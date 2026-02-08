@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_049"
+      "modifier": "<a class=\"gModGreen\" id=\"-602616935\">MStrongChallengeEX_Talent_StageAbility_LE_049</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_049",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1023679759\">MStrongChallengeEX_Talent_StageAbility_PLY_049</a>",
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -61,7 +61,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1777684731\">Standard_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (#ADF_2) || RETURN",
                     "displayLines": "#ADF_2",
@@ -89,7 +89,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_049",
+      "for": "<a class=\"gModGreen\" id=\"mod__-602616935\">MStrongChallengeEX_Talent_StageAbility_LE_049</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -116,7 +116,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_049"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1023679759\">MStrongChallengeEX_Talent_StageAbility_PLY_049</a>"
                 }
               ]
             }

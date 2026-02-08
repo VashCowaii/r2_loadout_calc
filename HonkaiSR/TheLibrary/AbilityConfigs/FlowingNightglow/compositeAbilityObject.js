@@ -18,13 +18,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23026_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-229933850\">LC_23026_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23026_Sub3[<span class=\"descriptionNumberColor\">Cadenza</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-36956856\">LC_23026_Sub3</a>[<span class=\"descriptionNumberColor\">Cadenza</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -56,7 +56,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23026_Sub2[<span class=\"descriptionNumberColor\">Cadenza</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-20179237\">LC_23026_Sub2</a>[<span class=\"descriptionNumberColor\">Cadenza</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -68,7 +68,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "LC_23026_Sub3[<span class=\"descriptionNumberColor\">Cadenza</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-36956856\">LC_23026_Sub3</a>[<span class=\"descriptionNumberColor\">Cadenza</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -114,7 +114,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members(Exclude Self)}}"
                   },
-                  "modifier": "LC_23026_Sub3[<span class=\"descriptionNumberColor\">Cadenza</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-36956856\">LC_23026_Sub3</a>[<span class=\"descriptionNumberColor\">Cadenza</span>]",
                   "valuePerStack": {
                     "AbilityEquip_P3_DmgAddedRatio": {
                       "operator": "Variables[0] (0.24) || RETURN",
@@ -148,7 +148,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_23026_Sub3[<span class=\"descriptionNumberColor\">Cadenza</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-36956856\">LC_23026_Sub3</a>[<span class=\"descriptionNumberColor\">Cadenza</span>]",
                       "valuePerStack": {
                         "AbilityEquip_P3_DmgAddedRatio": {
                           "operator": "Variables[0] (0.24) || RETURN",
@@ -172,7 +172,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23026_Sub[<span class=\"descriptionNumberColor\">Cantillation</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1072168277\">LC_23026_Sub</a>[<span class=\"descriptionNumberColor\">Cantillation</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -223,7 +223,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23026_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-229933850\">LC_23026_Main</a>",
           "execute": [
             {
               "eventTrigger": "Attack Start [Anyone]",
@@ -249,7 +249,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23026_Sub[<span class=\"descriptionNumberColor\">Cantillation</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1072168277\">LC_23026_Sub</a>[<span class=\"descriptionNumberColor\">Cantillation</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (5) || RETURN",
                         "displayLines": "5",
@@ -290,7 +290,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23026_Sub[<span class=\"descriptionNumberColor\">Cantillation</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1072168277\">LC_23026_Sub</a>[<span class=\"descriptionNumberColor\">Cantillation</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -298,7 +298,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23026_Sub2[<span class=\"descriptionNumberColor\">Cadenza</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-20179237\">LC_23026_Sub2</a>[<span class=\"descriptionNumberColor\">Cadenza</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",

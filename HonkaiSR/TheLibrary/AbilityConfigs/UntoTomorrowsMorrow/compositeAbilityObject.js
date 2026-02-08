@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_21055_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"1114034\">LC_21055_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_21055_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-739615985\">LC_21055_Sub2</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -75,7 +75,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_21055_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__658054695\">LC_21055_Sub</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -110,7 +110,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_21055_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-739615985\">LC_21055_Sub2</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     }
                   ],
                   "failed": [
@@ -120,7 +120,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_21055_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-739615985\">LC_21055_Sub2</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
                   ]
@@ -156,7 +156,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_21055_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-739615985\">LC_21055_Sub2</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     }
                   ],
                   "failed": [
@@ -166,7 +166,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_21055_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-739615985\">LC_21055_Sub2</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
                   ]
@@ -177,7 +177,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_21055_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__1114034\">LC_21055_Main</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -199,7 +199,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_21055_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"658054695\">LC_21055_Sub</a>"
                     }
                   ]
                 }
@@ -223,7 +223,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "LC_21055_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"658054695\">LC_21055_Sub</a>"
                     }
                   ]
                 }

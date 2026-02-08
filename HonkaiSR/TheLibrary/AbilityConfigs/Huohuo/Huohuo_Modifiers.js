@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Huohuo_Eidolon2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2094716401\">Huohuo_Eidolon2</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -54,7 +54,7 @@ const configAbility = {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "LifeTime",
                   "variableName": "Passive_HealMark_LifeTime",
-                  "modifierName": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                   "multiplier": 1
                 },
                 {
@@ -107,7 +107,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Huohuo_Eidolon2_ReviveCount[<span class=\"descriptionNumberColor\">Sealed in Tail, Wraith Subdued</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1683962968\">Huohuo_Eidolon2_ReviveCount</a>[<span class=\"descriptionNumberColor\">Sealed in Tail, Wraith Subdued</span>]",
       "stackType": "ReplaceByCaster",
       "variableValueChange": [
         {
@@ -143,7 +143,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
                       },
                       {
                         "name": "Compare: Variable",
@@ -160,7 +160,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]]"
                       },
-                      "modifier": "Huohuo_Eidolon2",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2094716401\">Huohuo_Eidolon2</a>",
                       "valuePerStack": {
                         "MDF_HealPercentage": {
                           "operator": "Variables[0] (0.5) || RETURN",
@@ -188,7 +188,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}"
                       },
-                      "modifier": "Huohuo_Eidolon2"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2094716401\">Huohuo_Eidolon2</a>"
                     },
                     {
                       "name": "IF",
@@ -220,7 +220,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Huohuo_Eidolon6_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2048047648\">Huohuo_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -256,7 +256,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Huohuo_DealHeal",
+      "for": "<a class=\"gModGreen\" id=\"mod__2047385879\">Huohuo_DealHeal</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -303,7 +303,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Huohuo_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1345100241\">Huohuo_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -338,7 +338,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Huohuo_Ability03_AttackUP[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-678196241\">Huohuo_Ability03_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -374,15 +374,15 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Huohuo_Passive_ModifySP"
+      "for": "<a class=\"gModGreen\" id=\"mod__2038615352\">Huohuo_Passive_ModifySP</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Huohuo_Passive_SPMark"
+      "for": "<a class=\"gModGreen\" id=\"mod__-1648992961\">Huohuo_Passive_SPMark</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Huohuo_Passive_HealHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__1278530083\">Huohuo_Passive_HealHP</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -463,7 +463,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Huohuo_DealHeal"
+              "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
             },
             {
               "name": "Heal",
@@ -495,7 +495,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Huohuo_DealHeal"
+              "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
             },
             {
               "name": "Find New Target",
@@ -593,7 +593,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Huohuo_DealHeal"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
                 },
                 {
                   "name": "Heal",
@@ -625,7 +625,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Huohuo_DealHeal"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
                 }
               ]
             }
@@ -713,7 +713,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Huohuo_DealHeal"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
                 },
                 {
                   "name": "Heal",
@@ -745,7 +745,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Huohuo_DealHeal"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
                 },
                 {
                   "name": "Find New Target",
@@ -843,7 +843,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Huohuo_DealHeal"
+                      "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
                     },
                     {
                       "name": "Heal",
@@ -875,7 +875,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Huohuo_DealHeal"
+                      "modifier": "<a class=\"gModGreen\" id=\"2047385879\">Huohuo_DealHeal</a>"
                     }
                   ]
                 }
@@ -887,7 +887,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -910,7 +910,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Huohuo_Eidolon2"
+              "modifier": "<a class=\"gModGreen\" id=\"-2094716401\">Huohuo_Eidolon2</a>"
             }
           ]
         },
@@ -925,7 +925,7 @@ const configAbility = {
               },
               "valueType": "LifeTime",
               "variableName": "Huohuo_Passive_HotCount",
-              "modifierName": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
               "multiplier": 1
             }
           ]
@@ -941,7 +941,7 @@ const configAbility = {
               },
               "valueType": "LifeTime",
               "variableName": "Huohuo_Passive_HotCount",
-              "modifierName": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
               "multiplier": 1
             },
             {
@@ -995,7 +995,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]]"
                   },
-                  "modifier": "Huohuo_Eidolon2",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2094716401\">Huohuo_Eidolon2</a>",
                   "valuePerStack": {
                     "MDF_HealPercentage": {
                       "operator": "Variables[0] (0.5) || RETURN",
@@ -1092,7 +1092,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
           },
-          "modifier": "Huohuo_Passive_HealHP",
+          "modifier": "<a class=\"gModGreen\" id=\"1278530083\">Huohuo_Passive_HealHP</a>",
           "haloStatus": true,
           "valuePerStack": {
             "HPRatio": {
@@ -1127,7 +1127,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
           },
-          "modifier": "Huohuo_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1345100241\">Huohuo_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "Eidolon Activated",

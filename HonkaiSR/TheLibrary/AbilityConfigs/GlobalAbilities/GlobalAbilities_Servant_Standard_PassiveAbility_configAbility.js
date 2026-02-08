@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Servant_Standard_PassiveModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1385373133\">Servant_Standard_PassiveModifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Servant_Standard_PassiveModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1385373133\">Servant_Standard_PassiveModifier</a>",
       "modifierFlags": [
         "KeepAllModifierOnDeathRattle"
       ],

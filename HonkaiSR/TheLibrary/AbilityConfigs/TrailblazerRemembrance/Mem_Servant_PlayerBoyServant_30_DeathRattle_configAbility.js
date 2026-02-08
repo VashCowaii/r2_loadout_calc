@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_PlayerBoyServant_30_DeathRattle"
+      "modifier": "<a class=\"gModGreen\" id=\"1143439505\">Memosprite_PlayerBoyServant_30_DeathRattle</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_PlayerBoyServant_30_DeathRattle",
+      "for": "<a class=\"gModGreen\" id=\"mod__1143439505\">Memosprite_PlayerBoyServant_30_DeathRattle</a>",
       "modifierFlags": [
         "Deathrattle"
       ],

@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Tribbie_Eidolon6_Bonus_Active",
+          "modifier": "<a class=\"gModGreen\" id=\"1011992176\">Tribbie_Eidolon6_Bonus_Active</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (7.29) || RETURN",
@@ -85,7 +85,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Tribbie_Eidolon6_Bonus_Active"
+          "modifier": "<a class=\"gModGreen\" id=\"1011992176\">Tribbie_Eidolon6_Bonus_Active</a>"
         }
       ]
     },
@@ -102,7 +102,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Tribbie_PointB1_DamageUpModifier[<span class=\"descriptionNumberColor\">Lamb Outside the Wall...</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"361990450\">Tribbie_PointB1_DamageUpModifier</a>[<span class=\"descriptionNumberColor\">Lamb Outside the Wall...</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",

@@ -18,7 +18,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "GT_StageAbility_Chess_Origin_System_Init",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__225382388\">GT_StageAbility_Chess_Origin_System_Init</a>",
           "parse": [
             {
               "name": "Declare Custom Variable",
@@ -51,7 +51,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "GT_StageAbility_Chess_Origin_System_EnterBattle",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-5531294\">GT_StageAbility_Chess_Origin_System_EnterBattle</a>",
           "parse": [
             {
               "name": "IF",
@@ -74,7 +74,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "TP_Modifier_Origin_Member"
+                    "modifier": "<a class=\"gModGreen\" id=\"-741732955\">TP_Modifier_Origin_Member</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -345,7 +345,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "GT_StageAbility_Chess_Origin_Bonus_01",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-2020630137\">GT_StageAbility_Chess_Origin_Bonus_01</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -359,7 +359,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "TP_Modifier_Origin_Member"
+                "modifier": "<a class=\"gModGreen\" id=\"-741732955\">TP_Modifier_Origin_Member</a>"
               },
               "ifTargetFound": [
                 {
@@ -368,7 +368,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TP_Modifier_Bonus",
+                  "modifier": "<a class=\"gModGreen\" id=\"-785771241\">TP_Modifier_Bonus</a>",
                   "addStacksPerTrigger": {
                     "operator": "Variables[0] (BonusLayer) || RETURN",
                     "displayLines": "BonusLayer",
@@ -384,7 +384,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "GT_StageAbility_Chess_Origin_Bonus_02",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-2003852518\">GT_StageAbility_Chess_Origin_Bonus_02</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -399,7 +399,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TP_Modifier_Bonus",
+                  "modifier": "<a class=\"gModGreen\" id=\"-785771241\">TP_Modifier_Bonus</a>",
                   "addStacksPerTrigger": {
                     "operator": "Variables[0] (BonusLayer) || RETURN",
                     "displayLines": "BonusLayer",

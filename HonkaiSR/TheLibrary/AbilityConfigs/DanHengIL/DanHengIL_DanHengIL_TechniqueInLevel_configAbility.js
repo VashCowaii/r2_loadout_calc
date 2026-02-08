@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_DanHengIL_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1145539876\">StageAbility_Maze_DanHengIL_Modifier</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,13 +26,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_DanHengILDamage_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1215340363\">StageAbility_Maze_DanHengILDamage_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_DanHengILDamage_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1215340363\">StageAbility_Maze_DanHengILDamage_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -89,7 +89,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_DanHengIL_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1145539876\">StageAbility_Maze_DanHengIL_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -173,7 +173,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
                   "value": {
                     "operator": "Variables[0] (BPExChange) || RETURN",
                     "displayLines": "BPExChange",
@@ -189,7 +189,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
                   "counter": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",

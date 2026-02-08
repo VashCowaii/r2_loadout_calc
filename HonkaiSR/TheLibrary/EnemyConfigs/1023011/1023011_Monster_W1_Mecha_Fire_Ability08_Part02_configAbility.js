@@ -69,7 +69,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
           },
           "ifTargetFound": [
             {
@@ -120,7 +120,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
             }
           ]
         }
@@ -133,7 +133,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha04_01_HeadEffect"
+      "modifier": "<a class=\"gModGreen\" id=\"-1466752435\">Monster_W1_Mecha04_01_HeadEffect</a>"
     },
     "Trigger: Ability End"
   ],

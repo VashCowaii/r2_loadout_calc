@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_Eidolon1"
+      "modifier": "<a class=\"gModGreen\" id=\"626123002\">Sam_Eidolon1</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Sam_Eidolon1_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1464889709\">Sam_Eidolon1_Sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -38,7 +38,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_Eidolon1",
+      "for": "<a class=\"gModGreen\" id=\"mod__626123002\">Sam_Eidolon1</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -93,7 +93,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_Eidolon1_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1464889709\">Sam_Eidolon1_Sub</a>"
                 }
               ]
             }
@@ -108,7 +108,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Sam_Eidolon1_Sub"
+              "modifier": "<a class=\"gModGreen\" id=\"-1464889709\">Sam_Eidolon1_Sub</a>"
             }
           ]
         }

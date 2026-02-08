@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Archer_BonusTrigger[<span class=\"descriptionNumberColor\">Circuit Connection</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1612899858\">Archer_BonusTrigger</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]"
     },
     {
       "name": "Define Custom Variable",

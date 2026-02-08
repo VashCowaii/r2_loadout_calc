@@ -6,7 +6,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "PlayerBoy_30_TryCreateServant"
+      "functionName": "<a class=\"gTempYellow\" id=\"1640803691\">PlayerBoy_30_TryCreateServant</a>"
     },
     {
       "name": "Update Energy",
@@ -35,7 +35,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{BattleEvent60021}}"
           },
-          "modifier": "MissionBattleEvent60021_TriggerBEAbility"
+          "modifier": "<a class=\"gModGreen\" id=\"1446276332\">MissionBattleEvent60021_TriggerBEAbility</a>"
         }
       ]
     },

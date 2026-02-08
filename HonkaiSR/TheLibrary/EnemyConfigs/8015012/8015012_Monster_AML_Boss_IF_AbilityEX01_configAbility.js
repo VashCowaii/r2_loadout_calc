@@ -21,7 +21,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_IF_AbilityEX01"
+          "modifier": "<a class=\"gModGreen\" id=\"-1835739852\">Enemy_AML_Boss_IF_AbilityEX01</a>"
         }
       ]
     }

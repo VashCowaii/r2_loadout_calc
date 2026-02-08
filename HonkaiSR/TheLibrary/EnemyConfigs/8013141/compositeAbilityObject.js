@@ -43,13 +43,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_HitEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-743479497\">Enemy_AML_Boss_Part2_HitEffect</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_HitEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-743479497\">Enemy_AML_Boss_Part2_HitEffect</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage End [Owner]: Hit",
@@ -124,7 +124,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "AML_Boss_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"2028329566\">AML_Boss_BattleScore1</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -132,7 +132,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-323890115\">Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -140,7 +140,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_OnBreakRecoverChangeWeak"
+          "modifier": "<a class=\"gModGreen\" id=\"-1822762552\">Enemy_W0_Boss_Part2_OnBreakRecoverChangeWeak</a>"
         },
         {
           "name": "IF",
@@ -161,7 +161,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W0_Boss_Part2_OnPhase3SpeedUp[<span class=\"descriptionNumberColor\">Burst</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1383210331\">Enemy_W0_Boss_Part2_OnPhase3SpeedUp</a>[<span class=\"descriptionNumberColor\">Burst</span>]",
               "valuePerStack": {
                 "MDF_SpeedAddedRatio": {
                   "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
@@ -179,7 +179,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-323890115\">Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -215,7 +215,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W0_Boss_Part2_OnBreakRecoverChangeWeak",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1822762552\">Enemy_W0_Boss_Part2_OnBreakRecoverChangeWeak</a>",
           "execute": [
             {
               "eventTrigger": "End Broken State [Owner]",
@@ -226,7 +226,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_Monster_AML_Boss_Part2_Ability07"
+                  "modifier": "<a class=\"gModGreen\" id=\"-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>"
                 }
               ]
             }
@@ -257,7 +257,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_Ability11_ListenSelfDieModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-842741041\">Enemy_AML_Boss_Part2_Ability11_ListenSelfDieModifier</a>"
         },
         "Ability Start",
         {
@@ -352,7 +352,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_Ability11_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>"
         },
         "Trigger: Attack End",
         "Trigger: Ability End"
@@ -407,7 +407,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_Ability11_ListenSelfDieModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-842741041\">Enemy_AML_Boss_Part2_Ability11_ListenSelfDieModifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -415,7 +415,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_Ability11_Modifier",
+          "modifier": "<a class=\"gModGreen\" id=\"596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>",
           "valuePerStack": {
             "MDF_AttackAddedRatio": {
               "operator": "Variables[0] ({[Skill11[0]]}) || RETURN",
@@ -559,7 +559,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability07_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1761279918\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Effect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -567,7 +567,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-846464827\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -575,7 +575,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability07_Frensnel"
+          "modifier": "<a class=\"gModGreen\" id=\"-354136848\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Frensnel</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -583,7 +583,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel"
+          "modifier": "<a class=\"gModGreen\" id=\"-859851761\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -591,7 +591,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_AttackUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill09[1]]}) || RETURN",
             "displayLines": "{[Skill09[1]]}",
@@ -617,7 +617,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_AttackUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill09[1]]}) || RETURN",
             "displayLines": "{[Skill09[1]]}",
@@ -643,7 +643,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_Monster_AML_Boss_Part2_Ability07"
+          "modifier": "<a class=\"gModGreen\" id=\"-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -651,7 +651,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_Monster_AML_Boss_Part2_Ability07"
+          "modifier": "<a class=\"gModGreen\" id=\"-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>"
         },
         "Ability Start",
         "Trigger: Ability End"
@@ -695,7 +695,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-846464827\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -703,7 +703,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel"
+          "modifier": "<a class=\"gModGreen\" id=\"-859851761\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -711,7 +711,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_AttackUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill08[1]]}) || RETURN",
             "displayLines": "{[Skill08[1]]}",
@@ -737,7 +737,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_Monster_AML_Boss_Part2_Ability07"
+          "modifier": "<a class=\"gModGreen\" id=\"-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>"
         },
         "Ability Start",
         "Trigger: Ability End"
@@ -781,7 +781,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability07_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1761279918\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Effect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -789,7 +789,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability07_Frensnel"
+          "modifier": "<a class=\"gModGreen\" id=\"-354136848\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Frensnel</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -797,7 +797,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_Monster_AML_Boss_Part2_Ability07"
+          "modifier": "<a class=\"gModGreen\" id=\"-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -805,7 +805,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_AttackUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill07[1]]}) || RETURN",
             "displayLines": "{[Skill07[1]]}",
@@ -867,7 +867,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "AML_Boss_BattleScore1",
+          "for": "<a class=\"gModGreen\" id=\"mod__2028329566\">AML_Boss_BattleScore1</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -947,7 +947,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W0_Boss_Part2_Ability11_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -958,7 +958,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_APShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                 }
               ]
             },
@@ -985,7 +985,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 1}}"
                       },
-                      "modifier": "Enemy_W0_Boss_Charge_DisableAction"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>"
                     }
                   ]
                 },
@@ -1009,7 +1009,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 3}}"
                       },
-                      "modifier": "Enemy_W0_Boss_Charge_DisableAction"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>"
                     }
                   ]
                 },
@@ -1019,7 +1019,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_APShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                 }
               ]
             },
@@ -1062,7 +1062,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 1}}"
                       },
-                      "modifier": "Enemy_W0_Boss_Charge_DisableAction"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>"
                     }
                   ]
                 },
@@ -1086,7 +1086,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 3}}"
                       },
-                      "modifier": "Enemy_W0_Boss_Charge_DisableAction"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>"
                     }
                   ]
                 },
@@ -1111,7 +1111,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_W0_Boss_Part2_Ability11_Modifier"
+                    "modifier": "<a class=\"gModGreen\" id=\"596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>"
                   }
                 }
               ]
@@ -1127,7 +1127,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W0_Boss_Charge_DisableAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>",
           "modifierFlags": [
             "DisableAction"
           ],
@@ -1138,7 +1138,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel",
+          "for": "<a class=\"gModGreen\" id=\"mod__-859851761\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1150,7 +1150,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-846464827\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -1192,7 +1192,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W0_Boss_Part2_AttackUp_Ability07_Frensnel",
+          "for": "<a class=\"gModGreen\" id=\"mod__-354136848\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Frensnel</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1204,7 +1204,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W0_Boss_Part2_AttackUp_Ability07_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1761279918\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Effect</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -1246,7 +1246,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W0_Boss_Part2_AttackUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1257,7 +1257,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability07_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1761279918\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Effect</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1265,7 +1265,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability07_Frensnel"
+                  "modifier": "<a class=\"gModGreen\" id=\"-354136848\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Frensnel</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1273,7 +1273,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-846464827\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1281,7 +1281,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel"
+                  "modifier": "<a class=\"gModGreen\" id=\"-859851761\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1289,7 +1289,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_Monster_AML_Boss_Part2_Ability07"
+                  "modifier": "<a class=\"gModGreen\" id=\"-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>"
                 }
               ]
             },
@@ -1327,7 +1327,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_WMonster_W0_Boss_Part_Passive_WeakPhysical",
+          "for": "<a class=\"gModGreen\" id=\"mod__-632703033\">Enemy_WMonster_W0_Boss_Part_Passive_WeakPhysical</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1385,7 +1385,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_WMonster_W0_Boss_Part_Passive_WeakWind",
+          "for": "<a class=\"gModGreen\" id=\"mod__-42840376\">Enemy_WMonster_W0_Boss_Part_Passive_WeakWind</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1443,7 +1443,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_WMonster_W0_Boss_Part_Passive_WeakFire",
+          "for": "<a class=\"gModGreen\" id=\"mod__1832434558\">Enemy_WMonster_W0_Boss_Part_Passive_WeakFire</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1501,7 +1501,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_WMonster_W0_Boss_Part_Passive_WeakIce",
+          "for": "<a class=\"gModGreen\" id=\"mod__-748933759\">Enemy_WMonster_W0_Boss_Part_Passive_WeakIce</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1559,7 +1559,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_Monster_AML_Boss_Part2_Ability07",
+          "for": "<a class=\"gModGreen\" id=\"mod__-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1581,7 +1581,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W0_Boss_Part2_OnPhase3SpeedUp[<span class=\"descriptionNumberColor\">Burst</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1383210331\">Enemy_W0_Boss_Part2_OnPhase3SpeedUp</a>[<span class=\"descriptionNumberColor\">Burst</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1616,7 +1616,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_Ability11_ListenSelfDieModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-842741041\">Enemy_AML_Boss_Part2_Ability11_ListenSelfDieModifier</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"

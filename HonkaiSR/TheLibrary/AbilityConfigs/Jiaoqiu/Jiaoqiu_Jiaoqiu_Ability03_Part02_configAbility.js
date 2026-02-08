@@ -23,7 +23,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
       },
       "ifTargetFound": [
         {
@@ -34,7 +34,7 @@ const configAbility = {
           },
           "valueType": "Layer",
           "variableName": "_Temp_Val",
-          "modifierName": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
           "multiplier": 1
         },
         {
@@ -99,7 +99,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
               },
               "passed": [
                 {
@@ -110,7 +110,7 @@ const configAbility = {
                   },
                   "valueType": "Layer",
                   "variableName": "_Temp_Val",
-                  "modifierName": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                   "multiplier": 1
                 }
               ]
@@ -137,7 +137,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -218,7 +218,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Jiaoqiu_Aura",
+      "modifier": "<a class=\"gModGreen\" id=\"-1304078651\">Jiaoqiu_Aura</a>",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -293,7 +293,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",

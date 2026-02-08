@@ -35,7 +35,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Castorice_Ability03_Field"
+      "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>"
     },
     {
       "name": "Summon Memosprite",
@@ -178,7 +178,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Castorice_Eidolon2_Check"
+          "modifier": "<a class=\"gModGreen\" id=\"176252830\">Castorice_Eidolon2_Check</a>"
         }
       ]
     },
@@ -237,7 +237,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "ReduceActionDelay",
+          "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -266,7 +266,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "execute": [
         {
           "name": "Copy Modifier",
@@ -290,7 +290,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Castorice_Modifier",
+      "modifier": "<a class=\"gModGreen\" id=\"689500868\">StageAbility_Maze_Castorice_Modifier</a>",
       "valuePerStack": {
         "MDF_LoseHP": {
           "operator": "Variables[0] (0.4) || RETURN",
@@ -306,7 +306,7 @@ const configAbility = {
   "functions": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Castorice_OnWaveMonsterPerform",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1404094382\">Servant_Castorice_OnWaveMonsterPerform</a>",
       "parse": [
         {
           "name": "Define Custom Variable",
@@ -323,7 +323,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Castorice_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__689500868\">StageAbility_Maze_Castorice_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

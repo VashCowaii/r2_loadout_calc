@@ -51,7 +51,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Topaz_BE_HitEffect"
+            "modifier": "<a class=\"gModGreen\" id=\"-1899526189\">Topaz_BE_HitEffect</a>"
           },
           "passed": [
             {
@@ -65,7 +65,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Topaz_BE_HitEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"-1899526189\">Topaz_BE_HitEffect</a>"
             }
           ],
           "failed": [
@@ -121,7 +121,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable with Modifier Values",
           "variableName": "CurEnhance",
-          "modifierName": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
           "multiplier": 1
         },
         {
@@ -196,7 +196,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_BE_CriticalChance"
+          "modifier": "<a class=\"gModGreen\" id=\"1213282515\">Topaz_BE_CriticalChance</a>"
         },
         {
           "name": "Looped Event",
@@ -332,7 +332,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Topaz_Bonus"
+            "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
           },
           "passed": [
             {
@@ -357,13 +357,13 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Topaz_Bonus"
+              "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
             }
           ]
         },
         {
           "name": "Define Modifier Variable",
-          "modifierName": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
           "function": "Add"
         },
         {
@@ -395,7 +395,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Numby}}"
               },
-              "modifier": "Topaz_BE_UltraEnhance_ShowText",
+              "modifier": "<a class=\"gModGreen\" id=\"1361568506\">Topaz_BE_UltraEnhance_ShowText</a>",
               "valuePerStack": {
                 "ATKCount": {
                   "operator": "Variables[0] (CurEnhance) || RETURN",
@@ -420,7 +420,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Numby}}"
               },
-              "modifier": "Topaz_BE_UltraEnhance_ShowText"
+              "modifier": "<a class=\"gModGreen\" id=\"1361568506\">Topaz_BE_UltraEnhance_ShowText</a>"
             }
           ]
         },
@@ -430,7 +430,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_BE_CriticalChance"
+          "modifier": "<a class=\"gModGreen\" id=\"1213282515\">Topaz_BE_CriticalChance</a>"
         }
       ],
       "references": []
@@ -519,7 +519,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Topaz_Bonus"
+            "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
           },
           "passed": [
             {
@@ -544,7 +544,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Topaz_Bonus"
+              "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
             }
           ]
         }
@@ -565,7 +565,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Battle Event's Caster}}"
             },
-            "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
           },
           "passed": [
             "Deleted bullshit"
@@ -582,7 +582,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Battle Event's Caster}}"
             },
-            "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
           },
           "passed": [
             {
@@ -658,7 +658,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Battle Event's Caster}}"
             },
-            "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
           },
           "passed": [
             "Deleted bullshit",
@@ -737,7 +737,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_BETag"
+          "modifier": "<a class=\"gModGreen\" id=\"1529971415\">Topaz_BETag</a>"
         },
         {
           "name": "Set Action-State",
@@ -754,7 +754,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BETag",
+          "for": "<a class=\"gModGreen\" id=\"mod__1529971415\">Topaz_BETag</a>",
           "modifierFlags": [
             "BlockDamage",
             "Stealth"
@@ -777,7 +777,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Topaz_BE_ReduceDelay"
+                    "modifier": "<a class=\"gModGreen\" id=\"-182734853\">Topaz_BE_ReduceDelay</a>"
                   },
                   "passed": [
                     {
@@ -804,7 +804,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                     }
                   },
                   "failed": [
@@ -814,7 +814,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Topaz_BE_FindNoTargetFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-93497222\">Topaz_BE_FindNoTargetFlag</a>"
                     }
                   ]
                 },
@@ -832,7 +832,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                     }
                   },
                   "passed": [
@@ -858,7 +858,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                              "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                             }
                           }
                         ]
@@ -888,7 +888,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Topaz_Passive"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
                   }
                 }
               ]
@@ -904,7 +904,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Topaz_Passive"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
                   }
                 }
               ]
@@ -952,7 +952,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Topaz_Passive"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
                   }
                 }
               ]
@@ -983,18 +983,18 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Technique_Topaz_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"520958214\">Technique_Topaz_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Topaz_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__285365186\">Topaz_Bonus</a>",
           "stackType": "ReplaceByCaster"
         },
         {
           "name": "Modifier Construction",
-          "for": "Technique_Topaz_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__520958214\">Technique_Topaz_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -1014,7 +1014,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Topaz_Bonus"
+                      "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
                     }
                   ]
                 }
@@ -1050,7 +1050,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1058,7 +1058,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_Passive_Sub_ListenAction"
+          "modifier": "<a class=\"gModGreen\" id=\"1550373829\">Topaz_Passive_Sub_ListenAction</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1066,7 +1066,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_BPAbility_ModifyBEAction"
+          "modifier": "<a class=\"gModGreen\" id=\"1586235241\">Topaz_BPAbility_ModifyBEAction</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1074,7 +1074,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_Ultimate_Normal_ModifyBEAction"
+          "modifier": "<a class=\"gModGreen\" id=\"633100540\">Topaz_Ultimate_Normal_ModifyBEAction</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1082,7 +1082,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_Ultimate_BPAbility_ModifyBEAction"
+          "modifier": "<a class=\"gModGreen\" id=\"-1215069030\">Topaz_Ultimate_BPAbility_ModifyBEAction</a>"
         },
         {
           "name": "IF",
@@ -1097,7 +1097,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Topaz_Normal_ModifyBEAction"
+              "modifier": "<a class=\"gModGreen\" id=\"1158310225\">Topaz_Normal_ModifyBEAction</a>"
             }
           ]
         },
@@ -1149,7 +1149,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Numby}}"
           },
-          "modifier": "Topaz_BE_BaseSpeed"
+          "modifier": "<a class=\"gModGreen\" id=\"-1168141322\">Topaz_BE_BaseSpeed</a>"
         },
         {
           "name": "IF",
@@ -1164,7 +1164,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Topaz_PointB2Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"828054091\">Topaz_PointB2Effect</a>"
             }
           ]
         },
@@ -1181,7 +1181,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Numby}}"
               },
-              "modifier": "Topaz_BE_ReduceDelay"
+              "modifier": "<a class=\"gModGreen\" id=\"-182734853\">Topaz_BE_ReduceDelay</a>"
             }
           ]
         },
@@ -1205,7 +1205,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Topaz_Passive_Sub_ListenAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1550373829\">Topaz_Passive_Sub_ListenAction</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -1242,7 +1242,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                         },
                         "invertCondition": true
                       }
@@ -1255,7 +1255,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Topaz_BE_FindNoTargetFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-93497222\">Topaz_BE_FindNoTargetFlag</a>"
                     }
                   ]
                 }
@@ -1293,7 +1293,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                         },
                         "invertCondition": true
                       }
@@ -1306,7 +1306,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"-373546697\">Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn</a>"
                     }
                   ]
                 }
@@ -1344,7 +1344,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                         },
                         "invertCondition": true
                       }
@@ -1357,7 +1357,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"-373546697\">Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn</a>"
                     }
                   ]
                 }
@@ -1395,7 +1395,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                         },
                         "invertCondition": true
                       }
@@ -1408,7 +1408,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Topaz_BE_FindNoTargetFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-93497222\">Topaz_BE_FindNoTargetFlag</a>"
                     }
                   ]
                 }
@@ -1420,7 +1420,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1965719686\">Topaz_Passive</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -1458,7 +1458,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Topaz_Ultimate_Listen_ModifyBEAction"
+                      "modifier": "<a class=\"gModGreen\" id=\"786181068\">Topaz_Ultimate_Listen_ModifyBEAction</a>"
                     }
                   ]
                 }
@@ -1473,7 +1473,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Numby}}"
                   },
-                  "modifier": "Topaz_BE_HitEffect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1899526189\">Topaz_BE_HitEffect</a>"
                 }
               ]
             },
@@ -1486,7 +1486,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members(Exclude Self)}}"
                   },
-                  "modifier": "Topaz_Ultimate_Listen_ModifyBEAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"786181068\">Topaz_Ultimate_Listen_ModifyBEAction</a>"
                 }
               ],
               "priorityLevel": -80
@@ -1498,7 +1498,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Topaz_BE_FindNoTargetFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"-93497222\">Topaz_BE_FindNoTargetFlag</a>"
                   },
                   "passed": [
                     {
@@ -1507,7 +1507,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Topaz_BE_FindNoTargetFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-93497222\">Topaz_BE_FindNoTargetFlag</a>"
                     },
                     {
                       "name": "Find New Target",
@@ -1524,7 +1524,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue1_DamageAdd": {
                               "operator": "Variables[0] (0.5) || RETURN",
@@ -1562,7 +1562,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn"
+                    "modifier": "<a class=\"gModGreen\" id=\"-373546697\">Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn</a>"
                   },
                   "passed": [
                     {
@@ -1571,7 +1571,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"-373546697\">Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn</a>"
                     },
                     {
                       "name": "Find New Target",
@@ -1588,7 +1588,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue1_DamageAdd": {
                               "operator": "Variables[0] (0.5) || RETURN",
@@ -1626,7 +1626,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Topaz_BETargetTagHitFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"1594870654\">Topaz_BETargetTagHitFlag</a>"
                   },
                   "passed": [
                     {
@@ -1635,7 +1635,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Topaz_BETargetTagHitFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"1594870654\">Topaz_BETargetTagHitFlag</a>"
                     },
                     {
                       "name": "IF",
@@ -1645,7 +1645,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
                       },
                       "passed": [
                         {
@@ -1678,7 +1678,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Topaz_BETargetTagInsertHitFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1346057059\">Topaz_BETargetTagInsertHitFlag</a>"
                   },
                   "passed": [
                     {
@@ -1687,7 +1687,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Topaz_BETargetTagInsertHitFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1346057059\">Topaz_BETargetTagInsertHitFlag</a>"
                     },
                     {
                       "name": "IF",
@@ -1740,7 +1740,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_PointB2Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__828054091\">Topaz_PointB2Effect</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1776,13 +1776,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BE_ReduceDelay",
+          "for": "<a class=\"gModGreen\" id=\"mod__-182734853\">Topaz_BE_ReduceDelay</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BE_BaseSpeed",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1168141322\">Topaz_BE_BaseSpeed</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1811,7 +1811,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_Ultimate_Listen_ModifyBEAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__786181068\">Topaz_Ultimate_Listen_ModifyBEAction</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -1844,7 +1844,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                   }
                 },
                 {
@@ -1853,7 +1853,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
                 },
                 {
                   "name": "Current Turn Is",
@@ -1880,7 +1880,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_Ultimate_BPAbility_ModifyBEAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1215069030\">Topaz_Ultimate_BPAbility_ModifyBEAction</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -1902,7 +1902,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
                 },
                 {
                   "name": "Current Turn Is",
@@ -1929,7 +1929,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_Ultimate_Normal_ModifyBEAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__633100540\">Topaz_Ultimate_Normal_ModifyBEAction</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -1951,7 +1951,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team Ability Target Lock}}"
                   },
-                  "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                 },
                 {
                   "name": "Has Modifier",
@@ -1959,7 +1959,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
                 },
                 {
                   "name": "Current Turn Is",
@@ -1986,7 +1986,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BPAbility_ModifyBEAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1586235241\">Topaz_BPAbility_ModifyBEAction</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -2022,7 +2022,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_Normal_ModifyBEAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1158310225\">Topaz_Normal_ModifyBEAction</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -2044,7 +2044,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team Ability Target Lock}}"
                   },
-                  "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                 },
                 {
                   "name": "Current Turn Is",
@@ -2083,7 +2083,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Numby}}"
           },
-          "modifier": "Topaz_BE_UltraEnhance_Text"
+          "modifier": "<a class=\"gModGreen\" id=\"-1524167625\">Topaz_BE_UltraEnhance_Text</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2091,7 +2091,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Numby}}"
           },
-          "modifier": "Topaz_BE_UltraEnhance_Text"
+          "modifier": "<a class=\"gModGreen\" id=\"-1524167625\">Topaz_BE_UltraEnhance_Text</a>"
         },
         {
           "name": "Update Energy",
@@ -2117,7 +2117,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
           "counter": {
             "operator": "Variables[0] (MaxEnhance) || RETURN",
             "displayLines": "MaxEnhance",
@@ -2192,7 +2192,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Numby}}"
           },
-          "modifier": "Topaz_BE_UltraEnhance_ShowText",
+          "modifier": "<a class=\"gModGreen\" id=\"1361568506\">Topaz_BE_UltraEnhance_ShowText</a>",
           "valuePerStack": {
             "ATKCount": {
               "operator": "Variables[0] (MaxEnhance) || RETURN",
@@ -2288,7 +2288,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Topaz_BPAbility_AddRegardAsAttackType"
+          "modifier": "<a class=\"gModGreen\" id=\"-934416652\">M_Topaz_BPAbility_AddRegardAsAttackType</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2296,7 +2296,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Numby}}"
           },
-          "modifier": "M_Topaz_BPAbility_AddRegardAsAttackType"
+          "modifier": "<a class=\"gModGreen\" id=\"-934416652\">M_Topaz_BPAbility_AddRegardAsAttackType</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2304,7 +2304,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
           "valuePerStack": {
             "MDF_PropertyValue1_DamageAdd": {
               "operator": "Variables[0] (0.5) || RETURN",
@@ -2341,7 +2341,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
           }
         },
         {
@@ -2385,13 +2385,13 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
           },
           "passed": [
             {
               "name": "Define Custom Variable with Modifier Values",
               "variableName": "CurEnhance",
-              "modifierName": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
               "multiplier": 1
             },
             {
@@ -2466,7 +2466,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Topaz_BE_CriticalChance"
+              "modifier": "<a class=\"gModGreen\" id=\"1213282515\">Topaz_BE_CriticalChance</a>"
             },
             {
               "name": "Looped Event",
@@ -2577,7 +2577,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Topaz_Bonus"
+                "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
               },
               "passed": [
                 {
@@ -2602,13 +2602,13 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Topaz_Bonus"
+                  "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
                 }
               ]
             },
             {
               "name": "Define Modifier Variable",
-              "modifierName": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
               "function": "Add"
             },
             {
@@ -2640,7 +2640,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Numby}}"
                   },
-                  "modifier": "Topaz_BE_UltraEnhance_ShowText",
+                  "modifier": "<a class=\"gModGreen\" id=\"1361568506\">Topaz_BE_UltraEnhance_ShowText</a>",
                   "valuePerStack": {
                     "ATKCount": {
                       "operator": "Variables[0] (CurEnhance) || RETURN",
@@ -2665,7 +2665,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Numby}}"
                   },
-                  "modifier": "Topaz_BE_UltraEnhance_ShowText"
+                  "modifier": "<a class=\"gModGreen\" id=\"1361568506\">Topaz_BE_UltraEnhance_ShowText</a>"
                 }
               ]
             },
@@ -2675,7 +2675,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Topaz_BE_CriticalChance"
+              "modifier": "<a class=\"gModGreen\" id=\"1213282515\">Topaz_BE_CriticalChance</a>"
             }
           ],
           "failed": [
@@ -2732,7 +2732,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Topaz_Bonus"
+                "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
               },
               "passed": [
                 {
@@ -2757,7 +2757,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Topaz_Bonus"
+                  "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
                 }
               ]
             }
@@ -2772,13 +2772,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_Ability02_SpecialMarkAdder"
+          "modifier": "<a class=\"gModGreen\" id=\"1891120358\">Topaz_Ability02_SpecialMarkAdder</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BETargetTagActive_BP",
+          "for": "<a class=\"gModGreen\" id=\"mod__264491546\">Topaz_BETargetTagActive_BP</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ListenBattleEventSkill",
@@ -2861,7 +2861,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_Ability02_SpecialMarkAdder",
+          "for": "<a class=\"gModGreen\" id=\"mod__1891120358\">Topaz_Ability02_SpecialMarkAdder</a>",
           "stackData": [],
           "latentQueue": [
             "_damageStart"
@@ -2873,7 +2873,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Topaz_BETargetTagActive_BP",
+              "modifier": "<a class=\"gModGreen\" id=\"264491546\">Topaz_BETargetTagActive_BP</a>",
               "aliveOnly": "True",
               "haloStatus": true
             }
@@ -2881,7 +2881,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Topaz_BPAbility_AddRegardAsAttackType",
+          "for": "<a class=\"gModGreen\" id=\"mod__-934416652\">M_Topaz_BPAbility_AddRegardAsAttackType</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2920,7 +2920,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Topaz_BPAbility_AddRegardAsAttackType"
+                  "modifier": "<a class=\"gModGreen\" id=\"-934416652\">M_Topaz_BPAbility_AddRegardAsAttackType</a>"
                 }
               ]
             }
@@ -2967,7 +2967,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
           }
         }
       ],
@@ -2992,7 +2992,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "M_Topaz_Normal_AddRegardAsAttackType"
+              "modifier": "<a class=\"gModGreen\" id=\"-2051023932\">M_Topaz_Normal_AddRegardAsAttackType</a>"
             }
           ]
         },
@@ -3036,7 +3036,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Topaz_Normal_AddRegardAsAttackType",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2051023932\">M_Topaz_Normal_AddRegardAsAttackType</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3075,7 +3075,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Topaz_Normal_AddRegardAsAttackType"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2051023932\">M_Topaz_Normal_AddRegardAsAttackType</a>"
                 }
               ]
             }
@@ -3145,7 +3145,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BE_UltraEnhance_ShowText",
+          "for": "<a class=\"gModGreen\" id=\"mod__1361568506\">Topaz_BE_UltraEnhance_ShowText</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [
             "ATKCount"
@@ -3156,7 +3156,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BETargetTagActive",
+          "for": "<a class=\"gModGreen\" id=\"mod__1350976023\">Topaz_BETargetTagActive</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ListenBattleEventSkill",
@@ -3274,7 +3274,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
                   },
                   "passed": [
                     {
@@ -3411,7 +3411,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BE_FiretakenRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__1982768595\">Topaz_BE_FiretakenRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3440,13 +3440,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BE_HitEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1899526189\">Topaz_BE_HitEffect</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BE_UltraEnhance_Text",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1524167625\">Topaz_BE_UltraEnhance_Text</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -3456,7 +3456,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
           "counter": 1,
           "stackType": "ReplaceByCaster",
           "execute": [
@@ -3472,7 +3472,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Numby}}"
                   },
-                  "modifier": "BE_ExtraSpeedModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"1182113181\">BE_ExtraSpeedModifier</a>"
                 }
               ]
             },
@@ -3508,7 +3508,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BE_CriticalChance",
+          "for": "<a class=\"gModGreen\" id=\"mod__1213282515\">Topaz_BE_CriticalChance</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3564,7 +3564,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BETargetTag_CriticalDamageUp[<span class=\"descriptionNumberColor\">Debtor</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1322510639\">Topaz_BETargetTag_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">Debtor</span>]",
           "stackType": "ReplaceByCaster",
           "description": "Increases CRIT DMG received from Follow-Up ATKs by <span class=\"descriptionNumberColor\">MDF_PropertyValue1_InsertCriticalDamageAddRatio</span>, stacking up to <span class=\"descriptionNumberColor\">MDF_PropertyValue2_InsertCriticalDamageAddMaxLayer</span> time(s).",
           "type": "Debuff",
@@ -3574,7 +3574,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn",
+          "for": "<a class=\"gModGreen\" id=\"mod__-373546697\">Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn</a>",
           "stackType": "Replace",
           "stackData": [],
           "latentQueue": [],
@@ -3582,7 +3582,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BE_FindNoTargetFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__-93497222\">Topaz_BE_FindNoTargetFlag</a>",
           "stackType": "Replace",
           "stackData": [],
           "latentQueue": [],
@@ -3590,19 +3590,19 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BETargetTagInsertHitFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1346057059\">Topaz_BETargetTagInsertHitFlag</a>",
           "stackType": "Replace",
           "duration": 1
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BETargetTagHitFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__1594870654\">Topaz_BETargetTagHitFlag</a>",
           "stackType": "Replace",
           "duration": 1
         },
         {
           "name": "Modifier Construction",
-          "for": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "ListenBattleEventSkill"
@@ -3639,7 +3639,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3647,7 +3647,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Topaz_BETargetTagActive"
+                      "modifier": "<a class=\"gModGreen\" id=\"1350976023\">Topaz_BETargetTagActive</a>"
                     }
                   ]
                 },
@@ -3669,7 +3669,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Topaz_BETargetTagActive",
+                  "modifier": "<a class=\"gModGreen\" id=\"1350976023\">Topaz_BETargetTagActive</a>",
                   "valuePerStack": {
                     "ShowSpecialMarkOnCreate": {
                       "operator": "Variables[0] (ShowSpecialMarkOnCreate) || RETURN",
@@ -3793,7 +3793,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Topaz_BETargetTag_CriticalDamageUp[<span class=\"descriptionNumberColor\">Debtor</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1322510639\">Topaz_BETargetTag_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">Debtor</span>]"
                 },
                 {
                   "name": "Toggle Skill Mark"
@@ -3900,7 +3900,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Topaz_BETargetTag_CriticalDamageUp[<span class=\"descriptionNumberColor\">Debtor</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1322510639\">Topaz_BETargetTag_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">Debtor</span>]"
                     }
                   ]
                 }
@@ -3947,7 +3947,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Topaz_BETargetTagHitFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"1594870654\">Topaz_BETargetTagHitFlag</a>"
                     }
                   ]
                 },
@@ -3985,7 +3985,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Topaz_BETargetTagInsertHitFlag"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1346057059\">Topaz_BETargetTagInsertHitFlag</a>"
                         }
                       ]
                     },
@@ -4037,7 +4037,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Topaz_BETargetTag_CriticalDamageUp[<span class=\"descriptionNumberColor\">Debtor</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"1322510639\">Topaz_BETargetTag_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">Debtor</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue1_InsertCriticalDamageAddRatio": {
                                   "operator": "Variables[0] (MDF_PropertyValue3_InsertCriticalDamageAddRatio) || RETURN",
@@ -4134,7 +4134,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
                   },
                   "passed": [
                     {

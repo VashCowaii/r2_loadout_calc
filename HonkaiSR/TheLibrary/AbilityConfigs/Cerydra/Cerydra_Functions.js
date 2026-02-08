@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Cerydra_Template_ReachPromotionEidolon1",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1336664335\">Cerydra_Template_ReachPromotionEidolon1</a>",
       "parse": [
         {
           "name": "Remove Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Cerydra's Promotion Target}}"
           },
-          "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -27,7 +27,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Cerydra's Promotion Target}}"
           },
-          "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (PromotionRank_AttackAddedValue) || RETURN",
@@ -61,7 +61,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Cerydra's Promotion Target}}"
           },
-          "modifier": "Standard_Windfury",
+          "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
           "valuePerStack": {
             "_ReplayAbility": 1
           },
@@ -85,7 +85,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "counter": 1,
-          "modifier": "Standard_Windfury",
+          "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
@@ -96,7 +96,7 @@ const configAbility = {
               "scope": "ContextCaster",
               "valueType": "Layer",
               "variableName": "InsertActionCount",
-              "modifierName": "Standard_Windfury",
+              "modifierName": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
               "multiplier": 1
             }
           ]
@@ -120,7 +120,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Cerydra_Template_MaxPointHandle",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1612575312\">Cerydra_Template_MaxPointHandle</a>",
       "parse": [
         {
           "name": "Define Custom Variable",
@@ -184,7 +184,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Cerydra_Template_SelfHandle",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1940085870\">Cerydra_Template_SelfHandle</a>",
       "parse": [
         {
           "name": "IF",
@@ -194,7 +194,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]",
             "invertCondition": true
           },
           "passed": [

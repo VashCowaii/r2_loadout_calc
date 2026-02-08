@@ -152,7 +152,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Beast01_Bonus"
+          "modifier": "<a class=\"gModGreen\" id=\"331621687\">Monster_W2_Beast01_Bonus</a>"
         }
       ],
       "whenAdded": [
@@ -162,13 +162,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Beast01_EffectController"
+          "modifier": "<a class=\"gModGreen\" id=\"-1785060906\">Enemy_W2_Beast01_EffectController</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Beast01_EffectController",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1785060906\">Enemy_W2_Beast01_EffectController</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -335,7 +335,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Beast01_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__331621687\">Monster_W2_Beast01_Bonus</a>",
           "modifierFlags": [
             "Deathrattle",
             "KeepOnDeathrattle"

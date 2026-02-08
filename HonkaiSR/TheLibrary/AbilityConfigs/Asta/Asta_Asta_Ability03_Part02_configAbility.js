@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{All Team Members}}"
       },
-      "modifier": "Asta_Ultimate_SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1589111502\">Asta_Ultimate_SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",
@@ -53,7 +53,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Asta_Eidolon2Flag"
+          "modifier": "<a class=\"gModGreen\" id=\"1558109509\">Asta_Eidolon2Flag</a>"
         }
       ]
     },
@@ -62,7 +62,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Asta_Ultimate_SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1589111502\">Asta_Ultimate_SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"

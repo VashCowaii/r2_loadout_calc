@@ -32,13 +32,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Constance_Eidolon6"
+          "modifier": "<a class=\"gModGreen\" id=\"-919146628\">Constance_Eidolon6</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Constance_Eidolon6",
+          "for": "<a class=\"gModGreen\" id=\"mod__-919146628\">Constance_Eidolon6</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -56,13 +56,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Constance_Eidolon2"
+          "modifier": "<a class=\"gModGreen\" id=\"-986257104\">Constance_Eidolon2</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Constance_Eidolon2_Bonus_OnCharacterCreate",
+          "for": "<a class=\"gModGreen\" id=\"mod__1789407747\">Constance_Eidolon2_Bonus_OnCharacterCreate</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -84,7 +84,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Constance_Ultimate_Weakness[<span class=\"descriptionNumberColor\">Wilt</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1539081164\">Constance_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Wilt</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -112,7 +112,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Eidolon2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-986257104\">Constance_Eidolon2</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -130,7 +130,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Constance_Ultimate_Weakness[<span class=\"descriptionNumberColor\">Wilt</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1539081164\">Constance_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Wilt</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -158,7 +158,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Constance_Eidolon2_Bonus_OnCharacterCreate"
+                  "modifier": "<a class=\"gModGreen\" id=\"1789407747\">Constance_Eidolon2_Bonus_OnCharacterCreate</a>"
                 },
                 "Modifier Deletes Itself"
               ],
@@ -182,13 +182,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Constance_Trace03"
+          "modifier": "<a class=\"gModGreen\" id=\"-2073058540\">Constance_Trace03</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "_M_Constance_Tree03_SpdPreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__1372103601\">_M_Constance_Tree03_SpdPreShow</a>",
           "stackType": "ReplaceByCaster",
           "previewValue": {
             "name": "Modifier: UI Preview",
@@ -216,7 +216,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_Tree03_Property[<span class=\"descriptionNumberColor\">Outgrow the Old, Espouse the New</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"922171575\">Constance_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Outgrow the Old, Espouse the New</span>]",
                   "invertCondition": true
                 }
               ]
@@ -229,7 +229,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "_M_Constance_Tree03_StancePreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__1550002034\">_M_Constance_Tree03_StancePreShow</a>",
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -283,7 +283,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Tree03_Property[<span class=\"descriptionNumberColor\">Outgrow the Old, Espouse the New</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__922171575\">Constance_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Outgrow the Old, Espouse the New</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -318,7 +318,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack",
+          "for": "<a class=\"gModGreen\" id=\"mod__-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -384,8 +384,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Constance_PointB3_AddWeaknessMark",
-                          "referenceModifier": "MReference_Empty",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1477912473\">Constance_PointB3_AddWeaknessMark</a>",
+                          "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>",
                           "casterAssign": "CasterSelf"
                         },
                         {
@@ -394,8 +394,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Constance_PointB3_SPAddMark",
-                          "referenceModifier": "MReference_Empty"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>",
+                          "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
                         }
                       ]
                     }
@@ -407,7 +407,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "_M_Constance_Tree03_AddWeaknessListener",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1302015690\">_M_Constance_Tree03_AddWeaknessListener</a>",
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -429,7 +429,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}.[[getCreator]]"
                       },
-                      "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+                      "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -437,7 +437,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}.[[getCreator]]"
                       },
-                      "modifier": "Constance_PointB3_SPAddMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
                     }
                   ]
                 },
@@ -447,7 +447,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+                  "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -455,7 +455,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_PointB3_SPAddMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -463,7 +463,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                   },
-                  "modifier": "Constance_PointB3_AddWeaknessMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1477912473\">Constance_PointB3_AddWeaknessMark</a>"
                 }
               ]
             },
@@ -486,7 +486,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Constance_PointB3_AddWeaknessMark",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1477912473\">Constance_PointB3_AddWeaknessMark</a>",
                         "casterFilter": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
@@ -541,7 +541,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Constance_PointB3_AddWeaknessMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1477912473\">Constance_PointB3_AddWeaknessMark</a>"
                     }
                   ]
                 },
@@ -556,7 +556,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Constance_PointB3_SPAddMark"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
                       },
                       {
                         "name": "Has Element",
@@ -682,7 +682,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Constance_PointB3_SPAddMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
                     }
                   ]
                 }
@@ -697,7 +697,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                   },
-                  "modifier": "Constance_PointB3_AddWeaknessMark",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1477912473\">Constance_PointB3_AddWeaknessMark</a>",
                   "removeToBeAdded": true
                 },
                 {
@@ -706,7 +706,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_PointB3_SPAddMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -714,7 +714,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
                   },
-                  "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+                  "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
                 },
                 {
                   "name": "IF",
@@ -733,7 +733,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}.[[getCreator]]"
                       },
-                      "modifier": "Constance_PointB3_SPAddMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -741,7 +741,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}.[[getCreator]]"
                       },
-                      "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+                      "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
                     }
                   ]
                 },
@@ -751,7 +751,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+                  "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
                 }
               ]
             },
@@ -764,7 +764,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+                  "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -772,7 +772,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_PointB3_SPAddMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
                 },
                 {
                   "name": "IF",
@@ -791,7 +791,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}.[[getCreator]]"
                       },
-                      "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+                      "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -799,7 +799,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}.[[getCreator]]"
                       },
-                      "modifier": "Constance_PointB3_SPAddMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
                     }
                   ]
                 },
@@ -809,7 +809,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                   },
-                  "modifier": "Constance_PointB3_AddWeaknessMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1477912473\">Constance_PointB3_AddWeaknessMark</a>"
                 }
               ]
             },
@@ -822,7 +822,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+                  "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
                 }
               ],
               "priorityLevel": -85
@@ -836,7 +836,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                   },
-                  "modifier": "Constance_PointB3_AddWeaknessMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1477912473\">Constance_PointB3_AddWeaknessMark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -844,7 +844,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_PointB3_SPAddMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
                 }
               ]
             },
@@ -878,7 +878,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Constance_Tree03_Property[<span class=\"descriptionNumberColor\">Outgrow the Old, Espouse the New</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"922171575\">Constance_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Outgrow the Old, Espouse the New</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -906,7 +906,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Trace03",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2073058540\">Constance_Trace03</a>",
           "stackData": [],
           "latentQueue": [],
           "subModList": [
@@ -916,7 +916,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
               },
-              "modifier": "_M_Constance_Tree03_AddWeaknessListener",
+              "modifier": "<a class=\"gModGreen\" id=\"-1302015690\">_M_Constance_Tree03_AddWeaknessListener</a>",
               "haloStatus": true,
               "includeBattleEvent": true
             },
@@ -926,7 +926,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
               },
-              "modifier": "_M_Constance_Tree03_StancePreShow",
+              "modifier": "<a class=\"gModGreen\" id=\"1550002034\">_M_Constance_Tree03_StancePreShow</a>",
               "haloStatus": true,
               "includeBattleEvent": true
             },
@@ -936,7 +936,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "_M_Constance_Tree03_SpdPreShow",
+              "modifier": "<a class=\"gModGreen\" id=\"1372103601\">_M_Constance_Tree03_SpdPreShow</a>",
               "haloStatus": true,
               "includeBattleEvent": true
             }
@@ -964,7 +964,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Constance_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1768728326\">StageAbility_Maze_Constance_Modifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -972,13 +972,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Constance_Modifier_SuperBreakTrigger"
+          "modifier": "<a class=\"gModGreen\" id=\"661250191\">StageAbility_Maze_Constance_Modifier_SuperBreakTrigger</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "_M_Constance_TechniqueUsage_SuperBreak",
+          "for": "<a class=\"gModGreen\" id=\"mod__-72763137\">_M_Constance_TechniqueUsage_SuperBreak</a>",
           "modifierFlags": [
             "STAT_SuperBreakBuff"
           ],
@@ -988,7 +988,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "DealSuperBreakDamage_DamagePerformance",
+                  "functionName": "<a class=\"gTempYellow\" id=\"2132906314\">DealSuperBreakDamage_DamagePerformance</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
@@ -1006,7 +1006,7 @@ const compositeAbilityObject = {
                   "damageSequence": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "PursuedDamage_PerformanceDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
@@ -1058,7 +1058,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "_M_Constance_TechniqueUsage_SuperBreakTriggerFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"465880923\">_M_Constance_TechniqueUsage_SuperBreakTriggerFlag</a>"
                   },
                   "passed": [
                     {
@@ -1067,11 +1067,11 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "_M_Constance_TechniqueUsage_SuperBreakTriggerFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"465880923\">_M_Constance_TechniqueUsage_SuperBreakTriggerFlag</a>"
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "DealSuperBreakDamage_DamagePerformance",
+                      "functionName": "<a class=\"gTempYellow\" id=\"2132906314\">DealSuperBreakDamage_DamagePerformance</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
@@ -1089,7 +1089,7 @@ const compositeAbilityObject = {
                       "damageSequence": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "PursuedDamage_PerformanceDelay",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
@@ -1139,7 +1139,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Constance_Modifier_SuperBreakTrigger",
+          "for": "<a class=\"gModGreen\" id=\"mod__661250191\">StageAbility_Maze_Constance_Modifier_SuperBreakTrigger</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -1156,7 +1156,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "_M_Constance_TechniqueUsage_SuperBreak"
+                    "modifier": "<a class=\"gModGreen\" id=\"-72763137\">_M_Constance_TechniqueUsage_SuperBreak</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -1165,8 +1165,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "_M_Constance_TechniqueUsage_SuperBreakTriggerFlag",
-                      "referenceModifier": "MReference_Empty"
+                      "modifier": "<a class=\"gModGreen\" id=\"465880923\">_M_Constance_TechniqueUsage_SuperBreakTriggerFlag</a>",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
                     }
                   ]
                 },
@@ -1180,7 +1180,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Constance_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1768728326\">StageAbility_Maze_Constance_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -1200,7 +1200,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Constance_Aura[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2139860773\">Constance_Aura</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -1241,7 +1241,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "_M_Constance_TechniqueUsage_SuperBreak",
+                          "modifier": "<a class=\"gModGreen\" id=\"-72763137\">_M_Constance_TechniqueUsage_SuperBreak</a>",
                           "valuePerStack": {
                             "MDF_DamagePercentage": {
                               "operator": "Variables[0] (0.6) || RETURN",
@@ -1292,7 +1292,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Constance_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-2129474083\">Constance_Passive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1300,7 +1300,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Constance_Ultimate_AddWeaknessPreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"-157877441\">Constance_Ultimate_AddWeaknessPreShow</a>"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -1343,7 +1343,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Constance_ReduceStanceTriggerCD",
+          "for": "<a class=\"gModGreen\" id=\"mod__-534697171\">Constance_ReduceStanceTriggerCD</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -1398,7 +1398,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Constance_ReduceStanceTriggerCD",
+                          "modifier": "<a class=\"gModGreen\" id=\"-534697171\">Constance_ReduceStanceTriggerCD</a>",
                           "removeToBeAdded": true
                         }
                       ]
@@ -1411,7 +1411,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_ReduceStanceTriggerCD",
+                  "modifier": "<a class=\"gModGreen\" id=\"-534697171\">Constance_ReduceStanceTriggerCD</a>",
                   "removeToBeAdded": true
                 }
               ]
@@ -1420,7 +1420,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Eidolon1_ReduceStance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1348225368\">Constance_Eidolon1_ReduceStance</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -1465,7 +1465,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Constance_ReduceStanceTriggerCD",
+                        "modifier": "<a class=\"gModGreen\" id=\"-534697171\">Constance_ReduceStanceTriggerCD</a>",
                         "invertCondition": true
                       }
                     ]
@@ -1528,7 +1528,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Constance_ReduceStanceTriggerCD"
+                      "modifier": "<a class=\"gModGreen\" id=\"-534697171\">Constance_ReduceStanceTriggerCD</a>"
                     }
                   ]
                 }
@@ -1538,7 +1538,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_StancePreview",
+          "for": "<a class=\"gModGreen\" id=\"mod__-935652084\">Constance_StancePreview</a>",
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1604,7 +1604,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Constance_ReduceStanceTriggerCD",
+                  "modifier": "<a class=\"gModGreen\" id=\"-534697171\">Constance_ReduceStanceTriggerCD</a>",
                   "invertCondition": true
                 }
               ]
@@ -1613,7 +1613,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "_M_Constance_Aura_ElementDamage",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1409392867\">_M_Constance_Aura_ElementDamage</a>",
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -1631,7 +1631,7 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "DealSuperBreakDamage_DamagePerformance",
+                      "functionName": "<a class=\"gTempYellow\" id=\"2132906314\">DealSuperBreakDamage_DamagePerformance</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
@@ -1649,7 +1649,7 @@ const compositeAbilityObject = {
                       "damageSequence": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "PursuedDamage_PerformanceDelay",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
@@ -1698,7 +1698,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Eidolon1_SuperBreak[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__793524292\">Constance_Eidolon1_SuperBreak</a>[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "STAT_SuperBreakBuff"
@@ -1713,7 +1713,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "_M_Constance_Aura_ElementDamage",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1409392867\">_M_Constance_Aura_ElementDamage</a>",
                   "valuePerStack": {
                     "MDF_SuperBreakDamagePercentage": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1736,7 +1736,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                   },
                   "passed": [
                     "Modifier Deletes Itself"
@@ -1751,7 +1751,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_DancerSuperBreak",
+          "for": "<a class=\"gModGreen\" id=\"mod__262562001\">Constance_DancerSuperBreak</a>",
           "modifierFlags": [
             "STAT_SuperBreakBuff"
           ],
@@ -1761,7 +1761,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Modifier-Specific Variable",
-                  "modifierName": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]",
                   "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1783,7 +1783,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "_M_Constance_Aura_ElementDamage",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1409392867\">_M_Constance_Aura_ElementDamage</a>",
                   "valuePerStack": {
                     "MDF_SuperBreakDamagePercentage": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1803,7 +1803,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Dancer_UITOP",
+          "for": "<a class=\"gModGreen\" id=\"mod__856745501\">Constance_Dancer_UITOP</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1828,7 +1828,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -1858,7 +1858,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}} - {{Modifier Holder}}"
                       },
-                      "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                     }
                   ]
                 }
@@ -1875,7 +1875,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_DancerSuperBreak",
+              "modifier": "<a class=\"gModGreen\" id=\"262562001\">Constance_DancerSuperBreak</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (Rank01_Activated) || Variables[1] (0.6) || Variables[2] (0.4) || ADD || Variables[1] (0.6) || CHECK || RETURN",
@@ -1895,7 +1895,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_Dancer_UITOP"
+              "modifier": "<a class=\"gModGreen\" id=\"856745501\">Constance_Dancer_UITOP</a>"
             },
             {
               "name": "Add Sub-Events/Bonuses",
@@ -1903,7 +1903,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_StancePreview",
+              "modifier": "<a class=\"gModGreen\" id=\"-935652084\">Constance_StancePreview</a>",
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 1
@@ -1941,7 +1941,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_Eidolon1_ReduceStance",
+              "modifier": "<a class=\"gModGreen\" id=\"-1348225368\">Constance_Eidolon1_ReduceStance</a>",
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 1
@@ -1977,7 +1977,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "_M_Constance_ListenInsert_SubOnEnemy",
+          "for": "<a class=\"gModGreen\" id=\"mod__-783629950\">_M_Constance_ListenInsert_SubOnEnemy</a>",
           "execute": [
             {
               "eventTrigger": "Being Attacked End [Owner]",
@@ -2011,7 +2011,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Constance_InsertCD[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1116970838\">Constance_InsertCD</a>[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]",
                         "invertCondition": true
                       },
                       {
@@ -2032,7 +2032,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                       }
                     ]
                   },
@@ -2080,7 +2080,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "_M_Constance_InsertCheck"
+                          "modifier": "<a class=\"gModGreen\" id=\"-2093019273\">_M_Constance_InsertCheck</a>"
                         }
                       ]
                     }
@@ -2092,7 +2092,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "_M_Constance_DancerManager",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1358334362\">_M_Constance_DancerManager</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2103,7 +2103,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                 },
                 {
                   "name": "Find New Target",
@@ -2127,7 +2127,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                     }
                   ],
                   "noTargetFound": [
@@ -2137,7 +2137,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[livingOrLimbo]].[[sortByBreakEffect]].[[reverse]].[[index0]]"
                       },
-                      "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                     }
                   ]
                 },
@@ -2160,7 +2160,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[removeMemosprite]] - {{Dahlia's Dance Partners}}"
                       },
-                      "modifier": "Constance_Eidolon1_SuperBreak[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"793524292\">Constance_Eidolon1_SuperBreak</a>[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.6) || RETURN",
@@ -2215,7 +2215,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[livingOrLimbo]].[[sortByBreakEffect]].[[reverse]].[[index0]]"
                       },
-                      "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                     }
                   ]
                 },
@@ -2242,7 +2242,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]",
                         "invertCondition": true
                       },
                       {
@@ -2264,7 +2264,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Constance_Eidolon1_SuperBreak[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"793524292\">Constance_Eidolon1_SuperBreak</a>[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.6) || RETURN",
@@ -2290,7 +2290,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                       },
                       {
                         "name": "Living State",
@@ -2319,7 +2319,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[livingOrLimbo]].[[sortByBreakEffect]].[[reverse]].[[index0]]"
                       },
-                      "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                     }
                   ]
                 }
@@ -2329,7 +2329,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Ultimate_AddWeaknessPreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-157877441\">Constance_Ultimate_AddWeaknessPreShow</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -2344,7 +2344,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Eidolon2_PropertyValue[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1624350031\">Constance_Eidolon2_PropertyValue</a>[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -2381,7 +2381,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Eidolon2_Halo",
+          "for": "<a class=\"gModGreen\" id=\"mod__-817970553\">Constance_Eidolon2_Halo</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2392,7 +2392,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                   },
-                  "modifier": "Constance_Eidolon2_PropertyValue[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1624350031\">Constance_Eidolon2_PropertyValue</a>[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2430,7 +2430,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Constance_Eidolon2_PropertyValue[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1624350031\">Constance_Eidolon2_PropertyValue</a>[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2450,7 +2450,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_MonsterPhaseChangeControl",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1614707802\">Constance_MonsterPhaseChangeControl</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "CustomEvent_MonsterChangePhaseTrigger"
@@ -2481,7 +2481,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Enemy_Standard_ChangephaseMark"
+                        "modifier": "<a class=\"gModGreen\" id=\"-2049832737\">Enemy_Standard_ChangephaseMark</a>"
                       }
                     ]
                   },
@@ -2492,7 +2492,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Constance_ReduceStanceTriggerCD",
+                      "modifier": "<a class=\"gModGreen\" id=\"-534697171\">Constance_ReduceStanceTriggerCD</a>",
                       "removeToBeAdded": true
                     }
                   ]
@@ -2503,7 +2503,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Eidolon6_Property[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1127015724\">Constance_Eidolon6_Property</a>[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -2537,7 +2537,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Eidolon6_PropertyListen",
+          "for": "<a class=\"gModGreen\" id=\"mod__-293054449\">Constance_Eidolon6_PropertyListen</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -2548,7 +2548,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Dahlia's Dance Partners}}"
                   },
-                  "modifier": "Constance_Eidolon6_Property[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1127015724\">Constance_Eidolon6_Property</a>[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2570,7 +2570,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                   },
                   "passed": [
                     {
@@ -2579,7 +2579,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Constance_Eidolon6_Property[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1127015724\">Constance_Eidolon6_Property</a>[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2599,7 +2599,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Tree01_Property[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1852842917\">Constance_Tree01_Property</a>[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2660,7 +2660,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_ListenTrace01",
+          "for": "<a class=\"gModGreen\" id=\"mod__1188679067\">Constance_ListenTrace01</a>",
           "execute": [
             {
               "eventTrigger": "Receiving Heal End [Owner]",
@@ -2688,7 +2688,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "_M_Constance_Tree01_CD",
+                        "modifier": "<a class=\"gModGreen\" id=\"1979766411\">_M_Constance_Tree01_CD</a>",
                         "invertCondition": true
                       }
                     ]
@@ -2700,8 +2700,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "_M_Constance_Tree01_CD",
-                      "referenceModifier": "MReference_Mark_RemoveOnTurnEnd"
+                      "modifier": "<a class=\"gModGreen\" id=\"1979766411\">_M_Constance_Tree01_CD</a>",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"-1664553013\">MReference_Mark_RemoveOnTurnEnd</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2709,7 +2709,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]] - {{Caster}}"
                       },
-                      "modifier": "Constance_Tree01_Property[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1852842917\">Constance_Tree01_Property</a>[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -2741,7 +2741,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]] - {{Caster}}"
                       },
-                      "modifier": "Constance_Tree01_Property[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1852842917\">Constance_Tree01_Property</a>[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -2793,7 +2793,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "_M_Constance_Tree01_CD",
+                        "modifier": "<a class=\"gModGreen\" id=\"1979766411\">_M_Constance_Tree01_CD</a>",
                         "invertCondition": true
                       }
                     ]
@@ -2805,8 +2805,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "_M_Constance_Tree01_CD",
-                      "referenceModifier": "MReference_Mark_RemoveOnTurnEnd"
+                      "modifier": "<a class=\"gModGreen\" id=\"1979766411\">_M_Constance_Tree01_CD</a>",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"-1664553013\">MReference_Mark_RemoveOnTurnEnd</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2814,7 +2814,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]] - {{Caster}}"
                       },
-                      "modifier": "Constance_Tree01_Property[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1852842917\">Constance_Tree01_Property</a>[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -2832,7 +2832,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2129474083\">Constance_Passive</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -2871,7 +2871,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "_M_Constance_DancerManager"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1358334362\">_M_Constance_DancerManager</a>"
                     }
                   ]
                 }
@@ -2888,7 +2888,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Constance_MonsterPhaseChangeControl",
+              "modifier": "<a class=\"gModGreen\" id=\"-1614707802\">Constance_MonsterPhaseChangeControl</a>",
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 1
@@ -2900,7 +2900,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Constance_Eidolon6_PropertyListen",
+              "modifier": "<a class=\"gModGreen\" id=\"-293054449\">Constance_Eidolon6_PropertyListen</a>",
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 6
@@ -2922,7 +2922,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Constance_ListenTrace01",
+              "modifier": "<a class=\"gModGreen\" id=\"1188679067\">Constance_ListenTrace01</a>",
               "conditions": {
                 "name": "Trace Activated",
                 "conditionList": "Yet Another Funeral"
@@ -2934,7 +2934,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Constance_Eidolon2_Halo",
+              "modifier": "<a class=\"gModGreen\" id=\"-817970553\">Constance_Eidolon2_Halo</a>",
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 2
@@ -2956,7 +2956,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "_M_Constance_ListenInsert_SubOnEnemy",
+              "modifier": "<a class=\"gModGreen\" id=\"-783629950\">_M_Constance_ListenInsert_SubOnEnemy</a>",
               "aliveOnly": "False",
               "haloStatus": true
             }
@@ -2983,7 +2983,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "Constance_Eidolon4_Property[<span class=\"descriptionNumberColor\">Pity Its Heart Gnawed by Worms</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-380368106\">Constance_Eidolon4_Property</a>[<span class=\"descriptionNumberColor\">Pity Its Heart Gnawed by Worms</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -3011,7 +3011,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Constance_InsertCD[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1116970838\">Constance_InsertCD</a>[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3019,7 +3019,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "_M_Constance_InsertCheck"
+          "modifier": "<a class=\"gModGreen\" id=\"-2093019273\">_M_Constance_InsertCheck</a>"
         },
         {
           "name": "IF",
@@ -3036,7 +3036,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Constance_Tree02_CD[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
                 "invertCondition": true
               },
               "passed": [
@@ -3051,7 +3051,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Constance_Tree02_CD[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
                   "counter": {
                     "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(2 - 1)",
@@ -3071,7 +3071,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "Constance_Tree02_CD[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
                   "function": "Add"
                 }
               ]
@@ -3143,7 +3143,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "ReduceNextActionDelay",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1527090005\">ReduceNextActionDelay</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Dahlia's Dance Partners}}"
@@ -3174,7 +3174,7 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -3202,7 +3202,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "_M_Constance_Insert_StanceRecorded"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -3245,7 +3245,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "_M_Constance_Insert_StanceRecorded"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>"
                   },
                   "passed": [
                     {
@@ -3254,7 +3254,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "_M_Constance_Insert_StanceRecorded",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>",
                       "variable": "MDF_TotalStanceDamage",
                       "target2": null,
                       "variable2": "ADF_StanceValue",
@@ -3262,7 +3262,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "DealSuperBreakDamage",
+                      "functionName": "<a class=\"gTempYellow\" id=\"795502164\">DealSuperBreakDamage</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
@@ -3292,7 +3292,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "_M_Constance_Insert_StanceRecorded"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>"
                     }
                   ]
                 }
@@ -3305,7 +3305,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "_M_Constance_Insert_StanceRecorded",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1229984298\">_M_Constance_Insert_StanceRecorded</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -3378,7 +3378,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Tree02_CD[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
           "stackData": [],
           "latentQueue": [],
           "description": "After using Talent's Follow-Up ATK <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s), the Skill Point recovery effect from \"Lament, Lost Soul\" can be triggered again.",
@@ -3387,7 +3387,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Eidolon4_Property[<span class=\"descriptionNumberColor\">Pity Its Heart Gnawed by Worms</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-380368106\">Constance_Eidolon4_Property</a>[<span class=\"descriptionNumberColor\">Pity Its Heart Gnawed by Worms</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3487,7 +3487,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "_M_Constance_InsertCheck"
+              "modifier": "<a class=\"gModGreen\" id=\"-2093019273\">_M_Constance_InsertCheck</a>"
             }
           ]
         }
@@ -3499,7 +3499,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "_M_Constance_InsertCheck"
+          "modifier": "<a class=\"gModGreen\" id=\"-2093019273\">_M_Constance_InsertCheck</a>"
         }
       ],
       "references": []
@@ -3516,7 +3516,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Constance_Ultimate_Weakness[<span class=\"descriptionNumberColor\">Wilt</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1539081164\">Constance_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Wilt</span>]",
           "duration": {
             "operator": "Variables[0] (4) || RETURN",
             "displayLines": "4",
@@ -3666,7 +3666,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Constance_Aura[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-2139860773\">Constance_Aura</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -3857,7 +3857,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "_M_Constance_InsertCheck",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2093019273\">_M_Constance_InsertCheck</a>",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
@@ -3867,7 +3867,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Constance_InsertRetargetSelf"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
                 }
               ]
             },
@@ -3882,7 +3882,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Constance_InsertRetargetSelf"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
                 }
               ],
               "priorityLevel": -55
@@ -3892,7 +3892,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Constance_InsertRetargetSelf"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
                 }
               ]
             },
@@ -3901,7 +3901,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Constance_InsertRetargetSelf"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
                 }
               ]
             },
@@ -3938,7 +3938,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Constance_InsertRetargetSelf"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
                     }
                   ]
                 }
@@ -3948,7 +3948,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Constance_InsertRetargetSelf",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-715058594\">Constance_InsertRetargetSelf</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -3995,7 +3995,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_InsertCD[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1116970838\">Constance_InsertCD</a>[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4008,7 +4008,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Constance_Aura[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2139860773\">Constance_Aura</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]"
                   },
                   "passed": [
                     {
@@ -4053,7 +4053,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Ultimate_Weakness_Sub_Imaginary",
+          "for": "<a class=\"gModGreen\" id=\"mod__628099091\">Constance_Ultimate_Weakness_Sub_Imaginary</a>",
           "stackType": "EntityUnique",
           "execute": [
             {
@@ -4076,7 +4076,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Ultimate_Weakness_Sub_Quantum",
+          "for": "<a class=\"gModGreen\" id=\"mod__1073816607\">Constance_Ultimate_Weakness_Sub_Quantum</a>",
           "stackType": "EntityUnique",
           "execute": [
             {
@@ -4099,7 +4099,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Ultimate_Weakness_Sub_Wind",
+          "for": "<a class=\"gModGreen\" id=\"mod__1412482872\">Constance_Ultimate_Weakness_Sub_Wind</a>",
           "stackType": "EntityUnique",
           "execute": [
             {
@@ -4122,7 +4122,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Ultimate_Weakness_Sub_Thunder",
+          "for": "<a class=\"gModGreen\" id=\"mod__1441945696\">Constance_Ultimate_Weakness_Sub_Thunder</a>",
           "stackType": "EntityUnique",
           "execute": [
             {
@@ -4145,7 +4145,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Ultimate_Weakness_Sub_Ice",
+          "for": "<a class=\"gModGreen\" id=\"mod__-401157135\">Constance_Ultimate_Weakness_Sub_Ice</a>",
           "stackType": "EntityUnique",
           "execute": [
             {
@@ -4168,7 +4168,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Ultimate_Weakness_Sub_Fire",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2114479442\">Constance_Ultimate_Weakness_Sub_Fire</a>",
           "stackType": "EntityUnique",
           "execute": [
             {
@@ -4191,7 +4191,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Ultimate_Weakness_Sub_Physical",
+          "for": "<a class=\"gModGreen\" id=\"mod__-447864201\">Constance_Ultimate_Weakness_Sub_Physical</a>",
           "stackType": "EntityUnique",
           "execute": [
             {
@@ -4214,7 +4214,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Ultimate_Weakness[<span class=\"descriptionNumberColor\">Wilt</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1539081164\">Constance_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Wilt</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttachWeakness",
@@ -4244,7 +4244,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "_T_Constance_RefreshWeakness"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-29129894\">_T_Constance_RefreshWeakness</a>"
                 }
               ]
             },
@@ -4255,12 +4255,12 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "_T_Constance_RefreshWeakness"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-29129894\">_T_Constance_RefreshWeakness</a>"
                     }
                   ]
                 }
@@ -4270,7 +4270,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "_T_Constance_RefreshWeakness",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-29129894\">_T_Constance_RefreshWeakness</a>",
               "parse": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -4278,7 +4278,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_Ultimate_Weakness_Sub_Physical",
+                  "modifier": "<a class=\"gModGreen\" id=\"-447864201\">Constance_Ultimate_Weakness_Sub_Physical</a>",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -4287,7 +4287,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_Ultimate_Weakness_Sub_Fire",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2114479442\">Constance_Ultimate_Weakness_Sub_Fire</a>",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -4296,7 +4296,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_Ultimate_Weakness_Sub_Ice",
+                  "modifier": "<a class=\"gModGreen\" id=\"-401157135\">Constance_Ultimate_Weakness_Sub_Ice</a>",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -4305,7 +4305,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_Ultimate_Weakness_Sub_Thunder",
+                  "modifier": "<a class=\"gModGreen\" id=\"1441945696\">Constance_Ultimate_Weakness_Sub_Thunder</a>",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -4314,7 +4314,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_Ultimate_Weakness_Sub_Wind",
+                  "modifier": "<a class=\"gModGreen\" id=\"1412482872\">Constance_Ultimate_Weakness_Sub_Wind</a>",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -4323,7 +4323,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_Ultimate_Weakness_Sub_Quantum",
+                  "modifier": "<a class=\"gModGreen\" id=\"1073816607\">Constance_Ultimate_Weakness_Sub_Quantum</a>",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -4332,7 +4332,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_Ultimate_Weakness_Sub_Imaginary",
+                  "modifier": "<a class=\"gModGreen\" id=\"628099091\">Constance_Ultimate_Weakness_Sub_Imaginary</a>",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -4364,7 +4364,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Constance_Ultimate_Weakness_Sub_Physical",
+                              "modifier": "<a class=\"gModGreen\" id=\"-447864201\">Constance_Ultimate_Weakness_Sub_Physical</a>",
                               "silentAdd": true
                             }
                           ]
@@ -4379,7 +4379,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Constance_Ultimate_Weakness_Sub_Fire",
+                              "modifier": "<a class=\"gModGreen\" id=\"-2114479442\">Constance_Ultimate_Weakness_Sub_Fire</a>",
                               "silentAdd": true
                             }
                           ]
@@ -4394,7 +4394,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Constance_Ultimate_Weakness_Sub_Ice",
+                              "modifier": "<a class=\"gModGreen\" id=\"-401157135\">Constance_Ultimate_Weakness_Sub_Ice</a>",
                               "silentAdd": true
                             }
                           ]
@@ -4409,7 +4409,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Constance_Ultimate_Weakness_Sub_Thunder",
+                              "modifier": "<a class=\"gModGreen\" id=\"1441945696\">Constance_Ultimate_Weakness_Sub_Thunder</a>",
                               "silentAdd": true
                             }
                           ]
@@ -4424,7 +4424,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Constance_Ultimate_Weakness_Sub_Wind",
+                              "modifier": "<a class=\"gModGreen\" id=\"1412482872\">Constance_Ultimate_Weakness_Sub_Wind</a>",
                               "silentAdd": true
                             }
                           ]
@@ -4439,7 +4439,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Constance_Ultimate_Weakness_Sub_Quantum",
+                              "modifier": "<a class=\"gModGreen\" id=\"1073816607\">Constance_Ultimate_Weakness_Sub_Quantum</a>",
                               "silentAdd": true
                             }
                           ]
@@ -4454,7 +4454,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Constance_Ultimate_Weakness_Sub_Imaginary",
+                              "modifier": "<a class=\"gModGreen\" id=\"628099091\">Constance_Ultimate_Weakness_Sub_Imaginary</a>",
                               "silentAdd": true
                             }
                           ]
@@ -4478,7 +4478,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Aura_OnEnemy[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1701170235\">Constance_Aura_OnEnemy</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
           "modifierFlags": [
             "STAT_ForceSuperBreakDamage"
           ],
@@ -4488,7 +4488,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Constance_Aura[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2139860773\">Constance_Aura</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -4605,7 +4605,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Constance_Aura_OnEnemy[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1701170235\">Constance_Aura_OnEnemy</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
               "aliveOnly": "False",
               "haloStatus": true
             },
@@ -4615,8 +4615,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
               },
-              "modifier": "Constance_Aura_OnTeam[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
-              "refModifier": "MReference_StanceBreakAddedRatio",
+              "modifier": "<a class=\"gModGreen\" id=\"-152934148\">Constance_Aura_OnTeam</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+              "refModifier": "<a class=\"gModGreen\" id=\"1782063048\">MReference_StanceBreakAddedRatio</a>",
               "aliveOnly": "False",
               "haloStatus": true,
               "valuePerStack": {

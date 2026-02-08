@@ -33,7 +33,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Standard_Entangle[<span class=\"descriptionNumberColor\">Entanglement</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
         "displayLines": "{[Skill05[2]]}",

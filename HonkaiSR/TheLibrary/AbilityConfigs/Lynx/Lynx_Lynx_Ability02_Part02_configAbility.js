@@ -63,7 +63,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Lynx_HPAddedRatio02[<span class=\"descriptionNumberColor\">Survival Response</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -130,7 +130,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Lynx_HPAddedRatio02[<span class=\"descriptionNumberColor\">Survival Response</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -220,7 +220,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Lynx_HPAddedRatio01[<span class=\"descriptionNumberColor\">Survival Response</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -277,7 +277,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Lynx_HPAddedRatio01[<span class=\"descriptionNumberColor\">Survival Response</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -336,7 +336,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Lynx_Eidolon2_Resist[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1832848148\">Lynx_Eidolon2_Resist</a>[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
         }
       ]
     },
@@ -353,7 +353,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Lynx_Eidolon4_AddAttackRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-96135638\">Lynx_Eidolon4_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -414,7 +414,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
           "duration": {
             "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
             "displayLines": "(2 + 1)",
@@ -467,7 +467,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",

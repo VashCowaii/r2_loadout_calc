@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Kafka_Eidolon4_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__1654241048\">Advanced_Kafka_Eidolon4_Sub</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -91,7 +91,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Kafka_Eidolon4",
+      "for": "<a class=\"gModGreen\" id=\"mod__1764225041\">Advanced_Kafka_Eidolon4</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -113,7 +113,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Advanced_Kafka_Eidolon4_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"1654241048\">Advanced_Kafka_Eidolon4_Sub</a>"
                 }
               ]
             }
@@ -129,7 +129,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Kafka_PassiveDotDamage_Eidolon1[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1537350177\">Advanced_Kafka_PassiveDotDamage_Eidolon1</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -174,7 +174,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Kafka_Friend_Mark_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-671501657\">Advanced_Kafka_Friend_Mark_Main</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -195,7 +195,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Advanced_Kafka_Friend_Mark_Main"
+                "modifier": "<a class=\"gModGreen\" id=\"-671501657\">Advanced_Kafka_Friend_Mark_Main</a>"
               },
               "ifTargetFound": [
                 {
@@ -204,7 +204,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Advanced_Kafka_Friend_Mark_Main"
+                  "modifier": "<a class=\"gModGreen\" id=\"-671501657\">Advanced_Kafka_Friend_Mark_Main</a>"
                 }
               ]
             }

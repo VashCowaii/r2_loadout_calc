@@ -15,7 +15,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
       "valuePerStack": {
         "MDF_PropertyRatio": {
           "operator": "Variables[0] (0.8) || RETURN",

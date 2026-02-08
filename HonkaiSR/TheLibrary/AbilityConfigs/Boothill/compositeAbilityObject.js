@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Boothill_Eidolon6"
+          "modifier": "<a class=\"gModGreen\" id=\"841247203\">Boothill_Eidolon6</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Boothill_Eidolon6",
+          "for": "<a class=\"gModGreen\" id=\"mod__841247203\">Boothill_Eidolon6</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -58,13 +58,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Boothill_Eidolon1"
+          "modifier": "<a class=\"gModGreen\" id=\"925135298\">Boothill_Eidolon1</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Boothill_Eidolon1",
+          "for": "<a class=\"gModGreen\" id=\"mod__925135298\">Boothill_Eidolon1</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -155,7 +155,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Boothill_SelfModification[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1894494257\">Boothill_SelfModification</a>[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -208,13 +208,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Boothill_Trace02"
+          "modifier": "<a class=\"gModGreen\" id=\"-1030918601\">M_Boothill_Trace02</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Boothill_Trace02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1030918601\">M_Boothill_Trace02</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -230,7 +230,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                       },
                       {
                         "name": "OR",
@@ -241,7 +241,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                           },
                           {
                             "name": "Has Modifier",
@@ -249,7 +249,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target's Source Owner}}"
                             },
-                            "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                           }
                         ],
                         "invertCondition": true
@@ -289,13 +289,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Boothill_Trace01"
+          "modifier": "<a class=\"gModGreen\" id=\"-1014140982\">M_Boothill_Trace01</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Boothill_Trace01_Sub2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-314049053\">M_Boothill_Trace01_Sub2</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -323,7 +323,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Boothill_Trace01_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__2136671299\">M_Boothill_Trace01_Sub</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -351,7 +351,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Boothill_Trace01",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1014140982\">M_Boothill_Trace01</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -374,7 +374,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Boothill_Trace01_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"2136671299\">M_Boothill_Trace01_Sub</a>",
                   "valuePerStack": {
                     "MDF_ConvertPropertyRatio": {
                       "operator": "Variables[0] (MIN) || Variables[1] (CasterBreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.3) || PARAM_2 || FUNCTION || RETURN",
@@ -395,7 +395,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Boothill_Trace01_Sub2",
+                  "modifier": "<a class=\"gModGreen\" id=\"-314049053\">M_Boothill_Trace01_Sub2</a>",
                   "valuePerStack": {
                     "MDF_ConvertPropertyRatio": {
                       "operator": "Variables[0] (MIN) || Variables[1] (CasterBreakDamageAdded) || Variables[2] (0.5) || MUL || Variables[3] (1.5) || PARAM_2 || FUNCTION || RETURN",
@@ -439,7 +439,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Boothill_Trace01_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"2136671299\">M_Boothill_Trace01_Sub</a>",
                       "valuePerStack": {
                         "MDF_ConvertPropertyRatio": {
                           "operator": "Variables[0] (MIN) || Variables[1] (CasterBreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.3) || PARAM_2 || FUNCTION || RETURN",
@@ -460,7 +460,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Boothill_Trace01_Sub2",
+                      "modifier": "<a class=\"gModGreen\" id=\"-314049053\">M_Boothill_Trace01_Sub2</a>",
                       "valuePerStack": {
                         "MDF_ConvertPropertyRatio": {
                           "operator": "Variables[0] (MIN) || Variables[1] (CasterBreakDamageAdded) || Variables[2] (0.5) || MUL || Variables[3] (1.5) || PARAM_2 || FUNCTION || RETURN",
@@ -498,13 +498,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Boothill_GainEnhance"
+          "modifier": "<a class=\"gModGreen\" id=\"-951211001\">M_Boothill_GainEnhance</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Boothill_GainEnhance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-951211001\">M_Boothill_GainEnhance</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -558,7 +558,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Boothill_SelfModification[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1894494257\">Boothill_SelfModification</a>[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -626,13 +626,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Boothill_Maze"
+          "modifier": "<a class=\"gModGreen\" id=\"773572399\">M_Boothill_Maze</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Boothill_TechniqueUsage_Ability02[<span class=\"descriptionNumberColor\">3-9× Smile</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1740127883\">Boothill_TechniqueUsage_Ability02</a>[<span class=\"descriptionNumberColor\">3-9× Smile</span>]",
           "description": "The first time the Skill is used in a battle, applies the same Physical Weakness to one designated enemy target as the one induced by the Ultimate, lasting for <span class=\"descriptionNumberColor\">MDF_Lifetime</span> turn(s).",
           "type": "Other",
           "statusName": "3-9× Smile",
@@ -647,7 +647,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Boothill_Maze",
+          "for": "<a class=\"gModGreen\" id=\"mod__773572399\">M_Boothill_Maze</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -667,7 +667,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Boothill_TechniqueUsage_Ability02[<span class=\"descriptionNumberColor\">3-9× Smile</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1740127883\">Boothill_TechniqueUsage_Ability02</a>[<span class=\"descriptionNumberColor\">3-9× Smile</span>]",
                       "valuePerStack": {
                         "MDF_Lifetime": {
                           "operator": "Variables[0] (2) || RETURN",
@@ -710,7 +710,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Boothill_StancePreview"
+          "modifier": "<a class=\"gModGreen\" id=\"909277085\">Boothill_StancePreview</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -718,7 +718,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Boothill_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-748622640\">Boothill_Passive</a>"
         },
         {
           "name": "IF",
@@ -782,7 +782,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Boothill_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-748622640\">Boothill_Passive</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -827,7 +827,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                           }
                         ]
                       },
@@ -838,7 +838,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "M_Boothill_AutoWinDuelTag",
+                          "modifier": "<a class=\"gModGreen\" id=\"837506667\">M_Boothill_AutoWinDuelTag</a>",
                           "addStacksPerTrigger": 1
                         }
                       ]
@@ -867,7 +867,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "M_Boothill_AutoWinDuelTag"
+                        "modifier": "<a class=\"gModGreen\" id=\"837506667\">M_Boothill_AutoWinDuelTag</a>"
                       },
                       {
                         "name": "Has Modifier",
@@ -875,7 +875,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                       }
                     ]
                   },
@@ -886,7 +886,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Boothill_SelfModification[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1894494257\">Boothill_SelfModification</a>[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -1074,7 +1074,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Boothill_StancePreview",
+          "for": "<a class=\"gModGreen\" id=\"mod__909277085\">Boothill_StancePreview</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -1103,7 +1103,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Boothill_Ultimate_PhysicalWeakness[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1234556186\">Boothill_Ultimate_PhysicalWeakness</a>[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1195,13 +1195,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Boothill_Ability03PreShowModifierTarget"
+          "modifier": "<a class=\"gModGreen\" id=\"-913559917\">Boothill_Ability03PreShowModifierTarget</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Boothill_Ability03PreShowModifierTarget",
+          "for": "<a class=\"gModGreen\" id=\"mod__-913559917\">Boothill_Ability03PreShowModifierTarget</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -1292,7 +1292,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
           }
         }
       ],
@@ -1312,7 +1312,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Boothill_TechniqueUsage_Ability02[<span class=\"descriptionNumberColor\">3-9× Smile</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1740127883\">Boothill_TechniqueUsage_Ability02</a>[<span class=\"descriptionNumberColor\">3-9× Smile</span>]"
           },
           "passed": [
             {
@@ -1321,7 +1321,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Boothill_Ultimate_PhysicalWeakness[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1234556186\">Boothill_Ultimate_PhysicalWeakness</a>[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1337,7 +1337,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Boothill_TechniqueUsage_Ability02[<span class=\"descriptionNumberColor\">3-9× Smile</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1740127883\">Boothill_TechniqueUsage_Ability02</a>[<span class=\"descriptionNumberColor\">3-9× Smile</span>]"
             }
           ]
         },
@@ -1354,7 +1354,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1381,7 +1381,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
                   "operator": "Variables[0] (0.3) || Variables[1] (0.12) || ADD || RETURN",
@@ -1402,7 +1402,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1428,7 +1428,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
                   "operator": "Variables[0] (0.3) || RETURN",
@@ -1448,7 +1448,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Boothill_Ability02_ContinuousCheck"
+          "modifier": "<a class=\"gModGreen\" id=\"-1862582819\">M_Boothill_Ability02_ContinuousCheck</a>"
         },
         {
           "name": "Inject Extra-Turn",
@@ -1463,7 +1463,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Boothill_Eidolon4_DamageReduce",
+          "for": "<a class=\"gModGreen\" id=\"mod__1604810561\">Boothill_Eidolon4_DamageReduce</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -1502,7 +1502,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                   },
                   "passed": [
                     {
@@ -1536,14 +1536,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Boothill_Ability02_ContinuousCheck",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1862582819\">M_Boothill_Ability02_ContinuousCheck</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Anyone]: Start",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Boothill_Ability02_NotContinuous"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1884487363\">Boothill_Ability02_NotContinuous</a>"
                 }
               ]
             },
@@ -1552,7 +1552,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Boothill_Ability02_NotContinuous"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1884487363\">Boothill_Ability02_NotContinuous</a>"
                 }
               ]
             },
@@ -1561,7 +1561,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Boothill_Ability02_NotContinuous"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1884487363\">Boothill_Ability02_NotContinuous</a>"
                 }
               ]
             },
@@ -1570,7 +1570,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Boothill_Ability02_NotContinuous"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1884487363\">Boothill_Ability02_NotContinuous</a>"
                 }
               ]
             }
@@ -1578,7 +1578,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Boothill_Ability02_NotContinuous",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1884487363\">Boothill_Ability02_NotContinuous</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -1662,27 +1662,27 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "One_Shot"
+          "functionName": "<a class=\"gTempYellow\" id=\"1166126384\">One_Shot</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "One_Shot"
+          "functionName": "<a class=\"gTempYellow\" id=\"1166126384\">One_Shot</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "One_Shot"
+          "functionName": "<a class=\"gTempYellow\" id=\"1166126384\">One_Shot</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "One_Shot"
+          "functionName": "<a class=\"gTempYellow\" id=\"1166126384\">One_Shot</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "One_Shot"
+          "functionName": "<a class=\"gTempYellow\" id=\"1166126384\">One_Shot</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "One_Shot_Final"
+          "functionName": "<a class=\"gTempYellow\" id=\"-824172561\">One_Shot_Final</a>"
         },
         {
           "name": "IF",
@@ -2122,13 +2122,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Boothill_Ability11_StancePreview"
+          "modifier": "<a class=\"gModGreen\" id=\"-1599304772\">M_Boothill_Ability11_StancePreview</a>"
         }
       ],
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "One_Shot",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1166126384\">One_Shot</a>",
           "parse": [
             {
               "name": "ATK Scaling DMG",
@@ -2177,7 +2177,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "One_Shot_Final",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-824172561\">One_Shot_Final</a>",
           "parse": [
             {
               "name": "ATK Scaling DMG",
@@ -2228,7 +2228,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Boothill_Ability11_StancePreview",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1599304772\">M_Boothill_Ability11_StancePreview</a>",
           "stackData": [],
           "latentQueue": [
             "_enhance_before_attack",
@@ -2244,7 +2244,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
             },
             "multiplier": {
               "operator": "Constants[0] (1) || Variables[0] (CurEnhance) || Variables[1] (0.5) || MUL || ADD || RETURN",
@@ -2464,7 +2464,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Boothill_Eidolon2_CD[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__827570007\">Boothill_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -2479,7 +2479,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Boothill_Eidolon2_Enhance[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__455996650\">Boothill_Eidolon2_Enhance</a>[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2510,7 +2510,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Boothill_SelfModification[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1894494257\">Boothill_SelfModification</a>[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2549,7 +2549,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                   },
                   "passed": [
                     {
@@ -2592,7 +2592,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Boothill_Eidolon2_CD[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
+                            "modifier": "<a class=\"gModGreen\" id=\"827570007\">Boothill_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
                             "invertCondition": true
                           }
                         ]
@@ -2604,7 +2604,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Boothill_Eidolon2_CD[<span class=\"descriptionNumberColor\">Milestonemonger</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"827570007\">Boothill_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Milestonemonger</span>]"
                         },
                         {
                           "name": "Skill Points Modification",
@@ -2624,7 +2624,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Boothill_Eidolon2_Enhance[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"455996650\">Boothill_Eidolon2_Enhance</a>[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",
@@ -2702,7 +2702,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Boothill_Ultimate_PhysicalWeakness[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1234556186\">Boothill_Ultimate_PhysicalWeakness</a>[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttachWeakness"
@@ -2734,7 +2734,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Boothill_AutoWinDuelTag",
+          "for": "<a class=\"gModGreen\" id=\"mod__837506667\">M_Boothill_AutoWinDuelTag</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -2743,7 +2743,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Boothill_EnemySpecialMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1876667790\">M_Boothill_EnemySpecialMark</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2797,7 +2797,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Boothill_DuelEndFollowingListener",
+          "for": "<a class=\"gModGreen\" id=\"mod__1727126810\">M_Boothill_DuelEndFollowingListener</a>",
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -2851,7 +2851,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Boothill_SelfModification[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1894494257\">Boothill_SelfModification</a>[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -2909,11 +2909,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Boothill_OnDuelEndCheck"
+          "for": "<a class=\"gModGreen\" id=\"mod__-588085300\">M_Boothill_OnDuelEndCheck</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
           "stackType": "ReplaceByCaster",
           "targetRestriction": {
             "name": "Target Name",
@@ -2935,7 +2935,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Boothill_EnemySpecialMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1876667790\">M_Boothill_EnemySpecialMark</a>"
                 }
               ]
             },
@@ -2944,7 +2944,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Duel_Win_Check"
+                  "functionName": "<a class=\"gTempYellow\" id=\"2020667561\">Duel_Win_Check</a>"
                 }
               ]
             },
@@ -2987,7 +2987,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Duel_Break_Check"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-229259724\">Duel_Break_Check</a>"
                 }
               ]
             },
@@ -3002,7 +3002,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                   },
                   "passed": [
                     {
@@ -3026,7 +3026,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Duel_Break_Check"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-229259724\">Duel_Break_Check</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -3055,7 +3055,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Duel_Win_Check"
+                  "functionName": "<a class=\"gTempYellow\" id=\"2020667561\">Duel_Win_Check</a>"
                 }
               ]
             },
@@ -3064,7 +3064,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Duel_Win_Check"
+                  "functionName": "<a class=\"gTempYellow\" id=\"2020667561\">Duel_Win_Check</a>"
                 }
               ]
             },
@@ -3075,12 +3075,12 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "M_Boothill_OnDuelEndCheck"
+                    "modifier": "<a class=\"gModGreen\" id=\"-588085300\">M_Boothill_OnDuelEndCheck</a>"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Duel_Break_Check"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-229259724\">Duel_Break_Check</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3088,7 +3088,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_Boothill_OnDuelEndCheck"
+                      "modifier": "<a class=\"gModGreen\" id=\"-588085300\">M_Boothill_OnDuelEndCheck</a>"
                     }
                   ]
                 }
@@ -3099,7 +3099,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Duel_Win_Check"
+                  "functionName": "<a class=\"gTempYellow\" id=\"2020667561\">Duel_Win_Check</a>"
                 }
               ]
             }
@@ -3107,7 +3107,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Duel_Win_Check",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__2020667561\">Duel_Win_Check</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -3117,7 +3117,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -3128,7 +3128,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "CharacterFunctions",
-              "functionName": "Duel_Break_Check",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-229259724\">Duel_Break_Check</a>",
               "parse": [
                 {
                   "name": "Looped Event",
@@ -3147,7 +3147,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Boothill_AutoWinDuelTag",
+                      "modifier": "<a class=\"gModGreen\" id=\"837506667\">M_Boothill_AutoWinDuelTag</a>",
                       "addStacksPerTrigger": 1
                     }
                   ]
@@ -3171,7 +3171,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -3187,7 +3187,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}"
                   },
-                  "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                 },
                 {
                   "name": "IF",
@@ -3197,7 +3197,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "M_Boothill_AutoWinDuelTag"
+                    "modifier": "<a class=\"gModGreen\" id=\"837506667\">M_Boothill_AutoWinDuelTag</a>"
                   },
                   "passed": [
                     {
@@ -3206,7 +3206,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_Boothill_AutoWinDuelTag"
+                      "modifier": "<a class=\"gModGreen\" id=\"837506667\">M_Boothill_AutoWinDuelTag</a>"
                     }
                   ]
                 },
@@ -3235,7 +3235,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Duel_End_Check"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1682994070\">Duel_End_Check</a>"
                 }
               ]
             },
@@ -3317,7 +3317,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "M_Boothill_AutoWinDuelTag"
+                        "modifier": "<a class=\"gModGreen\" id=\"837506667\">M_Boothill_AutoWinDuelTag</a>"
                       },
                       {
                         "name": "Has Modifier",
@@ -3325,7 +3325,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                       },
                       {
                         "name": "AND",
@@ -3368,7 +3368,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                   },
                   "passed": [
                     {
@@ -3402,7 +3402,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Duel_End_Check"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1682994070\">Duel_End_Check</a>"
                 }
               ]
             },
@@ -3411,7 +3411,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Duel_End_Check"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1682994070\">Duel_End_Check</a>"
                 }
               ]
             },
@@ -3420,7 +3420,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Duel_End_Check"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1682994070\">Duel_End_Check</a>"
                 }
               ]
             },
@@ -3429,7 +3429,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Duel_End_Check"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1682994070\">Duel_End_Check</a>"
                 }
               ]
             },
@@ -3438,7 +3438,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Duel_End_Check"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1682994070\">Duel_End_Check</a>"
                 }
               ]
             },
@@ -3447,7 +3447,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Duel_End_Check"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1682994070\">Duel_End_Check</a>"
                 }
               ]
             }
@@ -3455,7 +3455,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Duel_End_Check",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-1682994070\">Duel_End_Check</a>",
               "parse": [
                 {
                   "name": "Find New Target",
@@ -3471,7 +3471,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                   },
                   "ifTargetFound": [
                     {
@@ -3480,7 +3480,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_Boothill_OnDuelEndCheck"
+                      "modifier": "<a class=\"gModGreen\" id=\"-588085300\">M_Boothill_OnDuelEndCheck</a>"
                     }
                   ],
                   "noTargetFound": [
@@ -3495,7 +3495,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "M_Boothill_AutoWinDuelTag"
+                    "modifier": "<a class=\"gModGreen\" id=\"837506667\">M_Boothill_AutoWinDuelTag</a>"
                   },
                   "passed": [
                     {
@@ -3516,7 +3516,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                           },
                           {
                             "name": "AND",
@@ -3549,7 +3549,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "M_Boothill_DuelEndFollowingListener",
+                          "modifier": "<a class=\"gModGreen\" id=\"1727126810\">M_Boothill_DuelEndFollowingListener</a>",
                           "duration": 1,
                           "silentAdd": true
                         }
@@ -3573,7 +3573,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                           },
                           {
                             "name": "AND",

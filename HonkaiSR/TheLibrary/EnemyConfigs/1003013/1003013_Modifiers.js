@@ -10,11 +10,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "MW1_Soldier03_RL_AIFlag"
+      "for": "<a class=\"gModGreen\" id=\"mod__-655215127\">MW1_Soldier03_RL_AIFlag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier03_BattleScore1",
+      "for": "<a class=\"gModGreen\" id=\"mod__-35846482\">Enemy_W1_Soldier03_BattleScore1</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -126,7 +126,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Soldier03_LoseShieldInCtrl",
+      "for": "<a class=\"gModGreen\" id=\"mod__291277050\">Monster_W1_Soldier03_LoseShieldInCtrl</a>",
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -184,7 +184,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier03_ListenBeingAttacked[<span class=\"descriptionNumberColor\">Counter</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-387357924\">Enemy_W1_Soldier03_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
       "modifierFlags": [
         "MuteHitH",
         "ListenBattleEventSkill"
@@ -524,7 +524,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Soldier03_HoldShield",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1398382688\">Monster_W1_Soldier03_HoldShield</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -567,7 +567,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Soldier03_ShieldControl",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1997793398\">Monster_W1_Soldier03_ShieldControl</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -629,7 +629,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Monster_W1_Soldier03_HoldShield"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
                       },
                       "passed": [
                         {
@@ -638,7 +638,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Monster_W1_Soldier03_HoldShield"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
                         },
                         {
                           "name": "Inject Ability Use",
@@ -728,7 +728,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Monster_W1_Soldier03_HoldShield"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
                       },
                       "passed": [
                         {
@@ -737,7 +737,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Monster_W1_Soldier03_HoldShield"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
                         },
                         {
                           "name": "Inject Ability Use",

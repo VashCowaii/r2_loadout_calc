@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{All Team Members(Exclude Self)}}"
       },
-      "modifier": "Enemy_W2_ArgentiTotem_IF_Initiate"
+      "modifier": "<a class=\"gModGreen\" id=\"1639070947\">Enemy_W2_ArgentiTotem_IF_Initiate</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{All Team Members(Exclude Self)}}"
       },
-      "modifier": "Enemy_W2_ArgentiTotem_01_IF_Initiate"
+      "modifier": "<a class=\"gModGreen\" id=\"-1851629784\">Enemy_W2_ArgentiTotem_01_IF_Initiate</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -27,11 +27,11 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{All Team Members(Exclude Self)}}"
       },
-      "modifier": "Enemy_W2_ArgentiTotem_02_IF_Initiate"
+      "modifier": "<a class=\"gModGreen\" id=\"2041202953\">Enemy_W2_ArgentiTotem_02_IF_Initiate</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Collect_Power"
+      "functionName": "<a class=\"gTempYellow\" id=\"1718469723\">Collect_Power</a>"
     },
     {
       "name": "Dispel Debuffs",
@@ -62,7 +62,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Argenti_Ability16_IF_MarkModifier"
+      "for": "<a class=\"gModGreen\" id=\"mod__-708808137\">Monster_W2_Argenti_Ability16_IF_MarkModifier</a>"
     }
   ]
 }

@@ -33,7 +33,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "MWGallagher_Ability02_StatusResModifier[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1872837497\">MWGallagher_Ability02_StatusResModifier</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",

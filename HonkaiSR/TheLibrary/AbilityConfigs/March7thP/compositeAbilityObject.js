@@ -28,13 +28,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "March7th_Eidolon2_Shield_pre"
+          "modifier": "<a class=\"gModGreen\" id=\"534065666\">March7th_Eidolon2_Shield_pre</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "March7th_Eidolon2_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__985818260\">March7th_Eidolon2_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"
@@ -92,7 +92,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "March7th_Eidolon2_Shield_pre",
+          "for": "<a class=\"gModGreen\" id=\"mod__534065666\">March7th_Eidolon2_Shield_pre</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -142,7 +142,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "March7th_Eidolon2_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"985818260\">March7th_Eidolon2_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -197,13 +197,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Mar_7th_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1796845024\">StageAbility_Maze_Mar_7th_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Mar_7th_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1796845024\">StageAbility_Maze_Mar_7th_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -253,7 +253,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
                           "duration": {
                             "operator": "Variables[0] (1) || RETURN",
                             "displayLines": "1",
@@ -298,7 +298,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
                               "duration": {
                                 "operator": "Variables[0] (1) || RETURN",
                                 "displayLines": "1",
@@ -442,7 +442,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
           "function": "Add"
         },
         {
@@ -453,14 +453,14 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]"
           },
           "passed": [
             {
               "name": "Define Custom Variable with Modifier Values",
               "scope": "ContextCaster",
               "variableName": "Mar7th_00_Passive_CounterView",
-              "modifierName": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
               "multiplier": 1
             }
           ],
@@ -571,7 +571,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "March7th_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"189697089\">March7th_Passive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -579,7 +579,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "March7th_ListenEnergyBar"
+          "modifier": "<a class=\"gModGreen\" id=\"872238788\">March7th_ListenEnergyBar</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -587,7 +587,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]"
         },
         {
           "name": "IF",
@@ -598,7 +598,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Modifier Variable",
-              "modifierName": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
               "value": {
                 "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(2 + 1)",
@@ -656,7 +656,7 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Modifier Variable",
-              "modifierName": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
               "value": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -708,7 +708,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "March7th_ListenEnergyBar",
+          "for": "<a class=\"gModGreen\" id=\"mod__872238788\">March7th_ListenEnergyBar</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier is Added [Anyone]",
@@ -842,7 +842,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
           "counter": 3,
           "stackData": [],
           "latentQueue": [],
@@ -852,7 +852,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "March7th_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__189697089\">March7th_Passive</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -863,7 +863,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]"
                 },
                 {
                   "name": "IF",
@@ -874,7 +874,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Modifier Variable",
-                      "modifierName": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
                       "value": {
                         "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(2 + 1)",
@@ -980,7 +980,7 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Modifier Variable",
-                      "modifierName": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
                       "value": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -1083,7 +1083,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "March7th_BPAbility_Shield_Counter"
+                  "modifier": "<a class=\"gModGreen\" id=\"944962578\">March7th_BPAbility_Shield_Counter</a>"
                 }
               ]
             },
@@ -1106,7 +1106,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "March7th_BPAbility_Shield_Counter"
+                      "modifier": "<a class=\"gModGreen\" id=\"944962578\">March7th_BPAbility_Shield_Counter</a>"
                     }
                   ]
                 }
@@ -1130,7 +1130,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "March7th_BPAbility_Shield_Counter",
+                  "modifier": "<a class=\"gModGreen\" id=\"944962578\">March7th_BPAbility_Shield_Counter</a>",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -1220,7 +1220,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Mar_7th_FrozenFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"329183507\">Mar_7th_FrozenFlag</a>"
             }
           ]
         },
@@ -1244,7 +1244,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "March7th_UltraTarget"
+                  "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
                 }
               },
               "ifTargetFound": [
@@ -1283,7 +1283,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "March7th_UltraTarget"
+                  "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
                 }
               ]
             }
@@ -1305,7 +1305,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "March7th_UltraTarget"
+          "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
         },
         {
           "name": "Looped Event",
@@ -1327,7 +1327,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "March7th_UltraTarget"
+                  "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
                 }
               },
               "ifTargetFound": [
@@ -1366,7 +1366,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "March7th_UltraTarget"
+                  "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
                 }
               ]
             }
@@ -1388,7 +1388,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "March7th_UltraTarget"
+          "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
         },
         {
           "name": "Looped Event",
@@ -1410,7 +1410,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "March7th_UltraTarget"
+                  "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
                 }
               },
               "ifTargetFound": [
@@ -1449,7 +1449,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "March7th_UltraTarget"
+                  "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
                 }
               ]
             }
@@ -1471,7 +1471,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "March7th_UltraTarget"
+          "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
         },
         {
           "name": "Looped Event",
@@ -1493,7 +1493,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "March7th_UltraTarget"
+                  "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
                 }
               },
               "ifTargetFound": [
@@ -1532,7 +1532,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "March7th_UltraTarget"
+                  "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
                 }
               ]
             }
@@ -1555,7 +1555,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "March7th_UltraTarget"
+          "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
         },
         {
           "name": "IF",
@@ -1619,7 +1619,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -1700,7 +1700,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Mar_7th_Ability03_ListenFrozen"
+          "modifier": "<a class=\"gModGreen\" id=\"954113559\">Mar_7th_Ability03_ListenFrozen</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1708,7 +1708,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Mar_7th_FrozenFlag"
+          "modifier": "<a class=\"gModGreen\" id=\"329183507\">Mar_7th_FrozenFlag</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -1720,7 +1720,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "March7th_UltraTarget",
+          "for": "<a class=\"gModGreen\" id=\"mod__1349068502\">March7th_UltraTarget</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -1896,7 +1896,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "March7th_BPAbility_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1541241593\">March7th_BPAbility_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || Variables[1] (_Tree02_LifeTimeAdd) || ADD || RETURN",
                 "displayLines": "(3 + _Tree02_LifeTimeAdd)",
@@ -1957,7 +1957,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "March7th_BPAbility_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1541241593\">March7th_BPAbility_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || Variables[1] (_Tree02_LifeTimeAdd) || ADD || RETURN",
                 "displayLines": "(3 + _Tree02_LifeTimeAdd)",
@@ -2160,7 +2160,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "March7th_BPAbility_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1541241593\">March7th_BPAbility_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"
@@ -2307,7 +2307,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "March7th_BPAbility_Shield_Counter",
+          "for": "<a class=\"gModGreen\" id=\"mod__944962578\">March7th_BPAbility_Shield_Counter</a>",
           "execute": [
             {
               "eventTrigger": "Being Attacked Start [Owner]",
@@ -2335,7 +2335,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Variable",
-                        "value1": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]",
+                        "value1": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
                         "compareType": ">",
                         "value2": 0
                       }
@@ -2348,7 +2348,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "March7th_BPAbility_Shield_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"189970891\">March7th_BPAbility_Shield_Mark</a>"
                     }
                   ]
                 }
@@ -2360,7 +2360,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "March7th_BPAbility_Shield_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__189970891\">March7th_BPAbility_Shield_Mark</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -2390,7 +2390,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "March7th_BPAbility_Shield_Mark",
+                  "modifier": "<a class=\"gModGreen\" id=\"189970891\">March7th_BPAbility_Shield_Mark</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -2401,7 +2401,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Mar_7th_FrozenFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__329183507\">Mar_7th_FrozenFlag</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier is Added [Anyone]",

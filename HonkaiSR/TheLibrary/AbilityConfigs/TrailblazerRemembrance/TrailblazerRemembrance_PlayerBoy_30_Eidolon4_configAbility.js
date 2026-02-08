@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_PlayerBoy_30_Eidolon4"
+      "modifier": "<a class=\"gModGreen\" id=\"-1646565949\">M_PlayerBoy_30_Eidolon4</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_PlayerBoy_30_Eidolon4",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1646565949\">M_PlayerBoy_30_Eidolon4</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: Start",

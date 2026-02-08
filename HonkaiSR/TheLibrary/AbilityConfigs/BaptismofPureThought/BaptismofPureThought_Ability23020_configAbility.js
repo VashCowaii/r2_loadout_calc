@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23020_Main",
+      "modifier": "<a class=\"gModGreen\" id=\"1034410096\">LC_23020_Main</a>",
       "valuePerStack": {
         "_DebuffCount": 0,
         "MDF_PropertyValue": {
@@ -35,7 +35,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23020_Sub[<span class=\"descriptionNumberColor\">Disputation</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__837190525\">LC_23020_Sub</a>[<span class=\"descriptionNumberColor\">Disputation</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -93,7 +93,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23020_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1034410096\">LC_23020_Main</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -169,7 +169,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "LC_23020_Sub[<span class=\"descriptionNumberColor\">Disputation</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"837190525\">LC_23020_Sub</a>[<span class=\"descriptionNumberColor\">Disputation</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -191,7 +191,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23020_Sub[<span class=\"descriptionNumberColor\">Disputation</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"837190525\">LC_23020_Sub</a>[<span class=\"descriptionNumberColor\">Disputation</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

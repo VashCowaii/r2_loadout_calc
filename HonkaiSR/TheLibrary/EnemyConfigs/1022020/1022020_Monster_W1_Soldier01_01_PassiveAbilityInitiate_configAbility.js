@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W1_Soldier01_01_BreakEffectController"
+      "modifier": "<a class=\"gModGreen\" id=\"-1219084920\">Enemy_W1_Soldier01_01_BreakEffectController</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier01_01_FireEffectController",
+      "for": "<a class=\"gModGreen\" id=\"mod__-235837049\">Enemy_W1_Soldier01_01_FireEffectController</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -29,7 +29,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier01_01_BreakEffectController",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1219084920\">Enemy_W1_Soldier01_01_BreakEffectController</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -42,7 +42,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "StanceBreakState"
+                "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
               },
               "failed": [
                 {
@@ -51,7 +51,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W1_Soldier01_01_FireEffectController"
+                  "modifier": "<a class=\"gModGreen\" id=\"-235837049\">Enemy_W1_Soldier01_01_FireEffectController</a>"
                 }
               ]
             }
@@ -66,7 +66,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W1_Soldier01_01_FireEffectController"
+              "modifier": "<a class=\"gModGreen\" id=\"-235837049\">Enemy_W1_Soldier01_01_FireEffectController</a>"
             }
           ]
         },
@@ -79,7 +79,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W1_Soldier01_01_FireEffectController"
+              "modifier": "<a class=\"gModGreen\" id=\"-235837049\">Enemy_W1_Soldier01_01_FireEffectController</a>"
             }
           ]
         }

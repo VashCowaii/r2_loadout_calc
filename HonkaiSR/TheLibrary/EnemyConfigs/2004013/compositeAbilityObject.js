@@ -81,7 +81,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Kafka_RL_MindControl_True[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
               },
               {
                 "name": "Has Modifier",
@@ -89,7 +89,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Kafka_RL_MindControl_TrueEffect[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
               }
             ]
           },
@@ -100,7 +100,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_MindControl_True[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -108,7 +108,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_MindControl_TrueEffect[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
             },
             {
               "name": "Add Events/Bonuses",
@@ -116,7 +116,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_MindControl[<span class=\"descriptionNumberColor\">Dominated</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill07[1]]}) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "({[Skill07[1]]} + 1)",
@@ -205,7 +205,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_MindControl_False[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"2054484016\">Monster_W2_Kafka_RL_MindControl_False</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
         },
         {
           "name": "Define Custom Variable",
@@ -229,7 +229,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_W2_Kafka_RL_BattleEvent"
+          "modifier": "<a class=\"gModGreen\" id=\"-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -237,7 +237,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed"
+          "modifier": "<a class=\"gModGreen\" id=\"1014249439\">Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed</a>"
         },
         {
           "name": "Action Advance/Delay",
@@ -252,7 +252,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed",
+          "for": "<a class=\"gModGreen\" id=\"mod__1014249439\">Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -281,7 +281,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_W2_Kafka_RL_BattleEvent",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
             {
@@ -333,7 +333,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_ChangePhase"
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
         },
         {
           "name": "Action Advance/Delay",
@@ -350,7 +350,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_Part03EnhanceEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"1988286038\">Monster_W2_Kafka_RL_Part03EnhanceEffect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -358,7 +358,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -366,7 +366,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_Endurance"
+          "modifier": "<a class=\"gModGreen\" id=\"-1880603044\">Monster_W2_Kafka_RL_Endurance</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -397,7 +397,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Modifier_W2_Kafka_RL_BattleEvent"
+            "modifier": "<a class=\"gModGreen\" id=\"-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>"
           },
           "ifTargetFound": [
             {
@@ -415,7 +415,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_PartController"
+          "modifier": "<a class=\"gModGreen\" id=\"-1041839558\">Monster_W2_Kafka_RL_PartController</a>"
         }
       ],
       "references": []
@@ -445,7 +445,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_ChangePhase"
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -453,7 +453,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_Endurance"
+          "modifier": "<a class=\"gModGreen\" id=\"-1880603044\">Monster_W2_Kafka_RL_Endurance</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -506,7 +506,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_MindControl_True[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -514,7 +514,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_MindControl_TrueEffect[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -522,7 +522,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_MindControl_False[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"2054484016\">Monster_W2_Kafka_RL_MindControl_False</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -530,7 +530,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Standard_MindControl[<span class=\"descriptionNumberColor\">Dominated</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
         },
         {
           "name": "Declare Custom Variable",
@@ -554,7 +554,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Modifier_W2_Kafka_RL_BattleEvent"
+            "modifier": "<a class=\"gModGreen\" id=\"-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>"
           },
           "ifTargetFound": [
             {
@@ -600,7 +600,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Kafka_RL_MindControl_True[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -608,7 +608,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_AbilityTarget"
+                      "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
                     }
                   ]
                 }
@@ -639,7 +639,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Monster_W2_Kafka_RL_MindControl_True[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -647,7 +647,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_AbilityTarget"
+                          "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
                         }
                       ]
                     }
@@ -669,7 +669,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Monster_W2_Kafka_RL_MindControl_True[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -677,7 +677,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_AbilityTarget"
+                          "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
                         }
                       ]
                     }
@@ -825,7 +825,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
             }
           ]
         },
@@ -844,7 +844,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_Ability04_Target"
+              "modifier": "<a class=\"gModGreen\" id=\"488971952\">Monster_W2_Kafka_RL_Ability04_Target</a>"
             },
             {
               "name": "ATK Scaling DMG",
@@ -1084,7 +1084,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
               },
               "passed": [
                 {
@@ -1105,7 +1105,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
                 "displayLines": "{[Skill01[2]]}",
@@ -1151,7 +1151,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
                 }
               ]
             },
@@ -1195,7 +1195,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Kafka Skill4 Other Targets}}"
           },
-          "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1203,7 +1203,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_Ability04_Target"
+          "modifier": "<a class=\"gModGreen\" id=\"488971952\">Monster_W2_Kafka_RL_Ability04_Target</a>"
         },
         {
           "name": "IF",
@@ -1220,7 +1220,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
             }
           ]
         },
@@ -1259,7 +1259,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"1961920728\">Monster_W2_Kafka_BattleScore1</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -1276,7 +1276,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1284,7 +1284,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_Pursuit"
+          "modifier": "<a class=\"gModGreen\" id=\"108137779\">Monster_W2_Kafka_RL_Pursuit</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1292,7 +1292,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_AIChange"
+          "modifier": "<a class=\"gModGreen\" id=\"2066030702\">Monster_W2_Kafka_AIChange</a>"
         },
         {
           "name": "Boss Bar Display",
@@ -1308,7 +1308,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_PartController"
+          "modifier": "<a class=\"gModGreen\" id=\"-1041839558\">Monster_W2_Kafka_RL_PartController</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1316,7 +1316,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_Power",
+          "modifier": "<a class=\"gModGreen\" id=\"688364152\">Monster_W2_Kafka_RL_Power</a>",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
               "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
@@ -1334,7 +1334,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_LowHP",
+          "modifier": "<a class=\"gModGreen\" id=\"-1555277593\">Monster_W2_Kafka_RL_LowHP</a>",
           "valuePerStack": {
             "MDF_LowHPRatio": {
               "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
@@ -1351,7 +1351,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_AIChange",
+          "for": "<a class=\"gModGreen\" id=\"mod__2066030702\">Monster_W2_Kafka_AIChange</a>",
           "stackData": [],
           "latentQueue": [
             "DisPelCount"
@@ -1359,7 +1359,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_BattleScore1",
+          "for": "<a class=\"gModGreen\" id=\"mod__1961920728\">Monster_W2_Kafka_BattleScore1</a>",
           "execute": [
             {
               "eventTrigger": "Modifier Cleansed [Anyone]",
@@ -1371,7 +1371,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "Standard_MindControl[<span class=\"descriptionNumberColor\">Dominated</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
                       },
                       {
                         "name": "Is Teammate",
@@ -1493,7 +1493,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Recently Summoned Enemies}}"
                   },
-                  "modifier": "Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter"
+                  "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
                 }
               ],
               "failed": [
@@ -1522,7 +1522,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Recently Summoned Enemies}}"
                   },
-                  "modifier": "Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter"
+                  "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
                 }
               ]
             }
@@ -1541,7 +1541,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter"
+            "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
           },
           "ifTargetFound": [
             {
@@ -1550,7 +1550,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_IF_BeControled"
+              "modifier": "<a class=\"gModGreen\" id=\"410285383\">Monster_W2_Kafka_IF_BeControled</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1558,7 +1558,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter"
+              "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
             }
           ]
         }
@@ -1566,7 +1566,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_BeControled",
+          "for": "<a class=\"gModGreen\" id=\"mod__410285383\">Monster_W2_Kafka_IF_BeControled</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1579,7 +1579,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter",
+          "for": "<a class=\"gModGreen\" id=\"mod__-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1618,7 +1618,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+                "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
               },
               {
                 "name": "Has Modifier",
@@ -1626,7 +1626,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Kafka_IF_MindControl_TrueEffect"
+                "modifier": "<a class=\"gModGreen\" id=\"-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>"
               }
             ]
           },
@@ -1637,7 +1637,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+              "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1645,7 +1645,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_IF_MindControl_TrueEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1653,7 +1653,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_MindControl[<span class=\"descriptionNumberColor\">Dominated</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill07[1]]}) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "({[Skill07[1]]} + 1)",
@@ -1742,7 +1742,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_MindControl_False"
+          "modifier": "<a class=\"gModGreen\" id=\"1752429969\">Monster_W2_Kafka_IF_MindControl_False</a>"
         }
       ],
       "references": []
@@ -1760,7 +1760,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_W2_Kafka_RL_BattleEvent"
+          "modifier": "<a class=\"gModGreen\" id=\"-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1768,7 +1768,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed"
+          "modifier": "<a class=\"gModGreen\" id=\"1014249439\">Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed</a>"
         },
         {
           "name": "Action Advance/Delay",
@@ -1783,7 +1783,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed",
+          "for": "<a class=\"gModGreen\" id=\"mod__1014249439\">Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1812,7 +1812,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_W2_Kafka_RL_BattleEvent",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
             {
@@ -1864,7 +1864,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_ChangePhase"
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
         },
         {
           "name": "Action Advance/Delay",
@@ -1881,7 +1881,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_Part03EnhanceEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-682734007\">Monster_W2_Kafka_IF_Part03EnhanceEffect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1889,7 +1889,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1510857703\">Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1897,7 +1897,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_Endurance"
+          "modifier": "<a class=\"gModGreen\" id=\"1613170749\">Monster_W2_Kafka_IF_Endurance</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -1922,7 +1922,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Modifier_W2_Kafka_RL_BattleEvent"
+            "modifier": "<a class=\"gModGreen\" id=\"-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>"
           },
           "ifTargetFound": [
             {
@@ -1940,7 +1940,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_PartController"
+          "modifier": "<a class=\"gModGreen\" id=\"-568638257\">Monster_W2_Kafka_IF_PartController</a>"
         }
       ],
       "references": []
@@ -1970,7 +1970,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_ChangePhase"
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1978,7 +1978,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_Endurance"
+          "modifier": "<a class=\"gModGreen\" id=\"1613170749\">Monster_W2_Kafka_IF_Endurance</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -2050,7 +2050,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Recently Summoned Enemies}}"
                   },
-                  "modifier": "Monster_W2_Kafka_IF_SummonRotation"
+                  "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
                 }
               ],
               "failed": [
@@ -2079,7 +2079,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Recently Summoned Enemies}}"
                   },
-                  "modifier": "Monster_W2_Kafka_IF_SummonRotation"
+                  "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
                 }
               ]
             }
@@ -2098,7 +2098,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Kafka_IF_SummonRotation"
+            "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
           },
           "ifTargetFound": [
             {
@@ -2107,7 +2107,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_IF_BeControled"
+              "modifier": "<a class=\"gModGreen\" id=\"410285383\">Monster_W2_Kafka_IF_BeControled</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2115,7 +2115,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_IF_BPAdd"
+              "modifier": "<a class=\"gModGreen\" id=\"-1650363827\">Monster_W2_Kafka_IF_BPAdd</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2123,7 +2123,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_IF_SummonRotation"
+              "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
             }
           ]
         },
@@ -2133,7 +2133,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_SummonRotation"
+          "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2141,7 +2141,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_StartRotation"
+          "modifier": "<a class=\"gModGreen\" id=\"-54791834\">Monster_W2_Kafka_IF_StartRotation</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2149,14 +2149,14 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_SummonRotation"
+          "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
         },
         "Trigger: Ability End"
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_BPAdd",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1650363827\">Monster_W2_Kafka_IF_BPAdd</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -2184,7 +2184,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_BeControled",
+          "for": "<a class=\"gModGreen\" id=\"mod__410285383\">Monster_W2_Kafka_IF_BeControled</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -2195,7 +2195,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_StartRotation",
+          "for": "<a class=\"gModGreen\" id=\"mod__-54791834\">Monster_W2_Kafka_IF_StartRotation</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -2254,7 +2254,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -2340,7 +2340,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
           },
           "ifTargetFound": [
             {
@@ -2349,7 +2349,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -2435,7 +2435,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
           },
           "ifTargetFound": [
             {
@@ -2444,7 +2444,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -2511,7 +2511,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
           },
           "ifTargetFound": [
             {
@@ -2520,7 +2520,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -2579,7 +2579,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
               },
               "passed": [
                 {
@@ -2600,7 +2600,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
             },
             {
               "name": "Declare Custom Variable",
@@ -2631,7 +2631,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_Company_Coin_Elite[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
             }
           ]
         },
@@ -2773,7 +2773,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+          "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2781,7 +2781,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_MindControl_TrueEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2789,7 +2789,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_MindControl_False"
+          "modifier": "<a class=\"gModGreen\" id=\"1752429969\">Monster_W2_Kafka_IF_MindControl_False</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2797,7 +2797,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Standard_MindControl[<span class=\"descriptionNumberColor\">Dominated</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
         },
         {
           "name": "Declare Custom Variable",
@@ -2842,7 +2842,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+                      "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
                     }
                   ]
                 }
@@ -2873,7 +2873,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+                          "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
                         }
                       ]
                     }
@@ -2895,7 +2895,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+                          "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
                         }
                       ]
                     }
@@ -3037,7 +3037,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"-1510857703\">Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect</a>"
             }
           ]
         },
@@ -3056,7 +3056,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_IF_Ability04_Target"
+              "modifier": "<a class=\"gModGreen\" id=\"-1330368689\">Monster_W2_Kafka_IF_Ability04_Target</a>"
             },
             {
               "name": "ATK Scaling DMG",
@@ -3296,7 +3296,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
               },
               "passed": [
                 {
@@ -3317,7 +3317,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
                 "displayLines": "{[Skill01[2]]}",
@@ -3363,7 +3363,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
                 }
               ]
             },
@@ -3407,7 +3407,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Kafka Skill4 Other Targets}}"
           },
-          "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3415,7 +3415,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_Ability04_Target"
+          "modifier": "<a class=\"gModGreen\" id=\"-1330368689\">Monster_W2_Kafka_IF_Ability04_Target</a>"
         },
         {
           "name": "IF",
@@ -3432,7 +3432,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"-1510857703\">Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect</a>"
             }
           ]
         },
@@ -3508,7 +3508,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
           },
           "ifTargetFound": [
             {
@@ -3517,7 +3517,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
             }
           ]
         }
@@ -3555,14 +3555,14 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_Suicide"
+          "modifier": "<a class=\"gModGreen\" id=\"2083537880\">Monster_W2_Kafka_IF_Suicide</a>"
         }
       ],
       "whenAdded": [],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_Suicide",
+          "for": "<a class=\"gModGreen\" id=\"mod__2083537880\">Monster_W2_Kafka_IF_Suicide</a>",
           "execute": [
             {
               "eventTrigger": "Action End [Owner]",
@@ -3628,7 +3628,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"1961920728\">Monster_W2_Kafka_BattleScore1</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -3645,7 +3645,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3653,7 +3653,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_HPRatioTriggerAOE"
+          "modifier": "<a class=\"gModGreen\" id=\"781148168\">Monster_W2_Kafka_IF_HPRatioTriggerAOE</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3661,7 +3661,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_Pursuit"
+          "modifier": "<a class=\"gModGreen\" id=\"-857035022\">Monster_W2_Kafka_IF_Pursuit</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3669,7 +3669,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_AIChange"
+          "modifier": "<a class=\"gModGreen\" id=\"2066030702\">Monster_W2_Kafka_AIChange</a>"
         },
         {
           "name": "Boss Bar Display",
@@ -3685,7 +3685,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_PartController"
+          "modifier": "<a class=\"gModGreen\" id=\"-568638257\">Monster_W2_Kafka_IF_PartController</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3693,7 +3693,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_Power",
+          "modifier": "<a class=\"gModGreen\" id=\"1086358837\">Monster_W2_Kafka_IF_Power</a>",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
               "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
@@ -3711,7 +3711,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_LowHP",
+          "modifier": "<a class=\"gModGreen\" id=\"593237238\">Monster_W2_Kafka_IF_LowHP</a>",
           "valuePerStack": {
             "MDF_LowHPRatio": {
               "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
@@ -3729,14 +3729,14 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_SummonControl"
+          "modifier": "<a class=\"gModGreen\" id=\"-196949568\">Monster_W2_Kafka_IF_SummonControl</a>"
         }
       ],
       "whenAdded": [],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_AIChange",
+          "for": "<a class=\"gModGreen\" id=\"mod__2066030702\">Monster_W2_Kafka_AIChange</a>",
           "stackData": [],
           "latentQueue": [
             "DisPelCount"
@@ -3744,7 +3744,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_BattleScore1",
+          "for": "<a class=\"gModGreen\" id=\"mod__1961920728\">Monster_W2_Kafka_BattleScore1</a>",
           "execute": [
             {
               "eventTrigger": "Modifier Cleansed [Anyone]",
@@ -3756,7 +3756,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "Standard_MindControl[<span class=\"descriptionNumberColor\">Dominated</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
                       },
                       {
                         "name": "Is Teammate",
@@ -3833,7 +3833,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Kafka_IF02_Ability08_ExecuteTag"
+            "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
           },
           "ifTargetFound": [
             {
@@ -3842,7 +3842,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_IF_SummonRotation"
+              "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -3873,7 +3873,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Kafka_IF02_Ability08_ExecuteTag"
+            "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
           }
         },
         {
@@ -3889,7 +3889,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Kafka_IF02_Ability08_ExecuteTag"
+            "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
           },
           "ifTargetFound": [
             {
@@ -3898,7 +3898,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -3906,7 +3906,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_Company_Coin_Elite[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
             },
             {
               "name": "IF",
@@ -3916,7 +3916,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Kafka_IF02_LeftMonsterTag"
+                "modifier": "<a class=\"gModGreen\" id=\"452406781\">Monster_W2_Kafka_IF02_LeftMonsterTag</a>"
               }
             }
           ]
@@ -3935,7 +3935,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Kafka_IF02_Ability08_ExecuteTag"
+            "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
           },
           "ifTargetFound": [
             {
@@ -3946,7 +3946,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Kafka_IF02_LeftMonsterTag"
+                "modifier": "<a class=\"gModGreen\" id=\"452406781\">Monster_W2_Kafka_IF02_LeftMonsterTag</a>"
               },
               "passed": [
                 {
@@ -3967,7 +3967,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_Company_Coin_Elite[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
               "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
@@ -3986,7 +3986,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "Monster_Company_Coin_Elite[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
           "value": {
             "operator": "Variables[0] (MDF_StackCount) || RETURN",
             "displayLines": "MDF_StackCount",
@@ -4013,7 +4013,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Monster_W2_Kafka_IF02_P2ShieldBrokenTag"
+                "modifier": "<a class=\"gModGreen\" id=\"-1425462104\">Monster_W2_Kafka_IF02_P2ShieldBrokenTag</a>"
               }
             ]
           },
@@ -4057,7 +4057,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W2_Kafka_IF02_Ability08_ExecuteTag"
+          "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4065,7 +4065,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_SummonRotation"
+          "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -4076,7 +4076,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF02_MonsterCoinTag"
+          "for": "<a class=\"gModGreen\" id=\"mod__-2147044601\">Monster_W2_Kafka_IF02_MonsterCoinTag</a>"
         }
       ]
     },
@@ -4125,7 +4125,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
             }
           ]
         },
@@ -4137,7 +4137,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Monster_W2_Kafka_IF02_ContainJXDTag"
+            "modifier": "<a class=\"gModGreen\" id=\"1155608240\">Monster_W2_Kafka_IF02_ContainJXDTag</a>"
           },
           "passed": [
             {
@@ -4153,7 +4153,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Kafka_IF02_Ability08_ExecuteTag"
+                "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
               },
               "ifTargetFound": [
                 {
@@ -4185,7 +4185,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Kafka_IF02_Ability08_ExecuteTag"
+                "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
               },
               "ifTargetFound": [
                 {
@@ -4194,7 +4194,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -4202,7 +4202,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_Company_Coin_Elite[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
                 },
                 {
                   "name": "IF",
@@ -4212,7 +4212,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Kafka_IF02_LeftMonsterTag"
+                    "modifier": "<a class=\"gModGreen\" id=\"452406781\">Monster_W2_Kafka_IF02_LeftMonsterTag</a>"
                   },
                   "passed": [
                     {
@@ -4237,7 +4237,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Monster_W2_Kafka_IF02_SecondMonsterTag"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1769956032\">Monster_W2_Kafka_IF02_SecondMonsterTag</a>"
                         }
                       ]
                     }
@@ -4265,7 +4265,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Monster_W2_Kafka_IF02_SecondMonsterTag"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1769956032\">Monster_W2_Kafka_IF02_SecondMonsterTag</a>"
                         }
                       ]
                     }
@@ -4286,7 +4286,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Kafka_IF02_Ability08_ExecuteTag"
+                "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
               },
               "ifTargetFound": [
                 {
@@ -4297,7 +4297,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Kafka_IF02_LeftMonsterTag"
+                    "modifier": "<a class=\"gModGreen\" id=\"452406781\">Monster_W2_Kafka_IF02_LeftMonsterTag</a>"
                   },
                   "passed": [
                     {
@@ -4308,7 +4308,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_IF02_SecondMonsterTag"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1769956032\">Monster_W2_Kafka_IF02_SecondMonsterTag</a>"
                       },
                       "passed": [
                         {
@@ -4331,7 +4331,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_IF02_SecondMonsterTag"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1769956032\">Monster_W2_Kafka_IF02_SecondMonsterTag</a>"
                       },
                       "passed": [
                         {
@@ -4365,7 +4365,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_Company_Coin_Elite[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
                       "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
@@ -4417,7 +4417,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Monster_W2_Kafka_IF02_Ability08_ExecuteTag"
+              "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -4425,7 +4425,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Monster_W2_Kafka_IF02_SecondMonsterTag"
+              "modifier": "<a class=\"gModGreen\" id=\"-1769956032\">Monster_W2_Kafka_IF02_SecondMonsterTag</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -4433,7 +4433,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_IF02_ContainJXDTag"
+              "modifier": "<a class=\"gModGreen\" id=\"1155608240\">Monster_W2_Kafka_IF02_ContainJXDTag</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -4494,7 +4494,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_MeleeAttack",
+              "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
                   "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
@@ -4523,7 +4523,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_Part03EnhanceEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"1988286038\">Monster_W2_Kafka_RL_Part03EnhanceEffect</a>"
             }
           ]
         },
@@ -4631,7 +4631,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
           },
           "ifTargetFound": [
             {
@@ -4640,7 +4640,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_EnhanceElectricMark"
+              "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
             }
           ]
         },
@@ -4652,7 +4652,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
           },
           "passed": [
             {
@@ -4661,7 +4661,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Targets Adjacent(Blast)}}"
               },
-              "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
                 "displayLines": "{[Skill01[2]]}",
@@ -4695,7 +4695,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
           },
           "passed": [
             {
@@ -4704,7 +4704,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Monster_W2_Kafka_EnhanceElectricMark"
+              "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
             }
           ]
         },
@@ -4721,7 +4721,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Kafka_EnhanceElectricMark"
+            "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
           },
           "ifTargetFound": [
             {
@@ -4730,7 +4730,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
             }
           ]
         },
@@ -4740,7 +4740,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_MeleeAttack"
+          "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4748,7 +4748,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Monster_W2_Kafka_EnhanceElectricMark"
+          "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
         },
         {
           "name": "IF",
@@ -4765,7 +4765,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -4773,7 +4773,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_Part03EnhanceEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"1988286038\">Monster_W2_Kafka_RL_Part03EnhanceEffect</a>"
             }
           ]
         },
@@ -4811,7 +4811,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Monster_W2_Kafka_IF02_ContainJXDTag"
+            "modifier": "<a class=\"gModGreen\" id=\"1155608240\">Monster_W2_Kafka_IF02_ContainJXDTag</a>"
           },
           "passed": [
             "Deleted bullshit"
@@ -4851,7 +4851,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_IF02_BattleEventSummon"
+              "modifier": "<a class=\"gModGreen\" id=\"-1519530085\">Monster_W2_Kafka_IF02_BattleEventSummon</a>"
             }
           ]
         },
@@ -4861,7 +4861,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF02_ListenMonsterActionModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1004356166\">Monster_W2_Kafka_IF02_ListenMonsterActionModifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4869,7 +4869,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF02_BreakListen"
+          "modifier": "<a class=\"gModGreen\" id=\"-1644855766\">Monster_W2_Kafka_IF02_BreakListen</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4877,7 +4877,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"1961920728\">Monster_W2_Kafka_BattleScore1</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -4894,7 +4894,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4902,7 +4902,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_HPRatioTriggerAOE"
+          "modifier": "<a class=\"gModGreen\" id=\"781148168\">Monster_W2_Kafka_IF_HPRatioTriggerAOE</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4910,7 +4910,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_Pursuit"
+          "modifier": "<a class=\"gModGreen\" id=\"-857035022\">Monster_W2_Kafka_IF_Pursuit</a>"
         },
         {
           "name": "Boss Bar Display",
@@ -4926,7 +4926,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF02_PartController"
+          "modifier": "<a class=\"gModGreen\" id=\"1659045581\">Monster_W2_Kafka_IF02_PartController</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4934,7 +4934,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_Power",
+          "modifier": "<a class=\"gModGreen\" id=\"1086358837\">Monster_W2_Kafka_IF_Power</a>",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
               "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
@@ -4952,7 +4952,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_LowHP",
+          "modifier": "<a class=\"gModGreen\" id=\"593237238\">Monster_W2_Kafka_IF_LowHP</a>",
           "valuePerStack": {
             "MDF_LowHPRatio": {
               "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
@@ -4970,14 +4970,14 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_IF_BOSS_Standard_BreakBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"651865792\">Monster_IF_BOSS_Standard_BreakBonus</a>"
         }
       ],
       "whenAdded": [],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF02_ListenMonsterActionModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1004356166\">Monster_W2_Kafka_IF02_ListenMonsterActionModifier</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5005,7 +5005,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Monster_W2_Kafka_IF02_Ability08_ExecuteTag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
                 },
                 {
                   "name": "Find New Target",
@@ -5023,7 +5023,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -5031,7 +5031,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_Company_Coin_Elite[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
                       }
                     ]
                   },
@@ -5047,7 +5047,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Kafka_IF02_Ability08_ExecuteTag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
                     }
                   ]
                 },
@@ -5075,7 +5075,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W2_Kafka_IF02_ContainJXDTag"
+                          "modifier": "<a class=\"gModGreen\" id=\"1155608240\">Monster_W2_Kafka_IF02_ContainJXDTag</a>"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -5111,7 +5111,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_BattleScore1",
+          "for": "<a class=\"gModGreen\" id=\"mod__1961920728\">Monster_W2_Kafka_BattleScore1</a>",
           "execute": [
             {
               "eventTrigger": "Modifier Cleansed [Anyone]",
@@ -5123,7 +5123,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "Standard_MindControl[<span class=\"descriptionNumberColor\">Dominated</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
                       },
                       {
                         "name": "Is Teammate",
@@ -5181,14 +5181,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF02_BEFrozen",
+          "for": "<a class=\"gModGreen\" id=\"mod__-376688543\">Monster_W2_Kafka_IF02_BEFrozen</a>",
           "modifierFlags": [
             "MuteSpeed"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF02_BreakBebuff",
+          "for": "<a class=\"gModGreen\" id=\"mod__-680193995\">Monster_W2_Kafka_IF02_BreakBebuff</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5208,7 +5208,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF02_BreakListen",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1644855766\">Monster_W2_Kafka_IF02_BreakListen</a>",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -5248,7 +5248,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_W2_Kafka_CharmTargetMark"
+          "modifier": "<a class=\"gModGreen\" id=\"-879407781\">Monster_W2_Kafka_CharmTargetMark</a>"
         },
         {
           "name": "Find New Target",
@@ -5263,7 +5263,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Kafka_CharmMark"
+            "modifier": "<a class=\"gModGreen\" id=\"-954638742\">Monster_W2_Kafka_CharmMark</a>"
           }
         },
         {
@@ -5295,7 +5295,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Monster_W2_Kafka_CharmMark"
+          "modifier": "<a class=\"gModGreen\" id=\"-954638742\">Monster_W2_Kafka_CharmMark</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -5303,7 +5303,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Monster_W2_Kafka_CharmTargetMark"
+          "modifier": "<a class=\"gModGreen\" id=\"-879407781\">Monster_W2_Kafka_CharmTargetMark</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -5361,7 +5361,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
             }
           ]
         },
@@ -5371,7 +5371,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Standard_MindControl_Target"
+          "modifier": "<a class=\"gModGreen\" id=\"821900269\">Standard_MindControl_Target</a>"
         },
         "Reset Triggers: Attack",
         {
@@ -5519,7 +5519,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -5545,7 +5545,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
             }
           ]
         }
@@ -5598,7 +5598,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_MindControl[<span class=\"descriptionNumberColor\">Dominated</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill05[0]]}) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "({[Skill05[0]]} + 1)",
@@ -5758,7 +5758,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
           },
           "ignoreParallelWarning": true,
           "ifTargetFound": [
@@ -5768,7 +5768,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
             }
           ]
         },
@@ -5825,7 +5825,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
             }
           ]
         },
@@ -5884,7 +5884,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_MeleeAttack",
+              "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
                   "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
@@ -5913,7 +5913,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_Part03EnhanceEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"1988286038\">Monster_W2_Kafka_RL_Part03EnhanceEffect</a>"
             }
           ]
         },
@@ -6021,7 +6021,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
           },
           "ifTargetFound": [
             {
@@ -6030,7 +6030,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_EnhanceElectricMark"
+              "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
             }
           ]
         },
@@ -6042,7 +6042,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
           },
           "passed": [
             {
@@ -6051,7 +6051,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Targets Adjacent(Blast)}}"
               },
-              "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
                 "displayLines": "{[Skill01[2]]}",
@@ -6085,7 +6085,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
           },
           "passed": [
             {
@@ -6094,7 +6094,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Monster_W2_Kafka_EnhanceElectricMark"
+              "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
             }
           ]
         },
@@ -6111,7 +6111,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Kafka_EnhanceElectricMark"
+            "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
           },
           "ifTargetFound": [
             {
@@ -6120,7 +6120,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
             }
           ]
         },
@@ -6130,7 +6130,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_MeleeAttack"
+          "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -6138,7 +6138,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Monster_W2_Kafka_EnhanceElectricMark"
+          "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
         },
         {
           "name": "IF",
@@ -6155,7 +6155,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -6163,7 +6163,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_Part03EnhanceEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"1988286038\">Monster_W2_Kafka_RL_Part03EnhanceEffect</a>"
             }
           ]
         },
@@ -6252,7 +6252,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Kafka_RL_MeleeAttack",
+              "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
                   "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
@@ -6323,7 +6323,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
           },
           "passed": [
             {
@@ -6344,7 +6344,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
             "displayLines": "{[Skill01[2]]}",
@@ -6391,7 +6391,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
             }
           ]
         },
@@ -6410,7 +6410,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_MeleeAttack"
+          "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>"
         },
         "Trigger: Ability End"
       ],
@@ -6454,7 +6454,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"1961920728\">Monster_W2_Kafka_BattleScore1</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -6471,7 +6471,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -6479,7 +6479,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_Pursuit",
+          "modifier": "<a class=\"gModGreen\" id=\"-1082518094\">Monster_W2_Kafka_Pursuit</a>",
           "valuePerStack": {
             "MDF_Count": {
               "operator": "Variables[0] (UnusedUnderThisBase_16) || RETURN",
@@ -6497,7 +6497,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_AIChange"
+          "modifier": "<a class=\"gModGreen\" id=\"2066030702\">Monster_W2_Kafka_AIChange</a>"
         },
         {
           "name": "Boss Bar Display",
@@ -6574,7 +6574,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_Kafka_TargetFilter"
+                  "modifier": "<a class=\"gModGreen\" id=\"1137001600\">Monster_W2_Kafka_TargetFilter</a>"
                 }
               ]
             }
@@ -6585,7 +6585,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_TargetFilter",
+          "for": "<a class=\"gModGreen\" id=\"mod__1137001600\">Monster_W2_Kafka_TargetFilter</a>",
           "stackData": [],
           "latentQueue": [
             "DisPelCount"
@@ -6593,7 +6593,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_AIChange",
+          "for": "<a class=\"gModGreen\" id=\"mod__2066030702\">Monster_W2_Kafka_AIChange</a>",
           "stackData": [],
           "latentQueue": [
             "DisPelCount"
@@ -6601,7 +6601,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_BattleScore1",
+          "for": "<a class=\"gModGreen\" id=\"mod__1961920728\">Monster_W2_Kafka_BattleScore1</a>",
           "execute": [
             {
               "eventTrigger": "Modifier Cleansed [Anyone]",
@@ -6613,7 +6613,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "Standard_MindControl[<span class=\"descriptionNumberColor\">Dominated</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
                       },
                       {
                         "name": "Is Teammate",
@@ -6687,7 +6687,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "modifier": "Enemy_W2_Kafka_ResetStageBGM"
+          "modifier": "<a class=\"gModGreen\" id=\"932283080\">Enemy_W2_Kafka_ResetStageBGM</a>"
         }
       ],
       "whenAdded": [
@@ -6723,7 +6723,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Kafka_ResetStageBGM",
+          "for": "<a class=\"gModGreen\" id=\"mod__932283080\">Enemy_W2_Kafka_ResetStageBGM</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6785,7 +6785,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -6796,7 +6796,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_Part03EnhanceEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__1988286038\">Monster_W2_Kafka_RL_Part03EnhanceEffect</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -6807,7 +6807,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_LowHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1555277593\">Monster_W2_Kafka_RL_LowHP</a>",
           "execute": [
             {
               "eventTrigger": "HP Change [Owner]",
@@ -6914,7 +6914,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_MindControlCheck",
+          "for": "<a class=\"gModGreen\" id=\"mod__-658182904\">Monster_W2_Kafka_RL_MindControlCheck</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -6930,7 +6930,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_RL_MindControl_True[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -6938,7 +6938,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_RL_MindControl_TrueEffect[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
                       }
                     ]
                   },
@@ -6971,7 +6971,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_RL_MindControl_True[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -6979,7 +6979,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_RL_MindControl_TrueEffect[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
                       }
                     ]
                   },
@@ -6990,7 +6990,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_W2_Kafka_RL_MindControlStanceResistance"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1031793499\">Monster_W2_Kafka_RL_MindControlStanceResistance</a>"
                     }
                   ]
                 }
@@ -7010,7 +7010,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_RL_MindControl_True[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -7018,7 +7018,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_RL_MindControl_TrueEffect[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
                       }
                     ]
                   }
@@ -7031,7 +7031,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Kafka_RL_MindControl_True[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                   },
                   "passed": [
                     {
@@ -7040,7 +7040,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Kafka_RL_MindControl_True[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -7048,7 +7048,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Kafka_RL_MindControl_TrueEffect[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
                     }
                   ]
                 },
@@ -7060,7 +7060,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Kafka_RL_MindControl_False[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"2054484016\">Monster_W2_Kafka_RL_MindControl_False</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                   },
                   "passed": [
                     {
@@ -7069,7 +7069,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Kafka_RL_MindControl_False[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"2054484016\">Monster_W2_Kafka_RL_MindControl_False</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                     }
                   ]
                 },
@@ -7100,7 +7100,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_RL_MindControl_False[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"2054484016\">Monster_W2_Kafka_RL_MindControl_False</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                       },
                       "noTargetFound": [
                         {
@@ -7116,7 +7116,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Monster_W2_Kafka_RL_MindControl_True[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                           },
                           "ifTargetFound": [
                             {
@@ -7125,7 +7125,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Monster_W2_Kafka_RL_MindControl_TrueEffect[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
+                              "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
                             }
                           ]
                         },
@@ -7135,7 +7135,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Player Team All}}"
                           },
-                          "modifier": "Monster_W2_Kafka_RL_MindControl_False[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"2054484016\">Monster_W2_Kafka_RL_MindControl_False</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -7178,7 +7178,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_RL_MindControl_True[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                       },
                       "noTargetFound": [
                         {
@@ -7187,7 +7187,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Player Team All}}"
                           },
-                          "modifier": "Monster_W2_Kafka_RL_MindControl_False[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"2054484016\">Monster_W2_Kafka_RL_MindControl_False</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -7209,7 +7209,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_MindControlStanceResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1031793499\">Monster_W2_Kafka_RL_MindControlStanceResistance</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7237,7 +7237,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_MindControl_False[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2054484016\">Monster_W2_Kafka_RL_MindControl_False</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]",
           "modifierFlags": [
             "DispelPriorityHigh"
           ],
@@ -7248,7 +7248,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_MindControl_TrueEffect[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]",
           "modifierFlags": [
             "DispelPriorityHigh"
           ],
@@ -7262,7 +7262,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W2_Kafka_RL_MindControl_True[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                 }
               ]
             }
@@ -7278,7 +7278,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_MindControl_True[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]",
           "modifierFlags": [
             "DispelPriorityHigh",
             "RemoveWhenCasterDead"
@@ -7302,7 +7302,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -7342,7 +7342,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_MeleeAttack",
+          "for": "<a class=\"gModGreen\" id=\"mod__228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -7367,7 +7367,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_W2_Kafka_RL_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
                           "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
@@ -7401,7 +7401,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_ListenElectric",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1459324201\">Monster_W2_Kafka_RL_ListenElectric</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -7453,7 +7453,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Monster_W2_Kafka_RL_MeleeAttack"
+                        "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>"
                       },
                       "passed": [
                         {
@@ -7475,7 +7475,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W2_Kafka_RL_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
                               "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
@@ -7497,7 +7497,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_Power",
+          "for": "<a class=\"gModGreen\" id=\"mod__688364152\">Monster_W2_Kafka_RL_Power</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -7508,7 +7508,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Monster_W2_Kafka_RL_ListenElectric",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1459324201\">Monster_W2_Kafka_RL_ListenElectric</a>",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
                       "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
@@ -7538,7 +7538,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Modifier_W2_Kafka_RL_BattleEvent"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -7568,7 +7568,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Kafka_RL_ListenElectric",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1459324201\">Monster_W2_Kafka_RL_ListenElectric</a>",
                     "invertCondition": true
                   },
                   "ifTargetFound": [
@@ -7578,7 +7578,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Kafka_RL_ListenElectric",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1459324201\">Monster_W2_Kafka_RL_ListenElectric</a>",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
                           "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
@@ -7604,13 +7604,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_Ability04_Target",
+          "for": "<a class=\"gModGreen\" id=\"mod__488971952\">Monster_W2_Kafka_RL_Ability04_Target</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_Pursuit",
+          "for": "<a class=\"gModGreen\" id=\"mod__108137779\">Monster_W2_Kafka_RL_Pursuit</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -7756,7 +7756,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_Endurance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1880603044\">Monster_W2_Kafka_RL_Endurance</a>",
           "modifierFlags": [
             "Endurance"
           ],
@@ -7805,7 +7805,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_RL_PartController",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1041839558\">Monster_W2_Kafka_RL_PartController</a>",
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -7851,7 +7851,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W2_Kafka_RL_Endurance"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1880603044\">Monster_W2_Kafka_RL_Endurance</a>"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -7908,7 +7908,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W2_Kafka_RL_Endurance"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1880603044\">Monster_W2_Kafka_RL_Endurance</a>"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -7948,7 +7948,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1510857703\">Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -7959,7 +7959,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_Part03EnhanceEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-682734007\">Monster_W2_Kafka_IF_Part03EnhanceEffect</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -7970,7 +7970,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_LowHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__593237238\">Monster_W2_Kafka_IF_LowHP</a>",
           "execute": [
             {
               "eventTrigger": "HP Change [Owner]",
@@ -8067,7 +8067,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_MindControlCheck",
+          "for": "<a class=\"gModGreen\" id=\"mod__-696707181\">Monster_W2_Kafka_IF_MindControlCheck</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -8083,7 +8083,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+                        "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
                       },
                       {
                         "name": "Has Modifier",
@@ -8091,7 +8091,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_IF_MindControl_TrueEffect"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>"
                       }
                     ]
                   },
@@ -8124,7 +8124,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+                        "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
                       },
                       {
                         "name": "Has Modifier",
@@ -8132,7 +8132,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_IF_MindControl_TrueEffect"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>"
                       }
                     ]
                   },
@@ -8143,7 +8143,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_W2_Kafka_IF_MindControlStanceResistance"
+                      "modifier": "<a class=\"gModGreen\" id=\"-16307516\">Monster_W2_Kafka_IF_MindControlStanceResistance</a>"
                     }
                   ]
                 }
@@ -8163,7 +8163,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+                        "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
                       },
                       {
                         "name": "Has Modifier",
@@ -8171,7 +8171,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_IF_MindControl_TrueEffect"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>"
                       }
                     ]
                   }
@@ -8184,7 +8184,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+                    "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
                   },
                   "passed": [
                     {
@@ -8193,7 +8193,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+                      "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -8201,7 +8201,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Kafka_IF_MindControl_TrueEffect"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>"
                     }
                   ]
                 },
@@ -8213,7 +8213,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Kafka_IF_MindControl_False"
+                    "modifier": "<a class=\"gModGreen\" id=\"1752429969\">Monster_W2_Kafka_IF_MindControl_False</a>"
                   },
                   "passed": [
                     {
@@ -8222,7 +8222,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Kafka_IF_MindControl_False"
+                      "modifier": "<a class=\"gModGreen\" id=\"1752429969\">Monster_W2_Kafka_IF_MindControl_False</a>"
                     }
                   ]
                 },
@@ -8253,7 +8253,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_IF_MindControl_False"
+                        "modifier": "<a class=\"gModGreen\" id=\"1752429969\">Monster_W2_Kafka_IF_MindControl_False</a>"
                       },
                       "noTargetFound": [
                         {
@@ -8269,7 +8269,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+                            "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
                           },
                           "ifTargetFound": [
                             {
@@ -8278,7 +8278,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Monster_W2_Kafka_IF_MindControl_TrueEffect"
+                              "modifier": "<a class=\"gModGreen\" id=\"-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>"
                             }
                           ]
                         },
@@ -8288,7 +8288,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Player Team All}}"
                           },
-                          "modifier": "Monster_W2_Kafka_IF_MindControl_False"
+                          "modifier": "<a class=\"gModGreen\" id=\"1752429969\">Monster_W2_Kafka_IF_MindControl_False</a>"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -8331,7 +8331,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+                        "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
                       },
                       "noTargetFound": [
                         {
@@ -8340,7 +8340,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Player Team All}}"
                           },
-                          "modifier": "Monster_W2_Kafka_IF_MindControl_False"
+                          "modifier": "<a class=\"gModGreen\" id=\"1752429969\">Monster_W2_Kafka_IF_MindControl_False</a>"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -8362,7 +8362,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_MindControlStanceResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-16307516\">Monster_W2_Kafka_IF_MindControlStanceResistance</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -8390,14 +8390,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_MindControl_False",
+          "for": "<a class=\"gModGreen\" id=\"mod__1752429969\">Monster_W2_Kafka_IF_MindControl_False</a>",
           "modifierFlags": [
             "DispelPriorityHigh"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_MindControl_TrueEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>",
           "modifierFlags": [
             "DispelPriorityHigh"
           ],
@@ -8411,7 +8411,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+                  "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
                 }
               ]
             }
@@ -8423,7 +8423,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_MindControl_True",
+          "for": "<a class=\"gModGreen\" id=\"mod__807751830\">Monster_W2_Kafka_IF_MindControl_True</a>",
           "modifierFlags": [
             "DispelPriorityHigh"
           ],
@@ -8441,7 +8441,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_DamageUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__472862856\">Monster_W2_Kafka_IF_DamageUp</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -8477,7 +8477,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_MeleeAttack",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1236261740\">Monster_W2_Kafka_IF_MeleeAttack</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -8502,7 +8502,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_W2_Kafka_RL_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
                           "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
@@ -8532,7 +8532,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_ListenElectric",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1975598300\">Monster_W2_Kafka_IF_ListenElectric</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -8584,7 +8584,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Monster_W2_Kafka_IF_MeleeAttack"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1236261740\">Monster_W2_Kafka_IF_MeleeAttack</a>"
                       },
                       "passed": [
                         {
@@ -8606,7 +8606,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W2_Kafka_RL_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
                               "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
@@ -8628,7 +8628,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_Power",
+          "for": "<a class=\"gModGreen\" id=\"mod__1086358837\">Monster_W2_Kafka_IF_Power</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -8639,7 +8639,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Monster_W2_Kafka_IF_ListenElectric",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1975598300\">Monster_W2_Kafka_IF_ListenElectric</a>",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
                       "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
@@ -8669,7 +8669,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Kafka_IF_ListenElectric",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1975598300\">Monster_W2_Kafka_IF_ListenElectric</a>",
                     "invertCondition": true
                   },
                   "ifTargetFound": [
@@ -8679,7 +8679,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Kafka_IF_ListenElectric",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1975598300\">Monster_W2_Kafka_IF_ListenElectric</a>",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
                           "operator": "Variables[0] (MDF_DamageUpRatio_PerLayer) || RETURN",
@@ -8705,13 +8705,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_Ability04_Target",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1330368689\">Monster_W2_Kafka_IF_Ability04_Target</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_Pursuit",
+          "for": "<a class=\"gModGreen\" id=\"mod__-857035022\">Monster_W2_Kafka_IF_Pursuit</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -8857,7 +8857,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_Endurance",
+          "for": "<a class=\"gModGreen\" id=\"mod__1613170749\">Monster_W2_Kafka_IF_Endurance</a>",
           "modifierFlags": [
             "Endurance"
           ],
@@ -8906,7 +8906,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_PartController",
+          "for": "<a class=\"gModGreen\" id=\"mod__-568638257\">Monster_W2_Kafka_IF_PartController</a>",
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -8952,7 +8952,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W2_Kafka_IF_Endurance"
+                          "modifier": "<a class=\"gModGreen\" id=\"1613170749\">Monster_W2_Kafka_IF_Endurance</a>"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -9009,7 +9009,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W2_Kafka_IF_Endurance"
+                          "modifier": "<a class=\"gModGreen\" id=\"1613170749\">Monster_W2_Kafka_IF_Endurance</a>"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -9049,7 +9049,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_HPRatioTriggerAOE",
+          "for": "<a class=\"gModGreen\" id=\"mod__781148168\">Monster_W2_Kafka_IF_HPRatioTriggerAOE</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -9097,7 +9097,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_SummonControl",
+          "for": "<a class=\"gModGreen\" id=\"mod__-196949568\">Monster_W2_Kafka_IF_SummonControl</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -9127,7 +9127,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF02_ContainJXDTag",
+          "for": "<a class=\"gModGreen\" id=\"mod__1155608240\">Monster_W2_Kafka_IF02_ContainJXDTag</a>",
           "stackData": [],
           "latentQueue": [
             "MDF_HasTarget",
@@ -9136,7 +9136,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF_SummonRotation",
+          "for": "<a class=\"gModGreen\" id=\"mod__1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -9147,11 +9147,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF02_P2ShieldBrokenTag"
+          "for": "<a class=\"gModGreen\" id=\"mod__-1425462104\">Monster_W2_Kafka_IF02_P2ShieldBrokenTag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF02_P2ShieldModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__626983576\">Monster_W2_Kafka_IF02_P2ShieldModifier</a>",
           "modifierFlags": [
             "MuteBreak"
           ],
@@ -9270,7 +9270,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W2_Kafka_IF02_P2ShieldBrokenTag"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1425462104\">Monster_W2_Kafka_IF02_P2ShieldBrokenTag</a>"
                         },
                         "Modifier Deletes Itself"
                       ]
@@ -9283,7 +9283,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF02_PartController",
+          "for": "<a class=\"gModGreen\" id=\"mod__1659045581\">Monster_W2_Kafka_IF02_PartController</a>",
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -9429,7 +9429,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W2_Kafka_IF_Endurance"
+                          "modifier": "<a class=\"gModGreen\" id=\"1613170749\">Monster_W2_Kafka_IF_Endurance</a>"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -9469,7 +9469,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF02_Ability08_ExecuteTag",
+          "for": "<a class=\"gModGreen\" id=\"mod__-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>",
           "stackData": [],
           "latentQueue": [
             "MDF_HasTarget"
@@ -9477,7 +9477,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF02_SecondMonsterTag",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1769956032\">Monster_W2_Kafka_IF02_SecondMonsterTag</a>",
           "stackData": [],
           "latentQueue": [
             "MDF_Right",
@@ -9486,15 +9486,15 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF02_RightMonsterTag"
+          "for": "<a class=\"gModGreen\" id=\"mod__1771717814\">Monster_W2_Kafka_IF02_RightMonsterTag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF02_LeftMonsterTag"
+          "for": "<a class=\"gModGreen\" id=\"mod__452406781\">Monster_W2_Kafka_IF02_LeftMonsterTag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_IF02_BattleEventSummon",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1519530085\">Monster_W2_Kafka_IF02_BattleEventSummon</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -9588,7 +9588,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Recently Summoned Enemies}}"
                               },
-                              "modifier": "Monster_W2_Kafka_IF02_LeftMonsterTag"
+                              "modifier": "<a class=\"gModGreen\" id=\"452406781\">Monster_W2_Kafka_IF02_LeftMonsterTag</a>"
                             }
                           ],
                           "failed": [
@@ -9630,7 +9630,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Recently Summoned Enemies}}"
                               },
-                              "modifier": "Monster_W2_Kafka_IF02_RightMonsterTag"
+                              "modifier": "<a class=\"gModGreen\" id=\"1771717814\">Monster_W2_Kafka_IF02_RightMonsterTag</a>"
                             }
                           ]
                         }
@@ -9669,7 +9669,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Kafka_IF02_LeftMonsterTag"
+                    "modifier": "<a class=\"gModGreen\" id=\"452406781\">Monster_W2_Kafka_IF02_LeftMonsterTag</a>"
                   },
                   "passed": [
                     {
@@ -9734,7 +9734,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "OneMorePerTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                     }
                   ]
                 }
@@ -9746,7 +9746,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_CharmTargetMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-879407781\">Monster_W2_Kafka_CharmTargetMark</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -9762,7 +9762,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_CharmMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-954638742\">Monster_W2_Kafka_CharmMark</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -9771,7 +9771,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_CharmOneAttack",
+          "for": "<a class=\"gModGreen\" id=\"mod__64191029\">Monster_W2_Kafka_CharmOneAttack</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -9782,7 +9782,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
                 }
               ]
             }
@@ -9790,7 +9790,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_CharmDisableAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__808819939\">Monster_W2_Kafka_CharmDisableAction</a>",
           "modifierFlags": [
             "DisableAction"
           ],
@@ -9798,7 +9798,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_Charm[<span class=\"descriptionNumberColor\">Dominated</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1239633217\">Monster_W2_Kafka_Charm</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
           "stackType": "Refresh",
           "modifierFlags": [
             "STAT_CTRL",
@@ -9840,7 +9840,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_W2_Kafka_CharmDisableAction"
+                      "modifier": "<a class=\"gModGreen\" id=\"808819939\">Monster_W2_Kafka_CharmDisableAction</a>"
                     }
                   ]
                 }
@@ -9887,7 +9887,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Kafka_CharmTargetMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-879407781\">Monster_W2_Kafka_CharmTargetMark</a>"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -9919,7 +9919,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Monster_W2_Kafka_CharmTargetMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-879407781\">Monster_W2_Kafka_CharmTargetMark</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -9957,7 +9957,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_CharmControl",
+          "for": "<a class=\"gModGreen\" id=\"mod__2042396368\">Monster_W2_Kafka_CharmControl</a>",
           "execute": [
             {
               "eventTrigger": "Dealt Damage while Crowd/Mind Controlled [Anyone]",
@@ -10005,13 +10005,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_EnhanceElectricMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_EnhanceElectricDamage",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -10036,7 +10036,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_Enhance",
+          "for": "<a class=\"gModGreen\" id=\"mod__318325310\">Monster_W2_Kafka_Enhance</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -10055,7 +10055,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
                       },
                       {
                         "name": "NOT",
@@ -10065,7 +10065,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Monster_W2_Kafka_CharmTargetMark"
+                          "modifier": "<a class=\"gModGreen\" id=\"-879407781\">Monster_W2_Kafka_CharmTargetMark</a>"
                         }
                       },
                       {
@@ -10076,7 +10076,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Monster_W2_Kafka_CharmOneAttack"
+                          "modifier": "<a class=\"gModGreen\" id=\"64191029\">Monster_W2_Kafka_CharmOneAttack</a>"
                         }
                       }
                     ]
@@ -10088,7 +10088,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Kafka_CharmOneAttack"
+                      "modifier": "<a class=\"gModGreen\" id=\"64191029\">Monster_W2_Kafka_CharmOneAttack</a>"
                     }
                   ]
                 }
@@ -10106,7 +10106,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Monster_W2_Kafka_CharmOneAttack"
+                  "modifier": "<a class=\"gModGreen\" id=\"64191029\">Monster_W2_Kafka_CharmOneAttack</a>"
                 }
               ]
             }
@@ -10114,7 +10114,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Kafka_Pursuit",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1082518094\">Monster_W2_Kafka_Pursuit</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],

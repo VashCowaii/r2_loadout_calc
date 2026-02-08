@@ -20,7 +20,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Argenti_IF_EX_EnemyCount",
+          "modifier": "<a class=\"gModGreen\" id=\"-1397396521\">Enemy_W2_Argenti_IF_EX_EnemyCount</a>",
           "valuePerStack": {
             "MDF_ShowValue1": {
               "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",

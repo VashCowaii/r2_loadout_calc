@@ -78,7 +78,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
                     },
-                    "modifier": "Monster_W1_Mecha04_Sign01[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
                   },
                   "passed": [
                     {
@@ -159,7 +159,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "OneMore"
+                            "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
                           },
                           "passed": [
                             {
@@ -168,7 +168,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "OneMore",
+                              "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>",
                               "duration": 2
                             }
                           ],
@@ -179,7 +179,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "OneMore"
+                              "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
                             }
                           ]
                         },
@@ -212,7 +212,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Ability Target(ST)}}"
                             },
-                            "modifier": "Monster_W1_Mecha04_Sign01[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
                           },
                           "passed": [
                             {
@@ -251,7 +251,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "OneMore"
+                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
                       },
                       "passed": [
                         {
@@ -260,7 +260,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "OneMore",
+                          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>",
                           "duration": 2
                         }
                       ],
@@ -271,7 +271,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "OneMore"
+                          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
                         }
                       ]
                     },
@@ -326,7 +326,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "W1_Mecha02_ThunderDOT[<span class=\"descriptionNumberColor\">Bleed</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-95545360\">W1_Mecha02_ThunderDOT</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
           "duration": 2,
           "baseChance": {
             "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
@@ -398,7 +398,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "W1_Mecha02_ThunderDOT[<span class=\"descriptionNumberColor\">Bleed</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-95545360\">W1_Mecha02_ThunderDOT</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
           "duration": 2,
           "baseChance": {
             "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
@@ -465,7 +465,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W1_Mecha04_RemoveAim"
+              "modifier": "<a class=\"gModGreen\" id=\"86526796\">Monster_W1_Mecha04_RemoveAim</a>"
             },
             {
               "name": "Declare Custom Variable",
@@ -530,7 +530,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_W1_Mecha04_ChainSawSpeedUp"
+                  "modifier": "<a class=\"gModGreen\" id=\"1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -538,7 +538,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Sign_W1_Mecha02[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1909388904\">Sign_W1_Mecha02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ],
@@ -559,7 +559,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Monster_W1_Mecha04_RemoveAim"
+                      "modifier": "<a class=\"gModGreen\" id=\"86526796\">Monster_W1_Mecha04_RemoveAim</a>"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -582,7 +582,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W1_Mecha04_ChainSawSpeedUp"
+              "modifier": "<a class=\"gModGreen\" id=\"1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -590,7 +590,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Sign_W1_Mecha02[<span class=\"descriptionNumberColor\">Lock On</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1909388904\">Sign_W1_Mecha02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
               "onlyRemoveOwnersInstance": true
             }
           ]

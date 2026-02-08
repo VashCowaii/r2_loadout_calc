@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_22005_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"199111548\">LC_22005_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_22005_Sub[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1796724281\">LC_22005_Sub</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -85,7 +85,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_22005_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__199111548\">LC_22005_Main</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -103,7 +103,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "LC_22005_Sub[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1796724281\">LC_22005_Sub</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",

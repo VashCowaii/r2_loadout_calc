@@ -36,7 +36,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Herta_Trace03_AddDamageUp",
+                  "modifier": "<a class=\"gModGreen\" id=\"1926403261\">Herta_Trace03_AddDamageUp</a>",
                   "valuePerStack": {
                     "MDF_AllDamageTakenRatio": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -97,7 +97,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Herta_AbilityEidolon6_AttackUP[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-429248408\">Herta_AbilityEidolon6_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -127,14 +127,14 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Herta_Trace03_AddDamageUp"
+      "modifier": "<a class=\"gModGreen\" id=\"1926403261\">Herta_Trace03_AddDamageUp</a>"
     },
     "Trigger: Ability End"
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Herta_AbilityEidolon6_AttackUP[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-429248408\">Herta_AbilityEidolon6_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -170,7 +170,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Herta_Trace03_AddDamageUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__1926403261\">Herta_Trace03_AddDamageUp</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

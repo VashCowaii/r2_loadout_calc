@@ -43,13 +43,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "modifier": "Enemy_W2_Argenti_ResetStageBGM"
+      "modifier": "<a class=\"gModGreen\" id=\"1416499682\">Enemy_W2_Argenti_ResetStageBGM</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Argenti_ResetStageBGM",
+      "for": "<a class=\"gModGreen\" id=\"mod__1416499682\">Enemy_W2_Argenti_ResetStageBGM</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

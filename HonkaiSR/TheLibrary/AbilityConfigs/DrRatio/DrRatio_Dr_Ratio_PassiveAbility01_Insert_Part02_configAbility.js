@@ -72,7 +72,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1000967262\">Dr_Ratio_Ability03_TheFool</a>[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -108,7 +108,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio",
+          "modifier": "<a class=\"gModGreen\" id=\"-1351658038\">Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.5) || RETURN",
@@ -133,7 +133,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All(with Unselectable)}}"
       },
-      "modifier": "Dr_Ratio_Insert_Flag"
+      "modifier": "<a class=\"gModGreen\" id=\"-253275642\">Dr_Ratio_Insert_Flag</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -141,7 +141,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Dr_Ratio_Insert_Flag_Caster"
+      "modifier": "<a class=\"gModGreen\" id=\"1963870595\">Dr_Ratio_Insert_Flag_Caster</a>"
     },
     {
       "name": "IF",
@@ -300,7 +300,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Dr_Ratio_InsertAbility"
+      "modifier": "<a class=\"gModGreen\" id=\"1051620439\">Dr_Ratio_InsertAbility</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -308,7 +308,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio"
+      "modifier": "<a class=\"gModGreen\" id=\"-1351658038\">Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio</a>"
     },
     {
       "name": "Define Custom Variable",

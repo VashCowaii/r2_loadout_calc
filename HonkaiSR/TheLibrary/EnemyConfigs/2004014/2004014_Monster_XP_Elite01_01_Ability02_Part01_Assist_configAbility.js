@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMore"
+      "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_XP_Elite01_01_MonsterAssistBonus[<span class=\"descriptionNumberColor\">Crystallite</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-831587978\">Monster_XP_Elite01_01_MonsterAssistBonus</a>[<span class=\"descriptionNumberColor\">Crystallite</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -34,7 +34,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "XP_Ice_Elite_Powerful_Modifier[<span class=\"descriptionNumberColor\">Freezing Point</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-557071994\">XP_Ice_Elite_Powerful_Modifier</a>[<span class=\"descriptionNumberColor\">Freezing Point</span>]",
       "valuePerStack": {
         "Modifier_AllDamageTypeResistance": {
           "operator": "Variables[0] (UnusedUnderThisBase_26) || RETURN",

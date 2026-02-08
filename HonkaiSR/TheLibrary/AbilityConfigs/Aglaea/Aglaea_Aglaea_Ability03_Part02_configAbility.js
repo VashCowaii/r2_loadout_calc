@@ -21,7 +21,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Aglaea_PassiveAbility01_BattleEvent"
+              "modifier": "<a class=\"gModGreen\" id=\"-1954638967\">Aglaea_PassiveAbility01_BattleEvent</a>"
             }
           }
         ]
@@ -78,7 +78,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Aglaea_Ability02_ChangeSkill"
+          "modifier": "<a class=\"gModGreen\" id=\"755493734\">Aglaea_Ability02_ChangeSkill</a>"
         }
       ],
       "failed": [
@@ -161,7 +161,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Aglaea_Ability03[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"518821924\">Aglaea_Ability03</a>[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
     },
     {
       "name": "Add Battle Event",
@@ -184,7 +184,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Aglaea_Ability03_Sub"
+      "modifier": "<a class=\"gModGreen\" id=\"-498968511\">Aglaea_Ability03_Sub</a>"
     },
     {
       "name": "IF",
@@ -199,7 +199,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}} + {{Caster's Memosprite}}"
           },
-          "modifier": "Aglaea_Eidolon6_Effect[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.2) || RETURN",
@@ -219,7 +219,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Aglaea_Ability03_ForbidSkill"
+      "modifier": "<a class=\"gModGreen\" id=\"-1725518252\">Aglaea_Ability03_ForbidSkill</a>"
     },
     {
       "name": "Action Advance/Delay",
@@ -245,7 +245,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "March7th_UltraTarget"
+      "for": "<a class=\"gModGreen\" id=\"mod__1349068502\">March7th_UltraTarget</a>"
     }
   ]
 }

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yanqing_Eidolon4"
+      "modifier": "<a class=\"gModGreen\" id=\"1544718418\">Yanqing_Eidolon4</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Yanqing_Eidolon4_IcePenetrate[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1096242682\">Yanqing_Eidolon4_IcePenetrate</a>[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Yanqing_Eidolon4",
+      "for": "<a class=\"gModGreen\" id=\"mod__1544718418\">Yanqing_Eidolon4</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -78,7 +78,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yanqing_Eidolon4_IcePenetrate[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1096242682\">Yanqing_Eidolon4_IcePenetrate</a>[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
                   "valuePerStack": {
                     "MDF_IcePenetrate": {
                       "operator": "Variables[0] (0.12) || RETURN",
@@ -98,7 +98,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yanqing_Eidolon4_IcePenetrate[<span class=\"descriptionNumberColor\">Searing Sting</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1096242682\">Yanqing_Eidolon4_IcePenetrate</a>[<span class=\"descriptionNumberColor\">Searing Sting</span>]"
                 }
               ]
             }
@@ -133,7 +133,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yanqing_Eidolon4_IcePenetrate[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1096242682\">Yanqing_Eidolon4_IcePenetrate</a>[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
                   "valuePerStack": {
                     "MDF_IcePenetrate": {
                       "operator": "Variables[0] (0.12) || RETURN",
@@ -153,7 +153,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yanqing_Eidolon4_IcePenetrate[<span class=\"descriptionNumberColor\">Searing Sting</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1096242682\">Yanqing_Eidolon4_IcePenetrate</a>[<span class=\"descriptionNumberColor\">Searing Sting</span>]"
                 }
               ]
             }

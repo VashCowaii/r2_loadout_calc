@@ -57,7 +57,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{All Team Members}}"
       },
-      "modifier": "Bronya_Ultimate_PowerUp[<span class=\"descriptionNumberColor\">The Belobog March</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-379855100\">Bronya_Ultimate_PowerUp</a>[<span class=\"descriptionNumberColor\">The Belobog March</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",

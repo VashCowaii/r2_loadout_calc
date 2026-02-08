@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23025_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"1790842269\">LC_23025_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23025_Sub[<span class=\"descriptionNumberColor\">Routed</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1728787246\">LC_23025_Sub</a>[<span class=\"descriptionNumberColor\">Routed</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "STAT_SpeedDown"
@@ -75,7 +75,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23025_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__1790842269\">LC_23025_Main</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -95,7 +95,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_23025_Sub[<span class=\"descriptionNumberColor\">Routed</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1728787246\">LC_23025_Sub</a>[<span class=\"descriptionNumberColor\">Routed</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -113,7 +113,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "LC_23025_Sub[<span class=\"descriptionNumberColor\">Routed</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1728787246\">LC_23025_Sub</a>[<span class=\"descriptionNumberColor\">Routed</span>]",
                         "justAddedOrActive": true,
                         "casterFilter": {
                           "name": "Target Name",

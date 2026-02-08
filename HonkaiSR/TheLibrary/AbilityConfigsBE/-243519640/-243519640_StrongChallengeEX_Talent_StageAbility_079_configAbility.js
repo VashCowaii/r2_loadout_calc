@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_079"
+      "modifier": "<a class=\"gModGreen\" id=\"-468543078\">MStrongChallengeEX_Talent_StageAbility_LE_079</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_079_Extra[<span class=\"descriptionNumberColor\">Unto Apotheosis</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-675587525\">MStrongChallengeEX_Talent_StageAbility_PLY_079_Extra</a>[<span class=\"descriptionNumberColor\">Unto Apotheosis</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -56,7 +56,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_079",
+      "for": "<a class=\"gModGreen\" id=\"mod__1257826162\">MStrongChallengeEX_Talent_StageAbility_PLY_079</a>",
       "execute": [
         {
           "eventTrigger": "Skill Point Changes",
@@ -92,7 +92,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_079_Extra[<span class=\"descriptionNumberColor\">Unto Apotheosis</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-675587525\">MStrongChallengeEX_Talent_StageAbility_PLY_079_Extra</a>[<span class=\"descriptionNumberColor\">Unto Apotheosis</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
                     "displayLines": "MDF_PropertyValue2",
@@ -128,7 +128,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_079",
+      "for": "<a class=\"gModGreen\" id=\"mod__-468543078\">MStrongChallengeEX_Talent_StageAbility_LE_079</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -155,7 +155,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_079",
+                  "modifier": "<a class=\"gModGreen\" id=\"1257826162\">MStrongChallengeEX_Talent_StageAbility_PLY_079</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

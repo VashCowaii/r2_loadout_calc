@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_XP_Minion04_02_Introduce[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"2118515591\">Enemy_XP_Minion04_02_Introduce</a>[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -25,13 +25,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_XP_Minion04_02_P01_EnterBattle"
+      "modifier": "<a class=\"gModGreen\" id=\"1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Introduce[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2118515591\">Enemy_XP_Minion04_02_Introduce</a>[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]",
       "stackData": [],
       "latentQueue": [],
       "description": "When a friendly unit is attacked, Trotter of Destruction will attack all targets. The attack count is equal to the number of the targets attacked.",
@@ -41,7 +41,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_P01_EnterBattle",
+      "for": "<a class=\"gModGreen\" id=\"mod__1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -57,7 +57,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Caster"
+                    "modifier": "<a class=\"gModGreen\" id=\"-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>"
                   },
                   {
                     "name": "Is Part Of Team",
@@ -76,7 +76,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion"
+                  "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
                 }
               ]
             }

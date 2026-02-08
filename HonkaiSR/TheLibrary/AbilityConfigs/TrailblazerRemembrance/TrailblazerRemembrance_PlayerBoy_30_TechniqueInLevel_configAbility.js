@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "PlayerBoy_30_Maze"
+      "modifier": "<a class=\"gModGreen\" id=\"-1770265909\">PlayerBoy_30_Maze</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,13 +26,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "PlayerBoy_30_Maze_Damage"
+      "modifier": "<a class=\"gModGreen\" id=\"1506830909\">PlayerBoy_30_Maze_Damage</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "PlayerBoy_30_Maze_Damage",
+      "for": "<a class=\"gModGreen\" id=\"mod__1506830909\">PlayerBoy_30_Maze_Damage</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -76,7 +76,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "PlayerBoy_30_Maze",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1770265909\">PlayerBoy_30_Maze</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

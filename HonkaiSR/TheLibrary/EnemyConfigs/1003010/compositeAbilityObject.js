@@ -42,7 +42,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Soldier03_ListenBeingAttacked[<span class=\"descriptionNumberColor\">Counter</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-387357924\">Enemy_W1_Soldier03_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]"
         },
         {
           "name": "Declare Custom Variable",
@@ -107,7 +107,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "OneMore"
+                "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
               },
               {
                 "name": "Has Modifier",
@@ -115,7 +115,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Monster_W1_Soldier03_LoseShieldInCtrl"
+                "modifier": "<a class=\"gModGreen\" id=\"291277050\">Monster_W1_Soldier03_LoseShieldInCtrl</a>"
               }
             ]
           }
@@ -126,7 +126,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Soldier03_ListenBeingAttacked[<span class=\"descriptionNumberColor\">Counter</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-387357924\">Enemy_W1_Soldier03_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]"
         },
         {
           "name": "IF",
@@ -163,7 +163,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "OneMore"
+                "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
               }
             ]
           }
@@ -211,7 +211,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "OneMore"
+                "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
               }
             ]
           },
@@ -222,7 +222,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W1_Soldier03_LoseShieldInCtrl"
+              "modifier": "<a class=\"gModGreen\" id=\"291277050\">Monster_W1_Soldier03_LoseShieldInCtrl</a>"
             }
           ],
           "failed": [
@@ -232,7 +232,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W1_Soldier03_LoseShieldInCtrl"
+              "modifier": "<a class=\"gModGreen\" id=\"291277050\">Monster_W1_Soldier03_LoseShieldInCtrl</a>"
             }
           ]
         },
@@ -288,7 +288,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
           },
-          "modifier": "Monster_W1_Soldier01_03_Bonus[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1281886828\">Monster_W1_Soldier01_03_Bonus</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
             "operator": "Variables[0] (UnusedUnderThisBase_1) || RETURN",
             "displayLines": "UnusedUnderThisBase_1",
@@ -317,7 +317,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Monster_W1_Soldier03_HoldShield"
+            "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
           },
           "passed": [
             {
@@ -778,7 +778,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "OneMore"
+              "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
             }
           ]
         },
@@ -788,7 +788,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -852,7 +852,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W1_Soldier03_HoldShield"
+              "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
             }
           ]
         },
@@ -862,7 +862,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Soldier03_ListenBeingAttacked[<span class=\"descriptionNumberColor\">Counter</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-387357924\">Enemy_W1_Soldier03_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -1029,7 +1029,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Soldier03_ListenBeingAttacked[<span class=\"descriptionNumberColor\">Counter</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-387357924\">Enemy_W1_Soldier03_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]"
         },
         {
           "name": "Change Character Transformation",
@@ -1045,7 +1045,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Soldier03_ListenBeingAttacked[<span class=\"descriptionNumberColor\">Counter</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-387357924\">Enemy_W1_Soldier03_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]"
         }
       ],
       "references": []
@@ -1241,7 +1241,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Soldier03_ListenBeingAttacked[<span class=\"descriptionNumberColor\">Counter</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-387357924\">Enemy_W1_Soldier03_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]"
         },
         {
           "name": "Declare Custom Variable",
@@ -1442,7 +1442,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Soldier03_ListenBeingAttacked[<span class=\"descriptionNumberColor\">Counter</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-387357924\">Enemy_W1_Soldier03_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -1584,7 +1584,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Soldier03_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"-35846482\">Enemy_W1_Soldier03_BattleScore1</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -1611,7 +1611,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_HideMonsterHUD"
+          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1619,7 +1619,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         },
         {
           "name": "IF",
@@ -1639,7 +1639,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "OneMorePerTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1647,7 +1647,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W1_Soldier03_ShieldControl"
+              "modifier": "<a class=\"gModGreen\" id=\"-1997793398\">Monster_W1_Soldier03_ShieldControl</a>"
             }
           ]
         }
@@ -1666,7 +1666,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Soldier03_BattleScore1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-35846482\">Enemy_W1_Soldier03_BattleScore1</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -1778,7 +1778,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Soldier03_LoseShieldInCtrl",
+          "for": "<a class=\"gModGreen\" id=\"mod__291277050\">Monster_W1_Soldier03_LoseShieldInCtrl</a>",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -1836,7 +1836,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Soldier03_ListenBeingAttacked[<span class=\"descriptionNumberColor\">Counter</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-387357924\">Enemy_W1_Soldier03_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
           "modifierFlags": [
             "MuteHitH",
             "ListenBattleEventSkill"
@@ -2176,7 +2176,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Soldier03_HoldShield",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1398382688\">Monster_W1_Soldier03_HoldShield</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -2219,7 +2219,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Soldier03_ShieldControl",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1997793398\">Monster_W1_Soldier03_ShieldControl</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -2281,7 +2281,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "Monster_W1_Soldier03_HoldShield"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
                           },
                           "passed": [
                             {
@@ -2290,7 +2290,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Monster_W1_Soldier03_HoldShield"
+                              "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
                             },
                             {
                               "name": "Inject Ability Use",
@@ -2380,7 +2380,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "Monster_W1_Soldier03_HoldShield"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
                           },
                           "passed": [
                             {
@@ -2389,7 +2389,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Monster_W1_Soldier03_HoldShield"
+                              "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
                             },
                             {
                               "name": "Inject Ability Use",

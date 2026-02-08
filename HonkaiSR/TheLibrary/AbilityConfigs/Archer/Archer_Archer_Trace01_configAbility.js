@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Archer_Trace01"
+      "modifier": "<a class=\"gModGreen\" id=\"1642793787\">Archer_Trace01</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Archer_Trace01",
+      "for": "<a class=\"gModGreen\" id=\"mod__1642793787\">Archer_Trace01</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

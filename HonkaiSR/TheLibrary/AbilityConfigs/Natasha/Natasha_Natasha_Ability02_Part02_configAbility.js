@@ -87,7 +87,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Natasha_HOT_HPByMaxHP[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1462346849\">Natasha_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
       "duration": {
         "operator": "Variables[0] (2) || Variables[1] (SkillTree_LifeTime) || ADD || RETURN",
         "displayLines": "(2 + SkillTree_LifeTime)",

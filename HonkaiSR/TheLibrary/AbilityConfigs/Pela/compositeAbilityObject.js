@@ -28,13 +28,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Pela_Tree02"
+          "modifier": "<a class=\"gModGreen\" id=\"-320466292\">M_Pela_Tree02</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Pela_Tree02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-320466292\">M_Pela_Tree02</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -45,7 +45,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Pela_StatusProbability",
+                  "modifier": "<a class=\"gModGreen\" id=\"1480389752\">Pela_StatusProbability</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.1) || RETURN",
@@ -78,7 +78,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Pela_StatusProbability",
+                      "modifier": "<a class=\"gModGreen\" id=\"1480389752\">Pela_StatusProbability</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.1) || RETURN",
@@ -112,7 +112,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "Pela_StatusProbability",
+                  "modifier": "<a class=\"gModGreen\" id=\"1480389752\">Pela_StatusProbability</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -135,13 +135,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Pela_Tree01"
+          "modifier": "<a class=\"gModGreen\" id=\"-270133435\">M_Pela_Tree01</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Pela_Tree01",
+          "for": "<a class=\"gModGreen\" id=\"mod__-270133435\">M_Pela_Tree01</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -203,13 +203,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Pela_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"106839122\">StageAbility_Maze_Pela_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Pela_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__106839122\">StageAbility_Maze_Pela_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -272,7 +272,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "Pela_TechniqueUsage_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"607065154\">Pela_TechniqueUsage_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -331,7 +331,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Pela_PassiveAbility01_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1443679602\">Pela_PassiveAbility01_Modifier</a>"
         },
         {
           "name": "IF",
@@ -346,7 +346,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Pela_AbilityEidolon6"
+              "modifier": "<a class=\"gModGreen\" id=\"-1719883297\">Pela_AbilityEidolon6</a>"
             }
           ]
         }
@@ -354,7 +354,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Pela_AbilityEidolon6",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1719883297\">Pela_AbilityEidolon6</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -419,7 +419,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Pela_AbilityEidolon1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1770216154\">Pela_AbilityEidolon1</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -460,7 +460,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Pela_PassiveAbility01_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1443679602\">Pela_PassiveAbility01_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -478,7 +478,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Pela_AbilityEidolon1",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1770216154\">Pela_AbilityEidolon1</a>",
                       "valuePerStack": {
                         "MDF_SPValue": {
                           "operator": "Variables[0] (5) || RETURN",
@@ -526,7 +526,7 @@ const compositeAbilityObject = {
                           }
                         ]
                       },
-                      "modifier": "Pela_AbilityEidolon1"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1770216154\">Pela_AbilityEidolon1</a>"
                     }
                   ]
                 }
@@ -561,7 +561,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Pela_AbilityEidolon1",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1770216154\">Pela_AbilityEidolon1</a>",
                       "valuePerStack": {
                         "MDF_SPValue": {
                           "operator": "Variables[0] (5) || RETURN",
@@ -663,7 +663,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Pela_Ultimate_DroneAnalysis[<span class=\"descriptionNumberColor\">Exposed</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"275559829\">Pela_Ultimate_DroneAnalysis</a>[<span class=\"descriptionNumberColor\">Exposed</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -727,7 +727,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Pela_Ultimate_DroneAnalysis[<span class=\"descriptionNumberColor\">Exposed</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__275559829\">Pela_Ultimate_DroneAnalysis</a>[<span class=\"descriptionNumberColor\">Exposed</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_DefenceDown"
@@ -843,7 +843,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Pela_AbilityEidolon4_IceResistanceDown[<span class=\"descriptionNumberColor\">Ice RES Reduction</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"278160139\">Pela_AbilityEidolon4_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice RES Reduction</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -925,7 +925,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Pela_Trace03_DamageAddedRatio[<span class=\"descriptionNumberColor\">Wipe Out</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1505163766\">Pela_Trace03_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">Wipe Out</span>]",
                   "valuePerStack": {
                     "MDF_Pela_Trace03_DamageAddedRatio": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -963,7 +963,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Pela_AbilityEidolon2_AddSpeedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-250608162\">Pela_AbilityEidolon2_AddSpeedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1146,7 +1146,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Pela_StatusProbability",
+          "for": "<a class=\"gModGreen\" id=\"mod__1480389752\">Pela_StatusProbability</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1178,7 +1178,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Pela_TechniqueUsage_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__607065154\">Pela_TechniqueUsage_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -1220,7 +1220,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Pela_AbilityEidolon4_IceResistanceDown[<span class=\"descriptionNumberColor\">Ice RES Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__278160139\">Pela_AbilityEidolon4_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1259,7 +1259,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Pela_AbilityEidolon4_StanceBreakTaken[<span class=\"descriptionNumberColor\">Ravage</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__618444549\">Pela_AbilityEidolon4_StanceBreakTaken</a>[<span class=\"descriptionNumberColor\">Ravage</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [],
           "execute": [
@@ -1292,7 +1292,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Pela_AbilityEidolon2_AddSpeedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-250608162\">Pela_AbilityEidolon2_AddSpeedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -1331,7 +1331,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Pela_Trace03_DamageAddedRatio[<span class=\"descriptionNumberColor\">Wipe Out</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1505163766\">Pela_Trace03_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">Wipe Out</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {

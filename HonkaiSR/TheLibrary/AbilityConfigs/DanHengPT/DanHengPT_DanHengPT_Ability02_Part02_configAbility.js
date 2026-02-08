@@ -12,7 +12,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+        "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
         "invertCondition": true
       },
       "failed": [
@@ -29,7 +29,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All(with Unselectable)V2}}"
       },
-      "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
     },
     {
       "name": "IF",
@@ -44,7 +44,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}"
           },
-          "modifier": "DanHengPT_PointB1_AddAttackRatio[<span class=\"descriptionNumberColor\">Empyreanity</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]"
         }
       ]
     },
@@ -82,7 +82,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                       "valuePerStack": {
                         "MDF_PointB2_P3_DelayUp": {
                           "operator": "Variables[0] (0.15) || RETURN",
@@ -134,7 +134,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                       "valuePerStack": {
                         "MDF_PointB2_P3_DelayUp": {
                           "operator": "Variables[0] (0.15) || RETURN",
@@ -174,7 +174,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                   "valuePerStack": {
                     "MDF_PointB2_P3_DelayUp": {
                       "operator": "Variables[0] (0.15) || RETURN",
@@ -221,7 +221,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                       "valuePerStack": {
                         "MDF_PointB2_P3_DelayUp": 0,
                         "MDF_PointB2_P2_AddSP": 0,
@@ -259,7 +259,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                       "valuePerStack": {
                         "MDF_PointB2_P3_DelayUp": 0,
                         "MDF_PointB2_P2_AddSP": 0,
@@ -285,7 +285,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                   "valuePerStack": {
                     "MDF_PointB2_P3_DelayUp": 0,
                     "MDF_PointB2_P2_AddSP": 0,
@@ -313,7 +313,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
               "valuePerStack": {
                 "MDF_PointB2_P3_DelayUp": {
                   "operator": "Variables[0] (0.15) || RETURN",
@@ -344,7 +344,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
               "valuePerStack": {
                 "MDF_PointB2_P3_DelayUp": 0,
                 "MDF_PointB2_P2_AddSP": 0,
@@ -388,7 +388,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "DanHengPT_PointB1_AddAttackRatio[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
           "valuePerStack": {
             "MDF_AttackDelta": {
               "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",
@@ -901,7 +901,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "DanHengPT_BoostEnergy"
+            "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>"
           }
         }
       ],
@@ -915,7 +915,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "DanHengPT_AddShield"
+      "functionName": "<a class=\"gTempYellow\" id=\"1290948349\">DanHengPT_AddShield</a>"
     },
     {
       "name": "Update Energy",
@@ -935,7 +935,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "DanHengPT_Maze"
+        "modifier": "<a class=\"gModGreen\" id=\"-1357770440\">DanHengPT_Maze</a>"
       },
       "passed": [
         {
@@ -954,7 +954,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengPT_Maze"
+          "modifier": "<a class=\"gModGreen\" id=\"-1357770440\">DanHengPT_Maze</a>"
         }
       ]
     },

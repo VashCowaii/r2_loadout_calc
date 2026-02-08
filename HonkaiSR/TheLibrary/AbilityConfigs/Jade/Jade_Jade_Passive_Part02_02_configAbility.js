@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Jade_Eidolon1_InsertDamageRatio",
+          "modifier": "<a class=\"gModGreen\" id=\"-1701847025\">Jade_Eidolon1_InsertDamageRatio</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.32) || RETURN",
@@ -61,7 +61,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Jade_Passive_Rate[<span class=\"descriptionNumberColor\">Pawned Asset</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-2143808418\">Jade_Passive_Rate</a>[<span class=\"descriptionNumberColor\">Pawned Asset</span>]",
       "stackLimit": {
         "operator": "Variables[0] (50) || RETURN",
         "displayLines": "50",
@@ -262,7 +262,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Jade_Eidolon1_InsertDamageRatio"
+          "modifier": "<a class=\"gModGreen\" id=\"-1701847025\">Jade_Eidolon1_InsertDamageRatio</a>"
         }
       ]
     },
@@ -272,7 +272,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifierName": "Jade_Ultimate_Insert[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]",
+      "modifierName": "<a class=\"gModGreen\" id=\"-1732030848\">Jade_Ultimate_Insert</a>[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]",
       "function": "Add"
     }
   ],

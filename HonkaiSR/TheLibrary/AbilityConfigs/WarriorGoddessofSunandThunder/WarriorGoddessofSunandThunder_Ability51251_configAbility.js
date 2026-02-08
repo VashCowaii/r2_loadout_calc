@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_125_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1745527918\">Relic_125_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_125_Bonus2[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__149540788\">Relic_125_Bonus2</a>[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_125_Bonus[<span class=\"descriptionNumberColor\">Gentle Rain</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1449955790\">Relic_125_Bonus</a>[<span class=\"descriptionNumberColor\">Gentle Rain</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -62,7 +62,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Relic_125_Bonus2[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"149540788\">Relic_125_Bonus2</a>[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]",
               "onlyRemoveOwnersInstance": true
             }
           ]
@@ -95,7 +95,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Relic_125_Bonus2[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"149540788\">Relic_125_Bonus2</a>[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]"
               },
               "passed": [
                 {
@@ -104,7 +104,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Relic_125_Bonus2[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"149540788\">Relic_125_Bonus2</a>[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]",
                   "valuePerStack": {
                     "AbilityRelic_125_4_P2_DamageAddRatio": {
                       "operator": "Variables[0] (0.15) || RETURN",
@@ -132,7 +132,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Relic_125_Bonus2[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"149540788\">Relic_125_Bonus2</a>[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "AbilityRelic_125_4_P2_DamageAddRatio": {
@@ -149,7 +149,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_125_Sub2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2061800465\">Relic_125_Sub2</a>",
       "execute": [
         {
           "eventTrigger": "Heal Target End [Owner]",
@@ -177,7 +177,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Relic_125_Flag"
+                    "modifier": "<a class=\"gModGreen\" id=\"563355405\">Relic_125_Flag</a>"
                   }
                 ]
               },
@@ -188,7 +188,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Relic_125_Flag"
+                  "modifier": "<a class=\"gModGreen\" id=\"563355405\">Relic_125_Flag</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -196,7 +196,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Relic_125_Bonus[<span class=\"descriptionNumberColor\">Gentle Rain</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1449955790\">Relic_125_Bonus</a>[<span class=\"descriptionNumberColor\">Gentle Rain</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -224,7 +224,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_125_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__552195463\">Relic_125_Sub</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -235,7 +235,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Relic_125_Flag"
+              "modifier": "<a class=\"gModGreen\" id=\"563355405\">Relic_125_Flag</a>"
             }
           ]
         },
@@ -265,7 +265,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Relic_125_Flag"
+                    "modifier": "<a class=\"gModGreen\" id=\"563355405\">Relic_125_Flag</a>"
                   }
                 ]
               },
@@ -276,7 +276,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Relic_125_Flag"
+                  "modifier": "<a class=\"gModGreen\" id=\"563355405\">Relic_125_Flag</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -284,7 +284,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_125_Bonus[<span class=\"descriptionNumberColor\">Gentle Rain</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1449955790\">Relic_125_Bonus</a>[<span class=\"descriptionNumberColor\">Gentle Rain</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -317,7 +317,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Relic_125_Flag"
+              "modifier": "<a class=\"gModGreen\" id=\"563355405\">Relic_125_Flag</a>"
             }
           ]
         }
@@ -325,13 +325,13 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_125_Flag",
+      "for": "<a class=\"gModGreen\" id=\"mod__563355405\">Relic_125_Flag</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_125_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1745527918\">Relic_125_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -342,7 +342,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Relic_125_Sub"
+              "modifier": "<a class=\"gModGreen\" id=\"552195463\">Relic_125_Sub</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -350,7 +350,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "Relic_125_Sub2"
+              "modifier": "<a class=\"gModGreen\" id=\"-2061800465\">Relic_125_Sub2</a>"
             }
           ]
         },
@@ -377,7 +377,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Relic_125_Sub2"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2061800465\">Relic_125_Sub2</a>"
                 }
               ]
             }

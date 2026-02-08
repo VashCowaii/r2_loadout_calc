@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Aventurine_Ability03_CoinAdd"
+      "modifier": "<a class=\"gModGreen\" id=\"-989533278\">Aventurine_Ability03_CoinAdd</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Aventurine_Ability03_CritDmgIncrease[<span class=\"descriptionNumberColor\">Unnerved</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-839248266\">Aventurine_Ability03_CritDmgIncrease</a>[<span class=\"descriptionNumberColor\">Unnerved</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -78,7 +78,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Aventurine_RecordCurrentShield"
+          "functionName": "<a class=\"gTempYellow\" id=\"-969049614\">Aventurine_RecordCurrentShield</a>"
         },
         {
           "name": "Define Custom Variable with Stat",
@@ -95,7 +95,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Aventurine_StackableShield",
+          "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -152,7 +152,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Aventurine_Ability02_ShieldEffect",
+                "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
                 "invertCondition": true
               },
               "passed": [
@@ -211,7 +211,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Aventurine_Ability02_ShieldEffect",
+                  "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
                   "valuePerStack": {
                     "MDF_ResistanceRatio": {
                       "operator": "Variables[0] (0.5) || RETURN",
@@ -250,7 +250,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Heal_Mark"
+      "for": "<a class=\"gModGreen\" id=\"mod__-626881481\">Aventurine_Heal_Mark</a>"
     }
   ]
 }

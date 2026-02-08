@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Mydeimos_UltraTargetSpecialMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__1569520574\">Mydeimos_UltraTargetSpecialMark</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -102,7 +102,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Mydeimos_UltraTarget[<span class=\"descriptionNumberColor\">Throne of Bones</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"2061988688\">Mydeimos_UltraTarget</a>[<span class=\"descriptionNumberColor\">Throne of Bones</span>]"
                   },
                   "passed": [
                     {
@@ -126,7 +126,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mydeimos_UltraTarget[<span class=\"descriptionNumberColor\">Throne of Bones</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2061988688\">Mydeimos_UltraTarget</a>[<span class=\"descriptionNumberColor\">Throne of Bones</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -144,7 +144,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mydeimos_InsertActionAbortFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__18109462\">Mydeimos_InsertActionAbortFlag</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_MydeimosRemoveTransfer"
@@ -154,7 +154,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mydeimos_Trace01[<span class=\"descriptionNumberColor\">Earth and Water</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__951504069\">Mydeimos_Trace01</a>[<span class=\"descriptionNumberColor\">Earth and Water</span>]",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [],
@@ -165,7 +165,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mydeimos_Eidolon4[<span class=\"descriptionNumberColor\">Siren Jolts the Laconic Lion</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1739027787\">Mydeimos_Eidolon4</a>[<span class=\"descriptionNumberColor\">Siren Jolts the Laconic Lion</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -246,7 +246,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mydeimos_Eidolon2",
+      "for": "<a class=\"gModGreen\" id=\"mod__1839693501\">Mydeimos_Eidolon2</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -428,7 +428,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mydeimos_Trace03_Sub[<span class=\"descriptionNumberColor\">Bloodied Chiton</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-242497681\">Mydeimos_Trace03_Sub</a>[<span class=\"descriptionNumberColor\">Bloodied Chiton</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -542,7 +542,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mydeimos_Trace03",
+      "for": "<a class=\"gModGreen\" id=\"mod__917948831\">Mydeimos_Trace03</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -602,7 +602,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Mydeimos_Trace03_Sub[<span class=\"descriptionNumberColor\">Bloodied Chiton</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-242497681\">Mydeimos_Trace03_Sub</a>[<span class=\"descriptionNumberColor\">Bloodied Chiton</span>]",
                   "valuePerStack": {
                     "_MaxHPFixValue": {
                       "operator": "Variables[0] (MDF_CurrentRealHP) || Variables[1] (4000) || SUB || RETURN",
@@ -623,7 +623,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Mydeimos_Trace03"
+                  "modifier": "<a class=\"gModGreen\" id=\"917948831\">Mydeimos_Trace03</a>"
                 }
               ]
             }
@@ -637,7 +637,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mydeimos_Transfer_LockDEF",
+      "for": "<a class=\"gModGreen\" id=\"mod__1759525523\">Mydeimos_Transfer_LockDEF</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -694,7 +694,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "Crazy"
@@ -761,7 +761,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Mydeimos_InsertActionAbortFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"18109462\">Mydeimos_InsertActionAbortFlag</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -769,7 +769,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Mydeimos_Transfer_LockDEF"
+              "modifier": "<a class=\"gModGreen\" id=\"1759525523\">Mydeimos_Transfer_LockDEF</a>"
             }
           ]
         },
@@ -790,7 +790,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Mydeimos_Transfer_LockDEF"
+              "modifier": "<a class=\"gModGreen\" id=\"1759525523\">Mydeimos_Transfer_LockDEF</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -798,7 +798,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Mydeimos_InsertActionAbortFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"18109462\">Mydeimos_InsertActionAbortFlag</a>"
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -879,7 +879,7 @@ const configAbility = {
                   "flagName": [
                     "Endurance"
                   ],
-                  "modifierName": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]"
                 }
               ]
             }
@@ -965,7 +965,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Mydeimos_Transfer_LockDEF"
+                  "modifier": "<a class=\"gModGreen\" id=\"1759525523\">Mydeimos_Transfer_LockDEF</a>"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -1016,7 +1016,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Mydeimos_Transfer_LockDEF"
+                  "modifier": "<a class=\"gModGreen\" id=\"1759525523\">Mydeimos_Transfer_LockDEF</a>"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -1067,7 +1067,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Mydeimos_Transfer_LockDEF"
+                  "modifier": "<a class=\"gModGreen\" id=\"1759525523\">Mydeimos_Transfer_LockDEF</a>"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -1121,7 +1121,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Mydeimos_Eidolon2",
+          "modifier": "<a class=\"gModGreen\" id=\"1839693501\">Mydeimos_Eidolon2</a>",
           "conditions": {
             "name": "Eidolon Activated",
             "eidolon": 2
@@ -1151,7 +1151,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Mydeimos_Eidolon4[<span class=\"descriptionNumberColor\">Siren Jolts the Laconic Lion</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1739027787\">Mydeimos_Eidolon4</a>[<span class=\"descriptionNumberColor\">Siren Jolts the Laconic Lion</span>]",
           "conditions": {
             "name": "Eidolon Activated",
             "eidolon": 4

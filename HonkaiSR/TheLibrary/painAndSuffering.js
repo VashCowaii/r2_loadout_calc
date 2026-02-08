@@ -2523,6 +2523,7 @@ const megaParsingFuckeryPain = {
             "variables",
             "paramSequence",
             "damageSequence",
+            "isGlobal",
 
             "baseDelay",
             "delayInterval",
@@ -2574,10 +2575,11 @@ const megaParsingFuckeryPain = {
 
         // initialCounter++;
         return `<div class="actionDetailBody">
-            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.functionName} ${parseRef.target ? `on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}` : ""}
+            <div class="rotationConditionOperatorHeaderInline">Use Custom ${parseRef.isGlobal ? "GLOBAL" : "Character"} Function:</div>&nbsp;
+            ${parseRef.functionName}
         </div>
         <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.baseDelay,"baseDelay")}
             ${getStandardNameDisplay(initialCounter,parseRef.delayInterval,"delayInterval")}
             ${getStandardNameDisplay(initialCounter,parseRef.parallelCount,"parallelCount")}
@@ -8747,6 +8749,44 @@ const megaParsingFuckeryPain = {
         `;
 
     },
+    populateLinkedEntriesGlobal(coloring) {
+        const mappingColor = {
+            "gTempYellow": megaGlobalFunctionMap,
+            "gModGreen": megaGlobalModifierMap,
+        }
+        const mappingPrefix = {
+            "gTempYellow": "fun__",
+            "gModGreen": "mod__",
+        }
+
+        document.querySelectorAll(`.${coloring}`).forEach(a => {
+            const id = a.id;
+            if (!id) return;
+
+            const currentMapping = mappingColor[coloring];
+            const mappingPrefixFinal = mappingPrefix[coloring];
+
+            // console.log(id,id.split("__")?.[1])
+            // const modifierPathing = id.includes(mappingPrefixFinal) ? currentMapping[id.split("__")[1]].split(".") : currentMapping[id].split(".");
+            const modifierPathing = id.includes(mappingPrefixFinal) ? currentMapping[id.split("__")[1]]?.split(".") : currentMapping[id]?.split(".");
+            if (!modifierPathing) {
+                console.log(`Unmapped pathing on: ${id}, ${a.innerHTML}`)
+                return
+            }
+
+            const prefixPath = modifierPathing[0];
+            const filePath = modifierPathing[1];
+
+            const finalPrefixPath = megaMappingPathing[prefixPath] + "/" + filePath + "/";
+            const finalDepositPath = `/HonkaiSR/TheLibrary/` + finalPrefixPath + `${id.includes(mappingPrefixFinal) ? `#${id}` : `#${mappingPrefixFinal + id}`}`;
+
+            // megaMappingPathing
+
+            // encodeURIComponent(id)
+            a.href = finalDepositPath;
+            a.target = "_blank";
+        });
+    },
     "Modifier Construction"(parseRef,initialCounter) {
         initialCounter++;
         const knownKeySet = new Set ([
@@ -8835,6 +8875,12 @@ const megaParsingFuckeryPain = {
         if (functionExists) {returnStringDependencies += `<div class="rotationsConditionsBodyBox">` + functionExists(dependencyObject,initialCounter) + `</div>`;}
 
         // stackData
+
+        // const modName = parseRef.for;
+        // const modifiedModName = modName.replace(
+        //     /id\s*=\s*"([^"]+)"/g,
+        //     (match, id) => `id="mod__${id}"`
+        // );
 
         
         return `
@@ -9259,11 +9305,17 @@ const megaParsingFuckeryPain = {
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.variableValueChange,initialCounter);}
 
 
+        const modName = parseRef.functionName;
+        // const modifiedModName = modName.replace(
+        //     /id\s*=\s*"([^"]+)"/g,
+        //     (match, id) => `id="fun__${id}"`
+        // );
+
         return `
         <details class="rotationsPermaConditionsExpand" open="">
             <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
                 <div class="rotationConditionOperatorHeaderCondition">Character Function:</div>
-                ${parseRef.functionName}
+                ${modName}
             </summary>
 
 
@@ -10594,7 +10646,7 @@ const megaParsingFuckeryPain = {
         const hasParse = parseRef.conditionList?.length;
         // const hasRef = parseRef.failed?.length;
 
-        console.log(parseRef.conditionList)
+        // console.log(parseRef.conditionList)
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.conditionList,initialCounter);}
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed);}
         initialCounter++;

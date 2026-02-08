@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Archer_Trace03"
+      "modifier": "<a class=\"gModGreen\" id=\"1676349025\">Archer_Trace03</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Archer_Trace03_CriticalDMG[<span class=\"descriptionNumberColor\">Guardian</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__350752129\">Archer_Trace03_CriticalDMG</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Archer_Trace03",
+      "for": "<a class=\"gModGreen\" id=\"mod__1676349025\">Archer_Trace03</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -96,7 +96,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Archer_Trace03_CriticalDMG[<span class=\"descriptionNumberColor\">Guardian</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"350752129\">Archer_Trace03_CriticalDMG</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",

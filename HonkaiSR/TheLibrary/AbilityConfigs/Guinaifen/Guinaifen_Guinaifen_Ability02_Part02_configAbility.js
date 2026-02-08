@@ -20,7 +20,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{ST and Blast}}"
               },
-              "modifier": "Guinaifen_Eidolon1_StatusResistance[<span class=\"descriptionNumberColor\">Slurping Noodles During Handstand</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1962050217\">Guinaifen_Eidolon1_StatusResistance</a>[<span class=\"descriptionNumberColor\">Slurping Noodles During Handstand</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -85,7 +85,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -123,7 +123,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

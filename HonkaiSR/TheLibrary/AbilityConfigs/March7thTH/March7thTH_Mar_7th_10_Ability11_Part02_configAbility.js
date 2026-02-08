@@ -43,7 +43,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Deal_Single_Hit",
+              "functionName": "<a class=\"gTempYellow\" id=\"1235975678\">Deal_Single_Hit</a>",
               "variables": {
                 "parameter[1]_IsFinalHit": 0
               }
@@ -55,7 +55,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Deal_Single_Hit",
+              "functionName": "<a class=\"gTempYellow\" id=\"1235975678\">Deal_Single_Hit</a>",
               "variables": {
                 "parameter[1]_IsFinalHit": 0
               }
@@ -67,7 +67,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Deal_Single_Hit",
+              "functionName": "<a class=\"gTempYellow\" id=\"1235975678\">Deal_Single_Hit</a>",
               "variables": {
                 "parameter[1]_IsFinalHit": 0
               }
@@ -79,7 +79,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Deal_Single_Hit",
+              "functionName": "<a class=\"gTempYellow\" id=\"1235975678\">Deal_Single_Hit</a>",
               "variables": {
                 "parameter[1]_IsFinalHit": 1
               }
@@ -88,7 +88,7 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Shoot_Effect"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1401872852\">Shoot_Effect</a>"
         },
         {
           "name": "Shot Fired"
@@ -109,7 +109,7 @@ const configAbility = {
           "Event": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Deal_Loop_Hit"
+              "functionName": "<a class=\"gTempYellow\" id=\"78809812\">Deal_Loop_Hit</a>"
             }
           ]
         },
@@ -134,7 +134,7 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Deal_Loop_Hit_Final"
+          "functionName": "<a class=\"gTempYellow\" id=\"1956087107\">Deal_Loop_Hit_Final</a>"
         }
       ],
       "failed": [
@@ -150,7 +150,7 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Shoot_Effect"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1401872852\">Shoot_Effect</a>"
         },
         {
           "name": "Shot Fired"
@@ -171,20 +171,20 @@ const configAbility = {
           "Event": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Deal_Loop_Hit"
+              "functionName": "<a class=\"gTempYellow\" id=\"78809812\">Deal_Loop_Hit</a>"
             }
           ]
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Deal_Loop_Hit_Final"
+          "functionName": "<a class=\"gTempYellow\" id=\"1956087107\">Deal_Loop_Hit_Final</a>"
         }
       ]
     },
     "Trigger: Attack End",
     {
       "name": "Use Custom Character Function",
-      "functionName": "Mar_7th_10_GainEnergyWithCheck",
+      "functionName": "<a class=\"gTempYellow\" id=\"-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
       "variables": {
         "parameter[0]_AddValue": {
           "operator": "Constants[0] (0) || Variables[0] (EnergyBar_MaxEnergy) || SUB || RETURN",
@@ -204,7 +204,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Mar_7th_10_Ability03_Enhance_Normal[<span class=\"descriptionNumberColor\">March 7th, the Apex Heroine</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1546960372\">Mar_7th_10_Ability03_Enhance_Normal</a>[<span class=\"descriptionNumberColor\">March 7th, the Apex Heroine</span>]"
     },
     "Trigger: Ability End"
   ],
@@ -215,18 +215,18 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Mar_7th_10_Ability11_Preshow"
+      "modifier": "<a class=\"gModGreen\" id=\"218557064\">M_Mar_7th_10_Ability11_Preshow</a>"
     }
   ],
   "functions": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Shoot_Effect",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1401872852\">Shoot_Effect</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Deal_Single_Hit",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1235975678\">Deal_Single_Hit</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -254,7 +254,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
                 }
               },
               {
@@ -368,7 +368,8 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Mar_7th_10_Jianshi",
+          "functionName": "<a class=\"gTempYellow\" id=\"1835349740\">Mar_7th_10_Jianshi</a>",
+          "isGlobal": true,
           "variables": {
             "parameter[00]_IsAbility11": 1
           }
@@ -377,7 +378,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Deal_Loop_Hit",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__78809812\">Deal_Loop_Hit</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -405,7 +406,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
                 }
               },
               {
@@ -477,7 +478,8 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Mar_7th_10_Jianshi",
+          "functionName": "<a class=\"gTempYellow\" id=\"1835349740\">Mar_7th_10_Jianshi</a>",
+          "isGlobal": true,
           "variables": {
             "parameter[00]_IsAbility11": 1
           }
@@ -486,7 +488,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Deal_Loop_Hit_Final",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1956087107\">Deal_Loop_Hit_Final</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -514,7 +516,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
                 }
               },
               {
@@ -586,7 +588,8 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Mar_7th_10_Jianshi",
+          "functionName": "<a class=\"gTempYellow\" id=\"1835349740\">Mar_7th_10_Jianshi</a>",
+          "isGlobal": true,
           "variables": {
             "parameter[00]_IsAbility11": 1
           }
@@ -597,7 +600,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Mar_7th_10_Ability11_Preshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__218557064\">M_Mar_7th_10_Ability11_Preshow</a>",
       "stackData": [],
       "latentQueue": [
         "_have_gain_sp"
@@ -612,7 +615,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Mar_7th_10_Enhance"
+          "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>"
         },
         "multiplier": {
           "operator": "Variables[0] (Normal_StanceRatio) || Variables[1] (Skill11_BasicCount) || MUL || RETURN",

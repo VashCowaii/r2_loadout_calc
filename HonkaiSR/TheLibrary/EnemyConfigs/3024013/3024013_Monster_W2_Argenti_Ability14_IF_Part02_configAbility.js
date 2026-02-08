@@ -19,7 +19,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Argenti_IF_EX_PowerAdd"
+          "modifier": "<a class=\"gModGreen\" id=\"-169910900\">Enemy_W2_Argenti_IF_EX_PowerAdd</a>"
         }
       ],
       "failed": [
@@ -57,7 +57,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Argenti_Ability14_IF_MarkModifier",
+            "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>",
             "invertCondition": true
           },
           "ifTargetFound": [
@@ -67,7 +67,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_Ability14_IF_MarkModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>"
             },
             {
               "name": "Trigger Ability",
@@ -100,7 +100,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Monster_W2_Argenti_Ability14_IF_MarkModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>"
         },
         {
           "name": "Looped Event",
@@ -127,7 +127,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Argenti_Ability14_IF_MarkModifier",
+                "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>",
                 "invertCondition": true
               },
               "ifTargetFound": [
@@ -137,7 +137,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_Argenti_Ability14_IF_MarkModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -179,14 +179,14 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "Monster_W2_Argenti_Ability14_IF_MarkModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>"
     },
     "Trigger: Ability End"
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Argenti_Ability14_IF_MarkModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>",
       "stackData": [],
       "latentQueue": []
     }

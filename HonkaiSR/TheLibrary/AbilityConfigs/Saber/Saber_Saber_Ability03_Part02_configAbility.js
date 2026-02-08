@@ -262,7 +262,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Saber_Wind_Ability03_buff"
+      "modifier": "<a class=\"gModGreen\" id=\"-437296268\">Saber_Wind_Ability03_buff</a>"
     },
     "Trigger: Skip Death Handling",
     "Trigger: Ability End"

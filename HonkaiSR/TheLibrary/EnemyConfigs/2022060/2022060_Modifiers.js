@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Abomi03_HitTarget",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1176239641\">Monster_W2_Abomi03_HitTarget</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -22,7 +22,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W2_Abomi03_HitTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>"
             }
           ]
         }

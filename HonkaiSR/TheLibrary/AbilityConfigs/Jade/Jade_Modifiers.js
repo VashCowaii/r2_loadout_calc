@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Jade_Eidolon6_QuantumPenetrate",
+      "for": "<a class=\"gModGreen\" id=\"mod__68476876\">Jade_Eidolon6_QuantumPenetrate</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -42,7 +42,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jade_Eidolon4_DefPenetrate[<span class=\"descriptionNumberColor\">Sincerity? Put Option Only</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1189146824\">Jade_Eidolon4_DefPenetrate</a>[<span class=\"descriptionNumberColor\">Sincerity? Put Option Only</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -84,7 +84,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jade_Eidolon2_CriticalChance[<span class=\"descriptionNumberColor\">Morality? Herein Authenticated</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-759179558\">Jade_Eidolon2_CriticalChance</a>[<span class=\"descriptionNumberColor\">Morality? Herein Authenticated</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -115,7 +115,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jade_Eidolon1_InsertDamageRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1701847025\">Jade_Eidolon1_InsertDamageRatio</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -155,7 +155,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jade_Passive_contract",
+      "for": "<a class=\"gModGreen\" id=\"mod__477418814\">Jade_Passive_contract</a>",
       "modifierFlags": [
         "KeepOnDeathrattle",
         "RemoveWhenCasterDead"
@@ -187,7 +187,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Jade_BPAbility[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1749110767\">Jade_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
                           },
                           {
                             "name": "Has Modifier",
@@ -195,7 +195,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Jade_Eidolon6_BPAbility[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"119818662\">Jade_Eidolon6_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
                           }
                         ]
                       },
@@ -256,7 +256,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Jade_BPAbility[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1749110767\">Jade_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -264,7 +264,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Jade_Eidolon6_BPAbility[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"119818662\">Jade_Eidolon6_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
                   }
                 ]
               },
@@ -289,7 +289,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jade_Passive_Rate[<span class=\"descriptionNumberColor\">Pawned Asset</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2143808418\">Jade_Passive_Rate</a>[<span class=\"descriptionNumberColor\">Pawned Asset</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -336,7 +336,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jade_Eidolon2_CriticalChance[<span class=\"descriptionNumberColor\">Morality? Herein Authenticated</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-759179558\">Jade_Eidolon2_CriticalChance</a>[<span class=\"descriptionNumberColor\">Morality? Herein Authenticated</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.18) || RETURN",
@@ -412,7 +412,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jade_Passive_Count",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1339849421\">Jade_Passive_Count</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

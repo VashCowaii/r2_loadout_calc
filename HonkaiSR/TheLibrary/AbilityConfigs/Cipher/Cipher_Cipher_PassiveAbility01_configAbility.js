@@ -46,7 +46,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cipher_Eidolon2"
+          "modifier": "<a class=\"gModGreen\" id=\"441310455\">Cipher_Eidolon2</a>"
         }
       ]
     },
@@ -112,7 +112,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cipher_Eidolon6",
+          "modifier": "<a class=\"gModGreen\" id=\"374199979\">Cipher_Eidolon6</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (3.5) || RETURN",
@@ -132,7 +132,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Cipher_Mark_Listen"
+      "modifier": "<a class=\"gModGreen\" id=\"1663627639\">Cipher_Mark_Listen</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -145,7 +145,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Cipher_BpKuoSan_Self[<span class=\"descriptionNumberColor\">Patron</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"2063646932\">Cipher_BpKuoSan_Self</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
     },
     {
       "name": "Define Custom Variable with Stat",
@@ -230,7 +230,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cipher_PointB1_ListenSpeedChange"
+          "modifier": "<a class=\"gModGreen\" id=\"-1516019857\">Cipher_PointB1_ListenSpeedChange</a>"
         }
       ]
     },
@@ -247,7 +247,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cipher_PointB2_ListenNoKuosan"
+          "modifier": "<a class=\"gModGreen\" id=\"1617793657\">Cipher_PointB2_ListenNoKuosan</a>"
         }
       ]
     },
@@ -264,7 +264,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cipher_PointB3_Aura"
+          "modifier": "<a class=\"gModGreen\" id=\"-362400486\">Cipher_PointB3_Aura</a>"
         }
       ]
     },
@@ -274,13 +274,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Cipher_Insert_Listen"
+      "modifier": "<a class=\"gModGreen\" id=\"-556818185\">Cipher_Insert_Listen</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Cipher_BpKuoSan_Self[<span class=\"descriptionNumberColor\">Patron</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2063646932\">Cipher_BpKuoSan_Self</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
@@ -305,7 +305,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                     },
                     "invertCondition": true
                   }
@@ -341,7 +341,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
                       "valuePerStack": {}
                     }
                   ]
@@ -361,7 +361,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
               },
               "passed": [
                 {
@@ -406,7 +406,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
                       "valuePerStack": {}
                     }
                   ]
@@ -431,7 +431,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
               },
               "noTargetFound": [
                 {
@@ -463,7 +463,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
                       "valuePerStack": {}
                     }
                   ]
@@ -489,7 +489,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
               },
               "noTargetFound": [
                 {
@@ -521,7 +521,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
                       "valuePerStack": {}
                     }
                   ]
@@ -539,7 +539,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_PointB2_ListenNoKuosan",
+      "for": "<a class=\"gModGreen\" id=\"mod__1617793657\">Cipher_PointB2_ListenNoKuosan</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Anyone]: Any",
@@ -555,7 +555,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
                     "invertCondition": true
                   },
                   {
@@ -960,7 +960,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_Insert_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-556818185\">Cipher_Insert_Listen</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Anyone]",
@@ -981,7 +981,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Cipher_BpKuoSan_Insert_CD[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"4491835\">Cipher_BpKuoSan_Insert_CD</a>[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]",
                     "invertCondition": true
                   },
                   {
@@ -990,7 +990,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Cipher_Insert_Listen",
+                    "modifier": "<a class=\"gModGreen\" id=\"-556818185\">Cipher_Insert_Listen</a>",
                     "invertCondition": true
                   },
                   {
@@ -999,7 +999,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Cipher_BpKuoSan_Insert_Hit"
+                    "modifier": "<a class=\"gModGreen\" id=\"232969841\">Cipher_BpKuoSan_Insert_Hit</a>"
                   },
                   {
                     "name": "Is Part Of",
@@ -1065,7 +1065,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Cipher_BpKuoSan_Insert_Hit"
+              "modifier": "<a class=\"gModGreen\" id=\"232969841\">Cipher_BpKuoSan_Insert_Hit</a>"
             }
           ]
         }
@@ -1075,7 +1075,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_Eidolon6",
+      "for": "<a class=\"gModGreen\" id=\"mod__374199979\">Cipher_Eidolon6</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1111,7 +1111,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_PointB3_Aura",
+      "for": "<a class=\"gModGreen\" id=\"mod__-362400486\">Cipher_PointB3_Aura</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1160,7 +1160,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Cipher_PointB3_Debuff[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1113671218\">Cipher_PointB3_Debuff</a>[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -1177,7 +1177,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_Mark_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__1663627639\">Cipher_Mark_Listen</a>",
       "stackData": [],
       "latentQueue": [],
       "subModList": [
@@ -1187,14 +1187,14 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Cipher_SpecialMark02",
+          "modifier": "<a class=\"gModGreen\" id=\"875942501\">Cipher_SpecialMark02</a>",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_PointB1_ListenSpeedChange",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1516019857\">Cipher_PointB1_ListenSpeedChange</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1230,7 +1230,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Cipher_PointB1_ListenSpeedChange_Bonus",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.5) || RETURN",
@@ -1266,7 +1266,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Cipher_PointB1_ListenSpeedChange_Bonus",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.25) || RETURN",
@@ -1286,7 +1286,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Cipher_PointB1_ListenSpeedChange_Bonus"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>"
                     }
                   ]
                 }
@@ -1336,7 +1336,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Cipher_PointB1_ListenSpeedChange_Bonus",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.5) || RETURN",
@@ -1372,7 +1372,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Cipher_PointB1_ListenSpeedChange_Bonus",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (0.25) || RETURN",
@@ -1392,7 +1392,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Cipher_PointB1_ListenSpeedChange_Bonus"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>"
                         }
                       ]
                     }
@@ -1408,7 +1408,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_PointB1_ListenSpeedChange_Bonus",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1442,7 +1442,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_Eidolon2",
+      "for": "<a class=\"gModGreen\" id=\"mod__441310455\">Cipher_Eidolon2</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1464,7 +1464,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Cipher_Eidolon2_Debuff[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-309291538\">Cipher_Eidolon2_Debuff</a>[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1500,7 +1500,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Cipher_Eidolon2_Debuff[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-309291538\">Cipher_Eidolon2_Debuff</a>[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
@@ -1525,7 +1525,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Cipher_Eidolon2_Debuff[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-309291538\">Cipher_Eidolon2_Debuff</a>[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
                         "justAddedOrActive": true,
                         "casterFilter": {
                           "name": "Target Name",

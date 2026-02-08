@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Hyacine_Ability03_MaxHP_Grow[<span class=\"descriptionNumberColor\">After Rain</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__593318455\">Hyacine_Ability03_MaxHP_Grow</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -83,14 +83,14 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_HyacineServant_MuteSpeed",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1347756164\">Memosprite_HyacineServant_MuteSpeed</a>",
       "modifierFlags": [
         "MuteSpeed"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Hyacine_Eidolon2_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__290730475\">Hyacine_Eidolon2_Listen</a>",
       "execute": [
         {
           "eventTrigger": "HP Change [Anyone]",
@@ -127,7 +127,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Memosprite_HyacineServant_Eidolon2SpeedUp[<span class=\"descriptionNumberColor\">Come Sit in My Courtyard</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1897109390\">Memosprite_HyacineServant_Eidolon2SpeedUp</a>[<span class=\"descriptionNumberColor\">Come Sit in My Courtyard</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -157,7 +157,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_HyacineServant_MaxHpHalo[<span class=\"descriptionNumberColor\">After Rain</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -199,7 +199,7 @@ const configAbility = {
               "name": "Define Custom Variable with Modifier Values",
               "valueType": "LifeTime",
               "variableName": "_Energy",
-              "modifierName": "Memosprite_HyacineServant_MaxHpHalo[<span class=\"descriptionNumberColor\">After Rain</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
               "multiplier": 1
             },
             {
@@ -291,7 +291,7 @@ const configAbility = {
               "name": "Define Custom Variable with Modifier Values",
               "valueType": "LifeTime",
               "variableName": "_Energy",
-              "modifierName": "Memosprite_HyacineServant_MaxHpHalo[<span class=\"descriptionNumberColor\">After Rain</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
               "multiplier": 1
             },
             {
@@ -404,7 +404,7 @@ const configAbility = {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "LifeTime",
                   "variableName": "_Energy",
-                  "modifierName": "Memosprite_HyacineServant_MaxHpHalo[<span class=\"descriptionNumberColor\">After Rain</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
                   "multiplier": 1
                 },
                 {
@@ -451,7 +451,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}} - {{Caster}}"
           },
-          "modifier": "Hyacine_Ability03_MaxHP_Grow[<span class=\"descriptionNumberColor\">After Rain</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"593318455\">Hyacine_Ability03_MaxHP_Grow</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
           "aliveOnly": "False",
           "haloStatus": true,
           "valuePerStack": {
@@ -493,7 +493,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Hyacine_Passive_Effect[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1132518124\">Hyacine_Passive_Effect</a>[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -548,7 +548,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Hyacine_PointB2",
+      "for": "<a class=\"gModGreen\" id=\"mod__931141896\">Hyacine_PointB2</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -579,7 +579,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Hyacine_PointB1_Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__672502407\">Hyacine_PointB1_Effect</a>",
       "execute": [
         {
           "eventTrigger": "Heal Target Start [Owner]",
@@ -646,7 +646,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Hyacine_PointB1",
+      "for": "<a class=\"gModGreen\" id=\"mod__981474753\">Hyacine_PointB1</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -657,7 +657,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Hyacine_PointB1_Effect",
+              "modifier": "<a class=\"gModGreen\" id=\"672502407\">Hyacine_PointB1_Effect</a>",
               "valuePerStack": {
                 "MDF_CritChance": {
                   "operator": "Variables[0] (1) || RETURN",
@@ -710,7 +710,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Hyacine_PointB1_Effect",
+                  "modifier": "<a class=\"gModGreen\" id=\"672502407\">Hyacine_PointB1_Effect</a>",
                   "valuePerStack": {
                     "MDF_CritChance": {
                       "operator": "Variables[0] (1) || RETURN",
@@ -748,7 +748,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Hyacine_PointB3_Effect[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1110430040\">Hyacine_PointB3_Effect</a>[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -835,7 +835,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Hyacine_PointB3",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1888501948\">Hyacine_PointB3</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1010,7 +1010,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}+{{Caster's Memosprite}}"
                   },
-                  "modifier": "Hyacine_PointB3_Effect[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1110430040\">Hyacine_PointB3_Effect</a>[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]",
                   "valuePerStack": {
                     "_MaxHPAdd": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -1046,7 +1046,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}+{{Caster's Memosprite}}"
                   },
-                  "modifier": "Hyacine_PointB3_Effect[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1110430040\">Hyacine_PointB3_Effect</a>[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]"
                 }
               ]
             }

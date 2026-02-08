@@ -17,7 +17,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "MAssistant_Trigger_OnAfterTechniqueUsage",
+          "for": "<a class=\"gModGreen\" id=\"mod__-675119017\">MAssistant_Trigger_OnAfterTechniqueUsage</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -49,7 +49,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "MAssistant_Trigger_OnAfterTechniqueUsage",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-675119017\">MAssistant_Trigger_OnAfterTechniqueUsage</a>",
                   "function": "Add"
                 }
               ],
@@ -59,7 +59,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MAssistant_Trigger_AvatarHPLoss_Add",
+          "for": "<a class=\"gModGreen\" id=\"mod__1160127394\">MAssistant_Trigger_AvatarHPLoss_Add</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -95,7 +95,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "MAssistant_Trigger_AvatarHPLoss",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-926207822\">MAssistant_Trigger_AvatarHPLoss</a>",
                   "function": "Add"
                 }
               ]
@@ -104,7 +104,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MAssistant_Trigger_AvatarHPLoss",
+          "for": "<a class=\"gModGreen\" id=\"mod__-926207822\">MAssistant_Trigger_AvatarHPLoss</a>",
           "counter": 2,
           "execute": [
             {
@@ -116,7 +116,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "MAssistant_Trigger_AvatarHPLoss_Add"
+                  "modifier": "<a class=\"gModGreen\" id=\"1160127394\">MAssistant_Trigger_AvatarHPLoss_Add</a>"
                 }
               ]
             }
@@ -124,7 +124,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MAssistant_Trigger_AllEnemyBeingHitByFire",
+          "for": "<a class=\"gModGreen\" id=\"mod__1695634808\">MAssistant_Trigger_AllEnemyBeingHitByFire</a>",
           "counter": 2,
           "execute": [
             {
@@ -172,7 +172,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Modifier Variable",
-                      "modifierName": "MAssistant_Trigger_AllEnemyBeingHitByFire",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1695634808\">MAssistant_Trigger_AllEnemyBeingHitByFire</a>",
                       "function": "Add"
                     }
                   ]
@@ -183,7 +183,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MAssistant_Trigger_EnemyStatusChangeToBurn",
+          "for": "<a class=\"gModGreen\" id=\"mod__-600408678\">MAssistant_Trigger_EnemyStatusChangeToBurn</a>",
           "counter": 2,
           "execute": [
             {
@@ -238,7 +238,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Modifier Variable",
-                      "modifierName": "MAssistant_Trigger_EnemyStatusChangeToBurn",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-600408678\">MAssistant_Trigger_EnemyStatusChangeToBurn</a>",
                       "function": "Add"
                     }
                   ]
@@ -249,7 +249,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MAssistant_Trigger_EnemyDelayChange",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1782995181\">MAssistant_Trigger_EnemyDelayChange</a>",
           "counter": 1,
           "execute": [
             {
@@ -304,7 +304,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Modifier Variable",
-                      "modifierName": "Assistant_EnemyDelayChange",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-743590988\">Assistant_EnemyDelayChange</a>",
                       "function": "Add"
                     }
                   ]

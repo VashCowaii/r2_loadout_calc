@@ -10,17 +10,17 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_XP_Minion04_02_P01_Xuwu"
+      "modifier": "<a class=\"gModGreen\" id=\"-456326727\">Enemy_XP_Minion04_02_P01_Xuwu</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_P01_Xuwu_00"
+      "for": "<a class=\"gModGreen\" id=\"mod__1496273538\">Enemy_XP_Minion04_02_P01_Xuwu_00</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_P01_Xuwu",
+      "for": "<a class=\"gModGreen\" id=\"mod__-456326727\">Enemy_XP_Minion04_02_P01_Xuwu</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -36,7 +36,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Enemy_XP_Minion04_02_P01_Xuwu_00"
+                "modifier": "<a class=\"gModGreen\" id=\"1496273538\">Enemy_XP_Minion04_02_P01_Xuwu_00</a>"
               },
               "passed": [
                 {
@@ -68,7 +68,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_P01_Xuwu_00"
+                  "modifier": "<a class=\"gModGreen\" id=\"1496273538\">Enemy_XP_Minion04_02_P01_Xuwu_00</a>"
                 }
               ]
             }

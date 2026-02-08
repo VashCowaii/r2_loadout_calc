@@ -39,18 +39,18 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23039_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"1689186562\">LC_23039_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23039_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__58034583\">LC_23039_Sub</a>",
           "stackType": "ReplaceByCaster"
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23039_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__1689186562\">LC_23039_Main</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -63,7 +63,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "LC_23039_Sub",
+                    "modifier": "<a class=\"gModGreen\" id=\"58034583\">LC_23039_Sub</a>",
                     "justAddedOrActive": true
                   },
                   "passed": [
@@ -205,7 +205,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23039_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"58034583\">LC_23039_Sub</a>"
                     }
                   ]
                 }
@@ -220,7 +220,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23039_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"58034583\">LC_23039_Sub</a>"
                 },
                 {
                   "name": "Define Custom Variable",

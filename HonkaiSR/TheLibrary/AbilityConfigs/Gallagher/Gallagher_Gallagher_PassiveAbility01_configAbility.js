@@ -32,7 +32,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Gallagher_Eidolon1_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"208321537\">Gallagher_Eidolon1_Modifier</a>"
         }
       ]
     },
@@ -54,7 +54,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Gallagher_PointB3_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-237144299\">Gallagher_PointB3_Modifier</a>"
         }
       ],
       "failed": [
@@ -78,7 +78,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Gallagher_Eidolon2_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1477793302\">Gallagher_Eidolon2_Modifier</a>"
         }
       ]
     },
@@ -95,7 +95,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Gallagher_PointB2_PreshowModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"913171010\">Gallagher_PointB2_PreshowModifier</a>"
         }
       ]
     },
@@ -112,7 +112,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Gallagher_Eidolon6_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"799224722\">Gallagher_Eidolon6_Modifier</a>"
         }
       ]
     },
@@ -129,7 +129,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Gallagher_Passive_Trace01"
+          "modifier": "<a class=\"gModGreen\" id=\"786124629\">Gallagher_Passive_Trace01</a>"
         }
       ]
     }
@@ -137,7 +137,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Gallagher_Eidolon1_AddStatusModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1734825928\">Gallagher_Eidolon1_AddStatusModifier</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -164,7 +164,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Gallagher_Eidolon1_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__208321537\">Gallagher_Eidolon1_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -184,7 +184,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Gallagher_Eidolon1_AddStatusModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"1734825928\">Gallagher_Eidolon1_AddStatusModifier</a>"
                 },
                 {
                   "name": "Update Energy",
@@ -213,7 +213,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Gallagher_Eidolon6_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__799224722\">Gallagher_Eidolon6_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -258,7 +258,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Gallagher_PointB2_PreshowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__913171010\">Gallagher_PointB2_PreshowModifier</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -279,14 +279,14 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Gallagher_Eidolon2_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1477793302\">Gallagher_Eidolon2_Modifier</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Gallagher_PointB3_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-237144299\">Gallagher_PointB3_Modifier</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": []

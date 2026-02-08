@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_307_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-780787184\">Relic_307_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_307_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__2069130653\">Relic_307_Sub</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -50,7 +50,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_307_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-780787184\">Relic_307_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -81,7 +81,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_307_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"2069130653\">Relic_307_Sub</a>"
                     }
                   ]
                 }
@@ -111,7 +111,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_307_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"2069130653\">Relic_307_Sub</a>",
                       "onlyRemoveOwnersInstance": true
                     }
                   ],
@@ -122,7 +122,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_307_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"2069130653\">Relic_307_Sub</a>"
                     }
                   ]
                 }

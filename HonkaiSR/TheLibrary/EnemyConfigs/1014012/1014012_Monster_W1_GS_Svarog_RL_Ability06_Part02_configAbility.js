@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "valuePerStack": {
         "MDF_DamageUpRatio_PerLayer": {
           "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",

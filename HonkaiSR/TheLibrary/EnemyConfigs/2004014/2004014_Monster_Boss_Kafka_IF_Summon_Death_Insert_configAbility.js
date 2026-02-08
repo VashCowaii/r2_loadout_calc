@@ -123,7 +123,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire",
+                                "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>",
                                 "invertCondition": true
                               }
                             },
@@ -135,7 +135,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical",
+                                "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>",
                                 "invertCondition": true
                               }
                             }
@@ -190,7 +190,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster's Summoner}}"
                           },
-                          "modifier": "Enemy_W2_Cocolia_IF_SummonDie"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1225888494\">Enemy_W2_Cocolia_IF_SummonDie</a>"
                         },
                         {
                           "name": "Find New Target",
@@ -228,7 +228,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire",
+                                "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>",
                                 "invertCondition": true
                               },
                               "passed": [
@@ -238,7 +238,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire"
+                                  "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>"
                                 },
                                 {
                                   "name": "Add Events/Bonuses",
@@ -246,7 +246,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Wind"
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1358847221\">Enemy_W2_Kafka_IF_Weakness_Wind</a>"
                                 }
                               ]
                             },
@@ -258,7 +258,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical",
+                                "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>",
                                 "invertCondition": true
                               },
                               "passed": [
@@ -268,7 +268,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical"
+                                  "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>"
                                 },
                                 {
                                   "name": "Add Events/Bonuses",
@@ -276,7 +276,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Imaginary"
+                                  "modifier": "<a class=\"gModGreen\" id=\"1168051970\">Enemy_W2_Kafka_IF_Weakness_Imaginary</a>"
                                 }
                               ]
                             }
@@ -326,7 +326,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster's Summoner}}"
                               },
-                              "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical"
+                              "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -334,7 +334,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster's Summoner}}"
                               },
-                              "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire"
+                              "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -342,7 +342,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster's Summoner}}"
                               },
-                              "modifier": "Enemy_W2_Kafka_IF_Weakness_Wind"
+                              "modifier": "<a class=\"gModGreen\" id=\"-1358847221\">Enemy_W2_Kafka_IF_Weakness_Wind</a>"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -350,7 +350,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster's Summoner}}"
                               },
-                              "modifier": "Enemy_W2_Kafka_IF_Weakness_Imaginary"
+                              "modifier": "<a class=\"gModGreen\" id=\"1168051970\">Enemy_W2_Kafka_IF_Weakness_Imaginary</a>"
                             }
                           ]
                         }
@@ -416,7 +416,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire",
+                                "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>",
                                 "invertCondition": true
                               }
                             },
@@ -428,7 +428,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical",
+                                "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>",
                                 "invertCondition": true
                               }
                             }
@@ -483,7 +483,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster's Summoner}}"
                           },
-                          "modifier": "Enemy_W2_Cocolia_IF_SummonDie"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1225888494\">Enemy_W2_Cocolia_IF_SummonDie</a>"
                         },
                         {
                           "name": "Find New Target",
@@ -521,7 +521,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire",
+                                "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>",
                                 "invertCondition": true
                               },
                               "passed": [
@@ -531,7 +531,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire"
+                                  "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>"
                                 },
                                 {
                                   "name": "Add Events/Bonuses",
@@ -539,7 +539,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Wind"
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1358847221\">Enemy_W2_Kafka_IF_Weakness_Wind</a>"
                                 }
                               ]
                             },
@@ -551,7 +551,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical",
+                                "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>",
                                 "invertCondition": true
                               },
                               "passed": [
@@ -561,7 +561,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical"
+                                  "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>"
                                 },
                                 {
                                   "name": "Add Events/Bonuses",
@@ -569,7 +569,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Imaginary"
+                                  "modifier": "<a class=\"gModGreen\" id=\"1168051970\">Enemy_W2_Kafka_IF_Weakness_Imaginary</a>"
                                 }
                               ]
                             }
@@ -619,7 +619,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster's Summoner}}"
                               },
-                              "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical"
+                              "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -627,7 +627,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster's Summoner}}"
                               },
-                              "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire"
+                              "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -635,7 +635,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster's Summoner}}"
                               },
-                              "modifier": "Enemy_W2_Kafka_IF_Weakness_Wind"
+                              "modifier": "<a class=\"gModGreen\" id=\"-1358847221\">Enemy_W2_Kafka_IF_Weakness_Wind</a>"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -643,7 +643,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster's Summoner}}"
                               },
-                              "modifier": "Enemy_W2_Kafka_IF_Weakness_Imaginary"
+                              "modifier": "<a class=\"gModGreen\" id=\"1168051970\">Enemy_W2_Kafka_IF_Weakness_Imaginary</a>"
                             }
                           ]
                         }
@@ -698,7 +698,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical"
+          "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -706,7 +706,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire"
+          "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -714,7 +714,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "modifier": "Enemy_W2_Kafka_IF_Weakness_Wind"
+          "modifier": "<a class=\"gModGreen\" id=\"-1358847221\">Enemy_W2_Kafka_IF_Weakness_Wind</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -722,7 +722,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "modifier": "Enemy_W2_Kafka_IF_Weakness_Imaginary"
+          "modifier": "<a class=\"gModGreen\" id=\"1168051970\">Enemy_W2_Kafka_IF_Weakness_Imaginary</a>"
         }
       ]
     },

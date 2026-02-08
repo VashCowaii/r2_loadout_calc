@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Monster_W4_Pollux_Strengthen_EggAbsorb_FX",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__189344788\">Monster_W4_Pollux_Strengthen_EggAbsorb_FX</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -29,7 +29,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                 "invertCondition": true
               },
               {
@@ -38,7 +38,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_Pollux_EnergyBar"
+                "modifier": "<a class=\"gModGreen\" id=\"2086497725\">Monster_W4_Pollux_EnergyBar</a>"
               }
             ]
           }
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Monster_W4_Pollux_Strengthen_EggAbsorb",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__2062281585\">Monster_W4_Pollux_Strengthen_EggAbsorb</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -65,7 +65,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                 "invertCondition": true
               },
               {
@@ -74,7 +74,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_Pollux_EnergyBar"
+                "modifier": "<a class=\"gModGreen\" id=\"2086497725\">Monster_W4_Pollux_EnergyBar</a>"
               }
             ]
           },

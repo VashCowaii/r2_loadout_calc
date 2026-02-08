@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Silwolf_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"435463122\">StageAbility_Maze_Silwolf_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Silwolf_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__435463122\">StageAbility_Maze_Silwolf_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

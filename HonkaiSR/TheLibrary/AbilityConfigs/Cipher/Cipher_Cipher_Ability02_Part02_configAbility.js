@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All(with Unselectable)}}"
       },
-      "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
       "valuePerStack": {}
     },
     {
@@ -35,7 +35,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Cipher_BP_Debuff[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1685549745\">Cipher_BP_Debuff</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -71,7 +71,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Cipher_BP_Bonus[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"116163492\">Cipher_BP_Bonus</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",

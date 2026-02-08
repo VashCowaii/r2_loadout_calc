@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Constance_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1768728326\">StageAbility_Maze_Constance_Modifier</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,13 +26,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Constance_Modifier_SuperBreakTrigger"
+      "modifier": "<a class=\"gModGreen\" id=\"661250191\">StageAbility_Maze_Constance_Modifier_SuperBreakTrigger</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "_M_Constance_TechniqueUsage_SuperBreak",
+      "for": "<a class=\"gModGreen\" id=\"mod__-72763137\">_M_Constance_TechniqueUsage_SuperBreak</a>",
       "modifierFlags": [
         "STAT_SuperBreakBuff"
       ],
@@ -42,7 +42,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "DealSuperBreakDamage_DamagePerformance",
+              "functionName": "<a class=\"gTempYellow\" id=\"2132906314\">DealSuperBreakDamage_DamagePerformance</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -60,7 +60,7 @@ const configAbility = {
               "damageSequence": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "PursuedDamage_PerformanceDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
@@ -112,7 +112,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "_M_Constance_TechniqueUsage_SuperBreakTriggerFlag"
+                "modifier": "<a class=\"gModGreen\" id=\"465880923\">_M_Constance_TechniqueUsage_SuperBreakTriggerFlag</a>"
               },
               "passed": [
                 {
@@ -121,11 +121,11 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "_M_Constance_TechniqueUsage_SuperBreakTriggerFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"465880923\">_M_Constance_TechniqueUsage_SuperBreakTriggerFlag</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "DealSuperBreakDamage_DamagePerformance",
+                  "functionName": "<a class=\"gTempYellow\" id=\"2132906314\">DealSuperBreakDamage_DamagePerformance</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
@@ -143,7 +143,7 @@ const configAbility = {
                   "damageSequence": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "PursuedDamage_PerformanceDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
@@ -193,7 +193,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Constance_Modifier_SuperBreakTrigger",
+      "for": "<a class=\"gModGreen\" id=\"mod__661250191\">StageAbility_Maze_Constance_Modifier_SuperBreakTrigger</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -210,7 +210,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "_M_Constance_TechniqueUsage_SuperBreak"
+                "modifier": "<a class=\"gModGreen\" id=\"-72763137\">_M_Constance_TechniqueUsage_SuperBreak</a>"
               },
               "ifTargetFound": [
                 {
@@ -219,8 +219,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "_M_Constance_TechniqueUsage_SuperBreakTriggerFlag",
-                  "referenceModifier": "MReference_Empty"
+                  "modifier": "<a class=\"gModGreen\" id=\"465880923\">_M_Constance_TechniqueUsage_SuperBreakTriggerFlag</a>",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
                 }
               ]
             },
@@ -234,7 +234,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Constance_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1768728326\">StageAbility_Maze_Constance_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -254,7 +254,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Constance_Aura[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2139860773\">Constance_Aura</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -295,7 +295,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "_M_Constance_TechniqueUsage_SuperBreak",
+                      "modifier": "<a class=\"gModGreen\" id=\"-72763137\">_M_Constance_TechniqueUsage_SuperBreak</a>",
                       "valuePerStack": {
                         "MDF_DamagePercentage": {
                           "operator": "Variables[0] (0.6) || RETURN",

@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Pela_StatusProbability",
+      "for": "<a class=\"gModGreen\" id=\"mod__1480389752\">Pela_StatusProbability</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -42,7 +42,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Pela_TechniqueUsage_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__607065154\">Pela_TechniqueUsage_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -84,7 +84,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Pela_AbilityEidolon4_IceResistanceDown[<span class=\"descriptionNumberColor\">Ice RES Reduction</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__278160139\">Pela_AbilityEidolon4_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -123,7 +123,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Pela_AbilityEidolon4_StanceBreakTaken[<span class=\"descriptionNumberColor\">Ravage</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__618444549\">Pela_AbilityEidolon4_StanceBreakTaken</a>[<span class=\"descriptionNumberColor\">Ravage</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [],
       "execute": [
@@ -156,7 +156,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Pela_AbilityEidolon2_AddSpeedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-250608162\">Pela_AbilityEidolon2_AddSpeedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -195,7 +195,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Pela_Trace03_DamageAddedRatio[<span class=\"descriptionNumberColor\">Wipe Out</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1505163766\">Pela_Trace03_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">Wipe Out</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Ultimate_ExtraSP",
+      "modifier": "<a class=\"gModGreen\" id=\"63874351\">M_Ultimate_ExtraSP</a>",
       "valuePerStack": {
         "MDF_AddValue": {
           "operator": "Variables[0] (10) || RETURN",

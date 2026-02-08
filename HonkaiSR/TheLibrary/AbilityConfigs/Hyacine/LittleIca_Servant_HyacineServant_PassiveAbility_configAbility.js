@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_HyacineServant_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-1066684227\">Memosprite_HyacineServant_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_HyacineServant_ChallangeScore"
+      "modifier": "<a class=\"gModGreen\" id=\"1467878909\">Memosprite_HyacineServant_ChallangeScore</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -34,7 +34,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_HyacineServant_LoseHpPassive"
+      "modifier": "<a class=\"gModGreen\" id=\"124089426\">Memosprite_HyacineServant_LoseHpPassive</a>"
     },
     {
       "name": "IF",
@@ -53,7 +53,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_HyacineServant_Eidolon6_PenetrateRatio_Halo",
+          "modifier": "<a class=\"gModGreen\" id=\"3098173\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio_Halo</a>",
           "valuePerStack": {
             "MDF_PenetrateRatio": {
               "operator": "Variables[0] (0.2) || RETURN",
@@ -71,7 +71,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_HyacineServant_LoseHpPassive",
+      "for": "<a class=\"gModGreen\" id=\"mod__124089426\">Memosprite_HyacineServant_LoseHpPassive</a>",
       "stackData": [],
       "latentQueue": [],
       "subModList": [
@@ -81,7 +81,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
           },
-          "modifier": "Memosprite_HyacineServant_LoseHpSet",
+          "modifier": "<a class=\"gModGreen\" id=\"889204199\">Memosprite_HyacineServant_LoseHpSet</a>",
           "haloStatus": true
         }
       ]

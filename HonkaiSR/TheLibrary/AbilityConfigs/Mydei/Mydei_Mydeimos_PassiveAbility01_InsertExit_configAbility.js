@@ -42,7 +42,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "Mydeimos_Trace01[<span class=\"descriptionNumberColor\">Earth and Water</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"951504069\">Mydeimos_Trace01</a>[<span class=\"descriptionNumberColor\">Earth and Water</span>]",
           "function": "Add"
         },
         {
@@ -139,7 +139,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]"
         }
       ]
     }

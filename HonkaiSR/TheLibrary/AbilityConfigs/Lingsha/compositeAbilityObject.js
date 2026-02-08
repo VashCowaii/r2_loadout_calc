@@ -39,13 +39,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Lingsha_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1869117592\">StageAbility_Maze_Lingsha_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Lingsha_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1869117592\">StageAbility_Maze_Lingsha_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -65,7 +65,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "Lingsha_BreakDamageUp[<span class=\"descriptionNumberColor\">Befog</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-637709984\">Lingsha_BreakDamageUp</a>[<span class=\"descriptionNumberColor\">Befog</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -165,7 +165,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Lingsha_Eidolon6_Listen"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1458980452\">Lingsha_Eidolon6_Listen</a>"
                         }
                       ]
                     },
@@ -182,7 +182,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster's Self-Made Battle-Events}}"
                           },
-                          "modifier": "Lingsha_PointB3_OnListen",
+                          "modifier": "<a class=\"gModGreen\" id=\"210278197\">Lingsha_PointB3_OnListen</a>",
                           "valuePerStack": {
                             "MDF_HPRatio": {
                               "operator": "Variables[0] (0.6) || RETURN",
@@ -251,7 +251,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Lingsha_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-1977976670\">Lingsha_Passive</a>"
         },
         {
           "name": "Preload Battle Event(s)",
@@ -287,7 +287,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Lingsha_PointB1_OnListen"
+              "modifier": "<a class=\"gModGreen\" id=\"237515927\">Lingsha_PointB1_OnListen</a>"
             }
           ]
         },
@@ -297,7 +297,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Lingsha_Olisten_BE_Create"
+          "modifier": "<a class=\"gModGreen\" id=\"-1482372912\">Lingsha_Olisten_BE_Create</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -305,7 +305,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Lingsha_Ability_ModifyBEAction"
+          "modifier": "<a class=\"gModGreen\" id=\"285427978\">Lingsha_Ability_ModifyBEAction</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -313,7 +313,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Lingsha_Ultimate_ModifyBEAction"
+          "modifier": "<a class=\"gModGreen\" id=\"-1907662117\">Lingsha_Ultimate_ModifyBEAction</a>"
         },
         {
           "name": "IF",
@@ -328,7 +328,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Lingsha_Eidolon1_Listen",
+              "modifier": "<a class=\"gModGreen\" id=\"-1721297245\">Lingsha_Eidolon1_Listen</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.5) || RETURN",
@@ -369,7 +369,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_Ultimate_ModifyBEAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1907662117\">Lingsha_Ultimate_ModifyBEAction</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -403,7 +403,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_Ability_ModifyBEAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__285427978\">Lingsha_Ability_ModifyBEAction</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -437,7 +437,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_Olisten_BE_Create",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1482372912\">Lingsha_Olisten_BE_Create</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -469,7 +469,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_PointB1_Sub2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-835950999\">Lingsha_PointB1_Sub2</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -497,7 +497,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_PointB1_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-988682847\">Lingsha_PointB1_Sub</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -535,7 +535,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_PointB1_OnListen",
+          "for": "<a class=\"gModGreen\" id=\"mod__237515927\">Lingsha_PointB1_OnListen</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -558,7 +558,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Lingsha_PointB1_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"-988682847\">Lingsha_PointB1_Sub</a>",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.25) || MUL || Variables[3] (0.5) || PARAM_2 || FUNCTION || RETURN",
@@ -579,7 +579,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Lingsha_PointB1_Sub2",
+                  "modifier": "<a class=\"gModGreen\" id=\"-835950999\">Lingsha_PointB1_Sub2</a>",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.2) || PARAM_2 || FUNCTION || RETURN",
@@ -623,7 +623,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Lingsha_PointB1_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-988682847\">Lingsha_PointB1_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
                           "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.25) || MUL || Variables[3] (0.5) || PARAM_2 || FUNCTION || RETURN",
@@ -644,7 +644,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Lingsha_PointB1_Sub2",
+                      "modifier": "<a class=\"gModGreen\" id=\"-835950999\">Lingsha_PointB1_Sub2</a>",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
                           "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.2) || PARAM_2 || FUNCTION || RETURN",
@@ -669,7 +669,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1977976670\">Lingsha_Passive</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -713,7 +713,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Lingsha_Eidolon1_PassiveStackProperty"
+                          "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -721,7 +721,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Lingsha_Eidolon1_ListenBreak",
+                          "modifier": "<a class=\"gModGreen\" id=\"1709120566\">Lingsha_Eidolon1_ListenBreak</a>",
                           "valuePerStack": {
                             "Eidolon1_MDF_PropertyValue": {
                               "operator": "Variables[0] (0.2) || RETURN",
@@ -755,7 +755,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                       },
-                      "modifier": "Lingsha_Eidolon1_PassiveStackProperty"
+                      "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -763,7 +763,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                       },
-                      "modifier": "Lingsha_Eidolon1_ListenBreak",
+                      "modifier": "<a class=\"gModGreen\" id=\"1709120566\">Lingsha_Eidolon1_ListenBreak</a>",
                       "valuePerStack": {
                         "Eidolon1_MDF_PropertyValue": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -805,7 +805,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Lingsha_Eidolon2_BreakDamageAttackRatio[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-962483629\">Lingsha_Eidolon2_BreakDamageAttackRatio</a>[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -833,7 +833,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Lingsha_BreakDamageUp[<span class=\"descriptionNumberColor\">Befog</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-637709984\">Lingsha_BreakDamageUp</a>[<span class=\"descriptionNumberColor\">Befog</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -1003,7 +1003,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Lingsha_PointB3_CD[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1047,7 +1047,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Lingsha_Passive_Target"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1849801979\">Lingsha_Passive_Target</a>"
         },
         {
           "name": "IF",
@@ -1058,7 +1058,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Lingsha_Passive_Target_Eidolon6"
+              "functionName": "<a class=\"gTempYellow\" id=\"988152442\">Lingsha_Passive_Target_Eidolon6</a>"
             }
           ]
         },
@@ -1147,7 +1147,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Self-Made Battle-Events}}"
             },
-            "modifier": "Lingsha_BPAbility_BattleEvent_LifeTime",
+            "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
             "invertCondition": true
           },
           "passed": [
@@ -1187,7 +1187,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Lingsha_Eidolon6_Listen"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1458980452\">Lingsha_Eidolon6_Listen</a>"
                 }
               ]
             }
@@ -1232,7 +1232,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Lingsha_BPAbility_BattleEvent",
+          "modifier": "<a class=\"gModGreen\" id=\"1795719445\">Lingsha_BPAbility_BattleEvent</a>",
           "counter": {
             "operator": "Variables[0] (BattleEvent_Lingsha_PointB3) || RETURN",
             "displayLines": "BattleEvent_Lingsha_PointB3",
@@ -1248,7 +1248,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Lingsha_BPAbility_BattleEvent_LifeTime",
+          "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
           "counter": {
             "operator": "Variables[0] (BattleEvent_Lingsha_AttackTime) || RETURN",
             "displayLines": "BattleEvent_Lingsha_AttackTime",
@@ -1272,7 +1272,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_BPAbility_BattleEvent",
+          "for": "<a class=\"gModGreen\" id=\"mod__1795719445\">Lingsha_BPAbility_BattleEvent</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1408,7 +1408,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Self-Made Battle-Events}}"
               },
-              "modifier": "Lingsha_BPAbility_BattleEvent_LifeTime",
+              "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
               "counter": {
                 "operator": "Variables[0] (Lingsha_AttackTime) || RETURN",
                 "displayLines": "Lingsha_AttackTime",
@@ -1511,7 +1511,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Lingsha_Eidolon6_Listen"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1458980452\">Lingsha_Eidolon6_Listen</a>"
                 }
               ]
             },
@@ -1528,7 +1528,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Self-Made Battle-Events}}"
                   },
-                  "modifier": "Lingsha_PointB3_OnListen",
+                  "modifier": "<a class=\"gModGreen\" id=\"210278197\">Lingsha_PointB3_OnListen</a>",
                   "valuePerStack": {
                     "MDF_HPRatio": {
                       "operator": "Variables[0] (0.6) || RETURN",
@@ -1750,7 +1750,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_Eidolon6_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Arcadia Under Deep Seclusion</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1203114075\">Lingsha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Arcadia Under Deep Seclusion</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1783,7 +1783,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_Eidolon6_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1458980452\">Lingsha_Eidolon6_Listen</a>",
           "stackData": [],
           "latentQueue": [],
           "subModList": [
@@ -1793,7 +1793,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Lingsha_Eidolon6_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Arcadia Under Deep Seclusion</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1203114075\">Lingsha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Arcadia Under Deep Seclusion</span>]",
               "aliveOnly": "False",
               "haloStatus": true,
               "valuePerStack": {
@@ -1811,7 +1811,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_Eidolon2_BreakDamageAttackRatio[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-962483629\">Lingsha_Eidolon2_BreakDamageAttackRatio</a>[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1847,7 +1847,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_Eidolon1_DefenceRatioDown[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-127930650\">Lingsha_Eidolon1_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1858,7 +1858,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Lingsha_Eidolon1_PassiveStackProperty"
+                  "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>"
                 }
               ]
             },
@@ -1873,7 +1873,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_Eidolon1_PassiveStackProperty",
+          "for": "<a class=\"gModGreen\" id=\"mod__-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_DefenceDown"
@@ -1908,7 +1908,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_Eidolon1_ListenBreak",
+          "for": "<a class=\"gModGreen\" id=\"mod__1709120566\">Lingsha_Eidolon1_ListenBreak</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -1922,7 +1922,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Lingsha_Eidolon1_PassiveStackProperty",
+                  "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (Rank01_MDF_PropertyValue) || RETURN",
@@ -1940,7 +1940,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Lingsha_Eidolon1_DefenceRatioDown[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-127930650\">Lingsha_Eidolon1_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (Rank01_MDF_PropertyValue) || RETURN",
@@ -1962,7 +1962,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_Eidolon1_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1721297245\">Lingsha_Eidolon1_Listen</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1993,7 +1993,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_PointB3_CD[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "stackData": [],
           "latentQueue": [
@@ -2006,7 +2006,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_PointB3_OnListen",
+          "for": "<a class=\"gModGreen\" id=\"mod__210278197\">Lingsha_PointB3_OnListen</a>",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
@@ -2065,7 +2065,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Battle Event's Caster}}"
                             },
-                            "modifier": "Lingsha_PointB3_CD[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
+                            "modifier": "<a class=\"gModGreen\" id=\"551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
                             "invertCondition": true
                           },
                           "passed": [
@@ -2348,7 +2348,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_BPAbility_BattleEvent_LifeTime",
+          "for": "<a class=\"gModGreen\" id=\"mod__1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -2494,7 +2494,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lingsha_BreakDamageUp[<span class=\"descriptionNumberColor\">Befog</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-637709984\">Lingsha_BreakDamageUp</a>[<span class=\"descriptionNumberColor\">Befog</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2553,7 +2553,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Lingsha_Passive_Target",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1849801979\">Lingsha_Passive_Target</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -2799,7 +2799,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Lingsha_Passive_Target_Eidolon6",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__988152442\">Lingsha_Passive_Target_Eidolon6</a>",
           "parse": [
             {
               "name": "Looped Event",

@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "function_Saber_SurgeCheck",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-2003815504\">function_Saber_SurgeCheck</a>",
       "parse": [
         {
           "name": "Define Custom Variable",
@@ -116,7 +116,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Saber_Ability03_CD[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"879085567\">Saber_Ability03_CD</a>[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
                   }
                 ]
               },
@@ -162,7 +162,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Saber_Ability03_CD[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"879085567\">Saber_Ability03_CD</a>[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -170,7 +170,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Saber_Ability03_CD_02"
+                  "modifier": "<a class=\"gModGreen\" id=\"268332262\">Saber_Ability03_CD_02</a>"
                 }
               ]
             }
@@ -193,7 +193,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Saber_Wind_Ability03_buff"
+                "modifier": "<a class=\"gModGreen\" id=\"-437296268\">Saber_Wind_Ability03_buff</a>"
               },
               {
                 "name": "Compare: Variable",

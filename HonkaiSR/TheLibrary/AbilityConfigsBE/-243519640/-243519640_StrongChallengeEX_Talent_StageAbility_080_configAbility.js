@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_080"
+      "modifier": "<a class=\"gModGreen\" id=\"-621366030\">MStrongChallengeEX_Talent_StageAbility_LE_080</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_080[<span class=\"descriptionNumberColor\">Past Life: Shadowed Reverie</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1376108138\">MStrongChallengeEX_Talent_StageAbility_PLY_080</a>[<span class=\"descriptionNumberColor\">Past Life: Shadowed Reverie</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_080",
+      "for": "<a class=\"gModGreen\" id=\"mod__-621366030\">MStrongChallengeEX_Talent_StageAbility_LE_080</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -78,7 +78,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "MStrongChallengeEX_Talent_StageAbility_LE_080_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1643339413\">MStrongChallengeEX_Talent_StageAbility_LE_080_Template</a>"
                 }
               ]
             }
@@ -113,7 +113,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "MStrongChallengeEX_Talent_StageAbility_LE_080_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1643339413\">MStrongChallengeEX_Talent_StageAbility_LE_080_Template</a>"
                 }
               ]
             }
@@ -148,7 +148,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "MStrongChallengeEX_Talent_StageAbility_LE_080_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1643339413\">MStrongChallengeEX_Talent_StageAbility_LE_080_Template</a>"
                 }
               ]
             }
@@ -183,7 +183,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "MStrongChallengeEX_Talent_StageAbility_LE_080_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1643339413\">MStrongChallengeEX_Talent_StageAbility_LE_080_Template</a>"
                 }
               ]
             }
@@ -193,7 +193,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "MStrongChallengeEX_Talent_StageAbility_LE_080_Template",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1643339413\">MStrongChallengeEX_Talent_StageAbility_LE_080_Template</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Team Count",
@@ -240,7 +240,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_080[<span class=\"descriptionNumberColor\">Past Life: Shadowed Reverie</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1376108138\">MStrongChallengeEX_Talent_StageAbility_PLY_080</a>[<span class=\"descriptionNumberColor\">Past Life: Shadowed Reverie</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -260,7 +260,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_080[<span class=\"descriptionNumberColor\">Past Life: Shadowed Reverie</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1376108138\">MStrongChallengeEX_Talent_StageAbility_PLY_080</a>[<span class=\"descriptionNumberColor\">Past Life: Shadowed Reverie</span>]"
                 }
               ]
             }

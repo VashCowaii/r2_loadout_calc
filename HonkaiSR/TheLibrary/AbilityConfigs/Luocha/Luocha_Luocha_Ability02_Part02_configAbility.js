@@ -55,7 +55,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Luocha_Ability02_AddHealRatio",
+              "modifier": "<a class=\"gModGreen\" id=\"774057346\">Luocha_Ability02_AddHealRatio</a>",
               "valuePerStack": {
                 "MDF_AddHealRatio": {
                   "operator": "Variables[0] (0.3) || RETURN",
@@ -75,7 +75,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Luocha_Ability02_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1298017769\">Luocha_Ability02_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -158,7 +158,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Luocha_Passive01_HealHPArea"
+        "modifier": "<a class=\"gModGreen\" id=\"-1807885982\">Luocha_Passive01_HealHPArea</a>"
       },
       "failed": [
         {
@@ -167,7 +167,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Luocha_Passive01Modifier[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-390780291\">Luocha_Passive01Modifier</a>[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
           "valuePerStack": {
             "MDF_PassiveLayer": {
               "operator": "Variables[0] (2) || RETURN",

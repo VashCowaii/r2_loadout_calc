@@ -45,13 +45,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sparkle_Maze_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1062791672\">Sparkle_Maze_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Sparkle_Maze_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1062791672\">Sparkle_Maze_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -113,7 +113,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sparkle_PassiveAbility_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"1311234937\">Sparkle_PassiveAbility_Listen</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -121,7 +121,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sparkle_AbilityPreshow"
+          "modifier": "<a class=\"gModGreen\" id=\"705433852\">Sparkle_AbilityPreshow</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -139,7 +139,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Sparkle_PassiveAbility_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__1311234937\">Sparkle_PassiveAbility_Listen</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -262,7 +262,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Sparkle_PointB3_Mark",
+                            "modifier": "<a class=\"gModGreen\" id=\"-1668382571\">Sparkle_PointB3_Mark</a>",
                             "invertCondition": true
                           }
                         ]
@@ -289,7 +289,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Sparkle_PointB3_Mark"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1668382571\">Sparkle_PointB3_Mark</a>"
                         }
                       ]
                     },
@@ -308,7 +308,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Player Team All}}"
                           },
-                          "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (0.15) || RETURN",
@@ -345,7 +345,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Player Team All}}"
                               },
-                              "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
                                   "operator": "Variables[0] (0.15) || RETURN",
@@ -382,7 +382,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Player Team All}}"
                                   },
-                                  "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
                                       "operator": "Variables[0] (0.15) || RETURN",
@@ -461,7 +461,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Sparkle_PassiveAbility_AllDamageAddedRatio02[<span class=\"descriptionNumberColor\">Red Herring</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1017813291\">Sparkle_PassiveAbility_AllDamageAddedRatio02</a>[<span class=\"descriptionNumberColor\">Red Herring</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -558,7 +558,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Sparkle_PointB3_Mark",
+                            "modifier": "<a class=\"gModGreen\" id=\"-1668382571\">Sparkle_PointB3_Mark</a>",
                             "invertCondition": true
                           }
                         ]
@@ -585,7 +585,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Sparkle_PointB3_Mark"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1668382571\">Sparkle_PointB3_Mark</a>"
                         }
                       ]
                     },
@@ -604,7 +604,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Player Team All}}"
                           },
-                          "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (0.15) || RETURN",
@@ -641,7 +641,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Player Team All}}"
                               },
-                              "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
                                   "operator": "Variables[0] (0.15) || RETURN",
@@ -678,7 +678,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Player Team All}}"
                                   },
-                                  "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
                                       "operator": "Variables[0] (0.15) || RETURN",
@@ -715,7 +715,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sparkle_AbilityPreshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__705433852\">Sparkle_AbilityPreshow</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -811,7 +811,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -935,7 +935,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{All Team Members}}"
           },
-          "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -1006,7 +1006,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]"
               },
               "ifTargetFound": [
                 {
@@ -1015,7 +1015,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members(Exclude Self)}}"
                   },
-                  "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -1060,7 +1060,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Sparkle_Ability02_CritDmgAddedRatio02[<span class=\"descriptionNumberColor\">Dreamdiver</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]"
               },
               "ifTargetFound": [
                 {
@@ -1080,13 +1080,13 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
                           "invertCondition": true
                         }
                       }
                     ]
                   },
-                  "modifier": "Sparkle_Ability02_CritDmgAddedRatio02[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -1236,7 +1236,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1285,14 +1285,14 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
                         }
                       ]
                     }
                   }
                 ]
               },
-              "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1329,7 +1329,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1453,7 +1453,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
                         },
                         {
                           "name": "Is Part Of",
@@ -1472,7 +1472,7 @@ const compositeAbilityObject = {
                   }
                 ]
               },
-              "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1509,7 +1509,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1725,7 +1725,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -1839,7 +1839,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sparkle_Eidolon6_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__690939863\">Sparkle_Eidolon6_Mark</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1872,7 +1872,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Sparkle_Eidolon6_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"690939863\">Sparkle_Eidolon6_Mark</a>"
                     }
                   ]
                 }
@@ -1882,7 +1882,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sparkle_PassiveAbility_Real_AllDamageAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1934,13 +1934,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sparkle_PointB3_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1668382571\">Sparkle_PointB3_Mark</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Sparkle_PassiveAbility_AllDamageAddedRatio02[<span class=\"descriptionNumberColor\">Red Herring</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1017813291\">Sparkle_PassiveAbility_AllDamageAddedRatio02</a>[<span class=\"descriptionNumberColor\">Red Herring</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1952,7 +1952,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sparkle_PassiveAbility_Real_AllDamageAddedRatio"
+                  "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>"
                 }
               ]
             },
@@ -2011,7 +2011,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
                   },
                   "passed": [
                     {
@@ -2077,7 +2077,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sparkle_PassiveAbility_Real_AllDamageAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_AllDamageAddedRatio": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2112,7 +2112,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
                       },
                       {
                         "name": "Is Part Of",
@@ -2148,7 +2148,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sparkle_PassiveAbility_Real_AllDamageAddedRatio",
+                      "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
                       "valuePerStack": {
                         "MDF_AllDamageAddedRatio": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2182,7 +2182,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
                       },
                       {
                         "name": "Is Part Of",
@@ -2219,7 +2219,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sparkle_PassiveAbility_Real_AllDamageAddedRatio",
+                      "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
                       "valuePerStack": {
                         "MDF_AllDamageAddedRatio": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2257,7 +2257,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sparkle_Eidolon6_CritDmgAddedRatio01",
+          "for": "<a class=\"gModGreen\" id=\"mod__1304623516\">Sparkle_Eidolon6_CritDmgAddedRatio01</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2297,7 +2297,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sparkle_Ability02_CritDmgAddedRatio02[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
           "stackType": "Replace",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2350,7 +2350,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2369,7 +2369,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sparkle_Ability02_CritDmgAddedRatio02[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_PropertyValueConvert2": {
@@ -2404,7 +2404,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sparkle_Ability02_CritDmgAddedRatio02[<span class=\"descriptionNumberColor\">Dreamdiver</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2451,7 +2451,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sparkle_Eidolon4_CD",
+          "for": "<a class=\"gModGreen\" id=\"mod__-167826022\">Sparkle_Eidolon4_CD</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -2463,7 +2463,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ListenBattleEventSkill"

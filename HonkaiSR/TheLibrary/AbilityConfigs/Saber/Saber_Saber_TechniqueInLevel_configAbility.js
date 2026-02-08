@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Technique_Saber_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1123686300\">Technique_Saber_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Saber_TechniqueUsage_Bonus[<span class=\"descriptionNumberColor\">Behold, the King of Knights</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1732744103\">Saber_TechniqueUsage_Bonus</a>[<span class=\"descriptionNumberColor\">Behold, the King of Knights</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -56,7 +56,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Technique_Saber_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1123686300\">Technique_Saber_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -76,7 +76,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Saber_TechniqueUsage_Bonus[<span class=\"descriptionNumberColor\">Behold, the King of Knights</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1732744103\">Saber_TechniqueUsage_Bonus</a>[<span class=\"descriptionNumberColor\">Behold, the King of Knights</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -137,7 +137,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1328926688\">Saber_Trace03_Bonus_02</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (8) || RETURN",
                         "displayLines": "8",
@@ -180,7 +180,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1058966793\">Saber_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (15) || RETURN",
                         "displayLines": "15",

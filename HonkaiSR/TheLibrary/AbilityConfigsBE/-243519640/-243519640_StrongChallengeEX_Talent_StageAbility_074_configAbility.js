@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_074"
+      "modifier": "<a class=\"gModGreen\" id=\"-653096887\">MStrongChallengeEX_Talent_StageAbility_LE_074</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_MST_074",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1928504874\">MStrongChallengeEX_Talent_StageAbility_MST_074</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -65,7 +65,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_074",
+      "for": "<a class=\"gModGreen\" id=\"mod__1341714257\">MStrongChallengeEX_Talent_StageAbility_PLY_074</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -165,7 +165,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_074",
+      "for": "<a class=\"gModGreen\" id=\"mod__-653096887\">MStrongChallengeEX_Talent_StageAbility_LE_074</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -192,7 +192,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_074",
+                  "modifier": "<a class=\"gModGreen\" id=\"1341714257\">MStrongChallengeEX_Talent_StageAbility_PLY_074</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -236,7 +236,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}} + {{Enemy Team Unselectables}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_074",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1928504874\">MStrongChallengeEX_Talent_StageAbility_MST_074</a>",
                   "casterAssign": "TargetSelf"
                 }
               ]

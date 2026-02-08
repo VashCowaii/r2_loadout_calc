@@ -20,13 +20,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion01_03_EffectController"
+          "modifier": "<a class=\"gModGreen\" id=\"1220258029\">Enemy_XP_Minion01_03_EffectController</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion01_03_EffectController",
+          "for": "<a class=\"gModGreen\" id=\"mod__1220258029\">Enemy_XP_Minion01_03_EffectController</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -78,7 +78,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
             "displayLines": "{[Skill01[2]]}",

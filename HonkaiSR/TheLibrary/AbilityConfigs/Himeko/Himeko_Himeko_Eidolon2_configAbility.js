@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Himeko_Eidolon2_DamageUP",
+      "modifier": "<a class=\"gModGreen\" id=\"867071212\">Himeko_Eidolon2_DamageUP</a>",
       "valuePerStack": {
         "MDF_HPRatio": {
           "operator": "Variables[0] (0.5) || RETURN",
@@ -34,7 +34,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Himeko_Eidolon2_DamageUP",
+      "for": "<a class=\"gModGreen\" id=\"mod__867071212\">Himeko_Eidolon2_DamageUP</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",

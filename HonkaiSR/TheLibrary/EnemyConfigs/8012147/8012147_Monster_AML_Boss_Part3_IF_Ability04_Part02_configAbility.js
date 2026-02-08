@@ -36,7 +36,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Enemy_AML_Boss_IF_AbilityEX03"
+        "modifier": "<a class=\"gModGreen\" id=\"-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
       },
       "passed": [
         {
@@ -45,7 +45,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Standard_SpeedRatioUp",
+          "modifier": "<a class=\"gModGreen\" id=\"2003084081\">Standard_SpeedRatioUp</a>",
           "duration": 1,
           "valuePerStack": {
             "MDF_PropertyValue": {

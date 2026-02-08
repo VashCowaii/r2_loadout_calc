@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Bronya_Tree02"
+      "modifier": "<a class=\"gModGreen\" id=\"1530527517\">M_Bronya_Tree02</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Bronya_Tree02",
+      "for": "<a class=\"gModGreen\" id=\"mod__1530527517\">M_Bronya_Tree02</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -27,7 +27,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Bronya_Tree02_DefenceUp[<span class=\"descriptionNumberColor\">Battlefield</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2015057793\">Bronya_Tree02_DefenceUp</a>[<span class=\"descriptionNumberColor\">Battlefield</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -68,7 +68,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Bronya_Tree02_DefenceUp[<span class=\"descriptionNumberColor\">Battlefield</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2015057793\">Bronya_Tree02_DefenceUp</a>[<span class=\"descriptionNumberColor\">Battlefield</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

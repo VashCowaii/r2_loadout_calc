@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Rappa_Modifier_Dmg"
+      "modifier": "<a class=\"gModGreen\" id=\"496713366\">StageAbility_Maze_Rappa_Modifier_Dmg</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,13 +26,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Rappa_Modifier_Bonus"
+      "modifier": "<a class=\"gModGreen\" id=\"307934607\">StageAbility_Maze_Rappa_Modifier_Bonus</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Rappa_Modifier_Bonus",
+      "for": "<a class=\"gModGreen\" id=\"mod__307934607\">StageAbility_Maze_Rappa_Modifier_Bonus</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -81,7 +81,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Rappa_Modifier_Dmg",
+      "for": "<a class=\"gModGreen\" id=\"mod__496713366\">StageAbility_Maze_Rappa_Modifier_Dmg</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

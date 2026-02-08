@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_122_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1935878875\">Relic_122_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_122_Sub[<span class=\"descriptionNumberColor\">Scholar Lost in Erudition</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1050600358\">Relic_122_Sub</a>[<span class=\"descriptionNumberColor\">Scholar Lost in Erudition</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -93,7 +93,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_122_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1935878875\">Relic_122_Main</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -138,7 +138,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Relic_122_Sub[<span class=\"descriptionNumberColor\">Scholar Lost in Erudition</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1050600358\">Relic_122_Sub</a>[<span class=\"descriptionNumberColor\">Scholar Lost in Erudition</span>]"
                     }
                   ]
                 }

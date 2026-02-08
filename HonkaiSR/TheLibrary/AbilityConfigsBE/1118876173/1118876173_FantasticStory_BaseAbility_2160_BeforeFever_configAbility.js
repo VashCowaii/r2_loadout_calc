@@ -96,13 +96,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever"
+      "modifier": "<a class=\"gModGreen\" id=\"660002093\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever",
+      "for": "<a class=\"gModGreen\" id=\"mod__660002093\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -143,7 +143,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Modifier_FantasticStory_BaseAbility_2160_Aura"
+                        "modifier": "<a class=\"gModGreen\" id=\"-898765267\">Modifier_FantasticStory_BaseAbility_2160_Aura</a>"
                       },
                       {
                         "name": "Compare: Variable",
@@ -161,7 +161,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                       "duration": {
                         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
                         "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
@@ -214,7 +214,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                       "duration": {
                         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
                         "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
@@ -289,7 +289,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Modifier_FantasticStory_BaseAbility_2160_Aura"
+                        "modifier": "<a class=\"gModGreen\" id=\"-898765267\">Modifier_FantasticStory_BaseAbility_2160_Aura</a>"
                       },
                       {
                         "name": "Compare: Variable",
@@ -307,7 +307,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                       "duration": {
                         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
                         "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
@@ -360,7 +360,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                       "duration": {
                         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
                         "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
@@ -420,7 +420,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_ForShow[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1710887068\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
           "haloStatus": true
         }
       ]

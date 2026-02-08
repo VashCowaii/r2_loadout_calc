@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Sam_PassiveAbility_RedMode_DisableUltraSkill",
+      "for": "<a class=\"gModGreen\" id=\"mod__-340351438\">Sam_PassiveAbility_RedMode_DisableUltraSkill</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -33,7 +33,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_ActionBarPreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1084322434\">Sam_ActionBarPreShow</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -79,7 +79,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Sam_PassiveAbility01_BattleEvent"
+                      "modifier": "<a class=\"gModGreen\" id=\"92987575\">Sam_PassiveAbility01_BattleEvent</a>"
                     }
                   }
                 ]
@@ -104,7 +104,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Sam_PassiveAbility01_BattleEvent"
+                          "modifier": "<a class=\"gModGreen\" id=\"92987575\">Sam_PassiveAbility01_BattleEvent</a>"
                         }
                       }
                     ]
@@ -146,7 +146,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Sam_PassiveAbility01_BattleEvent"
+                              "modifier": "<a class=\"gModGreen\" id=\"92987575\">Sam_PassiveAbility01_BattleEvent</a>"
                             }
                           }
                         ]
@@ -162,7 +162,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_Eidolon2_BonusCD[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__881956526\">Sam_Eidolon2_BonusCD</a>[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]",
       "stackType": "ReplaceByCaster",
       "description": "The \"From Shattered Sky, I Free Fall\" effect cannot be triggered yet.",
       "type": "Other",
@@ -170,7 +170,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_Eidolon2_BonusCD_LuoJi",
+      "for": "<a class=\"gModGreen\" id=\"mod__539387692\">Sam_Eidolon2_BonusCD_LuoJi</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -199,7 +199,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_Eidolon4_Endurance",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1135525513\">Sam_Eidolon4_Endurance</a>",
       "counter": 2,
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
@@ -234,7 +234,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_Ultimate_BreakDamageAddRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__64395692\">Sam_Ultimate_BreakDamageAddRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -271,7 +271,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_ForceStanceDamage",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2077791877\">Sam_ForceStanceDamage</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ForceStanceDamage"
@@ -304,7 +304,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_Eidolon6_UltraDamageTypeAddRatio[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__154726309\">Sam_Eidolon6_UltraDamageTypeAddRatio</a>[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -336,7 +336,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_PointB2_SuperBreakBonus",
+      "for": "<a class=\"gModGreen\" id=\"mod__100735339\">Sam_PointB2_SuperBreakBonus</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SuperBreakBuff"
@@ -367,7 +367,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "DealSuperBreakDamage",
+                  "functionName": "<a class=\"gTempYellow\" id=\"795502164\">DealSuperBreakDamage</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Attack Targets of Modifier Holder}}"
@@ -407,7 +407,7 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "DealSuperBreakDamage",
+                      "functionName": "<a class=\"gTempYellow\" id=\"795502164\">DealSuperBreakDamage</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Attack Targets of Modifier Holder}}"
@@ -434,7 +434,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_Ability21_FireWeakType[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__639093534\">Sam_Ability21_FireWeakType</a>[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_AttachWeakness"
@@ -466,7 +466,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -502,7 +502,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -585,7 +585,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sam_Eidolon6_UltraDamageTypeAddRatio[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"154726309\">Sam_Eidolon6_UltraDamageTypeAddRatio</a>[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -593,7 +593,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Sam_Eidolon2_BonusCD[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"881956526\">Sam_Eidolon2_BonusCD</a>[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]"
             },
             {
               "name": "IF",
@@ -614,7 +614,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]"
                 }
               ],
               "failed": [
@@ -648,7 +648,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.4) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
@@ -727,7 +727,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sam_Eidolon2_BonusCD[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"881956526\">Sam_Eidolon2_BonusCD</a>[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]"
                     }
                   ]
                 }
@@ -861,7 +861,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.4) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
@@ -1004,7 +1004,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sam_Eidolon6_UltraDamageTypeAddRatio[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"154726309\">Sam_Eidolon6_UltraDamageTypeAddRatio</a>[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -1310,7 +1310,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_Eidolon2_BonusCD[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"881956526\">Sam_Eidolon2_BonusCD</a>[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1318,7 +1318,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_Eidolon2_BonusCD_LuoJi"
+                  "modifier": "<a class=\"gModGreen\" id=\"539387692\">Sam_Eidolon2_BonusCD_LuoJi</a>"
                 },
                 {
                   "name": "UI Display Event",
@@ -1364,7 +1364,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sam_PointB2_SuperBreakBonus"
+                      "modifier": "<a class=\"gModGreen\" id=\"100735339\">Sam_PointB2_SuperBreakBonus</a>"
                     }
                   ]
                 }
@@ -1376,7 +1376,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_PointB2_SuperBreakBonus"
+                  "modifier": "<a class=\"gModGreen\" id=\"100735339\">Sam_PointB2_SuperBreakBonus</a>"
                 }
               ]
             }
@@ -1400,7 +1400,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Sam_PassiveAbility_RedMode_DisableUltraSkill",
+          "modifier": "<a class=\"gModGreen\" id=\"-340351438\">Sam_PassiveAbility_RedMode_DisableUltraSkill</a>",
           "aliveOnly": "True",
           "haloStatus": true
         },
@@ -1410,7 +1410,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Sam_PointB2_SuperBreakBonus",
+          "modifier": "<a class=\"gModGreen\" id=\"100735339\">Sam_PointB2_SuperBreakBonus</a>",
           "aliveOnly": "True",
           "haloStatus": true,
           "conditions": {

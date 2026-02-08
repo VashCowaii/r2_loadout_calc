@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_20019_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1957214319\">LC_20019_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_20019_Sub[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1847667722\">LC_20019_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -51,7 +51,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_20019_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1957214319\">LC_20019_Main</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -71,7 +71,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "LC_20019_Sub[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1847667722\">LC_20019_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",

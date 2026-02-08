@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Mar_7th_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1796845024\">StageAbility_Maze_Mar_7th_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Mar_7th_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1796845024\">StageAbility_Maze_Mar_7th_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -74,7 +74,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -119,7 +119,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
                           "duration": {
                             "operator": "Variables[0] (1) || RETURN",
                             "displayLines": "1",

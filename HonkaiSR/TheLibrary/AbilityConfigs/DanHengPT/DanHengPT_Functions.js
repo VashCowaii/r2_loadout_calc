@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "DanHengPT_AddShield",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1290948349\">DanHengPT_AddShield</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -28,7 +28,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "DanHengPT_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -63,7 +63,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "DanHengPT_Ability03_AddShield",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1942576362\">DanHengPT_Ability03_AddShield</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -80,7 +80,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "DanHengPT_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -115,7 +115,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "DanHengPT_BE_AddShield",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__124728741\">DanHengPT_BE_AddShield</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -174,7 +174,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "DanHengPT_Eidolon2_LastBoostEnergyFlag"
+                "modifier": "<a class=\"gModGreen\" id=\"1941107033\">DanHengPT_Eidolon2_LastBoostEnergyFlag</a>"
               }
             ]
           },
@@ -185,7 +185,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengPT_Eidolon2_LastBoostEnergyFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"1941107033\">DanHengPT_Eidolon2_LastBoostEnergyFlag</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -193,7 +193,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "DanHengPT_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -261,7 +261,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "DanHengPT_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -306,7 +306,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "DanHengPT_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -373,7 +373,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "DanHengPT_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",

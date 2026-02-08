@@ -11,42 +11,42 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "function_Evernight_Group_FollowControl_00",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1711321550\">function_Evernight_Group_FollowControl_00</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "function_Evernight_Group_FollowControl_STB",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1551336747\">function_Evernight_Group_FollowControl_STB</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "function_Evernight_Group_FollowControl_ViewMode",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__724548436\">function_Evernight_Group_FollowControl_ViewMode</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "function_Evernight_Group_SizeControl_STB",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1946909591\">function_Evernight_Group_SizeControl_STB</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "function_Evernight_Group_SizeControl_STB2",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1393796287\">function_Evernight_Group_SizeControl_STB2</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "function_Evernight_Group_SizeControl_Perf2",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1349241137\">function_Evernight_Group_SizeControl_Perf2</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "function_Evernight_Group_SizeControl_Perf",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__294638745\">function_Evernight_Group_SizeControl_Perf</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "function_Evernight_TryCreateServant",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1497424763\">function_Evernight_TryCreateServant</a>",
       "parse": [
         {
           "name": "IF",
@@ -137,7 +137,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Evernight_PointB1_Crit[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.35) || RETURN",
@@ -168,7 +168,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Evernight_Eidolon2_Crit[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.4) || RETURN",
@@ -188,7 +188,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Evernight_HPChange",
+                  "modifier": "<a class=\"gModGreen\" id=\"2043260870\">Evernight_HPChange</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (2) || RETURN",
@@ -232,7 +232,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Evernight_Ability02_ChangeSkill"
+                  "modifier": "<a class=\"gModGreen\" id=\"132344239\">Evernight_Ability02_ChangeSkill</a>"
                 },
                 {
                   "name": "IF",
@@ -242,7 +242,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
                   },
                   "passed": [
                     {
@@ -265,7 +265,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -273,7 +273,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Evernight_S03",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>",
                         "invertCondition": true
                       }
                     ]
@@ -285,7 +285,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Evernight_UltraMode_Effect",
+                      "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>",
                       "casterAssign": "TargetSelf"
                     }
                   ]

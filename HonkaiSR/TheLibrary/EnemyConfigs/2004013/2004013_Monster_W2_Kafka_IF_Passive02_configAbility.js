@@ -10,14 +10,14 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "modifier": "Monster_W2_Kafka_IF_Suicide"
+      "modifier": "<a class=\"gModGreen\" id=\"2083537880\">Monster_W2_Kafka_IF_Suicide</a>"
     }
   ],
   "whenAdded": [],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_IF_Suicide",
+      "for": "<a class=\"gModGreen\" id=\"mod__2083537880\">Monster_W2_Kafka_IF_Suicide</a>",
       "execute": [
         {
           "eventTrigger": "Action End [Owner]",

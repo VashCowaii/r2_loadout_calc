@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_058"
+      "modifier": "<a class=\"gModGreen\" id=\"-518581745\">MStrongChallengeEX_Talent_StageAbility_LE_058</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_058",
+      "for": "<a class=\"gModGreen\" id=\"mod__-939644569\">MStrongChallengeEX_Talent_StageAbility_PLY_058</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -85,7 +85,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_058",
+      "for": "<a class=\"gModGreen\" id=\"mod__-518581745\">MStrongChallengeEX_Talent_StageAbility_LE_058</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -112,7 +112,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_058"
+                  "modifier": "<a class=\"gModGreen\" id=\"-939644569\">MStrongChallengeEX_Talent_StageAbility_PLY_058</a>"
                 }
               ]
             }

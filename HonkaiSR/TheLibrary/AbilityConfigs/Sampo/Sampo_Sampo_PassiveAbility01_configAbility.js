@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sampo_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"670903354\">Sampo_Passive</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Sampo_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__670903354\">Sampo_Passive</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -91,7 +91,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target TAKING DMG}}"
               },
-              "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || Variables[1] (_Tree01_LifeTimeAdd) || ADD || RETURN",
                 "displayLines": "(3 + _Tree01_LifeTimeAdd)",

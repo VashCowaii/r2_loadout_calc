@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_PlayerBoy_10_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"635436395\">StageAbility_Maze_PlayerBoy_10_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "PlayerBoy_10_TechniqueUsage_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__519378514\">PlayerBoy_10_TechniqueUsage_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "Shield"
@@ -84,7 +84,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_PlayerBoy_10_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__635436395\">StageAbility_Maze_PlayerBoy_10_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -113,7 +113,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "PlayerBoy_10_TechniqueUsage_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"519378514\">PlayerBoy_10_TechniqueUsage_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",

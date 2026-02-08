@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_081"
+      "modifier": "<a class=\"gModGreen\" id=\"-604588411\">MStrongChallengeEX_Talent_StageAbility_LE_081</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_081_Extra[<span class=\"descriptionNumberColor\">Whirlwind Turn</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1435721852\">MStrongChallengeEX_Talent_StageAbility_PLY_081_Extra</a>[<span class=\"descriptionNumberColor\">Whirlwind Turn</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_081",
+      "for": "<a class=\"gModGreen\" id=\"mod__1392885757\">MStrongChallengeEX_Talent_StageAbility_PLY_081</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -137,7 +137,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_081_Extra[<span class=\"descriptionNumberColor\">Whirlwind Turn</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1435721852\">MStrongChallengeEX_Talent_StageAbility_PLY_081_Extra</a>[<span class=\"descriptionNumberColor\">Whirlwind Turn</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
                     "displayLines": "MDF_PropertyValue3",
@@ -170,7 +170,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_081",
+      "for": "<a class=\"gModGreen\" id=\"mod__-604588411\">MStrongChallengeEX_Talent_StageAbility_LE_081</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -197,7 +197,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_081",
+                  "modifier": "<a class=\"gModGreen\" id=\"1392885757\">MStrongChallengeEX_Talent_StageAbility_PLY_081</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

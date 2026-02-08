@@ -20,7 +20,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "FuXuan_PassiveAbility"
+      "modifier": "<a class=\"gModGreen\" id=\"302655931\">FuXuan_PassiveAbility</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -28,7 +28,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "FuXuan_ExChangeHP"
+      "modifier": "<a class=\"gModGreen\" id=\"-2001636468\">FuXuan_ExChangeHP</a>"
     },
     {
       "name": "IF",
@@ -43,7 +43,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "FuXuan_Eidolon6[<span class=\"descriptionNumberColor\">Total HP lost</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1862182829\">FuXuan_Eidolon6</a>[<span class=\"descriptionNumberColor\">Total HP lost</span>]"
         }
       ]
     },
@@ -67,7 +67,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "FuXuan_PassiveAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__302655931\">FuXuan_PassiveAbility</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -87,7 +87,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_DamageReduce[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]"
             }
           ]
         },
@@ -110,7 +110,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "FuXuan_DamageReduce[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
               "valuePerStack": {
                 "MDF_DamageResistanceRatio": {
                   "operator": "Variables[0] (0.18) || RETURN",
@@ -144,7 +144,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "FuXuan_DamageReduce[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
                   "valuePerStack": {
                     "MDF_DamageResistanceRatio": {
                       "operator": "Variables[0] (0.18) || RETURN",

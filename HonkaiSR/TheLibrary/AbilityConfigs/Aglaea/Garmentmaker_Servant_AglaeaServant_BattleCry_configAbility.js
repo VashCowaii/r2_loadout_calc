@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_AglaeaServant_BattleCry"
+      "modifier": "<a class=\"gModGreen\" id=\"1545439856\">Memosprite_AglaeaServant_BattleCry</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_AglaeaServant_BattleCry",
+      "for": "<a class=\"gModGreen\" id=\"mod__1545439856\">Memosprite_AglaeaServant_BattleCry</a>",
       "stackType": "Replace",
       "execute": [
         {

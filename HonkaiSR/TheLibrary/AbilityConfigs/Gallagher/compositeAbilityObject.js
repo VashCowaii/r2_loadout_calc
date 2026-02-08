@@ -45,7 +45,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Gallagher_PreTechniqueUsage"
+          "modifier": "<a class=\"gModGreen\" id=\"-1721745580\">Gallagher_PreTechniqueUsage</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -53,13 +53,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Gallagher_TechniqueUsage"
+          "modifier": "<a class=\"gModGreen\" id=\"1689555093\">Gallagher_TechniqueUsage</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Gallagher_TechniqueUsage",
+          "for": "<a class=\"gModGreen\" id=\"mod__1689555093\">Gallagher_TechniqueUsage</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -231,7 +231,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Gallagher_PreTechniqueUsage",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1721745580\">Gallagher_PreTechniqueUsage</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -259,7 +259,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "MWGallagher_Ability03_DeBonusModifier[<span class=\"descriptionNumberColor\">Besotted</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-606062756\">MWGallagher_Ability03_DeBonusModifier</a>[<span class=\"descriptionNumberColor\">Besotted</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -324,7 +324,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Gallagher_Eidolon1_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"208321537\">Gallagher_Eidolon1_Modifier</a>"
             }
           ]
         },
@@ -346,7 +346,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Gallagher_PointB3_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-237144299\">Gallagher_PointB3_Modifier</a>"
             }
           ],
           "failed": [
@@ -370,7 +370,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Gallagher_Eidolon2_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"1477793302\">Gallagher_Eidolon2_Modifier</a>"
             }
           ]
         },
@@ -387,7 +387,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Gallagher_PointB2_PreshowModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"913171010\">Gallagher_PointB2_PreshowModifier</a>"
             }
           ]
         },
@@ -404,7 +404,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Gallagher_Eidolon6_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"799224722\">Gallagher_Eidolon6_Modifier</a>"
             }
           ]
         },
@@ -421,7 +421,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Gallagher_Passive_Trace01"
+              "modifier": "<a class=\"gModGreen\" id=\"786124629\">Gallagher_Passive_Trace01</a>"
             }
           ]
         }
@@ -429,7 +429,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Gallagher_Eidolon1_AddStatusModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1734825928\">Gallagher_Eidolon1_AddStatusModifier</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -456,7 +456,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Gallagher_Eidolon1_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__208321537\">Gallagher_Eidolon1_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -476,7 +476,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Gallagher_Eidolon1_AddStatusModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"1734825928\">Gallagher_Eidolon1_AddStatusModifier</a>"
                     },
                     {
                       "name": "Update Energy",
@@ -505,7 +505,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Gallagher_Eidolon6_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__799224722\">Gallagher_Eidolon6_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -550,7 +550,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Gallagher_PointB2_PreshowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__913171010\">Gallagher_PointB2_PreshowModifier</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -571,14 +571,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Gallagher_Eidolon2_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1477793302\">Gallagher_Eidolon2_Modifier</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Gallagher_PointB3_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-237144299\">Gallagher_PointB3_Modifier</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": []
@@ -625,7 +625,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "MWGallagher_Ability03_DeBonusModifier[<span class=\"descriptionNumberColor\">Besotted</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-606062756\">MWGallagher_Ability03_DeBonusModifier</a>[<span class=\"descriptionNumberColor\">Besotted</span>]",
           "duration": {
             "operator": "Variables[0] (2) || Variables[1] (Rank04_AddLifeTime) || ADD || RETURN",
             "displayLines": "(2 + Rank04_AddLifeTime)",
@@ -682,7 +682,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Gallagher_NormalAttckAlter_Enable"
+          "modifier": "<a class=\"gModGreen\" id=\"1869340095\">Gallagher_NormalAttckAlter_Enable</a>"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -787,7 +787,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "MWGallagher_Ability02_StatusResModifier[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1872837497\">MWGallagher_Ability02_StatusResModifier</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -977,7 +977,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "MWGallagher_Ability11_AttackDownModifier[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1678215353\">MWGallagher_Ability11_AttackDownModifier</a>[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -1141,7 +1141,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Gallagher_HealRatioAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__1129970541\">Gallagher_HealRatioAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1169,7 +1169,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Gallagher_Passive_Trace01",
+          "for": "<a class=\"gModGreen\" id=\"mod__786124629\">Gallagher_Passive_Trace01</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1179,7 +1179,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Gallagher_CheckBreakDamageAddedRatioChange"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1349711870\">Gallagher_CheckBreakDamageAddedRatioChange</a>"
                 }
               ],
               "priorityLevel": -80
@@ -1196,7 +1196,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Gallagher_CheckBreakDamageAddedRatioChange"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1349711870\">Gallagher_CheckBreakDamageAddedRatioChange</a>"
                     }
                   ]
                 }
@@ -1206,7 +1206,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Gallagher_CheckBreakDamageAddedRatioChange",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-1349711870\">Gallagher_CheckBreakDamageAddedRatioChange</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
@@ -1266,7 +1266,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Gallagher_HealRatioAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"1129970541\">Gallagher_HealRatioAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_HealRatioAddedRatio) || RETURN",
@@ -1286,7 +1286,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWGallagher_Ability11_AttackDownModifier[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1678215353\">MWGallagher_Ability11_AttackDownModifier</a>[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1320,7 +1320,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Gallagher_NormalAttckAlter_Enable",
+          "for": "<a class=\"gModGreen\" id=\"mod__1869340095\">Gallagher_NormalAttckAlter_Enable</a>",
           "stackType": "Refresh",
           "execute": [
             {
@@ -1385,7 +1385,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Gallagher_NormalAttckAlter_Enable"
+                      "modifier": "<a class=\"gModGreen\" id=\"1869340095\">Gallagher_NormalAttckAlter_Enable</a>"
                     }
                   ]
                 }
@@ -1397,7 +1397,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWGallagher_Ability03_DeBonusModifier[<span class=\"descriptionNumberColor\">Besotted</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-606062756\">MWGallagher_Ability03_DeBonusModifier</a>[<span class=\"descriptionNumberColor\">Besotted</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -1481,7 +1481,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Gallagher_NormalAttckAlter_Enable"
+                            "modifier": "<a class=\"gModGreen\" id=\"1869340095\">Gallagher_NormalAttckAlter_Enable</a>"
                           },
                           {
                             "name": "Skill Name",
@@ -1550,7 +1550,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWGallagher_Ability02_StatusResModifier[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1872837497\">MWGallagher_Ability02_StatusResModifier</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1586,7 +1586,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Gallagher_PointB3_AddFireBreakDamageModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__72686487\">Gallagher_PointB3_AddFireBreakDamageModifier</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {

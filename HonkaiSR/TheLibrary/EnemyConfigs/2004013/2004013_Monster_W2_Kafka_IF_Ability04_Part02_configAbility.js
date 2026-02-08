@@ -19,7 +19,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1510857703\">Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect</a>"
         }
       ]
     },
@@ -38,7 +38,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_Ability04_Target"
+          "modifier": "<a class=\"gModGreen\" id=\"-1330368689\">Monster_W2_Kafka_IF_Ability04_Target</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -278,7 +278,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
           },
           "passed": [
             {
@@ -299,7 +299,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
             "displayLines": "{[Skill01[2]]}",
@@ -345,7 +345,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
             }
           ]
         },
@@ -389,7 +389,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Kafka Skill4 Other Targets}}"
       },
-      "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+      "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -397,7 +397,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Monster_W2_Kafka_IF_Ability04_Target"
+      "modifier": "<a class=\"gModGreen\" id=\"-1330368689\">Monster_W2_Kafka_IF_Ability04_Target</a>"
     },
     {
       "name": "IF",
@@ -414,7 +414,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1510857703\">Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect</a>"
         }
       ]
     },

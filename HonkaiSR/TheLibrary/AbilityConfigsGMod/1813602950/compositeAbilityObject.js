@@ -17,7 +17,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "WStandard_DOT_ThunderCurse",
+          "for": "<a class=\"gModGreen\" id=\"mod__-231503615\">WStandard_DOT_ThunderCurse</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [

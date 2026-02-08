@@ -16,7 +16,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W4_Pollux_FX_Ground"
+      "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
     },
     {
       "name": "Find New Target",
@@ -33,7 +33,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display[<span class=\"descriptionNumberColor\">Death Rattle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"235074644\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display</a>[<span class=\"descriptionNumberColor\">Death Rattle</span>]"
           },
           "passed": [
             {
@@ -65,7 +65,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP"
+              "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>"
             },
             {
               "name": "ATK Scaling DMG",
@@ -147,7 +147,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP",
+            "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>",
             "invertCondition": true
           },
           "failed": [
@@ -206,7 +206,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP",
+            "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>",
             "invertCondition": true
           },
           "failed": [
@@ -265,7 +265,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP",
+            "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>",
             "invertCondition": true
           },
           "failed": [
@@ -322,7 +322,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Enemy_W4_Pollux_IF_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+        "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
         "invertCondition": true
       },
       "ifTargetFound": [
@@ -332,7 +332,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Enemy_W4_Pollux_IF_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
           "valuePerStack": {
             "MDF_DamagePercentage": {
               "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
@@ -360,7 +360,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP"
+      "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -368,7 +368,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W4_Pollux_FX_Ground"
+      "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -376,7 +376,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_APShow"
+      "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
     },
     {
       "name": "Define Custom Variable",

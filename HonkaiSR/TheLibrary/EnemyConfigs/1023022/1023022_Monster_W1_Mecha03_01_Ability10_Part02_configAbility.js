@@ -55,7 +55,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha03_01_Rage[<span class=\"descriptionNumberColor\">Surpass</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1705391722\">Monster_W1_Mecha03_01_Rage</a>[<span class=\"descriptionNumberColor\">Surpass</span>]",
       "duration": 1,
       "valuePerStack": {
         "MDF_AttackAddedRatio": {
@@ -74,7 +74,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha03_01_AOECount[<span class=\"descriptionNumberColor\">Bitterly Cold</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-800128779\">Monster_W1_Mecha03_01_AOECount</a>[<span class=\"descriptionNumberColor\">Bitterly Cold</span>]",
       "duration": 1,
       "addStacksPerTrigger": {
         "operator": "Variables[0] (SummonMonsterEatCount) || RETURN",

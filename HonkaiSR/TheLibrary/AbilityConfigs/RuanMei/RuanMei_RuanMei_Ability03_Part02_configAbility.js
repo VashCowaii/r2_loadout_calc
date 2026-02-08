@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "RuanMei_PassiveArea",
+          "modifier": "<a class=\"gModGreen\" id=\"1385395722\">RuanMei_PassiveArea</a>",
           "duration": {
             "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
             "displayLines": "(2 + 1)",
@@ -46,7 +46,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "RuanMei_PassiveArea",
+          "modifier": "<a class=\"gModGreen\" id=\"1385395722\">RuanMei_PassiveArea</a>",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -83,7 +83,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Ability03_Area_Eidolon1_Friend[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1242682284\">RuanMei_Ability03_Area_Eidolon1_Friend</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
       "stackType": "ReplaceByCaster",
       "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">Skill03_P1_PenetrateRatio</span>. When dealing DMG, ignores <span class=\"descriptionNumberColor\">SkillRank_Rank01_P1_IgnoreDEFRatio_Friend</span> of the target's DEF.",
       "type": "Buff",
@@ -92,7 +92,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Ability03_Area_Friend[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1476311818\">RuanMei_Ability03_Area_Friend</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
       "stackType": "ReplaceByCaster",
       "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">Skill03_P1_PenetrateRatio</span>.",
       "type": "Buff",
@@ -101,7 +101,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Ability03_Area_Eidolon1_Caster[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__678689072\">RuanMei_Ability03_Area_Eidolon1_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "variableValueChange": [
@@ -127,7 +127,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "RuanMei_PassiveArea",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1385395722\">RuanMei_PassiveArea</a>",
                       "value": {
                         "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                         "displayLines": "MDF_LifeTime",
@@ -152,7 +152,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Ability03_Area_Caster[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-995060554\">RuanMei_Ability03_Area_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "variableValueChange": [
@@ -178,7 +178,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "RuanMei_PassiveArea",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1385395722\">RuanMei_PassiveArea</a>",
                       "value": {
                         "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                         "displayLines": "MDF_LifeTime",

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21016_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"882546269\">LC_21016_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21016_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__882546269\">LC_21016_Main</a>",
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",
@@ -27,7 +27,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",

@@ -42,7 +42,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
             "displayLines": "{[Skill01[2]]}",
@@ -113,13 +113,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Soldier01_01_BreakEffectController"
+          "modifier": "<a class=\"gModGreen\" id=\"-1219084920\">Enemy_W1_Soldier01_01_BreakEffectController</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Soldier01_01_FireEffectController",
+          "for": "<a class=\"gModGreen\" id=\"mod__-235837049\">Enemy_W1_Soldier01_01_FireEffectController</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -131,7 +131,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Soldier01_01_BreakEffectController",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1219084920\">Enemy_W1_Soldier01_01_BreakEffectController</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -144,7 +144,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "StanceBreakState"
+                    "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
                   },
                   "failed": [
                     {
@@ -153,7 +153,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W1_Soldier01_01_FireEffectController"
+                      "modifier": "<a class=\"gModGreen\" id=\"-235837049\">Enemy_W1_Soldier01_01_FireEffectController</a>"
                     }
                   ]
                 }
@@ -168,7 +168,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W1_Soldier01_01_FireEffectController"
+                  "modifier": "<a class=\"gModGreen\" id=\"-235837049\">Enemy_W1_Soldier01_01_FireEffectController</a>"
                 }
               ]
             },
@@ -181,7 +181,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W1_Soldier01_01_FireEffectController"
+                  "modifier": "<a class=\"gModGreen\" id=\"-235837049\">Enemy_W1_Soldier01_01_FireEffectController</a>"
                 }
               ]
             }

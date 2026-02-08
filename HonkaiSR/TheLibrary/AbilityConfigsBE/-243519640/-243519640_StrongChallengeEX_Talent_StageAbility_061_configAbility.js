@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_061"
+      "modifier": "<a class=\"gModGreen\" id=\"1477410463\">MStrongChallengeEX_Talent_StageAbility_LE_061</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_TGT_061",
+      "for": "<a class=\"gModGreen\" id=\"mod__2133118051\">MStrongChallengeEX_Talent_StageAbility_TGT_061</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -45,7 +45,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_061",
+      "for": "<a class=\"gModGreen\" id=\"mod__1324789543\">MStrongChallengeEX_Talent_StageAbility_PLY_061</a>",
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -89,7 +89,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_061",
+                  "modifier": "<a class=\"gModGreen\" id=\"2133118051\">MStrongChallengeEX_Talent_StageAbility_TGT_061</a>",
                   "duration": {
                     "operator": "Variables[0] (#ADF_2) || RETURN",
                     "displayLines": "#ADF_2",
@@ -117,7 +117,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_061",
+      "for": "<a class=\"gModGreen\" id=\"mod__1477410463\">MStrongChallengeEX_Talent_StageAbility_LE_061</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -144,7 +144,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_061"
+                  "modifier": "<a class=\"gModGreen\" id=\"1324789543\">MStrongChallengeEX_Talent_StageAbility_PLY_061</a>"
                 }
               ]
             }

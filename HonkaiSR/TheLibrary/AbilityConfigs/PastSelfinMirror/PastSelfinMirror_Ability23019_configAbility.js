@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23019_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-128247200\">LC_23019_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23019_Sub2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-765272851\">LC_23019_Sub2</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -76,7 +76,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23019_Sub1[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-815605708\">LC_23019_Sub1</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -108,7 +108,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23019_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-128247200\">LC_23019_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -126,7 +126,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "LC_23019_Sub1[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-815605708\">LC_23019_Sub1</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -185,7 +185,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}.[[removeMemosprite]]"
                   },
-                  "modifier": "LC_23019_Sub2"
+                  "modifier": "<a class=\"gModGreen\" id=\"-765272851\">LC_23019_Sub2</a>"
                 }
               ]
             }

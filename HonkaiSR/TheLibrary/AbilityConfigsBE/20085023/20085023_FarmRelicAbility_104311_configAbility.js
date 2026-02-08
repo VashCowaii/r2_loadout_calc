@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MFarmRelic_104311"
+      "modifier": "<a class=\"gModGreen\" id=\"1990858090\">MFarmRelic_104311</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104311",
+      "for": "<a class=\"gModGreen\" id=\"mod__1990858090\">MFarmRelic_104311</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -53,7 +53,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_EliteField_Elite[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-858410577\">Standard_EliteField_Elite</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageReduce": 0.6,
                     "MDF_DamageByRatio": 0.15

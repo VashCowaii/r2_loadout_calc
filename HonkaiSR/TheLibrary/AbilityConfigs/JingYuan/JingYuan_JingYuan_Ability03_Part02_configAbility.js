@@ -41,7 +41,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
       "stackLimit": {
         "operator": "Variables[0] (10) || RETURN",
         "displayLines": "10",
@@ -63,14 +63,14 @@ const configAbility = {
       "name": "Define Custom Variable with Modifier Values",
       "valueType": "Layer",
       "variableName": "EnergyBar_UltraATKCount",
-      "modifierName": "JingYuan_BattleEvent_UltraATKCount[<span class=\"descriptionNumberColor\">Lightbringer</span>]",
+      "modifierName": "<a class=\"gModGreen\" id=\"-1804861609\">JingYuan_BattleEvent_UltraATKCount</a>[<span class=\"descriptionNumberColor\">Lightbringer</span>]",
       "multiplier": 1
     },
     {
       "name": "Define Custom Variable with Modifier Values",
       "valueType": "Layer",
       "variableName": "EnergyBar_ATKCount",
-      "modifierName": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+      "modifierName": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
       "multiplier": 1
     },
     {
@@ -136,7 +136,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Self-Made Battle-Events}}"
       },
-      "modifier": "JingYuan_BattleEvent_ATKCountShowText",
+      "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
       "valuePerStack": {
         "ATKCount": {
           "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
@@ -154,7 +154,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Self-Made Battle-Events}}"
       },
-      "modifier": "JingYuan_BattleEvent_SpeedUp",
+      "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
       "stackLimit": {
         "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
         "displayLines": "(10 - 3)",

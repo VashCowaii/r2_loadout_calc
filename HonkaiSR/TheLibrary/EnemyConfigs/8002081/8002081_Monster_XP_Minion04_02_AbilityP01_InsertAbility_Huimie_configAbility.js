@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_XP_Minion04_02_Huimie_EffectRound"
+      "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
     },
     {
       "name": "Looped Event",
@@ -52,7 +52,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_XP_Minion04_02_Huimie_EffectRound"
+      "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
     },
     {
       "name": "Declare Custom Variable",
@@ -78,7 +78,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On"
+      "modifier": "<a class=\"gModGreen\" id=\"224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>"
     }
   ],
   "references": []

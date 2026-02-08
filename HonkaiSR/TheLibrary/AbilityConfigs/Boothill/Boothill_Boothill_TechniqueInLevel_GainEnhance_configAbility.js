@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Boothill_GainEnhance"
+      "modifier": "<a class=\"gModGreen\" id=\"-951211001\">M_Boothill_GainEnhance</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Boothill_GainEnhance",
+      "for": "<a class=\"gModGreen\" id=\"mod__-951211001\">M_Boothill_GainEnhance</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -71,7 +71,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Boothill_SelfModification[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1894494257\">Boothill_SelfModification</a>[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

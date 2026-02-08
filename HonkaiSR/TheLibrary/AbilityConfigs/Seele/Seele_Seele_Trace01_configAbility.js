@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Seele_LowHP_AggroDown",
+      "modifier": "<a class=\"gModGreen\" id=\"-730910953\">Seele_LowHP_AggroDown</a>",
       "valuePerStack": {
         "MDF_HPRatio": {
           "operator": "Variables[0] (0.5) || RETURN",
@@ -34,7 +34,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Seele_Trace_AggroDown[<span class=\"descriptionNumberColor\">Nightshade</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -69,7 +69,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Seele_LowHP_AggroDown",
+      "for": "<a class=\"gModGreen\" id=\"mod__-730910953\">Seele_LowHP_AggroDown</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -101,7 +101,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Seele_Trace_AggroDown[<span class=\"descriptionNumberColor\">Nightshade</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_AggroDown) || RETURN",
@@ -146,7 +146,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Seele_Trace_AggroDown[<span class=\"descriptionNumberColor\">Nightshade</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_AggroDown) || RETURN",
@@ -166,7 +166,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Seele_Trace_AggroDown[<span class=\"descriptionNumberColor\">Nightshade</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]

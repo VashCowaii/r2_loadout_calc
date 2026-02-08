@@ -130,7 +130,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "March7th_BPAbility_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1541241593\">March7th_BPAbility_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
             "operator": "Variables[0] (3) || Variables[1] (_Tree02_LifeTimeAdd) || ADD || RETURN",
             "displayLines": "(3 + _Tree02_LifeTimeAdd)",
@@ -191,7 +191,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "March7th_BPAbility_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1541241593\">March7th_BPAbility_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
             "operator": "Variables[0] (3) || Variables[1] (_Tree02_LifeTimeAdd) || ADD || RETURN",
             "displayLines": "(3 + _Tree02_LifeTimeAdd)",

@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Argenti_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-573630990\">StageAbility_Maze_Argenti_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Argenti_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-573630990\">StageAbility_Maze_Argenti_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -40,7 +40,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Level Entity}}"
                     },
-                    "modifier": "StageAbility_MazeStandard_EnterBattle_Monster_Modifier",
+                    "modifier": "<a class=\"gModGreen\" id=\"1904238030\">StageAbility_MazeStandard_EnterBattle_Monster_Modifier</a>",
                     "invertCondition": true
                   },
                   {

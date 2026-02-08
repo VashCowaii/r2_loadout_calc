@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_023"
+      "modifier": "<a class=\"gModGreen\" id=\"-502936959\">MStrongChallengeEX_Talent_StageAbility_LE_023</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_023",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1192441687\">MStrongChallengeEX_Talent_StageAbility_PLY_023</a>",
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -59,7 +59,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -97,7 +97,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_023",
+      "for": "<a class=\"gModGreen\" id=\"mod__-502936959\">MStrongChallengeEX_Talent_StageAbility_LE_023</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -124,7 +124,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_023",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1192441687\">MStrongChallengeEX_Talent_StageAbility_PLY_023</a>",
                   "valuePerStack": {
                     "MDF_ActioDelayModifyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

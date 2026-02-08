@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_121_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1146318766\">Relic_121_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_121_Sub[<span class=\"descriptionNumberColor\">Sacerdos' Relived Ordeal</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-515052173\">Relic_121_Sub</a>[<span class=\"descriptionNumberColor\">Sacerdos' Relived Ordeal</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -61,7 +61,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_121_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1146318766\">Relic_121_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -154,7 +154,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Ability Target List}} + {{Ability Target List}}.[[getMemosprite]]"
                           },
-                          "modifier": "Relic_121_Sub[<span class=\"descriptionNumberColor\">Sacerdos' Relived Ordeal</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-515052173\">Relic_121_Sub</a>[<span class=\"descriptionNumberColor\">Sacerdos' Relived Ordeal</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",
@@ -180,7 +180,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Ability Target List}}"
                           },
-                          "modifier": "Relic_121_Sub[<span class=\"descriptionNumberColor\">Sacerdos' Relived Ordeal</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-515052173\">Relic_121_Sub</a>[<span class=\"descriptionNumberColor\">Sacerdos' Relived Ordeal</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",

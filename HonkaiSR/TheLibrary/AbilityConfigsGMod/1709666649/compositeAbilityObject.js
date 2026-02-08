@@ -17,7 +17,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002529_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-262937871\">MLevel_WB_3002529_Sub</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -60,7 +60,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002529",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1445330380\">MLevel_WB_3002529</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -92,7 +92,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002529_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-262937871\">MLevel_WB_3002529_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
                           "operator": "Variables[0] (MDF_2) || RETURN",
@@ -121,7 +121,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002529_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-262937871\">MLevel_WB_3002529_Sub</a>"
                     }
                   ]
                 }
@@ -156,7 +156,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002529_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-262937871\">MLevel_WB_3002529_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
                           "operator": "Variables[0] (MDF_2) || RETURN",
@@ -185,7 +185,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002529_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-262937871\">MLevel_WB_3002529_Sub</a>"
                     }
                   ]
                 }
@@ -195,7 +195,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002528_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2079541158\">MLevel_WB_3002528_Sub</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -274,7 +274,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002528",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1428552761\">MLevel_WB_3002528</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -286,7 +286,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MLevel_WB_3002528_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2079541158\">MLevel_WB_3002528_Sub</a>",
                   "valuePerStack": {
                     "MDF_1": {
                       "operator": "Variables[0] (MDF_1) || RETURN",
@@ -312,7 +312,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002527_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-677194305\">MLevel_WB_3002527_Sub</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -378,7 +378,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002527"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1613106570\">MLevel_WB_3002527</a>"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -391,7 +391,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002527",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1613106570\">MLevel_WB_3002527</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -403,7 +403,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MLevel_WB_3002527_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"-677194305\">MLevel_WB_3002527_Sub</a>",
                   "valuePerStack": {
                     "MDF_1": {
                       "operator": "Variables[0] (MDF_1) || RETURN",
@@ -434,7 +434,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MLevel_WB_3002527_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"-677194305\">MLevel_WB_3002527_Sub</a>",
                   "valuePerStack": {
                     "MDF_1": {
                       "operator": "Variables[0] (MDF_1) || RETURN",
@@ -460,7 +460,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002526",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1596328951\">MLevel_WB_3002526</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -490,7 +490,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002525",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1646661808\">MLevel_WB_3002525</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -502,7 +502,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MLevel_WB_3002523_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2000244981\">MLevel_WB_3002523_Sub</a>",
                   "valuePerStack": {
                     "MDF_1": {
                       "operator": "Variables[0] (MDF_1) || RETURN",
@@ -521,7 +521,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002523_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2000244981\">MLevel_WB_3002523_Sub</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -555,7 +555,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002523",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1545996094\">MLevel_WB_3002523</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -574,7 +574,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Attack Targets of Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002523_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2000244981\">MLevel_WB_3002523_Sub</a>",
                       "valuePerStack": {
                         "MDF_1": {
                           "operator": "Variables[0] (MDF_1) || RETURN",
@@ -593,7 +593,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members(Exclude Self)}}"
                       },
-                      "modifier": "MLevel_WB_3002523"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1545996094\">MLevel_WB_3002523</a>"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -604,7 +604,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002521",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1579551332\">MLevel_WB_3002521</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -632,7 +632,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002503_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__1602125537\">MLevel_WB_3002503_Sub</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -675,7 +675,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002503",
+          "for": "<a class=\"gModGreen\" id=\"mod__869583684\">MLevel_WB_3002503</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -782,7 +782,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002502_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__77193482\">MLevel_WB_3002502_Sub</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -825,7 +825,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002502",
+          "for": "<a class=\"gModGreen\" id=\"mod__886361303\">MLevel_WB_3002502</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -872,7 +872,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002502_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"77193482\">MLevel_WB_3002502_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
                           "operator": "Variables[0] (MDF_2) || RETURN",
@@ -893,7 +893,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002501_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1242915997\">MLevel_WB_3002501_Sub</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -927,7 +927,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002501",
+          "for": "<a class=\"gModGreen\" id=\"mod__903138922\">MLevel_WB_3002501</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -953,7 +953,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target TAKING DMG}}"
                       },
-                      "modifier": "MLevel_WB_3002501_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1242915997\">MLevel_WB_3002501_Sub</a>",
                       "valuePerStack": {
                         "MDF_Value": {
                           "operator": "Variables[0] (MDF_2) || RETURN",
@@ -974,7 +974,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002429",
+          "for": "<a class=\"gModGreen\" id=\"mod__892870251\">MLevel_WB_3002429</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -1007,7 +1007,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Standard_LevelAllDamageAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"-360289157\">Standard_LevelAllDamageAddedRatio</a>",
                   "duration": {
                     "operator": "Variables[0] (MDF_2) || RETURN",
                     "displayLines": "MDF_2",
@@ -1034,7 +1034,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002428",
+          "for": "<a class=\"gModGreen\" id=\"mod__876092632\">MLevel_WB_3002428</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -1097,7 +1097,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002427",
+          "for": "<a class=\"gModGreen\" id=\"mod__859315013\">MLevel_WB_3002427</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -1143,7 +1143,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002426",
+          "for": "<a class=\"gModGreen\" id=\"mod__842537394\">MLevel_WB_3002426</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -1178,7 +1178,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Attack Targets of Modifier Holder}}"
                       },
-                      "modifier": "Standard_DOT_Bleed[<span class=\"descriptionNumberColor\">Bleed</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1147160586\">Standard_DOT_Bleed</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_3) || RETURN",
                         "displayLines": "MDF_3",
@@ -1208,7 +1208,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002425",
+          "for": "<a class=\"gModGreen\" id=\"mod__825759775\">MLevel_WB_3002425</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -1254,7 +1254,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002424",
+          "for": "<a class=\"gModGreen\" id=\"mod__808982156\">MLevel_WB_3002424</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -1326,7 +1326,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002423",
+          "for": "<a class=\"gModGreen\" id=\"mod__792204537\">MLevel_WB_3002423</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -1398,7 +1398,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002422",
+          "for": "<a class=\"gModGreen\" id=\"mod__775426918\">MLevel_WB_3002422</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -1470,7 +1470,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002421",
+          "for": "<a class=\"gModGreen\" id=\"mod__758649299\">MLevel_WB_3002421</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -1526,7 +1526,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Attack Targets of Modifier Holder}}"
                       },
-                      "modifier": "Standard_CTRL_Taunt[<span class=\"descriptionNumberColor\">Taunt</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1488319040\">Standard_CTRL_Taunt</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
                       "duration": 1,
                       "casterAssign": "CasterSelf"
                     }
@@ -1538,7 +1538,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002403_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-768810398\">MLevel_WB_3002403_Sub</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -1581,7 +1581,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002403",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1220712385\">MLevel_WB_3002403</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -1691,7 +1691,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{All Team Members}}"
                           },
-                          "modifier": "MLevel_WB_3002403_Sub",
+                          "modifier": "<a class=\"gModGreen\" id=\"-768810398\">MLevel_WB_3002403_Sub</a>",
                           "valuePerStack": {
                             "MDF_2": {
                               "operator": "Variables[0] (MDF_2) || RETURN",
@@ -1726,7 +1726,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002402",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1237490004\">MLevel_WB_3002402</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -1780,7 +1780,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_Protect_AbilityRetarget[<span class=\"descriptionNumberColor\">undefined</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1788719875\">Standard_Protect_AbilityRetarget</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_1) || RETURN",
                         "displayLines": "MDF_1",
@@ -1799,7 +1799,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002401_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1364052196\">MLevel_WB_3002401_Sub</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -1840,7 +1840,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002401",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1187157147\">MLevel_WB_3002401</a>",
           "counter": 1,
           "stackType": "Multiple",
           "execute": [
@@ -1873,7 +1873,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002401_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1364052196\">MLevel_WB_3002401_Sub</a>",
                       "duration": {
                         "operator": "Variables[0] (MDF_2) || RETURN",
                         "displayLines": "MDF_2",
@@ -1922,7 +1922,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002401_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1364052196\">MLevel_WB_3002401_Sub</a>",
                       "duration": {
                         "operator": "Variables[0] (MDF_2) || RETURN",
                         "displayLines": "MDF_2",
@@ -1946,7 +1946,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002229",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1282754163\">MLevel_WB_3002229</a>",
           "stackType": "Multiple",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -1989,7 +1989,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_Protect_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1797420881\">Standard_Protect_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_ShowValue": {
@@ -2012,7 +2012,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002228",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1299531782\">MLevel_WB_3002228</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -2040,7 +2040,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002227",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1517640829\">MLevel_WB_3002227</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -2073,7 +2073,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002226_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-618173059\">MLevel_WB_3002226_Sub</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -2101,7 +2101,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002226",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1534418448\">MLevel_WB_3002226</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -2139,7 +2139,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MLevel_WB_3002226_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"-618173059\">MLevel_WB_3002226_Sub</a>",
                   "valuePerStack": {
                     "MDF_2": {
                       "operator": "Variables[0] (MDF_2) || RETURN",
@@ -2163,7 +2163,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MLevel_WB_3002226_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-618173059\">MLevel_WB_3002226_Sub</a>"
                 }
               ]
             }
@@ -2171,7 +2171,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002225",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1484085591\">MLevel_WB_3002225</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -2199,7 +2199,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002224",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1500863210\">MLevel_WB_3002224</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -2232,7 +2232,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002223",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1450530353\">MLevel_WB_3002223</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -2265,7 +2265,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002222",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1467307972\">MLevel_WB_3002222</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -2293,7 +2293,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002221",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1416975115\">MLevel_WB_3002221</a>",
           "stackType": "Multiple",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -2345,7 +2345,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002203",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1585045495\">MLevel_WB_3002203</a>",
           "stackType": "Multiple",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -2397,7 +2397,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002202",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1601823114\">MLevel_WB_3002202</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -2436,7 +2436,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002201_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-518795370\">MLevel_WB_3002201_Sub</a>",
           "stackType": "Replace",
           "functionalTurn": "AnyOneTurn",
           "execute": [
@@ -2464,7 +2464,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002201",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1618600733\">MLevel_WB_3002201</a>",
           "stackType": "Multiple",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -2552,7 +2552,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "MLevel_WB_3002201_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-518795370\">MLevel_WB_3002201_Sub</a>",
                       "casterAssign": "CasterSelf"
                     },
                     {
@@ -2563,7 +2563,7 @@ const compositeAbilityObject = {
                       },
                       "valueType": "Layer",
                       "variableName": "TempValue",
-                      "modifierName": "MLevel_WB_3002201_Sub",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-518795370\">MLevel_WB_3002201_Sub</a>",
                       "multiplier": 1
                     }
                   ]
@@ -2574,7 +2574,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002129",
+          "for": "<a class=\"gModGreen\" id=\"mod__1854833192\">MLevel_WB_3002129</a>",
           "stackType": "Multiple",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -2608,7 +2608,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_LevelAllDamageReduce[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1237033920\">Standard_LevelAllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -2630,7 +2630,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002128",
+          "for": "<a class=\"gModGreen\" id=\"mod__1871610811\">MLevel_WB_3002128</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -2654,7 +2654,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002127",
+          "for": "<a class=\"gModGreen\" id=\"mod__1821277954\">MLevel_WB_3002127</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -2687,7 +2687,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002126_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__861848812\">MLevel_WB_3002126_Sub</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2714,7 +2714,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002126",
+          "for": "<a class=\"gModGreen\" id=\"mod__1838055573\">MLevel_WB_3002126</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -2733,7 +2733,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002126_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"861848812\">MLevel_WB_3002126_Sub</a>",
                       "valuePerStack": {
                         "MDF_1": {
                           "operator": "Variables[0] (MDF_1) || RETURN",
@@ -2759,7 +2759,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MLevel_WB_3002126_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"861848812\">MLevel_WB_3002126_Sub</a>"
                 }
               ]
             }
@@ -2767,7 +2767,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002125",
+          "for": "<a class=\"gModGreen\" id=\"mod__1787722716\">MLevel_WB_3002125</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -2800,7 +2800,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002124",
+          "for": "<a class=\"gModGreen\" id=\"mod__1804500335\">MLevel_WB_3002124</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -2833,7 +2833,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002123",
+          "for": "<a class=\"gModGreen\" id=\"mod__1754167478\">MLevel_WB_3002123</a>",
           "stackType": "Multiple",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -2885,7 +2885,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002122",
+          "for": "<a class=\"gModGreen\" id=\"mod__1770945097\">MLevel_WB_3002122</a>",
           "stackType": "Multiple",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -2949,7 +2949,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002121",
+          "for": "<a class=\"gModGreen\" id=\"mod__1720612240\">MLevel_WB_3002121</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -2973,7 +2973,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002103",
+          "for": "<a class=\"gModGreen\" id=\"mod__-125220040\">MLevel_WB_3002103</a>",
           "stackType": "Multiple",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -3025,7 +3025,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002102",
+          "for": "<a class=\"gModGreen\" id=\"mod__-108442421\">MLevel_WB_3002102</a>",
           "stackType": "Multiple",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -3092,7 +3092,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002101",
+          "for": "<a class=\"gModGreen\" id=\"mod__-91664802\">MLevel_WB_3002101</a>",
           "stackType": "Multiple",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -3137,7 +3137,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "OneMore",
+                      "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>",
                       "casterAssign": "CasterSelf"
                     }
                   ]
@@ -3148,7 +3148,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002029",
+          "for": "<a class=\"gModGreen\" id=\"mod__166508431\">MLevel_WB_3002029</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -3176,7 +3176,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002028_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-646295095\">MLevel_WB_3002028_Sub</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3203,7 +3203,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002028",
+          "for": "<a class=\"gModGreen\" id=\"mod__149730812\">MLevel_WB_3002028</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -3235,7 +3235,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002028_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-646295095\">MLevel_WB_3002028_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
                           "operator": "Variables[0] (MDF_2) || RETURN",
@@ -3256,7 +3256,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002028_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-646295095\">MLevel_WB_3002028_Sub</a>"
                     }
                   ]
                 }
@@ -3291,7 +3291,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002028_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-646295095\">MLevel_WB_3002028_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
                           "operator": "Variables[0] (MDF_2) || RETURN",
@@ -3312,7 +3312,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002028_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-646295095\">MLevel_WB_3002028_Sub</a>"
                     }
                   ]
                 }
@@ -3322,7 +3322,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002027",
+          "for": "<a class=\"gModGreen\" id=\"mod__267174145\">MLevel_WB_3002027</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -3395,7 +3395,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002026",
+          "for": "<a class=\"gModGreen\" id=\"mod__250396526\">MLevel_WB_3002026</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -3423,7 +3423,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002025_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-146098050\">MLevel_WB_3002025_Sub</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3450,7 +3450,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002025",
+          "for": "<a class=\"gModGreen\" id=\"mod__233618907\">MLevel_WB_3002025</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -3482,7 +3482,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002025_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-146098050\">MLevel_WB_3002025_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
                           "operator": "Variables[0] (MDF_2) || RETURN",
@@ -3503,7 +3503,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002025_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-146098050\">MLevel_WB_3002025_Sub</a>"
                     }
                   ]
                 }
@@ -3538,7 +3538,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002025_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-146098050\">MLevel_WB_3002025_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
                           "operator": "Variables[0] (MDF_2) || RETURN",
@@ -3559,7 +3559,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002025_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-146098050\">MLevel_WB_3002025_Sub</a>"
                     }
                   ]
                 }
@@ -3569,7 +3569,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002024",
+          "for": "<a class=\"gModGreen\" id=\"mod__216841288\">MLevel_WB_3002024</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -3628,7 +3628,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002023_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__122496948\">MLevel_WB_3002023_Sub</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3671,7 +3671,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002023",
+          "for": "<a class=\"gModGreen\" id=\"mod__334284621\">MLevel_WB_3002023</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -3703,7 +3703,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002023_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"122496948\">MLevel_WB_3002023_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
                           "operator": "Variables[0] (MDF_2) || RETURN",
@@ -3732,7 +3732,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002023_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"122496948\">MLevel_WB_3002023_Sub</a>"
                     }
                   ]
                 }
@@ -3767,7 +3767,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002023_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"122496948\">MLevel_WB_3002023_Sub</a>",
                       "valuePerStack": {
                         "MDF_2": {
                           "operator": "Variables[0] (MDF_2) || RETURN",
@@ -3796,7 +3796,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MLevel_WB_3002023_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"122496948\">MLevel_WB_3002023_Sub</a>"
                     }
                   ]
                 }
@@ -3806,7 +3806,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002022",
+          "for": "<a class=\"gModGreen\" id=\"mod__317507002\">MLevel_WB_3002022</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -3834,7 +3834,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002021",
+          "for": "<a class=\"gModGreen\" id=\"mod__300729383\">MLevel_WB_3002021</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -3862,7 +3862,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002003",
+          "for": "<a class=\"gModGreen\" id=\"mod__2079451187\">MLevel_WB_3002003</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -3941,7 +3941,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002002",
+          "for": "<a class=\"gModGreen\" id=\"mod__2062673568\">MLevel_WB_3002002</a>",
           "stackType": "Multiple",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -4059,7 +4059,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MLevel_WB_3002001",
+          "for": "<a class=\"gModGreen\" id=\"mod__2113006425\">MLevel_WB_3002001</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -4080,7 +4080,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_Protect_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1797420881\">Standard_Protect_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": 2,
                   "valuePerStack": {
                     "MDF_ShowValue": {

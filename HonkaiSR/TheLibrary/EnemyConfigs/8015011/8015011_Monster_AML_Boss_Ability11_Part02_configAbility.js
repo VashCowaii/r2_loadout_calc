@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W0_Boss_Part2_Ability11_Modifier",
+      "modifier": "<a class=\"gModGreen\" id=\"596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>",
       "valuePerStack": {
         "MDF_AttackAddedRatio": 1
       }

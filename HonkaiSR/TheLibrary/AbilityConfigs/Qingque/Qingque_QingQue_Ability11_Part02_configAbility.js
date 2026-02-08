@@ -76,7 +76,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MWQingque_Attack_Transfer"
+      "modifier": "<a class=\"gModGreen\" id=\"723752004\">MWQingque_Attack_Transfer</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -84,7 +84,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1763556388\">QingQue_Passive_Hu</a>[<span class=\"descriptionNumberColor\">Hidden Hand</span>]"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -92,7 +92,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "QingQue_Passive_Hu_01"
+      "modifier": "<a class=\"gModGreen\" id=\"-1715908114\">QingQue_Passive_Hu_01</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -100,7 +100,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "QingQue_Passive_Hu_Flag_Wan"
+      "modifier": "<a class=\"gModGreen\" id=\"-797865006\">QingQue_Passive_Hu_Flag_Wan</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -108,7 +108,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "QingQue_Passive_Hu_Flag_Tong"
+      "modifier": "<a class=\"gModGreen\" id=\"-1600165622\">QingQue_Passive_Hu_Flag_Tong</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -116,7 +116,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "QingQue_Passive_Hu_Flag_Tiao"
+      "modifier": "<a class=\"gModGreen\" id=\"757701155\">QingQue_Passive_Hu_Flag_Tiao</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -124,7 +124,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "QingQue_Passive_Hu_Flag_Yu"
+      "modifier": "<a class=\"gModGreen\" id=\"-202055066\">QingQue_Passive_Hu_Flag_Yu</a>"
     },
     "Refresh QingQue Bar-State",
     {
@@ -145,7 +145,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Qingque_SpeedUpPointB3[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-514950186\">Qingque_SpeedUpPointB3</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "duration": 1,
           "valuePerStack": {
             "MDF_SpeedUp": {
@@ -166,7 +166,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "QingQue_Passive_Hu_Flag"
+      "modifier": "<a class=\"gModGreen\" id=\"-1539822909\">QingQue_Passive_Hu_Flag</a>"
     },
     "Trigger: Attack End",
     {

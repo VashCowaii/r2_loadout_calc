@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Trace_AggroUp",
+      "modifier": "<a class=\"gModGreen\" id=\"-1138569970\">M_Trace_AggroUp</a>",
       "valuePerStack": {
         "MDF_PropertyValue": {
           "operator": "Variables[0] (3) || RETURN",

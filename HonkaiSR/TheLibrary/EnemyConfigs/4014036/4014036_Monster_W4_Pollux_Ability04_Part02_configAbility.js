@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Monster_W4_PolluxPart_Shield[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"2034261592\">Monster_W4_PolluxPart_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
       "duration": {
         "operator": "Variables[0] (UnusedUnderThisBase_131) || RETURN",
         "displayLines": "UnusedUnderThisBase_131",

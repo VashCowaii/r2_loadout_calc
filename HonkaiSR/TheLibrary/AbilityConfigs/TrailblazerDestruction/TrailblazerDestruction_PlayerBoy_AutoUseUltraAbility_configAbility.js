@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Player_AutoUseUltraAbility"
+      "modifier": "<a class=\"gModGreen\" id=\"-707210254\">M_Player_AutoUseUltraAbility</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Player_AutoUseUltraAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__-707210254\">M_Player_AutoUseUltraAbility</a>",
       "stackData": [],
       "latentQueue": []
     }

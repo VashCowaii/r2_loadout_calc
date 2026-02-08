@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "function_Anaxa_AddWeakness",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-2143749742\">function_Anaxa_AddWeakness</a>",
       "parse": [
         {
           "name": "IF",
@@ -644,7 +644,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Function's Target List}}"
               },
-              "modifier": "Standard_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1724958950\">Standard_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -660,7 +660,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Function's Target List}}"
               },
-              "modifier": "Standard_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1938125975\">Standard_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -676,7 +676,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Function's Target List}}"
               },
-              "modifier": "Standard_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2009288629\">Standard_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -692,7 +692,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Function's Target List}}"
               },
-              "modifier": "Standard_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1930557999\">Standard_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -708,7 +708,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Function's Target List}}"
               },
-              "modifier": "Standard_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1497676034\">Standard_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -724,7 +724,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Function's Target List}}"
               },
-              "modifier": "Standard_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1012677236\">Standard_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -740,7 +740,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Function's Target List}}"
               },
-              "modifier": "Standard_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1118024096\">Standard_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -756,7 +756,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Anaxa_Ability02_SingleHit",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__662224417\">Anaxa_Ability02_SingleHit</a>",
       "parse": [
         {
           "name": "ATK Scaling DMG",
@@ -795,7 +795,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "M_Anaxa_Ability02_HitMark"
+          "modifier": "<a class=\"gModGreen\" id=\"1764573952\">M_Anaxa_Ability02_HitMark</a>"
         }
       ]
     }

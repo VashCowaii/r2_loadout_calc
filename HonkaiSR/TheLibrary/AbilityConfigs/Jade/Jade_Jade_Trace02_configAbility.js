@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Jade_Tree02"
+      "modifier": "<a class=\"gModGreen\" id=\"-1956050692\">Jade_Tree02</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Jade_Tree02",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1956050692\">Jade_Tree02</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

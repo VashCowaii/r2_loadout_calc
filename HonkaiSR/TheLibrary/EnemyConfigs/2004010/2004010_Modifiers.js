@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_CharmTargetMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-879407781\">Monster_W2_Kafka_CharmTargetMark</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -26,7 +26,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_CharmMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-954638742\">Monster_W2_Kafka_CharmMark</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -35,7 +35,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_CharmOneAttack",
+      "for": "<a class=\"gModGreen\" id=\"mod__64191029\">Monster_W2_Kafka_CharmOneAttack</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -46,7 +46,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
             }
           ]
         }
@@ -54,7 +54,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_CharmDisableAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__808819939\">Monster_W2_Kafka_CharmDisableAction</a>",
       "modifierFlags": [
         "DisableAction"
       ],
@@ -62,7 +62,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_Charm[<span class=\"descriptionNumberColor\">Dominated</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1239633217\">Monster_W2_Kafka_Charm</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
       "stackType": "Refresh",
       "modifierFlags": [
         "STAT_CTRL",
@@ -104,7 +104,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W2_Kafka_CharmDisableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"808819939\">Monster_W2_Kafka_CharmDisableAction</a>"
                 }
               ]
             }
@@ -151,7 +151,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_Kafka_CharmTargetMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-879407781\">Monster_W2_Kafka_CharmTargetMark</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -183,7 +183,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Monster_W2_Kafka_CharmTargetMark"
+              "modifier": "<a class=\"gModGreen\" id=\"-879407781\">Monster_W2_Kafka_CharmTargetMark</a>"
             },
             {
               "name": "Declare Custom Variable",
@@ -221,7 +221,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_CharmControl",
+      "for": "<a class=\"gModGreen\" id=\"mod__2042396368\">Monster_W2_Kafka_CharmControl</a>",
       "execute": [
         {
           "eventTrigger": "Dealt Damage while Crowd/Mind Controlled [Anyone]",
@@ -269,13 +269,13 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_EnhanceElectricMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_EnhanceElectricDamage",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -300,7 +300,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_Enhance",
+      "for": "<a class=\"gModGreen\" id=\"mod__318325310\">Monster_W2_Kafka_Enhance</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -319,7 +319,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
                   },
                   {
                     "name": "NOT",
@@ -329,7 +329,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Kafka_CharmTargetMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-879407781\">Monster_W2_Kafka_CharmTargetMark</a>"
                     }
                   },
                   {
@@ -340,7 +340,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Kafka_CharmOneAttack"
+                      "modifier": "<a class=\"gModGreen\" id=\"64191029\">Monster_W2_Kafka_CharmOneAttack</a>"
                     }
                   }
                 ]
@@ -352,7 +352,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_Kafka_CharmOneAttack"
+                  "modifier": "<a class=\"gModGreen\" id=\"64191029\">Monster_W2_Kafka_CharmOneAttack</a>"
                 }
               ]
             }
@@ -370,7 +370,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Monster_W2_Kafka_CharmOneAttack"
+              "modifier": "<a class=\"gModGreen\" id=\"64191029\">Monster_W2_Kafka_CharmOneAttack</a>"
             }
           ]
         }
@@ -378,7 +378,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_Pursuit",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1082518094\">Monster_W2_Kafka_Pursuit</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_EvernightServant_TriggerDeathrattle"
+      "modifier": "<a class=\"gModGreen\" id=\"-1418513049\">Memosprite_EvernightServant_TriggerDeathrattle</a>"
     },
     {
       "name": "IF",
@@ -20,7 +20,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster's Summoner}}"
         },
-        "modifier": "Evernight_UltraMode_Energy[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
       },
       "passed": [
         {
@@ -29,7 +29,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "modifier": "Evernight_UltraMode_Energy_Cost",
+          "modifier": "<a class=\"gModGreen\" id=\"-1643770860\">Evernight_UltraMode_Energy_Cost</a>",
           "casterAssign": "TargetSelf"
         }
       ]
@@ -40,7 +40,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Evernight_UltraMode_Effect_Normal"
+      "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -48,7 +48,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Summoner}}"
       },
-      "modifier": "Evernight_TryKillServant_Flag",
+      "modifier": "<a class=\"gModGreen\" id=\"-1586544037\">Evernight_TryKillServant_Flag</a>",
       "casterAssign": "TargetSelf"
     },
     {
@@ -59,7 +59,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster's Summoner}}"
         },
-        "modifier": "Evernight_UltraMode_Energy_0[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
       },
       "passed": [
         {
@@ -68,7 +68,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "modifier": "Evernight_TryRemoveUltra_Flag",
+          "modifier": "<a class=\"gModGreen\" id=\"-960144998\">Evernight_TryRemoveUltra_Flag</a>",
           "casterAssign": "TargetSelf"
         }
       ]
@@ -79,7 +79,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_EvernightServant_TriggerNormal"
+      "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>"
     },
     {
       "name": "IF",
@@ -187,7 +187,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_EvernightServant_TriggerDeathrattle"
+      "modifier": "<a class=\"gModGreen\" id=\"-1418513049\">Memosprite_EvernightServant_TriggerDeathrattle</a>"
     },
     {
       "name": "IF",

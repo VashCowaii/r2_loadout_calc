@@ -6,7 +6,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "Cyrene_ChargeEnergy",
+      "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
       "variables": {
         "parameter[0]_AddValue": {
           "operator": "Variables[0] (1) || RETURN",

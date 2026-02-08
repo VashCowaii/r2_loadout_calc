@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Constance_Trace03"
+      "modifier": "<a class=\"gModGreen\" id=\"-2073058540\">Constance_Trace03</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "_M_Constance_Tree03_SpdPreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__1372103601\">_M_Constance_Tree03_SpdPreShow</a>",
       "stackType": "ReplaceByCaster",
       "previewValue": {
         "name": "Modifier: UI Preview",
@@ -44,7 +44,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_Tree03_Property[<span class=\"descriptionNumberColor\">Outgrow the Old, Espouse the New</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"922171575\">Constance_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Outgrow the Old, Espouse the New</span>]",
               "invertCondition": true
             }
           ]
@@ -57,7 +57,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "_M_Constance_Tree03_StancePreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__1550002034\">_M_Constance_Tree03_StancePreShow</a>",
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -111,7 +111,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Tree03_Property[<span class=\"descriptionNumberColor\">Outgrow the Old, Espouse the New</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__922171575\">Constance_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Outgrow the Old, Espouse the New</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -146,7 +146,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack",
+      "for": "<a class=\"gModGreen\" id=\"mod__-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -212,8 +212,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Constance_PointB3_AddWeaknessMark",
-                      "referenceModifier": "MReference_Empty",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1477912473\">Constance_PointB3_AddWeaknessMark</a>",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>",
                       "casterAssign": "CasterSelf"
                     },
                     {
@@ -222,8 +222,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Constance_PointB3_SPAddMark",
-                      "referenceModifier": "MReference_Empty"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
                     }
                   ]
                 }
@@ -235,7 +235,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "_M_Constance_Tree03_AddWeaknessListener",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1302015690\">_M_Constance_Tree03_AddWeaknessListener</a>",
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -257,7 +257,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getCreator]]"
                   },
-                  "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+                  "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -265,7 +265,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getCreator]]"
                   },
-                  "modifier": "Constance_PointB3_SPAddMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
                 }
               ]
             },
@@ -275,7 +275,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+              "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -283,7 +283,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_PointB3_SPAddMark"
+              "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -291,7 +291,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Constance_PointB3_AddWeaknessMark"
+              "modifier": "<a class=\"gModGreen\" id=\"-1477912473\">Constance_PointB3_AddWeaknessMark</a>"
             }
           ]
         },
@@ -314,7 +314,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Constance_PointB3_AddWeaknessMark",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1477912473\">Constance_PointB3_AddWeaknessMark</a>",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
@@ -369,7 +369,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Constance_PointB3_AddWeaknessMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1477912473\">Constance_PointB3_AddWeaknessMark</a>"
                 }
               ]
             },
@@ -384,7 +384,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Constance_PointB3_SPAddMark"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
                   },
                   {
                     "name": "Has Element",
@@ -510,7 +510,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_PointB3_SPAddMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
                 }
               ]
             }
@@ -525,7 +525,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Constance_PointB3_AddWeaknessMark",
+              "modifier": "<a class=\"gModGreen\" id=\"-1477912473\">Constance_PointB3_AddWeaknessMark</a>",
               "removeToBeAdded": true
             },
             {
@@ -534,7 +534,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_PointB3_SPAddMark"
+              "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -542,7 +542,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
               },
-              "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+              "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
             },
             {
               "name": "IF",
@@ -561,7 +561,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getCreator]]"
                   },
-                  "modifier": "Constance_PointB3_SPAddMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -569,7 +569,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getCreator]]"
                   },
-                  "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+                  "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
                 }
               ]
             },
@@ -579,7 +579,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+              "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
             }
           ]
         },
@@ -592,7 +592,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+              "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -600,7 +600,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_PointB3_SPAddMark"
+              "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
             },
             {
               "name": "IF",
@@ -619,7 +619,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getCreator]]"
                   },
-                  "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+                  "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -627,7 +627,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getCreator]]"
                   },
-                  "modifier": "Constance_PointB3_SPAddMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
                 }
               ]
             },
@@ -637,7 +637,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Constance_PointB3_AddWeaknessMark"
+              "modifier": "<a class=\"gModGreen\" id=\"-1477912473\">Constance_PointB3_AddWeaknessMark</a>"
             }
           ]
         },
@@ -650,7 +650,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
+              "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
             }
           ],
           "priorityLevel": -85
@@ -664,7 +664,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Constance_PointB3_AddWeaknessMark"
+              "modifier": "<a class=\"gModGreen\" id=\"-1477912473\">Constance_PointB3_AddWeaknessMark</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -672,7 +672,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_PointB3_SPAddMark"
+              "modifier": "<a class=\"gModGreen\" id=\"-1314243171\">Constance_PointB3_SPAddMark</a>"
             }
           ]
         },
@@ -706,7 +706,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Constance_Tree03_Property[<span class=\"descriptionNumberColor\">Outgrow the Old, Espouse the New</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"922171575\">Constance_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Outgrow the Old, Espouse the New</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -734,7 +734,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Trace03",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2073058540\">Constance_Trace03</a>",
       "stackData": [],
       "latentQueue": [],
       "subModList": [
@@ -744,7 +744,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
           },
-          "modifier": "_M_Constance_Tree03_AddWeaknessListener",
+          "modifier": "<a class=\"gModGreen\" id=\"-1302015690\">_M_Constance_Tree03_AddWeaknessListener</a>",
           "haloStatus": true,
           "includeBattleEvent": true
         },
@@ -754,7 +754,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
           },
-          "modifier": "_M_Constance_Tree03_StancePreShow",
+          "modifier": "<a class=\"gModGreen\" id=\"1550002034\">_M_Constance_Tree03_StancePreShow</a>",
           "haloStatus": true,
           "includeBattleEvent": true
         },
@@ -764,7 +764,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
           },
-          "modifier": "_M_Constance_Tree03_SpdPreShow",
+          "modifier": "<a class=\"gModGreen\" id=\"1372103601\">_M_Constance_Tree03_SpdPreShow</a>",
           "haloStatus": true,
           "includeBattleEvent": true
         }

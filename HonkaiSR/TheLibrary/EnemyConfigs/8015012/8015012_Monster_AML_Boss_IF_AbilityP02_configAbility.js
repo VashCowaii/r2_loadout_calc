@@ -14,7 +14,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_IF_Unselectable[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1744952962\">Enemy_AML_Boss_IF_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
     },
     {
       "name": "Assign Unique Name",
@@ -30,7 +30,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_IF_PassiveAbilityInitiate_ChangePhaseController"
+      "modifier": "<a class=\"gModGreen\" id=\"1146217540\">Enemy_AML_Boss_IF_PassiveAbilityInitiate_ChangePhaseController</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -38,7 +38,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_IF_ListenAllPartLimbo"
+      "modifier": "<a class=\"gModGreen\" id=\"255719361\">Enemy_AML_Boss_IF_ListenAllPartLimbo</a>"
     }
   ],
   "references": []

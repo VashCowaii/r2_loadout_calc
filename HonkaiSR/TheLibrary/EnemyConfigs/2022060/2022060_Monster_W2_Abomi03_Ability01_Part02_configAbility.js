@@ -46,7 +46,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Abomi03_HitTarget",
+          "modifier": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>",
           "counter": 1
         }
       ]
@@ -71,7 +71,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Abomi03_HitTarget"
+                "modifier": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>"
               },
               {
                 "name": "Compare: Variable",
@@ -79,7 +79,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value1": "Monster_W2_Abomi03_HitTarget",
+                "value1": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>",
                 "compareType": "=",
                 "value2": 1
               }
@@ -113,7 +113,7 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Monster_W2_Abomi03_BulletHitEffect_SmallShake"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2024740573\">Monster_W2_Abomi03_BulletHitEffect_SmallShake</a>"
                     }
                   ]
                 }
@@ -124,7 +124,7 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Monster_W2_Abomi03_BulletHitEffect_SmallShake"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2024740573\">Monster_W2_Abomi03_BulletHitEffect_SmallShake</a>"
                     }
                   ]
                 }
@@ -137,7 +137,7 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Monster_W2_Abomi03_BulletHitEffect_SmallShake"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2024740573\">Monster_W2_Abomi03_BulletHitEffect_SmallShake</a>"
                 }
               ]
             }
@@ -149,7 +149,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Abomi03_HitTarget",
+          "modifier": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>",
           "counter": 2
         }
       ]
@@ -174,7 +174,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Abomi03_HitTarget"
+                "modifier": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>"
               },
               {
                 "name": "Compare: Variable",
@@ -182,7 +182,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value1": "Monster_W2_Abomi03_HitTarget",
+                "value1": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>",
                 "compareType": "=",
                 "value2": 2
               }
@@ -216,7 +216,7 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Monster_W2_Abomi03_BulletHitEffect_SmallShake"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2024740573\">Monster_W2_Abomi03_BulletHitEffect_SmallShake</a>"
                     }
                   ]
                 }
@@ -227,7 +227,7 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Monster_W2_Abomi03_BulletHitEffect_SmallShake"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2024740573\">Monster_W2_Abomi03_BulletHitEffect_SmallShake</a>"
                     }
                   ]
                 }
@@ -240,7 +240,7 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Monster_W2_Abomi03_BulletHitEffect_SmallShake"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2024740573\">Monster_W2_Abomi03_BulletHitEffect_SmallShake</a>"
                 }
               ]
             }
@@ -252,7 +252,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Abomi03_HitTarget",
+          "modifier": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>",
           "counter": 3
         }
       ]
@@ -277,7 +277,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Abomi03_HitTarget"
+                "modifier": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>"
               },
               {
                 "name": "Compare: Variable",
@@ -285,7 +285,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value1": "Monster_W2_Abomi03_HitTarget",
+                "value1": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>",
                 "compareType": "=",
                 "value2": 3
               }
@@ -319,7 +319,7 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Monster_W2_Abomi03_BulletHitEffect_SmallShake"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2024740573\">Monster_W2_Abomi03_BulletHitEffect_SmallShake</a>"
                     }
                   ]
                 }
@@ -330,7 +330,7 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Monster_W2_Abomi03_BulletHitEffect_SmallShake"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2024740573\">Monster_W2_Abomi03_BulletHitEffect_SmallShake</a>"
                     }
                   ]
                 }
@@ -343,7 +343,7 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Monster_W2_Abomi03_BulletHitEffect_SmallShake"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2024740573\">Monster_W2_Abomi03_BulletHitEffect_SmallShake</a>"
                 }
               ]
             }
@@ -355,7 +355,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Abomi03_HitTarget",
+          "modifier": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>",
           "counter": 4
         }
       ]
@@ -380,7 +380,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Abomi03_HitTarget"
+                "modifier": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>"
               },
               {
                 "name": "Compare: Variable",
@@ -388,7 +388,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value1": "Monster_W2_Abomi03_HitTarget",
+                "value1": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>",
                 "compareType": "=",
                 "value2": 4
               }
@@ -422,7 +422,7 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Monster_W2_Abomi03_BulletHitEffect_SmallShake"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2024740573\">Monster_W2_Abomi03_BulletHitEffect_SmallShake</a>"
                     }
                   ]
                 }
@@ -433,7 +433,7 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Monster_W2_Abomi03_BulletHitEffect_SmallShake"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2024740573\">Monster_W2_Abomi03_BulletHitEffect_SmallShake</a>"
                     }
                   ]
                 }
@@ -446,7 +446,7 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Monster_W2_Abomi03_BulletHitEffect_SmallShake"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2024740573\">Monster_W2_Abomi03_BulletHitEffect_SmallShake</a>"
                 }
               ]
             }
@@ -458,7 +458,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Abomi03_HitTarget",
+          "modifier": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>",
           "counter": 5
         }
       ]
@@ -483,7 +483,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Abomi03_HitTarget"
+                "modifier": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>"
               },
               {
                 "name": "Compare: Variable",
@@ -491,7 +491,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value1": "Monster_W2_Abomi03_HitTarget",
+                "value1": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>",
                 "compareType": "=",
                 "value2": 5
               }
@@ -617,7 +617,7 @@ const configAbility = {
   "functions": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Monster_W2_Abomi03_BulletHitEffect_BigShake",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__883350424\">Monster_W2_Abomi03_BulletHitEffect_BigShake</a>",
       "parse": [
         {
           "name": "ATK Scaling DMG",
@@ -645,7 +645,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Monster_W2_Abomi03_BulletHitEffect_SmallShake",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-2024740573\">Monster_W2_Abomi03_BulletHitEffect_SmallShake</a>",
       "parse": [
         {
           "name": "ATK Scaling DMG",

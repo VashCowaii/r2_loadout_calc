@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Mydeimos_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"705127850\">StageAbility_Maze_Mydeimos_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Mydeimos_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__705127850\">StageAbility_Maze_Mydeimos_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -76,7 +76,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Standard_CTRL_Taunt[<span class=\"descriptionNumberColor\">Taunt</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1488319040\">Standard_CTRL_Taunt</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",

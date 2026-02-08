@@ -82,7 +82,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{All Team Members}}"
           },
-          "modifier": "Monster_XP_Minion03_Attack[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1727496698\">Monster_XP_Minion03_Attack</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
             "displayLines": "{[Skill02[1]]}",
@@ -208,7 +208,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_XP_Minion03_EffectController"
+          "modifier": "<a class=\"gModGreen\" id=\"-397507265\">Monster_XP_Minion03_EffectController</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -216,13 +216,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_XP_Minion03_Deathrattle"
+          "modifier": "<a class=\"gModGreen\" id=\"2574934\">Monster_XP_Minion03_Deathrattle</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_XP_Minion03_Deathrattle",
+          "for": "<a class=\"gModGreen\" id=\"mod__2574934\">Monster_XP_Minion03_Deathrattle</a>",
           "modifierFlags": [
             "Deathrattle",
             "KeepOnDeathrattle"
@@ -260,7 +260,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_XP_Minion03_EffectController",
+          "for": "<a class=\"gModGreen\" id=\"mod__-397507265\">Monster_XP_Minion03_EffectController</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -509,7 +509,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_XP_Minion03_Attack[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1727496698\">Monster_XP_Minion03_Attack</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {

@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Technique_Herta_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1189021958\">Technique_Herta_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Herta_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">It Can Still Be Optimized</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-516353123\">Herta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">It Can Still Be Optimized</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -56,7 +56,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Technique_Herta_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1189021958\">Technique_Herta_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -76,7 +76,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Herta_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">It Can Still Be Optimized</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-516353123\">Herta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">It Can Still Be Optimized</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

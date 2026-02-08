@@ -1050,6 +1050,7 @@ let globalIsLightcone = false;
 let globalIsRelic = false;
 let globalIsNoImage = false;
 let isVaryingAbilityPage = false;
+let firstPageLoad = false;
 
 const megaParsingFuckery = {
     pageLoad(loadFile) {
@@ -1063,17 +1064,69 @@ const megaParsingFuckery = {
         loadFile = loadFile ?? compositeAbilityObject.abilityList[compositeAbilityObject.abilityList.length >= 2 ? 1 : 0];
         let configAbility = compositeAbilityObject.abilityObject[loadFile];
 
-        if (!configAbility) {
-            // loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName + "_Servant",compositeAbilityObject.trimSummonName);
-            loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName,compositeAbilityObject.trimSummonName);
-            console.log(loadFile)
-            // console.log(loadFile)
-            configAbility = compositeAbilityObject.abilityObject[loadFile];
-            // compositeAbilityObject.trimSummonName
+        // console.log(loadFile)
+        
+        if (!configAbility || location.hash) {
+            let foundValidFile = false;
+            
+            if (location.hash) {
+                const elemIDAfter = decodeURIComponent(location.hash.slice(1));
+                // const elemIDAfter = location.hash.slice(1);
+                
+                // console.log(elemIDAfter,readSelection(decodeURIComponent((elemIDAfter))))
+                if (!firstPageLoad && elemIDAfter && (elemIDAfter.includes("mod__") || elemIDAfter.includes("fun__"))) {
+                    // readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+
+                    firstPageLoad = true;
+                    
+                    for (let loadFileEntry in compositeAbilityObject.abilityObject) {
+                        let currentEntry = JSON.stringify(compositeAbilityObject.abilityObject[loadFileEntry]);
+
+                        console.log(elemIDAfter,currentEntry.includes(elemIDAfter))
+                        if (currentEntry.includes(elemIDAfter)) {
+                            configAbility = compositeAbilityObject.abilityObject[loadFileEntry];
+                            loadFile = loadFileEntry;
+                            currentEntry = "";
+                            foundValidFile = true;
+                            break;
+                        }
+                        currentEntry = "";
+                    }
+
+                    // console.log(elemIDAfter)
+                    // if (elemIDAfter.includes("mod__") || elemIDAfter.includes("fun__")) {
+                    //     readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+                    // }
+                    // else {
+                    //     readSelection("fileSelectionSelector").value = `${currentCharFilePrefix}_${elemIDAfter}`;
+                    //     megaParsingFuckery.renewFileSelected()
+                    // }
+
+                    if (!foundValidFile) {
+                        alert(`Couldn't find a matching file under this entity, for the link you were provided.\n\nIf you believe this is in error and you didn't just fuck with the URL like an idiot, then join the discord and let Vash know.`)
+                    }
+                };
+            }
+
+
+
+            if ((!firstPageLoad || !foundValidFile) && !configAbility) {
+                firstPageLoad = true;
+                // loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName + "_Servant",compositeAbilityObject.trimSummonName);
+                loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName,compositeAbilityObject.trimSummonName);
+                // console.log(loadFile)
+                // console.log(loadFile)
+                configAbility = compositeAbilityObject.abilityObject[loadFile];
+                // compositeAbilityObject.trimSummonName
+            }
+
+            
+            
 
         }
 
         let initialCounter = 1;
+        console.log(loadFile)
         let eventBodyString = megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter);
         let eventBodyStringOnAdd = megaParsingFuckery.fillEventBodyBox(configAbility.whenAdded,initialCounter);
         let eventBodyStringOnRemove = megaParsingFuckery.fillEventBodyBox(configAbility.whenRemoved,initialCounter);
@@ -1409,6 +1462,8 @@ const megaParsingFuckery = {
         
 
         bodyBox.innerHTML = mainAbilityString;
+        megaParsingFuckery.populateLinkedEntriesGlobal("gModGreen")
+        megaParsingFuckery.populateLinkedEntriesGlobal("gTempYellow")
 
         // if (isLightcone) {readSelection("lightconeSkillDescription").innerHTML = pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition],lightconeRef.desc);}
     },
@@ -1440,10 +1495,17 @@ if (location.hash && isVaryingAbilityPage) {
     // console.log(elemIDAfter,readSelection(decodeURIComponent((elemIDAfter))))
     if (elemIDAfter) {
         // readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+        console.log(elemIDAfter)
+        if (elemIDAfter.includes("mod__") || elemIDAfter.includes("fun__")) {
+            readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+        }
+        else {
+            readSelection("fileSelectionSelector").value = `${currentCharFilePrefix}_${elemIDAfter}`;
+            megaParsingFuckery.renewFileSelected()
+        }
 
 
-        readSelection("fileSelectionSelector").value = `${currentCharFilePrefix}_${elemIDAfter}`;
-        megaParsingFuckery.renewFileSelected()
+        
     
     
     

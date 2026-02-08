@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_20014_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-166658668\">LC_20014_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_20014_SpeedAddedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1556228019\">LC_20014_SpeedAddedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -51,7 +51,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_20014_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-166658668\">LC_20014_Main</a>",
       "execute": [
         {
           "eventTrigger": "Got a Kill [Owner]",
@@ -62,7 +62,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "LC_20014_SpeedAddedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1556228019\">LC_20014_SpeedAddedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",

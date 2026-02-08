@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members}}"
           },
-          "modifier": "Lingsha_Eidolon2_BreakDamageAttackRatio[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-962483629\">Lingsha_Eidolon2_BreakDamageAttackRatio</a>[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -45,7 +45,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Lingsha_BreakDamageUp[<span class=\"descriptionNumberColor\">Befog</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-637709984\">Lingsha_BreakDamageUp</a>[<span class=\"descriptionNumberColor\">Befog</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",

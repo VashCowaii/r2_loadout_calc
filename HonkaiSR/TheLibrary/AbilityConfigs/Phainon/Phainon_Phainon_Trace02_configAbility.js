@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Phainon_Trace02"
+      "modifier": "<a class=\"gModGreen\" id=\"-1063594901\">M_Phainon_Trace02</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Trace02_SubListener",
+      "for": "<a class=\"gModGreen\" id=\"mod__-805051886\">M_Phainon_Trace02_SubListener</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -100,7 +100,7 @@ const configAbility = {
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+                      "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                       "variables": {
                         "parameter[0]_AddValue": {
                           "operator": "Variables[0] (1) || RETURN",
@@ -122,7 +122,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Trace02",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1063594901\">M_Phainon_Trace02</a>",
       "execute": [
         {
           "eventTrigger": "Receiving Heal End [Owner]",
@@ -150,7 +150,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "M_Phainon_Tree02_CD",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1458521528\">M_Phainon_Tree02_CD</a>",
                     "invertCondition": true
                   }
                 ]
@@ -162,8 +162,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Phainon_Tree02_CD",
-                  "referenceModifier": "MReference_Mark_RemoveOnTurnEnd"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1458521528\">M_Phainon_Tree02_CD</a>",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"-1664553013\">MReference_Mark_RemoveOnTurnEnd</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -171,7 +171,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Phainon_Trace02_Property[<span class=\"descriptionNumberColor\">Bide in Flames</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1218793056\">Phainon_Trace02_Property</a>[<span class=\"descriptionNumberColor\">Bide in Flames</span>]",
                   "duration": {
                     "operator": "Variables[0] (4) || RETURN",
                     "displayLines": "4",
@@ -180,7 +180,7 @@ const configAbility = {
                       4
                     ]
                   },
-                  "referenceModifier": "MReference_AllDamageTypeAddedRatio",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"1337385649\">MReference_AllDamageTypeAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.45) || RETURN",
@@ -220,7 +220,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Phainon_Trace02_SubListener",
+                  "modifier": "<a class=\"gModGreen\" id=\"-805051886\">M_Phainon_Trace02_SubListener</a>",
                   "silentAdd": true
                 }
               ]
@@ -236,7 +236,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_Phainon_Trace02_SubListener"
+              "modifier": "<a class=\"gModGreen\" id=\"-805051886\">M_Phainon_Trace02_SubListener</a>"
             }
           ]
         },
@@ -277,7 +277,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "M_Phainon_Tree02_CD",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1458521528\">M_Phainon_Tree02_CD</a>",
                     "invertCondition": true
                   }
                 ]
@@ -289,8 +289,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Phainon_Tree02_CD",
-                  "referenceModifier": "MReference_Mark_RemoveOnTurnEnd"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1458521528\">M_Phainon_Tree02_CD</a>",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"-1664553013\">MReference_Mark_RemoveOnTurnEnd</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -298,7 +298,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Phainon_Trace02_Property[<span class=\"descriptionNumberColor\">Bide in Flames</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1218793056\">Phainon_Trace02_Property</a>[<span class=\"descriptionNumberColor\">Bide in Flames</span>]",
                   "duration": {
                     "operator": "Variables[0] (4) || RETURN",
                     "displayLines": "4",
@@ -307,7 +307,7 @@ const configAbility = {
                       4
                     ]
                   },
-                  "referenceModifier": "MReference_AllDamageTypeAddedRatio",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"1337385649\">MReference_AllDamageTypeAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.45) || RETURN",

@@ -184,7 +184,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "DanHengPT_PassiveModifier"
+                "modifier": "<a class=\"gModGreen\" id=\"292748857\">DanHengPT_PassiveModifier</a>"
               }
             }
           ]
@@ -211,7 +211,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "DanHengPT_BEModifier"
+                "modifier": "<a class=\"gModGreen\" id=\"-516529797\">DanHengPT_BEModifier</a>"
               }
             }
           ]
@@ -238,7 +238,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
               }
             }
           ]
@@ -272,7 +272,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Evernight_Passive"
+                    "modifier": "<a class=\"gModGreen\" id=\"208363119\">Evernight_Passive</a>"
                   }
                 }
               ]
@@ -372,7 +372,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Memosprite_EvernightServant_PartnerControl"
+                    "modifier": "<a class=\"gModGreen\" id=\"1040270840\">Memosprite_EvernightServant_PartnerControl</a>"
                   }
                 }
               ]
@@ -417,7 +417,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Memosprite_EvernightServant_PartnerControl"
+                "modifier": "<a class=\"gModGreen\" id=\"1040270840\">Memosprite_EvernightServant_PartnerControl</a>"
               }
             }
           ]
@@ -496,7 +496,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Cerydra_Ability02_Target"
+                "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>"
               }
             },
             {
@@ -555,7 +555,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Phainon_Ability03_BattleEvent_BaseSpeed"
+                "modifier": "<a class=\"gModGreen\" id=\"320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>"
               }
             }
           ]
@@ -606,7 +606,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Tribbie_SKL03_Bonus_HighestHPMark",
+                "modifier": "<a class=\"gModGreen\" id=\"890101932\">Tribbie_SKL03_Bonus_HighestHPMark</a>",
                 "justAddedOrActive": true
               }
             },
@@ -749,7 +749,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "MWAglaea_Summon_Passive"
+                "modifier": "<a class=\"gModGreen\" id=\"-1428154352\">MWAglaea_Summon_Passive</a>"
               }
             }
           ]
@@ -776,7 +776,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
               }
             }
           ]
@@ -803,7 +803,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Robin_PassiveAbility01_BattleEvent"
+                "modifier": "<a class=\"gModGreen\" id=\"594877276\">Robin_PassiveAbility01_BattleEvent</a>"
               }
             }
           ]
@@ -844,7 +844,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Modifier Value",
-              "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
               "sortByHighest": true
             },
             {
@@ -908,7 +908,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Modifier Value",
-              "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
               "sortByHighest": true
             },
             {
@@ -1187,7 +1187,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Modifier Value",
-              "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
               "sortByHighest": true
             },
             {
@@ -1242,7 +1242,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
               }
             }
           ]
@@ -1269,7 +1269,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Lingsha_BPAbility_BattleEvent"
+                "modifier": "<a class=\"gModGreen\" id=\"1795719445\">Lingsha_BPAbility_BattleEvent</a>"
               }
             }
           ]
@@ -1296,7 +1296,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "M_Feixiao_UltraTarget"
+                "modifier": "<a class=\"gModGreen\" id=\"550698929\">M_Feixiao_UltraTarget</a>"
               }
             }
           ]
@@ -1323,7 +1323,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Yukong_Flower"
+                "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>"
               }
             }
           ]
@@ -1370,7 +1370,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Topaz_BETag"
+                "modifier": "<a class=\"gModGreen\" id=\"1529971415\">Topaz_BETag</a>"
               }
             }
           ]
@@ -1397,7 +1397,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
               }
             }
           ]
@@ -1424,7 +1424,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_Pollux_Status"
+                "modifier": "<a class=\"gModGreen\" id=\"1927341406\">Monster_W4_Pollux_Status</a>"
               }
             }
           ]
@@ -1538,7 +1538,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_PolluxPart_R"
+                "modifier": "<a class=\"gModGreen\" id=\"-226864099\">Monster_W4_PolluxPart_R</a>"
               }
             }
           ]
@@ -1565,7 +1565,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_PolluxPart_L"
+                "modifier": "<a class=\"gModGreen\" id=\"-193308861\">Monster_W4_PolluxPart_L</a>"
               }
             }
           ]
@@ -1595,7 +1595,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W4_Pollux_Status"
+                    "modifier": "<a class=\"gModGreen\" id=\"1927341406\">Monster_W4_Pollux_Status</a>"
                   },
                   {
                     "name": "Has Modifier",
@@ -1603,7 +1603,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W4_PolluxPart_Status"
+                    "modifier": "<a class=\"gModGreen\" id=\"1695851719\">Monster_W4_PolluxPart_Status</a>"
                   },
                   {
                     "name": "Has Modifier",
@@ -1611,7 +1611,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_W4_PolluxPart_IF_Status"
+                    "modifier": "<a class=\"gModGreen\" id=\"385444056\">Enemy_W4_PolluxPart_IF_Status</a>"
                   }
                 ]
               }
@@ -1643,7 +1643,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_Pollux_Ability03_Mark"
+                "modifier": "<a class=\"gModGreen\" id=\"-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>"
               }
             }
           ]
@@ -1670,7 +1670,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_W4_PolluxPart_IF_Status"
+                "modifier": "<a class=\"gModGreen\" id=\"385444056\">Enemy_W4_PolluxPart_IF_Status</a>"
               }
             }
           ]
@@ -1697,7 +1697,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_W2_Valkyrie02_Ability04_Target[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"-1513487927\">Enemy_W2_Valkyrie02_Ability04_Target</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
                 "casterFilter": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -1731,7 +1731,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -1739,7 +1739,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Kafka_RL_Ability04_Target",
+                    "modifier": "<a class=\"gModGreen\" id=\"488971952\">Monster_W2_Kafka_RL_Ability04_Target</a>",
                     "invertCondition": true
                   }
                 ]
@@ -1769,7 +1769,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W1_Svarog_RL_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1293195213\">Monster_W1_Svarog_RL_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
               }
             }
           ]
@@ -1796,7 +1796,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
               }
             }
           ]

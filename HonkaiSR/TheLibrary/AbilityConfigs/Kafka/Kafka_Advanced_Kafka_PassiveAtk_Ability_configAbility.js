@@ -85,7 +85,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE, with Unselectables)}}"
       },
-      "modifier": "Advanced_Kafka_Friend_Mark_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-671501657\">Advanced_Kafka_Friend_Mark_Main</a>"
     },
     {
       "name": "UI Display Event",
@@ -178,7 +178,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Advanced_Kafka_PassiveDotDamage_Eidolon1[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1537350177\">Advanced_Kafka_PassiveDotDamage_Eidolon1</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -395,7 +395,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
       "duration": {
         "operator": "Variables[0] (Skill03_P3_LifeTime) || RETURN",
         "displayLines": "Skill03_P3_LifeTime",

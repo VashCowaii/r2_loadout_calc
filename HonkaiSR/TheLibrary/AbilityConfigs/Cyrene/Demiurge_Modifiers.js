@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_Eidolon6_Sub[<span class=\"descriptionNumberColor\">Remembrance, Sung in Ripples ♪</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2147220756\">Memosprite_CyreneServant_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Remembrance, Sung in Ripples ♪</span>]",
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
@@ -45,7 +45,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_Eidolon6",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1795139027\">Memosprite_CyreneServant_Eidolon6</a>",
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -53,7 +53,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}.[[removeBattleEvents]]"
           },
-          "modifier": "Memosprite_CyreneServant_Eidolon6_Sub[<span class=\"descriptionNumberColor\">Remembrance, Sung in Ripples ♪</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2147220756\">Memosprite_CyreneServant_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Remembrance, Sung in Ripples ♪</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -70,7 +70,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_DanHengPT_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__576316400\">Memosprite_CyreneServant_AmazingBonus_DanHengPT_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -124,7 +124,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_DanHengPT[<span class=\"descriptionNumberColor\">Ode to Earth</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1655562855\">Memosprite_CyreneServant_AmazingBonus_DanHengPT</a>[<span class=\"descriptionNumberColor\">Ode to Earth</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -166,7 +166,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
               },
               "passed": [
                 {
@@ -175,7 +175,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_AmazingBonus_DanHengPT_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"576316400\">Memosprite_CyreneServant_AmazingBonus_DanHengPT_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -183,7 +183,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Bondmate}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_AmazingBonus_DanHengPT_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"576316400\">Memosprite_CyreneServant_AmazingBonus_DanHengPT_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageIncrease": {
                       "operator": "Variables[0] (MDF_DamageIncrease) || RETURN",
@@ -265,7 +265,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -273,7 +273,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Cyrene_UITop"
+          "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -281,7 +281,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Bondmate}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_DanHengPT_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"576316400\">Memosprite_CyreneServant_AmazingBonus_DanHengPT_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_DamageIncrease": {
@@ -298,7 +298,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Evernight[<span class=\"descriptionNumberColor\">Ode to Time</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__81139284\">Memosprite_CyreneServant_AmazingBonus_Evernight</a>[<span class=\"descriptionNumberColor\">Ode to Time</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -444,7 +444,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -452,13 +452,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Cyrene_UITop"
+          "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Phainon_Dot",
+      "for": "<a class=\"gModGreen\" id=\"mod__694346963\">Memosprite_CyreneServant_AmazingBonus_Phainon_Dot</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -566,12 +566,12 @@ const configAbility = {
       "addStacksPerTrigger": 1,
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+        "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
       }
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Phainon_Sub[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-277317282\">Memosprite_CyreneServant_AmazingBonus_Phainon_Sub</a>[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -594,7 +594,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_AmazingBonus_Phainon_Property[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1551063165\">Memosprite_CyreneServant_AmazingBonus_Phainon_Property</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -607,12 +607,12 @@ const configAbility = {
       "statusName": "Eternal Ignition",
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+        "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
       }
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Phainon[<span class=\"descriptionNumberColor\">Ode to Worldbearing</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-484368069\">Memosprite_CyreneServant_AmazingBonus_Phainon</a>[<span class=\"descriptionNumberColor\">Ode to Worldbearing</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -620,7 +620,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+              "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
               "variables": {
                 "parameter[0]_AddValue": {
                   "operator": "Variables[0] (MDF_Kindling) || RETURN",
@@ -665,7 +665,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
               },
               "passed": [
                 {
@@ -822,8 +822,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_AmazingBonus_Phainon_Property[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
-                  "referenceModifier": "MReference_CriticalDamageUp",
+                  "modifier": "<a class=\"gModGreen\" id=\"1551063165\">Memosprite_CyreneServant_AmazingBonus_Phainon_Property</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_FinalRatio) || RETURN",
@@ -846,7 +846,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
               },
               "passed": [
                 {
@@ -855,7 +855,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_AmazingBonus_Phainon_Property[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1551063165\">Memosprite_CyreneServant_AmazingBonus_Phainon_Property</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
                 }
               ]
             }
@@ -868,7 +868,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
               },
               "passed": [
                 {
@@ -877,7 +877,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_AmazingBonus_Phainon_Dot",
+                  "modifier": "<a class=\"gModGreen\" id=\"694346963\">Memosprite_CyreneServant_AmazingBonus_Phainon_Dot</a>",
                   "valuePerStack": {
                     "MDF_LoseHP": {
                       "operator": "Variables[0] (MDF_LoseHP) || RETURN",
@@ -903,7 +903,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_AmazingBonus_Phainon_Sub[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-277317282\">Memosprite_CyreneServant_AmazingBonus_Phainon_Sub</a>[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]"
                 }
               ]
             }
@@ -933,7 +933,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -941,18 +941,18 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Cyrene_UITop"
+          "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Cipher_Sub2",
+      "for": "<a class=\"gModGreen\" id=\"mod__270673902\">Memosprite_CyreneServant_AmazingBonus_Cipher_Sub2</a>",
       "stackType": "Replace"
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Cipher_Sub[<span class=\"descriptionNumberColor\">Ode to Trickery</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1917936936\">Memosprite_CyreneServant_AmazingBonus_Cipher_Sub</a>[<span class=\"descriptionNumberColor\">Ode to Trickery</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "STAT_DefenceDown"
@@ -969,7 +969,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
               },
               "passed": [
                 {
@@ -1028,7 +1028,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
               },
               "passed": [
                 {
@@ -1073,7 +1073,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
               },
               "passed": [
                 {
@@ -1119,7 +1119,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Cipher[<span class=\"descriptionNumberColor\">Ode to Trickery</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1139724287\">Memosprite_CyreneServant_AmazingBonus_Cipher</a>[<span class=\"descriptionNumberColor\">Ode to Trickery</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -1163,7 +1163,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Cipher_Sub[<span class=\"descriptionNumberColor\">Ode to Trickery</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1917936936\">Memosprite_CyreneServant_AmazingBonus_Cipher_Sub</a>[<span class=\"descriptionNumberColor\">Ode to Trickery</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_DefDown": {
@@ -1190,7 +1190,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1198,13 +1198,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Cyrene_UITop"
+          "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Anaxa_Halo[<span class=\"descriptionNumberColor\">True Knowledge</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__835315990\">Memosprite_CyreneServant_AmazingBonus_Anaxa_Halo</a>[<span class=\"descriptionNumberColor\">True Knowledge</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1260,7 +1260,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Anaxa_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__1162786634\">Memosprite_CyreneServant_AmazingBonus_Anaxa_Sub</a>",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
         {
@@ -1315,7 +1315,7 @@ const configAbility = {
               }
             ]
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Anaxa_Halo[<span class=\"descriptionNumberColor\">True Knowledge</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"835315990\">Memosprite_CyreneServant_AmazingBonus_Anaxa_Halo</a>[<span class=\"descriptionNumberColor\">True Knowledge</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_DamageIncrease": {
@@ -1340,7 +1340,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Anaxa_HaloMain",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1645914465\">Memosprite_CyreneServant_AmazingBonus_Anaxa_HaloMain</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -1388,7 +1388,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_AmazingBonus_Anaxa_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"1162786634\">Memosprite_CyreneServant_AmazingBonus_Anaxa_Sub</a>",
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_DamageIncrease": {
@@ -1424,7 +1424,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Anaxa[<span class=\"descriptionNumberColor\">Ode to Reason</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__84592407\">Memosprite_CyreneServant_AmazingBonus_Anaxa</a>[<span class=\"descriptionNumberColor\">Ode to Reason</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -1511,7 +1511,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1519,13 +1519,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Cyrene_UITop"
+          "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Cerydra_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1194084175\">Memosprite_CyreneServant_AmazingBonus_Cerydra_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -1557,12 +1557,12 @@ const configAbility = {
       "statusName": "CRIT DMG Boost",
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "Cerydra_Ability02_Target"
+        "dependancyName": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>"
       }
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Cerydra[<span class=\"descriptionNumberColor\">Ode to Law</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__609996020\">Memosprite_CyreneServant_AmazingBonus_Cerydra</a>[<span class=\"descriptionNumberColor\">Ode to Law</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -1621,11 +1621,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                   },
                   {
                     "name": "Modifier Was",
-                    "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]"
                   }
                 ]
               },
@@ -1636,7 +1636,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_AmazingBonus_Cerydra_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1194084175\">Memosprite_CyreneServant_AmazingBonus_Cerydra_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1644,7 +1644,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Cerydra's Promotion Target}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_AmazingBonus_Cerydra_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1194084175\">Memosprite_CyreneServant_AmazingBonus_Cerydra_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageIncrease": {
                       "operator": "Variables[0] (MDF_DamageIncrease) || RETURN",
@@ -1677,7 +1677,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1685,7 +1685,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Cerydra's Promotion Target}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Cerydra_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1194084175\">Memosprite_CyreneServant_AmazingBonus_Cerydra_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
           "valuePerStack": {
             "MDF_DamageIncrease": {
               "operator": "Variables[0] (MDF_DamageIncrease) || RETURN",
@@ -1703,13 +1703,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Cyrene_UITop"
+          "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Harscyline_Sub[<span class=\"descriptionNumberColor\">Flowing Warmth</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-814125319\">Memosprite_CyreneServant_AmazingBonus_Harscyline_Sub</a>[<span class=\"descriptionNumberColor\">Flowing Warmth</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -1747,7 +1747,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Harscyline[<span class=\"descriptionNumberColor\">Ode to Ocean</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-716696180\">Memosprite_CyreneServant_AmazingBonus_Harscyline</a>[<span class=\"descriptionNumberColor\">Ode to Ocean</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -1850,7 +1850,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1858,13 +1858,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Cyrene_UITop"
+          "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Aglaea_Sub2[<span class=\"descriptionNumberColor\">Romantic</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-313440704\">Memosprite_CyreneServant_AmazingBonus_Aglaea_Sub2</a>[<span class=\"descriptionNumberColor\">Romantic</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -1940,7 +1940,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Aglaea_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__1440647410\">Memosprite_CyreneServant_AmazingBonus_Aglaea_Sub</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -1985,7 +1985,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Aglaea[<span class=\"descriptionNumberColor\">Ode to Romance</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1654237423\">Memosprite_CyreneServant_AmazingBonus_Aglaea</a>[<span class=\"descriptionNumberColor\">Ode to Romance</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -2036,7 +2036,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}.[[getMemosprite]]"
                 },
-                "modifier": "Memosprite_AglaeaServant_Passive"
+                "modifier": "<a class=\"gModGreen\" id=\"68059554\">Memosprite_AglaeaServant_Passive</a>"
               },
               "passed": [
                 {
@@ -2045,7 +2045,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getMemosprite]]"
                   },
-                  "modifier": "Memosprite_AglaeaServant_Passive",
+                  "modifier": "<a class=\"gModGreen\" id=\"68059554\">Memosprite_AglaeaServant_Passive</a>",
                   "variable": "_MaxLayer",
                   "target2": {
                     "name": "Target Name",
@@ -2059,7 +2059,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getMemosprite]]"
                   },
-                  "modifier": "Memosprite_AglaeaServant_AddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (_MaxLayer) || RETURN",
                     "displayLines": "_MaxLayer",
@@ -2086,7 +2086,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Aglaea_Ability03[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"518821924\">Aglaea_Ability03</a>[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
                   },
                   "passed": [
                     {
@@ -2095,7 +2095,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Memosprite_AglaeaServant_SummonerAddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (_MaxLayer) || RETURN",
                         "displayLines": "_MaxLayer",
@@ -2130,7 +2130,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Aglaea_Ability03[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"518821924\">Aglaea_Ability03</a>[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
               },
               "passed": [
                 "Modifier Deletes Itself"
@@ -2155,7 +2155,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}.[[getMemosprite]]"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Aglaea_Sub",
+          "modifier": "<a class=\"gModGreen\" id=\"1440647410\">Memosprite_CyreneServant_AmazingBonus_Aglaea_Sub</a>",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_DamageIncrease": {
@@ -2182,7 +2182,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -2190,13 +2190,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Cyrene_UITop"
+          "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Mydeimos_ListenWindfury",
+      "for": "<a class=\"gModGreen\" id=\"mod__-184719311\">Memosprite_CyreneServant_AmazingBonus_Mydeimos_ListenWindfury</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -2260,11 +2260,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Normal"
+                    "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
                   },
                   {
                     "name": "Modifier Was",
-                    "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Skill"
+                    "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>"
                   }
                 ]
               },
@@ -2314,7 +2314,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Mydeimos_OnWaveMonster",
+      "for": "<a class=\"gModGreen\" id=\"mod__696288062\">Memosprite_CyreneServant_AmazingBonus_Mydeimos_OnWaveMonster</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
@@ -2330,7 +2330,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Memosprite_CyreneServant_AmazingBonus_Mydeimos"
+              "modifier": "<a class=\"gModGreen\" id=\"-431200233\">Memosprite_CyreneServant_AmazingBonus_Mydeimos</a>"
             }
           ]
         },
@@ -2339,7 +2339,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Memosprite_CyreneServant_AmazingBonus_Mydeimos_InsertActionCheck"
+              "functionName": "<a class=\"gTempYellow\" id=\"-546409943\">Memosprite_CyreneServant_AmazingBonus_Mydeimos_InsertActionCheck</a>"
             }
           ],
           "priorityLevel": -55
@@ -2349,7 +2349,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Memosprite_CyreneServant_AmazingBonus_Mydeimos_InsertActionCheck"
+              "functionName": "<a class=\"gTempYellow\" id=\"-546409943\">Memosprite_CyreneServant_AmazingBonus_Mydeimos_InsertActionCheck</a>"
             }
           ]
         },
@@ -2358,7 +2358,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Memosprite_CyreneServant_AmazingBonus_Mydeimos_InsertActionCheck"
+              "functionName": "<a class=\"gTempYellow\" id=\"-546409943\">Memosprite_CyreneServant_AmazingBonus_Mydeimos_InsertActionCheck</a>"
             }
           ]
         },
@@ -2378,7 +2378,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Memosprite_CyreneServant_AmazingBonus_Mydeimos_InsertActionCheck"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-546409943\">Memosprite_CyreneServant_AmazingBonus_Mydeimos_InsertActionCheck</a>"
                 }
               ]
             }
@@ -2388,7 +2388,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Memosprite_CyreneServant_AmazingBonus_Mydeimos_InsertActionCheck",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-546409943\">Memosprite_CyreneServant_AmazingBonus_Mydeimos_InsertActionCheck</a>",
           "parse": [
             {
               "name": "IF",
@@ -2398,7 +2398,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]"
               },
               "passed": [
                 {
@@ -2434,7 +2434,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Memosprite_CyreneServant_AmazingBonus_Mydeimos_OnWaveMonster"
+                          "modifier": "<a class=\"gModGreen\" id=\"696288062\">Memosprite_CyreneServant_AmazingBonus_Mydeimos_OnWaveMonster</a>"
                         }
                       ],
                       "abortFlags": [
@@ -2447,7 +2447,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Memosprite_CyreneServant_AmazingBonus_Mydeimos_OnWaveMonster",
+                      "modifier": "<a class=\"gModGreen\" id=\"696288062\">Memosprite_CyreneServant_AmazingBonus_Mydeimos_OnWaveMonster</a>",
                       "addStacksPerTrigger": -1
                     }
                   ]
@@ -2465,7 +2465,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_AmazingBonus_Mydeimos"
+                  "modifier": "<a class=\"gModGreen\" id=\"-431200233\">Memosprite_CyreneServant_AmazingBonus_Mydeimos</a>"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -2477,7 +2477,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Mydeimos_Sub[<span class=\"descriptionNumberColor\">Ode to Strife</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__222914634\">Memosprite_CyreneServant_AmazingBonus_Mydeimos_Sub</a>[<span class=\"descriptionNumberColor\">Ode to Strife</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -2538,7 +2538,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Standard_Windfury"
+                "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>"
               },
               "passed": [
                 {
@@ -2547,7 +2547,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_AmazingBonus_Mydeimos_ListenWindfury"
+                  "modifier": "<a class=\"gModGreen\" id=\"-184719311\">Memosprite_CyreneServant_AmazingBonus_Mydeimos_ListenWindfury</a>"
                 }
               ]
             },
@@ -2618,7 +2618,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Mydeimos",
+      "for": "<a class=\"gModGreen\" id=\"mod__-431200233\">Memosprite_CyreneServant_AmazingBonus_Mydeimos</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -2648,7 +2648,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]"
               },
               "passed": [
                 {
@@ -2667,7 +2667,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Memosprite_CyreneServant_AmazingBonus_Mydeimos_OnWaveMonster"
+                      "modifier": "<a class=\"gModGreen\" id=\"696288062\">Memosprite_CyreneServant_AmazingBonus_Mydeimos_OnWaveMonster</a>"
                     }
                   ],
                   "abortFlags": [
@@ -2708,7 +2708,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]",
                     "invertCondition": true
                   },
                   {
@@ -2751,7 +2751,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_AmazingBonus_Mydeimos_Sub[<span class=\"descriptionNumberColor\">Ode to Strife</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"222914634\">Memosprite_CyreneServant_AmazingBonus_Mydeimos_Sub</a>[<span class=\"descriptionNumberColor\">Ode to Strife</span>]",
                   "valuePerStack": {
                     "MDF_CritDamage": {
                       "operator": "Variables[0] (MDF_CritDamage) || RETURN",
@@ -2800,7 +2800,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -2808,13 +2808,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Cyrene_UITop"
+          "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Tribbie[<span class=\"descriptionNumberColor\">Ode to Passage</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1569324375\">Memosprite_CyreneServant_AmazingBonus_Tribbie</a>[<span class=\"descriptionNumberColor\">Ode to Passage</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -2928,7 +2928,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -2936,13 +2936,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Cyrene_UITop"
+          "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "_M_Cyrene_Player_InsertActionCheck",
+      "for": "<a class=\"gModGreen\" id=\"mod__2065842868\">_M_Cyrene_Player_InsertActionCheck</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
@@ -2953,7 +2953,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "_T_Cyrene_Player_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"-2119618893\">_T_Cyrene_Player_InsertRetarget</a>"
             }
           ]
         },
@@ -2968,7 +2968,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "_T_Cyrene_Player_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"-2119618893\">_T_Cyrene_Player_InsertRetarget</a>"
             }
           ],
           "priorityLevel": -55
@@ -2978,7 +2978,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "_T_Cyrene_Player_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"-2119618893\">_T_Cyrene_Player_InsertRetarget</a>"
             }
           ]
         },
@@ -2987,7 +2987,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "_T_Cyrene_Player_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"-2119618893\">_T_Cyrene_Player_InsertRetarget</a>"
             }
           ]
         },
@@ -3024,7 +3024,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "_T_Cyrene_Player_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2119618893\">_T_Cyrene_Player_InsertRetarget</a>"
                 }
               ]
             }
@@ -3034,7 +3034,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "_T_Cyrene_Player_InsertRetarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-2119618893\">_T_Cyrene_Player_InsertRetarget</a>",
           "parse": [
             {
               "name": "IF",
@@ -3080,7 +3080,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "_M_Cyrene_Player_Ability01Prepare",
+                          "modifier": "<a class=\"gModGreen\" id=\"874651474\">_M_Cyrene_Player_Ability01Prepare</a>",
                           "addStacksPerTrigger": 1
                         },
                         {
@@ -3099,7 +3099,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "_M_Cyrene_Player_Ability01Prepare",
+                              "modifier": "<a class=\"gModGreen\" id=\"874651474\">_M_Cyrene_Player_Ability01Prepare</a>",
                               "addStacksPerTrigger": -1
                             },
                             {
@@ -3108,7 +3108,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "_M_Cyrene_Player_InsertActionCheck",
+                              "modifier": "<a class=\"gModGreen\" id=\"2065842868\">_M_Cyrene_Player_InsertActionCheck</a>",
                               "addStacksPerTrigger": 1
                             }
                           ],
@@ -3128,7 +3128,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "_M_Cyrene_Player_Ability01Prepare",
+      "for": "<a class=\"gModGreen\" id=\"mod__874651474\">_M_Cyrene_Player_Ability01Prepare</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -3177,7 +3177,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "_M_Cyrene_Player_PropertySyncer",
+      "for": "<a class=\"gModGreen\" id=\"mod__899663966\">_M_Cyrene_Player_PropertySyncer</a>",
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
@@ -3188,7 +3188,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "_T_AmazingBonus_Player_AttackSyncer"
+                  "functionName": "<a class=\"gTempYellow\" id=\"445891682\">_T_AmazingBonus_Player_AttackSyncer</a>"
                 }
               ]
             }
@@ -3203,7 +3203,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "_T_AmazingBonus_Player_AttackSyncer"
+                  "functionName": "<a class=\"gTempYellow\" id=\"445891682\">_T_AmazingBonus_Player_AttackSyncer</a>"
                 }
               ]
             }
@@ -3218,7 +3218,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "_T_AmazingBonus_Player_AttackSyncer"
+                  "functionName": "<a class=\"gTempYellow\" id=\"445891682\">_T_AmazingBonus_Player_AttackSyncer</a>"
                 }
               ]
             }
@@ -3252,7 +3252,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Memosprite_CyreneServant_AmazingBonus_Player[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"937032379\">Memosprite_CyreneServant_AmazingBonus_Player</a>[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]"
                   },
                   "ifTargetFound": [
                     {
@@ -3261,7 +3261,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifierName": "Memosprite_CyreneServant_AmazingBonus_Player[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"937032379\">Memosprite_CyreneServant_AmazingBonus_Player</a>[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]",
                       "variableName": "MDF_CritAddRatio",
                       "value": {
                         "operator": "Variables[0] (0.72) || Variables[1] (CasterCritRatio) || MUL || RETURN",
@@ -3283,7 +3283,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "_T_AmazingBonus_Player_AttackSyncer",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__445891682\">_T_AmazingBonus_Player_AttackSyncer</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
@@ -3315,7 +3315,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Memosprite_CyreneServant_AmazingBonus_Player[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"937032379\">Memosprite_CyreneServant_AmazingBonus_Player</a>[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]"
               },
               "ifTargetFound": [
                 {
@@ -3324,7 +3324,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifierName": "Memosprite_CyreneServant_AmazingBonus_Player[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"937032379\">Memosprite_CyreneServant_AmazingBonus_Player</a>[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]",
                   "variableName": "MDF_AttackAddRatio",
                   "value": {
                     "operator": "Variables[0] (0.16) || Variables[1] (CasterHP) || Variables[2] (CasterHPConvert) || SUB || MUL || RETURN",
@@ -3345,7 +3345,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_PlayerServant",
+      "for": "<a class=\"gModGreen\" id=\"mod__-627276004\">Memosprite_CyreneServant_AmazingBonus_PlayerServant</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -3359,8 +3359,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifierName": "Memosprite_CyreneServant_AmazingBonus_PlayerServant",
-              "modifierNameUpdate": "Memosprite_CyreneServant_AmazingBonus_Player[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]"
+              "modifierName": "<a class=\"gModGreen\" id=\"-627276004\">Memosprite_CyreneServant_AmazingBonus_PlayerServant</a>",
+              "modifierNameUpdate": "<a class=\"gModGreen\" id=\"937032379\">Memosprite_CyreneServant_AmazingBonus_Player</a>[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]"
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -3514,7 +3514,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Player[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__937032379\">Memosprite_CyreneServant_AmazingBonus_Player</a>[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -3628,7 +3628,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "_M_Cyrene_Player_Ability01Prepare",
+                  "modifier": "<a class=\"gModGreen\" id=\"874651474\">_M_Cyrene_Player_Ability01Prepare</a>",
                   "addStacksPerTrigger": 1
                 },
                 {
@@ -3647,7 +3647,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "_M_Cyrene_Player_Ability01Prepare",
+                      "modifier": "<a class=\"gModGreen\" id=\"874651474\">_M_Cyrene_Player_Ability01Prepare</a>",
                       "addStacksPerTrigger": -1
                     },
                     {
@@ -3656,7 +3656,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "_M_Cyrene_Player_InsertActionCheck",
+                      "modifier": "<a class=\"gModGreen\" id=\"2065842868\">_M_Cyrene_Player_InsertActionCheck</a>",
                       "addStacksPerTrigger": 1
                     }
                   ],
@@ -3698,7 +3698,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getMemosprite]]"
                   },
-                  "modifierName": "Memosprite_CyreneServant_AmazingBonus_PlayerServant",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-627276004\">Memosprite_CyreneServant_AmazingBonus_PlayerServant</a>",
                   "variableName": "MDF_AttackAddRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackAddRatio) || RETURN",
@@ -3743,7 +3743,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getMemosprite]]"
                   },
-                  "modifierName": "Memosprite_CyreneServant_AmazingBonus_PlayerServant",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-627276004\">Memosprite_CyreneServant_AmazingBonus_PlayerServant</a>",
                   "variableName": "MDF_CritAddRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_CritAddRatio) || RETURN",
@@ -3775,7 +3775,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -3783,7 +3783,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Cyrene_UITop"
+          "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -3791,7 +3791,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}.[[getMemosprite]]"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_PlayerServant",
+          "modifier": "<a class=\"gModGreen\" id=\"-627276004\">Memosprite_CyreneServant_AmazingBonus_PlayerServant</a>",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_HPTransferRatio": {
@@ -3818,13 +3818,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "modifier": "_M_Cyrene_Player_PropertySyncer"
+          "modifier": "<a class=\"gModGreen\" id=\"899663966\">_M_Cyrene_Player_PropertySyncer</a>"
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Castorice_Sub[<span class=\"descriptionNumberColor\">Ode to Life and Death</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1621405598\">Memosprite_CyreneServant_AmazingBonus_Castorice_Sub</a>[<span class=\"descriptionNumberColor\">Ode to Life and Death</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -3932,7 +3932,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Castorice_MaxSP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-640436779\">Memosprite_CyreneServant_AmazingBonus_Castorice_MaxSP</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -4015,7 +4015,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_UITop",
+      "for": "<a class=\"gModGreen\" id=\"mod__577014273\">Cyrene_UITop</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -4030,7 +4030,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Castorice[<span class=\"descriptionNumberColor\">Ode to Life and Death</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-331286977\">Memosprite_CyreneServant_AmazingBonus_Castorice</a>[<span class=\"descriptionNumberColor\">Ode to Life and Death</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -4078,7 +4078,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_AmazingBonus_Castorice_Sub[<span class=\"descriptionNumberColor\">Ode to Life and Death</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1621405598\">Memosprite_CyreneServant_AmazingBonus_Castorice_Sub</a>[<span class=\"descriptionNumberColor\">Ode to Life and Death</span>]",
                   "valuePerStack": {
                     "MDF_ExtraSP_PercentCount": {
                       "operator": "Variables[0] (_ExtraSP_PercentCount) || RETURN",
@@ -4196,7 +4196,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -4204,7 +4204,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Castorice_MaxSP",
+          "modifier": "<a class=\"gModGreen\" id=\"-640436779\">Memosprite_CyreneServant_AmazingBonus_Castorice_MaxSP</a>",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_ExtraRatio": {
@@ -4233,13 +4233,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Cyrene_UITop"
+          "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Hyacine[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-588160151\">Memosprite_CyreneServant_AmazingBonus_Hyacine</a>[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -4318,7 +4318,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": "Memosprite_CyreneServant_AmazingBonus_Hyacine[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"-588160151\">Memosprite_CyreneServant_AmazingBonus_Hyacine</a>[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
                     "compareType": ">",
                     "value2": 1,
                     "valueType": "Layer"
@@ -4330,7 +4330,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Memosprite_CyreneServant_AmazingBonus_Hyacine[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-588160151\">Memosprite_CyreneServant_AmazingBonus_Hyacine</a>[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
                       "valuePerStack": {
                         "MDF_HyacineRatio": {
                           "operator": "Variables[0] (0.72) || RETURN",
@@ -4371,7 +4371,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus",
+          "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>",
           "haloStatus": true
         },
         {
@@ -4380,13 +4380,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Cyrene_UITop"
+          "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus_Normal[<span class=\"descriptionNumberColor\">This Ode, to All Lives</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__42532209\">Memosprite_CyreneServant_AmazingBonus_Normal</a>[<span class=\"descriptionNumberColor\">This Ode, to All Lives</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -4401,7 +4401,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Memosprite_CyreneServant_AmazingBonus"
+              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
             }
           ]
         },
@@ -4441,7 +4441,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -4449,8 +4449,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}.[[getMemosprite]]"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Normal_Sub[<span class=\"descriptionNumberColor\">This Ode, to All Lives</span>]",
-          "refModifier": "MReference_AllDamageTypeAddedRatio",
+          "modifier": "<a class=\"gModGreen\" id=\"1800777976\">Memosprite_CyreneServant_AmazingBonus_Normal_Sub</a>[<span class=\"descriptionNumberColor\">This Ode, to All Lives</span>]",
+          "refModifier": "<a class=\"gModGreen\" id=\"1337385649\">MReference_AllDamageTypeAddedRatio</a>",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -4469,13 +4469,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Cyrene_UITop"
+          "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_AmazingBonus",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4497,7 +4497,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_Cyrene_Eidolon2_ThanksGift"
+                  "modifier": "<a class=\"gModGreen\" id=\"406765614\">Memosprite_Cyrene_Eidolon2_ThanksGift</a>"
                 }
               ]
             }
@@ -4509,7 +4509,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_Cyrene_Eidolon2_ThanksGift",
+      "for": "<a class=\"gModGreen\" id=\"mod__406765614\">Memosprite_Cyrene_Eidolon2_ThanksGift</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -4530,7 +4530,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Cyrene}}"
               },
-              "modifier": "Cyrene_Eidolon2_1",
+              "modifier": "<a class=\"gModGreen\" id=\"1161189096\">Cyrene_Eidolon2_1</a>",
               "casterAssign": "TargetSelf"
             }
           ]
@@ -4541,7 +4541,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_SummonerAbility03Disable",
+      "for": "<a class=\"gModGreen\" id=\"mod__2017433273\">Memosprite_CyreneServant_SummonerAbility03Disable</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -4564,7 +4564,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_Ability21Disable",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1790676299\">Memosprite_CyreneServant_Ability21Disable</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -4588,7 +4588,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_Ability02Disable",
+      "for": "<a class=\"gModGreen\" id=\"mod__339481432\">Memosprite_CyreneServant_Ability02Disable</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -4614,7 +4614,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_Ability01Disable",
+      "for": "<a class=\"gModGreen\" id=\"mod__1599805283\">Memosprite_CyreneServant_Ability01Disable</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -4638,7 +4638,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_Passive_Memory[<span class=\"descriptionNumberColor\">Engraved</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1787059075\">Memosprite_CyreneServant_Passive_Memory</a>[<span class=\"descriptionNumberColor\">Engraved</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -4779,7 +4779,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "_M_Cyrene_Eidolon1_Ability01Prepare",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2012168482\">_M_Cyrene_Eidolon1_Ability01Prepare</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -4825,7 +4825,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_Eidolon4_Count[<span class=\"descriptionNumberColor\">Please Write On, With a Smile</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-156616153\">Memosprite_CyreneServant_Eidolon4_Count</a>[<span class=\"descriptionNumberColor\">Please Write On, With a Smile</span>]",
       "stackType": "ReplaceByCaster",
       "stackData": [
         "MDF_Count",
@@ -4840,7 +4840,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_Energy[<span class=\"descriptionNumberColor\">Story</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__684175961\">Memosprite_CyreneServant_Energy</a>[<span class=\"descriptionNumberColor\">Story</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
@@ -4851,7 +4851,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "_T_Cyrene_Eidolon1_EnergyCheck"
+              "functionName": "<a class=\"gTempYellow\" id=\"301160822\">_T_Cyrene_Eidolon1_EnergyCheck</a>"
             }
           ]
         },
@@ -4860,7 +4860,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "_T_Cyrene_Eidolon1_EnergyCheck"
+              "functionName": "<a class=\"gTempYellow\" id=\"301160822\">_T_Cyrene_Eidolon1_EnergyCheck</a>"
             }
           ],
           "priorityLevel": -55
@@ -4870,7 +4870,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "_T_Cyrene_Eidolon1_EnergyCheck"
+              "functionName": "<a class=\"gTempYellow\" id=\"301160822\">_T_Cyrene_Eidolon1_EnergyCheck</a>"
             }
           ]
         },
@@ -4882,7 +4882,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "_T_Cyrene_Eidolon1_EnergyCheck"
+              "functionName": "<a class=\"gTempYellow\" id=\"301160822\">_T_Cyrene_Eidolon1_EnergyCheck</a>"
             }
           ]
         }
@@ -4897,7 +4897,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_NegativeHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__133953622\">Memosprite_CyreneServant_NegativeHP</a>",
       "stackType": "Replace",
       "execute": [
         {

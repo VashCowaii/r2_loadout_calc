@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "DanHengIL_CancelCamera",
+      "for": "<a class=\"gModGreen\" id=\"mod__-807307973\">DanHengIL_CancelCamera</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -29,7 +29,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "DanHengIL_CancelCameraFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"-345032011\">DanHengIL_CancelCameraFlag</a>"
                   },
                   {
                     "name": "Compare: Target",
@@ -51,7 +51,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengIL_Eidolon6_ImaginaryPenetrate[<span class=\"descriptionNumberColor\">Reign, Returned</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-330148584\">DanHengIL_Eidolon6_ImaginaryPenetrate</a>[<span class=\"descriptionNumberColor\">Reign, Returned</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -118,7 +118,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengIL_Eidolon6",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1339168225\">DanHengIL_Eidolon6</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -164,7 +164,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHengIL_Eidolon6_ImaginaryPenetrate[<span class=\"descriptionNumberColor\">Reign, Returned</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-330148584\">DanHengIL_Eidolon6_ImaginaryPenetrate</a>[<span class=\"descriptionNumberColor\">Reign, Returned</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -194,7 +194,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengIL_BPDisable",
+      "for": "<a class=\"gModGreen\" id=\"mod__1468527103\">DanHengIL_BPDisable</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -292,7 +292,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengIL_Ability02_CriticalDamage[<span class=\"descriptionNumberColor\">Outroar</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -340,7 +340,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

@@ -28,7 +28,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{All Team Members(Exclude Self)}}"
       },
-      "modifier": "Monster_W1_Soldier01_03_Bonus[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1281886828\">Monster_W1_Soldier01_03_Bonus</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "duration": {
         "operator": "Variables[0] (UnusedUnderThisBase_1) || RETURN",
         "displayLines": "UnusedUnderThisBase_1",
@@ -57,7 +57,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Monster_W1_Soldier03_HoldShield"
+        "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
       },
       "passed": [
         {

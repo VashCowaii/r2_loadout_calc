@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Guinaifen_Trace03"
+      "modifier": "<a class=\"gModGreen\" id=\"1541839766\">Guinaifen_Trace03</a>"
     }
   ],
   "references": []

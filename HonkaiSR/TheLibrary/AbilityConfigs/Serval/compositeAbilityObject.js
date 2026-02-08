@@ -29,13 +29,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Serval_Eidolon6"
+          "modifier": "<a class=\"gModGreen\" id=\"-955881111\">Serval_Eidolon6</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Serval_Eidolon6",
+          "for": "<a class=\"gModGreen\" id=\"mod__-955881111\">Serval_Eidolon6</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -91,13 +91,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Serval_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1873521021\">StageAbility_Maze_Serval_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Serval_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1873521021\">StageAbility_Maze_Serval_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -160,7 +160,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -212,13 +212,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Serval_Trace03"
+          "modifier": "<a class=\"gModGreen\" id=\"-1863302037\">M_Serval_Trace03</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Serval_Trace03",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1863302037\">M_Serval_Trace03</a>",
           "execute": [
             {
               "eventTrigger": "Got a Kill [Owner]",
@@ -229,7 +229,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Serval_Tree03_AttackRatioUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2005029779\">Serval_Tree03_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -269,13 +269,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Serval_Trace02"
+          "modifier": "<a class=\"gModGreen\" id=\"-1880079656\">M_Serval_Trace02</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Serval_Trace02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1880079656\">M_Serval_Trace02</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -345,13 +345,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Serval_Passive01Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1505777820\">Serval_Passive01Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Serval_Passive01Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1505777820\">Serval_Passive01Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -471,7 +471,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -710,7 +710,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{ST and Blast}}"
           },
-          "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -910,7 +910,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Serval_Tree03_AttackRatioUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2005029779\">Serval_Tree03_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -946,7 +946,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Serval_Eidolon6_Check_Show",
+          "for": "<a class=\"gModGreen\" id=\"mod__-766476870\">Serval_Eidolon6_Check_Show</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -996,7 +996,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Serval_Eidolon6_Check[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"731548834\">Serval_Eidolon6_Check</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     }
                   ],
                   "whenLeavingRange": [
@@ -1006,7 +1006,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Serval_Eidolon6_Check[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"731548834\">Serval_Eidolon6_Check</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     }
                   ]
                 }
@@ -1016,7 +1016,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Serval_Eidolon6_Check[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__731548834\">Serval_Eidolon6_Check</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",

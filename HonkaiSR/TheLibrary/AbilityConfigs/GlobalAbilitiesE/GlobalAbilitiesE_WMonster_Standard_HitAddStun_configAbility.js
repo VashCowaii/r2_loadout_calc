@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "WEnemy_Standard_HitAddStun"
+      "modifier": "<a class=\"gModGreen\" id=\"1381171644\">WEnemy_Standard_HitAddStun</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "WEnemy_Standard_HitAddStun",
+      "for": "<a class=\"gModGreen\" id=\"mod__1381171644\">WEnemy_Standard_HitAddStun</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -28,7 +28,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Attack Targets of Modifier Holder}}"
               },
-              "modifier": "Standard_CTRL_Stun[<span class=\"descriptionNumberColor\">Stunned</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1162946172\">Standard_CTRL_Stun</a>[<span class=\"descriptionNumberColor\">Stunned</span>]",
               "duration": 1,
               "baseChance": 1
             }

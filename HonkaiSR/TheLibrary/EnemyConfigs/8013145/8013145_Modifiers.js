@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3[<span class=\"descriptionNumberColor\">Imaginary Mark</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__216530002\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3</a>[<span class=\"descriptionNumberColor\">Imaginary Mark</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -37,7 +37,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1[<span class=\"descriptionNumberColor\">Quantum Mark</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__182974764\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1</a>[<span class=\"descriptionNumberColor\">Quantum Mark</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -64,7 +64,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_IF_AbilityP01_WeaknessControll",
+      "for": "<a class=\"gModGreen\" id=\"mod__-909037772\">Enemy_AML_Boss_Part2_IF_AbilityP01_WeaknessControll</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -93,11 +93,11 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_AML_Boss_IF_Sign_Part1"
+                    "modifier": "<a class=\"gModGreen\" id=\"1787283303\">Enemy_AML_Boss_IF_Sign_Part1</a>"
                   },
                   {
                     "name": "Modifier Was",
-                    "modifier": "Enemy_AML_Boss_IF_Part_Unselectable"
+                    "modifier": "<a class=\"gModGreen\" id=\"1248604534\">Enemy_AML_Boss_IF_Part_Unselectable</a>"
                   }
                 ]
               },
@@ -108,7 +108,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1[<span class=\"descriptionNumberColor\">Quantum Mark</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"182974764\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1</a>[<span class=\"descriptionNumberColor\">Quantum Mark</span>]"
                 }
               ]
             },
@@ -123,11 +123,11 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_AML_Boss_IF_Sign_Part3"
+                    "modifier": "<a class=\"gModGreen\" id=\"1820838541\">Enemy_AML_Boss_IF_Sign_Part3</a>"
                   },
                   {
                     "name": "Modifier Was",
-                    "modifier": "Enemy_AML_Boss_IF_Part_Unselectable"
+                    "modifier": "<a class=\"gModGreen\" id=\"1248604534\">Enemy_AML_Boss_IF_Part_Unselectable</a>"
                   }
                 ]
               },
@@ -138,7 +138,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3[<span class=\"descriptionNumberColor\">Imaginary Mark</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"216530002\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3</a>[<span class=\"descriptionNumberColor\">Imaginary Mark</span>]"
                 }
               ]
             }
@@ -148,7 +148,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_IF_Ability13_Mark",
+      "for": "<a class=\"gModGreen\" id=\"mod__1178360880\">Enemy_AML_Boss_Part2_IF_Ability13_Mark</a>",
       "stackData": [],
       "latentQueue": [
         "AML_Boss_00_BattleScore2_Flag"
@@ -156,7 +156,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_IF_RemoveOneMore",
+      "for": "<a class=\"gModGreen\" id=\"mod__-864984736\">Enemy_AML_Boss_Part2_IF_RemoveOneMore</a>",
       "execute": [
         {
           "eventTrigger": "Action End [Owner]",
@@ -194,7 +194,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MoreOneMorePerTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                     }
                   ],
                   "failed": [
@@ -206,7 +206,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "MoreOneMorePerTurn"
+                        "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                       },
                       "failed": [
                         {
@@ -215,7 +215,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "MoreOneMorePerTurn"
+                          "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                         }
                       ]
                     }
@@ -303,7 +303,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "OneMorePerTurn"
+                    "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                   },
                   "failed": [
                     {
@@ -312,7 +312,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "OneMorePerTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                     }
                   ]
                 }
@@ -379,7 +379,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "MoreOneMorePerTurn"
+                        "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                       },
                       "failed": [
                         {
@@ -388,7 +388,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "MoreOneMorePerTurn"
+                          "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                         }
                       ]
                     }
@@ -442,7 +442,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "MoreOneMorePerTurn"
+                        "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                       },
                       "failed": [
                         {
@@ -451,7 +451,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "MoreOneMorePerTurn"
+                          "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                         }
                       ]
                     }
@@ -486,7 +486,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_Ability11_Charge",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1128742763\">Enemy_AML_Boss_Part2_Ability11_Charge</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -497,7 +497,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             }
           ]
         },
@@ -542,7 +542,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             }
           ]
         },
@@ -570,7 +570,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_AML_Boss_Part2_Ability11_Charge"
+                "modifier": "<a class=\"gModGreen\" id=\"-1128742763\">Enemy_AML_Boss_Part2_Ability11_Charge</a>"
               }
             }
           ]
@@ -584,14 +584,14 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Charge_DisableAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__214857158\">Enemy_AML_Boss_Charge_DisableAction</a>",
       "modifierFlags": [
         "DisableAction"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Charge_DisableAction_Controller",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1395729801\">Enemy_AML_Boss_Charge_DisableAction_Controller</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier is Added [Anyone]",
@@ -600,7 +600,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Enemy_AML_Boss_Part2_Ability11_Charge"
+                "modifier": "<a class=\"gModGreen\" id=\"-1128742763\">Enemy_AML_Boss_Part2_Ability11_Charge</a>"
               },
               "passed": [
                 {
@@ -609,7 +609,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Charge_DisableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"214857158\">Enemy_AML_Boss_Charge_DisableAction</a>"
                 }
               ]
             }
@@ -622,7 +622,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Enemy_AML_Boss_Part2_Ability11_Charge"
+                "modifier": "<a class=\"gModGreen\" id=\"-1128742763\">Enemy_AML_Boss_Part2_Ability11_Charge</a>"
               },
               "passed": [
                 {
@@ -631,7 +631,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Charge_DisableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"214857158\">Enemy_AML_Boss_Charge_DisableAction</a>"
                 }
               ]
             }
@@ -641,7 +641,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Frensnel",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1797898351\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Frensnel</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -653,7 +653,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__651084439\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Effect</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -713,7 +713,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Frensnel",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1548805762\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Frensnel</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -725,7 +725,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1366215328\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Effect</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -785,7 +785,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part3",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1204086808\">Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part3</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -836,7 +836,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part1",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1170531570\">Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part1</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -887,7 +887,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2[<span class=\"descriptionNumberColor\">Amplification</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__150642610\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -900,7 +900,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Enemy_AML_Boss_IF_Sign_Part1"
+                "modifier": "<a class=\"gModGreen\" id=\"1787283303\">Enemy_AML_Boss_IF_Sign_Part1</a>"
               },
               "passed": [
                 {
@@ -909,7 +909,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part1"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1170531570\">Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part1</a>"
                 }
               ]
             },
@@ -921,7 +921,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Enemy_AML_Boss_IF_Sign_Part3"
+                "modifier": "<a class=\"gModGreen\" id=\"1820838541\">Enemy_AML_Boss_IF_Sign_Part3</a>"
               },
               "passed": [
                 {
@@ -930,7 +930,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part3"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1204086808\">Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part3</a>"
                 }
               ]
             }
@@ -945,7 +945,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part1"
+              "modifier": "<a class=\"gModGreen\" id=\"-1170531570\">Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part1</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -953,7 +953,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part3"
+              "modifier": "<a class=\"gModGreen\" id=\"-1204086808\">Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part3</a>"
             }
           ]
         }
@@ -965,7 +965,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1[<span class=\"descriptionNumberColor\">Amplification</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__133864991\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
       "description": "Skill is enhanced. Current Enhancement Level: 1",
       "type": "Other",
       "effectName": "Amplification",
@@ -973,7 +973,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_IF_Enhancement",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2123264245\">Enemy_AML_Boss_Part2_IF_Enhancement</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -985,7 +985,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-1366215328\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Effect</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -993,7 +993,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Frensnel"
+              "modifier": "<a class=\"gModGreen\" id=\"-1548805762\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Frensnel</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1001,7 +1001,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"651084439\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Effect</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1009,7 +1009,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Frensnel"
+              "modifier": "<a class=\"gModGreen\" id=\"-1797898351\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Frensnel</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1017,7 +1017,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_Monster_AML_Boss_Part2_Ability07"
+              "modifier": "<a class=\"gModGreen\" id=\"-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -1035,7 +1035,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1[<span class=\"descriptionNumberColor\">Amplification</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"133864991\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1</a>[<span class=\"descriptionNumberColor\">Amplification</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1043,7 +1043,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2[<span class=\"descriptionNumberColor\">Amplification</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"150642610\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2</a>[<span class=\"descriptionNumberColor\">Amplification</span>]"
             }
           ]
         },
@@ -1076,7 +1076,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2[<span class=\"descriptionNumberColor\">Amplification</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"150642610\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2</a>[<span class=\"descriptionNumberColor\">Amplification</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1084,7 +1084,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1[<span class=\"descriptionNumberColor\">Amplification</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"133864991\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1</a>[<span class=\"descriptionNumberColor\">Amplification</span>]"
                 }
               ]
             },
@@ -1108,7 +1108,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1[<span class=\"descriptionNumberColor\">Amplification</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"133864991\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1</a>[<span class=\"descriptionNumberColor\">Amplification</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1116,7 +1116,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2[<span class=\"descriptionNumberColor\">Amplification</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"150642610\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2</a>[<span class=\"descriptionNumberColor\">Amplification</span>]"
                 }
               ]
             },
@@ -1152,7 +1152,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_OnPhase3SpeedUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__661636354\">Enemy_AML_Boss_Part2_OnPhase3SpeedUp</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

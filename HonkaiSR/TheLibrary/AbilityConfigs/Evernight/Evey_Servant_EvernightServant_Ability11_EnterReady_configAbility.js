@@ -11,11 +11,11 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_SizeControl_Perf"
+      "functionName": "<a class=\"gTempYellow\" id=\"294638745\">function_Evernight_Group_SizeControl_Perf</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_FollowControl_00"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
     },
     {
       "name": "IF",
@@ -25,7 +25,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster's Summoner}}"
         },
-        "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
       }
     },
     {

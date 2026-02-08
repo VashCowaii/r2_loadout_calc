@@ -64,7 +64,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "TingYun_Ability03DamageUp[<span class=\"descriptionNumberColor\">Amidst the Rejoicing Clouds</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"132060184\">TingYun_Ability03DamageUp</a>[<span class=\"descriptionNumberColor\">Amidst the Rejoicing Clouds</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",
@@ -100,7 +100,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "TingYun_Ability03DamageUp[<span class=\"descriptionNumberColor\">Amidst the Rejoicing Clouds</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__132060184\">TingYun_Ability03DamageUp</a>[<span class=\"descriptionNumberColor\">Amidst the Rejoicing Clouds</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

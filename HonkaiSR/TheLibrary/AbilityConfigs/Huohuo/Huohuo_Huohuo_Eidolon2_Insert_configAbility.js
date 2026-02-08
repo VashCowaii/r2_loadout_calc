@@ -19,7 +19,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Huohuo_Passive"
+        "modifier": "<a class=\"gModGreen\" id=\"-1608829904\">Huohuo_Passive</a>"
       },
       "ifTargetFound": [
         {
@@ -33,7 +33,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
               },
               {
                 "name": "Compare: Variable",
@@ -64,7 +64,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifierName": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
               "function": "Add",
               "valueType": "Duration"
             },
@@ -117,7 +117,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1522612454\">Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
                   },
                   {
                     "name": "Compare: Variable",
@@ -147,7 +147,7 @@ const configAbility = {
                       }
                     ]
                   },
-                  "modifier": "Huohuo_Eidolon2"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2094716401\">Huohuo_Eidolon2</a>"
                 }
               ]
             }
@@ -168,7 +168,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "Huohuo_Eidolon2"
+              "modifier": "<a class=\"gModGreen\" id=\"-2094716401\">Huohuo_Eidolon2</a>"
             }
           ]
         }

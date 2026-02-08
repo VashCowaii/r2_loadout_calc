@@ -29,7 +29,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Beast02_Weak[<span class=\"descriptionNumberColor\">Exhaustion</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1532177993\">Monster_W2_Beast02_Weak</a>[<span class=\"descriptionNumberColor\">Exhaustion</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -80,7 +80,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMore"
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
         },
         "Ability Start",
         {
@@ -89,7 +89,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Beast02_Bullet[<span class=\"descriptionNumberColor\">Gusto</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"908537899\">Monster_W2_Beast02_Bullet</a>[<span class=\"descriptionNumberColor\">Gusto</span>]",
           "counter": 3
         },
         {
@@ -109,7 +109,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Beast02_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-1917780561\">Enemy_W2_Beast02_Passive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -117,7 +117,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -125,7 +125,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Monster_W2_Beast02_Edict"
+          "modifier": "<a class=\"gModGreen\" id=\"130206318\">Monster_W2_Beast02_Edict</a>"
         },
         "Trigger: Ability End"
       ],
@@ -169,7 +169,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_Standard_Layer_DamageUP[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1692594642\">Monster_Standard_Layer_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
             "displayLines": "{[Skill03[1]]}",
@@ -246,7 +246,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMore"
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
         },
         "Ability Start",
         {
@@ -255,7 +255,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "Monster_W2_Beast02_Bullet[<span class=\"descriptionNumberColor\">Gusto</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"908537899\">Monster_W2_Beast02_Bullet</a>[<span class=\"descriptionNumberColor\">Gusto</span>]",
           "function": "Add"
         },
         {
@@ -298,7 +298,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Beast02_Weak[<span class=\"descriptionNumberColor\">Exhaustion</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1532177993\">Monster_W2_Beast02_Weak</a>[<span class=\"descriptionNumberColor\">Exhaustion</span>]",
           "duration": -1
         },
         "Trigger: Ability End"
@@ -350,14 +350,14 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMore"
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
         },
         "Ability Start",
         {
           "name": "IF",
           "conditions": {
             "name": "Compare: Variable",
-            "value1": "Monster_W2_Beast02_Bullet[<span class=\"descriptionNumberColor\">Gusto</span>]",
+            "value1": "<a class=\"gModGreen\" id=\"908537899\">Monster_W2_Beast02_Bullet</a>[<span class=\"descriptionNumberColor\">Gusto</span>]",
             "compareType": "=",
             "value2": 3
           }
@@ -368,7 +368,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "Monster_W2_Beast02_Bullet[<span class=\"descriptionNumberColor\">Gusto</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"908537899\">Monster_W2_Beast02_Bullet</a>[<span class=\"descriptionNumberColor\">Gusto</span>]",
           "function": "Add"
         },
         {
@@ -450,7 +450,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "W2_Beast02_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"2027241011\">W2_Beast02_MuteHitFly</a>"
         },
         {
           "name": "IF",
@@ -496,13 +496,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "W2_Beast02_MuteHitFly",
+          "for": "<a class=\"gModGreen\" id=\"mod__2027241011\">W2_Beast02_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
           ],
@@ -523,7 +523,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Beast02_Edict",
+          "for": "<a class=\"gModGreen\" id=\"mod__130206318\">Monster_W2_Beast02_Edict</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -553,7 +553,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Beast02_Weak[<span class=\"descriptionNumberColor\">Exhaustion</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1532177993\">Monster_W2_Beast02_Weak</a>[<span class=\"descriptionNumberColor\">Exhaustion</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -572,7 +572,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Beast02_Bullet[<span class=\"descriptionNumberColor\">Gusto</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__908537899\">Monster_W2_Beast02_Bullet</a>[<span class=\"descriptionNumberColor\">Gusto</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -584,7 +584,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_APShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                 }
               ]
             },
@@ -597,7 +597,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_APShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                 }
               ]
             },
@@ -614,7 +614,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead",
@@ -655,7 +655,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                         },
                         "Modifier Deletes Itself"
                       ]
@@ -674,7 +674,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Beast02_BlockDamage[<span class=\"descriptionNumberColor\">Barrier</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__162724046\">Enemy_W2_Beast02_BlockDamage</a>[<span class=\"descriptionNumberColor\">Barrier</span>]",
           "counter": 1,
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
@@ -733,7 +733,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_Standard_Layer_DamageUP[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1692594642\">Monster_Standard_Layer_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -782,7 +782,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Beast02_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1917780561\">Enemy_W2_Beast02_Passive</a>",
           "modifierFlags": [
             "MuteHitFly",
             "ListenBattleEventSkill"
@@ -808,7 +808,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -831,7 +831,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Monster_W2_Beast02_Edict"
+                      "modifier": "<a class=\"gModGreen\" id=\"130206318\">Monster_W2_Beast02_Edict</a>"
                     }
                   ]
                 }
@@ -913,7 +913,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]",
                         "invertCondition": true,
                         "casterFilter": {
                           "name": "Target Name",
@@ -929,7 +929,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]",
                       "onlyRemoveOwnersInstance": true
                     },
                     {
@@ -938,7 +938,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                     }
                   ]
                 }
@@ -960,7 +960,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Beast02_Bullet[<span class=\"descriptionNumberColor\">Gusto</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"908537899\">Monster_W2_Beast02_Bullet</a>[<span class=\"descriptionNumberColor\">Gusto</span>]"
                   },
                   "ifTargetFound": [
                     {
@@ -980,7 +980,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Monster_W2_Beast02_Edict"
+                      "modifier": "<a class=\"gModGreen\" id=\"130206318\">Monster_W2_Beast02_Edict</a>"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -1013,7 +1013,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
                   ]
@@ -1066,7 +1066,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Monster_W2_Beast02_Weak[<span class=\"descriptionNumberColor\">Exhaustion</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1532177993\">Monster_W2_Beast02_Weak</a>[<span class=\"descriptionNumberColor\">Exhaustion</span>]"
                   },
                   "passed": [
                     {
@@ -1075,7 +1075,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Monster_W2_Beast02_Weak[<span class=\"descriptionNumberColor\">Exhaustion</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1532177993\">Monster_W2_Beast02_Weak</a>[<span class=\"descriptionNumberColor\">Exhaustion</span>]"
                     }
                   ]
                 }

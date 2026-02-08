@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE, with Unselectables)}}"
       },
-      "modifier": "Evernight_ServantTarget"
+      "modifier": "<a class=\"gModGreen\" id=\"-895132658\">Evernight_ServantTarget</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Evernight_ServantTarget"
+      "modifier": "<a class=\"gModGreen\" id=\"-895132658\">Evernight_ServantTarget</a>"
     },
     {
       "name": "ATK Scaling DMG",

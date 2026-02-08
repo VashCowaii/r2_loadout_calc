@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Klara_Trace01",
+      "modifier": "<a class=\"gModGreen\" id=\"-1111450796\">Klara_Trace01</a>",
       "valuePerStack": {
         "MDF_Chance": {
           "operator": "Variables[0] (0.35) || RETURN",
@@ -26,7 +26,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Klara_Trace01",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1111450796\">Klara_Trace01</a>",
       "execute": [
         {
           "eventTrigger": "Being Attacked Start [Owner]",

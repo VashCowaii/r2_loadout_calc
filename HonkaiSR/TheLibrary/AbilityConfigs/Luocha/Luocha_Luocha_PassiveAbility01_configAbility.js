@@ -21,7 +21,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Luocha_Passive01_QuickHealthHP",
+      "modifier": "<a class=\"gModGreen\" id=\"-613660626\">Luocha_Passive01_QuickHealthHP</a>",
       "valuePerStack": {
         "MDF_HPRatio": {
           "operator": "Variables[0] (0.5) || RETURN",
@@ -45,7 +45,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Luocha_InsertAbility02_Mark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1001666346\">Luocha_InsertAbility02_Mark</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -81,7 +81,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Luocha_InsertAbility02_Retarget"
+              "modifier": "<a class=\"gModGreen\" id=\"-704950893\">Luocha_InsertAbility02_Retarget</a>"
             }
           ]
         }
@@ -89,7 +89,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luocha_InsertAbility02_Retarget",
+      "for": "<a class=\"gModGreen\" id=\"mod__-704950893\">Luocha_InsertAbility02_Retarget</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -186,7 +186,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Luocha_InsertAbility02_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1001666346\">Luocha_InsertAbility02_Mark</a>"
                 }
               ]
             }
@@ -196,7 +196,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luocha_Passive01_QuickHealthHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-613660626\">Luocha_Passive01_QuickHealthHP</a>",
       "execute": [
         {
           "eventTrigger": "HP Change [Anyone]",
@@ -233,7 +233,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Luocha_Passive01_HealHPCD[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1468187936\">Luocha_Passive01_HealHPCD</a>[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]"
                     }
                   },
                   "passed": [
@@ -382,7 +382,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "Luocha_InsertAbility02_Retarget"
+                                  "modifier": "<a class=\"gModGreen\" id=\"-704950893\">Luocha_InsertAbility02_Retarget</a>"
                                 }
                               ]
                             }
@@ -429,7 +429,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Luocha_InsertAbility02_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1001666346\">Luocha_InsertAbility02_Mark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -437,7 +437,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Luocha_InsertAbility02_Retarget"
+                  "modifier": "<a class=\"gModGreen\" id=\"-704950893\">Luocha_InsertAbility02_Retarget</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -452,7 +452,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Luocha_Passive01_InsertMark"
+                    "modifier": "<a class=\"gModGreen\" id=\"905229597\">Luocha_Passive01_InsertMark</a>"
                   },
                   "passed": [
                     {
@@ -461,7 +461,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Luocha_Passive01_InsertMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"905229597\">Luocha_Passive01_InsertMark</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -469,7 +469,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Luocha_Passive01_DisableActionInsertMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"1784149745\">Luocha_Passive01_DisableActionInsertMark</a>"
                     }
                   ]
                 }

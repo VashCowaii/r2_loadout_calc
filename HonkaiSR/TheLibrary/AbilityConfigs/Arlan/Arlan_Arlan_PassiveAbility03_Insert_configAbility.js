@@ -31,7 +31,7 @@ const configAbility = {
     },
     {
       "name": "Define Modifier Variable",
-      "modifierName": "Arlan_PassiveAbility_UnDead[<span class=\"descriptionNumberColor\">Turn the Tables</span>]",
+      "modifierName": "<a class=\"gModGreen\" id=\"-331301596\">Arlan_PassiveAbility_UnDead</a>[<span class=\"descriptionNumberColor\">Turn the Tables</span>]",
       "function": "Add"
     },
     {

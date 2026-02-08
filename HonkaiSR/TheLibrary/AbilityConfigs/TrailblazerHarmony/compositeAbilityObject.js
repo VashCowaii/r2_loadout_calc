@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_PlayerBoy_20_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-632230246\">StageAbility_Maze_PlayerBoy_20_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_PlayerBoy_20_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-632230246\">StageAbility_Maze_PlayerBoy_20_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -60,7 +60,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "PlayerBoy_20_TechniqueUsage_Bonus[<span class=\"descriptionNumberColor\">Now! I'm the Band!</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1971132539\">PlayerBoy_20_TechniqueUsage_Bonus</a>[<span class=\"descriptionNumberColor\">Now! I'm the Band!</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -118,7 +118,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_20_Eidolon4_Bonus"
+              "modifier": "<a class=\"gModGreen\" id=\"-1584216137\">PlayerBoy_20_Eidolon4_Bonus</a>"
             }
           ]
         },
@@ -135,7 +135,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_20_PointB2_Bonus"
+              "modifier": "<a class=\"gModGreen\" id=\"1126601177\">PlayerBoy_20_PointB2_Bonus</a>"
             }
           ]
         },
@@ -152,7 +152,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_20_PointB3_Bonus",
+              "modifier": "<a class=\"gModGreen\" id=\"-1588077472\">PlayerBoy_20_PointB3_Bonus</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.3) || RETURN",
@@ -179,7 +179,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_20_Eidolon1"
+              "modifier": "<a class=\"gModGreen\" id=\"-1193433566\">PlayerBoy_20_Eidolon1</a>"
             }
           ]
         },
@@ -196,7 +196,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_20_Eidolon2[<span class=\"descriptionNumberColor\">Jailbreaking Rainbowwalk</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1210211185\">PlayerBoy_20_Eidolon2</a>[<span class=\"descriptionNumberColor\">Jailbreaking Rainbowwalk</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -239,7 +239,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_20_Passive_BonusArea"
+          "modifier": "<a class=\"gModGreen\" id=\"1679523029\">PlayerBoy_20_Passive_BonusArea</a>"
         }
       ],
       "references": []
@@ -256,7 +256,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_20_AbilityP01_ListenRedShieldModifier",
+          "modifier": "<a class=\"gModGreen\" id=\"610400910\">PlayerBoy_20_AbilityP01_ListenRedShieldModifier</a>",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -492,7 +492,7 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -649,7 +649,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_20_Eidolon2[<span class=\"descriptionNumberColor\">Jailbreaking Rainbowwalk</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1210211185\">PlayerBoy_20_Eidolon2</a>[<span class=\"descriptionNumberColor\">Jailbreaking Rainbowwalk</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -683,7 +683,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_20_Eidolon1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1193433566\">PlayerBoy_20_Eidolon1</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -718,7 +718,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_20_PointB3_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1588077472\">PlayerBoy_20_PointB3_Bonus</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -729,7 +729,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "PlayerBoy_20_PointB3_Bonus_Preshow",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1962521181\">PlayerBoy_20_PointB3_Bonus_Preshow</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue2": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -763,7 +763,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "PlayerBoy_20_PointB3_Bonus_Preshow",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1962521181\">PlayerBoy_20_PointB3_Bonus_Preshow</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue2": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -814,7 +814,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_20_PointB3_Bonus_Preshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1962521181\">PlayerBoy_20_PointB3_Bonus_Preshow</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -855,7 +855,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_20_PointB2_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__1126601177\">PlayerBoy_20_PointB2_Bonus</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit"
@@ -884,7 +884,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_20_Passive_SpecialMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__492165817\">PlayerBoy_20_Passive_SpecialMark</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -947,7 +947,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "PlayerBoy_20_AbilityP01_ListenBreakDamage_Self"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1949564802\">PlayerBoy_20_AbilityP01_ListenBreakDamage_Self</a>"
                       }
                     ]
                   },
@@ -996,7 +996,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "PlayerBoy_20_AbilityP01_ListenBreakDamage_Self"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1949564802\">PlayerBoy_20_AbilityP01_ListenBreakDamage_Self</a>"
                       }
                     ]
                   },
@@ -1019,7 +1019,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_20_Passive_BonusArea",
+          "for": "<a class=\"gModGreen\" id=\"mod__1679523029\">PlayerBoy_20_Passive_BonusArea</a>",
           "execute": [
             {
               "eventTrigger": "Weakness Break [Anyone]",
@@ -1057,7 +1057,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "PlayerBoy_20_Passive_SpecialMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"492165817\">PlayerBoy_20_Passive_SpecialMark</a>"
                     }
                   ]
                 }
@@ -1072,7 +1072,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "PlayerBoy_20_Passive_SpecialMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"492165817\">PlayerBoy_20_Passive_SpecialMark</a>"
                 }
               ]
             }
@@ -1082,7 +1082,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_20_Ability03_ElementDamage",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1873952341\">PlayerBoy_20_Ability03_ElementDamage</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -1090,7 +1090,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "DealSuperBreakDamage_DamagePerformance",
+                  "functionName": "<a class=\"gTempYellow\" id=\"2132906314\">DealSuperBreakDamage_DamagePerformance</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Attack Targets of Modifier Holder}}"
@@ -1108,7 +1108,7 @@ const compositeAbilityObject = {
                   "damageSequence": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "PursuedDamage_PerformanceDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
@@ -1156,7 +1156,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_20_AbilityP01_ListenBreakDamage_Self",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1949564802\">PlayerBoy_20_AbilityP01_ListenBreakDamage_Self</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead",
@@ -1175,8 +1175,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifierName": "PlayerBoy_20_AbilityP01_ListenBreakDamage_Self",
-                  "modifierNameUpdate": "PlayerBoy_20_AbilityP01_ListenBreakDamage[<span class=\"descriptionNumberColor\">Backup Dancer</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1949564802\">PlayerBoy_20_AbilityP01_ListenBreakDamage_Self</a>",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-197410613\">PlayerBoy_20_AbilityP01_ListenBreakDamage</a>[<span class=\"descriptionNumberColor\">Backup Dancer</span>]"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1389,7 +1389,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "PlayerBoy_20_Ability03_ElementDamage",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1873952341\">PlayerBoy_20_Ability03_ElementDamage</a>",
                   "valuePerStack": {
                     "MDF_SuperBreakDamagePercentage": {
                       "operator": "Variables[0] (MDF_PassiveDamage2) || RETURN",
@@ -1410,7 +1410,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_20_AbilityP01_ListenBreakDamage[<span class=\"descriptionNumberColor\">Backup Dancer</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-197410613\">PlayerBoy_20_AbilityP01_ListenBreakDamage</a>[<span class=\"descriptionNumberColor\">Backup Dancer</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead",
@@ -1634,7 +1634,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "PlayerBoy_20_Ability03_ElementDamage",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1873952341\">PlayerBoy_20_Ability03_ElementDamage</a>",
                   "valuePerStack": {
                     "MDF_SuperBreakDamagePercentage": {
                       "operator": "Variables[0] (MDF_PassiveDamage2) || RETURN",
@@ -1658,7 +1658,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_20_AbilityP01_ListenRedShieldModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__610400910\">PlayerBoy_20_AbilityP01_ListenRedShieldModifier</a>",
           "stackType": "Replace",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -1689,7 +1689,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "PlayerBoy_20_AbilityP01_ListenBreakDamage[<span class=\"descriptionNumberColor\">Backup Dancer</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-197410613\">PlayerBoy_20_AbilityP01_ListenBreakDamage</a>[<span class=\"descriptionNumberColor\">Backup Dancer</span>]"
                 }
               ]
             },
@@ -1704,7 +1704,7 @@ const compositeAbilityObject = {
                   },
                   "valueType": "LifeTime",
                   "variableName": "MDF_HarmonyEnergy",
-                  "modifierName": "PlayerBoy_20_AbilityP01_ListenRedShieldModifier",
+                  "modifierName": "<a class=\"gModGreen\" id=\"610400910\">PlayerBoy_20_AbilityP01_ListenRedShieldModifier</a>",
                   "multiplier": 1
                 },
                 {
@@ -1743,7 +1743,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
               },
-              "modifier": "PlayerBoy_20_AbilityP01_ListenBreakDamage[<span class=\"descriptionNumberColor\">Backup Dancer</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-197410613\">PlayerBoy_20_AbilityP01_ListenBreakDamage</a>[<span class=\"descriptionNumberColor\">Backup Dancer</span>]",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_RealMaxStance": 30,
@@ -1811,7 +1811,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_20_AbilityP01_ListenBreakDamage_Self",
+              "modifier": "<a class=\"gModGreen\" id=\"-1949564802\">PlayerBoy_20_AbilityP01_ListenBreakDamage_Self</a>",
               "haloStatus": true,
               "duration": {
                 "operator": "Variables[0] (MDF_LifeTime) || RETURN",
@@ -1887,7 +1887,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "PlayerBoy_20_Ability03_ElementDamage",
+              "modifier": "<a class=\"gModGreen\" id=\"-1873952341\">PlayerBoy_20_Ability03_ElementDamage</a>",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_SuperBreakDamagePercentage": 0
@@ -1897,7 +1897,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_20_Eidolon4_BreakDamageBonus[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1272032141\">PlayerBoy_20_Eidolon4_BreakDamageBonus</a>[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -1928,7 +1928,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_20_Eidolon4_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1584216137\">PlayerBoy_20_Eidolon4_Bonus</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1940,7 +1940,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "PlayerBoy_20_Eidolon4_BreakDamageBonus[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1272032141\">PlayerBoy_20_Eidolon4_BreakDamageBonus</a>[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]"
                 }
               ]
             },
@@ -1949,7 +1949,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "PlayerBoy_20_Eidolon4_Sub"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-517215747\">PlayerBoy_20_Eidolon4_Sub</a>"
                 }
               ]
             },
@@ -1969,7 +1969,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "PlayerBoy_20_Eidolon4_Sub"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-517215747\">PlayerBoy_20_Eidolon4_Sub</a>"
                     }
                   ]
                 }
@@ -1984,7 +1984,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "PlayerBoy_20_Eidolon4_BreakDamageBonus[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1272032141\">PlayerBoy_20_Eidolon4_BreakDamageBonus</a>[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]"
                 }
               ]
             }
@@ -1999,7 +1999,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "PlayerBoy_20_Eidolon4_Sub"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-517215747\">PlayerBoy_20_Eidolon4_Sub</a>"
                     }
                   ]
                 }
@@ -2014,7 +2014,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "PlayerBoy_20_Eidolon4_Sub"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-517215747\">PlayerBoy_20_Eidolon4_Sub</a>"
                     }
                   ]
                 }
@@ -2029,7 +2029,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "PlayerBoy_20_Eidolon4_Sub"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-517215747\">PlayerBoy_20_Eidolon4_Sub</a>"
                     }
                   ]
                 }
@@ -2039,7 +2039,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "PlayerBoy_20_Eidolon4_Sub",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-517215747\">PlayerBoy_20_Eidolon4_Sub</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
@@ -2069,7 +2069,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
                   },
-                  "modifier": "PlayerBoy_20_Eidolon4_BreakDamageBonus[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1272032141\">PlayerBoy_20_Eidolon4_BreakDamageBonus</a>[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]",
                   "valuePerStack": {
                     "MDF_AddBreakDamageRatio": {
                       "operator": "Variables[0] (MDF_BreakDamageAdd) || RETURN",
@@ -2089,7 +2089,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_20_TechniqueUsage_Bonus[<span class=\"descriptionNumberColor\">Now! I'm the Band!</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1971132539\">PlayerBoy_20_TechniqueUsage_Bonus</a>[<span class=\"descriptionNumberColor\">Now! I'm the Band!</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {

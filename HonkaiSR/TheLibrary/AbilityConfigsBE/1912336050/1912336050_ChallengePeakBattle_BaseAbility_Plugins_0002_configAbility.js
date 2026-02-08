@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002"
+      "modifier": "<a class=\"gModGreen\" id=\"-1999550155\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF_2",
+      "for": "<a class=\"gModGreen\" id=\"mod__1575097166\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF_2</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -38,7 +38,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF",
+      "for": "<a class=\"gModGreen\" id=\"mod__-565240697\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -59,7 +59,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_02[<span class=\"descriptionNumberColor\">Infantry and Cavalry</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1527327304\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_02</a>[<span class=\"descriptionNumberColor\">Infantry and Cavalry</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Owner]: Any",
@@ -103,7 +103,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF",
+                  "modifier": "<a class=\"gModGreen\" id=\"-565240697\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0002_ADF_1": {
                       "operator": "Variables[0] (ChallengePeakBattle_Plugins_0002_ADF_1) || RETURN",
@@ -146,7 +146,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF_2",
+                  "modifier": "<a class=\"gModGreen\" id=\"1575097166\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF_2</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0002_ADF_2": {
                       "operator": "Variables[0] (ChallengePeakBattle_Plugins_0002_ADF_2) || RETURN",
@@ -183,7 +183,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF"
+                  "modifier": "<a class=\"gModGreen\" id=\"-565240697\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -205,7 +205,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF_2"
+                  "modifier": "<a class=\"gModGreen\" id=\"1575097166\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF_2</a>"
                 }
               ]
             }
@@ -218,7 +218,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1999550155\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -245,7 +245,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_02[<span class=\"descriptionNumberColor\">Infantry and Cavalry</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1527327304\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_02</a>[<span class=\"descriptionNumberColor\">Infantry and Cavalry</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0002_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_073"
+      "modifier": "<a class=\"gModGreen\" id=\"-636319268\">MStrongChallengeEX_Talent_StageAbility_LE_073</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_TGT_073",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2128146912\">MStrongChallengeEX_Talent_StageAbility_TGT_073</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -83,7 +83,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_073",
+      "for": "<a class=\"gModGreen\" id=\"mod__1358491876\">MStrongChallengeEX_Talent_StageAbility_PLY_073</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -101,7 +101,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_073",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2128146912\">MStrongChallengeEX_Talent_StageAbility_TGT_073</a>",
                   "duration": {
                     "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
                     "displayLines": "MDF_PropertyValue3",
@@ -138,7 +138,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_073",
+      "for": "<a class=\"gModGreen\" id=\"mod__-636319268\">MStrongChallengeEX_Talent_StageAbility_LE_073</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -149,7 +149,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Far Left Player Entity(no Memosprite)}}"
               },
-              "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_073",
+              "modifier": "<a class=\"gModGreen\" id=\"1358491876\">MStrongChallengeEX_Talent_StageAbility_PLY_073</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (#ADF_1) || RETURN",

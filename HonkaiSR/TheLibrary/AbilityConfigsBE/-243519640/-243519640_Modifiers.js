@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>",
       "stackType": "Replace",
       "stackData": [
         "MDF_PropertyValue"
@@ -19,19 +19,19 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+      "for": "<a class=\"gModGreen\" id=\"mod__-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+      "for": "<a class=\"gModGreen\" id=\"mod__-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+      "for": "<a class=\"gModGreen\" id=\"mod__-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_BOSS_007_Debuff",
+      "for": "<a class=\"gModGreen\" id=\"mod__142979484\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Debuff</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -66,7 +66,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger",
+      "for": "<a class=\"gModGreen\" id=\"mod__1349202594\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -78,7 +78,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"
               },
-              "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_007_Debuff",
+              "modifier": "<a class=\"gModGreen\" id=\"142979484\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Debuff</a>",
               "duration": {
                 "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                 "displayLines": "MDF_LifeTime",

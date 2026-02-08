@@ -54,7 +54,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_IF_BOSS_Standard_BreakBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"651865792\">Monster_IF_BOSS_Standard_BreakBonus</a>"
         }
       ],
       "references": []
@@ -72,7 +72,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Bronya_IF_02_PartController"
+          "modifier": "<a class=\"gModGreen\" id=\"-1546214500\">Monster_W1_Bronya_IF_02_PartController</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -108,7 +108,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bronya_BattleScore2"
+          "modifier": "<a class=\"gModGreen\" id=\"236879313\">Bronya_BattleScore2</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -116,7 +116,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bronya_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"186546456\">Bronya_BattleScore1</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -124,7 +124,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -151,7 +151,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_HideMonsterHUD"
+          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -159,7 +159,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_WeaknessProtect"
+          "modifier": "<a class=\"gModGreen\" id=\"479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -167,7 +167,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_ListenSelfBreak"
+          "modifier": "<a class=\"gModGreen\" id=\"-302906078\">Enemy_W1_Bronya_IF_02_ListenSelfBreak</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -175,7 +175,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_AssistantSpeed[<span class=\"descriptionNumberColor\">Defense</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
           "valuePerStack": {
             "MDF_SpeedDownRatio": {
               "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
@@ -193,7 +193,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurnInit"
+          "modifier": "<a class=\"gModGreen\" id=\"1849445154\">Enemy_W1_Bronya_IF_02_EnhancePerTurnInit</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -201,13 +201,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_Part2EnhanceInti"
+          "modifier": "<a class=\"gModGreen\" id=\"-715823219\">Enemy_W1_Bronya_IF_02_Part2EnhanceInti</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_IF_02_EnhancePerTurnInit",
+          "for": "<a class=\"gModGreen\" id=\"mod__1849445154\">Enemy_W1_Bronya_IF_02_EnhancePerTurnInit</a>",
           "execute": [
             {
               "eventTrigger": "Action End [Owner]",
@@ -218,7 +218,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
                       "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
@@ -250,7 +250,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_IF_02_ListenSelfBreak",
+          "for": "<a class=\"gModGreen\" id=\"mod__-302906078\">Enemy_W1_Bronya_IF_02_ListenSelfBreak</a>",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -315,7 +315,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W1_Bronya_IF_02_AssistantSpeed[<span class=\"descriptionNumberColor\">Defense</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]"
                   },
                   "passed": [
                     {
@@ -324,7 +324,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_W1_Bronya_IF_02_WeaknessProtect"
+                      "modifier": "<a class=\"gModGreen\" id=\"479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>"
                     }
                   ]
                 }
@@ -351,7 +351,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Standard_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2036544920\">Standard_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
             "displayLines": "{[Skill05[1]]}",
@@ -412,7 +412,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_WeaknessProtect"
+          "modifier": "<a class=\"gModGreen\" id=\"479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -420,7 +420,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
           "valuePerStack": {
             "MDF_SpeedUpPerLayer": {
               "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
@@ -446,7 +446,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Bronya_IF_02_Toast"
+          "modifier": "<a class=\"gModGreen\" id=\"1332478484\">Monster_W1_Bronya_IF_02_Toast</a>"
         },
         {
           "name": "IF",
@@ -467,7 +467,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_Enhance[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1364188900\">Enemy_W1_Bronya_IF_02_Enhance</a>[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
               "valuePerStack": {
                 "MDF_SpeedUp": {
                   "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
@@ -490,7 +490,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "OneMorePerTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -498,7 +498,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "MoreOneMorePerTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
             }
           ],
           "failed": [
@@ -559,7 +559,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Bronya_IF_02_Toast",
+          "for": "<a class=\"gModGreen\" id=\"mod__1332478484\">Monster_W1_Bronya_IF_02_Toast</a>",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -572,7 +572,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W1_Bronya_IF_02_Enhance[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1364188900\">Enemy_W1_Bronya_IF_02_Enhance</a>[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
                     "invertCondition": true
                   }
                 },
@@ -728,7 +728,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -780,7 +780,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W1_Gepard_IF_03_PartController"
+            "modifier": "<a class=\"gModGreen\" id=\"2141633429\">Monster_W1_Gepard_IF_03_PartController</a>"
           },
           "ifTargetFound": [
             {
@@ -789,7 +789,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W1_Gepard_IF_03_EnhancePerTurn[<span class=\"descriptionNumberColor\">Will of Steel</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -797,7 +797,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_MainHaloEffect[<span class=\"descriptionNumberColor\">Charge</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -805,7 +805,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_AssistantSpeed[<span class=\"descriptionNumberColor\">Defense</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]"
             }
           ]
         },
@@ -860,7 +860,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
                   "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
@@ -888,7 +888,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
                   "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
@@ -916,7 +916,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_AssistantSpeed[<span class=\"descriptionNumberColor\">Defense</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -924,7 +924,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_Enhance[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1364188900\">Enemy_W1_Bronya_IF_02_Enhance</a>[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
           "valuePerStack": {
             "MDF_SpeedUp": {
               "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
@@ -947,7 +947,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -955,7 +955,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MoreOneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -963,7 +963,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_WeaknessProtect"
+          "modifier": "<a class=\"gModGreen\" id=\"479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>"
         },
         {
           "name": "UI Display Event (On Entity)",
@@ -989,7 +989,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_MainHaloEffect[<span class=\"descriptionNumberColor\">Charge</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
         },
         {
           "name": "IF",
@@ -999,7 +999,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_W1_Bronya_IF_02_MainHaloEffect[<span class=\"descriptionNumberColor\">Charge</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
           },
           "failed": [
             {
@@ -1008,7 +1008,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_MainHaloEffect[<span class=\"descriptionNumberColor\">Charge</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
             }
           ]
         },
@@ -1036,7 +1036,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_AssistantSpeed[<span class=\"descriptionNumberColor\">Defense</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
               "valuePerStack": {
                 "MDF_SpeedDownRatio": {
                   "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
@@ -1084,7 +1084,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W1_Gepard_IF_03_PartController"
+            "modifier": "<a class=\"gModGreen\" id=\"2141633429\">Monster_W1_Gepard_IF_03_PartController</a>"
           },
           "ifTargetFound": [
             {
@@ -1093,7 +1093,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "OneMorePerTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1101,7 +1101,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "MoreOneMorePerTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
             },
             {
               "name": "IF",
@@ -1120,7 +1120,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_W1_Gepard_IF_03_WeaknessProtect"
+                  "modifier": "<a class=\"gModGreen\" id=\"1559306113\">Enemy_W1_Gepard_IF_03_WeaknessProtect</a>"
                 }
               ]
             },
@@ -1176,7 +1176,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "OneMorePerTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
             }
           ],
           "failed": [
@@ -1186,7 +1186,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "MoreOneMorePerTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
             }
           ]
         },
@@ -1241,7 +1241,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
                   "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
@@ -1269,7 +1269,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
                   "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
@@ -1297,7 +1297,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_AssistantSpeed[<span class=\"descriptionNumberColor\">Defense</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]"
         },
         {
           "name": "Define Custom Variable",
@@ -1310,7 +1310,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_WeaknessProtect"
+          "modifier": "<a class=\"gModGreen\" id=\"479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>"
         },
         {
           "name": "Action Advance/Delay",
@@ -1327,7 +1327,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_MainHaloEffect[<span class=\"descriptionNumberColor\">Charge</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1335,7 +1335,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_MainHaloEffect[<span class=\"descriptionNumberColor\">Charge</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
         },
         {
           "name": "Find New Target",
@@ -1361,7 +1361,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_AssistantSpeed[<span class=\"descriptionNumberColor\">Defense</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
               "valuePerStack": {
                 "MDF_SpeedDownRatio": {
                   "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
@@ -1398,7 +1398,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W1_Gepard_IF_03_PartController"
+            "modifier": "<a class=\"gModGreen\" id=\"2141633429\">Monster_W1_Gepard_IF_03_PartController</a>"
           },
           "ifTargetFound": [
             {
@@ -1432,7 +1432,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W1_Gepard_IF_03_EnhancePerTurn[<span class=\"descriptionNumberColor\">Will of Steel</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1440,7 +1440,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_MainHaloEffect[<span class=\"descriptionNumberColor\">Charge</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1448,7 +1448,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_AssistantSpeed[<span class=\"descriptionNumberColor\">Defense</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]"
             },
             {
               "name": "Define Custom Variable",
@@ -1465,7 +1465,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W1_Gepard_IF_03_ListenBeingAttacked"
+              "modifier": "<a class=\"gModGreen\" id=\"-1241486816\">Enemy_W1_Gepard_IF_03_ListenBeingAttacked</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1473,7 +1473,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "Enemy_IF_LimboMark[<span class=\"descriptionNumberColor\">Valor Via Setbacks</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1981216123\">Enemy_IF_LimboMark</a>[<span class=\"descriptionNumberColor\">Valor Via Setbacks</span>]",
               "removeAllInstances": true
             },
             {
@@ -1482,7 +1482,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Monster_Standard_Endurance"
+              "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
             },
             {
               "name": "Declare Custom Variable",
@@ -1530,7 +1530,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "OneMorePerTurn",
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>",
               "removeToBeAdded": true
             },
             {
@@ -1539,7 +1539,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "MoreOneMorePerTurn",
+              "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>",
               "removeToBeAdded": true
             },
             {
@@ -1548,7 +1548,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "OneMore",
+              "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>",
               "removeToBeAdded": true
             },
             {
@@ -1557,15 +1557,15 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Enemy_W1_Soldier04_AbilityP01_Supported[<span class=\"descriptionNumberColor\">Reinforced</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Monster_ChangePhase"
+              "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Monster_ChangePhase_ParamEntity"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1902031976\">Monster_ChangePhase_ParamEntity</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1573,7 +1573,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_AssistantSpeed[<span class=\"descriptionNumberColor\">Defense</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
               "valuePerStack": {
                 "MDF_SpeedDownRatio": {
                   "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
@@ -1591,7 +1591,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W1_Gepard_IF_03_WeaknessProtect"
+              "modifier": "<a class=\"gModGreen\" id=\"1559306113\">Enemy_W1_Gepard_IF_03_WeaknessProtect</a>"
             },
             {
               "name": "Action Advance/Delay",
@@ -1617,7 +1617,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_WeaknessProtect"
+              "modifier": "<a class=\"gModGreen\" id=\"479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>"
             },
             {
               "name": "Find New Target",
@@ -1653,7 +1653,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W1_Gepard_IF_03_Part2EnhanceInti"
+              "modifier": "<a class=\"gModGreen\" id=\"514811508\">Enemy_W1_Gepard_IF_03_Part2EnhanceInti</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1661,7 +1661,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
                   "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
@@ -1687,7 +1687,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Monster_Standard_Endurance"
+              "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1695,7 +1695,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W1_Gepard_IF_03_Enhance[<span class=\"descriptionNumberColor\">Thick and Thin</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1430608043\">Enemy_W1_Gepard_IF_03_Enhance</a>[<span class=\"descriptionNumberColor\">Thick and Thin</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1703,7 +1703,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_Enhance[<span class=\"descriptionNumberColor\">Shared Hatred</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1364188900\">Enemy_W1_Bronya_IF_02_Enhance</a>[<span class=\"descriptionNumberColor\">Shared Hatred</span>]"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1711,7 +1711,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_MainHaloEffect[<span class=\"descriptionNumberColor\">Charge</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
             }
           ]
         }
@@ -1731,7 +1731,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_PassiveAbility_Formation2"
+          "modifier": "<a class=\"gModGreen\" id=\"-247015465\">Enemy_W1_Bronya_PassiveAbility_Formation2</a>"
         }
       ],
       "references": []
@@ -1749,7 +1749,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_PassiveAbility_NoLockStance"
+          "modifier": "<a class=\"gModGreen\" id=\"746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>"
         }
       ],
       "references": []
@@ -1766,7 +1766,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_M1LockHP"
+          "modifier": "<a class=\"gModGreen\" id=\"-589353924\">Enemy_W1_Bronya_M1LockHP</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -1781,14 +1781,14 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_Instance_DisableAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1556370949\">Enemy_W1_Bronya_Instance_DisableAction</a>",
           "modifierFlags": [
             "DisableAction"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_M1LockHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-589353924\">Enemy_W1_Bronya_M1LockHP</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1839,7 +1839,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "Enemy_W1_Bronya_Instance_DisableAction"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1556370949\">Enemy_W1_Bronya_Instance_DisableAction</a>"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -1873,7 +1873,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Enemy_W1_Bronya_WeakPointProtected[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
         },
         {
           "name": "Declare Custom Variable",
@@ -1899,7 +1899,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bronya_BattleScore2"
+          "modifier": "<a class=\"gModGreen\" id=\"236879313\">Bronya_BattleScore2</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1907,7 +1907,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bronya_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"186546456\">Bronya_BattleScore1</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1915,7 +1915,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1923,7 +1923,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -1951,7 +1951,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_W1_Bronya_PassiveAbility_NoLockStance",
+            "modifier": "<a class=\"gModGreen\" id=\"746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>",
             "invertCondition": true
           },
           "passed": [
@@ -1961,7 +1961,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W1_Bronya_WeakPointProtectController"
+              "modifier": "<a class=\"gModGreen\" id=\"43109596\">Enemy_W1_Bronya_WeakPointProtectController</a>"
             }
           ]
         },
@@ -1971,13 +1971,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_ListenSelfBreak"
+          "modifier": "<a class=\"gModGreen\" id=\"2074412751\">Enemy_W1_Bronya_ListenSelfBreak</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_ListenSelfBreak",
+          "for": "<a class=\"gModGreen\" id=\"mod__2074412751\">Enemy_W1_Bronya_ListenSelfBreak</a>",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -2021,7 +2021,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_WeakPointProtected[<span class=\"descriptionNumberColor\">Weakness Protected</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]",
           "modifierFlags": [
             "MuteBreak"
           ],
@@ -2074,7 +2074,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_WeakPointProtectController",
+          "for": "<a class=\"gModGreen\" id=\"mod__43109596\">Enemy_W1_Bronya_WeakPointProtectController</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2107,7 +2107,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W1_Bronya_WeakPointProtected[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
                     }
                   ]
                 }
@@ -2129,7 +2129,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "TaskList_W1_Bronya_WeakPointProtectController_OnDieOrEscape"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-968447814\">TaskList_W1_Bronya_WeakPointProtectController_OnDieOrEscape</a>"
                     }
                   ]
                 }
@@ -2151,7 +2151,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "TaskList_W1_Bronya_WeakPointProtectController_OnDieOrEscape"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-968447814\">TaskList_W1_Bronya_WeakPointProtectController_OnDieOrEscape</a>"
                     }
                   ]
                 }
@@ -2179,7 +2179,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W1_Bronya_WeakPointProtected[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
                     }
                   ]
                 }
@@ -2189,7 +2189,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "TaskList_W1_Bronya_WeakPointProtectController_OnDieOrEscape",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-968447814\">TaskList_W1_Bronya_WeakPointProtectController_OnDieOrEscape</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -2223,7 +2223,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Enemy_W1_Bronya_WeakPointProtected[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
                       }
                     ]
                   },
@@ -2482,7 +2482,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -2535,7 +2535,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_Ability02_PowerUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-209859933\">Enemy_W1_Bronya_Ability02_PowerUp</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -2665,7 +2665,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Bronya_IF_02_PartController",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1546214500\">Monster_W1_Bronya_IF_02_PartController</a>",
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -2697,7 +2697,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W1_Gepard_IF_03_PartController"
+                        "modifier": "<a class=\"gModGreen\" id=\"2141633429\">Monster_W1_Gepard_IF_03_PartController</a>"
                       },
                       "ifTargetFound": [
                         {
@@ -2721,7 +2721,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Enemy_IF_LimboMark[<span class=\"descriptionNumberColor\">Valor Via Setbacks</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1981216123\">Enemy_IF_LimboMark</a>[<span class=\"descriptionNumberColor\">Valor Via Setbacks</span>]"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -2738,7 +2738,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "MoreOneMorePerTurn"
+                          "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                         },
                         {
                           "name": "IF",
@@ -2965,7 +2965,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W1_Gepard_IF_03_PartController"
+                        "modifier": "<a class=\"gModGreen\" id=\"2141633429\">Monster_W1_Gepard_IF_03_PartController</a>"
                       },
                       "ifTargetFound": [
                         {
@@ -3007,7 +3007,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_IF_02_Part2EnhanceInti",
+          "for": "<a class=\"gModGreen\" id=\"mod__-715823219\">Enemy_W1_Bronya_IF_02_Part2EnhanceInti</a>",
           "stackType": "Refresh",
           "execute": [
             {
@@ -3032,7 +3032,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpPerLayer": {
                           "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
@@ -3066,7 +3066,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_IF_02_AssistantSpeed[<span class=\"descriptionNumberColor\">Defense</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3108,7 +3108,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_IF_02_WeaknessProtect",
+          "for": "<a class=\"gModGreen\" id=\"mod__479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>",
           "modifierFlags": [
             "MuteBreak"
           ],
@@ -3135,7 +3135,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_IF_02_MainHaloEffect[<span class=\"descriptionNumberColor\">Charge</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -3169,7 +3169,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -3194,7 +3194,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpPerLayer": {
                           "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
@@ -3222,7 +3222,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpPerLayer": {
                           "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
@@ -3318,7 +3318,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_IF_02_Enhance[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1364188900\">Enemy_W1_Bronya_IF_02_Enhance</a>[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
@@ -3358,7 +3358,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bronya_BattleScore2",
+          "for": "<a class=\"gModGreen\" id=\"mod__236879313\">Bronya_BattleScore2</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -3416,7 +3416,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bronya_BattleScore1",
+          "for": "<a class=\"gModGreen\" id=\"mod__186546456\">Bronya_BattleScore1</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -3498,7 +3498,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_Ability02[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1747978880\">Enemy_W1_Bronya_Ability02</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3530,7 +3530,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TEST_DarkTeamBackRow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1115057368\">TEST_DarkTeamBackRow</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3582,7 +3582,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_PassiveAbility_Formation2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-247015465\">Enemy_W1_Bronya_PassiveAbility_Formation2</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -3619,7 +3619,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_PassiveAbility_NoLockStance",
+          "for": "<a class=\"gModGreen\" id=\"mod__746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>",
           "stackData": [],
           "latentQueue": []
         }

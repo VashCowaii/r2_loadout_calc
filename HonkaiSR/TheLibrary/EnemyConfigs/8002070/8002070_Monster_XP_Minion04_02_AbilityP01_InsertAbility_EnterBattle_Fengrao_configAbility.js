@@ -52,7 +52,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EffectPaths"
+          "modifier": "<a class=\"gModGreen\" id=\"1306349309\">Enemy_XP_Minion04_02_EffectPaths</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -60,7 +60,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Fengrao_Caster"
+          "modifier": "<a class=\"gModGreen\" id=\"93806967\">Enemy_XP_Minion04_02_Fengrao_Caster</a>"
         },
         {
           "name": "Find New Target",
@@ -75,7 +75,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Enemy_XP_Minion04_02_P01_EnterBattle",
+            "modifier": "<a class=\"gModGreen\" id=\"1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>",
             "invertCondition": true
           },
           "ifTargetFound": [
@@ -85,7 +85,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Fengrao_Minion",
+              "modifier": "<a class=\"gModGreen\" id=\"-1146816007\">Enemy_XP_Minion04_02_Fengrao_Minion</a>",
               "valuePerStack": {
                 "_HealRatio": {
                   "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
@@ -113,7 +113,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EffectGround"
+          "modifier": "<a class=\"gModGreen\" id=\"196303828\">Enemy_XP_Minion04_02_EffectGround</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -121,7 +121,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EffectRound"
+          "modifier": "<a class=\"gModGreen\" id=\"-801636319\">Enemy_XP_Minion04_02_EffectRound</a>"
         }
       ],
       "failed": [
@@ -145,7 +145,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_EffectPaths"
+                  "modifier": "<a class=\"gModGreen\" id=\"1306349309\">Enemy_XP_Minion04_02_EffectPaths</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -153,7 +153,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Fengrao_Caster"
+                  "modifier": "<a class=\"gModGreen\" id=\"93806967\">Enemy_XP_Minion04_02_Fengrao_Caster</a>"
                 },
                 {
                   "name": "Find New Target",
@@ -168,7 +168,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_XP_Minion04_02_P01_EnterBattle",
+                    "modifier": "<a class=\"gModGreen\" id=\"1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>",
                     "invertCondition": true
                   },
                   "ifTargetFound": [
@@ -178,7 +178,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Fengrao_Minion",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1146816007\">Enemy_XP_Minion04_02_Fengrao_Minion</a>",
                       "valuePerStack": {
                         "_HealRatio": {
                           "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",

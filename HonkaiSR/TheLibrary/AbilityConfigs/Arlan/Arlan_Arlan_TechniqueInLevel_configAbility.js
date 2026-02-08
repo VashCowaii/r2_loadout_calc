@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Arlan_TechniqueUsage_Proc"
+      "modifier": "<a class=\"gModGreen\" id=\"-1043065373\">Arlan_TechniqueUsage_Proc</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Arlan_TechniqueUsage_Proc",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1043065373\">Arlan_TechniqueUsage_Proc</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

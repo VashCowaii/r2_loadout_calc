@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Himeko_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"836140027\">StageAbility_Maze_Himeko_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Himeko_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__836140027\">StageAbility_Maze_Himeko_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -46,7 +46,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Himeko_FireTakenRatio[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1013692489\">Himeko_FireTakenRatio</a>[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

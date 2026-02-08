@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Arlan_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"937498507\">M_Arlan_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Arlan_Ability02_LoseHPPreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"301994937\">M_Arlan_Ability02_LoseHPPreShow</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -35,7 +35,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Arlan_Eidolon1"
+      "modifier": "<a class=\"gModGreen\" id=\"1890598575\">Arlan_Eidolon1</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -43,7 +43,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Arlan_Eidolon6"
+      "modifier": "<a class=\"gModGreen\" id=\"1840265718\">Arlan_Eidolon6</a>"
     },
     {
       "name": "IF",
@@ -58,7 +58,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Arlan_PassiveAbility_UnDead[<span class=\"descriptionNumberColor\">Turn the Tables</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-331301596\">Arlan_PassiveAbility_UnDead</a>[<span class=\"descriptionNumberColor\">Turn the Tables</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -74,7 +74,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Arlan_Ability02_LoseHPPreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__301994937\">M_Arlan_Ability02_LoseHPPreShow</a>",
       "execute": [
         {
           "eventTrigger": "Update Target Selected(UI) [Owner]",
@@ -133,7 +133,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Arlan_PassiveAbility_UnDead[<span class=\"descriptionNumberColor\">Turn the Tables</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-331301596\">Arlan_PassiveAbility_UnDead</a>[<span class=\"descriptionNumberColor\">Turn the Tables</span>]",
       "counter": 1,
       "execute": [
         {
@@ -262,7 +262,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Arlan_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__937498507\">M_Arlan_Passive</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -294,7 +294,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Arlan_Passive_DamageUp[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1498391924\">Arlan_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.72) || Constants[0] (1) || Variables[1] (_HPRatio) || SUB || MUL || RETURN",
@@ -335,7 +335,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Arlan_Passive_DamageUp[<span class=\"descriptionNumberColor\">Pain and Anger</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1498391924\">Arlan_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Pain and Anger</span>]"
                 }
               ],
               "failed": [
@@ -353,7 +353,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Arlan_Passive_DamageUp[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1498391924\">Arlan_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.72) || Constants[0] (1) || Variables[1] (_HPRatio) || SUB || MUL || RETURN",
@@ -378,7 +378,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Arlan_Eidolon1",
+      "for": "<a class=\"gModGreen\" id=\"mod__1890598575\">Arlan_Eidolon1</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -429,7 +429,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Arlan_Eidolon6",
+      "for": "<a class=\"gModGreen\" id=\"mod__1840265718\">Arlan_Eidolon6</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",

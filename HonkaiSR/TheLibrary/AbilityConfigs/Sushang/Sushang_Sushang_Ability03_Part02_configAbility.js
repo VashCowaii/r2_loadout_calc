@@ -49,7 +49,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sushang_UltraBonus[<span class=\"descriptionNumberColor\">Dawn Herald</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1472874588\">Sushang_UltraBonus</a>[<span class=\"descriptionNumberColor\">Dawn Herald</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",

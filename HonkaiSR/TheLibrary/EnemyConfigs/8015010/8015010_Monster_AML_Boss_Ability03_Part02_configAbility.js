@@ -57,7 +57,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
       "duration": 1,
       "baseChance": 1,
       "immediateEffect": true,

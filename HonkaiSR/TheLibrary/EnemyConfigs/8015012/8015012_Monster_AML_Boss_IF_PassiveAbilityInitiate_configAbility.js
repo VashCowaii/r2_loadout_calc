@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_Standard_MuteHitFly"
+      "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
     },
     {
       "name": "Set Enemy Phase"
@@ -30,7 +30,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_IF_Die_Camera"
+      "modifier": "<a class=\"gModGreen\" id=\"-1346968931\">Enemy_AML_Boss_IF_Die_Camera</a>"
     }
   ],
   "references": []

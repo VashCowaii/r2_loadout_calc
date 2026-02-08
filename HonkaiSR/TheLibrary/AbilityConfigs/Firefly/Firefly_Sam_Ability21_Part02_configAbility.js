@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_Ultimate_BreakDamageAddRatio",
+      "modifier": "<a class=\"gModGreen\" id=\"64395692\">Sam_Ultimate_BreakDamageAddRatio</a>",
       "valuePerStack": {
         "MDF_PropertyValue": {
           "operator": "Variables[0] (0.2) || RETURN",
@@ -44,7 +44,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Sam_Ability21_FireWeakType[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"639093534\">Sam_Ability21_FireWeakType</a>[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",
@@ -85,7 +85,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sam_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
             }
           ]
         },
@@ -129,7 +129,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
         },
         {
           "name": "Find New Target",
@@ -167,7 +167,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sam_ForceStanceDamage"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
                 }
               ]
             },
@@ -210,7 +210,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sam_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
             }
           ]
         }
@@ -243,7 +243,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
         }
       ]
     },
@@ -287,7 +287,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_ForceStanceDamage"
+      "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
     },
     {
       "name": "Find New Target",
@@ -325,7 +325,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sam_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
             }
           ]
         },
@@ -368,7 +368,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
         }
       ]
     },
@@ -379,7 +379,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_Ultimate_BreakDamageAddRatio"
+      "modifier": "<a class=\"gModGreen\" id=\"64395692\">Sam_Ultimate_BreakDamageAddRatio</a>"
     },
     "Trigger: Ability End"
   ],

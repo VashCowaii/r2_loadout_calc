@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yukong_Ability02_FlowerFlag"
+      "modifier": "<a class=\"gModGreen\" id=\"-1103490299\">Yukong_Ability02_FlowerFlag</a>"
     },
     {
       "name": "Trigger Ability",
@@ -35,7 +35,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Yukong_Ability02_FlowerFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1103490299\">Yukong_Ability02_FlowerFlag</a>",
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",

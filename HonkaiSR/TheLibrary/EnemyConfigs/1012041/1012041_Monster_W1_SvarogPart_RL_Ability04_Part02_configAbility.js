@@ -12,7 +12,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Modifier Holder}}"
         },
-        "modifier": "Monster_W1_Svarog_RL_Control_OnPart_Modifier"
+        "modifier": "<a class=\"gModGreen\" id=\"1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>"
       },
       "passed": [
         {
@@ -30,7 +30,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Svarog's Confinement Target v2}}"
           },
-          "modifier": "Standard_AbilityTarget"
+          "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -72,7 +72,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Svarog's Confinement Target v2}}"
       },
-      "modifier": "Standard_AbilityTarget"
+      "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
     },
     "Trigger: Ability End"
   ],

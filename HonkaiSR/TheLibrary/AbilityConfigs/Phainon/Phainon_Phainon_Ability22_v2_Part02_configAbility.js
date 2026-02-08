@@ -129,7 +129,7 @@ const configAbility = {
       "Event": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Bounce_SelectTarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
@@ -189,7 +189,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "M_Phainon_Ability22_v2_TargetTimeslow",
+      "modifier": "<a class=\"gModGreen\" id=\"423192378\">M_Phainon_Ability22_v2_TargetTimeslow</a>",
       "silentAdd": true
     },
     {
@@ -313,13 +313,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Phainon_Ability22_Insert"
+      "modifier": "<a class=\"gModGreen\" id=\"45709795\">M_Phainon_Ability22_Insert</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Ability22_v2_TargetTimeslow",
+      "for": "<a class=\"gModGreen\" id=\"mod__423192378\">M_Phainon_Ability22_v2_TargetTimeslow</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -339,7 +339,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Ability22_Insert",
+      "for": "<a class=\"gModGreen\" id=\"mod__45709795\">M_Phainon_Ability22_Insert</a>",
       "execute": [
         {
           "eventTrigger": "Extra Turn Action Injection: Start",

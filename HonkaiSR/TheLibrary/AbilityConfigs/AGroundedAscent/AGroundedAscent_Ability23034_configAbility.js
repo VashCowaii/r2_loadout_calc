@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23034_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1365193031\">LC_23034_Main</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23034_Sub2[<span class=\"descriptionNumberColor\">Departing Anew</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1900448438\">LC_23034_Sub2</a>[<span class=\"descriptionNumberColor\">Departing Anew</span>]"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23034_Sub2[<span class=\"descriptionNumberColor\">Departing Anew</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1900448438\">LC_23034_Sub2</a>[<span class=\"descriptionNumberColor\">Departing Anew</span>]",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [],
@@ -34,7 +34,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23034_Sub[<span class=\"descriptionNumberColor\">Hymn</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2022288380\">LC_23034_Sub</a>[<span class=\"descriptionNumberColor\">Hymn</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -90,7 +90,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23034_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1365193031\">LC_23034_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -205,7 +205,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Ability Target List}} + {{Ability Target List}}.[[getMemosprite]]"
                           },
-                          "modifier": "LC_23034_Sub[<span class=\"descriptionNumberColor\">Hymn</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"2022288380\">LC_23034_Sub</a>[<span class=\"descriptionNumberColor\">Hymn</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -231,7 +231,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Ability Target List}}"
                           },
-                          "modifier": "LC_23034_Sub[<span class=\"descriptionNumberColor\">Hymn</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"2022288380\">LC_23034_Sub</a>[<span class=\"descriptionNumberColor\">Hymn</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -333,7 +333,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "LC_23034_Sub2[<span class=\"descriptionNumberColor\">Departing Anew</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1900448438\">LC_23034_Sub2</a>[<span class=\"descriptionNumberColor\">Departing Anew</span>]"
                         }
                       ],
                       "failed": [
@@ -343,7 +343,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "LC_23034_Sub2[<span class=\"descriptionNumberColor\">Departing Anew</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1900448438\">LC_23034_Sub2</a>[<span class=\"descriptionNumberColor\">Departing Anew</span>]"
                         }
                       ]
                     }

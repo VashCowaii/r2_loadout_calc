@@ -112,7 +112,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Targets Adjacent(Blast)}}"
               },
-              "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                 "displayLines": "(2 + 1)",
@@ -233,7 +233,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
       "duration": {
         "operator": "Variables[0] (2) || Variables[1] (Rank_LifeTime) || ADD || RETURN",
         "displayLines": "(2 + Rank_LifeTime)",
@@ -286,7 +286,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifierName": "Hook_BPAbilityAlter_Enable[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]",
+      "modifierName": "<a class=\"gModGreen\" id=\"-1319656232\">Hook_BPAbilityAlter_Enable</a>[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]",
       "function": "Add"
     },
     {
@@ -295,7 +295,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Hook_Eidolon1_AddDamageRatio"
+      "modifier": "<a class=\"gModGreen\" id=\"372814598\">Hook_Eidolon1_AddDamageRatio</a>"
     },
     "Trigger: Ability End"
   ],

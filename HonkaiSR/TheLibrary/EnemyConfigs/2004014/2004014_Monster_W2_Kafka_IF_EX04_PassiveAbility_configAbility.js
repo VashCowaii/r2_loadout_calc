@@ -20,7 +20,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Kafka_IF_EX04_Boss"
+          "modifier": "<a class=\"gModGreen\" id=\"1162350754\">Enemy_W2_Kafka_IF_EX04_Boss</a>"
         }
       ]
     }
@@ -28,7 +28,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Kafka_IF_EX04_Boss",
+      "for": "<a class=\"gModGreen\" id=\"mod__1162350754\">Enemy_W2_Kafka_IF_EX04_Boss</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

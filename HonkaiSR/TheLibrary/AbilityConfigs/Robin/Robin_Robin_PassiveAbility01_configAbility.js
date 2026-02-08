@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Robin_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"1781438521\">Robin_Passive</a>"
     },
     {
       "name": "Update Displayed Energy Bar",

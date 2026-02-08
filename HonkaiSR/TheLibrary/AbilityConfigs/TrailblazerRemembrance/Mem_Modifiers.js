@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -46,7 +46,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
+                      "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>"
                     }
                   ]
                 }
@@ -73,7 +73,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -81,7 +81,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
                     "invertCondition": true
                   }
                 ]
@@ -93,8 +93,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy",
-                  "referenceModifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -246,7 +246,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -254,7 +254,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
+                    "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>"
                   }
                 ]
               },
@@ -265,7 +265,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
+                  "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>"
                 }
               ]
             },
@@ -275,8 +275,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifierName": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy",
-              "modifierNameUpdate": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+              "modifierName": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>",
+              "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
             },
             {
               "name": "IF",
@@ -309,7 +309,7 @@ const configAbility = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "TServant_PlayerBoyServant_30_RefreshDamagePercentage"
+              "functionName": "<a class=\"gTempYellow\" id=\"-763533094\">TServant_PlayerBoyServant_30_RefreshDamagePercentage</a>"
             }
           ]
         },
@@ -323,7 +323,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                   },
                   {
                     "name": "Is Part Of",
@@ -346,7 +346,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
+                  "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>"
                 }
               ]
             }
@@ -363,7 +363,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "TServant_PlayerBoyServant_30_RefreshDamagePercentage"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-763533094\">TServant_PlayerBoyServant_30_RefreshDamagePercentage</a>"
                 }
               ]
             }
@@ -392,8 +392,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}.[[getMemosprite]] | {{Modifier Holder}}.[[getSummoner]]"
           },
-          "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy",
-          "refModifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>",
+          "refModifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
           "aliveOnly": "False",
           "haloStatus": true,
           "conditions": {
@@ -419,7 +419,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}.[[getMemosprite]]"
                     },
-                    "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                   }
                 ],
                 "invertCondition": true
@@ -440,7 +440,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}.[[getSummoner]]"
                     },
-                    "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                   }
                 ],
                 "invertCondition": true
@@ -512,7 +512,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_PlayerBoyServant_30_CritDmgUp[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1895406948\">Memosprite_PlayerBoyServant_30_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -571,7 +571,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_PlayerBoyServant_30_EnableAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__2058264520\">M_PlayerBoyServant_30_EnableAbility</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -688,7 +688,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "PlayerBoy_30_TeamSP[<span class=\"descriptionNumberColor\">Charge</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1274980234\">PlayerBoy_30_TeamSP</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "modifierFlags": [
         "RetainCountZero"
       ],

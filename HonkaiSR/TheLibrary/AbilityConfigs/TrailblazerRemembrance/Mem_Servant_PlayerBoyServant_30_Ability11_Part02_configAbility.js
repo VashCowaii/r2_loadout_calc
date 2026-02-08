@@ -15,7 +15,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_PlayerBoyServant_30_EnableAbility"
+      "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>"
     },
     {
       "name": "IF",
@@ -49,7 +49,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -136,13 +136,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_PlayerBoy_30_BE_Ability02_Preshow"
+      "modifier": "<a class=\"gModGreen\" id=\"-2111079333\">M_PlayerBoy_30_BE_Ability02_Preshow</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_PlayerBoy_30_BE_Ability02_Preshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2111079333\">M_PlayerBoy_30_BE_Ability02_Preshow</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -164,7 +164,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "M_PlayerBoyServant_30_EnableAbility"
+              "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>"
             },
             {
               "name": "Is Part Of",

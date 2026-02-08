@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_RLBoss_PartController_LockHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__529874783\">Monster_W4_Pollux_RLBoss_PartController_LockHP</a>",
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -52,7 +52,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_W4_Pollux_Endurance"
+                  "modifier": "<a class=\"gModGreen\" id=\"1688517080\">Enemy_W4_Pollux_Endurance</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -88,7 +88,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_RLBoss_Status",
+      "for": "<a class=\"gModGreen\" id=\"mod__-891601506\">Monster_W4_Pollux_RLBoss_Status</a>",
       "execute": [
         {
           "eventTrigger": "HP Change [Anyone]",
@@ -141,7 +141,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W4_Pollux_BloodRange[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
                       "valuePerStack": {
                         "_HpLimitRatio": {
                           "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
@@ -176,7 +176,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "W4_Pollux_BattleScore3",
+      "for": "<a class=\"gModGreen\" id=\"mod__1099423808\">W4_Pollux_BattleScore3</a>",
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -229,7 +229,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "W4_Pollux_BattleScore2",
+      "for": "<a class=\"gModGreen\" id=\"mod__1116201427\">W4_Pollux_BattleScore2</a>",
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -295,7 +295,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "W4_Pollux_BattleScore1",
+      "for": "<a class=\"gModGreen\" id=\"mod__1132979046\">W4_Pollux_BattleScore1</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -326,7 +326,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Monster_W4_Pollux_BloodRange[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]"
                           }
                         }
                       ]
@@ -359,7 +359,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_StoryMode_SpecailAbility05",
+      "for": "<a class=\"gModGreen\" id=\"mod__1061433740\">Monster_W4_Pollux_StoryMode_SpecailAbility05</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -406,7 +406,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -529,7 +529,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_Endurance",
+      "for": "<a class=\"gModGreen\" id=\"mod__1688517080\">Enemy_W4_Pollux_Endurance</a>",
       "modifierFlags": [
         "Endurance"
       ],
@@ -557,7 +557,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_StoryMode_LockHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-289587260\">Monster_W4_Pollux_StoryMode_LockHP</a>",
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -606,7 +606,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_W4_Pollux_DisableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"891735658\">Monster_W4_Pollux_DisableAction</a>"
                 },
                 {
                   "name": "Dispel Debuffs",
@@ -622,7 +622,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_W4_Pollux_Endurance"
+                  "modifier": "<a class=\"gModGreen\" id=\"1688517080\">Enemy_W4_Pollux_Endurance</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -658,7 +658,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_PartController_LockHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-720682465\">Monster_W4_Pollux_PartController_LockHP</a>",
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -692,7 +692,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_W4_Pollux_Endurance"
+                  "modifier": "<a class=\"gModGreen\" id=\"1688517080\">Enemy_W4_Pollux_Endurance</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -730,11 +730,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_PartStrong"
+      "for": "<a class=\"gModGreen\" id=\"mod__1861751766\">Monster_W4_Pollux_PartStrong</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_Fatigue",
+      "for": "<a class=\"gModGreen\" id=\"mod__931855053\">Monster_W4_Pollux_Fatigue</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -756,7 +756,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_BloodRange[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "RemoveWhenCasterUnstage"
@@ -771,7 +771,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W4_Pollux_Fatigue"
+              "modifier": "<a class=\"gModGreen\" id=\"931855053\">Monster_W4_Pollux_Fatigue</a>"
             }
           ]
         },
@@ -832,7 +832,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W4_Pollux_Fatigue",
+              "modifier": "<a class=\"gModGreen\" id=\"931855053\">Monster_W4_Pollux_Fatigue</a>",
               "valuePerStack": {
                 "_FatigueRatio": {
                   "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
@@ -963,7 +963,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Fatigue",
+                  "modifier": "<a class=\"gModGreen\" id=\"931855053\">Monster_W4_Pollux_Fatigue</a>",
                   "valuePerStack": {
                     "_FatigueRatio": {
                       "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
@@ -1009,7 +1009,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_PolluxPart_Shield[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2034261592\">Monster_W4_PolluxPart_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "Endurance"
@@ -1037,7 +1037,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "modifier": "Monster_W4_Pollux_PartStrong"
+              "modifier": "<a class=\"gModGreen\" id=\"1861751766\">Monster_W4_Pollux_PartStrong</a>"
             }
           ]
         },
@@ -1129,7 +1129,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "modifier": "Monster_W4_Pollux_PartStrong"
+                  "modifier": "<a class=\"gModGreen\" id=\"1861751766\">Monster_W4_Pollux_PartStrong</a>"
                 }
               ],
               "failed": [
@@ -1152,7 +1152,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Monster_W4_PolluxPart_Shield[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"2034261592\">Monster_W4_PolluxPart_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]"
                           }
                         }
                       ]
@@ -1168,7 +1168,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Summoner of Modifier Holder}}"
                       },
-                      "modifier": "Monster_W4_Pollux_PartStrong"
+                      "modifier": "<a class=\"gModGreen\" id=\"1861751766\">Monster_W4_Pollux_PartStrong</a>"
                     }
                   ]
                 }
@@ -1186,7 +1186,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_Main_DisableAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__276281376\">Monster_W4_Pollux_Main_DisableAction</a>",
       "modifierFlags": [
         "DisableAction"
       ],
@@ -1195,7 +1195,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_DisableAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__891735658\">Monster_W4_Pollux_DisableAction</a>",
       "modifierFlags": [
         "DisableAction"
       ],
@@ -1207,7 +1207,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_Strengthen_Break",
+      "for": "<a class=\"gModGreen\" id=\"mod__-888665654\">Monster_W4_Pollux_Strengthen_Break</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1223,7 +1223,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W4_Pollux_Strengthen_BreakMark"
+              "modifier": "<a class=\"gModGreen\" id=\"586169347\">Monster_W4_Pollux_Strengthen_BreakMark</a>"
             },
             {
               "name": "Change Character Transformation",
@@ -1265,7 +1265,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W4_Pollux_DisableAction"
+              "modifier": "<a class=\"gModGreen\" id=\"891735658\">Monster_W4_Pollux_DisableAction</a>"
             },
             "Modifier Deletes Itself"
           ]
@@ -1278,11 +1278,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_Strengthen_BreakMark"
+      "for": "<a class=\"gModGreen\" id=\"mod__586169347\">Monster_W4_Pollux_Strengthen_BreakMark</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_Strengthen_Shield",
+      "for": "<a class=\"gModGreen\" id=\"mod__1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -1320,7 +1320,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Strengthen_BreakMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"586169347\">Monster_W4_Pollux_Strengthen_BreakMark</a>"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -1351,7 +1351,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
             }
           ]
         },
@@ -1434,7 +1434,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Monster_W4_Pollux_RLBoss_Status"
+                        "modifier": "<a class=\"gModGreen\" id=\"-891601506\">Monster_W4_Pollux_RLBoss_Status</a>"
                       },
                       {
                         "name": "Compare: Variable",
@@ -1491,7 +1491,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Modifier_StageSpecialAbility_10441065_OnPollux",
+                        "modifier": "<a class=\"gModGreen\" id=\"23603986\">Modifier_StageSpecialAbility_10441065_OnPollux</a>",
                         "invertCondition": true
                       }
                     ]
@@ -1547,7 +1547,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Monster_W4_Pollux_RLBoss_Status",
+                            "modifier": "<a class=\"gModGreen\" id=\"-891601506\">Monster_W4_Pollux_RLBoss_Status</a>",
                             "invertCondition": true
                           },
                           {
@@ -1726,7 +1726,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Monster_W4_Pollux_RLBoss_Status"
+                        "modifier": "<a class=\"gModGreen\" id=\"-891601506\">Monster_W4_Pollux_RLBoss_Status</a>"
                       },
                       {
                         "name": "Compare: Variable",
@@ -1783,7 +1783,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_Strengthen_SpeedAdded",
+      "for": "<a class=\"gModGreen\" id=\"mod__1777171408\">Monster_W4_Pollux_Strengthen_SpeedAdded</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1811,7 +1811,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_Strengthen_Property[<span class=\"descriptionNumberColor\">Weakness Protected</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-501677850\">Monster_W4_Pollux_Strengthen_Property</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]",
       "modifierFlags": [
         "MuteBreak",
         "Endurance"
@@ -1881,7 +1881,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -1895,7 +1895,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}} + {{Caster's Minions}}"
               },
-              "modifier": "Standard_Monster_AllDamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -1908,7 +1908,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W4_Pollux_BloodPool[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-977406110\">Monster_W4_Pollux_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
             },
             {
               "name": "IF",
@@ -1939,7 +1939,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Strengthen_Shield",
+                  "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                   "valuePerStack": {
                     "MDF_ShieldPercentage": {
                       "operator": "Variables[0] (UnusedUnderThisBase_71) || RETURN",
@@ -1967,7 +1967,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Strengthen_Shield",
+                  "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                   "valuePerStack": {
                     "MDF_ShieldPercentage": {
                       "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
@@ -2021,7 +2021,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Monster_W4_Pollux_RLBoss_Status",
+                    "modifier": "<a class=\"gModGreen\" id=\"-891601506\">Monster_W4_Pollux_RLBoss_Status</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -2031,7 +2031,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Monster_W4_Pollux_Strengthen_Property[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-501677850\">Monster_W4_Pollux_Strengthen_Property</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
                     }
                   ]
                 },
@@ -2041,7 +2041,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_APShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                 }
               ]
             }
@@ -2093,7 +2093,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W4_Pollux_Strengthen_Shield"
+              "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2101,7 +2101,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W4_Pollux_Strengthen_SpeedAdded"
+              "modifier": "<a class=\"gModGreen\" id=\"1777171408\">Monster_W4_Pollux_Strengthen_SpeedAdded</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2109,7 +2109,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W4_Pollux_BloodPool[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-977406110\">Monster_W4_Pollux_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2117,7 +2117,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W4_Pollux_Strengthen_Property[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-501677850\">Monster_W4_Pollux_Strengthen_Property</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2125,7 +2125,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -2159,7 +2159,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W4_Pollux_Strengthen_Property[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-501677850\">Monster_W4_Pollux_Strengthen_Property</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
             }
           ]
         },
@@ -2185,7 +2185,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W4_Pollux_Strengthen_SpeedAdded",
+              "modifier": "<a class=\"gModGreen\" id=\"1777171408\">Monster_W4_Pollux_Strengthen_SpeedAdded</a>",
               "valuePerStack": {
                 "MDF_ShowValue1": {
                   "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
@@ -2229,7 +2229,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W1_CocoliaP1_RL_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
                       "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
@@ -2288,7 +2288,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_EnergyBar",
+      "for": "<a class=\"gModGreen\" id=\"mod__2086497725\">Monster_W4_Pollux_EnergyBar</a>",
       "stackData": [],
       "latentQueue": [
         "_TempAIFlag",
@@ -2299,7 +2299,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_BloodPool[<span class=\"descriptionNumberColor\">Dream of Demise</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-977406110\">Monster_W4_Pollux_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]",
       "stackData": [],
       "latentQueue": [
         "_WorldLevel",
@@ -2311,13 +2311,13 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_Ability03_Mark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_FX_Ground",
+      "for": "<a class=\"gModGreen\" id=\"mod__599310144\">Monster_W4_Pollux_FX_Ground</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",

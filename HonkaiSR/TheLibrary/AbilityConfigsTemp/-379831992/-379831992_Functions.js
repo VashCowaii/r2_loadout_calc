@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "GT_GridFight_SetEnergyBar_Normal",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__713542553\">GT_GridFight_SetEnergyBar_Normal</a>",
       "parse": [
         {
           "name": "IF",
@@ -69,22 +69,22 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "GT_GridFight_PFM_CameraShakeBig",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1439408409\">GT_GridFight_PFM_CameraShakeBig</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "GT_GridFight_PFM_CameraDarkTeamFar",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-94694499\">GT_GridFight_PFM_CameraDarkTeamFar</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "GT_GridFight_PFM_CameraLightTeamNear",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1338172648\">GT_GridFight_PFM_CameraLightTeamNear</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "GT_GridFight_Standard_BonusLightTeam",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-2140960208\">GT_GridFight_Standard_BonusLightTeam</a>",
       "parse": [
         {
           "name": "IF",
@@ -123,7 +123,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TP_Modifier_Bonus"
+                          "modifier": "<a class=\"gModGreen\" id=\"-785771241\">TP_Modifier_Bonus</a>"
                         }
                       ]
                     }
@@ -146,7 +146,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TP_Modifier_Bonus"
+                          "modifier": "<a class=\"gModGreen\" id=\"-785771241\">TP_Modifier_Bonus</a>"
                         }
                       ]
                     }
@@ -169,7 +169,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TP_Modifier_Bonus"
+                          "modifier": "<a class=\"gModGreen\" id=\"-785771241\">TP_Modifier_Bonus</a>"
                         }
                       ]
                     }
@@ -216,7 +216,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TP_Modifier_Bonus"
+                          "modifier": "<a class=\"gModGreen\" id=\"-785771241\">TP_Modifier_Bonus</a>"
                         }
                       ]
                     }
@@ -247,7 +247,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TP_Modifier_Bonus"
+                          "modifier": "<a class=\"gModGreen\" id=\"-785771241\">TP_Modifier_Bonus</a>"
                         }
                       ]
                     }
@@ -278,7 +278,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TP_Modifier_Bonus"
+                          "modifier": "<a class=\"gModGreen\" id=\"-785771241\">TP_Modifier_Bonus</a>"
                         }
                       ]
                     }
@@ -293,7 +293,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "GT_StageAbility_GridFight_Origin_Bonus_01",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1222829193\">GT_StageAbility_GridFight_Origin_Bonus_01</a>",
       "parse": [
         {
           "name": "IF",
@@ -317,7 +317,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TP_Modifier_Bonus"
+                  "modifier": "<a class=\"gModGreen\" id=\"-785771241\">TP_Modifier_Bonus</a>"
                 }
               ]
             }
@@ -327,7 +327,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "GT_StageAbility_GridFight_Origin_Bonus_02",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1172496336\">GT_StageAbility_GridFight_Origin_Bonus_02</a>",
       "parse": [
         {
           "name": "IF",
@@ -359,7 +359,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TP_Modifier_Bonus"
+                  "modifier": "<a class=\"gModGreen\" id=\"-785771241\">TP_Modifier_Bonus</a>"
                 }
               ]
             }
@@ -369,7 +369,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "GT_StageAbility_GridFight_Origin_Bonus_02_LowestX",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-524077135\">GT_StageAbility_GridFight_Origin_Bonus_02_LowestX</a>",
       "parse": [
         {
           "name": "IF",
@@ -417,7 +417,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TP_Modifier_Bonus"
+                  "modifier": "<a class=\"gModGreen\" id=\"-785771241\">TP_Modifier_Bonus</a>"
                 }
               ]
             }
@@ -427,7 +427,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "GT_StageAbility_GridFight_Origin_Bonus_02_HighestX",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__660398765\">GT_StageAbility_GridFight_Origin_Bonus_02_HighestX</a>",
       "parse": [
         {
           "name": "IF",
@@ -476,7 +476,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TP_Modifier_Bonus"
+                  "modifier": "<a class=\"gModGreen\" id=\"-785771241\">TP_Modifier_Bonus</a>"
                 }
               ]
             }
@@ -486,7 +486,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "GT_StageAbility_GridFight_Origin_Bonus_03",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1189273955\">GT_StageAbility_GridFight_Origin_Bonus_03</a>",
       "parse": [
         {
           "name": "IF",
@@ -509,7 +509,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "TP_Modifier_Origin_Member"
+                "modifier": "<a class=\"gModGreen\" id=\"-741732955\">TP_Modifier_Origin_Member</a>"
               },
               "ifTargetFound": [
                 {
@@ -518,7 +518,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TP_Modifier_Bonus"
+                  "modifier": "<a class=\"gModGreen\" id=\"-785771241\">TP_Modifier_Bonus</a>"
                 }
               ]
             }
@@ -528,7 +528,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "GT_StageAbility_GridFight_PursuedDamage_PerformanceDelay",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-2092817578\">GT_StageAbility_GridFight_PursuedDamage_PerformanceDelay</a>",
       "parse": [
         {
           "name": "Declare Custom Variable",
@@ -630,7 +630,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "GridFight_Standard_Basic_MonsterDrop",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1957296310\">GridFight_Standard_Basic_MonsterDrop</a>",
       "parse": [
         {
           "name": "Declare Custom Variable",
@@ -920,7 +920,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "GridFight_Standard_Basic_MonsterDrop_ParamEntity",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-688010457\">GridFight_Standard_Basic_MonsterDrop_ParamEntity</a>",
       "parse": [
         {
           "name": "Declare Custom Variable",

@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Argenti_IF_Initiate"
+      "modifier": "<a class=\"gModGreen\" id=\"1341379409\">Monster_W2_Argenti_IF_Initiate</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Argenti_IF_Initiate",
+      "for": "<a class=\"gModGreen\" id=\"mod__1341379409\">Monster_W2_Argenti_IF_Initiate</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -27,7 +27,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Argenti_KillAllMonsters"
+              "functionName": "<a class=\"gTempYellow\" id=\"1817558624\">Argenti_KillAllMonsters</a>"
             },
             {
               "name": "IF",
@@ -63,7 +63,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_Standard_Endurance"
+                  "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
                 },
                 {
                   "name": "Define Custom Variable with Varying Data",
@@ -94,7 +94,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -132,7 +132,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "modifier": "Enemy_W2_Yanqing_01_ChangePhaseDestroy"
+              "modifier": "<a class=\"gModGreen\" id=\"1982647452\">Enemy_W2_Yanqing_01_ChangePhaseDestroy</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -140,11 +140,11 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
               },
-              "modifier": "Enemy_W2_Yanqing_01_ChangePhaseDestroy"
+              "modifier": "<a class=\"gModGreen\" id=\"1982647452\">Enemy_W2_Yanqing_01_ChangePhaseDestroy</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Argenti_KillAllMonsters"
+              "functionName": "<a class=\"gTempYellow\" id=\"1817558624\">Argenti_KillAllMonsters</a>"
             }
           ]
         }

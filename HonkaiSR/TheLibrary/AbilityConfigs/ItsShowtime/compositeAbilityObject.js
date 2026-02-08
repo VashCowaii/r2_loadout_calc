@@ -18,13 +18,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_21041_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-2113657931\">LC_21041_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_21041_Sub_Attack[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1888721625\">LC_21041_Sub_Attack</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -55,7 +55,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_21041_Sub[<span class=\"descriptionNumberColor\">Trick</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-672411958\">LC_21041_Sub</a>[<span class=\"descriptionNumberColor\">Trick</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -100,7 +100,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_21041_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2113657931\">LC_21041_Main</a>",
           "execute": [
             {
               "eventTrigger": "Apply Modifier [From Owner] (Success)",
@@ -131,7 +131,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_21041_Sub[<span class=\"descriptionNumberColor\">Trick</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-672411958\">LC_21041_Sub</a>[<span class=\"descriptionNumberColor\">Trick</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -177,7 +177,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_21041_Sub_Attack[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1888721625\">LC_21041_Sub_Attack</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
                     }
                   ]
                 },
@@ -198,7 +198,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_21041_Sub_Attack[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1888721625\">LC_21041_Sub_Attack</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
                     }
                   ]
                 }

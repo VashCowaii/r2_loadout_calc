@@ -32,7 +32,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "modifier": "Yanqing_BonusTargetMark"
+        "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
       }
     }
   ],

@@ -19,7 +19,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
         }
       ]
     },
@@ -29,7 +29,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Standard_MindControl_Target"
+      "modifier": "<a class=\"gModGreen\" id=\"821900269\">Standard_MindControl_Target</a>"
     },
     "Reset Triggers: Attack",
     {
@@ -177,7 +177,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+      "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
     },
     {
       "name": "Declare Custom Variable",
@@ -203,7 +203,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
         }
       ]
     }

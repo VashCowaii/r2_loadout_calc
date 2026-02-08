@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "W4_Pollux_BattleScore2"
+      "modifier": "<a class=\"gModGreen\" id=\"1116201427\">W4_Pollux_BattleScore2</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "W4_Pollux_BattleScore3"
+      "modifier": "<a class=\"gModGreen\" id=\"1099423808\">W4_Pollux_BattleScore3</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W4_Pollux_IF_Status"
+      "modifier": "<a class=\"gModGreen\" id=\"-147958761\">Enemy_W4_Pollux_IF_Status</a>"
     },
     {
       "name": "Create Enemies",
@@ -57,7 +57,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Recently Summoned Enemies}}"
       },
-      "modifier": "Monster_W4_PolluxPart_L"
+      "modifier": "<a class=\"gModGreen\" id=\"-193308861\">Monster_W4_PolluxPart_L</a>"
     },
     {
       "name": "Create Enemies",
@@ -88,7 +88,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Recently Summoned Enemies}}"
       },
-      "modifier": "Monster_W4_PolluxPart_R"
+      "modifier": "<a class=\"gModGreen\" id=\"-226864099\">Monster_W4_PolluxPart_R</a>"
     },
     {
       "name": "Create Shared HP Group",
@@ -108,7 +108,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Standard_Monster_AllDamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
           "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
@@ -126,7 +126,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_Standard_WeakControl[<span class=\"descriptionNumberColor\">Toughness Protection</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1754480095\">Monster_Standard_WeakControl</a>[<span class=\"descriptionNumberColor\">Toughness Protection</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -134,7 +134,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W4_Pollux_IF_BloodPool[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-740454395\">Enemy_W4_Pollux_IF_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
     },
     {
       "name": "Boss Bar Display",
@@ -150,7 +150,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_Standard_MuteHitFly"
+      "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -158,7 +158,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -166,7 +166,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W4_Pollux_IF_RemoveOneMore"
+      "modifier": "<a class=\"gModGreen\" id=\"-313862182\">Enemy_W4_Pollux_IF_RemoveOneMore</a>"
     },
     {
       "name": "Set Enemy Phase"
@@ -177,7 +177,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W4_Pollux_IF_PartController_LockHP"
+      "modifier": "<a class=\"gModGreen\" id=\"-1837027601\">Monster_W4_Pollux_IF_PartController_LockHP</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -185,7 +185,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W4_Pollux_IF_AbilityP01_WeaknessControl"
+      "modifier": "<a class=\"gModGreen\" id=\"-354779130\">Enemy_W4_Pollux_IF_AbilityP01_WeaknessControl</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -217,7 +217,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W4_Pollux_IF_HintToastController"
+      "modifier": "<a class=\"gModGreen\" id=\"-1922809357\">Enemy_W4_Pollux_IF_HintToastController</a>"
     },
     {
       "name": "IF",
@@ -227,7 +227,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Enemy_W4_Pollux_IF_AbilityEX01"
+        "modifier": "<a class=\"gModGreen\" id=\"-1423004880\">Enemy_W4_Pollux_IF_AbilityEX01</a>"
       },
       "passed": [
         {
@@ -236,7 +236,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Cocolia_IF_SuperArmorController",
+          "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
           "valuePerStack": {
             "MDF_IF_BOSS_BreakDelay": {
               "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
@@ -270,7 +270,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Cocolia_IF_SoftFrenzyController",
+          "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
           "valuePerStack": {
             "MDF_FrenzyStartDelay": {
               "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
@@ -316,7 +316,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Enemy_W4_Pollux_IF_AbilityEX04"
+        "modifier": "<a class=\"gModGreen\" id=\"-1339116785\">Enemy_W4_Pollux_IF_AbilityEX04</a>"
       },
       "passed": [
         {
@@ -325,7 +325,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}} + {{Caster's Minions}}"
           },
-          "modifier": "Enemy_W2_Cocolia_IF_WeaknessCount",
+          "modifier": "<a class=\"gModGreen\" id=\"-146543153\">Enemy_W2_Cocolia_IF_WeaknessCount</a>",
           "valuePerStack": {
             "MDF_TokenDamageReduceRatio": {
               "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
@@ -355,7 +355,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W4_Pollux_FX_Ground"
+      "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -363,19 +363,19 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W4_Pollux_IF_EnterBattle"
+      "modifier": "<a class=\"gModGreen\" id=\"-261920057\">Enemy_W4_Pollux_IF_EnterBattle</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_PolluxPart_R",
+      "for": "<a class=\"gModGreen\" id=\"mod__-226864099\">Monster_W4_PolluxPart_R</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_PolluxPart_L",
+      "for": "<a class=\"gModGreen\" id=\"mod__-193308861\">Monster_W4_PolluxPart_L</a>",
       "stackData": [],
       "latentQueue": []
     }

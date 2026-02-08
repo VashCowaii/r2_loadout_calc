@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 1}}"
       },
-      "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Effect"
+      "modifier": "<a class=\"gModGreen\" id=\"-1366215328\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Effect</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 1}}"
       },
-      "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Frensnel"
+      "modifier": "<a class=\"gModGreen\" id=\"-1548805762\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Frensnel</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 1}}"
       },
-      "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement",
+      "modifier": "<a class=\"gModGreen\" id=\"-2123264245\">Enemy_AML_Boss_Part2_IF_Enhancement</a>",
       "addStacksPerTrigger": 1
     },
     "Ability Start",
@@ -38,7 +38,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Enemy_AML_Boss_IF_AbilityEX03"
+        "modifier": "<a class=\"gModGreen\" id=\"-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
       },
       "passed": [
         {

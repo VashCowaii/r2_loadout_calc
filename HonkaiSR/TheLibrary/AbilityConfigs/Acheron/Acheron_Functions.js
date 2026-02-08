@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Acheron_SetEnergyBarState",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1427559472\">Acheron_SetEnergyBarState</a>",
       "parse": [
         {
           "name": "IF",
@@ -21,7 +21,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Acheron_Passive01Modifier"
+            "modifier": "<a class=\"gModGreen\" id=\"-98170223\">Acheron_Passive01Modifier</a>"
           },
           "failed": [
             {
@@ -30,7 +30,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Acheron_Passive01Modifier",
+              "modifier": "<a class=\"gModGreen\" id=\"-98170223\">Acheron_Passive01Modifier</a>",
               "counter": {
                 "operator": "Variables[0] (MDF_Passive_Count) || RETURN",
                 "displayLines": "MDF_Passive_Count",
@@ -145,7 +145,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Acheron_AddFlower_Ability",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-64481768\">Acheron_AddFlower_Ability</a>",
       "parse": [
         {
           "name": "IF",
@@ -155,7 +155,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
           },
           "passed": [
             {
@@ -170,7 +170,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "variableName": "MDF_CurrentCountFlag01",
-              "modifierName": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
               "multiplier": 1
             },
             {
@@ -192,7 +192,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
               "counter": {
                 "operator": "Variables[0] (MDF_CurrentCountFlag01) || RETURN",
                 "displayLines": "MDF_CurrentCountFlag01",
@@ -228,7 +228,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
               "counter": {
                 "operator": "Variables[0] (Acheron_FlowerCountBySp) || RETURN",
                 "displayLines": "Acheron_FlowerCountBySp",
@@ -267,7 +267,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Acheron_AddFlower_Passiv01",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1879158642\">Acheron_AddFlower_Passiv01</a>",
       "parse": [
         {
           "name": "IF",
@@ -277,7 +277,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
           },
           "passed": [
             {
@@ -292,7 +292,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "variableName": "MDF_CurrentCountFlag01",
-              "modifierName": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
               "multiplier": 1
             },
             {
@@ -314,7 +314,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
               "counter": {
                 "operator": "Variables[0] (MDF_CurrentCountFlag01) || RETURN",
                 "displayLines": "MDF_CurrentCountFlag01",
@@ -355,7 +355,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
               "counter": {
                 "operator": "Variables[0] (Acheron_FlowerCountBySp) || RETURN",
                 "displayLines": "Acheron_FlowerCountBySp",
@@ -394,7 +394,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Acheron_LimboTransfer",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1830638488\">Acheron_LimboTransfer</a>",
       "parse": [
         {
           "name": "IF",
@@ -407,7 +407,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Acheron_Ability03_Special",
+                "modifier": "<a class=\"gModGreen\" id=\"-2096189522\">Acheron_Ability03_Special</a>",
                 "invertCondition": true
               },
               {
@@ -465,7 +465,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
                   },
                   "passed": [
                     {
@@ -480,7 +480,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "variableName": "MDF_Acheron_FlagCount",
-                      "modifierName": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                       "multiplier": 1
                     },
                     {
@@ -502,7 +502,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                       "counter": {
                         "operator": "Variables[0] (MDF_Acheron_FlagCount) || RETURN",
                         "displayLines": "MDF_Acheron_FlagCount",
@@ -538,7 +538,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                       "counter": {
                         "operator": "Variables[0] (Limbo_Count) || RETURN",
                         "displayLines": "Limbo_Count",
@@ -581,7 +581,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Acheron_HitFlower",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__77299136\">Acheron_HitFlower</a>",
       "parse": [
         {
           "name": "IF",
@@ -591,7 +591,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
           },
           "passed": [
             {
@@ -600,7 +600,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Acheron_PointB3_DamageUp[<span class=\"descriptionNumberColor\">Thunder Core</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-535608708\">Acheron_PointB3_DamageUp</a>[<span class=\"descriptionNumberColor\">Thunder Core</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -643,7 +643,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Acheron_TiggerFlower",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1252175641\">Acheron_TiggerFlower</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Modifier Values",
@@ -652,7 +652,7 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "variableName": "TargetEntity_CurrentFlagCount",
-          "modifierName": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
           "multiplier": 1
         },
         {
@@ -724,7 +724,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
                 }
               ],
               "failed": [
@@ -753,7 +753,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                   "counter": {
                     "operator": "Variables[0] (TargetEntity_UltraFlagCount) || RETURN",
                     "displayLines": "TargetEntity_UltraFlagCount",
@@ -816,7 +816,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
             }
           ]
         },
@@ -918,7 +918,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
               },
               {
                 "name": "Compare: Variable",
@@ -940,7 +940,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "variableName": "Limbo_FlowerCurrentCount",
-              "modifierName": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
               "multiplier": 1
             },
             {
@@ -967,7 +967,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
             }
           ]
         },
@@ -1012,7 +1012,7 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Acheron_AddFlower_Passiv02",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1895936261\">Acheron_AddFlower_Passiv02</a>",
                       "variables": {
                         "Limbo_FlowerCount": {
                           "operator": "Variables[0] (Limbo_FlowerTotalCount) || RETURN",
@@ -1040,7 +1040,7 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Acheron_AddFlower_Passiv02",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1895936261\">Acheron_AddFlower_Passiv02</a>",
                       "variables": {
                         "Limbo_FlowerCount": {
                           "operator": "Variables[0] (Limbo_FlowerTotalCount) || RETURN",
@@ -1069,7 +1069,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Acheron_AddFlower_Passiv02",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1895936261\">Acheron_AddFlower_Passiv02</a>",
       "parse": [
         {
           "name": "IF",
@@ -1079,7 +1079,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
           },
           "passed": [
             {
@@ -1094,7 +1094,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "variableName": "MDF_Acheron_FlagCount",
-              "modifierName": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
               "multiplier": 1
             },
             {
@@ -1116,7 +1116,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
               "counter": {
                 "operator": "Variables[0] (MDF_Acheron_FlagCount) || RETURN",
                 "displayLines": "MDF_Acheron_FlagCount",
@@ -1157,7 +1157,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
               "counter": {
                 "operator": "Variables[0] (Limbo_FlowerCount) || RETURN",
                 "displayLines": "Limbo_FlowerCount",

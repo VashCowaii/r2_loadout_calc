@@ -73,7 +73,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Monster_ChangePhase"
+      "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -81,7 +81,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Svarog_RL_Endurance"
+      "modifier": "<a class=\"gModGreen\" id=\"-870237047\">Monster_W1_Svarog_RL_Endurance</a>"
     },
     {
       "name": "Declare Custom Variable",

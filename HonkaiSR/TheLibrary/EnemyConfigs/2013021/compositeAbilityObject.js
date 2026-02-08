@@ -34,7 +34,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1870683085\">Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect</a>[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
         },
         {
           "name": "ATK Scaling DMG",
@@ -135,7 +135,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Enemy_W2_Valkyrie02_Ability04_Target[<span class=\"descriptionNumberColor\">Lock On</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1513487927\">Enemy_W2_Valkyrie02_Ability04_Target</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
           "onlyRemoveOwnersInstance": true
         },
         {
@@ -280,7 +280,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -323,7 +323,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1870683085\">Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect</a>[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -331,7 +331,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Enemy_W2_Valkyrie02_Ability04_Target[<span class=\"descriptionNumberColor\">Lock On</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1513487927\">Enemy_W2_Valkyrie02_Ability04_Target</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -339,7 +339,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         }
       ],
       "references": []
@@ -380,7 +380,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1870683085\">Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect</a>[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
         },
         {
           "name": "ATK Scaling DMG",
@@ -503,7 +503,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -511,7 +511,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Enemy_W2_Valkyrie02_Ability04_Target[<span class=\"descriptionNumberColor\">Lock On</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1513487927\">Enemy_W2_Valkyrie02_Ability04_Target</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
           "onlyRemoveOwnersInstance": true
         },
         {
@@ -632,7 +632,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_Unstable[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
                   "invertCondition": true
                 },
                 {
@@ -641,7 +641,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
                   "invertCondition": true
                 }
               ]
@@ -665,7 +665,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Standard_Unstable[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
                     "invertCondition": true
                   },
                   {
@@ -674,7 +674,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
                     "invertCondition": true
                   }
                 ]
@@ -686,7 +686,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_Unstable[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
                   "duration": {
                     "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
                     "displayLines": "{[Skill03[2]]}",
@@ -728,7 +728,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Standard_Unstable[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
                     "invertCondition": true
                   },
                   {
@@ -737,7 +737,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
                     "invertCondition": true
                   }
                 ]
@@ -749,7 +749,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_Unstable[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
                   "duration": {
                     "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
                     "displayLines": "{[Skill03[2]]}",
@@ -844,7 +844,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Standard_Unstable[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
                 "invertCondition": true
               },
               {
@@ -853,7 +853,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
                 "invertCondition": true
               }
             ]
@@ -865,7 +865,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Standard_Unstable[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
                 "displayLines": "{[Skill02[2]]}",
@@ -931,7 +931,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Enemy_W2_Valkyrie02_RLElite_AimMark",
+          "modifier": "<a class=\"gModGreen\" id=\"-1672379364\">Enemy_W2_Valkyrie02_RLElite_AimMark</a>",
           "onlyRemoveOwnersInstance": true
         },
         {
@@ -1039,7 +1039,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1047,7 +1047,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Valkyrie02_RLElite_RemoveOneMore"
+          "modifier": "<a class=\"gModGreen\" id=\"-186638571\">Enemy_W2_Valkyrie02_RLElite_RemoveOneMore</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1055,7 +1055,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -1091,7 +1091,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Valkyrie02_RLElite_AimMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1672379364\">Enemy_W2_Valkyrie02_RLElite_AimMark</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead",
@@ -1105,7 +1105,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Valkyrie02_RLElite_RemoveOneMore",
+          "for": "<a class=\"gModGreen\" id=\"mod__-186638571\">Enemy_W2_Valkyrie02_RLElite_RemoveOneMore</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -1127,7 +1127,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
                         }
                       },
                       {
@@ -1136,7 +1136,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1870683085\">Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect</a>[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]",
                         "invertCondition": true
                       },
                       {
@@ -1236,7 +1236,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
                               }
                             ]
                           },
@@ -1246,7 +1246,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
                           }
                         ]
                       },
@@ -1280,7 +1280,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "OneMorePerTurn"
+                        "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                       },
                       "failed": [
                         {
@@ -1289,7 +1289,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "OneMorePerTurn"
+                          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                         }
                       ]
                     }
@@ -1303,7 +1303,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1870683085\">Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect</a>[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
                   },
                   "passed": [
                     {
@@ -1312,7 +1312,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "OneMorePerTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                     }
                   ]
                 }
@@ -1340,7 +1340,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Enemy_W2_Valkyrie02_RLElite_AimMark",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1672379364\">Enemy_W2_Valkyrie02_RLElite_AimMark</a>",
                       "onlyRemoveOwnersInstance": true
                     }
                   ]
@@ -1401,7 +1401,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "OneMorePerTurn"
+                    "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                   },
                   "failed": [
                     {
@@ -1410,7 +1410,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "OneMorePerTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                     }
                   ]
                 },
@@ -1420,7 +1420,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1870683085\">Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect</a>[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1428,7 +1428,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Enemy_W2_Valkyrie02_Ability04_Target[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1513487927\">Enemy_W2_Valkyrie02_Ability04_Target</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1436,7 +1436,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Enemy_W2_Valkyrie02_RLElite_AimMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1672379364\">Enemy_W2_Valkyrie02_RLElite_AimMark</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -1471,7 +1471,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -1479,7 +1479,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1870683085\">Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect</a>[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]",
                         "invertCondition": true
                       },
                       {
@@ -1579,7 +1579,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
                               }
                             ]
                           },
@@ -1589,7 +1589,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
                           }
                         ]
                       },

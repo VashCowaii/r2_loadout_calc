@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Misha_Eidolon6"
+      "modifier": "<a class=\"gModGreen\" id=\"-1756447027\">M_Misha_Eidolon6</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Misha_Eidolon6_RecoverBP[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1472142053\">Misha_Eidolon6_RecoverBP</a>[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -53,7 +53,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Misha_Eidolon6_DamageUp[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-186724559\">Misha_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -92,7 +92,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Misha_Eidolon6",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1756447027\">M_Misha_Eidolon6</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -110,7 +110,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Misha_Eidolon6_DamageUp[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-186724559\">Misha_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
@@ -129,7 +129,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Misha_Eidolon6_RecoverBP[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1472142053\">Misha_Eidolon6_RecoverBP</a>[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
                   "valuePerStack": {
                     "MDF_Value": {
                       "operator": "Variables[0] (1) || RETURN",

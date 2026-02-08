@@ -13,7 +13,7 @@ const configAbility = {
       "execute": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Argenti_SummonAllMonsters",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
           "variables": {
             "SummonMonsterID": {
               "operator": "Variables[0] (SummonID02) || RETURN",
@@ -59,7 +59,7 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Argenti_SummonAllMonsters",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
           "variables": {
             "SummonMonsterID": {
               "operator": "Variables[0] (SummonID02) || RETURN",
@@ -107,7 +107,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Argenti_AddWeaknessToAllSummons"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1119292672\">Argenti_AddWeaknessToAllSummons</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -115,7 +115,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Argenti_IF_Protect"
+      "modifier": "<a class=\"gModGreen\" id=\"-309668248\">Enemy_W2_Argenti_IF_Protect</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -123,7 +123,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Argenti_IF_EX_PowerAdd"
+      "modifier": "<a class=\"gModGreen\" id=\"-169910900\">Enemy_W2_Argenti_IF_EX_PowerAdd</a>"
     },
     "Trigger: Ability End"
   ],

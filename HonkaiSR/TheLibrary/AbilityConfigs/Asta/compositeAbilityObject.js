@@ -27,13 +27,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Asta_Tree02"
+          "modifier": "<a class=\"gModGreen\" id=\"-895121187\">M_Asta_Tree02</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Asta_Tree02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-895121187\">M_Asta_Tree02</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -53,7 +53,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "Asta_FireAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"-653161821\">Asta_FireAddedRatio</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -67,7 +67,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Asta_FireAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"-653161821\">Asta_FireAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.18) || RETURN",
@@ -100,7 +100,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Asta_FireAddedRatio",
+                      "modifier": "<a class=\"gModGreen\" id=\"-653161821\">Asta_FireAddedRatio</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.18) || RETURN",
@@ -142,13 +142,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Asta_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1978268527\">StageAbility_Maze_Asta_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Asta_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1978268527\">StageAbility_Maze_Asta_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -225,7 +225,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Asta_Passive",
+          "modifier": "<a class=\"gModGreen\" id=\"-89645956\">M_Asta_Passive</a>",
           "valuePerStack": {
             "MDF_CostLayer": {
               "operator": "Variables[0] (3) || RETURN",
@@ -267,7 +267,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Asta_Eidolon2Flag"
+          "modifier": "<a class=\"gModGreen\" id=\"1558109509\">Asta_Eidolon2Flag</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -275,7 +275,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Asta_AbilityPreShowModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1587956839\">Asta_AbilityPreShowModifier</a>"
         },
         {
           "name": "IF",
@@ -295,7 +295,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Asta_AbilityPreShowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1587956839\">Asta_AbilityPreShowModifier</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -315,7 +315,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Asta_Ultimate_SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1589111502\">Asta_Ultimate_SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "invertCondition": true
             },
             "delayAdvancePreview": {
@@ -326,7 +326,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Asta_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-89645956\">M_Asta_Passive</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -339,7 +339,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Asta_Eidolon2Flag"
+                    "modifier": "<a class=\"gModGreen\" id=\"1558109509\">Asta_Eidolon2Flag</a>"
                   },
                   "failed": [
                     {
@@ -411,7 +411,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Asta_Passive_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
+                              "modifier": "<a class=\"gModGreen\" id=\"-2135184996\">Asta_Passive_SPRatioUp</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
                             }
                           ]
                         },
@@ -421,7 +421,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                           "valuePerStack": {
                             "MDF_AttackAddedRatio": {
                               "operator": "Variables[0] (0.14) || RETURN",
@@ -473,7 +473,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifierName": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                           "value": 0
                         },
                         {
@@ -498,7 +498,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
                         }
                       ]
                     }
@@ -579,7 +579,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                           "valuePerStack": {
                             "MDF_AttackAddedRatio": {
                               "operator": "Variables[0] (0.14) || RETURN",
@@ -675,7 +675,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                           "valuePerStack": {
                             "MDF_AttackAddedRatio": {
                               "operator": "Variables[0] (0.14) || RETURN",
@@ -746,7 +746,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{All Team Members}}"
           },
-          "modifier": "Asta_Ultimate_SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1589111502\">Asta_Ultimate_SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -789,7 +789,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Asta_Eidolon2Flag"
+              "modifier": "<a class=\"gModGreen\" id=\"1558109509\">Asta_Eidolon2Flag</a>"
             }
           ]
         },
@@ -798,7 +798,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Asta_Ultimate_SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1589111502\">Asta_Ultimate_SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -953,7 +953,7 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -1047,7 +1047,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -1154,7 +1154,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Asta_Passive_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2135184996\">Asta_Passive_SPRatioUp</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1186,7 +1186,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Asta_Eidolon2Flag",
+          "for": "<a class=\"gModGreen\" id=\"mod__1558109509\">Asta_Eidolon2Flag</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -1194,7 +1194,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__216386907\">Asta_TeamAttackUP</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1202,7 +1202,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Modifier Variable",
-                  "modifierName": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"216386907\">Asta_TeamAttackUP</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                   "value": {
                     "operator": "Variables[0] (MDF_Charge_Count) || RETURN",
                     "displayLines": "MDF_Charge_Count",
@@ -1239,7 +1239,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
           "counter": 5,
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
@@ -1283,7 +1283,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"216386907\">Asta_TeamAttackUP</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
                 },
                 {
                   "name": "IF",
@@ -1298,7 +1298,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Asta_Passive_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2135184996\">Asta_Passive_SPRatioUp</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
                     }
                   ]
                 }
@@ -1309,7 +1309,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Modifier Variable",
-                  "modifierName": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                   "value": {
                     "operator": "Variables[0] (MDF_Count) || RETURN",
                     "displayLines": "MDF_Count",
@@ -1414,7 +1414,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
                   },
-                  "modifier": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"216386907\">Asta_TeamAttackUP</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
                       "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
@@ -1449,7 +1449,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value1": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                        "value1": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                         "compareType": ">=",
                         "value2": {
                           "operator": "Variables[0] (MDF_BuffLayer) || RETURN",
@@ -1467,7 +1467,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Asta_Passive_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-2135184996\">Asta_Passive_SPRatioUp</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (MDF_SPRatio) || RETURN",
@@ -1513,7 +1513,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"216386907\">Asta_TeamAttackUP</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
                           "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
@@ -1553,7 +1553,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Asta_FireAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-653161821\">Asta_FireAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {

@@ -18,13 +18,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_115_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-256966985\">Relic_115_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_115_Sub[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1551453236\">Relic_115_Sub</a>[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -69,7 +69,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_115_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-256966985\">Relic_115_Main</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -96,7 +96,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Relic_115_Sub[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1551453236\">Relic_115_Sub</a>[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]"
                       },
                       "passed": [
                         {
@@ -107,7 +107,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value1": "Relic_115_Sub[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
+                            "value1": "<a class=\"gModGreen\" id=\"-1551453236\">Relic_115_Sub</a>[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
                             "compareType": "=",
                             "value2": {
                               "operator": "Variables[0] (8) || RETURN",
@@ -126,7 +126,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Relic_115_Sub[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1551453236\">Relic_115_Sub</a>[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
                                 "displayLines": "3",
@@ -164,7 +164,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Relic_115_Sub[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1551453236\">Relic_115_Sub</a>[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -218,7 +218,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Relic_115_Sub[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1551453236\">Relic_115_Sub</a>[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]"
                       },
                       "passed": [
                         {
@@ -229,7 +229,7 @@ const compositeAbilityObject = {
                           },
                           "valueType": "Layer",
                           "variableName": "Old_Layer",
-                          "modifierName": "Relic_115_Sub[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-1551453236\">Relic_115_Sub</a>[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
                           "multiplier": 1
                         },
                         {
@@ -250,7 +250,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_115_Sub[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1551453236\">Relic_115_Sub</a>[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]"
                     }
                   ]
                 }
@@ -290,13 +290,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_115_Main2"
+          "modifier": "<a class=\"gModGreen\" id=\"1752869727\">Relic_115_Main2</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_115_Main2",
+          "for": "<a class=\"gModGreen\" id=\"mod__1752869727\">Relic_115_Main2</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",

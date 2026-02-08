@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_Standard_MuteHitFly"
+      "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "AML_Boss_BattleScore1"
+      "modifier": "<a class=\"gModGreen\" id=\"2028329566\">AML_Boss_BattleScore1</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect"
+      "modifier": "<a class=\"gModGreen\" id=\"-323890115\">Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -35,7 +35,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_Part2_OnBreakRecoverChangeWeak"
+      "modifier": "<a class=\"gModGreen\" id=\"-1140477295\">Enemy_AML_Boss_Part2_OnBreakRecoverChangeWeak</a>"
     },
     {
       "name": "IF",
@@ -56,7 +56,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_Part2_HitEffect"
+      "modifier": "<a class=\"gModGreen\" id=\"-743479497\">Enemy_AML_Boss_Part2_HitEffect</a>"
     },
     {
       "name": "IF",
@@ -77,7 +77,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         }
       ],
       "failed": [
@@ -87,7 +87,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MoreOneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
         }
       ]
     },
@@ -97,13 +97,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_Part2_IF_RemoveOneMore"
+      "modifier": "<a class=\"gModGreen\" id=\"-864984736\">Enemy_AML_Boss_Part2_IF_RemoveOneMore</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_HitEffect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-743479497\">Enemy_AML_Boss_Part2_HitEffect</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage End [Owner]: Hit",
@@ -162,7 +162,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-323890115\">Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -198,7 +198,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_OnBreakRecoverChangeWeak",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1140477295\">Enemy_AML_Boss_Part2_OnBreakRecoverChangeWeak</a>",
       "execute": [
         {
           "eventTrigger": "End Broken State [Owner]",
@@ -209,7 +209,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_Monster_AML_Boss_Part2_Ability07"
+              "modifier": "<a class=\"gModGreen\" id=\"-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>"
             }
           ]
         }

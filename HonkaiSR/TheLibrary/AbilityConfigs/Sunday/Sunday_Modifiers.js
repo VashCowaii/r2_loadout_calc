@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_CriticalChanceConvert[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -90,7 +90,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_CriticalChanceConvertListen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-213785338\">Sunday_10_CriticalChanceConvertListen</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -101,7 +101,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Sunday_10_CriticalChanceConvert[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
             }
           ]
         },
@@ -132,7 +132,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sunday_10_CriticalChanceConvert[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
                 }
               ]
             }
@@ -165,7 +165,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sunday_10_CriticalChanceConvert[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
                 }
               ],
               "failed": [
@@ -175,7 +175,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sunday_10_CriticalChanceConvert[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
                 }
               ]
             }
@@ -185,7 +185,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_CritUp[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -204,7 +204,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sunday_10_CriticalChanceConvertListen"
+                  "modifier": "<a class=\"gModGreen\" id=\"-213785338\">Sunday_10_CriticalChanceConvertListen</a>"
                 }
               ]
             }
@@ -288,7 +288,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sunday_10_CriticalChanceConvertListen",
+                  "modifier": "<a class=\"gModGreen\" id=\"-213785338\">Sunday_10_CriticalChanceConvertListen</a>",
                   "valuePerStack": {
                     "_CritialChance": 0
                   },
@@ -310,7 +310,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_Ability02_PreshowForSummonUnit",
+      "for": "<a class=\"gModGreen\" id=\"mod__-376848843\">Sunday_10_Ability02_PreshowForSummonUnit</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -342,7 +342,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_Ability02_PreshowForLongling",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1403569034\">Sunday_10_Ability02_PreshowForLongling</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -374,7 +374,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_Ability02_Preshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1534107855\">Sunday_10_Ability02_Preshow</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -482,7 +482,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_Eidolon1_SuperBonusForServant[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1698887691\">Sunday_10_Eidolon1_SuperBonusForServant</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -512,7 +512,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_Eidolon1_SuperBonus[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-817980433\">Sunday_10_Eidolon1_SuperBonus</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -621,7 +621,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
                   },
                   {
                     "name": "Compare: Target Count",
@@ -684,7 +684,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
               },
               "passed": [
                 {
@@ -740,7 +740,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
               },
               "passed": [
                 {
@@ -802,7 +802,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_MazeBonus[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2041266105\">Sunday_10_MazeBonus</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -838,7 +838,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -866,7 +866,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]"
               },
               "ifTargetFound": [
                 {
@@ -911,7 +911,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sunday_10_Ability03_Link_ForCaster"
+                      "modifier": "<a class=\"gModGreen\" id=\"762667758\">Sunday_10_Ability03_Link_ForCaster</a>"
                     },
                     {
                       "name": "Update Displayed Energy Bar",

@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Ren_CheckHPChange",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1574082321\">Ren_CheckHPChange</a>",
       "parse": [
         {
           "name": "IF",
@@ -89,7 +89,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Advanced_Ren_Ability03_Listen[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-936894999\">Advanced_Ren_Ability03_Listen</a>[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (CasterFinalLostHP) || RETURN",

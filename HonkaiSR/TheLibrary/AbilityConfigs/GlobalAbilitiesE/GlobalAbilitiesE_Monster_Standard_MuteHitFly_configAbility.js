@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Local_MuteHitFly"
+      "modifier": "<a class=\"gModGreen\" id=\"1010816158\">Local_MuteHitFly</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Local_MuteHitFly",
+      "for": "<a class=\"gModGreen\" id=\"mod__1010816158\">Local_MuteHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
       ],

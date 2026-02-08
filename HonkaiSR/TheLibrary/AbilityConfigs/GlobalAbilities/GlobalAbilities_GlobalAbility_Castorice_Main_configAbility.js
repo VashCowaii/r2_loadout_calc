@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "modifier": "GlobalAbility_Castorice_CreateBattleEvent"
+      "modifier": "<a class=\"gModGreen\" id=\"708690209\">GlobalAbility_Castorice_CreateBattleEvent</a>"
     }
   ],
   "references": []

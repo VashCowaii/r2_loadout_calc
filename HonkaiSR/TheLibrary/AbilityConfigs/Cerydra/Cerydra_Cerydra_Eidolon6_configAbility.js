@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Cerydra_Eidolon6_AddDamageCarry"
+      "modifier": "<a class=\"gModGreen\" id=\"1076811702\">Cerydra_Eidolon6_AddDamageCarry</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Cerydra_Eidolon6_AddDamageCarry",
+      "for": "<a class=\"gModGreen\" id=\"mod__1076811702\">Cerydra_Eidolon6_AddDamageCarry</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

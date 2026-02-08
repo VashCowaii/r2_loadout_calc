@@ -24,7 +24,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+            "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
           },
           {
             "name": "Has Modifier",
@@ -32,7 +32,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Kafka_IF_MindControl_TrueEffect"
+            "modifier": "<a class=\"gModGreen\" id=\"-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>"
           }
         ]
       },
@@ -43,7 +43,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_MindControl_True"
+          "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -51,7 +51,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_MindControl_TrueEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -59,7 +59,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Standard_MindControl[<span class=\"descriptionNumberColor\">Dominated</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill07[1]]}) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "({[Skill07[1]]} + 1)",
@@ -148,7 +148,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Monster_W2_Kafka_IF_MindControl_False"
+      "modifier": "<a class=\"gModGreen\" id=\"1752429969\">Monster_W2_Kafka_IF_MindControl_False</a>"
     }
   ],
   "references": []

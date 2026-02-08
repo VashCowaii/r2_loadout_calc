@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Archer_Trace01"
+          "modifier": "<a class=\"gModGreen\" id=\"1642793787\">Archer_Trace01</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Archer_Trace01",
+          "for": "<a class=\"gModGreen\" id=\"mod__1642793787\">Archer_Trace01</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -102,13 +102,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Archer_Trace03"
+          "modifier": "<a class=\"gModGreen\" id=\"1676349025\">Archer_Trace03</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Archer_Trace03_CriticalDMG[<span class=\"descriptionNumberColor\">Guardian</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__350752129\">Archer_Trace03_CriticalDMG</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -140,7 +140,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Archer_Trace03",
+          "for": "<a class=\"gModGreen\" id=\"mod__1676349025\">Archer_Trace03</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -188,7 +188,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Archer_Trace03_CriticalDMG[<span class=\"descriptionNumberColor\">Guardian</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"350752129\">Archer_Trace03_CriticalDMG</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -238,7 +238,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Archer_PreMaze"
+          "modifier": "<a class=\"gModGreen\" id=\"1394006307\">Archer_PreMaze</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -246,13 +246,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Archer_Maze"
+          "modifier": "<a class=\"gModGreen\" id=\"-1353149844\">Archer_Maze</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Archer_Maze",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1353149844\">Archer_Maze</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -308,7 +308,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Archer_PreMaze",
+          "for": "<a class=\"gModGreen\" id=\"mod__1394006307\">Archer_PreMaze</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -442,7 +442,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Archer_Insert_Target"
+            "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
           },
           "ifTargetFound": [
             {
@@ -476,7 +476,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Archer_Insert_Target"
+                  "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
                 }
               ]
             }
@@ -495,7 +495,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Archer_Insert_Target"
+            "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
           },
           "ifTargetFound": [
             {
@@ -504,7 +504,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "Archer_InsertTag"
+              "modifier": "<a class=\"gModGreen\" id=\"-181774758\">Archer_InsertTag</a>"
             },
             {
               "name": "UI Display Event",
@@ -532,7 +532,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Archer_Insert_Target"
+          "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
         }
       ],
       "onAbort": [
@@ -542,7 +542,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Archer_InsertTag"
+          "modifier": "<a class=\"gModGreen\" id=\"-181774758\">Archer_InsertTag</a>"
         },
         {
           "name": "IF",
@@ -633,7 +633,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Archer_Insert_Target"
+                          "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
                         },
                         {
                           "name": "Inject Ability Use",
@@ -738,7 +738,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Archer_PassiveAbility"
+          "modifier": "<a class=\"gModGreen\" id=\"1240494785\">Archer_PassiveAbility</a>"
         },
         {
           "name": "IF",
@@ -753,7 +753,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Archer_Eidolon4_Ability03AddUltraDamage",
+              "modifier": "<a class=\"gModGreen\" id=\"816189388\">Archer_Eidolon4_Ability03AddUltraDamage</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (1.5) || RETURN",
@@ -780,7 +780,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Archer_Eidolon6_Ability02IgnoreDef",
+              "modifier": "<a class=\"gModGreen\" id=\"1962762500\">Archer_Eidolon6_Ability02IgnoreDef</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.2) || RETURN",
@@ -798,7 +798,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Archer_Eidolon6_Ability02IgnoreDef",
+          "for": "<a class=\"gModGreen\" id=\"mod__1962762500\">Archer_Eidolon6_Ability02IgnoreDef</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -834,7 +834,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Archer_Eidolon4_Ability03AddUltraDamage",
+          "for": "<a class=\"gModGreen\" id=\"mod__816189388\">Archer_Eidolon4_Ability03AddUltraDamage</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -870,12 +870,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Archer_InsertTag",
+          "for": "<a class=\"gModGreen\" id=\"mod__-181774758\">Archer_InsertTag</a>",
           "stackType": "Replace"
         },
         {
           "name": "Modifier Construction",
-          "for": "Archer_AttackListner",
+          "for": "<a class=\"gModGreen\" id=\"mod__1570379004\">Archer_AttackListner</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "CustomEvent_InfiniteRefresh"
@@ -943,7 +943,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Archer_InsertTag"
+                        "modifier": "<a class=\"gModGreen\" id=\"-181774758\">Archer_InsertTag</a>"
                       },
                       "passed": [
                         {
@@ -1044,7 +1044,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Archer_InsertTag"
+                                  "modifier": "<a class=\"gModGreen\" id=\"-181774758\">Archer_InsertTag</a>"
                                 }
                               ]
                             }
@@ -1073,7 +1073,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Archer_InsertTag"
+                                  "modifier": "<a class=\"gModGreen\" id=\"-181774758\">Archer_InsertTag</a>"
                                 }
                               ]
                             }
@@ -1095,7 +1095,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Archer_InsertTag",
+                        "modifier": "<a class=\"gModGreen\" id=\"-181774758\">Archer_InsertTag</a>",
                         "justAddedOrActive": true
                       },
                       "ifTargetFound": [
@@ -1115,7 +1115,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Archer_Insert_Target"
+                          "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
                         },
                         {
                           "name": "Inject Ability Use",
@@ -1178,7 +1178,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Archer_Insert_Target"
+                              "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
                             },
                             {
                               "name": "Inject Ability Use",
@@ -1261,7 +1261,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Targets of Modifier Holder}}"
                           },
-                          "modifier": "Archer_InsertTag"
+                          "modifier": "<a class=\"gModGreen\" id=\"-181774758\">Archer_InsertTag</a>"
                         }
                       ]
                     }
@@ -1337,7 +1337,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Archer_Insert_Target"
+                          "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
                         },
                         {
                           "name": "Inject Ability Use",
@@ -1438,7 +1438,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Archer_Insert_Target"
+                          "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
                         },
                         {
                           "name": "Inject Ability Use",
@@ -1568,7 +1568,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Archer_PassiveAbility",
+          "for": "<a class=\"gModGreen\" id=\"mod__1240494785\">Archer_PassiveAbility</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1609,7 +1609,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}} -{{Caster}}"
                   },
-                  "modifier": "Archer_AttackListner"
+                  "modifier": "<a class=\"gModGreen\" id=\"1570379004\">Archer_AttackListner</a>"
                 },
                 {
                   "name": "IF",
@@ -1665,7 +1665,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Archer_AttackListner"
+                      "modifier": "<a class=\"gModGreen\" id=\"1570379004\">Archer_AttackListner</a>"
                     }
                   ]
                 }
@@ -1857,7 +1857,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Archer_Eidolon2_AddWeak[<span class=\"descriptionNumberColor\">The Unfulfilled Happiness</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1473893661\">Archer_Eidolon2_AddWeak</a>[<span class=\"descriptionNumberColor\">The Unfulfilled Happiness</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -2421,7 +2421,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Archer_BonusTrigger[<span class=\"descriptionNumberColor\">Circuit Connection</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1612899858\">Archer_BonusTrigger</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]"
         },
         {
           "name": "Define Custom Variable",
@@ -2476,7 +2476,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Archer_BonusTrigger[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1612899858\">Archer_BonusTrigger</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
           "immediateEffect": true
         },
         {
@@ -2604,7 +2604,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Archer_BPAbility_AddDamagePercentage[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"308886295\">Archer_BPAbility_AddDamagePercentage</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                 "displayLines": "(2 + 1)",
@@ -2634,7 +2634,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Archer_BPAbility_AddDamagePercentage[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"308886295\">Archer_BPAbility_AddDamagePercentage</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -2703,7 +2703,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Standard_Windfury"
+                    "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>"
                   }
                 ]
               },
@@ -2788,7 +2788,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Archer_BonusAbility02Ready",
+            "modifier": "<a class=\"gModGreen\" id=\"-130031811\">Archer_BonusAbility02Ready</a>",
             "invertCondition": true
           },
           "passed": [
@@ -2803,7 +2803,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Archer_BonusAbility02Ready",
+            "modifier": "<a class=\"gModGreen\" id=\"-130031811\">Archer_BonusAbility02Ready</a>",
             "invertCondition": true
           }
         },
@@ -2978,7 +2978,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Archer_BonusTrigger[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1612899858\">Archer_BonusTrigger</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2989,7 +2989,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Archer_BonusAbility02Ready"
+                  "modifier": "<a class=\"gModGreen\" id=\"-130031811\">Archer_BonusAbility02Ready</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -3002,7 +3002,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Archer_BPAbility_AddDamagePercentage[<span class=\"descriptionNumberColor\">Circuit Connection</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"308886295\">Archer_BPAbility_AddDamagePercentage</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -3095,7 +3095,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Archer_BonusAbility02Ready"
+                      "modifier": "<a class=\"gModGreen\" id=\"-130031811\">Archer_BonusAbility02Ready</a>"
                     },
                     {
                       "name": "IF",
@@ -3229,7 +3229,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Archer_BonusAbility02Ready",
+          "for": "<a class=\"gModGreen\" id=\"mod__-130031811\">Archer_BonusAbility02Ready</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3284,7 +3284,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Archer_BPAbility_AddDamagePercentage[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__308886295\">Archer_BPAbility_AddDamagePercentage</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -3350,7 +3350,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Archer_Eidolon2_AddWeak[<span class=\"descriptionNumberColor\">The Unfulfilled Happiness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1473893661\">Archer_Eidolon2_AddWeak</a>[<span class=\"descriptionNumberColor\">The Unfulfilled Happiness</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttachWeakness"
@@ -3389,7 +3389,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Archer_Insert_Target",
+          "for": "<a class=\"gModGreen\" id=\"mod__496562314\">Archer_Insert_Target</a>",
           "stackData": [],
           "latentQueue": [
             "MDF_InsertUsed",

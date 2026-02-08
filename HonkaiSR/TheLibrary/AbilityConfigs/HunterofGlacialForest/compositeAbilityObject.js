@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_104_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1204920927\">Relic_104_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_104_CriticalDamage[<span class=\"descriptionNumberColor\">Hunter of Glacial Forest</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1571582832\">Relic_104_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Hunter of Glacial Forest</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -55,7 +55,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_104_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1204920927\">Relic_104_Main</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -73,7 +73,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_104_CriticalDamage[<span class=\"descriptionNumberColor\">Hunter of Glacial Forest</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1571582832\">Relic_104_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Hunter of Glacial Forest</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",

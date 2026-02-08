@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_126_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"2008190265\">Relic_126_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_126_Sub2[<span class=\"descriptionNumberColor\">Wavestrider Captain</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-922033468\">Relic_126_Sub2</a>[<span class=\"descriptionNumberColor\">Wavestrider Captain</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -55,7 +55,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_126_Sub[<span class=\"descriptionNumberColor\">Help</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1631804574\">Relic_126_Sub</a>[<span class=\"descriptionNumberColor\">Help</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -103,7 +103,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_126_Sub2[<span class=\"descriptionNumberColor\">Wavestrider Captain</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-922033468\">Relic_126_Sub2</a>[<span class=\"descriptionNumberColor\">Wavestrider Captain</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -136,7 +136,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_126_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__2008190265\">Relic_126_Main</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Anyone]: Start",
@@ -204,7 +204,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_126_Sub[<span class=\"descriptionNumberColor\">Help</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1631804574\">Relic_126_Sub</a>[<span class=\"descriptionNumberColor\">Help</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",

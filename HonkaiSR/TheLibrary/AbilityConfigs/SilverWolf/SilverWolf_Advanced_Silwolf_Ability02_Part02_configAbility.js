@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Advanced_Silwolf_BPAbility_AllDamageTypeResistanceDown[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1155855512\">Advanced_Silwolf_BPAbility_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",
@@ -44,7 +44,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -106,13 +106,13 @@ const configAbility = {
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Advanced_Silwolf_Ability02_Success"
+          "functionName": "<a class=\"gTempYellow\" id=\"1377567581\">Advanced_Silwolf_Ability02_Success</a>"
         }
       ],
       "failed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Advanced_Silwolf_Ability02_Failed"
+          "functionName": "<a class=\"gTempYellow\" id=\"906144091\">Advanced_Silwolf_Ability02_Failed</a>"
         }
       ]
     }
@@ -120,7 +120,7 @@ const configAbility = {
   "functions": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Advanced_Silwolf_Ability02_Success",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1377567581\">Advanced_Silwolf_Ability02_Success</a>",
       "parse": [
         "Deleted bullshit",
         {
@@ -234,7 +234,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
               },
               "passed": [
                 {
@@ -277,7 +277,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
               },
               "passed": [
                 {
@@ -320,7 +320,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
               },
               "passed": [
                 {
@@ -363,7 +363,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
               },
               "passed": [
                 {
@@ -406,7 +406,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
               },
               "passed": [
                 {
@@ -449,7 +449,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
               },
               "passed": [
                 {
@@ -492,7 +492,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
               },
               "passed": [
                 {
@@ -523,7 +523,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Advanced_Silwolf_Ability02_Failed",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__906144091\">Advanced_Silwolf_Ability02_Failed</a>",
       "parse": [
         "Deleted bullshit",
         {

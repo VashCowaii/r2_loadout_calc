@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Cyrene_Passive_FemaleMaster"
+      "modifier": "<a class=\"gModGreen\" id=\"-1723137724\">Cyrene_Passive_FemaleMaster</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_Passive_FemaleMaster",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1723137724\">Cyrene_Passive_FemaleMaster</a>",
       "stackData": [],
       "latentQueue": []
     }

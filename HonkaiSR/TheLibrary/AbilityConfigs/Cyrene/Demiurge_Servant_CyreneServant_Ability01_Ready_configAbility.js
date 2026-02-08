@@ -22,7 +22,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_CyreneServant_Ability02Disable"
+      "modifier": "<a class=\"gModGreen\" id=\"339481432\">Memosprite_CyreneServant_Ability02Disable</a>"
     },
     {
       "name": "Inject Extra-Turn",

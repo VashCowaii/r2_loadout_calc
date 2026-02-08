@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Silwolf_Eidolon2_Bonus"
+      "modifier": "<a class=\"gModGreen\" id=\"1800596972\">M_Silwolf_Eidolon2_Bonus</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_Eidolon2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-153761563\">Advanced_Silwolf_Eidolon2</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -72,7 +72,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Silwolf_Eidolon2_Bonus_OnCharacterCreate",
+      "for": "<a class=\"gModGreen\" id=\"mod__1871788715\">M_Silwolf_Eidolon2_Bonus_OnCharacterCreate</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -94,7 +94,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-860979758\">Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -114,7 +114,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Silwolf_Eidolon2_Bonus",
+      "for": "<a class=\"gModGreen\" id=\"mod__1800596972\">M_Silwolf_Eidolon2_Bonus</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -125,7 +125,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-860979758\">Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.2) || RETURN",
@@ -143,7 +143,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "M_Silwolf_Eidolon2_Bonus_OnCharacterCreate"
+              "modifier": "<a class=\"gModGreen\" id=\"1871788715\">M_Silwolf_Eidolon2_Bonus_OnCharacterCreate</a>"
             }
           ],
           "priorityLevel": -80
@@ -158,7 +158,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Advanced_Silwolf_Eidolon2",
+          "modifier": "<a class=\"gModGreen\" id=\"-153761563\">Advanced_Silwolf_Eidolon2</a>",
           "haloStatus": true
         }
       ]

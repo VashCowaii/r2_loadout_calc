@@ -72,7 +72,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "_M_Cyrene_Eidolon1_Ability01Prepare"
+          "modifier": "<a class=\"gModGreen\" id=\"-2012168482\">_M_Cyrene_Eidolon1_Ability01Prepare</a>"
         },
         {
           "name": "IF",
@@ -96,7 +96,7 @@ const configAbility = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "ServantCyrene_ChargeEnergy",
+              "functionName": "<a class=\"gTempYellow\" id=\"1364306036\">ServantCyrene_ChargeEnergy</a>",
               "variables": {
                 "parameter[0]_AddValue": {
                   "operator": "Variables[0] (6) || RETURN",
@@ -119,7 +119,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "ServantCyrene_Eidolon6"
+              "functionName": "<a class=\"gTempYellow\" id=\"-296031576\">ServantCyrene_Eidolon6</a>"
             }
           ]
         },
@@ -129,7 +129,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CyreneServant_Energy[<span class=\"descriptionNumberColor\">Story</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"684175961\">Memosprite_CyreneServant_Energy</a>[<span class=\"descriptionNumberColor\">Story</span>]"
         }
       ],
       "failed": [
@@ -150,7 +150,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "_M_Cyrene_Player_Ability01Prepare"
+                "modifier": "<a class=\"gModGreen\" id=\"874651474\">_M_Cyrene_Player_Ability01Prepare</a>"
               }
             ]
           },
@@ -164,7 +164,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "value1": "_M_Cyrene_Player_Ability01Prepare",
+                "value1": "<a class=\"gModGreen\" id=\"874651474\">_M_Cyrene_Player_Ability01Prepare</a>",
                 "compareType": ">",
                 "value2": 1,
                 "valueType": "Layer"
@@ -176,7 +176,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "_M_Cyrene_Player_Ability01Prepare",
+                  "modifier": "<a class=\"gModGreen\" id=\"874651474\">_M_Cyrene_Player_Ability01Prepare</a>",
                   "addStacksPerTrigger": -1
                 }
               ],
@@ -187,7 +187,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "_M_Cyrene_Player_Ability01Prepare"
+                  "modifier": "<a class=\"gModGreen\" id=\"874651474\">_M_Cyrene_Player_Ability01Prepare</a>"
                 }
               ]
             }
@@ -244,7 +244,7 @@ const configAbility = {
       "Event": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Bounce_SelectTarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
@@ -306,7 +306,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Hyacine[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-588160151\">Memosprite_CyreneServant_AmazingBonus_Hyacine</a>[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
           "valuePerStack": {
             "MDF_HyacineRatio": {
               "operator": "Variables[0] (0.72) || RETURN",
@@ -344,7 +344,7 @@ const configAbility = {
           }
         ]
       },
-      "modifier": "Memosprite_CyreneServant_AmazingBonus_DanHengPT[<span class=\"descriptionNumberColor\">Ode to Earth</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1655562855\">Memosprite_CyreneServant_AmazingBonus_DanHengPT</a>[<span class=\"descriptionNumberColor\">Ode to Earth</span>]",
       "valuePerStack": {
         "MDF_DamageIncrease": {
           "operator": "Variables[0] (0.24) || RETURN",
@@ -395,7 +395,7 @@ const configAbility = {
           }
         ]
       },
-      "modifier": "DanHengPT_LongLingAttackExtraDamage",
+      "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
       "valuePerStack": {
         "MDF_Count": {
           "operator": "Variables[0] (3) || RETURN",
@@ -428,7 +428,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_Ability01_Debuff",
+      "for": "<a class=\"gModGreen\" id=\"mod__1620033376\">Memosprite_CyreneServant_Ability01_Debuff</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

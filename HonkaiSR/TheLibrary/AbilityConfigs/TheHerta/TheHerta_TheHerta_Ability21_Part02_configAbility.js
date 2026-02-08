@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "TheHerta_Ability21"
+      "modifier": "<a class=\"gModGreen\" id=\"1324497127\">TheHerta_Ability21</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "TheHerta_SKL02_Mark"
+      "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "TheHerta_SKL02_Mark_Pre"
+      "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -34,7 +34,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "TheHerta_SKL02_Mark"
+      "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -49,7 +49,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
       },
       "passed": [
         {
@@ -60,7 +60,7 @@ const configAbility = {
           },
           "valueType": "Layer",
           "variableName": "S03_Mark_Count",
-          "modifierName": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
           "multiplier": 1
         },
         {
@@ -71,7 +71,7 @@ const configAbility = {
           },
           "valueType": "Layer",
           "variableName": "Orig_Layer",
-          "modifierName": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
           "multiplier": 1
         },
         {
@@ -98,12 +98,12 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                     }
                   },
                   {
                     "name": "Sort by Modifier Value",
-                    "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                     "value": "Layer",
                     "sortByHighest": true
                   }
@@ -120,7 +120,7 @@ const configAbility = {
                   },
                   "valueType": "Layer",
                   "variableName": "_ADJ_TMP_COUNT",
-                  "modifierName": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                   "multiplier": 1
                 },
                 {
@@ -163,7 +163,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "TheHerta_PointB1_42",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1341843949\">TheHerta_PointB1_42</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.5) || RETURN",
@@ -187,7 +187,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "TheHerta_MageNum_2"
+            "modifier": "<a class=\"gModGreen\" id=\"-2073297144\">TheHerta_MageNum_2</a>"
           },
           "passed": [
             {
@@ -212,7 +212,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
         },
         {
           "name": "IF",
@@ -232,7 +232,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (42) || RETURN",
                 "displayLines": "42",
@@ -284,7 +284,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (42) || RETURN",
                 "displayLines": "42",
@@ -327,7 +327,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "TheHerta_SKL02",
+      "functionName": "<a class=\"gTempYellow\" id=\"1142002606\">TheHerta_SKL02</a>",
       "variables": {
         "DV_DamageRatio1": {
           "operator": "Variables[0] (0.8) || RETURN",
@@ -370,7 +370,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "TheHerta_Passive_MagicMark_Burst_Show"
+          "modifier": "<a class=\"gModGreen\" id=\"27955030\">TheHerta_Passive_MagicMark_Burst_Show</a>"
         }
       ]
     },
@@ -514,7 +514,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "ReduceNextActionDelay",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1527090005\">ReduceNextActionDelay</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -540,7 +540,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "TheHerta_Ability21"
+        "modifier": "<a class=\"gModGreen\" id=\"1324497127\">TheHerta_Ability21</a>"
       },
       "passed": [
         {
@@ -549,7 +549,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "TheHerta_Passive_MagicMark_Burst"
+          "modifier": "<a class=\"gModGreen\" id=\"-333672562\">TheHerta_Passive_MagicMark_Burst</a>"
         }
       ]
     },
@@ -559,7 +559,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "TheHerta_Ability21"
+      "modifier": "<a class=\"gModGreen\" id=\"1324497127\">TheHerta_Ability21</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -567,7 +567,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "TheHerta_PointB1_42"
+      "modifier": "<a class=\"gModGreen\" id=\"-1341843949\">TheHerta_PointB1_42</a>"
     },
     {
       "name": "Adjust Variable Value",

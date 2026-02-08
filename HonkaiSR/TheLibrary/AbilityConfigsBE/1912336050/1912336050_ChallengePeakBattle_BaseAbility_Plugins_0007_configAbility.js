@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007"
+      "modifier": "<a class=\"gModGreen\" id=\"-2083438250\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_04[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1588986863\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_04</a>[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_03[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1538654006\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_03</a>[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -99,7 +99,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_02",
+      "for": "<a class=\"gModGreen\" id=\"mod__1555431625\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_02</a>",
       "execute": [
         {
           "eventTrigger": "Being Toughness Bar Reset [Owner]",
@@ -110,7 +110,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_03[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1538654006\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_03</a>[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (ChallengePeakBattle_Plugins_0007_ADF_3) || RETURN",
                 "displayLines": "ChallengePeakBattle_Plugins_0007_ADF_3",
@@ -152,7 +152,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2083438250\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -179,7 +179,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_02",
+                  "modifier": "<a class=\"gModGreen\" id=\"1555431625\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0007_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -231,7 +231,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_04[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1588986863\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_04</a>[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0007_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

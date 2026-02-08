@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23031_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1848269670\">LC_23031_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23031_Sub[<span class=\"descriptionNumberColor\">Luminflux</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1255032527\">LC_23031_Sub</a>[<span class=\"descriptionNumberColor\">Luminflux</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -28,7 +28,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "LC_23031_Sub[<span class=\"descriptionNumberColor\">Luminflux</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1255032527\">LC_23031_Sub</a>[<span class=\"descriptionNumberColor\">Luminflux</span>]",
               "addStacksPerTrigger": -1
             }
           ]
@@ -96,7 +96,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23031_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1848269670\">LC_23031_Main</a>",
       "execute": [
         {
           "eventTrigger": "Attack Start [Owner]",
@@ -120,7 +120,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_23031_Sub[<span class=\"descriptionNumberColor\">Luminflux</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1255032527\">LC_23031_Sub</a>[<span class=\"descriptionNumberColor\">Luminflux</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

@@ -20,7 +20,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Jingliu_LoseHPPreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"11983250\">Jingliu_LoseHPPreShow</a>"
     },
     {
       "name": "IF",
@@ -119,7 +119,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Jingliu_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-537143412\">Jingliu_Passive</a>"
     },
     {
       "name": "IF",
@@ -134,7 +134,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Jingliu_AbilityPreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"-582112064\">Jingliu_AbilityPreShow</a>"
         }
       ]
     }

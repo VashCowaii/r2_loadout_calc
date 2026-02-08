@@ -6,7 +6,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "PlayerBoy_30_TryCreateServant"
+      "functionName": "<a class=\"gTempYellow\" id=\"1640803691\">PlayerBoy_30_TryCreateServant</a>"
     },
     {
       "name": "Define Custom Variable",

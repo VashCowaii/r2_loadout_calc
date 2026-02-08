@@ -15,7 +15,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_GSMecha_01_Initiate"
+      "modifier": "<a class=\"gModGreen\" id=\"1061722899\">Monster_W1_GSMecha_01_Initiate</a>"
     },
     {
       "name": "Declare Custom Variable",
@@ -39,7 +39,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_GSMecha_01_Initiate",
+      "for": "<a class=\"gModGreen\" id=\"mod__1061722899\">Monster_W1_GSMecha_01_Initiate</a>",
       "modifierFlags": [
         "Deathrattle",
         "KeepOnDeathrattle"

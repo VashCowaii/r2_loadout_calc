@@ -45,7 +45,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Rappa_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
         },
         {
           "name": "IF",
@@ -127,7 +127,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Rappa_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
         }
       ],
       "failed": [
@@ -234,7 +234,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Rappa_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
             },
             {
               "name": "ATK Scaling DMG",
@@ -272,7 +272,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Rappa_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
             }
           ],
           "failed": [
@@ -347,7 +347,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Rappa_Ability13_StanceDamagePreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"-1369082619\">Rappa_Ability13_StanceDamagePreShow</a>"
     },
     {
       "name": "Force-Trigger Ability Next-Phase",

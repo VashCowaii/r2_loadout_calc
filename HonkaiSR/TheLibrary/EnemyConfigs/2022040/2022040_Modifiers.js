@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Beast01_Bonus",
+      "for": "<a class=\"gModGreen\" id=\"mod__331621687\">Monster_W2_Beast01_Bonus</a>",
       "modifierFlags": [
         "Deathrattle",
         "KeepOnDeathrattle"

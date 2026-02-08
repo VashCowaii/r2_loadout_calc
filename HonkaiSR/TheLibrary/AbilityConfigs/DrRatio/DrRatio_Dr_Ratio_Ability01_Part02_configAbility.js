@@ -20,7 +20,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Dr_Ratio_Insert_Flag_Caster"
+      "modifier": "<a class=\"gModGreen\" id=\"1963870595\">Dr_Ratio_Insert_Flag_Caster</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -28,7 +28,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All(with Unselectable)}}"
       },
-      "modifier": "Dr_Ratio_Insert_Flag"
+      "modifier": "<a class=\"gModGreen\" id=\"-253275642\">Dr_Ratio_Insert_Flag</a>"
     },
     {
       "name": "ATK Scaling DMG",

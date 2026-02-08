@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yukong_Point02_Bonus"
+      "modifier": "<a class=\"gModGreen\" id=\"1474251407\">Yukong_Point02_Bonus</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Yukong_Point02_ImaginaryAddedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__931142386\">Yukong_Point02_ImaginaryAddedRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -44,7 +44,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Yukong_Point02_Bonus",
+      "for": "<a class=\"gModGreen\" id=\"mod__1474251407\">Yukong_Point02_Bonus</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -55,7 +55,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Yukong_Point02_ImaginaryAddedRatio",
+              "modifier": "<a class=\"gModGreen\" id=\"931142386\">Yukong_Point02_ImaginaryAddedRatio</a>",
               "valuePerStack": {
                 "MDF_Ratio": {
                   "operator": "Variables[0] (0.12) || RETURN",
@@ -88,7 +88,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Yukong_Point02_ImaginaryAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"931142386\">Yukong_Point02_ImaginaryAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_Ratio": {
                       "operator": "Variables[0] (0.12) || RETURN",
@@ -113,7 +113,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Yukong_Point02_ImaginaryAddedRatio",
+              "modifier": "<a class=\"gModGreen\" id=\"931142386\">Yukong_Point02_ImaginaryAddedRatio</a>",
               "onlyRemoveOwnersInstance": true
             }
           ]

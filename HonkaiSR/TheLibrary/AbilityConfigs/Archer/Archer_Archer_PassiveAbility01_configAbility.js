@@ -60,7 +60,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Archer_PassiveAbility"
+      "modifier": "<a class=\"gModGreen\" id=\"1240494785\">Archer_PassiveAbility</a>"
     },
     {
       "name": "IF",
@@ -75,7 +75,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Archer_Eidolon4_Ability03AddUltraDamage",
+          "modifier": "<a class=\"gModGreen\" id=\"816189388\">Archer_Eidolon4_Ability03AddUltraDamage</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (1.5) || RETURN",
@@ -102,7 +102,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Archer_Eidolon6_Ability02IgnoreDef",
+          "modifier": "<a class=\"gModGreen\" id=\"1962762500\">Archer_Eidolon6_Ability02IgnoreDef</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.2) || RETURN",
@@ -120,7 +120,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Archer_Eidolon6_Ability02IgnoreDef",
+      "for": "<a class=\"gModGreen\" id=\"mod__1962762500\">Archer_Eidolon6_Ability02IgnoreDef</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -156,7 +156,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Archer_Eidolon4_Ability03AddUltraDamage",
+      "for": "<a class=\"gModGreen\" id=\"mod__816189388\">Archer_Eidolon4_Ability03AddUltraDamage</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -192,12 +192,12 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Archer_InsertTag",
+      "for": "<a class=\"gModGreen\" id=\"mod__-181774758\">Archer_InsertTag</a>",
       "stackType": "Replace"
     },
     {
       "name": "Modifier Construction",
-      "for": "Archer_AttackListner",
+      "for": "<a class=\"gModGreen\" id=\"mod__1570379004\">Archer_AttackListner</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "CustomEvent_InfiniteRefresh"
@@ -265,7 +265,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Archer_InsertTag"
+                    "modifier": "<a class=\"gModGreen\" id=\"-181774758\">Archer_InsertTag</a>"
                   },
                   "passed": [
                     {
@@ -366,7 +366,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Archer_InsertTag"
+                              "modifier": "<a class=\"gModGreen\" id=\"-181774758\">Archer_InsertTag</a>"
                             }
                           ]
                         }
@@ -395,7 +395,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Archer_InsertTag"
+                              "modifier": "<a class=\"gModGreen\" id=\"-181774758\">Archer_InsertTag</a>"
                             }
                           ]
                         }
@@ -417,7 +417,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Archer_InsertTag",
+                    "modifier": "<a class=\"gModGreen\" id=\"-181774758\">Archer_InsertTag</a>",
                     "justAddedOrActive": true
                   },
                   "ifTargetFound": [
@@ -437,7 +437,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Archer_Insert_Target"
+                      "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -500,7 +500,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Archer_Insert_Target"
+                          "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
                         },
                         {
                           "name": "Inject Ability Use",
@@ -583,7 +583,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Ability Targets of Modifier Holder}}"
                       },
-                      "modifier": "Archer_InsertTag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-181774758\">Archer_InsertTag</a>"
                     }
                   ]
                 }
@@ -659,7 +659,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Archer_Insert_Target"
+                      "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -760,7 +760,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Archer_Insert_Target"
+                      "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -890,7 +890,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Archer_PassiveAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__1240494785\">Archer_PassiveAbility</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -931,7 +931,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}} -{{Caster}}"
               },
-              "modifier": "Archer_AttackListner"
+              "modifier": "<a class=\"gModGreen\" id=\"1570379004\">Archer_AttackListner</a>"
             },
             {
               "name": "IF",
@@ -987,7 +987,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Archer_AttackListner"
+                  "modifier": "<a class=\"gModGreen\" id=\"1570379004\">Archer_AttackListner</a>"
                 }
               ]
             }

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_108_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"2108707157\">Relic_108_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_108_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__2108707157\">Relic_108_Main</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",

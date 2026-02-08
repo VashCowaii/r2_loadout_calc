@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     },
     {
       "name": "IF",
@@ -30,7 +30,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_RemoveOneMore"
+          "modifier": "<a class=\"gModGreen\" id=\"-404471381\">Monster_W1_Mecha03_RemoveOneMore</a>"
         }
       ]
     },
@@ -40,7 +40,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_Mecha03_BreakResetCharge"
+      "modifier": "<a class=\"gModGreen\" id=\"-1280509085\">Monster_Mecha03_BreakResetCharge</a>"
     },
     {
       "name": "Declare Custom Variable",
@@ -58,7 +58,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "HideMonsterHUD"
+      "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
     }
   ],
   "whenAdded": [
@@ -68,13 +68,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "WMonster_Mecha_02_MuteHitFly"
+      "modifier": "<a class=\"gModGreen\" id=\"-69428728\">WMonster_Mecha_02_MuteHitFly</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_Mecha03_BreakResetCharge",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1280509085\">Monster_Mecha03_BreakResetCharge</a>",
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -87,7 +87,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "W1_Mecha02_AttackBonus[<span class=\"descriptionNumberColor\">Charging</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1670817312\">W1_Mecha02_AttackBonus</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
               },
               "passed": [
                 {
@@ -152,7 +152,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "WMonster_Mecha_02_MuteHitFly",
+      "for": "<a class=\"gModGreen\" id=\"mod__-69428728\">WMonster_Mecha_02_MuteHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
       ],
@@ -163,7 +163,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "HideMonsterHUD",
+      "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]"

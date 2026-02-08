@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23009_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"613340223\">LC_23009_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23009_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1249262228\">LC_23009_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23009_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__613340223\">LC_23009_Main</a>",
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -90,7 +90,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23009_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1249262228\">LC_23009_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 }
               ]
             }
@@ -105,7 +105,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "LC_23009_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1249262228\">LC_23009_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
             }
           ]
         },
@@ -118,7 +118,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "LC_23009_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1249262228\">LC_23009_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
             }
           ]
         }

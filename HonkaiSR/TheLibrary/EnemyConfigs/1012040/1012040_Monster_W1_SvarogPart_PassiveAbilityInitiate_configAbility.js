@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_SvarogPart_CountDown[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-770745937\">Monster_W1_SvarogPart_CountDown</a>[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "({[Skill06[0]]} + 1)",
@@ -29,7 +29,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_SvarogPart_Break"
+      "modifier": "<a class=\"gModGreen\" id=\"2122508331\">Monster_W1_SvarogPart_Break</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -37,7 +37,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_SvarogPart_Die"
+      "modifier": "<a class=\"gModGreen\" id=\"272812978\">Monster_W1_SvarogPart_Die</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -45,13 +45,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_SvarogPart_BattleScore1"
+      "modifier": "<a class=\"gModGreen\" id=\"968585055\">Monster_W1_SvarogPart_BattleScore1</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_SvarogPart_Die",
+      "for": "<a class=\"gModGreen\" id=\"mod__272812978\">Monster_W1_SvarogPart_Die</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -62,7 +62,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "modifier": "Monster_W1_SvarogPart_CD",
+              "modifier": "<a class=\"gModGreen\" id=\"2115356635\">Monster_W1_SvarogPart_CD</a>",
               "duration": 1
             }
           ]
@@ -73,7 +73,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_SvarogPart_Break",
+      "for": "<a class=\"gModGreen\" id=\"mod__2122508331\">Monster_W1_SvarogPart_Break</a>",
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",

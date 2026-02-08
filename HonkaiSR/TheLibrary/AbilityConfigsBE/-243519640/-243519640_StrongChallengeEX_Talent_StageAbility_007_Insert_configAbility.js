@@ -59,7 +59,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger",
+          "modifier": "<a class=\"gModGreen\" id=\"1349202594\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (PropertyValue) || RETURN",

@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Archer_Eidolon2_AddWeak[<span class=\"descriptionNumberColor\">The Unfulfilled Happiness</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1473893661\">Archer_Eidolon2_AddWeak</a>[<span class=\"descriptionNumberColor\">The Unfulfilled Happiness</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",

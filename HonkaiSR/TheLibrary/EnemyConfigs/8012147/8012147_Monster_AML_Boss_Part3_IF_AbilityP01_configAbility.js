@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_Part3_IF_AbilityP01_OneMoreController"
+      "modifier": "<a class=\"gModGreen\" id=\"1344394786\">Enemy_AML_Boss_Part3_IF_AbilityP01_OneMoreController</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3[<span class=\"descriptionNumberColor\">Imaginary Mark</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"216530002\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3</a>[<span class=\"descriptionNumberColor\">Imaginary Mark</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -34,13 +34,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_Part3_IF_AbilityP01_WeaknessControll"
+      "modifier": "<a class=\"gModGreen\" id=\"1217675805\">Enemy_AML_Boss_Part3_IF_AbilityP01_WeaknessControll</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part3_IF_AbilityP01_WeaknessControll",
+      "for": "<a class=\"gModGreen\" id=\"mod__1217675805\">Enemy_AML_Boss_Part3_IF_AbilityP01_WeaknessControll</a>",
       "modifierFlags": [
         "Deathrattle",
         "KeepOnDeathrattle"
@@ -138,7 +138,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part3_IF_AbilityP01_ReflexController",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1202331805\">Enemy_AML_Boss_Part3_IF_AbilityP01_ReflexController</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -190,7 +190,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_AML_Boss_IF_Enhance_Quantum[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-291765317\">Enemy_AML_Boss_IF_Enhance_Quantum</a>[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]"
                   }
                 ]
               },

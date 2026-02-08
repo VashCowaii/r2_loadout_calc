@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Serval_Tree03_AttackRatioUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2005029779\">Serval_Tree03_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -46,7 +46,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Serval_Eidolon6_Check_Show",
+      "for": "<a class=\"gModGreen\" id=\"mod__-766476870\">Serval_Eidolon6_Check_Show</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -96,7 +96,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Serval_Eidolon6_Check[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"731548834\">Serval_Eidolon6_Check</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 }
               ],
               "whenLeavingRange": [
@@ -106,7 +106,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Serval_Eidolon6_Check[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"731548834\">Serval_Eidolon6_Check</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 }
               ]
             }
@@ -116,7 +116,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Serval_Eidolon6_Check[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__731548834\">Serval_Eidolon6_Check</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",

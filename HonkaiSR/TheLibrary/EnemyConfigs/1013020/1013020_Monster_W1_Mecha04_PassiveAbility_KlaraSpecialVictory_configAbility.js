@@ -10,20 +10,20 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha04_KlaraSpecialVictory_LockHP"
+      "modifier": "<a class=\"gModGreen\" id=\"-220942891\">Monster_W1_Mecha04_KlaraSpecialVictory_LockHP</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_Instance_DisableAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__151548297\">Monster_W1_Mecha04_Instance_DisableAction</a>",
       "modifierFlags": [
         "DisableAction"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_KlaraSpecialVictory_LockHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-220942891\">Monster_W1_Mecha04_KlaraSpecialVictory_LockHP</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -43,7 +43,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "Monster_W1_Mecha04_Instance_DisableAction"
+              "modifier": "<a class=\"gModGreen\" id=\"151548297\">Monster_W1_Mecha04_Instance_DisableAction</a>"
             }
           ]
         }

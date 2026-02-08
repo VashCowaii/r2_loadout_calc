@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23037_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-554867908\">LC_23037_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23037_Sub2[<span class=\"descriptionNumberColor\">Increases Skill DMG and Ultimate DMG</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-574485103\">LC_23037_Sub2</a>[<span class=\"descriptionNumberColor\">Increases Skill DMG and Ultimate DMG</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -54,7 +54,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23037_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-554867908\">LC_23037_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -72,7 +72,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23037_Sub2[<span class=\"descriptionNumberColor\">Increases Skill DMG and Ultimate DMG</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-574485103\">LC_23037_Sub2</a>[<span class=\"descriptionNumberColor\">Increases Skill DMG and Ultimate DMG</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -95,7 +95,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "LC_23037_Main_CheckSP"
+              "modifier": "<a class=\"gModGreen\" id=\"-1462256216\">LC_23037_Main_CheckSP</a>"
             },
             {
               "name": "IF",
@@ -154,7 +154,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "LC_23037_Main_CheckSP"
+              "modifier": "<a class=\"gModGreen\" id=\"-1462256216\">LC_23037_Main_CheckSP</a>"
             }
           ]
         },
@@ -178,7 +178,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "LC_23037_Main_CheckSP"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1462256216\">LC_23037_Main_CheckSP</a>"
                   }
                 ]
               },
@@ -212,13 +212,13 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23037_Main_CheckSP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1462256216\">LC_23037_Main_CheckSP</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23037_BP_CD",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1975566381\">LC_23037_BP_CD</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End"
     }

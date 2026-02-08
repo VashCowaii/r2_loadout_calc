@@ -15,13 +15,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Beast01_02_EffectController"
+      "modifier": "<a class=\"gModGreen\" id=\"558871716\">Enemy_W2_Beast01_02_EffectController</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Beast01_02_EffectController",
+      "for": "<a class=\"gModGreen\" id=\"mod__558871716\">Enemy_W2_Beast01_02_EffectController</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"

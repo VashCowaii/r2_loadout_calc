@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Anaxa_Eidolon2"
+      "modifier": "<a class=\"gModGreen\" id=\"126451485\">Anaxa_Eidolon2</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Anaxa_Eidolon2_Bonus_OnCharacterCreate",
+      "for": "<a class=\"gModGreen\" id=\"mod__1634329483\">M_Anaxa_Eidolon2_Bonus_OnCharacterCreate</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -34,7 +34,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Anaxa_AddWeakness",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2143749742\">function_Anaxa_AddWeakness</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
@@ -46,8 +46,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Anaxa_Eidolon2_Property[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
-                  "referenceModifier": "MReference_AllDamageTypeResistanceDown",
+                  "modifier": "<a class=\"gModGreen\" id=\"1219895923\">Anaxa_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"-1864228635\">MReference_AllDamageTypeResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -67,7 +67,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Anaxa_Eidolon2",
+      "for": "<a class=\"gModGreen\" id=\"mod__126451485\">Anaxa_Eidolon2</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -81,7 +81,7 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Anaxa_AddWeakness",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2143749742\">function_Anaxa_AddWeakness</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
@@ -93,8 +93,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Anaxa_Eidolon2_Property[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
-                  "referenceModifier": "MReference_AllDamageTypeResistanceDown",
+                  "modifier": "<a class=\"gModGreen\" id=\"1219895923\">Anaxa_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"-1864228635\">MReference_AllDamageTypeResistanceDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -114,7 +114,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "M_Anaxa_Eidolon2_Bonus_OnCharacterCreate"
+              "modifier": "<a class=\"gModGreen\" id=\"1634329483\">M_Anaxa_Eidolon2_Bonus_OnCharacterCreate</a>"
             },
             "Modifier Deletes Itself"
           ],

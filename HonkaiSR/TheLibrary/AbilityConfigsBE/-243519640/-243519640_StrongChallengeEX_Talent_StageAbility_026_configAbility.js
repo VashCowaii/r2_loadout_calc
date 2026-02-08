@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_026"
+      "modifier": "<a class=\"gModGreen\" id=\"-452604102\">MStrongChallengeEX_Talent_StageAbility_LE_026</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_026",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1142108830\">MStrongChallengeEX_Talent_StageAbility_PLY_026</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -65,7 +65,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_026",
+      "for": "<a class=\"gModGreen\" id=\"mod__-452604102\">MStrongChallengeEX_Talent_StageAbility_LE_026</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -92,7 +92,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_026",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1142108830\">MStrongChallengeEX_Talent_StageAbility_PLY_026</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

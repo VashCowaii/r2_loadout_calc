@@ -18,20 +18,20 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_XP_Elite02_02_BattlePerform_LockHP"
+      "modifier": "<a class=\"gModGreen\" id=\"1667528367\">Monster_XP_Elite02_02_BattlePerform_LockHP</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_XP_Elite02_02_Instance_DisableAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-207530010\">Monster_XP_Elite02_02_Instance_DisableAction</a>",
       "modifierFlags": [
         "DisableAction"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_XP_Elite02_02_BattlePerform_LockHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__1667528367\">Monster_XP_Elite02_02_BattlePerform_LockHP</a>",
       "modifierFlags": [
         "Deathrattle"
       ],

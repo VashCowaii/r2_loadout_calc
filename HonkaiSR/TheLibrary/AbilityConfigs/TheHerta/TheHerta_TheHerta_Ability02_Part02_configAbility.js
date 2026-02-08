@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "TheHerta_Trace02_MainTarget"
+      "modifier": "<a class=\"gModGreen\" id=\"-424945107\">TheHerta_Trace02_MainTarget</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "TheHerta_SKL02_Mark"
+      "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "TheHerta_SKL02_Mark_Pre"
+      "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -34,11 +34,11 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "TheHerta_SKL02_Mark"
+      "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "TheHerta_SKL02",
+      "functionName": "<a class=\"gTempYellow\" id=\"1142002606\">TheHerta_SKL02</a>",
       "variables": {
         "DV_DamageRatio1": {
           "operator": "Variables[0] (0.7) || RETURN",
@@ -73,7 +73,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "TheHerta_SKL02_Mark_Pre"
+      "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -81,7 +81,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "TheHerta_SKL02_Mark"
+      "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -89,7 +89,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "TheHerta_Trace02_MainTarget"
+      "modifier": "<a class=\"gModGreen\" id=\"-424945107\">TheHerta_Trace02_MainTarget</a>"
     },
     "Trigger: Ability End"
   ],

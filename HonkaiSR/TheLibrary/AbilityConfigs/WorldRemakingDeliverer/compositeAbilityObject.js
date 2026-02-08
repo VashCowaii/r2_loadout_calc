@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_127_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1330751048\">Relic_127_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_127_Sub4[<span class=\"descriptionNumberColor\">World-Remaking Deliverer</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1926285053\">Relic_127_Sub4</a>[<span class=\"descriptionNumberColor\">World-Remaking Deliverer</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -54,7 +54,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_127_Sub3[<span class=\"descriptionNumberColor\">World-Remaking Deliverer</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1842396958\">Relic_127_Sub3</a>[<span class=\"descriptionNumberColor\">World-Remaking Deliverer</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -85,7 +85,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_127_Sub2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1825619339\">Relic_127_Sub2</a>",
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -93,14 +93,14 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Relic_127_Sub4[<span class=\"descriptionNumberColor\">World-Remaking Deliverer</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1926285053\">Relic_127_Sub4</a>[<span class=\"descriptionNumberColor\">World-Remaking Deliverer</span>]",
               "haloStatus": true
             }
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_127_Sub1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1875952196\">Relic_127_Sub1</a>",
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -108,14 +108,14 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}} + {{Caster's Memosprite}}"
               },
-              "modifier": "Relic_127_Sub3[<span class=\"descriptionNumberColor\">World-Remaking Deliverer</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1842396958\">Relic_127_Sub3</a>[<span class=\"descriptionNumberColor\">World-Remaking Deliverer</span>]",
               "haloStatus": true
             }
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_127_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1330751048\">Relic_127_Main</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -155,7 +155,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Relic_127_Sub1"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1875952196\">Relic_127_Sub1</a>"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -163,7 +163,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Relic_127_Sub2"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1825619339\">Relic_127_Sub2</a>"
                         }
                       ],
                       "failed": [
@@ -173,7 +173,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Relic_127_Sub1"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1875952196\">Relic_127_Sub1</a>"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -181,7 +181,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Relic_127_Sub2"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1825619339\">Relic_127_Sub2</a>"
                         }
                       ]
                     }

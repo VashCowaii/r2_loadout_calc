@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_025"
+      "modifier": "<a class=\"gModGreen\" id=\"-469381721\">MStrongChallengeEX_Talent_StageAbility_LE_025</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_025",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1158886449\">MStrongChallengeEX_Talent_StageAbility_PLY_025</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -74,7 +74,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_025",
+      "for": "<a class=\"gModGreen\" id=\"mod__-469381721\">MStrongChallengeEX_Talent_StageAbility_LE_025</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -96,7 +96,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_025",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1158886449\">MStrongChallengeEX_Talent_StageAbility_PLY_025</a>",
                   "valuePerStack": {
                     "MDF_Ultimate_DefaultStanceBreakRatio": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

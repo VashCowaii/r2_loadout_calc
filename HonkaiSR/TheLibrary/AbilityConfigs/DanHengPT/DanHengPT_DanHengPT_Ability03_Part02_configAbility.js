@@ -144,7 +144,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
       },
       "ifTargetFound": [
         {
@@ -168,7 +168,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHengPT_BoostEnergy",
+      "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>",
       "valuePerStack": {
         "MDF_IsStack": 1
       }
@@ -184,7 +184,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "DanHengPT_Ability03_AddShield"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1942576362\">DanHengPT_Ability03_AddShield</a>"
     },
     "Trigger: Skip Death Handling",
     "Trigger: Ability End"

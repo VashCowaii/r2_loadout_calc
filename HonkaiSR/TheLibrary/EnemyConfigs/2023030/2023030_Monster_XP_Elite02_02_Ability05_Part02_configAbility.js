@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_XP_Elite02_02_ChargeEffect[<span class=\"descriptionNumberColor\">Japa</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1633463751\">Monster_XP_Elite02_02_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
         "displayLines": "{[Skill05[1]]}",

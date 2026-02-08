@@ -62,7 +62,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Recently Summoned Enemies}}"
               },
-              "modifier": "Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter"
+              "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
             }
           ],
           "failed": [
@@ -91,7 +91,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Recently Summoned Enemies}}"
               },
-              "modifier": "Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter"
+              "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
             }
           ]
         }
@@ -110,7 +110,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter"
+        "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
       },
       "ifTargetFound": [
         {
@@ -119,7 +119,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_BeControled"
+          "modifier": "<a class=\"gModGreen\" id=\"410285383\">Monster_W2_Kafka_IF_BeControled</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -127,7 +127,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter"
+          "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
         }
       ]
     }
@@ -135,7 +135,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_IF_BeControled",
+      "for": "<a class=\"gModGreen\" id=\"mod__410285383\">Monster_W2_Kafka_IF_BeControled</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -148,7 +148,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter",
+      "for": "<a class=\"gModGreen\" id=\"mod__-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

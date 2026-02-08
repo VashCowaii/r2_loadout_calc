@@ -110,7 +110,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_HyacineServant_Passive_Mark[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"492819159\">Memosprite_HyacineServant_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]"
     },
     {
       "name": "ATK Scaling DMG",

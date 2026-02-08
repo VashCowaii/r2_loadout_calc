@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_Argenti_Attack_Sign",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1888942295\">Monster_Argenti_Attack_Sign</a>",
       "modifierFlags": [],
       "execute": [
         {
@@ -20,7 +20,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_Standard_AllDamageReduce",
+      "for": "<a class=\"gModGreen\" id=\"mod__-401873404\">Monster_Standard_AllDamageReduce</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -49,7 +49,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Argenti_Power_RL[<span class=\"descriptionNumberColor\">Soul Ascension</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]",
       "stackType": "Refresh",
       "execute": [
         {
@@ -68,7 +68,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Argenti_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]",
       "stackType": "Refresh",
       "execute": [
         {

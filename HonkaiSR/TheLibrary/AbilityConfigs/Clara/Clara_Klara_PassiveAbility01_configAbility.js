@@ -37,7 +37,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Klara_PassiveAbility01_ListenCounter",
+      "modifier": "<a class=\"gModGreen\" id=\"1664082780\">Klara_PassiveAbility01_ListenCounter</a>",
       "valuePerStack": {
         "MDF_Chance": {
           "operator": "Variables[0] (1) || RETURN",
@@ -55,7 +55,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Klara_PassiveAbility01_AddRevenge"
+      "modifier": "<a class=\"gModGreen\" id=\"-1481439916\">Klara_PassiveAbility01_AddRevenge</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -63,7 +63,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Klara_Passive_DamageReduce[<span class=\"descriptionNumberColor\">Guardian</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-796199138\">Klara_Passive_DamageReduce</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
           "operator": "Variables[0] (0.1) || RETURN",
@@ -79,7 +79,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Klara_PassiveAbility01_AddRevenge",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1481439916\">Klara_PassiveAbility01_AddRevenge</a>",
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -90,7 +90,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
             }
           ]
         },
@@ -103,7 +103,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
             }
           ]
         }
@@ -113,7 +113,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Klara_PassiveAbility01_ListenCounter",
+      "for": "<a class=\"gModGreen\" id=\"mod__1664082780\">Klara_PassiveAbility01_ListenCounter</a>",
       "execute": [
         {
           "eventTrigger": "Being Attacked Start [Owner]",
@@ -151,7 +151,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Klara_PassiveATK_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1426674462\">Klara_PassiveATK_Mark</a>"
                 }
               ]
             }

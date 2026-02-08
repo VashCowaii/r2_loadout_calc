@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003"
+      "modifier": "<a class=\"gModGreen\" id=\"-2016327774\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_03[<span class=\"descriptionNumberColor\">Hammer and Anvil</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1147866258\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_03</a>[<span class=\"descriptionNumberColor\">Hammer and Anvil</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -64,7 +64,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_02",
+      "for": "<a class=\"gModGreen\" id=\"mod__1164643877\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_02</a>",
       "execute": [
         {
           "eventTrigger": "Receiving Heal End [Owner]",
@@ -103,7 +103,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_03[<span class=\"descriptionNumberColor\">Hammer and Anvil</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1147866258\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_03</a>[<span class=\"descriptionNumberColor\">Hammer and Anvil</span>]",
                   "duration": {
                     "operator": "Variables[0] (ChallengePeakBattle_Plugins_0003_ADF_3) || RETURN",
                     "displayLines": "ChallengePeakBattle_Plugins_0003_ADF_3",
@@ -184,7 +184,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_03[<span class=\"descriptionNumberColor\">Hammer and Anvil</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1147866258\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_03</a>[<span class=\"descriptionNumberColor\">Hammer and Anvil</span>]",
                   "duration": {
                     "operator": "Variables[0] (ChallengePeakBattle_Plugins_0003_ADF_3) || RETURN",
                     "displayLines": "ChallengePeakBattle_Plugins_0003_ADF_3",
@@ -228,7 +228,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2016327774\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -255,7 +255,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_02",
+                  "modifier": "<a class=\"gModGreen\" id=\"1164643877\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0003_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_044"
+      "modifier": "<a class=\"gModGreen\" id=\"-418063126\">MStrongChallengeEX_Talent_StageAbility_LE_044</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_TGT_044[<span class=\"descriptionNumberColor\">Teach By Banaxample</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2044111722\">MStrongChallengeEX_Talent_StageAbility_TGT_044</a>[<span class=\"descriptionNumberColor\">Teach By Banaxample</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -78,7 +78,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_044",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1107567854\">MStrongChallengeEX_Talent_StageAbility_PLY_044</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -196,7 +196,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Targets of Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_044[<span class=\"descriptionNumberColor\">Teach By Banaxample</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2044111722\">MStrongChallengeEX_Talent_StageAbility_TGT_044</a>[<span class=\"descriptionNumberColor\">Teach By Banaxample</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_TGT_Lifetime) || RETURN",
                     "displayLines": "MDF_TGT_Lifetime",
@@ -241,7 +241,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_044",
+      "for": "<a class=\"gModGreen\" id=\"mod__-418063126\">MStrongChallengeEX_Talent_StageAbility_LE_044</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -263,7 +263,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_044",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1107567854\">MStrongChallengeEX_Talent_StageAbility_PLY_044</a>",
                   "valuePerStack": {
                     "MDF_TGT_CriticalDamage": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Mar_7th_10_Trace03"
+      "modifier": "<a class=\"gModGreen\" id=\"512866948\">M_Mar_7th_10_Trace03</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_PointB3_Break_Property[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1794469882\">Mar_7th_10_PointB3_Break_Property</a>[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_PointB3_Kill_Property[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-110388147\">Mar_7th_10_PointB3_Kill_Property</a>[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -80,7 +80,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Mar_7th_10_Trace03",
+      "for": "<a class=\"gModGreen\" id=\"mod__512866948\">M_Mar_7th_10_Trace03</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -100,7 +100,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Mar_7th_10_Enhance"
+                    "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>"
                   }
                 ]
               },
@@ -147,7 +147,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
                     }
                   },
                   "passed": [
@@ -166,7 +166,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Mar_7th_10_PointB3_Kill_Property[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-110388147\">Mar_7th_10_PointB3_Kill_Property</a>[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",
@@ -192,7 +192,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Mar_7th_10_PointB3_Break_Property[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1794469882\">Mar_7th_10_PointB3_Break_Property</a>[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",

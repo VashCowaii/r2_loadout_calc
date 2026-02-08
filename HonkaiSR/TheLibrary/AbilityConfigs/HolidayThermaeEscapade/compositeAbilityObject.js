@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_21061_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-556352437\">LC_21061_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_21061_Sub[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-461503808\">LC_21061_Sub</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -72,7 +72,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_21061_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-556352437\">LC_21061_Main</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -91,7 +91,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_21061_Sub[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-461503808\">LC_21061_Sub</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",

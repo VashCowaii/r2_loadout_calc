@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Tingyun_Tree03"
+      "modifier": "<a class=\"gModGreen\" id=\"499252230\">Tingyun_Tree03</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Tingyun_Tree03",
+      "for": "<a class=\"gModGreen\" id=\"mod__499252230\">Tingyun_Tree03</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",

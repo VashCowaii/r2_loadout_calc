@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23046_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"116691484\">LC_23046_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23046_Bonus02[<span class=\"descriptionNumberColor\">Hrunting</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-598797650\">LC_23046_Bonus02</a>[<span class=\"descriptionNumberColor\">Hrunting</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -60,7 +60,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23046_Bonus[<span class=\"descriptionNumberColor\">Hrunting</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__840145864\">LC_23046_Bonus</a>[<span class=\"descriptionNumberColor\">Hrunting</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -91,7 +91,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23046_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__116691484\">LC_23046_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -109,7 +109,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23046_Bonus02[<span class=\"descriptionNumberColor\">Hrunting</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-598797650\">LC_23046_Bonus02</a>[<span class=\"descriptionNumberColor\">Hrunting</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (4) || RETURN",
                     "displayLines": "4",
@@ -171,7 +171,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23046_Bonus[<span class=\"descriptionNumberColor\">Hrunting</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"840145864\">LC_23046_Bonus</a>[<span class=\"descriptionNumberColor\">Hrunting</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.4) || RETURN",

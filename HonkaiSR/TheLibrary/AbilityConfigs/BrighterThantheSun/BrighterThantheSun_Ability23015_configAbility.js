@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23015_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-731637436\">LC_23015_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23015_Sub[<span class=\"descriptionNumberColor\">Dragon's Call</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__899015137\">LC_23015_Sub</a>[<span class=\"descriptionNumberColor\">Dragon's Call</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -77,7 +77,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23015_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-731637436\">LC_23015_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -95,7 +95,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23015_Sub[<span class=\"descriptionNumberColor\">Dragon's Call</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"899015137\">LC_23015_Sub</a>[<span class=\"descriptionNumberColor\">Dragon's Call</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

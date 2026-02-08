@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Svarog_Ability06_Bonus",
+      "modifier": "<a class=\"gModGreen\" id=\"-41812969\">Svarog_Ability06_Bonus</a>",
       "duration": 1
     },
     "Trigger: Ability End"

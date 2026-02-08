@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MFarmRelic_104309"
+      "modifier": "<a class=\"gModGreen\" id=\"1789379567\">MFarmRelic_104309</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104309_Sub2[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -73,7 +73,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104309_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-76327950\">MFarmRelic_104309_Sub</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier is Added [Owner]",
@@ -123,7 +123,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "MFarmRelic_104309_Sub2[<span class=\"descriptionNumberColor\">Vulnerability</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]"
                   },
                   "passed": [
                     {
@@ -134,7 +134,7 @@ const configAbility = {
                       },
                       "valueType": "Layer",
                       "variableName": "Modifier_Layer",
-                      "modifierName": "MFarmRelic_104309_Sub2[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "multiplier": 1
                     }
                   ],
@@ -152,7 +152,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MFarmRelic_104309_Sub2[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "addStacksPerTrigger": {
                     "operator": "Variables[0] (DOT_Layer) || Variables[1] (Modifier_Layer) || SUB || RETURN",
                     "displayLines": "(DOT_Layer - Modifier_Layer)",
@@ -215,7 +215,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "MFarmRelic_104309_Sub2[<span class=\"descriptionNumberColor\">Vulnerability</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]"
                   },
                   "passed": [
                     {
@@ -226,7 +226,7 @@ const configAbility = {
                       },
                       "valueType": "Layer",
                       "variableName": "Modifier_Layer",
-                      "modifierName": "MFarmRelic_104309_Sub2[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "multiplier": 1
                     }
                   ],
@@ -244,7 +244,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MFarmRelic_104309_Sub2[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "addStacksPerTrigger": {
                     "operator": "Variables[0] (DOT_Layer) || Variables[1] (Modifier_Layer) || SUB || RETURN",
                     "displayLines": "(DOT_Layer - Modifier_Layer)",
@@ -263,7 +263,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104309",
+      "for": "<a class=\"gModGreen\" id=\"mod__1789379567\">MFarmRelic_104309</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -285,7 +285,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MFarmRelic_104309_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-76327950\">MFarmRelic_104309_Sub</a>"
                 }
               ]
             }

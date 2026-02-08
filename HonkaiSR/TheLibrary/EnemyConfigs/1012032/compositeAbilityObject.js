@@ -20,7 +20,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_StageSpecialAbility_10441211_Block[<span class=\"descriptionNumberColor\">Golden Ring</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1931189851\">Modifier_StageSpecialAbility_10441211_Block</a>[<span class=\"descriptionNumberColor\">Golden Ring</span>]"
         }
       ],
       "references": []

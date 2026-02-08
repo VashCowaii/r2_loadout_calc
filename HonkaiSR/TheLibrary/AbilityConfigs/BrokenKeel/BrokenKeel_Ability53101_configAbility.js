@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_310_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"46418876\">Relic_310_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_310_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__274038905\">Relic_310_Sub</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_310_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__46418876\">Relic_310_Main</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -89,7 +89,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Relic_310_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"274038905\">Relic_310_Sub</a>"
                     }
                   ]
                 }
@@ -135,7 +135,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Relic_310_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"274038905\">Relic_310_Sub</a>"
                     }
                   ]
                 }
@@ -168,7 +168,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Relic_310_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"274038905\">Relic_310_Sub</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ],
@@ -179,7 +179,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Relic_310_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"274038905\">Relic_310_Sub</a>"
                 }
               ]
             }

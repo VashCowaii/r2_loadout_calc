@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_309_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1146685458\">Relic_309_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_309_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1743585357\">Relic_309_Sub</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -56,7 +56,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_309_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1146685458\">Relic_309_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -87,7 +87,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_309_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1743585357\">Relic_309_Sub</a>"
                     }
                   ]
                 }
@@ -117,7 +117,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_309_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1743585357\">Relic_309_Sub</a>",
                       "onlyRemoveOwnersInstance": true
                     }
                   ],
@@ -128,7 +128,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_309_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1743585357\">Relic_309_Sub</a>"
                     }
                   ]
                 }

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Abomi04_PassiveAbility_DanHeng"
+      "modifier": "<a class=\"gModGreen\" id=\"-1529984302\">Monster_W2_Abomi04_PassiveAbility_DanHeng</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Abomi04_PassiveAbility_DanHeng",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1529984302\">Monster_W2_Abomi04_PassiveAbility_DanHeng</a>",
       "execute": [
         {
           "eventTrigger": "Got a Kill [Owner]",
@@ -27,7 +27,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "OneMorePerTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -35,7 +35,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "OneMore"
+              "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
             }
           ]
         }

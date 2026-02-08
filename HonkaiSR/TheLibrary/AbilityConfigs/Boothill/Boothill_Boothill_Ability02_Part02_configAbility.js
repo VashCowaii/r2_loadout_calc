@@ -12,7 +12,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Boothill_TechniqueUsage_Ability02[<span class=\"descriptionNumberColor\">3-9× Smile</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-1740127883\">Boothill_TechniqueUsage_Ability02</a>[<span class=\"descriptionNumberColor\">3-9× Smile</span>]"
       },
       "passed": [
         {
@@ -21,7 +21,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Boothill_Ultimate_PhysicalWeakness[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1234556186\">Boothill_Ultimate_PhysicalWeakness</a>[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -37,7 +37,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Boothill_TechniqueUsage_Ability02[<span class=\"descriptionNumberColor\">3-9× Smile</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1740127883\">Boothill_TechniqueUsage_Ability02</a>[<span class=\"descriptionNumberColor\">3-9× Smile</span>]"
         }
       ]
     },
@@ -54,7 +54,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -81,7 +81,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
           "valuePerStack": {
             "MDF_PropertyRatio": {
               "operator": "Variables[0] (0.3) || Variables[1] (0.12) || ADD || RETURN",
@@ -102,7 +102,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -128,7 +128,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
           "valuePerStack": {
             "MDF_PropertyRatio": {
               "operator": "Variables[0] (0.3) || RETURN",
@@ -148,7 +148,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Boothill_Ability02_ContinuousCheck"
+      "modifier": "<a class=\"gModGreen\" id=\"-1862582819\">M_Boothill_Ability02_ContinuousCheck</a>"
     },
     {
       "name": "Inject Extra-Turn",
@@ -163,7 +163,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Boothill_Eidolon4_DamageReduce",
+      "for": "<a class=\"gModGreen\" id=\"mod__1604810561\">Boothill_Eidolon4_DamageReduce</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -202,7 +202,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
               },
               "passed": [
                 {
@@ -236,14 +236,14 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Boothill_Ability02_ContinuousCheck",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1862582819\">M_Boothill_Ability02_ContinuousCheck</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: Start",
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Boothill_Ability02_NotContinuous"
+              "functionName": "<a class=\"gTempYellow\" id=\"1884487363\">Boothill_Ability02_NotContinuous</a>"
             }
           ]
         },
@@ -252,7 +252,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Boothill_Ability02_NotContinuous"
+              "functionName": "<a class=\"gTempYellow\" id=\"1884487363\">Boothill_Ability02_NotContinuous</a>"
             }
           ]
         },
@@ -261,7 +261,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Boothill_Ability02_NotContinuous"
+              "functionName": "<a class=\"gTempYellow\" id=\"1884487363\">Boothill_Ability02_NotContinuous</a>"
             }
           ]
         },
@@ -270,7 +270,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Boothill_Ability02_NotContinuous"
+              "functionName": "<a class=\"gTempYellow\" id=\"1884487363\">Boothill_Ability02_NotContinuous</a>"
             }
           ]
         }
@@ -278,7 +278,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Boothill_Ability02_NotContinuous",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1884487363\">Boothill_Ability02_NotContinuous</a>",
           "parse": [
             {
               "name": "IF",

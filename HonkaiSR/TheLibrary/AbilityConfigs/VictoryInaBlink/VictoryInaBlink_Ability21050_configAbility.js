@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21050_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1284950625\">LC_21050_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21050_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-277720014\">LC_21050_Sub2</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21050_Sub1",
+      "for": "<a class=\"gModGreen\" id=\"mod__-294497633\">LC_21050_Sub1</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -74,7 +74,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "LC_21050_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-277720014\">LC_21050_Sub2</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -92,7 +92,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21050_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1284950625\">LC_21050_Main</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -131,7 +131,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "LC_21050_Sub1"
+                  "modifier": "<a class=\"gModGreen\" id=\"-294497633\">LC_21050_Sub1</a>"
                 }
               ]
             }

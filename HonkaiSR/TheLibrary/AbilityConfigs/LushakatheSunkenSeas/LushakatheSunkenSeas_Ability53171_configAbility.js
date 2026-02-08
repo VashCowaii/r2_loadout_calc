@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_317_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-481512901\">Relic_317_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_317_Sub[<span class=\"descriptionNumberColor\">Lushaka, the Sunken Seas</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__550683344\">Relic_317_Sub</a>[<span class=\"descriptionNumberColor\">Lushaka, the Sunken Seas</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -51,7 +51,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_317_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-481512901\">Relic_317_Main</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -86,7 +86,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Far Left Player Entity(no Memosprite)}}"
                       },
-                      "modifier": "Relic_317_Sub[<span class=\"descriptionNumberColor\">Lushaka, the Sunken Seas</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"550683344\">Relic_317_Sub</a>[<span class=\"descriptionNumberColor\">Lushaka, the Sunken Seas</span>]"
                     }
                   ]
                 }

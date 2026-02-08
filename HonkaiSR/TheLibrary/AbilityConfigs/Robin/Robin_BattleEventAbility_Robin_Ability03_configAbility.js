@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Robin_PassiveAbility01_BattleEvent"
+      "modifier": "<a class=\"gModGreen\" id=\"594877276\">Robin_PassiveAbility01_BattleEvent</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Robin_PassiveAbility01_BattleEvent_BaseSpeed"
+      "modifier": "<a class=\"gModGreen\" id=\"906631439\">Robin_PassiveAbility01_BattleEvent_BaseSpeed</a>"
     },
     {
       "name": "Block Advance/Delay Effects",
@@ -37,7 +37,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Robin_PassiveAbility01_BattleEvent_BaseSpeed",
+      "for": "<a class=\"gModGreen\" id=\"mod__906631439\">Robin_PassiveAbility01_BattleEvent_BaseSpeed</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

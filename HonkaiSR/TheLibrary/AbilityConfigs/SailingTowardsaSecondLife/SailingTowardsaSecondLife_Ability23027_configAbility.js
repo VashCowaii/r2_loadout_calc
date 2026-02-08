@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23027_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1693625911\">LC_23027_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23027_Sub[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1965028940\">LC_23027_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23027_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1693625911\">LC_23027_Main</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -105,7 +105,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23027_Sub[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1965028940\">LC_23027_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (0.12) || RETURN",
@@ -146,7 +146,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23027_Sub[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1965028940\">LC_23027_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
                 }
               ],
               "whenLeavingRange": [
@@ -156,7 +156,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23027_Sub[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1965028940\">LC_23027_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (0.12) || RETURN",

@@ -19,17 +19,17 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_BlackSwan_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1317961344\">StageAbility_Maze_BlackSwan_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_Maze_StopAddDot"
+      "for": "<a class=\"gModGreen\" id=\"mod__465925451\">M_BlackSwan_Maze_StopAddDot</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_BlackSwan_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1317961344\">StageAbility_Maze_BlackSwan_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

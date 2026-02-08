@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Gepard_Eidolon4_AddStatusResistance[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1307422316\">Gepard_Eidolon4_AddStatusResistance</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -45,7 +45,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Gepard_Eidolon2_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1613152679\">Gepard_Eidolon2_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "STAT_SpeedDown"
@@ -82,7 +82,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Gepard_Eidolon2_Delay",
+      "for": "<a class=\"gModGreen\" id=\"mod__-367770919\">Gepard_Eidolon2_Delay</a>",
       "execute": [
         {
           "eventTrigger": "When Losing Modifier [Anyone]",
@@ -98,7 +98,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -106,7 +106,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Gepard_Eidolon2_Delay"
+                    "modifier": "<a class=\"gModGreen\" id=\"-367770919\">Gepard_Eidolon2_Delay</a>"
                   }
                 ]
               },
@@ -117,7 +117,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Gepard_Eidolon2_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1613152679\">Gepard_Eidolon2_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_Lifetime) || RETURN",
                     "displayLines": "MDF_Lifetime",
@@ -151,7 +151,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Gepard_Passive02_AttackDeltaUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__567771648\">Gepard_Passive02_AttackDeltaUp</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -183,7 +183,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Gepard_Ultimate_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-176429589\">Gepard_Ultimate_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "Shield"

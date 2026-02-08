@@ -17,11 +17,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_Standard_ChangephaseMark"
+          "for": "<a class=\"gModGreen\" id=\"mod__-2049832737\">Enemy_Standard_ChangephaseMark</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Monster_Floating_DamageReduce",
+          "for": "<a class=\"gModGreen\" id=\"mod__981190627\">Standard_Monster_Floating_DamageReduce</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -49,11 +49,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Monster_Floating_DamageReduceLock"
+          "for": "<a class=\"gModGreen\" id=\"mod__-1095699636\">Standard_Monster_Floating_DamageReduceLock</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Monster_Floating_DamageReduceController",
+          "for": "<a class=\"gModGreen\" id=\"mod__766895631\">Standard_Monster_Floating_DamageReduceController</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -65,7 +65,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Standard_Monster_Floating_DamageReduce"
+                  "modifier": "<a class=\"gModGreen\" id=\"981190627\">Standard_Monster_Floating_DamageReduce</a>"
                 }
               ]
             },
@@ -74,11 +74,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Standard_Monster_CheckDamageReduce_Cal"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1620966519\">Standard_Monster_CheckDamageReduce_Cal</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Standard_Monster_RefreshDamageReduce"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1048963995\">Standard_Monster_RefreshDamageReduce</a>"
                 }
               ]
             },
@@ -87,11 +87,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Standard_Monster_CheckDamageReduce_Cal"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1620966519\">Standard_Monster_CheckDamageReduce_Cal</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Standard_Monster_RefreshDamageReduce"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1048963995\">Standard_Monster_RefreshDamageReduce</a>"
                 }
               ]
             },
@@ -100,7 +100,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Standard_Monster_RefreshDamageReduce"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1048963995\">Standard_Monster_RefreshDamageReduce</a>"
                 }
               ]
             },
@@ -114,11 +114,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Standard_Monster_CheckDamageReduce_Cal"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1620966519\">Standard_Monster_CheckDamageReduce_Cal</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Standard_Monster_RefreshDamageReduce"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1048963995\">Standard_Monster_RefreshDamageReduce</a>"
                 }
               ]
             }
@@ -126,7 +126,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Standard_Monster_CheckDamageReduce_Cal",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1620966519\">Standard_Monster_CheckDamageReduce_Cal</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -136,7 +136,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Standard_Monster_Floating_DamageReduceLock",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1095699636\">Standard_Monster_Floating_DamageReduceLock</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -185,7 +185,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "CharacterFunctions",
-              "functionName": "Standard_Monster_RefreshDamageReduce",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1048963995\">Standard_Monster_RefreshDamageReduce</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -231,7 +231,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "modifier": "Standard_Monster_Floating_DamageReduce",
+                          "modifier": "<a class=\"gModGreen\" id=\"981190627\">Standard_Monster_Floating_DamageReduce</a>",
                           "valuePerStack": {
                             "MDF_DamageReduce": {
                               "operator": "Constants[0] (1) || Variables[0] (MDF_LastLockHpRatio) || Variables[1] (MDF_NextLockHpRatio ) || SUB || Variables[2] (MDF_LockHpUpLimitRatio) || DIV || SUB || Variables[3] (MDF_DamageReduceRatio) || MUL || RETURN",
@@ -256,7 +256,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "modifier": "Standard_Monster_Floating_DamageReduce"
+                          "modifier": "<a class=\"gModGreen\" id=\"981190627\">Standard_Monster_Floating_DamageReduce</a>"
                         }
                       ]
                     }
@@ -268,7 +268,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Standard_Monster_Floating_DamageReduce"
+                      "modifier": "<a class=\"gModGreen\" id=\"981190627\">Standard_Monster_Floating_DamageReduce</a>"
                     }
                   ]
                 }
@@ -278,7 +278,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_LockActionDelayChange",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1003024550\">Standard_LockActionDelayChange</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -314,21 +314,21 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_MuteSpeed",
+          "for": "<a class=\"gModGreen\" id=\"mod__1187511334\">Standard_MuteSpeed</a>",
           "modifierFlags": [
             "MuteSpeed"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_MuteAttachWeakness",
+          "for": "<a class=\"gModGreen\" id=\"mod__1856806253\">Standard_MuteAttachWeakness</a>",
           "modifierFlags": [
             "MuteAttachWeakness"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Monster_AllDamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -596,7 +596,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_AllDamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2083575949\">Standard_AllDamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -627,11 +627,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_FastAction_Action"
+          "for": "<a class=\"gModGreen\" id=\"mod__773711749\">Standard_FastAction_Action</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_FastAction_Part1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1796235183\">Standard_FastAction_Part1</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -678,7 +678,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_FastAction_Action"
+                      "modifier": "<a class=\"gModGreen\" id=\"773711749\">Standard_FastAction_Action</a>"
                     }
                   ],
                   "failed": [
@@ -688,7 +688,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_FastAction[<span class=\"descriptionNumberColor\">Stormride</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"35393434\">Standard_FastAction</a>[<span class=\"descriptionNumberColor\">Stormride</span>]"
                     }
                   ]
                 },
@@ -699,7 +699,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_FastAction_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1040166694\">Standard_FastAction_Effect</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -711,7 +711,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_FastAction_Permanent[<span class=\"descriptionNumberColor\">Stormride</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-213110193\">Standard_FastAction_Permanent</a>[<span class=\"descriptionNumberColor\">Stormride</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -723,7 +723,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_FastAction_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1040166694\">Standard_FastAction_Effect</a>"
                 }
               ]
             },
@@ -736,7 +736,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_FastAction_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1040166694\">Standard_FastAction_Effect</a>"
                 }
               ]
             },
@@ -749,7 +749,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_FastAction_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1040166694\">Standard_FastAction_Effect</a>"
                 },
                 {
                   "name": "IF",
@@ -759,7 +759,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Standard_FastAction_Action"
+                    "modifier": "<a class=\"gModGreen\" id=\"773711749\">Standard_FastAction_Action</a>"
                   },
                   "passed": [
                     {
@@ -768,7 +768,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_FastAction_Action"
+                      "modifier": "<a class=\"gModGreen\" id=\"773711749\">Standard_FastAction_Action</a>"
                     }
                   ],
                   "failed": [
@@ -823,7 +823,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "OneMore",
+                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>",
                         "invertCondition": true
                       },
                       "passed": [
@@ -833,7 +833,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Standard_FastAction_Part1",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1796235183\">Standard_FastAction_Part1</a>",
                           "valuePerStack": {
                             "_FastAction_Turns": -1,
                             "_CurrentTurnsLeft": 0
@@ -854,7 +854,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_FastAction_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1040166694\">Standard_FastAction_Effect</a>"
                 }
               ]
             },
@@ -883,7 +883,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_FastAction[<span class=\"descriptionNumberColor\">Stormride</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__35393434\">Standard_FastAction</a>[<span class=\"descriptionNumberColor\">Stormride</span>]",
           "counter": 1,
           "stackType": "Replace",
           "execute": [
@@ -896,7 +896,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_FastAction_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1040166694\">Standard_FastAction_Effect</a>"
                 }
               ]
             },
@@ -909,7 +909,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_FastAction_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1040166694\">Standard_FastAction_Effect</a>"
                 }
               ]
             },
@@ -922,7 +922,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_FastAction_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1040166694\">Standard_FastAction_Effect</a>"
                 },
                 {
                   "name": "IF",
@@ -932,7 +932,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Standard_FastAction_Action"
+                    "modifier": "<a class=\"gModGreen\" id=\"773711749\">Standard_FastAction_Action</a>"
                   },
                   "passed": [
                     {
@@ -941,7 +941,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_FastAction_Action"
+                      "modifier": "<a class=\"gModGreen\" id=\"773711749\">Standard_FastAction_Action</a>"
                     }
                   ],
                   "failed": [
@@ -996,7 +996,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "OneMore",
+                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>",
                         "invertCondition": true
                       },
                       "passed": [
@@ -1019,7 +1019,7 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Modifier Variable",
-                          "modifierName": "Standard_FastAction[<span class=\"descriptionNumberColor\">Stormride</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"35393434\">Standard_FastAction</a>[<span class=\"descriptionNumberColor\">Stormride</span>]",
                           "value": {
                             "operator": "Variables[0] (Standard_FastAction) || Variables[1] (MDF_CurrentTurnsLeft) || SUB || RETURN",
                             "displayLines": "(Standard_FastAction - MDF_CurrentTurnsLeft)",
@@ -1036,7 +1036,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Standard_FastAction_Part1",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1796235183\">Standard_FastAction_Part1</a>",
                           "valuePerStack": {
                             "_FastAction_Turns": {
                               "operator": "Variables[0] (Standard_FastAction) || RETURN",
@@ -1067,7 +1067,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Modifier Variable",
-                  "modifierName": "Standard_FastAction[<span class=\"descriptionNumberColor\">Stormride</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"35393434\">Standard_FastAction</a>[<span class=\"descriptionNumberColor\">Stormride</span>]",
                   "value": {
                     "operator": "Variables[0] (Standard_FastAction) || Variables[1] (MDF_CurrentTurnsLeft) || SUB || RETURN",
                     "displayLines": "(Standard_FastAction - MDF_CurrentTurnsLeft)",
@@ -1089,7 +1089,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_FastAction_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1040166694\">Standard_FastAction_Effect</a>"
                 }
               ]
             },
@@ -1118,7 +1118,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_SuperArmorBreak[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1917647041\">Standard_SuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]",
           "modifierFlags": [
             "STAT_SuperArmorBreak"
           ],
@@ -1132,7 +1132,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "StanceBreakState_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
                 }
               ]
             },
@@ -1164,7 +1164,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "StanceBreakState_Effect"
+                    "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
                   },
                   "passed": [
                     {
@@ -1173,7 +1173,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "StanceBreakState_Effect"
+                      "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
                     }
                   ]
                 }
@@ -1187,7 +1187,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_SuperArmor[<span class=\"descriptionNumberColor\">Safeguard</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
           "modifierFlags": [
             "MuteHitH",
             "STAT_SuperArmor"
@@ -1453,7 +1453,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_SuperArmorController",
+          "for": "<a class=\"gModGreen\" id=\"mod__532367944\">Standard_SuperArmorController</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1464,7 +1464,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmor[<span class=\"descriptionNumberColor\">Safeguard</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
                       "operator": "Variables[0] (MDF_SuperArmorDamageResistance) || RETURN",
@@ -1487,7 +1487,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmor[<span class=\"descriptionNumberColor\">Safeguard</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]"
                 },
                 {
                   "name": "Action Advance/Delay",
@@ -1504,7 +1504,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmorBreak[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1917647041\">Standard_SuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
                       "operator": "Variables[0] (MDF_SuperArmorBreakDamageTakenRatio) || RETURN",
@@ -1527,7 +1527,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmorBreak[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1917647041\">Standard_SuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1535,7 +1535,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmor[<span class=\"descriptionNumberColor\">Safeguard</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
                       "operator": "Variables[0] (MDF_SuperArmorDamageResistance) || RETURN",
@@ -1553,7 +1553,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_RogueBoss_DamageUp[<span class=\"descriptionNumberColor\">Berserk</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2068031350\">Monster_RogueBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -1600,7 +1600,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_RogueBoss",
+          "for": "<a class=\"gModGreen\" id=\"mod__1542717021\">Monster_RogueBoss</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -1624,7 +1624,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_RogueBoss_DamageUp[<span class=\"descriptionNumberColor\">Berserk</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2068031350\">Monster_RogueBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": 0.4
                       }
@@ -1637,7 +1637,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_RogueElite_DamageUp[<span class=\"descriptionNumberColor\">Berserk</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2140377444\">Monster_RogueElite_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -1684,7 +1684,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_RogueElite",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1381820489\">Monster_RogueElite</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -1708,7 +1708,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_RogueElite_DamageUp[<span class=\"descriptionNumberColor\">Berserk</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2140377444\">Monster_RogueElite_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": 0.4
                       }
@@ -1721,20 +1721,20 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_Standard_Strange[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1526690424\">Monster_Standard_Strange</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "description": "Missing Description",
           "type": "Other"
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_Standard_Enhance[<span class=\"descriptionNumberColor\">Enhance</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-91116970\">Monster_Standard_Enhance</a>[<span class=\"descriptionNumberColor\">Enhance</span>]",
           "description": "The false projection produced by compromised codes receives a massive boost in combat strength.",
           "type": "Other",
           "statusName": "Enhance"
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_Standard_HideMonsterHUD",
+          "for": "<a class=\"gModGreen\" id=\"mod__1019940220\">Enemy_Standard_HideMonsterHUD</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]"
@@ -1746,14 +1746,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_Standard_MuteHitFly",
+          "for": "<a class=\"gModGreen\" id=\"mod__1166907060\">Enemy_Standard_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "NoWeakAndResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-561802374\">NoWeakAndResistance</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1762,7 +1762,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_Blood_Link_Stun",
+          "for": "<a class=\"gModGreen\" id=\"mod__70226604\">Monster_Blood_Link_Stun</a>",
           "stackType": "Merge",
           "modifierFlags": [
             "DisableAction",
@@ -1773,7 +1773,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_Blood_Link_Revive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1554000099\">Monster_Blood_Link_Revive</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1810,7 +1810,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_Blood_Link_Stun"
+                  "modifier": "<a class=\"gModGreen\" id=\"70226604\">Monster_Blood_Link_Stun</a>"
                 }
               ]
             }
@@ -1819,7 +1819,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_Blood_Link_Group1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1410232630\">Monster_Blood_Link_Group1</a>",
           "modifierFlags": [
             "BloodLink"
           ],
@@ -1859,7 +1859,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_Blood_Link_Revive",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1554000099\">Monster_Blood_Link_Revive</a>",
                       "counter": 1
                     },
                     {
@@ -1868,7 +1868,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_Blood_Link_Stun",
+                      "modifier": "<a class=\"gModGreen\" id=\"70226604\">Monster_Blood_Link_Stun</a>",
                       "counter": 1
                     }
                   ]
@@ -1879,7 +1879,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_Mecha_BlockDamage[<span class=\"descriptionNumberColor\">Barrier</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-696028198\">Enemy_Mecha_BlockDamage</a>[<span class=\"descriptionNumberColor\">Barrier</span>]",
           "counter": 1,
           "modifierFlags": [
             "BlockDamageExcludeDot",
@@ -1936,14 +1936,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_Standard_DisableAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__740710426\">Monster_Standard_DisableAction</a>",
           "modifierFlags": [
             "DisableAction"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_Standard_SpeedRatioDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-958879550\">Monster_Standard_SpeedRatioDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedDown"

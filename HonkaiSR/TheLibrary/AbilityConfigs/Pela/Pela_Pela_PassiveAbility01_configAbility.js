@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Pela_PassiveAbility01_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1443679602\">Pela_PassiveAbility01_Modifier</a>"
     },
     {
       "name": "IF",
@@ -33,7 +33,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Pela_AbilityEidolon6"
+          "modifier": "<a class=\"gModGreen\" id=\"-1719883297\">Pela_AbilityEidolon6</a>"
         }
       ]
     }
@@ -41,7 +41,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Pela_AbilityEidolon6",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1719883297\">Pela_AbilityEidolon6</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -106,7 +106,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Pela_AbilityEidolon1",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1770216154\">Pela_AbilityEidolon1</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -147,7 +147,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Pela_PassiveAbility01_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1443679602\">Pela_PassiveAbility01_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -165,7 +165,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Pela_AbilityEidolon1",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1770216154\">Pela_AbilityEidolon1</a>",
                   "valuePerStack": {
                     "MDF_SPValue": {
                       "operator": "Variables[0] (5) || RETURN",
@@ -213,7 +213,7 @@ const configAbility = {
                       }
                     ]
                   },
-                  "modifier": "Pela_AbilityEidolon1"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1770216154\">Pela_AbilityEidolon1</a>"
                 }
               ]
             }
@@ -248,7 +248,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Pela_AbilityEidolon1",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1770216154\">Pela_AbilityEidolon1</a>",
                   "valuePerStack": {
                     "MDF_SPValue": {
                       "operator": "Variables[0] (5) || RETURN",

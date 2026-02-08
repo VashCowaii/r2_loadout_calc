@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Topaz_Normal_AddRegardAsAttackType"
+          "modifier": "<a class=\"gModGreen\" id=\"-2051023932\">M_Topaz_Normal_AddRegardAsAttackType</a>"
         }
       ]
     },
@@ -61,7 +61,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Topaz_Normal_AddRegardAsAttackType",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2051023932\">M_Topaz_Normal_AddRegardAsAttackType</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -100,7 +100,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_Topaz_Normal_AddRegardAsAttackType"
+              "modifier": "<a class=\"gModGreen\" id=\"-2051023932\">M_Topaz_Normal_AddRegardAsAttackType</a>"
             }
           ]
         }

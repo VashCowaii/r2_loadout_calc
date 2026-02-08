@@ -42,7 +42,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
       },
       "ignoreParallelWarning": true,
       "ifTargetFound": [
@@ -52,7 +52,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
         }
       ]
     },

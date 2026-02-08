@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha03_02_Effect"
+      "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
     },
     {
       "name": "IF",
@@ -39,7 +39,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
             "invertCondition": true
           },
           "ifTargetFound": [
@@ -49,7 +49,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W1_Mecha03_02_RLElite_ReFreshMark"
+              "modifier": "<a class=\"gModGreen\" id=\"769637727\">Enemy_W1_Mecha03_02_RLElite_ReFreshMark</a>"
             },
             {
               "name": "Exit Broken-State",
@@ -84,7 +84,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Enemy_W1_Mecha03_02_RLElite_ReFreshMark"
+        "modifier": "<a class=\"gModGreen\" id=\"769637727\">Enemy_W1_Mecha03_02_RLElite_ReFreshMark</a>"
       },
       "ifTargetFound": [
         {
@@ -101,7 +101,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier01"
+          "modifier": "<a class=\"gModGreen\" id=\"1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -109,7 +109,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier02"
+          "modifier": "<a class=\"gModGreen\" id=\"1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>"
         },
         {
           "name": "Force Entity Death",
@@ -155,7 +155,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Recently Summoned Enemies}}"
               },
-              "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier02"
+              "modifier": "<a class=\"gModGreen\" id=\"1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>"
             }
           ]
         },
@@ -196,7 +196,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Recently Summoned Enemies}}"
               },
-              "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier01"
+              "modifier": "<a class=\"gModGreen\" id=\"1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>"
             }
           ]
         },
@@ -206,7 +206,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
         },
         {
           "name": "Define Custom Variable",
@@ -221,7 +221,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha03_02_Effect"
+      "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
     },
     {
       "name": "IF",
@@ -256,7 +256,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                 "invertCondition": true
               },
               {
@@ -277,7 +277,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio": {
                   "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",

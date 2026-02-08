@@ -32,7 +32,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Monster_Standard_SpeedRatioDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-958879550\">Monster_Standard_SpeedRatioDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
         "displayLines": "{[Skill01[3]]}",

@@ -10,17 +10,17 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23012_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"310397379\">LC_23012_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23012_CD"
+      "for": "<a class=\"gModGreen\" id=\"mod__107824413\">LC_23012_CD</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23012_Sub[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1089873720\">LC_23012_Sub</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -52,7 +52,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23012_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__310397379\">LC_23012_Main</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -76,7 +76,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23012_CD"
+                      "modifier": "<a class=\"gModGreen\" id=\"107824413\">LC_23012_CD</a>"
                     }
                   },
                   {
@@ -95,7 +95,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23012_Sub[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1089873720\">LC_23012_Sub</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -111,7 +111,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23012_CD",
+                  "modifier": "<a class=\"gModGreen\" id=\"107824413\">LC_23012_CD</a>",
                   "duration": {
                     "operator": "Variables[0] (3) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(3 - 1)",

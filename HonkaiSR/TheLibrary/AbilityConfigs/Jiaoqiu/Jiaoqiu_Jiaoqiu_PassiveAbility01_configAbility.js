@@ -33,13 +33,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Jiaoqiu_PassiveAbility"
+      "modifier": "<a class=\"gModGreen\" id=\"-1097387552\">Jiaoqiu_PassiveAbility</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Jiaoqiu_Tree01_recoverSP",
+      "for": "<a class=\"gModGreen\" id=\"mod__674970009\">Jiaoqiu_Tree01_recoverSP</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -78,7 +78,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jiaoqiu_PassiveAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1097387552\">Jiaoqiu_PassiveAbility</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -92,14 +92,14 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Jiaoqiu_Aura"
+                "modifier": "<a class=\"gModGreen\" id=\"-1304078651\">Jiaoqiu_Aura</a>"
               },
               "passed": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "LifeTime",
                   "variableName": "EnergyBarCount",
-                  "modifierName": "Jiaoqiu_Aura",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1304078651\">Jiaoqiu_Aura</a>",
                   "multiplier": 1
                 }
               ],
@@ -170,7 +170,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Jiaoqiu_PassiveAbility_Debuff"
+              "modifier": "<a class=\"gModGreen\" id=\"-666615841\">Jiaoqiu_PassiveAbility_Debuff</a>"
             },
             {
               "name": "IF",
@@ -185,7 +185,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jiaoqiu_Tree01_recoverSP"
+                  "modifier": "<a class=\"gModGreen\" id=\"674970009\">Jiaoqiu_Tree01_recoverSP</a>"
                 }
               ]
             },
@@ -202,7 +202,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jiaoqiu_Tree02_StatusProbabilityShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"-122400477\">Jiaoqiu_Tree02_StatusProbabilityShow</a>"
                 }
               ]
             },
@@ -219,7 +219,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jiaoqiu_Eidolon6_ListenFlavor"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1908309004\">Jiaoqiu_Eidolon6_ListenFlavor</a>"
                 }
               ]
             },
@@ -296,7 +296,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Jiaoqiu_PassiveAbility_Debuff"
+                  "modifier": "<a class=\"gModGreen\" id=\"-666615841\">Jiaoqiu_PassiveAbility_Debuff</a>"
                 }
               ]
             }
@@ -312,7 +312,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
           },
-          "modifier": "Jiaoqiu_Eidolon1_ListenDamage[<span class=\"descriptionNumberColor\">Pentapathic Transference</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"453883342\">Jiaoqiu_Eidolon1_ListenDamage</a>[<span class=\"descriptionNumberColor\">Pentapathic Transference</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "Eidolon Activated",

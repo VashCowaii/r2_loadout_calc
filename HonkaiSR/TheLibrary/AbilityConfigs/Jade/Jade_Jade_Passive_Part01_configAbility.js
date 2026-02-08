@@ -17,7 +17,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Jade_Ultimate_Insert[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]",
+        "modifier": "<a class=\"gModGreen\" id=\"-1732030848\">Jade_Ultimate_Insert</a>[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]",
         "invertCondition": true
       },
       "passed": [
@@ -59,7 +59,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Jade_Ultimate_Insert[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-1732030848\">Jade_Ultimate_Insert</a>[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]"
       }
     },
     {
@@ -70,7 +70,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Jade_Ultimate_Insert[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-1732030848\">Jade_Ultimate_Insert</a>[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]"
       }
     },
     {
@@ -81,7 +81,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Jade_Ultimate_Insert[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]",
+        "modifier": "<a class=\"gModGreen\" id=\"-1732030848\">Jade_Ultimate_Insert</a>[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]",
         "invertCondition": true
       },
       "passed": [

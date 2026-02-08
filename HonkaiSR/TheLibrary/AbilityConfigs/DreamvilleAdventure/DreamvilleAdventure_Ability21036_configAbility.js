@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21036_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1894267391\">LC_21036_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21036_Sub_Ultra[<span class=\"descriptionNumberColor\">Childishness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1572993167\">LC_21036_Sub_Ultra</a>[<span class=\"descriptionNumberColor\">Childishness</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -52,7 +52,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21036_Sub_Ability[<span class=\"descriptionNumberColor\">Childishness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1677530678\">LC_21036_Sub_Ability</a>[<span class=\"descriptionNumberColor\">Childishness</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -88,7 +88,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21036_Sub_Normal[<span class=\"descriptionNumberColor\">Childishness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1012793214\">LC_21036_Sub_Normal</a>[<span class=\"descriptionNumberColor\">Childishness</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -124,7 +124,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21036_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1894267391\">LC_21036_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -144,7 +144,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "LC_21036_Sub_Normal[<span class=\"descriptionNumberColor\">Childishness</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1012793214\">LC_21036_Sub_Normal</a>[<span class=\"descriptionNumberColor\">Childishness</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -162,7 +162,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "LC_21036_Sub_Ability[<span class=\"descriptionNumberColor\">Childishness</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1677530678\">LC_21036_Sub_Ability</a>[<span class=\"descriptionNumberColor\">Childishness</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -180,7 +180,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "LC_21036_Sub_Ultra[<span class=\"descriptionNumberColor\">Childishness</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1572993167\">LC_21036_Sub_Ultra</a>[<span class=\"descriptionNumberColor\">Childishness</span>]",
               "onlyRemoveOwnersInstance": true
             }
           ]
@@ -194,7 +194,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "LC_21036_Sub_Normal[<span class=\"descriptionNumberColor\">Childishness</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1012793214\">LC_21036_Sub_Normal</a>[<span class=\"descriptionNumberColor\">Childishness</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -202,7 +202,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "LC_21036_Sub_Ability[<span class=\"descriptionNumberColor\">Childishness</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1677530678\">LC_21036_Sub_Ability</a>[<span class=\"descriptionNumberColor\">Childishness</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -210,7 +210,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "LC_21036_Sub_Ultra[<span class=\"descriptionNumberColor\">Childishness</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1572993167\">LC_21036_Sub_Ultra</a>[<span class=\"descriptionNumberColor\">Childishness</span>]"
             },
             {
               "name": "IF",
@@ -225,7 +225,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "LC_21036_Sub_Normal[<span class=\"descriptionNumberColor\">Childishness</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1012793214\">LC_21036_Sub_Normal</a>[<span class=\"descriptionNumberColor\">Childishness</span>]"
                 }
               ]
             },
@@ -242,7 +242,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "LC_21036_Sub_Ability[<span class=\"descriptionNumberColor\">Childishness</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1677530678\">LC_21036_Sub_Ability</a>[<span class=\"descriptionNumberColor\">Childishness</span>]"
                 }
               ]
             },
@@ -259,7 +259,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "LC_21036_Sub_Ultra[<span class=\"descriptionNumberColor\">Childishness</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1572993167\">LC_21036_Sub_Ultra</a>[<span class=\"descriptionNumberColor\">Childishness</span>]"
                 }
               ]
             }

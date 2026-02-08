@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Hanya_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-429927791\">StageAbility_Maze_Hanya_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Hanya_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-429927791\">StageAbility_Maze_Hanya_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -109,7 +109,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1376832164\">WHanya_BpZhanYin</a>[<span class=\"descriptionNumberColor\">Burden</span>]",
                           "valuePerStack": {
                             "MDF_Lifetime": {
                               "operator": "Variables[0] (2) || RETURN",
@@ -159,7 +159,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "WHanya_BpZhanYin_Self"
+                          "modifier": "<a class=\"gModGreen\" id=\"1118030779\">WHanya_BpZhanYin_Self</a>"
                         }
                       ]
                     }

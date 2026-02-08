@@ -188,7 +188,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W4_Pollux_Strengthen_Break"
+      "modifier": "<a class=\"gModGreen\" id=\"-888665654\">Monster_W4_Pollux_Strengthen_Break</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -196,7 +196,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W4_Pollux_DisableAction"
+      "modifier": "<a class=\"gModGreen\" id=\"891735658\">Monster_W4_Pollux_DisableAction</a>"
     },
     {
       "name": "IF",
@@ -206,7 +206,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "HeiShengBei_PreAddBEModifier"
+        "modifier": "<a class=\"gModGreen\" id=\"-1075172229\">HeiShengBei_PreAddBEModifier</a>"
       },
       "passed": [
         {

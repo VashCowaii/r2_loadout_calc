@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_Trace03_BreakDamageAddedRatio"
+      "modifier": "<a class=\"gModGreen\" id=\"-48653263\">Sam_Trace03_BreakDamageAddedRatio</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Sam_Trace03_BreakDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-146915656\">Sam_Trace03_BreakDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -74,7 +74,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_Trace03_BreakDamageAddedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__-48653263\">Sam_Trace03_BreakDamageAddedRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -82,7 +82,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Sam_Trace03_BreakDamageAddedRatio"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
             }
           ]
         }
@@ -97,7 +97,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Sam_Trace03_BreakDamageAddedRatio"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
                 }
               ]
             }
@@ -112,7 +112,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Sam_Trace03_BreakDamageAddedRatio"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
                 }
               ]
             }
@@ -127,7 +127,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Sam_Trace03_BreakDamageAddedRatio"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
                 }
               ]
             }
@@ -137,7 +137,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Sam_Trace03_BreakDamageAddedRatio",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
@@ -195,7 +195,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Sam_Trace03_BreakDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-146915656\">Sam_Trace03_BreakDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]"
                   },
                   "passed": [
                     {
@@ -204,7 +204,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sam_Trace03_BreakDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-146915656\">Sam_Trace03_BreakDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_CurrentAttack2) || Variables[1] (1800) || SUB || RETURN",
@@ -225,7 +225,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sam_Trace03_BreakDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-146915656\">Sam_Trace03_BreakDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_CurrentAttack2) || Variables[1] (1800) || SUB || RETURN",
@@ -248,7 +248,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sam_Trace03_BreakDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-146915656\">Sam_Trace03_BreakDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]"
                 }
               ]
             }

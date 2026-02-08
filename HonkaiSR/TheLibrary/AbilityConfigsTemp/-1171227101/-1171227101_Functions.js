@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Monster_ChangePhase",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__542143301\">Monster_ChangePhase</a>",
       "parse": [
         {
           "name": "Exit Broken-State",
@@ -73,7 +73,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_ChangephaseMark"
+          "modifier": "<a class=\"gModGreen\" id=\"-2049832737\">Enemy_Standard_ChangephaseMark</a>"
         },
         {
           "name": "Trigger Modifier Event",
@@ -91,13 +91,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_ChangephaseMark"
+          "modifier": "<a class=\"gModGreen\" id=\"-2049832737\">Enemy_Standard_ChangephaseMark</a>"
         }
       ]
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Monster_ChangePhase_ParamEntity",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1902031976\">Monster_ChangePhase_ParamEntity</a>",
       "parse": [
         {
           "name": "Exit Broken-State",
@@ -150,7 +150,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Wave_StandardPreProcess",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__2098369310\">Wave_StandardPreProcess</a>",
       "parse": [
         {
           "name": "Call Parameter Sequence",
@@ -193,17 +193,17 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Wave_StandardProcess",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-50656795\">Wave_StandardProcess</a>",
       "parse": [
         "Apply Binding Stage Buff",
         {
           "name": "Use Custom Character Function",
-          "functionName": "TaskList_WaveMonsterDelayCreate"
+          "functionName": "<a class=\"gTempYellow\" id=\"505671569\">TaskList_WaveMonsterDelayCreate</a>"
         },
         "Trigger: Enter Battle",
         {
           "name": "Use Custom Character Function",
-          "functionName": "Wave_ShowRoleTrialPage"
+          "functionName": "<a class=\"gTempYellow\" id=\"2020088159\">Wave_ShowRoleTrialPage</a>"
         },
         {
           "name": "Check Enemy Team Killed",
@@ -228,7 +228,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "TaskList_WaveMonsterDelayCreate",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__505671569\">TaskList_WaveMonsterDelayCreate</a>",
       "parse": [
         {
           "name": "IF",
@@ -248,7 +248,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "CameraTaskList_Puman_DelayCreate",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1934732519\">CameraTaskList_Puman_DelayCreate</a>",
       "parse": [
         {
           "name": "Assign Unique Name",
@@ -262,7 +262,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "StanceBreak_Physical",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__485608192\">StanceBreak_Physical</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -288,7 +288,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Standard_Element_Bleed[<span class=\"descriptionNumberColor\">Bleed</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1797970053\">Standard_Element_Bleed</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
           "duration": 2,
           "baseChance": 1.5,
           "valuePerStack": {
@@ -341,7 +341,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "StanceBreak_Ice",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-687043424\">StanceBreak_Ice</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -359,7 +359,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Standard_Element_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-130814791\">Standard_Element_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
           "duration": 1,
           "baseChance": 1.5,
           "valuePerStack": {
@@ -399,7 +399,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "StanceBreak_Fire",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__483030905\">StanceBreak_Fire</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -417,7 +417,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Standard_Element_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1852685234\">Standard_Element_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": 2,
           "baseChance": 1.5,
           "valuePerStack": {
@@ -456,7 +456,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "StanceBreak_Wind",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1573629529\">StanceBreak_Wind</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -486,7 +486,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_Element_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-51292629\">Standard_Element_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
               "duration": 2,
               "baseChance": 1.5,
               "valuePerStack": {
@@ -502,7 +502,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_Element_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-51292629\">Standard_Element_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
               "duration": 2,
               "baseChance": 1.5,
               "valuePerStack": {
@@ -544,7 +544,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "StanceBreak_Thunder",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1796036529\">StanceBreak_Thunder</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -562,7 +562,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Standard_Element_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1979618180\">Standard_Element_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
           "duration": 2,
           "baseChance": 1.5,
           "valuePerStack": {
@@ -602,7 +602,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "StanceBreak_Imaginary",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-433289498\">StanceBreak_Imaginary</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -620,7 +620,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Standard_Element_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-838929203\">Standard_Element_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
           "duration": 1,
           "baseChance": 1.5,
           "valuePerStack": {
@@ -661,7 +661,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "StanceBreak_Quantum",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__789833122\">StanceBreak_Quantum</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -679,7 +679,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Standard_Element_Entangle[<span class=\"descriptionNumberColor\">Entanglement</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-576412017\">Standard_Element_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
           "duration": 1,
           "baseChance": 1.5,
           "valuePerStack": {
@@ -732,7 +732,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "StanceCountDown_Physical",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1088674520\">StanceCountDown_Physical</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -776,7 +776,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "StanceCountDown_Ice",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-184331160\">StanceCountDown_Ice</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -821,7 +821,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "StanceCountDown_Fire",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1895171535\">StanceCountDown_Fire</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -865,7 +865,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "StanceCountDown_Wind",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1032587311\">StanceCountDown_Wind</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -910,7 +910,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "StanceCountDown_Thunder",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__983067753\">StanceCountDown_Thunder</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -955,7 +955,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "StanceCountDown_Imaginary",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1968828018\">StanceCountDown_Imaginary</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -1000,7 +1000,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "StanceCountDown_Quantum",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1123715482\">StanceCountDown_Quantum</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -1045,7 +1045,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "MLevel_BoxingClubResonance_Fire_ExplodeTask",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-112239810\">MLevel_BoxingClubResonance_Fire_ExplodeTask</a>",
       "parse": [
         {
           "name": "IF",
@@ -1055,7 +1055,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "MLevel_BoxingClubResonance_Fire_10_Debuff[<span class=\"descriptionNumberColor\">undefined</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1331212938\">MLevel_BoxingClubResonance_Fire_10_Debuff</a>[<span class=\"descriptionNumberColor\">undefined</span>]"
           },
           "passed": [
             {
@@ -1066,7 +1066,7 @@ const configAbility = {
               },
               "valueType": "Layer",
               "variableName": "ExplodeLayer",
-              "modifierName": "MLevel_BoxingClubResonance_Fire_10_Debuff[<span class=\"descriptionNumberColor\">undefined</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"1331212938\">MLevel_BoxingClubResonance_Fire_10_Debuff</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
               "multiplier": 1
             }
           ],
@@ -1154,7 +1154,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "MLevel_BoxingClubResonance_Fire_ExtraDamage",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-664267055\">MLevel_BoxingClubResonance_Fire_ExtraDamage</a>",
       "parse": [
         {
           "name": "ATK Scaling DMG",
@@ -1186,7 +1186,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "MLevel_BoxingClubResonance_Ice_ExtraDamage",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1004297140\">MLevel_BoxingClubResonance_Ice_ExtraDamage</a>",
       "parse": [
         {
           "name": "ATK Scaling DMG",
@@ -1218,7 +1218,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "MLevel_BoxingClubResonance_Thunder_ExtraDamage",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-394635175\">MLevel_BoxingClubResonance_Thunder_ExtraDamage</a>",
       "parse": [
         {
           "name": "ATK Scaling DMG",
@@ -1247,7 +1247,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "MLevel_BoxingClubResonance_Ice_OneMoreBreakTask",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1638970024\">MLevel_BoxingClubResonance_Ice_OneMoreBreakTask</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -1292,7 +1292,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Monster_FormChange",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__533043980\">Monster_FormChange</a>",
       "parse": [
         {
           "name": "Create Enemies",
@@ -1330,7 +1330,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "PursuedDamage_PerformanceDelay",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1466558420\">PursuedDamage_PerformanceDelay</a>",
       "parse": [
         {
           "name": "Declare Custom Variable",
@@ -1445,7 +1445,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "PursuedDamage_PerformanceDelay_ForSnapshotEntity",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__2024963643\">PursuedDamage_PerformanceDelay_ForSnapshotEntity</a>",
       "parse": [
         {
           "name": "Declare Custom Variable",
@@ -1551,7 +1551,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "ModifyDamageData_IndependentDamageAddedRatio",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-446302809\">ModifyDamageData_IndependentDamageAddedRatio</a>",
       "parse": [
         {
           "name": "IF",
@@ -1624,7 +1624,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Bounce_SelectTarget",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__247970287\">Bounce_SelectTarget</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -1677,7 +1677,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Silwolf_Ability02_OverrideNameForStatus",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__958478851\">Silwolf_Ability02_OverrideNameForStatus</a>",
       "parse": [
         {
           "name": "IF",
@@ -1694,8 +1694,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifierName": "Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-              "modifierNameUpdate": "Silwolf_BPAbility_WeakType_Physical[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]"
+              "modifierName": "<a class=\"gModGreen\" id=\"-56897788\">Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+              "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-719977260\">Silwolf_BPAbility_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]"
             }
           ]
         },
@@ -1714,8 +1714,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifierName": "Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-              "modifierNameUpdate": "Silwolf_BPAbility_WeakType_Fire[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]"
+              "modifierName": "<a class=\"gModGreen\" id=\"-56897788\">Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+              "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1099669275\">Silwolf_BPAbility_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]"
             }
           ]
         },
@@ -1734,8 +1734,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifierName": "Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-              "modifierNameUpdate": "Silwolf_BPAbility_WeakType_Ice[<span class=\"descriptionNumberColor\">Extra Ice Weakness</span>]"
+              "modifierName": "<a class=\"gModGreen\" id=\"-56897788\">Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+              "modifierNameUpdate": "<a class=\"gModGreen\" id=\"110873612\">Silwolf_BPAbility_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Extra Ice Weakness</span>]"
             }
           ]
         },
@@ -1754,8 +1754,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifierName": "Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-              "modifierNameUpdate": "Silwolf_BPAbility_WeakType_Thunder[<span class=\"descriptionNumberColor\">Extra Lightning Weakness</span>]"
+              "modifierName": "<a class=\"gModGreen\" id=\"-56897788\">Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+              "modifierNameUpdate": "<a class=\"gModGreen\" id=\"954284461\">Silwolf_BPAbility_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Extra Lightning Weakness</span>]"
             }
           ]
         },
@@ -1774,8 +1774,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifierName": "Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-              "modifierNameUpdate": "Silwolf_BPAbility_WeakType_Wind[<span class=\"descriptionNumberColor\">Extra Wind Weakness</span>]"
+              "modifierName": "<a class=\"gModGreen\" id=\"-56897788\">Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+              "modifierNameUpdate": "<a class=\"gModGreen\" id=\"1411533355\">Silwolf_BPAbility_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Extra Wind Weakness</span>]"
             }
           ]
         },
@@ -1794,8 +1794,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifierName": "Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-              "modifierNameUpdate": "Silwolf_BPAbility_WeakType_Quantum[<span class=\"descriptionNumberColor\">Extra Quantum Weakness</span>]"
+              "modifierName": "<a class=\"gModGreen\" id=\"-56897788\">Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+              "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-69851026\">Silwolf_BPAbility_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Extra Quantum Weakness</span>]"
             }
           ]
         },
@@ -1814,8 +1814,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifierName": "Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-              "modifierNameUpdate": "Silwolf_BPAbility_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Extra Imaginary Weakness</span>]"
+              "modifierName": "<a class=\"gModGreen\" id=\"-56897788\">Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+              "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-780191838\">Silwolf_BPAbility_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Extra Imaginary Weakness</span>]"
             }
           ]
         }
@@ -1823,7 +1823,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "VS_VAR_AllTargetCount",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__538840476\">VS_VAR_AllTargetCount</a>",
       "parse": [
         {
           "name": "Declare Custom Variable",
@@ -1854,7 +1854,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "VS_VAR_HitTargetCount",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1318721654\">VS_VAR_HitTargetCount</a>",
       "parse": [
         {
           "name": "Declare Custom Variable",
@@ -1896,7 +1896,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "VS_VAR_AttackTargetCount",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1453468479\">VS_VAR_AttackTargetCount</a>",
       "parse": [
         {
           "name": "Declare Custom Variable",
@@ -1938,7 +1938,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "VS_VAR_ModifierTargetCount",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1595800368\">VS_VAR_ModifierTargetCount</a>",
       "parse": [
         {
           "name": "Declare Custom Variable",
@@ -1980,42 +1980,42 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "VS_PFM_CameraShakeSmall",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__664881127\">VS_PFM_CameraShakeSmall</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "VS_PFM_CameraShakeFireBall",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1980798041\">VS_PFM_CameraShakeFireBall</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "VS_PFM_CameraShakeBig",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-612430370\">VS_PFM_CameraShakeBig</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "VS_PFM_CameraDarkTeamNear",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-822738563\">VS_PFM_CameraDarkTeamNear</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "VS_PFM_CameraDarkTeamFar",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-869958192\">VS_PFM_CameraDarkTeamFar</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "VS_PFM_CameraDarkEntityNear",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1630420963\">VS_PFM_CameraDarkEntityNear</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "VS_PFM_CameraLightTeamNear",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1760920045\">VS_PFM_CameraLightTeamNear</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "ElementBall_Consume",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1214929217\">ElementBall_Consume</a>",
       "parse": [
         {
           "name": "IF",
@@ -2159,7 +2159,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "ElementBall_Dam",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1405102231\">ElementBall_Dam</a>",
       "parse": [
         {
           "name": "SWITCH",
@@ -3398,7 +3398,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "ElementBall_Calculation",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1549875740\">ElementBall_Calculation</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Share Points",
@@ -3461,7 +3461,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "LeziActivity_Dam",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-732112097\">LeziActivity_Dam</a>",
       "parse": [
         {
           "name": "SWITCH",
@@ -3676,7 +3676,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "ReduceActionDelay",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-537679168\">ReduceActionDelay</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -3747,7 +3747,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "ReduceNextActionDelay",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1527090005\">ReduceNextActionDelay</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -3787,7 +3787,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_ModifyActionDelayOnTurnEnd",
+                      "modifier": "<a class=\"gModGreen\" id=\"564198756\">Standard_ModifyActionDelayOnTurnEnd</a>",
                       "valuePerStack": {
                         "MDF_DelayCost": {
                           "operator": "Variables[0] (parameter[0]_NormalizedValue) || RETURN",
@@ -3855,7 +3855,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "DealSuperBreakDamage",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__795502164\">DealSuperBreakDamage</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -3894,7 +3894,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStageAbility_BattleCommonRule_SuperBreak_SubOnEnemy",
+                  "modifier": "<a class=\"gModGreen\" id=\"-175400695\">MStageAbility_BattleCommonRule_SuperBreak_SubOnEnemy</a>",
                   "variable": "MDF_TotalStanceDamage",
                   "target2": null,
                   "variable2": "TDF_TotalStanceDamageOnTarget",
@@ -3973,7 +3973,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "BeingDealSuperBreakDamage",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__932403897\">BeingDealSuperBreakDamage</a>",
       "parse": [
         {
           "name": "IF",
@@ -4015,7 +4015,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStageAbility_BattleCommonRule_SuperBreak_SubOnEnemy",
+                  "modifier": "<a class=\"gModGreen\" id=\"-175400695\">MStageAbility_BattleCommonRule_SuperBreak_SubOnEnemy</a>",
                   "variable": "MDF_TotalStanceDamage",
                   "target2": null,
                   "variable2": "TDF_TotalStanceDamageOnTarget",
@@ -4094,7 +4094,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "DealSuperBreakDamage_DamagePerformance",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__2132906314\">DealSuperBreakDamage_DamagePerformance</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -4142,7 +4142,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStageAbility_BattleCommonRule_SuperBreak_SubOnEnemy",
+                  "modifier": "<a class=\"gModGreen\" id=\"-175400695\">MStageAbility_BattleCommonRule_SuperBreak_SubOnEnemy</a>",
                   "variable": "MDF_TotalStanceDamage",
                   "target2": null,
                   "variable2": "TDF_TotalStanceDamageOnTarget",
@@ -4204,7 +4204,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "BeingDealSuperBreakDamage_DamagePerformance",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1682373485\">BeingDealSuperBreakDamage_DamagePerformance</a>",
       "parse": [
         {
           "name": "IF",
@@ -4255,7 +4255,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStageAbility_BattleCommonRule_SuperBreak_SubOnEnemy",
+                  "modifier": "<a class=\"gModGreen\" id=\"-175400695\">MStageAbility_BattleCommonRule_SuperBreak_SubOnEnemy</a>",
                   "variable": "MDF_TotalStanceDamage",
                   "target2": null,
                   "variable2": "TDF_TotalStanceDamageOnTarget",
@@ -4317,7 +4317,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "AddMuteSpeedAndLockActionDelayChange",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1445036185\">AddMuteSpeedAndLockActionDelayChange</a>",
       "parse": [
         {
           "name": "Add Events/Bonuses",
@@ -4325,7 +4325,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Function's Target List}}"
           },
-          "modifier": "Standard_MuteSpeed"
+          "modifier": "<a class=\"gModGreen\" id=\"1187511334\">Standard_MuteSpeed</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4333,13 +4333,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Function's Target List}}"
           },
-          "modifier": "Standard_LockActionDelayChange"
+          "modifier": "<a class=\"gModGreen\" id=\"-1003024550\">Standard_LockActionDelayChange</a>"
         }
       ]
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "RemoveMuteSpeedAndLockActionDelayChange",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1044523816\">RemoveMuteSpeedAndLockActionDelayChange</a>",
       "parse": [
         {
           "name": "Remove Events/Bonuses",
@@ -4347,7 +4347,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Function's Target List}}"
           },
-          "modifier": "Standard_LockActionDelayChange"
+          "modifier": "<a class=\"gModGreen\" id=\"-1003024550\">Standard_LockActionDelayChange</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4355,7 +4355,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Function's Target List}}"
           },
-          "modifier": "Standard_MuteSpeed"
+          "modifier": "<a class=\"gModGreen\" id=\"1187511334\">Standard_MuteSpeed</a>"
         }
       ]
     }

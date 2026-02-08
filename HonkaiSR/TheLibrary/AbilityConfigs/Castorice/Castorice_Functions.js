@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Castorice_SetDamageRatio",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-815210421\">Castorice_SetDamageRatio</a>",
       "parse": [
         {
           "name": "IF",
@@ -138,7 +138,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Castorice_AddSpecialSP",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1401999190\">Castorice_AddSpecialSP</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -226,7 +226,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Castorice_ExtraSpecialSPReturn",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1186346947\">Castorice_ExtraSpecialSPReturn</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -239,7 +239,7 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Castorice_AddSpecialSP",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
           "variables": {
             "_FixedAddValue": {
               "operator": "Variables[0] (_CurExtraSpecialSP) || Variables[1] (MDF_ReturnRatio) || MUL || RETURN",

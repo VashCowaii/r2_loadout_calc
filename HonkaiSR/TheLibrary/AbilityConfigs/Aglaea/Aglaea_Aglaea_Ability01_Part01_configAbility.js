@@ -33,13 +33,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Aglaea_SpecialMarkAdder"
+      "modifier": "<a class=\"gModGreen\" id=\"2137422120\">Aglaea_SpecialMarkAdder</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_SpecialMar",
+      "for": "<a class=\"gModGreen\" id=\"mod__1853055971\">Aglaea_SpecialMar</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ListenBattleEventSkill",
@@ -139,7 +139,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_SpecialMarkAdder",
+      "for": "<a class=\"gModGreen\" id=\"mod__2137422120\">Aglaea_SpecialMarkAdder</a>",
       "stackData": [],
       "latentQueue": [],
       "subModList": [
@@ -149,7 +149,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Aglaea_SpecialMar",
+          "modifier": "<a class=\"gModGreen\" id=\"1853055971\">Aglaea_SpecialMar</a>",
           "aliveOnly": "True",
           "haloStatus": true
         }

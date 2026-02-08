@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MFarmRelic_104314"
+      "modifier": "<a class=\"gModGreen\" id=\"1940525233\">MFarmRelic_104314</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104314_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-772982810\">MFarmRelic_104314_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -50,7 +50,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104314",
+      "for": "<a class=\"gModGreen\" id=\"mod__1940525233\">MFarmRelic_104314</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -68,7 +68,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "FarmRelicAbility_104314_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"739278249\">FarmRelicAbility_104314_Template</a>"
                 }
               ]
             }
@@ -90,7 +90,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "FarmRelicAbility_104314_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"739278249\">FarmRelicAbility_104314_Template</a>"
                 }
               ]
             }
@@ -101,7 +101,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "FarmRelicAbility_104314_Template"
+              "functionName": "<a class=\"gTempYellow\" id=\"739278249\">FarmRelicAbility_104314_Template</a>"
             }
           ],
           "priorityLevel": -90
@@ -122,7 +122,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "FarmRelicAbility_104314_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"739278249\">FarmRelicAbility_104314_Template</a>"
                 }
               ]
             }
@@ -144,7 +144,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "FarmRelicAbility_104314_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"739278249\">FarmRelicAbility_104314_Template</a>"
                 }
               ]
             }
@@ -166,7 +166,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "FarmRelicAbility_104314_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"739278249\">FarmRelicAbility_104314_Template</a>"
                 }
               ]
             }
@@ -176,7 +176,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "FarmRelicAbility_104314_Template",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__739278249\">FarmRelicAbility_104314_Template</a>",
           "parse": [
             {
               "name": "Define Custom Variable",
@@ -238,7 +238,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "MFarmRelic_104314_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-772982810\">MFarmRelic_104314_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "valuePerStack": {
                 "MDF_SummonCount": {
                   "operator": "Variables[0] (MDF_SummonCount) || RETURN",

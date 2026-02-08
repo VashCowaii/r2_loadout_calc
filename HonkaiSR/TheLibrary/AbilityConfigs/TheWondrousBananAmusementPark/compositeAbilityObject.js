@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_318_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"797664164\">Relic_318_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_318_Sub[<span class=\"descriptionNumberColor\">The Wondrous BananAmusement Park</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__103322561\">Relic_318_Sub</a>[<span class=\"descriptionNumberColor\">The Wondrous BananAmusement Park</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -54,14 +54,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_318_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__797664164\">Relic_318_Main</a>",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Relic_318_Main_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1103320679\">Relic_318_Main_Template</a>"
                 }
               ]
             },
@@ -70,7 +70,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Relic_318_Main_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1103320679\">Relic_318_Main_Template</a>"
                 }
               ]
             },
@@ -79,7 +79,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Relic_318_Main_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1103320679\">Relic_318_Main_Template</a>"
                 }
               ]
             },
@@ -88,7 +88,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Relic_318_Main_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1103320679\">Relic_318_Main_Template</a>"
                 }
               ]
             },
@@ -97,7 +97,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Relic_318_Main_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1103320679\">Relic_318_Main_Template</a>"
                 }
               ]
             },
@@ -106,7 +106,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Relic_318_Main_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1103320679\">Relic_318_Main_Template</a>"
                 }
               ]
             }
@@ -114,7 +114,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Relic_318_Main_Template",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1103320679\">Relic_318_Main_Template</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -134,7 +134,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Relic_318_Sub[<span class=\"descriptionNumberColor\">The Wondrous BananAmusement Park</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"103322561\">Relic_318_Sub</a>[<span class=\"descriptionNumberColor\">The Wondrous BananAmusement Park</span>]"
                     }
                   ],
                   "failed": [
@@ -144,7 +144,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Relic_318_Sub[<span class=\"descriptionNumberColor\">The Wondrous BananAmusement Park</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"103322561\">Relic_318_Sub</a>[<span class=\"descriptionNumberColor\">The Wondrous BananAmusement Park</span>]"
                     }
                   ]
                 }

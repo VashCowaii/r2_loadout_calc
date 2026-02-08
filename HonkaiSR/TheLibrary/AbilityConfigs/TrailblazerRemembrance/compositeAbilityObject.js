@@ -49,13 +49,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_PlayerBoy_30_Eidolon4"
+          "modifier": "<a class=\"gModGreen\" id=\"-1646565949\">M_PlayerBoy_30_Eidolon4</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_PlayerBoy_30_Eidolon4",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1646565949\">M_PlayerBoy_30_Eidolon4</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Anyone]: Start",
@@ -144,13 +144,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_PlayerBoy_30_Eidolon2"
+          "modifier": "<a class=\"gModGreen\" id=\"-1545900235\">M_PlayerBoy_30_Eidolon2</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "RetainCountZero"
@@ -190,7 +190,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Modifier-Specific Variable",
-                  "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                   "variableName": "MDF_Count",
                   "value": {
                     "operator": "Variables[0] (mInit_Count) || RETURN",
@@ -210,7 +210,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_PlayerBoy_30_Eidolon2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1545900235\">M_PlayerBoy_30_Eidolon2</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -221,7 +221,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                   "counter": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -281,7 +281,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Variable",
-                        "value1": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+                        "value1": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                         "compareType": ">",
                         "value2": 0
                       }
@@ -310,7 +310,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                       "function": "Add"
                     },
                     {
@@ -319,7 +319,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                       "adjustmentType": "+",
                       "variableName": "MDF_Count",
                       "value": -1
@@ -358,7 +358,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Variable",
-                        "value1": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+                        "value1": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                         "compareType": ">",
                         "value2": 0
                       }
@@ -387,7 +387,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                       "function": "Add"
                     },
                     {
@@ -396,7 +396,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                       "adjustmentType": "+",
                       "variableName": "MDF_Count",
                       "value": -1
@@ -423,7 +423,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_PlayerBoy_30_Trace01"
+          "modifier": "<a class=\"gModGreen\" id=\"-1430938835\">M_PlayerBoy_30_Trace01</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -431,13 +431,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_PlayerBoy_30_Trace01_ListenFirstSummon"
+          "modifier": "<a class=\"gModGreen\" id=\"894703898\">M_PlayerBoy_30_Trace01_ListenFirstSummon</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_PlayerBoy_30_Trace01_ListenFirstSummon",
+          "for": "<a class=\"gModGreen\" id=\"mod__894703898\">M_PlayerBoy_30_Trace01_ListenFirstSummon</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -500,7 +500,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_PlayerBoy_30_Trace01",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1430938835\">M_PlayerBoy_30_Trace01</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -554,7 +554,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_30_Maze"
+          "modifier": "<a class=\"gModGreen\" id=\"-1770265909\">PlayerBoy_30_Maze</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -562,13 +562,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_30_Maze_Damage"
+          "modifier": "<a class=\"gModGreen\" id=\"1506830909\">PlayerBoy_30_Maze_Damage</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_30_Maze_Damage",
+          "for": "<a class=\"gModGreen\" id=\"mod__1506830909\">PlayerBoy_30_Maze_Damage</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -612,7 +612,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_30_Maze",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1770265909\">PlayerBoy_30_Maze</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -663,7 +663,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_30_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"78289633\">PlayerBoy_30_Passive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -671,7 +671,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_PlayerBoy_30_CreateServantPreshow",
+          "modifier": "<a class=\"gModGreen\" id=\"409195494\">M_PlayerBoy_30_CreateServantPreshow</a>",
           "valuePerStack": {
             "ServantID": {
               "operator": "Variables[0] (ServantID) || RETURN",
@@ -718,7 +718,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_30_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__78289633\">PlayerBoy_30_Passive</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -774,7 +774,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "PlayerBoy_30_Halo_ListenSPChange"
+                      "modifier": "<a class=\"gModGreen\" id=\"1937701279\">PlayerBoy_30_Halo_ListenSPChange</a>"
                     }
                   ]
                 }
@@ -805,7 +805,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "PlayerBoy_30_UltraState[<span class=\"descriptionNumberColor\">Epic</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -829,7 +829,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "PlayerBoy_30_Halo_ListenSPChange"
+                  "modifier": "<a class=\"gModGreen\" id=\"1937701279\">PlayerBoy_30_Halo_ListenSPChange</a>"
                 }
               ],
               "priorityLevel": -80
@@ -975,7 +975,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "PlayerBoy_30_TryCreateServant"
+          "functionName": "<a class=\"gTempYellow\" id=\"1640803691\">PlayerBoy_30_TryCreateServant</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -1135,7 +1135,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "PlayerBoy_30_TryCreateServant"
+          "functionName": "<a class=\"gTempYellow\" id=\"1640803691\">PlayerBoy_30_TryCreateServant</a>"
         },
         {
           "name": "Update Energy",
@@ -1164,7 +1164,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{BattleEvent60021}}"
               },
-              "modifier": "MissionBattleEvent60021_TriggerBEAbility"
+              "modifier": "<a class=\"gModGreen\" id=\"1446276332\">MissionBattleEvent60021_TriggerBEAbility</a>"
             }
           ]
         },
@@ -1213,7 +1213,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_30_UltraState[<span class=\"descriptionNumberColor\">Epic</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
           "addStacksPerTrigger": -1,
           "silentAdd": true
         },
@@ -1431,7 +1431,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_30_UltraState_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-915997562\">PlayerBoy_30_UltraState_Sub</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1482,7 +1482,7 @@ const compositeAbilityObject = {
           ],
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "PlayerBoy_30_UltraState[<span class=\"descriptionNumberColor\">Epic</span>]",
+            "dependancyName": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
             "casterFilter": {
               "name": "Target Name",
               "target": "{{Caster}}"
@@ -1491,7 +1491,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_30_UltraState[<span class=\"descriptionNumberColor\">Epic</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1533,7 +1533,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "PlayerBoy_30_UltraState_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                         }
                       ],
                       "failed": [
@@ -1543,7 +1543,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "PlayerBoy_30_UltraState_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                         }
                       ]
                     }
@@ -1573,7 +1573,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "PlayerBoy_30_UltraState_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                     }
                   ],
                   "failed": [
@@ -1583,7 +1583,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "PlayerBoy_30_UltraState_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                     }
                   ]
                 }
@@ -1611,7 +1611,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "PlayerBoy_30_UltraState_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                     }
                   ],
                   "failed": [
@@ -1621,7 +1621,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "PlayerBoy_30_UltraState_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                     }
                   ]
                 }
@@ -1647,7 +1647,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "PlayerBoy_30_UltraState_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                     }
                   ]
                 }
@@ -1689,7 +1689,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "PlayerBoy_30_UltraState_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                     }
                   ]
                 }
@@ -1707,7 +1707,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_PlayerBoy_30_CreateServantPreshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__409195494\">M_PlayerBoy_30_CreateServantPreshow</a>",
           "stackData": [
             "ServantID"
           ],
@@ -1734,7 +1734,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_30_Halo_ListenSPChange",
+          "for": "<a class=\"gModGreen\" id=\"mod__1937701279\">PlayerBoy_30_Halo_ListenSPChange</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -1845,7 +1845,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "PlayerBoy_30_TryCreateServant",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1640803691\">PlayerBoy_30_TryCreateServant</a>",
           "parse": [
             {
               "name": "IF",
@@ -1933,13 +1933,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_PlayerBoyServant_30_DeathRattle"
+          "modifier": "<a class=\"gModGreen\" id=\"1143439505\">Memosprite_PlayerBoyServant_30_DeathRattle</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_PlayerBoyServant_30_DeathRattle",
+          "for": "<a class=\"gModGreen\" id=\"mod__1143439505\">Memosprite_PlayerBoyServant_30_DeathRattle</a>",
           "modifierFlags": [
             "Deathrattle"
           ],
@@ -1984,13 +1984,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_PlayerBoyServant_30_BattleCry"
+          "modifier": "<a class=\"gModGreen\" id=\"1428217171\">Memosprite_PlayerBoyServant_30_BattleCry</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_PlayerBoyServant_30_BattleCry",
+          "for": "<a class=\"gModGreen\" id=\"mod__1428217171\">Memosprite_PlayerBoyServant_30_BattleCry</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2043,7 +2043,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_PlayerBoyServant_30_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-4188752\">Memosprite_PlayerBoyServant_30_Passive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2051,7 +2051,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_PlayerBoyServant_30_Passive_Performance"
+          "modifier": "<a class=\"gModGreen\" id=\"1883418109\">Memosprite_PlayerBoyServant_30_Passive_Performance</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2059,7 +2059,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_30_TeamSP[<span class=\"descriptionNumberColor\">Charge</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1274980234\">PlayerBoy_30_TeamSP</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
           "counter": {
             "operator": "Variables[0] (CurEnergy) || RETURN",
             "displayLines": "CurEnergy",
@@ -2118,8 +2118,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_PlayerBoyServant_30_Eidolon1",
-              "referenceModifier": "MReference_Empty"
+              "modifier": "<a class=\"gModGreen\" id=\"585085986\">Memosprite_PlayerBoyServant_30_Eidolon1</a>",
+              "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
             }
           ]
         }
@@ -2127,7 +2127,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_PlayerBoyServant_30_BreakFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__145969573\">M_PlayerBoyServant_30_BreakFlag</a>",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -2159,7 +2159,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_PlayerBoyServant_30_Passive_Performance",
+          "for": "<a class=\"gModGreen\" id=\"mod__1883418109\">Memosprite_PlayerBoyServant_30_Passive_Performance</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2195,7 +2195,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "M_PlayerBoyServant_30_BreakFlag"
+                          "modifier": "<a class=\"gModGreen\" id=\"145969573\">M_PlayerBoyServant_30_BreakFlag</a>"
                         }
                       }
                     }
@@ -2218,7 +2218,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "M_PlayerBoyServant_30_BreakFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"145969573\">M_PlayerBoyServant_30_BreakFlag</a>"
                 }
               ]
             },
@@ -2287,7 +2287,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_PlayerBoyServant_30_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-4188752\">Memosprite_PlayerBoyServant_30_Passive</a>",
           "execute": [
             {
               "eventTrigger": "Pre-Death [Owner]",
@@ -2386,7 +2386,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "modifier": "M_PlayerBoyServant_30_EnableAbility",
+                                "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>",
                                 "invertCondition": true
                               }
                             ]
@@ -2414,7 +2414,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "M_PlayerBoyServant_30_EnableAbility"
+                          "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>"
                         }
                       ]
                     },
@@ -2424,7 +2424,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "PlayerBoy_30_TeamSP[<span class=\"descriptionNumberColor\">Charge</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1274980234\">PlayerBoy_30_TeamSP</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                       "value": {
                         "operator": "Variables[0] (CurEnergy) || RETURN",
                         "displayLines": "CurEnergy",
@@ -2468,7 +2468,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}"
                       },
-                      "modifier": "Memosprite_PlayerBoyServant_30_CritDmgUp[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1895406948\">Memosprite_PlayerBoyServant_30_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
                       "valuePerStack": {
                         "MDF_PropertyConvert": {
                           "operator": "Variables[0] (0.12) || RETURN",
@@ -2502,7 +2502,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Memosprite_PlayerBoyServant_30_CritDmgUp[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1895406948\">Memosprite_PlayerBoyServant_30_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyConvert": {
@@ -2593,7 +2593,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "M_PlayerBoyServant_30_Eidolon6"
+              "modifier": "<a class=\"gModGreen\" id=\"164475936\">M_PlayerBoyServant_30_Eidolon6</a>"
             }
           ]
         }
@@ -2601,7 +2601,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_PlayerBoyServant_30_Eidolon6",
+          "for": "<a class=\"gModGreen\" id=\"mod__164475936\">M_PlayerBoyServant_30_Eidolon6</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2661,7 +2661,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_PlayerBoyServant_30_EnableAbility"
+          "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>"
         },
         {
           "name": "IF",
@@ -2695,7 +2695,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -2782,13 +2782,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_PlayerBoy_30_BE_Ability02_Preshow"
+          "modifier": "<a class=\"gModGreen\" id=\"-2111079333\">M_PlayerBoy_30_BE_Ability02_Preshow</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_PlayerBoy_30_BE_Ability02_Preshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2111079333\">M_PlayerBoy_30_BE_Ability02_Preshow</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -2810,7 +2810,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_PlayerBoyServant_30_EnableAbility"
+                  "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>"
                 },
                 {
                   "name": "Is Part Of",
@@ -3047,7 +3047,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Ability Target Group}}"
@@ -3180,7 +3180,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3216,7 +3216,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
+                          "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>"
                         }
                       ]
                     }
@@ -3243,7 +3243,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -3251,7 +3251,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
                         "invertCondition": true
                       }
                     ]
@@ -3263,8 +3263,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy",
-                      "referenceModifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
                           "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -3416,7 +3416,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -3424,7 +3424,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
+                        "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>"
                       }
                     ]
                   },
@@ -3435,7 +3435,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
+                      "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>"
                     }
                   ]
                 },
@@ -3445,8 +3445,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifierName": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy",
-                  "modifierNameUpdate": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                 },
                 {
                   "name": "IF",
@@ -3479,7 +3479,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "TServant_PlayerBoyServant_30_RefreshDamagePercentage"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-763533094\">TServant_PlayerBoyServant_30_RefreshDamagePercentage</a>"
                 }
               ]
             },
@@ -3493,7 +3493,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                       },
                       {
                         "name": "Is Part Of",
@@ -3516,7 +3516,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
+                      "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>"
                     }
                   ]
                 }
@@ -3533,7 +3533,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "TServant_PlayerBoyServant_30_RefreshDamagePercentage"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-763533094\">TServant_PlayerBoyServant_30_RefreshDamagePercentage</a>"
                     }
                   ]
                 }
@@ -3562,8 +3562,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}.[[getMemosprite]] | {{Modifier Holder}}.[[getSummoner]]"
               },
-              "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy",
-              "refModifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>",
+              "refModifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
               "aliveOnly": "False",
               "haloStatus": true,
               "conditions": {
@@ -3589,7 +3589,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}.[[getMemosprite]]"
                         },
-                        "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                       }
                     ],
                     "invertCondition": true
@@ -3610,7 +3610,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}.[[getSummoner]]"
                         },
-                        "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                       }
                     ],
                     "invertCondition": true
@@ -3682,7 +3682,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_PlayerBoyServant_30_CritDmgUp[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1895406948\">Memosprite_PlayerBoyServant_30_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3741,7 +3741,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_PlayerBoyServant_30_EnableAbility",
+          "for": "<a class=\"gModGreen\" id=\"mod__2058264520\">M_PlayerBoyServant_30_EnableAbility</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3858,7 +3858,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_30_TeamSP[<span class=\"descriptionNumberColor\">Charge</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1274980234\">PlayerBoy_30_TeamSP</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
           "modifierFlags": [
             "RetainCountZero"
           ],
@@ -3886,7 +3886,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "TServant_PlayerBoyServant_30_RefreshDamagePercentage",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-763533094\">TServant_PlayerBoyServant_30_RefreshDamagePercentage</a>",
           "parse": [
             {
               "name": "Define Custom Variable",

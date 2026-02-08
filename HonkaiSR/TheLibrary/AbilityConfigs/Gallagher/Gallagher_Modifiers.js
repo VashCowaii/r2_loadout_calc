@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Gallagher_HealRatioAddedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__1129970541\">Gallagher_HealRatioAddedRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -38,7 +38,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Gallagher_Passive_Trace01",
+      "for": "<a class=\"gModGreen\" id=\"mod__786124629\">Gallagher_Passive_Trace01</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -48,7 +48,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Gallagher_CheckBreakDamageAddedRatioChange"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1349711870\">Gallagher_CheckBreakDamageAddedRatioChange</a>"
             }
           ],
           "priorityLevel": -80
@@ -65,7 +65,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Gallagher_CheckBreakDamageAddedRatioChange"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1349711870\">Gallagher_CheckBreakDamageAddedRatioChange</a>"
                 }
               ]
             }
@@ -75,7 +75,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Gallagher_CheckBreakDamageAddedRatioChange",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1349711870\">Gallagher_CheckBreakDamageAddedRatioChange</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
@@ -135,7 +135,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Gallagher_HealRatioAddedRatio",
+              "modifier": "<a class=\"gModGreen\" id=\"1129970541\">Gallagher_HealRatioAddedRatio</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (MDF_HealRatioAddedRatio) || RETURN",
@@ -155,7 +155,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MWGallagher_Ability11_AttackDownModifier[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1678215353\">MWGallagher_Ability11_AttackDownModifier</a>[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -189,7 +189,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Gallagher_NormalAttckAlter_Enable",
+      "for": "<a class=\"gModGreen\" id=\"mod__1869340095\">Gallagher_NormalAttckAlter_Enable</a>",
       "stackType": "Refresh",
       "execute": [
         {
@@ -254,7 +254,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Gallagher_NormalAttckAlter_Enable"
+                  "modifier": "<a class=\"gModGreen\" id=\"1869340095\">Gallagher_NormalAttckAlter_Enable</a>"
                 }
               ]
             }
@@ -266,7 +266,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MWGallagher_Ability03_DeBonusModifier[<span class=\"descriptionNumberColor\">Besotted</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-606062756\">MWGallagher_Ability03_DeBonusModifier</a>[<span class=\"descriptionNumberColor\">Besotted</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -350,7 +350,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Gallagher_NormalAttckAlter_Enable"
+                        "modifier": "<a class=\"gModGreen\" id=\"1869340095\">Gallagher_NormalAttckAlter_Enable</a>"
                       },
                       {
                         "name": "Skill Name",
@@ -419,7 +419,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MWGallagher_Ability02_StatusResModifier[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1872837497\">MWGallagher_Ability02_StatusResModifier</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -455,7 +455,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Gallagher_PointB3_AddFireBreakDamageModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__72686487\">Gallagher_PointB3_AddFireBreakDamageModifier</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

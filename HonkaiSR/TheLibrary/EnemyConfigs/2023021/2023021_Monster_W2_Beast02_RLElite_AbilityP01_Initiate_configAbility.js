@@ -50,7 +50,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Beast02_RLElite_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-992439979\">Enemy_W2_Beast02_RLElite_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -58,7 +58,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Beast02_RLElite_ActionCheck"
+      "modifier": "<a class=\"gModGreen\" id=\"16551050\">Enemy_W2_Beast02_RLElite_ActionCheck</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -66,7 +66,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Beast02_RLElite_BreakListener"
+      "modifier": "<a class=\"gModGreen\" id=\"1589154351\">Enemy_W2_Beast02_RLElite_BreakListener</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -74,14 +74,14 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     }
   ],
   "whenAdded": [],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Beast02_RLElite_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-992439979\">Enemy_W2_Beast02_RLElite_Passive</a>",
       "modifierFlags": [
         "MuteHitFly",
         "ListenBattleEventSkill",
@@ -122,7 +122,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]",
                   "onlyRemoveOwnersInstance": true,
                   "removeAllInstances": true
                 },
@@ -132,7 +132,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Monster_W2_Beast02_RLElite_Edict"
+                  "modifier": "<a class=\"gModGreen\" id=\"1835721372\">Monster_W2_Beast02_RLElite_Edict</a>"
                 }
               ]
             }
@@ -174,7 +174,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -182,7 +182,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -190,7 +190,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_W2_Beast02_RLElite_GennkiMark[<span class=\"descriptionNumberColor\">Gather Courage</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>[<span class=\"descriptionNumberColor\">Gather Courage</span>]",
                   "stackLimit": 3
                 },
                 {
@@ -224,7 +224,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "Monster_W2_Beast02_RLElite_Bullet",
+                  "modifierName": "<a class=\"gModGreen\" id=\"296260861\">Monster_W2_Beast02_RLElite_Bullet</a>",
                   "function": "Add",
                   "value": 1
                 },
@@ -270,7 +270,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Beast02_RLElite_Bullet"
+                "modifier": "<a class=\"gModGreen\" id=\"296260861\">Monster_W2_Beast02_RLElite_Bullet</a>"
               },
               "ifTargetFound": [
                 {
@@ -290,7 +290,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -298,7 +298,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Monster_W2_Beast02_RLElite_Edict"
+                  "modifier": "<a class=\"gModGreen\" id=\"1835721372\">Monster_W2_Beast02_RLElite_Edict</a>"
                 },
                 {
                   "name": "Declare Custom Variable",

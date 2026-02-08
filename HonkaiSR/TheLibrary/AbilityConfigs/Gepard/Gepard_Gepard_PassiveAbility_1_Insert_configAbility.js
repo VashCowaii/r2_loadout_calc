@@ -57,7 +57,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Gepard_Eidolon6ActionDelay0",
+              "modifier": "<a class=\"gModGreen\" id=\"793899382\">Gepard_Eidolon6ActionDelay0</a>",
               "duration": 1,
               "immediateEffect": true
             }
@@ -112,7 +112,7 @@ const configAbility = {
     },
     {
       "name": "Define Modifier Variable",
-      "modifierName": "Gepard_PassiveAbility_UnDead[<span class=\"descriptionNumberColor\">Unyielding Will</span>]",
+      "modifierName": "<a class=\"gModGreen\" id=\"-179604795\">Gepard_PassiveAbility_UnDead</a>[<span class=\"descriptionNumberColor\">Unyielding Will</span>]",
       "function": "Add"
     },
     {
@@ -135,7 +135,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Gepard_Eidolon6ActionDelay0",
+      "for": "<a class=\"gModGreen\" id=\"mod__793899382\">Gepard_Eidolon6ActionDelay0</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "OneMore"

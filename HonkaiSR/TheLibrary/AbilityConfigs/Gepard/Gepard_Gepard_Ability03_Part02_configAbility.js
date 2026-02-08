@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{All Team Members}}"
       },
-      "modifier": "Gepard_Ultimate_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-176429589\">Gepard_Ultimate_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",

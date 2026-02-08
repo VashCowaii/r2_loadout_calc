@@ -22,7 +22,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster's Minions}}"
         },
-        "modifier": "StanceBreakState"
+        "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
       },
       "passed": [
         {
@@ -31,7 +31,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "StanceBreakState"
+          "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
         }
       ]
     },

@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Lingsha_BPAbility_BattleEvent",
+      "modifier": "<a class=\"gModGreen\" id=\"1795719445\">Lingsha_BPAbility_BattleEvent</a>",
       "counter": {
         "operator": "Variables[0] (BattleEvent_Lingsha_PointB3) || RETURN",
         "displayLines": "BattleEvent_Lingsha_PointB3",
@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Lingsha_BPAbility_BattleEvent_LifeTime",
+      "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
       "counter": {
         "operator": "Variables[0] (BattleEvent_Lingsha_AttackTime) || RETURN",
         "displayLines": "BattleEvent_Lingsha_AttackTime",
@@ -51,7 +51,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_BPAbility_BattleEvent",
+      "for": "<a class=\"gModGreen\" id=\"mod__1795719445\">Lingsha_BPAbility_BattleEvent</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

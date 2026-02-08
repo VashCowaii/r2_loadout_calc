@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Welt_Trace01_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1040154561\">Welt_Trace01_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -46,7 +46,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Welt_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2123171519\">Welt_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedDown"
@@ -87,7 +87,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Welt_Eidolon1_Enhance[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-374836920\">Welt_Eidolon1_Enhance</a>[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]",
       "counter": 2,
       "stackData": [],
       "latentQueue": [],

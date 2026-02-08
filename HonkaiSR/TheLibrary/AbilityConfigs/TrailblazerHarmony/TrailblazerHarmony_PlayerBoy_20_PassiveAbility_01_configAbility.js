@@ -25,7 +25,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_20_Eidolon4_Bonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1584216137\">PlayerBoy_20_Eidolon4_Bonus</a>"
         }
       ]
     },
@@ -42,7 +42,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_20_PointB2_Bonus"
+          "modifier": "<a class=\"gModGreen\" id=\"1126601177\">PlayerBoy_20_PointB2_Bonus</a>"
         }
       ]
     },
@@ -59,7 +59,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_20_PointB3_Bonus",
+          "modifier": "<a class=\"gModGreen\" id=\"-1588077472\">PlayerBoy_20_PointB3_Bonus</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.3) || RETURN",
@@ -86,7 +86,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_20_Eidolon1"
+          "modifier": "<a class=\"gModGreen\" id=\"-1193433566\">PlayerBoy_20_Eidolon1</a>"
         }
       ]
     },
@@ -103,7 +103,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_20_Eidolon2[<span class=\"descriptionNumberColor\">Jailbreaking Rainbowwalk</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1210211185\">PlayerBoy_20_Eidolon2</a>[<span class=\"descriptionNumberColor\">Jailbreaking Rainbowwalk</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -146,7 +146,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "PlayerBoy_20_Passive_BonusArea"
+      "modifier": "<a class=\"gModGreen\" id=\"1679523029\">PlayerBoy_20_Passive_BonusArea</a>"
     }
   ],
   "references": []

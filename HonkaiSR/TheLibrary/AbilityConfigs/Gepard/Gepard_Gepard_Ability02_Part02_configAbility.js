@@ -108,7 +108,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
       "duration": {
         "operator": "Variables[0] (1) || RETURN",
         "displayLines": "1",
@@ -150,7 +150,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Gepard_Eidolon2_Delay",
+              "modifier": "<a class=\"gModGreen\" id=\"-367770919\">Gepard_Eidolon2_Delay</a>",
               "valuePerStack": {
                 "MDF_SPD": {
                   "operator": "Variables[0] (0.2) || RETURN",

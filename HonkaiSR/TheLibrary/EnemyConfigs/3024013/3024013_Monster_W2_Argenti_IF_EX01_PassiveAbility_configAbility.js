@@ -20,7 +20,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Cocolia_IF_SuperArmorController",
+          "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
           "valuePerStack": {
             "MDF_IF_BOSS_BreakDelay": {
               "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
@@ -54,7 +54,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Cocolia_IF_SoftFrenzyController",
+          "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
           "valuePerStack": {
             "MDF_FrenzyStartDelay": {
               "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
@@ -96,7 +96,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Argenti_IF_EX01_PassiveAbility_Boss"
+          "modifier": "<a class=\"gModGreen\" id=\"-1480098360\">Monster_W2_Argenti_IF_EX01_PassiveAbility_Boss</a>"
         }
       ]
     }
@@ -104,7 +104,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Argenti_IF_EX01_PassiveAbility_Boss",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1480098360\">Monster_W2_Argenti_IF_EX01_PassiveAbility_Boss</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -140,7 +140,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_W2_Cocolia_IF_SuperArmorController",
+                  "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
                   "valuePerStack": {
                     "MDF_IF_BOSS_BreakDelay": {
                       "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",

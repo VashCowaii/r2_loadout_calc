@@ -42,7 +42,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Natasha_Eidolon2_HOT_HPByMaxHP[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-251008638\">Natasha_Eidolon2_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -135,7 +135,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Natasha_Eidolon2_HOT_HPByMaxHP[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-251008638\">Natasha_Eidolon2_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [

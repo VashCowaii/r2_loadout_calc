@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Kafka_BattleScore1"
+      "modifier": "<a class=\"gModGreen\" id=\"1961920728\">Monster_W2_Kafka_BattleScore1</a>"
     },
     {
       "name": "Declare Custom Variable",
@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -35,7 +35,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Kafka_RL_Pursuit"
+      "modifier": "<a class=\"gModGreen\" id=\"108137779\">Monster_W2_Kafka_RL_Pursuit</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -43,7 +43,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Kafka_AIChange"
+      "modifier": "<a class=\"gModGreen\" id=\"2066030702\">Monster_W2_Kafka_AIChange</a>"
     },
     {
       "name": "Boss Bar Display",
@@ -59,7 +59,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Kafka_RL_PartController"
+      "modifier": "<a class=\"gModGreen\" id=\"-1041839558\">Monster_W2_Kafka_RL_PartController</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -67,7 +67,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Kafka_RL_Power",
+      "modifier": "<a class=\"gModGreen\" id=\"688364152\">Monster_W2_Kafka_RL_Power</a>",
       "valuePerStack": {
         "MDF_DamageUpRatio_PerLayer": {
           "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
@@ -85,7 +85,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Kafka_RL_LowHP",
+      "modifier": "<a class=\"gModGreen\" id=\"-1555277593\">Monster_W2_Kafka_RL_LowHP</a>",
       "valuePerStack": {
         "MDF_LowHPRatio": {
           "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
@@ -102,7 +102,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_AIChange",
+      "for": "<a class=\"gModGreen\" id=\"mod__2066030702\">Monster_W2_Kafka_AIChange</a>",
       "stackData": [],
       "latentQueue": [
         "DisPelCount"
@@ -110,7 +110,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_BattleScore1",
+      "for": "<a class=\"gModGreen\" id=\"mod__1961920728\">Monster_W2_Kafka_BattleScore1</a>",
       "execute": [
         {
           "eventTrigger": "Modifier Cleansed [Anyone]",
@@ -122,7 +122,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "Standard_MindControl[<span class=\"descriptionNumberColor\">Dominated</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
                   },
                   {
                     "name": "Is Teammate",

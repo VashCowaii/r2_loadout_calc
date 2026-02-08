@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Mar_7th_10_TechniqueEnergy"
+      "modifier": "<a class=\"gModGreen\" id=\"-321936663\">Mar_7th_10_TechniqueEnergy</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_TechniqueEnergy",
+      "for": "<a class=\"gModGreen\" id=\"mod__-321936663\">Mar_7th_10_TechniqueEnergy</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -33,7 +33,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Mar_7th_10_GainEnergyWithCheck",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

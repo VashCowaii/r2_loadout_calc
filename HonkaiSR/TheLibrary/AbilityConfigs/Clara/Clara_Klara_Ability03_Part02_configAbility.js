@@ -43,7 +43,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Klara_Eidolon2_AttackUP[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-632500359\">Klara_Eidolon2_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -79,7 +79,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Klara_Ultimate_WarriorMode[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1618683191\">Klara_Ultimate_WarriorMode</a>[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -114,7 +114,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
           "counter": {
             "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
             "displayLines": "(2 + 1)",
@@ -152,7 +152,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Klara_Ultimate_WarriorMode[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1618683191\">Klara_Ultimate_WarriorMode</a>[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -187,7 +187,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
           "counter": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -232,7 +232,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Klara_Eidolon2_AttackUP[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-632500359\">Klara_Eidolon2_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "Refresh",
       "execute": [
         {
@@ -268,7 +268,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Klara_PassiveATK_TeamMember",
+      "for": "<a class=\"gModGreen\" id=\"mod__1513804400\">Klara_PassiveATK_TeamMember</a>",
       "execute": [
         {
           "eventTrigger": "Being Attacked Start [Owner]",
@@ -290,7 +290,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Klara_PassiveATK_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1426674462\">Klara_PassiveATK_Mark</a>"
                 }
               ]
             }
@@ -300,7 +300,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
       "counter": 1,
       "stackType": "ReplaceByCaster",
       "execute": [
@@ -322,7 +322,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "Klara_PassiveATK_TeamMember",
+              "modifier": "<a class=\"gModGreen\" id=\"1513804400\">Klara_PassiveATK_TeamMember</a>",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -361,7 +361,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Klara_PassiveATK_TeamMember"
+              "modifier": "<a class=\"gModGreen\" id=\"1513804400\">Klara_PassiveATK_TeamMember</a>"
             }
           ]
         },
@@ -384,7 +384,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Klara_PassiveATK_TeamMember"
+                  "modifier": "<a class=\"gModGreen\" id=\"1513804400\">Klara_PassiveATK_TeamMember</a>"
                 }
               ]
             }
@@ -408,7 +408,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "Klara_PassiveATK_TeamMember",
+              "modifier": "<a class=\"gModGreen\" id=\"1513804400\">Klara_PassiveATK_TeamMember</a>",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -437,7 +437,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Klara_Ultimate_WarriorMode[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1618683191\">Klara_Ultimate_WarriorMode</a>[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
       "stackType": "Refresh",
       "modifierFlags": [
         "STAT_Burst"

@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Minion03_Target[<span class=\"descriptionNumberColor\">Lock On</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1906134144\">Enemy_AML_Minion03_Target</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "TeamAction"

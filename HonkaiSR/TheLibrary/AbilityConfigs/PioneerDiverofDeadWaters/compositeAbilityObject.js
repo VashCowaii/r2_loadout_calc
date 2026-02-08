@@ -18,13 +18,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_117_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-159750627\">Relic_117_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_117_Sub[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-950302126\">Relic_117_Sub</a>[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -55,7 +55,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_117_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-159750627\">Relic_117_Main</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -88,7 +88,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Relic_117_Sub[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-950302126\">Relic_117_Sub</a>[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]"
                       },
                       "passed": [
                         {
@@ -145,7 +145,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "Relic_117_Sub[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-950302126\">Relic_117_Sub</a>[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]"
                           },
                           "passed": [
                             {
@@ -207,7 +207,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_117_Sub[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-950302126\">Relic_117_Sub</a>[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -258,13 +258,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_117_Main2"
+          "modifier": "<a class=\"gModGreen\" id=\"833543165\">Relic_117_Main2</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_117_DamageUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-491528476\">Relic_117_DamageUp</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -300,7 +300,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_117_Main2",
+          "for": "<a class=\"gModGreen\" id=\"mod__833543165\">Relic_117_Main2</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -311,7 +311,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_117_DamageUp",
+                  "modifier": "<a class=\"gModGreen\" id=\"-491528476\">Relic_117_DamageUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.12) || RETURN",

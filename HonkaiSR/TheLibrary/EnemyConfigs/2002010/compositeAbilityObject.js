@@ -172,7 +172,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_Knight01_Formation[<span class=\"descriptionNumberColor\">undefined</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1416805079\">Monster_W2_Knight01_Formation</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                   "valuePerStack": {
                     "Modifier_DefenceAddedRatio": {
                       "operator": "Variables[0] (UnusedUnderThisBase_65) || RETURN",
@@ -251,7 +251,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-43160834\">Standard_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
             "displayLines": "{[Skill01[2]]}",

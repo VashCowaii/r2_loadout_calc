@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Sampo_Ultimate_DOTTakenUp[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2131103330\">Sampo_Ultimate_DOTTakenUp</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

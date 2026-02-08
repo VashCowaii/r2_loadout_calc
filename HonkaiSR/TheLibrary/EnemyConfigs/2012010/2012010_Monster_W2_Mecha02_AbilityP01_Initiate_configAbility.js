@@ -15,7 +15,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Mecha02_Initiate"
+      "modifier": "<a class=\"gModGreen\" id=\"1333978286\">Enemy_W2_Mecha02_Initiate</a>"
     },
     {
       "name": "Declare Custom Variable",
@@ -30,7 +30,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Mecha02_Initiate",
+      "for": "<a class=\"gModGreen\" id=\"mod__1333978286\">Enemy_W2_Mecha02_Initiate</a>",
       "modifierFlags": [
         "Deathrattle",
         "KeepOnDeathrattle"

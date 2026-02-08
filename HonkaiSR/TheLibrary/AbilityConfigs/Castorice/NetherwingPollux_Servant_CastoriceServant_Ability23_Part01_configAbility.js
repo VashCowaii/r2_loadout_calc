@@ -20,7 +20,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "Servant_CastoriceServant_FlyToAbility23"
+      "functionName": "<a class=\"gTempYellow\" id=\"1407069104\">Servant_CastoriceServant_FlyToAbility23</a>"
     },
     {
       "name": "Change Battle Arena",

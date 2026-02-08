@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Serval_Passive01Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1505777820\">Serval_Passive01Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Serval_Passive01Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1505777820\">Serval_Passive01Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",

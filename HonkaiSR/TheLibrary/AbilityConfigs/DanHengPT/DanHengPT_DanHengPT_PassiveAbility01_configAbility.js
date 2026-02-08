@@ -37,7 +37,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHengPT_Olisten_BE_Create"
+      "modifier": "<a class=\"gModGreen\" id=\"3985826\">DanHengPT_Olisten_BE_Create</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -45,7 +45,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHengPT_PassiveModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"292748857\">DanHengPT_PassiveModifier</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -63,7 +63,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHengPT_ExtraListen"
+      "modifier": "<a class=\"gModGreen\" id=\"1781840956\">DanHengPT_ExtraListen</a>"
     },
     {
       "name": "IF",
@@ -78,7 +78,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengPT_Eidolon1_Onlisten"
+          "modifier": "<a class=\"gModGreen\" id=\"933382237\">DanHengPT_Eidolon1_Onlisten</a>"
         }
       ]
     },
@@ -95,7 +95,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengPT_Eidolon2_Onlisten"
+          "modifier": "<a class=\"gModGreen\" id=\"-853961878\">DanHengPT_Eidolon2_Onlisten</a>"
         }
       ]
     },
@@ -218,7 +218,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_ShieldUPFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__85270413\">DanHengPT_ShieldUPFlag</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -232,7 +232,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{DHPT}}"
                 },
-                "modifier": "DanHengPT_ShieldUPFlag"
+                "modifier": "<a class=\"gModGreen\" id=\"85270413\">DanHengPT_ShieldUPFlag</a>"
               },
               "passed": [
                 {
@@ -241,7 +241,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{DHPT}}"
                   },
-                  "modifier": "DanHengPT_LongLingExtraShield",
+                  "modifier": "<a class=\"gModGreen\" id=\"297054432\">DanHengPT_LongLingExtraShield</a>",
                   "variable": "MDF_ShieldRatio",
                   "target2": null,
                   "variable2": "MDF_ShieldUPRatioTemp",
@@ -267,7 +267,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_ImmediateAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1169230\">DanHengPT_ImmediateAction</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -275,7 +275,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "ReduceActionDelay",
+              "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Souldragon}}"
@@ -290,7 +290,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_ExtraDamageCount",
+      "for": "<a class=\"gModGreen\" id=\"mod__98427049\">DanHengPT_ExtraDamageCount</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -312,7 +312,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{DHPT}}"
               },
-              "modifier": "DanHengPT_LongLingAttackExtraDamage",
+              "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
               "variable": "MDF_DamageRatio",
               "target2": {
                 "name": "Target Name",
@@ -339,7 +339,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{DHPT}}"
               },
-              "modifier": "DanHengPT_LongLingAttackExtraDamage",
+              "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
               "variable": "MDF_Count",
               "target2": {
                 "name": "Target Name",
@@ -365,12 +365,12 @@ const configAbility = {
       ],
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "Memosprite_CyreneServant_AmazingBonus_DanHengPT[<span class=\"descriptionNumberColor\">Ode to Earth</span>]"
+        "dependancyName": "<a class=\"gModGreen\" id=\"-1655562855\">Memosprite_CyreneServant_AmazingBonus_DanHengPT</a>[<span class=\"descriptionNumberColor\">Ode to Earth</span>]"
       }
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_ExtraListen",
+      "for": "<a class=\"gModGreen\" id=\"mod__1781840956\">DanHengPT_ExtraListen</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking Modifier Instance [Owner]",
@@ -379,7 +379,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "DanHengPT_LongLingAttackExtraDamage"
+                "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>"
               },
               "passed": [
                 {
@@ -388,7 +388,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{DHPT}}"
                   },
-                  "modifier": "DanHengPT_ExtraDamageCount"
+                  "modifier": "<a class=\"gModGreen\" id=\"98427049\">DanHengPT_ExtraDamageCount</a>"
                 }
               ]
             },
@@ -396,7 +396,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "DanHengPT_LongLingExtraShield"
+                "modifier": "<a class=\"gModGreen\" id=\"297054432\">DanHengPT_LongLingExtraShield</a>"
               },
               "passed": [
                 {
@@ -405,7 +405,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "DanHengPT_LongLingFreeImmediateAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"1866376122\">DanHengPT_LongLingFreeImmediateAction</a>"
                 }
               ]
             },
@@ -413,7 +413,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "DanHengPT_LongLingExtraShield"
+                "modifier": "<a class=\"gModGreen\" id=\"297054432\">DanHengPT_LongLingExtraShield</a>"
               },
               "passed": [
                 {
@@ -422,7 +422,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{DHPT}}"
                   },
-                  "modifier": "DanHengPT_ShieldUPFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"85270413\">DanHengPT_ShieldUPFlag</a>"
                 }
               ]
             }
@@ -436,7 +436,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_Olisten_BE_Create",
+      "for": "<a class=\"gModGreen\" id=\"mod__3985826\">DanHengPT_Olisten_BE_Create</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -457,7 +457,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_Eidolon2_Onlisten",
+      "for": "<a class=\"gModGreen\" id=\"mod__-853961878\">DanHengPT_Eidolon2_Onlisten</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -471,7 +471,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Souldragon}}"
@@ -507,7 +507,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_Eidolon1_Onlisten",
+      "for": "<a class=\"gModGreen\" id=\"mod__933382237\">DanHengPT_Eidolon1_Onlisten</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -537,7 +537,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Bondmate}}"
                   },
-                  "modifier": "DanHengPT_Eidolon1[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2035403394\">DanHengPT_Eidolon1</a>[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -569,7 +569,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_PassiveModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__292748857\">DanHengPT_PassiveModifier</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -580,7 +580,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}"
               },
-              "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
             },
             {
               "name": "Force Entity Death",
@@ -733,7 +733,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Bondmate}}"
                       },
-                      "modifier": "DanHengPT_PointB1_AddAttackRatio[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
                       "valuePerStack": {
                         "MDF_AttackDelta": {
                           "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",
@@ -792,7 +792,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Bondmate}}"
                       },
-                      "modifier": "DanHengPT_PointB1_AddAttackRatio[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
                       "valuePerStack": {
                         "MDF_AttackDelta": {
                           "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",

@@ -57,7 +57,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
         "displayLines": "{[Skill03[2]]}",
@@ -93,13 +93,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Monster_W2_Mecha03_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1235993006\">Monster_W2_Mecha03_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
     },
     {
       "name": "IF",
       "conditions": {
         "name": "Compare: Variable",
-        "value1": "Enemy_W2_Mecha03_Overdrive_On[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
+        "value1": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
         "compareType": "=",
         "value2": 1,
         "valueType": "LifeTime"
@@ -111,7 +111,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Mecha03_Overdrive_On[<span class=\"descriptionNumberColor\">Sanction Mode</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]"
         }
       ]
     },

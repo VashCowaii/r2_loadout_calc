@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Bronya_BattleScore2",
+      "for": "<a class=\"gModGreen\" id=\"mod__236879313\">Bronya_BattleScore2</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -68,7 +68,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Bronya_BattleScore1",
+      "for": "<a class=\"gModGreen\" id=\"mod__186546456\">Bronya_BattleScore1</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -150,7 +150,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_Ability02[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1747978880\">Enemy_W1_Bronya_Ability02</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -182,7 +182,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "TEST_DarkTeamBackRow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1115057368\">TEST_DarkTeamBackRow</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -234,7 +234,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_PassiveAbility_Formation2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-247015465\">Enemy_W1_Bronya_PassiveAbility_Formation2</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -271,7 +271,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_PassiveAbility_NoLockStance",
+      "for": "<a class=\"gModGreen\" id=\"mod__746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>",
       "stackData": [],
       "latentQueue": []
     }

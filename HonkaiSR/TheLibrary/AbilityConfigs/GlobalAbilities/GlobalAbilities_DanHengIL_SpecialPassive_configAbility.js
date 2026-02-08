@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHengIL_SpecialPassiveModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-138851216\">DanHengIL_SpecialPassiveModifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "DanHengIL_SpecialModifier_DisableAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -39,7 +39,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengIL_SpecialPassiveModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-138851216\">DanHengIL_SpecialPassiveModifier</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -108,7 +108,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHengIL_SpecialModifier_DisableAbility",
+                      "modifier": "<a class=\"gModGreen\" id=\"954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
                       "immediateEffect": true
                     }
                   ]
@@ -135,7 +135,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHengIL_SpecialModifier_DisableAbility",
+                      "modifier": "<a class=\"gModGreen\" id=\"954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
                       "immediateEffect": true
                     }
                   ]
@@ -162,7 +162,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHengIL_SpecialModifier_DisableAbility",
+                      "modifier": "<a class=\"gModGreen\" id=\"954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
                       "immediateEffect": true
                     }
                   ]

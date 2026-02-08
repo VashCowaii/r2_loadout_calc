@@ -30,7 +30,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Luka_Eidolon1_Sub[<span class=\"descriptionNumberColor\">Fighting Endlessly</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-632542414\">Luka_Eidolon1_Sub</a>[<span class=\"descriptionNumberColor\">Fighting Endlessly</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -119,7 +119,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Luka_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1202378594\">Luka_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -163,7 +163,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Luka_ReloadBullet",
+      "modifier": "<a class=\"gModGreen\" id=\"-1275149529\">Luka_ReloadBullet</a>",
       "valuePerStack": {
         "MDF_AddValue": {
           "operator": "Variables[0] (1) || RETURN",

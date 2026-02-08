@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_319_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"365619541\">Relic_319_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_319_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1421609494\">Relic_319_Sub</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -51,7 +51,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_319_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__365619541\">Relic_319_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -82,7 +82,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_319_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1421609494\">Relic_319_Sub</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -90,7 +90,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Relic_319_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1421609494\">Relic_319_Sub</a>"
                     }
                   ]
                 }
@@ -139,7 +139,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_319_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1421609494\">Relic_319_Sub</a>"
                         }
                       ]
                     }
@@ -171,7 +171,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_319_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1421609494\">Relic_319_Sub</a>",
                       "onlyRemoveOwnersInstance": true
                     },
                     {
@@ -180,7 +180,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Relic_319_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1421609494\">Relic_319_Sub</a>",
                       "onlyRemoveOwnersInstance": true
                     }
                   ],
@@ -191,7 +191,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_319_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1421609494\">Relic_319_Sub</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -199,7 +199,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Relic_319_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1421609494\">Relic_319_Sub</a>"
                     }
                   ]
                 }

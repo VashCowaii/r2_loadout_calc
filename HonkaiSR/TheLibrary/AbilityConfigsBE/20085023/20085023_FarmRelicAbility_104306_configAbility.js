@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MFarmRelic_104306"
+      "modifier": "<a class=\"gModGreen\" id=\"1873267662\">MFarmRelic_104306</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104306_DamageAddedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1205325421\">MFarmRelic_104306_DamageAddedRatio</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -50,7 +50,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104306",
+      "for": "<a class=\"gModGreen\" id=\"mod__1873267662\">MFarmRelic_104306</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -72,7 +72,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MFarmRelic_104306_DamageAddedRatio"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1205325421\">MFarmRelic_104306_DamageAddedRatio</a>"
                 }
               ]
             }

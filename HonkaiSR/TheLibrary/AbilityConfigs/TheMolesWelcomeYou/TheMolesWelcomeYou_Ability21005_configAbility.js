@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21005_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1073775603\">LC_21005_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21005_AttackAddedRatio[<span class=\"descriptionNumberColor\">Mischievous</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-59377763\">LC_21005_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">Mischievous</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -81,7 +81,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21005_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1073775603\">LC_21005_Main</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -136,7 +136,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "LC_21005_AttackAddedRatio[<span class=\"descriptionNumberColor\">Mischievous</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-59377763\">LC_21005_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">Mischievous</span>]"
               },
               "passed": [
                 {
@@ -163,7 +163,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_21005_AttackAddedRatio[<span class=\"descriptionNumberColor\">Mischievous</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-59377763\">LC_21005_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">Mischievous</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.12) || RETURN",
@@ -211,7 +211,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_21005_AttackAddedRatio[<span class=\"descriptionNumberColor\">Mischievous</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-59377763\">LC_21005_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">Mischievous</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.12) || RETURN",

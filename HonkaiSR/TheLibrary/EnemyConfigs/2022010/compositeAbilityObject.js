@@ -107,7 +107,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
             "displayLines": "{[Skill01[2]]}",
@@ -268,7 +268,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
             "displayLines": "{[Skill01[2]]}",
@@ -442,7 +442,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W2_Abomi01_Accelerate[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"345912758\">Monster_W2_Abomi01_Accelerate</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                           "valuePerStack": {
                             "MDF_SpeedRatio": {
                               "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
@@ -504,7 +504,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W2_Abomi01_Revive[<span class=\"descriptionNumberColor\">Rebirth</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
                         }
                       ]
                     },
@@ -642,7 +642,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W2_Abomi01_Revive[<span class=\"descriptionNumberColor\">Rebirth</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -650,7 +650,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W2_Abomi01_Accelerate[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"345912758\">Monster_W2_Abomi01_Accelerate</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                           "valuePerStack": {
                             "MDF_SpeedRatio": {
                               "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
@@ -735,7 +735,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Abomi01_Revive[<span class=\"descriptionNumberColor\">Rebirth</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
         }
       ],
       "references": []
@@ -759,7 +759,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Abomi01_Break"
+          "modifier": "<a class=\"gModGreen\" id=\"-2059655878\">Monster_W2_Abomi01_Break</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -767,7 +767,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Abomi01_Revive[<span class=\"descriptionNumberColor\">Rebirth</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -775,7 +775,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Abomi01_HitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"686723873\">Monster_W2_Abomi01_HitFly</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -783,7 +783,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Monster_W2_Abomi01_Sushang"
+          "modifier": "<a class=\"gModGreen\" id=\"-1592917856\">Monster_W2_Abomi01_Sushang</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -791,7 +791,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Monster_W2_Abomi01_DanHeng"
+          "modifier": "<a class=\"gModGreen\" id=\"1968583742\">Monster_W2_Abomi01_DanHeng</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -799,7 +799,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Abomi01_Standard_Servant"
+          "modifier": "<a class=\"gModGreen\" id=\"-1913097491\">Monster_W2_Abomi01_Standard_Servant</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -807,13 +807,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Abomi01_IsHit"
+          "modifier": "<a class=\"gModGreen\" id=\"-508592004\">Monster_W2_Abomi01_IsHit</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi01_HitFly",
+          "for": "<a class=\"gModGreen\" id=\"mod__686723873\">Monster_W2_Abomi01_HitFly</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -855,7 +855,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi01_Break",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2059655878\">Monster_W2_Abomi01_Break</a>",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -892,7 +892,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi01_BattleRage",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1539118036\">Monster_W2_Abomi01_BattleRage</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -920,7 +920,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi01_DanHeng",
+          "for": "<a class=\"gModGreen\" id=\"mod__1968583742\">Monster_W2_Abomi01_DanHeng</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -964,7 +964,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_W2_Abomi01_DanHeng_Hide"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1865884989\">Monster_W2_Abomi01_DanHeng_Hide</a>"
                     }
                   ]
                 }
@@ -977,7 +977,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi01_Sushang",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1592917856\">Monster_W2_Abomi01_Sushang</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1024,14 +1024,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi01_Standard_Servant",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1913097491\">Monster_W2_Abomi01_Standard_Servant</a>",
           "useEntitySnapshot": true,
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi01_IsHit",
+          "for": "<a class=\"gModGreen\" id=\"mod__-508592004\">Monster_W2_Abomi01_IsHit</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -1042,7 +1042,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W2_Abomi01_BeingHit"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1907438637\">Monster_W2_Abomi01_BeingHit</a>"
                 }
               ]
             }
@@ -1065,7 +1065,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi01_Accelerate[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__345912758\">Monster_W2_Abomi01_Accelerate</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1103,7 +1103,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi01_LockHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-870035928\">Monster_W2_Abomi01_LockHP</a>",
           "modifierFlags": [
             "Endurance"
           ],
@@ -1121,7 +1121,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi01_Revive[<span class=\"descriptionNumberColor\">Rebirth</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1349,14 +1349,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi01_DanHeng_Hide",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1865884989\">Monster_W2_Abomi01_DanHeng_Hide</a>",
           "useEntitySnapshot": true,
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi01_BeingHit",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1907438637\">Monster_W2_Abomi01_BeingHit</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",

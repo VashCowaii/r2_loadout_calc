@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{All Team Members(Exclude Self)}}"
       },
-      "modifier": "Huohuo_Ability03_AttackUP[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-678196241\">Huohuo_Ability03_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",

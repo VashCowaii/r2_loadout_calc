@@ -43,7 +43,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHeng_Ability02_CheckCritical_Modifier",
+      "modifier": "<a class=\"gModGreen\" id=\"-2025698986\">DanHeng_Ability02_CheckCritical_Modifier</a>",
       "valuePerStack": {
         "MDF_Chance": {
           "operator": "Variables[0] (1) || RETURN",
@@ -179,14 +179,14 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHeng_Ability02_CheckCritical_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-2025698986\">DanHeng_Ability02_CheckCritical_Modifier</a>"
     },
     "Trigger: Ability End"
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "DanHeng_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1147035290\">DanHeng_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedDown"
@@ -223,7 +223,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHeng_Ability02_CheckCritical_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2025698986\">DanHeng_Ability02_CheckCritical_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -240,7 +240,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "DanHeng_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1147035290\">DanHeng_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_311_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"850905709\">Relic_311_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_311_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__487760194\">Relic_311_Sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -44,7 +44,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_311_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__850905709\">Relic_311_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -75,7 +75,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_311_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"487760194\">Relic_311_Sub</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.18) || RETURN",
@@ -115,7 +115,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_311_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"487760194\">Relic_311_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.12) || RETURN",
@@ -157,7 +157,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_311_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"487760194\">Relic_311_Sub</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -187,7 +187,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_311_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"487760194\">Relic_311_Sub</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.12) || RETURN",
@@ -218,7 +218,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_311_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"487760194\">Relic_311_Sub</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.18) || RETURN",

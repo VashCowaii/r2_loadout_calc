@@ -45,7 +45,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_BlackSwan_Maze_Flag"
+      "modifier": "<a class=\"gModGreen\" id=\"-1849837561\">M_BlackSwan_Maze_Flag</a>"
     },
     {
       "name": "Looped Event",
@@ -107,7 +107,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "M_BlackSwan_Maze_StopAddDot",
+            "modifier": "<a class=\"gModGreen\" id=\"465925451\">M_BlackSwan_Maze_StopAddDot</a>",
             "invertCondition": true
           },
           "ifTargetFound": [
@@ -161,7 +161,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
               "baseChance": {
                 "operator": "Variables[0] (_current_chance) || RETURN",
                 "displayLines": "_current_chance",
@@ -259,7 +259,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "M_BlackSwan_Maze_StopAddDot"
+                  "modifier": "<a class=\"gModGreen\" id=\"465925451\">M_BlackSwan_Maze_StopAddDot</a>"
                 }
               ]
             }
@@ -296,7 +296,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "M_BlackSwan_Maze_StopAddDot"
+      "modifier": "<a class=\"gModGreen\" id=\"465925451\">M_BlackSwan_Maze_StopAddDot</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -304,13 +304,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_BlackSwan_Maze_Flag"
+      "modifier": "<a class=\"gModGreen\" id=\"-1849837561\">M_BlackSwan_Maze_Flag</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_Maze_Flag",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1849837561\">M_BlackSwan_Maze_Flag</a>",
       "stackData": [],
       "latentQueue": [
         "MazeSkill_Triggered",

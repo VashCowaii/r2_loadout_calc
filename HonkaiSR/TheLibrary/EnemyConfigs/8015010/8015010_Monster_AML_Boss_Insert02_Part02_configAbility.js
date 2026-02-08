@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_WMonster_W0_Boss_Unselectable[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1691894969\">Enemy_WMonster_W0_Boss_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
     },
     {
       "name": "Boss Bar Display",
@@ -35,13 +35,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_HitEffect"
+      "modifier": "<a class=\"gModGreen\" id=\"1605741417\">Enemy_AML_Boss_HitEffect</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_WMonster_W0_Boss_CharacterAdded",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1808633435\">Enemy_WMonster_W0_Boss_CharacterAdded</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -68,7 +68,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_WMonster_W0_Boss_NoSpeed",
+      "for": "<a class=\"gModGreen\" id=\"mod__1544253052\">Enemy_WMonster_W0_Boss_NoSpeed</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

@@ -25,7 +25,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Kafka_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-748126065\">M_Kafka_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -33,7 +33,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Kafka_Passive_CanAttack[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1926104538\">Kafka_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -59,7 +59,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Kafka_Passive_DotSpecialMark_Listen"
+      "modifier": "<a class=\"gModGreen\" id=\"42937918\">Kafka_Passive_DotSpecialMark_Listen</a>"
     },
     {
       "name": "IF",
@@ -88,7 +88,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Kafka_Eidolon4"
+          "modifier": "<a class=\"gModGreen\" id=\"-1192521276\">Kafka_Eidolon4</a>"
         }
       ]
     }
@@ -96,7 +96,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Kafka_Passive_CanAttack[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1926104538\">Kafka_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
       "stackData": [],
       "latentQueue": [
         "Kafka_Listen_Rank1"
@@ -107,7 +107,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Kafka_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-748126065\">M_Kafka_Passive</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -121,7 +121,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Kafka_Passive_CanAttack[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1926104538\">Kafka_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
             },
             {
               "name": "Define Custom Variable",
@@ -134,7 +134,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Kafka_Passive_CanAttackCD[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-899885235\">Kafka_Passive_CanAttackCD</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -178,7 +178,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Kafka_Passive_CanAttack[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1926104538\">Kafka_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
                   }
                 ]
               },
@@ -289,7 +289,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Kafka_Passive_UltraSpecialMarkTrigger",
+      "for": "<a class=\"gModGreen\" id=\"mod__410847021\">Kafka_Passive_UltraSpecialMarkTrigger</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ListenBattleEventSkill"
@@ -376,7 +376,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Kafka_Passive_DotSpecialMarkTrigger",
+      "for": "<a class=\"gModGreen\" id=\"mod__2055478652\">Kafka_Passive_DotSpecialMarkTrigger</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ListenBattleEventSkill",
@@ -581,7 +581,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Kafka_Passive_DotSpecialMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__124377312\">Kafka_Passive_DotSpecialMark</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ListenBattleEventSkill",
@@ -767,7 +767,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Kafka_Passive_DotSpecialMark_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__42937918\">Kafka_Passive_DotSpecialMark_Listen</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -778,7 +778,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Kafka_Passive_DotSpecialMark"
+              "modifier": "<a class=\"gModGreen\" id=\"124377312\">Kafka_Passive_DotSpecialMark</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -786,7 +786,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Kafka_Passive_DotSpecialMarkTrigger"
+              "modifier": "<a class=\"gModGreen\" id=\"2055478652\">Kafka_Passive_DotSpecialMarkTrigger</a>"
             }
           ]
         },
@@ -823,7 +823,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Kafka_Passive_DotSpecialMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"124377312\">Kafka_Passive_DotSpecialMark</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -831,7 +831,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Kafka_Passive_DotSpecialMarkTrigger"
+                  "modifier": "<a class=\"gModGreen\" id=\"2055478652\">Kafka_Passive_DotSpecialMarkTrigger</a>"
                 }
               ]
             }
@@ -870,7 +870,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Kafka_Passive_DotSpecialMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"124377312\">Kafka_Passive_DotSpecialMark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -878,7 +878,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Kafka_Passive_DotSpecialMarkTrigger"
+                  "modifier": "<a class=\"gModGreen\" id=\"2055478652\">Kafka_Passive_DotSpecialMarkTrigger</a>"
                 }
               ]
             }

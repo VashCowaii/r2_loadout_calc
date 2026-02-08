@@ -17,7 +17,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Standard_Property_Config",
+          "for": "<a class=\"gModGreen\" id=\"mod__-428222978\">Standard_Property_Config</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -460,7 +460,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_AggroDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-560872508\">Standard_AggroDown</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -491,7 +491,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_AggroUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__233406053\">Standard_AggroUp</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -520,7 +520,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_SPRatioDown[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2108411860\">Standard_SPRatioDown</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -554,7 +554,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1533265365\">Standard_SPRatioUp</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -586,7 +586,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_StatusResistanceDown[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__4474377\">Standard_StatusResistanceDown</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -621,7 +621,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_StatusResistanceUp[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1990889700\">Standard_StatusResistanceUp</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -654,7 +654,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_StatusProbability[<span class=\"descriptionNumberColor\">Effect Hit Rate Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__879494395\">Standard_StatusProbability</a>[<span class=\"descriptionNumberColor\">Effect Hit Rate Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -686,7 +686,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_HealTakenRatioDown[<span class=\"descriptionNumberColor\">Incoming Healing Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-647756354\">Standard_HealTakenRatioDown</a>[<span class=\"descriptionNumberColor\">Incoming Healing Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -721,7 +721,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_HealTakenRatioUp[<span class=\"descriptionNumberColor\">Incoming Healing Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2022562475\">Standard_HealTakenRatioUp</a>[<span class=\"descriptionNumberColor\">Incoming Healing Boost</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -754,7 +754,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_HealRatioDown[<span class=\"descriptionNumberColor\">Outgoing Healing Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__954433891\">Standard_HealRatioDown</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -788,7 +788,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_HealRatioUp[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-776411742\">Standard_HealRatioUp</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -820,7 +820,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_SpeedDown[<span class=\"descriptionNumberColor\">Speed Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1325963283\">Standard_SpeedDown</a>[<span class=\"descriptionNumberColor\">Speed Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedDown"
@@ -857,7 +857,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2036544920\">Standard_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -892,7 +892,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_PhysicalStanceBreakResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__220552919\">Standard_PhysicalStanceBreakResistance</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -921,7 +921,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ImaginaryStanceBreakResistance[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__22618651\">Standard_ImaginaryStanceBreakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -952,7 +952,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_QuantumStanceBreakResistance[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-107751281\">Standard_QuantumStanceBreakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -983,7 +983,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_WindStanceBreakResistance[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__921927174\">Standard_WindStanceBreakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1014,7 +1014,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ThunderStanceBreakResistance[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2091317506\">Standard_ThunderStanceBreakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1045,7 +1045,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_IceStanceBreakResistance[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-525185247\">Standard_IceStanceBreakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1076,7 +1076,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_FireStanceBreakResistance[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1567140260\">Standard_FireStanceBreakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1107,7 +1107,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_StanceBreakTakenRatio[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1260087139\">Standard_StanceBreakTakenRatio</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1138,7 +1138,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_StanceBreakResistanceAll[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-797089541\">Standard_StanceBreakResistanceAll</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "Replace",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1208,7 +1208,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_StanceBreakResistance[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1821874088\">Standard_StanceBreakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1239,7 +1239,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_StanceBreakAddedRatio[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1910965732\">Standard_StanceBreakAddedRatio</a>[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1271,7 +1271,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ImaginaryAbsorb[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__179551098\">Standard_ImaginaryAbsorb</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1302,7 +1302,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_QuantumAbsorb[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-48968594\">Standard_QuantumAbsorb</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1333,7 +1333,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_WindAbsorb[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1173787861\">Standard_WindAbsorb</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1364,7 +1364,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ThunderAbsorb[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-119299315\">Standard_ThunderAbsorb</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1395,7 +1395,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_IceAbsorb[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__213964956\">Standard_IceAbsorb</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1426,7 +1426,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_FireAbsorb[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1252318641\">Standard_FireAbsorb</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1457,7 +1457,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_PhysicalAbsorb[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__370516022\">Standard_PhysicalAbsorb</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1488,7 +1488,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ImaginaryTakenRatio[<span class=\"descriptionNumberColor\">Imaginary Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__991543017\">Standard_ImaginaryTakenRatio</a>[<span class=\"descriptionNumberColor\">Imaginary Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1521,7 +1521,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_QuantumTakenRatio[<span class=\"descriptionNumberColor\">Quantum Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__60101517\">Standard_QuantumTakenRatio</a>[<span class=\"descriptionNumberColor\">Quantum Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1554,7 +1554,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_WindTakenRatio[<span class=\"descriptionNumberColor\">Wind Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1944536666\">Standard_WindTakenRatio</a>[<span class=\"descriptionNumberColor\">Wind Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1587,7 +1587,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ThunderTakenRatio[<span class=\"descriptionNumberColor\">Lightning Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__109685826\">Standard_ThunderTakenRatio</a>[<span class=\"descriptionNumberColor\">Lightning Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1620,7 +1620,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_IceTakenRatio[<span class=\"descriptionNumberColor\">Ice Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__255191535\">Standard_IceTakenRatio</a>[<span class=\"descriptionNumberColor\">Ice Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1653,7 +1653,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_FireTakenRatio[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1249803144\">Standard_FireTakenRatio</a>[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1686,7 +1686,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_PhysicalTakenRatio[<span class=\"descriptionNumberColor\">Physical Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-109354427\">Standard_PhysicalTakenRatio</a>[<span class=\"descriptionNumberColor\">Physical Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1719,7 +1719,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-43160834\">Standard_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1752,7 +1752,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ImaginaryPenetrate[<span class=\"descriptionNumberColor\">Imaginary RES PEN</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1394259979\">Standard_ImaginaryPenetrate</a>[<span class=\"descriptionNumberColor\">Imaginary RES PEN</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1784,7 +1784,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_QuantumPenetrate[<span class=\"descriptionNumberColor\">Quantum RES PEN</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__618971177\">Standard_QuantumPenetrate</a>[<span class=\"descriptionNumberColor\">Quantum RES PEN</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1816,7 +1816,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_WindPenetrate[<span class=\"descriptionNumberColor\">Wind RES PEN</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-885249768\">Standard_WindPenetrate</a>[<span class=\"descriptionNumberColor\">Wind RES PEN</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1848,7 +1848,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ThunderPenetrate[<span class=\"descriptionNumberColor\">Lightning RES PEN</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__288500000\">Standard_ThunderPenetrate</a>[<span class=\"descriptionNumberColor\">Lightning RES PEN</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1880,7 +1880,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_IcePenetrate[<span class=\"descriptionNumberColor\">Ice RES PEN</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-415729513\">Standard_IcePenetrate</a>[<span class=\"descriptionNumberColor\">Ice RES PEN</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1912,7 +1912,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_FirePenetrate[<span class=\"descriptionNumberColor\">Fire RES PEN</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__801781618\">Standard_FirePenetrate</a>[<span class=\"descriptionNumberColor\">Fire RES PEN</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1944,7 +1944,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_PhysicalPenetrate[<span class=\"descriptionNumberColor\">Physical RES PEN</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2158881\">Standard_PhysicalPenetrate</a>[<span class=\"descriptionNumberColor\">Physical RES PEN</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1976,7 +1976,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ImaginaryResistanceDown[<span class=\"descriptionNumberColor\">Imaginary RES Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1176142950\">Standard_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2011,7 +2011,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_QuantumResistanceDown[<span class=\"descriptionNumberColor\">Quantum RES Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__533883510\">Standard_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2046,7 +2046,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_WindResistanceDown[<span class=\"descriptionNumberColor\">Wind RES Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-192876579\">Standard_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2081,7 +2081,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Lightning RES Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1410888443\">Standard_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2116,7 +2116,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_IceResistanceDown[<span class=\"descriptionNumberColor\">Ice RES Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1969217848\">Standard_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2151,7 +2151,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_FireResistanceDown[<span class=\"descriptionNumberColor\">Fire RES Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1537044997\">Standard_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2186,7 +2186,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Physical RES Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1887078258\">Standard_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2221,7 +2221,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_AllDamageTypeResistanceDown[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__541957737\">Standard_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2256,7 +2256,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ImaginaryResistance[<span class=\"descriptionNumberColor\">Imaginary RES Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-698350622\">Standard_ImaginaryResistance</a>[<span class=\"descriptionNumberColor\">Imaginary RES Boost</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2289,7 +2289,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_QuantumResistance[<span class=\"descriptionNumberColor\">Quantum RES Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__337755598\">Standard_QuantumResistance</a>[<span class=\"descriptionNumberColor\">Quantum RES Boost</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2322,7 +2322,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_WindResistance[<span class=\"descriptionNumberColor\">Wind RES Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1512979021\">Standard_WindResistance</a>[<span class=\"descriptionNumberColor\">Wind RES Boost</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2355,7 +2355,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ThunderResistance[<span class=\"descriptionNumberColor\">Lightning RES Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1519562059\">Standard_ThunderResistance</a>[<span class=\"descriptionNumberColor\">Lightning RES Boost</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2388,7 +2388,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_IceResistance[<span class=\"descriptionNumberColor\">Ice RES Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1811570484\">Standard_IceResistance</a>[<span class=\"descriptionNumberColor\">Ice RES Boost</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2421,7 +2421,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_FireResistance[<span class=\"descriptionNumberColor\">Fire RES Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1103107279\">Standard_FireResistance</a>[<span class=\"descriptionNumberColor\">Fire RES Boost</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2454,7 +2454,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_PhysicalResistance[<span class=\"descriptionNumberColor\">Physical RES Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__395693382\">Standard_PhysicalResistance</a>[<span class=\"descriptionNumberColor\">Physical RES Boost</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2487,7 +2487,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">All-Type RES Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1897838297\">Standard_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Boost</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2520,7 +2520,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ImaginaryAddedRatio[<span class=\"descriptionNumberColor\">Imaginary DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-589529710\">Standard_ImaginaryAddedRatio</a>[<span class=\"descriptionNumberColor\">Imaginary DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2552,7 +2552,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_QuantumAddedRatio[<span class=\"descriptionNumberColor\">Quantum DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__881315694\">Standard_QuantumAddedRatio</a>[<span class=\"descriptionNumberColor\">Quantum DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2584,7 +2584,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_WindAddedRatio[<span class=\"descriptionNumberColor\">Wind DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__443833545\">Standard_WindAddedRatio</a>[<span class=\"descriptionNumberColor\">Wind DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2616,7 +2616,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ThunderAddedRatio[<span class=\"descriptionNumberColor\">Lightning DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1568131025\">Standard_ThunderAddedRatio</a>[<span class=\"descriptionNumberColor\">Lightning DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2648,7 +2648,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_IceAddedRatio[<span class=\"descriptionNumberColor\">Ice DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-107089616\">Standard_IceAddedRatio</a>[<span class=\"descriptionNumberColor\">Ice DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2680,7 +2680,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_FireAddedRatio[<span class=\"descriptionNumberColor\">Fire DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__396974031\">Standard_FireAddedRatio</a>[<span class=\"descriptionNumberColor\">Fire DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2712,7 +2712,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_PhysicalAddedRatio[<span class=\"descriptionNumberColor\">Physical DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2082176038\">Standard_PhysicalAddedRatio</a>[<span class=\"descriptionNumberColor\">Physical DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2744,7 +2744,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1777684731\">Standard_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2776,7 +2776,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_FatigueRatio[<span class=\"descriptionNumberColor\">Weaken</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_Fatigue"
@@ -2811,7 +2811,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_CriticalResistanceDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1356356018\">Standard_CriticalResistanceDown</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2842,7 +2842,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_CriticalResistanceUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__1858540699\">Standard_CriticalResistanceUp</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2871,7 +2871,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_CriticalDamageDown[<span class=\"descriptionNumberColor\">CRIT DMG Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__909057422\">Standard_CriticalDamageDown</a>[<span class=\"descriptionNumberColor\">CRIT DMG Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2905,7 +2905,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_CriticalDamageUp[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__365398491\">Standard_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2937,7 +2937,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_CriticalChanceDown[<span class=\"descriptionNumberColor\">CRIT Rate Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-424299549\">Standard_CriticalChanceDown</a>[<span class=\"descriptionNumberColor\">CRIT Rate Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2971,7 +2971,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_CriticalChanceUp[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-543542238\">Standard_CriticalChanceUp</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3003,7 +3003,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_LevelAllDamageReduce[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1237033920\">Standard_LevelAllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -3035,7 +3035,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_LevelAllDamageAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-360289157\">Standard_LevelAllDamageAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3063,7 +3063,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_DefenceDeltaDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-725625020\">Standard_DefenceDeltaDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -3101,7 +3101,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_DefenceDeltaUp[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1908508133\">Standard_DefenceDeltaUp</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -3134,7 +3134,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -3173,7 +3173,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_DefenceRatioUp[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-640702816\">Standard_DefenceRatioUp</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -3206,7 +3206,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_AttackDeltaDown[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-313217188\">Standard_AttackDeltaDown</a>[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttackDown"
@@ -3243,7 +3243,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_AttackDeltaUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__493386269\">Standard_AttackDeltaUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3275,7 +3275,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_AttackRatioDown[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1592948509\">Standard_AttackRatioDown</a>[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttackDown"
@@ -3312,7 +3312,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_AttackRatioUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1638600472\">Standard_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {

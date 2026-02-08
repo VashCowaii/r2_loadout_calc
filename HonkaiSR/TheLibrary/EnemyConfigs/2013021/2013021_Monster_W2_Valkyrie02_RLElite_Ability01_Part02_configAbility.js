@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Enemy_W2_Valkyrie02_RLElite_AimMark",
+      "modifier": "<a class=\"gModGreen\" id=\"-1672379364\">Enemy_W2_Valkyrie02_RLElite_AimMark</a>",
       "onlyRemoveOwnersInstance": true
     },
     {

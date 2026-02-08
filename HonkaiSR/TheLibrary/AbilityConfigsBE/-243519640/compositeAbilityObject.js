@@ -103,13 +103,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_082"
+          "modifier": "<a class=\"gModGreen\" id=\"-654921268\">MStrongChallengeEX_Talent_StageAbility_LE_082</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_082",
+          "for": "<a class=\"gModGreen\" id=\"mod__1342552900\">MStrongChallengeEX_Talent_StageAbility_PLY_082</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -136,7 +136,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_082",
+          "for": "<a class=\"gModGreen\" id=\"mod__-654921268\">MStrongChallengeEX_Talent_StageAbility_LE_082</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -181,7 +181,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Player Team All(with Unselectable)V2}}"
                           },
-                          "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_082"
+                          "modifier": "<a class=\"gModGreen\" id=\"1342552900\">MStrongChallengeEX_Talent_StageAbility_PLY_082</a>"
                         }
                       ]
                     }
@@ -208,13 +208,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_081"
+          "modifier": "<a class=\"gModGreen\" id=\"-604588411\">MStrongChallengeEX_Talent_StageAbility_LE_081</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_081_Extra[<span class=\"descriptionNumberColor\">Whirlwind Turn</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1435721852\">MStrongChallengeEX_Talent_StageAbility_PLY_081_Extra</a>[<span class=\"descriptionNumberColor\">Whirlwind Turn</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -245,7 +245,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_081",
+          "for": "<a class=\"gModGreen\" id=\"mod__1392885757\">MStrongChallengeEX_Talent_StageAbility_PLY_081</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -334,7 +334,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_081_Extra[<span class=\"descriptionNumberColor\">Whirlwind Turn</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1435721852\">MStrongChallengeEX_Talent_StageAbility_PLY_081_Extra</a>[<span class=\"descriptionNumberColor\">Whirlwind Turn</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
                         "displayLines": "MDF_PropertyValue3",
@@ -367,7 +367,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_081",
+          "for": "<a class=\"gModGreen\" id=\"mod__-604588411\">MStrongChallengeEX_Talent_StageAbility_LE_081</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -394,7 +394,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_081",
+                      "modifier": "<a class=\"gModGreen\" id=\"1392885757\">MStrongChallengeEX_Talent_StageAbility_PLY_081</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -445,13 +445,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_080"
+          "modifier": "<a class=\"gModGreen\" id=\"-621366030\">MStrongChallengeEX_Talent_StageAbility_LE_080</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_080[<span class=\"descriptionNumberColor\">Past Life: Shadowed Reverie</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1376108138\">MStrongChallengeEX_Talent_StageAbility_PLY_080</a>[<span class=\"descriptionNumberColor\">Past Life: Shadowed Reverie</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -481,7 +481,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_080",
+          "for": "<a class=\"gModGreen\" id=\"mod__-621366030\">MStrongChallengeEX_Talent_StageAbility_LE_080</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -512,7 +512,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "MStrongChallengeEX_Talent_StageAbility_LE_080_Template"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1643339413\">MStrongChallengeEX_Talent_StageAbility_LE_080_Template</a>"
                     }
                   ]
                 }
@@ -547,7 +547,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "MStrongChallengeEX_Talent_StageAbility_LE_080_Template"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1643339413\">MStrongChallengeEX_Talent_StageAbility_LE_080_Template</a>"
                     }
                   ]
                 }
@@ -582,7 +582,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "MStrongChallengeEX_Talent_StageAbility_LE_080_Template"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1643339413\">MStrongChallengeEX_Talent_StageAbility_LE_080_Template</a>"
                     }
                   ]
                 }
@@ -617,7 +617,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "MStrongChallengeEX_Talent_StageAbility_LE_080_Template"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1643339413\">MStrongChallengeEX_Talent_StageAbility_LE_080_Template</a>"
                     }
                   ]
                 }
@@ -627,7 +627,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "MStrongChallengeEX_Talent_StageAbility_LE_080_Template",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1643339413\">MStrongChallengeEX_Talent_StageAbility_LE_080_Template</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable with Team Count",
@@ -674,7 +674,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_080[<span class=\"descriptionNumberColor\">Past Life: Shadowed Reverie</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1376108138\">MStrongChallengeEX_Talent_StageAbility_PLY_080</a>[<span class=\"descriptionNumberColor\">Past Life: Shadowed Reverie</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -694,7 +694,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_080[<span class=\"descriptionNumberColor\">Past Life: Shadowed Reverie</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1376108138\">MStrongChallengeEX_Talent_StageAbility_PLY_080</a>[<span class=\"descriptionNumberColor\">Past Life: Shadowed Reverie</span>]"
                     }
                   ]
                 }
@@ -719,13 +719,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_079"
+          "modifier": "<a class=\"gModGreen\" id=\"-468543078\">MStrongChallengeEX_Talent_StageAbility_LE_079</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_079_Extra[<span class=\"descriptionNumberColor\">Unto Apotheosis</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-675587525\">MStrongChallengeEX_Talent_StageAbility_PLY_079_Extra</a>[<span class=\"descriptionNumberColor\">Unto Apotheosis</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -764,7 +764,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_079",
+          "for": "<a class=\"gModGreen\" id=\"mod__1257826162\">MStrongChallengeEX_Talent_StageAbility_PLY_079</a>",
           "execute": [
             {
               "eventTrigger": "Skill Point Changes",
@@ -800,7 +800,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_079_Extra[<span class=\"descriptionNumberColor\">Unto Apotheosis</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-675587525\">MStrongChallengeEX_Talent_StageAbility_PLY_079_Extra</a>[<span class=\"descriptionNumberColor\">Unto Apotheosis</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
                         "displayLines": "MDF_PropertyValue2",
@@ -836,7 +836,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_079",
+          "for": "<a class=\"gModGreen\" id=\"mod__-468543078\">MStrongChallengeEX_Talent_StageAbility_LE_079</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -863,7 +863,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_079",
+                      "modifier": "<a class=\"gModGreen\" id=\"1257826162\">MStrongChallengeEX_Talent_StageAbility_PLY_079</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -906,13 +906,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_078"
+          "modifier": "<a class=\"gModGreen\" id=\"-451765459\">MStrongChallengeEX_Talent_StageAbility_LE_078</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_078",
+          "for": "<a class=\"gModGreen\" id=\"mod__1274603781\">MStrongChallengeEX_Talent_StageAbility_PLY_078</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -946,7 +946,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_078",
+          "for": "<a class=\"gModGreen\" id=\"mod__-451765459\">MStrongChallengeEX_Talent_StageAbility_LE_078</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -957,7 +957,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Far Left Player Entity(no Memosprite)}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_078",
+                  "modifier": "<a class=\"gModGreen\" id=\"1274603781\">MStrongChallengeEX_Talent_StageAbility_PLY_078</a>",
                   "valuePerStack": {
                     "MDF_IgnoreDEF": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -990,13 +990,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_077"
+          "modifier": "<a class=\"gModGreen\" id=\"-703429744\">MStrongChallengeEX_Talent_StageAbility_LE_077</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_077[<span class=\"descriptionNumberColor\">Shatterstrike</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1291381400\">MStrongChallengeEX_Talent_StageAbility_PLY_077</a>[<span class=\"descriptionNumberColor\">Shatterstrike</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1105,7 +1105,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_077",
+          "for": "<a class=\"gModGreen\" id=\"mod__-703429744\">MStrongChallengeEX_Talent_StageAbility_LE_077</a>",
           "execute": [
             {
               "eventTrigger": "Weakness Break [Anyone]",
@@ -1157,7 +1157,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_077[<span class=\"descriptionNumberColor\">Shatterstrike</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1291381400\">MStrongChallengeEX_Talent_StageAbility_PLY_077</a>[<span class=\"descriptionNumberColor\">Shatterstrike</span>]",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -1211,13 +1211,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_076"
+          "modifier": "<a class=\"gModGreen\" id=\"-686652125\">MStrongChallengeEX_Talent_StageAbility_LE_076</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_076",
+          "for": "<a class=\"gModGreen\" id=\"mod__1308159019\">MStrongChallengeEX_Talent_StageAbility_PLY_076</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1276,7 +1276,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_076",
+          "for": "<a class=\"gModGreen\" id=\"mod__-686652125\">MStrongChallengeEX_Talent_StageAbility_LE_076</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1303,7 +1303,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_076",
+                      "modifier": "<a class=\"gModGreen\" id=\"1308159019\">MStrongChallengeEX_Talent_StageAbility_PLY_076</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -1346,13 +1346,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_075"
+          "modifier": "<a class=\"gModGreen\" id=\"-669874506\">MStrongChallengeEX_Talent_StageAbility_LE_075</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_MST_075",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1911727255\">MStrongChallengeEX_Talent_StageAbility_MST_075</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -1409,7 +1409,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_075",
+          "for": "<a class=\"gModGreen\" id=\"mod__-669874506\">MStrongChallengeEX_Talent_StageAbility_LE_075</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1431,7 +1431,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_075",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1911727255\">MStrongChallengeEX_Talent_StageAbility_MST_075</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -1464,7 +1464,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_075",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1911727255\">MStrongChallengeEX_Talent_StageAbility_MST_075</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -1505,13 +1505,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_074"
+          "modifier": "<a class=\"gModGreen\" id=\"-653096887\">MStrongChallengeEX_Talent_StageAbility_LE_074</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_MST_074",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1928504874\">MStrongChallengeEX_Talent_StageAbility_MST_074</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1559,7 +1559,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_074",
+          "for": "<a class=\"gModGreen\" id=\"mod__1341714257\">MStrongChallengeEX_Talent_StageAbility_PLY_074</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1659,7 +1659,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_074",
+          "for": "<a class=\"gModGreen\" id=\"mod__-653096887\">MStrongChallengeEX_Talent_StageAbility_LE_074</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1686,7 +1686,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_074",
+                      "modifier": "<a class=\"gModGreen\" id=\"1341714257\">MStrongChallengeEX_Talent_StageAbility_PLY_074</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -1730,7 +1730,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}} + {{Enemy Team Unselectables}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_074",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1928504874\">MStrongChallengeEX_Talent_StageAbility_MST_074</a>",
                       "casterAssign": "TargetSelf"
                     }
                   ]
@@ -1756,13 +1756,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_073"
+          "modifier": "<a class=\"gModGreen\" id=\"-636319268\">MStrongChallengeEX_Talent_StageAbility_LE_073</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_TGT_073",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2128146912\">MStrongChallengeEX_Talent_StageAbility_TGT_073</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1828,7 +1828,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_073",
+          "for": "<a class=\"gModGreen\" id=\"mod__1358491876\">MStrongChallengeEX_Talent_StageAbility_PLY_073</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -1846,7 +1846,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_073",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2128146912\">MStrongChallengeEX_Talent_StageAbility_TGT_073</a>",
                       "duration": {
                         "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
                         "displayLines": "MDF_PropertyValue3",
@@ -1883,7 +1883,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_073",
+          "for": "<a class=\"gModGreen\" id=\"mod__-636319268\">MStrongChallengeEX_Talent_StageAbility_LE_073</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -1894,7 +1894,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Far Left Player Entity(no Memosprite)}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_073",
+                  "modifier": "<a class=\"gModGreen\" id=\"1358491876\">MStrongChallengeEX_Talent_StageAbility_PLY_073</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -1943,13 +1943,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_072"
+          "modifier": "<a class=\"gModGreen\" id=\"-619541649\">MStrongChallengeEX_Talent_StageAbility_LE_072</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_072",
+          "for": "<a class=\"gModGreen\" id=\"mod__1375269495\">MStrongChallengeEX_Talent_StageAbility_PLY_072</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1992,7 +1992,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_072",
+          "for": "<a class=\"gModGreen\" id=\"mod__-619541649\">MStrongChallengeEX_Talent_StageAbility_LE_072</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -2019,7 +2019,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_072",
+                      "modifier": "<a class=\"gModGreen\" id=\"1375269495\">MStrongChallengeEX_Talent_StageAbility_PLY_072</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -2062,13 +2062,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_071"
+          "modifier": "<a class=\"gModGreen\" id=\"-602764030\">MStrongChallengeEX_Talent_StageAbility_LE_071</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_MST_071",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2095,7 +2095,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_071",
+          "for": "<a class=\"gModGreen\" id=\"mod__-602764030\">MStrongChallengeEX_Talent_StageAbility_LE_071</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -2126,7 +2126,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_071",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (#ADF_3) || RETURN",
@@ -2155,7 +2155,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All}}"
                               },
-                              "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_071",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
                                   "operator": "Variables[0] (#ADF_2) || RETURN",
@@ -2184,7 +2184,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Enemy Team All}}"
                                   },
-                                  "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_071",
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
                                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -2235,7 +2235,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_071",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_3) || RETURN",
@@ -2264,7 +2264,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_071",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (#ADF_2) || RETURN",
@@ -2293,7 +2293,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All}}"
                               },
-                              "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_071",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
                                   "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -2332,13 +2332,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_070"
+          "modifier": "<a class=\"gModGreen\" id=\"-585986411\">MStrongChallengeEX_Talent_StageAbility_LE_070</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_TGT_070",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2077814055\">MStrongChallengeEX_Talent_StageAbility_TGT_070</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -2366,7 +2366,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_070",
+          "for": "<a class=\"gModGreen\" id=\"mod__1408824733\">MStrongChallengeEX_Talent_StageAbility_PLY_070</a>",
           "execute": [
             {
               "eventTrigger": "Caused Weakness Break [Owner]",
@@ -2377,7 +2377,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_070",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2077814055\">MStrongChallengeEX_Talent_StageAbility_TGT_070</a>",
                   "duration": {
                     "operator": "Variables[0] (MDF_TGT_LifeTime) || RETURN",
                     "displayLines": "MDF_TGT_LifeTime",
@@ -2403,7 +2403,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_EMY_070",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1167978341\">MStrongChallengeEX_Talent_StageAbility_EMY_070</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -2439,7 +2439,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_070",
+          "for": "<a class=\"gModGreen\" id=\"mod__-585986411\">MStrongChallengeEX_Talent_StageAbility_LE_070</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -2466,7 +2466,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}} + {{Enemy Team Unselectables}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_070",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1167978341\">MStrongChallengeEX_Talent_StageAbility_EMY_070</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -2502,7 +2502,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_070",
+                      "modifier": "<a class=\"gModGreen\" id=\"1408824733\">MStrongChallengeEX_Talent_StageAbility_PLY_070</a>",
                       "valuePerStack": {
                         "MDF_TGT_SpeedAddedRatio": {
                           "operator": "Variables[0] (#ADF_2) || RETURN",
@@ -2545,13 +2545,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_069"
+          "modifier": "<a class=\"gModGreen\" id=\"1611631415\">MStrongChallengeEX_Talent_StageAbility_LE_069</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_069",
+          "for": "<a class=\"gModGreen\" id=\"mod__1190568591\">MStrongChallengeEX_Talent_StageAbility_PLY_069</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -2614,7 +2614,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_069",
+          "for": "<a class=\"gModGreen\" id=\"mod__1611631415\">MStrongChallengeEX_Talent_StageAbility_LE_069</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -2641,7 +2641,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_069",
+                      "modifier": "<a class=\"gModGreen\" id=\"1190568591\">MStrongChallengeEX_Talent_StageAbility_PLY_069</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -2676,13 +2676,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_068"
+          "modifier": "<a class=\"gModGreen\" id=\"1594853796\">MStrongChallengeEX_Talent_StageAbility_LE_068</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_EMY_068",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1134570198\">MStrongChallengeEX_Talent_StageAbility_EMY_068</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2711,7 +2711,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_068",
+          "for": "<a class=\"gModGreen\" id=\"mod__1173790972\">MStrongChallengeEX_Talent_StageAbility_PLY_068</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2738,7 +2738,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_068",
+          "for": "<a class=\"gModGreen\" id=\"mod__1594853796\">MStrongChallengeEX_Talent_StageAbility_LE_068</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -2765,7 +2765,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_068",
+                      "modifier": "<a class=\"gModGreen\" id=\"1173790972\">MStrongChallengeEX_Talent_StageAbility_PLY_068</a>",
                       "valuePerStack": {
                         "MDF_PhysicalAddedRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -2801,7 +2801,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_068",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1134570198\">MStrongChallengeEX_Talent_StageAbility_EMY_068</a>",
                       "valuePerStack": {
                         "MDF_PhysicalResistanceDelta": {
                           "operator": "Variables[0] (#ADF_2) || RETURN",
@@ -2836,13 +2836,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_067"
+          "modifier": "<a class=\"gModGreen\" id=\"1443855225\">MStrongChallengeEX_Talent_StageAbility_LE_067</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_TGT_067[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2061183531\">MStrongChallengeEX_Talent_StageAbility_TGT_067</a>[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2889,7 +2889,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_067",
+          "for": "<a class=\"gModGreen\" id=\"mod__1291234305\">MStrongChallengeEX_Talent_StageAbility_PLY_067</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -2907,7 +2907,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_067[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2061183531\">MStrongChallengeEX_Talent_StageAbility_TGT_067</a>[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
                         "displayLines": "MDF_PropertyValue3",
@@ -2965,7 +2965,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_067[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2061183531\">MStrongChallengeEX_Talent_StageAbility_TGT_067</a>[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
                   "invertCondition": true
                 }
               ]
@@ -2982,7 +2982,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_067",
+          "for": "<a class=\"gModGreen\" id=\"mod__1443855225\">MStrongChallengeEX_Talent_StageAbility_LE_067</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -3009,7 +3009,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_067",
+                      "modifier": "<a class=\"gModGreen\" id=\"1291234305\">MStrongChallengeEX_Talent_StageAbility_PLY_067</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -3060,13 +3060,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_066"
+          "modifier": "<a class=\"gModGreen\" id=\"1427077606\">MStrongChallengeEX_Talent_StageAbility_LE_066</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_066",
+          "for": "<a class=\"gModGreen\" id=\"mod__1274456686\">MStrongChallengeEX_Talent_StageAbility_PLY_066</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -3172,7 +3172,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_066",
+          "for": "<a class=\"gModGreen\" id=\"mod__1427077606\">MStrongChallengeEX_Talent_StageAbility_LE_066</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -3199,7 +3199,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_066"
+                      "modifier": "<a class=\"gModGreen\" id=\"1274456686\">MStrongChallengeEX_Talent_StageAbility_PLY_066</a>"
                     }
                   ]
                 }
@@ -3224,13 +3224,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_065"
+          "modifier": "<a class=\"gModGreen\" id=\"1410299987\">MStrongChallengeEX_Talent_StageAbility_LE_065</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_SVT_065",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1074029153\">MStrongChallengeEX_Talent_StageAbility_SVT_065</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -3251,7 +3251,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_065",
+          "for": "<a class=\"gModGreen\" id=\"mod__1410299987\">MStrongChallengeEX_Talent_StageAbility_LE_065</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -3286,7 +3286,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_SVT_065",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1074029153\">MStrongChallengeEX_Talent_StageAbility_SVT_065</a>",
                       "valuePerStack": {
                         "MDF_IgnoreDefenceRatioTotal": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -3321,13 +3321,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_064"
+          "modifier": "<a class=\"gModGreen\" id=\"1393522368\">MStrongChallengeEX_Talent_StageAbility_LE_064</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_TGT_064",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2111516388\">MStrongChallengeEX_Talent_StageAbility_TGT_064</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3393,7 +3393,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_064",
+          "for": "<a class=\"gModGreen\" id=\"mod__1240901448\">MStrongChallengeEX_Talent_StageAbility_PLY_064</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -3411,7 +3411,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_064",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2111516388\">MStrongChallengeEX_Talent_StageAbility_TGT_064</a>",
                       "duration": {
                         "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
                         "displayLines": "MDF_PropertyValue3",
@@ -3448,7 +3448,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_064",
+          "for": "<a class=\"gModGreen\" id=\"mod__1393522368\">MStrongChallengeEX_Talent_StageAbility_LE_064</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -3459,7 +3459,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Far Left Player Entity(no Memosprite)}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_064",
+                  "modifier": "<a class=\"gModGreen\" id=\"1240901448\">MStrongChallengeEX_Talent_StageAbility_PLY_064</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -3508,7 +3508,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_063"
+          "modifier": "<a class=\"gModGreen\" id=\"1510965701\">MStrongChallengeEX_Talent_StageAbility_LE_063</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -3523,7 +3523,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_EMY_063",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1285568769\">MStrongChallengeEX_Talent_StageAbility_EMY_063</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3560,7 +3560,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_063",
+          "for": "<a class=\"gModGreen\" id=\"mod__1358344781\">MStrongChallengeEX_Talent_StageAbility_PLY_063</a>",
           "execute": [
             {
               "eventTrigger": "Got a Kill [Owner]",
@@ -3588,7 +3588,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_063",
+          "for": "<a class=\"gModGreen\" id=\"mod__1510965701\">MStrongChallengeEX_Talent_StageAbility_LE_063</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -3615,7 +3615,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_063",
+                      "modifier": "<a class=\"gModGreen\" id=\"1358344781\">MStrongChallengeEX_Talent_StageAbility_PLY_063</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue2": {
                           "operator": "Variables[0] (#ADF_2) || RETURN",
@@ -3651,7 +3651,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_063",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1285568769\">MStrongChallengeEX_Talent_StageAbility_EMY_063</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
@@ -3670,7 +3670,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team Unselectables}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_063",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1285568769\">MStrongChallengeEX_Talent_StageAbility_EMY_063</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
@@ -3713,7 +3713,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_063",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1285568769\">MStrongChallengeEX_Talent_StageAbility_EMY_063</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
@@ -3749,13 +3749,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_062"
+          "modifier": "<a class=\"gModGreen\" id=\"1494188082\">MStrongChallengeEX_Talent_StageAbility_LE_062</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_062",
+          "for": "<a class=\"gModGreen\" id=\"mod__1341567162\">MStrongChallengeEX_Talent_StageAbility_PLY_062</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3795,7 +3795,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_062",
+          "for": "<a class=\"gModGreen\" id=\"mod__1494188082\">MStrongChallengeEX_Talent_StageAbility_LE_062</a>",
           "execute": [
             {
               "eventTrigger": "Skill Point Changes",
@@ -3832,7 +3832,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_062",
+                      "modifier": "<a class=\"gModGreen\" id=\"1341567162\">MStrongChallengeEX_Talent_StageAbility_PLY_062</a>",
                       "stackLimit": {
                         "operator": "Variables[0] (#ADF_2) || RETURN",
                         "displayLines": "#ADF_2",
@@ -3883,13 +3883,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_061"
+          "modifier": "<a class=\"gModGreen\" id=\"1477410463\">MStrongChallengeEX_Talent_StageAbility_LE_061</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_TGT_061",
+          "for": "<a class=\"gModGreen\" id=\"mod__2133118051\">MStrongChallengeEX_Talent_StageAbility_TGT_061</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3917,7 +3917,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_061",
+          "for": "<a class=\"gModGreen\" id=\"mod__1324789543\">MStrongChallengeEX_Talent_StageAbility_PLY_061</a>",
           "execute": [
             {
               "eventTrigger": "HP Change [Owner]",
@@ -3961,7 +3961,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_061",
+                      "modifier": "<a class=\"gModGreen\" id=\"2133118051\">MStrongChallengeEX_Talent_StageAbility_TGT_061</a>",
                       "duration": {
                         "operator": "Variables[0] (#ADF_2) || RETURN",
                         "displayLines": "#ADF_2",
@@ -3989,7 +3989,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_061",
+          "for": "<a class=\"gModGreen\" id=\"mod__1477410463\">MStrongChallengeEX_Talent_StageAbility_LE_061</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -4016,7 +4016,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_061"
+                      "modifier": "<a class=\"gModGreen\" id=\"1324789543\">MStrongChallengeEX_Talent_StageAbility_PLY_061</a>"
                     }
                   ]
                 }
@@ -4041,13 +4041,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_060"
+          "modifier": "<a class=\"gModGreen\" id=\"1460632844\">MStrongChallengeEX_Talent_StageAbility_LE_060</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_060",
+          "for": "<a class=\"gModGreen\" id=\"mod__1308011924\">MStrongChallengeEX_Talent_StageAbility_PLY_060</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -4110,7 +4110,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_060",
+          "for": "<a class=\"gModGreen\" id=\"mod__1460632844\">MStrongChallengeEX_Talent_StageAbility_LE_060</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -4137,7 +4137,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_060",
+                      "modifier": "<a class=\"gModGreen\" id=\"1308011924\">MStrongChallengeEX_Talent_StageAbility_PLY_060</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -4172,13 +4172,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_059"
+          "modifier": "<a class=\"gModGreen\" id=\"-535359364\">MStrongChallengeEX_Talent_StageAbility_LE_059</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_059",
+          "for": "<a class=\"gModGreen\" id=\"mod__-956422188\">MStrongChallengeEX_Talent_StageAbility_PLY_059</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4236,7 +4236,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_059",
+          "for": "<a class=\"gModGreen\" id=\"mod__-535359364\">MStrongChallengeEX_Talent_StageAbility_LE_059</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -4263,7 +4263,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_059",
+                      "modifier": "<a class=\"gModGreen\" id=\"-956422188\">MStrongChallengeEX_Talent_StageAbility_PLY_059</a>",
                       "valuePerStack": {
                         "MDF_Ultimate_DamageAddedRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -4306,13 +4306,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_058"
+          "modifier": "<a class=\"gModGreen\" id=\"-518581745\">MStrongChallengeEX_Talent_StageAbility_LE_058</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_058",
+          "for": "<a class=\"gModGreen\" id=\"mod__-939644569\">MStrongChallengeEX_Talent_StageAbility_PLY_058</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -4380,7 +4380,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_058",
+          "for": "<a class=\"gModGreen\" id=\"mod__-518581745\">MStrongChallengeEX_Talent_StageAbility_LE_058</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -4407,7 +4407,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_058"
+                      "modifier": "<a class=\"gModGreen\" id=\"-939644569\">MStrongChallengeEX_Talent_StageAbility_PLY_058</a>"
                     }
                   ]
                 }
@@ -4432,13 +4432,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_057"
+          "modifier": "<a class=\"gModGreen\" id=\"-434693650\">MStrongChallengeEX_Talent_StageAbility_LE_057</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_057",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1124198378\">MStrongChallengeEX_Talent_StageAbility_PLY_057</a>",
           "execute": [
             {
               "eventTrigger": "HP Change [Owner]",
@@ -4482,7 +4482,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1777684731\">Standard_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (#ADF_2) || RETURN",
                         "displayLines": "#ADF_2",
@@ -4510,7 +4510,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_057",
+          "for": "<a class=\"gModGreen\" id=\"mod__-434693650\">MStrongChallengeEX_Talent_StageAbility_LE_057</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -4537,7 +4537,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_057"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1124198378\">MStrongChallengeEX_Talent_StageAbility_PLY_057</a>"
                     }
                   ]
                 }
@@ -4562,13 +4562,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_056"
+          "modifier": "<a class=\"gModGreen\" id=\"-417916031\">MStrongChallengeEX_Talent_StageAbility_LE_056</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_056[<span class=\"descriptionNumberColor\">Bold Leader</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1107420759\">MStrongChallengeEX_Talent_StageAbility_PLY_056</a>[<span class=\"descriptionNumberColor\">Bold Leader</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4598,7 +4598,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_056",
+          "for": "<a class=\"gModGreen\" id=\"mod__-417916031\">MStrongChallengeEX_Talent_StageAbility_LE_056</a>",
           "execute": [
             {
               "eventTrigger": "Skill Point Changes",
@@ -4727,7 +4727,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Far Left Player Entity(no Memosprite)}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_056[<span class=\"descriptionNumberColor\">Bold Leader</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1107420759\">MStrongChallengeEX_Talent_StageAbility_PLY_056</a>[<span class=\"descriptionNumberColor\">Bold Leader</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeAddedRatio": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -4760,13 +4760,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_055"
+          "modifier": "<a class=\"gModGreen\" id=\"-468248888\">MStrongChallengeEX_Talent_StageAbility_LE_055</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_055",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1157753616\">MStrongChallengeEX_Talent_StageAbility_PLY_055</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4823,7 +4823,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_055",
+          "for": "<a class=\"gModGreen\" id=\"mod__-468248888\">MStrongChallengeEX_Talent_StageAbility_LE_055</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -4850,7 +4850,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_055",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1157753616\">MStrongChallengeEX_Talent_StageAbility_PLY_055</a>",
                       "valuePerStack": {
                         "MDF_PhysicalAddedRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -4893,13 +4893,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_054"
+          "modifier": "<a class=\"gModGreen\" id=\"-451471269\">MStrongChallengeEX_Talent_StageAbility_LE_054</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_MST_054",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1995909540\">MStrongChallengeEX_Talent_StageAbility_MST_054</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4929,7 +4929,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_054",
+          "for": "<a class=\"gModGreen\" id=\"mod__-451471269\">MStrongChallengeEX_Talent_StageAbility_LE_054</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -4956,7 +4956,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_054",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1995909540\">MStrongChallengeEX_Talent_StageAbility_MST_054</a>",
                       "valuePerStack": {
                         "MDF_QuantumResistanceDelta": {
                           "operator": "Variables[0] (#ADF_1) || Variables[1] (_CharacterCount) || MUL || RETURN",
@@ -5002,7 +5002,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_054",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1995909540\">MStrongChallengeEX_Talent_StageAbility_MST_054</a>",
                   "valuePerStack": {
                     "MDF_QuantumResistanceDelta": {
                       "operator": "Variables[0] (#ADF_1) || Variables[1] (_CharacterCount) || MUL || RETURN",
@@ -5036,13 +5036,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_053"
+          "modifier": "<a class=\"gModGreen\" id=\"-367583174\">MStrongChallengeEX_Talent_StageAbility_LE_053</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_SVT_053",
+          "for": "<a class=\"gModGreen\" id=\"mod__1308834030\">MStrongChallengeEX_Talent_StageAbility_SVT_053</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -5091,7 +5091,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_053",
+          "for": "<a class=\"gModGreen\" id=\"mod__-367583174\">MStrongChallengeEX_Talent_StageAbility_LE_053</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -5126,7 +5126,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_SVT_053",
+                      "modifier": "<a class=\"gModGreen\" id=\"1308834030\">MStrongChallengeEX_Talent_StageAbility_SVT_053</a>",
                       "valuePerStack": {
                         "MDF_DefaultStanceBreakRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -5169,13 +5169,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_052"
+          "modifier": "<a class=\"gModGreen\" id=\"-350805555\">MStrongChallengeEX_Talent_StageAbility_LE_052</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_052",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1040310283\">MStrongChallengeEX_Talent_StageAbility_PLY_052</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -5232,7 +5232,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_052",
+          "for": "<a class=\"gModGreen\" id=\"mod__-350805555\">MStrongChallengeEX_Talent_StageAbility_LE_052</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -5259,7 +5259,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_052"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1040310283\">MStrongChallengeEX_Talent_StageAbility_PLY_052</a>"
                     }
                   ]
                 }
@@ -5284,13 +5284,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_051"
+          "modifier": "<a class=\"gModGreen\" id=\"-401138412\">MStrongChallengeEX_Talent_StageAbility_LE_051</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_051",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1090643140\">MStrongChallengeEX_Talent_StageAbility_PLY_051</a>",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -5446,7 +5446,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_051",
+          "for": "<a class=\"gModGreen\" id=\"mod__-401138412\">MStrongChallengeEX_Talent_StageAbility_LE_051</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -5473,7 +5473,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_051"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1090643140\">MStrongChallengeEX_Talent_StageAbility_PLY_051</a>"
                     }
                   ]
                 }
@@ -5498,13 +5498,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_050"
+          "modifier": "<a class=\"gModGreen\" id=\"-384360793\">MStrongChallengeEX_Talent_StageAbility_LE_050</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_050",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1073865521\">MStrongChallengeEX_Talent_StageAbility_PLY_050</a>",
           "execute": [
             {
               "eventTrigger": "Caused Weakness Break [Owner]",
@@ -5515,7 +5515,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Monster_Standard_SpeedAddedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1551178382\">Monster_Standard_SpeedAddedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (#ADF_2) || RETURN",
                     "displayLines": "#ADF_2",
@@ -5541,7 +5541,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_050",
+          "for": "<a class=\"gModGreen\" id=\"mod__-384360793\">MStrongChallengeEX_Talent_StageAbility_LE_050</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -5568,7 +5568,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_050"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1073865521\">MStrongChallengeEX_Talent_StageAbility_PLY_050</a>"
                     }
                   ]
                 }
@@ -5593,13 +5593,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_049"
+          "modifier": "<a class=\"gModGreen\" id=\"-602616935\">MStrongChallengeEX_Talent_StageAbility_LE_049</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_049",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1023679759\">MStrongChallengeEX_Talent_StageAbility_PLY_049</a>",
           "execute": [
             {
               "eventTrigger": "HP Change [Owner]",
@@ -5643,7 +5643,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1777684731\">Standard_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (#ADF_2) || RETURN",
                         "displayLines": "#ADF_2",
@@ -5671,7 +5671,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_049",
+          "for": "<a class=\"gModGreen\" id=\"mod__-602616935\">MStrongChallengeEX_Talent_StageAbility_LE_049</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -5698,7 +5698,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_049"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1023679759\">MStrongChallengeEX_Talent_StageAbility_PLY_049</a>"
                     }
                   ]
                 }
@@ -5723,13 +5723,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_048"
+          "modifier": "<a class=\"gModGreen\" id=\"-619394554\">MStrongChallengeEX_Talent_StageAbility_LE_048</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_048",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1040457378\">MStrongChallengeEX_Talent_StageAbility_PLY_048</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -5782,7 +5782,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_048",
+          "for": "<a class=\"gModGreen\" id=\"mod__-619394554\">MStrongChallengeEX_Talent_StageAbility_LE_048</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -5809,7 +5809,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_048"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1040457378\">MStrongChallengeEX_Talent_StageAbility_PLY_048</a>"
                     }
                   ]
                 }
@@ -5834,13 +5834,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_047"
+          "modifier": "<a class=\"gModGreen\" id=\"-434840745\">MStrongChallengeEX_Talent_StageAbility_LE_047</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_047",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1124345473\">MStrongChallengeEX_Talent_StageAbility_PLY_047</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5867,7 +5867,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_047",
+          "for": "<a class=\"gModGreen\" id=\"mod__-434840745\">MStrongChallengeEX_Talent_StageAbility_LE_047</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -5912,7 +5912,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Player Team All(with Unselectable)V2}}"
                           },
-                          "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_047"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1124345473\">MStrongChallengeEX_Talent_StageAbility_PLY_047</a>"
                         }
                       ]
                     }
@@ -5939,13 +5939,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_046"
+          "modifier": "<a class=\"gModGreen\" id=\"-451618364\">MStrongChallengeEX_Talent_StageAbility_LE_046</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_046",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1141123092\">MStrongChallengeEX_Talent_StageAbility_PLY_046</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -5978,7 +5978,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_046",
+          "for": "<a class=\"gModGreen\" id=\"mod__-451618364\">MStrongChallengeEX_Talent_StageAbility_LE_046</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -6005,7 +6005,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_046"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1141123092\">MStrongChallengeEX_Talent_StageAbility_PLY_046</a>"
                     }
                   ]
                 }
@@ -6030,13 +6030,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_045"
+          "modifier": "<a class=\"gModGreen\" id=\"-401285507\">MStrongChallengeEX_Talent_StageAbility_LE_045</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_TGT_045",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2027334103\">MStrongChallengeEX_Talent_StageAbility_TGT_045</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -6064,7 +6064,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_045",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1090790235\">MStrongChallengeEX_Talent_StageAbility_PLY_045</a>",
           "execute": [
             {
               "eventTrigger": "Caused Weakness Break [Owner]",
@@ -6075,7 +6075,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_045",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2027334103\">MStrongChallengeEX_Talent_StageAbility_TGT_045</a>",
                   "duration": {
                     "operator": "Variables[0] (MDF_TGT_LifeTime) || RETURN",
                     "displayLines": "MDF_TGT_LifeTime",
@@ -6101,7 +6101,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_EMY_045",
+          "for": "<a class=\"gModGreen\" id=\"mod__760903391\">MStrongChallengeEX_Talent_StageAbility_EMY_045</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -6137,7 +6137,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_045",
+          "for": "<a class=\"gModGreen\" id=\"mod__-401285507\">MStrongChallengeEX_Talent_StageAbility_LE_045</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -6164,7 +6164,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_045",
+                      "modifier": "<a class=\"gModGreen\" id=\"760903391\">MStrongChallengeEX_Talent_StageAbility_EMY_045</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -6182,7 +6182,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team Unselectables}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_045",
+                      "modifier": "<a class=\"gModGreen\" id=\"760903391\">MStrongChallengeEX_Talent_StageAbility_EMY_045</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -6218,7 +6218,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_045",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1090790235\">MStrongChallengeEX_Talent_StageAbility_PLY_045</a>",
                       "valuePerStack": {
                         "MDF_TGT_SpeedAddedRatio": {
                           "operator": "Variables[0] (#ADF_2) || RETURN",
@@ -6261,13 +6261,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_044"
+          "modifier": "<a class=\"gModGreen\" id=\"-418063126\">MStrongChallengeEX_Talent_StageAbility_LE_044</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_TGT_044[<span class=\"descriptionNumberColor\">Teach By Banaxample</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2044111722\">MStrongChallengeEX_Talent_StageAbility_TGT_044</a>[<span class=\"descriptionNumberColor\">Teach By Banaxample</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -6328,7 +6328,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_044",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1107567854\">MStrongChallengeEX_Talent_StageAbility_PLY_044</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -6446,7 +6446,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Targets of Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_044[<span class=\"descriptionNumberColor\">Teach By Banaxample</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2044111722\">MStrongChallengeEX_Talent_StageAbility_TGT_044</a>[<span class=\"descriptionNumberColor\">Teach By Banaxample</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_TGT_Lifetime) || RETURN",
                         "displayLines": "MDF_TGT_Lifetime",
@@ -6491,7 +6491,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_044",
+          "for": "<a class=\"gModGreen\" id=\"mod__-418063126\">MStrongChallengeEX_Talent_StageAbility_LE_044</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -6513,7 +6513,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_044",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1107567854\">MStrongChallengeEX_Talent_StageAbility_PLY_044</a>",
                       "valuePerStack": {
                         "MDF_TGT_CriticalDamage": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -6564,13 +6564,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_043"
+          "modifier": "<a class=\"gModGreen\" id=\"-501951221\">MStrongChallengeEX_Talent_StageAbility_LE_043</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_043",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1191455949\">MStrongChallengeEX_Talent_StageAbility_PLY_043</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ForceStanceDamage"
@@ -6616,7 +6616,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_043",
+          "for": "<a class=\"gModGreen\" id=\"mod__-501951221\">MStrongChallengeEX_Talent_StageAbility_LE_043</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -6643,7 +6643,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_043",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1191455949\">MStrongChallengeEX_Talent_StageAbility_PLY_043</a>",
                       "valuePerStack": {
                         "MDF_Insert_AllDamageTypePenetrate": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -6686,13 +6686,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_042"
+          "modifier": "<a class=\"gModGreen\" id=\"-518728840\">MStrongChallengeEX_Talent_StageAbility_LE_042</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_042",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1208233568\">MStrongChallengeEX_Talent_StageAbility_PLY_042</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6735,7 +6735,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_042",
+          "for": "<a class=\"gModGreen\" id=\"mod__-518728840\">MStrongChallengeEX_Talent_StageAbility_LE_042</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -6762,7 +6762,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_042"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1208233568\">MStrongChallengeEX_Talent_StageAbility_PLY_042</a>"
                     }
                   ]
                 }
@@ -6787,13 +6787,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_041"
+          "modifier": "<a class=\"gModGreen\" id=\"-468395983\">MStrongChallengeEX_Talent_StageAbility_LE_041</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_041",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1157900711\">MStrongChallengeEX_Talent_StageAbility_PLY_041</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -6826,7 +6826,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -6848,7 +6848,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_041",
+          "for": "<a class=\"gModGreen\" id=\"mod__-468395983\">MStrongChallengeEX_Talent_StageAbility_LE_041</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -6875,7 +6875,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_041"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1157900711\">MStrongChallengeEX_Talent_StageAbility_PLY_041</a>"
                     }
                   ]
                 }
@@ -6900,13 +6900,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_040"
+          "modifier": "<a class=\"gModGreen\" id=\"-485173602\">MStrongChallengeEX_Talent_StageAbility_LE_040</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_040",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1174678330\">MStrongChallengeEX_Talent_StageAbility_PLY_040</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -6965,7 +6965,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_040",
+          "for": "<a class=\"gModGreen\" id=\"mod__-485173602\">MStrongChallengeEX_Talent_StageAbility_LE_040</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -6992,7 +6992,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_040",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1174678330\">MStrongChallengeEX_Talent_StageAbility_PLY_040</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -7035,7 +7035,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_039"
+          "modifier": "<a class=\"gModGreen\" id=\"-603455578\">MStrongChallengeEX_Talent_StageAbility_LE_039</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -7050,7 +7050,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_EMY_039",
+          "for": "<a class=\"gModGreen\" id=\"mod__963367652\">MStrongChallengeEX_Talent_StageAbility_EMY_039</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -7087,7 +7087,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_039",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1024518402\">MStrongChallengeEX_Talent_StageAbility_PLY_039</a>",
           "execute": [
             {
               "eventTrigger": "Got a Kill [Owner]",
@@ -7115,7 +7115,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_039",
+          "for": "<a class=\"gModGreen\" id=\"mod__-603455578\">MStrongChallengeEX_Talent_StageAbility_LE_039</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -7142,7 +7142,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_039",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1024518402\">MStrongChallengeEX_Talent_StageAbility_PLY_039</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue2": {
                           "operator": "Variables[0] (#ADF_2) || RETURN",
@@ -7178,7 +7178,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_039",
+                      "modifier": "<a class=\"gModGreen\" id=\"963367652\">MStrongChallengeEX_Talent_StageAbility_EMY_039</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
@@ -7197,7 +7197,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team Unselectables}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_039",
+                      "modifier": "<a class=\"gModGreen\" id=\"963367652\">MStrongChallengeEX_Talent_StageAbility_EMY_039</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
@@ -7240,7 +7240,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_039",
+                      "modifier": "<a class=\"gModGreen\" id=\"963367652\">MStrongChallengeEX_Talent_StageAbility_EMY_039</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
@@ -7276,13 +7276,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_038"
+          "modifier": "<a class=\"gModGreen\" id=\"-586677959\">MStrongChallengeEX_Talent_StageAbility_LE_038</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_038",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1007740783\">MStrongChallengeEX_Talent_StageAbility_PLY_038</a>",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -7373,7 +7373,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_038",
+          "for": "<a class=\"gModGreen\" id=\"mod__-586677959\">MStrongChallengeEX_Talent_StageAbility_LE_038</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -7400,7 +7400,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_038",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1007740783\">MStrongChallengeEX_Talent_StageAbility_PLY_038</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -7443,20 +7443,20 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_037"
+          "modifier": "<a class=\"gModGreen\" id=\"-435679388\">MStrongChallengeEX_Talent_StageAbility_LE_037</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_037",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1125184116\">MStrongChallengeEX_Talent_StageAbility_PLY_037</a>",
           "execute": [
             {
               "eventTrigger": "Caused Weakness Break [Owner]",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -7478,7 +7478,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_037",
+          "for": "<a class=\"gModGreen\" id=\"mod__-435679388\">MStrongChallengeEX_Talent_StageAbility_LE_037</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -7505,7 +7505,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_037"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1125184116\">MStrongChallengeEX_Talent_StageAbility_PLY_037</a>"
                     }
                   ]
                 }
@@ -7530,13 +7530,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_036"
+          "modifier": "<a class=\"gModGreen\" id=\"-418901769\">MStrongChallengeEX_Talent_StageAbility_LE_036</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_036",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1108406497\">MStrongChallengeEX_Talent_StageAbility_PLY_036</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7579,7 +7579,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_036",
+          "for": "<a class=\"gModGreen\" id=\"mod__-418901769\">MStrongChallengeEX_Talent_StageAbility_LE_036</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -7606,7 +7606,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_036",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1108406497\">MStrongChallengeEX_Talent_StageAbility_PLY_036</a>",
                       "valuePerStack": {
                         "MDF_PhysicalDamageAddedRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -7649,13 +7649,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_035"
+          "modifier": "<a class=\"gModGreen\" id=\"-402124150\">MStrongChallengeEX_Talent_StageAbility_LE_035</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_035",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1091628878\">MStrongChallengeEX_Talent_StageAbility_PLY_035</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7682,7 +7682,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_035",
+          "for": "<a class=\"gModGreen\" id=\"mod__-402124150\">MStrongChallengeEX_Talent_StageAbility_LE_035</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -7725,7 +7725,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_035",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1091628878\">MStrongChallengeEX_Talent_StageAbility_PLY_035</a>",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -7775,7 +7775,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_035",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1091628878\">MStrongChallengeEX_Talent_StageAbility_PLY_035</a>",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -7810,20 +7810,20 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_034"
+          "modifier": "<a class=\"gModGreen\" id=\"-385346531\">MStrongChallengeEX_Talent_StageAbility_LE_034</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_034",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1074851259\">MStrongChallengeEX_Talent_StageAbility_PLY_034</a>",
           "execute": [
             {
               "eventTrigger": "Caused a Limbo/DeathState [Owner]",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -7866,7 +7866,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_034",
+          "for": "<a class=\"gModGreen\" id=\"mod__-385346531\">MStrongChallengeEX_Talent_StageAbility_LE_034</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -7893,7 +7893,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_034",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1074851259\">MStrongChallengeEX_Talent_StageAbility_PLY_034</a>",
                       "valuePerStack": {
                         "MDF_QuantumDamageAddedRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -7936,13 +7936,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_033"
+          "modifier": "<a class=\"gModGreen\" id=\"-502789864\">MStrongChallengeEX_Talent_StageAbility_LE_033</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_BOSS_033",
+          "for": "<a class=\"gModGreen\" id=\"mod__-78445718\">MStrongChallengeEX_Talent_StageAbility_BOSS_033</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -7987,7 +7987,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (Damage_Total) || RETURN",
@@ -8030,7 +8030,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>"
                     }
                   ]
                 }
@@ -8043,12 +8043,12 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "BeingBreakDMGTrigger"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1917476935\">BeingBreakDMGTrigger</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -8056,7 +8056,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
                     }
                   ]
                 },
@@ -8064,12 +8064,12 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "BeingBreakDMGTrigger"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1917476935\">BeingBreakDMGTrigger</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -8077,7 +8077,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
                     }
                   ]
                 },
@@ -8085,12 +8085,12 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "BeingBreakDMGTrigger"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1917476935\">BeingBreakDMGTrigger</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -8098,7 +8098,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -8111,7 +8111,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>"
                     }
                   ]
                 }
@@ -8121,7 +8121,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "BeingBreakDMGTrigger",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1917476935\">BeingBreakDMGTrigger</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -8165,7 +8165,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_033",
+          "for": "<a class=\"gModGreen\" id=\"mod__-502789864\">MStrongChallengeEX_Talent_StageAbility_LE_033</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -8201,7 +8201,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_033"
+                      "modifier": "<a class=\"gModGreen\" id=\"-78445718\">MStrongChallengeEX_Talent_StageAbility_BOSS_033</a>"
                     }
                   ]
                 }
@@ -8226,13 +8226,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_032"
+          "modifier": "<a class=\"gModGreen\" id=\"-486012245\">MStrongChallengeEX_Talent_StageAbility_LE_032</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_032",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1175516973\">MStrongChallengeEX_Talent_StageAbility_PLY_032</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -8278,7 +8278,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_032",
+          "for": "<a class=\"gModGreen\" id=\"mod__-486012245\">MStrongChallengeEX_Talent_StageAbility_LE_032</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -8305,7 +8305,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_032",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1175516973\">MStrongChallengeEX_Talent_StageAbility_PLY_032</a>",
                       "valuePerStack": {
                         "MDF_AllDamageAddedRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -8340,13 +8340,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_031"
+          "modifier": "<a class=\"gModGreen\" id=\"-469234626\">MStrongChallengeEX_Talent_StageAbility_LE_031</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_031",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1158739354\">MStrongChallengeEX_Talent_StageAbility_PLY_031</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -8379,7 +8379,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_031",
+          "for": "<a class=\"gModGreen\" id=\"mod__-469234626\">MStrongChallengeEX_Talent_StageAbility_LE_031</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -8406,7 +8406,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_031"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1158739354\">MStrongChallengeEX_Talent_StageAbility_PLY_031</a>"
                     }
                   ]
                 }
@@ -8431,13 +8431,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_030"
+          "modifier": "<a class=\"gModGreen\" id=\"-452457007\">MStrongChallengeEX_Talent_StageAbility_LE_030</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_TGT_030",
+          "for": "<a class=\"gModGreen\" id=\"mod__472972413\">MStrongChallengeEX_Talent_StageAbility_TGT_030</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -8465,7 +8465,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_030",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1141961735\">MStrongChallengeEX_Talent_StageAbility_PLY_030</a>",
           "execute": [
             {
               "eventTrigger": "Caused Weakness Break [Owner]",
@@ -8476,7 +8476,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_030",
+                  "modifier": "<a class=\"gModGreen\" id=\"472972413\">MStrongChallengeEX_Talent_StageAbility_TGT_030</a>",
                   "duration": {
                     "operator": "Variables[0] (MDF_TGT_LifeTime) || RETURN",
                     "displayLines": "MDF_TGT_LifeTime",
@@ -8502,7 +8502,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_EMY_030",
+          "for": "<a class=\"gModGreen\" id=\"mod__845924319\">MStrongChallengeEX_Talent_StageAbility_EMY_030</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -8538,7 +8538,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_030",
+          "for": "<a class=\"gModGreen\" id=\"mod__-452457007\">MStrongChallengeEX_Talent_StageAbility_LE_030</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -8565,7 +8565,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_030",
+                      "modifier": "<a class=\"gModGreen\" id=\"845924319\">MStrongChallengeEX_Talent_StageAbility_EMY_030</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -8583,7 +8583,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team Unselectables}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_030",
+                      "modifier": "<a class=\"gModGreen\" id=\"845924319\">MStrongChallengeEX_Talent_StageAbility_EMY_030</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -8619,7 +8619,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_030",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1141961735\">MStrongChallengeEX_Talent_StageAbility_PLY_030</a>",
                       "valuePerStack": {
                         "MDF_TGT_SpeedAddedRatio": {
                           "operator": "Variables[0] (#ADF_2) || RETURN",
@@ -8662,13 +8662,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_029"
+          "modifier": "<a class=\"gModGreen\" id=\"-670713149\">MStrongChallengeEX_Talent_StageAbility_LE_029</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_TGT_029[<span class=\"descriptionNumberColor\">Cheat Sheet</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__254716271\">MStrongChallengeEX_Talent_StageAbility_TGT_029</a>[<span class=\"descriptionNumberColor\">Cheat Sheet</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -8729,7 +8729,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_029",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1091775973\">MStrongChallengeEX_Talent_StageAbility_PLY_029</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -8847,7 +8847,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Targets of Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_029[<span class=\"descriptionNumberColor\">Cheat Sheet</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"254716271\">MStrongChallengeEX_Talent_StageAbility_TGT_029</a>[<span class=\"descriptionNumberColor\">Cheat Sheet</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_TGT_Lifetime) || RETURN",
                         "displayLines": "MDF_TGT_Lifetime",
@@ -8892,7 +8892,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_029",
+          "for": "<a class=\"gModGreen\" id=\"mod__-670713149\">MStrongChallengeEX_Talent_StageAbility_LE_029</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -8914,7 +8914,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_029",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1091775973\">MStrongChallengeEX_Talent_StageAbility_PLY_029</a>",
                       "valuePerStack": {
                         "MDF_TGT_AttackAddedRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -8965,13 +8965,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_028"
+          "modifier": "<a class=\"gModGreen\" id=\"-687490768\">MStrongChallengeEX_Talent_StageAbility_LE_028</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_028",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1108553592\">MStrongChallengeEX_Talent_StageAbility_PLY_028</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -9003,7 +9003,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_028",
+          "for": "<a class=\"gModGreen\" id=\"mod__-687490768\">MStrongChallengeEX_Talent_StageAbility_LE_028</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -9030,7 +9030,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_028"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1108553592\">MStrongChallengeEX_Talent_StageAbility_PLY_028</a>"
                     }
                   ]
                 }
@@ -9055,20 +9055,20 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_027"
+          "modifier": "<a class=\"gModGreen\" id=\"-435826483\">MStrongChallengeEX_Talent_StageAbility_LE_027</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_027",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1125331211\">MStrongChallengeEX_Talent_StageAbility_PLY_027</a>",
           "execute": [
             {
               "eventTrigger": "Got a Kill [Owner]",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
@@ -9090,7 +9090,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_027",
+          "for": "<a class=\"gModGreen\" id=\"mod__-435826483\">MStrongChallengeEX_Talent_StageAbility_LE_027</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -9117,7 +9117,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_027",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1125331211\">MStrongChallengeEX_Talent_StageAbility_PLY_027</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -9152,13 +9152,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_026"
+          "modifier": "<a class=\"gModGreen\" id=\"-452604102\">MStrongChallengeEX_Talent_StageAbility_LE_026</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_026",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1142108830\">MStrongChallengeEX_Talent_StageAbility_PLY_026</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -9206,7 +9206,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_026",
+          "for": "<a class=\"gModGreen\" id=\"mod__-452604102\">MStrongChallengeEX_Talent_StageAbility_LE_026</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -9233,7 +9233,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_026",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1142108830\">MStrongChallengeEX_Talent_StageAbility_PLY_026</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -9276,13 +9276,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_025"
+          "modifier": "<a class=\"gModGreen\" id=\"-469381721\">MStrongChallengeEX_Talent_StageAbility_LE_025</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_025",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1158886449\">MStrongChallengeEX_Talent_StageAbility_PLY_025</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -9339,7 +9339,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_025",
+          "for": "<a class=\"gModGreen\" id=\"mod__-469381721\">MStrongChallengeEX_Talent_StageAbility_LE_025</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -9361,7 +9361,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_025",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1158886449\">MStrongChallengeEX_Talent_StageAbility_PLY_025</a>",
                       "valuePerStack": {
                         "MDF_Ultimate_DefaultStanceBreakRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -9396,13 +9396,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_024"
+          "modifier": "<a class=\"gModGreen\" id=\"-486159340\">MStrongChallengeEX_Talent_StageAbility_LE_024</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_024",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1175664068\">MStrongChallengeEX_Talent_StageAbility_PLY_024</a>",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -9498,7 +9498,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "ReduceActionDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -9536,7 +9536,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_024",
+          "for": "<a class=\"gModGreen\" id=\"mod__-486159340\">MStrongChallengeEX_Talent_StageAbility_LE_024</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -9558,7 +9558,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_024",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1175664068\">MStrongChallengeEX_Talent_StageAbility_PLY_024</a>",
                       "valuePerStack": {
                         "MDF_ActioDelayModifyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -9601,13 +9601,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_023"
+          "modifier": "<a class=\"gModGreen\" id=\"-502936959\">MStrongChallengeEX_Talent_StageAbility_LE_023</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_023",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1192441687\">MStrongChallengeEX_Talent_StageAbility_PLY_023</a>",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -9649,7 +9649,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "ReduceActionDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -9687,7 +9687,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_023",
+          "for": "<a class=\"gModGreen\" id=\"mod__-502936959\">MStrongChallengeEX_Talent_StageAbility_LE_023</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -9714,7 +9714,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_023",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1192441687\">MStrongChallengeEX_Talent_StageAbility_PLY_023</a>",
                       "valuePerStack": {
                         "MDF_ActioDelayModifyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -9757,13 +9757,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_022"
+          "modifier": "<a class=\"gModGreen\" id=\"-519714578\">MStrongChallengeEX_Talent_StageAbility_LE_022</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_EMY_022",
+          "for": "<a class=\"gModGreen\" id=\"mod__711556272\">MStrongChallengeEX_Talent_StageAbility_EMY_022</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -9825,7 +9825,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_022",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1209219306\">MStrongChallengeEX_Talent_StageAbility_PLY_022</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -9852,7 +9852,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_022",
+          "for": "<a class=\"gModGreen\" id=\"mod__-519714578\">MStrongChallengeEX_Talent_StageAbility_LE_022</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -9879,7 +9879,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_022"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1209219306\">MStrongChallengeEX_Talent_StageAbility_PLY_022</a>"
                     }
                   ]
                 }
@@ -9904,13 +9904,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_021"
+          "modifier": "<a class=\"gModGreen\" id=\"-536492197\">MStrongChallengeEX_Talent_StageAbility_LE_021</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_021",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1225996925\">MStrongChallengeEX_Talent_StageAbility_PLY_021</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ForceStanceDamage"
@@ -10226,7 +10226,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_021",
+          "for": "<a class=\"gModGreen\" id=\"mod__-536492197\">MStrongChallengeEX_Talent_StageAbility_LE_021</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -10253,7 +10253,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_021",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1225996925\">MStrongChallengeEX_Talent_StageAbility_PLY_021</a>",
                       "valuePerStack": {
                         "MDF_Insert_AllDamageTypePenetrate": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -10296,13 +10296,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_020"
+          "modifier": "<a class=\"gModGreen\" id=\"-553269816\">MStrongChallengeEX_Talent_StageAbility_LE_020</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_020",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1242774544\">MStrongChallengeEX_Talent_StageAbility_PLY_020</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -10360,7 +10360,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_020",
+          "for": "<a class=\"gModGreen\" id=\"mod__-553269816\">MStrongChallengeEX_Talent_StageAbility_LE_020</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -10387,7 +10387,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_020",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1242774544\">MStrongChallengeEX_Talent_StageAbility_PLY_020</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -10430,7 +10430,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_019"
+          "modifier": "<a class=\"gModGreen\" id=\"1477263368\">MStrongChallengeEX_Talent_StageAbility_LE_019</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -10445,7 +10445,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_EMY_019",
+          "for": "<a class=\"gModGreen\" id=\"mod__1030183938\">MStrongChallengeEX_Talent_StageAbility_EMY_019</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -10482,7 +10482,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_019",
+          "for": "<a class=\"gModGreen\" id=\"mod__1056200544\">MStrongChallengeEX_Talent_StageAbility_PLY_019</a>",
           "execute": [
             {
               "eventTrigger": "Got a Kill [Owner]",
@@ -10510,7 +10510,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_019",
+          "for": "<a class=\"gModGreen\" id=\"mod__1477263368\">MStrongChallengeEX_Talent_StageAbility_LE_019</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -10537,7 +10537,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_019",
+                      "modifier": "<a class=\"gModGreen\" id=\"1056200544\">MStrongChallengeEX_Talent_StageAbility_PLY_019</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue2": {
                           "operator": "Variables[0] (#ADF_2) || RETURN",
@@ -10573,7 +10573,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_019",
+                      "modifier": "<a class=\"gModGreen\" id=\"1030183938\">MStrongChallengeEX_Talent_StageAbility_EMY_019</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
@@ -10592,7 +10592,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team Unselectables}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_019",
+                      "modifier": "<a class=\"gModGreen\" id=\"1030183938\">MStrongChallengeEX_Talent_StageAbility_EMY_019</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
@@ -10635,7 +10635,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_019",
+                      "modifier": "<a class=\"gModGreen\" id=\"1030183938\">MStrongChallengeEX_Talent_StageAbility_EMY_019</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
@@ -10671,13 +10671,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_018"
+          "modifier": "<a class=\"gModGreen\" id=\"1494040987\">MStrongChallengeEX_Talent_StageAbility_LE_018</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_018",
+          "for": "<a class=\"gModGreen\" id=\"mod__1072978163\">MStrongChallengeEX_Talent_StageAbility_PLY_018</a>",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -10768,7 +10768,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_018",
+          "for": "<a class=\"gModGreen\" id=\"mod__1494040987\">MStrongChallengeEX_Talent_StageAbility_LE_018</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -10795,7 +10795,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_018",
+                      "modifier": "<a class=\"gModGreen\" id=\"1072978163\">MStrongChallengeEX_Talent_StageAbility_PLY_018</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -10838,13 +10838,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_017"
+          "modifier": "<a class=\"gModGreen\" id=\"1443708130\">MStrongChallengeEX_Talent_StageAbility_LE_017</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_017",
+          "for": "<a class=\"gModGreen\" id=\"mod__1291087210\">MStrongChallengeEX_Talent_StageAbility_PLY_017</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -10902,7 +10902,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_017",
+          "for": "<a class=\"gModGreen\" id=\"mod__1443708130\">MStrongChallengeEX_Talent_StageAbility_LE_017</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -10929,7 +10929,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_017",
+                      "modifier": "<a class=\"gModGreen\" id=\"1291087210\">MStrongChallengeEX_Talent_StageAbility_PLY_017</a>",
                       "valuePerStack": {
                         "MDF_BPCrit_DamageAddedRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -10972,13 +10972,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_016"
+          "modifier": "<a class=\"gModGreen\" id=\"1460485749\">MStrongChallengeEX_Talent_StageAbility_LE_016</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_EMY_016",
+          "for": "<a class=\"gModGreen\" id=\"mod__1080516795\">MStrongChallengeEX_Talent_StageAbility_EMY_016</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -11014,7 +11014,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_016",
+          "for": "<a class=\"gModGreen\" id=\"mod__1460485749\">MStrongChallengeEX_Talent_StageAbility_LE_016</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -11041,7 +11041,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_016",
+                      "modifier": "<a class=\"gModGreen\" id=\"1080516795\">MStrongChallengeEX_Talent_StageAbility_EMY_016</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -11059,7 +11059,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team Unselectables}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_016",
+                      "modifier": "<a class=\"gModGreen\" id=\"1080516795\">MStrongChallengeEX_Talent_StageAbility_EMY_016</a>",
                       "valuePerStack": {
                         "MDF_Element_DamageTakenRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -11094,13 +11094,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_015"
+          "modifier": "<a class=\"gModGreen\" id=\"1410152892\">MStrongChallengeEX_Talent_StageAbility_LE_015</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_015",
+          "for": "<a class=\"gModGreen\" id=\"mod__1257531972\">MStrongChallengeEX_Talent_StageAbility_PLY_015</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ForceStanceDamage"
@@ -11720,7 +11720,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_015",
+          "for": "<a class=\"gModGreen\" id=\"mod__1410152892\">MStrongChallengeEX_Talent_StageAbility_LE_015</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -11747,7 +11747,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_015",
+                      "modifier": "<a class=\"gModGreen\" id=\"1257531972\">MStrongChallengeEX_Talent_StageAbility_PLY_015</a>",
                       "valuePerStack": {
                         "MDF_Insert_DefaultStanceBreakRatio": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -11790,20 +11790,20 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_014"
+          "modifier": "<a class=\"gModGreen\" id=\"1426930511\">MStrongChallengeEX_Talent_StageAbility_LE_014</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_014",
+          "for": "<a class=\"gModGreen\" id=\"mod__1274309591\">MStrongChallengeEX_Talent_StageAbility_PLY_014</a>",
           "execute": [
             {
               "eventTrigger": "Caused Weakness Break [Owner]",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -11825,7 +11825,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_014",
+          "for": "<a class=\"gModGreen\" id=\"mod__1426930511\">MStrongChallengeEX_Talent_StageAbility_LE_014</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -11852,7 +11852,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_014"
+                      "modifier": "<a class=\"gModGreen\" id=\"1274309591\">MStrongChallengeEX_Talent_StageAbility_PLY_014</a>"
                     }
                   ]
                 }
@@ -11877,13 +11877,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_013"
+          "modifier": "<a class=\"gModGreen\" id=\"1376597654\">MStrongChallengeEX_Talent_StageAbility_LE_013</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_013",
+          "for": "<a class=\"gModGreen\" id=\"mod__1223976734\">MStrongChallengeEX_Talent_StageAbility_PLY_013</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -11940,7 +11940,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_013",
+          "for": "<a class=\"gModGreen\" id=\"mod__1376597654\">MStrongChallengeEX_Talent_StageAbility_LE_013</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -11967,7 +11967,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_013"
+                      "modifier": "<a class=\"gModGreen\" id=\"1223976734\">MStrongChallengeEX_Talent_StageAbility_PLY_013</a>"
                     }
                   ]
                 }
@@ -11992,13 +11992,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_012"
+          "modifier": "<a class=\"gModGreen\" id=\"1393375273\">MStrongChallengeEX_Talent_StageAbility_LE_012</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_BOSS_012",
+          "for": "<a class=\"gModGreen\" id=\"mod__1817027871\">MStrongChallengeEX_Talent_StageAbility_BOSS_012</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -12043,7 +12043,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (Damage_Total) || RETURN",
@@ -12086,7 +12086,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>"
                     }
                   ]
                 }
@@ -12099,12 +12099,12 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "BeingBreakDMGTrigger"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1917476935\">BeingBreakDMGTrigger</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -12112,7 +12112,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
                     }
                   ]
                 },
@@ -12120,12 +12120,12 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "BeingBreakDMGTrigger"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1917476935\">BeingBreakDMGTrigger</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -12133,7 +12133,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
                     }
                   ]
                 },
@@ -12141,12 +12141,12 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "BeingBreakDMGTrigger"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1917476935\">BeingBreakDMGTrigger</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -12154,7 +12154,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -12167,7 +12167,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>"
                     }
                   ]
                 }
@@ -12177,7 +12177,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "BeingBreakDMGTrigger",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1917476935\">BeingBreakDMGTrigger</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -12221,7 +12221,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_012",
+          "for": "<a class=\"gModGreen\" id=\"mod__1393375273\">MStrongChallengeEX_Talent_StageAbility_LE_012</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -12257,7 +12257,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_012"
+                      "modifier": "<a class=\"gModGreen\" id=\"1817027871\">MStrongChallengeEX_Talent_StageAbility_BOSS_012</a>"
                     }
                   ]
                 }
@@ -12282,13 +12282,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_011"
+          "modifier": "<a class=\"gModGreen\" id=\"1343042416\">MStrongChallengeEX_Talent_StageAbility_LE_011</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_BOSS_011",
+          "for": "<a class=\"gModGreen\" id=\"mod__1833805490\">MStrongChallengeEX_Talent_StageAbility_BOSS_011</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -12333,7 +12333,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (Damage_Total) || RETURN",
@@ -12376,7 +12376,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>"
                     }
                   ]
                 }
@@ -12389,12 +12389,12 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "BeingBreakDMGTrigger"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1917476935\">BeingBreakDMGTrigger</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -12402,7 +12402,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
                     }
                   ]
                 },
@@ -12410,12 +12410,12 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "BeingBreakDMGTrigger"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1917476935\">BeingBreakDMGTrigger</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -12423,7 +12423,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
                     }
                   ]
                 },
@@ -12431,12 +12431,12 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "BeingBreakDMGTrigger"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1917476935\">BeingBreakDMGTrigger</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -12444,7 +12444,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -12457,7 +12457,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>"
                     }
                   ]
                 }
@@ -12467,7 +12467,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "BeingBreakDMGTrigger",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1917476935\">BeingBreakDMGTrigger</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -12511,7 +12511,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_011",
+          "for": "<a class=\"gModGreen\" id=\"mod__1343042416\">MStrongChallengeEX_Talent_StageAbility_LE_011</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -12547,7 +12547,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_011"
+                      "modifier": "<a class=\"gModGreen\" id=\"1833805490\">MStrongChallengeEX_Talent_StageAbility_BOSS_011</a>"
                     }
                   ]
                 }
@@ -12572,17 +12572,17 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_010[<span class=\"descriptionNumberColor\">Moment of Termination</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1359820035\">MStrongChallengeEX_Talent_StageAbility_LE_010</a>[<span class=\"descriptionNumberColor\">Moment of Termination</span>]"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_010_Mark"
+          "for": "<a class=\"gModGreen\" id=\"mod__-1343970059\">MStrongChallengeEX_Talent_StageAbility_PLY_010_Mark</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_010",
+          "for": "<a class=\"gModGreen\" id=\"mod__1207199115\">MStrongChallengeEX_Talent_StageAbility_PLY_010</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -12615,7 +12615,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -12640,7 +12640,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_010[<span class=\"descriptionNumberColor\">Moment of Termination</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1359820035\">MStrongChallengeEX_Talent_StageAbility_LE_010</a>[<span class=\"descriptionNumberColor\">Moment of Termination</span>]",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -12667,7 +12667,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_010"
+                      "modifier": "<a class=\"gModGreen\" id=\"1207199115\">MStrongChallengeEX_Talent_StageAbility_PLY_010</a>"
                     }
                   ]
                 }
@@ -12695,17 +12695,17 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_009"
+          "modifier": "<a class=\"gModGreen\" id=\"1678447701\">MStrongChallengeEX_Talent_StageAbility_LE_009</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_009_Mark"
+          "for": "<a class=\"gModGreen\" id=\"mod__1543706023\">MStrongChallengeEX_Talent_StageAbility_PLY_009_Mark</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_009[<span class=\"descriptionNumberColor\">Ashen Battleground</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1257384877\">MStrongChallengeEX_Talent_StageAbility_PLY_009</a>[<span class=\"descriptionNumberColor\">Ashen Battleground</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -12739,7 +12739,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -12767,7 +12767,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_009",
+          "for": "<a class=\"gModGreen\" id=\"mod__1678447701\">MStrongChallengeEX_Talent_StageAbility_LE_009</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -12794,7 +12794,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_009[<span class=\"descriptionNumberColor\">Ashen Battleground</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1257384877\">MStrongChallengeEX_Talent_StageAbility_PLY_009</a>[<span class=\"descriptionNumberColor\">Ashen Battleground</span>]"
                     }
                   ]
                 }
@@ -12819,13 +12819,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_008"
+          "modifier": "<a class=\"gModGreen\" id=\"1661670082\">MStrongChallengeEX_Talent_StageAbility_LE_008</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-847062697\">MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -12862,11 +12862,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark"
+          "for": "<a class=\"gModGreen\" id=\"mod__-770987134\">MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_008[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1240607258\">MStrongChallengeEX_Talent_StageAbility_PLY_008</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Any",
@@ -12888,7 +12888,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark",
+                        "modifier": "<a class=\"gModGreen\" id=\"-770987134\">MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark</a>",
                         "invertCondition": true
                       },
                       "passed": [
@@ -12898,7 +12898,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark"
+                          "modifier": "<a class=\"gModGreen\" id=\"-770987134\">MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark</a>"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -12955,7 +12955,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-847062697\">MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -12987,7 +12987,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-770987134\">MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark</a>"
                 },
                 {
                   "name": "IF",
@@ -13009,7 +13009,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-847062697\">MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_PropertyValue4) || RETURN",
                         "displayLines": "MDF_PropertyValue4",
@@ -13046,7 +13046,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_008",
+          "for": "<a class=\"gModGreen\" id=\"mod__1661670082\">MStrongChallengeEX_Talent_StageAbility_LE_008</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -13073,7 +13073,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_008[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1240607258\">MStrongChallengeEX_Talent_StageAbility_PLY_008</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -13139,7 +13139,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EscapingCharge02"
+          "modifier": "<a class=\"gModGreen\" id=\"1449818532\">Enemy_XP_Minion04_02_EscapingCharge02</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -13147,7 +13147,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EffectGround"
+          "modifier": "<a class=\"gModGreen\" id=\"196303828\">Enemy_XP_Minion04_02_EffectGround</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -13155,7 +13155,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EffectRound"
+          "modifier": "<a class=\"gModGreen\" id=\"-801636319\">Enemy_XP_Minion04_02_EffectRound</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -13163,7 +13163,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Huimie_EffectGround"
+          "modifier": "<a class=\"gModGreen\" id=\"1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -13171,7 +13171,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Huimie_EffectRound"
+          "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
         },
         {
           "name": "IF",
@@ -13274,7 +13274,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger",
+              "modifier": "<a class=\"gModGreen\" id=\"1349202594\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (PropertyValue) || RETURN",
@@ -13320,13 +13320,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_007"
+          "modifier": "<a class=\"gModGreen\" id=\"1712002939\">MStrongChallengeEX_Talent_StageAbility_LE_007</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_BOSS_007",
+          "for": "<a class=\"gModGreen\" id=\"mod__1732992681\">MStrongChallengeEX_Talent_StageAbility_BOSS_007</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -13486,7 +13486,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger"
+                      "modifier": "<a class=\"gModGreen\" id=\"1349202594\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger</a>"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -13511,7 +13511,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_007",
+          "for": "<a class=\"gModGreen\" id=\"mod__1712002939\">MStrongChallengeEX_Talent_StageAbility_LE_007</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -13550,7 +13550,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_007",
+                      "modifier": "<a class=\"gModGreen\" id=\"1732992681\">MStrongChallengeEX_Talent_StageAbility_BOSS_007</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -13601,20 +13601,20 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_006"
+          "modifier": "<a class=\"gModGreen\" id=\"1695225320\">MStrongChallengeEX_Talent_StageAbility_LE_006</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_006",
+          "for": "<a class=\"gModGreen\" id=\"mod__1005720592\">MStrongChallengeEX_Talent_StageAbility_PLY_006</a>",
           "execute": [
             {
               "eventTrigger": "Got a Kill [Owner]",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -13636,7 +13636,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_006",
+          "for": "<a class=\"gModGreen\" id=\"mod__1695225320\">MStrongChallengeEX_Talent_StageAbility_LE_006</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -13663,7 +13663,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_006"
+                      "modifier": "<a class=\"gModGreen\" id=\"1005720592\">MStrongChallengeEX_Talent_StageAbility_PLY_006</a>"
                     }
                   ]
                 }
@@ -13688,13 +13688,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_005"
+          "modifier": "<a class=\"gModGreen\" id=\"1745558177\">MStrongChallengeEX_Talent_StageAbility_LE_005</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_005",
+          "for": "<a class=\"gModGreen\" id=\"mod__1745558177\">MStrongChallengeEX_Talent_StageAbility_LE_005</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -13730,7 +13730,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_AttackRatioUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1638600472\">Standard_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (#ADF_2) || RETURN",
@@ -13748,7 +13748,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_StatusResistanceUp[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1990889700\">Standard_StatusResistanceUp</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -13790,13 +13790,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_004"
+          "modifier": "<a class=\"gModGreen\" id=\"1728780558\">MStrongChallengeEX_Talent_StageAbility_LE_004</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_004",
+          "for": "<a class=\"gModGreen\" id=\"mod__1039275830\">MStrongChallengeEX_Talent_StageAbility_PLY_004</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ForceStanceDamage"
@@ -14286,7 +14286,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_004",
+          "for": "<a class=\"gModGreen\" id=\"mod__1728780558\">MStrongChallengeEX_Talent_StageAbility_LE_004</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -14313,7 +14313,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_004",
+                      "modifier": "<a class=\"gModGreen\" id=\"1039275830\">MStrongChallengeEX_Talent_StageAbility_PLY_004</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -14348,13 +14348,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_003"
+          "modifier": "<a class=\"gModGreen\" id=\"1779113415\">MStrongChallengeEX_Talent_StageAbility_LE_003</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_BOSS_003",
+          "for": "<a class=\"gModGreen\" id=\"mod__1800103157\">MStrongChallengeEX_Talent_StageAbility_BOSS_003</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -14388,7 +14388,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_003",
+          "for": "<a class=\"gModGreen\" id=\"mod__1779113415\">MStrongChallengeEX_Talent_StageAbility_LE_003</a>",
           "execute": [
             {
               "eventTrigger": "Weakness Break [Anyone]",
@@ -14433,7 +14433,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_003",
+                      "modifier": "<a class=\"gModGreen\" id=\"1800103157\">MStrongChallengeEX_Talent_StageAbility_BOSS_003</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_2) || RETURN",
@@ -14468,13 +14468,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_002"
+          "modifier": "<a class=\"gModGreen\" id=\"1762335796\">MStrongChallengeEX_Talent_StageAbility_LE_002</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_002_Extra",
+          "for": "<a class=\"gModGreen\" id=\"mod__-32026811\">MStrongChallengeEX_Talent_StageAbility_PLY_002_Extra</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "EnduranceEnemyOnly"
@@ -14499,7 +14499,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_002",
+          "for": "<a class=\"gModGreen\" id=\"mod__1072831068\">MStrongChallengeEX_Talent_StageAbility_PLY_002</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -14527,7 +14527,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_002",
+          "for": "<a class=\"gModGreen\" id=\"mod__1762335796\">MStrongChallengeEX_Talent_StageAbility_LE_002</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -14554,7 +14554,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_002",
+                      "modifier": "<a class=\"gModGreen\" id=\"1072831068\">MStrongChallengeEX_Talent_StageAbility_PLY_002</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -14595,7 +14595,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_002_Extra"
+                      "modifier": "<a class=\"gModGreen\" id=\"-32026811\">MStrongChallengeEX_Talent_StageAbility_PLY_002_Extra</a>"
                     }
                   ]
                 }
@@ -14620,13 +14620,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_001"
+          "modifier": "<a class=\"gModGreen\" id=\"1812668653\">MStrongChallengeEX_Talent_StageAbility_LE_001</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_BOSS_001",
+          "for": "<a class=\"gModGreen\" id=\"mod__1766547919\">MStrongChallengeEX_Talent_StageAbility_BOSS_001</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -14661,7 +14661,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_PLY_001",
+          "for": "<a class=\"gModGreen\" id=\"mod__1123163925\">MStrongChallengeEX_Talent_StageAbility_PLY_001</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -14689,7 +14689,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_LE_001",
+          "for": "<a class=\"gModGreen\" id=\"mod__1812668653\">MStrongChallengeEX_Talent_StageAbility_LE_001</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -14716,7 +14716,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_001",
+                      "modifier": "<a class=\"gModGreen\" id=\"1123163925\">MStrongChallengeEX_Talent_StageAbility_PLY_001</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -14757,7 +14757,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_001",
+                      "modifier": "<a class=\"gModGreen\" id=\"1766547919\">MStrongChallengeEX_Talent_StageAbility_BOSS_001</a>",
                       "stackLimit": {
                         "operator": "Variables[0] (#ADF_3) || RETURN",
                         "displayLines": "#ADF_3",
@@ -14799,7 +14799,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>",
           "stackType": "Replace",
           "stackData": [
             "MDF_PropertyValue"
@@ -14808,19 +14808,19 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+          "for": "<a class=\"gModGreen\" id=\"mod__-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+          "for": "<a class=\"gModGreen\" id=\"mod__-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+          "for": "<a class=\"gModGreen\" id=\"mod__-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_BOSS_007_Debuff",
+          "for": "<a class=\"gModGreen\" id=\"mod__142979484\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Debuff</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -14855,7 +14855,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger",
+          "for": "<a class=\"gModGreen\" id=\"mod__1349202594\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -14867,7 +14867,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members(Exclude Self)}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_007_Debuff",
+                  "modifier": "<a class=\"gModGreen\" id=\"142979484\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Debuff</a>",
                   "duration": {
                     "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                     "displayLines": "MDF_LifeTime",

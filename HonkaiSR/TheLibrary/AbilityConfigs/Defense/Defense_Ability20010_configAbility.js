@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_20010_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"250762008\">LC_20010_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_20010_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__250762008\">LC_20010_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",

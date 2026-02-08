@@ -12,7 +12,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Feixiao_Ultramode",
+        "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>",
         "invertCondition": true
       },
       "passed": [
@@ -41,7 +41,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "M_Feixiao_Friend_Mark_Self"
+                "modifier": "<a class=\"gModGreen\" id=\"158143017\">M_Feixiao_Friend_Mark_Self</a>"
               }
             ]
           },
@@ -109,7 +109,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Feixiao_InsertCheckSelf"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1503840637\">M_Feixiao_InsertCheckSelf</a>"
                 }
               ]
             }
@@ -125,7 +125,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Feixiao_InsertCheckSelf"
+      "modifier": "<a class=\"gModGreen\" id=\"-1503840637\">M_Feixiao_InsertCheckSelf</a>"
     }
   ],
   "references": []

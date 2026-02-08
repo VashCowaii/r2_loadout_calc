@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_XP_Elite02_02_DirtyHPSpecial[<span class=\"descriptionNumberColor\">undefined</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__545314015\">Monster_XP_Elite02_02_DirtyHPSpecial</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -51,7 +51,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_XP_Elite02_02_DirtyHP[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-14434436\">Monster_XP_Elite02_02_DirtyHP</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -99,7 +99,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_XP_Elite02_02_ChargeEffect[<span class=\"descriptionNumberColor\">Japa</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1633463751\">Monster_XP_Elite02_02_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -117,7 +117,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_XP_Elite02_02_ChargeEffect[<span class=\"descriptionNumberColor\">Japa</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1633463751\">Monster_XP_Elite02_02_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]"
             }
           ]
         }

@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "W1_Mecha02_AttackBonus_Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__1364752860\">W1_Mecha02_AttackBonus_Effect</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -19,7 +19,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "W1_Mecha02_AttackBonus[<span class=\"descriptionNumberColor\">Charging</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1670817312\">W1_Mecha02_AttackBonus</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [],
       "execute": [
@@ -32,7 +32,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "W1_Mecha02_AttackBonus_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"1364752860\">W1_Mecha02_AttackBonus_Effect</a>"
             }
           ]
         },
@@ -45,7 +45,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W1_Mecha03_RL_Revenge[<span class=\"descriptionNumberColor\">Obliteration Order</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-735432971\">Monster_W1_Mecha03_RL_Revenge</a>[<span class=\"descriptionNumberColor\">Obliteration Order</span>]"
             }
           ]
         },
@@ -98,7 +98,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "W1_Mecha02_AttackBonus_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"1364752860\">W1_Mecha02_AttackBonus_Effect</a>"
             },
             "Modifier Deletes Itself"
           ]
@@ -113,7 +113,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sign_W1_Mecha02[<span class=\"descriptionNumberColor\">Lock On</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1909388904\">Sign_W1_Mecha02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -133,7 +133,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "W1_Mecha02_ThunderDOT[<span class=\"descriptionNumberColor\">Bleed</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-95545360\">W1_Mecha02_ThunderDOT</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -263,7 +263,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_Mecha04_BattleScore1",
+      "for": "<a class=\"gModGreen\" id=\"mod__1081277388\">Monster_Mecha04_BattleScore1</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -316,7 +316,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Mecha04_ChainSawSpeedUpAgain",
+      "for": "<a class=\"gModGreen\" id=\"mod__413586706\">Enemy_W1_Mecha04_ChainSawSpeedUpAgain</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -327,7 +327,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W1_Mecha04_ChainSawSpeedUp"
+              "modifier": "<a class=\"gModGreen\" id=\"1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>"
             },
             "Modifier Deletes Itself"
           ]
@@ -340,7 +340,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Mecha04_ChainSawSpeedUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -408,7 +408,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RemoveAim",
+      "for": "<a class=\"gModGreen\" id=\"mod__86526796\">Monster_W1_Mecha04_RemoveAim</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -419,7 +419,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Monster_W1_Mecha04_Sign01[<span class=\"descriptionNumberColor\">Lock On</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -427,7 +427,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Monster_W1_Mecha04_Sign02[<span class=\"descriptionNumberColor\">Lock On</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1052882616\">Monster_W1_Mecha04_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -435,7 +435,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W1_Mecha04_ChainSawSpeedUp"
+              "modifier": "<a class=\"gModGreen\" id=\"1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>"
             },
             {
               "name": "Declare Custom Variable",
@@ -461,7 +461,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_Sign02[<span class=\"descriptionNumberColor\">Lock On</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1052882616\">Monster_W1_Mecha04_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -478,7 +478,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_Sign01[<span class=\"descriptionNumberColor\">Lock On</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -495,7 +495,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RemoveOneMore",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1321057432\">Monster_W1_Mecha04_RemoveOneMore</a>",
       "execute": [
         {
           "eventTrigger": "Action End [Owner]",
@@ -536,7 +536,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMorePerTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                 }
               ],
               "failed": [
@@ -548,7 +548,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "OneMorePerTurn"
+                    "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                   },
                   "failed": [
                     {
@@ -557,7 +557,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "OneMorePerTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                     }
                   ]
                 }

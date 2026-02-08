@@ -6,7 +6,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "Cyrene_ExtraSpecialSPReturn",
+      "functionName": "<a class=\"gTempYellow\" id=\"-1728765029\">Cyrene_ExtraSpecialSPReturn</a>",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"

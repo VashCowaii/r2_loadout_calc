@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21045_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1198267127\">LC_21045_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21045_Sub[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1163720690\">LC_21045_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -51,7 +51,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21045_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1198267127\">LC_21045_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -69,7 +69,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_21045_Sub[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1163720690\">LC_21045_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -102,7 +102,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "LC_21045_Sub[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1163720690\">LC_21045_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "invertCondition": true
         },
         "delayAdvancePreview": {

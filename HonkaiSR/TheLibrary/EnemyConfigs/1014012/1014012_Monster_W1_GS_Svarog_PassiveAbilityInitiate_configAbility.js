@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_GS_Svarog_BattleScore1"
+      "modifier": "<a class=\"gModGreen\" id=\"340882576\">Monster_W1_GS_Svarog_BattleScore1</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_GS_Svarog_Break"
+      "modifier": "<a class=\"gModGreen\" id=\"686372206\">Monster_W1_GS_Svarog_Break</a>"
     },
     {
       "name": "IF",
@@ -46,7 +46,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_GS_Svarog_SpecialVictory_LockHP"
+          "modifier": "<a class=\"gModGreen\" id=\"193352830\">Monster_W1_GS_Svarog_SpecialVictory_LockHP</a>"
         }
       ]
     }
@@ -54,7 +54,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_GS_Svarog_SpecialVictory_LockHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__193352830\">Monster_W1_GS_Svarog_SpecialVictory_LockHP</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -114,7 +114,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Monster_W1_GS_Svarog_DisableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"-353224873\">Monster_W1_GS_Svarog_DisableAction</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -136,7 +136,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_GS_Svarog_Break",
+      "for": "<a class=\"gModGreen\" id=\"mod__686372206\">Monster_W1_GS_Svarog_Break</a>",
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]"

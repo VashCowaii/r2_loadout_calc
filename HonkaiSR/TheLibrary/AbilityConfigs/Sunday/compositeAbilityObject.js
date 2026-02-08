@@ -34,20 +34,20 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sunday_10_Maze_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-484835695\">Sunday_10_Maze_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_MazeBonus_ForCaster[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1449149515\">Sunday_10_MazeBonus_ForCaster</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
           "description": "The next time this unit uses an ability on an ally target, the target's DMG dealt increases.",
           "type": "Other",
           "statusName": "The Glorious Mysteries"
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_Maze_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-484835695\">Sunday_10_Maze_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -67,7 +67,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sunday_10_MazeBonus_ForCaster[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1449149515\">Sunday_10_MazeBonus_ForCaster</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
                     }
                   ]
                 }
@@ -100,7 +100,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sunday_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-1941280863\">Sunday_Passive</a>"
         },
         {
           "name": "IF",
@@ -115,7 +115,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sunday_10_Eidolon4Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"143576908\">Sunday_10_Eidolon4Modifier</a>"
             }
           ]
         },
@@ -161,7 +161,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Sunday_10_Ability02_PreshowForLongling"
+          "modifier": "<a class=\"gModGreen\" id=\"-1403569034\">Sunday_10_Ability02_PreshowForLongling</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -169,7 +169,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Sunday_10_Ability02_PreshowForSummonUnit"
+          "modifier": "<a class=\"gModGreen\" id=\"-376848843\">Sunday_10_Ability02_PreshowForSummonUnit</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -177,7 +177,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Sunday_10_Ability02_Preshow"
+          "modifier": "<a class=\"gModGreen\" id=\"-1534107855\">Sunday_10_Ability02_Preshow</a>"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -199,7 +199,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MW_Sunday_Listen_ModifyBEAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-381925899\">MW_Sunday_Listen_ModifyBEAction</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -232,7 +232,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_Eidolon4Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__143576908\">Sunday_10_Eidolon4Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -261,11 +261,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_Eidolon2_UltraTag"
+          "for": "<a class=\"gModGreen\" id=\"mod__761788663\">Sunday_Eidolon2_UltraTag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_Eidolon2Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1347113419\">Sunday_Eidolon2Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -285,7 +285,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sunday_Eidolon2_UltraTag"
+                      "modifier": "<a class=\"gModGreen\" id=\"761788663\">Sunday_Eidolon2_UltraTag</a>"
                     }
                   ]
                 }
@@ -296,7 +296,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_PointB2Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-117549613\">Sunday_PointB2Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -335,7 +335,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1941280863\">Sunday_Passive</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -377,7 +377,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Sunday_TempAddAITag"
+                      "modifier": "<a class=\"gModGreen\" id=\"2623025\">Sunday_TempAddAITag</a>"
                     }
                   ]
                 },
@@ -394,7 +394,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sunday_PointB2Modifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-117549613\">Sunday_PointB2Modifier</a>"
                     }
                   ]
                 },
@@ -411,7 +411,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sunday_Eidolon2Modifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1347113419\">Sunday_Eidolon2Modifier</a>"
                     }
                   ]
                 },
@@ -480,7 +480,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Sunday_TempAddAITag"
+                      "modifier": "<a class=\"gModGreen\" id=\"2623025\">Sunday_TempAddAITag</a>"
                     }
                   ]
                 }
@@ -492,7 +492,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_TempAddAITag",
+          "for": "<a class=\"gModGreen\" id=\"mod__2623025\">Sunday_TempAddAITag</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": []
@@ -644,7 +644,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Sunday_Eidolon2_UltraTag"
+            "modifier": "<a class=\"gModGreen\" id=\"761788663\">Sunday_Eidolon2_UltraTag</a>"
           },
           "passed": [
             {
@@ -665,7 +665,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sunday_Eidolon2_UltraTag"
+              "modifier": "<a class=\"gModGreen\" id=\"761788663\">Sunday_Eidolon2_UltraTag</a>"
             }
           ]
         },
@@ -707,7 +707,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sunday_10_Ability03_Link_ForCaster",
+              "modifier": "<a class=\"gModGreen\" id=\"762667758\">Sunday_10_Ability03_Link_ForCaster</a>",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -723,7 +723,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]"
             },
             {
               "name": "IF",
@@ -742,7 +742,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}} + {{Ability Target(ST)}}.[[getMemosprite]]"
                   },
-                  "modifier": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (0.3) || RETURN",
@@ -770,7 +770,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (0.3) || RETURN",
@@ -802,7 +802,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Sunday_10_MazeBonus_ForCaster[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1449149515\">Sunday_10_MazeBonus_ForCaster</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
           },
           "passed": [
             {
@@ -811,7 +811,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sunday_10_MazeBonus_ForCaster[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1449149515\">Sunday_10_MazeBonus_ForCaster</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
             },
             {
               "name": "Add Events/Bonuses",
@@ -819,7 +819,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}} + {{Ability Target(ST)}}.[[getMemosprite]]"
               },
-              "modifier": "Sunday_10_MazeBonus[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"2041266105\">Sunday_10_MazeBonus</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -865,7 +865,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}} + {{Ability Target(ST)}}.[[getMemosprite]]"
                   },
-                  "modifier": "Sunday_10_CritUp[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
                   "duration": {
                     "operator": "Variables[0] (_P01_LifeTime) || RETURN",
                     "displayLines": "_P01_LifeTime",
@@ -902,7 +902,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Sunday_10_CritUp[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
                   "duration": {
                     "operator": "Variables[0] (_P01_LifeTime) || RETURN",
                     "displayLines": "_P01_LifeTime",
@@ -964,7 +964,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_Ability03_Link_Damage",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1076921726\">Sunday_10_Ability03_Link_Damage</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -978,7 +978,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "MW_Sunday_Passive"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1034196387\">MW_Sunday_Passive</a>"
                   },
                   "passed": [
                     {
@@ -1019,7 +1019,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_Ability03_Link_ForCaster",
+          "for": "<a class=\"gModGreen\" id=\"mod__762667758\">Sunday_10_Ability03_Link_ForCaster</a>",
           "stackType": "Replace",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1032,7 +1032,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]"
                 }
               ]
             },
@@ -1127,7 +1127,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]"
                       },
                       "ifTargetFound": [
                         {
@@ -1159,7 +1159,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifierName": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]",
                           "variableName": "MDF_PropertyFinal",
                           "value": {
                             "operator": "Variables[0] (_PropertyFinal) || RETURN",
@@ -1344,7 +1344,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}} + {{Summoner/Memosprite of Ability Target(ST)}}"
                   },
-                  "modifier": "Sunday_10_Ability02_Property[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2015662270\">Sunday_10_Ability02_Property</a>[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1373,7 +1373,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}} + {{Summoner/Memosprite of Ability Target(ST)}}"
                   },
-                  "modifier": "Sunday_10_Ability02_Property[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2015662270\">Sunday_10_Ability02_Property</a>[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1403,7 +1403,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Sunday_10_Ability02_Property[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"2015662270\">Sunday_10_Ability02_Property</a>[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1434,7 +1434,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Sunday_10_MazeBonus_ForCaster[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1449149515\">Sunday_10_MazeBonus_ForCaster</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
           },
           "passed": [
             {
@@ -1443,7 +1443,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sunday_10_MazeBonus_ForCaster[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1449149515\">Sunday_10_MazeBonus_ForCaster</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1451,7 +1451,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}} + {{Ability Target(ST)}}.[[getMemosprite]]"
               },
-              "modifier": "Sunday_10_MazeBonus[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"2041266105\">Sunday_10_MazeBonus</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1481,7 +1481,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]"
           },
           "passed": [
             {
@@ -1580,7 +1580,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}} + {{Ability Target(ST)}}.[[getMemosprite]]"
                   },
-                  "modifier": "Sunday_10_CritUp[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
                   "duration": {
                     "operator": "Variables[0] (_P01_LifeTime) || RETURN",
                     "displayLines": "_P01_LifeTime",
@@ -1617,7 +1617,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}} + {{Ability Target(ST)}}.[[getMemosprite]]"
                   },
-                  "modifier": "Sunday_10_CritUp[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
                   "duration": {
                     "operator": "Variables[0] (_P01_LifeTime) || RETURN",
                     "displayLines": "_P01_LifeTime",
@@ -1654,7 +1654,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Sunday_10_CritUp[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
                   "duration": {
                     "operator": "Variables[0] (_P01_LifeTime) || RETURN",
                     "displayLines": "_P01_LifeTime",
@@ -1691,7 +1691,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Sunday_10_CritUp[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
                   "duration": {
                     "operator": "Variables[0] (_P01_LifeTime) || RETURN",
                     "displayLines": "_P01_LifeTime",
@@ -1747,7 +1747,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Sunday_10_Eidolon1_SuperBonus[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-817980433\">Sunday_10_Eidolon1_SuperBonus</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -1794,7 +1794,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Sunday_10_Eidolon1_SuperBonusForServant[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1698887691\">Sunday_10_Eidolon1_SuperBonusForServant</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -1835,7 +1835,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_Ability02_Property[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2015662270\">Sunday_10_Ability02_Property</a>[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2060,7 +2060,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_CriticalChanceConvert[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2140,7 +2140,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_CriticalChanceConvertListen",
+          "for": "<a class=\"gModGreen\" id=\"mod__-213785338\">Sunday_10_CriticalChanceConvertListen</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2151,7 +2151,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sunday_10_CriticalChanceConvert[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
                 }
               ]
             },
@@ -2182,7 +2182,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sunday_10_CriticalChanceConvert[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
                     }
                   ]
                 }
@@ -2215,7 +2215,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sunday_10_CriticalChanceConvert[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
                     }
                   ],
                   "failed": [
@@ -2225,7 +2225,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sunday_10_CriticalChanceConvert[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
                     }
                   ]
                 }
@@ -2235,7 +2235,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_CritUp[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2254,7 +2254,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sunday_10_CriticalChanceConvertListen"
+                      "modifier": "<a class=\"gModGreen\" id=\"-213785338\">Sunday_10_CriticalChanceConvertListen</a>"
                     }
                   ]
                 }
@@ -2338,7 +2338,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sunday_10_CriticalChanceConvertListen",
+                      "modifier": "<a class=\"gModGreen\" id=\"-213785338\">Sunday_10_CriticalChanceConvertListen</a>",
                       "valuePerStack": {
                         "_CritialChance": 0
                       },
@@ -2360,7 +2360,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_Ability02_PreshowForSummonUnit",
+          "for": "<a class=\"gModGreen\" id=\"mod__-376848843\">Sunday_10_Ability02_PreshowForSummonUnit</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -2392,7 +2392,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_Ability02_PreshowForLongling",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1403569034\">Sunday_10_Ability02_PreshowForLongling</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -2424,7 +2424,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_Ability02_Preshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1534107855\">Sunday_10_Ability02_Preshow</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -2532,7 +2532,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_Eidolon1_SuperBonusForServant[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1698887691\">Sunday_10_Eidolon1_SuperBonusForServant</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2562,7 +2562,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_Eidolon1_SuperBonus[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-817980433\">Sunday_10_Eidolon1_SuperBonus</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2671,7 +2671,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
                       },
                       {
                         "name": "Compare: Target Count",
@@ -2734,7 +2734,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
                   },
                   "passed": [
                     {
@@ -2790,7 +2790,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
                   },
                   "passed": [
                     {
@@ -2852,7 +2852,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_MazeBonus[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2041266105\">Sunday_10_MazeBonus</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2888,7 +2888,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2916,7 +2916,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]"
                   },
                   "ifTargetFound": [
                     {
@@ -2961,7 +2961,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Sunday_10_Ability03_Link_ForCaster"
+                          "modifier": "<a class=\"gModGreen\" id=\"762667758\">Sunday_10_Ability03_Link_ForCaster</a>"
                         },
                         {
                           "name": "Update Displayed Energy Bar",

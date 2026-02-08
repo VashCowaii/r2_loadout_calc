@@ -34,7 +34,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23052_Main",
+      "modifier": "<a class=\"gModGreen\" id=\"-442867401\">LC_23052_Main</a>",
       "valuePerStack": {
         "MDF_ExtraRatio": {
           "operator": "Variables[0] (0.6) || RETURN",
@@ -50,7 +50,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23052_Halo2[<span class=\"descriptionNumberColor\">Blank</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__951721622\">LC_23052_Halo2</a>[<span class=\"descriptionNumberColor\">Blank</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -81,7 +81,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23052_Halo[<span class=\"descriptionNumberColor\">Verse</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2050514144\">LC_23052_Halo</a>[<span class=\"descriptionNumberColor\">Verse</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -112,7 +112,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23052_Sub2[<span class=\"descriptionNumberColor\">Blank</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1610136410\">LC_23052_Sub2</a>[<span class=\"descriptionNumberColor\">Blank</span>]",
       "execute": [
         {
           "eventTrigger": "When Modifier is Added [Owner]",
@@ -121,7 +121,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "LC_23052_Sub[<span class=\"descriptionNumberColor\">Verse</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-97167540\">LC_23052_Sub</a>[<span class=\"descriptionNumberColor\">Verse</span>]"
               },
               "passed": [
                 {
@@ -160,7 +160,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "LC_23052_Halo2[<span class=\"descriptionNumberColor\">Blank</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"951721622\">LC_23052_Halo2</a>[<span class=\"descriptionNumberColor\">Blank</span>]"
                 }
               ]
             }
@@ -177,14 +177,14 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}.[[removeBattleEvents]]"
           },
-          "modifier": "LC_23052_Halo2[<span class=\"descriptionNumberColor\">Blank</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"951721622\">LC_23052_Halo2</a>[<span class=\"descriptionNumberColor\">Blank</span>]",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23052_Sub[<span class=\"descriptionNumberColor\">Verse</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-97167540\">LC_23052_Sub</a>[<span class=\"descriptionNumberColor\">Verse</span>]",
       "execute": [
         {
           "eventTrigger": "When Modifier is Added [Owner]",
@@ -193,7 +193,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "LC_23052_Sub2[<span class=\"descriptionNumberColor\">Blank</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1610136410\">LC_23052_Sub2</a>[<span class=\"descriptionNumberColor\">Blank</span>]"
               },
               "passed": [
                 {
@@ -232,7 +232,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "LC_23052_Halo[<span class=\"descriptionNumberColor\">Verse</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"2050514144\">LC_23052_Halo</a>[<span class=\"descriptionNumberColor\">Verse</span>]"
                 }
               ]
             }
@@ -249,14 +249,14 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "LC_23052_Halo[<span class=\"descriptionNumberColor\">Verse</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2050514144\">LC_23052_Halo</a>[<span class=\"descriptionNumberColor\">Verse</span>]",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23052_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-442867401\">LC_23052_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: Start",
@@ -292,7 +292,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}.[[getMemosprite]]"
                       },
-                      "modifier": "LC_23052_Sub[<span class=\"descriptionNumberColor\">Verse</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-97167540\">LC_23052_Sub</a>[<span class=\"descriptionNumberColor\">Verse</span>]"
                     }
                   ],
                   "failed": [
@@ -327,7 +327,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}.[[getMemosprite]]"
                           },
-                          "modifier": "LC_23052_Sub2[<span class=\"descriptionNumberColor\">Blank</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1610136410\">LC_23052_Sub2</a>[<span class=\"descriptionNumberColor\">Blank</span>]"
                         }
                       ]
                     }

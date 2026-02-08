@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMore"
+      "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_XP_Elite01_MonsterAssistBonus"
+      "modifier": "<a class=\"gModGreen\" id=\"-1024613503\">Monster_XP_Elite01_MonsterAssistBonus</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -34,7 +34,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "XP_Fire_Elite_Burning_Modifier_2[<span class=\"descriptionNumberColor\">Spontaneous Combustion</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1090456915\">XP_Fire_Elite_Burning_Modifier_2</a>[<span class=\"descriptionNumberColor\">Spontaneous Combustion</span>]",
       "valuePerStack": {
         "Modifier_StanceWeakAddedRatio": {
           "operator": "Variables[0] (UnusedUnderThisBase_22) || RETURN",

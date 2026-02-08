@@ -18,13 +18,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_21024_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"1496824922\">LC_21024_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_21024_Sub[<span class=\"descriptionNumberColor\">SPD Boost, and DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1208434319\">LC_21024_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost, and DMG Boost</span>]",
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
@@ -74,7 +74,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_21024_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__1496824922\">LC_21024_Main</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -87,7 +87,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "LC_21024_Sub[<span class=\"descriptionNumberColor\">SPD Boost, and DMG Boost</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1208434319\">LC_21024_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost, and DMG Boost</span>]"
                   },
                   "failed": [
                     {
@@ -96,7 +96,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_21024_Sub[<span class=\"descriptionNumberColor\">SPD Boost, and DMG Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1208434319\">LC_21024_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost, and DMG Boost</span>]"
                     }
                   ]
                 }
@@ -144,7 +144,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_21024_Sub[<span class=\"descriptionNumberColor\">SPD Boost, and DMG Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1208434319\">LC_21024_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost, and DMG Boost</span>]"
                     }
                   ]
                 }
@@ -168,7 +168,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_21024_Sub[<span class=\"descriptionNumberColor\">SPD Boost, and DMG Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1208434319\">LC_21024_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost, and DMG Boost</span>]"
                     }
                   ]
                 }

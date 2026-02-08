@@ -44,7 +44,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
               "duration": 1,
               "baseChance": {
                 "operator": "Variables[0] (DispelSuccess) || RETURN",
@@ -108,7 +108,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_AttackRatioDown[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1592948509\">Standard_AttackRatioDown</a>[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
               "duration": {
                 "operator": "Constants[0] (1) || RETURN",
                 "displayLines": "1",
@@ -179,7 +179,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
               "duration": 1,
               "baseChance": {
                 "operator": "Variables[0] (DispelSuccess) || RETURN",

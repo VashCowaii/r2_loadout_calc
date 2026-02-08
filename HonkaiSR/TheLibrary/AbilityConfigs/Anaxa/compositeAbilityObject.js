@@ -32,7 +32,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Anaxa_Eidolon6_DamageUp[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2017566930\">Anaxa_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
           "valuePerStack": {
             "MDF_PropertyRatio": {
               "operator": "Variables[0] (1.3) || RETURN",
@@ -48,14 +48,14 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Anaxa_Eidolon6_DamageUp[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2017566930\">Anaxa_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ModifyDamageData_IndependentDamageAddedRatio",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-446302809\">ModifyDamageData_IndependentDamageAddedRatio</a>",
                   "variables": {
                     "parameter[0]_IndependentDamageAddedRatio": {
                       "operator": "Variables[0] (MDF_PropertyRatio) || Constants[0] (1) || SUB || RETURN",
@@ -94,13 +94,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Anaxa_Eidolon2"
+          "modifier": "<a class=\"gModGreen\" id=\"126451485\">Anaxa_Eidolon2</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Anaxa_Eidolon2_Bonus_OnCharacterCreate",
+          "for": "<a class=\"gModGreen\" id=\"mod__1634329483\">M_Anaxa_Eidolon2_Bonus_OnCharacterCreate</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -118,7 +118,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "function_Anaxa_AddWeakness",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2143749742\">function_Anaxa_AddWeakness</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
@@ -130,8 +130,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Anaxa_Eidolon2_Property[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
-                      "referenceModifier": "MReference_AllDamageTypeResistanceDown",
+                      "modifier": "<a class=\"gModGreen\" id=\"1219895923\">Anaxa_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"-1864228635\">MReference_AllDamageTypeResistanceDown</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -151,7 +151,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Anaxa_Eidolon2",
+          "for": "<a class=\"gModGreen\" id=\"mod__126451485\">Anaxa_Eidolon2</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -165,7 +165,7 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "function_Anaxa_AddWeakness",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2143749742\">function_Anaxa_AddWeakness</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
@@ -177,8 +177,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Anaxa_Eidolon2_Property[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
-                      "referenceModifier": "MReference_AllDamageTypeResistanceDown",
+                      "modifier": "<a class=\"gModGreen\" id=\"1219895923\">Anaxa_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"-1864228635\">MReference_AllDamageTypeResistanceDown</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -198,7 +198,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Anaxa_Eidolon2_Bonus_OnCharacterCreate"
+                  "modifier": "<a class=\"gModGreen\" id=\"1634329483\">M_Anaxa_Eidolon2_Bonus_OnCharacterCreate</a>"
                 },
                 "Modifier Deletes Itself"
               ],
@@ -222,7 +222,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Anaxa_Eidolon1"
+          "modifier": "<a class=\"gModGreen\" id=\"76118628\">Anaxa_Eidolon1</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -230,13 +230,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Anaxa_Eidolon1_FirstBP"
+          "modifier": "<a class=\"gModGreen\" id=\"1900870399\">Anaxa_Eidolon1_FirstBP</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Anaxa_Eidolon1_FirstBP",
+          "for": "<a class=\"gModGreen\" id=\"mod__1900870399\">Anaxa_Eidolon1_FirstBP</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -271,7 +271,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Anaxa_Eidolon1",
+          "for": "<a class=\"gModGreen\" id=\"mod__76118628\">Anaxa_Eidolon1</a>",
           "execute": [
             {
               "eventTrigger": "Attacker Finalizes DMG Data",
@@ -289,7 +289,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Anaxa_Eidolon1_Property[<span class=\"descriptionNumberColor\">Magician, Isolated by Stars</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-266153828\">Anaxa_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Magician, Isolated by Stars</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -298,7 +298,7 @@ const compositeAbilityObject = {
                           2
                         ]
                       },
-                      "referenceModifier": "MReference_DefenceRatioDown",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"779501689\">MReference_DefenceRatioDown</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.16) || RETURN",
@@ -332,13 +332,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Anaxa_Trace03"
+          "modifier": "<a class=\"gModGreen\" id=\"-1452029121\">Anaxa_Trace03</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Anaxa_Trace03",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1452029121\">Anaxa_Trace03</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -402,13 +402,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Anaxa_Trace02"
+          "modifier": "<a class=\"gModGreen\" id=\"-1468806740\">Anaxa_Trace02</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -439,7 +439,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Anaxa_Trace02_Sub[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-879409639\">Anaxa_Trace02_Sub</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -470,7 +470,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Anaxa_Trace02_SubAllListener",
+          "for": "<a class=\"gModGreen\" id=\"mod__-682474568\">Anaxa_Trace02_SubAllListener</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -492,7 +492,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
                           "operator": "Variables[0] (0.5) || RETURN",
@@ -512,7 +512,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Anaxa_Trace02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1468806740\">Anaxa_Trace02</a>",
           "execute": [
             {
               "eventTrigger": "Character Path Change [Anyone]",
@@ -549,7 +549,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Anaxa_Trace02_Sub[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-879409639\">Anaxa_Trace02_Sub</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
                               "operator": "Variables[0] (1.4) || RETURN",
@@ -573,7 +573,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{All Team Members with Unselectables}}"
                           },
-                          "modifier": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -581,7 +581,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Anaxa_Trace02_SubAllListener"
+                          "modifier": "<a class=\"gModGreen\" id=\"-682474568\">Anaxa_Trace02_SubAllListener</a>"
                         }
                       ],
                       "failed": [
@@ -591,7 +591,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{All Team Members with Unselectables}}"
                           },
-                          "modifier": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
                               "operator": "Variables[0] (0.5) || RETURN",
@@ -609,7 +609,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Anaxa_Trace02_SubAllListener"
+                          "modifier": "<a class=\"gModGreen\" id=\"-682474568\">Anaxa_Trace02_SubAllListener</a>"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -623,7 +623,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Anaxa_Trace02_Sub[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-879409639\">Anaxa_Trace02_Sub</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]"
                         }
                       ]
                     }
@@ -656,7 +656,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Anaxa_Trace02_Sub[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-879409639\">Anaxa_Trace02_Sub</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
                               "operator": "Variables[0] (1.4) || RETURN",
@@ -680,7 +680,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{All Team Members with Unselectables}}"
                           },
-                          "modifier": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
                               "operator": "Variables[0] (0.5) || RETURN",
@@ -698,7 +698,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Anaxa_Trace02_SubAllListener"
+                          "modifier": "<a class=\"gModGreen\" id=\"-682474568\">Anaxa_Trace02_SubAllListener</a>"
                         }
                       ],
                       "failed": [
@@ -755,7 +755,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Anaxa_Trace02_Sub[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-879409639\">Anaxa_Trace02_Sub</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyRatio": {
                                   "operator": "Variables[0] (1.4) || RETURN",
@@ -781,7 +781,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{All Team Members with Unselectables}}"
                               },
-                              "modifier": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyRatio": {
                                   "operator": "Variables[0] (0.5) || RETURN",
@@ -799,7 +799,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Anaxa_Trace02_SubAllListener"
+                              "modifier": "<a class=\"gModGreen\" id=\"-682474568\">Anaxa_Trace02_SubAllListener</a>"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -842,13 +842,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Anaxa_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1935874220\">StageAbility_Maze_Anaxa_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Anaxa_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1935874220\">StageAbility_Maze_Anaxa_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -864,7 +864,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Level Entity}}"
                         },
-                        "modifier": "StageAbility_MazeStandard_EnterBattle_Monster_Modifier",
+                        "modifier": "<a class=\"gModGreen\" id=\"1904238030\">StageAbility_MazeStandard_EnterBattle_Monster_Modifier</a>",
                         "invertCondition": true
                       },
                       {
@@ -914,7 +914,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Hostile Entities(AOE)}}"
                               },
-                              "modifier": "Standard_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1724958950\">Standard_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
                                 "displayLines": "3",
@@ -946,7 +946,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Hostile Entities(AOE)}}"
                               },
-                              "modifier": "Standard_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-2009288629\">Standard_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
                                 "displayLines": "3",
@@ -978,7 +978,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Hostile Entities(AOE)}}"
                               },
-                              "modifier": "Standard_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"1497676034\">Standard_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
                                 "displayLines": "3",
@@ -1010,7 +1010,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Hostile Entities(AOE)}}"
                               },
-                              "modifier": "Standard_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"1930557999\">Standard_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
                                 "displayLines": "3",
@@ -1042,7 +1042,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Hostile Entities(AOE)}}"
                               },
-                              "modifier": "Standard_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1938125975\">Standard_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
                                 "displayLines": "3",
@@ -1074,7 +1074,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Hostile Entities(AOE)}}"
                               },
-                              "modifier": "Standard_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"1012677236\">Standard_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
                                 "displayLines": "3",
@@ -1106,7 +1106,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Hostile Entities(AOE)}}"
                               },
-                              "modifier": "Standard_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1118024096\">Standard_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
                                 "displayLines": "3",
@@ -1151,13 +1151,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Anaxa_PassiveAbility"
+          "modifier": "<a class=\"gModGreen\" id=\"-1905813937\">Anaxa_PassiveAbility</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Anaxa_Passive_Mark_Property",
+          "for": "<a class=\"gModGreen\" id=\"mod__-552811494\">Anaxa_Passive_Mark_Property</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -1210,7 +1210,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__140202366\">Anaxa_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "ListenBattleEventSkill"
@@ -1309,7 +1309,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Anaxa_Passive_WeaknessListener",
+          "for": "<a class=\"gModGreen\" id=\"mod__-353589008\">Anaxa_Passive_WeaknessListener</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -1396,7 +1396,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"140202366\">Anaxa_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
                           "operator": "Variables[0] (0.3) || RETURN",
@@ -1410,7 +1410,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Modifier-Specific Variable",
-                      "modifierName": "Anaxa_Passive_Mark_Property",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
                       "variableName": "MDF_PropertyRatio",
                       "value": {
                         "operator": "Variables[0] (0.3) || RETURN",
@@ -1487,7 +1487,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"140202366\">Anaxa_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
                           "operator": "Variables[0] (0.3) || RETURN",
@@ -1501,7 +1501,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Modifier-Specific Variable",
-                      "modifierName": "Anaxa_Passive_Mark_Property",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
                       "variableName": "MDF_PropertyRatio",
                       "value": {
                         "operator": "Variables[0] (0.3) || RETURN",
@@ -1520,11 +1520,11 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"140202366\">Anaxa_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
                     },
                     {
                       "name": "Define Modifier-Specific Variable",
-                      "modifierName": "Anaxa_Passive_Mark_Property",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
                       "variableName": "MDF_PropertyRatio",
                       "value": 0
                     }
@@ -1536,7 +1536,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Anaxa_InsertMainTargetMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1965386380\">M_Anaxa_InsertMainTargetMark</a>",
           "stackType": "RetainGlobalLatest",
           "execute": [
             {
@@ -1549,7 +1549,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Anaxa_PassiveAbility",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1905813937\">Anaxa_PassiveAbility</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -1585,7 +1585,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"140202366\">Anaxa_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
                         },
                         "invertCondition": true
                       },
@@ -1622,7 +1622,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Anaxa_AddWeakness",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2143749742\">function_Anaxa_AddWeakness</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
@@ -1657,7 +1657,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Ability Target List}}"
                         },
-                        "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"140202366\">Anaxa_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -1665,7 +1665,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "M_Anaxa_StartFreeBP",
+                        "modifier": "<a class=\"gModGreen\" id=\"1815988112\">M_Anaxa_StartFreeBP</a>",
                         "invertCondition": true
                       }
                     ]
@@ -1677,7 +1677,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target List}}"
                       },
-                      "modifier": "M_Anaxa_InsertMainTargetMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1965386380\">M_Anaxa_InsertMainTargetMark</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1685,7 +1685,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Anaxa_PrepareFreeBP",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
                       "addStacksPerTrigger": 1
                     },
                     {
@@ -1704,7 +1704,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "M_Anaxa_PrepareFreeBP",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
                           "addStacksPerTrigger": -1
                         },
                         {
@@ -1713,7 +1713,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "M_Anaxa_InsertActionCheck",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1929414079\">M_Anaxa_InsertActionCheck</a>",
                           "addStacksPerTrigger": 1
                         }
                       ],
@@ -1733,7 +1733,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Anaxa_Passive_Mark_Property",
+              "modifier": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
               "haloStatus": true
             },
             {
@@ -1742,7 +1742,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Anaxa_Passive_WeaknessListener",
+              "modifier": "<a class=\"gModGreen\" id=\"-353589008\">Anaxa_Passive_WeaknessListener</a>",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_WeaknessNeed": {
@@ -1771,7 +1771,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Anaxa_UltraDebuff[<span class=\"descriptionNumberColor\">Sublimation</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1588888193\">Anaxa_UltraDebuff</a>[<span class=\"descriptionNumberColor\">Sublimation</span>]"
         },
         {
           "name": "ATK Scaling DMG",
@@ -1987,7 +1987,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Anaxa_BPAbility_ModifyDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"1091558079\">M_Anaxa_BPAbility_ModifyDamage</a>"
         },
         {
           "name": "IF",
@@ -2002,7 +2002,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Anaxa_BPAbility_Bonus[<span class=\"descriptionNumberColor\">Blaze, Plunged to Canyon</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"671072840\">Anaxa_BPAbility_Bonus</a>[<span class=\"descriptionNumberColor\">Blaze, Plunged to Canyon</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -2088,7 +2088,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "M_Anaxa_Ability02_HitMark"
+          "modifier": "<a class=\"gModGreen\" id=\"1764573952\">M_Anaxa_Ability02_HitMark</a>"
         },
         {
           "name": "Looped Event",
@@ -2125,19 +2125,19 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "M_Anaxa_Ability02_HitMark",
+                "modifier": "<a class=\"gModGreen\" id=\"1764573952\">M_Anaxa_Ability02_HitMark</a>",
                 "invertCondition": true
               },
               "ifTargetFound": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Anaxa_Ability02_SingleHit"
+                  "functionName": "<a class=\"gTempYellow\" id=\"662224417\">Anaxa_Ability02_SingleHit</a>"
                 }
               ],
               "noTargetFound": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Bounce_SelectTarget",
+                  "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
@@ -2145,7 +2145,7 @@ const compositeAbilityObject = {
                   "paramSequence": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Anaxa_Ability02_SingleHit"
+                      "functionName": "<a class=\"gTempYellow\" id=\"662224417\">Anaxa_Ability02_SingleHit</a>"
                     }
                   ]
                 }
@@ -2159,7 +2159,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Anaxa_BPAbility_Bonus[<span class=\"descriptionNumberColor\">Blaze, Plunged to Canyon</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__671072840\">Anaxa_BPAbility_Bonus</a>[<span class=\"descriptionNumberColor\">Blaze, Plunged to Canyon</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2196,7 +2196,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Anaxa_Ability02_HitMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__1764573952\">M_Anaxa_Ability02_HitMark</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2217,7 +2217,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Anaxa_BPAbility_ModifyDamage",
+          "for": "<a class=\"gModGreen\" id=\"mod__1091558079\">M_Anaxa_BPAbility_ModifyDamage</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2405,7 +2405,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "M_Anaxa_StartFreeBP",
+          "for": "<a class=\"gModGreen\" id=\"mod__1815988112\">M_Anaxa_StartFreeBP</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2440,12 +2440,12 @@ const compositeAbilityObject = {
           ],
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "M_Anaxa_PrepareFreeBP"
+            "dependancyName": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>"
           }
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Anaxa_PrepareFreeBP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1540917869\">M_Anaxa_PrepareFreeBP</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2465,7 +2465,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "M_Anaxa_StartFreeBP"
+                    "modifier": "<a class=\"gModGreen\" id=\"1815988112\">M_Anaxa_StartFreeBP</a>"
                   },
                   "passed": [
                     {
@@ -2474,7 +2474,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Anaxa_StartFreeBP"
+                      "modifier": "<a class=\"gModGreen\" id=\"1815988112\">M_Anaxa_StartFreeBP</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2482,7 +2482,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Anaxa_PrepareFreeBP",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
                       "addStacksPerTrigger": -1
                     }
                   ]
@@ -2506,7 +2506,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Anaxa_StartFreeBP"
+                      "modifier": "<a class=\"gModGreen\" id=\"1815988112\">M_Anaxa_StartFreeBP</a>"
                     },
                     {
                       "name": "UI Display Event",
@@ -2523,7 +2523,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Anaxa_InsertActionCheck",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1929414079\">M_Anaxa_InsertActionCheck</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
@@ -2534,7 +2534,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Anaxa_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
                 }
               ]
             },
@@ -2549,7 +2549,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Anaxa_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
                 }
               ],
               "priorityLevel": -55
@@ -2559,7 +2559,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Anaxa_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
                 }
               ]
             },
@@ -2568,7 +2568,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Anaxa_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
                 }
               ]
             },
@@ -2605,7 +2605,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Anaxa_InsertRetarget"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
                     }
                   ]
                 }
@@ -2615,7 +2615,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Anaxa_InsertRetarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1862868553\">Anaxa_InsertRetarget</a>",
               "parse": [
                 {
                   "name": "Find New Target",
@@ -2651,7 +2651,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "M_Anaxa_PrepareFreeBP",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
                           "addStacksPerTrigger": 1
                         },
                         {
@@ -2670,7 +2670,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "M_Anaxa_PrepareFreeBP",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
                               "addStacksPerTrigger": -1
                             },
                             {
@@ -2679,7 +2679,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "M_Anaxa_InsertActionCheck",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1929414079\">M_Anaxa_InsertActionCheck</a>",
                               "addStacksPerTrigger": 1
                             }
                           ],
@@ -2699,7 +2699,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Anaxa_UltraDebuff[<span class=\"descriptionNumberColor\">Sublimation</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1588888193\">Anaxa_UltraDebuff</a>[<span class=\"descriptionNumberColor\">Sublimation</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -2832,7 +2832,7 @@ const compositeAbilityObject = {
                         "STAT_CTRL_Frozen_Effect",
                         "FixedPerformTime"
                       ],
-                      "modifierName": "Anaxa_UltraDebuff[<span class=\"descriptionNumberColor\">Sublimation</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1588888193\">Anaxa_UltraDebuff</a>[<span class=\"descriptionNumberColor\">Sublimation</span>]",
                       "casterFilter": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -2943,7 +2943,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "function_Anaxa_AddWeakness",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-2143749742\">function_Anaxa_AddWeakness</a>",
           "parse": [
             {
               "name": "IF",
@@ -3576,7 +3576,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Function's Target List}}"
                   },
-                  "modifier": "Standard_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1724958950\">Standard_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -3592,7 +3592,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Function's Target List}}"
                   },
-                  "modifier": "Standard_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1938125975\">Standard_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -3608,7 +3608,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Function's Target List}}"
                   },
-                  "modifier": "Standard_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2009288629\">Standard_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -3624,7 +3624,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Function's Target List}}"
                   },
-                  "modifier": "Standard_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1930557999\">Standard_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -3640,7 +3640,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Function's Target List}}"
                   },
-                  "modifier": "Standard_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1497676034\">Standard_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -3656,7 +3656,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Function's Target List}}"
                   },
-                  "modifier": "Standard_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1012677236\">Standard_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -3672,7 +3672,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Function's Target List}}"
                   },
-                  "modifier": "Standard_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1118024096\">Standard_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -3688,7 +3688,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Anaxa_Ability02_SingleHit",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__662224417\">Anaxa_Ability02_SingleHit</a>",
           "parse": [
             {
               "name": "ATK Scaling DMG",
@@ -3727,7 +3727,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "M_Anaxa_Ability02_HitMark"
+              "modifier": "<a class=\"gModGreen\" id=\"1764573952\">M_Anaxa_Ability02_HitMark</a>"
             }
           ]
         }

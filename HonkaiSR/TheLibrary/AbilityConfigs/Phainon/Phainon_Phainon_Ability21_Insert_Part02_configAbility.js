@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Phainon_Ability21_InsertCheck"
+      "modifier": "<a class=\"gModGreen\" id=\"-1520947056\">M_Phainon_Ability21_InsertCheck</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Phainon_Guard_Visual_ReadyForHitBack"
+      "modifier": "<a class=\"gModGreen\" id=\"-1586210896\">Phainon_Guard_Visual_ReadyForHitBack</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Phainon_Guard_VisualOnStack"
+      "modifier": "<a class=\"gModGreen\" id=\"211331230\">Phainon_Guard_VisualOnStack</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -34,14 +34,14 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Phainon_Guard_VisualAfterAbilityUse"
+      "modifier": "<a class=\"gModGreen\" id=\"-833311189\">Phainon_Guard_VisualAfterAbilityUse</a>"
     },
     {
       "name": "Define Custom Variable with Modifier Values",
       "scope": "ContextAbility",
       "valueType": "Layer",
       "variableName": "ADF_GuardLayer",
-      "modifierName": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
+      "modifierName": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
       "multiplier": 1
     },
     {
@@ -60,7 +60,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "M_Phainon_Ability21_TargetTimeslow",
+      "modifier": "<a class=\"gModGreen\" id=\"554403436\">M_Phainon_Ability21_TargetTimeslow</a>",
       "silentAdd": true
     },
     {
@@ -114,7 +114,7 @@ const configAbility = {
       "Event": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Bounce_SelectTarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
@@ -179,13 +179,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Ability21_TargetTimeslow",
+      "for": "<a class=\"gModGreen\" id=\"mod__554403436\">M_Phainon_Ability21_TargetTimeslow</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

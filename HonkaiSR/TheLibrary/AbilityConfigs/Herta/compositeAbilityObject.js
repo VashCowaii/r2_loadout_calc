@@ -28,7 +28,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Herta_Trace02_Resistance",
+          "modifier": "<a class=\"gModGreen\" id=\"499178350\">Herta_Trace02_Resistance</a>",
           "valuePerStack": {
             "MDF_Resistance": {
               "operator": "Variables[0] (0.35) || RETURN",
@@ -44,7 +44,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Herta_Trace02_Resistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__499178350\">Herta_Trace02_Resistance</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -95,13 +95,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Technique_Herta_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1189021958\">Technique_Herta_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Herta_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">It Can Still Be Optimized</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-516353123\">Herta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">It Can Still Be Optimized</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -133,7 +133,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Technique_Herta_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1189021958\">Technique_Herta_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -153,7 +153,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Herta_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">It Can Still Be Optimized</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-516353123\">Herta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">It Can Still Be Optimized</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -196,7 +196,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Herta_Passive_Flag"
+          "modifier": "<a class=\"gModGreen\" id=\"1076207439\">Herta_Passive_Flag</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -271,7 +271,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Herta_AbilityEidolon2_CriticalChance[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1736222640\">Herta_AbilityEidolon2_CriticalChance</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
@@ -306,7 +306,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Herta_AbilityEidolon4_DamageUp",
+                  "modifier": "<a class=\"gModGreen\" id=\"1482818607\">Herta_AbilityEidolon4_DamageUp</a>",
                   "valuePerStack": {
                     "AbilityRank_Eidolon4_P1_DamagePercentage": {
                       "operator": "Variables[0] (0.1) || RETURN",
@@ -370,7 +370,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Herta_AbilityEidolon4_DamageUp"
+                  "modifier": "<a class=\"gModGreen\" id=\"1482818607\">Herta_AbilityEidolon4_DamageUp</a>"
                 },
                 "Deleted bullshit",
                 {
@@ -402,7 +402,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Herta_Passive_ATK"
+                  "modifier": "<a class=\"gModGreen\" id=\"-256958111\">Herta_Passive_ATK</a>"
                 }
               ],
               "failed": [
@@ -427,7 +427,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Herta_AbilityEidolon4_DamageUp"
+                      "modifier": "<a class=\"gModGreen\" id=\"1482818607\">Herta_AbilityEidolon4_DamageUp</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -435,7 +435,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Herta_Passive_ATK"
+                      "modifier": "<a class=\"gModGreen\" id=\"-256958111\">Herta_Passive_ATK</a>"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -478,7 +478,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Herta_AbilityEidolon4_DamageUp"
+                      "modifier": "<a class=\"gModGreen\" id=\"1482818607\">Herta_AbilityEidolon4_DamageUp</a>"
                     }
                   ]
                 }
@@ -492,13 +492,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Herta_Passive_Flag"
+          "modifier": "<a class=\"gModGreen\" id=\"1076207439\">Herta_Passive_Flag</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Herta_AbilityEidolon4_DamageUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__1482818607\">Herta_AbilityEidolon4_DamageUp</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -525,7 +525,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Herta_AbilityEidolon2_CriticalChance[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1736222640\">Herta_AbilityEidolon2_CriticalChance</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -597,7 +597,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Herta_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-1179391648\">Herta_Passive</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -628,7 +628,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Herta_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1179391648\">Herta_Passive</a>",
           "execute": [
             {
               "eventTrigger": "HP Change [Anyone]",
@@ -755,7 +755,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Herta_Passive_ATK"
+                              "modifier": "<a class=\"gModGreen\" id=\"-256958111\">Herta_Passive_ATK</a>"
                             },
                             {
                               "name": "Declare Custom Variable",
@@ -874,7 +874,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Herta_Passive_ATK"
+                  "modifier": "<a class=\"gModGreen\" id=\"-256958111\">Herta_Passive_ATK</a>"
                 }
               ]
             }
@@ -922,7 +922,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Herta_Trace03_AddDamageUp",
+                      "modifier": "<a class=\"gModGreen\" id=\"1926403261\">Herta_Trace03_AddDamageUp</a>",
                       "valuePerStack": {
                         "MDF_AllDamageTakenRatio": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -983,7 +983,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Herta_AbilityEidolon6_AttackUP[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-429248408\">Herta_AbilityEidolon6_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1013,14 +1013,14 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Herta_Trace03_AddDamageUp"
+          "modifier": "<a class=\"gModGreen\" id=\"1926403261\">Herta_Trace03_AddDamageUp</a>"
         },
         "Trigger: Ability End"
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Herta_AbilityEidolon6_AttackUP[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-429248408\">Herta_AbilityEidolon6_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1056,7 +1056,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Herta_Trace03_AddDamageUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__1926403261\">Herta_Trace03_AddDamageUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1132,7 +1132,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Herta_Ability02_CheckHp"
+          "modifier": "<a class=\"gModGreen\" id=\"1288583281\">Herta_Ability02_CheckHp</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -1201,14 +1201,14 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Herta_Ability02_CheckHp"
+          "modifier": "<a class=\"gModGreen\" id=\"1288583281\">Herta_Ability02_CheckHp</a>"
         },
         "Trigger: Ability End"
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Herta_Ability02_CheckHp",
+          "for": "<a class=\"gModGreen\" id=\"mod__1288583281\">Herta_Ability02_CheckHp</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1333,7 +1333,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Herta_Ability01_CheckHp"
+              "modifier": "<a class=\"gModGreen\" id=\"1016241896\">Herta_Ability01_CheckHp</a>"
             }
           ]
         },
@@ -1447,7 +1447,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Herta_Ability01_CheckHp"
+          "modifier": "<a class=\"gModGreen\" id=\"1016241896\">Herta_Ability01_CheckHp</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -1459,7 +1459,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Herta_Ability01_CheckHp",
+          "for": "<a class=\"gModGreen\" id=\"mod__1016241896\">Herta_Ability01_CheckHp</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1551,13 +1551,13 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Herta_Passive_Flag",
+          "for": "<a class=\"gModGreen\" id=\"mod__1076207439\">Herta_Passive_Flag</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Herta_Passive_ATK",
+          "for": "<a class=\"gModGreen\" id=\"mod__-256958111\">Herta_Passive_ATK</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Anyone]",
@@ -1593,7 +1593,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Herta_Passive_Flag",
+                        "modifier": "<a class=\"gModGreen\" id=\"1076207439\">Herta_Passive_Flag</a>",
                         "invertCondition": true
                       }
                     ]
@@ -1665,7 +1665,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Herta_Passive_Charge",
+          "for": "<a class=\"gModGreen\" id=\"mod__-677386583\">Herta_Passive_Charge</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {

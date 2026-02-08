@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Rappa_Passive_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"823190278\">Rappa_Passive_Modifier</a>"
     },
     {
       "name": "Read Variable Value",
@@ -130,7 +130,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Rappa_Break_Modifier_ForShow[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
           "stackLimit": {
             "operator": "Variables[0] (_PassiveBreakCountMax) || RETURN",
             "displayLines": "_PassiveBreakCountMax",
@@ -154,7 +154,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Rappa_Break_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-200121332\">Rappa_Break_Modifier</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -175,7 +175,7 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Template_Rappa_PassiveBreak"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1176541882\">Template_Rappa_PassiveBreak</a>"
                 }
               ]
             }
@@ -186,7 +186,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Template_Rappa_PassiveBreak"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1176541882\">Template_Rappa_PassiveBreak</a>"
             }
           ]
         },
@@ -195,7 +195,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Template_Rappa_PassiveBreak"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1176541882\">Template_Rappa_PassiveBreak</a>"
             }
           ]
         }
@@ -203,7 +203,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Rappa_Passive_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__823190278\">Rappa_Passive_Modifier</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -310,7 +310,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Rappa_Trace03"
+                  "modifier": "<a class=\"gModGreen\" id=\"421544848\">Rappa_Trace03</a>"
                 }
               ]
             },
@@ -348,7 +348,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Rappa_Break_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-200121332\">Rappa_Break_Modifier</a>"
                 }
               ]
             }
@@ -379,7 +379,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Rappa_Break_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-200121332\">Rappa_Break_Modifier</a>"
             }
           ],
           "priorityLevel": -80

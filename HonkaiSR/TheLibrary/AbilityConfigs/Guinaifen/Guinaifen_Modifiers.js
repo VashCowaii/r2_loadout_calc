@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Guinaifen_Eidolon4",
+      "for": "<a class=\"gModGreen\" id=\"mod__573283172\">Guinaifen_Eidolon4</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -90,7 +90,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Guinaifen_Eidolon1_StatusResistance[<span class=\"descriptionNumberColor\">Slurping Noodles During Handstand</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1962050217\">Guinaifen_Eidolon1_StatusResistance</a>[<span class=\"descriptionNumberColor\">Slurping Noodles During Handstand</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -127,7 +127,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Guinaifen_Trace03",
+      "for": "<a class=\"gModGreen\" id=\"mod__1541839766\">Guinaifen_Trace03</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -163,7 +163,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Guinaifen_Trace02",
+      "for": "<a class=\"gModGreen\" id=\"mod__1558617385\">Guinaifen_Trace02</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -197,7 +197,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Guinaifen_Oil_Sub[<span class=\"descriptionNumberColor\">Firekiss</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__597170239\">Guinaifen_Oil_Sub</a>[<span class=\"descriptionNumberColor\">Firekiss</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -256,7 +256,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Guinaifen_Oil",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1670902538\">Guinaifen_Oil</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -319,7 +319,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Guinaifen_Oil_Sub[<span class=\"descriptionNumberColor\">Firekiss</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"597170239\">Guinaifen_Oil_Sub</a>[<span class=\"descriptionNumberColor\">Firekiss</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -379,7 +379,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "GuiNaiFen_PassiveAbility01_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1214365283\">GuiNaiFen_PassiveAbility01_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -390,7 +390,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Guinaifen_Oil"
+              "modifier": "<a class=\"gModGreen\" id=\"-1670902538\">Guinaifen_Oil</a>"
             },
             {
               "name": "IF",
@@ -405,7 +405,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Guinaifen_Eidolon4",
+                  "modifier": "<a class=\"gModGreen\" id=\"573283172\">Guinaifen_Eidolon4</a>",
                   "valuePerStack": {
                     "SpAdded": {
                       "operator": "Variables[0] (2) || RETURN",
@@ -466,7 +466,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -504,7 +504,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",

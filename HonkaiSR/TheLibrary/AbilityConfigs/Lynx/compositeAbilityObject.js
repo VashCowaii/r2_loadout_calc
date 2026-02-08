@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Lynx_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-872415748\">StageAbility_Maze_Lynx_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Lynx_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-872415748\">StageAbility_Maze_Lynx_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -67,7 +67,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{All Team Members}}"
                           },
-                          "modifier": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                             "displayLines": "(2 + 1)",
@@ -120,7 +120,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{All Team Members}}"
                           },
-                          "modifier": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",
@@ -204,7 +204,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Lynx_Tree01_Listen"
+              "modifier": "<a class=\"gModGreen\" id=\"199115984\">Lynx_Tree01_Listen</a>"
             }
           ]
         },
@@ -221,7 +221,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Lynx_Tree02_Resistance",
+              "modifier": "<a class=\"gModGreen\" id=\"1819426834\">Lynx_Tree02_Resistance</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.35) || RETURN",
@@ -248,7 +248,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Lynx_Eidolon1_ListenBeforeDealHeal01"
+              "modifier": "<a class=\"gModGreen\" id=\"1732085386\">Lynx_Eidolon1_ListenBeforeDealHeal01</a>"
             }
           ]
         }
@@ -256,7 +256,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Lynx_Eidolon1_ListenBeforeDealHeal02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1715307767\">Lynx_Eidolon1_ListenBeforeDealHeal02</a>",
           "execute": [
             {
               "eventTrigger": "Heal Target Start [Owner]",
@@ -302,7 +302,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lynx_Eidolon1_ListenBeforeDealHeal01",
+          "for": "<a class=\"gModGreen\" id=\"mod__1732085386\">Lynx_Eidolon1_ListenBeforeDealHeal01</a>",
           "modifierFlags": [
             "MuteDotCasterCallBack"
           ],
@@ -356,7 +356,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Lynx_Eidolon1_ListenBeforeDealHeal02",
+                  "modifier": "<a class=\"gModGreen\" id=\"1715307767\">Lynx_Eidolon1_ListenBeforeDealHeal02</a>",
                   "valuePerStack": {
                     "MDF_Target_HpRatio": {
                       "operator": "Variables[0] (0.5) || RETURN",
@@ -384,7 +384,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lynx_Tree01_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__199115984\">Lynx_Tree01_Listen</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -395,7 +395,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Lynx_Tree01_OnBeforeBeingAttacked",
+                  "modifier": "<a class=\"gModGreen\" id=\"1804592669\">Lynx_Tree01_OnBeforeBeingAttacked</a>",
                   "valuePerStack": {
                     "MDF_Lynx_PointB1_AddSpValue": {
                       "operator": "Variables[0] (2) || RETURN",
@@ -431,7 +431,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Lynx_Tree01_OnBeforeBeingAttacked",
+                        "modifier": "<a class=\"gModGreen\" id=\"1804592669\">Lynx_Tree01_OnBeforeBeingAttacked</a>",
                         "invertCondition": true
                       }
                     ]
@@ -443,7 +443,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Lynx_Tree01_OnBeforeBeingAttacked",
+                      "modifier": "<a class=\"gModGreen\" id=\"1804592669\">Lynx_Tree01_OnBeforeBeingAttacked</a>",
                       "valuePerStack": {
                         "MDF_Lynx_PointB1_AddSpValue": {
                           "operator": "Variables[0] (2) || RETURN",
@@ -524,7 +524,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                 "displayLines": "(2 + 1)",
@@ -577,7 +577,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -761,7 +761,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Lynx_HPAddedRatio02[<span class=\"descriptionNumberColor\">Survival Response</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -828,7 +828,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Lynx_HPAddedRatio02[<span class=\"descriptionNumberColor\">Survival Response</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -918,7 +918,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Lynx_HPAddedRatio01[<span class=\"descriptionNumberColor\">Survival Response</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -975,7 +975,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Lynx_HPAddedRatio01[<span class=\"descriptionNumberColor\">Survival Response</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1034,7 +1034,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Lynx_Eidolon2_Resist[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1832848148\">Lynx_Eidolon2_Resist</a>[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
             }
           ]
         },
@@ -1051,7 +1051,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Lynx_Eidolon4_AddAttackRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-96135638\">Lynx_Eidolon4_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1112,7 +1112,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                 "displayLines": "(2 + 1)",
@@ -1165,7 +1165,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1370,7 +1370,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Lynx_Eidolon4_AddAttackRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-96135638\">Lynx_Eidolon4_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1406,7 +1406,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lynx_Eidolon2_Resist[<span class=\"descriptionNumberColor\">Debuff RES</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1832848148\">Lynx_Eidolon2_Resist</a>[<span class=\"descriptionNumberColor\">Debuff RES</span>]",
           "modifierFlags": [
             "ImmuneDebuff"
           ],
@@ -1420,7 +1420,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Lynx_Eidolon2_Resist[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1832848148\">Lynx_Eidolon2_Resist</a>[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
                 }
               ]
             }
@@ -1433,7 +1433,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lynx_Tree02_Resistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__1819426834\">Lynx_Tree02_Resistance</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1464,7 +1464,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lynx_Tree01_OnBeforeBeingAttacked",
+          "for": "<a class=\"gModGreen\" id=\"mod__1804592669\">Lynx_Tree01_OnBeforeBeingAttacked</a>",
           "execute": [
             {
               "eventTrigger": "Being Attacked End [Owner]",
@@ -1483,7 +1483,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "Lynx_HPAddedRatio01[<span class=\"descriptionNumberColor\">Survival Response</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]"
                           },
                           {
                             "name": "Has Modifier",
@@ -1491,7 +1491,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "Lynx_HPAddedRatio02[<span class=\"descriptionNumberColor\">Survival Response</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]"
                           }
                         ]
                       },
@@ -1534,7 +1534,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1552,7 +1552,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Lynx_HPAddedRatio01[<span class=\"descriptionNumberColor\">Survival Response</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -1560,7 +1560,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Lynx_HPAddedRatio02[<span class=\"descriptionNumberColor\">Survival Response</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]"
                       }
                     ]
                   },
@@ -1637,7 +1637,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lynx_HPAddedRatio02[<span class=\"descriptionNumberColor\">Survival Response</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1649,7 +1649,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Lynx_Eidolon2_Resist[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1832848148\">Lynx_Eidolon2_Resist</a>[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
                 }
               ]
             },
@@ -1753,7 +1753,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Lynx_HPAddedRatio01[<span class=\"descriptionNumberColor\">Survival Response</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1765,7 +1765,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Lynx_Eidolon2_Resist[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1832848148\">Lynx_Eidolon2_Resist</a>[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
                 }
               ]
             },

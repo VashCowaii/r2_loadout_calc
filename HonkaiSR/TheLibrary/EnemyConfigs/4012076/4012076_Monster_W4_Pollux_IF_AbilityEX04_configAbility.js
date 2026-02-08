@@ -20,7 +20,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W4_Pollux_IF_AbilityEX04"
+          "modifier": "<a class=\"gModGreen\" id=\"-1339116785\">Enemy_W4_Pollux_IF_AbilityEX04</a>"
         }
       ]
     }

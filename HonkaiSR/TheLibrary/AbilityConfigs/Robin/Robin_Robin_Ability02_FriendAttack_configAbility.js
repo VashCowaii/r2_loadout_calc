@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Robin_Ability02_DmgUpCasterListener[<span class=\"descriptionNumberColor\">Aria</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-341772219\">Robin_Ability02_DmgUpCasterListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Robin_Ability02_Aura"
+      "modifier": "<a class=\"gModGreen\" id=\"853884831\">Robin_Ability02_Aura</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Robin_Ability02_DmgUpCasterListener[<span class=\"descriptionNumberColor\">Aria</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-341772219\">Robin_Ability02_DmgUpCasterListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",

@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Bronya_RL_Revive",
+      "for": "<a class=\"gModGreen\" id=\"mod__653281472\">Monster_W1_Bronya_RL_Revive</a>",
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo",
@@ -83,7 +83,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "StanceBreakState"
+                          "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -91,7 +91,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Monster_W1_CocoliaP1_RL_Endurance"
+                          "modifier": "<a class=\"gModGreen\" id=\"920837138\">Monster_W1_CocoliaP1_RL_Endurance</a>"
                         },
                         {
                           "name": "Inject Ability Use",

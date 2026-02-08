@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Ability02_Area_Friend[<span class=\"descriptionNumberColor\">Overtone</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
       "stackType": "ReplaceByCaster",
       "stackData": [
         "Skill02_P1_DamageAddedRatio_Friend",
@@ -24,7 +24,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Ability02_DamageUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1426523\">RuanMei_Ability02_DamageUp</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -82,11 +82,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_ResetImprint"
+      "for": "<a class=\"gModGreen\" id=\"mod__520440377\">RuanMei_ResetImprint</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_PassiveArea_Enemy[<span class=\"descriptionNumberColor\">Thanatoplum Rebloom</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__379919533\">RuanMei_PassiveArea_Enemy</a>[<span class=\"descriptionNumberColor\">Thanatoplum Rebloom</span>]",
       "modifierFlags": [
         "BreakExtend",
         "RemoveWhenCasterDead"
@@ -106,7 +106,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "RuanMei_ResetImprint"
+                    "modifier": "<a class=\"gModGreen\" id=\"520440377\">RuanMei_ResetImprint</a>"
                   },
                   {
                     "name": "Compare: Variable",
@@ -128,7 +128,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "RuanMei_ResetImprint"
+                  "modifier": "<a class=\"gModGreen\" id=\"520440377\">RuanMei_ResetImprint</a>"
                 }
               ]
             }
@@ -200,7 +200,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "RuanMei_PassiveArea_EnemyCD"
+                  "modifier": "<a class=\"gModGreen\" id=\"-882985814\">RuanMei_PassiveArea_EnemyCD</a>"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -273,7 +273,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "RuanMei_PassiveArea_EnemyCD"
+              "modifier": "<a class=\"gModGreen\" id=\"-882985814\">RuanMei_PassiveArea_EnemyCD</a>"
             },
             "Modifier Deletes Itself"
           ]
@@ -287,7 +287,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "RuanMei_PassiveArea_EnemyCD"
+              "modifier": "<a class=\"gModGreen\" id=\"-882985814\">RuanMei_PassiveArea_EnemyCD</a>"
             }
           ]
         },
@@ -346,7 +346,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_PassiveArea_EnemyCD",
+      "for": "<a class=\"gModGreen\" id=\"mod__-882985814\">RuanMei_PassiveArea_EnemyCD</a>",
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -364,7 +364,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_PassiveArea_PenetrateUP",
+      "for": "<a class=\"gModGreen\" id=\"mod__806368907\">RuanMei_PassiveArea_PenetrateUP</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -399,7 +399,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "RuanMei_Ability03_Area_Eidolon1_Friend[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1242682284\">RuanMei_Ability03_Area_Eidolon1_Friend</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                   "valuePerStack": {
                     "Ability03_P1_PenetrateRatio": {
                       "operator": "Variables[0] (0.25) || RETURN",
@@ -427,7 +427,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "RuanMei_Ability03_Area_Friend[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1476311818\">RuanMei_Ability03_Area_Friend</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                   "valuePerStack": {
                     "Ability03_P1_PenetrateRatio": {
                       "operator": "Variables[0] (0.25) || RETURN",
@@ -447,7 +447,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_PassiveArea",
+      "for": "<a class=\"gModGreen\" id=\"mod__1385395722\">RuanMei_PassiveArea</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -460,7 +460,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "RuanMei_PassiveArea_PenetrateUP"
+              "modifier": "<a class=\"gModGreen\" id=\"806368907\">RuanMei_PassiveArea_PenetrateUP</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -468,7 +468,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "RuanMei_Ability03_Area_Caster[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-995060554\">RuanMei_Ability03_Area_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -476,7 +476,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "RuanMei_Ability03_Area_Friend[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1476311818\">RuanMei_Ability03_Area_Friend</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -484,7 +484,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "RuanMei_Ability03_Area_Eidolon1_Caster[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"678689072\">RuanMei_Ability03_Area_Eidolon1_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -492,7 +492,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "RuanMei_Ability03_Area_Eidolon1_Friend[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1242682284\">RuanMei_Ability03_Area_Eidolon1_Friend</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -500,7 +500,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "RuanMei_Ability03_Eidolon1_DefenceIgnore"
+              "modifier": "<a class=\"gModGreen\" id=\"68128116\">RuanMei_Ability03_Eidolon1_DefenceIgnore</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -508,7 +508,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "RuanMei_Ability03_Eidolon1_DefenceIgnore"
+              "modifier": "<a class=\"gModGreen\" id=\"68128116\">RuanMei_Ability03_Eidolon1_DefenceIgnore</a>"
             }
           ]
         },
@@ -544,7 +544,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "RuanMei_Ability03_Eidolon1_DefenceIgnore",
+                  "modifier": "<a class=\"gModGreen\" id=\"68128116\">RuanMei_Ability03_Eidolon1_DefenceIgnore</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -562,7 +562,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "RuanMei_Ability03_Area_Eidolon1_Caster[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"678689072\">RuanMei_Ability03_Area_Eidolon1_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                     "displayLines": "(2 + 1)",
@@ -588,7 +588,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "RuanMei_Ability03_Eidolon1_DefenceIgnore",
+                      "modifier": "<a class=\"gModGreen\" id=\"68128116\">RuanMei_Ability03_Eidolon1_DefenceIgnore</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -606,7 +606,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "RuanMei_Ability03_Area_Eidolon1_Caster[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"678689072\">RuanMei_Ability03_Area_Eidolon1_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -624,7 +624,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "RuanMei_Ability03_Area_Caster[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-995060554\">RuanMei_Ability03_Area_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -674,7 +674,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "RuanMei_PassiveArea_EnemyCD"
+                        "modifier": "<a class=\"gModGreen\" id=\"-882985814\">RuanMei_PassiveArea_EnemyCD</a>"
                       },
                       "failed": [
                         {
@@ -683,7 +683,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "RuanMei_PassiveArea_Enemy[<span class=\"descriptionNumberColor\">Thanatoplum Rebloom</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"379919533\">RuanMei_PassiveArea_Enemy</a>[<span class=\"descriptionNumberColor\">Thanatoplum Rebloom</span>]"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -691,7 +691,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "RuanMei_PassiveArea_EnemyCD"
+                          "modifier": "<a class=\"gModGreen\" id=\"-882985814\">RuanMei_PassiveArea_EnemyCD</a>"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -699,7 +699,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "RuanMei_ResetImprint"
+                          "modifier": "<a class=\"gModGreen\" id=\"520440377\">RuanMei_ResetImprint</a>"
                         }
                       ]
                     }
@@ -721,7 +721,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
           },
-          "modifier": "RuanMei_PassiveArea_PenetrateUP",
+          "modifier": "<a class=\"gModGreen\" id=\"806368907\">RuanMei_PassiveArea_PenetrateUP</a>",
           "aliveOnly": "True",
           "haloStatus": true,
           "valuePerStack": {
@@ -741,7 +741,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
           },
-          "modifier": "RuanMei_Ability03_Eidolon1_DefenceIgnore",
+          "modifier": "<a class=\"gModGreen\" id=\"68128116\">RuanMei_Ability03_Eidolon1_DefenceIgnore</a>",
           "haloStatus": true,
           "conditions": {
             "name": "Eidolon Activated",
@@ -762,7 +762,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Eidolon4_Passive_BreakDamageAddedUp[<span class=\"descriptionNumberColor\">Chatoyant Éclat</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__353149410\">RuanMei_Eidolon4_Passive_BreakDamageAddedUp</a>[<span class=\"descriptionNumberColor\">Chatoyant Éclat</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -774,7 +774,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "RuanMei_Eidolon4_PassiveStackProperty",
+              "modifier": "<a class=\"gModGreen\" id=\"614915339\">RuanMei_Eidolon4_PassiveStackProperty</a>",
               "valuePerStack": {
                 "AbilityRank_Eidolon4_P1_BreakDamageAdded": 0
               }
@@ -789,7 +789,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Eidolon4_PassiveListenBreak",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1703049476\">RuanMei_Eidolon4_PassiveListenBreak</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -804,7 +804,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "RuanMei_Eidolon4_PassiveStackProperty",
+              "modifier": "<a class=\"gModGreen\" id=\"614915339\">RuanMei_Eidolon4_PassiveStackProperty</a>",
               "valuePerStack": {
                 "AbilityRank_Eidolon4_P1_BreakDamageAdded": {
                   "operator": "Variables[0] (1) || RETURN",
@@ -822,7 +822,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "RuanMei_Eidolon4_Passive_BreakDamageAddedUp[<span class=\"descriptionNumberColor\">Chatoyant Éclat</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"353149410\">RuanMei_Eidolon4_Passive_BreakDamageAddedUp</a>[<span class=\"descriptionNumberColor\">Chatoyant Éclat</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -840,7 +840,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Eidolon4_PassiveStackProperty",
+      "for": "<a class=\"gModGreen\" id=\"mod__614915339\">RuanMei_Eidolon4_PassiveStackProperty</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -872,7 +872,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_AttackBreakEnemyAttackUp[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1641844295\">RuanMei_AttackBreakEnemyAttackUp</a>[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -913,7 +913,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Ability03_Eidolon1_DefenceIgnore",
+      "for": "<a class=\"gModGreen\" id=\"mod__68128116\">RuanMei_Ability03_Eidolon1_DefenceIgnore</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -941,7 +941,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Tree03_BreakDamageAddedValueShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1212418869\">RuanMei_Tree03_BreakDamageAddedValueShow</a>",
       "stackType": "ReplaceByCaster",
       "abilityValueChange": [
         {
@@ -1054,7 +1054,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "RuanMei_Ability02_DamageUp"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1426523\">RuanMei_Ability02_DamageUp</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -1063,7 +1063,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "RuanMei_Ability02_DamageUp"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1426523\">RuanMei_Ability02_DamageUp</a>"
                     }
                   ]
                 },
@@ -1080,7 +1080,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "RuanMei_Ability02_Area_Friend[<span class=\"descriptionNumberColor\">Overtone</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]"
                   },
                   "ifTargetFound": [
                     {
@@ -1089,7 +1089,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "RuanMei_Ability02_Area_Friend[<span class=\"descriptionNumberColor\">Overtone</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
                       "valuePerStack": {
                         "Ability02_P1_DamageAddedRatio_Friend": {
                           "operator": "Variables[0] (Skill02_P1_DamageAddedRatioFinal) || RETURN",
@@ -1214,7 +1214,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "RuanMei_Ability02_DamageUp"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1426523\">RuanMei_Ability02_DamageUp</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -1223,7 +1223,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "RuanMei_Ability02_DamageUp"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1426523\">RuanMei_Ability02_DamageUp</a>"
                     }
                   ]
                 },
@@ -1240,7 +1240,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "RuanMei_Ability02_Area_Friend[<span class=\"descriptionNumberColor\">Overtone</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]"
                   },
                   "ifTargetFound": [
                     {
@@ -1249,7 +1249,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "RuanMei_Ability02_Area_Friend[<span class=\"descriptionNumberColor\">Overtone</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
                       "valuePerStack": {
                         "Ability02_P1_DamageAddedRatio_Friend": {
                           "operator": "Variables[0] (Skill02_P1_DamageAddedRatioFinal) || RETURN",
@@ -1281,7 +1281,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Tree02_RecoverSP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-780236472\">RuanMei_Tree02_RecoverSP</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -1312,7 +1312,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_BreakDamageAdded[<span class=\"descriptionNumberColor\">Inert Respiration</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-23155683\">RuanMei_BreakDamageAdded</a>[<span class=\"descriptionNumberColor\">Inert Respiration</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

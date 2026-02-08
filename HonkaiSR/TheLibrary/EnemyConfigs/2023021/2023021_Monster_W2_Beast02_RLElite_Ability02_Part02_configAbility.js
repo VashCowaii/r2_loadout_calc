@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMore"
+      "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
     },
     "Ability Start",
     {
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Beast02_RLElite_Bullet",
+      "modifier": "<a class=\"gModGreen\" id=\"296260861\">Monster_W2_Beast02_RLElite_Bullet</a>",
       "counter": 1
     },
     {
@@ -51,7 +51,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -59,7 +59,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -67,7 +67,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Monster_W2_Beast02_RLElite_Edict"
+      "modifier": "<a class=\"gModGreen\" id=\"1835721372\">Monster_W2_Beast02_RLElite_Edict</a>"
     },
     {
       "name": "Action Advance/Delay",

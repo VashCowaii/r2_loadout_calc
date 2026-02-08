@@ -32,13 +32,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yanqing_Eidolon4"
+          "modifier": "<a class=\"gModGreen\" id=\"1544718418\">Yanqing_Eidolon4</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Yanqing_Eidolon4_IcePenetrate[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1096242682\">Yanqing_Eidolon4_IcePenetrate</a>[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -69,7 +69,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yanqing_Eidolon4",
+          "for": "<a class=\"gModGreen\" id=\"mod__1544718418\">Yanqing_Eidolon4</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -100,7 +100,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yanqing_Eidolon4_IcePenetrate[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1096242682\">Yanqing_Eidolon4_IcePenetrate</a>[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
                       "valuePerStack": {
                         "MDF_IcePenetrate": {
                           "operator": "Variables[0] (0.12) || RETURN",
@@ -120,7 +120,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yanqing_Eidolon4_IcePenetrate[<span class=\"descriptionNumberColor\">Searing Sting</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1096242682\">Yanqing_Eidolon4_IcePenetrate</a>[<span class=\"descriptionNumberColor\">Searing Sting</span>]"
                     }
                   ]
                 }
@@ -155,7 +155,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yanqing_Eidolon4_IcePenetrate[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1096242682\">Yanqing_Eidolon4_IcePenetrate</a>[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
                       "valuePerStack": {
                         "MDF_IcePenetrate": {
                           "operator": "Variables[0] (0.12) || RETURN",
@@ -175,7 +175,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yanqing_Eidolon4_IcePenetrate[<span class=\"descriptionNumberColor\">Searing Sting</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1096242682\">Yanqing_Eidolon4_IcePenetrate</a>[<span class=\"descriptionNumberColor\">Searing Sting</span>]"
                     }
                   ]
                 }
@@ -199,7 +199,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yanqing_Eidolon1",
+          "modifier": "<a class=\"gModGreen\" id=\"1494385561\">Yanqing_Eidolon1</a>",
           "valuePerStack": {
             "MDF_DamageRatio": {
               "operator": "Variables[0] (0.6) || RETURN",
@@ -215,11 +215,11 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Yanqing_Eidolon1_TargetMark"
+          "for": "<a class=\"gModGreen\" id=\"mod__125262534\">Yanqing_Eidolon1_TargetMark</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Yanqing_Eidolon1",
+          "for": "<a class=\"gModGreen\" id=\"mod__1494385561\">Yanqing_Eidolon1</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -281,7 +281,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Yanqing_Tree03",
+          "modifier": "<a class=\"gModGreen\" id=\"645549950\">M_Yanqing_Tree03</a>",
           "valuePerStack": {
             "MDF_SpeedValue": {
               "operator": "Variables[0] (0.1) || RETURN",
@@ -297,7 +297,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Yanqing_Tree03SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2119684740\">M_Yanqing_Tree03SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -330,7 +330,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Yanqing_Tree03",
+          "for": "<a class=\"gModGreen\" id=\"mod__645549950\">M_Yanqing_Tree03</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -347,7 +347,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Yanqing_Tree03SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2119684740\">M_Yanqing_Tree03SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -399,7 +399,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Yanqing_Tree01",
+          "modifier": "<a class=\"gModGreen\" id=\"611994712\">M_Yanqing_Tree01</a>",
           "valuePerStack": {
             "MDF_DamageRatio": {
               "operator": "Variables[0] (0.3) || RETURN",
@@ -415,7 +415,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Yanqing_Tree01",
+          "for": "<a class=\"gModGreen\" id=\"mod__611994712\">M_Yanqing_Tree01</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -485,13 +485,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Technique_Yanqing_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"995164865\">Technique_Yanqing_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Yanqing_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">The One True Sword</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__704251526\">Yanqing_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">The One True Sword</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -538,7 +538,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Technique_Yanqing_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__995164865\">Technique_Yanqing_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -558,7 +558,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yanqing_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">The One True Sword</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"704251526\">Yanqing_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">The One True Sword</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -671,7 +671,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
           "duration": 1,
           "baseChance": {
             "operator": "Variables[0] (0.65) || RETURN",
@@ -711,7 +711,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Yanqing_BonusTargetMark"
+          "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
         },
         "Deleted bullshit",
         {
@@ -753,7 +753,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yanqing_PassiveAbility_Modifier",
+          "modifier": "<a class=\"gModGreen\" id=\"1507574257\">Yanqing_PassiveAbility_Modifier</a>",
           "valuePerStack": {
             "MDF_CriticalBoost": {
               "operator": "Variables[0] (0.2) || RETURN",
@@ -811,7 +811,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Yanqing_BonusTargetMark"
+          "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -819,7 +819,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yanqing_Ability03_Bonus[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"294496269\">Yanqing_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
           "duration": 1,
           "immediateEffect": true,
           "valuePerStack": {
@@ -841,7 +841,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Yanqing_FrozenMark[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]"
           },
           "passed": [
             {
@@ -850,7 +850,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yanqing_FrozenMark[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
               "duration": 1,
               "immediateEffect": true,
               "valuePerStack": {
@@ -967,7 +967,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Yanqing_BonusTargetMark"
+          "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
         },
         {
           "name": "Shot Fired",
@@ -1081,7 +1081,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Yanqing_BonusTargetMark"
+            "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
           }
         }
       ],
@@ -1099,7 +1099,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Yanqing_BonusTargetMark"
+          "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -1229,7 +1229,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Yanqing_BonusTargetMark"
+            "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
           }
         }
       ],
@@ -1247,7 +1247,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Yanqing_Ability03_Bonus[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__294496269\">Yanqing_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1287,7 +1287,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "Yanqing_Ability03_Bonus[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"294496269\">Yanqing_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
                       "function": "Add",
                       "value": 1,
                       "valueType": "Duration"
@@ -1308,7 +1308,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yanqing_BonusTargetMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-348622200\">Yanqing_BonusTargetMark</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1317,7 +1317,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yanqing_FrozenMark[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1523,7 +1523,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "Yanqing_FrozenMark[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
                       "function": "Add",
                       "value": 1,
                       "valueType": "Duration"
@@ -1563,7 +1563,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Yanqing_FrozenMark[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]"
                         }
                       ]
                     }
@@ -1610,7 +1610,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target List}}"
                           },
-                          "modifier": "Yanqing_BonusTargetMark"
+                          "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
                         }
                       ]
                     }
@@ -1635,7 +1635,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Yanqing_BonusTargetMark"
+                    "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -1679,7 +1679,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yanqing_PassiveAbility_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1507574257\">Yanqing_PassiveAbility_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -1697,7 +1697,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yanqing_FrozenMark[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_CriticalBoost": {

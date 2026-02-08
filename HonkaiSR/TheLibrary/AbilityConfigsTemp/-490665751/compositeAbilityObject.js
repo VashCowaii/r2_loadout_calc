@@ -18,7 +18,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "InfiniteWave_SummonMonster",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__2033536184\">InfiniteWave_SummonMonster</a>",
           "parse": [
             {
               "name": "IF",
@@ -78,7 +78,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "InfiniteWave_SummonMonster2",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1491565886\">InfiniteWave_SummonMonster2</a>",
           "parse": [
             {
               "name": "IF",
@@ -138,7 +138,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "InfiniteWave_SummonMonster_Fuyan",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__269952436\">InfiniteWave_SummonMonster_Fuyan</a>",
           "parse": [
             {
               "name": "IF",

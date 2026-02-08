@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_Junk_Special_ChangeWidth"
+      "modifier": "<a class=\"gModGreen\" id=\"1825644415\">Monster_Junk_Special_ChangeWidth</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_Junk_Special_ChangeWidth",
+      "for": "<a class=\"gModGreen\" id=\"mod__1825644415\">Monster_Junk_Special_ChangeWidth</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

@@ -12,7 +12,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Battle Event's Caster}}"
         },
-        "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
       },
       "passed": [
         "Deleted bullshit"
@@ -29,7 +29,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Battle Event's Caster}}"
         },
-        "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
       },
       "passed": [
         {

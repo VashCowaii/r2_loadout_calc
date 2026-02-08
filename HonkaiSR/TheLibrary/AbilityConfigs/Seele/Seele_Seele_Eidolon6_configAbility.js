@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Seele_Eidolon6"
+      "modifier": "<a class=\"gModGreen\" id=\"-301677957\">Seele_Eidolon6</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Seele_Eidolon6",
+      "for": "<a class=\"gModGreen\" id=\"mod__-301677957\">Seele_Eidolon6</a>",
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -27,7 +27,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "Seele_Eidolon6_Flag[<span class=\"descriptionNumberColor\">Butterfly Flurry</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"995458646\">Seele_Eidolon6_Flag</a>[<span class=\"descriptionNumberColor\">Butterfly Flurry</span>]"
             }
           ]
         },

@@ -124,7 +124,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Harscyline_Ability03_Halopre"
+          "modifier": "<a class=\"gModGreen\" id=\"681243570\">Harscyline_Ability03_Halopre</a>"
         }
       ]
     },
@@ -134,7 +134,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Harscyline_PassiveRandomDOT"
+      "modifier": "<a class=\"gModGreen\" id=\"92976527\">Harscyline_PassiveRandomDOT</a>"
     },
     {
       "name": "IF",
@@ -149,7 +149,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Harscyline_PointB3"
+          "modifier": "<a class=\"gModGreen\" id=\"2109692643\">Harscyline_PointB3</a>"
         }
       ]
     },
@@ -166,7 +166,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Harscyline_DOTDamageUpPre",
+          "modifier": "<a class=\"gModGreen\" id=\"1305457610\">Harscyline_DOTDamageUpPre</a>",
           "valuePerStack": {
             "MDF_DamageUpRatio": {
               "operator": "Variables[0] (1.16) || RETURN",
@@ -184,7 +184,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_PointB3",
+      "for": "<a class=\"gModGreen\" id=\"mod__2109692643\">Harscyline_PointB3</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -192,7 +192,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Harscyline_PointB3_Sub"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1047911609\">Harscyline_PointB3_Sub</a>"
             }
           ],
           "priorityLevel": -80
@@ -210,13 +210,13 @@ const configAbility = {
               "whenEnteringRange": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Harscyline_PointB3_Sub"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1047911609\">Harscyline_PointB3_Sub</a>"
                 }
               ],
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Harscyline_PointB3_Sub"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1047911609\">Harscyline_PointB3_Sub</a>"
                 }
               ]
             }
@@ -226,7 +226,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Harscyline_PointB3_Sub",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1047911609\">Harscyline_PointB3_Sub</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
@@ -341,7 +341,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1957610629\">Harscyline_PointB3_DamageAdded</a>[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]"
                 }
               ],
               "failed": [
@@ -360,7 +360,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Harscyline_Ability03_HaloStatus"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1383903101\">Harscyline_Ability03_HaloStatus</a>"
                       }
                     ]
                   },
@@ -371,7 +371,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1957610629\">Harscyline_PointB3_DamageAdded</a>[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
                           "operator": "Variables[0] (SkillTree_PointB3_StatusProbabilityValue) || RETURN",
@@ -391,7 +391,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1957610629\">Harscyline_PointB3_DamageAdded</a>[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
                           "operator": "Variables[0] (SkillTree_PointB3_StatusProbabilityValue) || RETURN",
@@ -415,11 +415,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_FirstHitFlag"
+      "for": "<a class=\"gModGreen\" id=\"mod__-1905867121\">Harscyline_FirstHitFlag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_PassiveRandomDOT",
+      "for": "<a class=\"gModGreen\" id=\"mod__92976527\">Harscyline_PassiveRandomDOT</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Anyone]: Hit",
@@ -459,7 +459,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Harscyline_FirstHitFlag",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1905867121\">Harscyline_FirstHitFlag</a>",
                     "invertCondition": true
                   }
                 ]
@@ -467,7 +467,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Harscyline_RandomDOT_PassiveRandomDOT"
+                  "functionName": "<a class=\"gTempYellow\" id=\"824285103\">Harscyline_RandomDOT_PassiveRandomDOT</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -475,7 +475,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Harscyline_FirstHitFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1905867121\">Harscyline_FirstHitFlag</a>"
                 }
               ]
             }
@@ -490,7 +490,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "Harscyline_FirstHitFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"-1905867121\">Harscyline_FirstHitFlag</a>"
             }
           ]
         }
@@ -500,7 +500,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_Ability03_Halopre",
+      "for": "<a class=\"gModGreen\" id=\"mod__681243570\">Harscyline_Ability03_Halopre</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -520,7 +520,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Harscyline_Ability03_HaloStatus",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1383903101\">Harscyline_Ability03_HaloStatus</a>",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23017_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1205241986\">LC_23017_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23017_Sub[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1946026397\">LC_23017_Sub</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -61,7 +61,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23017_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1205241986\">LC_23017_Main</a>",
       "execute": [
         {
           "eventTrigger": "Heal Target Start [Owner]",
@@ -83,7 +83,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_23017_Sub[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1946026397\">LC_23017_Sub</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

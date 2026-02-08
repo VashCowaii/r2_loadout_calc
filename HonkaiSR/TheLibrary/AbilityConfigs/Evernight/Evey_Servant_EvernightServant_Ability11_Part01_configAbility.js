@@ -24,11 +24,11 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_SizeControl_Perf"
+      "functionName": "<a class=\"gTempYellow\" id=\"294638745\">function_Evernight_Group_SizeControl_Perf</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_FollowControl_00"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
     },
     {
       "name": "IF",
@@ -38,7 +38,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster's Summoner}}"
         },
-        "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
       },
       "passed": [
         {
@@ -57,31 +57,31 @@ const configAbility = {
           "functionList": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability12_TriggerAnim_Tuowei"
+              "functionName": "<a class=\"gTempYellow\" id=\"996483879\">Servant_Evernight_Ability12_TriggerAnim_Tuowei</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability12_TriggerAnim_Man"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1426186916\">Servant_Evernight_Ability12_TriggerAnim_Man</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability12_TriggerAnim_01"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1684581797\">Servant_Evernight_Ability12_TriggerAnim_01</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability12_TriggerAnim_02"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1667804178\">Servant_Evernight_Ability12_TriggerAnim_02</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability12_TriggerAnim_03"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1651026559\">Servant_Evernight_Ability12_TriggerAnim_03</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability12_TriggerAnim_04"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1634248940\">Servant_Evernight_Ability12_TriggerAnim_04</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability12_TriggerAnim_05"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1617471321\">Servant_Evernight_Ability12_TriggerAnim_05</a>"
             }
           ]
         }
@@ -122,27 +122,27 @@ const configAbility = {
           "functionList": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability11_TriggerAnim_Man"
+              "functionName": "<a class=\"gTempYellow\" id=\"1828267341\">Servant_Evernight_Ability11_TriggerAnim_Man</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability11_TriggerAnim_01"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1582823768\">Servant_Evernight_Ability11_TriggerAnim_01</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability11_TriggerAnim_02"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1532490911\">Servant_Evernight_Ability11_TriggerAnim_02</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability11_TriggerAnim_03"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1549268530\">Servant_Evernight_Ability11_TriggerAnim_03</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability11_TriggerAnim_04"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1498935673\">Servant_Evernight_Ability11_TriggerAnim_04</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability11_TriggerAnim_05"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1515713292\">Servant_Evernight_Ability11_TriggerAnim_05</a>"
             }
           ]
         }
@@ -156,82 +156,82 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster's Summoner}}"
         },
-        "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
       }
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_FollowControl_STB"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_SizeControl_STB"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1946909591\">function_Evernight_Group_SizeControl_STB</a>"
     }
   ],
   "functions": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability11_TriggerAnim_Man",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1828267341\">Servant_Evernight_Ability11_TriggerAnim_Man</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability11_TriggerAnim_01",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1582823768\">Servant_Evernight_Ability11_TriggerAnim_01</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability11_TriggerAnim_02",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1532490911\">Servant_Evernight_Ability11_TriggerAnim_02</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability11_TriggerAnim_03",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1549268530\">Servant_Evernight_Ability11_TriggerAnim_03</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability11_TriggerAnim_04",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1498935673\">Servant_Evernight_Ability11_TriggerAnim_04</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability11_TriggerAnim_05",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1515713292\">Servant_Evernight_Ability11_TriggerAnim_05</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability12_TriggerAnim_Tuowei",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__996483879\">Servant_Evernight_Ability12_TriggerAnim_Tuowei</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability12_TriggerAnim_Man",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1426186916\">Servant_Evernight_Ability12_TriggerAnim_Man</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability12_TriggerAnim_01",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1684581797\">Servant_Evernight_Ability12_TriggerAnim_01</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability12_TriggerAnim_02",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1667804178\">Servant_Evernight_Ability12_TriggerAnim_02</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability12_TriggerAnim_03",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1651026559\">Servant_Evernight_Ability12_TriggerAnim_03</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability12_TriggerAnim_04",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1634248940\">Servant_Evernight_Ability12_TriggerAnim_04</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability12_TriggerAnim_05",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1617471321\">Servant_Evernight_Ability12_TriggerAnim_05</a>",
       "parse": []
     }
   ],

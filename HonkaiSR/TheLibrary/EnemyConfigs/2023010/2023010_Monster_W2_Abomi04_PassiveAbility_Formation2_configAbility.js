@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Abomi04_PassiveAbility_Formation2"
+      "modifier": "<a class=\"gModGreen\" id=\"-502774281\">Enemy_W2_Abomi04_PassiveAbility_Formation2</a>"
     }
   ],
   "references": []

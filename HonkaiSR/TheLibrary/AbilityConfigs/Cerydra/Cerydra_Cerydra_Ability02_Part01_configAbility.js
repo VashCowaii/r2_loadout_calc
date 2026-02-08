@@ -27,7 +27,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "modifier": "Cerydra_Ability02_Target",
+        "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>",
         "invertCondition": true,
         "justAddedOrActive": true
       },
@@ -61,7 +61,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
           },
           "passed": [
             {
@@ -174,7 +174,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]"
               },
               "passed": [
                 "Deleted bullshit",

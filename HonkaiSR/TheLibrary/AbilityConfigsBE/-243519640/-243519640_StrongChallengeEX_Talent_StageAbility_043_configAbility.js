@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_043"
+      "modifier": "<a class=\"gModGreen\" id=\"-501951221\">MStrongChallengeEX_Talent_StageAbility_LE_043</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_043",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1191455949\">MStrongChallengeEX_Talent_StageAbility_PLY_043</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ForceStanceDamage"
@@ -63,7 +63,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_043",
+      "for": "<a class=\"gModGreen\" id=\"mod__-501951221\">MStrongChallengeEX_Talent_StageAbility_LE_043</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -90,7 +90,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_043",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1191455949\">MStrongChallengeEX_Talent_StageAbility_PLY_043</a>",
                   "valuePerStack": {
                     "MDF_Insert_AllDamageTypePenetrate": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

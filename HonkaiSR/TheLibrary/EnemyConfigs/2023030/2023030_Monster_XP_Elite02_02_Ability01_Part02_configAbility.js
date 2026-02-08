@@ -7,19 +7,19 @@ const configAbility = {
     "Ability Start",
     {
       "name": "Use Custom Character Function",
-      "functionName": "Monster_XP_Elite02_02_Ability01_TaskTemplate_DamageWithRandomEffect_FirstHit"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1849670320\">Monster_XP_Elite02_02_Ability01_TaskTemplate_DamageWithRandomEffect_FirstHit</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Monster_XP_Elite02_02_Ability01_TaskTemplate_DamageWithRandomEffect"
+      "functionName": "<a class=\"gTempYellow\" id=\"-237709658\">Monster_XP_Elite02_02_Ability01_TaskTemplate_DamageWithRandomEffect</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Monster_XP_Elite02_02_Ability01_TaskTemplate_DamageWithRandomEffect"
+      "functionName": "<a class=\"gTempYellow\" id=\"-237709658\">Monster_XP_Elite02_02_Ability01_TaskTemplate_DamageWithRandomEffect</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Monster_XP_Elite02_02_Ability01_TaskTemplate_DamageWithRandomEffect"
+      "functionName": "<a class=\"gTempYellow\" id=\"-237709658\">Monster_XP_Elite02_02_Ability01_TaskTemplate_DamageWithRandomEffect</a>"
     },
     {
       "name": "Find New Target",
@@ -60,7 +60,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
             "displayLines": "{[Skill01[2]]}",
@@ -115,7 +115,7 @@ const configAbility = {
   "functions": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Monster_XP_Elite02_02_Ability01_TaskTemplate_DamageWithRandomEffect",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-237709658\">Monster_XP_Elite02_02_Ability01_TaskTemplate_DamageWithRandomEffect</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -155,7 +155,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
                 "displayLines": "{[Skill01[2]]}",
@@ -206,7 +206,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Monster_XP_Elite02_02_Ability01_TaskTemplate_DamageWithRandomEffect_FirstHit",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1849670320\">Monster_XP_Elite02_02_Ability01_TaskTemplate_DamageWithRandomEffect_FirstHit</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -246,7 +246,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
                 "displayLines": "{[Skill01[2]]}",

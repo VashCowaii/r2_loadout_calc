@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_Standard_ConfineHit",
+      "for": "<a class=\"gModGreen\" id=\"mod__-867295363\">Monster_Standard_ConfineHit</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -65,7 +65,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_APShow_Infinite_NotCancel",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1780831313\">Monster_APShow_Infinite_NotCancel</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -76,7 +76,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             },
             "Modifier Deletes Itself"
           ]
@@ -85,7 +85,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_APShow_SevenTurn",
+      "for": "<a class=\"gModGreen\" id=\"mod__544701675\">Monster_APShow_SevenTurn</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -96,7 +96,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow_Base",
+              "modifier": "<a class=\"gModGreen\" id=\"-904148602\">Monster_APShow_Base</a>",
               "valuePerStack": {
                 "Acc_Turn": 7
               }
@@ -108,7 +108,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_APShow_TwoTurn_NotCancel",
+      "for": "<a class=\"gModGreen\" id=\"mod__805664840\">Monster_APShow_TwoTurn_NotCancel</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -119,7 +119,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow_Base_NotCancel",
+              "modifier": "<a class=\"gModGreen\" id=\"-745531330\">Monster_APShow_Base_NotCancel</a>",
               "valuePerStack": {
                 "Acc_Turn": 2
               }
@@ -131,7 +131,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_APShow_TwoTurn",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2103106200\">Monster_APShow_TwoTurn</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -142,7 +142,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow_Base",
+              "modifier": "<a class=\"gModGreen\" id=\"-904148602\">Monster_APShow_Base</a>",
               "valuePerStack": {
                 "Acc_Turn": 2
               }
@@ -154,7 +154,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_APShow_OneTurn_NotCancel",
+      "for": "<a class=\"gModGreen\" id=\"mod__-340521378\">Monster_APShow_OneTurn_NotCancel</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -165,7 +165,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow_Base_NotCancel",
+              "modifier": "<a class=\"gModGreen\" id=\"-745531330\">Monster_APShow_Base_NotCancel</a>",
               "valuePerStack": {
                 "Acc_Turn": 1
               }
@@ -177,7 +177,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_APShow_OneTurn",
+      "for": "<a class=\"gModGreen\" id=\"mod__-531387674\">Monster_APShow_OneTurn</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -188,7 +188,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow_Base",
+              "modifier": "<a class=\"gModGreen\" id=\"-904148602\">Monster_APShow_Base</a>",
               "valuePerStack": {
                 "Acc_Turn": 1
               }
@@ -200,7 +200,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_APShow_Base_NotCancel",
+      "for": "<a class=\"gModGreen\" id=\"mod__-745531330\">Monster_APShow_Base_NotCancel</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -211,7 +211,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             }
           ]
         },
@@ -224,7 +224,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -273,7 +273,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_APShow_Base_Immediately",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1170331045\">Monster_APShow_Base_Immediately</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -284,7 +284,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             }
           ]
         },
@@ -297,7 +297,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             }
           ]
         },
@@ -353,7 +353,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_APShow_Base",
+      "for": "<a class=\"gModGreen\" id=\"mod__-904148602\">Monster_APShow_Base</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -364,7 +364,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             }
           ]
         },
@@ -377,7 +377,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -432,7 +432,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_APShow_OneMore",
+      "for": "<a class=\"gModGreen\" id=\"mod__-200542532\">Monster_APShow_OneMore</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -443,7 +443,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_MonsterCharge_ActionBarText"
+              "modifier": "<a class=\"gModGreen\" id=\"-2098906249\">Standard_MonsterCharge_ActionBarText</a>"
             }
           ]
         },
@@ -456,7 +456,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_MonsterCharge_ActionBarText"
+              "modifier": "<a class=\"gModGreen\" id=\"-2098906249\">Standard_MonsterCharge_ActionBarText</a>"
             }
           ]
         }
@@ -464,7 +464,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_APShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__2047455110\">Monster_APShow</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -475,7 +475,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_MonsterCharge_ActionBarText"
+              "modifier": "<a class=\"gModGreen\" id=\"-2098906249\">Standard_MonsterCharge_ActionBarText</a>"
             }
           ]
         },
@@ -488,7 +488,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_MonsterCharge_ActionBarText"
+              "modifier": "<a class=\"gModGreen\" id=\"-2098906249\">Standard_MonsterCharge_ActionBarText</a>"
             }
           ]
         }

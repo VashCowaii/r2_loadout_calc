@@ -15,7 +15,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Xueyi_BP_Passive02"
+      "modifier": "<a class=\"gModGreen\" id=\"461375302\">Xueyi_BP_Passive02</a>"
     },
     {
       "name": "UI Display Event",

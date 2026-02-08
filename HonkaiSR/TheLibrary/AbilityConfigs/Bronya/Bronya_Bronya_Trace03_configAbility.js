@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Bronya_Tree03"
+      "modifier": "<a class=\"gModGreen\" id=\"1513749898\">M_Bronya_Tree03</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Bronya_Tree03",
+      "for": "<a class=\"gModGreen\" id=\"mod__1513749898\">M_Bronya_Tree03</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -36,7 +36,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "Bronya_Tree03_DamageUp",
+              "modifier": "<a class=\"gModGreen\" id=\"-196204909\">Bronya_Tree03_DamageUp</a>",
               "onlyRemoveOwnersInstance": true
             }
           ]
@@ -50,7 +50,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Bronya_Tree03_DamageUp",
+              "modifier": "<a class=\"gModGreen\" id=\"-196204909\">Bronya_Tree03_DamageUp</a>",
               "valuePerStack": {
                 "MDF_AllDamageTypeAddedRatio": {
                   "operator": "Variables[0] (0.1) || RETURN",
@@ -83,7 +83,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Bronya_Tree03_DamageUp",
+                  "modifier": "<a class=\"gModGreen\" id=\"-196204909\">Bronya_Tree03_DamageUp</a>",
                   "valuePerStack": {
                     "MDF_AllDamageTypeAddedRatio": {
                       "operator": "Variables[0] (0.1) || RETURN",

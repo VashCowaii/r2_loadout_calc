@@ -29,7 +29,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "QingQue_PassiveCount_QingqueSelf",
+          "modifier": "<a class=\"gModGreen\" id=\"1861987598\">QingQue_PassiveCount_QingqueSelf</a>",
           "valuePerStack": {
             "AbilityRank_Eidolon2_P1_SPAdd": {
               "operator": "Variables[0] (1) || RETURN",

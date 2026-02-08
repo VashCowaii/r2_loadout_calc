@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23044_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-356600426\">LC_23044_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23044_Sub2[<span class=\"descriptionNumberColor\">Dispossession</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__237864619\">LC_23044_Sub2</a>[<span class=\"descriptionNumberColor\">Dispossession</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -64,7 +64,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23044_Sub[<span class=\"descriptionNumberColor\">Blazing Sun</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__613021115\">LC_23044_Sub</a>[<span class=\"descriptionNumberColor\">Blazing Sun</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -103,7 +103,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23044_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-356600426\">LC_23044_Main</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -121,7 +121,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "LC_23044_Sub[<span class=\"descriptionNumberColor\">Blazing Sun</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"613021115\">LC_23044_Sub</a>[<span class=\"descriptionNumberColor\">Blazing Sun</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.6) || RETURN",
@@ -146,7 +146,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_23044_Sub2[<span class=\"descriptionNumberColor\">Dispossession</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"237864619\">LC_23044_Sub2</a>[<span class=\"descriptionNumberColor\">Dispossession</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.18) || RETURN",

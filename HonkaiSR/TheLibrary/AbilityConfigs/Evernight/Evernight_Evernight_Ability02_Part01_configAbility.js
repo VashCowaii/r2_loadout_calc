@@ -17,7 +17,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_SizeControl_Perf2"
+      "functionName": "<a class=\"gTempYellow\" id=\"1349241137\">function_Evernight_Group_SizeControl_Perf2</a>"
     },
     {
       "name": "IF",
@@ -27,7 +27,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
       },
       "passed": [
         {
@@ -46,7 +46,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_UltraMode_Effect",
+          "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>",
           "casterAssign": "TargetSelf"
         }
       ],
@@ -65,7 +65,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_SizeControl_STB2"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1393796287\">function_Evernight_Group_SizeControl_STB2</a>"
     }
   ],
   "references": []

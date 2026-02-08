@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_109_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1754215516\">Relic_109_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_109_Sub[<span class=\"descriptionNumberColor\">Band of Sizzling Thunder</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1034849217\">Relic_109_Sub</a>[<span class=\"descriptionNumberColor\">Band of Sizzling Thunder</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_109_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1754215516\">Relic_109_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -66,7 +66,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_109_Sub[<span class=\"descriptionNumberColor\">Band of Sizzling Thunder</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1034849217\">Relic_109_Sub</a>[<span class=\"descriptionNumberColor\">Band of Sizzling Thunder</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",

@@ -151,7 +151,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Beast02_RLElite_Weak"
+          "modifier": "<a class=\"gModGreen\" id=\"974234853\">Monster_W2_Beast02_RLElite_Weak</a>"
         },
         "Trigger: Ability End"
       ],
@@ -202,7 +202,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMore"
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
         },
         "Ability Start",
         {
@@ -211,7 +211,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Beast02_RLElite_Bullet",
+          "modifier": "<a class=\"gModGreen\" id=\"296260861\">Monster_W2_Beast02_RLElite_Bullet</a>",
           "counter": 1
         },
         {
@@ -243,7 +243,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -251,7 +251,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -259,7 +259,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Monster_W2_Beast02_RLElite_Edict"
+          "modifier": "<a class=\"gModGreen\" id=\"1835721372\">Monster_W2_Beast02_RLElite_Edict</a>"
         },
         {
           "name": "Action Advance/Delay",
@@ -358,7 +358,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "Monster_W2_Beast02_RLElite_Bullet",
+          "modifierName": "<a class=\"gModGreen\" id=\"296260861\">Monster_W2_Beast02_RLElite_Bullet</a>",
           "value": 0
         },
         {
@@ -376,7 +376,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Beast02_RLElite_GennkiMark[<span class=\"descriptionNumberColor\">Gather Courage</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>[<span class=\"descriptionNumberColor\">Gather Courage</span>]"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -474,7 +474,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Beast02_RLElite_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-992439979\">Enemy_W2_Beast02_RLElite_Passive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -482,7 +482,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Beast02_RLElite_ActionCheck"
+          "modifier": "<a class=\"gModGreen\" id=\"16551050\">Enemy_W2_Beast02_RLElite_ActionCheck</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -490,7 +490,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Beast02_RLElite_BreakListener"
+          "modifier": "<a class=\"gModGreen\" id=\"1589154351\">Enemy_W2_Beast02_RLElite_BreakListener</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -498,14 +498,14 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         }
       ],
       "whenAdded": [],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Beast02_RLElite_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-992439979\">Enemy_W2_Beast02_RLElite_Passive</a>",
           "modifierFlags": [
             "MuteHitFly",
             "ListenBattleEventSkill",
@@ -546,7 +546,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]",
                       "onlyRemoveOwnersInstance": true,
                       "removeAllInstances": true
                     },
@@ -556,7 +556,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Monster_W2_Beast02_RLElite_Edict"
+                      "modifier": "<a class=\"gModGreen\" id=\"1835721372\">Monster_W2_Beast02_RLElite_Edict</a>"
                     }
                   ]
                 }
@@ -598,7 +598,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -606,7 +606,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -614,7 +614,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_W2_Beast02_RLElite_GennkiMark[<span class=\"descriptionNumberColor\">Gather Courage</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>[<span class=\"descriptionNumberColor\">Gather Courage</span>]",
                       "stackLimit": 3
                     },
                     {
@@ -648,7 +648,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "Monster_W2_Beast02_RLElite_Bullet",
+                      "modifierName": "<a class=\"gModGreen\" id=\"296260861\">Monster_W2_Beast02_RLElite_Bullet</a>",
                       "function": "Add",
                       "value": 1
                     },
@@ -694,7 +694,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Beast02_RLElite_Bullet"
+                    "modifier": "<a class=\"gModGreen\" id=\"296260861\">Monster_W2_Beast02_RLElite_Bullet</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -714,7 +714,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -722,7 +722,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Monster_W2_Beast02_RLElite_Edict"
+                      "modifier": "<a class=\"gModGreen\" id=\"1835721372\">Monster_W2_Beast02_RLElite_Edict</a>"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -758,7 +758,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Beast02_RLElite_Edict",
+          "for": "<a class=\"gModGreen\" id=\"mod__1835721372\">Monster_W2_Beast02_RLElite_Edict</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -784,7 +784,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Beast02_RLElite_Weak",
+          "for": "<a class=\"gModGreen\" id=\"mod__974234853\">Monster_W2_Beast02_RLElite_Weak</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -797,7 +797,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Beast02_RLElite_Bullet",
+          "for": "<a class=\"gModGreen\" id=\"mod__296260861\">Monster_W2_Beast02_RLElite_Bullet</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -812,7 +812,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "KeepOnDeathrattle",
@@ -853,7 +853,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                         },
                         "Modifier Deletes Itself"
                       ]
@@ -874,7 +874,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Beast02_RLElite_BreakListener",
+          "for": "<a class=\"gModGreen\" id=\"mod__1589154351\">Enemy_W2_Beast02_RLElite_BreakListener</a>",
           "execute": [
             {
               "eventTrigger": "When Put in Deathstate Limbo"
@@ -906,7 +906,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Modifier Variable",
-                  "modifierName": "Monster_W2_Beast02_RLElite_Bullet",
+                  "modifierName": "<a class=\"gModGreen\" id=\"296260861\">Monster_W2_Beast02_RLElite_Bullet</a>",
                   "value": 0
                 },
                 {
@@ -926,7 +926,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W2_Beast02_RLElite_GennkiMark[<span class=\"descriptionNumberColor\">Gather Courage</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>[<span class=\"descriptionNumberColor\">Gather Courage</span>]"
                   },
                   "passed": [
                     {
@@ -935,7 +935,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Beast02_RLElite_GennkiMark[<span class=\"descriptionNumberColor\">Gather Courage</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>[<span class=\"descriptionNumberColor\">Gather Courage</span>]"
                     }
                   ]
                 },
@@ -986,7 +986,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Beast02_RLElite_ActionCheck",
+          "for": "<a class=\"gModGreen\" id=\"mod__16551050\">Enemy_W2_Beast02_RLElite_ActionCheck</a>",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -1044,7 +1044,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Beast02_RLElite_GennkiMark[<span class=\"descriptionNumberColor\">Gather Courage</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>[<span class=\"descriptionNumberColor\">Gather Courage</span>]",
           "stackType": "Replace",
           "execute": [
             {

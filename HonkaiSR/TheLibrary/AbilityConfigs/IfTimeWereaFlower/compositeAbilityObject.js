@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23038_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-536002141\">LC_23038_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23038_AuraBonus_Buff[<span class=\"descriptionNumberColor\">Presage</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-940045420\">LC_23038_AuraBonus_Buff</a>[<span class=\"descriptionNumberColor\">Presage</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -72,7 +72,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23038_AuraBonus[<span class=\"descriptionNumberColor\">Presage</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-327496768\">LC_23038_AuraBonus</a>[<span class=\"descriptionNumberColor\">Presage</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -108,7 +108,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]-{{Caster}}"
               },
-              "modifier": "LC_23038_AuraBonus_Buff[<span class=\"descriptionNumberColor\">Presage</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-940045420\">LC_23038_AuraBonus_Buff</a>[<span class=\"descriptionNumberColor\">Presage</span>]",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -125,7 +125,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23038_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-536002141\">LC_23038_Main</a>",
           "execute": [
             {
               "eventTrigger": "Attack Start [Owner]",
@@ -171,7 +171,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "LC_23038_AuraBonus[<span class=\"descriptionNumberColor\">Presage</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-327496768\">LC_23038_AuraBonus</a>[<span class=\"descriptionNumberColor\">Presage</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -229,7 +229,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "LC_23038_AuraBonus[<span class=\"descriptionNumberColor\">Presage</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-327496768\">LC_23038_AuraBonus</a>[<span class=\"descriptionNumberColor\">Presage</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",

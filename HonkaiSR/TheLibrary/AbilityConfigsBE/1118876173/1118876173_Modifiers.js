@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus5AddOn_Servant[<span class=\"descriptionNumberColor\">Cinnabar Inscription</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1360922097\">Modifier_FantasticStory_BaseAbility_2160_Plus5AddOn_Servant</a>[<span class=\"descriptionNumberColor\">Cinnabar Inscription</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "KeepOnDeathrattle"
@@ -30,7 +30,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2160_Aura",
+                    "modifier": "<a class=\"gModGreen\" id=\"-898765267\">Modifier_FantasticStory_BaseAbility_2160_Aura</a>",
                     "invertCondition": true
                   }
                 ]
@@ -139,7 +139,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus5AddOn",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1986033123\">Modifier_FantasticStory_BaseAbility_2160_Plus5AddOn</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [
@@ -155,14 +155,14 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2160_Plus5AddOn_Servant[<span class=\"descriptionNumberColor\">Cinnabar Inscription</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1360922097\">Modifier_FantasticStory_BaseAbility_2160_Plus5AddOn_Servant</a>[<span class=\"descriptionNumberColor\">Cinnabar Inscription</span>]",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus4AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics: Torn Fabric</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-354244179\">Modifier_FantasticStory_BaseAbility_2160_Plus4AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Torn Fabric</span>]",
       "stackType": "ReplaceByCaster",
       "description": "When a Weakness is Broken, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2164_ADF_2</span> Grit Value for allies.",
       "type": "Debuff",
@@ -170,7 +170,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus4AddOn",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1797276940\">Modifier_FantasticStory_BaseAbility_2160_Plus4AddOn</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -248,7 +248,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2160_Aura",
+                    "modifier": "<a class=\"gModGreen\" id=\"-898765267\">Modifier_FantasticStory_BaseAbility_2160_Aura</a>",
                     "invertCondition": true
                   }
                 ]
@@ -403,19 +403,19 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2160_Plus4AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics: Torn Fabric</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-354244179\">Modifier_FantasticStory_BaseAbility_2160_Plus4AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Torn Fabric</span>]",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus3AddOn_ForShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-490455822\">Modifier_FantasticStory_BaseAbility_2160_Plus3AddOn_ForShow</a>",
       "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus3AddOn[<span class=\"descriptionNumberColor\">Grit Mechanics: Misplacement</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-273250865\">Modifier_FantasticStory_BaseAbility_2160_Plus3AddOn</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Misplacement</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -440,7 +440,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2160_Aura",
+                    "modifier": "<a class=\"gModGreen\" id=\"-898765267\">Modifier_FantasticStory_BaseAbility_2160_Aura</a>",
                     "invertCondition": true
                   }
                 ]
@@ -543,19 +543,19 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2160_Plus3AddOn_ForShow",
+          "modifier": "<a class=\"gModGreen\" id=\"-490455822\">Modifier_FantasticStory_BaseAbility_2160_Plus3AddOn_ForShow</a>",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus2AddOn_ForShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__1386471387\">Modifier_FantasticStory_BaseAbility_2160_Plus2AddOn_ForShow</a>",
       "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus2AddOn[<span class=\"descriptionNumberColor\">Grit Mechanics: Intertextuality</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__596697214\">Modifier_FantasticStory_BaseAbility_2160_Plus2AddOn</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Intertextuality</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -576,7 +576,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2160_Aura",
+                    "modifier": "<a class=\"gModGreen\" id=\"-898765267\">Modifier_FantasticStory_BaseAbility_2160_Aura</a>",
                     "invertCondition": true
                   }
                 ]
@@ -694,14 +694,14 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2160_Plus2AddOn_ForShow",
+          "modifier": "<a class=\"gModGreen\" id=\"1386471387\">Modifier_FantasticStory_BaseAbility_2160_Plus2AddOn_ForShow</a>",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus5_ForShow[<span class=\"descriptionNumberColor\">Cinnabar Inscription</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1172490940\">Modifier_FantasticStory_BaseAbility_2160_Plus5_ForShow</a>[<span class=\"descriptionNumberColor\">Cinnabar Inscription</span>]",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [
@@ -713,7 +713,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus5_Servant[<span class=\"descriptionNumberColor\">Cinnabar Inscription</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1127959511\">Modifier_FantasticStory_BaseAbility_2160_Plus5_Servant</a>[<span class=\"descriptionNumberColor\">Cinnabar Inscription</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -732,7 +732,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                   "duration": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
                     "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
@@ -787,7 +787,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus4_Sub[<span class=\"descriptionNumberColor\">Torn Fabric</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2135566331\">Modifier_FantasticStory_BaseAbility_2160_Plus4_Sub</a>[<span class=\"descriptionNumberColor\">Torn Fabric</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -801,7 +801,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT[<span class=\"descriptionNumberColor\">Echo Enigma</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]"
               },
               "passed": [
                 {
@@ -812,7 +812,7 @@ const configAbility = {
                   },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
-                  "modifierName": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                   "multiplier": 1
                 },
                 {
@@ -836,7 +836,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus3_ForShow[<span class=\"descriptionNumberColor\">Misplacement</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-187538002\">Modifier_FantasticStory_BaseAbility_2160_Plus3_ForShow</a>[<span class=\"descriptionNumberColor\">Misplacement</span>]",
       "stackType": "ReplaceByCaster",
       "description": "When entering combat and after taking an action, additionally becomes afflicted with <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2163_ADF_2</span> stack(s) of \"Echo Enigma,\" where each stack of \"Echo Enigma\" increases DMG taken by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2163_ADF_1</span>.",
       "type": "Debuff",
@@ -844,7 +844,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus2_Sub[<span class=\"descriptionNumberColor\">Intertextuality</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1668876339\">Modifier_FantasticStory_BaseAbility_2160_Plus2_Sub</a>[<span class=\"descriptionNumberColor\">Intertextuality</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -867,7 +867,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT[<span class=\"descriptionNumberColor\">Echo Enigma</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]"
                   },
                   "passed": [
                     {
@@ -878,7 +878,7 @@ const configAbility = {
                       },
                       "valueType": "Layer",
                       "variableName": "DOT_Layer",
-                      "modifierName": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
                       "multiplier": 1
                     },
                     {
@@ -916,7 +916,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_PLY[<span class=\"descriptionNumberColor\">DoT Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-397579384\">Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_PLY</a>[<span class=\"descriptionNumberColor\">DoT Boost</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -959,7 +959,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_Enemy",
+      "for": "<a class=\"gModGreen\" id=\"mod__1037601571\">Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_Enemy</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -984,7 +984,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_PLY[<span class=\"descriptionNumberColor\">DoT Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-397579384\">Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_PLY</a>[<span class=\"descriptionNumberColor\">DoT Boost</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2161_ADF_3) || RETURN",
                     "displayLines": "DV_FantasticStory_PlusAbility_2161_ADF_3",
@@ -1002,7 +1002,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub[<span class=\"descriptionNumberColor\">Exposition</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__871276272\">Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub</a>[<span class=\"descriptionNumberColor\">Exposition</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1042,7 +1042,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_BaseAddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1418148626\">Modifier_FantasticStory_BaseAbility_2160_BaseAddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
       "stackType": "ReplaceByCaster",
       "stackData": [
         "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value"
@@ -1054,7 +1054,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_ForShow[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1710887068\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [],
@@ -1064,7 +1064,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_EnterFever_Sub[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__297114355\">Modifier_FantasticStory_BaseAbility_2160_EnterFever_Sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1127,7 +1127,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_Aura",
+      "for": "<a class=\"gModGreen\" id=\"mod__-898765267\">Modifier_FantasticStory_BaseAbility_2160_Aura</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1139,7 +1139,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_PLY[<span class=\"descriptionNumberColor\">DoT Boost</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-397579384\">Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_PLY</a>[<span class=\"descriptionNumberColor\">DoT Boost</span>]"
             },
             {
               "name": "Define Custom Variable",
@@ -1204,7 +1204,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2160_EnterFever_Sub[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"297114355\">Modifier_FantasticStory_BaseAbility_2160_EnterFever_Sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio": {
@@ -1239,7 +1239,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub[<span class=\"descriptionNumberColor\">Exposition</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"871276272\">Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub</a>[<span class=\"descriptionNumberColor\">Exposition</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "Compare: Variable",
@@ -1254,7 +1254,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_Enemy",
+          "modifier": "<a class=\"gModGreen\" id=\"1037601571\">Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_Enemy</a>",
           "haloStatus": true,
           "conditions": {
             "name": "Compare: Variable",
@@ -1269,7 +1269,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2160_Plus2_Sub[<span class=\"descriptionNumberColor\">Intertextuality</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1668876339\">Modifier_FantasticStory_BaseAbility_2160_Plus2_Sub</a>[<span class=\"descriptionNumberColor\">Intertextuality</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "Compare: Variable",
@@ -1284,7 +1284,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2160_Plus3_ForShow[<span class=\"descriptionNumberColor\">Misplacement</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-187538002\">Modifier_FantasticStory_BaseAbility_2160_Plus3_ForShow</a>[<span class=\"descriptionNumberColor\">Misplacement</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "Compare: Variable",
@@ -1299,7 +1299,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2160_Plus4_Sub[<span class=\"descriptionNumberColor\">Torn Fabric</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2135566331\">Modifier_FantasticStory_BaseAbility_2160_Plus4_Sub</a>[<span class=\"descriptionNumberColor\">Torn Fabric</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "Compare: Variable",
@@ -1314,7 +1314,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2160_Plus5_Servant[<span class=\"descriptionNumberColor\">Cinnabar Inscription</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1127959511\">Modifier_FantasticStory_BaseAbility_2160_Plus5_Servant</a>[<span class=\"descriptionNumberColor\">Cinnabar Inscription</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "Compare: Variable",
@@ -1327,7 +1327,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -1638,7 +1638,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_ListenBEDelay",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1851952501\">Modifier_FantasticStory_BaseAbility_2160_ListenBEDelay</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1650,7 +1650,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2160_Aura"
+              "modifier": "<a class=\"gModGreen\" id=\"-898765267\">Modifier_FantasticStory_BaseAbility_2160_Aura</a>"
             }
           ]
         },

@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23006_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1382073968\">LC_23006_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23006_DOT[<span class=\"descriptionNumberColor\">Erode</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1485539064\">LC_23006_DOT</a>[<span class=\"descriptionNumberColor\">Erode</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -140,7 +140,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23006_SpeedAddedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1036917801\">LC_23006_SpeedAddedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -188,7 +188,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23006_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1382073968\">LC_23006_Main</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -201,7 +201,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "LC_23006_DOT[<span class=\"descriptionNumberColor\">Erode</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1485539064\">LC_23006_DOT</a>[<span class=\"descriptionNumberColor\">Erode</span>]"
                   },
                   "failed": [
                     {
@@ -210,7 +210,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_23006_DOT[<span class=\"descriptionNumberColor\">Erode</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1485539064\">LC_23006_DOT</a>[<span class=\"descriptionNumberColor\">Erode</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -244,7 +244,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23006_SpeedAddedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1036917801\">LC_23006_SpeedAddedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

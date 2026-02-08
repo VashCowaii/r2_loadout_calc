@@ -19,7 +19,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "FuXuan_ListenLifeTime[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
           }
         ]
       },
@@ -50,7 +50,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "FuXuan_ListenLifeTime[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
       }
     },
     {
@@ -68,7 +68,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "FuXuan_ListenLifeTime[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -94,7 +94,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
       },
-      "modifier": "FuXuan_HitDamageSplit[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1553530097\">FuXuan_HitDamageSplit</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
       "valuePerStack": {
         "MDF_SplitPercentage": {
           "operator": "Variables[0] (0.65) || RETURN",
@@ -135,7 +135,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
           },
-          "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
         }
       ]
     },

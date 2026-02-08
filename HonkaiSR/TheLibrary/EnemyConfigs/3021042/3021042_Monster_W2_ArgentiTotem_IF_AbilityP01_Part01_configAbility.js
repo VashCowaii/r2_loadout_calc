@@ -41,7 +41,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "W2_ArgentiTotem_BattleScore1"
+              "modifier": "<a class=\"gModGreen\" id=\"64663457\">W2_ArgentiTotem_BattleScore1</a>"
             }
           ]
         },

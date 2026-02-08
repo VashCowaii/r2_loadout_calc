@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Anaxa_Trace02"
+      "modifier": "<a class=\"gModGreen\" id=\"-1468806740\">Anaxa_Trace02</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Anaxa_Trace02_Sub[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-879409639\">Anaxa_Trace02_Sub</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -78,7 +78,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Anaxa_Trace02_SubAllListener",
+      "for": "<a class=\"gModGreen\" id=\"mod__-682474568\">Anaxa_Trace02_SubAllListener</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -100,7 +100,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (0.5) || RETURN",
@@ -120,7 +120,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Anaxa_Trace02",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1468806740\">Anaxa_Trace02</a>",
       "execute": [
         {
           "eventTrigger": "Character Path Change [Anyone]",
@@ -157,7 +157,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Anaxa_Trace02_Sub[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-879409639\">Anaxa_Trace02_Sub</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
                           "operator": "Variables[0] (1.4) || RETURN",
@@ -181,7 +181,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}"
                       },
-                      "modifier": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -189,7 +189,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Anaxa_Trace02_SubAllListener"
+                      "modifier": "<a class=\"gModGreen\" id=\"-682474568\">Anaxa_Trace02_SubAllListener</a>"
                     }
                   ],
                   "failed": [
@@ -199,7 +199,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}"
                       },
-                      "modifier": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
                           "operator": "Variables[0] (0.5) || RETURN",
@@ -217,7 +217,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Anaxa_Trace02_SubAllListener"
+                      "modifier": "<a class=\"gModGreen\" id=\"-682474568\">Anaxa_Trace02_SubAllListener</a>"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -231,7 +231,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Anaxa_Trace02_Sub[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-879409639\">Anaxa_Trace02_Sub</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]"
                     }
                   ]
                 }
@@ -264,7 +264,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Anaxa_Trace02_Sub[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-879409639\">Anaxa_Trace02_Sub</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
                           "operator": "Variables[0] (1.4) || RETURN",
@@ -288,7 +288,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}"
                       },
-                      "modifier": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
                           "operator": "Variables[0] (0.5) || RETURN",
@@ -306,7 +306,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Anaxa_Trace02_SubAllListener"
+                      "modifier": "<a class=\"gModGreen\" id=\"-682474568\">Anaxa_Trace02_SubAllListener</a>"
                     }
                   ],
                   "failed": [
@@ -363,7 +363,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Anaxa_Trace02_Sub[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-879409639\">Anaxa_Trace02_Sub</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
                               "operator": "Variables[0] (1.4) || RETURN",
@@ -389,7 +389,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{All Team Members with Unselectables}}"
                           },
-                          "modifier": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
                               "operator": "Variables[0] (0.5) || RETURN",
@@ -407,7 +407,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Anaxa_Trace02_SubAllListener"
+                          "modifier": "<a class=\"gModGreen\" id=\"-682474568\">Anaxa_Trace02_SubAllListener</a>"
                         },
                         {
                           "name": "Define Custom Variable",

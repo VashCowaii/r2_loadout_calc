@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_XP_Minion04_BeHitSoundController"
+      "modifier": "<a class=\"gModGreen\" id=\"1012060513\">Enemy_XP_Minion04_BeHitSoundController</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_BeHitSoundController",
+      "for": "<a class=\"gModGreen\" id=\"mod__1012060513\">Enemy_XP_Minion04_BeHitSoundController</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Hit"

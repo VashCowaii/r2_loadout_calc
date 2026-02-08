@@ -28,7 +28,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "AbilityPreShowModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1621594543\">AbilityPreShowModifier</a>"
         }
       ]
     },
@@ -38,7 +38,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "AbilityPreShowModifier2"
+      "modifier": "<a class=\"gModGreen\" id=\"-993379801\">AbilityPreShowModifier2</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -46,7 +46,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHeng_CheckSelfBeingTarget"
+      "modifier": "<a class=\"gModGreen\" id=\"-1693166190\">DanHeng_CheckSelfBeingTarget</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -54,7 +54,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -67,7 +67,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "DanHeng_CheckSelfBeingTarget",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1693166190\">DanHeng_CheckSelfBeingTarget</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -109,7 +109,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   },
                   {
@@ -120,7 +120,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   },
                   {
@@ -183,7 +183,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                   "valuePerStack": {
                     "DanHeng_PassivePene": {
                       "operator": "Variables[0] (0.36) || RETURN",
@@ -208,7 +208,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                 }
               ]
             }
@@ -230,7 +230,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   },
                   {
@@ -241,7 +241,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   },
                   {
@@ -287,7 +287,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                   "valuePerStack": {
                     "DanHeng_PassivePene": {
                       "operator": "Variables[0] (0.36) || RETURN",
@@ -312,7 +312,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                 }
               ]
             }
@@ -334,7 +334,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   },
                   {
@@ -345,7 +345,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   },
                   {
@@ -391,7 +391,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                   "valuePerStack": {
                     "DanHeng_PassivePene": {
                       "operator": "Variables[0] (0.36) || RETURN",
@@ -416,7 +416,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                 }
               ]
             }
@@ -428,7 +428,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "AbilityPreShowModifier2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-993379801\">AbilityPreShowModifier2</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -445,7 +445,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "DanHeng_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1147035290\">DanHeng_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]"
           }
         },
         "delayAdvancePreview": {
@@ -456,7 +456,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "AbilityPreShowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1621594543\">AbilityPreShowModifier</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -474,7 +474,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Modifier Holder}}"
             },
-            "modifier": "DanHeng_PointB2_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1050755614\">DanHeng_PointB2_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
           }
         },
         "delayAdvancePreview": {

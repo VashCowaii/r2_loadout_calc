@@ -132,7 +132,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Monster_W1_Mecha03_01_Frozen[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1137901449\">Monster_W1_Mecha03_01_Frozen</a>[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
       "baseChance": 1,
       "stackLimit": {
         "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",

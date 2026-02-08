@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_321_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1342088556\">Relic_321_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1306384815\">Relic_321_Sub</a>[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -54,14 +54,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_321_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1342088556\">Relic_321_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Ability53211_GlobalFunctions"
+                  "functionName": "<a class=\"gTempYellow\" id=\"92643458\">Ability53211_GlobalFunctions</a>"
                 }
               ]
             },
@@ -81,7 +81,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Ability53211_GlobalFunctions"
+                      "functionName": "<a class=\"gTempYellow\" id=\"92643458\">Ability53211_GlobalFunctions</a>"
                     }
                   ]
                 }
@@ -103,7 +103,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Ability53211_GlobalFunctions"
+                      "functionName": "<a class=\"gTempYellow\" id=\"92643458\">Ability53211_GlobalFunctions</a>"
                     }
                   ]
                 }
@@ -125,7 +125,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Ability53211_GlobalFunctions"
+                      "functionName": "<a class=\"gTempYellow\" id=\"92643458\">Ability53211_GlobalFunctions</a>"
                     }
                   ]
                 }
@@ -147,7 +147,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Ability53211_GlobalFunctions"
+                      "functionName": "<a class=\"gTempYellow\" id=\"92643458\">Ability53211_GlobalFunctions</a>"
                     }
                   ]
                 }
@@ -175,7 +175,7 @@ const compositeAbilityObject = {
       "referencesGlobalFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Ability53211_GlobalFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__92643458\">Ability53211_GlobalFunctions</a>",
           "parse": [
             {
               "name": "Define Custom Variable",
@@ -239,7 +239,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1306384815\">Relic_321_Sub</a>[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (_DamageAddCount) || Variables[1] (0.09) || MUL || RETURN",
@@ -258,7 +258,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1306384815\">Relic_321_Sub</a>[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (_DamageAddCount) || Variables[1] (0.09) || MUL || RETURN",
@@ -288,7 +288,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1306384815\">Relic_321_Sub</a>[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -296,7 +296,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1306384815\">Relic_321_Sub</a>[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]"
                 }
               ]
             },
@@ -342,7 +342,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1306384815\">Relic_321_Sub</a>[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (_DamageAddCount) || Variables[1] (0.12) || MUL || RETURN",
@@ -361,7 +361,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1306384815\">Relic_321_Sub</a>[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (_DamageAddCount) || Variables[1] (0.12) || MUL || RETURN",

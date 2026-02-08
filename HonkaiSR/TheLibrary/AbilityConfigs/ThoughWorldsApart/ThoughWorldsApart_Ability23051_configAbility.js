@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23051_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-2127237332\">LC_23051_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23051_Sub[<span class=\"descriptionNumberColor\">Redoubt</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-194150391\">LC_23051_Sub</a>[<span class=\"descriptionNumberColor\">Redoubt</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -89,7 +89,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23051_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2127237332\">LC_23051_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -107,7 +107,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "LC_23051_Sub[<span class=\"descriptionNumberColor\">Redoubt</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-194150391\">LC_23051_Sub</a>[<span class=\"descriptionNumberColor\">Redoubt</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

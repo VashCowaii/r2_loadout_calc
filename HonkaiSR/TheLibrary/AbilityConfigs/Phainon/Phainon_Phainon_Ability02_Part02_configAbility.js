@@ -6,7 +6,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+      "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
       "variables": {
         "parameter[0]_AddValue": {
           "operator": "Variables[0] (2) || RETURN",
@@ -24,7 +24,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}} + {{Ability Targets Adjacent(Blast)}}"
       },
-      "modifier": "M_Phainon_Ability02_TargetTimeslow",
+      "modifier": "<a class=\"gModGreen\" id=\"1602739833\">M_Phainon_Ability02_TargetTimeslow</a>",
       "silentAdd": true
     },
     {
@@ -89,7 +89,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Ability02_TargetTimeslow",
+      "for": "<a class=\"gModGreen\" id=\"mod__1602739833\">M_Phainon_Ability02_TargetTimeslow</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

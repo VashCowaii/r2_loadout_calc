@@ -34,7 +34,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -42,7 +42,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W4_Pollux_DisableAction"
+      "modifier": "<a class=\"gModGreen\" id=\"891735658\">Monster_W4_Pollux_DisableAction</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -50,7 +50,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W4_Pollux_Endurance"
+      "modifier": "<a class=\"gModGreen\" id=\"1688517080\">Enemy_W4_Pollux_Endurance</a>"
     },
     {
       "name": "Action Advance/Delay",
@@ -63,7 +63,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Monster_ChangePhase"
+      "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
     },
     {
       "name": "Find New Target",
@@ -75,7 +75,7 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_ChangePhase_ParamEntity"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1902031976\">Monster_ChangePhase_ParamEntity</a>"
         }
       ]
     },
@@ -94,7 +94,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W4_Pollux_PartController_LockHP"
+      "modifier": "<a class=\"gModGreen\" id=\"-720682465\">Monster_W4_Pollux_PartController_LockHP</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -102,7 +102,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W4_Pollux_Strengthen_Break"
+      "modifier": "<a class=\"gModGreen\" id=\"-888665654\">Monster_W4_Pollux_Strengthen_Break</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -110,7 +110,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "modifier": "Monster_W4_Pollux_Strengthen_BreakMark"
+      "modifier": "<a class=\"gModGreen\" id=\"586169347\">Monster_W4_Pollux_Strengthen_BreakMark</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -156,7 +156,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W4_Pollux_StoryMode_LockHP"
+          "modifier": "<a class=\"gModGreen\" id=\"-289587260\">Monster_W4_Pollux_StoryMode_LockHP</a>"
         }
       ]
     },
@@ -189,7 +189,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}} + {{Caster's Minions}}"
           },
-          "modifier": "Standard_Monster_AllDamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] ({[PassiveSkill04[4]]}) || RETURN",
@@ -209,7 +209,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}} + {{Caster's Minions}}"
           },
-          "modifier": "Standard_Monster_AllDamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",

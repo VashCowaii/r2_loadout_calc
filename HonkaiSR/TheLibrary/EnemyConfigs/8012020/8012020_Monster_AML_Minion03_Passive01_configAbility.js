@@ -12,13 +12,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_AML_Minion03_EffectController"
+      "modifier": "<a class=\"gModGreen\" id=\"537523857\">Monster_AML_Minion03_EffectController</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_AML_Minion03_Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__642618837\">Monster_AML_Minion03_Effect</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -27,7 +27,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_AML_Minion03_EffectController",
+      "for": "<a class=\"gModGreen\" id=\"mod__537523857\">Monster_AML_Minion03_EffectController</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -40,7 +40,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "StanceBreakState"
+                "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
               },
               "failed": [
                 {
@@ -49,7 +49,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_AML_Minion03_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"642618837\">Monster_AML_Minion03_Effect</a>"
                 }
               ]
             }
@@ -64,7 +64,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_AML_Minion03_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"642618837\">Monster_AML_Minion03_Effect</a>"
             }
           ]
         },
@@ -77,7 +77,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_AML_Minion03_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"642618837\">Monster_AML_Minion03_Effect</a>"
             }
           ]
         }

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Gepard_AttackConvert",
+      "modifier": "<a class=\"gModGreen\" id=\"1558938344\">M_Gepard_AttackConvert</a>",
       "valuePerStack": {
         "MDF_ConvertRatio": {
           "operator": "Variables[0] (0.35) || RETURN",
@@ -26,7 +26,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Gepard_AttackConvert",
+      "for": "<a class=\"gModGreen\" id=\"mod__1558938344\">M_Gepard_AttackConvert</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -55,7 +55,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Gepard_Passive02_AttackDeltaUp",
+              "modifier": "<a class=\"gModGreen\" id=\"567771648\">Gepard_Passive02_AttackDeltaUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (Avatar_Gepard_DefenceValue) || Variables[1] (Avatar_Gepard_DefenceConvert) || SUB || Variables[2] (MDF_ConvertRatio) || MUL || RETURN",
@@ -98,7 +98,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Gepard_Passive02_AttackDeltaUp",
+              "modifier": "<a class=\"gModGreen\" id=\"567771648\">Gepard_Passive02_AttackDeltaUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (Avatar_Gepard_DefenceValue) || Variables[1] (Avatar_Gepard_DefenceConvert) || SUB || Variables[2] (MDF_ConvertRatio) || MUL || RETURN",

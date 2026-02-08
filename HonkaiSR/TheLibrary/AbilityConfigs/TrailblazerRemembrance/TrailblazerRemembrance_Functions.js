@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "PlayerBoy_30_TryCreateServant",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1640803691\">PlayerBoy_30_TryCreateServant</a>",
       "parse": [
         {
           "name": "IF",

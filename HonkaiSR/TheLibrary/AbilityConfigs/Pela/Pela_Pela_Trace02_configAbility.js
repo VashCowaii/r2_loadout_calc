@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Pela_Tree02"
+      "modifier": "<a class=\"gModGreen\" id=\"-320466292\">M_Pela_Tree02</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Pela_Tree02",
+      "for": "<a class=\"gModGreen\" id=\"mod__-320466292\">M_Pela_Tree02</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -27,7 +27,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Pela_StatusProbability",
+              "modifier": "<a class=\"gModGreen\" id=\"1480389752\">Pela_StatusProbability</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.1) || RETURN",
@@ -60,7 +60,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Pela_StatusProbability",
+                  "modifier": "<a class=\"gModGreen\" id=\"1480389752\">Pela_StatusProbability</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.1) || RETURN",
@@ -94,7 +94,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "Pela_StatusProbability",
+              "modifier": "<a class=\"gModGreen\" id=\"1480389752\">Pela_StatusProbability</a>",
               "onlyRemoveOwnersInstance": true
             }
           ]

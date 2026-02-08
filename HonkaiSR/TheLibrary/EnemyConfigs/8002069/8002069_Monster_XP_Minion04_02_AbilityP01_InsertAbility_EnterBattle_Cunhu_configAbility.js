@@ -52,7 +52,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Cunhu_Caster"
+          "modifier": "<a class=\"gModGreen\" id=\"-1092716228\">Enemy_XP_Minion04_02_Cunhu_Caster</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -60,7 +60,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
           "counter": {
             "operator": "Variables[0] (UnusedUnderThisBase_135) || RETURN",
             "displayLines": "UnusedUnderThisBase_135",
@@ -92,7 +92,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Cunhu_Caster"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1092716228\">Enemy_XP_Minion04_02_Cunhu_Caster</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -100,7 +100,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                   "counter": {
                     "operator": "Variables[0] (UnusedUnderThisBase_135) || RETURN",
                     "displayLines": "UnusedUnderThisBase_135",

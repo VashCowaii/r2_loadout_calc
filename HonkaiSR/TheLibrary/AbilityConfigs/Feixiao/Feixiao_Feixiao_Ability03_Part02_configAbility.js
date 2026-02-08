@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Feixiao_Ultramode"
+      "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "M_Feixiao_UltraTarget"
+      "modifier": "<a class=\"gModGreen\" id=\"550698929\">M_Feixiao_UltraTarget</a>"
     },
     {
       "name": "IF",
@@ -63,7 +63,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Feixiao_Ultramode_StanceBreakPreshow"
+          "modifier": "<a class=\"gModGreen\" id=\"-1539174332\">Feixiao_Ultramode_StanceBreakPreshow</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -108,7 +108,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "M_Feixiao_UltraTarget_Visual_Stun"
+          "modifier": "<a class=\"gModGreen\" id=\"-1192517657\">M_Feixiao_UltraTarget_Visual_Stun</a>"
         }
       ],
       "failed": [
@@ -118,7 +118,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "M_Feixiao_UltraTarget_Visual_Confine"
+          "modifier": "<a class=\"gModGreen\" id=\"1169885953\">M_Feixiao_UltraTarget_Visual_Confine</a>"
         }
       ]
     },
@@ -128,7 +128,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "M_Feixiao_UltraTarget_Mark"
+      "modifier": "<a class=\"gModGreen\" id=\"176878499\">M_Feixiao_UltraTarget_Mark</a>"
     },
     {
       "name": "IF",
@@ -160,7 +160,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "M_Feixiao_UltraTarget_FadeInFlag"
+      "modifier": "<a class=\"gModGreen\" id=\"385618061\">M_Feixiao_UltraTarget_FadeInFlag</a>"
     },
     {
       "name": "Trigger: Ability End",
@@ -174,7 +174,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Feixiao_Ability03_ForceStance"
+      "modifier": "<a class=\"gModGreen\" id=\"-233737306\">M_Feixiao_Ability03_ForceStance</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -182,17 +182,17 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Feixiao_Ability03_StanceAddedPreshow"
+      "modifier": "<a class=\"gModGreen\" id=\"922102305\">M_Feixiao_Ability03_StanceAddedPreshow</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_BreakableElite_Mark"
+      "for": "<a class=\"gModGreen\" id=\"mod__802330220\">M_Feixiao_BreakableElite_Mark</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_BreakableElite_Listener",
+      "for": "<a class=\"gModGreen\" id=\"mod__1999108381\">M_Feixiao_BreakableElite_Listener</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -202,7 +202,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_RefreshUltraFrame"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1135796130\">Feixiao_RefreshUltraFrame</a>"
             }
           ]
         },
@@ -211,7 +211,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_RefreshUltraFrame"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1135796130\">Feixiao_RefreshUltraFrame</a>"
             }
           ]
         },
@@ -220,7 +220,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_RefreshUltraFrame"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1135796130\">Feixiao_RefreshUltraFrame</a>"
             }
           ]
         },
@@ -229,7 +229,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_RefreshUltraFrame"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1135796130\">Feixiao_RefreshUltraFrame</a>"
             }
           ]
         },
@@ -238,7 +238,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_RefreshUltraFrame"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1135796130\">Feixiao_RefreshUltraFrame</a>"
             }
           ]
         }
@@ -246,7 +246,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_RefreshUltraFrame",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1135796130\">Feixiao_RefreshUltraFrame</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
@@ -324,7 +324,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Feixiao_BreakableElite_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"802330220\">M_Feixiao_BreakableElite_Mark</a>"
                 }
               ],
               "failed": [
@@ -334,7 +334,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Feixiao_BreakableElite_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"802330220\">M_Feixiao_BreakableElite_Mark</a>"
                 }
               ]
             }
@@ -344,7 +344,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_BreakableEliteMarker",
+      "for": "<a class=\"gModGreen\" id=\"mod__224032294\">M_Feixiao_BreakableEliteMarker</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -380,7 +380,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "M_Feixiao_BreakableElite_Listener",
+                  "modifier": "<a class=\"gModGreen\" id=\"1999108381\">M_Feixiao_BreakableElite_Listener</a>",
                   "valuePerStack": {
                     "MDF_BaseStance": {
                       "operator": "Variables[0] (ST Toughness Value) || RETURN",
@@ -423,7 +423,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "M_Feixiao_BreakableElite_Listener",
+                  "modifier": "<a class=\"gModGreen\" id=\"1999108381\">M_Feixiao_BreakableElite_Listener</a>",
                   "valuePerStack": {
                     "MDF_BaseStance": {
                       "operator": "Variables[0] (ST Toughness Value) || RETURN",
@@ -446,7 +446,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "M_Feixiao_BreakableElite_Mark"
+                "modifier": "<a class=\"gModGreen\" id=\"802330220\">M_Feixiao_BreakableElite_Mark</a>"
               }
             }
           ]
@@ -458,7 +458,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "M_Feixiao_BreakableElite_Mark"
+                "modifier": "<a class=\"gModGreen\" id=\"802330220\">M_Feixiao_BreakableElite_Mark</a>"
               },
               "passed": [
                 {
@@ -475,7 +475,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_Feixiao_BreakableElite_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"802330220\">M_Feixiao_BreakableElite_Mark</a>"
                     },
                     "invertCondition": true
                   }
@@ -488,7 +488,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_Ability03_StanceAddedPreshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__922102305\">M_Feixiao_Ability03_StanceAddedPreshow</a>",
       "stackData": [],
       "latentQueue": [
         "First_Break_Effect"
@@ -506,7 +506,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Feixiao_Ultramode",
+              "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>",
               "invertCondition": true
             },
             {
@@ -532,7 +532,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_Ability03_ForceStance",
+      "for": "<a class=\"gModGreen\" id=\"mod__-233737306\">M_Feixiao_Ability03_ForceStance</a>",
       "stackData": [],
       "latentQueue": [
         "First_Break_Effect"
@@ -547,7 +547,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Feixiao_Ultramode",
+          "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>",
           "invertCondition": true
         },
         "toughnessForcedReductionPreview": 1,
@@ -556,7 +556,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_UltraTarget_Mark",
+      "for": "<a class=\"gModGreen\" id=\"mod__176878499\">M_Feixiao_UltraTarget_Mark</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -573,7 +573,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "M_Feixiao_UltraTarget_FadeInFlag"
+                "modifier": "<a class=\"gModGreen\" id=\"385618061\">M_Feixiao_UltraTarget_FadeInFlag</a>"
               },
               "passed": [
                 {
@@ -587,7 +587,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "M_Feixiao_UltraTarget_CutFlag"
+                "modifier": "<a class=\"gModGreen\" id=\"-1145384524\">M_Feixiao_UltraTarget_CutFlag</a>"
               },
               "passed": [
                 {
@@ -601,7 +601,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "M_Feixiao_UltraTarget_FinalHitFlag"
+                "modifier": "<a class=\"gModGreen\" id=\"965737321\">M_Feixiao_UltraTarget_FinalHitFlag</a>"
               },
               "passed": [
                 {
@@ -620,12 +620,12 @@ const configAbility = {
       ],
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "M_Feixiao_UltraTarget"
+        "dependancyName": "<a class=\"gModGreen\" id=\"550698929\">M_Feixiao_UltraTarget</a>"
       }
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_UltraTarget",
+      "for": "<a class=\"gModGreen\" id=\"mod__550698929\">M_Feixiao_UltraTarget</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -636,7 +636,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "M_Feixiao_UltraTarget_Visual_Confine"
+              "modifier": "<a class=\"gModGreen\" id=\"1169885953\">M_Feixiao_UltraTarget_Visual_Confine</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -644,7 +644,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "M_Feixiao_UltraTarget_Visual_Stun"
+              "modifier": "<a class=\"gModGreen\" id=\"-1192517657\">M_Feixiao_UltraTarget_Visual_Stun</a>"
             }
           ]
         },
@@ -662,7 +662,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Feixiao_Ultramode",
+                "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>",
                 "invertCondition": true
               },
               "passed": [

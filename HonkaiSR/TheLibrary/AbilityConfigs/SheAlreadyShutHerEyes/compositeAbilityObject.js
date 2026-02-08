@@ -39,13 +39,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23011_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"80805896\">LC_23011_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23011_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__274994789\">LC_23011_Sub2</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -76,7 +76,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23011_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__80805896\">LC_23011_Main</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -120,7 +120,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "LC_23011_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"274994789\">LC_23011_Sub2</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",

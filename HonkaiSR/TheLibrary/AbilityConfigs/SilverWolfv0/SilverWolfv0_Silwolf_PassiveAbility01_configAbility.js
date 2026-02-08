@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_SilverWolf_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"1061621734\">M_SilverWolf_Passive</a>"
     },
     {
       "name": "IF",
@@ -69,7 +69,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Silwolf_Eidolon1"
+          "modifier": "<a class=\"gModGreen\" id=\"1991784090\">Silwolf_Eidolon1</a>"
         }
       ]
     },
@@ -86,7 +86,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Silwolf_Eidolon4"
+          "modifier": "<a class=\"gModGreen\" id=\"1941451233\">Silwolf_Eidolon4</a>"
         }
       ]
     }
@@ -94,7 +94,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_Eidolon4",
+      "for": "<a class=\"gModGreen\" id=\"mod__1941451233\">Silwolf_Eidolon4</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -125,7 +125,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_Eidolon1",
+      "for": "<a class=\"gModGreen\" id=\"mod__1991784090\">Silwolf_Eidolon1</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -156,7 +156,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_SilverWolf_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__1061621734\">M_SilverWolf_Passive</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

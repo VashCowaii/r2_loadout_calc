@@ -7,7 +7,7 @@ const configAbility = {
     {
       "name": "Define Custom Variable with Modifier Values",
       "variableName": "CurEnhance",
-      "modifierName": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
+      "modifierName": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
       "multiplier": 1
     },
     {
@@ -82,7 +82,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Topaz_BE_CriticalChance"
+      "modifier": "<a class=\"gModGreen\" id=\"1213282515\">Topaz_BE_CriticalChance</a>"
     },
     {
       "name": "Looped Event",
@@ -218,7 +218,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Topaz_Bonus"
+        "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
       },
       "passed": [
         {
@@ -243,13 +243,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_Bonus"
+          "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
         }
       ]
     },
     {
       "name": "Define Modifier Variable",
-      "modifierName": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
+      "modifierName": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
       "function": "Add"
     },
     {
@@ -281,7 +281,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Numby}}"
           },
-          "modifier": "Topaz_BE_UltraEnhance_ShowText",
+          "modifier": "<a class=\"gModGreen\" id=\"1361568506\">Topaz_BE_UltraEnhance_ShowText</a>",
           "valuePerStack": {
             "ATKCount": {
               "operator": "Variables[0] (CurEnhance) || RETURN",
@@ -306,7 +306,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Numby}}"
           },
-          "modifier": "Topaz_BE_UltraEnhance_ShowText"
+          "modifier": "<a class=\"gModGreen\" id=\"1361568506\">Topaz_BE_UltraEnhance_ShowText</a>"
         }
       ]
     },
@@ -316,7 +316,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Topaz_BE_CriticalChance"
+      "modifier": "<a class=\"gModGreen\" id=\"1213282515\">Topaz_BE_CriticalChance</a>"
     }
   ],
   "references": []

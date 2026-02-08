@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Advanced_Kafka_Tree02"
+      "modifier": "<a class=\"gModGreen\" id=\"2069092104\">Advanced_Kafka_Tree02</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Kafka_Tree02",
+      "for": "<a class=\"gModGreen\" id=\"mod__2069092104\">Advanced_Kafka_Tree02</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",

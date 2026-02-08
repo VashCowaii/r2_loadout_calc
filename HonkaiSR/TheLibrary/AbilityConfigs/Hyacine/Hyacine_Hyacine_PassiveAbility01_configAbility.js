@@ -41,12 +41,12 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Hyacine_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-151777328\">Hyacine_Passive</a>"
     },
     {
       "name": "Define Custom Variable with Modifier Values",
       "variableName": "MDF_Energy_Count",
-      "modifierName": "Hyacine_IronWater",
+      "modifierName": "<a class=\"gModGreen\" id=\"1761632932\">Hyacine_IronWater</a>",
       "multiplier": 1
     },
     {
@@ -62,7 +62,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Hyacine_PointB1"
+          "modifier": "<a class=\"gModGreen\" id=\"981474753\">Hyacine_PointB1</a>"
         }
       ]
     },
@@ -79,7 +79,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Hyacine_PointB2",
+          "modifier": "<a class=\"gModGreen\" id=\"931141896\">Hyacine_PointB2</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.5) || RETURN",
@@ -97,7 +97,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Hyacine_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-151777328\">Hyacine_Passive</a>",
       "execute": [
         {
           "eventTrigger": "Heal Target Start [Owner]",
@@ -108,7 +108,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "Hyacine_Passive_Effect[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1132518124\">Hyacine_Passive_Effect</a>[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -228,7 +228,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "Memosprite_HyacineServant_Passive_Mark[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"492819159\">Memosprite_HyacineServant_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]",
               "casterAssign": "TargetSelf"
             }
           ]
@@ -249,7 +249,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Hyacine_PointB3"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1888501948\">Hyacine_PointB3</a>"
                 }
               ]
             },
@@ -266,7 +266,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Hyacine_Eidolon2_Listen"
+                  "modifier": "<a class=\"gModGreen\" id=\"290730475\">Hyacine_Eidolon2_Listen</a>"
                 }
               ]
             }
@@ -304,7 +304,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Hyacine_PointB3"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1888501948\">Hyacine_PointB3</a>"
                 }
               ]
             }
@@ -364,7 +364,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Hyacine_PointB3"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1888501948\">Hyacine_PointB3</a>"
                     }
                   ]
                 }
@@ -392,7 +392,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Hyacine_PointB3"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1888501948\">Hyacine_PointB3</a>"
                     }
                   ]
                 }
@@ -420,7 +420,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Hyacine_PointB3"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1888501948\">Hyacine_PointB3</a>"
                     }
                   ]
                 }
@@ -448,7 +448,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Hyacine_PointB3"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1888501948\">Hyacine_PointB3</a>"
                     }
                   ]
                 }

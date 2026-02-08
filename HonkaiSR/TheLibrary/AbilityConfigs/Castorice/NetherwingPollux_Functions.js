@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_CastoriceServant_RefreshActionBar",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1179778456\">Servant_CastoriceServant_RefreshActionBar</a>",
       "parse": [
         {
           "name": "IF",
@@ -41,7 +41,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Memosprite_CastoriceServant_LifeTime"
+                "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>"
               }
             ]
           },
@@ -79,7 +79,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_InsideExplode[<span class=\"descriptionNumberColor\">Back to the Black</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"2133723962\">Memosprite_CastoriceServant_InsideExplode</a>[<span class=\"descriptionNumberColor\">Back to the Black</span>]"
             }
           ],
           "failed": [
@@ -100,7 +100,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_InsideExplode[<span class=\"descriptionNumberColor\">Back to the Black</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"2133723962\">Memosprite_CastoriceServant_InsideExplode</a>[<span class=\"descriptionNumberColor\">Back to the Black</span>]"
             }
           ]
         }
@@ -108,7 +108,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_CastoriceServant_SetDamageRatio",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1405272466\">Servant_CastoriceServant_SetDamageRatio</a>",
       "parse": [
         {
           "name": "IF",
@@ -235,7 +235,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_CastoriceServant_GetMaxHP",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1714839092\">Servant_CastoriceServant_GetMaxHP</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -268,7 +268,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_CastoriceServant_BP_OneMore_Clean",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-32719272\">Servant_CastoriceServant_BP_OneMore_Clean</a>",
       "parse": [
         {
           "name": "Define Custom Variable",
@@ -281,7 +281,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_Flag01"
+          "modifier": "<a class=\"gModGreen\" id=\"847472600\">Memosprite_CastoriceServant_Flag01</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -289,7 +289,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_BPCost_1"
+          "modifier": "<a class=\"gModGreen\" id=\"164818074\">Memosprite_CastoriceServant_BPCost_1</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -297,7 +297,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_BPCost_2"
+          "modifier": "<a class=\"gModGreen\" id=\"148040455\">Memosprite_CastoriceServant_BPCost_2</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -305,7 +305,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_BPCost_3"
+          "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -313,13 +313,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_BP_Explode"
+          "modifier": "<a class=\"gModGreen\" id=\"-256072391\">Memosprite_CastoriceServant_BP_Explode</a>"
         }
       ]
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_CastoriceServant_BP_OneMore_AbilityChange",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1235861704\">Servant_CastoriceServant_BP_OneMore_AbilityChange</a>",
       "parse": [
         {
           "name": "IF",
@@ -367,7 +367,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Memosprite_CastoriceServant_LifeTime",
+            "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
             "invertCondition": true
           },
           "passed": [
@@ -377,7 +377,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Disable"
+              "modifier": "<a class=\"gModGreen\" id=\"1341939671\">Memosprite_CastoriceServant_Disable</a>"
             }
           ]
         },
@@ -394,7 +394,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_Flag01"
+          "modifier": "<a class=\"gModGreen\" id=\"847472600\">Memosprite_CastoriceServant_Flag01</a>"
         },
         {
           "name": "IF",
@@ -404,7 +404,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Memosprite_CastoriceServant_BP_Explode"
+            "modifier": "<a class=\"gModGreen\" id=\"-256072391\">Memosprite_CastoriceServant_BP_Explode</a>"
           },
           "failed": [
             {
@@ -433,7 +433,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_BPCost_1"
+                  "modifier": "<a class=\"gModGreen\" id=\"164818074\">Memosprite_CastoriceServant_BPCost_1</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -441,7 +441,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_BPCost_2"
+                  "modifier": "<a class=\"gModGreen\" id=\"148040455\">Memosprite_CastoriceServant_BPCost_2</a>"
                 },
                 {
                   "name": "IF",
@@ -458,7 +458,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_CastoriceServant_BPCost_1"
+                      "modifier": "<a class=\"gModGreen\" id=\"164818074\">Memosprite_CastoriceServant_BPCost_1</a>"
                     }
                   ]
                 },
@@ -477,7 +477,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_CastoriceServant_BPCost_2"
+                      "modifier": "<a class=\"gModGreen\" id=\"148040455\">Memosprite_CastoriceServant_BPCost_2</a>"
                     }
                   ]
                 },
@@ -487,7 +487,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_BPCost_3"
+                  "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
                 }
               ],
               "failed": [
@@ -506,7 +506,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_CastoriceServant_BPCost_1"
+                      "modifier": "<a class=\"gModGreen\" id=\"164818074\">Memosprite_CastoriceServant_BPCost_1</a>"
                     }
                   ]
                 },
@@ -525,7 +525,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_CastoriceServant_BPCost_2"
+                      "modifier": "<a class=\"gModGreen\" id=\"148040455\">Memosprite_CastoriceServant_BPCost_2</a>"
                     }
                   ]
                 }
@@ -552,7 +552,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Memosprite_CastoriceServant_TiggerKiller",
+                "modifier": "<a class=\"gModGreen\" id=\"156488588\">Memosprite_CastoriceServant_TiggerKiller</a>",
                 "invertCondition": true
               }
             ]
@@ -571,7 +571,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_Castorice_SpeedRatio[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -615,7 +615,7 @@ const configAbility = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_CastoriceServant_AnimEvents"
+              "functionName": "<a class=\"gTempYellow\" id=\"807803738\">Servant_CastoriceServant_AnimEvents</a>"
             },
             "Trigger: Attack End",
             {
@@ -631,7 +631,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+                  "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
                 }
               ]
             },
@@ -650,7 +650,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Flag01"
+              "modifier": "<a class=\"gModGreen\" id=\"847472600\">Memosprite_CastoriceServant_Flag01</a>"
             }
           ],
           "failed": [
@@ -668,7 +668,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_CastoriceServant_FlyToAbility23",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1407069104\">Servant_CastoriceServant_FlyToAbility23</a>",
       "parse": [
         {
           "name": "IF",
@@ -712,13 +712,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_BPCost_3"
+          "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
         }
       ]
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_CastoriceServant_OnPhase1Change",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-593669759\">Servant_CastoriceServant_OnPhase1Change</a>",
       "parse": [
         {
           "name": "IF",
@@ -735,7 +735,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_BPCost_2"
+              "modifier": "<a class=\"gModGreen\" id=\"148040455\">Memosprite_CastoriceServant_BPCost_2</a>"
             },
             {
               "name": "Set Netherwing Skill Phase",
@@ -782,7 +782,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_BPCost_2"
+                  "modifier": "<a class=\"gModGreen\" id=\"148040455\">Memosprite_CastoriceServant_BPCost_2</a>"
                 },
                 {
                   "name": "Set Netherwing Skill Phase",
@@ -841,7 +841,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_CastoriceServant_BPCost_1"
+                      "modifier": "<a class=\"gModGreen\" id=\"164818074\">Memosprite_CastoriceServant_BPCost_1</a>"
                     },
                     {
                       "name": "IF",
@@ -906,7 +906,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_CastoriceServant_AnimEvents",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__807803738\">Servant_CastoriceServant_AnimEvents</a>",
       "parse": [
         {
           "name": "Force Auto-Battle on Target",
@@ -948,7 +948,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_BPCost_3"
+          "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
         }
       ]
     }

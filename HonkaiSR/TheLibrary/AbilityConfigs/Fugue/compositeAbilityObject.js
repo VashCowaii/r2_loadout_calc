@@ -36,13 +36,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Fugue_TechniqueUsage_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1034016164\">Fugue_TechniqueUsage_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Fugue_TechniqueUsage_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1034016164\">Fugue_TechniqueUsage_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -58,7 +58,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Level Entity}}"
                         },
-                        "modifier": "StageAbility_MazeStandard_EnterBattle_Monster_Modifier",
+                        "modifier": "<a class=\"gModGreen\" id=\"1904238030\">StageAbility_MazeStandard_EnterBattle_Monster_Modifier</a>",
                         "invertCondition": true
                       },
                       {
@@ -88,7 +88,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "Fugue_DefenceDown[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-375769760\">Fugue_DefenceDown</a>[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -156,7 +156,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Fugue_PassiveAbility_OnListenBreakModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-825933762\">Fugue_PassiveAbility_OnListenBreakModifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -164,7 +164,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Fugue_StancePreview"
+          "modifier": "<a class=\"gModGreen\" id=\"873674204\">Fugue_StancePreview</a>"
         },
         {
           "name": "IF",
@@ -179,7 +179,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Fugue_PointB1_Listen"
+              "modifier": "<a class=\"gModGreen\" id=\"1113685163\">Fugue_PointB1_Listen</a>"
             }
           ]
         },
@@ -196,7 +196,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Fugue_PointB2_BpBack"
+              "modifier": "<a class=\"gModGreen\" id=\"-880987638\">Fugue_PointB2_BpBack</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -204,7 +204,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Fugue_PointB2_Sub[<span class=\"descriptionNumberColor\">Sylvan Enigma</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1748420043\">Fugue_PointB2_Sub</a>[<span class=\"descriptionNumberColor\">Sylvan Enigma</span>]",
               "valuePerStack": {
                 "MDF_PropertyRatio_BreakDamageSelf": {
                   "operator": "Variables[0] (0.3) || RETURN",
@@ -231,7 +231,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Fugue_PointB3_Listen"
+              "modifier": "<a class=\"gModGreen\" id=\"32106889\">Fugue_PointB3_Listen</a>"
             }
           ]
         },
@@ -248,7 +248,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Fugue_Eidolon2_Listen"
+              "modifier": "<a class=\"gModGreen\" id=\"-18674978\">Fugue_Eidolon2_Listen</a>"
             }
           ]
         },
@@ -265,7 +265,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Fugue_Eidolon2_PreShow"
+              "modifier": "<a class=\"gModGreen\" id=\"915939939\">Fugue_Eidolon2_PreShow</a>"
             }
           ]
         },
@@ -282,7 +282,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Fugue_Eidolon6[<span class=\"descriptionNumberColor\">Clairvoyance of Boom and Doom</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1045772852\">Fugue_Eidolon6</a>[<span class=\"descriptionNumberColor\">Clairvoyance of Boom and Doom</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.5) || RETURN",
@@ -300,7 +300,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Fugue_Eidolon6[<span class=\"descriptionNumberColor\">Clairvoyance of Boom and Doom</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1045772852\">Fugue_Eidolon6</a>[<span class=\"descriptionNumberColor\">Clairvoyance of Boom and Doom</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -335,7 +335,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_Eidolon2_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__-18674978\">Fugue_Eidolon2_Listen</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -387,7 +387,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_PointB3_Sub03",
+          "for": "<a class=\"gModGreen\" id=\"mod__281541797\">Fugue_PointB3_Sub03</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -421,7 +421,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}} - {{Caster}}"
                       },
-                      "modifier": "Fugue_PointB3_Sub02",
+                      "modifier": "<a class=\"gModGreen\" id=\"264764178\">Fugue_PointB3_Sub02</a>",
                       "stackLimit": {
                         "operator": "Variables[0] (MDF_Sub3_MaxLayer) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_Sub3_MaxLayer + 1)",
@@ -450,7 +450,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}} - {{Caster}}"
                       },
-                      "modifier": "Fugue_PointB3_Sub[<span class=\"descriptionNumberColor\">Phecda Primordia</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"490649964\">Fugue_PointB3_Sub</a>[<span class=\"descriptionNumberColor\">Phecda Primordia</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Sub3_LifeTime) || RETURN",
                         "displayLines": "MDF_Sub3_LifeTime",
@@ -487,7 +487,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}} - {{Caster}}"
                       },
-                      "modifier": "Fugue_PointB3_Sub02",
+                      "modifier": "<a class=\"gModGreen\" id=\"264764178\">Fugue_PointB3_Sub02</a>",
                       "stackLimit": {
                         "operator": "Variables[0] (MDF_Sub3_MaxLayer) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_Sub3_MaxLayer + 1)",
@@ -516,7 +516,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}} - {{Caster}}"
                       },
-                      "modifier": "Fugue_PointB3_Sub[<span class=\"descriptionNumberColor\">Phecda Primordia</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"490649964\">Fugue_PointB3_Sub</a>[<span class=\"descriptionNumberColor\">Phecda Primordia</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Sub3_LifeTime) || RETURN",
                         "displayLines": "MDF_Sub3_LifeTime",
@@ -553,7 +553,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_PointB3_Sub02",
+          "for": "<a class=\"gModGreen\" id=\"mod__264764178\">Fugue_PointB3_Sub02</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -567,7 +567,7 @@ const compositeAbilityObject = {
                   },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
-                  "modifierName": "Fugue_PointB3_Sub02",
+                  "modifierName": "<a class=\"gModGreen\" id=\"264764178\">Fugue_PointB3_Sub02</a>",
                   "multiplier": 1
                 },
                 {
@@ -610,7 +610,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Fugue_PointB3_Sub[<span class=\"descriptionNumberColor\">Phecda Primordia</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"490649964\">Fugue_PointB3_Sub</a>[<span class=\"descriptionNumberColor\">Phecda Primordia</span>]"
                   },
                   "passed": [
                     {
@@ -650,7 +650,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Fugue_PointB3_Sub02",
+                          "modifier": "<a class=\"gModGreen\" id=\"264764178\">Fugue_PointB3_Sub02</a>",
                           "addStacksPerTrigger": {
                             "operator": "Constants[0] (1) || Variables[0] (Layer_Count) || SUB || RETURN",
                             "displayLines": "(1 - Layer_Count)",
@@ -676,7 +676,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_PointB3_Sub[<span class=\"descriptionNumberColor\">Phecda Primordia</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__490649964\">Fugue_PointB3_Sub</a>[<span class=\"descriptionNumberColor\">Phecda Primordia</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -694,7 +694,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_PointB3_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__32106889\">Fugue_PointB3_Listen</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -718,7 +718,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Fugue_PointB3_Sub02",
+                        "modifier": "<a class=\"gModGreen\" id=\"264764178\">Fugue_PointB3_Sub02</a>",
                         "invertCondition": true
                       }
                     ]
@@ -730,7 +730,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Fugue_PointB3_Sub02",
+                      "modifier": "<a class=\"gModGreen\" id=\"264764178\">Fugue_PointB3_Sub02</a>",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(2 + 1)",
@@ -766,7 +766,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Fugue_PointB3_Sub03",
+                      "modifier": "<a class=\"gModGreen\" id=\"281541797\">Fugue_PointB3_Sub03</a>",
                       "valuePerStack": {
                         "MDF_Sub3_MaxLayer": {
                           "operator": "Variables[0] (2) || RETURN",
@@ -830,7 +830,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Fugue_PointB3_Sub02",
+                    "modifier": "<a class=\"gModGreen\" id=\"264764178\">Fugue_PointB3_Sub02</a>",
                     "invertCondition": true
                   },
                   "ifTargetFound": [
@@ -840,7 +840,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Fugue_PointB3_Sub02",
+                      "modifier": "<a class=\"gModGreen\" id=\"264764178\">Fugue_PointB3_Sub02</a>",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(2 + 1)",
@@ -865,7 +865,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}"
                   },
-                  "modifier": "Fugue_PointB3_Sub03",
+                  "modifier": "<a class=\"gModGreen\" id=\"281541797\">Fugue_PointB3_Sub03</a>",
                   "valuePerStack": {
                     "MDF_Sub3_MaxLayer": {
                       "operator": "Variables[0] (2) || RETURN",
@@ -919,7 +919,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_PointB2_Sub[<span class=\"descriptionNumberColor\">Sylvan Enigma</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1748420043\">Fugue_PointB2_Sub</a>[<span class=\"descriptionNumberColor\">Sylvan Enigma</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -955,7 +955,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_PointB2_BpBack",
+          "for": "<a class=\"gModGreen\" id=\"mod__-880987638\">Fugue_PointB2_BpBack</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -990,7 +990,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_PointB1_Bonus_Preshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1523669098\">Fugue_PointB1_Bonus_Preshow</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -1027,7 +1027,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_PointB1_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__1113685163\">Fugue_PointB1_Listen</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1038,7 +1038,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Fugue_PointB1_Bonus_Preshow",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1523669098\">Fugue_PointB1_Bonus_Preshow</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue2": {
                       "operator": "Variables[0] (0.15) || RETURN",
@@ -1072,7 +1072,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "Fugue_PointB1_Bonus_Preshow",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1523669098\">Fugue_PointB1_Bonus_Preshow</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue2": {
                           "operator": "Variables[0] (0.15) || RETURN",
@@ -1121,7 +1121,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_PassiveAbility_OnListenBreakModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-825933762\">Fugue_PassiveAbility_OnListenBreakModifier</a>",
           "stackData": [],
           "latentQueue": [],
           "subModList": [
@@ -1131,7 +1131,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Fugue_PassiveAbility_ListenBreakDamage",
+              "modifier": "<a class=\"gModGreen\" id=\"2001305717\">Fugue_PassiveAbility_ListenBreakDamage</a>",
               "aliveOnly": "False",
               "haloStatus": true,
               "valuePerStack": {
@@ -1151,7 +1151,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "Fugue_RedStance[<span class=\"descriptionNumberColor\">Cloudflame Luster</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1774454693\">Fugue_RedStance</a>[<span class=\"descriptionNumberColor\">Cloudflame Luster</span>]",
               "aliveOnly": "False",
               "haloStatus": true,
               "valuePerStack": {
@@ -1180,7 +1180,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Fugue_PassiveAbility_ElementDamage",
+              "modifier": "<a class=\"gModGreen\" id=\"-74108309\">Fugue_PassiveAbility_ElementDamage</a>",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_SuperBreakDamagePercentage": 0
@@ -1202,7 +1202,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Fugue_Ability03_WeakType_BUFF"
+          "modifier": "<a class=\"gModGreen\" id=\"-1376045581\">Fugue_Ability03_WeakType_BUFF</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -1366,7 +1366,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Fugue_Ability03_WeakType_BUFF"
+          "modifier": "<a class=\"gModGreen\" id=\"-1376045581\">Fugue_Ability03_WeakType_BUFF</a>"
         },
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
@@ -1423,7 +1423,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Fugue_BPAbilityBonusListen[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1431,7 +1431,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Fugue_BPAbility[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"647019371\">Fugue_BPAbility</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1439,7 +1439,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Fugue_BPAbility_Eidolon1[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1132900651\">Fugue_BPAbility_Eidolon1</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1447,7 +1447,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Fugue_BPAbility_Eidolon4[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -1464,7 +1464,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Fugue_BPAbilityBonusListen[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -1513,7 +1513,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Fugue_Eidolon6_Listen"
+              "modifier": "<a class=\"gModGreen\" id=\"696396442\">Fugue_Eidolon6_Listen</a>"
             }
           ],
           "failed": [
@@ -1530,7 +1530,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Fugue_BPAbility_Eidolon4[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
                   "valuePerStack": {
                     "MDF_BreakDamageAdd": {
                       "operator": "Variables[0] (0.3) || RETURN",
@@ -1605,7 +1605,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "Fugue_BPAbility_Eidolon1[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1132900651\">Fugue_BPAbility_Eidolon1</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
                       "valuePerStack": {
                         "MDF_BreakDamageAdd": {
                           "operator": "Variables[0] (0.3) || RETURN",
@@ -1665,7 +1665,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "Fugue_BPAbility[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"647019371\">Fugue_BPAbility</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
                       "valuePerStack": {
                         "MDF_BreakDamageAdd": {
                           "operator": "Variables[0] (0.3) || RETURN",
@@ -1730,7 +1730,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Fugue_BPAbility_Eidolon4[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "Unknow",
           "modifierFlags": [
@@ -1755,7 +1755,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Fugue_BPAbilityBonusListen[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
                     }
                   ]
                 }
@@ -1863,7 +1863,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_BPAbility_Eidolon1[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1132900651\">Fugue_BPAbility_Eidolon1</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "Unknow",
           "modifierFlags": [
@@ -1881,7 +1881,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Fugue_BPAbilityBonusListen[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
                 }
               ]
             },
@@ -1955,7 +1955,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_BPAbility[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__647019371\">Fugue_BPAbility</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "Unknow",
           "modifierFlags": [
@@ -1973,7 +1973,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Fugue_BPAbilityBonusListen[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
                 }
               ]
             },
@@ -2030,7 +2030,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_BPAbilityBonusListen[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
             {
@@ -2051,7 +2051,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Fugue_BPAbility[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"647019371\">Fugue_BPAbility</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2059,7 +2059,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Fugue_BPAbility_Eidolon1[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1132900651\">Fugue_BPAbility_Eidolon1</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2067,7 +2067,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Fugue_BPAbility_Eidolon4[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2075,7 +2075,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Fugue_Eidolon6_Listen"
+                  "modifier": "<a class=\"gModGreen\" id=\"696396442\">Fugue_Eidolon6_Listen</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2109,7 +2109,7 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "LifeTime",
                   "variableName": "Skill02_EnergyBarCount",
-                  "modifierName": "Fugue_BPAbilityBonusListen[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
                   "multiplier": 1
                 },
                 {
@@ -2395,7 +2395,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Fugue_PassiveAbility_ElementDamage",
+          "for": "<a class=\"gModGreen\" id=\"mod__-74108309\">Fugue_PassiveAbility_ElementDamage</a>",
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -2406,7 +2406,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "DealSuperBreakDamage_DamagePerformance",
+                  "functionName": "<a class=\"gTempYellow\" id=\"2132906314\">DealSuperBreakDamage_DamagePerformance</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Attack Targets of Modifier Holder}}"
@@ -2424,7 +2424,7 @@ const compositeAbilityObject = {
                   "damageSequence": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "PursuedDamage_PerformanceDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
@@ -2475,7 +2475,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_PassiveAbility_ListenBreakDamage",
+          "for": "<a class=\"gModGreen\" id=\"mod__2001305717\">Fugue_PassiveAbility_ListenBreakDamage</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead",
@@ -2491,7 +2491,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Fugue_PassiveAbility_ElementDamage",
+                  "modifier": "<a class=\"gModGreen\" id=\"-74108309\">Fugue_PassiveAbility_ElementDamage</a>",
                   "valuePerStack": {
                     "MDF_SuperBreakDamagePercentage": {
                       "operator": "Variables[0] (MDF_PassiveDamage2) || RETURN",
@@ -2515,7 +2515,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_Ability03_WeakType_BUFF",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1376045581\">Fugue_Ability03_WeakType_BUFF</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ForceStanceDamage"
@@ -2548,7 +2548,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_StancePreview",
+          "for": "<a class=\"gModGreen\" id=\"mod__873674204\">Fugue_StancePreview</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -2568,7 +2568,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_DefenceDown[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-375769760\">Fugue_DefenceDown</a>[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_DefenceDown"
@@ -2601,7 +2601,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_Eidolon2_PreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__915939939\">Fugue_Eidolon2_PreShow</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -2629,7 +2629,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_Eidolon6_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__696396442\">Fugue_Eidolon6_Listen</a>",
           "stackData": [],
           "latentQueue": [],
           "subModList": [
@@ -2639,7 +2639,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Fugue_BPAbility_Eidolon4[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
               "aliveOnly": "True",
               "haloStatus": true,
               "valuePerStack": {
@@ -2705,7 +2705,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fugue_RedStance[<span class=\"descriptionNumberColor\">Cloudflame Luster</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1774454693\">Fugue_RedStance</a>[<span class=\"descriptionNumberColor\">Cloudflame Luster</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -2775,7 +2775,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Fugue_BPAbility_Eidolon4[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -2783,7 +2783,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Fugue_BPAbility_Eidolon1[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1132900651\">Fugue_BPAbility_Eidolon1</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -2791,7 +2791,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Fugue_BPAbility[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"647019371\">Fugue_BPAbility</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
                       }
                     ]
                   },
@@ -2802,7 +2802,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Fugue_DefenceDown[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-375769760\">Fugue_DefenceDown</a>[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",

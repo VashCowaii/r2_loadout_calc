@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Mar_7th_10_TechniqueInLevel"
+      "modifier": "<a class=\"gModGreen\" id=\"272360968\">Mar_7th_10_TechniqueInLevel</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_TechniqueInLevel",
+      "for": "<a class=\"gModGreen\" id=\"mod__272360968\">Mar_7th_10_TechniqueInLevel</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

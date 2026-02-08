@@ -6,7 +6,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "Cyrene_ChargeEnergy",
+      "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
       "variables": {
         "parameter[0]_AddValue": {
           "operator": "Variables[0] (3) || RETURN",
@@ -24,7 +24,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Cyrene_Ability02_Bonus_Main[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1356425425\">Cyrene_Ability02_Bonus_Main</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
       "duration": {
         "operator": "Variables[0] (FieldLifeTime) || RETURN",
         "displayLines": "FieldLifeTime",

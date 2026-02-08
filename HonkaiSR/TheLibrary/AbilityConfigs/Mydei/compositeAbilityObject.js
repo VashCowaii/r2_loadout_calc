@@ -39,13 +39,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Mydeimos_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"705127850\">StageAbility_Maze_Mydeimos_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Mydeimos_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__705127850\">StageAbility_Maze_Mydeimos_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -97,7 +97,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Standard_CTRL_Taunt[<span class=\"descriptionNumberColor\">Taunt</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1488319040\">Standard_CTRL_Taunt</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -419,7 +419,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Mydeimos_UltraTarget[<span class=\"descriptionNumberColor\">Throne of Bones</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"2061988688\">Mydeimos_UltraTarget</a>[<span class=\"descriptionNumberColor\">Throne of Bones</span>]"
         },
         {
           "name": "WAIT FOR",
@@ -575,7 +575,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifierName": "Mydeimos_Trace01[<span class=\"descriptionNumberColor\">Earth and Water</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"951504069\">Mydeimos_Trace01</a>[<span class=\"descriptionNumberColor\">Earth and Water</span>]",
               "function": "Add"
             },
             {
@@ -672,7 +672,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]"
             }
           ]
         }
@@ -714,7 +714,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -789,7 +789,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Mydeimos_Passive01Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1001366743\">Mydeimos_Passive01Modifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -797,7 +797,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Mydeimos_BPAbility_PreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"-863542474\">Mydeimos_BPAbility_PreShow</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -805,7 +805,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Mydeimos_InsertActionAbortFlag"
+          "modifier": "<a class=\"gModGreen\" id=\"18109462\">Mydeimos_InsertActionAbortFlag</a>"
         },
         {
           "name": "Read Variable Value",
@@ -844,7 +844,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Mydeimos_Trace01[<span class=\"descriptionNumberColor\">Earth and Water</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"951504069\">Mydeimos_Trace01</a>[<span class=\"descriptionNumberColor\">Earth and Water</span>]",
               "counter": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -907,7 +907,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Mydeimos_BPAbility_PreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-863542474\">Mydeimos_BPAbility_PreShow</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1014,7 +1014,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Mydeimos_Passive01Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1001366743\">Mydeimos_Passive01Modifier</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1139,11 +1139,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Mydeimos_PassiveAbility_Transfer"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-796211194\">Mydeimos_PassiveAbility_Transfer</a>"
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Mydeimos_Ability22_Predicate"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-778096199\">Mydeimos_Ability22_Predicate</a>"
                     }
                   ]
                 }
@@ -1188,11 +1188,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Mydeimos_PassiveAbility_Transfer"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-796211194\">Mydeimos_PassiveAbility_Transfer</a>"
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Mydeimos_Ability22_Predicate"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-778096199\">Mydeimos_Ability22_Predicate</a>"
                     }
                   ]
                 }
@@ -1263,7 +1263,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Mydeimos_Trace03"
+                      "modifier": "<a class=\"gModGreen\" id=\"917948831\">Mydeimos_Trace03</a>"
                     }
                   ]
                 },
@@ -1346,11 +1346,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Mydeimos_PassiveAbility_Transfer"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-796211194\">Mydeimos_PassiveAbility_Transfer</a>"
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Mydeimos_Ability22_Predicate"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-778096199\">Mydeimos_Ability22_Predicate</a>"
                     }
                   ]
                 }
@@ -1395,11 +1395,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Mydeimos_PassiveAbility_Transfer"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-796211194\">Mydeimos_PassiveAbility_Transfer</a>"
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Mydeimos_Ability22_Predicate"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-778096199\">Mydeimos_Ability22_Predicate</a>"
                     }
                   ]
                 }
@@ -1450,12 +1450,12 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]"
                       },
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Mydeimos_Ability22_Predicate"
+                          "functionName": "<a class=\"gTempYellow\" id=\"-778096199\">Mydeimos_Ability22_Predicate</a>"
                         }
                       ],
                       "failed": [
@@ -1563,11 +1563,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Mydeimos_PassiveAbility_Transfer"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-796211194\">Mydeimos_PassiveAbility_Transfer</a>"
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Mydeimos_Ability22_Predicate"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-778096199\">Mydeimos_Ability22_Predicate</a>"
                     }
                   ]
                 }
@@ -1591,7 +1591,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]",
                         "invertCondition": true
                       },
                       "passed": [
@@ -1693,7 +1693,7 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Mydeimos_Ability22_Predicate"
+                          "functionName": "<a class=\"gTempYellow\" id=\"-778096199\">Mydeimos_Ability22_Predicate</a>"
                         }
                       ]
                     }
@@ -1711,7 +1711,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "Mydeimos_UltraTargetSpecialMark",
+              "modifier": "<a class=\"gModGreen\" id=\"1569520574\">Mydeimos_UltraTargetSpecialMark</a>",
               "aliveOnly": "False",
               "haloStatus": true
             }
@@ -1824,7 +1824,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{ST and Blast}}"
           },
-          "modifier": "Standard_CTRL_Taunt[<span class=\"descriptionNumberColor\">Taunt</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1488319040\">Standard_CTRL_Taunt</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -1840,7 +1840,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Mydeimos_UltraTarget[<span class=\"descriptionNumberColor\">Throne of Bones</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"2061988688\">Mydeimos_UltraTarget</a>[<span class=\"descriptionNumberColor\">Throne of Bones</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1848,7 +1848,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Mydeimos_UltraTarget[<span class=\"descriptionNumberColor\">Throne of Bones</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"2061988688\">Mydeimos_UltraTarget</a>[<span class=\"descriptionNumberColor\">Throne of Bones</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -2092,7 +2092,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Mydeimos_UltraTargetSpecialMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__1569520574\">Mydeimos_UltraTargetSpecialMark</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -2184,7 +2184,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Mydeimos_UltraTarget[<span class=\"descriptionNumberColor\">Throne of Bones</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"2061988688\">Mydeimos_UltraTarget</a>[<span class=\"descriptionNumberColor\">Throne of Bones</span>]"
                       },
                       "passed": [
                         {
@@ -2208,7 +2208,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Mydeimos_UltraTarget[<span class=\"descriptionNumberColor\">Throne of Bones</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2061988688\">Mydeimos_UltraTarget</a>[<span class=\"descriptionNumberColor\">Throne of Bones</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -2226,7 +2226,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Mydeimos_InsertActionAbortFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__18109462\">Mydeimos_InsertActionAbortFlag</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_MydeimosRemoveTransfer"
@@ -2236,7 +2236,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Mydeimos_Trace01[<span class=\"descriptionNumberColor\">Earth and Water</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__951504069\">Mydeimos_Trace01</a>[<span class=\"descriptionNumberColor\">Earth and Water</span>]",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -2247,7 +2247,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Mydeimos_Eidolon4[<span class=\"descriptionNumberColor\">Siren Jolts the Laconic Lion</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1739027787\">Mydeimos_Eidolon4</a>[<span class=\"descriptionNumberColor\">Siren Jolts the Laconic Lion</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2328,7 +2328,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Mydeimos_Eidolon2",
+          "for": "<a class=\"gModGreen\" id=\"mod__1839693501\">Mydeimos_Eidolon2</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2510,7 +2510,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Mydeimos_Trace03_Sub[<span class=\"descriptionNumberColor\">Bloodied Chiton</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-242497681\">Mydeimos_Trace03_Sub</a>[<span class=\"descriptionNumberColor\">Bloodied Chiton</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2624,7 +2624,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Mydeimos_Trace03",
+          "for": "<a class=\"gModGreen\" id=\"mod__917948831\">Mydeimos_Trace03</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2684,7 +2684,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Mydeimos_Trace03_Sub[<span class=\"descriptionNumberColor\">Bloodied Chiton</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-242497681\">Mydeimos_Trace03_Sub</a>[<span class=\"descriptionNumberColor\">Bloodied Chiton</span>]",
                       "valuePerStack": {
                         "_MaxHPFixValue": {
                           "operator": "Variables[0] (MDF_CurrentRealHP) || Variables[1] (4000) || SUB || RETURN",
@@ -2705,7 +2705,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Mydeimos_Trace03"
+                      "modifier": "<a class=\"gModGreen\" id=\"917948831\">Mydeimos_Trace03</a>"
                     }
                   ]
                 }
@@ -2719,7 +2719,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Mydeimos_Transfer_LockDEF",
+          "for": "<a class=\"gModGreen\" id=\"mod__1759525523\">Mydeimos_Transfer_LockDEF</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2776,7 +2776,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "Crazy"
@@ -2843,7 +2843,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Mydeimos_InsertActionAbortFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"18109462\">Mydeimos_InsertActionAbortFlag</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2851,7 +2851,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Mydeimos_Transfer_LockDEF"
+                  "modifier": "<a class=\"gModGreen\" id=\"1759525523\">Mydeimos_Transfer_LockDEF</a>"
                 }
               ]
             },
@@ -2872,7 +2872,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Mydeimos_Transfer_LockDEF"
+                  "modifier": "<a class=\"gModGreen\" id=\"1759525523\">Mydeimos_Transfer_LockDEF</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2880,7 +2880,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Mydeimos_InsertActionAbortFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"18109462\">Mydeimos_InsertActionAbortFlag</a>"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -2961,7 +2961,7 @@ const compositeAbilityObject = {
                       "flagName": [
                         "Endurance"
                       ],
-                      "modifierName": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]"
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]"
                     }
                   ]
                 }
@@ -3047,7 +3047,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Mydeimos_Transfer_LockDEF"
+                      "modifier": "<a class=\"gModGreen\" id=\"1759525523\">Mydeimos_Transfer_LockDEF</a>"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -3098,7 +3098,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Mydeimos_Transfer_LockDEF"
+                      "modifier": "<a class=\"gModGreen\" id=\"1759525523\">Mydeimos_Transfer_LockDEF</a>"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -3149,7 +3149,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Mydeimos_Transfer_LockDEF"
+                      "modifier": "<a class=\"gModGreen\" id=\"1759525523\">Mydeimos_Transfer_LockDEF</a>"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -3203,7 +3203,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Mydeimos_Eidolon2",
+              "modifier": "<a class=\"gModGreen\" id=\"1839693501\">Mydeimos_Eidolon2</a>",
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 2
@@ -3233,7 +3233,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Mydeimos_Eidolon4[<span class=\"descriptionNumberColor\">Siren Jolts the Laconic Lion</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1739027787\">Mydeimos_Eidolon4</a>[<span class=\"descriptionNumberColor\">Siren Jolts the Laconic Lion</span>]",
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 4
@@ -3275,7 +3275,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Mydeimos_Ability22_Predicate",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-778096199\">Mydeimos_Ability22_Predicate</a>",
           "parse": [
             {
               "name": "IF",
@@ -3285,7 +3285,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]"
               },
               "passed": [
                 {
@@ -3350,7 +3350,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "modifier": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]"
                               },
                               "passed": [
                                 {
@@ -3518,7 +3518,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Mydeimos_PassiveAbility_Transfer",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-796211194\">Mydeimos_PassiveAbility_Transfer</a>",
           "parse": [
             {
               "name": "IF",

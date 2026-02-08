@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Yanqing_Tree01",
+      "modifier": "<a class=\"gModGreen\" id=\"611994712\">M_Yanqing_Tree01</a>",
       "valuePerStack": {
         "MDF_DamageRatio": {
           "operator": "Variables[0] (0.3) || RETURN",
@@ -26,7 +26,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Yanqing_Tree01",
+      "for": "<a class=\"gModGreen\" id=\"mod__611994712\">M_Yanqing_Tree01</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",

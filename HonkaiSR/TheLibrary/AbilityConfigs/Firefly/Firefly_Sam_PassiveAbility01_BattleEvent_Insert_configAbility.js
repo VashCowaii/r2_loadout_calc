@@ -30,7 +30,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
         }
       ],
       "failed": [
@@ -40,7 +40,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_PassiveAbility01_ExitRedMode"
+          "modifier": "<a class=\"gModGreen\" id=\"-1258419380\">Sam_PassiveAbility01_ExitRedMode</a>"
         }
       ]
     }
@@ -48,7 +48,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Sam_PassiveAbility01_ExitRedMode",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1258419380\">Sam_PassiveAbility01_ExitRedMode</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -85,7 +85,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_PassiveAbility01_ExitRedMode"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1258419380\">Sam_PassiveAbility01_ExitRedMode</a>"
                 }
               ]
             }

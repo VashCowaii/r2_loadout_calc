@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Yukong_FlowerListen",
+      "for": "<a class=\"gModGreen\" id=\"mod__64466487\">Yukong_FlowerListen</a>",
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -21,7 +21,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Yukong_Flower"
+              "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>"
             }
           ]
         }
@@ -31,7 +31,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Yukong_Eidolon4_Flower_Bonus[<span class=\"descriptionNumberColor\">Zephyrean Echoes</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__781697929\">Yukong_Eidolon4_Flower_Bonus</a>[<span class=\"descriptionNumberColor\">Zephyrean Echoes</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -62,7 +62,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Yukong_Passive_BonusCD",
+      "for": "<a class=\"gModGreen\" id=\"mod__1203634791\">Yukong_Passive_BonusCD</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -73,7 +73,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yukong_Passive_Bonus[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2029608096\">Yukong_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]",
               "valuePerStack": {
                 "MDF_AddDamagePercentage": {
                   "operator": "Variables[0] (MDF_AddDamagePercentage) || RETURN",
@@ -104,7 +104,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yukong_Passive_Bonus[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-2029608096\">Yukong_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]"
             }
           ]
         }
@@ -117,7 +117,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Yukong_Passive_Bonus[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2029608096\">Yukong_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]",
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -128,7 +128,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Yukong_Flower"
+              "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>"
             }
           ]
         }
@@ -144,11 +144,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Yukong_Flower_ActionTurn"
+      "for": "<a class=\"gModGreen\" id=\"mod__-1932378528\">Yukong_Flower_ActionTurn</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Yukong_Flower_ATK_Crit[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1097783562\">Yukong_Flower_ATK_Crit</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -160,7 +160,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Yukong_Flower_ATK[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"432670237\">Yukong_Flower_ATK</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
             },
             {
               "name": "Stack Target Stat Value",
@@ -226,7 +226,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Yukong_Flower_ATK[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__432670237\">Yukong_Flower_ATK</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -258,7 +258,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Yukong_Flower",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1617821492\">Yukong_Flower</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -277,7 +277,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yukong_Eidolon4_Flower_Bonus[<span class=\"descriptionNumberColor\">Zephyrean Echoes</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"781697929\">Yukong_Eidolon4_Flower_Bonus</a>[<span class=\"descriptionNumberColor\">Zephyrean Echoes</span>]",
                   "valuePerStack": {
                     "MDF_AddedRatio": {
                       "operator": "Variables[0] (MDF_Rank04AddedRatio) || RETURN",
@@ -310,7 +310,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yukong_Flower_ATK[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"432670237\">Yukong_Flower_ATK</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
                   "valuePerStack": {
                     "MDF_RealAttack": {
                       "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
@@ -335,7 +335,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Yukong_Flower_ATK[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"432670237\">Yukong_Flower_ATK</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -343,7 +343,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Yukong_Flower_ATK_Crit[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1097783562\">Yukong_Flower_ATK_Crit</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -351,7 +351,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Yukong_Eidolon4_Flower_Bonus[<span class=\"descriptionNumberColor\">Zephyrean Echoes</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"781697929\">Yukong_Eidolon4_Flower_Bonus</a>[<span class=\"descriptionNumberColor\">Zephyrean Echoes</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -359,7 +359,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Yukong_Flower_ActionTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"-1932378528\">Yukong_Flower_ActionTurn</a>"
             }
           ]
         },
@@ -382,7 +382,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yukong_Flower_ActionTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1932378528\">Yukong_Flower_ActionTurn</a>"
                 }
               ]
             }
@@ -409,7 +409,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Yukong_Flower_ActionTurn"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1932378528\">Yukong_Flower_ActionTurn</a>"
                   },
                   "passed": [
                     {
@@ -430,7 +430,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Yukong_Flower_ActionTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"-1932378528\">Yukong_Flower_ActionTurn</a>"
             }
           ]
         },
@@ -455,7 +455,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Yukong_Ability02_FlowerFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1103490299\">Yukong_Ability02_FlowerFlag</a>"
                   },
                   "failed": [
                     {
@@ -464,7 +464,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Yukong_Flower_ActionTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1932378528\">Yukong_Flower_ActionTurn</a>"
                     }
                   ]
                 }
@@ -501,7 +501,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yukong_Flower_ActionTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1932378528\">Yukong_Flower_ActionTurn</a>"
                 },
                 {
                   "name": "Define Custom Variable",

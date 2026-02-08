@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Ability03PreShowModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-247396096\">Ability03PreShowModifier</a>"
     },
     {
       "name": "IF",
@@ -33,7 +33,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Ability01PreShowModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1540905078\">Ability01PreShowModifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -41,7 +41,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Ability02PreShowModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-894890999\">Ability02PreShowModifier</a>"
         }
       ]
     },
@@ -51,7 +51,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sushang_P01_Check"
+      "modifier": "<a class=\"gModGreen\" id=\"1122395035\">Sushang_P01_Check</a>"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -89,7 +89,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_LowHP_AggroDown",
+          "modifier": "<a class=\"gModGreen\" id=\"136105164\">Sushang_LowHP_AggroDown</a>",
           "valuePerStack": {
             "MDF_HPRatio": {
               "operator": "Variables[0] (0.5) || RETURN",
@@ -124,7 +124,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_P01_Eidolon6[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-995993731\">Sushang_P01_Eidolon6</a>[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -160,7 +160,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_Eidolon4"
+          "modifier": "<a class=\"gModGreen\" id=\"1549572923\">Sushang_Eidolon4</a>"
         }
       ]
     }
@@ -168,7 +168,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Sushang_P01_Check",
+      "for": "<a class=\"gModGreen\" id=\"mod__1122395035\">Sushang_P01_Check</a>",
       "execute": [
         {
           "eventTrigger": "Weakness Break [Anyone]",
@@ -186,7 +186,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_P01_Eidolon6[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-995993731\">Sushang_P01_Eidolon6</a>[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -215,7 +215,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_P01[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"326660748\">Sushang_P01</a>[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -245,7 +245,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sushang_Eidolon4",
+      "for": "<a class=\"gModGreen\" id=\"mod__1549572923\">Sushang_Eidolon4</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -274,7 +274,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Ability02PreShowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-894890999\">Ability02PreShowModifier</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -327,7 +327,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Ability01PreShowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1540905078\">Ability01PreShowModifier</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -380,7 +380,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Ability03PreShowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-247396096\">Ability03PreShowModifier</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {

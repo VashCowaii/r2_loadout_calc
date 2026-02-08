@@ -10,17 +10,17 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yukong_Eidolon2_Bonus"
+      "modifier": "<a class=\"gModGreen\" id=\"153995997\">Yukong_Eidolon2_Bonus</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Yukong_Eidolon2_BonusCD"
+      "for": "<a class=\"gModGreen\" id=\"mod__-476851750\">Yukong_Eidolon2_BonusCD</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Yukong_Eidolon2_TeamMemberCheckSP",
+      "for": "<a class=\"gModGreen\" id=\"mod__1787779750\">Yukong_Eidolon2_TeamMemberCheckSP</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -36,7 +36,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Yukong_Eidolon2_BonusCD",
+                    "modifier": "<a class=\"gModGreen\" id=\"-476851750\">Yukong_Eidolon2_BonusCD</a>",
                     "invertCondition": true
                   },
                   {
@@ -74,7 +74,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yukong_Eidolon2_BonusCD"
+                  "modifier": "<a class=\"gModGreen\" id=\"-476851750\">Yukong_Eidolon2_BonusCD</a>"
                 }
               ]
             }
@@ -94,7 +94,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Yukong_Eidolon2_BonusCD",
+                    "modifier": "<a class=\"gModGreen\" id=\"-476851750\">Yukong_Eidolon2_BonusCD</a>",
                     "invertCondition": true
                   },
                   {
@@ -138,7 +138,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yukong_Eidolon2_BonusCD"
+                  "modifier": "<a class=\"gModGreen\" id=\"-476851750\">Yukong_Eidolon2_BonusCD</a>"
                 }
               ]
             }
@@ -148,7 +148,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Yukong_Eidolon2_Bonus",
+      "for": "<a class=\"gModGreen\" id=\"mod__153995997\">Yukong_Eidolon2_Bonus</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -171,7 +171,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Yukong_Eidolon2_TeamMemberCheckSP"
+              "modifier": "<a class=\"gModGreen\" id=\"1787779750\">Yukong_Eidolon2_TeamMemberCheckSP</a>"
             }
           ]
         },
@@ -194,7 +194,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Yukong_Eidolon2_TeamMemberCheckSP"
+                  "modifier": "<a class=\"gModGreen\" id=\"1787779750\">Yukong_Eidolon2_TeamMemberCheckSP</a>"
                 }
               ]
             }
@@ -209,7 +209,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Yukong_Eidolon2_TeamMemberCheckSP",
+              "modifier": "<a class=\"gModGreen\" id=\"1787779750\">Yukong_Eidolon2_TeamMemberCheckSP</a>",
               "onlyRemoveOwnersInstance": true
             }
           ]

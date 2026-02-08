@@ -11,17 +11,17 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_009"
+      "modifier": "<a class=\"gModGreen\" id=\"1678447701\">MStrongChallengeEX_Talent_StageAbility_LE_009</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_009_Mark"
+      "for": "<a class=\"gModGreen\" id=\"mod__1543706023\">MStrongChallengeEX_Talent_StageAbility_PLY_009_Mark</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_009[<span class=\"descriptionNumberColor\">Ashen Battleground</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1257384877\">MStrongChallengeEX_Talent_StageAbility_PLY_009</a>[<span class=\"descriptionNumberColor\">Ashen Battleground</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -55,7 +55,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "ReduceActionDelay",
+              "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -83,7 +83,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_009",
+      "for": "<a class=\"gModGreen\" id=\"mod__1678447701\">MStrongChallengeEX_Talent_StageAbility_LE_009</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -110,7 +110,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_009[<span class=\"descriptionNumberColor\">Ashen Battleground</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1257384877\">MStrongChallengeEX_Talent_StageAbility_PLY_009</a>[<span class=\"descriptionNumberColor\">Ashen Battleground</span>]"
                 }
               ]
             }

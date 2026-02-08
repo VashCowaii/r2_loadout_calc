@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Moze_Ability03_DamageAddModifier[<span class=\"descriptionNumberColor\">Heathprowler</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1395014383\">Moze_Ability03_DamageAddModifier</a>[<span class=\"descriptionNumberColor\">Heathprowler</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -168,7 +168,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
       }
     },
     "Trigger: Skip Death Handling",
@@ -177,7 +177,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Moze_Ability03_DamageAddModifier[<span class=\"descriptionNumberColor\">Heathprowler</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1395014383\">Moze_Ability03_DamageAddModifier</a>[<span class=\"descriptionNumberColor\">Heathprowler</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -213,7 +213,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Moze_Ultimate_AddRegardAsAttackType",
+      "for": "<a class=\"gModGreen\" id=\"mod__1536415722\">M_Moze_Ultimate_AddRegardAsAttackType</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -252,7 +252,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_Moze_Ultimate_AddRegardAsAttackType"
+              "modifier": "<a class=\"gModGreen\" id=\"1536415722\">M_Moze_Ultimate_AddRegardAsAttackType</a>"
             }
           ]
         }

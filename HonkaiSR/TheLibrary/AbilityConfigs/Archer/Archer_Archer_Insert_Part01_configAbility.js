@@ -22,7 +22,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Archer_Insert_Target"
+        "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
       },
       "ifTargetFound": [
         {
@@ -56,7 +56,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Archer_Insert_Target"
+              "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
             }
           ]
         }
@@ -75,7 +75,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Archer_Insert_Target"
+        "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
       },
       "ifTargetFound": [
         {
@@ -84,7 +84,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Archer_InsertTag"
+          "modifier": "<a class=\"gModGreen\" id=\"-181774758\">Archer_InsertTag</a>"
         },
         {
           "name": "UI Display Event",
@@ -112,7 +112,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All(with Unselectable)}}"
       },
-      "modifier": "Archer_Insert_Target"
+      "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
     }
   ],
   "onAbort": [
@@ -122,7 +122,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All(with Unselectable)}}"
       },
-      "modifier": "Archer_InsertTag"
+      "modifier": "<a class=\"gModGreen\" id=\"-181774758\">Archer_InsertTag</a>"
     },
     {
       "name": "IF",
@@ -213,7 +213,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Archer_Insert_Target"
+                      "modifier": "<a class=\"gModGreen\" id=\"496562314\">Archer_Insert_Target</a>"
                     },
                     {
                       "name": "Inject Ability Use",

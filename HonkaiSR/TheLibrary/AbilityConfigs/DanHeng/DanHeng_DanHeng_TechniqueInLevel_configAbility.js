@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Technique_DanHeng_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1614350483\">Technique_DanHeng_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "DanHeng_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">Splitting Spearhead</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1978717144\">DanHeng_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Splitting Spearhead</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -56,7 +56,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Technique_DanHeng_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1614350483\">Technique_DanHeng_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -76,7 +76,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHeng_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">Splitting Spearhead</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1978717144\">DanHeng_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Splitting Spearhead</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

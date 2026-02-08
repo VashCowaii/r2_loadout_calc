@@ -47,13 +47,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_PlayerBoy_Trace01"
+          "modifier": "<a class=\"gModGreen\" id=\"1966656323\">M_PlayerBoy_Trace01</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_PlayerBoy_Trace01",
+          "for": "<a class=\"gModGreen\" id=\"mod__1966656323\">M_PlayerBoy_Trace01</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -115,13 +115,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Player_AutoUseUltraAbility"
+          "modifier": "<a class=\"gModGreen\" id=\"-707210254\">M_Player_AutoUseUltraAbility</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Player_AutoUseUltraAbility",
+          "for": "<a class=\"gModGreen\" id=\"mod__-707210254\">M_Player_AutoUseUltraAbility</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -147,7 +147,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Player_PassiveAbility"
+          "modifier": "<a class=\"gModGreen\" id=\"1780517119\">M_Player_PassiveAbility</a>"
         },
         {
           "name": "IF",
@@ -162,7 +162,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_Eidolon4_Break_Check"
+              "modifier": "<a class=\"gModGreen\" id=\"922416060\">PlayerBoy_Eidolon4_Break_Check</a>"
             }
           ]
         },
@@ -179,7 +179,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_Eidolon2_Heal_Check"
+              "modifier": "<a class=\"gModGreen\" id=\"-556710801\">PlayerBoy_Eidolon2_Heal_Check</a>"
             }
           ]
         }
@@ -187,7 +187,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "PlayerWarrior_SkilTree02_BreakDefUp[<span class=\"descriptionNumberColor\">Tenacity</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1618202918\">PlayerWarrior_SkilTree02_BreakDefUp</a>[<span class=\"descriptionNumberColor\">Tenacity</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -232,7 +232,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerWarrior_Passive_BreakAtkUp[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-417743675\">PlayerWarrior_Passive_BreakAtkUp</a>[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -277,7 +277,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Player_PassiveAbility",
+          "for": "<a class=\"gModGreen\" id=\"mod__1780517119\">M_Player_PassiveAbility</a>",
           "execute": [
             {
               "eventTrigger": "Got a Kill [Owner]",
@@ -308,7 +308,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "PlayerWarrior_Passive_BreakAtkUp[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-417743675\">PlayerWarrior_Passive_BreakAtkUp</a>[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
                         "displayLines": "(2 + MDF_Max_Layer)",
@@ -342,7 +342,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "PlayerWarrior_SkilTree02_BreakDefUp[<span class=\"descriptionNumberColor\">Tenacity</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1618202918\">PlayerWarrior_SkilTree02_BreakDefUp</a>[<span class=\"descriptionNumberColor\">Tenacity</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
                             "displayLines": "(2 + MDF_Max_Layer)",
@@ -391,7 +391,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "PlayerWarrior_Passive_BreakAtkUp[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-417743675\">PlayerWarrior_Passive_BreakAtkUp</a>[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
                     "displayLines": "(2 + MDF_Max_Layer)",
@@ -425,7 +425,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "PlayerWarrior_SkilTree02_BreakDefUp[<span class=\"descriptionNumberColor\">Tenacity</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1618202918\">PlayerWarrior_SkilTree02_BreakDefUp</a>[<span class=\"descriptionNumberColor\">Tenacity</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
                         "displayLines": "(2 + MDF_Max_Layer)",
@@ -456,7 +456,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_Eidolon4_Break_Check",
+          "for": "<a class=\"gModGreen\" id=\"mod__922416060\">PlayerBoy_Eidolon4_Break_Check</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -492,7 +492,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_Eidolon2_Heal_Check",
+          "for": "<a class=\"gModGreen\" id=\"mod__-556710801\">PlayerBoy_Eidolon2_Heal_Check</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -619,7 +619,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_Eidolon1_Check_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"451418523\">PlayerBoy_Eidolon1_Check_Modifier</a>"
             }
           ]
         },
@@ -636,7 +636,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_Trace03_DamageAddedRatio"
+              "modifier": "<a class=\"gModGreen\" id=\"470799784\">PlayerBoy_Trace03_DamageAddedRatio</a>"
             }
           ]
         },
@@ -682,7 +682,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_Trace03_DamageAddedRatio"
+              "modifier": "<a class=\"gModGreen\" id=\"470799784\">PlayerBoy_Trace03_DamageAddedRatio</a>"
             }
           ]
         },
@@ -728,7 +728,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_Eidolon1_Check_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"451418523\">PlayerBoy_Eidolon1_Check_Modifier</a>"
             }
           ]
         },
@@ -738,7 +738,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerWarrior_Ultimate_Transform"
+          "modifier": "<a class=\"gModGreen\" id=\"784141078\">PlayerWarrior_Ultimate_Transform</a>"
         },
         {
           "name": "Update Ult Alt Display"
@@ -795,7 +795,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_Trace03_DamageAddedRatio"
+              "modifier": "<a class=\"gModGreen\" id=\"470799784\">PlayerBoy_Trace03_DamageAddedRatio</a>"
             }
           ]
         },
@@ -841,7 +841,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_Trace03_DamageAddedRatio"
+              "modifier": "<a class=\"gModGreen\" id=\"470799784\">PlayerBoy_Trace03_DamageAddedRatio</a>"
             }
           ]
         },
@@ -926,7 +926,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_Eidolon1_Check_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"451418523\">PlayerBoy_Eidolon1_Check_Modifier</a>"
             }
           ]
         },
@@ -977,7 +977,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_Eidolon1_Check_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"451418523\">PlayerBoy_Eidolon1_Check_Modifier</a>"
             }
           ]
         },
@@ -987,7 +987,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerWarrior_Ultimate_Transform"
+          "modifier": "<a class=\"gModGreen\" id=\"784141078\">PlayerWarrior_Ultimate_Transform</a>"
         },
         {
           "name": "Update Ult Alt Display"
@@ -1112,7 +1112,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "PlayerWarrior_Ultimate_Transform",
+          "for": "<a class=\"gModGreen\" id=\"mod__784141078\">PlayerWarrior_Ultimate_Transform</a>",
           "lifeCyclePhaseAllowed": "ActionPhaseEnd",
           "modifierFlags": [
             "STAT_Burst"
@@ -1153,7 +1153,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_Trace03_DamageAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__470799784\">PlayerBoy_Trace03_DamageAddedRatio</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1176,7 +1176,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "PlayerBoy_Eidolon1_Check_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__451418523\">PlayerBoy_Eidolon1_Check_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Got a Kill [Owner]",

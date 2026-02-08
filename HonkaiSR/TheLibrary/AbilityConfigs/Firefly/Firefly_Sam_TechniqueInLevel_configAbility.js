@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_Maze_AddWeakness"
+      "modifier": "<a class=\"gModGreen\" id=\"-2073901601\">Sam_Maze_AddWeakness</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,13 +26,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_Maze"
+      "modifier": "<a class=\"gModGreen\" id=\"-2024354192\">Sam_Maze</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Sam_Maze",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2024354192\">Sam_Maze</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -117,7 +117,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_Maze_AddWeakness",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2073901601\">Sam_Maze_AddWeakness</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -128,7 +128,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "Sam_Ability21_FireWeakType[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"639093534\">Sam_Ability21_FireWeakType</a>[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",

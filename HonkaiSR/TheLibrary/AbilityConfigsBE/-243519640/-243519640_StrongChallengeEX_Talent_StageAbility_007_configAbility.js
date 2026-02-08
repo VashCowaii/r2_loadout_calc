@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_007"
+      "modifier": "<a class=\"gModGreen\" id=\"1712002939\">MStrongChallengeEX_Talent_StageAbility_LE_007</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_BOSS_007",
+      "for": "<a class=\"gModGreen\" id=\"mod__1732992681\">MStrongChallengeEX_Talent_StageAbility_BOSS_007</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -177,7 +177,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger"
+                  "modifier": "<a class=\"gModGreen\" id=\"1349202594\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger</a>"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -202,7 +202,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_007",
+      "for": "<a class=\"gModGreen\" id=\"mod__1712002939\">MStrongChallengeEX_Talent_StageAbility_LE_007</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -241,7 +241,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_007",
+                  "modifier": "<a class=\"gModGreen\" id=\"1732992681\">MStrongChallengeEX_Talent_StageAbility_BOSS_007</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

@@ -20,7 +20,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Advanced_Silwolf_Ultimate_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-46466503\">Advanced_Silwolf_Ultimate_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",

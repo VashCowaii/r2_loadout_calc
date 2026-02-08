@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_012"
+      "modifier": "<a class=\"gModGreen\" id=\"1393375273\">MStrongChallengeEX_Talent_StageAbility_LE_012</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_BOSS_012",
+      "for": "<a class=\"gModGreen\" id=\"mod__1817027871\">MStrongChallengeEX_Talent_StageAbility_BOSS_012</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -62,7 +62,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (Damage_Total) || RETURN",
@@ -105,7 +105,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>"
                 }
               ]
             }
@@ -118,12 +118,12 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+                "modifier": "<a class=\"gModGreen\" id=\"-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
               },
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "BeingBreakDMGTrigger"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1917476935\">BeingBreakDMGTrigger</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -131,7 +131,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
                 }
               ]
             },
@@ -139,12 +139,12 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+                "modifier": "<a class=\"gModGreen\" id=\"-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
               },
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "BeingBreakDMGTrigger"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1917476935\">BeingBreakDMGTrigger</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -152,7 +152,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
                 }
               ]
             },
@@ -160,12 +160,12 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+                "modifier": "<a class=\"gModGreen\" id=\"-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
               },
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "BeingBreakDMGTrigger"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1917476935\">BeingBreakDMGTrigger</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -173,7 +173,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -186,7 +186,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>"
                 }
               ]
             }
@@ -196,7 +196,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "BeingBreakDMGTrigger",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1917476935\">BeingBreakDMGTrigger</a>",
           "parse": [
             {
               "name": "IF",
@@ -240,7 +240,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_012",
+      "for": "<a class=\"gModGreen\" id=\"mod__1393375273\">MStrongChallengeEX_Talent_StageAbility_LE_012</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -276,7 +276,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_012"
+                  "modifier": "<a class=\"gModGreen\" id=\"1817027871\">MStrongChallengeEX_Talent_StageAbility_BOSS_012</a>"
                 }
               ]
             }

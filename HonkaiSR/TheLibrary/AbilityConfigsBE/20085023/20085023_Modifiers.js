@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Standard_EliteField_Servant[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -66,7 +66,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Standard_EliteField_Elite[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-858410577\">Standard_EliteField_Elite</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -93,7 +93,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"
               },
-              "modifier": "Standard_EliteField_Servant[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
               "valuePerStack": {
                 "MDF_AllDamageReduce": {
                   "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
@@ -135,7 +135,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_EliteField_Servant[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
                       "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",

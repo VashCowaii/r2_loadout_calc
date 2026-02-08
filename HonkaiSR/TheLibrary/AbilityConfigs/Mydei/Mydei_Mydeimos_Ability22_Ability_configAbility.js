@@ -282,7 +282,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All(with Unselectable)}}"
       },
-      "modifier": "Mydeimos_UltraTarget[<span class=\"descriptionNumberColor\">Throne of Bones</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"2061988688\">Mydeimos_UltraTarget</a>[<span class=\"descriptionNumberColor\">Throne of Bones</span>]"
     },
     {
       "name": "WAIT FOR",

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Yanqing_Tree03",
+      "modifier": "<a class=\"gModGreen\" id=\"645549950\">M_Yanqing_Tree03</a>",
       "valuePerStack": {
         "MDF_SpeedValue": {
           "operator": "Variables[0] (0.1) || RETURN",
@@ -26,7 +26,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Yanqing_Tree03SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2119684740\">M_Yanqing_Tree03SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -59,7 +59,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Yanqing_Tree03",
+      "for": "<a class=\"gModGreen\" id=\"mod__645549950\">M_Yanqing_Tree03</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -76,7 +76,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Yanqing_Tree03SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2119684740\">M_Yanqing_Tree03SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sunday_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-1941280863\">Sunday_Passive</a>"
     },
     {
       "name": "IF",
@@ -33,7 +33,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sunday_10_Eidolon4Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"143576908\">Sunday_10_Eidolon4Modifier</a>"
         }
       ]
     },
@@ -79,7 +79,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "modifier": "Sunday_10_Ability02_PreshowForLongling"
+      "modifier": "<a class=\"gModGreen\" id=\"-1403569034\">Sunday_10_Ability02_PreshowForLongling</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -87,7 +87,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "modifier": "Sunday_10_Ability02_PreshowForSummonUnit"
+      "modifier": "<a class=\"gModGreen\" id=\"-376848843\">Sunday_10_Ability02_PreshowForSummonUnit</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -95,7 +95,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "modifier": "Sunday_10_Ability02_Preshow"
+      "modifier": "<a class=\"gModGreen\" id=\"-1534107855\">Sunday_10_Ability02_Preshow</a>"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -117,7 +117,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MW_Sunday_Listen_ModifyBEAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-381925899\">MW_Sunday_Listen_ModifyBEAction</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -150,7 +150,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_Eidolon4Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__143576908\">Sunday_10_Eidolon4Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -179,11 +179,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_Eidolon2_UltraTag"
+      "for": "<a class=\"gModGreen\" id=\"mod__761788663\">Sunday_Eidolon2_UltraTag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_Eidolon2Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1347113419\">Sunday_Eidolon2Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -203,7 +203,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sunday_Eidolon2_UltraTag"
+                  "modifier": "<a class=\"gModGreen\" id=\"761788663\">Sunday_Eidolon2_UltraTag</a>"
                 }
               ]
             }
@@ -214,7 +214,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_PointB2Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-117549613\">Sunday_PointB2Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -253,7 +253,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1941280863\">Sunday_Passive</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -295,7 +295,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Sunday_TempAddAITag"
+                  "modifier": "<a class=\"gModGreen\" id=\"2623025\">Sunday_TempAddAITag</a>"
                 }
               ]
             },
@@ -312,7 +312,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sunday_PointB2Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-117549613\">Sunday_PointB2Modifier</a>"
                 }
               ]
             },
@@ -329,7 +329,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sunday_Eidolon2Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1347113419\">Sunday_Eidolon2Modifier</a>"
                 }
               ]
             },
@@ -398,7 +398,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Sunday_TempAddAITag"
+                  "modifier": "<a class=\"gModGreen\" id=\"2623025\">Sunday_TempAddAITag</a>"
                 }
               ]
             }
@@ -410,7 +410,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_TempAddAITag",
+      "for": "<a class=\"gModGreen\" id=\"mod__2623025\">Sunday_TempAddAITag</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": []

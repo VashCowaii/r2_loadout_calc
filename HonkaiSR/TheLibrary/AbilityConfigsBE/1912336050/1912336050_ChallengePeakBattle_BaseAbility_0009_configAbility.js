@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0009"
+      "modifier": "<a class=\"gModGreen\" id=\"-170392195\">Modifier_ChallengePeakBattle_BaseAbility_0009</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0009_02[<span class=\"descriptionNumberColor\">Interference</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__954434320\">Modifier_ChallengePeakBattle_BaseAbility_0009_02</a>[<span class=\"descriptionNumberColor\">Interference</span>]",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -69,7 +69,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0009",
+      "for": "<a class=\"gModGreen\" id=\"mod__-170392195\">Modifier_ChallengePeakBattle_BaseAbility_0009</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -91,7 +91,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0009_02[<span class=\"descriptionNumberColor\">Interference</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"954434320\">Modifier_ChallengePeakBattle_BaseAbility_0009_02</a>[<span class=\"descriptionNumberColor\">Interference</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0009_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

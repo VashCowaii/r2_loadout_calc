@@ -19,7 +19,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
         }
       ]
     },
@@ -78,7 +78,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_MeleeAttack",
+          "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
               "operator": "Variables[0] (UnusedUnderThisBase_14) || RETURN",
@@ -107,7 +107,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_Part03EnhanceEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"1988286038\">Monster_W2_Kafka_RL_Part03EnhanceEffect</a>"
         }
       ]
     },
@@ -215,7 +215,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
       },
       "ifTargetFound": [
         {
@@ -224,7 +224,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Kafka_EnhanceElectricMark"
+          "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
         }
       ]
     },
@@ -236,7 +236,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
       },
       "passed": [
         {
@@ -245,7 +245,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Targets Adjacent(Blast)}}"
           },
-          "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
             "displayLines": "{[Skill01[2]]}",
@@ -279,7 +279,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
       },
       "passed": [
         {
@@ -288,7 +288,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_W2_Kafka_EnhanceElectricMark"
+          "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
         }
       ]
     },
@@ -305,7 +305,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Monster_W2_Kafka_EnhanceElectricMark"
+        "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
       },
       "ifTargetFound": [
         {
@@ -314,7 +314,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Kafka_EnhanceElectricDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
         }
       ]
     },
@@ -324,7 +324,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Kafka_RL_MeleeAttack"
+      "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -332,7 +332,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Monster_W2_Kafka_EnhanceElectricMark"
+      "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
     },
     {
       "name": "IF",
@@ -349,7 +349,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -357,7 +357,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Kafka_RL_Part03EnhanceEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"1988286038\">Monster_W2_Kafka_RL_Part03EnhanceEffect</a>"
         }
       ]
     },

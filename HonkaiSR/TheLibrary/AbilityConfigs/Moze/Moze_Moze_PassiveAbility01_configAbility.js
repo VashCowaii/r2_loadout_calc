@@ -39,7 +39,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Moze_ListenUnstageModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"99483717\">Moze_ListenUnstageModifier</a>"
     },
     {
       "name": "IF",
@@ -90,7 +90,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Moze_Eidolon1_PreChangeUltraToInsertModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-923746792\">Moze_Eidolon1_PreChangeUltraToInsertModifier</a>"
         }
       ]
     },
@@ -107,7 +107,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Moze_Eidolon1_AddSPModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1809879863\">Moze_Eidolon1_AddSPModifier</a>"
         }
       ]
     },
@@ -117,7 +117,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Moze_PassiveModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"787836470\">Moze_PassiveModifier</a>"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -138,7 +138,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Moze_OnlyMozeOnStageModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-711864046\">Moze_OnlyMozeOnStageModifier</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -149,7 +149,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -157,7 +157,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Moze_Ability02_InShadowModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
             },
             {
               "name": "Disable Abilities",
@@ -175,7 +175,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Moze_ListenUnstageModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__99483717\">Moze_ListenUnstageModifier</a>",
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Owner]",
@@ -248,7 +248,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Moze_OnlyMozeOnStageModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                 }
               ],
               "failed": [
@@ -260,7 +260,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Monster_W3_Aventurine_Gambling[<span class=\"descriptionNumberColor\">Gamble</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1454354819\">Monster_W3_Aventurine_Gambling</a>[<span class=\"descriptionNumberColor\">Gamble</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -270,7 +270,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Moze_OnlyMozeOnStageModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                     }
                   ]
                 }
@@ -349,7 +349,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Moze_OnlyMozeOnStageModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                 }
               ]
             }
@@ -426,7 +426,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Moze_OnlyMozeOnStageModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                 }
               ],
               "failed": [
@@ -445,7 +445,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Moze_OnlyMozeOnStageModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                     }
                   ]
                 }
@@ -460,7 +460,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Monster_W3_Aventurine_Gambling[<span class=\"descriptionNumberColor\">Gamble</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1454354819\">Monster_W3_Aventurine_Gambling</a>[<span class=\"descriptionNumberColor\">Gamble</span>]"
               },
               "passed": [
                 {
@@ -474,7 +474,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Moze_OnlyMozeOnStageModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                 }
               ]
             }
@@ -487,7 +487,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Monster_W3_Aventurine_Gambling[<span class=\"descriptionNumberColor\">Gamble</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1454354819\">Monster_W3_Aventurine_Gambling</a>[<span class=\"descriptionNumberColor\">Gamble</span>]"
               },
               "passed": [
                 {
@@ -563,7 +563,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Moze_OnlyMozeOnStageModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                     }
                   ]
                 }
@@ -629,7 +629,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Moze_OnlyMozeOnStageModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                 }
               ],
               "failed": [
@@ -648,7 +648,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Moze_OnlyMozeOnStageModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                     }
                   ]
                 }
@@ -714,7 +714,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Moze_OnlyMozeOnStageModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                 }
               ],
               "failed": [
@@ -733,7 +733,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Moze_OnlyMozeOnStageModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                     }
                   ]
                 }
@@ -747,7 +747,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Moze_PassiveModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__787836470\">Moze_PassiveModifier</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
@@ -820,7 +820,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
               },
               "passed": [
                 {
@@ -829,7 +829,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Moze_Ability02_InShadowModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -837,7 +837,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
                 }
               ]
             },
@@ -902,7 +902,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -910,7 +910,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Moze_Ability02_InShadowModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
                     }
                   ]
                 }
@@ -1053,7 +1053,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Moze_Ability02_InShadowModifier"
+                "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
               },
               "passed": [
                 {
@@ -1251,7 +1251,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Moze_Ability02_InShadowModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
             }
           ]
         },
@@ -1365,7 +1365,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Moze_Eidolon1_ChangeUltraToInsertModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-139735837\">Moze_Eidolon1_ChangeUltraToInsertModifier</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1399,7 +1399,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Moze_Eidolon1_PreChangeUltraToInsertModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-923746792\">Moze_Eidolon1_PreChangeUltraToInsertModifier</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -1410,7 +1410,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Moze_Eidolon1_ChangeUltraToInsertModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-139735837\">Moze_Eidolon1_ChangeUltraToInsertModifier</a>"
             }
           ]
         },
@@ -1430,7 +1430,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Moze_Eidolon1_ChangeUltraToInsertModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-139735837\">Moze_Eidolon1_ChangeUltraToInsertModifier</a>"
                 }
               ]
             }
@@ -1442,7 +1442,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Moze_Eidolon1_AddSPModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1809879863\">Moze_Eidolon1_AddSPModifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

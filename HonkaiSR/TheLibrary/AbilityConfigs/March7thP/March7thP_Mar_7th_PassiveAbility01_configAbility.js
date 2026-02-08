@@ -20,7 +20,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "March7th_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"189697089\">March7th_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -28,7 +28,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "March7th_ListenEnergyBar"
+      "modifier": "<a class=\"gModGreen\" id=\"872238788\">March7th_ListenEnergyBar</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -36,7 +36,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]"
     },
     {
       "name": "IF",
@@ -47,7 +47,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Modifier Variable",
-          "modifierName": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
           "value": {
             "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(2 + 1)",
@@ -105,7 +105,7 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Modifier Variable",
-          "modifierName": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -157,7 +157,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "March7th_ListenEnergyBar",
+      "for": "<a class=\"gModGreen\" id=\"mod__872238788\">March7th_ListenEnergyBar</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier is Added [Anyone]",
@@ -291,7 +291,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
       "counter": 3,
       "stackData": [],
       "latentQueue": [],
@@ -301,7 +301,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "March7th_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__189697089\">March7th_Passive</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -312,7 +312,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]"
             },
             {
               "name": "IF",
@@ -323,7 +323,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Modifier Variable",
-                  "modifierName": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
                   "value": {
                     "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(2 + 1)",
@@ -429,7 +429,7 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Modifier Variable",
-                  "modifierName": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
                   "value": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -532,7 +532,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "March7th_BPAbility_Shield_Counter"
+              "modifier": "<a class=\"gModGreen\" id=\"944962578\">March7th_BPAbility_Shield_Counter</a>"
             }
           ]
         },
@@ -555,7 +555,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "March7th_BPAbility_Shield_Counter"
+                  "modifier": "<a class=\"gModGreen\" id=\"944962578\">March7th_BPAbility_Shield_Counter</a>"
                 }
               ]
             }
@@ -579,7 +579,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "March7th_BPAbility_Shield_Counter",
+              "modifier": "<a class=\"gModGreen\" id=\"944962578\">March7th_BPAbility_Shield_Counter</a>",
               "onlyRemoveOwnersInstance": true
             },
             {

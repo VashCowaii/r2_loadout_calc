@@ -20,7 +20,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Herta_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-1179391648\">Herta_Passive</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -51,7 +51,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Herta_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1179391648\">Herta_Passive</a>",
       "execute": [
         {
           "eventTrigger": "HP Change [Anyone]",
@@ -178,7 +178,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Herta_Passive_ATK"
+                          "modifier": "<a class=\"gModGreen\" id=\"-256958111\">Herta_Passive_ATK</a>"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -297,7 +297,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Herta_Passive_ATK"
+              "modifier": "<a class=\"gModGreen\" id=\"-256958111\">Herta_Passive_ATK</a>"
             }
           ]
         }

@@ -6,7 +6,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "Cyrene_ChargeEnergy",
+      "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
       "variables": {
         "parameter[0]_AddValue": {
           "operator": "Variables[0] (3) || RETURN",
@@ -78,7 +78,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Cyrene_AbilityTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"1383897460\">Cyrene_AbilityTarget</a>"
             }
           },
           "ifTargetFound": [
@@ -118,7 +118,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Cyrene_AbilityTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"1383897460\">Cyrene_AbilityTarget</a>"
             }
           ]
         }
@@ -160,7 +160,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_AbilityTarget",
+      "for": "<a class=\"gModGreen\" id=\"mod__1383897460\">Cyrene_AbilityTarget</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Anyone]",

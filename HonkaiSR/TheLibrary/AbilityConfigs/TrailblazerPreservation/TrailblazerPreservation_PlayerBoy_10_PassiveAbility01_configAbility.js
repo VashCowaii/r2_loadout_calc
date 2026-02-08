@@ -39,7 +39,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MWPlayerBoy_10_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-2110431012\">MWPlayerBoy_10_Passive</a>"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -160,7 +160,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]"
         },
         {
           "name": "Define Modifier Variable",
@@ -168,7 +168,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
           "value": {
             "operator": "Variables[0] (4) || RETURN",
             "displayLines": "4",
@@ -201,13 +201,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_Weapon_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-2059998112\">PlayerBoy_Weapon_Effect</a>"
         },
         {
           "name": "IF",
           "conditions": {
             "name": "Compare: Variable",
-            "value1": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]",
+            "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
             "compareType": ">",
             "value2": 3.5
           },
@@ -218,7 +218,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_10_ChangeAttack"
+              "modifier": "<a class=\"gModGreen\" id=\"1462404810\">PlayerBoy_10_ChangeAttack</a>"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -284,7 +284,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_10_PointB3"
+          "modifier": "<a class=\"gModGreen\" id=\"-1667806661\">PlayerBoy_10_PointB3</a>"
         }
       ]
     }
@@ -292,7 +292,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MWPlayerBoy_10_ShieldAfterBeingHit",
+      "for": "<a class=\"gModGreen\" id=\"mod__63956904\">MWPlayerBoy_10_ShieldAfterBeingHit</a>",
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",
@@ -303,7 +303,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "MWPlayerBoy_10_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1400516150\">MWPlayerBoy_10_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -329,7 +329,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]"
             },
             "Modifier Deletes Itself"
           ]
@@ -338,7 +338,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MWPlayerBoy_10_AttackRatioUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1396744931\">MWPlayerBoy_10_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -370,7 +370,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MWPlayerBoy_10_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2110431012\">MWPlayerBoy_10_Passive</a>",
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",
@@ -383,7 +383,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]"
               },
               "passed": [
                 {
@@ -402,7 +402,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
                   "value": {
                     "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
                     "displayLines": "MDF_Energy_Count",
@@ -420,7 +420,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "PlayerBoy_10_WeaponCharge_Free[<span class=\"descriptionNumberColor\">War-Flaming Lance</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1196656931\">PlayerBoy_10_WeaponCharge_Free</a>[<span class=\"descriptionNumberColor\">War-Flaming Lance</span>]"
                   },
                   "failed": [
                     {
@@ -429,7 +429,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "PlayerBoy_Weapon_Effect"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2059998112\">PlayerBoy_Weapon_Effect</a>"
                     }
                   ]
                 },
@@ -437,7 +437,7 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "value1": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
                     "compareType": ">=",
                     "value2": {
                       "operator": "Variables[0] (8) || RETURN",
@@ -451,7 +451,7 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Modifier Variable",
-                      "modifierName": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
                       "value": {
                         "operator": "Variables[0] (8) || RETURN",
                         "displayLines": "8",
@@ -467,7 +467,7 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "value1": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
                     "compareType": ">",
                     "value2": 3.5
                   },
@@ -478,7 +478,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "PlayerBoy_10_ChangeAttack"
+                      "modifier": "<a class=\"gModGreen\" id=\"1462404810\">PlayerBoy_10_ChangeAttack</a>"
                     }
                   ]
                 }
@@ -490,7 +490,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]"
                 },
                 {
                   "name": "Adjust Variable Value",
@@ -573,7 +573,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_Weapon_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-2059998112\">PlayerBoy_Weapon_Effect</a>"
             }
           ]
         }
@@ -585,7 +585,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "PlayerBoy_10_PointB3",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1667806661\">PlayerBoy_10_PointB3</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -623,7 +623,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "MWPlayerBoy_10_AttackRatioUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1396744931\">MWPlayerBoy_10_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                   "duration": 1,
                   "immediateEffect": true,
                   "valuePerStack": {

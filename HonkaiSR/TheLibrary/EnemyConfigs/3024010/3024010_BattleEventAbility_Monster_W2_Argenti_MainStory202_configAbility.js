@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Monster_Monster_W2_Argenti_BattlePerform_LockHP"
+      "modifier": "<a class=\"gModGreen\" id=\"1276714002\">Monster_Monster_W2_Argenti_BattlePerform_LockHP</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_Monster_W2_Argenti_BattlePerform_LockHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__1276714002\">Monster_Monster_W2_Argenti_BattlePerform_LockHP</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

@@ -21,7 +21,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Aventurine_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-106868585\">Aventurine_Passive</a>"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -45,7 +45,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Aventurine_Trace01"
+          "modifier": "<a class=\"gModGreen\" id=\"1167695204\">Aventurine_Trace01</a>"
         }
       ]
     }

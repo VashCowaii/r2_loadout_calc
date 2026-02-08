@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1[<span class=\"descriptionNumberColor\">Quantum Mark</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"182974764\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1</a>[<span class=\"descriptionNumberColor\">Quantum Mark</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,13 +26,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_Part1_IF_AbilityP01_WeaknessControll"
+      "modifier": "<a class=\"gModGreen\" id=\"-724030977\">Enemy_AML_Boss_Part1_IF_AbilityP01_WeaknessControll</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part1_IF_AbilityP01_WeaknessControll",
+      "for": "<a class=\"gModGreen\" id=\"mod__-724030977\">Enemy_AML_Boss_Part1_IF_AbilityP01_WeaknessControll</a>",
       "modifierFlags": [
         "Deathrattle",
         "KeepOnDeathrattle"
@@ -130,7 +130,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part1_IF_AbilityP01_ReflexController",
+      "for": "<a class=\"gModGreen\" id=\"mod__1156928989\">Enemy_AML_Boss_Part1_IF_AbilityP01_ReflexController</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -182,7 +182,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_AML_Boss_IF_Enhance_Imaginary[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1433767937\">Enemy_AML_Boss_IF_Enhance_Imaginary</a>[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]"
                   }
                 ]
               },

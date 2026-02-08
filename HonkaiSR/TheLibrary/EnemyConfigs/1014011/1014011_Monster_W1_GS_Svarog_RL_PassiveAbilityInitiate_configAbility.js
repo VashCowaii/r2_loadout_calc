@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_GS_Svarog_BattleScore1"
+      "modifier": "<a class=\"gModGreen\" id=\"340882576\">Monster_W1_GS_Svarog_BattleScore1</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Svarog_RL_PartController_LockHP"
+      "modifier": "<a class=\"gModGreen\" id=\"916805475\">Monster_W1_Svarog_RL_PartController_LockHP</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -35,7 +35,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Svarog_RL_LowHP",
+      "modifier": "<a class=\"gModGreen\" id=\"-1864956422\">Monster_W1_Svarog_RL_LowHP</a>",
       "valuePerStack": {
         "MDF_LowHPRatio": {
           "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
@@ -53,13 +53,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Svarog_RL_ReviveEffect"
+      "modifier": "<a class=\"gModGreen\" id=\"1614912264\">Monster_W1_Svarog_RL_ReviveEffect</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Svarog_RL_ReviveEffect",
+      "for": "<a class=\"gModGreen\" id=\"mod__1614912264\">Monster_W1_Svarog_RL_ReviveEffect</a>",
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo"
@@ -70,7 +70,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Svarog_RL_LowHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1864956422\">Monster_W1_Svarog_RL_LowHP</a>",
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",

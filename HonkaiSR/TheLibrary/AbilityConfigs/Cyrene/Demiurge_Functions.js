@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "_T_Cyrene_Eidolon1_EnergyCheck",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__301160822\">_T_Cyrene_Eidolon1_EnergyCheck</a>",
       "parse": [
         {
           "name": "IF",
@@ -42,7 +42,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "_M_Cyrene_Eidolon1_Ability01Prepare",
+                "modifier": "<a class=\"gModGreen\" id=\"-2012168482\">_M_Cyrene_Eidolon1_Ability01Prepare</a>",
                 "invertCondition": true
               },
               {
@@ -72,7 +72,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "_M_Cyrene_Eidolon1_Ability01Prepare"
+              "modifier": "<a class=\"gModGreen\" id=\"-2012168482\">_M_Cyrene_Eidolon1_Ability01Prepare</a>"
             },
             {
               "name": "Inject Extra-Turn",
@@ -95,7 +95,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "_M_Cyrene_Eidolon1_Ability01Prepare"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2012168482\">_M_Cyrene_Eidolon1_Ability01Prepare</a>"
                 }
               ],
               "ignoreCost": true
@@ -106,7 +106,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "HPSync",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-255863654\">HPSync</a>",
       "parse": [
         {
           "name": "Define Custom Variable with HP%",
@@ -202,7 +202,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_NegativeHP",
+                  "modifier": "<a class=\"gModGreen\" id=\"133953622\">Memosprite_CyreneServant_NegativeHP</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (CasterNegativeHP) || RETURN",
@@ -222,7 +222,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_NegativeHP",
+                  "modifier": "<a class=\"gModGreen\" id=\"133953622\">Memosprite_CyreneServant_NegativeHP</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": 0
                   }
@@ -283,7 +283,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Memosprite_CyreneServant_NegativeHP"
+              "modifier": "<a class=\"gModGreen\" id=\"133953622\">Memosprite_CyreneServant_NegativeHP</a>"
             },
             {
               "name": "IF",
@@ -337,7 +337,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_CyreneServant_AbilityManage",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1428811240\">Servant_CyreneServant_AbilityManage</a>",
       "parse": [
         {
           "name": "IF",
@@ -365,7 +365,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Memosprite_CyreneServant_Ability01Disable"
+              "modifier": "<a class=\"gModGreen\" id=\"1599805283\">Memosprite_CyreneServant_Ability01Disable</a>"
             }
           ],
           "failed": [
@@ -375,7 +375,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Memosprite_CyreneServant_Ability01Disable"
+              "modifier": "<a class=\"gModGreen\" id=\"1599805283\">Memosprite_CyreneServant_Ability01Disable</a>"
             }
           ]
         },
@@ -405,7 +405,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Memosprite_CyreneServant_Ability02Disable"
+              "modifier": "<a class=\"gModGreen\" id=\"339481432\">Memosprite_CyreneServant_Ability02Disable</a>"
             }
           ],
           "failed": [
@@ -415,7 +415,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Memosprite_CyreneServant_Ability02Disable"
+              "modifier": "<a class=\"gModGreen\" id=\"339481432\">Memosprite_CyreneServant_Ability02Disable</a>"
             }
           ]
         },
@@ -467,7 +467,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}.[[getSummoner]]"
               },
-              "modifier": "Memosprite_CyreneServant_SummonerAbility03Disable"
+              "modifier": "<a class=\"gModGreen\" id=\"2017433273\">Memosprite_CyreneServant_SummonerAbility03Disable</a>"
             }
           ],
           "failed": [
@@ -477,7 +477,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}.[[getSummoner]]"
               },
-              "modifier": "Memosprite_CyreneServant_SummonerAbility03Disable"
+              "modifier": "<a class=\"gModGreen\" id=\"2017433273\">Memosprite_CyreneServant_SummonerAbility03Disable</a>"
             }
           ]
         }
@@ -485,7 +485,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_CyreneServant_AbilityReady_LightTeamMirrorSetupEffect",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1634834847\">Servant_CyreneServant_AbilityReady_LightTeamMirrorSetupEffect</a>",
       "parse": [
         {
           "name": "IF",
@@ -506,14 +506,14 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Memosprite_CyreneServant_AmazingBonus"
+            "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
           }
         }
       ]
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_CyreneServant_AbilityReady_LightTeamMirrorChosenEffect",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__344221092\">Servant_CyreneServant_AbilityReady_LightTeamMirrorChosenEffect</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -562,7 +562,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_CyreneServant_AbilityReady_MirrorSetup",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-668366939\">Servant_CyreneServant_AbilityReady_MirrorSetup</a>",
       "parse": [
         {
           "name": "Declare Custom Variable",
@@ -633,7 +633,7 @@ const configAbility = {
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Servant_CyreneServant_AbilityReady_LightTeamMirrorSetupEffect",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1634834847\">Servant_CyreneServant_AbilityReady_LightTeamMirrorSetupEffect</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
@@ -703,7 +703,7 @@ const configAbility = {
                             },
                             {
                               "name": "Use Custom Character Function",
-                              "functionName": "Servant_CyreneServant_AbilityReady_LightTeamMirrorSetupEffect",
+                              "functionName": "<a class=\"gTempYellow\" id=\"-1634834847\">Servant_CyreneServant_AbilityReady_LightTeamMirrorSetupEffect</a>",
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
@@ -737,7 +737,7 @@ const configAbility = {
                             },
                             {
                               "name": "Use Custom Character Function",
-                              "functionName": "Servant_CyreneServant_AbilityReady_LightTeamMirrorSetupEffect",
+                              "functionName": "<a class=\"gTempYellow\" id=\"-1634834847\">Servant_CyreneServant_AbilityReady_LightTeamMirrorSetupEffect</a>",
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
@@ -805,7 +805,7 @@ const configAbility = {
                             },
                             {
                               "name": "Use Custom Character Function",
-                              "functionName": "Servant_CyreneServant_AbilityReady_LightTeamMirrorSetupEffect",
+                              "functionName": "<a class=\"gTempYellow\" id=\"-1634834847\">Servant_CyreneServant_AbilityReady_LightTeamMirrorSetupEffect</a>",
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
@@ -839,7 +839,7 @@ const configAbility = {
                             },
                             {
                               "name": "Use Custom Character Function",
-                              "functionName": "Servant_CyreneServant_AbilityReady_LightTeamMirrorSetupEffect",
+                              "functionName": "<a class=\"gTempYellow\" id=\"-1634834847\">Servant_CyreneServant_AbilityReady_LightTeamMirrorSetupEffect</a>",
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
@@ -873,7 +873,7 @@ const configAbility = {
                             },
                             {
                               "name": "Use Custom Character Function",
-                              "functionName": "Servant_CyreneServant_AbilityReady_LightTeamMirrorSetupEffect",
+                              "functionName": "<a class=\"gTempYellow\" id=\"-1634834847\">Servant_CyreneServant_AbilityReady_LightTeamMirrorSetupEffect</a>",
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
@@ -931,7 +931,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "ServantCyrene_ChargeEnergy",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1364306036\">ServantCyrene_ChargeEnergy</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -1019,7 +1019,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "ServantCyrene_Eidolon6",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-296031576\">ServantCyrene_Eidolon6</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Added Value",
@@ -1045,7 +1045,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CyreneServant_Eidolon6",
+              "modifier": "<a class=\"gModGreen\" id=\"-1795139027\">Memosprite_CyreneServant_Eidolon6</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.2) || RETURN",
@@ -1061,7 +1061,7 @@ const configAbility = {
           "failed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "ReduceActionDelay",
+              "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"

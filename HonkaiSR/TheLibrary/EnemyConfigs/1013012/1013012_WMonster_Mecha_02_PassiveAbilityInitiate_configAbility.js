@@ -39,13 +39,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "WMonster_Mecha_02_Activation_Controller"
+      "modifier": "<a class=\"gModGreen\" id=\"639506044\">WMonster_Mecha_02_Activation_Controller</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "WMonster_Mecha_02_Activation_Controller",
+      "for": "<a class=\"gModGreen\" id=\"mod__639506044\">WMonster_Mecha_02_Activation_Controller</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage End [Owner]: Hit",

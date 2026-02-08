@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Abomi02_EffectControl",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1599810700\">Monster_W2_Abomi02_EffectControl</a>",
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
@@ -46,7 +46,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Abomi02_Mark[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
       "stackType": "Multiple",
       "execute": [
         {
@@ -90,7 +90,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Abomi02_TargetList[<span class=\"descriptionNumberColor\">Core Formation</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1723051927\">Monster_W2_Abomi02_TargetList</a>[<span class=\"descriptionNumberColor\">Core Formation</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -159,7 +159,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Abomi02_Mark[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
@@ -232,7 +232,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Abomi02_Mark[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
@@ -267,7 +267,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W2_Abomi02_TargetList[<span class=\"descriptionNumberColor\">Core Formation</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1723051927\">Monster_W2_Abomi02_TargetList</a>[<span class=\"descriptionNumberColor\">Core Formation</span>]"
                 }
               ]
             }

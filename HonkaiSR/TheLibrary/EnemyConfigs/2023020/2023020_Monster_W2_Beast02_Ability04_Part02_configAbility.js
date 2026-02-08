@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMore"
+      "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
     },
     "Ability Start",
     {
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Beast02_Bullet[<span class=\"descriptionNumberColor\">Gusto</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"908537899\">Monster_W2_Beast02_Bullet</a>[<span class=\"descriptionNumberColor\">Gusto</span>]",
       "counter": 3
     },
     {
@@ -39,7 +39,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Beast02_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-1917780561\">Enemy_W2_Beast02_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -47,7 +47,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -55,7 +55,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Monster_W2_Beast02_Edict"
+      "modifier": "<a class=\"gModGreen\" id=\"130206318\">Monster_W2_Beast02_Edict</a>"
     },
     "Trigger: Ability End"
   ],

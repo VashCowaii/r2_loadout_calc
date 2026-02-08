@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_Standard_Layer_DamageUP[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1692594642\">Monster_Standard_Layer_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
         "displayLines": "{[Skill03[1]]}",

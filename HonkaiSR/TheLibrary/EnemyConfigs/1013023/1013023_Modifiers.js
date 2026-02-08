@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RL_AfterCharge",
+      "for": "<a class=\"gModGreen\" id=\"mod__-977376968\">Monster_W1_Mecha04_RL_AfterCharge</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -50,7 +50,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RL_ChargeDecision",
+      "for": "<a class=\"gModGreen\" id=\"mod__613455868\">Monster_W1_Mecha04_RL_ChargeDecision</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier is Added [Owner]",
@@ -63,7 +63,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Enemy_W1_Mecha04_ChainSawSpeedUp"
+                "modifier": "<a class=\"gModGreen\" id=\"1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>"
               },
               "passed": [
                 {
@@ -72,7 +72,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W1_Mecha04_RL_AfterCharge",
+                  "modifier": "<a class=\"gModGreen\" id=\"-977376968\">Monster_W1_Mecha04_RL_AfterCharge</a>",
                   "valuePerStack": {
                     "MDF_RogueGoalID": {
                       "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__33) || RETURN",
@@ -92,7 +92,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RL_Part03Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__1980712149\">Monster_W1_Mecha04_RL_Part03Effect</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -103,7 +103,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RL_Part02Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1289880646\">Monster_W1_Mecha04_RL_Part02Effect</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -114,7 +114,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_Mecha04_RL_ResetAI",
+      "for": "<a class=\"gModGreen\" id=\"mod__1432540592\">Monster_Mecha04_RL_ResetAI</a>",
       "execute": [
         {
           "eventTrigger": "Action End [Owner]",
@@ -184,7 +184,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W1_Mecha04_Sign01[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -192,7 +192,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W1_Mecha04_Sign02[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1052882616\">Monster_W1_Mecha04_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
                   }
                 ]
               },
@@ -213,7 +213,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_APShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -231,7 +231,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Monster_W1_Mecha04_Sign01[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
               },
               "passed": [
                 {
@@ -255,7 +255,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Monster_W1_Mecha04_Sign02[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1052882616\">Monster_W1_Mecha04_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
               },
               "passed": [
                 {
@@ -283,7 +283,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RL_ChargeFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__1780187848\">Monster_W1_Mecha04_RL_ChargeFlag</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -302,7 +302,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RL_Ability12_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-136691859\">Monster_W1_Mecha04_RL_Ability12_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -358,7 +358,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RL_Part3Passive[<span class=\"descriptionNumberColor\">Combat Speed-Up</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1362109025\">Monster_W1_Mecha04_RL_Part3Passive</a>[<span class=\"descriptionNumberColor\">Combat Speed-Up</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -393,11 +393,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RL_BreakTarget"
+      "for": "<a class=\"gModGreen\" id=\"mod__373380688\">Monster_W1_Mecha04_RL_BreakTarget</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RL_Support",
+      "for": "<a class=\"gModGreen\" id=\"mod__1749433093\">Monster_W1_Mecha04_RL_Support</a>",
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -408,7 +408,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Monster_W1_Mecha04_RL_BreakTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"373380688\">Monster_W1_Mecha04_RL_BreakTarget</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -416,7 +416,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W1_Mecha04_RL_BreakTarget",
+              "modifier": "<a class=\"gModGreen\" id=\"373380688\">Monster_W1_Mecha04_RL_BreakTarget</a>",
               "casterAssign": "TargetSelf"
             },
             {
@@ -432,7 +432,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W1_Mecha03_RL_PartController"
+                "modifier": "<a class=\"gModGreen\" id=\"1494789360\">Monster_W1_Mecha03_RL_PartController</a>"
               },
               "ifTargetFound": [
                 {
@@ -451,7 +451,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "W1_Mecha02_AttackBonus[<span class=\"descriptionNumberColor\">Charging</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1670817312\">W1_Mecha02_AttackBonus</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
                 },
                 {
                   "name": "Action Advance/Delay",
@@ -482,7 +482,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RL_Endurance",
+      "for": "<a class=\"gModGreen\" id=\"mod__1547227211\">Monster_W1_Mecha04_RL_Endurance</a>",
       "modifierFlags": [
         "Endurance"
       ],
@@ -505,7 +505,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RL_Stealth",
+      "for": "<a class=\"gModGreen\" id=\"mod__1755632757\">Monster_W1_Mecha04_RL_Stealth</a>",
       "modifierFlags": [
         "Stealth",
         "Endurance"
@@ -524,7 +524,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RL_Enhance_Dormancy[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
       "modifierFlags": [
         "DisableHealHP"
       ],
@@ -548,7 +548,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W1_Mecha04_RL_Stealth"
+              "modifier": "<a class=\"gModGreen\" id=\"1755632757\">Monster_W1_Mecha04_RL_Stealth</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -556,7 +556,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "OneMorePerTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -564,7 +564,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Sign_W1_Mecha02[<span class=\"descriptionNumberColor\">Lock On</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1909388904\">Sign_W1_Mecha02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -573,7 +573,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Monster_W1_Mecha04_Sign01[<span class=\"descriptionNumberColor\">Lock On</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -582,7 +582,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Monster_W1_Mecha04_Sign02[<span class=\"descriptionNumberColor\">Lock On</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1052882616\">Monster_W1_Mecha04_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -604,7 +604,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "OneMorePerTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -639,7 +639,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W1_Mecha04_RL_Stealth"
+              "modifier": "<a class=\"gModGreen\" id=\"1755632757\">Monster_W1_Mecha04_RL_Stealth</a>"
             },
             {
               "name": "Change Character Transformation",
@@ -660,7 +660,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W1_Mecha04_RL_Stealth"
+              "modifier": "<a class=\"gModGreen\" id=\"1755632757\">Monster_W1_Mecha04_RL_Stealth</a>"
             }
           ]
         },
@@ -673,7 +673,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W1_Mecha04_RL_Stealth"
+              "modifier": "<a class=\"gModGreen\" id=\"1755632757\">Monster_W1_Mecha04_RL_Stealth</a>"
             }
           ]
         },
@@ -699,7 +699,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RL_Dormancy",
+      "for": "<a class=\"gModGreen\" id=\"mod__-301883151\">Monster_W1_Mecha04_RL_Dormancy</a>",
       "modifierFlags": [
         "DisableHealHP",
         "DisableAction",
@@ -715,7 +715,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W1_Mecha04_RL_Stealth"
+              "modifier": "<a class=\"gModGreen\" id=\"1755632757\">Monster_W1_Mecha04_RL_Stealth</a>"
             }
           ]
         },
@@ -728,7 +728,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W1_Mecha04_RL_Stealth"
+              "modifier": "<a class=\"gModGreen\" id=\"1755632757\">Monster_W1_Mecha04_RL_Stealth</a>"
             }
           ]
         },
@@ -750,7 +750,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RL_PartController",
+      "for": "<a class=\"gModGreen\" id=\"mod__736844777\">Monster_W1_Mecha04_RL_PartController</a>",
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -782,7 +782,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W1_Mecha03_RL_PartController"
+                    "modifier": "<a class=\"gModGreen\" id=\"1494789360\">Monster_W1_Mecha03_RL_PartController</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -809,7 +809,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Monster_W1_Mecha03_RL_Dormancy",
+                                "modifier": "<a class=\"gModGreen\" id=\"-1739978054\">Monster_W1_Mecha03_RL_Dormancy</a>",
                                 "justAddedOrActive": true
                               },
                               {
@@ -818,7 +818,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Monster_W1_Mecha03_RL_Enhance_Dormancy[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
+                                "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                 "justAddedOrActive": true
                               }
                             ]
@@ -852,7 +852,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "modifier": "Monster_W1_Mecha04_RL_Endurance"
+                                  "modifier": "<a class=\"gModGreen\" id=\"1547227211\">Monster_W1_Mecha04_RL_Endurance</a>"
                                 },
                                 {
                                   "name": "Declare Custom Variable",
@@ -899,7 +899,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Monster_W1_Mecha03_RL_Endurance",
+                                  "modifier": "<a class=\"gModGreen\" id=\"-16772570\">Monster_W1_Mecha03_RL_Endurance</a>",
                                   "casterAssign": "TargetSelf"
                                 },
                                 {
@@ -951,7 +951,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Player Team All}}"
                                   },
-                                  "modifier": "Sign_W1_Mecha02[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1909388904\">Sign_W1_Mecha02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
                                   "onlyRemoveOwnersInstance": true
                                 },
                                 {
@@ -960,7 +960,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Player Team All}}"
                                   },
-                                  "modifier": "Monster_W1_Mecha04_Sign01[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
                                   "onlyRemoveOwnersInstance": true
                                 },
                                 {
@@ -969,7 +969,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Player Team All}}"
                                   },
-                                  "modifier": "Monster_W1_Mecha04_Sign02[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1052882616\">Monster_W1_Mecha04_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
                                   "onlyRemoveOwnersInstance": true
                                 },
                                 {
@@ -1025,7 +1025,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "modifier": "Enemy_W1_Mecha04_ChainSawSpeedUp"
+                                  "modifier": "<a class=\"gModGreen\" id=\"1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>"
                                 },
                                 {
                                   "name": "IF",
@@ -1082,7 +1082,7 @@ const configAbility = {
                                             "name": "Target Name",
                                             "target": "{{Modifier Holder}}"
                                           },
-                                          "modifier": "Monster_W1_Mecha04_RL_Enhance_Dormancy[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
+                                          "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                           "duration": {
                                             "operator": "Variables[0] (UnusedUnderThisBase_57) || RETURN",
                                             "displayLines": "UnusedUnderThisBase_57",
@@ -1109,7 +1109,7 @@ const configAbility = {
                                             "name": "Target Name",
                                             "target": "{{Modifier Holder}}"
                                           },
-                                          "modifier": "Monster_W1_Mecha04_RL_Enhance_Dormancy[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
+                                          "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                           "duration": {
                                             "operator": "Variables[0] (UnusedUnderThisBase_55) || RETURN",
                                             "displayLines": "UnusedUnderThisBase_55",
@@ -1129,7 +1129,7 @@ const configAbility = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "modifier": "Monster_W1_Mecha04_RL_Dormancy"
+                                      "modifier": "<a class=\"gModGreen\" id=\"-301883151\">Monster_W1_Mecha04_RL_Dormancy</a>"
                                     }
                                   ]
                                 },
@@ -1215,7 +1215,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Monster_W1_Mecha03_RL_Endurance",
+                          "modifier": "<a class=\"gModGreen\" id=\"-16772570\">Monster_W1_Mecha03_RL_Endurance</a>",
                           "casterAssign": "TargetSelf"
                         },
                         {
@@ -1284,7 +1284,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Monster_W1_Mecha03_RL_PartController"
+                                "modifier": "<a class=\"gModGreen\" id=\"1494789360\">Monster_W1_Mecha03_RL_PartController</a>"
                               },
                               "ifTargetFound": [
                                 {
@@ -1311,7 +1311,7 @@ const configAbility = {
                                               "name": "Target Name",
                                               "target": "{{Parameter Target}}"
                                             },
-                                            "modifier": "Monster_W1_Mecha03_RL_Dormancy",
+                                            "modifier": "<a class=\"gModGreen\" id=\"-1739978054\">Monster_W1_Mecha03_RL_Dormancy</a>",
                                             "justAddedOrActive": true
                                           },
                                           {
@@ -1320,7 +1320,7 @@ const configAbility = {
                                               "name": "Target Name",
                                               "target": "{{Parameter Target}}"
                                             },
-                                            "modifier": "Monster_W1_Mecha03_RL_Enhance_Dormancy[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
+                                            "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                             "justAddedOrActive": true
                                           }
                                         ]
@@ -1380,7 +1380,7 @@ const configAbility = {
                                                     "name": "Target Name",
                                                     "target": "{{Caster}}"
                                                   },
-                                                  "modifier": "Monster_W1_Mecha04_RL_Part02Effect"
+                                                  "modifier": "<a class=\"gModGreen\" id=\"-1289880646\">Monster_W1_Mecha04_RL_Part02Effect</a>"
                                                 },
                                                 {
                                                   "name": "Remove Events/Bonuses",
@@ -1388,7 +1388,7 @@ const configAbility = {
                                                     "name": "Target Name",
                                                     "target": "{{Caster}}"
                                                   },
-                                                  "modifier": "Monster_W1_Mecha04_RL_Part03Effect"
+                                                  "modifier": "<a class=\"gModGreen\" id=\"1980712149\">Monster_W1_Mecha04_RL_Part03Effect</a>"
                                                 },
                                                 {
                                                   "name": "Add Events/Bonuses",
@@ -1396,7 +1396,7 @@ const configAbility = {
                                                     "name": "Target Name",
                                                     "target": "{{Modifier Holder}}"
                                                   },
-                                                  "modifier": "Monster_W1_Mecha04_RL_Endurance"
+                                                  "modifier": "<a class=\"gModGreen\" id=\"1547227211\">Monster_W1_Mecha04_RL_Endurance</a>"
                                                 },
                                                 {
                                                   "name": "Declare Custom Variable",
@@ -1443,7 +1443,7 @@ const configAbility = {
                                                     "name": "Target Name",
                                                     "target": "{{Parameter Target}}"
                                                   },
-                                                  "modifier": "Monster_W1_Mecha03_RL_Endurance",
+                                                  "modifier": "<a class=\"gModGreen\" id=\"-16772570\">Monster_W1_Mecha03_RL_Endurance</a>",
                                                   "casterAssign": "TargetSelf"
                                                 },
                                                 {
@@ -1497,7 +1497,7 @@ const configAbility = {
                                                 "name": "Target Name",
                                                 "target": "{{Player Team All}}"
                                               },
-                                              "modifier": "Sign_W1_Mecha02[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                                              "modifier": "<a class=\"gModGreen\" id=\"-1909388904\">Sign_W1_Mecha02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
                                               "onlyRemoveOwnersInstance": true
                                             },
                                             {
@@ -1506,7 +1506,7 @@ const configAbility = {
                                                 "name": "Target Name",
                                                 "target": "{{Player Team All}}"
                                               },
-                                              "modifier": "Monster_W1_Mecha04_Sign01[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                                              "modifier": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
                                               "onlyRemoveOwnersInstance": true
                                             },
                                             {
@@ -1515,7 +1515,7 @@ const configAbility = {
                                                 "name": "Target Name",
                                                 "target": "{{Player Team All}}"
                                               },
-                                              "modifier": "Monster_W1_Mecha04_Sign02[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                                              "modifier": "<a class=\"gModGreen\" id=\"-1052882616\">Monster_W1_Mecha04_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
                                               "onlyRemoveOwnersInstance": true
                                             },
                                             {
@@ -1571,7 +1571,7 @@ const configAbility = {
                                                 "name": "Target Name",
                                                 "target": "{{Modifier Holder}}"
                                               },
-                                              "modifier": "Enemy_W1_Mecha04_ChainSawSpeedUp"
+                                              "modifier": "<a class=\"gModGreen\" id=\"1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>"
                                             },
                                             {
                                               "name": "IF",
@@ -1628,7 +1628,7 @@ const configAbility = {
                                                         "name": "Target Name",
                                                         "target": "{{Modifier Holder}}"
                                                       },
-                                                      "modifier": "Monster_W1_Mecha04_RL_Enhance_Dormancy[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
+                                                      "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                                       "duration": {
                                                         "operator": "Variables[0] (UnusedUnderThisBase_57) || RETURN",
                                                         "displayLines": "UnusedUnderThisBase_57",
@@ -1655,7 +1655,7 @@ const configAbility = {
                                                         "name": "Target Name",
                                                         "target": "{{Modifier Holder}}"
                                                       },
-                                                      "modifier": "Monster_W1_Mecha04_RL_Enhance_Dormancy[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
+                                                      "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                                       "duration": {
                                                         "operator": "Variables[0] (UnusedUnderThisBase_55) || RETURN",
                                                         "displayLines": "UnusedUnderThisBase_55",
@@ -1675,7 +1675,7 @@ const configAbility = {
                                                     "name": "Target Name",
                                                     "target": "{{Modifier Holder}}"
                                                   },
-                                                  "modifier": "Monster_W1_Mecha04_RL_Dormancy"
+                                                  "modifier": "<a class=\"gModGreen\" id=\"-301883151\">Monster_W1_Mecha04_RL_Dormancy</a>"
                                                 }
                                               ]
                                             },
@@ -1685,7 +1685,7 @@ const configAbility = {
                                                 "name": "Target Name",
                                                 "target": "{{Caster}}"
                                               },
-                                              "modifier": "Monster_W1_Mecha04_RL_Part02Effect"
+                                              "modifier": "<a class=\"gModGreen\" id=\"-1289880646\">Monster_W1_Mecha04_RL_Part02Effect</a>"
                                             },
                                             {
                                               "name": "Remove Events/Bonuses",
@@ -1693,7 +1693,7 @@ const configAbility = {
                                                 "name": "Target Name",
                                                 "target": "{{Caster}}"
                                               },
-                                              "modifier": "Monster_W1_Mecha04_RL_Part03Effect"
+                                              "modifier": "<a class=\"gModGreen\" id=\"1980712149\">Monster_W1_Mecha04_RL_Part03Effect</a>"
                                             },
                                             {
                                               "name": "Define Custom Variable",
@@ -1744,7 +1744,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Monster_W1_Mecha03_RL_PartController"
+                                "modifier": "<a class=\"gModGreen\" id=\"1494789360\">Monster_W1_Mecha03_RL_PartController</a>"
                               },
                               "ifTargetFound": [
                                 {
@@ -1776,7 +1776,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "W1_Mecha02_AttackBonus_Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__1364752860\">W1_Mecha02_AttackBonus_Effect</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1787,7 +1787,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "W1_Mecha02_AttackBonus[<span class=\"descriptionNumberColor\">Charging</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1670817312\">W1_Mecha02_AttackBonus</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [],
       "execute": [
@@ -1800,7 +1800,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "W1_Mecha02_AttackBonus_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"1364752860\">W1_Mecha02_AttackBonus_Effect</a>"
             }
           ]
         },
@@ -1813,7 +1813,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W1_Mecha03_RL_Revenge[<span class=\"descriptionNumberColor\">Obliteration Order</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-735432971\">Monster_W1_Mecha03_RL_Revenge</a>[<span class=\"descriptionNumberColor\">Obliteration Order</span>]"
             }
           ]
         },
@@ -1866,7 +1866,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "W1_Mecha02_AttackBonus_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"1364752860\">W1_Mecha02_AttackBonus_Effect</a>"
             },
             "Modifier Deletes Itself"
           ]
@@ -1885,7 +1885,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sign_W1_Mecha02[<span class=\"descriptionNumberColor\">Lock On</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1909388904\">Sign_W1_Mecha02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -1905,7 +1905,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "W1_Mecha02_ThunderDOT[<span class=\"descriptionNumberColor\">Bleed</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-95545360\">W1_Mecha02_ThunderDOT</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -2035,7 +2035,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_Mecha04_BattleScore1",
+      "for": "<a class=\"gModGreen\" id=\"mod__1081277388\">Monster_Mecha04_BattleScore1</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -2088,7 +2088,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Mecha04_ChainSawSpeedUpAgain",
+      "for": "<a class=\"gModGreen\" id=\"mod__413586706\">Enemy_W1_Mecha04_ChainSawSpeedUpAgain</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -2099,7 +2099,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W1_Mecha04_ChainSawSpeedUp"
+              "modifier": "<a class=\"gModGreen\" id=\"1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>"
             },
             "Modifier Deletes Itself"
           ]
@@ -2112,7 +2112,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Mecha04_ChainSawSpeedUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2180,7 +2180,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RemoveAim",
+      "for": "<a class=\"gModGreen\" id=\"mod__86526796\">Monster_W1_Mecha04_RemoveAim</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -2191,7 +2191,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Monster_W1_Mecha04_Sign01[<span class=\"descriptionNumberColor\">Lock On</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2199,7 +2199,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Monster_W1_Mecha04_Sign02[<span class=\"descriptionNumberColor\">Lock On</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1052882616\">Monster_W1_Mecha04_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2207,7 +2207,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W1_Mecha04_ChainSawSpeedUp"
+              "modifier": "<a class=\"gModGreen\" id=\"1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>"
             },
             {
               "name": "Declare Custom Variable",
@@ -2233,7 +2233,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_Sign02[<span class=\"descriptionNumberColor\">Lock On</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1052882616\">Monster_W1_Mecha04_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -2250,7 +2250,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_Sign01[<span class=\"descriptionNumberColor\">Lock On</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -2267,7 +2267,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_RemoveOneMore",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1321057432\">Monster_W1_Mecha04_RemoveOneMore</a>",
       "execute": [
         {
           "eventTrigger": "Action End [Owner]",
@@ -2308,7 +2308,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMorePerTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                 }
               ],
               "failed": [
@@ -2320,7 +2320,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "OneMorePerTurn"
+                    "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                   },
                   "failed": [
                     {
@@ -2329,7 +2329,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "OneMorePerTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                     }
                   ]
                 }

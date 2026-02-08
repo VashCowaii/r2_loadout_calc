@@ -20,7 +20,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Advanced_Jingliu_LoseHPPreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"1453058731\">Advanced_Jingliu_LoseHPPreShow</a>"
     },
     {
       "name": "Read Variable Value",
@@ -128,7 +128,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Advanced_Jingliu_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-908005903\">Advanced_Jingliu_Passive</a>"
     }
   ],
   "references": []

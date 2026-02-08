@@ -17,8 +17,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "RuanMei_DelayHint",
-      "referenceModifier": "MReference_Empty"
+      "modifier": "<a class=\"gModGreen\" id=\"-1922337227\">RuanMei_DelayHint</a>",
+      "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
     },
     {
       "name": "Define Custom Variable with Stat",
@@ -96,7 +96,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "RuanMei_DelayHint"
+      "modifier": "<a class=\"gModGreen\" id=\"-1922337227\">RuanMei_DelayHint</a>"
     }
   ],
   "references": []

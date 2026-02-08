@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Cipher_SpecialMark01",
+      "for": "<a class=\"gModGreen\" id=\"mod__825609644\">Cipher_SpecialMark01</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -47,7 +47,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Cipher_SpecialMark01"
+                  "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
                 }
               ]
             }
@@ -106,7 +106,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_SpecialMark02",
+      "for": "<a class=\"gModGreen\" id=\"mod__875942501\">Cipher_SpecialMark02</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "ListenBattleEventSkill"
@@ -167,7 +167,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                       },
                       "passed": [
                         {
@@ -201,7 +201,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                       },
                       "passed": [
                         {
@@ -268,7 +268,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                       },
                       "passed": [
                         {
@@ -302,7 +302,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                       },
                       "passed": [
                         {
@@ -336,7 +336,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_Ability03_Force_Preshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__838995685\">Cipher_Ability03_Force_Preshow</a>",
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -347,7 +347,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_Ability03_Force",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1154380754\">Cipher_Ability03_Force</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ForceStanceDamage"
@@ -371,7 +371,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_BpKuoSan_Insert_Bonuser",
+      "for": "<a class=\"gModGreen\" id=\"mod__-315567514\">Cipher_BpKuoSan_Insert_Bonuser</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
@@ -381,7 +381,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Cipher_InsertRetargetSelf"
+              "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
             }
           ]
         },
@@ -396,7 +396,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Cipher_InsertRetargetSelf"
+              "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
             }
           ],
           "priorityLevel": -55
@@ -406,7 +406,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Cipher_InsertRetargetSelf"
+              "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
             }
           ]
         },
@@ -415,7 +415,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Cipher_InsertRetargetSelf"
+              "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
             }
           ]
         },
@@ -452,7 +452,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Cipher_InsertRetargetSelf"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
                 }
               ]
             }
@@ -462,7 +462,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Cipher_InsertRetargetSelf",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-2003903269\">Cipher_InsertRetargetSelf</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -516,7 +516,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_BpKuoSan_Insert_CD[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__4491835\">Cipher_BpKuoSan_Insert_CD</a>[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -538,12 +538,12 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_PointB2_CD",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1385569030\">Cipher_PointB2_CD</a>",
       "duration": 1
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
       "modifierFlags": [
         "KeepOnDeathrattle",
         "STAT_AITargetHigherPriority",
@@ -580,7 +580,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -588,7 +588,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Cipher_SpecialMark01"
+                  "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
                 }
               ]
             },
@@ -598,7 +598,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Cipher_SpecialMark01"
+              "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
             }
           ]
         },
@@ -611,7 +611,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -619,7 +619,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Cipher_SpecialMark01"
+              "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
             }
           ]
         },
@@ -637,7 +637,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Cipher_Insert_Listen",
+                    "modifier": "<a class=\"gModGreen\" id=\"-556818185\">Cipher_Insert_Listen</a>",
                     "invertCondition": true
                   },
                   {
@@ -657,7 +657,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Cipher_BpKuoSan_Insert_Hit"
+                  "modifier": "<a class=\"gModGreen\" id=\"232969841\">Cipher_BpKuoSan_Insert_Hit</a>"
                 }
               ]
             }
@@ -1109,7 +1109,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
                   "valuePerStack": {}
                 }
               ]
@@ -1120,7 +1120,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
             }
           ]
         },
@@ -1226,7 +1226,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
                   "valuePerStack": {}
                 }
               ]
@@ -1237,7 +1237,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
             }
           ]
         }
@@ -1251,7 +1251,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_BpKuoSan_Adj",
+      "for": "<a class=\"gModGreen\" id=\"mod__31554455\">Cipher_BpKuoSan_Adj</a>",
       "modifierFlags": [
         "KeepOnDeathrattle",
         "RemoveWhenCasterDead"
@@ -1305,7 +1305,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                           }
                         }
                       ]
@@ -1356,7 +1356,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                           }
                         }
                       ]
@@ -1382,17 +1382,17 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_BpKuoSan_Insert_Hit_PointB1"
+      "for": "<a class=\"gModGreen\" id=\"mod__-989192431\">Cipher_BpKuoSan_Insert_Hit_PointB1</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_BpKuoSan_Insert_Hit",
+      "for": "<a class=\"gModGreen\" id=\"mod__232969841\">Cipher_BpKuoSan_Insert_Hit</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_PointB1_Debuff",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1369337828\">Cipher_PointB1_Debuff</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1429,7 +1429,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_BP_Bonus[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__116163492\">Cipher_BP_Bonus</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1464,7 +1464,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_BP_Debuff[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1685549745\">Cipher_BP_Debuff</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_Fatigue"
@@ -1503,7 +1503,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_PointB3_Debuff[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1113671218\">Cipher_PointB3_Debuff</a>[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1538,7 +1538,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_PointB1_InsertBonus",
+      "for": "<a class=\"gModGreen\" id=\"mod__-235690437\">Cipher_PointB1_InsertBonus</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1574,7 +1574,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_Eidolon6_Debuff",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1912968422\">Cipher_Eidolon6_Debuff</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -1595,7 +1595,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_Eidolon1_Bonus[<span class=\"descriptionNumberColor\">Read the Room, Seek the Glee</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1467539794\">Cipher_Eidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Read the Room, Seek the Glee</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1631,7 +1631,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cipher_Eidolon2_Debuff[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-309291538\">Cipher_Eidolon2_Debuff</a>[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

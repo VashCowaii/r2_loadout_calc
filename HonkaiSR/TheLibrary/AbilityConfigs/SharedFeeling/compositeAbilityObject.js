@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_21007_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"136667367\">LC_21007_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_21007_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__136667367\">LC_21007_Main</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",

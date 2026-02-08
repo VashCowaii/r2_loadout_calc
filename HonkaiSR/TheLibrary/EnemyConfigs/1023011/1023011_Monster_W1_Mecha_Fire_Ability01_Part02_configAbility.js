@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha_Fire_Burning[<span class=\"descriptionNumberColor\">Mania</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"188036182\">Monster_W1_Mecha_Fire_Burning</a>[<span class=\"descriptionNumberColor\">Mania</span>]",
       "valuePerStack": {
         "Modifier_AttackAddedRatio": {
           "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",

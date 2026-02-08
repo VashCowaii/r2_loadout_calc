@@ -24,7 +24,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_Part1_HitEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1881757554\">Enemy_AML_Boss_Part1_HitEffect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -32,13 +32,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_Part1_OnBreakRecoverSoundEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"1242637680\">Enemy_AML_Boss_Part1_OnBreakRecoverSoundEffect</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part1_OnBreakRecoverSoundEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__1242637680\">Enemy_AML_Boss_Part1_OnBreakRecoverSoundEffect</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -74,7 +74,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part1_HitEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1881757554\">Enemy_AML_Boss_Part1_HitEffect</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -200,7 +200,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
             "displayLines": "{[Skill03[2]]}",
@@ -302,7 +302,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
             "displayLines": "{[Skill02[2]]}",

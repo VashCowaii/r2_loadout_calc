@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Boothill_Eidolon2_CD[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__827570007\">Boothill_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -25,7 +25,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Boothill_Eidolon2_Enhance[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__455996650\">Boothill_Eidolon2_Enhance</a>[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -56,7 +56,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Boothill_SelfModification[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1894494257\">Boothill_SelfModification</a>[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -95,7 +95,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
               },
               "passed": [
                 {
@@ -138,7 +138,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Boothill_Eidolon2_CD[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"827570007\">Boothill_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
                         "invertCondition": true
                       }
                     ]
@@ -150,7 +150,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Boothill_Eidolon2_CD[<span class=\"descriptionNumberColor\">Milestonemonger</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"827570007\">Boothill_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Milestonemonger</span>]"
                     },
                     {
                       "name": "Skill Points Modification",
@@ -170,7 +170,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Boothill_Eidolon2_Enhance[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"455996650\">Boothill_Eidolon2_Enhance</a>[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -248,7 +248,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Boothill_Ultimate_PhysicalWeakness[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1234556186\">Boothill_Ultimate_PhysicalWeakness</a>[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_AttachWeakness"
@@ -280,7 +280,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Boothill_AutoWinDuelTag",
+      "for": "<a class=\"gModGreen\" id=\"mod__837506667\">M_Boothill_AutoWinDuelTag</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [],
@@ -289,7 +289,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Boothill_EnemySpecialMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1876667790\">M_Boothill_EnemySpecialMark</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -343,7 +343,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Boothill_DuelEndFollowingListener",
+      "for": "<a class=\"gModGreen\" id=\"mod__1727126810\">M_Boothill_DuelEndFollowingListener</a>",
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -397,7 +397,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Boothill_SelfModification[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1894494257\">Boothill_SelfModification</a>[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -455,11 +455,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Boothill_OnDuelEndCheck"
+      "for": "<a class=\"gModGreen\" id=\"mod__-588085300\">M_Boothill_OnDuelEndCheck</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
       "stackType": "ReplaceByCaster",
       "targetRestriction": {
         "name": "Target Name",
@@ -481,7 +481,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_Boothill_EnemySpecialMark"
+              "modifier": "<a class=\"gModGreen\" id=\"-1876667790\">M_Boothill_EnemySpecialMark</a>"
             }
           ]
         },
@@ -490,7 +490,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Duel_Win_Check"
+              "functionName": "<a class=\"gTempYellow\" id=\"2020667561\">Duel_Win_Check</a>"
             }
           ]
         },
@@ -533,7 +533,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Duel_Break_Check"
+              "functionName": "<a class=\"gTempYellow\" id=\"-229259724\">Duel_Break_Check</a>"
             }
           ]
         },
@@ -548,7 +548,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
               },
               "passed": [
                 {
@@ -572,7 +572,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Duel_Break_Check"
+              "functionName": "<a class=\"gTempYellow\" id=\"-229259724\">Duel_Break_Check</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -601,7 +601,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Duel_Win_Check"
+              "functionName": "<a class=\"gTempYellow\" id=\"2020667561\">Duel_Win_Check</a>"
             }
           ]
         },
@@ -610,7 +610,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Duel_Win_Check"
+              "functionName": "<a class=\"gTempYellow\" id=\"2020667561\">Duel_Win_Check</a>"
             }
           ]
         },
@@ -621,12 +621,12 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "M_Boothill_OnDuelEndCheck"
+                "modifier": "<a class=\"gModGreen\" id=\"-588085300\">M_Boothill_OnDuelEndCheck</a>"
               },
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Duel_Break_Check"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-229259724\">Duel_Break_Check</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -634,7 +634,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Boothill_OnDuelEndCheck"
+                  "modifier": "<a class=\"gModGreen\" id=\"-588085300\">M_Boothill_OnDuelEndCheck</a>"
                 }
               ]
             }
@@ -645,7 +645,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Duel_Win_Check"
+              "functionName": "<a class=\"gTempYellow\" id=\"2020667561\">Duel_Win_Check</a>"
             }
           ]
         }
@@ -653,7 +653,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Duel_Win_Check",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__2020667561\">Duel_Win_Check</a>",
           "parse": [
             {
               "name": "IF",
@@ -663,7 +663,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
                 "invertCondition": true
               },
               "passed": [
@@ -674,7 +674,7 @@ const configAbility = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Duel_Break_Check",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-229259724\">Duel_Break_Check</a>",
           "parse": [
             {
               "name": "Looped Event",
@@ -693,7 +693,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Boothill_AutoWinDuelTag",
+                  "modifier": "<a class=\"gModGreen\" id=\"837506667\">M_Boothill_AutoWinDuelTag</a>",
                   "addStacksPerTrigger": 1
                 }
               ]
@@ -717,7 +717,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -733,7 +733,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
             },
             {
               "name": "IF",
@@ -743,7 +743,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "M_Boothill_AutoWinDuelTag"
+                "modifier": "<a class=\"gModGreen\" id=\"837506667\">M_Boothill_AutoWinDuelTag</a>"
               },
               "passed": [
                 {
@@ -752,7 +752,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Boothill_AutoWinDuelTag"
+                  "modifier": "<a class=\"gModGreen\" id=\"837506667\">M_Boothill_AutoWinDuelTag</a>"
                 }
               ]
             },
@@ -781,7 +781,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Duel_End_Check"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1682994070\">Duel_End_Check</a>"
             }
           ]
         },
@@ -863,7 +863,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "M_Boothill_AutoWinDuelTag"
+                    "modifier": "<a class=\"gModGreen\" id=\"837506667\">M_Boothill_AutoWinDuelTag</a>"
                   },
                   {
                     "name": "Has Modifier",
@@ -871,7 +871,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                   },
                   {
                     "name": "AND",
@@ -914,7 +914,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
               },
               "passed": [
                 {
@@ -948,7 +948,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Duel_End_Check"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1682994070\">Duel_End_Check</a>"
             }
           ]
         },
@@ -957,7 +957,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Duel_End_Check"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1682994070\">Duel_End_Check</a>"
             }
           ]
         },
@@ -966,7 +966,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Duel_End_Check"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1682994070\">Duel_End_Check</a>"
             }
           ]
         },
@@ -975,7 +975,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Duel_End_Check"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1682994070\">Duel_End_Check</a>"
             }
           ]
         },
@@ -984,7 +984,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Duel_End_Check"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1682994070\">Duel_End_Check</a>"
             }
           ]
         },
@@ -993,7 +993,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Duel_End_Check"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1682994070\">Duel_End_Check</a>"
             }
           ]
         }
@@ -1001,7 +1001,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Duel_End_Check",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1682994070\">Duel_End_Check</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -1017,7 +1017,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
               },
               "ifTargetFound": [
                 {
@@ -1026,7 +1026,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "M_Boothill_OnDuelEndCheck"
+                  "modifier": "<a class=\"gModGreen\" id=\"-588085300\">M_Boothill_OnDuelEndCheck</a>"
                 }
               ],
               "noTargetFound": [
@@ -1041,7 +1041,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "M_Boothill_AutoWinDuelTag"
+                "modifier": "<a class=\"gModGreen\" id=\"837506667\">M_Boothill_AutoWinDuelTag</a>"
               },
               "passed": [
                 {
@@ -1062,7 +1062,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                       },
                       {
                         "name": "AND",
@@ -1095,7 +1095,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_Boothill_DuelEndFollowingListener",
+                      "modifier": "<a class=\"gModGreen\" id=\"1727126810\">M_Boothill_DuelEndFollowingListener</a>",
                       "duration": 1,
                       "silentAdd": true
                     }
@@ -1119,7 +1119,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                       },
                       {
                         "name": "AND",

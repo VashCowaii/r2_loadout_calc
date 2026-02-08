@@ -66,7 +66,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Feixiao_ResetAnimSpeed"
+      "functionName": "<a class=\"gTempYellow\" id=\"2050569712\">Feixiao_ResetAnimSpeed</a>"
     },
     {
       "name": "IF",
@@ -150,7 +150,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Feixiao_ComboStartCheck"
+      "functionName": "<a class=\"gTempYellow\" id=\"1125040676\">Feixiao_ComboStartCheck</a>"
     },
     {
       "name": "IF",

@@ -37,7 +37,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Advanced_Ren_Attack_Transfer[<span class=\"descriptionNumberColor\">Hellscape</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-405491517\">Advanced_Ren_Attack_Transfer</a>[<span class=\"descriptionNumberColor\">Hellscape</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -53,7 +53,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Advanced_Ren_Attack[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1791240191\">Advanced_Ren_Attack</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
           "operator": "Variables[0] (0.4) || RETURN",

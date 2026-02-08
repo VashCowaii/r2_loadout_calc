@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Misha_Passive_Sub_EnergyBar"
+      "modifier": "<a class=\"gModGreen\" id=\"6214973\">M_Misha_Passive_Sub_EnergyBar</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -55,7 +55,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Misha_EnergyCount[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
       "counter": {
         "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
         "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",
@@ -140,7 +140,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Misha_EnergyCount[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
       "counter": 1,
       "stackType": "ReplaceByCaster",
       "execute": [
@@ -153,7 +153,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Misha_EnergyCount[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
               "counter": {
                 "operator": "Variables[0] (BasicAttack) || RETURN",
                 "displayLines": "BasicAttack",
@@ -176,7 +176,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Misha_Passive_Sub_EnergyBar",
+      "for": "<a class=\"gModGreen\" id=\"mod__6214973\">M_Misha_Passive_Sub_EnergyBar</a>",
       "execute": [
         {
           "eventTrigger": "Skill Point Changes",
@@ -300,7 +300,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "Misha_EnergyCount[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
                   "value": {
                     "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
                     "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",

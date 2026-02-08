@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_PlayerBoy_30_Eidolon2"
+      "modifier": "<a class=\"gModGreen\" id=\"-1545900235\">M_PlayerBoy_30_Eidolon2</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "RetainCountZero"
@@ -56,7 +56,7 @@ const configAbility = {
             },
             {
               "name": "Define Modifier-Specific Variable",
-              "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
               "variableName": "MDF_Count",
               "value": {
                 "operator": "Variables[0] (mInit_Count) || RETURN",
@@ -76,7 +76,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_PlayerBoy_30_Eidolon2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1545900235\">M_PlayerBoy_30_Eidolon2</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -87,7 +87,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
               "counter": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -147,7 +147,7 @@ const configAbility = {
                   },
                   {
                     "name": "Compare: Variable",
-                    "value1": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                     "compareType": ">",
                     "value2": 0
                   }
@@ -176,7 +176,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                   "function": "Add"
                 },
                 {
@@ -185,7 +185,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                   "adjustmentType": "+",
                   "variableName": "MDF_Count",
                   "value": -1
@@ -224,7 +224,7 @@ const configAbility = {
                   },
                   {
                     "name": "Compare: Variable",
-                    "value1": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                     "compareType": ">",
                     "value2": 0
                   }
@@ -253,7 +253,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                   "function": "Add"
                 },
                 {
@@ -262,7 +262,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1854522168\">PlayerBoy_30_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                   "adjustmentType": "+",
                   "variableName": "MDF_Count",
                   "value": -1

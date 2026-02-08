@@ -105,7 +105,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Monster_W2_Abomi01_Accelerate[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"345912758\">Monster_W2_Abomi01_Accelerate</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "valuePerStack": {
                         "MDF_SpeedRatio": {
                           "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
@@ -167,7 +167,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Monster_W2_Abomi01_Revive[<span class=\"descriptionNumberColor\">Rebirth</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
                     }
                   ]
                 },
@@ -305,7 +305,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Monster_W2_Abomi01_Revive[<span class=\"descriptionNumberColor\">Rebirth</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -313,7 +313,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Monster_W2_Abomi01_Accelerate[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"345912758\">Monster_W2_Abomi01_Accelerate</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "valuePerStack": {
                         "MDF_SpeedRatio": {
                           "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",

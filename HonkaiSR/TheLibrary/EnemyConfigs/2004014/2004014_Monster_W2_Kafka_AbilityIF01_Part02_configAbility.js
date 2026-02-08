@@ -29,7 +29,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_W2_Kafka_IF03_SummonKillBonus01[<span class=\"descriptionNumberColor\">Madden</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-689878752\">Monster_W2_Kafka_IF03_SummonKillBonus01</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
           "valuePerStack": {
             "MDF_KillBonus": {
               "operator": "Variables[0] ({[SkillIF01[2]]}) || RETURN",
@@ -68,7 +68,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_W2_Kafka_IF03_SummonKillBonus02[<span class=\"descriptionNumberColor\">Madden</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-639545895\">Monster_W2_Kafka_IF03_SummonKillBonus02</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
           "valuePerStack": {
             "MDF_KillBonus": {
               "operator": "Variables[0] ({[SkillIF01[2]]}) || RETURN",
@@ -99,7 +99,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_W2_Kafka_IF_EX04_Boss"
+            "modifier": "<a class=\"gModGreen\" id=\"1162350754\">Enemy_W2_Kafka_IF_EX04_Boss</a>"
           }
         ]
       },
@@ -223,7 +223,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_Kafka_IF03_SummonKillBonus03[<span class=\"descriptionNumberColor\">Madden</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-656323514\">Monster_W2_Kafka_IF03_SummonKillBonus03</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
                   "valuePerStack": {
                     "MDF_KillBonus": {
                       "operator": "Variables[0] ({[SkillIF01[2]]}) || RETURN",
@@ -305,7 +305,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_Kafka_IF03_SummonKillBonus04[<span class=\"descriptionNumberColor\">Madden</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-605990657\">Monster_W2_Kafka_IF03_SummonKillBonus04</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
                   "valuePerStack": {
                     "MDF_KillBonus": {
                       "operator": "Variables[0] ({[SkillIF01[2]]}) || RETURN",
@@ -348,7 +348,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Monster_W2_Kafka_IF03_SummonKillBonus03[<span class=\"descriptionNumberColor\">Madden</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-656323514\">Monster_W2_Kafka_IF03_SummonKillBonus03</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
               "valuePerStack": {
                 "MDF_KillBonus": {
                   "operator": "Variables[0] ({[SkillIF01[2]]}) || RETURN",
@@ -387,7 +387,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Monster_W2_Kafka_IF03_SummonKillBonus04[<span class=\"descriptionNumberColor\">Madden</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-605990657\">Monster_W2_Kafka_IF03_SummonKillBonus04</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
               "valuePerStack": {
                 "MDF_KillBonus": {
                   "operator": "Variables[0] ({[SkillIF01[2]]}) || RETURN",
@@ -420,7 +420,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_W2_Kafka_IF_EX04_Boss"
+            "modifier": "<a class=\"gModGreen\" id=\"1162350754\">Enemy_W2_Kafka_IF_EX04_Boss</a>"
           }
         }
       ]

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Qingque_Ability03_Eidolon1"
+      "modifier": "<a class=\"gModGreen\" id=\"520474077\">Qingque_Ability03_Eidolon1</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -48,7 +48,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Qingque_Ability03_Eidolon1"
+      "modifier": "<a class=\"gModGreen\" id=\"520474077\">Qingque_Ability03_Eidolon1</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -56,7 +56,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "QingQue_Passive_Tiao",
+      "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>",
       "removeAllInstances": true
     },
     {
@@ -65,7 +65,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "QingQue_Passive_Tong",
+      "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>",
       "removeAllInstances": true
     },
     {
@@ -74,7 +74,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "QingQue_Passive_Wan",
+      "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>",
       "removeAllInstances": true
     },
     {
@@ -103,7 +103,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1763556388\">QingQue_Passive_Hu</a>[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
           "operator": "Variables[0] (MDF_PropertyValue01) || RETURN",
@@ -121,7 +121,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "QingQue_Passive_Hu_Flag_Yu"
+      "modifier": "<a class=\"gModGreen\" id=\"-202055066\">QingQue_Passive_Hu_Flag_Yu</a>"
     },
     {
       "name": "IF",
@@ -145,7 +145,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "QingQue_Passive_Hu_01"
+          "modifier": "<a class=\"gModGreen\" id=\"-1715908114\">QingQue_Passive_Hu_01</a>"
         },
         {
           "name": "Inject Ability Use",
@@ -172,7 +172,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Qingque_Ability03_Eidolon1",
+      "for": "<a class=\"gModGreen\" id=\"mod__520474077\">Qingque_Ability03_Eidolon1</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",

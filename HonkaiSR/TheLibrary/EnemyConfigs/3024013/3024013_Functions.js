@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Argenti_SummonAllMonsters",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1462831775\">Argenti_SummonAllMonsters</a>",
       "parse": [
         {
           "name": "IF",
@@ -291,7 +291,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W2_Argenti_IF_Summon01"
+          "modifier": "<a class=\"gModGreen\" id=\"1783897766\">Monster_W2_Argenti_IF_Summon01</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -299,7 +299,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W2_Argenti_IF_Summon02"
+          "modifier": "<a class=\"gModGreen\" id=\"1767120147\">Monster_W2_Argenti_IF_Summon02</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -307,7 +307,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W2_Argenti_IF_Summon03"
+          "modifier": "<a class=\"gModGreen\" id=\"1750342528\">Monster_W2_Argenti_IF_Summon03</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -315,7 +315,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W2_Argenti_IF_Summon04"
+          "modifier": "<a class=\"gModGreen\" id=\"1867785861\">Monster_W2_Argenti_IF_Summon04</a>"
         },
         {
           "name": "Find New Target",
@@ -339,7 +339,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon01"
+              "modifier": "<a class=\"gModGreen\" id=\"1783897766\">Monster_W2_Argenti_IF_Summon01</a>"
             }
           ]
         },
@@ -366,7 +366,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon04"
+              "modifier": "<a class=\"gModGreen\" id=\"1867785861\">Monster_W2_Argenti_IF_Summon04</a>"
             }
           ]
         },
@@ -393,7 +393,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon02"
+              "modifier": "<a class=\"gModGreen\" id=\"1767120147\">Monster_W2_Argenti_IF_Summon02</a>"
             }
           ]
         },
@@ -422,7 +422,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Argenti_IF_Summon04",
+                "modifier": "<a class=\"gModGreen\" id=\"1867785861\">Monster_W2_Argenti_IF_Summon04</a>",
                 "invertCondition": true
               }
             ]
@@ -434,7 +434,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon03"
+              "modifier": "<a class=\"gModGreen\" id=\"1750342528\">Monster_W2_Argenti_IF_Summon03</a>"
             }
           ]
         },
@@ -460,7 +460,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "modifier": "Enemy_W2_Argenti_IF_Summon_Enhance_Sword"
+              "modifier": "<a class=\"gModGreen\" id=\"2029398801\">Enemy_W2_Argenti_IF_Summon_Enhance_Sword</a>"
             }
           ]
         },
@@ -486,7 +486,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "modifier": "Enemy_W2_Argenti_IF_Summon_Enhance_Shield"
+              "modifier": "<a class=\"gModGreen\" id=\"1909918465\">Enemy_W2_Argenti_IF_Summon_Enhance_Shield</a>"
             }
           ]
         },
@@ -496,13 +496,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
         }
       ]
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Argenti_KillAllMonsters",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1817558624\">Argenti_KillAllMonsters</a>",
       "parse": [
         {
           "name": "Dispel Debuffs",
@@ -518,7 +518,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Enemy_W2_ArgentiTotem_IF_Initiate"
+          "modifier": "<a class=\"gModGreen\" id=\"1639070947\">Enemy_W2_ArgentiTotem_IF_Initiate</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -526,7 +526,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Enemy_W2_ArgentiTotem_01_IF_Initiate"
+          "modifier": "<a class=\"gModGreen\" id=\"-1851629784\">Enemy_W2_ArgentiTotem_01_IF_Initiate</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -534,7 +534,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Enemy_W2_ArgentiTotem_02_IF_Initiate"
+          "modifier": "<a class=\"gModGreen\" id=\"2041202953\">Enemy_W2_ArgentiTotem_02_IF_Initiate</a>"
         },
         {
           "name": "Find New Target",
@@ -560,7 +560,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
             }
           ]
         },
@@ -575,7 +575,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Argenti_AddWeaknessToAllSummons",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1119292672\">Argenti_AddWeaknessToAllSummons</a>",
       "parse": [
         {
           "name": "Remove Events/Bonuses",
@@ -583,7 +583,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W2_Argenti_IF_Sword01"
+          "modifier": "<a class=\"gModGreen\" id=\"1345800412\">Monster_W2_Argenti_IF_Sword01</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -591,7 +591,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W2_Argenti_IF_Sword02"
+          "modifier": "<a class=\"gModGreen\" id=\"1396133269\">Monster_W2_Argenti_IF_Sword02</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -599,7 +599,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W2_Argenti_IF_Sword03"
+          "modifier": "<a class=\"gModGreen\" id=\"1379355650\">Monster_W2_Argenti_IF_Sword03</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -607,7 +607,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W2_Argenti_IF_Sword04"
+          "modifier": "<a class=\"gModGreen\" id=\"1295467555\">Monster_W2_Argenti_IF_Sword04</a>"
         },
         {
           "name": "Find New Target",
@@ -622,7 +622,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Argenti_IF_Summon01"
+            "modifier": "<a class=\"gModGreen\" id=\"1783897766\">Monster_W2_Argenti_IF_Summon01</a>"
           },
           "ifTargetFound": [
             {
@@ -631,7 +631,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_SwordBase"
+              "modifier": "<a class=\"gModGreen\" id=\"-1702120198\">Monster_W2_Argenti_IF_SwordBase</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -639,7 +639,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Sword01"
+              "modifier": "<a class=\"gModGreen\" id=\"1345800412\">Monster_W2_Argenti_IF_Sword01</a>"
             }
           ]
         },
@@ -656,7 +656,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Argenti_IF_Summon02"
+            "modifier": "<a class=\"gModGreen\" id=\"1767120147\">Monster_W2_Argenti_IF_Summon02</a>"
           },
           "ifTargetFound": [
             {
@@ -665,7 +665,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_SwordBase"
+              "modifier": "<a class=\"gModGreen\" id=\"-1702120198\">Monster_W2_Argenti_IF_SwordBase</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -673,7 +673,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Sword02"
+              "modifier": "<a class=\"gModGreen\" id=\"1396133269\">Monster_W2_Argenti_IF_Sword02</a>"
             }
           ]
         },
@@ -690,7 +690,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Argenti_IF_Summon03"
+            "modifier": "<a class=\"gModGreen\" id=\"1750342528\">Monster_W2_Argenti_IF_Summon03</a>"
           },
           "ifTargetFound": [
             {
@@ -699,7 +699,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_SwordBase"
+              "modifier": "<a class=\"gModGreen\" id=\"-1702120198\">Monster_W2_Argenti_IF_SwordBase</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -707,7 +707,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Sword03"
+              "modifier": "<a class=\"gModGreen\" id=\"1379355650\">Monster_W2_Argenti_IF_Sword03</a>"
             }
           ]
         },
@@ -724,7 +724,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Argenti_IF_Summon04"
+            "modifier": "<a class=\"gModGreen\" id=\"1867785861\">Monster_W2_Argenti_IF_Summon04</a>"
           },
           "ifTargetFound": [
             {
@@ -733,7 +733,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_SwordBase"
+              "modifier": "<a class=\"gModGreen\" id=\"-1702120198\">Monster_W2_Argenti_IF_SwordBase</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -741,7 +741,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Sword04"
+              "modifier": "<a class=\"gModGreen\" id=\"1295467555\">Monster_W2_Argenti_IF_Sword04</a>"
             }
           ]
         }
@@ -749,17 +749,17 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Shake_Small",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__416766717\">Shake_Small</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Shake_Big",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-2094171200\">Shake_Big</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Collect_Power",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1718469723\">Collect_Power</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -780,7 +780,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
                   }
                 ]
               },
@@ -801,7 +801,7 @@ const configAbility = {
           "functionList": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Collect_Power_Sub",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1233803522\">Collect_Power_Sub</a>",
               "delayInterval": 0.3,
               "parallelCount": 4
             }
@@ -811,7 +811,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Collect_Power_Sub",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1233803522\">Collect_Power_Sub</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -833,7 +833,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
                   }
                 ]
               },
@@ -854,7 +854,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W2_Argenti_IF_EX_PowerUpDark[<span class=\"descriptionNumberColor\">Regain Enhancement</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1768656268\">Enemy_W2_Argenti_IF_EX_PowerUpDark</a>[<span class=\"descriptionNumberColor\">Regain Enhancement</span>]",
               "casterAssign": "TargetSelf"
             },
             {
@@ -863,7 +863,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
             }
           ]
         }

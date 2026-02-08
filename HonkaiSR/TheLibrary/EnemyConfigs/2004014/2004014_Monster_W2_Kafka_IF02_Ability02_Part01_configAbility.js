@@ -28,7 +28,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Monster_W2_Kafka_IF02_ContainJXDTag"
+        "modifier": "<a class=\"gModGreen\" id=\"1155608240\">Monster_W2_Kafka_IF02_ContainJXDTag</a>"
       },
       "passed": [
         "Deleted bullshit"

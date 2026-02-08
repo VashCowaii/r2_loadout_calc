@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_106_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1261574715\">Relic_106_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_106_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1261574715\">Relic_106_Main</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",

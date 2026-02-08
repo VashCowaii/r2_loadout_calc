@@ -7,19 +7,19 @@ const configAbility = {
     "Ability Start",
     {
       "name": "Use Custom Character Function",
-      "functionName": "Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect_FirstHit"
+      "functionName": "<a class=\"gTempYellow\" id=\"-506001002\">Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect_FirstHit</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect"
+      "functionName": "<a class=\"gTempYellow\" id=\"1394287032\">Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect"
+      "functionName": "<a class=\"gTempYellow\" id=\"1394287032\">Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect"
+      "functionName": "<a class=\"gTempYellow\" id=\"1394287032\">Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect</a>"
     },
     {
       "name": "Find New Target",
@@ -38,7 +38,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
           },
           "passed": [
             {
@@ -47,7 +47,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+              "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
             }
           ]
         },
@@ -80,7 +80,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
             "displayLines": "{[Skill01[2]]}",
@@ -136,7 +136,7 @@ const configAbility = {
   "functions": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect_FirstHit",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-506001002\">Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect_FirstHit</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -155,7 +155,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
               },
               "passed": [
                 {
@@ -164,7 +164,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+                  "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
                 }
               ]
             },
@@ -197,7 +197,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
                 "displayLines": "{[Skill01[2]]}",
@@ -248,7 +248,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1394287032\">Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -267,7 +267,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
               },
               "passed": [
                 {
@@ -276,7 +276,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+                  "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
                 }
               ]
             },
@@ -309,7 +309,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
                 "displayLines": "{[Skill01[2]]}",

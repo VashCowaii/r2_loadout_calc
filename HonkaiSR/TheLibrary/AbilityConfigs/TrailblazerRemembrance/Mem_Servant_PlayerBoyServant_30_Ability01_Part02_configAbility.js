@@ -56,7 +56,7 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Bounce_SelectTarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Ability Target Group}}"

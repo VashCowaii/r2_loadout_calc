@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Welt_Ability02_ListenModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-307195596\">Welt_Ability02_ListenModifier</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -48,7 +48,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Welt_Eidolon1_Enhance[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-374836920\">Welt_Eidolon1_Enhance</a>[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]"
       },
       "passed": [
         {
@@ -57,7 +57,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "Welt_Eidolon1_Enhance[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"-374836920\">Welt_Eidolon1_Enhance</a>[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]",
           "function": "Add"
         },
         {
@@ -86,7 +86,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Bounce_SelectTarget",
+      "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
       "target": {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
@@ -125,7 +125,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Bounce_SelectTarget",
+      "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
       "target": {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
@@ -172,7 +172,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Bounce_SelectTarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
@@ -222,14 +222,14 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Welt_Ability02_ListenModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-307195596\">Welt_Ability02_ListenModifier</a>"
     },
     "Trigger: Ability End"
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Welt_Ability02_ListenModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-307195596\">Welt_Ability02_ListenModifier</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -247,7 +247,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Target TAKING DMG}}"
                   },
-                  "modifier": "Welt_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2123171519\">Welt_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -284,7 +284,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Target TAKING DMG}}"
                   },
-                  "modifier": "Welt_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2123171519\">Welt_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

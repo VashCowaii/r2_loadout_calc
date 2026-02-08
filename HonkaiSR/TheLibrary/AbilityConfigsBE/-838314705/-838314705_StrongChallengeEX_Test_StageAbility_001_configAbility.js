@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StrongChallengeEX_Test_StageAbility_LE_001"
+      "modifier": "<a class=\"gModGreen\" id=\"1623304526\">StrongChallengeEX_Test_StageAbility_LE_001</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StrongChallengeEX_Test_StageAbility_LE_001",
+      "for": "<a class=\"gModGreen\" id=\"mod__1623304526\">StrongChallengeEX_Test_StageAbility_LE_001</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "modifier": "Enemy_W1_Bronya_WeakPointProtected[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
     },
     {
       "name": "Declare Custom Variable",

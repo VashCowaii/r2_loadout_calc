@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Klara_Eidolon4_ListenBeingAttack"
+      "modifier": "<a class=\"gModGreen\" id=\"-1780515596\">Klara_Eidolon4_ListenBeingAttack</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Klara_Eidolon4_DamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__202295497\">Klara_Eidolon4_DamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Klara_Eidolon4_ListenBeingAttack",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1780515596\">Klara_Eidolon4_ListenBeingAttack</a>",
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",
@@ -59,7 +59,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Klara_Eidolon4_DamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"202295497\">Klara_Eidolon4_DamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
               "duration": 1,
               "immediateEffect": true,
               "valuePerStack": {

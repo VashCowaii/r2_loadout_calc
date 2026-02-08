@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_312_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"2093679926\">Relic_312_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_312_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__2132743387\">Relic_312_Sub</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_312_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__2093679926\">Relic_312_Main</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -97,7 +97,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_312_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"2132743387\">Relic_312_Sub</a>"
                         }
                       ]
                     }
@@ -137,7 +137,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_312_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"2132743387\">Relic_312_Sub</a>"
                         }
                       ]
                     }
@@ -177,7 +177,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_312_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"2132743387\">Relic_312_Sub</a>"
                         }
                       ]
                     }
@@ -217,7 +217,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_312_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"2132743387\">Relic_312_Sub</a>"
                         }
                       ]
                     }
@@ -257,7 +257,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_312_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"2132743387\">Relic_312_Sub</a>"
                         }
                       ]
                     }
@@ -297,7 +297,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_312_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"2132743387\">Relic_312_Sub</a>"
                         }
                       ]
                     }
@@ -337,7 +337,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_312_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"2132743387\">Relic_312_Sub</a>"
                         }
                       ]
                     }
@@ -398,7 +398,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_312_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"2132743387\">Relic_312_Sub</a>"
                         }
                       ]
                     }
@@ -443,7 +443,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_312_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"2132743387\">Relic_312_Sub</a>"
                         }
                       ]
                     }
@@ -488,7 +488,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_312_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"2132743387\">Relic_312_Sub</a>"
                         }
                       ]
                     }
@@ -533,7 +533,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_312_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"2132743387\">Relic_312_Sub</a>"
                         }
                       ]
                     }
@@ -578,7 +578,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_312_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"2132743387\">Relic_312_Sub</a>"
                         }
                       ]
                     }
@@ -623,7 +623,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_312_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"2132743387\">Relic_312_Sub</a>"
                         }
                       ]
                     }
@@ -668,7 +668,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_312_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"2132743387\">Relic_312_Sub</a>"
                         }
                       ]
                     }

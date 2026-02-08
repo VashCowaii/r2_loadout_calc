@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_24004_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1124656917\">LC_24004_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_24004_SpeedAddRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__291841903\">LC_24004_SpeedAddRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -75,7 +75,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_24004_AttackAddRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1892511260\">LC_24004_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -107,7 +107,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_24004_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1124656917\">LC_24004_Main</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -118,7 +118,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_24004_AttackAddRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1892511260\">LC_24004_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -139,7 +139,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_24004_AttackAddRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1892511260\">LC_24004_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                   "valuePerStack": {
                     "MDF_1": {
                       "operator": "Variables[0] (AttackNum_24004) || Variables[1] (0.04) || MUL || RETURN",
@@ -174,7 +174,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_24004_SpeedAddRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"291841903\">LC_24004_SpeedAddRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",

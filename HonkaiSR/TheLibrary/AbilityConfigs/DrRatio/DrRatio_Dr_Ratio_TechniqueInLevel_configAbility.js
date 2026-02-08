@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Dr_Ratio_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1862456216\">StageAbility_Maze_Dr_Ratio_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Dr_Ratio_Maze_SpeedDown[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1535177927\">Dr_Ratio_Maze_SpeedDown</a>[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedDown"
@@ -61,7 +61,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Dr_Ratio_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1862456216\">StageAbility_Maze_Dr_Ratio_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -83,7 +83,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Dr_Ratio_Maze_SpeedDown[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1535177927\">Dr_Ratio_Maze_SpeedDown</a>[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Mar_7th_10_Eidolon4"
+      "modifier": "<a class=\"gModGreen\" id=\"-926052805\">Mar_7th_10_Eidolon4</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_Eidolon4",
+      "for": "<a class=\"gModGreen\" id=\"mod__-926052805\">Mar_7th_10_Eidolon4</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",

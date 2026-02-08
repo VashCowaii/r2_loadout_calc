@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yukong_Passive_Bonus[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-2029608096\">Yukong_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]",
       "valuePerStack": {
         "MDF_AddDamagePercentage": {
           "operator": "Variables[0] (0.8) || RETURN",
@@ -60,7 +60,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yukong_FlowerListen"
+      "modifier": "<a class=\"gModGreen\" id=\"64466487\">Yukong_FlowerListen</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -68,13 +68,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "modifier": "Yukong_ServantFlowerListen"
+      "modifier": "<a class=\"gModGreen\" id=\"1947872588\">Yukong_ServantFlowerListen</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Yukong_ServantFlowerListen",
+      "for": "<a class=\"gModGreen\" id=\"mod__1947872588\">Yukong_ServantFlowerListen</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -98,7 +98,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Yukong_Flower_ATK[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"432670237\">Yukong_Flower_ATK</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
                   },
                   "passed": [
                     {
@@ -107,7 +107,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Yukong_Flower",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
                           "operator": "Variables[0] (0.8) || RETURN",
@@ -146,7 +146,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Yukong_Flower_ATK_Crit[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1097783562\">Yukong_Flower_ATK_Crit</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
                   },
                   "passed": [
                     {
@@ -155,7 +155,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Yukong_Flower",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
                           "operator": "Variables[0] (0.8) || RETURN",
@@ -190,7 +190,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Yukong's Flower Target}}"
                       },
-                      "modifier": "Yukong_Flower_ATK_Crit[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1097783562\">Yukong_Flower_ATK_Crit</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
                       "valuePerStack": {
                         "MDF_RealAttack": {
                           "operator": "Variables[0] (0.8) || RETURN",

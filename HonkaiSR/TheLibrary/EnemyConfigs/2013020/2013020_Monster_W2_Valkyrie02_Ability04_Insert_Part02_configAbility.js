@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1870683085\">Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect</a>[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Enemy_W2_Valkyrie02_Ability04_Target[<span class=\"descriptionNumberColor\">Lock On</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1513487927\">Enemy_W2_Valkyrie02_Ability04_Target</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     }
   ],
   "references": []

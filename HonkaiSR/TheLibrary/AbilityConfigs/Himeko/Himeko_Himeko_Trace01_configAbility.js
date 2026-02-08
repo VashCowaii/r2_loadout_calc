@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Himeko_Trace01"
+      "modifier": "<a class=\"gModGreen\" id=\"1997235572\">Himeko_Trace01</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Himeko_Trace01",
+      "for": "<a class=\"gModGreen\" id=\"mod__1997235572\">Himeko_Trace01</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -27,7 +27,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Attack Targets}}"
               },
-              "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",

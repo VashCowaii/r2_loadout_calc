@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Evernight_Weapon_Show_2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1080789313\">Evernight_Weapon_Show_2</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -20,7 +20,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_Weapon_Show_1",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1064011694\">Evernight_Weapon_Show_1</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -30,7 +30,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "EnduranceLogicOnly"
@@ -86,7 +86,7 @@ const configAbility = {
               }
             ]
           },
-          "modifier": "Evernight_UltraMode_Bonus",
+          "modifier": "<a class=\"gModGreen\" id=\"778280081\">Evernight_UltraMode_Bonus</a>",
           "aliveOnly": "True",
           "haloStatus": true,
           "valuePerStack": {
@@ -106,7 +106,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Evernight_UltraMode_Debuff[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1347842886\">Evernight_UltraMode_Debuff</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
           "aliveOnly": "True",
           "haloStatus": true,
           "valuePerStack": {
@@ -124,7 +124,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_UltraMode_Debuff[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1347842886\">Evernight_UltraMode_Debuff</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -162,7 +162,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_UltraMode_Energy_0[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
       "execute": [
         {
           "eventTrigger": "Turn Start [Anyone]",
@@ -187,7 +187,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Evernight_TryRemoveUltra_Flag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-960144998\">Evernight_TryRemoveUltra_Flag</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -195,7 +195,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Evernight_UltraMode_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -203,7 +203,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "Evernight_UltraMode_Effect_Normal"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -211,7 +211,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -219,7 +219,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Evernight_UltraMode_Energy[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -227,7 +227,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Evernight_UltraMode_Energy_0[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
                 }
               ]
             }
@@ -240,11 +240,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_TryRemoveUltra_Flag"
+      "for": "<a class=\"gModGreen\" id=\"mod__-960144998\">Evernight_TryRemoveUltra_Flag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_UltraMode_Energy[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
       "counter": 1,
       "execute": [
         {
@@ -256,7 +256,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Evernight_UltraMode_Energy_0[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
             }
           ]
         },
@@ -271,7 +271,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Evernight_UltraMode_Energy_Cost"
+                "modifier": "<a class=\"gModGreen\" id=\"-1643770860\">Evernight_UltraMode_Energy_Cost</a>"
               },
               "passed": [
                 {
@@ -280,7 +280,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Evernight_UltraMode_Energy_Cost"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1643770860\">Evernight_UltraMode_Energy_Cost</a>"
                 },
                 {
                   "name": "IF",
@@ -290,7 +290,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": "Evernight_UltraMode_Energy[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
                     "compareType": ">",
                     "value2": 1
                   },
@@ -308,7 +308,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Evernight_UltraMode_Energy_0[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -326,11 +326,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_UltraMode_Energy_Cost"
+      "for": "<a class=\"gModGreen\" id=\"mod__-1643770860\">Evernight_UltraMode_Energy_Cost</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_UltraMode_Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__1307478561\">Evernight_UltraMode_Effect</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -345,7 +345,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "Evernight_UltraMode_Effect_Normal",
+              "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>",
               "casterAssign": "TargetSelf"
             }
           ]
@@ -356,7 +356,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_UltraMode_Effect_Normal",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1807727255\">Evernight_UltraMode_Effect_Normal</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -370,7 +370,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_ServantTarget",
+      "for": "<a class=\"gModGreen\" id=\"mod__-895132658\">Evernight_ServantTarget</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -379,7 +379,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_Ability02_ChangeSkill",
+      "for": "<a class=\"gModGreen\" id=\"mod__132344239\">Evernight_Ability02_ChangeSkill</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -415,11 +415,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_TryKillServant_Flag"
+      "for": "<a class=\"gModGreen\" id=\"mod__-1586544037\">Evernight_TryKillServant_Flag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_UltraMode_Bonus",
+      "for": "<a class=\"gModGreen\" id=\"mod__778280081\">Evernight_UltraMode_Bonus</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -451,7 +451,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_Ability02_Bonus_PointB3[<span class=\"descriptionNumberColor\">Kindle the Morn, Drop the Rain</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__645822293\">Evernight_Ability02_Bonus_PointB3</a>[<span class=\"descriptionNumberColor\">Kindle the Morn, Drop the Rain</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -485,7 +485,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -575,7 +575,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_Ability02_Bonus[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1894879081\">Evernight_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "variableValueChange": [
@@ -637,7 +637,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]"
                       },
                       "passed": [
                         {
@@ -646,7 +646,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifierName": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
                           "variableName": "MDF_PropertyValue",
                           "value": {
                             "operator": "Variables[0] (_TMP_NEW_VAL) || RETURN",
@@ -665,7 +665,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
                           "valuePerStack": {
                             "MDF_Conv": {
                               "operator": "Variables[0] (MDF_CritBase) || RETURN",
@@ -731,7 +731,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]"
                       },
                       "passed": [
                         {
@@ -740,7 +740,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifierName": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
                           "variableName": "MDF_PropertyValue",
                           "value": {
                             "operator": "Variables[0] (_TMP_NEW_VAL) || RETURN",
@@ -759,7 +759,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
                           "valuePerStack": {
                             "MDF_Conv": {
                               "operator": "Variables[0] (MDF_CritBase) || RETURN",
@@ -797,7 +797,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
           },
-          "modifier": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_Conv": {
@@ -816,7 +816,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
           },
-          "modifier": "Evernight_Ability02_Bonus_PointB3[<span class=\"descriptionNumberColor\">Kindle the Morn, Drop the Rain</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"645822293\">Evernight_Ability02_Bonus_PointB3</a>[<span class=\"descriptionNumberColor\">Kindle the Morn, Drop the Rain</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "AND",
@@ -848,7 +848,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_Eidolon2_Crit[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -883,7 +883,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_Passive_Bonus[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -915,7 +915,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_HPChange_Trigger",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1356856923\">Evernight_HPChange_Trigger</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -927,7 +927,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_Passive_Bonus[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -953,7 +953,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "Evernight_Passive_Bonus[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -980,7 +980,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">Wake Up, the Tomorrow is Yours</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__86729012\">Evernight_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">Wake Up, the Tomorrow is Yours</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -1064,7 +1064,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_Eidolon6_Bonus[<span class=\"descriptionNumberColor\">Like This, Always</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__376015846\">Evernight_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">Like This, Always</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -1104,7 +1104,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_HPChange",
+      "for": "<a class=\"gModGreen\" id=\"mod__2043260870\">Evernight_HPChange</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -1396,7 +1396,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Evernight_HPChange_Trigger",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1356856923\">Evernight_HPChange_Trigger</a>",
                           "casterAssign": "TargetSelf"
                         }
                       ]
@@ -1442,7 +1442,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_PointB1_Crit[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -1479,7 +1479,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_SummonServantPreshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__1910251570\">Evernight_SummonServantPreshow</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -1509,7 +1509,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_PointB1_Bonus[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -1544,7 +1544,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_PointB1_Servant",
+      "for": "<a class=\"gModGreen\" id=\"mod__720331211\">Evernight_PointB1_Servant</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -1576,7 +1576,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_PointB1_Bonus[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
               "duration": {
                 "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                 "displayLines": "MDF_LifeTime",
@@ -1602,7 +1602,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "Evernight_PointB1_Bonus[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
               "duration": {
                 "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                 "displayLines": "MDF_LifeTime",
@@ -1628,7 +1628,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Evernight_PointB1_Aura",
+      "for": "<a class=\"gModGreen\" id=\"mod__557640561\">Evernight_PointB1_Aura</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -1657,7 +1657,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_PointB1_Bonus[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
               "duration": {
                 "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                 "displayLines": "MDF_LifeTime",
@@ -1683,7 +1683,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "Evernight_PointB1_Bonus[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
               "duration": {
                 "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                 "displayLines": "MDF_LifeTime",
@@ -1719,7 +1719,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Memosprite}}"
           },
-          "modifier": "Evernight_PointB1_Servant",
+          "modifier": "<a class=\"gModGreen\" id=\"720331211\">Evernight_PointB1_Servant</a>",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {

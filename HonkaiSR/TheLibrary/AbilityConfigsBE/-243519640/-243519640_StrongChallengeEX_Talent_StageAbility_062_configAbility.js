@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_062"
+      "modifier": "<a class=\"gModGreen\" id=\"1494188082\">MStrongChallengeEX_Talent_StageAbility_LE_062</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_062",
+      "for": "<a class=\"gModGreen\" id=\"mod__1341567162\">MStrongChallengeEX_Talent_StageAbility_PLY_062</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -57,7 +57,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_062",
+      "for": "<a class=\"gModGreen\" id=\"mod__1494188082\">MStrongChallengeEX_Talent_StageAbility_LE_062</a>",
       "execute": [
         {
           "eventTrigger": "Skill Point Changes",
@@ -94,7 +94,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_062",
+                  "modifier": "<a class=\"gModGreen\" id=\"1341567162\">MStrongChallengeEX_Talent_StageAbility_PLY_062</a>",
                   "stackLimit": {
                     "operator": "Variables[0] (#ADF_2) || RETURN",
                     "displayLines": "#ADF_2",

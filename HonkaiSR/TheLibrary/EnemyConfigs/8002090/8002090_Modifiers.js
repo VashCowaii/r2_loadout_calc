@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_EscapingCharge02",
+      "for": "<a class=\"gModGreen\" id=\"mod__222306094\">Enemy_XP_Minion04_EscapingCharge02</a>",
       "modifierFlags": [
         "MuteHitFly",
         "Endurance",
@@ -61,7 +61,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_EscapingCharge01",
+      "for": "<a class=\"gModGreen\" id=\"mod__205528475\">Enemy_XP_Minion04_EscapingCharge01</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -101,7 +101,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_01_EscapingCharge02",
+      "for": "<a class=\"gModGreen\" id=\"mod__588877955\">Enemy_XP_Minion04_01_EscapingCharge02</a>",
       "modifierFlags": [
         "KeepOnDeathrattle",
         "MuteHitFly",
@@ -153,7 +153,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_01_EscapingCharge01",
+      "for": "<a class=\"gModGreen\" id=\"mod__605655574\">Enemy_XP_Minion04_01_EscapingCharge01</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],

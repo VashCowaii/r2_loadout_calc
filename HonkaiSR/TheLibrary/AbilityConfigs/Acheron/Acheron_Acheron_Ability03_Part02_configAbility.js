@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Acheron_Passive01Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-98170223\">Acheron_Passive01Modifier</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Acheron_AbilityChange01"
+      "modifier": "<a class=\"gModGreen\" id=\"-401175728\">Acheron_AbilityChange01</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Acheron_AbilityChange02"
+      "modifier": "<a class=\"gModGreen\" id=\"-350842871\">Acheron_AbilityChange02</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -34,7 +34,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Acheron_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"447524573\">Acheron_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
           "operator": "Variables[0] (0.2) || RETURN",
@@ -52,7 +52,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Acheron_AbilityChange01"
+      "modifier": "<a class=\"gModGreen\" id=\"-401175728\">Acheron_AbilityChange01</a>"
     },
     {
       "name": "IF",
@@ -90,7 +90,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
           },
           "ifTargetFound": [
             {
@@ -102,7 +102,7 @@ const configAbility = {
               "max": 1,
               "sortOperator": {
                 "name": "Sort by Modifier Variable",
-                "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                 "value": "MDF_Count"
               },
               "includeDying": true,

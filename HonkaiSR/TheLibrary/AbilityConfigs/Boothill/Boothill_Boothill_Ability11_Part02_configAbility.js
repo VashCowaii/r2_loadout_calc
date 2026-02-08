@@ -23,27 +23,27 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "One_Shot"
+      "functionName": "<a class=\"gTempYellow\" id=\"1166126384\">One_Shot</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "One_Shot"
+      "functionName": "<a class=\"gTempYellow\" id=\"1166126384\">One_Shot</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "One_Shot"
+      "functionName": "<a class=\"gTempYellow\" id=\"1166126384\">One_Shot</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "One_Shot"
+      "functionName": "<a class=\"gTempYellow\" id=\"1166126384\">One_Shot</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "One_Shot"
+      "functionName": "<a class=\"gTempYellow\" id=\"1166126384\">One_Shot</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "One_Shot_Final"
+      "functionName": "<a class=\"gTempYellow\" id=\"-824172561\">One_Shot_Final</a>"
     },
     {
       "name": "IF",
@@ -483,13 +483,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Boothill_Ability11_StancePreview"
+      "modifier": "<a class=\"gModGreen\" id=\"-1599304772\">M_Boothill_Ability11_StancePreview</a>"
     }
   ],
   "functions": [
     {
       "name": "CharacterFunctions",
-      "functionName": "One_Shot",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1166126384\">One_Shot</a>",
       "parse": [
         {
           "name": "ATK Scaling DMG",
@@ -538,7 +538,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "One_Shot_Final",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-824172561\">One_Shot_Final</a>",
       "parse": [
         {
           "name": "ATK Scaling DMG",
@@ -589,7 +589,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Boothill_Ability11_StancePreview",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1599304772\">M_Boothill_Ability11_StancePreview</a>",
       "stackData": [],
       "latentQueue": [
         "_enhance_before_attack",
@@ -605,7 +605,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
         },
         "multiplier": {
           "operator": "Constants[0] (1) || Variables[0] (CurEnhance) || Variables[1] (0.5) || MUL || ADD || RETURN",

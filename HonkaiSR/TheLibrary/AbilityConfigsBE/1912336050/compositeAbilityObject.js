@@ -67,13 +67,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_BattleTarget_TurnLimit_PeakBattle_7"
+          "modifier": "<a class=\"gModGreen\" id=\"-1377962353\">Modifier_BattleTarget_TurnLimit_PeakBattle_7</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_BattleTarget_TurnLimit_PeakBattle_7",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1377962353\">Modifier_BattleTarget_TurnLimit_PeakBattle_7</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -125,13 +125,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_BattleTarget_TurnLimit_PeakBattle_6"
+          "modifier": "<a class=\"gModGreen\" id=\"-1394739972\">Modifier_BattleTarget_TurnLimit_PeakBattle_6</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_BattleTarget_TurnLimit_PeakBattle_6",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1394739972\">Modifier_BattleTarget_TurnLimit_PeakBattle_6</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -183,13 +183,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_BattleTarget_TurnLimit_PeakBattle_5"
+          "modifier": "<a class=\"gModGreen\" id=\"-1344407115\">Modifier_BattleTarget_TurnLimit_PeakBattle_5</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_BattleTarget_TurnLimit_PeakBattle_5",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1344407115\">Modifier_BattleTarget_TurnLimit_PeakBattle_5</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -241,13 +241,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_BattleTarget_TurnLimit_PeakBattle_4"
+          "modifier": "<a class=\"gModGreen\" id=\"-1361184734\">Modifier_BattleTarget_TurnLimit_PeakBattle_4</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_BattleTarget_TurnLimit_PeakBattle_4",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1361184734\">Modifier_BattleTarget_TurnLimit_PeakBattle_4</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -299,13 +299,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_BattleTarget_TurnLimit_PeakBattle_3"
+          "modifier": "<a class=\"gModGreen\" id=\"-1445072829\">Modifier_BattleTarget_TurnLimit_PeakBattle_3</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_BattleTarget_TurnLimit_PeakBattle_3",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1445072829\">Modifier_BattleTarget_TurnLimit_PeakBattle_3</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -357,13 +357,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_BattleTarget_TurnLimit_PeakBattle_2"
+          "modifier": "<a class=\"gModGreen\" id=\"-1461850448\">Modifier_BattleTarget_TurnLimit_PeakBattle_2</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_BattleTarget_TurnLimit_PeakBattle_2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1461850448\">Modifier_BattleTarget_TurnLimit_PeakBattle_2</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -415,13 +415,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_BattleTarget_TurnLimit_PeakBattle_1"
+          "modifier": "<a class=\"gModGreen\" id=\"-1411517591\">Modifier_BattleTarget_TurnLimit_PeakBattle_1</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_BattleTarget_TurnLimit_PeakBattle_1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1411517591\">Modifier_BattleTarget_TurnLimit_PeakBattle_1</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -490,7 +490,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_BattleEventAbility_ChallengePeakBattle_CountDown",
+          "modifier": "<a class=\"gModGreen\" id=\"-1148970670\">Modifier_BattleEventAbility_ChallengePeakBattle_CountDown</a>",
           "valuePerStack": {
             "BattleEventTurnLeftParam": {
               "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
@@ -526,7 +526,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_BattleEventAbility_ChallengePeakBattle_Rage[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-936105590\">Modifier_BattleEventAbility_ChallengePeakBattle_Rage</a>[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -566,7 +566,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_BattleEventAbility_ChallengePeakBattle_CountDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1148970670\">Modifier_BattleEventAbility_ChallengePeakBattle_CountDown</a>",
           "modifierFlags": [
             "STAT_TurnCountAccumulator"
           ],
@@ -699,7 +699,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}"
                       },
-                      "modifier": "Modifier_BattleEventAbility_ChallengePeakBattle_Rage[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-936105590\">Modifier_BattleEventAbility_ChallengePeakBattle_Rage</a>[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
                       "valuePerStack": {
                         "BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio": {
                           "operator": "Variables[0] (RageTime) || RETURN",
@@ -801,7 +801,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_BattleEventAbility_ChallengePeakBattle_Rage[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-936105590\">Modifier_BattleEventAbility_ChallengePeakBattle_Rage</a>[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
                       "valuePerStack": {
                         "BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio": {
                           "operator": "Variables[0] (RageTime) || RETURN",
@@ -886,13 +886,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Environment_0001"
+          "modifier": "<a class=\"gModGreen\" id=\"850232515\">Modifier_ChallengePeakBattle_BaseAbility_Environment_0001</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_03",
+          "for": "<a class=\"gModGreen\" id=\"mod__1809743821\">Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_03</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -914,7 +914,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1792966202\">Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_02</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -926,7 +926,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_03",
+                  "modifier": "<a class=\"gModGreen\" id=\"1809743821\">Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_03</a>",
                   "duration": {
                     "operator": "Variables[0] (ChallengePeakBattle_Environment_0001_ADF_2) || RETURN",
                     "displayLines": "ChallengePeakBattle_Environment_0001_ADF_2",
@@ -972,7 +972,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_03",
+                      "modifier": "<a class=\"gModGreen\" id=\"1809743821\">Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_03</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_Environment_0001_ADF_2) || RETURN",
                         "displayLines": "ChallengePeakBattle_Environment_0001_ADF_2",
@@ -1008,7 +1008,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Environment_0001",
+          "for": "<a class=\"gModGreen\" id=\"mod__850232515\">Modifier_ChallengePeakBattle_BaseAbility_Environment_0001</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1030,7 +1030,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"1792966202\">Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_Environment_0001_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -1073,41 +1073,41 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009"
+          "modifier": "<a class=\"gModGreen\" id=\"-1915662060\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "ChallengePeakBattle_Plugins_0009_WindTag"
+          "for": "<a class=\"gModGreen\" id=\"mod__1054595271\">ChallengePeakBattle_Plugins_0009_WindTag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "ChallengePeakBattle_Plugins_0009_ThunderTag"
+          "for": "<a class=\"gModGreen\" id=\"mod__662747565\">ChallengePeakBattle_Plugins_0009_ThunderTag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "ChallengePeakBattle_Plugins_0009_QuantumTag"
+          "for": "<a class=\"gModGreen\" id=\"mod__-1584675292\">ChallengePeakBattle_Plugins_0009_QuantumTag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "ChallengePeakBattle_Plugins_0009_PhysicalTag"
+          "for": "<a class=\"gModGreen\" id=\"mod__1304856250\">ChallengePeakBattle_Plugins_0009_PhysicalTag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "ChallengePeakBattle_Plugins_0009_ImaginaryTag"
+          "for": "<a class=\"gModGreen\" id=\"mod__1959783064\">ChallengePeakBattle_Plugins_0009_ImaginaryTag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "ChallengePeakBattle_Plugins_0009_IceTag"
+          "for": "<a class=\"gModGreen\" id=\"mod__1098913394\">ChallengePeakBattle_Plugins_0009_IceTag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "ChallengePeakBattle_Plugins_0009_FireTag"
+          "for": "<a class=\"gModGreen\" id=\"mod__962586433\">ChallengePeakBattle_Plugins_0009_FireTag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009_02[<span class=\"descriptionNumberColor\">Seize the Moment</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1236507091\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009_02</a>[<span class=\"descriptionNumberColor\">Seize the Moment</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1174,7 +1174,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-2009288629\">Standard_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1182,7 +1182,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "ChallengePeakBattle_Plugins_0009_FireTag"
+                          "modifier": "<a class=\"gModGreen\" id=\"962586433\">ChallengePeakBattle_Plugins_0009_FireTag</a>"
                         }
                       ]
                     },
@@ -1220,7 +1220,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1497676034\">Standard_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1228,7 +1228,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "ChallengePeakBattle_Plugins_0009_IceTag"
+                          "modifier": "<a class=\"gModGreen\" id=\"1098913394\">ChallengePeakBattle_Plugins_0009_IceTag</a>"
                         }
                       ]
                     },
@@ -1266,7 +1266,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1118024096\">Standard_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1274,7 +1274,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "ChallengePeakBattle_Plugins_0009_ImaginaryTag"
+                          "modifier": "<a class=\"gModGreen\" id=\"1959783064\">ChallengePeakBattle_Plugins_0009_ImaginaryTag</a>"
                         }
                       ]
                     },
@@ -1312,7 +1312,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1724958950\">Standard_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1320,7 +1320,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "ChallengePeakBattle_Plugins_0009_PhysicalTag"
+                          "modifier": "<a class=\"gModGreen\" id=\"1304856250\">ChallengePeakBattle_Plugins_0009_PhysicalTag</a>"
                         }
                       ]
                     },
@@ -1358,7 +1358,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1012677236\">Standard_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1366,7 +1366,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "ChallengePeakBattle_Plugins_0009_QuantumTag"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1584675292\">ChallengePeakBattle_Plugins_0009_QuantumTag</a>"
                         }
                       ]
                     },
@@ -1404,7 +1404,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1930557999\">Standard_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1412,7 +1412,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "ChallengePeakBattle_Plugins_0009_ThunderTag"
+                          "modifier": "<a class=\"gModGreen\" id=\"662747565\">ChallengePeakBattle_Plugins_0009_ThunderTag</a>"
                         }
                       ]
                     },
@@ -1450,7 +1450,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1938125975\">Standard_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1458,7 +1458,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "ChallengePeakBattle_Plugins_0009_WindTag"
+                          "modifier": "<a class=\"gModGreen\" id=\"1054595271\">ChallengePeakBattle_Plugins_0009_WindTag</a>"
                         }
                       ]
                     }
@@ -1477,7 +1477,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "ChallengePeakBattle_Plugins_0009_FireTag",
+                    "modifier": "<a class=\"gModGreen\" id=\"962586433\">ChallengePeakBattle_Plugins_0009_FireTag</a>",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
@@ -1490,7 +1490,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2009288629\">Standard_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
                   ]
@@ -1503,7 +1503,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "ChallengePeakBattle_Plugins_0009_IceTag",
+                    "modifier": "<a class=\"gModGreen\" id=\"1098913394\">ChallengePeakBattle_Plugins_0009_IceTag</a>",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
@@ -1516,7 +1516,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1497676034\">Standard_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
                   ]
@@ -1529,7 +1529,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "ChallengePeakBattle_Plugins_0009_ImaginaryTag",
+                    "modifier": "<a class=\"gModGreen\" id=\"1959783064\">ChallengePeakBattle_Plugins_0009_ImaginaryTag</a>",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
@@ -1542,7 +1542,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1118024096\">Standard_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
                   ]
@@ -1555,7 +1555,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "ChallengePeakBattle_Plugins_0009_PhysicalTag",
+                    "modifier": "<a class=\"gModGreen\" id=\"1304856250\">ChallengePeakBattle_Plugins_0009_PhysicalTag</a>",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
@@ -1568,7 +1568,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1724958950\">Standard_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
                   ]
@@ -1581,7 +1581,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "ChallengePeakBattle_Plugins_0009_QuantumTag",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1584675292\">ChallengePeakBattle_Plugins_0009_QuantumTag</a>",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
@@ -1594,7 +1594,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1012677236\">Standard_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
                   ]
@@ -1607,7 +1607,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "ChallengePeakBattle_Plugins_0009_ThunderTag",
+                    "modifier": "<a class=\"gModGreen\" id=\"662747565\">ChallengePeakBattle_Plugins_0009_ThunderTag</a>",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
@@ -1620,7 +1620,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1930557999\">Standard_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
                   ]
@@ -1633,7 +1633,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "ChallengePeakBattle_Plugins_0009_WindTag",
+                    "modifier": "<a class=\"gModGreen\" id=\"1054595271\">ChallengePeakBattle_Plugins_0009_WindTag</a>",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
@@ -1646,7 +1646,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1938125975\">Standard_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
                   ]
@@ -1660,7 +1660,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1915662060\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1687,7 +1687,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009_02[<span class=\"descriptionNumberColor\">Seize the Moment</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1236507091\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009_02</a>[<span class=\"descriptionNumberColor\">Seize the Moment</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0009_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -1722,13 +1722,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008"
+          "modifier": "<a class=\"gModGreen\" id=\"-1898884441\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_Halo",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2126925530\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_Halo</a>",
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -1747,13 +1747,13 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1577099167\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
                       "invertCondition": true
                     }
                   }
                 ]
               },
-              "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_04",
+              "modifier": "<a class=\"gModGreen\" id=\"-1560321548\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_04</a>",
               "haloStatus": true,
               "valuePerStack": {
                 "ChallengePeakBattle_Plugins_0008_ADF_1": {
@@ -1786,7 +1786,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_04",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1560321548\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_04</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1797,7 +1797,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1577099167\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
                   "stackLimit": 999,
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0008_ADF_1": {
@@ -1838,7 +1838,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1577099167\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -1883,7 +1883,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_02[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1593876786\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_02</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1913,7 +1913,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1898884441\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1954,7 +1954,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_02[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1593876786\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_02</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0008_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -1988,7 +1988,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "MissionBattleEvent60038_BE_Trigger"
+                        "modifier": "<a class=\"gModGreen\" id=\"1690022498\">MissionBattleEvent60038_BE_Trigger</a>"
                       }
                     ]
                   },
@@ -1999,7 +1999,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable, exclude Netherwing)}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1577099167\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
                       "stackLimit": 999,
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0008_ADF_1": {
@@ -2026,7 +2026,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_Halo",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2126925530\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_Halo</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0008_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -2079,13 +2079,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007"
+          "modifier": "<a class=\"gModGreen\" id=\"-2083438250\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_04[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1588986863\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_04</a>[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2115,7 +2115,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_03[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1538654006\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_03</a>[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -2167,7 +2167,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1555431625\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_02</a>",
           "execute": [
             {
               "eventTrigger": "Being Toughness Bar Reset [Owner]",
@@ -2178,7 +2178,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_03[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1538654006\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_03</a>[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (ChallengePeakBattle_Plugins_0007_ADF_3) || RETURN",
                     "displayLines": "ChallengePeakBattle_Plugins_0007_ADF_3",
@@ -2220,7 +2220,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2083438250\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -2247,7 +2247,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"1555431625\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0007_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -2299,7 +2299,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_04[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1588986863\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_04</a>[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0007_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -2350,13 +2350,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006"
+          "modifier": "<a class=\"gModGreen\" id=\"-2066660631\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_Halo",
+          "for": "<a class=\"gModGreen\" id=\"mod__-754455660\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_Halo</a>",
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -2375,13 +2375,13 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"770601951\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
                       "invertCondition": true
                     }
                   }
                 ]
               },
-              "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_04",
+              "modifier": "<a class=\"gModGreen\" id=\"720269094\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_04</a>",
               "haloStatus": true,
               "valuePerStack": {
                 "ChallengePeakBattle_Plugins_0006_ADF_1": {
@@ -2414,7 +2414,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_04",
+          "for": "<a class=\"gModGreen\" id=\"mod__720269094\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_04</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2425,7 +2425,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"770601951\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
                   "stackLimit": 999,
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0006_ADF_1": {
@@ -2466,7 +2466,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__770601951\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -2511,7 +2511,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_02[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__753824332\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_02</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2546,7 +2546,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2066660631\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -2573,7 +2573,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_02[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"753824332\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_02</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0006_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -2607,7 +2607,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "MissionBattleEvent60037_BE_Trigger"
+                        "modifier": "<a class=\"gModGreen\" id=\"922752745\">MissionBattleEvent60037_BE_Trigger</a>"
                       }
                     ]
                   },
@@ -2618,7 +2618,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable, exclude Netherwing)}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"770601951\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
                       "stackLimit": 999,
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0006_ADF_1": {
@@ -2645,7 +2645,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_Halo",
+                      "modifier": "<a class=\"gModGreen\" id=\"-754455660\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_Halo</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0006_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -2688,13 +2688,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005"
+          "modifier": "<a class=\"gModGreen\" id=\"-2116993488\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_Halo",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1184857721\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_Halo</a>",
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -2713,13 +2713,13 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_03[<span class=\"descriptionNumberColor\">Power Surge</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-46685300\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_03</a>[<span class=\"descriptionNumberColor\">Power Surge</span>]",
                       "invertCondition": true
                     }
                   }
                 ]
               },
-              "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_04",
+              "modifier": "<a class=\"gModGreen\" id=\"-63462919\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_04</a>",
               "haloStatus": true,
               "valuePerStack": {
                 "ChallengePeakBattle_Plugins_0005_ADF_1": {
@@ -2752,7 +2752,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_04",
+          "for": "<a class=\"gModGreen\" id=\"mod__-63462919\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_04</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2763,7 +2763,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_03[<span class=\"descriptionNumberColor\">Power Surge</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-46685300\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_03</a>[<span class=\"descriptionNumberColor\">Power Surge</span>]",
                   "stackLimit": 999,
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0005_ADF_1": {
@@ -2804,7 +2804,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_03[<span class=\"descriptionNumberColor\">Power Surge</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-46685300\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_03</a>[<span class=\"descriptionNumberColor\">Power Surge</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -2849,7 +2849,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_02[<span class=\"descriptionNumberColor\">Power Surge</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-29907681\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_02</a>[<span class=\"descriptionNumberColor\">Power Surge</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2886,7 +2886,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2116993488\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -2913,7 +2913,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_02[<span class=\"descriptionNumberColor\">Power Surge</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-29907681\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_02</a>[<span class=\"descriptionNumberColor\">Power Surge</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0005_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -2947,7 +2947,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "MissionBattleEvent60037_BE_Trigger"
+                        "modifier": "<a class=\"gModGreen\" id=\"922752745\">MissionBattleEvent60037_BE_Trigger</a>"
                       }
                     ]
                   },
@@ -2958,7 +2958,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable, exclude Netherwing)}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_03[<span class=\"descriptionNumberColor\">Power Surge</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-46685300\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_03</a>[<span class=\"descriptionNumberColor\">Power Surge</span>]",
                       "stackLimit": 999,
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0005_ADF_1": {
@@ -2985,7 +2985,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_Halo",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1184857721\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_Halo</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0005_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -3028,13 +3028,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004"
+          "modifier": "<a class=\"gModGreen\" id=\"-2100215869\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_03",
+          "for": "<a class=\"gModGreen\" id=\"mod__-468236083\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_03</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3062,7 +3062,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_02[<span class=\"descriptionNumberColor\">Sanguine Vitality</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-485013702\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_02</a>[<span class=\"descriptionNumberColor\">Sanguine Vitality</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3092,7 +3092,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2100215869\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -3119,7 +3119,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_02[<span class=\"descriptionNumberColor\">Sanguine Vitality</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-485013702\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_02</a>[<span class=\"descriptionNumberColor\">Sanguine Vitality</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0004_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -3168,7 +3168,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_03",
+                      "modifier": "<a class=\"gModGreen\" id=\"-468236083\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_03</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0004_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -3212,13 +3212,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003"
+          "modifier": "<a class=\"gModGreen\" id=\"-2016327774\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_03[<span class=\"descriptionNumberColor\">Hammer and Anvil</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1147866258\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_03</a>[<span class=\"descriptionNumberColor\">Hammer and Anvil</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -3265,7 +3265,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1164643877\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_02</a>",
           "execute": [
             {
               "eventTrigger": "Receiving Heal End [Owner]",
@@ -3304,7 +3304,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_03[<span class=\"descriptionNumberColor\">Hammer and Anvil</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1147866258\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_03</a>[<span class=\"descriptionNumberColor\">Hammer and Anvil</span>]",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_Plugins_0003_ADF_3) || RETURN",
                         "displayLines": "ChallengePeakBattle_Plugins_0003_ADF_3",
@@ -3385,7 +3385,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_03[<span class=\"descriptionNumberColor\">Hammer and Anvil</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1147866258\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_03</a>[<span class=\"descriptionNumberColor\">Hammer and Anvil</span>]",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_Plugins_0003_ADF_3) || RETURN",
                         "displayLines": "ChallengePeakBattle_Plugins_0003_ADF_3",
@@ -3429,7 +3429,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2016327774\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -3456,7 +3456,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"1164643877\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0003_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -3507,13 +3507,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002"
+          "modifier": "<a class=\"gModGreen\" id=\"-1999550155\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF_2",
+          "for": "<a class=\"gModGreen\" id=\"mod__1575097166\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF_2</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -3534,7 +3534,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF",
+          "for": "<a class=\"gModGreen\" id=\"mod__-565240697\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -3555,7 +3555,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_02[<span class=\"descriptionNumberColor\">Infantry and Cavalry</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1527327304\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_02</a>[<span class=\"descriptionNumberColor\">Infantry and Cavalry</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Any",
@@ -3599,7 +3599,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF",
+                      "modifier": "<a class=\"gModGreen\" id=\"-565240697\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0002_ADF_1": {
                           "operator": "Variables[0] (ChallengePeakBattle_Plugins_0002_ADF_1) || RETURN",
@@ -3642,7 +3642,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF_2",
+                      "modifier": "<a class=\"gModGreen\" id=\"1575097166\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF_2</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0002_ADF_2": {
                           "operator": "Variables[0] (ChallengePeakBattle_Plugins_0002_ADF_2) || RETURN",
@@ -3679,7 +3679,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF"
+                      "modifier": "<a class=\"gModGreen\" id=\"-565240697\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF</a>"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -3701,7 +3701,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF_2"
+                      "modifier": "<a class=\"gModGreen\" id=\"1575097166\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_IgnoreDEF_2</a>"
                     }
                   ]
                 }
@@ -3714,7 +3714,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1999550155\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -3741,7 +3741,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_02[<span class=\"descriptionNumberColor\">Infantry and Cavalry</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1527327304\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_02</a>[<span class=\"descriptionNumberColor\">Infantry and Cavalry</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0002_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -3802,13 +3802,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001"
+          "modifier": "<a class=\"gModGreen\" id=\"-2049883012\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02[<span class=\"descriptionNumberColor\">Think Outside the Box</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-963813829\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02</a>[<span class=\"descriptionNumberColor\">Think Outside the Box</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -3839,7 +3839,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2049883012\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -3857,7 +3857,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "ChallengePeakBattle_BaseAbility_Plugins_0001_Template"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1330375513\">ChallengePeakBattle_BaseAbility_Plugins_0001_Template</a>"
                     }
                   ]
                 }
@@ -3879,7 +3879,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "ChallengePeakBattle_BaseAbility_Plugins_0001_Template"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1330375513\">ChallengePeakBattle_BaseAbility_Plugins_0001_Template</a>"
                     }
                   ]
                 }
@@ -3901,7 +3901,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "ChallengePeakBattle_BaseAbility_Plugins_0001_Template"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1330375513\">ChallengePeakBattle_BaseAbility_Plugins_0001_Template</a>"
                     }
                   ]
                 }
@@ -3923,7 +3923,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "ChallengePeakBattle_BaseAbility_Plugins_0001_Template"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1330375513\">ChallengePeakBattle_BaseAbility_Plugins_0001_Template</a>"
                     }
                   ]
                 }
@@ -3933,7 +3933,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "ChallengePeakBattle_BaseAbility_Plugins_0001_Template",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-1330375513\">ChallengePeakBattle_BaseAbility_Plugins_0001_Template</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable with Team Count",
@@ -3960,7 +3960,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02[<span class=\"descriptionNumberColor\">Think Outside the Box</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-963813829\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02</a>[<span class=\"descriptionNumberColor\">Think Outside the Box</span>]"
                     }
                   ],
                   "failed": [
@@ -3970,7 +3970,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02[<span class=\"descriptionNumberColor\">Think Outside the Box</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-963813829\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02</a>[<span class=\"descriptionNumberColor\">Think Outside the Box</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0001_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -4008,13 +4008,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0013"
+          "modifier": "<a class=\"gModGreen\" id=\"1007273967\">Modifier_ChallengePeakBattle_ExtremeAbility_0013</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0013_03",
+          "for": "<a class=\"gModGreen\" id=\"mod__-926604631\">Modifier_ChallengePeakBattle_ExtremeAbility_0013_03</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4041,7 +4041,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0013_02[<span class=\"descriptionNumberColor\">Depowered++</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-943382250\">Modifier_ChallengePeakBattle_ExtremeAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered++</span>]",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4052,7 +4052,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getMemosprite]]"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0013_02[<span class=\"descriptionNumberColor\">Depowered++</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-943382250\">Modifier_ChallengePeakBattle_ExtremeAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered++</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -4060,7 +4060,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0013_03"
+                  "modifier": "<a class=\"gModGreen\" id=\"-926604631\">Modifier_ChallengePeakBattle_ExtremeAbility_0013_03</a>"
                 }
               ]
             },
@@ -4073,7 +4073,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0013_03"
+                  "modifier": "<a class=\"gModGreen\" id=\"-926604631\">Modifier_ChallengePeakBattle_ExtremeAbility_0013_03</a>"
                 }
               ]
             },
@@ -4086,7 +4086,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0013_03",
+                  "modifier": "<a class=\"gModGreen\" id=\"-926604631\">Modifier_ChallengePeakBattle_ExtremeAbility_0013_03</a>",
                   "duration": {
                     "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_3) || RETURN",
                     "displayLines": "ChallengePeakBattle_0013_ADF_3",
@@ -4133,7 +4133,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0013_03",
+                  "modifier": "<a class=\"gModGreen\" id=\"-926604631\">Modifier_ChallengePeakBattle_ExtremeAbility_0013_03</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0013_ADF_1": {
                       "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_1) || RETURN",
@@ -4205,7 +4205,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0013_02[<span class=\"descriptionNumberColor\">Depowered++</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-943382250\">Modifier_ChallengePeakBattle_ExtremeAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered++</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0013_ADF_1": {
                           "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_1) || RETURN",
@@ -4266,7 +4266,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0013",
+          "for": "<a class=\"gModGreen\" id=\"mod__1007273967\">Modifier_ChallengePeakBattle_ExtremeAbility_0013</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -4301,7 +4301,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0013_02[<span class=\"descriptionNumberColor\">Depowered++</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-943382250\">Modifier_ChallengePeakBattle_ExtremeAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered++</span>]",
                       "duration": {
                         "operator": "Variables[0] (#ADF_3) || RETURN",
                         "displayLines": "#ADF_3",
@@ -4360,13 +4360,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0013"
+          "modifier": "<a class=\"gModGreen\" id=\"1699267029\">Modifier_ChallengePeakBattle_EnhancedAbility_0013</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0013_03",
+          "for": "<a class=\"gModGreen\" id=\"mod__-399931461\">Modifier_ChallengePeakBattle_EnhancedAbility_0013_03</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4393,7 +4393,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0013_02[<span class=\"descriptionNumberColor\">Depowered+</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-416709080\">Modifier_ChallengePeakBattle_EnhancedAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered+</span>]",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4404,7 +4404,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getMemosprite]]"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0013_02[<span class=\"descriptionNumberColor\">Depowered+</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-416709080\">Modifier_ChallengePeakBattle_EnhancedAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered+</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -4412,7 +4412,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0013_03"
+                  "modifier": "<a class=\"gModGreen\" id=\"-399931461\">Modifier_ChallengePeakBattle_EnhancedAbility_0013_03</a>"
                 }
               ]
             },
@@ -4425,7 +4425,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0013_03"
+                  "modifier": "<a class=\"gModGreen\" id=\"-399931461\">Modifier_ChallengePeakBattle_EnhancedAbility_0013_03</a>"
                 }
               ]
             },
@@ -4438,7 +4438,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0013_03",
+                  "modifier": "<a class=\"gModGreen\" id=\"-399931461\">Modifier_ChallengePeakBattle_EnhancedAbility_0013_03</a>",
                   "duration": {
                     "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_3) || RETURN",
                     "displayLines": "ChallengePeakBattle_0013_ADF_3",
@@ -4485,7 +4485,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0013_03",
+                  "modifier": "<a class=\"gModGreen\" id=\"-399931461\">Modifier_ChallengePeakBattle_EnhancedAbility_0013_03</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0013_ADF_1": {
                       "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_1) || RETURN",
@@ -4557,7 +4557,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0013_02[<span class=\"descriptionNumberColor\">Depowered+</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-416709080\">Modifier_ChallengePeakBattle_EnhancedAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered+</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0013_ADF_1": {
                           "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_1) || RETURN",
@@ -4618,7 +4618,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0013",
+          "for": "<a class=\"gModGreen\" id=\"mod__1699267029\">Modifier_ChallengePeakBattle_EnhancedAbility_0013</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -4653,7 +4653,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0013_02[<span class=\"descriptionNumberColor\">Depowered+</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-416709080\">Modifier_ChallengePeakBattle_EnhancedAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered+</span>]",
                       "duration": {
                         "operator": "Variables[0] (#ADF_3) || RETURN",
                         "displayLines": "#ADF_3",
@@ -4712,13 +4712,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0013"
+          "modifier": "<a class=\"gModGreen\" id=\"-203800338\">Modifier_ChallengePeakBattle_BaseAbility_0013</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0013_03",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1710557010\">Modifier_ChallengePeakBattle_BaseAbility_0013_03</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4745,7 +4745,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0013_02[<span class=\"descriptionNumberColor\">Depowered</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1693779391\">Modifier_ChallengePeakBattle_BaseAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered</span>]",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4756,7 +4756,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getMemosprite]]"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0013_02[<span class=\"descriptionNumberColor\">Depowered</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1693779391\">Modifier_ChallengePeakBattle_BaseAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -4764,7 +4764,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0013_03"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1710557010\">Modifier_ChallengePeakBattle_BaseAbility_0013_03</a>"
                 }
               ]
             },
@@ -4777,7 +4777,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0013_03"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1710557010\">Modifier_ChallengePeakBattle_BaseAbility_0013_03</a>"
                 }
               ]
             },
@@ -4790,7 +4790,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0013_03",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1710557010\">Modifier_ChallengePeakBattle_BaseAbility_0013_03</a>",
                   "duration": {
                     "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_3) || RETURN",
                     "displayLines": "ChallengePeakBattle_0013_ADF_3",
@@ -4837,7 +4837,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0013_03",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1710557010\">Modifier_ChallengePeakBattle_BaseAbility_0013_03</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0013_ADF_1": {
                       "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_1) || RETURN",
@@ -4909,7 +4909,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0013_02[<span class=\"descriptionNumberColor\">Depowered</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1693779391\">Modifier_ChallengePeakBattle_BaseAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0013_ADF_1": {
                           "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_1) || RETURN",
@@ -4970,7 +4970,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0013",
+          "for": "<a class=\"gModGreen\" id=\"mod__-203800338\">Modifier_ChallengePeakBattle_BaseAbility_0013</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -5005,7 +5005,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0013_02[<span class=\"descriptionNumberColor\">Depowered</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1693779391\">Modifier_ChallengePeakBattle_BaseAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered</span>]",
                       "duration": {
                         "operator": "Variables[0] (#ADF_3) || RETURN",
                         "displayLines": "#ADF_3",
@@ -5064,13 +5064,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0012"
+          "modifier": "<a class=\"gModGreen\" id=\"1682489410\">Modifier_ChallengePeakBattle_EnhancedAbility_0012</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1351261938\">Modifier_ChallengePeakBattle_EnhancedAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -5124,7 +5124,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0012_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1368039557\">Modifier_ChallengePeakBattle_EnhancedAbility_0012_02</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -5135,7 +5135,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1351261938\">Modifier_ChallengePeakBattle_EnhancedAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -5143,7 +5143,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1351261938\">Modifier_ChallengePeakBattle_EnhancedAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (ChallengePeakBattle_0012_ADF_2) || RETURN",
                     "displayLines": "ChallengePeakBattle_0012_ADF_2",
@@ -5191,7 +5191,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1351261938\">Modifier_ChallengePeakBattle_EnhancedAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (ChallengePeakBattle_0012_ADF_2) || RETURN",
                     "displayLines": "ChallengePeakBattle_0012_ADF_2",
@@ -5251,7 +5251,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1351261938\">Modifier_ChallengePeakBattle_EnhancedAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0012_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -5292,7 +5292,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1351261938\">Modifier_ChallengePeakBattle_EnhancedAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -5300,7 +5300,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1351261938\">Modifier_ChallengePeakBattle_EnhancedAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (ChallengePeakBattle_0012_ADF_2) || RETURN",
                     "displayLines": "ChallengePeakBattle_0012_ADF_2",
@@ -5343,7 +5343,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0012",
+          "for": "<a class=\"gModGreen\" id=\"mod__1682489410\">Modifier_ChallengePeakBattle_EnhancedAbility_0012</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -5365,7 +5365,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0012_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"1368039557\">Modifier_ChallengePeakBattle_EnhancedAbility_0012_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0012_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -5416,13 +5416,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012"
+          "modifier": "<a class=\"gModGreen\" id=\"-187022719\">Modifier_ChallengePeakBattle_BaseAbility_0012</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -5476,7 +5476,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0012_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-575697244\">Modifier_ChallengePeakBattle_BaseAbility_0012_02</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -5487,7 +5487,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -5495,7 +5495,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (ChallengePeakBattle_0012_ADF_2) || RETURN",
                     "displayLines": "ChallengePeakBattle_0012_ADF_2",
@@ -5543,7 +5543,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (ChallengePeakBattle_0012_ADF_2) || RETURN",
                     "displayLines": "ChallengePeakBattle_0012_ADF_2",
@@ -5603,7 +5603,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0012_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -5644,7 +5644,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -5652,7 +5652,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (ChallengePeakBattle_0012_ADF_2) || RETURN",
                     "displayLines": "ChallengePeakBattle_0012_ADF_2",
@@ -5695,7 +5695,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0012",
+          "for": "<a class=\"gModGreen\" id=\"mod__-187022719\">Modifier_ChallengePeakBattle_BaseAbility_0012</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -5717,7 +5717,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"-575697244\">Modifier_ChallengePeakBattle_BaseAbility_0012_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0012_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -5768,13 +5768,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0011"
+          "modifier": "<a class=\"gModGreen\" id=\"1665711791\">Modifier_ChallengePeakBattle_EnhancedAbility_0011</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0011_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-241610538\">Modifier_ChallengePeakBattle_EnhancedAbility_0011_02</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -5805,7 +5805,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0011",
+          "for": "<a class=\"gModGreen\" id=\"mod__1665711791\">Modifier_ChallengePeakBattle_EnhancedAbility_0011</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -5827,7 +5827,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0011_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"-241610538\">Modifier_ChallengePeakBattle_EnhancedAbility_0011_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0011_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -5870,13 +5870,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0011"
+          "modifier": "<a class=\"gModGreen\" id=\"-237355576\">Modifier_ChallengePeakBattle_BaseAbility_0011</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0011_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1228128919\">Modifier_ChallengePeakBattle_BaseAbility_0011_02</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -5907,7 +5907,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0011",
+          "for": "<a class=\"gModGreen\" id=\"mod__-237355576\">Modifier_ChallengePeakBattle_BaseAbility_0011</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -5929,7 +5929,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0011_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"1228128919\">Modifier_ChallengePeakBattle_BaseAbility_0011_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0011_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -5972,13 +5972,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010"
+          "modifier": "<a class=\"gModGreen\" id=\"-220577957\">Modifier_ChallengePeakBattle_BaseAbility_0010</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5",
+          "for": "<a class=\"gModGreen\" id=\"mod__1607072781\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -6006,7 +6006,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4",
+          "for": "<a class=\"gModGreen\" id=\"mod__1590295162\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -6034,7 +6034,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3",
+          "for": "<a class=\"gModGreen\" id=\"mod__1506407067\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -6062,7 +6062,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2",
+          "for": "<a class=\"gModGreen\" id=\"mod__1489629448\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -6090,7 +6090,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1",
+          "for": "<a class=\"gModGreen\" id=\"mod__1539962305\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -6118,7 +6118,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0010_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1208937842\">Modifier_ChallengePeakBattle_BaseAbility_0010_02</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -6158,7 +6158,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1"
+                        "modifier": "<a class=\"gModGreen\" id=\"1539962305\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1</a>"
                       },
                       "passed": [
                         {
@@ -6167,7 +6167,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1",
+                          "modifier": "<a class=\"gModGreen\" id=\"1539962305\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1</a>",
                           "duration": {
                             "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                             "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -6237,7 +6237,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2"
+                        "modifier": "<a class=\"gModGreen\" id=\"1489629448\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2</a>"
                       },
                       "passed": [
                         {
@@ -6246,7 +6246,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2",
+                          "modifier": "<a class=\"gModGreen\" id=\"1489629448\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2</a>",
                           "duration": {
                             "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                             "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -6316,7 +6316,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3"
+                        "modifier": "<a class=\"gModGreen\" id=\"1506407067\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3</a>"
                       },
                       "passed": [
                         {
@@ -6325,7 +6325,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3",
+                          "modifier": "<a class=\"gModGreen\" id=\"1506407067\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3</a>",
                           "duration": {
                             "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                             "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -6395,7 +6395,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4"
+                        "modifier": "<a class=\"gModGreen\" id=\"1590295162\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4</a>"
                       },
                       "passed": [
                         {
@@ -6404,7 +6404,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4",
+                          "modifier": "<a class=\"gModGreen\" id=\"1590295162\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4</a>",
                           "duration": {
                             "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                             "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -6474,7 +6474,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5"
+                        "modifier": "<a class=\"gModGreen\" id=\"1607072781\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5</a>"
                       },
                       "passed": [
                         {
@@ -6483,7 +6483,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5",
+                          "modifier": "<a class=\"gModGreen\" id=\"1607072781\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5</a>",
                           "duration": {
                             "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                             "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -6560,7 +6560,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1"
+                    "modifier": "<a class=\"gModGreen\" id=\"1539962305\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1</a>"
                   },
                   "passed": [
                     {
@@ -6585,7 +6585,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2"
+                    "modifier": "<a class=\"gModGreen\" id=\"1489629448\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2</a>"
                   },
                   "passed": [
                     {
@@ -6610,7 +6610,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3"
+                    "modifier": "<a class=\"gModGreen\" id=\"1506407067\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3</a>"
                   },
                   "passed": [
                     {
@@ -6635,7 +6635,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4"
+                    "modifier": "<a class=\"gModGreen\" id=\"1590295162\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4</a>"
                   },
                   "passed": [
                     {
@@ -6660,7 +6660,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5"
+                    "modifier": "<a class=\"gModGreen\" id=\"1607072781\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5</a>"
                   },
                   "passed": [
                     {
@@ -6688,7 +6688,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1"
+                        "modifier": "<a class=\"gModGreen\" id=\"1539962305\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1</a>"
                       },
                       {
                         "name": "Has Modifier",
@@ -6696,7 +6696,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2"
+                        "modifier": "<a class=\"gModGreen\" id=\"1489629448\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2</a>"
                       },
                       {
                         "name": "Has Modifier",
@@ -6704,7 +6704,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3"
+                        "modifier": "<a class=\"gModGreen\" id=\"1506407067\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3</a>"
                       },
                       {
                         "name": "Has Modifier",
@@ -6712,7 +6712,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4"
+                        "modifier": "<a class=\"gModGreen\" id=\"1590295162\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4</a>"
                       },
                       {
                         "name": "Has Modifier",
@@ -6720,7 +6720,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5"
+                        "modifier": "<a class=\"gModGreen\" id=\"1607072781\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5</a>"
                       }
                     ]
                   },
@@ -6819,7 +6819,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getSummoner]]"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1",
+                          "modifier": "<a class=\"gModGreen\" id=\"1539962305\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1</a>",
                           "duration": {
                             "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                             "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -6885,7 +6885,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getSummoner]]"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2",
+                          "modifier": "<a class=\"gModGreen\" id=\"1489629448\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2</a>",
                           "duration": {
                             "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                             "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -6951,7 +6951,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getSummoner]]"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3",
+                          "modifier": "<a class=\"gModGreen\" id=\"1506407067\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3</a>",
                           "duration": {
                             "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                             "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -7017,7 +7017,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getSummoner]]"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4",
+                          "modifier": "<a class=\"gModGreen\" id=\"1590295162\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4</a>",
                           "duration": {
                             "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                             "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -7083,7 +7083,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getSummoner]]"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5",
+                          "modifier": "<a class=\"gModGreen\" id=\"1607072781\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5</a>",
                           "duration": {
                             "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                             "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -7198,7 +7198,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1",
+                          "modifier": "<a class=\"gModGreen\" id=\"1539962305\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1</a>",
                           "duration": {
                             "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                             "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -7264,7 +7264,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2",
+                          "modifier": "<a class=\"gModGreen\" id=\"1489629448\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2</a>",
                           "duration": {
                             "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                             "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -7330,7 +7330,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3",
+                          "modifier": "<a class=\"gModGreen\" id=\"1506407067\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3</a>",
                           "duration": {
                             "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                             "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -7396,7 +7396,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4",
+                          "modifier": "<a class=\"gModGreen\" id=\"1590295162\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4</a>",
                           "duration": {
                             "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                             "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -7462,7 +7462,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5",
+                          "modifier": "<a class=\"gModGreen\" id=\"1607072781\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5</a>",
                           "duration": {
                             "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                             "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -7532,7 +7532,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0010",
+          "for": "<a class=\"gModGreen\" id=\"mod__-220577957\">Modifier_ChallengePeakBattle_BaseAbility_0010</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -7554,7 +7554,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"1208937842\">Modifier_ChallengePeakBattle_BaseAbility_0010_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0010_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -7629,13 +7629,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0009"
+          "modifier": "<a class=\"gModGreen\" id=\"973865824\">Modifier_ChallengePeakBattle_ExtremeAbility_0009</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0009_02[<span class=\"descriptionNumberColor\">Interference++</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__574373263\">Modifier_ChallengePeakBattle_ExtremeAbility_0009_02</a>[<span class=\"descriptionNumberColor\">Interference++</span>]",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -7687,7 +7687,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0009",
+          "for": "<a class=\"gModGreen\" id=\"mod__973865824\">Modifier_ChallengePeakBattle_ExtremeAbility_0009</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -7709,7 +7709,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0009_02[<span class=\"descriptionNumberColor\">Interference++</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"574373263\">Modifier_ChallengePeakBattle_ExtremeAbility_0009_02</a>[<span class=\"descriptionNumberColor\">Interference++</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0009_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -7752,13 +7752,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0009"
+          "modifier": "<a class=\"gModGreen\" id=\"1867190314\">Modifier_ChallengePeakBattle_EnhancedAbility_0009</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0009_02[<span class=\"descriptionNumberColor\">Interference+</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__141969773\">Modifier_ChallengePeakBattle_EnhancedAbility_0009_02</a>[<span class=\"descriptionNumberColor\">Interference+</span>]",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -7810,7 +7810,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0009",
+          "for": "<a class=\"gModGreen\" id=\"mod__1867190314\">Modifier_ChallengePeakBattle_EnhancedAbility_0009</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -7832,7 +7832,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0009_02[<span class=\"descriptionNumberColor\">Interference+</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"141969773\">Modifier_ChallengePeakBattle_EnhancedAbility_0009_02</a>[<span class=\"descriptionNumberColor\">Interference+</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0009_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -7875,13 +7875,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0009"
+          "modifier": "<a class=\"gModGreen\" id=\"-170392195\">Modifier_ChallengePeakBattle_BaseAbility_0009</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0009_02[<span class=\"descriptionNumberColor\">Interference</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__954434320\">Modifier_ChallengePeakBattle_BaseAbility_0009_02</a>[<span class=\"descriptionNumberColor\">Interference</span>]",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -7933,7 +7933,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0009",
+          "for": "<a class=\"gModGreen\" id=\"mod__-170392195\">Modifier_ChallengePeakBattle_BaseAbility_0009</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -7955,7 +7955,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0009_02[<span class=\"descriptionNumberColor\">Interference</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"954434320\">Modifier_ChallengePeakBattle_BaseAbility_0009_02</a>[<span class=\"descriptionNumberColor\">Interference</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0009_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -7998,13 +7998,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0008"
+          "modifier": "<a class=\"gModGreen\" id=\"1883967933\">Modifier_ChallengePeakBattle_EnhancedAbility_0008</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting+</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2147319581\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting+</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -8057,7 +8057,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_02_PreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-427871213\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_02_PreShow</a>",
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -8080,7 +8080,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value1": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting+</span>]",
+                  "value1": "<a class=\"gModGreen\" id=\"-2147319581\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting+</span>]",
                   "compareType": ">=",
                   "value2": {
                     "operator": "Variables[0] (ChallengePeakBattle_0008_ADF_1) || Constants[0] (1) || SUB || RETURN",
@@ -8114,7 +8114,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__2130870096\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_02</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -8126,7 +8126,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting+</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2147319581\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting+</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -8134,7 +8134,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting+</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2147319581\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting+</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0008_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -8158,7 +8158,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting+</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2147319581\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting+</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0008_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -8182,7 +8182,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting+</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2147319581\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting+</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0008_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -8201,7 +8201,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0008",
+          "for": "<a class=\"gModGreen\" id=\"mod__1883967933\">Modifier_ChallengePeakBattle_EnhancedAbility_0008</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -8223,7 +8223,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"2130870096\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0008_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -8254,7 +8254,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_02_PreShow",
+                      "modifier": "<a class=\"gModGreen\" id=\"-427871213\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_02_PreShow</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0008_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -8289,13 +8289,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0008"
+          "modifier": "<a class=\"gModGreen\" id=\"-187169814\">Modifier_ChallengePeakBattle_BaseAbility_0008</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1051243622\">Modifier_ChallengePeakBattle_BaseAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -8348,7 +8348,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0008_02_PreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__1958699986\">Modifier_ChallengePeakBattle_BaseAbility_0008_02_PreShow</a>",
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -8371,7 +8371,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value1": "Modifier_ChallengePeakBattle_BaseAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting</span>]",
+                  "value1": "<a class=\"gModGreen\" id=\"-1051243622\">Modifier_ChallengePeakBattle_BaseAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting</span>]",
                   "compareType": ">=",
                   "value2": {
                     "operator": "Variables[0] (ChallengePeakBattle_0008_ADF_1) || Constants[0] (1) || SUB || RETURN",
@@ -8405,7 +8405,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0008_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1034466003\">Modifier_ChallengePeakBattle_BaseAbility_0008_02</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -8417,7 +8417,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1051243622\">Modifier_ChallengePeakBattle_BaseAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -8425,7 +8425,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1051243622\">Modifier_ChallengePeakBattle_BaseAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0008_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -8449,7 +8449,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1051243622\">Modifier_ChallengePeakBattle_BaseAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0008_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -8473,7 +8473,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1051243622\">Modifier_ChallengePeakBattle_BaseAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0008_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -8540,7 +8540,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0008",
+          "for": "<a class=\"gModGreen\" id=\"mod__-187169814\">Modifier_ChallengePeakBattle_BaseAbility_0008</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -8562,7 +8562,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0008_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1034466003\">Modifier_ChallengePeakBattle_BaseAbility_0008_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0008_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -8593,7 +8593,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0008_02_PreShow",
+                      "modifier": "<a class=\"gModGreen\" id=\"1958699986\">Modifier_ChallengePeakBattle_BaseAbility_0008_02_PreShow</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0008_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -8628,13 +8628,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0007"
+          "modifier": "<a class=\"gModGreen\" id=\"1208752490\">Modifier_ChallengePeakBattle_ExtremeAbility_0007</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder++</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-576579558\">Modifier_ChallengePeakBattle_ExtremeAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder++</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -8689,7 +8689,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0007_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-559801939\">Modifier_ChallengePeakBattle_ExtremeAbility_0007_02</a>",
           "execute": [
             {
               "eventTrigger": "Receiving Heal End [Owner]",
@@ -8728,7 +8728,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder++</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-576579558\">Modifier_ChallengePeakBattle_ExtremeAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder++</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -8736,7 +8736,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target's Source Owner}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder++</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-576579558\">Modifier_ChallengePeakBattle_ExtremeAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder++</span>]"
                     }
                   ]
                 }
@@ -8762,7 +8762,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder++</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-576579558\">Modifier_ChallengePeakBattle_ExtremeAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder++</span>]",
                       "stackLimit": 999,
                       "valuePerStack": {
                         "ChallengePeakBattle_0007_ADF_1": {
@@ -8820,7 +8820,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder++</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-576579558\">Modifier_ChallengePeakBattle_ExtremeAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder++</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -8828,7 +8828,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target 2}}.[[getSourceCreator]]"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder++</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-576579558\">Modifier_ChallengePeakBattle_ExtremeAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder++</span>]"
                     }
                   ]
                 }
@@ -8838,7 +8838,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0007",
+          "for": "<a class=\"gModGreen\" id=\"mod__1208752490\">Modifier_ChallengePeakBattle_ExtremeAbility_0007</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -8865,7 +8865,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0007_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"-559801939\">Modifier_ChallengePeakBattle_ExtremeAbility_0007_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0007_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -8900,13 +8900,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0007"
+          "modifier": "<a class=\"gModGreen\" id=\"1632303648\">Modifier_ChallengePeakBattle_EnhancedAbility_0007</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder+</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1259367356\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder+</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -8961,7 +8961,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1276144975\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_02</a>",
           "execute": [
             {
               "eventTrigger": "Receiving Heal End [Owner]",
@@ -9000,7 +9000,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder+</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1259367356\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder+</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -9008,7 +9008,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target's Source Owner}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder+</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1259367356\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder+</span>]"
                     }
                   ]
                 }
@@ -9034,7 +9034,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder+</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1259367356\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder+</span>]",
                       "stackLimit": 999,
                       "valuePerStack": {
                         "ChallengePeakBattle_0007_ADF_1": {
@@ -9092,7 +9092,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder+</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1259367356\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder+</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -9100,7 +9100,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target 2}}.[[getSourceCreator]]"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder+</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1259367356\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder+</span>]"
                     }
                   ]
                 }
@@ -9110,7 +9110,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0007",
+          "for": "<a class=\"gModGreen\" id=\"mod__1632303648\">Modifier_ChallengePeakBattle_EnhancedAbility_0007</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -9137,7 +9137,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"1276144975\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0007_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -9172,13 +9172,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0007"
+          "modifier": "<a class=\"gModGreen\" id=\"-405278861\">Modifier_ChallengePeakBattle_BaseAbility_0007</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1518475395\">Modifier_ChallengePeakBattle_BaseAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -9233,7 +9233,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0007_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1535253014\">Modifier_ChallengePeakBattle_BaseAbility_0007_02</a>",
           "execute": [
             {
               "eventTrigger": "Receiving Heal End [Owner]",
@@ -9272,7 +9272,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1518475395\">Modifier_ChallengePeakBattle_BaseAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -9280,7 +9280,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target's Source Owner}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1518475395\">Modifier_ChallengePeakBattle_BaseAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder</span>]"
                     }
                   ]
                 }
@@ -9306,7 +9306,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1518475395\">Modifier_ChallengePeakBattle_BaseAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder</span>]",
                       "stackLimit": 999,
                       "valuePerStack": {
                         "ChallengePeakBattle_0007_ADF_1": {
@@ -9364,7 +9364,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1518475395\">Modifier_ChallengePeakBattle_BaseAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -9372,7 +9372,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target 2}}.[[getSourceCreator]]"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1518475395\">Modifier_ChallengePeakBattle_BaseAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder</span>]"
                     }
                   ]
                 }
@@ -9382,7 +9382,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0007",
+          "for": "<a class=\"gModGreen\" id=\"mod__-405278861\">Modifier_ChallengePeakBattle_BaseAbility_0007</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -9409,7 +9409,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0007_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1535253014\">Modifier_ChallengePeakBattle_BaseAbility_0007_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0007_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -9444,13 +9444,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0006"
+          "modifier": "<a class=\"gModGreen\" id=\"1225530109\">Modifier_ChallengePeakBattle_ExtremeAbility_0006</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0006_03[<span class=\"descriptionNumberColor\">Anguish++</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1445876003\">Modifier_ChallengePeakBattle_ExtremeAbility_0006_03</a>[<span class=\"descriptionNumberColor\">Anguish++</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -9490,7 +9490,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0006_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1429098384\">Modifier_ChallengePeakBattle_ExtremeAbility_0006_02</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -9501,7 +9501,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0006_03[<span class=\"descriptionNumberColor\">Anguish++</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1445876003\">Modifier_ChallengePeakBattle_ExtremeAbility_0006_03</a>[<span class=\"descriptionNumberColor\">Anguish++</span>]",
                   "baseChance": {
                     "operator": "Variables[0] (ChallengePeakBattle_0006_ADF_1) || RETURN",
                     "displayLines": "ChallengePeakBattle_0006_ADF_1",
@@ -9551,7 +9551,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0006",
+          "for": "<a class=\"gModGreen\" id=\"mod__1225530109\">Modifier_ChallengePeakBattle_ExtremeAbility_0006</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -9587,7 +9587,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0006_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"1429098384\">Modifier_ChallengePeakBattle_ExtremeAbility_0006_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0006_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -9638,13 +9638,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0006"
+          "modifier": "<a class=\"gModGreen\" id=\"1649081267\">Modifier_ChallengePeakBattle_EnhancedAbility_0006</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0006_03[<span class=\"descriptionNumberColor\">Anguish+</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-342039619\">Modifier_ChallengePeakBattle_EnhancedAbility_0006_03</a>[<span class=\"descriptionNumberColor\">Anguish+</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -9684,7 +9684,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0006_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-358817238\">Modifier_ChallengePeakBattle_EnhancedAbility_0006_02</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -9695,7 +9695,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0006_03[<span class=\"descriptionNumberColor\">Anguish+</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-342039619\">Modifier_ChallengePeakBattle_EnhancedAbility_0006_03</a>[<span class=\"descriptionNumberColor\">Anguish+</span>]",
                   "baseChance": {
                     "operator": "Variables[0] (ChallengePeakBattle_0006_ADF_1) || RETURN",
                     "displayLines": "ChallengePeakBattle_0006_ADF_1",
@@ -9745,7 +9745,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0006",
+          "for": "<a class=\"gModGreen\" id=\"mod__1649081267\">Modifier_ChallengePeakBattle_EnhancedAbility_0006</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -9781,7 +9781,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0006_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"-358817238\">Modifier_ChallengePeakBattle_EnhancedAbility_0006_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0006_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -9832,13 +9832,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0006"
+          "modifier": "<a class=\"gModGreen\" id=\"-422056480\">Modifier_ChallengePeakBattle_BaseAbility_0006</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0006_03[<span class=\"descriptionNumberColor\">Anguish</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__82931580\">Modifier_ChallengePeakBattle_BaseAbility_0006_03</a>[<span class=\"descriptionNumberColor\">Anguish</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -9878,7 +9878,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0006_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__99709199\">Modifier_ChallengePeakBattle_BaseAbility_0006_02</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -9889,7 +9889,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0006_03[<span class=\"descriptionNumberColor\">Anguish</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"82931580\">Modifier_ChallengePeakBattle_BaseAbility_0006_03</a>[<span class=\"descriptionNumberColor\">Anguish</span>]",
                   "baseChance": {
                     "operator": "Variables[0] (ChallengePeakBattle_0006_ADF_1) || RETURN",
                     "displayLines": "ChallengePeakBattle_0006_ADF_1",
@@ -9939,7 +9939,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0006",
+          "for": "<a class=\"gModGreen\" id=\"mod__-422056480\">Modifier_ChallengePeakBattle_BaseAbility_0006</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -9975,7 +9975,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0006_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"99709199\">Modifier_ChallengePeakBattle_BaseAbility_0006_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0006_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -10026,13 +10026,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0005"
+          "modifier": "<a class=\"gModGreen\" id=\"1175197252\">Modifier_ChallengePeakBattle_ExtremeAbility_0005</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0005_02[<span class=\"descriptionNumberColor\">Energy Absorption++</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1840788035\">Modifier_ChallengePeakBattle_ExtremeAbility_0005_02</a>[<span class=\"descriptionNumberColor\">Energy Absorption++</span>]",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -10158,7 +10158,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0005",
+          "for": "<a class=\"gModGreen\" id=\"mod__1175197252\">Modifier_ChallengePeakBattle_ExtremeAbility_0005</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -10180,7 +10180,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0005_02[<span class=\"descriptionNumberColor\">Energy Absorption++</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1840788035\">Modifier_ChallengePeakBattle_ExtremeAbility_0005_02</a>[<span class=\"descriptionNumberColor\">Energy Absorption++</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0005_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -10223,13 +10223,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0005"
+          "modifier": "<a class=\"gModGreen\" id=\"1665858886\">Modifier_ChallengePeakBattle_EnhancedAbility_0005</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0005_02[<span class=\"descriptionNumberColor\">Energy Absorption+</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__713949049\">Modifier_ChallengePeakBattle_EnhancedAbility_0005_02</a>[<span class=\"descriptionNumberColor\">Energy Absorption+</span>]",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -10355,7 +10355,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0005",
+          "for": "<a class=\"gModGreen\" id=\"mod__1665858886\">Modifier_ChallengePeakBattle_EnhancedAbility_0005</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -10377,7 +10377,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0005_02[<span class=\"descriptionNumberColor\">Energy Absorption+</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"713949049\">Modifier_ChallengePeakBattle_EnhancedAbility_0005_02</a>[<span class=\"descriptionNumberColor\">Energy Absorption+</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0005_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -10420,13 +10420,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0005"
+          "modifier": "<a class=\"gModGreen\" id=\"-371723623\">Modifier_ChallengePeakBattle_BaseAbility_0005</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0005_02[<span class=\"descriptionNumberColor\">Energy Absorption</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1618051580\">Modifier_ChallengePeakBattle_BaseAbility_0005_02</a>[<span class=\"descriptionNumberColor\">Energy Absorption</span>]",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -10552,7 +10552,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0005",
+          "for": "<a class=\"gModGreen\" id=\"mod__-371723623\">Modifier_ChallengePeakBattle_BaseAbility_0005</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -10574,7 +10574,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0005_02[<span class=\"descriptionNumberColor\">Energy Absorption</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1618051580\">Modifier_ChallengePeakBattle_BaseAbility_0005_02</a>[<span class=\"descriptionNumberColor\">Energy Absorption</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0005_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -10626,13 +10626,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0004"
+          "modifier": "<a class=\"gModGreen\" id=\"-388501242\">Modifier_ChallengePeakBattle_BaseAbility_0004</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0004_02[<span class=\"descriptionNumberColor\">Under Protection</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-886944199\">Modifier_ChallengePeakBattle_BaseAbility_0004_02</a>[<span class=\"descriptionNumberColor\">Under Protection</span>]",
           "modifierFlags": [
             "MuteBreak",
             "STAT_AITargetLowerPriority"
@@ -10671,7 +10671,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "lockHolder": "ChallengePeakBattle_BaseAbility_0004_LockHP"
+                  "lockHolder": "<a class=\"gModGreen\" id=\"-1276583244\">ChallengePeakBattle_BaseAbility_0004_LockHP</a>"
                 },
                 {
                   "name": "Modify Weaknesses",
@@ -10699,7 +10699,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0004",
+          "for": "<a class=\"gModGreen\" id=\"mod__-388501242\">Modifier_ChallengePeakBattle_BaseAbility_0004</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -10777,7 +10777,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0004_02[<span class=\"descriptionNumberColor\">Under Protection</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-886944199\">Modifier_ChallengePeakBattle_BaseAbility_0004_02</a>[<span class=\"descriptionNumberColor\">Under Protection</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0004_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -10858,7 +10858,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0004_02[<span class=\"descriptionNumberColor\">Under Protection</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-886944199\">Modifier_ChallengePeakBattle_BaseAbility_0004_02</a>[<span class=\"descriptionNumberColor\">Under Protection</span>]"
                         },
                         {
                           "name": "Force Entity Death",
@@ -10892,13 +10892,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0003"
+          "modifier": "<a class=\"gModGreen\" id=\"1141642014\">Modifier_ChallengePeakBattle_ExtremeAbility_0003</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0003_02[<span class=\"descriptionNumberColor\">Inversion++</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-577906191\">Modifier_ChallengePeakBattle_ExtremeAbility_0003_02</a>[<span class=\"descriptionNumberColor\">Inversion++</span>]",
           "execute": [
             {
               "eventTrigger": "Being Attacked End [Owner]",
@@ -10939,7 +10939,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0003",
+          "for": "<a class=\"gModGreen\" id=\"mod__1141642014\">Modifier_ChallengePeakBattle_ExtremeAbility_0003</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -10961,7 +10961,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0003_02[<span class=\"descriptionNumberColor\">Inversion++</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-577906191\">Modifier_ChallengePeakBattle_ExtremeAbility_0003_02</a>[<span class=\"descriptionNumberColor\">Inversion++</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0003_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -10997,13 +10997,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0003"
+          "modifier": "<a class=\"gModGreen\" id=\"1699414124\">Modifier_ChallengePeakBattle_EnhancedAbility_0003</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0003_02[<span class=\"descriptionNumberColor\">Inversion+</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1805296405\">Modifier_ChallengePeakBattle_EnhancedAbility_0003_02</a>[<span class=\"descriptionNumberColor\">Inversion+</span>]",
           "execute": [
             {
               "eventTrigger": "Being Attacked End [Owner]",
@@ -11044,7 +11044,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0003",
+          "for": "<a class=\"gModGreen\" id=\"mod__1699414124\">Modifier_ChallengePeakBattle_EnhancedAbility_0003</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -11066,7 +11066,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0003_02[<span class=\"descriptionNumberColor\">Inversion+</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1805296405\">Modifier_ChallengePeakBattle_EnhancedAbility_0003_02</a>[<span class=\"descriptionNumberColor\">Inversion+</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0003_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -11102,13 +11102,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0003"
+          "modifier": "<a class=\"gModGreen\" id=\"-338168385\">Modifier_ChallengePeakBattle_BaseAbility_0003</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0003_02[<span class=\"descriptionNumberColor\">Inversion</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1303856730\">Modifier_ChallengePeakBattle_BaseAbility_0003_02</a>[<span class=\"descriptionNumberColor\">Inversion</span>]",
           "execute": [
             {
               "eventTrigger": "Being Attacked End [Owner]",
@@ -11149,7 +11149,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0003",
+          "for": "<a class=\"gModGreen\" id=\"mod__-338168385\">Modifier_ChallengePeakBattle_BaseAbility_0003</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -11171,7 +11171,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0003_02[<span class=\"descriptionNumberColor\">Inversion</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1303856730\">Modifier_ChallengePeakBattle_BaseAbility_0003_02</a>[<span class=\"descriptionNumberColor\">Inversion</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0003_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -11207,13 +11207,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0002"
+          "modifier": "<a class=\"gModGreen\" id=\"-354946004\">Modifier_ChallengePeakBattle_BaseAbility_0002</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0002_03",
+          "for": "<a class=\"gModGreen\" id=\"mod__872000024\">Modifier_ChallengePeakBattle_BaseAbility_0002_03</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -11284,7 +11284,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0002_02[<span class=\"descriptionNumberColor\">Tempering</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__888777643\">Modifier_ChallengePeakBattle_BaseAbility_0002_02</a>[<span class=\"descriptionNumberColor\">Tempering</span>]",
           "execute": [
             {
               "eventTrigger": "HP Change [Owner]",
@@ -11295,7 +11295,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0002_03",
+                  "modifier": "<a class=\"gModGreen\" id=\"872000024\">Modifier_ChallengePeakBattle_BaseAbility_0002_03</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0002_ADF_1": {
                       "operator": "Variables[0] (ChallengePeakBattle_0002_ADF_1) || RETURN",
@@ -11316,7 +11316,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0002",
+          "for": "<a class=\"gModGreen\" id=\"mod__-354946004\">Modifier_ChallengePeakBattle_BaseAbility_0002</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -11338,7 +11338,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0002_02[<span class=\"descriptionNumberColor\">Tempering</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"888777643\">Modifier_ChallengePeakBattle_BaseAbility_0002_02</a>[<span class=\"descriptionNumberColor\">Tempering</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_0002_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -11373,13 +11373,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0001"
+          "modifier": "<a class=\"gModGreen\" id=\"1108086776\">Modifier_ChallengePeakBattle_ExtremeAbility_0001</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__391969588\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -11405,7 +11405,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"391969588\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]"
                     }
                   ]
                 }
@@ -11457,7 +11457,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"391969588\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]"
                     }
                   ]
                 }
@@ -11471,7 +11471,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__408747207\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_02</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -11482,7 +11482,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"391969588\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (ChallengePeakBattle_0001_ADF_1) || RETURN",
                     "displayLines": "ChallengePeakBattle_0001_ADF_1",
@@ -11529,7 +11529,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"391969588\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -11537,7 +11537,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"391969588\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (ChallengePeakBattle_0001_ADF_1) || RETURN",
                     "displayLines": "ChallengePeakBattle_0001_ADF_1",
@@ -11579,7 +11579,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0001",
+          "for": "<a class=\"gModGreen\" id=\"mod__1108086776\">Modifier_ChallengePeakBattle_ExtremeAbility_0001</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -11601,7 +11601,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"408747207\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0001_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -11644,13 +11644,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0001"
+          "modifier": "<a class=\"gModGreen\" id=\"1732969362\">Modifier_ChallengePeakBattle_EnhancedAbility_0001</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor+</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-681980542\">Modifier_ChallengePeakBattle_EnhancedAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor+</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -11676,7 +11676,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor+</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-681980542\">Modifier_ChallengePeakBattle_EnhancedAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor+</span>]"
                     }
                   ]
                 }
@@ -11728,7 +11728,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor+</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-681980542\">Modifier_ChallengePeakBattle_EnhancedAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor+</span>]"
                     }
                   ]
                 }
@@ -11742,7 +11742,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0001_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-665202923\">Modifier_ChallengePeakBattle_EnhancedAbility_0001_02</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -11753,7 +11753,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor+</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-681980542\">Modifier_ChallengePeakBattle_EnhancedAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor+</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (ChallengePeakBattle_0001_ADF_1) || RETURN",
                     "displayLines": "ChallengePeakBattle_0001_ADF_1",
@@ -11800,7 +11800,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor+</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-681980542\">Modifier_ChallengePeakBattle_EnhancedAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor+</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -11808,7 +11808,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor+</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-681980542\">Modifier_ChallengePeakBattle_EnhancedAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor+</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (ChallengePeakBattle_0001_ADF_1) || RETURN",
                     "displayLines": "ChallengePeakBattle_0001_ADF_1",
@@ -11850,7 +11850,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0001",
+          "for": "<a class=\"gModGreen\" id=\"mod__1732969362\">Modifier_ChallengePeakBattle_EnhancedAbility_0001</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -11872,7 +11872,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0001_02",
+                      "modifier": "<a class=\"gModGreen\" id=\"-665202923\">Modifier_ChallengePeakBattle_EnhancedAbility_0001_02</a>",
                       "valuePerStack": {
                         "ChallengePeakBattle_0001_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -11915,13 +11915,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0001"
+          "modifier": "<a class=\"gModGreen\" id=\"-304613147\">Modifier_ChallengePeakBattle_BaseAbility_0001</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0001_02[<span class=\"descriptionNumberColor\">Resilient Armor</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1656944184\">Modifier_ChallengePeakBattle_BaseAbility_0001_02</a>[<span class=\"descriptionNumberColor\">Resilient Armor</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -11947,7 +11947,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0001_02[<span class=\"descriptionNumberColor\">Resilient Armor</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1656944184\">Modifier_ChallengePeakBattle_BaseAbility_0001_02</a>[<span class=\"descriptionNumberColor\">Resilient Armor</span>]"
                     }
                   ]
                 }
@@ -11999,7 +11999,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0001_02[<span class=\"descriptionNumberColor\">Resilient Armor</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1656944184\">Modifier_ChallengePeakBattle_BaseAbility_0001_02</a>[<span class=\"descriptionNumberColor\">Resilient Armor</span>]"
                     }
                   ]
                 }
@@ -12013,7 +12013,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_ChallengePeakBattle_BaseAbility_0001",
+          "for": "<a class=\"gModGreen\" id=\"mod__-304613147\">Modifier_ChallengePeakBattle_BaseAbility_0001</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -12035,7 +12035,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0001_02[<span class=\"descriptionNumberColor\">Resilient Armor</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1656944184\">Modifier_ChallengePeakBattle_BaseAbility_0001_02</a>[<span class=\"descriptionNumberColor\">Resilient Armor</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (#ADF_1) || RETURN",
                         "displayLines": "#ADF_1",

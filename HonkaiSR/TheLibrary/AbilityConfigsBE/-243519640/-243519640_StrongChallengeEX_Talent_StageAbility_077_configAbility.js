@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_077"
+      "modifier": "<a class=\"gModGreen\" id=\"-703429744\">MStrongChallengeEX_Talent_StageAbility_LE_077</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_077[<span class=\"descriptionNumberColor\">Shatterstrike</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1291381400\">MStrongChallengeEX_Talent_StageAbility_PLY_077</a>[<span class=\"descriptionNumberColor\">Shatterstrike</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -126,7 +126,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_077",
+      "for": "<a class=\"gModGreen\" id=\"mod__-703429744\">MStrongChallengeEX_Talent_StageAbility_LE_077</a>",
       "execute": [
         {
           "eventTrigger": "Weakness Break [Anyone]",
@@ -178,7 +178,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_077[<span class=\"descriptionNumberColor\">Shatterstrike</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1291381400\">MStrongChallengeEX_Talent_StageAbility_PLY_077</a>[<span class=\"descriptionNumberColor\">Shatterstrike</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {

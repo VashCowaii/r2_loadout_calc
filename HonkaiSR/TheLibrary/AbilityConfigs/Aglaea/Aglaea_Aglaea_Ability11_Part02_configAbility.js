@@ -104,7 +104,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Aglaea_GoldenSword_Mark[<span class=\"descriptionNumberColor\">Seam Stitch</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"216440055\">Aglaea_GoldenSword_Mark</a>[<span class=\"descriptionNumberColor\">Seam Stitch</span>]",
           "valuePerStack": {
             "BombDamagePercentage": {
               "operator": "Variables[0] (0.3) || RETURN",

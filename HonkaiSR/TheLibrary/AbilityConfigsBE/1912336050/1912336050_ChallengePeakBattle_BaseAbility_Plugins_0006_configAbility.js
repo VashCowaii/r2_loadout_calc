@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006"
+      "modifier": "<a class=\"gModGreen\" id=\"-2066660631\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_Halo",
+      "for": "<a class=\"gModGreen\" id=\"mod__-754455660\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_Halo</a>",
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -36,13 +36,13 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"770601951\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
                   "invertCondition": true
                 }
               }
             ]
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_04",
+          "modifier": "<a class=\"gModGreen\" id=\"720269094\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_04</a>",
           "haloStatus": true,
           "valuePerStack": {
             "ChallengePeakBattle_Plugins_0006_ADF_1": {
@@ -75,7 +75,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_04",
+      "for": "<a class=\"gModGreen\" id=\"mod__720269094\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_04</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -86,7 +86,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"770601951\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
               "stackLimit": 999,
               "valuePerStack": {
                 "ChallengePeakBattle_Plugins_0006_ADF_1": {
@@ -127,7 +127,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__770601951\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -172,7 +172,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_02[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__753824332\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_02</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -207,7 +207,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2066660631\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -234,7 +234,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_02[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"753824332\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_02</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0006_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -268,7 +268,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "MissionBattleEvent60037_BE_Trigger"
+                    "modifier": "<a class=\"gModGreen\" id=\"922752745\">MissionBattleEvent60037_BE_Trigger</a>"
                   }
                 ]
               },
@@ -279,7 +279,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable, exclude Netherwing)}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"770601951\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
                   "stackLimit": 999,
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0006_ADF_1": {
@@ -306,7 +306,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_Halo",
+                  "modifier": "<a class=\"gModGreen\" id=\"-754455660\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_Halo</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0006_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

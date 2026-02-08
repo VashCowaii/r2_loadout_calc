@@ -31,7 +31,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Cerydra_Ability02_Target"
+        "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>"
       },
       "noTargetFound": [
         {
@@ -49,7 +49,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Cerydra_Ability02_Target",
+              "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>",
               "valuePerStack": {
                 "DV_PointAdded_Get": {
                   "operator": "Variables[0] (1) || RETURN",
@@ -86,7 +86,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Cerydra_Ability02_Target",
+                  "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>",
                   "valuePerStack": {
                     "DV_PointAdded_Get": {
                       "operator": "Variables[0] (1) || RETURN",
@@ -106,7 +106,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Cerydra_Template_MaxPointHandle",
+      "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
       "variables": {
         "DV_AddPoint": {
           "operator": "Variables[0] (2) || RETURN",

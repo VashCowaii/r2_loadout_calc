@@ -40,7 +40,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Mar_7th_10_Ability03_Enhance_Normal[<span class=\"descriptionNumberColor\">March 7th, the Apex Heroine</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1546960372\">Mar_7th_10_Ability03_Enhance_Normal</a>[<span class=\"descriptionNumberColor\">March 7th, the Apex Heroine</span>]",
       "valuePerStack": {
         "MDF_Value": {
           "operator": "Variables[0] (2) || RETURN",
@@ -74,7 +74,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_Ability03_Enhance_Normal[<span class=\"descriptionNumberColor\">March 7th, the Apex Heroine</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1546960372\">Mar_7th_10_Ability03_Enhance_Normal</a>[<span class=\"descriptionNumberColor\">March 7th, the Apex Heroine</span>]",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -164,7 +164,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Mar_7th_10_Enhance"
+                "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>"
               }
             }
           ]
@@ -187,7 +187,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Mar_7th_10_Enhance"
+                    "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>"
                   },
                   {
                     "name": "Attack Type",

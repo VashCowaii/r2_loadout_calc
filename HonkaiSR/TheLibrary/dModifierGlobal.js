@@ -27,7 +27,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_AttackRatioUp",
+    "name": "<a class=\"gModGreen\" id=\"-1638600472\">Standard_AttackRatioUp</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "ATK +#1[i]%.",
@@ -38,7 +38,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_AttackRatioDown",
+    "name": "<a class=\"gModGreen\" id=\"1592948509\">Standard_AttackRatioDown</a>",
     "realName": "ATK Reduction",
     "aim": "Debuff",
     "desc": "ATK -#1[i]%.",
@@ -49,7 +49,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_AttackDeltaUp",
+    "name": "<a class=\"gModGreen\" id=\"493386269\">Standard_AttackDeltaUp</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "ATK +#1[i].",
@@ -60,7 +60,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_AttackDeltaDown",
+    "name": "<a class=\"gModGreen\" id=\"-313217188\">Standard_AttackDeltaDown</a>",
     "realName": "ATK Reduction",
     "aim": "Debuff",
     "desc": "ATK -#1[i].",
@@ -71,7 +71,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_DefenceRatioUp",
+    "name": "<a class=\"gModGreen\" id=\"-640702816\">Standard_DefenceRatioUp</a>",
     "realName": "DEF Boost",
     "aim": "Buff",
     "desc": "DEF increases by #1[i]%",
@@ -82,7 +82,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_DefenceRatioDown",
+    "name": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>",
     "realName": "DEF Reduction",
     "aim": "Debuff",
     "desc": "DEF -#1[i]%.",
@@ -93,7 +93,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_DefenceDeltaUp",
+    "name": "<a class=\"gModGreen\" id=\"1908508133\">Standard_DefenceDeltaUp</a>",
     "realName": "DEF Boost",
     "aim": "Buff",
     "desc": "DEF +#1[i].",
@@ -104,7 +104,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_DefenceDeltaDown",
+    "name": "<a class=\"gModGreen\" id=\"-725625020\">Standard_DefenceDeltaDown</a>",
     "realName": "DEF Reduction",
     "aim": "Debuff",
     "desc": "DEF -#1[i].",
@@ -115,7 +115,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_AllDamageAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"2083575949\">Standard_AllDamageAddedRatio</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -126,7 +126,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_CriticalChanceUp",
+    "name": "<a class=\"gModGreen\" id=\"-543542238\">Standard_CriticalChanceUp</a>",
     "realName": "CRIT Rate Boost",
     "aim": "Buff",
     "desc": "CRIT Rate +#1[i]%.",
@@ -137,7 +137,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_CriticalChanceDown",
+    "name": "<a class=\"gModGreen\" id=\"-424299549\">Standard_CriticalChanceDown</a>",
     "realName": "CRIT Rate Reduction",
     "aim": "Debuff",
     "desc": "CRIT Rate -#1[i]%.",
@@ -148,7 +148,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_CriticalDamageUp",
+    "name": "<a class=\"gModGreen\" id=\"365398491\">Standard_CriticalDamageUp</a>",
     "realName": "CRIT DMG Boost",
     "aim": "Buff",
     "desc": "CRIT DMG +#1[i]%.",
@@ -159,7 +159,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_CriticalDamageDown",
+    "name": "<a class=\"gModGreen\" id=\"909057422\">Standard_CriticalDamageDown</a>",
     "realName": "CRIT DMG Reduction",
     "aim": "Debuff",
     "desc": "CRIT DMG -#1[i]%.",
@@ -170,7 +170,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_FatigueRatio",
+    "name": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>",
     "realName": "Weaken",
     "aim": "Debuff",
     "desc": "DMG dealt -#1[i]%.",
@@ -181,7 +181,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_AllDamageTypeAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-1777684731\">Standard_AllDamageTypeAddedRatio</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -192,7 +192,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_PhysicalAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"2082176038\">Standard_PhysicalAddedRatio</a>",
     "realName": "Physical DMG Boost",
     "aim": "Buff",
     "desc": "Physical DMG dealt +#1[i]%.",
@@ -203,7 +203,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_FireAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"396974031\">Standard_FireAddedRatio</a>",
     "realName": "Fire DMG Boost",
     "aim": "Buff",
     "desc": "Fire DMG dealt +#1[i]%.",
@@ -214,7 +214,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_IceAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-107089616\">Standard_IceAddedRatio</a>",
     "realName": "Ice DMG Boost",
     "aim": "Buff",
     "desc": "Ice DMG dealt +#1[i]%.",
@@ -225,7 +225,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_ThunderAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1568131025\">Standard_ThunderAddedRatio</a>",
     "realName": "Lightning DMG Boost",
     "aim": "Buff",
     "desc": "Lightning DMG dealt +#1[i]%.",
@@ -236,7 +236,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_WindAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"443833545\">Standard_WindAddedRatio</a>",
     "realName": "Wind DMG Boost",
     "aim": "Buff",
     "desc": "Wind DMG dealt +#1[i]%.",
@@ -247,7 +247,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_QuantumAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"881315694\">Standard_QuantumAddedRatio</a>",
     "realName": "Quantum DMG Boost",
     "aim": "Buff",
     "desc": "Quantum DMG dealt +#1[i]%.",
@@ -258,7 +258,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_ImaginaryAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-589529710\">Standard_ImaginaryAddedRatio</a>",
     "realName": "Imaginary DMG Boost",
     "aim": "Buff",
     "desc": "Imaginary DMG dealt +#1[i]%.",
@@ -269,7 +269,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_AllDamageTypeResistance",
+    "name": "<a class=\"gModGreen\" id=\"1897838297\">Standard_AllDamageTypeResistance</a>",
     "realName": "All-Type RES Boost",
     "aim": "Buff",
     "desc": "All-Type RES +#1[i]%.",
@@ -280,7 +280,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_PhysicalResistance",
+    "name": "<a class=\"gModGreen\" id=\"395693382\">Standard_PhysicalResistance</a>",
     "realName": "Physical RES Boost",
     "aim": "Buff",
     "desc": "Physical RES +#1[i]%.",
@@ -291,7 +291,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_FireResistance",
+    "name": "<a class=\"gModGreen\" id=\"1103107279\">Standard_FireResistance</a>",
     "realName": "Fire RES Boost",
     "aim": "Buff",
     "desc": "Fire RES +#1[i]%.",
@@ -302,7 +302,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_IceResistance",
+    "name": "<a class=\"gModGreen\" id=\"-1811570484\">Standard_IceResistance</a>",
     "realName": "Ice RES Boost",
     "aim": "Buff",
     "desc": "Ice RES +#1[i]%.",
@@ -313,7 +313,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_ThunderResistance",
+    "name": "<a class=\"gModGreen\" id=\"-1519562059\">Standard_ThunderResistance</a>",
     "realName": "Lightning RES Boost",
     "aim": "Buff",
     "desc": "Lightning RES +#1[i]%.",
@@ -324,7 +324,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_WindResistance",
+    "name": "<a class=\"gModGreen\" id=\"1512979021\">Standard_WindResistance</a>",
     "realName": "Wind RES Boost",
     "aim": "Buff",
     "desc": "Wind RES +#1[i]%.",
@@ -335,7 +335,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_QuantumResistance",
+    "name": "<a class=\"gModGreen\" id=\"337755598\">Standard_QuantumResistance</a>",
     "realName": "Quantum RES Boost",
     "aim": "Buff",
     "desc": "Quantum RES +#1[i]%.",
@@ -346,7 +346,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_ImaginaryResistance",
+    "name": "<a class=\"gModGreen\" id=\"-698350622\">Standard_ImaginaryResistance</a>",
     "realName": "Imaginary RES Boost",
     "aim": "Buff",
     "desc": "Imaginary RES +#1[i]%.",
@@ -357,7 +357,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_PhysicalPenetrate",
+    "name": "<a class=\"gModGreen\" id=\"2158881\">Standard_PhysicalPenetrate</a>",
     "realName": "Physical RES PEN",
     "aim": "Buff",
     "desc": "Physical RES PEN +#1[i]%.",
@@ -368,7 +368,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_FirePenetrate",
+    "name": "<a class=\"gModGreen\" id=\"801781618\">Standard_FirePenetrate</a>",
     "realName": "Fire RES PEN",
     "aim": "Buff",
     "desc": "Fire RES PEN +#1[i]%.",
@@ -379,7 +379,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_IcePenetrate",
+    "name": "<a class=\"gModGreen\" id=\"-415729513\">Standard_IcePenetrate</a>",
     "realName": "Ice RES PEN",
     "aim": "Buff",
     "desc": "Ice RES PEN +#1[i]%.",
@@ -390,7 +390,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_ThunderPenetrate",
+    "name": "<a class=\"gModGreen\" id=\"288500000\">Standard_ThunderPenetrate</a>",
     "realName": "Lightning RES PEN",
     "aim": "Buff",
     "desc": "Lightning RES PEN +#1[i]%.",
@@ -401,7 +401,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_WindPenetrate",
+    "name": "<a class=\"gModGreen\" id=\"-885249768\">Standard_WindPenetrate</a>",
     "realName": "Wind RES PEN",
     "aim": "Buff",
     "desc": "Wind RES PEN +#1[i]%.",
@@ -412,7 +412,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_QuantumPenetrate",
+    "name": "<a class=\"gModGreen\" id=\"618971177\">Standard_QuantumPenetrate</a>",
     "realName": "Quantum RES PEN",
     "aim": "Buff",
     "desc": "Quantum RES PEN +#1[i]%.",
@@ -423,7 +423,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_ImaginaryPenetrate",
+    "name": "<a class=\"gModGreen\" id=\"-1394259979\">Standard_ImaginaryPenetrate</a>",
     "realName": "Imaginary RES PEN",
     "aim": "Buff",
     "desc": "Imaginary RES PEN +#1[i]%.",
@@ -434,7 +434,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_AllDamageTypeTakenRatio",
+    "name": "<a class=\"gModGreen\" id=\"-43160834\">Standard_AllDamageTypeTakenRatio</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG taken by #1[i]%.",
@@ -445,7 +445,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_PhysicalTakenRatio",
+    "name": "<a class=\"gModGreen\" id=\"-109354427\">Standard_PhysicalTakenRatio</a>",
     "realName": "Physical Vulnerability",
     "aim": "Debuff",
     "desc": "Physical DMG taken +#1[i]%.",
@@ -456,7 +456,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_FireTakenRatio",
+    "name": "<a class=\"gModGreen\" id=\"1249803144\">Standard_FireTakenRatio</a>",
     "realName": "Fire Vulnerability",
     "aim": "Debuff",
     "desc": "Fire DMG taken +#1[i]%.",
@@ -467,7 +467,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_IceTakenRatio",
+    "name": "<a class=\"gModGreen\" id=\"255191535\">Standard_IceTakenRatio</a>",
     "realName": "Ice Vulnerability",
     "aim": "Debuff",
     "desc": "Ice DMG taken +#1[i]%.",
@@ -478,7 +478,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_ThunderTakenRatio",
+    "name": "<a class=\"gModGreen\" id=\"109685826\">Standard_ThunderTakenRatio</a>",
     "realName": "Lightning Vulnerability",
     "aim": "Debuff",
     "desc": "Lightning DMG taken +#1[i]%.",
@@ -489,7 +489,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_WindTakenRatio",
+    "name": "<a class=\"gModGreen\" id=\"1944536666\">Standard_WindTakenRatio</a>",
     "realName": "Wind Vulnerability",
     "aim": "Debuff",
     "desc": "Wind DMG taken +#1[i]%.",
@@ -500,7 +500,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_QuantumTakenRatio",
+    "name": "<a class=\"gModGreen\" id=\"60101517\">Standard_QuantumTakenRatio</a>",
     "realName": "Quantum Vulnerability",
     "aim": "Debuff",
     "desc": "Quantum DMG taken +#1[i]%.",
@@ -511,7 +511,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_ImaginaryTakenRatio",
+    "name": "<a class=\"gModGreen\" id=\"991543017\">Standard_ImaginaryTakenRatio</a>",
     "realName": "Imaginary Vulnerability",
     "aim": "Debuff",
     "desc": "Imaginary DMG taken +#1[i]%.",
@@ -522,7 +522,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_PhysicalAbsorb",
+    "name": "<a class=\"gModGreen\" id=\"370516022\">Standard_PhysicalAbsorb</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -533,7 +533,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_FireAbsorb",
+    "name": "<a class=\"gModGreen\" id=\"-1252318641\">Standard_FireAbsorb</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -544,7 +544,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_IceAbsorb",
+    "name": "<a class=\"gModGreen\" id=\"213964956\">Standard_IceAbsorb</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -555,7 +555,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_ThunderAbsorb",
+    "name": "<a class=\"gModGreen\" id=\"-119299315\">Standard_ThunderAbsorb</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -566,7 +566,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_WindAbsorb",
+    "name": "<a class=\"gModGreen\" id=\"1173787861\">Standard_WindAbsorb</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -577,7 +577,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_QuantumAbsorb",
+    "name": "<a class=\"gModGreen\" id=\"-48968594\">Standard_QuantumAbsorb</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -588,7 +588,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_ImaginaryAbsorb",
+    "name": "<a class=\"gModGreen\" id=\"179551098\">Standard_ImaginaryAbsorb</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -599,7 +599,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_StanceBreakAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-1910965732\">Standard_StanceBreakAddedRatio</a>",
     "realName": "Weakness Break Efficiency Boost",
     "aim": "Buff",
     "desc": "Increases Weakness Break Efficiency by #1[i]%.",
@@ -610,7 +610,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_StanceBreakResistance",
+    "name": "<a class=\"gModGreen\" id=\"-1821874088\">Standard_StanceBreakResistance</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -621,7 +621,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_StanceBreakResistanceAll",
+    "name": "<a class=\"gModGreen\" id=\"-797089541\">Standard_StanceBreakResistanceAll</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -629,7 +629,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_StanceBreakTakenRatio",
+    "name": "<a class=\"gModGreen\" id=\"1260087139\">Standard_StanceBreakTakenRatio</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -640,7 +640,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_FireStanceBreakResistance",
+    "name": "<a class=\"gModGreen\" id=\"1567140260\">Standard_FireStanceBreakResistance</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -651,7 +651,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_IceStanceBreakResistance",
+    "name": "<a class=\"gModGreen\" id=\"-525185247\">Standard_IceStanceBreakResistance</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -662,7 +662,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_ThunderStanceBreakResistance",
+    "name": "<a class=\"gModGreen\" id=\"-2091317506\">Standard_ThunderStanceBreakResistance</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -673,7 +673,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_WindStanceBreakResistance",
+    "name": "<a class=\"gModGreen\" id=\"921927174\">Standard_WindStanceBreakResistance</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -684,7 +684,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_QuantumStanceBreakResistance",
+    "name": "<a class=\"gModGreen\" id=\"-107751281\">Standard_QuantumStanceBreakResistance</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -695,7 +695,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_ImaginaryStanceBreakResistance",
+    "name": "<a class=\"gModGreen\" id=\"22618651\">Standard_ImaginaryStanceBreakResistance</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -706,7 +706,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_SpeedUp",
+    "name": "<a class=\"gModGreen\" id=\"2036544920\">Standard_SpeedUp</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "SPD +#1[i].",
@@ -717,7 +717,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_SpeedDown",
+    "name": "<a class=\"gModGreen\" id=\"-1325963283\">Standard_SpeedDown</a>",
     "realName": "Speed Reduction",
     "aim": "Debuff",
     "desc": "SPD -#1[i].",
@@ -728,7 +728,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_HealRatioUp",
+    "name": "<a class=\"gModGreen\" id=\"-776411742\">Standard_HealRatioUp</a>",
     "realName": "Outgoing Healing Boost",
     "aim": "Buff",
     "desc": "Outgoing Healing +#1[i]%.",
@@ -739,7 +739,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_HealRatioDown",
+    "name": "<a class=\"gModGreen\" id=\"954433891\">Standard_HealRatioDown</a>",
     "realName": "Outgoing Healing Reduction",
     "aim": "Debuff",
     "desc": "Outgoing Healing -#1[i]%.",
@@ -750,7 +750,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_HealTakenRatioUp",
+    "name": "<a class=\"gModGreen\" id=\"2022562475\">Standard_HealTakenRatioUp</a>",
     "realName": "Incoming Healing Boost",
     "aim": "Buff",
     "desc": "Incoming Healing +#1[i]%.",
@@ -761,7 +761,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_HealTakenRatioDown",
+    "name": "<a class=\"gModGreen\" id=\"-647756354\">Standard_HealTakenRatioDown</a>",
     "realName": "Incoming Healing Reduction",
     "aim": "Debuff",
     "desc": "Incoming Healing -#1[i]%.",
@@ -772,7 +772,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_StatusProbability",
+    "name": "<a class=\"gModGreen\" id=\"879494395\">Standard_StatusProbability</a>",
     "realName": "Effect Hit Rate Boost",
     "aim": "Buff",
     "desc": "Effect Hit Rate +#1[i]%.",
@@ -783,7 +783,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_StatusResistanceUp",
+    "name": "<a class=\"gModGreen\" id=\"-1990889700\">Standard_StatusResistanceUp</a>",
     "realName": "Effect RES Boost",
     "aim": "Buff",
     "desc": "Effect RES +#1[i]%.",
@@ -794,7 +794,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_SPRatioUp",
+    "name": "<a class=\"gModGreen\" id=\"1533265365\">Standard_SPRatioUp</a>",
     "realName": "Energy Regeneration Rate Boost",
     "aim": "Buff",
     "desc": "Increases Energy Regeneration Rate by #1[i]%.",
@@ -805,7 +805,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_SPRatioDown",
+    "name": "<a class=\"gModGreen\" id=\"2108411860\">Standard_SPRatioDown</a>",
     "realName": "Energy Regeneration Rate Reduction",
     "aim": "Debuff",
     "desc": "Decreases Energy Regeneration Rate by #1[i]%.",
@@ -816,7 +816,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_StatusResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"4474377\">Standard_StatusResistanceDown</a>",
     "realName": "Effect RES Reduction",
     "aim": "Debuff",
     "desc": "Effect RES -#1[i]%.",
@@ -827,7 +827,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_AllDamageTypeResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"541957737\">Standard_AllDamageTypeResistanceDown</a>",
     "realName": "All-Type RES Reduction",
     "aim": "Debuff",
     "desc": "All-Type DMG RES -#1[i]%.",
@@ -838,7 +838,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_PhysicalResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"-1887078258\">Standard_PhysicalResistanceDown</a>",
     "realName": "Physical RES Reduction",
     "aim": "Debuff",
     "desc": "Physical RES -#1[i]%.",
@@ -849,7 +849,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_FireResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"-1537044997\">Standard_FireResistanceDown</a>",
     "realName": "Fire RES Reduction",
     "aim": "Debuff",
     "desc": "Fire RES -#1[i]%.",
@@ -860,7 +860,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_IceResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"1969217848\">Standard_IceResistanceDown</a>",
     "realName": "Ice RES Reduction",
     "aim": "Debuff",
     "desc": "Ice RES -#1[i]%.",
@@ -871,7 +871,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_ThunderResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"-1410888443\">Standard_ThunderResistanceDown</a>",
     "realName": "Lightning RES Reduction",
     "aim": "Debuff",
     "desc": "Lightning RES -#1[i]%.",
@@ -882,7 +882,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_WindResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"-192876579\">Standard_WindResistanceDown</a>",
     "realName": "Wind RES Reduction",
     "aim": "Debuff",
     "desc": "Wind RES -#1[i]%.",
@@ -893,7 +893,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_QuantumResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"533883510\">Standard_QuantumResistanceDown</a>",
     "realName": "Quantum RES Reduction",
     "aim": "Debuff",
     "desc": "Quantum RES -#1[i]%.",
@@ -904,7 +904,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_ImaginaryResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"-1176142950\">Standard_ImaginaryResistanceDown</a>",
     "realName": "Imaginary RES Reduction",
     "aim": "Debuff",
     "desc": "Imaginary RES -#1[i]%.",
@@ -915,7 +915,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_DOT_Bleed",
+    "name": "<a class=\"gModGreen\" id=\"1147160586\">Standard_DOT_Bleed</a>",
     "realName": "Bleed",
     "aim": "Debuff",
     "desc": "Takes Physical DMG at the start of each turn for a certain number of turns.",
@@ -923,7 +923,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_DOT_Burn",
+    "name": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>",
     "realName": "Burn",
     "aim": "Debuff",
     "desc": "Takes Fire DMG at the start of each turn for a certain number of turns.",
@@ -931,7 +931,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_DOT_Poison",
+    "name": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>",
     "realName": "Wind Shear",
     "aim": "Debuff",
     "desc": "Takes Wind DMG at the start of each turn for a certain number of turns.",
@@ -939,7 +939,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_DOT_Electric",
+    "name": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>",
     "realName": "Shock",
     "aim": "Debuff",
     "desc": "Takes Lightning DMG at the start of each turn for a certain number of turns.",
@@ -947,7 +947,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_DOT_Tear",
+    "name": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>",
     "realName": "Bleed",
     "aim": "Debuff",
     "desc": "Takes Physical DMG at the start of each turn for a certain number of turns.",
@@ -955,7 +955,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_HOT_HPByMaxHP",
+    "name": "<a class=\"gModGreen\" id=\"1156628335\">Standard_HOT_HPByMaxHP</a>",
     "realName": "Healing Over Time",
     "aim": "Buff",
     "desc": "Restores a certain amount of HP at the start of each turn.",
@@ -963,7 +963,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_HOT_SP",
+    "name": "<a class=\"gModGreen\" id=\"2090146765\">Standard_HOT_SP</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -990,7 +990,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_CTRL_Taunt",
+    "name": "<a class=\"gModGreen\" id=\"-1488319040\">Standard_CTRL_Taunt</a>",
     "realName": "Taunt",
     "aim": "Debuff",
     "desc": "Can only select %CasterName as the target to attack.",
@@ -998,7 +998,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_CTRL_Stun",
+    "name": "<a class=\"gModGreen\" id=\"-1162946172\">Standard_CTRL_Stun</a>",
     "realName": "Stunned",
     "aim": "Debuff",
     "desc": "Cannot take action for a certain number of turns.",
@@ -1006,7 +1006,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_CTRL_Frozen",
+    "name": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>",
     "realName": "Frozen",
     "aim": "Debuff",
     "desc": "Cannot take action for a certain number of turns and takes Ice Additional DMG at the beginning of each turn.",
@@ -1014,7 +1014,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_Confine",
+    "name": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>",
     "realName": "Imprisonment",
     "aim": "Debuff",
     "desc": "Action is delayed and SPD is reduced.",
@@ -1022,7 +1022,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_BAN_Heal",
+    "name": "<a class=\"gModGreen\" id=\"-475439782\">Standard_BAN_Heal</a>",
     "realName": "undefined",
     "aim": "Debuff",
     "desc": "undefined",
@@ -1030,7 +1030,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_BAN_Silence",
+    "name": "<a class=\"gModGreen\" id=\"1445032651\">Standard_BAN_Silence</a>",
     "realName": "undefined",
     "aim": "Debuff",
     "desc": "undefined",
@@ -1038,7 +1038,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_Stealth",
+    "name": "<a class=\"gModGreen\" id=\"815559009\">Standard_Stealth</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -1046,7 +1046,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Standard_Servant",
+    "name": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>",
     "realName": "Self-Destruct",
     "aim": "Other",
     "desc": "When the summoner is defeated, the summoned objects will also be defeated.",
@@ -1054,7 +1054,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Standard_Protect_Shield",
+    "name": "<a class=\"gModGreen\" id=\"-1797420881\">Standard_Protect_Shield</a>",
     "realName": "Shield",
     "aim": "Buff",
     "desc": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
@@ -1062,7 +1062,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Standard_Protect_AbilityRetarget",
+    "name": "<a class=\"gModGreen\" id=\"1788719875\">Standard_Protect_AbilityRetarget</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -1070,7 +1070,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_Element_Bleed",
+    "name": "<a class=\"gModGreen\" id=\"1797970053\">Standard_Element_Bleed</a>",
     "realName": "Bleed",
     "aim": "Debuff",
     "desc": "Takes Physical DMG at the start of each turn for a certain number of turns.",
@@ -1078,7 +1078,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_Element_Frozen",
+    "name": "<a class=\"gModGreen\" id=\"-130814791\">Standard_Element_Frozen</a>",
     "realName": "Frozen",
     "aim": "Debuff",
     "desc": "Cannot take action for a certain number of turns and takes Ice Additional DMG at the beginning of each turn.",
@@ -1086,7 +1086,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_Element_Burn",
+    "name": "<a class=\"gModGreen\" id=\"-1852685234\">Standard_Element_Burn</a>",
     "realName": "Burn",
     "aim": "Debuff",
     "desc": "Takes Fire DMG at the beginning of each turn for a certain number of turns.",
@@ -1094,7 +1094,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_Element_Poison",
+    "name": "<a class=\"gModGreen\" id=\"-51292629\">Standard_Element_Poison</a>",
     "realName": "Wind Shear",
     "aim": "Debuff",
     "desc": "Takes Wind DMG at the beginning of each turn for a certain number of turns.",
@@ -1102,7 +1102,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_Element_Electric",
+    "name": "<a class=\"gModGreen\" id=\"1979618180\">Standard_Element_Electric</a>",
     "realName": "Shock",
     "aim": "Debuff",
     "desc": "Takes Lightning DMG at the beginning of each turn for a certain number of turns.",
@@ -1110,7 +1110,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_Element_Confine",
+    "name": "<a class=\"gModGreen\" id=\"-838929203\">Standard_Element_Confine</a>",
     "realName": "Imprisonment",
     "aim": "Debuff",
     "desc": "Action is delayed and SPD is reduced.",
@@ -1118,7 +1118,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_Element_Entangle",
+    "name": "<a class=\"gModGreen\" id=\"-576412017\">Standard_Element_Entangle</a>",
     "realName": "Entanglement",
     "aim": "Debuff",
     "desc": "Action delayed and receives Additional Quantum DMG at the start of the next turn.\\nThis Additional DMG is increased when Entangled enemies are attacked. This effect can stack up to 5 times.",
@@ -1126,7 +1126,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_Entangle",
+    "name": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>",
     "realName": "Entanglement",
     "aim": "Debuff",
     "desc": "Action delayed and receives Additional Quantum DMG at the start of the next turn.\\nThis Additional DMG is increased when Entangled enemies are attacked. This effect can stack up to 5 times.",
@@ -1134,7 +1134,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_MindControl",
+    "name": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>",
     "realName": "Dominated",
     "aim": "Debuff",
     "desc": "Makes a single target unable to take action. Target will use Basic ATK to attack a random ally of theirs. If an ability is cast on the target to remove a debuff, the Dominated status will be removed first.",
@@ -1142,7 +1142,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_BlackBlood",
+    "name": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>",
     "realName": "Prana-Siphoned",
     "aim": "Debuff",
     "desc": "Decreases Maximum Restorable HP by #1[i]%.",
@@ -1230,7 +1230,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_20000_Main",
+    "name": "<a class=\"gModGreen\" id=\"396468451\">LC_20000_Main</a>",
     "realName": "CRIT Rate Boost",
     "aim": "Buff",
     "desc": "CRIT Rate +#1[i]%.",
@@ -1241,7 +1241,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_20004_Main",
+    "name": "<a class=\"gModGreen\" id=\"-926441489\">LC_20004_Main</a>",
     "realName": "Effect Hit Rate Boost",
     "aim": "Buff",
     "desc": "Effect Hit Rate +#1[i]%.",
@@ -1252,7 +1252,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_20007_AttackAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-892055160\">LC_20007_AttackAddedRatio</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "ATK +#1[i]%.",
@@ -1263,7 +1263,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_20014_SpeedAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-1556228019\">LC_20014_SpeedAddedRatio</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "SPD +#1[i]%.",
@@ -1274,7 +1274,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_20016_CriticalChance",
+    "name": "<a class=\"gModGreen\" id=\"-1690247274\">LC_20016_CriticalChance</a>",
     "realName": "CRIT Rate Boost",
     "aim": "Buff",
     "desc": "CRIT Rate +#1[i]%.",
@@ -1285,7 +1285,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_20019_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1847667722\">LC_20019_Sub</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "SPD +#1[i].",
@@ -1296,7 +1296,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_20020_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1720319946\">LC_20020_Sub</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "ATK +#1[i]%.",
@@ -1307,7 +1307,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21005_AttackAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-59377763\">LC_21005_AttackAddedRatio</a>",
     "realName": "Mischievous",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[i]%, up to 3 stacks.",
@@ -1318,7 +1318,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21010_DamageAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"90221710\">LC_21010_DamageAddedRatio</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%, up to #2[i] stack(s).",
@@ -1330,7 +1330,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21015_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1118663317\">LC_21015_Sub</a>",
     "realName": "Ensnarement",
     "aim": "Debuff",
     "desc": "DEF -#1[i]%.",
@@ -1341,7 +1341,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21019_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1639337319\">LC_21019_Sub</a>",
     "realName": "CRIT Rate Boost",
     "aim": "Buff",
     "desc": "CRIT Rate +#1[i]%.",
@@ -1352,7 +1352,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21020_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1496959259\">LC_21020_Sub</a>",
     "realName": "CRIT DMG Boost",
     "aim": "Buff",
     "desc": "CRIT DMG +#1[i]%.",
@@ -1363,7 +1363,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21023_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-531007870\">LC_21023_Sub</a>",
     "realName": "DMG Mitigation",
     "aim": "Buff",
     "desc": "DMG taken -#1[i]%.",
@@ -1374,7 +1374,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21024_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1208434319\">LC_21024_Sub</a>",
     "realName": "SPD Boost, and DMG Boost",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%, and DMG dealt by #2[i]%.",
@@ -1386,7 +1386,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21025_Sub",
+    "name": "<a class=\"gModGreen\" id=\"232669200\">LC_21025_Sub</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -1397,7 +1397,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21027_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1358976474\">LC_21027_Sub</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[i]%, up to #2[i] stack(s).",
@@ -1409,7 +1409,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21032_Bonus1",
+    "name": "<a class=\"gModGreen\" id=\"-149255462\">LC_21032_Bonus1</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "ATK +#1[i]%.",
@@ -1420,7 +1420,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21032_Bonus2",
+    "name": "<a class=\"gModGreen\" id=\"-166033081\">LC_21032_Bonus2</a>",
     "realName": "CRIT DMG Boost",
     "aim": "Buff",
     "desc": "CRIT DMG +#1[i]%.",
@@ -1431,7 +1431,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21032_Bonus3",
+    "name": "<a class=\"gModGreen\" id=\"-182810700\">LC_21032_Bonus3</a>",
     "realName": "Energy Regeneration Rate Boost",
     "aim": "Buff",
     "desc": "Increases Energy Regeneration Rate by #1[i]%.",
@@ -1442,7 +1442,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23000_DamageAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-651116041\">LC_23000_DamageAddedRatio</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -1453,7 +1453,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23002_Effect",
+    "name": "<a class=\"gModGreen\" id=\"-66885584\">LC_23002_Effect</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -1464,7 +1464,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23003_TriggerCD",
+    "name": "<a class=\"gModGreen\" id=\"-491630213\">LC_23003_TriggerCD</a>",
     "realName": "Heir",
     "aim": "Other",
     "desc": "Heir's Skill Point regeneration effect cannot be triggered.",
@@ -1472,7 +1472,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "LC_23003_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-756547598\">LC_23003_Sub</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -1483,7 +1483,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23006_DOT",
+    "name": "<a class=\"gModGreen\" id=\"1485539064\">LC_23006_DOT</a>",
     "realName": "Erode",
     "aim": "Debuff",
     "desc": "Takes Lightning DMG at the beginning of each turn for a certain number of turns.",
@@ -1491,7 +1491,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "LC_23006_SpeedAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1036917801\">LC_23006_SpeedAddedRatio</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "Each stack increases SPD by #1[f1]%, up to #2[i] stack(s).",
@@ -1503,7 +1503,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23008_SpeedDeltaAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1558750701\">LC_23008_SpeedDeltaAddedRatio</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "SPD increases by #1[i].",
@@ -1514,7 +1514,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23009_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1249262228\">LC_23009_Sub</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -1525,7 +1525,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23010_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-374895026\">LC_23010_Sub</a>",
     "realName": "Somnus Corpus",
     "aim": "Buff",
     "desc": "Increases DMG dealt by the next Follow-Up ATK by #1[i]%.",
@@ -1536,7 +1536,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23011_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"274994789\">LC_23011_Sub2</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[f1]%.",
@@ -1547,7 +1547,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23012_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1089873720\">LC_23012_Sub</a>",
     "realName": "CRIT Rate Boost",
     "aim": "Buff",
     "desc": "CRIT Rate +#1[i]%.",
@@ -1558,7 +1558,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23016_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"-2096438896\">LC_23016_Enhance</a>",
     "realName": "Tame",
     "aim": "Debuff",
     "desc": "Each stack of Tame increases CRIT DMG dealt by allies to this unit by #1[i]%, up to #2[i] stack(s).",
@@ -1570,7 +1570,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_24000_AttackAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"844192795\">LC_24000_AttackAddedRatio</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[i]%, up to #2[i] stack(s).",
@@ -1582,7 +1582,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_24000_DamageAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"410951674\">LC_24000_DamageAddedRatio</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -1593,7 +1593,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_24001_AttackAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"545736558\">LC_24001_AttackAddedRatio</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "ATK +#1[i]%.",
@@ -1604,7 +1604,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_24002_Shield",
+    "name": "<a class=\"gModGreen\" id=\"1791888969\">LC_24002_Shield</a>",
     "realName": "Shield",
     "aim": "Buff",
     "desc": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
@@ -1612,7 +1612,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Relic_104_CriticalDamage",
+    "name": "<a class=\"gModGreen\" id=\"-1571582832\">Relic_104_CriticalDamage</a>",
     "realName": "Hunter of Glacial Forest",
     "aim": "Buff",
     "desc": "CRIT DMG +#1[i]%.",
@@ -1623,7 +1623,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_105_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-686777299\">Relic_105_Sub</a>",
     "realName": "Champion of Streetwise Boxing",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[i]%, up to #2[i] stack(s).",
@@ -1635,7 +1635,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_107_FireDamageAddRatio",
+    "name": "<a class=\"gModGreen\" id=\"2026250788\">Relic_107_FireDamageAddRatio</a>",
     "realName": "Firesmith of Lava-Forging",
     "aim": "Buff",
     "desc": "The next attack's Fire DMG increases by #1[i]%.",
@@ -1646,7 +1646,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_109_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1034849217\">Relic_109_Sub</a>",
     "realName": "Band of Sizzling Thunder",
     "aim": "Buff",
     "desc": "ATK +#1[i]%.",
@@ -1668,7 +1668,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_Stage20123201_LevelAllDamageReduce",
+    "name": "<a class=\"gModGreen\" id=\"-1105433913\">MLevel_Stage20123201_LevelAllDamageReduce</a>",
     "realName": "Wildfire Reinforcements",
     "aim": "Buff",
     "desc": "DMG taken -#1[i]%.",
@@ -1701,7 +1701,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_Stage2013201_UnWeakResistance",
+    "name": "<a class=\"gModGreen\" id=\"344912821\">MLevel_Stage2013201_UnWeakResistance</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -1712,7 +1712,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_Stage2013202",
+    "name": "<a class=\"gModGreen\" id=\"1551674831\">MLevel_Stage2013202</a>",
     "realName": "Fragmentum Energy Surge",
     "aim": "Buff",
     "desc": "ATK +#1[i]% and DEF +#2[i]%.",
@@ -1724,7 +1724,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_Stage20132_NatashaMission_FrozenResistance",
+    "name": "<a class=\"gModGreen\" id=\"1532514750\">MLevel_Stage20132_NatashaMission_FrozenResistance</a>",
     "realName": "Blizzard Immunity",
     "aim": "Buff",
     "desc": "Cannot be Frozen.",
@@ -2196,7 +2196,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "MLevel_RougeSpecialStage01_UnWeakResistance",
+    "name": "<a class=\"gModGreen\" id=\"1767296958\">MLevel_RougeSpecialStage01_UnWeakResistance</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -2207,7 +2207,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_RougeSpecialStage02",
+    "name": "<a class=\"gModGreen\" id=\"-359434846\">MLevel_RougeSpecialStage02</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -2219,7 +2219,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_RougeSpecialStage02_1_Attack",
+    "name": "<a class=\"gModGreen\" id=\"1293097583\">MLevel_RougeSpecialStage02_1_Attack</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -2230,7 +2230,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_RougeSpecialStage03",
+    "name": "<a class=\"gModGreen\" id=\"-342657227\">MLevel_RougeSpecialStage03</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -2241,7 +2241,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_RougeSpecialStage03_1_Speed",
+    "name": "<a class=\"gModGreen\" id=\"1642131353\">MLevel_RougeSpecialStage03_1_Speed</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -2252,7 +2252,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_RougeSpecialStage04",
+    "name": "<a class=\"gModGreen\" id=\"-460100560\">MLevel_RougeSpecialStage04</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -2264,7 +2264,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_RougeSpecialStage04_1_Attack",
+    "name": "<a class=\"gModGreen\" id=\"-1273587047\">MLevel_RougeSpecialStage04_1_Attack</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -2275,7 +2275,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_RougeSpecialStage05",
+    "name": "<a class=\"gModGreen\" id=\"-443322941\">MLevel_RougeSpecialStage05</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -2286,7 +2286,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_RougeSpecialStage05_1_Attack",
+    "name": "<a class=\"gModGreen\" id=\"-1091695268\">MLevel_RougeSpecialStage05_1_Attack</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -2297,7 +2297,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_RougeSpecialStage06",
+    "name": "<a class=\"gModGreen\" id=\"-426545322\">MLevel_RougeSpecialStage06</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -2305,7 +2305,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "MLevel_RougeSpecialStage07",
+    "name": "<a class=\"gModGreen\" id=\"-409767703\">MLevel_RougeSpecialStage07</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -2313,7 +2313,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "MLevel_RougeSpecialStage08",
+    "name": "<a class=\"gModGreen\" id=\"-258769132\">MLevel_RougeSpecialStage08</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -2325,7 +2325,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_RougeSpecialStage06_1_BlockDamage",
+    "name": "<a class=\"gModGreen\" id=\"1409382141\">MLevel_RougeSpecialStage06_1_BlockDamage</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -2333,7 +2333,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Monster_RogueElite_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"-2140377444\">Monster_RogueElite_DamageUp</a>",
     "realName": "Berserk",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect can stack.",
@@ -2344,7 +2344,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Monster_RogueBoss_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"2068031350\">Monster_RogueBoss_DamageUp</a>",
     "realName": "Berserk",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect can stack.",
@@ -2355,7 +2355,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Monster_Standard_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"-91116970\">Monster_Standard_Enhance</a>",
     "realName": "Enhance",
     "aim": "Other",
     "desc": "The false projection produced by compromised codes receives a massive boost in combat strength.",
@@ -2363,7 +2363,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Monster_Standard_Strange",
+    "name": "<a class=\"gModGreen\" id=\"-1526690424\">Monster_Standard_Strange</a>",
     "realName": "undefined",
     "aim": "Other",
     "desc": "undefined",
@@ -2727,7 +2727,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Special_Rogue_Shield",
+    "name": "<a class=\"gModGreen\" id=\"-1245339581\">Special_Rogue_Shield</a>",
     "realName": "Amber",
     "aim": "Buff",
     "desc": "When a Shielded character receives DMG that exceeds the Shield value, the excess DMG becomes invalid. This effect is removed after 1 activation.",
@@ -2735,7 +2735,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "RogueBattleevent122_Levelup2_1",
+    "name": "<a class=\"gModGreen\" id=\"94764098\">RogueBattleevent122_Levelup2_1</a>",
     "realName": "Confusion",
     "aim": "Debuff",
     "desc": "When the target is afflicted with Weakness Break, every stack of Confusion deals DMG equal to #1[i]% of all current DoT effects. Consumes 1 stack of this effect. This effect can stack up to 5 time(s).",
@@ -2746,7 +2746,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent122_Levelup2_2",
+    "name": "<a class=\"gModGreen\" id=\"77986479\">RogueBattleevent122_Levelup2_2</a>",
     "realName": "Devoid",
     "aim": "Debuff",
     "desc": "Each stack reduces Toughness regeneration by #1[i]%, stacking up to 5 times.",
@@ -2757,7 +2757,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent123_LevelUp2",
+    "name": "<a class=\"gModGreen\" id=\"-369007412\">RogueBattleevent123_LevelUp2</a>",
     "realName": "Subduing Evils",
     "aim": "Buff",
     "desc": "Can consume 1 stack of this effect to resist a debuff for 1 time, and then restore HP equal to #1[i]% of Max HP. This effect can stack up to #2[i] time(s).",
@@ -2769,7 +2769,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent124_Levelup1",
+    "name": "<a class=\"gModGreen\" id=\"-630773715\">RogueBattleevent124_Levelup1</a>",
     "realName": "Light-Hunting Celestial Arrow",
     "aim": "Buff",
     "desc": "CRIT DMG increases by an amount equal to #1[i]% of CRIT Rate. Gains one extra turn after defeating an enemy. This effect cannot trigger repeatedly.",
@@ -2780,7 +2780,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent125_Levelup2",
+    "name": "<a class=\"gModGreen\" id=\"132537613\">RogueBattleevent125_Levelup2</a>",
     "realName": "Entropic Retribution",
     "aim": "Debuff",
     "desc": "DEF decreases by #1[i]%. At the beginning of each turn, receives Fire Additional DMG equal to #2[i]% of the total HP currently lost by all allies.",
@@ -2868,7 +2868,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent121_Levelup2",
+    "name": "<a class=\"gModGreen\" id=\"-2074175810\">RogueBattleevent121_Levelup2</a>",
     "realName": "Eonian River",
     "aim": "Other",
     "desc": "When debuffed, the duration of this debuff doubles.",
@@ -2876,7 +2876,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "RogueBattleevent126_LevelUp1_1",
+    "name": "<a class=\"gModGreen\" id=\"-740499460\">RogueBattleevent126_LevelUp1_1</a>",
     "realName": "Sensory Pursuit",
     "aim": "Debuff",
     "desc": "Each stack increases Follow-Up ATK DMG taken by #1[i]%.",
@@ -2887,7 +2887,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent123_HPAddRatio",
+    "name": "<a class=\"gModGreen\" id=\"1571353533\">RogueBattleevent123_HPAddRatio</a>",
     "realName": "Path Resonance: Abundance",
     "aim": "Buff",
     "desc": "Max HP +#1[i]%.",
@@ -2920,7 +2920,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent121_Levelup1",
+    "name": "<a class=\"gModGreen\" id=\"-2090953429\">RogueBattleevent121_Levelup1</a>",
     "realName": "Resonance Formation: Total Recall",
     "aim": "Debuff",
     "desc": "Chance to resist Frozen -#1[i]%.",
@@ -3739,7 +3739,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "LC_23017_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1946026397\">LC_23017_Sub</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[f1]%, up to #2[i] stack(s).",
@@ -3751,7 +3751,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23021_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-1372338228\">LC_23021_Sub2</a>",
     "realName": "Radiant Flame",
     "aim": "Other",
     "desc": "Upon reaching #1[i] stacks, removes all the Radiant Flame stacks and gains Mask.",
@@ -4003,7 +4003,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "LC_23015_Sub",
+    "name": "<a class=\"gModGreen\" id=\"899015137\">LC_23015_Sub</a>",
     "realName": "Dragon's Call",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[i]% and Energy Regeneration Rate by #2[i]%, stacking up to #3[i] time(s).",
@@ -4027,7 +4027,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23007_DamageTakenUp",
+    "name": "<a class=\"gModGreen\" id=\"2037149365\">LC_23007_DamageTakenUp</a>",
     "realName": "Aether Code",
     "aim": "Debuff",
     "desc": "Increases DMG taken by #1[i]%.",
@@ -4050,7 +4050,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent127_Power_Base",
+    "name": "<a class=\"gModGreen\" id=\"640692512\">RogueBattleevent127_Power_Base</a>",
     "realName": "Metamorphosis",
     "aim": "Buff",
     "desc": "When attacking, ignore #1[i]% of the target enemy's all-Type RES for every Skill Point consumed or recovered. This effect can stack up to #2[i] times.",
@@ -4106,7 +4106,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_22001_Sub",
+    "name": "<a class=\"gModGreen\" id=\"222357741\">LC_22001_Sub</a>",
     "realName": "Outgoing Healing Boost",
     "aim": "Buff",
     "desc": "Increases Outgoing Healing by #1[i]%.",
@@ -4117,7 +4117,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_LevelAllDamageReduce",
+    "name": "<a class=\"gModGreen\" id=\"1237033920\">Standard_LevelAllDamageReduce</a>",
     "realName": "DMG Reduction",
     "aim": "Buff",
     "desc": "DMG taken -#1[i]%.",
@@ -4139,7 +4139,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MFantasticStory_Environment_Ability_0001_Character_AttackUp",
+    "name": "<a class=\"gModGreen\" id=\"-531188185\">MFantasticStory_Environment_Ability_0001_Character_AttackUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -4150,7 +4150,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MFantasticStory_Environment_Ability_0003_Character_AttackUp",
+    "name": "<a class=\"gModGreen\" id=\"882117\">MFantasticStory_Environment_Ability_0003_Character_AttackUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Each stack increases DMG by #1[i]%, up to 2 stacks.",
@@ -4184,7 +4184,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_113_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1696785974\">Relic_113_Sub</a>",
     "realName": "Longevous Disciple",
     "aim": "Buff",
     "desc": "Each stack increases CRIT Rate by #1[i]%, up to #2[i] stacks.",
@@ -4196,7 +4196,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_114_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-293683157\">Relic_114_Sub</a>",
     "realName": "Messenger Traversing Hackerspace",
     "aim": "Buff",
     "desc": "SPD +#1[i]%.",
@@ -4360,7 +4360,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MFantasticStory_Small_1_Ability_0002_Character_AttackUp",
+    "name": "<a class=\"gModGreen\" id=\"-948421842\">MFantasticStory_Small_1_Ability_0002_Character_AttackUp</a>",
     "realName": "CRIT DMG Boost",
     "aim": "Buff",
     "desc": "CRIT DMG +#1[i]%.",
@@ -4371,7 +4371,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MFantasticStory_Small_1_Ability_0003_Character_AttackUp",
+    "name": "<a class=\"gModGreen\" id=\"834648227\">MFantasticStory_Small_1_Ability_0003_Character_AttackUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -4463,7 +4463,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent121_LevelUp4_1",
+    "name": "<a class=\"gModGreen\" id=\"-1007881200\">RogueBattleevent121_LevelUp4_1</a>",
     "realName": "Resonance Interplay: Faces Places",
     "aim": "Debuff",
     "desc": "Decreases All-Type RES by #1[i]%.",
@@ -4486,7 +4486,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_24003_DotDamageAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-1464436876\">LC_24003_DotDamageAddedRatio</a>",
     "realName": "DoT Boost",
     "aim": "Buff",
     "desc": "Increases DoT dealt by #1[i]%",
@@ -4661,7 +4661,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent121_LevelUp5_1",
+    "name": "<a class=\"gModGreen\" id=\"1081429131\">RogueBattleevent121_LevelUp5_1</a>",
     "realName": "Resonance Interplay: Landscape in the Mist",
     "aim": "Debuff",
     "desc": "Decreases SPD by #1[i]%.",
@@ -4672,7 +4672,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent123_Levelup_4_1",
+    "name": "<a class=\"gModGreen\" id=\"831328805\">RogueBattleevent123_Levelup_4_1</a>",
     "realName": "Resonance Interplay: Mountain High",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%, up to #2[i] stack(s).",
@@ -4684,7 +4684,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent124_LevelUp4",
+    "name": "<a class=\"gModGreen\" id=\"344719413\">RogueBattleevent124_LevelUp4</a>",
     "realName": "Resonance Interplay: Startling Breeze",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i].",
@@ -4706,7 +4706,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_CTRL_Crazy",
+    "name": "<a class=\"gModGreen\" id=\"-1794338335\">Standard_CTRL_Crazy</a>",
     "realName": "Outrage",
     "aim": "Debuff",
     "desc": "Cannot be controlled. Automatically attacks a random enemy target. If the target is about to have any debuff removed by an ability, then the Outrage state will be prioritized for removal.",
@@ -4932,7 +4932,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_Heliobus_Suiyang_Ability_ActionBonus_Enemy_Attack",
+    "name": "<a class=\"gModGreen\" id=\"-1696388598\">Modifier_Heliobus_Suiyang_Ability_ActionBonus_Enemy_Attack</a>",
     "realName": "Stats Boost",
     "aim": "Buff",
     "desc": "Each stack increases ATK, DEF, and SPD by #1[i]%, stacking up to #2[i] time(s).",
@@ -4944,7 +4944,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_HeliobusActionAbilityBPRecover_Listener",
+    "name": "<a class=\"gModGreen\" id=\"-139066169\">Modifier_HeliobusActionAbilityBPRecover_Listener</a>",
     "realName": "Spiritual Command",
     "aim": "Buff",
     "desc": "When consuming Skill Points, increases the character's Basic ATK and Skill DMG by #1[i]%, lasting until the end of their turn.",
@@ -4955,7 +4955,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_Heliobus_Suiyang_Ability_DeathBonus_Enemy_Damage",
+    "name": "<a class=\"gModGreen\" id=\"-681181087\">Modifier_Heliobus_Suiyang_Ability_DeathBonus_Enemy_Damage</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Each stack increases DMG by #1[i]%, up to #2[i] time(s).",
@@ -4967,7 +4967,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_Heliobus_Suiyang_Ability_StealBP_Enhance_Enemy",
+    "name": "<a class=\"gModGreen\" id=\"-1622590144\">Modifier_Heliobus_Suiyang_Ability_StealBP_Enhance_Enemy</a>",
     "realName": "Enhanced Stealing",
     "aim": "Buff",
     "desc": "The next attack will steal an additional Skill Point.",
@@ -5060,7 +5060,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23023_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1911897696\">LC_23023_Sub</a>",
     "realName": "CRIT DMG Boost",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -5109,7 +5109,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_HeliobusActionAbilityFormChange_Enemy",
+    "name": "<a class=\"gModGreen\" id=\"-1943056367\">Modifier_HeliobusActionAbilityFormChange_Enemy</a>",
     "realName": "Incarnate Morph",
     "aim": "Debuff",
     "desc": "Turn into a harmless Trotter. The DMG it receives is guaranteed to be CRIT Hit, and the CRIT DMG it receives increases by #1[i]%.",
@@ -5120,7 +5120,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent123_Levelup_5",
+    "name": "<a class=\"gModGreen\" id=\"1572469434\">RogueBattleevent123_Levelup_5</a>",
     "realName": "Resonance Interplay: Nullifying Ardor",
     "aim": "Buff",
     "desc": "Each stack increases Weakness Break Efficiency by #1[i]%, and Break Effect by #2[i]%, stacking up to #3[i] time(s).",
@@ -5133,7 +5133,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent127_Levelup4",
+    "name": "<a class=\"gModGreen\" id=\"22094730\">RogueBattleevent127_Levelup4</a>",
     "realName": "Resonance Interplay: Superposition Eye",
     "aim": "Buff",
     "desc": "Nullifies all DMG received except DoTs. This status is dispelled after being attacked.",
@@ -5222,7 +5222,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "HeliobusActionAbilityBoomerang_DOT",
+    "name": "<a class=\"gModGreen\" id=\"-605314136\">HeliobusActionAbilityBoomerang_DOT</a>",
     "realName": "Bleed",
     "aim": "Debuff",
     "desc": "For a certain number of turns, enemies receive Physical DMG based on their Max HP at the beginning of each turn, stacking up to #1[i] time(s).",
@@ -5233,7 +5233,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_HeliobusActionAbilityDamageReflect",
+    "name": "<a class=\"gModGreen\" id=\"1003203034\">Modifier_HeliobusActionAbilityDamageReflect</a>",
     "realName": "Altar Aegis",
     "aim": "Buff",
     "desc": "Provides immunity to all damage. When hit by an attack, deal Ice DMG equal to #1[i]% of this unit's DEF to the attacker. This DMG cannot CRIT hit and cannot defeat the enemy. Every time this unit is attacked, 1 stack will be reduced.",
@@ -5244,7 +5244,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_HeliobusActionAbilitySetBoom_BoomCount",
+    "name": "<a class=\"gModGreen\" id=\"-890599250\">Modifier_HeliobusActionAbilitySetBoom_BoomCount</a>",
     "realName": "Quincunx Smite (Max)",
     "aim": "Debuff",
     "desc": "Each stack increases DMG received from Skyfire Curse by #1[i]%, up to #2[i] stack(s).",
@@ -5316,7 +5316,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_Protect_Shield_612521",
+    "name": "<a class=\"gModGreen\" id=\"1017480433\">Standard_Protect_Shield_612521</a>",
     "realName": "Shield",
     "aim": "Buff",
     "desc": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce the HP of the character with the Shield.",
@@ -5415,7 +5415,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23014_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-625916918\">LC_23014_Sub</a>",
     "realName": "Eclipse",
     "aim": "Buff",
     "desc": "Each stack will increase the DMG dealt by the next attack by #1[i]%, up to a maximum of #2[i] stack(s). When #2[i] stack(s) are reached, an additional attack will be delivered that ignores #3[i]% of the enemy's DEF.",
@@ -5470,7 +5470,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_18_Sub4",
+    "name": "<a class=\"gModGreen\" id=\"-1989287647\">Modifier_BattleEventAbility_Challenge_Month_18_Sub4</a>",
     "realName": "Energy Overflow",
     "aim": "Other",
     "desc": "#1[i] extra Energy. This will be consumed first when unleashing Ultimate.",
@@ -5481,7 +5481,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_HeliobusActionAbilitySetBoom_Boom",
+    "name": "<a class=\"gModGreen\" id=\"-1380032969\">Modifier_HeliobusActionAbilitySetBoom_Boom</a>",
     "realName": "Quincunx Smite",
     "aim": "Debuff",
     "desc": "After being attacked, deals DMG to the unit with this effect, and targets adjacent to that unit.",
@@ -5489,7 +5489,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_Heliobus_Suiyang_Ability_DamageBurn_Enhance_Enemy",
+    "name": "<a class=\"gModGreen\" id=\"-708794205\">Modifier_Heliobus_Suiyang_Ability_DamageBurn_Enhance_Enemy</a>",
     "realName": "Extra Wind Shear",
     "aim": "Buff",
     "desc": "The next attack additionally inflicts Wind Shear.",
@@ -5603,7 +5603,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "HeliobusActionAbilityForceBreak_Ability03_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"-1936406658\">HeliobusActionAbilityForceBreak_Ability03_DamageUp</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG taken by #1[i]%.",
@@ -5681,7 +5681,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ActionEventAbility_Standard_StatusUp_Character",
+    "name": "<a class=\"gModGreen\" id=\"-1109634181\">Modifier_ActionEventAbility_Standard_StatusUp_Character</a>",
     "realName": "Vessel Benediction",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[i]% and DEF by #2[i]%.",
@@ -5808,7 +5808,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_HeliobusActionAbilityDelayAction",
+    "name": "<a class=\"gModGreen\" id=\"373407425\">Modifier_HeliobusActionAbilityDelayAction</a>",
     "realName": "Paranoia",
     "aim": "Debuff",
     "desc": "After every attack received, receive Imaginary Additional DMG equal to #1[i]% of the attacker's ATK. This DMG is not affected by additional multipliers.",
@@ -5819,7 +5819,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_HeliobusActionAbilitySPRecover",
+    "name": "<a class=\"gModGreen\" id=\"-40724235\">Modifier_HeliobusActionAbilitySPRecover</a>",
     "realName": "Ultimate DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt by the next Ultimate increases by #1[i]%.",
@@ -5841,7 +5841,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent128_Link",
+    "name": "<a class=\"gModGreen\" id=\"1883139380\">RogueBattleevent128_Link</a>",
     "realName": "Synapse Resonance",
     "aim": "Other",
     "desc": "After getting attacked by a character, this unit and the enemy target that has the highest Max HP both take 1 instance of Ultimate DMG equal to #1[i]% of the attacker's ATK. This effect will be removed after it has been triggered #2[i] times across all enemies.",
@@ -5927,7 +5927,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_HeliobusActionAbilityBPRecover_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"-1110720773\">Modifier_HeliobusActionAbilityBPRecover_DamageUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%, lasting until the end of turn",
@@ -6001,7 +6001,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0010_plus3_ultraDmgUp",
+    "name": "<a class=\"gModGreen\" id=\"637313409\">Modifier_FantasticStory_BaseAbility_0010_plus3_ultraDmgUp</a>",
     "realName": "Rupture",
     "aim": "Buff",
     "desc": "Ultimate deals #1[i]% more DMG.",
@@ -6012,7 +6012,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_115_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1551453236\">Relic_115_Sub</a>",
     "realName": "The Ashblazing Grand Duke",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[i]%, up to #2[i] stack(s).",
@@ -6158,7 +6158,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallenge_Talent_StageAbility_0301_PLY",
+    "name": "<a class=\"gModGreen\" id=\"1771367727\">MStrongChallenge_Talent_StageAbility_0301_PLY</a>",
     "realName": "Basic ATK DMG Boost",
     "aim": "Buff",
     "desc": "Increases Basic ATK DMG by #1[i]%.",
@@ -6169,7 +6169,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallenge_Talent_StageAbility_0302_PLY",
+    "name": "<a class=\"gModGreen\" id=\"1274879182\">MStrongChallenge_Talent_StageAbility_0302_PLY</a>",
     "realName": "Skill DMG Boost",
     "aim": "Buff",
     "desc": "Increases Skill DMG by #1[i]%.",
@@ -6180,7 +6180,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallenge_Talent_StageAbility_0303_PLY",
+    "name": "<a class=\"gModGreen\" id=\"796755513\">MStrongChallenge_Talent_StageAbility_0303_PLY</a>",
     "realName": "Ultimate DMG Boost",
     "aim": "Buff",
     "desc": "Increases Ultimate DMG by #1[i]%.",
@@ -6191,7 +6191,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallenge_Talent_StageAbility_0304_PLY",
+    "name": "<a class=\"gModGreen\" id=\"-49225744\">MStrongChallenge_Talent_StageAbility_0304_PLY</a>",
     "realName": "Follow-Up ATK DMG Boost",
     "aim": "Buff",
     "desc": "Increases Follow-Up ATK DMG by #1[i]%.",
@@ -6202,7 +6202,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallenge_Talent_StageAbility_0305_PLY",
+    "name": "<a class=\"gModGreen\" id=\"-1908374077\">MStrongChallenge_Talent_StageAbility_0305_PLY</a>",
     "realName": "DoT Boost",
     "aim": "Buff",
     "desc": "DoT DMG increases #1[i]%.",
@@ -6213,7 +6213,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallenge_Talent_StageAbility_0401_PLY",
+    "name": "<a class=\"gModGreen\" id=\"1047347082\">MStrongChallenge_Talent_StageAbility_0401_PLY</a>",
     "realName": "Weakness Break Efficiency Boost",
     "aim": "Buff",
     "desc": "Increases Weakness Break Efficiency by #1[i]%.",
@@ -6270,7 +6270,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallenge_Talent_StageAbility_0603_PLY",
+    "name": "<a class=\"gModGreen\" id=\"1297612090\">MStrongChallenge_Talent_StageAbility_0603_PLY</a>",
     "realName": "Restore HP After Action",
     "aim": "Buff",
     "desc": "After every action, heals HP equal to #1[i]% of this unit's Max HP.",
@@ -6281,7 +6281,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23019_Sub1",
+    "name": "<a class=\"gModGreen\" id=\"-815605708\">LC_23019_Sub1</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -6292,7 +6292,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_24004_AttackAddRatio",
+    "name": "<a class=\"gModGreen\" id=\"1892511260\">LC_24004_AttackAddRatio</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "ATK increases by #1[i]%, lasting until after the next attack.",
@@ -6303,7 +6303,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0020_sub2_dot",
+    "name": "<a class=\"gModGreen\" id=\"1561743765\">Modifier_FantasticStory_BaseAbility_0020_sub2_dot</a>",
     "realName": "Rumor",
     "aim": "Debuff",
     "desc": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
@@ -6565,7 +6565,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23025_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1728787246\">LC_23025_Sub</a>",
     "realName": "Routed",
     "aim": "Debuff",
     "desc": "Increase Break DMG dealt by the wearer by #1[f1]% and decrease SPD by #2[i]%.",
@@ -6577,7 +6577,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23024_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1868046089\">LC_23024_Sub</a>",
     "realName": "Mirage Fizzle",
     "aim": "Debuff",
     "desc": "The wearer deals #1[i]% more DMG to the target. And additionally increases the Ultimate DMG dealt by #2[i]%.",
@@ -6589,7 +6589,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21036_Sub_Normal",
+    "name": "<a class=\"gModGreen\" id=\"1012793214\">LC_21036_Sub_Normal</a>",
     "realName": "Childishness",
     "aim": "Buff",
     "desc": "Increases Basic ATK DMG by #1[i]%.",
@@ -6600,7 +6600,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21036_Sub_Ability",
+    "name": "<a class=\"gModGreen\" id=\"-1677530678\">LC_21036_Sub_Ability</a>",
     "realName": "Childishness",
     "aim": "Buff",
     "desc": "Increases Skill DMG by #1[i]%.",
@@ -6611,7 +6611,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21036_Sub_Ultra",
+    "name": "<a class=\"gModGreen\" id=\"-1572993167\">LC_21036_Sub_Ultra</a>",
     "realName": "Childishness",
     "aim": "Buff",
     "desc": "Increases Ultimate DMG by #1[i]%.",
@@ -6622,7 +6622,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21037_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1915494643\">LC_21037_Sub</a>",
     "realName": "Good Fortune",
     "aim": "Buff",
     "desc": "Each stack increases CRIT DMG dealt by #1[i]%, up to #2[i] stack(s).",
@@ -6634,7 +6634,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21038_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1257997546\">LC_21038_Sub</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -6645,7 +6645,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21039_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1008889053\">LC_21039_Sub</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[f1]%.",
@@ -6656,7 +6656,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21040_Sub",
+    "name": "<a class=\"gModGreen\" id=\"852520097\">LC_21040_Sub</a>",
     "realName": "CRIT DMG Boost",
     "aim": "Buff",
     "desc": "Increase CRIT DMG by #1[i]%.",
@@ -6667,7 +6667,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21041_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-672411958\">LC_21041_Sub</a>",
     "realName": "Trick",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%, up to #2[i] stack(s).",
@@ -6679,7 +6679,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21041_Sub_Attack",
+    "name": "<a class=\"gModGreen\" id=\"-1888721625\">LC_21041_Sub_Attack</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "Increases ATK by #1[i]%.",
@@ -6690,7 +6690,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23020_Sub",
+    "name": "<a class=\"gModGreen\" id=\"837190525\">LC_23020_Sub</a>",
     "realName": "Disputation",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]% and Follow-Up ATKs ignore #2[i]% of target DEF.",
@@ -6702,7 +6702,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21042_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1919461923\">LC_21042_Sub</a>",
     "realName": "CRIT Rate Boost",
     "aim": "Buff",
     "desc": "Increase CRIT Rate by #1[i]%.",
@@ -6713,7 +6713,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent122_LevelUp7_2",
+    "name": "<a class=\"gModGreen\" id=\"-645875445\">RogueBattleevent122_LevelUp7_2</a>",
     "realName": "Resonance Interplay: Terror and Tremble",
     "aim": "Debuff",
     "desc": "Path Resonance deals #1[i]% more DMG to this target.",
@@ -6724,7 +6724,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent123_Levelup6_1",
+    "name": "<a class=\"gModGreen\" id=\"-1640486188\">RogueBattleevent123_Levelup6_1</a>",
     "realName": "Resonance Interplay: Fleeting Samadhi",
     "aim": "Buff",
     "desc": "Increases the Ultimate DMG dealt by #1[i]%.",
@@ -6735,7 +6735,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent123_Levelup7_1",
+    "name": "<a class=\"gModGreen\" id=\"2059475567\">RogueBattleevent123_Levelup7_1</a>",
     "realName": "Resonance Interplay: Destined Death",
     "aim": "Buff",
     "desc": "#1[i] points of healing has been stored.",
@@ -6746,7 +6746,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent125_LevelUp7_2",
+    "name": "<a class=\"gModGreen\" id=\"-319859080\">RogueBattleevent125_LevelUp7_2</a>",
     "realName": "Resonance Interplay: Protostar",
     "aim": "Buff",
     "desc": "Restores #1[i] HP at the beginning of each turn.",
@@ -6769,7 +6769,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23021_Sub",
+    "name": "<a class=\"gModGreen\" id=\"918300854\">LC_23021_Sub</a>",
     "realName": "CRIT Rate and CRIT DMG Boost",
     "aim": "Buff",
     "desc": "Increases CRIT Rate by #1[i]% and CRIT DMG by #2[i]%.",
@@ -6793,7 +6793,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21043_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1373377156\">LC_21043_Sub</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -6869,7 +6869,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallenge_Talent_StageAbility_0504_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-1004446686\">MStrongChallenge_Talent_StageAbility_0504_Bonus</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%.",
@@ -7199,7 +7199,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "LC_23022_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1313207201\">LC_23022_Sub</a>",
     "realName": "Prophet",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[i]% and DoT dealt ignores #2[f1]% of the target's DEF, stacking up to #3[i] time(s).",
@@ -7225,7 +7225,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23021_Sub3",
+    "name": "<a class=\"gModGreen\" id=\"-1355560609\">LC_23021_Sub3</a>",
     "realName": "Mask",
     "aim": "Buff",
     "desc": "Increases teammates' CRIT Rate by #1[i]% and CRIT DMG by #2[i]%.",
@@ -7237,7 +7237,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_117_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-950302126\">Relic_117_Sub</a>",
     "realName": "Pioneer Diver of Dead Waters",
     "aim": "Other",
     "desc": "The 4-piece set's CRIT Rate and CRIT DMG Boost effect are increased.",
@@ -7245,7 +7245,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Relic_118_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-663861721\">Relic_118_Sub</a>",
     "realName": "Watchmaker, Master of Dream Machinations",
     "aim": "Buff",
     "desc": "Increases Break Effect by #1[i]%.",
@@ -7256,7 +7256,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23028_Sub",
+    "name": "<a class=\"gModGreen\" id=\"5448581\">LC_23028_Sub</a>",
     "realName": "Promise",
     "aim": "Buff",
     "desc": "The DMG dealt by Ultimate or Follow-Up ATK ignores #1[i]% of the target's DEF.",
@@ -7267,7 +7267,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23027_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1965028940\">LC_23027_Sub</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -7297,7 +7297,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp",
+    "name": "<a class=\"gModGreen\" id=\"-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>",
     "realName": "Scalded",
     "aim": "Debuff",
     "desc": "Increases DMG received by #1[i]%.",
@@ -7308,7 +7308,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0010_plus6_ultraDmgUp",
+    "name": "<a class=\"gModGreen\" id=\"-2046125016\">Modifier_FantasticStory_BaseAbility_0010_plus6_ultraDmgUp</a>",
     "realName": "Splash",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -7339,7 +7339,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow",
+    "name": "<a class=\"gModGreen\" id=\"639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>",
     "realName": "Energy Overflow",
     "aim": "Other",
     "desc": "This unit has #1[i] points of extra Energy. This will be consumed first when using the Ultimate.",
@@ -7358,7 +7358,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0010_sub2",
+    "name": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>",
     "realName": "Shatter",
     "aim": "Debuff",
     "desc": "When this unit's turn starts or when this unit is defeated, this unit and adjacent targets take a set amount of DMG based on the active number of Shatter stacks.",
@@ -7366,7 +7366,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Relic_120_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1900399572\">Relic_120_Sub</a>",
     "realName": "The Wind-Soaring Valorous",
     "aim": "Buff",
     "desc": "Ultimate deals #1[i]% more DMG.",
@@ -7377,7 +7377,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_313_CriticalDamage",
+    "name": "<a class=\"gModGreen\" id=\"-1445057094\">Relic_313_CriticalDamage</a>",
     "realName": "Sigonia, the Unclaimed Desolation",
     "aim": "Buff",
     "desc": "Each stack increases CRIT DMG dealt by #1[i]%, up to #2[i] stack(s).",
@@ -7397,7 +7397,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_StageAbility_3107202_ARankEffect_Sub_1",
+    "name": "<a class=\"gModGreen\" id=\"498835255\">Modifier_StageAbility_3107202_ARankEffect_Sub_1</a>",
     "realName": "Shudder",
     "aim": "Debuff",
     "desc": "Increases Trotters' DMG received by #1[i]%.",
@@ -7408,7 +7408,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_3107101_SSRankEffect_Sub_1",
+    "name": "<a class=\"gModGreen\" id=\"-243040750\">Modifier_StageAbility_3107101_SSRankEffect_Sub_1</a>",
     "realName": "Galefury",
     "aim": "Buff",
     "desc": "Characters with Galefury will consume one of its stacks at the end of their turn and have their Action Advanced forward by 100%.",
@@ -7416,7 +7416,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_StageAbility_3107502_ARankEffect_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1888687414\">Modifier_StageAbility_3107502_ARankEffect_Sub</a>",
     "realName": "Ally Bonus",
     "aim": "Buff",
     "desc": "Increases the next attack's DMG by #1[i]%.",
@@ -7427,7 +7427,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_3107503_ARankEffect_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-717108023\">Modifier_StageAbility_3107503_ARankEffect_Sub</a>",
     "realName": "Ally Bonus",
     "aim": "Buff",
     "desc": "Increases the next attack's DMG by #1[i]%.",
@@ -7438,7 +7438,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23026_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1072168277\">LC_23026_Sub</a>",
     "realName": "Cantillation",
     "aim": "Buff",
     "desc": "Increases Energy Regeneration Rate by #1[f1]%.",
@@ -7449,7 +7449,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23026_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-20179237\">LC_23026_Sub2</a>",
     "realName": "Cadenza",
     "aim": "Buff",
     "desc": "ATK increases by #2[i]% and DMG dealt increases by #1[i]%.",
@@ -7461,7 +7461,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23026_Sub3",
+    "name": "<a class=\"gModGreen\" id=\"-36956856\">LC_23026_Sub3</a>",
     "realName": "Cadenza",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -7472,7 +7472,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_22002_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1903725424\">LC_22002_Sub</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -7483,7 +7483,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23023_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"753842390\">LC_23023_Sub2</a>",
     "realName": "All-In",
     "aim": "Debuff",
     "desc": "Increases DMG received by #1[i]%.",
@@ -7564,7 +7564,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_3107202_ARankEffect_Sub",
+    "name": "<a class=\"gModGreen\" id=\"875721035\">Modifier_StageAbility_3107202_ARankEffect_Sub</a>",
     "realName": "Startlement",
     "aim": "Debuff",
     "desc": "Increases DMG received by #1[i]%.",
@@ -7586,7 +7586,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_3107201_SSRankEffect_Sub1",
+    "name": "<a class=\"gModGreen\" id=\"400821176\">Modifier_StageAbility_3107201_SSRankEffect_Sub1</a>",
     "realName": "Fatigued",
     "aim": "Debuff",
     "desc": "Each stack increases DMG received by #1[i]%.",
@@ -7740,7 +7740,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_3107105_SRankEffect_sub",
+    "name": "<a class=\"gModGreen\" id=\"1757165805\">Modifier_StageAbility_3107105_SRankEffect_sub</a>",
     "realName": "Detonate",
     "aim": "Debuff",
     "desc": "Every unit afflicted by this effect additionally takes a fixed amount of DMG based on the Detonate stacks. The DMG increases with the number of stacks. The effect is dispelled when the affected unit takes action.",
@@ -7759,7 +7759,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0020_sub3_dot",
+    "name": "<a class=\"gModGreen\" id=\"-19171630\">Modifier_FantasticStory_BaseAbility_0020_sub3_dot</a>",
     "realName": "Argument",
     "aim": "Debuff",
     "desc": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
@@ -7767,7 +7767,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0020_sub4",
+    "name": "<a class=\"gModGreen\" id=\"-1437269613\">Modifier_FantasticStory_BaseAbility_0020_sub4</a>",
     "realName": "Verification",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]% and increases SPD by #2[i]%.",
@@ -7790,7 +7790,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_3107401_SSRankEffect_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"1814121015\">Modifier_StageAbility_3107401_SSRankEffect_DamageUp</a>",
     "realName": "Bellow",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%.",
@@ -7801,7 +7801,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_3107403_RankA_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-193156341\">Modifier_StageAbility_3107403_RankA_Sub</a>",
     "realName": "Blood Rage",
     "aim": "Buff",
     "desc": "Every stack increases CRIT Rate by #1[i]% and CRIT DMG by #2[i]%.",
@@ -8269,7 +8269,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_24004_SpeedAddRatio",
+    "name": "<a class=\"gModGreen\" id=\"291841903\">LC_24004_SpeedAddRatio</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%.",
@@ -8440,7 +8440,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_StarBattle_BattleGift_3109021_Sub_AttackUP",
+    "name": "<a class=\"gModGreen\" id=\"51141409\">Modifier_StageAbility_StarBattle_BattleGift_3109021_Sub_AttackUP</a>",
     "realName": "Giftbox",
     "aim": "Buff",
     "desc": "Increases ATK by #1[i]% and Deals Additional DMG 1 time after attacking.",
@@ -8452,7 +8452,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Weapon_011_BOSS_DamageSplit_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-1330893201\">StageAbility_VS_Weapon_011_BOSS_DamageSplit_Modifier</a>",
     "realName": "Reverberation",
     "aim": "Debuff",
     "desc": "When a teammate of the holder receives DMG, the holder receives DMG equal to #1[i]% of that DMG.",
@@ -8463,7 +8463,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Weapon_012_BOSS_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-501740522\">StageAbility_VS_Weapon_012_BOSS_Modifier</a>",
     "realName": "Chagrined",
     "aim": "Debuff",
     "desc": "Receives massive DMG once when reaching #1[i] stacks.",
@@ -8474,7 +8474,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Weapon_007_PLY_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"892039316\">StageAbility_VS_Weapon_007_PLY_Modifier</a>",
     "realName": "Frosty Flying Sword",
     "aim": "Buff",
     "desc": "When enemies start their action, trigger a corresponding number of Flying Swords based on the number of stacks.",
@@ -8482,7 +8482,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "StageAbility_VS_Weapon_004_BOSS_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-29423223\">StageAbility_VS_Weapon_004_BOSS_Modifier</a>",
     "realName": "Thunderbolt Thorns",
     "aim": "Debuff",
     "desc": "At the start of the turn, trigger Thunderbolt Thorns to attack the holder and their teammates.",
@@ -8490,7 +8490,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "StageAbility_VS_Weapon_006_PLY_Shield_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"2011349799\">StageAbility_VS_Weapon_006_PLY_Shield_Modifier</a>",
     "realName": "Fortification",
     "aim": "Buff",
     "desc": "Provides Shield. After attacking, additionally deals Physical DMG based on the Shield Effect. If the attacked target's HP is lower than a certain percentage of the Shield Effect, deals a set amount of DMG and removes the Shield.",
@@ -8498,7 +8498,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "StageAbility_VS_Weapon_009_PLY_Permanent_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"146163793\">StageAbility_VS_Weapon_009_PLY_Permanent_Modifier</a>",
     "realName": "Kindest Benediction",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%.",
@@ -8509,7 +8509,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_StarBattle_GroupMark_3109011_Sub_DamageUP",
+    "name": "<a class=\"gModGreen\" id=\"-999722171\">Modifier_StageAbility_StarBattle_GroupMark_3109011_Sub_DamageUP</a>",
     "realName": "Starlight",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%.",
@@ -8598,7 +8598,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_PLY_AllDamageTypeAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-416769088\">StageAbility_VS_Accessory_PLY_AllDamageTypeAddedRatio</a>",
     "realName": "Disco Baseball",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%, up to #2[i] stack(s).",
@@ -8610,7 +8610,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_PLY_PhysicalAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"451488021\">StageAbility_VS_Accessory_PLY_PhysicalAddedRatio</a>",
     "realName": "Daring Wager",
     "aim": "Buff",
     "desc": "Increases Physical DMG dealt by #1[i]%.",
@@ -8622,7 +8622,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_PLY_FireAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1682005220\">StageAbility_VS_Accessory_PLY_FireAddedRatio</a>",
     "realName": "Icefire Talisman",
     "aim": "Buff",
     "desc": "Increases Fire DMG dealt by #2[i]%.",
@@ -8634,7 +8634,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_PLY_IceAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"328513261\">StageAbility_VS_Accessory_PLY_IceAddedRatio</a>",
     "realName": "Icefire Talisman",
     "aim": "Buff",
     "desc": "Increases Ice DMG dealt by #2[i]%.",
@@ -8646,7 +8646,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_PLY_ThunderAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1010774060\">StageAbility_VS_Accessory_PLY_ThunderAddedRatio</a>",
     "realName": "Lightning Storm Shackles",
     "aim": "Buff",
     "desc": "Increases Lightning DMG dealt by #2[i]%.",
@@ -8658,7 +8658,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_PLY_WindAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-464465606\">StageAbility_VS_Accessory_PLY_WindAddedRatio</a>",
     "realName": "Lightning Storm Shackles",
     "aim": "Buff",
     "desc": "Increases Wind DMG dealt by #2[i]%.",
@@ -8670,7 +8670,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_PLY_QuantumAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-391986561\">StageAbility_VS_Accessory_PLY_QuantumAddedRatio</a>",
     "realName": "Daring Wager",
     "aim": "Buff",
     "desc": "Increases Quantum DMG dealt by #2[i]%.",
@@ -8682,7 +8682,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_PLY_ImaginaryAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-1622989373\">StageAbility_VS_Accessory_PLY_ImaginaryAddedRatio</a>",
     "realName": "Daring Wager",
     "aim": "Buff",
     "desc": "Increases Imaginary DMG dealt by #2[i]%.",
@@ -8694,7 +8694,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_PLY_SpeedUp",
+    "name": "<a class=\"gModGreen\" id=\"-1240611871\">StageAbility_VS_Accessory_PLY_SpeedUp</a>",
     "realName": "Shards of the Crown",
     "aim": "Buff",
     "desc": "Increases SPD by #2[i].",
@@ -8718,7 +8718,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_Attribute_004_Count_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-428729428\">StageAbility_VS_Accessory_Attribute_004_Count_Modifier</a>",
     "realName": "Greed of the Sublime",
     "aim": "Buff",
     "desc": "For every #1[i] instance(s) of dealing DMG, increase the next instance of DMG by #2[i]%.",
@@ -8730,7 +8730,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_Attribute_005_PLY_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-1630446803\">StageAbility_VS_Accessory_Attribute_005_PLY_Modifier</a>",
     "realName": "Golden Rose",
     "aim": "Buff",
     "desc": "When the turn ends, there is a #1[i]% fixed chance of Advancing action Forward by #2[i]%.",
@@ -8742,7 +8742,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_Attribute_006_PLYAndBOSS_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-1418831338\">StageAbility_VS_Accessory_Attribute_006_PLYAndBOSS_Modifier</a>",
     "realName": "Overdosing Prescription",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #2[i]%.",
@@ -8829,7 +8829,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_316_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1101990991\">Relic_316_Sub</a>",
     "realName": "Forge of the Kalpagni Lantern",
     "aim": "Buff",
     "desc": "Break Effect increases by #1[i]%.",
@@ -8856,7 +8856,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "StageAbility_VS_Weapon_004_BOSS_Modifier_Max",
+    "name": "<a class=\"gModGreen\" id=\"1602077188\">StageAbility_VS_Weapon_004_BOSS_Modifier_Max</a>",
     "realName": "Shockbolt Crown",
     "aim": "Debuff",
     "desc": "At the start of the turn, trigger Shockbolt Crown to attack the holder and their teammates.",
@@ -8872,7 +8872,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0040_plus2_sub",
+    "name": "<a class=\"gModGreen\" id=\"1558011426\">Modifier_FantasticStory_BaseAbility_0040_plus2_sub</a>",
     "realName": "Ultimate DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by Ultimate by #1[i]%. After the Ultimate is cast, Whimsicality additionally gains #2[i] point(s) of Charge.",
@@ -8884,7 +8884,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0040_plus3_sub",
+    "name": "<a class=\"gModGreen\" id=\"355925913\">Modifier_FantasticStory_BaseAbility_0040_plus3_sub</a>",
     "realName": "Bonus Charge",
     "aim": "Buff",
     "desc": "After attacking enemy targets, Whimsicality additionally gains #1[i] point(s) of Charge.",
@@ -8895,7 +8895,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Standard_PLY_Enhance_Modifier_001",
+    "name": "<a class=\"gModGreen\" id=\"1674419590\">StageAbility_VS_Standard_PLY_Enhance_Modifier_001</a>",
     "realName": "Team Bonus",
     "aim": "Buff",
     "desc": "Increases ATK by #1[i]%.",
@@ -8906,7 +8906,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Standard_PLY_Enhance_Modifier_002",
+    "name": "<a class=\"gModGreen\" id=\"1657641971\">StageAbility_VS_Standard_PLY_Enhance_Modifier_002</a>",
     "realName": "Team Bonus",
     "aim": "Buff",
     "desc": "DoT effects applied by this unit deal #1[i]% more DMG.",
@@ -8917,7 +8917,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Standard_PLY_Enhance_Modifier_003",
+    "name": "<a class=\"gModGreen\" id=\"1640864352\">StageAbility_VS_Standard_PLY_Enhance_Modifier_003</a>",
     "realName": "Team Bonus",
     "aim": "Buff",
     "desc": "Increases Break Effect by #1[i]%.",
@@ -8928,7 +8928,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Standard_PLY_Enhance_Modifier_004",
+    "name": "<a class=\"gModGreen\" id=\"1758307685\">StageAbility_VS_Standard_PLY_Enhance_Modifier_004</a>",
     "realName": "Team Bonus",
     "aim": "Buff",
     "desc": "Basic ATK and Ultimate deals #1[i]% more DMG.",
@@ -8939,7 +8939,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Standard_PLY_Enhance_Modifier_005",
+    "name": "<a class=\"gModGreen\" id=\"1741530066\">StageAbility_VS_Standard_PLY_Enhance_Modifier_005</a>",
     "realName": "Team Bonus",
     "aim": "Buff",
     "desc": "DMG dealt by Follow-Up ATK increases by #1[i]%.",
@@ -8950,7 +8950,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Standard_PLY_Enhance_Modifier_006",
+    "name": "<a class=\"gModGreen\" id=\"1724752447\">StageAbility_VS_Standard_PLY_Enhance_Modifier_006</a>",
     "realName": "Team Bonus",
     "aim": "Buff",
     "desc": "DoT and Ultimate deals #1[i]% more DMG.",
@@ -8961,7 +8961,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Standard_PLY_Enhance_Modifier_007",
+    "name": "<a class=\"gModGreen\" id=\"1707974828\">StageAbility_VS_Standard_PLY_Enhance_Modifier_007</a>",
     "realName": "Team Bonus",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -8972,7 +8972,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Standard_PLY_Enhance_Modifier_008",
+    "name": "<a class=\"gModGreen\" id=\"1825418161\">StageAbility_VS_Standard_PLY_Enhance_Modifier_008</a>",
     "realName": "Team Bonus",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -8983,7 +8983,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_StarBattle_InitStance_3109031_BreakAOE_DamageCount_DamageTakenAdd",
+    "name": "<a class=\"gModGreen\" id=\"1306220475\">Modifier_StageAbility_StarBattle_InitStance_3109031_BreakAOE_DamageCount_DamageTakenAdd</a>",
     "realName": "Contusion",
     "aim": "Debuff",
     "desc": "Each stack increases DMG received by #1[i]%.",
@@ -8994,7 +8994,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_StarBattle_Revive_3109051_Avatar",
+    "name": "<a class=\"gModGreen\" id=\"1029619944\">StageAbility_StarBattle_Revive_3109051_Avatar</a>",
     "realName": "Blessing of the Stars",
     "aim": "Buff",
     "desc": "When the character receives fatal damage, they do not get knocked down. Instead, they immediately restore health and regenerate some energy.",
@@ -9236,7 +9236,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent_Abundance_S1_Powerup",
+    "name": "<a class=\"gModGreen\" id=\"-1981671024\">RogueBattleevent_Abundance_S1_Powerup</a>",
     "realName": "Purgatorial Eradication",
     "aim": "Buff",
     "desc": "Increases Max HP by #1[i]% and the DMG dealt by #2[i]%. Becomes immune to debuffs.",
@@ -9248,7 +9248,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent_Elation_S1_PowerUp",
+    "name": "<a class=\"gModGreen\" id=\"618778755\">RogueBattleevent_Elation_S1_PowerUp</a>",
     "realName": "Masked Fools",
     "aim": "Buff",
     "desc": "Basic ATK, Skill or Ultimate DMG will all be considered as Follow-Up ATK DMG.",
@@ -9256,7 +9256,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "RogueBattleevent_Breeding_S1_Power",
+    "name": "<a class=\"gModGreen\" id=\"-1220158996\">RogueBattleevent_Breeding_S1_Power</a>",
     "realName": "Levitation",
     "aim": "Buff",
     "desc": "When using Basic ATK or Skill to attack, ignore #1[i]% of the target's All-Type RES, and deal Additional DMG equal to #2[i]% of the character's ATK to the attacked target. This effect only works on the latest target.",
@@ -9268,7 +9268,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent_Erudition_S1_Link",
+    "name": "<a class=\"gModGreen\" id=\"436650924\">RogueBattleevent_Erudition_S1_Link</a>",
     "realName": "Central Link",
     "aim": "Other",
     "desc": "After getting attacked by a character, this unit and the enemy target that has the highest Max HP both take 1 instance of Ultimate DMG equal to #1[i]% of the attacker's ATK. This effect will be removed after it has been triggered #2[i] times across all enemies.",
@@ -9280,7 +9280,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_StarBattle_UltraActive_3109061_Count",
+    "name": "<a class=\"gModGreen\" id=\"1907419900\">Modifier_StageAbility_StarBattle_UltraActive_3109061_Count</a>",
     "realName": "Second Finale",
     "aim": "Other",
     "desc": "Already used the Ultimate #1[i] time(s). Re-activate this character's Ultimate after using their Ultimate #2[i] more time(s).",
@@ -9292,7 +9292,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_StarBattle_UltraActive_3109061_DamageUP",
+    "name": "<a class=\"gModGreen\" id=\"-2068180363\">Modifier_StageAbility_StarBattle_UltraActive_3109061_DamageUP</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%.",
@@ -9303,7 +9303,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_StarBattle_SpecialBomb_3109071_DamageTakenUP",
+    "name": "<a class=\"gModGreen\" id=\"901370508\">Modifier_StageAbility_StarBattle_SpecialBomb_3109071_DamageTakenUP</a>",
     "realName": "Dead End",
     "aim": "Debuff",
     "desc": "Each stack increases the received Ultimate DMG by #1[i]%.",
@@ -9334,7 +9334,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_StageAbility_StarBattle_ActiveDot_3109081_Monster_AttackDown",
+    "name": "<a class=\"gModGreen\" id=\"1511096431\">Modifier_StageAbility_StarBattle_ActiveDot_3109081_Monster_AttackDown</a>",
     "realName": "ATK Reduction",
     "aim": "Debuff",
     "desc": "ATK decreases by #1[i]%.",
@@ -9345,7 +9345,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_StarBattle_ActiveDot_3109081_Monster_DamageTaken",
+    "name": "<a class=\"gModGreen\" id=\"427904253\">Modifier_StageAbility_StarBattle_ActiveDot_3109081_Monster_DamageTaken</a>",
     "realName": "DoT Vulnerability",
     "aim": "Debuff",
     "desc": "Each stack increases DoT taken by #1[i]%.",
@@ -9367,7 +9367,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_StarBattle_Revive_3109051_AttackUP",
+    "name": "<a class=\"gModGreen\" id=\"2091951144\">StageAbility_StarBattle_Revive_3109051_AttackUP</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[i]%.",
@@ -9422,7 +9422,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23029_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1943682494\">LC_23029_Sub</a>",
     "realName": "Unarmored",
     "aim": "Debuff",
     "desc": "Increases DMG received by #1[i]%. While under a DoT state applied from the wearer and after receiving an attack from the wearer's Basic ATK, Skill, or Ultimate, there is a #2[i]% base chance of having this state upgraded to Cornered, which additionally increases DMG received by #3[i]%.",
@@ -9435,7 +9435,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23029_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-326179996\">LC_23029_Sub2</a>",
     "realName": "Cornered",
     "aim": "Debuff",
     "desc": "Increases DMG taken by #1[i]%.",
@@ -9446,7 +9446,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_315_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1040962330\">Relic_315_Sub</a>",
     "realName": "Merit",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by Follow-Up ATK by #1[i]%. This effect stacks up to #2[i] time(s). When #2[i] stack(s) are reached, additionally increases CRIT DMG by #3[i]%.",
@@ -9459,7 +9459,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallengeEX_Talent_StageAbility_PLY_008",
+    "name": "<a class=\"gModGreen\" id=\"1240607258\">MStrongChallengeEX_Talent_StageAbility_PLY_008</a>",
     "realName": "Sundered Paradise",
     "aim": "Buff",
     "desc": "Break Effect increases by #1[i]%.",
@@ -9481,7 +9481,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallengeEX_Talent_StageAbility_PLY_009",
+    "name": "<a class=\"gModGreen\" id=\"1257384877\">MStrongChallengeEX_Talent_StageAbility_PLY_009</a>",
     "realName": "Ashen Battleground",
     "aim": "Buff",
     "desc": "Increases DMG dealt by Basic ATK and Skill by #1[i]%.",
@@ -9492,7 +9492,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallengeEX_Talent_StageAbility_LE_010",
+    "name": "<a class=\"gModGreen\" id=\"1359820035\">MStrongChallengeEX_Talent_StageAbility_LE_010</a>",
     "realName": "Moment of Termination",
     "aim": "Buff",
     "desc": "Ultimate deals #1[i]% more DMG.",
@@ -9515,7 +9515,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Special_Rogue_Shield_S1",
+    "name": "<a class=\"gModGreen\" id=\"-763352804\">Special_Rogue_Shield_S1</a>",
     "realName": "Amber",
     "aim": "Buff",
     "desc": "When a Shielded character receives DMG that exceeds the Shield value, the excess DMG becomes invalid and 1 stack of Amber is removed.",
@@ -9653,7 +9653,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0050_plus1_sub",
+    "name": "<a class=\"gModGreen\" id=\"937919550\">Modifier_FantasticStory_BaseAbility_0050_plus1_sub</a>",
     "realName": "Arioso",
     "aim": "Buff",
     "desc": "If Super Break DMG is dealt to enemies after using an attack, additionally charges Whimsicality by #1[i] points.",
@@ -9664,7 +9664,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0050_plus2_sub",
+    "name": "<a class=\"gModGreen\" id=\"805201127\">Modifier_FantasticStory_BaseAbility_0050_plus2_sub</a>",
     "realName": "Picturesque",
     "aim": "Buff",
     "desc": "Follow-Up ATK DMG dealt increases by #1[i]%. Follow-Up ATKs' Weakness Break Efficiency increases by #2[i]%.",
@@ -9676,7 +9676,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0050_plus3_sub",
+    "name": "<a class=\"gModGreen\" id=\"-28797912\">Modifier_FantasticStory_BaseAbility_0050_plus3_sub</a>",
     "realName": "Free Writing",
     "aim": "Buff",
     "desc": "When attacking via using Ultimate, ignore the enemy targets' Weakness to deal Toughness Reduction.",
@@ -9684,7 +9684,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "LC_23030_Sub",
+    "name": "<a class=\"gModGreen\" id=\"703724880\">LC_23030_Sub</a>",
     "realName": "Firedance",
     "aim": "Buff",
     "desc": "DMG dealt by Follow-Up ATK increases by #1[i]%.",
@@ -9731,7 +9731,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21045_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1163720690\">LC_21045_Sub</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%.",
@@ -9799,7 +9799,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23032_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-887920794\">LC_23032_Sub</a>",
     "realName": "Woefree",
     "aim": "Debuff",
     "desc": "Increases DMG taken by #1[i]%.",
@@ -9810,7 +9810,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23031_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1255032527\">LC_23031_Sub</a>",
     "realName": "Luminflux",
     "aim": "Buff",
     "desc": "Each stack allows the Ultimate DMG dealt to ignore #1[i]% of the target's DEF. This effect has a max of #2[i] stack(s).",
@@ -9822,7 +9822,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp",
+    "name": "<a class=\"gModGreen\" id=\"-847062697\">MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp</a>",
     "realName": "Sundered Paradise",
     "aim": "Buff",
     "desc": "SPD increases by #1[i].",
@@ -9841,7 +9841,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Standard_DOT_Burn_Rogue_S1",
+    "name": "<a class=\"gModGreen\" id=\"884556115\">Standard_DOT_Burn_Rogue_S1</a>",
     "realName": "Burn",
     "aim": "Debuff",
     "desc": "Takes Fire DMG at the beginning of each turn for a certain number of turns.",
@@ -9849,7 +9849,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_DOT_Poison_Rogue_S1",
+    "name": "<a class=\"gModGreen\" id=\"1266499176\">Standard_DOT_Poison_Rogue_S1</a>",
     "realName": "Wind Shear",
     "aim": "Debuff",
     "desc": "Takes Wind DMG at the start of each turn for a certain number of turns.",
@@ -9857,7 +9857,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_DOT_Electric_Rogue_S1",
+    "name": "<a class=\"gModGreen\" id=\"2039618849\">Standard_DOT_Electric_Rogue_S1</a>",
     "realName": "Shock",
     "aim": "Debuff",
     "desc": "Takes Lightning DMG at the beginning of each turn for a certain number of turns.",
@@ -9865,7 +9865,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Standard_DOT_Tear_Rogue_S1",
+    "name": "<a class=\"gModGreen\" id=\"65097736\">Standard_DOT_Tear_Rogue_S1</a>",
     "realName": "Bleed",
     "aim": "Debuff",
     "desc": "Takes Physical DMG at the start of each turn for a certain number of turns.",
@@ -9873,7 +9873,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "LC_21046_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"33731582\">LC_21046_Bonus</a>",
     "realName": "CRIT DMG Boost",
     "aim": "Buff",
     "desc": "Increases CRIT DMG by #1[i]%.",
@@ -10093,7 +10093,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "FightFest_Main_Ability01_UltraAction1",
+    "name": "<a class=\"gModGreen\" id=\"1273869083\">FightFest_Main_Ability01_UltraAction1</a>",
     "realName": "Feint Attack",
     "aim": "Buff",
     "desc": "Action is Advanced Forward by #1[i]% after the next use of an Ultimate.",
@@ -10104,7 +10104,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21047_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-1670109633\">LC_21047_Bonus</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -10115,7 +10115,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_3122025_Modifier_Shield",
+    "name": "<a class=\"gModGreen\" id=\"1707862755\">StageAbility_3122025_Modifier_Shield</a>",
     "realName": "Barrier",
     "aim": "Buff",
     "desc": "Immune to all DMG.",
@@ -10123,7 +10123,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "StageAbility_3120013_Modifier_Effect",
+    "name": "<a class=\"gModGreen\" id=\"-2031742416\">StageAbility_3120013_Modifier_Effect</a>",
     "realName": "Spiritual Torture",
     "aim": "Other",
     "desc": "Each stack increases the number of Bounce DMG instances for Spiritual Caning.",
@@ -10217,7 +10217,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_BeforeFever_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-1101088336\">Modifier_FantasticStory_BaseAbility_2010_BeforeFever_ForShow</a>",
     "realName": "Concordant Truce",
     "aim": "Buff",
     "desc": "After using Skill to attack an enemy target, deals a set amount of DMG to the targets.",
@@ -10225,7 +10225,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "FightFest_Main_Ability01_UltraAction2",
+    "name": "<a class=\"gModGreen\" id=\"1290646702\">FightFest_Main_Ability01_UltraAction2</a>",
     "realName": "Feint Attack",
     "aim": "Buff",
     "desc": "Weakness Break Efficiency increases by #1[i]%.",
@@ -10236,7 +10236,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_3120012_Modifier_Effect",
+    "name": "<a class=\"gModGreen\" id=\"-51174625\">StageAbility_3120012_Modifier_Effect</a>",
     "realName": "Performance Points",
     "aim": "Buff",
     "desc": "Each stack increases the Ultimate DMG dealt.",
@@ -10244,7 +10244,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_StageAbility_3123012_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-1485648955\">Modifier_StageAbility_3123012_Sub2</a>",
     "realName": "Blu Bull",
     "aim": "Debuff",
     "desc": "Each stack increases Ultimate DMG taken by #1[i]%.",
@@ -10329,7 +10329,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FightFest_FeverEffect",
+    "name": "<a class=\"gModGreen\" id=\"-1608486361\">Modifier_FightFest_FeverEffect</a>",
     "realName": "Super Hype",
     "aim": "Debuff",
     "desc": "When \"Super Hype\" is active, DMG taken by enemies increases by 400%.",
@@ -10489,7 +10489,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23033_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1465262419\">LC_23033_Sub</a>",
     "realName": "Raiton",
     "aim": "Other",
     "desc": "After using Basic Attacks #1[i] time(s), advances the next action by #2[i]%.",
@@ -10501,7 +10501,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_3121003_Modifier_Character_Count",
+    "name": "<a class=\"gModGreen\" id=\"1527906536\">StageAbility_3121003_Modifier_Character_Count</a>",
     "realName": "Follow-Up Tally",
     "aim": "Other",
     "desc": "Tallied number of Follow-Up ATKs launched. Accumulate #1[i] attacks to launch \"Raging Wildfire.\"",
@@ -10512,7 +10512,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_3120014_Modifier_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-1373022448\">StageAbility_3120014_Modifier_Sub2</a>",
     "realName": "Ultimate Tally",
     "aim": "Other",
     "desc": "Tallied number of Ultimates used. Accumulate #1[i] uses to launch Brave Fist.",
@@ -10709,7 +10709,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0050_plus1_sub2",
+    "name": "<a class=\"gModGreen\" id=\"225763044\">Modifier_FantasticStory_BaseAbility_0050_plus1_sub2</a>",
     "realName": "Arioso",
     "aim": "Debuff",
     "desc": "Break DMG taken increases by #1[i]%.",
@@ -10863,7 +10863,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_317_Sub",
+    "name": "<a class=\"gModGreen\" id=\"550683344\">Relic_317_Sub</a>",
     "realName": "Lushaka, the Sunken Seas",
     "aim": "Buff",
     "desc": "ATK increases by #1[i]%.",
@@ -10874,7 +10874,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FightFest_Main_Ability02",
+    "name": "<a class=\"gModGreen\" id=\"1839515953\">Modifier_FightFest_Main_Ability02</a>",
     "realName": "Early Reveal",
     "aim": "Buff",
     "desc": "After every attack against the enemy, deal a set amount of DMG to the enemy hit by this attack and inflict Startled on them.",
@@ -10882,7 +10882,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_FightFest_Main_Ability02_Insert_Effect",
+    "name": "<a class=\"gModGreen\" id=\"-879190499\">Modifier_FightFest_Main_Ability02_Insert_Effect</a>",
     "realName": "Startled",
     "aim": "Debuff",
     "desc": "Each stack increases DMG taken by #1[i]%.",
@@ -10893,7 +10893,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "FightFest_Main_Ability06_StanceDamage",
+    "name": "<a class=\"gModGreen\" id=\"1897560670\">FightFest_Main_Ability06_StanceDamage</a>",
     "realName": "Stealing Their Thunder",
     "aim": "Buff",
     "desc": "Weakness Break Efficiency increases by #1[i]%.",
@@ -10904,7 +10904,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_3120013_Modifier_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-933679831\">StageAbility_3120013_Modifier_Sub</a>",
     "realName": "Spiritual Caning",
     "aim": "Other",
     "desc": "At the start of a turn, deals Lightning DoT to all enemies multiple times.",
@@ -10912,7 +10912,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "StageAbility_3120035_Modifier_Count",
+    "name": "<a class=\"gModGreen\" id=\"-374012756\">StageAbility_3120035_Modifier_Count</a>",
     "realName": "Ready for Battle",
     "aim": "Other",
     "desc": "Each stack increases DMG dealt by Ultimate by #1[i]%. For every #2[i] stack(s) gained, the first character in the team lineup will immediately activate their Ultimate.",
@@ -10924,7 +10924,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_3121005_Modifier_Character_Count",
+    "name": "<a class=\"gModGreen\" id=\"-1714349966\">StageAbility_3121005_Modifier_Character_Count</a>",
     "realName": "Skill Point Tally",
     "aim": "Other",
     "desc": "Tallied number of Skill Points. Accumulate #1[i] to cause the leftmost character in the lineup to immediately take action.",
@@ -10935,7 +10935,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_3121006_Modifier_Character2_Count",
+    "name": "<a class=\"gModGreen\" id=\"967872201\">StageAbility_3121006_Modifier_Character2_Count</a>",
     "realName": "Ultimate Tally",
     "aim": "Other",
     "desc": "Tallied number of Ultimate attack target number. Accumulate #1[i] to regenerate the Energy of the leftmost character in the lineup.",
@@ -10954,7 +10954,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Relic_318_Sub",
+    "name": "<a class=\"gModGreen\" id=\"103322561\">Relic_318_Sub</a>",
     "realName": "The Wondrous BananAmusement Park",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -10987,7 +10987,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0020_sub5",
+    "name": "<a class=\"gModGreen\" id=\"-1454047232\">Modifier_FantasticStory_BaseAbility_0020_sub5</a>",
     "realName": "Gimmick",
     "aim": "Buff",
     "desc": "Increases Break Effect by #1[i]%. Upon Breaking an enemy target's Weakness, applies Wind Shear to all enemies.",
@@ -10998,7 +10998,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_0020_sub6_dot",
+    "name": "<a class=\"gModGreen\" id=\"1431018009\">Modifier_FantasticStory_BaseAbility_0020_sub6_dot</a>",
     "realName": "Gimmick",
     "aim": "Debuff",
     "desc": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
@@ -11387,7 +11387,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "StageAbility_3121008_Modifier_Effect",
+    "name": "<a class=\"gModGreen\" id=\"539730861\">StageAbility_3121008_Modifier_Effect</a>",
     "realName": "Performance Points",
     "aim": "Buff",
     "desc": "Each stack increases Break Effect by #1[i]%.",
@@ -11398,7 +11398,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_3121009_Modifier_Character_Effect",
+    "name": "<a class=\"gModGreen\" id=\"-480211470\">StageAbility_3121009_Modifier_Character_Effect</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%.",
@@ -11472,7 +11472,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "FightFest_Main_Ability05_UltraAction",
+    "name": "<a class=\"gModGreen\" id=\"1795704980\">FightFest_Main_Ability05_UltraAction</a>",
     "realName": "Uproot the Cause",
     "aim": "Buff",
     "desc": "Immediately take another action after their next action and increases their DMG dealt by #1[i]%.",
@@ -11483,7 +11483,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "FightFest_Main_Ability05_UltraAction2",
+    "name": "<a class=\"gModGreen\" id=\"604659026\">FightFest_Main_Ability05_UltraAction2</a>",
     "realName": "Uproot the Cause",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%, lasting until the end of this action",
@@ -11505,7 +11505,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_22003_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-927960305\">LC_22003_Sub</a>",
     "realName": "CRIT DMG Boost",
     "aim": "Buff",
     "desc": "Increases CRIT DMG by #1[i]%.",
@@ -11575,7 +11575,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23035_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-2009182373\">LC_23035_Sub</a>",
     "realName": "Charring",
     "aim": "Debuff",
     "desc": "Each stack increases the Break DMG taken by #1[i]%. This effect can stack up to #2[i] time(s).",
@@ -11587,7 +11587,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_121_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-515052173\">Relic_121_Sub</a>",
     "realName": "Sacerdos' Relived Ordeal",
     "aim": "Buff",
     "desc": "Each stack increases CRIT DMG dealt by #1[i]%. This effect can stack up to #2[i] time(s).",
@@ -11599,7 +11599,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_122_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1050600358\">Relic_122_Sub</a>",
     "realName": "Scholar Lost in Erudition",
     "aim": "Buff",
     "desc": "Increases DMG dealt when using Skill by #1[i]%.",
@@ -11610,7 +11610,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23034_Sub",
+    "name": "<a class=\"gModGreen\" id=\"2022288380\">LC_23034_Sub</a>",
     "realName": "Hymn",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%, up to #2[i] stack(s).",
@@ -11655,7 +11655,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_HPParentChild",
+    "name": "<a class=\"gModGreen\" id=\"-149468610\">Modifier_FantasticStory_HPParentChild</a>",
     "realName": "Binding Obligation",
     "aim": "Buff",
     "desc": "After non-Elite enemy targets are defeated, receive DMG based on a certain percentage of this unit's Max HP.",
@@ -11663,7 +11663,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_FantasticStory_HPParentChildForShow",
+    "name": "<a class=\"gModGreen\" id=\"1532586988\">Modifier_FantasticStory_HPParentChildForShow</a>",
     "realName": "Fate's Convergence",
     "aim": "Buff",
     "desc": "After being defeated, deal DMG based on a certain percentage of their Max HP to the Elite enemy target.",
@@ -11695,7 +11695,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_EnterFever_sub",
+    "name": "<a class=\"gModGreen\" id=\"-1762727873\">Modifier_FantasticStory_BaseAbility_2010_EnterFever_sub</a>",
     "realName": "Surging Grit",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -11706,7 +11706,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23037_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-574485103\">LC_23037_Sub2</a>",
     "realName": "Increases Skill DMG and Ultimate DMG",
     "aim": "Buff",
     "desc": "Increases Skill DMG and Ultimate DMG dealt by #1[i]%.",
@@ -11763,7 +11763,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_EnterFever_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"2044140979\">Modifier_FantasticStory_BaseAbility_2010_EnterFever_ForShow</a>",
     "realName": "Surging Grit",
     "aim": "Buff",
     "desc": "After using Skill to attack an enemy target, deals a set amount of DMG to the targets adjacent to the attacked target.",
@@ -11771,7 +11771,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_BaseAddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-364255802\">Modifier_FantasticStory_BaseAbility_2010_BaseAddOn_ForShow</a>",
     "realName": "Grit Mechanics",
     "aim": "Buff",
     "desc": "After using Skill to attack enemy targets, every enemy target attacked additionally accumulates #1[i] Grit Value.",
@@ -11782,7 +11782,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_plus1_sub",
+    "name": "<a class=\"gModGreen\" id=\"396795156\">Modifier_FantasticStory_BaseAbility_2010_plus1_sub</a>",
     "realName": "Empty Air",
     "aim": "Buff",
     "desc": "Using Skill does not consume Skill Points.",
@@ -11790,7 +11790,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_plus1_sub2",
+    "name": "<a class=\"gModGreen\" id=\"1632199378\">Modifier_FantasticStory_BaseAbility_2010_plus1_sub2</a>",
     "realName": "Feverish Surge",
     "aim": "Buff",
     "desc": "Skill and Ultimate DMG dealt increase by #1[i]% and SPD increases by #2[i]%.",
@@ -11802,7 +11802,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_plus2_sub",
+    "name": "<a class=\"gModGreen\" id=\"-1203635663\">Modifier_FantasticStory_BaseAbility_2010_plus2_sub</a>",
     "realName": "False Promises",
     "aim": "Buff",
     "desc": "Follow-Up ATK DMG dealt increases by #1[i]%. After launching a Follow-Up ATK, deals a set amount of DMG to every attacked enemy target and adjacent target.",
@@ -11813,7 +11813,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_plus3_sub",
+    "name": "<a class=\"gModGreen\" id=\"-1236148774\">Modifier_FantasticStory_BaseAbility_2010_plus3_sub</a>",
     "realName": "Hollow Hope",
     "aim": "Debuff",
     "desc": "Break DMG taken increases by #1[i]%. When Weakness is Broken, the attacker's action advances by #2[i]%.",
@@ -11825,7 +11825,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23034_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-1900448438\">LC_23034_Sub2</a>",
     "realName": "Departing Anew",
     "aim": "Other",
     "desc": "\"Departing Anew\"'s Skill Point recovery effect cannot be triggered.",
@@ -11893,7 +11893,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_Plus1AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"88399756\">Modifier_FantasticStory_BaseAbility_2010_Plus1AddOn_ForShow</a>",
     "realName": "Grit Mechanics: Empty Air",
     "aim": "Buff",
     "desc": "After using Ultimate to attack enemy targets, every enemy target attacked additionally accumulates #1[i] Grit Value.",
@@ -11904,7 +11904,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_Plus2AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-1263632305\">Modifier_FantasticStory_BaseAbility_2010_Plus2AddOn_ForShow</a>",
     "realName": "Grit Mechanics: False Promises",
     "aim": "Buff",
     "desc": "After launching a Follow-Up ATK, every enemy target attacked additionally accumulates #1[i] Grit Value.",
@@ -11915,7 +11915,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_Plus3AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"243727462\">Modifier_FantasticStory_BaseAbility_2010_Plus3AddOn_ForShow</a>",
     "realName": "Grit Mechanics: Hollow Hope",
     "aim": "Buff",
     "desc": "After attacking enemy targets, every enemy target who has their Weakness Broken additionally accumulates #1[i] Grit Value.",
@@ -11926,7 +11926,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_LevelAbility_Activity_LuckyScroll_MindControl_Sub_Avatar",
+    "name": "<a class=\"gModGreen\" id=\"-731811966\">Modifier_LevelAbility_Activity_LuckyScroll_MindControl_Sub_Avatar</a>",
     "realName": "Stage Buff — \"Targeted Break\"",
     "aim": "Buff",
     "desc": "Increases Break Effect by #1[i]% (every rank additionally increases it by #1[i]%) and Weakness Break Efficiency by #4[i]%. When Breaking enemy target's Weakness, applies the attacker's Weakness Type to the target and adjacent targets, increases its Break DMG taken by #3[i]%, and deals Break DMG equal to #2[i]% of the attacker's Break DMG.",
@@ -11940,7 +11940,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_LevelAbility_Activity_LuckyScroll_Shooter_Avatar",
+    "name": "<a class=\"gModGreen\" id=\"-370918338\">Modifier_LevelAbility_Activity_LuckyScroll_Shooter_Avatar</a>",
     "realName": "Stage Buff — \"Multi-Strike Shred\"",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]% (every rank additionally increases it by #1[i]%). After every action, action advances \"Shadesever Bow\" that is about to appear on the action bar by #3[i]%. \"Shadesever Bow\" will attack enemies when taking action, and its DMG dealt increases according to the total rank (every rank increases DMG dealt by #2[i]%).",
@@ -11953,7 +11953,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_LevelAbility_Activity_LuckyScroll_Mascot_Avatar",
+    "name": "<a class=\"gModGreen\" id=\"-1951469461\">Modifier_LevelAbility_Activity_LuckyScroll_Mascot_Avatar</a>",
     "realName": "Stage Buff — \"Solved Departure\"",
     "aim": "Buff",
     "desc": "Increases ATK by #1[i]% (every rank additionally increases it by #1[i]%). After attacking, for every 1 enemy target hit, deals DMG equals to #2[i]% of this unit's ATK to the enemy target hit with the highest Max HP, and increases the Toughness Reduction of this attack towards it by #3[i].",
@@ -11966,7 +11966,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_LevelAbility_Activity_LuckyScroll_Claymore_Avatar",
+    "name": "<a class=\"gModGreen\" id=\"2100427190\">Modifier_LevelAbility_Activity_LuckyScroll_Claymore_Avatar</a>",
     "realName": "Stage Buff — \"Frenzied Absorption\"",
     "aim": "Buff",
     "desc": "Increases CRIT DMG by #2[i]% (every rank additionally increases it by #2[i]%) and every attack is guaranteed to CRIT. After using an attack, applies one instance of Additional DMG equal to #3[i]% of this unit's ATK that can trigger CRIT to the enemy target.",
@@ -11979,7 +11979,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_Activity_LuckyScroll_Fantastic_Elite",
+    "name": "<a class=\"gModGreen\" id=\"-1306921760\">Modifier_Activity_LuckyScroll_Fantastic_Elite</a>",
     "realName": "Binding Obligation",
     "aim": "Buff",
     "desc": "When non-Elite enemies are defeated, this unit will take DMG equal to a certain percentage of this unit's Max HP.",
@@ -11987,7 +11987,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_Activity_LuckyScroll_Fantastic_Servant",
+    "name": "<a class=\"gModGreen\" id=\"-818168354\">Modifier_Activity_LuckyScroll_Fantastic_Servant</a>",
     "realName": "Fate's Convergence",
     "aim": "Buff",
     "desc": "After being defeated, deal DMG to the Elite enemy target based on a certain percentage of its Max HP.",
@@ -12144,7 +12144,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Scholar_Activity_BookTarget",
+    "name": "<a class=\"gModGreen\" id=\"-1436064963\">MModifier_Monster_W4_Scholar_Activity_BookTarget</a>",
     "realName": "Ignited Flame",
     "aim": "Buff",
     "desc": "Break Effect increases by #1[i]%.",
@@ -12155,7 +12155,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallengeEX_Talent_StageAbility_TGT_029",
+    "name": "<a class=\"gModGreen\" id=\"254716271\">MStrongChallengeEX_Talent_StageAbility_TGT_029</a>",
     "realName": "Cheat Sheet",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[i]%, up to #2[i] stack(s).",
@@ -12300,7 +12300,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23036_Effect",
+    "name": "<a class=\"gModGreen\" id=\"2056335473\">LC_23036_Effect</a>",
     "realName": "Brocade",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[f1]%.",
@@ -12331,7 +12331,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub",
+    "name": "<a class=\"gModGreen\" id=\"1981060014\">Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub</a>",
     "realName": "Surging Grit",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%. When defeated, additionally accumulate 1 stack of \"Resound.\"",
@@ -12342,7 +12342,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount",
+    "name": "<a class=\"gModGreen\" id=\"-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>",
     "realName": "\"Resound\"",
     "aim": "Buff",
     "desc": "#1[i] stack(s) of \"Resound\" have been accumulated. Consume all \"Resound\" stacks when entering Surging Grit or having accumulated #2[i] or more stacks during Surging Grit. Every \"Resound\" stack deals 1 instance of a set amount of DMG to a random enemy target.",
@@ -12421,7 +12421,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_LevelAbility_Activity_LuckyScroll_MindControl_Sub_Weak",
+    "name": "<a class=\"gModGreen\" id=\"1010385523\">Modifier_LevelAbility_Activity_LuckyScroll_MindControl_Sub_Weak</a>",
     "realName": "Weakness Implant",
     "aim": "Buff",
     "desc": "Becomes implanted with the Weakness of the attacker's Type and increases Break DMG taken by #1[i]%.",
@@ -12432,7 +12432,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_plus1_sub2",
+    "name": "<a class=\"gModGreen\" id=\"-54375589\">Modifier_FantasticStory_BaseAbility_2060_plus1_sub2</a>",
     "realName": "Radiance",
     "aim": "Debuff",
     "desc": "When defeated, there is a #1[i]% chance to additionally accumulate 1 \"Resound\" stack.",
@@ -12443,7 +12443,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_plus2_sub",
+    "name": "<a class=\"gModGreen\" id=\"514411026\">Modifier_FantasticStory_BaseAbility_2060_plus2_sub</a>",
     "realName": "Universality",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%. When all \"Resound\" is consumed in an attack, recover 1 Skill Point.",
@@ -12454,7 +12454,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_plus3_sub",
+    "name": "<a class=\"gModGreen\" id=\"391899273\">Modifier_FantasticStory_BaseAbility_2060_plus3_sub</a>",
     "realName": "Potential",
     "aim": "Buff",
     "desc": "DMG dealt by using Ultimate increases by #1[i]%.",
@@ -12465,7 +12465,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-1271014269\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_ForShow</a>",
     "realName": "Concordant Truce",
     "aim": "Debuff",
     "desc": "Accumulate 1 stack of \"Resound\" when defeated.",
@@ -12473,7 +12473,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"278893341\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow</a>",
     "realName": "Grit Mechanics_Radiance",
     "aim": "Buff",
     "desc": "After launching a Follow-Up ATK, every enemy target attacked additionally accumulates #1[i] Grit Value.",
@@ -12484,7 +12484,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"155042142\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow</a>",
     "realName": "Grit Mechanics_Universality",
     "aim": "Buff",
     "desc": "After using Skill to attack enemy targets, every enemy target attacked additionally accumulates #1[i] Grit Value.",
@@ -12503,7 +12503,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_BaseAddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-398018983\">Modifier_FantasticStory_BaseAbility_2060_BaseAddOn_ForShow</a>",
     "realName": "Grit Mechanics",
     "aim": "Buff",
     "desc": "After using Ultimate to attack enemy targets, every enemy target attacked additionally accumulates #1[i] Grit Value.",
@@ -12536,7 +12536,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_LevelAbility_Activity_LuckyScroll_Mascot_AllDamageTypeTakenRatio",
+    "name": "<a class=\"gModGreen\" id=\"664212862\">Modifier_LevelAbility_Activity_LuckyScroll_Mascot_AllDamageTypeTakenRatio</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -12547,7 +12547,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23038_AuraBonus",
+    "name": "<a class=\"gModGreen\" id=\"-327496768\">LC_23038_AuraBonus</a>",
     "realName": "Presage",
     "aim": "Buff",
     "desc": "Increases CRIT DMG by #1[f1]%.",
@@ -12558,7 +12558,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23038_AuraBonus_Buff",
+    "name": "<a class=\"gModGreen\" id=\"-940045420\">LC_23038_AuraBonus_Buff</a>",
     "realName": "Presage",
     "aim": "Buff",
     "desc": "Increases CRIT DMG by #1[f1]%.",
@@ -12751,7 +12751,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Enemy_W4_Mascot_ListenCorrectInteract_Activity_DeathMark",
+    "name": "<a class=\"gModGreen\" id=\"-906898841\">Enemy_W4_Mascot_ListenCorrectInteract_Activity_DeathMark</a>",
     "realName": "Brainteaser",
     "aim": "Other",
     "desc": "The Spirithief presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with the corresponding \"Skill\" or \"Ultimate.\" If the correct attack type is used to respond to Spirithief's brainteaser, Spirithief will immediately leave the field. When Spirithief is attacked with a \"Basic ATK\" or an attack from friendly targets, it will change the brainteaser.",
@@ -12885,7 +12885,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Relic_123_Sub3",
+    "name": "<a class=\"gModGreen\" id=\"-1578671258\">Relic_123_Sub3</a>",
     "realName": "Hero of Triumphant Song",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -12896,7 +12896,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_124_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-281803576\">Relic_124_Sub</a>",
     "realName": "Poet of Mourning Collapse",
     "aim": "Buff",
     "desc": "CRIT Rate increases by #1[i]%.",
@@ -12907,7 +12907,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_20022_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"394065750\">LC_20022_Sub2</a>",
     "realName": "Commemoration",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%, up to 4 stacks.",
@@ -12918,7 +12918,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21050_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-277720014\">LC_21050_Sub2</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -12929,7 +12929,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21051_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-833650413\">LC_21051_Sub</a>",
     "realName": "Basic ATK DMG Boost",
     "aim": "Buff",
     "desc": "Basic ATK DMG increases by #1[i]%.",
@@ -12940,7 +12940,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21052_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1410775302\">LC_21052_Sub</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -13230,7 +13230,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "M_MissionBattleEvent60022_AddDamage",
+    "name": "<a class=\"gModGreen\" id=\"999661832\">M_MissionBattleEvent60022_AddDamage</a>",
     "realName": "Blood of \"Strife\"",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -13241,7 +13241,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2110_BaseAddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-1732946835\">Modifier_FantasticStory_BaseAbility_2110_BaseAddOn_ForShow</a>",
     "realName": "Grit Mechanics",
     "aim": "Buff",
     "desc": "After using Basic ATK or Ultimate to attack enemy targets, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
@@ -13252,7 +13252,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2110_BeforeFever_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"1102093119\">Modifier_FantasticStory_BaseAbility_2110_BeforeFever_ForShow</a>",
     "realName": "Concordant Truce",
     "aim": "Buff",
     "desc": "When using a Basic ATK or an Ultimate to attack an enemy target, inflicts the target with \"Shatter,\" stacking up to #1[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of \"Shatter\" stacks.",
@@ -13263,7 +13263,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2110_BeforeFever_sub2",
+    "name": "<a class=\"gModGreen\" id=\"-2132571309\">Modifier_FantasticStory_BaseAbility_2110_BeforeFever_sub2</a>",
     "realName": "Shatter",
     "aim": "Debuff",
     "desc": "When this unit's turn starts or when defeated by any unit, this unit takes a set amount of DMG based on the number of \"Shatter\" stacks.",
@@ -13271,7 +13271,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2110_EnterFever_sub",
+    "name": "<a class=\"gModGreen\" id=\"-277929062\">Modifier_FantasticStory_BaseAbility_2110_EnterFever_sub</a>",
     "realName": "Surging Grit",
     "aim": "Debuff",
     "desc": "Increases DMG taken by #1[i]%.",
@@ -13282,7 +13282,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2110_ExceedSP",
+    "name": "<a class=\"gModGreen\" id=\"51786752\">Modifier_FantasticStory_BaseAbility_2110_ExceedSP</a>",
     "realName": "Energy Overflow",
     "aim": "Other",
     "desc": "#1[i] extra Energy. This will be consumed first when unleashing Ultimate.",
@@ -13293,7 +13293,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2110_Plus1AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-31325999\">Modifier_FantasticStory_BaseAbility_2110_Plus1AddOn_ForShow</a>",
     "realName": "Grit Mechanics: Evince",
     "aim": "Buff",
     "desc": "After using Skill or launching a Follow-Up ATK, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
@@ -13304,7 +13304,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2110_Plus2AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"612720754\">Modifier_FantasticStory_BaseAbility_2110_Plus2AddOn_ForShow</a>",
     "realName": "Grit Mechanics: Gnosis",
     "aim": "Debuff",
     "desc": "When a Weakness is Broken, additionally accumulates #1[i] Grit Value for allies.",
@@ -13315,7 +13315,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2110_Plus3AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-1805319333\">Modifier_FantasticStory_BaseAbility_2110_Plus3AddOn_ForShow</a>",
     "realName": "Grit Mechanics: Sanity",
     "aim": "Buff",
     "desc": "When receiving an attack or losing HP, allies will additionally accumulate #1[i] Grit Value.",
@@ -13326,7 +13326,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2110_plus1_sub",
+    "name": "<a class=\"gModGreen\" id=\"547730031\">Modifier_FantasticStory_BaseAbility_2110_plus1_sub</a>",
     "realName": "Evince",
     "aim": "Buff",
     "desc": "Use Skills or launching a Follow-Up ATK against enemy targets with \"Shatter\" can immediately trigger \"Shatter.\"",
@@ -13334,7 +13334,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2110_plus2_sub2",
+    "name": "<a class=\"gModGreen\" id=\"-2052424996\">Modifier_FantasticStory_BaseAbility_2110_plus2_sub2</a>",
     "realName": "Gnosis",
     "aim": "Debuff",
     "desc": "Break DMG taken increases by #1[i]%.",
@@ -13345,7 +13345,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2110_plus3_sub",
+    "name": "<a class=\"gModGreen\" id=\"-1184097523\">Modifier_FantasticStory_BaseAbility_2110_plus3_sub</a>",
     "realName": "Sanity",
     "aim": "Buff",
     "desc": "Consumes this unit's current HP by #1[i]% when using a Skill. After using Skill, restores #2[i]% HP equal to this unit's Max HP.",
@@ -13668,7 +13668,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "LC_23036_Effect_Servant",
+    "name": "<a class=\"gModGreen\" id=\"-1248014501\">LC_23036_Effect_Servant</a>",
     "realName": "Brocade",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[f1]%.",
@@ -13735,7 +13735,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_24005_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1344178785\">LC_24005_Sub</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -13886,7 +13886,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "RogueBattleevent_Ruin_S4_MaxHP",
+    "name": "<a class=\"gModGreen\" id=\"1342069688\">RogueBattleevent_Ruin_S4_MaxHP</a>",
     "realName": "Max HP Boost",
     "aim": "Buff",
     "desc": "Increases Max HP by #1[i]%",
@@ -13897,7 +13897,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "RogueBattleevent_Ruin_S4_HealHP",
+    "name": "<a class=\"gModGreen\" id=\"-1409801640\">RogueBattleevent_Ruin_S4_HealHP</a>",
     "realName": "Healing Over Time",
     "aim": "Buff",
     "desc": "Restores #1[i]% of missing HP at the beginning of each turn.",
@@ -14007,7 +14007,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23041_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-969142096\">LC_23041_Sub</a>",
     "realName": "DEF Reduced",
     "aim": "Debuff",
     "desc": "DEF decreases by #1[i]%.",
@@ -14029,7 +14029,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_plus4_sub",
+    "name": "<a class=\"gModGreen\" id=\"-375683577\">Modifier_FantasticStory_BaseAbility_2010_plus4_sub</a>",
     "realName": "Hierophany",
     "aim": "Buff",
     "desc": "Using Skill consumes HP equal to #1[i]% of this unit's Max HP. Additionally, after using Skill, restores HP equal to #2[i]% of this unit's Max HP.",
@@ -14041,7 +14041,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_Plus4AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-854888599\">Modifier_FantasticStory_BaseAbility_2010_Plus4AddOn_ForShow</a>",
     "realName": "Grit Mechanics: Hierophany",
     "aim": "Buff",
     "desc": "When receiving an attack or losing HP, allies will additionally accumulate #1[i] Grit Value.",
@@ -14120,7 +14120,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_WeakType_Fire",
+    "name": "<a class=\"gModGreen\" id=\"-2009288629\">Standard_WeakType_Fire</a>",
     "realName": "Additional Fire Weakness",
     "aim": "Debuff",
     "desc": "Additionally implanted Fire Weakness.",
@@ -14131,7 +14131,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_WeakType_Ice",
+    "name": "<a class=\"gModGreen\" id=\"1497676034\">Standard_WeakType_Ice</a>",
     "realName": "Additional Ice Weakness",
     "aim": "Debuff",
     "desc": "Additionally implanted Ice Weakness.",
@@ -14142,7 +14142,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_WeakType_Wind",
+    "name": "<a class=\"gModGreen\" id=\"-1938125975\">Standard_WeakType_Wind</a>",
     "realName": "Additional Wind Weakness",
     "aim": "Debuff",
     "desc": "Additionally implanted Wind Weakness.",
@@ -14153,7 +14153,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_WeakType_Physical",
+    "name": "<a class=\"gModGreen\" id=\"-1724958950\">Standard_WeakType_Physical</a>",
     "realName": "Additional Physical Weakness",
     "aim": "Debuff",
     "desc": "Additionally implanted Physical Weakness.",
@@ -14164,7 +14164,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_WeakType_Thunder",
+    "name": "<a class=\"gModGreen\" id=\"1930557999\">Standard_WeakType_Thunder</a>",
     "realName": "Additional Lightning Weakness",
     "aim": "Debuff",
     "desc": "Additionally implanted Lightning Weakness.",
@@ -14175,7 +14175,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_WeakType_Quantum",
+    "name": "<a class=\"gModGreen\" id=\"1012677236\">Standard_WeakType_Quantum</a>",
     "realName": "Additional Quantum Weakness",
     "aim": "Debuff",
     "desc": "Additionally implanted Quantum Weakness.",
@@ -14186,7 +14186,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_WeakType_Imaginary",
+    "name": "<a class=\"gModGreen\" id=\"-1118024096\">Standard_WeakType_Imaginary</a>",
     "realName": "Additional Imaginary Weakness",
     "aim": "Debuff",
     "desc": "Additionally implanted Imaginary Weakness.",
@@ -14220,7 +14220,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Standard_CTRL_Frozen_616120",
+    "name": "<a class=\"gModGreen\" id=\"892418165\">Standard_CTRL_Frozen_616120</a>",
     "realName": "Frozen",
     "aim": "Debuff",
     "desc": "Cannot take action for a certain number of turns and takes Ice Additional DMG at the beginning of each turn. After being attacked by a memosprite, additionally takes True DMG equal to #2[i]% of Max HP. Can trigger #1[i] more time(s).",
@@ -14232,7 +14232,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallengeEX_Talent_StageAbility_TGT_044",
+    "name": "<a class=\"gModGreen\" id=\"-2044111722\">MStrongChallengeEX_Talent_StageAbility_TGT_044</a>",
     "realName": "Teach By Banaxample",
     "aim": "Buff",
     "desc": "Each stack increases CRIT DMG by #1[i]%. This effect can stack up to #2[i] time(s).",
@@ -14315,7 +14315,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_plus4_sub",
+    "name": "<a class=\"gModGreen\" id=\"906922784\">Modifier_FantasticStory_BaseAbility_2060_plus4_sub</a>",
     "realName": "Divine Score",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -14378,7 +14378,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23040_Main02",
+    "name": "<a class=\"gModGreen\" id=\"-414774492\">LC_23040_Main02</a>",
     "realName": "Death Flower",
     "aim": "Buff",
     "desc": "When dealing DMG, ignores #1[i]% of the target's DEF.",
@@ -14389,7 +14389,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23040_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1983557807\">LC_23040_Sub</a>",
     "realName": "Death Flower",
     "aim": "Buff",
     "desc": "When dealing DMG, ignores #1[i]% of the target's DEF.",
@@ -14446,7 +14446,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23042_AllDamageTypeTakenRatio",
+    "name": "<a class=\"gModGreen\" id=\"-1169158629\">LC_23042_AllDamageTypeTakenRatio</a>",
     "realName": "Tolerant",
     "aim": "Debuff",
     "desc": "DMG received increases by #1[f1]%.",
@@ -14457,7 +14457,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_125_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"1449955790\">Relic_125_Bonus</a>",
     "realName": "Gentle Rain",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -14468,7 +14468,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_125_Bonus2",
+    "name": "<a class=\"gModGreen\" id=\"149540788\">Relic_125_Bonus2</a>",
     "realName": "Warrior Goddess of Sun and Thunder",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -14491,7 +14491,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23046_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"840145864\">LC_23046_Bonus</a>",
     "realName": "Hrunting",
     "aim": "Buff",
     "desc": "ATK increases by #1[i]%.",
@@ -14502,7 +14502,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23046_Bonus02",
+    "name": "<a class=\"gModGreen\" id=\"-598797650\">LC_23046_Bonus02</a>",
     "realName": "Hrunting",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[i]%. This effect stacks up to #2[i] time(s).",
@@ -14514,7 +14514,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23043_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-254264378\">LC_23043_Sub</a>",
     "realName": "Bamboozle",
     "aim": "Debuff",
     "desc": "Decreases DEF by #1[i]%.",
@@ -14525,7 +14525,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23043_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"409362716\">LC_23043_Sub2</a>",
     "realName": "Theft",
     "aim": "Debuff",
     "desc": "Decreases DEF by #1[i]%.",
@@ -14571,7 +14571,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21054_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1013040664\">LC_21054_Sub</a>",
     "realName": "Outgoing Healing Boost",
     "aim": "Buff",
     "desc": "Outgoing Healing increases by #1[i]%.",
@@ -14605,7 +14605,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_VS_Weapon_S2_001_AddWeak",
+    "name": "<a class=\"gModGreen\" id=\"-1072784706\">Modifier_StageAbility_VS_Weapon_S2_001_AddWeak</a>",
     "realName": "Weakness Implant",
     "aim": "Debuff",
     "desc": "Implants a new Weakness.",
@@ -14613,7 +14613,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_StageAbility_VS_Weapon_S2_002_Fire",
+    "name": "<a class=\"gModGreen\" id=\"1634179944\">Modifier_StageAbility_VS_Weapon_S2_002_Fire</a>",
     "realName": "Fire Weakness",
     "aim": "Debuff",
     "desc": "Implants Fire Weakness.",
@@ -14621,7 +14621,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_StageAbility_VS_Weapon_S2_002_Ice",
+    "name": "<a class=\"gModGreen\" id=\"1919755003\">Modifier_StageAbility_VS_Weapon_S2_002_Ice</a>",
     "realName": "Ice Weakness",
     "aim": "Debuff",
     "desc": "Implants Ice Weakness.",
@@ -14629,7 +14629,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_StageAbility_VS_Weapon_S2_002_Wind",
+    "name": "<a class=\"gModGreen\" id=\"1845146218\">Modifier_StageAbility_VS_Weapon_S2_002_Wind</a>",
     "realName": "Wind Weakness",
     "aim": "Debuff",
     "desc": "Implants Wind Weakness",
@@ -14637,7 +14637,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_StageAbility_VS_Weapon_S2_002_Thunder",
+    "name": "<a class=\"gModGreen\" id=\"1130909486\">Modifier_StageAbility_VS_Weapon_S2_002_Thunder</a>",
     "realName": "Lightning Weakness",
     "aim": "Debuff",
     "desc": "Implants Lightning Weakness.",
@@ -14645,7 +14645,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_StageAbility_VS_Weapon_S2_002_Physical",
+    "name": "<a class=\"gModGreen\" id=\"1820882449\">Modifier_StageAbility_VS_Weapon_S2_002_Physical</a>",
     "realName": "Physical Weakness",
     "aim": "Debuff",
     "desc": "Implants Physical Weakness.",
@@ -14653,7 +14653,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_StageAbility_VS_Weapon_S2_002_Quantum",
+    "name": "<a class=\"gModGreen\" id=\"547395969\">Modifier_StageAbility_VS_Weapon_S2_002_Quantum</a>",
     "realName": "Quantum Weakness",
     "aim": "Debuff",
     "desc": "Implants Quantum Weakness.",
@@ -14661,7 +14661,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_StageAbility_VS_Weapon_S2_002_Imaginary",
+    "name": "<a class=\"gModGreen\" id=\"626002445\">Modifier_StageAbility_VS_Weapon_S2_002_Imaginary</a>",
     "realName": "Imaginary Weakness",
     "aim": "Debuff",
     "desc": "Implants Imaginary Weakness.",
@@ -14669,7 +14669,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "StageAbility_VS_Weapon_S2_009_PLY_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"873444646\">StageAbility_VS_Weapon_S2_009_PLY_Modifier</a>",
     "realName": "Spear of Eternal Ice",
     "aim": "Other",
     "desc": "A total of #1[i] target(s) have been hit. Triggers the spear to attack after hitting #2[i] target(s).",
@@ -14681,7 +14681,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Weapon_S2_002_BOSS_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"1931300243\">StageAbility_VS_Weapon_S2_002_BOSS_Modifier</a>",
     "realName": "Mark of Ruin",
     "aim": "Debuff",
     "desc": "When the holder receives Break DMG, triggers \"Mark of Ruin\" to attack the holder and their teammate(s).",
@@ -14689,7 +14689,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "StageAbility_VS_Weapon_S2_002_BOSS_Modifier_Max",
+    "name": "<a class=\"gModGreen\" id=\"1342462866\">StageAbility_VS_Weapon_S2_002_BOSS_Modifier_Max</a>",
     "realName": "Mark of Ruin",
     "aim": "Debuff",
     "desc": "When the holder receives Break DMG, triggers \"Mark of Ruin\" to attack the holder and their teammate(s).",
@@ -14697,7 +14697,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_StageAbility_VS_Weapon_S2_004_Insert_HPListener_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1097113523\">Modifier_StageAbility_VS_Weapon_S2_004_Insert_HPListener_Sub</a>",
     "realName": "Fiery Dimension",
     "aim": "Other",
     "desc": "At the start of the turn, consume HP equal to #1[i]% of this character's Max HP.",
@@ -14708,7 +14708,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_VS_Weapon_S2_004_Insert_HPListener_Sub_Enemy",
+    "name": "<a class=\"gModGreen\" id=\"-544913590\">Modifier_StageAbility_VS_Weapon_S2_004_Insert_HPListener_Sub_Enemy</a>",
     "realName": "Fiery Dimension",
     "aim": "Debuff",
     "desc": "Take Fire DMG at the beginning of the turn.",
@@ -14735,7 +14735,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "StageAbility_VS_Weapon_S2_015_PLY_Permanent_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-434968782\">StageAbility_VS_Weapon_S2_015_PLY_Permanent_Modifier</a>",
     "realName": "Kindest Benediction",
     "aim": "Buff",
     "desc": "Each stack increases the final DMG dealt by #1[i]%.",
@@ -14746,7 +14746,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Standard_PLY_Enhance_Modifier_009",
+    "name": "<a class=\"gModGreen\" id=\"1808640542\">StageAbility_VS_Standard_PLY_Enhance_Modifier_009</a>",
     "realName": "Team Bonus",
     "aim": "Buff",
     "desc": "CRIT DMG dealt increases by #1[i]%.",
@@ -14757,7 +14757,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Standard_PLY_Enhance_Modifier_010",
+    "name": "<a class=\"gModGreen\" id=\"1590384400\">StageAbility_VS_Standard_PLY_Enhance_Modifier_010</a>",
     "realName": "Team Bonus",
     "aim": "Buff",
     "desc": "The final DMG dealt increases by #1[i]%.",
@@ -14768,7 +14768,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Standard_PLY_Enhance_Modifier_011",
+    "name": "<a class=\"gModGreen\" id=\"1607162019\">StageAbility_VS_Standard_PLY_Enhance_Modifier_011</a>",
     "realName": "Team Bonus",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -14779,7 +14779,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Standard_PLY_Enhance_Modifier_011_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-15294378\">StageAbility_VS_Standard_PLY_Enhance_Modifier_011_Sub</a>",
     "realName": "Team Bonus",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -14790,7 +14790,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_SC_PLY_FireAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-151178779\">StageAbility_VS_Accessory_SC_PLY_FireAddedRatio</a>",
     "realName": "Benedictive Torch",
     "aim": "Buff",
     "desc": "Fire DMG dealt increases by #1[i]%.",
@@ -14801,7 +14801,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_SC_PLY_IceAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1361477766\">StageAbility_VS_Accessory_SC_PLY_IceAddedRatio</a>",
     "realName": "Evergreen Spring",
     "aim": "Buff",
     "desc": "Ice DMG dealt increases by #1[i]%.",
@@ -14812,7 +14812,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_SC_PLY_ThunderAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-509770821\">StageAbility_VS_Accessory_SC_PLY_ThunderAddedRatio</a>",
     "realName": "Meadow Breeze",
     "aim": "Buff",
     "desc": "Lightning DMG dealt increases by #1[i]%.",
@@ -14823,7 +14823,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_SC_PLY_WindAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1135225231\">StageAbility_VS_Accessory_SC_PLY_WindAddedRatio</a>",
     "realName": "Meadow Breeze",
     "aim": "Buff",
     "desc": "Wind DMG dealt increases by #1[i]%.",
@@ -14834,7 +14834,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_SC_PLY_QuantumAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1893796588\">StageAbility_VS_Accessory_SC_PLY_QuantumAddedRatio</a>",
     "realName": "Evergreen Spring",
     "aim": "Buff",
     "desc": "Quantum DMG dealt increases by #1[i]%.",
@@ -14845,7 +14845,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_SC_PLY_ImaginaryAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-249310120\">StageAbility_VS_Accessory_SC_PLY_ImaginaryAddedRatio</a>",
     "realName": "Benedictive Torch",
     "aim": "Buff",
     "desc": "Imaginary DMG dealt increases by #1[i]%.",
@@ -14856,7 +14856,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_SC_PLY_PhysicalAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"268295588\">StageAbility_VS_Accessory_SC_PLY_PhysicalAddedRatio</a>",
     "realName": "Meadow Breeze",
     "aim": "Buff",
     "desc": "Physical DMG dealt increases by #1[i]%.",
@@ -14867,7 +14867,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_SC_Special_005_PLY_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-1763009203\">StageAbility_VS_Accessory_SC_Special_005_PLY_Modifier</a>",
     "realName": "Golden Rose",
     "aim": "Buff",
     "desc": "When the turn ends, there is a #1[i]% fixed chance of advancing action by #2[i]%.",
@@ -14879,7 +14879,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Accessory_SC_PLY_CriticalAllUP",
+    "name": "<a class=\"gModGreen\" id=\"-13679611\">StageAbility_VS_Accessory_SC_PLY_CriticalAllUP</a>",
     "realName": "Cream Raccoon Pie",
     "aim": "Buff",
     "desc": "Increases CRIT Rate by #1[i]% and increases CRIT DMG by #2[i]%.",
@@ -14891,7 +14891,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_VS_Card_SC_010_BE",
+    "name": "<a class=\"gModGreen\" id=\"1348526583\">Modifier_StageAbility_VS_Card_SC_010_BE</a>",
     "realName": "Solid Foundation",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -14902,7 +14902,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Card_SC_053_BE_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"860004052\">StageAbility_VS_Card_SC_053_BE_Modifier</a>",
     "realName": "Comrades in Arms",
     "aim": "Buff",
     "desc": "Each stack increases the DMG dealt by #1[i]%.",
@@ -14913,7 +14913,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Card_SC_063_BE_Modifier_Sub",
+    "name": "<a class=\"gModGreen\" id=\"865071894\">StageAbility_VS_Card_SC_063_BE_Modifier_Sub</a>",
     "realName": "Strong Start",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -14924,7 +14924,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Card_SC_064_BE_Modifier_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-619400037\">StageAbility_VS_Card_SC_064_BE_Modifier_Sub</a>",
     "realName": "Race Against Time",
     "aim": "Buff",
     "desc": "SPD increases by #1[i].",
@@ -14935,7 +14935,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Card_SC_067_BE_Modifier_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1455875534\">StageAbility_VS_Card_SC_067_BE_Modifier_Sub</a>",
     "realName": "Suppressive Level",
     "aim": "Buff",
     "desc": "Each stack increases the DMG dealt by #1[i]%.",
@@ -14946,7 +14946,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Card_SC_072_BE_Modifier_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-485705892\">StageAbility_VS_Card_SC_072_BE_Modifier_Sub</a>",
     "realName": "Honed Blade",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -14957,7 +14957,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_VS_Card_SC_073_LE_Enemy",
+    "name": "<a class=\"gModGreen\" id=\"-223238282\">Modifier_VS_Card_SC_073_LE_Enemy</a>",
     "realName": "Oblivion",
     "aim": "Debuff",
     "desc": "DMG received increases by #1[i]%.",
@@ -14968,7 +14968,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Card_SC_074_LE_Modifier_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1119938456\">StageAbility_VS_Card_SC_074_LE_Modifier_Sub</a>",
     "realName": "Enkindle",
     "aim": "Buff",
     "desc": "Weakness Break Efficiency increases by #1[i]%.",
@@ -14979,7 +14979,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Card_SC_075_LE_Modifier_Sub",
+    "name": "<a class=\"gModGreen\" id=\"982787063\">StageAbility_VS_Card_SC_075_LE_Modifier_Sub</a>",
     "realName": "Cool Breeze",
     "aim": "Buff",
     "desc": "Outgoing Healing increases by #1[i]%.",
@@ -14990,7 +14990,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Card_SC_075_LE_Modifier_Sub_2",
+    "name": "<a class=\"gModGreen\" id=\"-1458542722\">StageAbility_VS_Card_SC_075_LE_Modifier_Sub_2</a>",
     "realName": "Cool Breeze",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -15001,7 +15001,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Card_SC_077_PLY_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"1495655574\">StageAbility_VS_Card_SC_077_PLY_Modifier</a>",
     "realName": "Blossom of Life",
     "aim": "Buff",
     "desc": "Max HP increases by #1[i]%.",
@@ -15012,7 +15012,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Card_SC_082_BE_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"379754206\">StageAbility_VS_Card_SC_082_BE_Modifier</a>",
     "realName": "Meticulous Selection",
     "aim": "Buff",
     "desc": "Each stack increases the DMG dealt by #1[i]%.",
@@ -15611,7 +15611,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23044_Sub",
+    "name": "<a class=\"gModGreen\" id=\"613021115\">LC_23044_Sub</a>",
     "realName": "Blazing Sun",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect is dispelled at the start of its turn.",
@@ -15644,7 +15644,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_126_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1631804574\">Relic_126_Sub</a>",
     "realName": "Help",
     "aim": "Other",
     "desc": "Stacks up to #1[i] time(s). When using Ultimate, if the unit possesses #1[i] stacks of \"Help,\" consumes all \"Help\" and increases the wearer's ATK by #2[i]%, lasting #3[i] turn(s).",
@@ -15657,7 +15657,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_126_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-922033468\">Relic_126_Sub2</a>",
     "realName": "Wavestrider Captain",
     "aim": "Buff",
     "desc": "ATK increases by #1[i]%.",
@@ -15760,7 +15760,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Weapon_S2_015_PLY_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"1651291033\">StageAbility_VS_Weapon_S2_015_PLY_Modifier</a>",
     "realName": "Prayers of Beauty",
     "aim": "Buff",
     "desc": "The final DMG dealt increases by #1[i]%.",
@@ -15771,7 +15771,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Card_SC_077_PLY_Modifier_2",
+    "name": "<a class=\"gModGreen\" id=\"757367835\">StageAbility_VS_Card_SC_077_PLY_Modifier_2</a>",
     "realName": "Blossom of Life",
     "aim": "Buff",
     "desc": "Each stack increases the DMG dealt by #1[i]%.",
@@ -16035,7 +16035,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Relic_321_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1306384815\">Relic_321_Sub</a>",
     "realName": "Arcadia of Woven Dreams",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -16046,7 +16046,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_322_Sub",
+    "name": "<a class=\"gModGreen\" id=\"294149172\">Relic_322_Sub</a>",
     "realName": "Revelry by the Sea",
     "aim": "Buff",
     "desc": "Increases DoT dealt by #1[i]%.",
@@ -16068,7 +16068,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23045_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"1662085723\">LC_23045_Bonus</a>",
     "realName": "King of Knights",
     "aim": "Buff",
     "desc": "ATK increases by #1[i]%.",
@@ -16109,7 +16109,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1773154335\">Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub</a>",
     "realName": "Paradox",
     "aim": "Debuff",
     "desc": "Break DMG taken increases by #1[i]%.",
@@ -16128,7 +16128,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub_PLY",
+    "name": "<a class=\"gModGreen\" id=\"1645086487\">Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub_PLY</a>",
     "realName": "Paradox",
     "aim": "Buff",
     "desc": "Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to #1[i]% of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
@@ -16139,7 +16139,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "StageAbility_VS_Devil_3113405_LE_ShieldTreasure",
+    "name": "<a class=\"gModGreen\" id=\"-750946821\">StageAbility_VS_Devil_3113405_LE_ShieldTreasure</a>",
     "realName": "Black Cloak Zone (Low-End Edition)",
     "aim": "Buff",
     "desc": "Immune to DMG dealt by an attack. This effect is dispelled at the start of the next wave.",
@@ -16268,7 +16268,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT",
+    "name": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>",
     "realName": "Echo Enigma",
     "aim": "Debuff",
     "desc": "Takes Wind DMG at the start of each turn for a certain number of turns. This effect has a limit of #1[i] stack(s).",
@@ -16279,7 +16279,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-1710887068\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_ForShow</a>",
     "realName": "Concordant Truce",
     "aim": "Debuff",
     "desc": "Upon entering combat, becomes afflicted with #1[i] stack(s) of \"Echo Enigma.\" After taking action, becomes afflicted with #2[i] stack(s) of \"Echo Enigma.\"",
@@ -16291,7 +16291,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2160_BaseAddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"1418148626\">Modifier_FantasticStory_BaseAbility_2160_BaseAddOn_ForShow</a>",
     "realName": "Grit Mechanics",
     "aim": "Debuff",
     "desc": "After receiving DoT, additionally accumulates #1[i] Grit Value for allies.",
@@ -16302,7 +16302,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2160_EnterFever_Sub",
+    "name": "<a class=\"gModGreen\" id=\"297114355\">Modifier_FantasticStory_BaseAbility_2160_EnterFever_Sub</a>",
     "realName": "Surging Grit",
     "aim": "Debuff",
     "desc": "Increases DMG taken by #1[i]%, decreases DMG dealt by #2[i]%, and increases SPD by #3[i]%.",
@@ -16315,7 +16315,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub",
+    "name": "<a class=\"gModGreen\" id=\"871276272\">Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub</a>",
     "realName": "Exposition",
     "aim": "Buff",
     "desc": "DoT dealt ignores #1[i]% of the target's All-Type RES.",
@@ -16326,7 +16326,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_PLY",
+    "name": "<a class=\"gModGreen\" id=\"-397579384\">Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_PLY</a>",
     "realName": "DoT Boost",
     "aim": "Buff",
     "desc": "Each stack increases DoT dealt by #1[i]%.",
@@ -16337,7 +16337,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2160_Plus2_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1668876339\">Modifier_FantasticStory_BaseAbility_2160_Plus2_Sub</a>",
     "realName": "Intertextuality",
     "aim": "Buff",
     "desc": "Increases Skill DMG dealt by #1[i]%. When attacking targets with \"Echo Enigma,\" each stack of \"Echo Enigma\" additionally increases Skill DMG by #2[i]%.",
@@ -16349,7 +16349,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2160_Plus2AddOn",
+    "name": "<a class=\"gModGreen\" id=\"596697214\">Modifier_FantasticStory_BaseAbility_2160_Plus2AddOn</a>",
     "realName": "Grit Mechanics: Intertextuality",
     "aim": "Buff",
     "desc": "For each enemy target hit with Skill, additionally accumulates #1[i] Grit Value for allies.",
@@ -16360,7 +16360,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2160_Plus3_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-187538002\">Modifier_FantasticStory_BaseAbility_2160_Plus3_ForShow</a>",
     "realName": "Misplacement",
     "aim": "Debuff",
     "desc": "When entering combat and after taking an action, additionally becomes afflicted with #1[i] stack(s) of \"Echo Enigma,\" where each stack of \"Echo Enigma\" increases DMG taken by #2[i]%.",
@@ -16372,7 +16372,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2160_Plus3AddOn",
+    "name": "<a class=\"gModGreen\" id=\"-273250865\">Modifier_FantasticStory_BaseAbility_2160_Plus3AddOn</a>",
     "realName": "Grit Mechanics: Misplacement",
     "aim": "Debuff",
     "desc": "After being defeated, additionally accumulates #1[i] Grit Value for allies.",
@@ -16498,7 +16498,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageSpecialAbility_10441217_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1300476012\">Modifier_StageSpecialAbility_10441217_Sub</a>",
     "realName": "Command Spell",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -16521,7 +16521,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23045_Bonus2",
+    "name": "<a class=\"gModGreen\" id=\"1567261515\">LC_23045_Bonus2</a>",
     "realName": "King of Knights",
     "aim": "Buff",
     "desc": "ATK increases by #1[i]%.",
@@ -16543,7 +16543,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21053_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"1300199833\">LC_21053_Sub2</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -16554,7 +16554,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21055_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-739615985\">LC_21055_Sub2</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -16565,7 +16565,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_21061_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-461503808\">LC_21061_Sub</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -16576,7 +16576,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23044_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"237864619\">LC_23044_Sub2</a>",
     "realName": "Dispossession",
     "aim": "Buff",
     "desc": "When dealing DMG, ignores #1[i]% of the target's DEF.",
@@ -16642,7 +16642,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallengeEX_Talent_StageAbility_PLY_056",
+    "name": "<a class=\"gModGreen\" id=\"-1107420759\">MStrongChallengeEX_Talent_StageAbility_PLY_056</a>",
     "realName": "Bold Leader",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -16782,7 +16782,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_Plus5_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-588223096\">Modifier_FantasticStory_BaseAbility_2010_Plus5_Sub</a>",
     "realName": "Ballad",
     "aim": "Buff",
     "desc": "Increases DMG by #1[i]%, and memomaster's action advances by #2[i]% when it disappears.",
@@ -16794,7 +16794,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_Plus5AddOn",
+    "name": "<a class=\"gModGreen\" id=\"-454840159\">Modifier_FantasticStory_BaseAbility_2010_Plus5AddOn</a>",
     "realName": "Grit Mechanics: Ballad",
     "aim": "Buff",
     "desc": "For each enemy target hit after an attack, additionally accumulates #1[i] Grit Value for allies.",
@@ -16805,7 +16805,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_Plus6_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1764196443\">Modifier_FantasticStory_BaseAbility_2010_Plus6_Sub</a>",
     "realName": "Euphony",
     "aim": "Debuff",
     "desc": "Increases DoT taken by #1[i]%.",
@@ -16816,7 +16816,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_Plus6AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"224481971\">Modifier_FantasticStory_BaseAbility_2010_Plus6AddOn_ForShow</a>",
     "realName": "Grit Mechanics: Euphony",
     "aim": "Debuff",
     "desc": "After receiving DoT, additionally accumulates #1[i] Grit Value for allies.",
@@ -16851,7 +16851,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_22005_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1796724281\">LC_22005_Sub</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[i]%. This effect stacks up to #2[i] time(s).",
@@ -16863,7 +16863,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23047_Sub3",
+    "name": "<a class=\"gModGreen\" id=\"-852967101\">LC_23047_Sub3</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "Increases SPD by #1[f1]%.",
@@ -16885,7 +16885,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23048_Sub",
+    "name": "<a class=\"gModGreen\" id=\"361999223\">LC_23048_Sub</a>",
     "realName": "Skill DMG Boost",
     "aim": "Buff",
     "desc": "Increases Skill DMG dealt by #1[i]%.",
@@ -16963,7 +16963,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_127_Sub3",
+    "name": "<a class=\"gModGreen\" id=\"-1842396958\">Relic_127_Sub3</a>",
     "realName": "World-Remaking Deliverer",
     "aim": "Buff",
     "desc": "Max HP increases by #1[i]%.",
@@ -16974,7 +16974,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_127_Sub4",
+    "name": "<a class=\"gModGreen\" id=\"-1926285053\">Relic_127_Sub4</a>",
     "realName": "World-Remaking Deliverer",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -16985,7 +16985,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_128_Sub1",
+    "name": "<a class=\"gModGreen\" id=\"1965254951\">Relic_128_Sub1</a>",
     "realName": "Self-Enshrouded Recluse",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -17030,7 +17030,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23051_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-194150391\">LC_23051_Sub</a>",
     "realName": "Redoubt",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -17099,7 +17099,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23047_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-869744720\">LC_23047_Sub2</a>",
     "realName": "Enthrallment",
     "aim": "Debuff",
     "desc": "Increases DoT received by #1[f1]%.",
@@ -17226,7 +17226,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY",
+    "name": "<a class=\"gModGreen\" id=\"1211620586\">Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY</a>",
     "realName": "Reminiscence",
     "aim": "Buff",
     "desc": "Increases each stack's DMG dealt by #1[i]%.",
@@ -17237,7 +17237,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_Plus7_Sub",
+    "name": "<a class=\"gModGreen\" id=\"412492093\">Modifier_FantasticStory_BaseAbility_2060_Plus7_Sub</a>",
     "realName": "Memory",
     "aim": "Debuff",
     "desc": "Increases DoT taken by #1[i]%.",
@@ -17248,7 +17248,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-1785697589\">Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn_ForShow</a>",
     "realName": "Grit Mechanics: Memory",
     "aim": "Debuff",
     "desc": "After receiving DoT, additionally accumulates #1[i] Grit Value for allies.",
@@ -17259,7 +17259,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_Plus8_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1428129204\">Modifier_FantasticStory_BaseAbility_2060_Plus8_Sub</a>",
     "realName": "Epiphany",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%. After using a Skill, applies #2[i] stacks of \"Resound\" to all allies.",
@@ -17271,7 +17271,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-1198694676\">Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn_ForShow</a>",
     "realName": "Grit Mechanics: Epiphany",
     "aim": "Buff",
     "desc": "After using a Skill to attack, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
@@ -17293,7 +17293,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallengeEX_Talent_StageAbility_TGT_067",
+    "name": "<a class=\"gModGreen\" id=\"-2061183531\">MStrongChallengeEX_Talent_StageAbility_TGT_067</a>",
     "realName": "Unstoppable Momentum",
     "aim": "Buff",
     "desc": "Increases Weakness Break Efficiency by #1[i]% and increases CRIT DMG by #2[i]%.",
@@ -17552,7 +17552,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "LC_23049_Sub",
+    "name": "<a class=\"gModGreen\" id=\"474890872\">LC_23049_Sub</a>",
     "realName": "Noctis",
     "aim": "Other",
     "desc": "When the wearer's memosprite disappears, regenerates #1[i] Energy for the wearer.",
@@ -17563,7 +17563,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23049_Sub3",
+    "name": "<a class=\"gModGreen\" id=\"-634233839\">LC_23049_Sub3</a>",
     "realName": "Sleepless",
     "aim": "Buff",
     "desc": "When dealing DMG, ignores #1[i]% of the target's DEF.",
@@ -17574,7 +17574,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23049_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-651011458\">LC_23049_Sub2</a>",
     "realName": "Sleepless",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -17937,7 +17937,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_323_Sub3",
+    "name": "<a class=\"gModGreen\" id=\"1051103648\">Relic_323_Sub3</a>",
     "realName": "Amphoreus, The Eternal Land",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -17948,7 +17948,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_324_Sub",
+    "name": "<a class=\"gModGreen\" id=\"25554174\">Relic_324_Sub</a>",
     "realName": "Tengoku@Livestream",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -18564,7 +18564,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2160_Plus4_Sub",
+    "name": "<a class=\"gModGreen\" id=\"2135566331\">Modifier_FantasticStory_BaseAbility_2160_Plus4_Sub</a>",
     "realName": "Torn Fabric",
     "aim": "Buff",
     "desc": "When dealing DMG to targets afflicted with \"Echo Enigma,\" each stack of \"Echo Enigma\" increases Weakness Break Efficiency by #1[i]%.",
@@ -18575,7 +18575,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2160_Plus4AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-354244179\">Modifier_FantasticStory_BaseAbility_2160_Plus4AddOn_ForShow</a>",
     "realName": "Grit Mechanics: Torn Fabric",
     "aim": "Debuff",
     "desc": "When a Weakness is Broken, additionally accumulates #1[i] Grit Value for allies.",
@@ -18586,7 +18586,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2160_Plus5_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"1172490940\">Modifier_FantasticStory_BaseAbility_2160_Plus5_ForShow</a>",
     "realName": "Cinnabar Inscription",
     "aim": "Debuff",
     "desc": "Each stack of \"Echo Enigma\" increases DMG taken by #1[i]%.",
@@ -18597,7 +18597,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2160_Plus5_Servant",
+    "name": "<a class=\"gModGreen\" id=\"1127959511\">Modifier_FantasticStory_BaseAbility_2160_Plus5_Servant</a>",
     "realName": "Cinnabar Inscription",
     "aim": "Buff",
     "desc": "After attacking, inflicts #1[i] stacks of \"Echo Enigma\" on the target.",
@@ -18608,7 +18608,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2160_Plus5AddOn_Servant",
+    "name": "<a class=\"gModGreen\" id=\"-1360922097\">Modifier_FantasticStory_BaseAbility_2160_Plus5AddOn_Servant</a>",
     "realName": "Cinnabar Inscription",
     "aim": "Buff",
     "desc": "For each enemy target hit after an attack, additionally accumulates #1[i] Grit Value for allies.",
@@ -19460,7 +19460,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23052_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-97167540\">LC_23052_Sub</a>",
     "realName": "Verse",
     "aim": "Other",
     "desc": "CRIT DMG dealt by all allies increases by #1[i]%.",
@@ -19471,7 +19471,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23052_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"1610136410\">LC_23052_Sub2</a>",
     "realName": "Blank",
     "aim": "Other",
     "desc": "DMG received by all enemies increases by #1[i]%.",
@@ -19501,7 +19501,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "LC_22006_Halo",
+    "name": "<a class=\"gModGreen\" id=\"-428551888\">LC_22006_Halo</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -19546,7 +19546,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23052_Halo",
+    "name": "<a class=\"gModGreen\" id=\"2050514144\">LC_23052_Halo</a>",
     "realName": "Verse",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -19557,7 +19557,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23052_Halo2",
+    "name": "<a class=\"gModGreen\" id=\"951721622\">LC_23052_Halo2</a>",
     "realName": "Blank",
     "aim": "Debuff",
     "desc": "DMG received increases by #1[i]%.",
@@ -19661,7 +19661,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_plus8_sub",
+    "name": "<a class=\"gModGreen\" id=\"-2145216821\">Modifier_FantasticStory_BaseAbility_2010_plus8_sub</a>",
     "realName": "Ravings",
     "aim": "Debuff",
     "desc": "Increases Break DMG taken by #1[i]%.",
@@ -19672,7 +19672,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2010_Plus8AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"1120307389\">Modifier_FantasticStory_BaseAbility_2010_Plus8AddOn_ForShow</a>",
     "realName": "Grit Mechanics_Ravings",
     "aim": "Buff",
     "desc": "After attacking enemy targets, every enemy target who has their Weakness Broken additionally accumulates #1[i] Grit Value.",
@@ -19700,7 +19700,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallengeEX_Talent_StageAbility_PLY_077",
+    "name": "<a class=\"gModGreen\" id=\"1291381400\">MStrongChallengeEX_Talent_StageAbility_PLY_077</a>",
     "realName": "Shatterstrike",
     "aim": "Buff",
     "desc": "Increases Break DMG dealt by #1[i]%.",
@@ -19711,7 +19711,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallengeEX_Talent_StageAbility_PLY_079_Extra",
+    "name": "<a class=\"gModGreen\" id=\"-675587525\">MStrongChallengeEX_Talent_StageAbility_PLY_079_Extra</a>",
     "realName": "Unto Apotheosis",
     "aim": "Buff",
     "desc": "Each stack increases CRIT DMG by #1[i]%. This effect can stack up to #2[i] time(s).",
@@ -19723,7 +19723,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallengeEX_Talent_StageAbility_PLY_080",
+    "name": "<a class=\"gModGreen\" id=\"1376108138\">MStrongChallengeEX_Talent_StageAbility_PLY_080</a>",
     "realName": "Past Life: Shadowed Reverie",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -19734,7 +19734,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallengeEX_Talent_StageAbility_PLY_081_Extra",
+    "name": "<a class=\"gModGreen\" id=\"1435721852\">MStrongChallengeEX_Talent_StageAbility_PLY_081_Extra</a>",
     "realName": "Whirlwind Turn",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -19767,7 +19767,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23050_Sub",
+    "name": "<a class=\"gModGreen\" id=\"503983570\">LC_23050_Sub</a>",
     "realName": "Immolation",
     "aim": "Buff",
     "desc": "Increases Break DMG dealt by #1[i]%.",

@@ -18,13 +18,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_24000_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1207613833\">LC_24000_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_24000_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__410951674\">LC_24000_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -56,7 +56,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_24000_AttackAddedRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__844192795\">LC_24000_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -101,7 +101,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_24000_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1207613833\">LC_24000_Main</a>",
           "execute": [
             {
               "eventTrigger": "Attack Start [Owner]",
@@ -114,7 +114,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "LC_24000_AttackAddedRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"844192795\">LC_24000_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
                   },
                   "passed": [
                     {
@@ -125,7 +125,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value1": "LC_24000_AttackAddedRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+                        "value1": "<a class=\"gModGreen\" id=\"844192795\">LC_24000_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                         "compareType": "<",
                         "value2": {
                           "operator": "Variables[0] (4) || RETURN",
@@ -154,7 +154,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "LC_24000_AttackAddedRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"844192795\">LC_24000_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (4) || RETURN",
                             "displayLines": "4",
@@ -184,7 +184,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_24000_AttackAddedRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"844192795\">LC_24000_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (4) || RETURN",
                         "displayLines": "4",
@@ -207,7 +207,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_24000_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"410951674\">LC_24000_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

@@ -15,7 +15,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yunli_Ability03_ForBidUltra"
+      "modifier": "<a class=\"gModGreen\" id=\"183026830\">Yunli_Ability03_ForBidUltra</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -23,7 +23,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]"
     },
     {
       "name": "Update Energy",
@@ -41,7 +41,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -49,7 +49,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yunli_Blocking_CritDamage[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1896809372\">Yunli_Blocking_CritDamage</a>[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -57,7 +57,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Standard_CTRL_Taunt[<span class=\"descriptionNumberColor\">Taunt</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1488319040\">Standard_CTRL_Taunt</a>[<span class=\"descriptionNumberColor\">Taunt</span>]"
     },
     "Trigger: Ability End"
   ],

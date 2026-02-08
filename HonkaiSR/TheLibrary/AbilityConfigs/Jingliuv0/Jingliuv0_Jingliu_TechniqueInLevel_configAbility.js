@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Technique_Jingliu_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1289509358\">Technique_Jingliu_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_TechniqueUsage",
+      "for": "<a class=\"gModGreen\" id=\"mod__67659312\">Jingliu_TechniqueUsage</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -76,7 +76,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Technique_Jingliu_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1289509358\">Technique_Jingliu_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -93,7 +93,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -154,7 +154,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jingliu_TechniqueUsage",
+                  "modifier": "<a class=\"gModGreen\" id=\"67659312\">Jingliu_TechniqueUsage</a>",
                   "valuePerStack": {
                     "MDF_MazeMoonFlag": {
                       "operator": "Variables[0] (1) || RETURN",

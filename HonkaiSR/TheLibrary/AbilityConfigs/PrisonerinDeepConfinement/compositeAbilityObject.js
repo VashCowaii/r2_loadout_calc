@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_116_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1941336916\">Relic_116_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_116_DamageUp_Dot",
+          "for": "<a class=\"gModGreen\" id=\"mod__1031791545\">Relic_116_DamageUp_Dot</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -83,7 +83,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_116_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1941336916\">Relic_116_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -94,7 +94,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_116_DamageUp_Dot",
+                  "modifier": "<a class=\"gModGreen\" id=\"1031791545\">Relic_116_DamageUp_Dot</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.06) || RETURN",

@@ -21,7 +21,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Kafka_IF02_BattleEventSummon"
+          "modifier": "<a class=\"gModGreen\" id=\"-1519530085\">Monster_W2_Kafka_IF02_BattleEventSummon</a>"
         }
       ]
     },
@@ -31,7 +31,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Kafka_IF02_ListenMonsterActionModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1004356166\">Monster_W2_Kafka_IF02_ListenMonsterActionModifier</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -39,7 +39,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Kafka_IF02_BreakListen"
+      "modifier": "<a class=\"gModGreen\" id=\"-1644855766\">Monster_W2_Kafka_IF02_BreakListen</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -47,7 +47,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Kafka_BattleScore1"
+      "modifier": "<a class=\"gModGreen\" id=\"1961920728\">Monster_W2_Kafka_BattleScore1</a>"
     },
     {
       "name": "Declare Custom Variable",
@@ -64,7 +64,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -72,7 +72,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Kafka_IF_HPRatioTriggerAOE"
+      "modifier": "<a class=\"gModGreen\" id=\"781148168\">Monster_W2_Kafka_IF_HPRatioTriggerAOE</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -80,7 +80,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Kafka_IF_Pursuit"
+      "modifier": "<a class=\"gModGreen\" id=\"-857035022\">Monster_W2_Kafka_IF_Pursuit</a>"
     },
     {
       "name": "Boss Bar Display",
@@ -96,7 +96,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Kafka_IF02_PartController"
+      "modifier": "<a class=\"gModGreen\" id=\"1659045581\">Monster_W2_Kafka_IF02_PartController</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -104,7 +104,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Kafka_IF_Power",
+      "modifier": "<a class=\"gModGreen\" id=\"1086358837\">Monster_W2_Kafka_IF_Power</a>",
       "valuePerStack": {
         "MDF_DamageUpRatio_PerLayer": {
           "operator": "Variables[0] (UnusedUnderThisBase_14) || RETURN",
@@ -122,7 +122,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Kafka_IF_LowHP",
+      "modifier": "<a class=\"gModGreen\" id=\"593237238\">Monster_W2_Kafka_IF_LowHP</a>",
       "valuePerStack": {
         "MDF_LowHPRatio": {
           "operator": "Variables[0] (UnusedUnderThisBase_17) || RETURN",
@@ -140,14 +140,14 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_IF_BOSS_Standard_BreakBonus"
+      "modifier": "<a class=\"gModGreen\" id=\"651865792\">Monster_IF_BOSS_Standard_BreakBonus</a>"
     }
   ],
   "whenAdded": [],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_IF02_ListenMonsterActionModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1004356166\">Monster_W2_Kafka_IF02_ListenMonsterActionModifier</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -175,7 +175,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Monster_W2_Kafka_IF02_Ability08_ExecuteTag"
+              "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
             },
             {
               "name": "Find New Target",
@@ -193,7 +193,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -201,7 +201,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_Company_Coin_Elite[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
                   }
                 ]
               },
@@ -217,7 +217,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_Kafka_IF02_Ability08_ExecuteTag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
                 }
               ]
             },
@@ -245,7 +245,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Monster_W2_Kafka_IF02_ContainJXDTag"
+                      "modifier": "<a class=\"gModGreen\" id=\"1155608240\">Monster_W2_Kafka_IF02_ContainJXDTag</a>"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -281,7 +281,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_BattleScore1",
+      "for": "<a class=\"gModGreen\" id=\"mod__1961920728\">Monster_W2_Kafka_BattleScore1</a>",
       "execute": [
         {
           "eventTrigger": "Modifier Cleansed [Anyone]",
@@ -293,7 +293,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "Standard_MindControl[<span class=\"descriptionNumberColor\">Dominated</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
                   },
                   {
                     "name": "Is Teammate",
@@ -351,14 +351,14 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_IF02_BEFrozen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-376688543\">Monster_W2_Kafka_IF02_BEFrozen</a>",
       "modifierFlags": [
         "MuteSpeed"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_IF02_BreakBebuff",
+      "for": "<a class=\"gModGreen\" id=\"mod__-680193995\">Monster_W2_Kafka_IF02_BreakBebuff</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -378,7 +378,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_IF02_BreakListen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1644855766\">Monster_W2_Kafka_IF02_BreakListen</a>",
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",

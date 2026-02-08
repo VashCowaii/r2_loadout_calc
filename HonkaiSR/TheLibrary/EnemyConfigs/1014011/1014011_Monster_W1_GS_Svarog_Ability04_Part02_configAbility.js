@@ -23,7 +23,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMore"
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -31,7 +31,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_GS_Svarog_Level_SpecialWin"
+          "modifier": "<a class=\"gModGreen\" id=\"-1443371257\">Monster_W1_GS_Svarog_Level_SpecialWin</a>"
         }
       ]
     },
@@ -71,7 +71,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Standard_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
         "displayLines": "{[Skill04[2]]}",

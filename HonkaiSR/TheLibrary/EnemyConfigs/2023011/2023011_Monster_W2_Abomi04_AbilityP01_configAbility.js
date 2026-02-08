@@ -15,7 +15,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Abomi04_HitToHeal_Controller"
+      "modifier": "<a class=\"gModGreen\" id=\"378580326\">Enemy_W2_Abomi04_HitToHeal_Controller</a>"
     }
   ],
   "references": []

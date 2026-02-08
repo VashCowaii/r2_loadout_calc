@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]] - {{Caster}}"
       },
-      "modifier": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1724674064\">Tribbie_CanTriggerInsertTag</a>[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Tribbie_SKL03_Bonus[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1351986018\">Tribbie_SKL03_Bonus</a>[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",

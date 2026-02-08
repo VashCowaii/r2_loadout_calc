@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -35,7 +35,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>"
     },
     {
       "name": "Find New Target",
@@ -59,7 +59,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>"
         }
       ],
       "noTargetFound": [
@@ -78,7 +78,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -86,7 +86,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_AbilityTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
             }
           ]
         }
@@ -115,7 +115,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>"
         }
       ],
       "noTargetFound": [
@@ -134,7 +134,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -142,7 +142,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_AbilityTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
             }
           ]
         }
@@ -171,7 +171,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>"
         }
       ],
       "noTargetFound": [
@@ -190,7 +190,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -198,7 +198,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_AbilityTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
             }
           ]
         }
@@ -227,7 +227,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>"
         }
       ],
       "noTargetFound": [
@@ -246,7 +246,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -254,7 +254,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_AbilityTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
             }
           ]
         }
@@ -277,7 +277,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon01"
+              "modifier": "<a class=\"gModGreen\" id=\"1783897766\">Monster_W2_Argenti_IF_Summon01</a>"
             }
           }
         ]
@@ -306,7 +306,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_AbilityTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
             }
           ]
         }
@@ -329,7 +329,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon01"
+              "modifier": "<a class=\"gModGreen\" id=\"1783897766\">Monster_W2_Argenti_IF_Summon01</a>"
             }
           }
         ]
@@ -354,7 +354,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon02"
+              "modifier": "<a class=\"gModGreen\" id=\"1767120147\">Monster_W2_Argenti_IF_Summon02</a>"
             }
           }
         ]
@@ -384,7 +384,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_AbilityTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
             }
           ]
         }
@@ -407,7 +407,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon02"
+              "modifier": "<a class=\"gModGreen\" id=\"1767120147\">Monster_W2_Argenti_IF_Summon02</a>"
             }
           }
         ]
@@ -432,7 +432,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon03"
+              "modifier": "<a class=\"gModGreen\" id=\"1750342528\">Monster_W2_Argenti_IF_Summon03</a>"
             }
           }
         ]
@@ -462,7 +462,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_AbilityTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
             }
           ]
         }
@@ -485,7 +485,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon03"
+              "modifier": "<a class=\"gModGreen\" id=\"1750342528\">Monster_W2_Argenti_IF_Summon03</a>"
             }
           }
         ]
@@ -510,7 +510,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon01"
+              "modifier": "<a class=\"gModGreen\" id=\"1783897766\">Monster_W2_Argenti_IF_Summon01</a>"
             }
           }
         ]
@@ -535,7 +535,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon04"
+              "modifier": "<a class=\"gModGreen\" id=\"1867785861\">Monster_W2_Argenti_IF_Summon04</a>"
             }
           }
         ]
@@ -565,7 +565,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_AbilityTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
             }
           ]
         }
@@ -588,7 +588,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon04"
+              "modifier": "<a class=\"gModGreen\" id=\"1867785861\">Monster_W2_Argenti_IF_Summon04</a>"
             }
           }
         ]
@@ -613,7 +613,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon02"
+              "modifier": "<a class=\"gModGreen\" id=\"1767120147\">Monster_W2_Argenti_IF_Summon02</a>"
             }
           }
         ]
@@ -638,7 +638,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon03"
+              "modifier": "<a class=\"gModGreen\" id=\"1750342528\">Monster_W2_Argenti_IF_Summon03</a>"
             }
           }
         ]
@@ -663,7 +663,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_Summon04"
+              "modifier": "<a class=\"gModGreen\" id=\"1867785861\">Monster_W2_Argenti_IF_Summon04</a>"
             }
           }
         ]
@@ -677,38 +677,38 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "Monster_W2_Argenti_Ability15_IF_MarkModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"561789538\">Monster_W2_Argenti_Ability15_IF_MarkModifier</a>"
     },
     "Trigger: Ability End"
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Argenti_Ability15_IF_MarkModifier"
+      "for": "<a class=\"gModGreen\" id=\"mod__561789538\">Monster_W2_Argenti_Ability15_IF_MarkModifier</a>"
     }
   ]
 }

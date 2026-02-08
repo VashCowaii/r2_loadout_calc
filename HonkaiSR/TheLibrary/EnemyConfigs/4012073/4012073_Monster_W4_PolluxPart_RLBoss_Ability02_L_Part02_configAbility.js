@@ -218,11 +218,11 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Monster_W4_PolluxPart_Strengthen_EggAbsorb_FX"
+      "functionName": "<a class=\"gTempYellow\" id=\"1740422599\">Monster_W4_PolluxPart_Strengthen_EggAbsorb_FX</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Monster_W4_PolluxPart_Strengthen_EggAbsorb"
+      "functionName": "<a class=\"gTempYellow\" id=\"965791908\">Monster_W4_PolluxPart_Strengthen_EggAbsorb</a>"
     },
     "Trigger: Ability End"
   ],

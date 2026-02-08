@@ -20,7 +20,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Cocolia_IF_SuperArmorController",
+          "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
           "valuePerStack": {
             "MDF_IF_BOSS_BreakDelay": {
               "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
@@ -54,7 +54,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Kafka_IF_WeaknessSplit",
+          "modifier": "<a class=\"gModGreen\" id=\"-243559524\">Enemy_W2_Kafka_IF_WeaknessSplit</a>",
           "valuePerStack": {
             "MDF_MaxSummonNum": 2,
             "MDF_StanceWeaknessList": 1725,
@@ -67,7 +67,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Kafka_IF_AssistController",
+          "modifier": "<a class=\"gModGreen\" id=\"-916114620\">Enemy_W2_Kafka_IF_AssistController</a>",
           "valuePerStack": {
             "MDF_DotMaxCount": {
               "operator": "Variables[0] ({[SkillIF01[0]]}) || RETURN",
@@ -101,7 +101,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Kafka_IF_AssistController",
+      "for": "<a class=\"gModGreen\" id=\"mod__-916114620\">Enemy_W2_Kafka_IF_AssistController</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
@@ -239,7 +239,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_IF03_SummonKillBonus01[<span class=\"descriptionNumberColor\">Madden</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-689878752\">Monster_W2_Kafka_IF03_SummonKillBonus01</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
                         "invertCondition": true
                       },
                       {
@@ -248,7 +248,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_IF03_SummonKillBonus02[<span class=\"descriptionNumberColor\">Madden</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-639545895\">Monster_W2_Kafka_IF03_SummonKillBonus02</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
                         "invertCondition": true
                       },
                       {
@@ -257,7 +257,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_IF03_SummonKillBonus03[<span class=\"descriptionNumberColor\">Madden</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-656323514\">Monster_W2_Kafka_IF03_SummonKillBonus03</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
                         "invertCondition": true
                       },
                       {
@@ -266,7 +266,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Kafka_IF03_SummonKillBonus04[<span class=\"descriptionNumberColor\">Madden</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-605990657\">Monster_W2_Kafka_IF03_SummonKillBonus04</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
                         "invertCondition": true
                       },
                       {
@@ -522,7 +522,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Kafka_IF_AssistController_Save[<span class=\"descriptionNumberColor\">Threads of the Puppet</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1540227508\">Enemy_W2_Kafka_IF_AssistController_Save</a>[<span class=\"descriptionNumberColor\">Threads of the Puppet</span>]",
       "description": "Consumes Threads of the Puppet to apply Madden to summons.",
       "type": "Other",
       "statusName": "Threads of the Puppet"

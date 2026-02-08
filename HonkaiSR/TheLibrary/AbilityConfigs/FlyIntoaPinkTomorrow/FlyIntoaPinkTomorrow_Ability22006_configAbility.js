@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_22006_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1797491335\">LC_22006_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_22006_Halo[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-428551888\">LC_22006_Halo</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_22006_Sub2",
+      "for": "<a class=\"gModGreen\" id=\"mod__679385098\">LC_22006_Sub2</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -81,7 +81,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_22006_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-585058756\">LC_22006_Sub</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -99,7 +99,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}} + {{Caster's Memosprite}}"
                   },
-                  "modifier": "LC_22006_Sub2"
+                  "modifier": "<a class=\"gModGreen\" id=\"679385098\">LC_22006_Sub2</a>"
                 }
               ]
             }
@@ -113,14 +113,14 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "LC_22006_Halo[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-428551888\">LC_22006_Halo</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_22006_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1797491335\">LC_22006_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -157,7 +157,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_22006_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-585058756\">LC_22006_Sub</a>"
                 }
               ]
             }

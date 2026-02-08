@@ -44,7 +44,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "W2_ArgentiTotem_01_BattleScore1"
+              "modifier": "<a class=\"gModGreen\" id=\"-444895536\">W2_ArgentiTotem_01_BattleScore1</a>"
             }
           ]
         },
@@ -54,7 +54,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Enemy_Argenti_DamageUP[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
             "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
             "displayLines": "{[SkillP01[3]]}",
@@ -90,7 +90,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Enemy_Argenti_DamageUP[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
             "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
             "displayLines": "{[SkillP01[3]]}",
@@ -119,7 +119,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Enemy_Argenti_DamageUP[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
             "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
             "displayLines": "{[SkillP01[3]]}",

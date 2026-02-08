@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_Eidolon6_StancePreview",
+      "for": "<a class=\"gModGreen\" id=\"mod__313910489\">Memosprite_CastoriceServant_Eidolon6_StancePreview</a>",
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
@@ -60,7 +60,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage",
+      "for": "<a class=\"gModGreen\" id=\"mod__-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ForceStanceDamage"
@@ -93,7 +93,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_Ability23Check",
+      "for": "<a class=\"gModGreen\" id=\"mod__1420894416\">Memosprite_CastoriceServant_Ability23Check</a>",
       "stackData": [],
       "latentQueue": [
         "CL_PlayTimes",
@@ -102,7 +102,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_BP_Explode",
+      "for": "<a class=\"gModGreen\" id=\"mod__-256072391\">Memosprite_CastoriceServant_BP_Explode</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -177,7 +177,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Disable"
+              "modifier": "<a class=\"gModGreen\" id=\"1341939671\">Memosprite_CastoriceServant_Disable</a>"
             }
           ]
         },
@@ -190,7 +190,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Disable"
+              "modifier": "<a class=\"gModGreen\" id=\"1341939671\">Memosprite_CastoriceServant_Disable</a>"
             },
             {
               "name": "Update Ability Binding",
@@ -213,7 +213,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_Disable",
+      "for": "<a class=\"gModGreen\" id=\"mod__1341939671\">Memosprite_CastoriceServant_Disable</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -242,7 +242,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_BPCost_3",
+      "for": "<a class=\"gModGreen\" id=\"mod__131262836\">Memosprite_CastoriceServant_BPCost_3</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -346,7 +346,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_BPCost_2",
+      "for": "<a class=\"gModGreen\" id=\"mod__148040455\">Memosprite_CastoriceServant_BPCost_2</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -375,7 +375,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_BPCost_1",
+      "for": "<a class=\"gModGreen\" id=\"mod__164818074\">Memosprite_CastoriceServant_BPCost_1</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -404,7 +404,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_Flag01",
+      "for": "<a class=\"gModGreen\" id=\"mod__847472600\">Memosprite_CastoriceServant_Flag01</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -413,7 +413,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_InsideExplode[<span class=\"descriptionNumberColor\">Back to the Black</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2133723962\">Memosprite_CastoriceServant_InsideExplode</a>[<span class=\"descriptionNumberColor\">Back to the Black</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -425,7 +425,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_GoDie",
+      "for": "<a class=\"gModGreen\" id=\"mod__1793501095\">Memosprite_CastoriceServant_GoDie</a>",
       "modifierFlags": [
         "DisableHPBarRefresh"
       ],
@@ -439,7 +439,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_HitDamageSplit",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -454,7 +454,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "lockHolder": "Memosprite_CastoriceServant_HitDamageSplit"
+              "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
             }
           ]
         },
@@ -472,7 +472,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Standard_Departed",
+                "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
                 "invertCondition": true
               },
               "passed": [
@@ -494,7 +494,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "lockHolder": "Memosprite_CastoriceServant_HitDamageSplit"
+                      "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
                     }
                   ]
                 }
@@ -513,7 +513,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Standard_Departed",
+                "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
                 "invertCondition": true
               },
               "passed": [
@@ -534,7 +534,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "lockHolder": "Memosprite_CastoriceServant_HitDamageSplit"
+                        "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
                       }
                     ]
                   },
@@ -570,7 +570,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "lockHolder": "Memosprite_CastoriceServant_HitDamageSplit"
+              "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
             }
           ]
         },
@@ -583,7 +583,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "lockHolder": "Memosprite_CastoriceServant_HitDamageSplit"
+              "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
             }
           ]
         }
@@ -591,7 +591,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_OnListenHitDamageSplit",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1340712313\">Memosprite_CastoriceServant_OnListenHitDamageSplit</a>",
       "stackData": [],
       "latentQueue": [],
       "subModList": [
@@ -601,14 +601,14 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]]"
           },
-          "modifier": "Memosprite_CastoriceServant_HitDamageSplit",
+          "modifier": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_LoseHPPreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-858784788\">Memosprite_CastoriceServant_LoseHPPreShow</a>",
       "execute": [
         {
           "eventTrigger": "Update Target Selected(UI) [Anyone]",
@@ -660,7 +660,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Memosprite_CastoriceServant_LifeTime",
+                    "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -719,7 +719,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Memosprite_CastoriceServant_LifeTime",
+                    "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -806,7 +806,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-509656395\">Memosprite_CastoriceServant_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
       "stackType": "Replace",
       "execute": [
         {

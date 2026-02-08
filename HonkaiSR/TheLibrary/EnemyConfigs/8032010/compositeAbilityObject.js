@@ -21,7 +21,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Soldier02_01_CoinPassive"
+          "modifier": "<a class=\"gModGreen\" id=\"-288523596\">Monster_W1_Soldier02_01_CoinPassive</a>"
         }
       ],
       "references": []
@@ -100,7 +100,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Soldier02_01_CoinPassive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-288523596\">Monster_W1_Soldier02_01_CoinPassive</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -113,7 +113,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
                   },
                   "failed": [
                     {
@@ -122,7 +122,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio": {
                           "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",

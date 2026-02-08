@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "TingYun_ByIsTingYun"
+      "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
     },
     {
       "name": "IF",
@@ -33,7 +33,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Ability02PreShowModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-894890999\">Ability02PreShowModifier</a>"
         }
       ]
     },
@@ -49,7 +49,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Ability02PreShowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-894890999\">Ability02PreShowModifier</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -70,7 +70,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Modifier Holder}}"
             },
-            "modifier": "Tingyun_Trace_B1_SpeedUp[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1819337398\">Tingyun_Trace_B1_SpeedUp</a>[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]"
           }
         },
         "delayAdvancePreview": {

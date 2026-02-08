@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Serval_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1873521021\">StageAbility_Maze_Serval_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Serval_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1873521021\">StageAbility_Maze_Serval_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -87,7 +87,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

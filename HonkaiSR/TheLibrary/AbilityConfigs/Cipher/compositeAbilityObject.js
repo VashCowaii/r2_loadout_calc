@@ -86,14 +86,14 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Cipher_Modifier",
+          "modifier": "<a class=\"gModGreen\" id=\"377231131\">StageAbility_Maze_Cipher_Modifier</a>",
           "valuePerStack": {}
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Cipher_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__377231131\">StageAbility_Maze_Cipher_Modifier</a>",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
@@ -336,7 +336,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Cipher_Eidolon2"
+              "modifier": "<a class=\"gModGreen\" id=\"441310455\">Cipher_Eidolon2</a>"
             }
           ]
         },
@@ -402,7 +402,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Cipher_Eidolon6",
+              "modifier": "<a class=\"gModGreen\" id=\"374199979\">Cipher_Eidolon6</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (3.5) || RETURN",
@@ -422,7 +422,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cipher_Mark_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"1663627639\">Cipher_Mark_Listen</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -435,7 +435,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cipher_BpKuoSan_Self[<span class=\"descriptionNumberColor\">Patron</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"2063646932\">Cipher_BpKuoSan_Self</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
         },
         {
           "name": "Define Custom Variable with Stat",
@@ -520,7 +520,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Cipher_PointB1_ListenSpeedChange"
+              "modifier": "<a class=\"gModGreen\" id=\"-1516019857\">Cipher_PointB1_ListenSpeedChange</a>"
             }
           ]
         },
@@ -537,7 +537,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Cipher_PointB2_ListenNoKuosan"
+              "modifier": "<a class=\"gModGreen\" id=\"1617793657\">Cipher_PointB2_ListenNoKuosan</a>"
             }
           ]
         },
@@ -554,7 +554,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Cipher_PointB3_Aura"
+              "modifier": "<a class=\"gModGreen\" id=\"-362400486\">Cipher_PointB3_Aura</a>"
             }
           ]
         },
@@ -564,13 +564,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cipher_Insert_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"-556818185\">Cipher_Insert_Listen</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Cipher_BpKuoSan_Self[<span class=\"descriptionNumberColor\">Patron</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2063646932\">Cipher_BpKuoSan_Self</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
@@ -595,7 +595,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                         },
                         "invertCondition": true
                       }
@@ -631,7 +631,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
                           "valuePerStack": {}
                         }
                       ]
@@ -651,7 +651,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                   },
                   "passed": [
                     {
@@ -696,7 +696,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
                           "valuePerStack": {}
                         }
                       ]
@@ -721,7 +721,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                   },
                   "noTargetFound": [
                     {
@@ -753,7 +753,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
                           "valuePerStack": {}
                         }
                       ]
@@ -779,7 +779,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                   },
                   "noTargetFound": [
                     {
@@ -811,7 +811,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
                           "valuePerStack": {}
                         }
                       ]
@@ -829,7 +829,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_PointB2_ListenNoKuosan",
+          "for": "<a class=\"gModGreen\" id=\"mod__1617793657\">Cipher_PointB2_ListenNoKuosan</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Anyone]: Any",
@@ -845,7 +845,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
                         "invertCondition": true
                       },
                       {
@@ -1250,7 +1250,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_Insert_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__-556818185\">Cipher_Insert_Listen</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Anyone]",
@@ -1271,7 +1271,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Cipher_BpKuoSan_Insert_CD[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"4491835\">Cipher_BpKuoSan_Insert_CD</a>[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]",
                         "invertCondition": true
                       },
                       {
@@ -1280,7 +1280,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Cipher_Insert_Listen",
+                        "modifier": "<a class=\"gModGreen\" id=\"-556818185\">Cipher_Insert_Listen</a>",
                         "invertCondition": true
                       },
                       {
@@ -1289,7 +1289,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Cipher_BpKuoSan_Insert_Hit"
+                        "modifier": "<a class=\"gModGreen\" id=\"232969841\">Cipher_BpKuoSan_Insert_Hit</a>"
                       },
                       {
                         "name": "Is Part Of",
@@ -1355,7 +1355,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Cipher_BpKuoSan_Insert_Hit"
+                  "modifier": "<a class=\"gModGreen\" id=\"232969841\">Cipher_BpKuoSan_Insert_Hit</a>"
                 }
               ]
             }
@@ -1365,7 +1365,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_Eidolon6",
+          "for": "<a class=\"gModGreen\" id=\"mod__374199979\">Cipher_Eidolon6</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1401,7 +1401,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_PointB3_Aura",
+          "for": "<a class=\"gModGreen\" id=\"mod__-362400486\">Cipher_PointB3_Aura</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1450,7 +1450,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "Cipher_PointB3_Debuff[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1113671218\">Cipher_PointB3_Debuff</a>[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -1467,7 +1467,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_Mark_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__1663627639\">Cipher_Mark_Listen</a>",
           "stackData": [],
           "latentQueue": [],
           "subModList": [
@@ -1477,14 +1477,14 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "Cipher_SpecialMark02",
+              "modifier": "<a class=\"gModGreen\" id=\"875942501\">Cipher_SpecialMark02</a>",
               "haloStatus": true
             }
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_PointB1_ListenSpeedChange",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1516019857\">Cipher_PointB1_ListenSpeedChange</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1520,7 +1520,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Cipher_PointB1_ListenSpeedChange_Bonus",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.5) || RETURN",
@@ -1556,7 +1556,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Cipher_PointB1_ListenSpeedChange_Bonus",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (0.25) || RETURN",
@@ -1576,7 +1576,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Cipher_PointB1_ListenSpeedChange_Bonus"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>"
                         }
                       ]
                     }
@@ -1626,7 +1626,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Cipher_PointB1_ListenSpeedChange_Bonus",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (0.5) || RETURN",
@@ -1662,7 +1662,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Cipher_PointB1_ListenSpeedChange_Bonus",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
                                   "operator": "Variables[0] (0.25) || RETURN",
@@ -1682,7 +1682,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Cipher_PointB1_ListenSpeedChange_Bonus"
+                              "modifier": "<a class=\"gModGreen\" id=\"-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>"
                             }
                           ]
                         }
@@ -1698,7 +1698,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_PointB1_ListenSpeedChange_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1732,7 +1732,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_Eidolon2",
+          "for": "<a class=\"gModGreen\" id=\"mod__441310455\">Cipher_Eidolon2</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1754,7 +1754,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Cipher_Eidolon2_Debuff[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-309291538\">Cipher_Eidolon2_Debuff</a>[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -1790,7 +1790,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Cipher_Eidolon2_Debuff[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-309291538\">Cipher_Eidolon2_Debuff</a>[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
                         "casterFilter": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
@@ -1815,7 +1815,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Cipher_Eidolon2_Debuff[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
+                            "modifier": "<a class=\"gModGreen\" id=\"-309291538\">Cipher_Eidolon2_Debuff</a>[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
                             "justAddedOrActive": true,
                             "casterFilter": {
                               "name": "Target Name",
@@ -1881,7 +1881,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Cipher_Eidolon1_Bonus[<span class=\"descriptionNumberColor\">Read the Room, Seek the Glee</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1467539794\">Cipher_Eidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Read the Room, Seek the Glee</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1909,7 +1909,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cipher_BpKuoSan_Insert_Bonuser"
+          "modifier": "<a class=\"gModGreen\" id=\"-315567514\">Cipher_BpKuoSan_Insert_Bonuser</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -2113,7 +2113,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
               }
             ]
           },
@@ -2154,7 +2154,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Cipher_BpKuoSan_Insert_CD[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"4491835\">Cipher_BpKuoSan_Insert_CD</a>[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]"
                 }
               ]
             },
@@ -2254,7 +2254,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Cipher_BpKuoSan_Insert_CD[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"4491835\">Cipher_BpKuoSan_Insert_CD</a>[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]"
                     }
                   ]
                 },
@@ -2279,7 +2279,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Cipher_BpKuoSan_Insert_Bonuser"
+                  "modifier": "<a class=\"gModGreen\" id=\"-315567514\">Cipher_BpKuoSan_Insert_Bonuser</a>"
                 }
               ]
             }
@@ -2293,7 +2293,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cipher_BpKuoSan_Insert_Bonuser"
+          "modifier": "<a class=\"gModGreen\" id=\"-315567514\">Cipher_BpKuoSan_Insert_Bonuser</a>"
         }
       ],
       "references": []
@@ -2310,7 +2310,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2318,7 +2318,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
           "valuePerStack": {}
         },
         {
@@ -2799,7 +2799,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2807,7 +2807,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
           "valuePerStack": {}
         },
         {
@@ -2824,7 +2824,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Cipher_BP_Debuff[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1685549745\">Cipher_BP_Debuff</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -2860,7 +2860,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cipher_BP_Bonus[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"116163492\">Cipher_BP_Bonus</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -3357,7 +3357,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Cipher_SpecialMark01",
+          "for": "<a class=\"gModGreen\" id=\"mod__825609644\">Cipher_SpecialMark01</a>",
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead",
@@ -3394,7 +3394,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Cipher_SpecialMark01"
+                      "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
                     }
                   ]
                 }
@@ -3453,7 +3453,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_SpecialMark02",
+          "for": "<a class=\"gModGreen\" id=\"mod__875942501\">Cipher_SpecialMark02</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "ListenBattleEventSkill"
@@ -3514,7 +3514,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                           },
                           "passed": [
                             {
@@ -3548,7 +3548,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                           },
                           "passed": [
                             {
@@ -3615,7 +3615,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                           },
                           "passed": [
                             {
@@ -3649,7 +3649,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                           },
                           "passed": [
                             {
@@ -3683,7 +3683,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_Ability03_Force_Preshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__838995685\">Cipher_Ability03_Force_Preshow</a>",
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -3694,7 +3694,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_Ability03_Force",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1154380754\">Cipher_Ability03_Force</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ForceStanceDamage"
@@ -3718,7 +3718,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_BpKuoSan_Insert_Bonuser",
+          "for": "<a class=\"gModGreen\" id=\"mod__-315567514\">Cipher_BpKuoSan_Insert_Bonuser</a>",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
@@ -3728,7 +3728,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Cipher_InsertRetargetSelf"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
                 }
               ]
             },
@@ -3743,7 +3743,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Cipher_InsertRetargetSelf"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
                 }
               ],
               "priorityLevel": -55
@@ -3753,7 +3753,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Cipher_InsertRetargetSelf"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
                 }
               ]
             },
@@ -3762,7 +3762,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Cipher_InsertRetargetSelf"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
                 }
               ]
             },
@@ -3799,7 +3799,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Cipher_InsertRetargetSelf"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
                     }
                   ]
                 }
@@ -3809,7 +3809,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Cipher_InsertRetargetSelf",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-2003903269\">Cipher_InsertRetargetSelf</a>",
               "parse": [
                 {
                   "name": "Find New Target",
@@ -3863,7 +3863,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_BpKuoSan_Insert_CD[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__4491835\">Cipher_BpKuoSan_Insert_CD</a>[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -3885,12 +3885,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_PointB2_CD",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1385569030\">Cipher_PointB2_CD</a>",
           "duration": 1
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
           "modifierFlags": [
             "KeepOnDeathrattle",
             "STAT_AITargetHigherPriority",
@@ -3927,7 +3927,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3935,7 +3935,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Cipher_SpecialMark01"
+                      "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
                     }
                   ]
                 },
@@ -3945,7 +3945,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Cipher_SpecialMark01"
+                  "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
                 }
               ]
             },
@@ -3958,7 +3958,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3966,7 +3966,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Cipher_SpecialMark01"
+                  "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
                 }
               ]
             },
@@ -3984,7 +3984,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Cipher_Insert_Listen",
+                        "modifier": "<a class=\"gModGreen\" id=\"-556818185\">Cipher_Insert_Listen</a>",
                         "invertCondition": true
                       },
                       {
@@ -4004,7 +4004,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Cipher_BpKuoSan_Insert_Hit"
+                      "modifier": "<a class=\"gModGreen\" id=\"232969841\">Cipher_BpKuoSan_Insert_Hit</a>"
                     }
                   ]
                 }
@@ -4456,7 +4456,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
                       "valuePerStack": {}
                     }
                   ]
@@ -4467,7 +4467,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                 }
               ]
             },
@@ -4573,7 +4573,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
                       "valuePerStack": {}
                     }
                   ]
@@ -4584,7 +4584,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                 }
               ]
             }
@@ -4598,7 +4598,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_BpKuoSan_Adj",
+          "for": "<a class=\"gModGreen\" id=\"mod__31554455\">Cipher_BpKuoSan_Adj</a>",
           "modifierFlags": [
             "KeepOnDeathrattle",
             "RemoveWhenCasterDead"
@@ -4652,7 +4652,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                               }
                             }
                           ]
@@ -4703,7 +4703,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Cipher_BpKuoSan[<span class=\"descriptionNumberColor\">Patron</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
                               }
                             }
                           ]
@@ -4729,17 +4729,17 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_BpKuoSan_Insert_Hit_PointB1"
+          "for": "<a class=\"gModGreen\" id=\"mod__-989192431\">Cipher_BpKuoSan_Insert_Hit_PointB1</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_BpKuoSan_Insert_Hit",
+          "for": "<a class=\"gModGreen\" id=\"mod__232969841\">Cipher_BpKuoSan_Insert_Hit</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_PointB1_Debuff",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1369337828\">Cipher_PointB1_Debuff</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4776,7 +4776,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_BP_Bonus[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__116163492\">Cipher_BP_Bonus</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4811,7 +4811,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_BP_Debuff[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1685549745\">Cipher_BP_Debuff</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_Fatigue"
@@ -4850,7 +4850,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_PointB3_Debuff[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1113671218\">Cipher_PointB3_Debuff</a>[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4885,7 +4885,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_PointB1_InsertBonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__-235690437\">Cipher_PointB1_InsertBonus</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -4921,7 +4921,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_Eidolon6_Debuff",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1912968422\">Cipher_Eidolon6_Debuff</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -4942,7 +4942,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_Eidolon1_Bonus[<span class=\"descriptionNumberColor\">Read the Room, Seek the Glee</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1467539794\">Cipher_Eidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Read the Room, Seek the Glee</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4978,7 +4978,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cipher_Eidolon2_Debuff[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-309291538\">Cipher_Eidolon2_Debuff</a>[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {

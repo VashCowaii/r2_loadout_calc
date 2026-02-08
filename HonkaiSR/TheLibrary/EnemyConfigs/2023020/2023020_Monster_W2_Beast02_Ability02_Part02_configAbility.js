@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMore"
+      "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
     },
     "Ability Start",
     {
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifierName": "Monster_W2_Beast02_Bullet[<span class=\"descriptionNumberColor\">Gusto</span>]",
+      "modifierName": "<a class=\"gModGreen\" id=\"908537899\">Monster_W2_Beast02_Bullet</a>[<span class=\"descriptionNumberColor\">Gusto</span>]",
       "function": "Add"
     },
     {
@@ -62,7 +62,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Beast02_Weak[<span class=\"descriptionNumberColor\">Exhaustion</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1532177993\">Monster_W2_Beast02_Weak</a>[<span class=\"descriptionNumberColor\">Exhaustion</span>]",
       "duration": -1
     },
     "Trigger: Ability End"

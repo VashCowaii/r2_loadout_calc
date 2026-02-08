@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Harscyline_Ability03_Flag"
+      "modifier": "<a class=\"gModGreen\" id=\"-1908768915\">Harscyline_Ability03_Flag</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Harscyline_Ability03_HaloStatus",
+      "modifier": "<a class=\"gModGreen\" id=\"-1383903101\">Harscyline_Ability03_HaloStatus</a>",
       "duration": {
         "operator": "Variables[0] (Skill03_HaloLifeTime) || RETURN",
         "displayLines": "Skill03_HaloLifeTime",
@@ -145,7 +145,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Harscyline_Ability03_Flag"
+      "modifier": "<a class=\"gModGreen\" id=\"-1908768915\">Harscyline_Ability03_Flag</a>"
     },
     "Trigger: Skip Death Handling",
     "Trigger: Ability End"

@@ -29,13 +29,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001"
+      "modifier": "<a class=\"gModGreen\" id=\"-2049883012\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02[<span class=\"descriptionNumberColor\">Think Outside the Box</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-963813829\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02</a>[<span class=\"descriptionNumberColor\">Think Outside the Box</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -66,7 +66,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2049883012\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -84,7 +84,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ChallengePeakBattle_BaseAbility_Plugins_0001_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1330375513\">ChallengePeakBattle_BaseAbility_Plugins_0001_Template</a>"
                 }
               ]
             }
@@ -106,7 +106,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ChallengePeakBattle_BaseAbility_Plugins_0001_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1330375513\">ChallengePeakBattle_BaseAbility_Plugins_0001_Template</a>"
                 }
               ]
             }
@@ -128,7 +128,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ChallengePeakBattle_BaseAbility_Plugins_0001_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1330375513\">ChallengePeakBattle_BaseAbility_Plugins_0001_Template</a>"
                 }
               ]
             }
@@ -150,7 +150,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ChallengePeakBattle_BaseAbility_Plugins_0001_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1330375513\">ChallengePeakBattle_BaseAbility_Plugins_0001_Template</a>"
                 }
               ]
             }
@@ -160,7 +160,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "ChallengePeakBattle_BaseAbility_Plugins_0001_Template",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1330375513\">ChallengePeakBattle_BaseAbility_Plugins_0001_Template</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Team Count",
@@ -187,7 +187,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02[<span class=\"descriptionNumberColor\">Think Outside the Box</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-963813829\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02</a>[<span class=\"descriptionNumberColor\">Think Outside the Box</span>]"
                 }
               ],
               "failed": [
@@ -197,7 +197,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02[<span class=\"descriptionNumberColor\">Think Outside the Box</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-963813829\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02</a>[<span class=\"descriptionNumberColor\">Think Outside the Box</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0001_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

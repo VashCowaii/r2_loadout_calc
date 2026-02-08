@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_106_Main2"
+      "modifier": "<a class=\"gModGreen\" id=\"1759444011\">Relic_106_Main2</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_106_Main2",
+      "for": "<a class=\"gModGreen\" id=\"mod__1759444011\">Relic_106_Main2</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

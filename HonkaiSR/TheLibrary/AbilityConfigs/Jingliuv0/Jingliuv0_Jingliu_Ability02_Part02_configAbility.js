@@ -108,7 +108,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jingliu_Trace02_ModifyAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1713327141\">Jingliu_Trace02_ModifyAction</a>"
                 }
               ],
               "failed": [

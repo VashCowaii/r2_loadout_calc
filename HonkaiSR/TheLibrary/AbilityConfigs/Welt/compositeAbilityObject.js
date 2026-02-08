@@ -28,13 +28,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Welt_Tree03"
+          "modifier": "<a class=\"gModGreen\" id=\"1626960995\">M_Welt_Tree03</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Welt_Tree03",
+          "for": "<a class=\"gModGreen\" id=\"mod__1626960995\">M_Welt_Tree03</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -47,7 +47,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target TAKING DMG}}"
                     },
-                    "modifier": "StanceBreakState"
+                    "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
                   },
                   "passed": [
                     {
@@ -82,7 +82,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Ultimate_ExtraSP",
+          "modifier": "<a class=\"gModGreen\" id=\"63874351\">M_Ultimate_ExtraSP</a>",
           "valuePerStack": {
             "MDF_AddValue": {
               "operator": "Variables[0] (10) || RETURN",
@@ -117,13 +117,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Welt_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1756861226\">StageAbility_Maze_Welt_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Welt_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1756861226\">StageAbility_Maze_Welt_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -145,7 +145,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
                       "duration": 1,
                       "baseChance": {
                         "operator": "Variables[0] (1) || RETURN",
@@ -206,7 +206,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Welt_Passive01Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1725603697\">Welt_Passive01Modifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -214,7 +214,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "AbilityPreShowModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1621594543\">AbilityPreShowModifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -222,7 +222,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "AbilityPreShowModifier2"
+          "modifier": "<a class=\"gModGreen\" id=\"-993379801\">AbilityPreShowModifier2</a>"
         },
         {
           "name": "IF",
@@ -242,7 +242,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Welt_Passive01Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1725603697\">Welt_Passive01Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -315,7 +315,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "AbilityPreShowModifier2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-993379801\">AbilityPreShowModifier2</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -336,7 +336,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
@@ -363,7 +363,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "AbilityPreShowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1621594543\">AbilityPreShowModifier</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -386,7 +386,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
                       "casterFilter": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -433,7 +433,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "Welt_Trace01_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1040154561\">Welt_Trace01_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -529,7 +529,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
           "duration": 1,
           "baseChance": {
             "operator": "Variables[0] (1) || RETURN",
@@ -572,11 +572,11 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Welt_Eidolon1_Enhance[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-374836920\">Welt_Eidolon1_Enhance</a>[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]"
             },
             {
               "name": "Define Modifier Variable",
-              "modifierName": "Welt_Eidolon1_Enhance[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-374836920\">Welt_Eidolon1_Enhance</a>[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]",
               "value": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -643,7 +643,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Welt_Ability02_ListenModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-307195596\">Welt_Ability02_ListenModifier</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -681,7 +681,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Welt_Eidolon1_Enhance[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-374836920\">Welt_Eidolon1_Enhance</a>[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]"
           },
           "passed": [
             {
@@ -690,7 +690,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifierName": "Welt_Eidolon1_Enhance[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-374836920\">Welt_Eidolon1_Enhance</a>[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]",
               "function": "Add"
             },
             {
@@ -719,7 +719,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Bounce_SelectTarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
@@ -758,7 +758,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Bounce_SelectTarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
@@ -805,7 +805,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -855,14 +855,14 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Welt_Ability02_ListenModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-307195596\">Welt_Ability02_ListenModifier</a>"
         },
         "Trigger: Ability End"
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Welt_Ability02_ListenModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-307195596\">Welt_Ability02_ListenModifier</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -880,7 +880,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target TAKING DMG}}"
                       },
-                      "modifier": "Welt_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2123171519\">Welt_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -917,7 +917,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target TAKING DMG}}"
                       },
-                      "modifier": "Welt_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2123171519\">Welt_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -998,7 +998,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Welt_Eidolon1_Enhance[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-374836920\">Welt_Eidolon1_Enhance</a>[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]"
           },
           "passed": [
             {
@@ -1007,7 +1007,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifierName": "Welt_Eidolon1_Enhance[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-374836920\">Welt_Eidolon1_Enhance</a>[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]",
               "function": "Add"
             },
             {
@@ -1109,7 +1109,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Welt_Trace01_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1040154561\">Welt_Trace01_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1145,7 +1145,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Welt_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2123171519\">Welt_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedDown"
@@ -1186,7 +1186,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Welt_Eidolon1_Enhance[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-374836920\">Welt_Eidolon1_Enhance</a>[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]",
           "counter": 2,
           "stackData": [],
           "latentQueue": [],

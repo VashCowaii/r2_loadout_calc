@@ -30,13 +30,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2110_BaseAddOn"
+      "modifier": "<a class=\"gModGreen\" id=\"609570996\">Modifier_FantasticStory_BaseAbility_2110_BaseAddOn</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2110_BaseAddOn",
+      "for": "<a class=\"gModGreen\" id=\"mod__609570996\">Modifier_FantasticStory_BaseAbility_2110_BaseAddOn</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -78,7 +78,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2110_aura",
+                    "modifier": "<a class=\"gModGreen\" id=\"1923363748\">Modifier_FantasticStory_BaseAbility_2110_aura</a>",
                     "invertCondition": true
                   }
                 ]
@@ -193,7 +193,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2110_BaseAddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1732946835\">Modifier_FantasticStory_BaseAbility_2110_BaseAddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "DV_Ratio": {

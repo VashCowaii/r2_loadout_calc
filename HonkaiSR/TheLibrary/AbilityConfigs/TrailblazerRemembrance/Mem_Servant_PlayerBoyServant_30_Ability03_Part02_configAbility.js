@@ -64,7 +64,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_PlayerBoyServant_30_Eidolon6"
+          "modifier": "<a class=\"gModGreen\" id=\"164475936\">M_PlayerBoyServant_30_Eidolon6</a>"
         }
       ]
     }
@@ -72,7 +72,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_PlayerBoyServant_30_Eidolon6",
+      "for": "<a class=\"gModGreen\" id=\"mod__164475936\">M_PlayerBoyServant_30_Eidolon6</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",

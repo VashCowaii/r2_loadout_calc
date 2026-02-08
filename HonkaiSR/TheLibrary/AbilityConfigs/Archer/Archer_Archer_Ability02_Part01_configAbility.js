@@ -25,7 +25,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Archer_BonusAbility02Ready",
+        "modifier": "<a class=\"gModGreen\" id=\"-130031811\">Archer_BonusAbility02Ready</a>",
         "invertCondition": true
       },
       "passed": [
@@ -40,7 +40,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Archer_BonusAbility02Ready",
+        "modifier": "<a class=\"gModGreen\" id=\"-130031811\">Archer_BonusAbility02Ready</a>",
         "invertCondition": true
       }
     },

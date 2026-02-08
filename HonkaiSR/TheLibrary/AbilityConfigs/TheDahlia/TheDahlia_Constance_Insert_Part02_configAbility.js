@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Constance_Eidolon4_Property[<span class=\"descriptionNumberColor\">Pity Its Heart Gnawed by Worms</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-380368106\">Constance_Eidolon4_Property</a>[<span class=\"descriptionNumberColor\">Pity Its Heart Gnawed by Worms</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -45,7 +45,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Constance_InsertCD[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1116970838\">Constance_InsertCD</a>[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -53,7 +53,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "_M_Constance_InsertCheck"
+      "modifier": "<a class=\"gModGreen\" id=\"-2093019273\">_M_Constance_InsertCheck</a>"
     },
     {
       "name": "IF",
@@ -70,7 +70,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Constance_Tree02_CD[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
             "invertCondition": true
           },
           "passed": [
@@ -85,7 +85,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Constance_Tree02_CD[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
               "counter": {
                 "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(2 - 1)",
@@ -105,7 +105,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifierName": "Constance_Tree02_CD[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
               "function": "Add"
             }
           ]
@@ -177,7 +177,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "ReduceNextActionDelay",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1527090005\">ReduceNextActionDelay</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Dahlia's Dance Partners}}"
@@ -208,7 +208,7 @@ const configAbility = {
       "Event": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Bounce_SelectTarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
@@ -236,7 +236,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "_M_Constance_Insert_StanceRecorded"
+              "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>"
             },
             {
               "name": "ATK Scaling DMG",
@@ -279,7 +279,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "_M_Constance_Insert_StanceRecorded"
+                "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>"
               },
               "passed": [
                 {
@@ -288,7 +288,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "_M_Constance_Insert_StanceRecorded",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>",
                   "variable": "MDF_TotalStanceDamage",
                   "target2": null,
                   "variable2": "ADF_StanceValue",
@@ -296,7 +296,7 @@ const configAbility = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "DealSuperBreakDamage",
+                  "functionName": "<a class=\"gTempYellow\" id=\"795502164\">DealSuperBreakDamage</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
@@ -326,7 +326,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "_M_Constance_Insert_StanceRecorded"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>"
                 }
               ]
             }
@@ -339,7 +339,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "_M_Constance_Insert_StanceRecorded",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1229984298\">_M_Constance_Insert_StanceRecorded</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -412,7 +412,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Tree02_CD[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
       "stackData": [],
       "latentQueue": [],
       "description": "After using Talent's Follow-Up ATK <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s), the Skill Point recovery effect from \"Lament, Lost Soul\" can be triggered again.",
@@ -421,7 +421,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Eidolon4_Property[<span class=\"descriptionNumberColor\">Pity Its Heart Gnawed by Worms</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-380368106\">Constance_Eidolon4_Property</a>[<span class=\"descriptionNumberColor\">Pity Its Heart Gnawed by Worms</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

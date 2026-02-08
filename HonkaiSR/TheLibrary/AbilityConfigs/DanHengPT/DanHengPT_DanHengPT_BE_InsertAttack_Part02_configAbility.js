@@ -32,7 +32,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{DHPT}}"
               },
-              "modifier": "DanHengPT_BoostEnergy"
+              "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>"
             }
           ]
         }
@@ -44,7 +44,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{DHPT}}"
           },
-          "modifier": "DanHengPT_BoostEnergy",
+          "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>",
           "valuePerStack": {
             "MDF_IsStack": 0
           },

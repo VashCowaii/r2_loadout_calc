@@ -20,13 +20,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0004"
+      "modifier": "<a class=\"gModGreen\" id=\"-388501242\">Modifier_ChallengePeakBattle_BaseAbility_0004</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0004_02[<span class=\"descriptionNumberColor\">Under Protection</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-886944199\">Modifier_ChallengePeakBattle_BaseAbility_0004_02</a>[<span class=\"descriptionNumberColor\">Under Protection</span>]",
       "modifierFlags": [
         "MuteBreak",
         "STAT_AITargetLowerPriority"
@@ -65,7 +65,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "lockHolder": "ChallengePeakBattle_BaseAbility_0004_LockHP"
+              "lockHolder": "<a class=\"gModGreen\" id=\"-1276583244\">ChallengePeakBattle_BaseAbility_0004_LockHP</a>"
             },
             {
               "name": "Modify Weaknesses",
@@ -93,7 +93,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0004",
+      "for": "<a class=\"gModGreen\" id=\"mod__-388501242\">Modifier_ChallengePeakBattle_BaseAbility_0004</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -171,7 +171,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0004_02[<span class=\"descriptionNumberColor\">Under Protection</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-886944199\">Modifier_ChallengePeakBattle_BaseAbility_0004_02</a>[<span class=\"descriptionNumberColor\">Under Protection</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0004_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -252,7 +252,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0004_02[<span class=\"descriptionNumberColor\">Under Protection</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-886944199\">Modifier_ChallengePeakBattle_BaseAbility_0004_02</a>[<span class=\"descriptionNumberColor\">Under Protection</span>]"
                     },
                     {
                       "name": "Force Entity Death",

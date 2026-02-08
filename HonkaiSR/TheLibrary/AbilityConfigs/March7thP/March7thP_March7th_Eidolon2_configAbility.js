@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "March7th_Eidolon2_Shield_pre"
+      "modifier": "<a class=\"gModGreen\" id=\"534065666\">March7th_Eidolon2_Shield_pre</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "March7th_Eidolon2_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__985818260\">March7th_Eidolon2_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "Shield"
@@ -74,7 +74,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "March7th_Eidolon2_Shield_pre",
+      "for": "<a class=\"gModGreen\" id=\"mod__534065666\">March7th_Eidolon2_Shield_pre</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -124,7 +124,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "March7th_Eidolon2_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"985818260\">March7th_Eidolon2_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",

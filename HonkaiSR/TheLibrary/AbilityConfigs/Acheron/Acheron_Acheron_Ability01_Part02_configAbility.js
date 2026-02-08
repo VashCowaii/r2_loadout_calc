@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Acheron_Eidolon6_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"946113051\">Acheron_Eidolon6_ForceStanceDamage</a>"
         }
       ]
     },
@@ -105,7 +105,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Acheron_Eidolon6_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"946113051\">Acheron_Eidolon6_ForceStanceDamage</a>"
         }
       ]
     },

@@ -39,7 +39,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Argenti_UltraAbilityPrepare"
+      "modifier": "<a class=\"gModGreen\" id=\"1628831638\">Argenti_UltraAbilityPrepare</a>"
     },
     {
       "name": "IF",
@@ -54,7 +54,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Argenti_Eidolon2_TargetNumberListen"
+          "modifier": "<a class=\"gModGreen\" id=\"886693794\">Argenti_Eidolon2_TargetNumberListen</a>"
         }
       ]
     },
@@ -95,7 +95,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                 "displayLines": "MDF_MaxCount",
@@ -136,7 +136,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Argenti_PointB1_AutoBonusLayerModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"53398910\">Argenti_PointB1_AutoBonusLayerModifier</a>"
         }
       ]
     },
@@ -153,7 +153,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Argenti_PointB2_SummonSpModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-143251630\">Argenti_PointB2_SummonSpModifier</a>"
         }
       ]
     },
@@ -170,7 +170,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Argenti_PointB3_DamageUpModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1414453443\">Argenti_PointB3_DamageUpModifier</a>"
         }
       ]
     }

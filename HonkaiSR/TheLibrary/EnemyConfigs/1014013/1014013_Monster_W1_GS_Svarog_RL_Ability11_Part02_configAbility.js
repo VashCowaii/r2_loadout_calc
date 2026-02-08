@@ -35,7 +35,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"1760667361\">Monster_W1_Svarog_RL_Mark</a>"
         },
         {
           "name": "Create Enemies",
@@ -55,7 +55,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
         },
         {
           "name": "IF",
@@ -65,14 +65,14 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
           },
           "passed": [
             {
               "name": "Define Custom Variable with Modifier Values",
               "valueType": "Layer",
               "variableName": "AttackUpLayer",
-              "modifierName": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "multiplier": 1
             },
             {
@@ -81,7 +81,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "modifier": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
                   "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
@@ -116,7 +116,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W1_Svarog_RL_Mark"
+            "modifier": "<a class=\"gModGreen\" id=\"1760667361\">Monster_W1_Svarog_RL_Mark</a>"
           }
         }
       ]
@@ -126,7 +126,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Svarog_RL_Mark",
+      "for": "<a class=\"gModGreen\" id=\"mod__1760667361\">Monster_W1_Svarog_RL_Mark</a>",
       "stackData": [],
       "latentQueue": []
     }

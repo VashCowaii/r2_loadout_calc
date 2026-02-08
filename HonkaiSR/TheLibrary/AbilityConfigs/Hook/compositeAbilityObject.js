@@ -32,13 +32,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Hook_Eidolon6"
+          "modifier": "<a class=\"gModGreen\" id=\"1069979687\">Hook_Eidolon6</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Hook_Eidolon6",
+          "for": "<a class=\"gModGreen\" id=\"mod__1069979687\">Hook_Eidolon6</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -111,13 +111,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Hook_Trace01"
+          "modifier": "<a class=\"gModGreen\" id=\"2102269383\">M_Hook_Trace01</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Hook_Trace01",
+          "for": "<a class=\"gModGreen\" id=\"mod__2102269383\">M_Hook_Trace01</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -143,13 +143,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Hook_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1395234345\">StageAbility_Maze_Hook_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Hook_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1395234345\">StageAbility_Maze_Hook_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -240,7 +240,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -338,7 +338,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Targets Adjacent(Blast)}}"
               },
-              "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                 "displayLines": "(2 + 1)",
@@ -426,7 +426,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Ability01PreShowModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"1540905078\">Ability01PreShowModifier</a>"
             }
           ]
         },
@@ -441,7 +441,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Ability01PreShowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1540905078\">Ability01PreShowModifier</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -576,7 +576,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Hook_BPAbilityAlter_Enable[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1319656232\">Hook_BPAbilityAlter_Enable</a>[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]"
         },
         {
           "name": "IF",
@@ -591,7 +591,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Hook_Eidolon1_AddDamageRatio",
+              "modifier": "<a class=\"gModGreen\" id=\"372814598\">Hook_Eidolon1_AddDamageRatio</a>",
               "valuePerStack": {
                 "MDF_AddRatio": {
                   "operator": "Variables[0] (0.2) || RETURN",
@@ -645,7 +645,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Hook_Eidolon1_AddDamageRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__372814598\">Hook_Eidolon1_AddDamageRatio</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -831,7 +831,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Targets Adjacent(Blast)}}"
                   },
-                  "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                     "displayLines": "(2 + 1)",
@@ -952,7 +952,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
             "operator": "Variables[0] (2) || Variables[1] (Rank_LifeTime) || ADD || RETURN",
             "displayLines": "(2 + Rank_LifeTime)",
@@ -1005,7 +1005,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "Hook_BPAbilityAlter_Enable[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"-1319656232\">Hook_BPAbilityAlter_Enable</a>[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]",
           "function": "Add"
         },
         {
@@ -1014,7 +1014,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Hook_Eidolon1_AddDamageRatio"
+          "modifier": "<a class=\"gModGreen\" id=\"372814598\">Hook_Eidolon1_AddDamageRatio</a>"
         },
         "Trigger: Ability End"
       ],
@@ -1148,7 +1148,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
             "operator": "Variables[0] (2) || Variables[1] (Rank_LifeTime) || ADD || RETURN",
             "displayLines": "(2 + Rank_LifeTime)",
@@ -1322,7 +1322,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Hook_BPAbilityAlter_Enable[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1319656232\">Hook_BPAbilityAlter_Enable</a>[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]",
           "counter": 1,
           "execute": [
             {

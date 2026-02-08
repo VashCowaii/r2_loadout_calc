@@ -26,7 +26,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Cerydra_Template_ReachPromotionEidolon1"
+      "functionName": "<a class=\"gTempYellow\" id=\"1336664335\">Cerydra_Template_ReachPromotionEidolon1</a>"
     }
   ],
   "references": []

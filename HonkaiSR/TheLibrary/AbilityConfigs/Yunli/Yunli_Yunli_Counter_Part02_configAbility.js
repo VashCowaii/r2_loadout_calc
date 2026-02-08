@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]"
     },
     {
       "name": "Update Energy",
@@ -99,7 +99,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Blocking_CritDamage[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1896809372\">Yunli_Blocking_CritDamage</a>[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
         },
         "Trigger: Attack End"
       ]

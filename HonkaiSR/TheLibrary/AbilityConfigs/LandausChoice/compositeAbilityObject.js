@@ -18,13 +18,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_21009_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"854343753\">LC_21009_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_21009_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__854343753\">LC_21009_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",

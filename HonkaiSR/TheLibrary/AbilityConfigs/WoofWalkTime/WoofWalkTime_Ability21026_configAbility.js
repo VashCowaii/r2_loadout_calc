@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21026_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-716257792\">LC_21026_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21026_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1936214931\">LC_21026_Sub</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -63,7 +63,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21026_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-716257792\">LC_21026_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -74,7 +74,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "LC_21026_Sub"
+              "modifier": "<a class=\"gModGreen\" id=\"-1936214931\">LC_21026_Sub</a>"
             }
           ]
         }

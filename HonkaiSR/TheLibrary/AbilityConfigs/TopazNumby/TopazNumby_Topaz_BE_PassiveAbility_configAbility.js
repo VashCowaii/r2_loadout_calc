@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Topaz_BETag"
+      "modifier": "<a class=\"gModGreen\" id=\"1529971415\">Topaz_BETag</a>"
     },
     {
       "name": "Set Action-State",
@@ -28,7 +28,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Topaz_BETag",
+      "for": "<a class=\"gModGreen\" id=\"mod__1529971415\">Topaz_BETag</a>",
       "modifierFlags": [
         "BlockDamage",
         "Stealth"
@@ -51,7 +51,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Topaz_BE_ReduceDelay"
+                "modifier": "<a class=\"gModGreen\" id=\"-182734853\">Topaz_BE_ReduceDelay</a>"
               },
               "passed": [
                 {
@@ -78,7 +78,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                 }
               },
               "failed": [
@@ -88,7 +88,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Topaz_BE_FindNoTargetFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-93497222\">Topaz_BE_FindNoTargetFlag</a>"
                 }
               ]
             },
@@ -106,7 +106,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                 }
               },
               "passed": [
@@ -132,7 +132,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                         }
                       }
                     ]
@@ -162,7 +162,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Topaz_Passive"
+                "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
               }
             }
           ]
@@ -178,7 +178,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Topaz_Passive"
+                "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
               }
             }
           ]
@@ -226,7 +226,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Topaz_Passive"
+                "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
               }
             }
           ]

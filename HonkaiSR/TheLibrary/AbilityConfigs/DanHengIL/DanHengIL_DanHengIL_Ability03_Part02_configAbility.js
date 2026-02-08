@@ -57,7 +57,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "DanHengIL_Ability03Target",
+            "modifier": "<a class=\"gModGreen\" id=\"-1340732042\">DanHengIL_Ability03Target</a>",
             "invertCondition": true
           },
           "ifTargetFound": [
@@ -95,7 +95,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "DanHengIL_Ability03Target"
+              "modifier": "<a class=\"gModGreen\" id=\"-1340732042\">DanHengIL_Ability03Target</a>"
             }
           ]
         }
@@ -121,7 +121,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "DanHengIL_Ability03Target"
+      "modifier": "<a class=\"gModGreen\" id=\"-1340732042\">DanHengIL_Ability03Target</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -171,7 +171,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "DanHengIL_Ability03Target",
+            "modifier": "<a class=\"gModGreen\" id=\"-1340732042\">DanHengIL_Ability03Target</a>",
             "invertCondition": true
           },
           "ifTargetFound": [
@@ -209,7 +209,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "DanHengIL_Ability03Target"
+              "modifier": "<a class=\"gModGreen\" id=\"-1340732042\">DanHengIL_Ability03Target</a>"
             }
           ]
         }
@@ -235,7 +235,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "DanHengIL_Ability03Target"
+      "modifier": "<a class=\"gModGreen\" id=\"-1340732042\">DanHengIL_Ability03Target</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -317,7 +317,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "DanHengIL_Ability03Target"
+      "modifier": "<a class=\"gModGreen\" id=\"-1340732042\">DanHengIL_Ability03Target</a>"
     },
     {
       "name": "IF",
@@ -390,7 +390,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
           "value": {
             "operator": "Variables[0] (BPExChange) || RETURN",
             "displayLines": "BPExChange",
@@ -406,7 +406,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
           "counter": {
             "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(2 + 1)",
@@ -511,7 +511,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
           "value": {
             "operator": "Variables[0] (BPExChange) || RETURN",
             "displayLines": "BPExChange",
@@ -527,7 +527,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
           "counter": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -563,7 +563,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "DanHengIL_Ability03Target",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1340732042\">DanHengIL_Ability03Target</a>",
       "stackData": [],
       "latentQueue": []
     }

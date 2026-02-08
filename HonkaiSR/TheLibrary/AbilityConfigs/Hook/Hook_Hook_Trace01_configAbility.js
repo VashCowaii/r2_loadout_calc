@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Hook_Trace01"
+      "modifier": "<a class=\"gModGreen\" id=\"2102269383\">M_Hook_Trace01</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Hook_Trace01",
+      "for": "<a class=\"gModGreen\" id=\"mod__2102269383\">M_Hook_Trace01</a>",
       "stackData": [],
       "latentQueue": []
     }

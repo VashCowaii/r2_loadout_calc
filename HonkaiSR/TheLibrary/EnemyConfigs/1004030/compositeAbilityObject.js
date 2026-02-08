@@ -31,7 +31,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_PassiveAbility_Formation2"
+          "modifier": "<a class=\"gModGreen\" id=\"-247015465\">Enemy_W1_Bronya_PassiveAbility_Formation2</a>"
         }
       ],
       "references": []
@@ -49,7 +49,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_PassiveAbility_NoLockStance"
+          "modifier": "<a class=\"gModGreen\" id=\"746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>"
         }
       ],
       "references": []
@@ -66,7 +66,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_M1LockHP"
+          "modifier": "<a class=\"gModGreen\" id=\"-589353924\">Enemy_W1_Bronya_M1LockHP</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -81,14 +81,14 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_Instance_DisableAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1556370949\">Enemy_W1_Bronya_Instance_DisableAction</a>",
           "modifierFlags": [
             "DisableAction"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_M1LockHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-589353924\">Enemy_W1_Bronya_M1LockHP</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -139,7 +139,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "Enemy_W1_Bronya_Instance_DisableAction"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1556370949\">Enemy_W1_Bronya_Instance_DisableAction</a>"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -173,7 +173,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Enemy_W1_Bronya_WeakPointProtected[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
         },
         {
           "name": "Declare Custom Variable",
@@ -200,7 +200,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bronya_BattleScore2"
+          "modifier": "<a class=\"gModGreen\" id=\"236879313\">Bronya_BattleScore2</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -208,7 +208,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bronya_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"186546456\">Bronya_BattleScore1</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -216,7 +216,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -224,7 +224,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -252,7 +252,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_W1_Bronya_PassiveAbility_NoLockStance",
+            "modifier": "<a class=\"gModGreen\" id=\"746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>",
             "invertCondition": true
           },
           "passed": [
@@ -262,7 +262,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W1_Bronya_WeakPointProtectController"
+              "modifier": "<a class=\"gModGreen\" id=\"43109596\">Enemy_W1_Bronya_WeakPointProtectController</a>"
             }
           ]
         },
@@ -272,13 +272,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_ListenSelfBreak"
+          "modifier": "<a class=\"gModGreen\" id=\"2074412751\">Enemy_W1_Bronya_ListenSelfBreak</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_ListenSelfBreak",
+          "for": "<a class=\"gModGreen\" id=\"mod__2074412751\">Enemy_W1_Bronya_ListenSelfBreak</a>",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -322,7 +322,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_WeakPointProtected[<span class=\"descriptionNumberColor\">Weakness Protected</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]",
           "modifierFlags": [
             "MuteBreak"
           ],
@@ -375,7 +375,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_WeakPointProtectController",
+          "for": "<a class=\"gModGreen\" id=\"mod__43109596\">Enemy_W1_Bronya_WeakPointProtectController</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -408,7 +408,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W1_Bronya_WeakPointProtected[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
                     }
                   ]
                 }
@@ -430,7 +430,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "TaskList_W1_Bronya_WeakPointProtectController_OnDieOrEscape"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-968447814\">TaskList_W1_Bronya_WeakPointProtectController_OnDieOrEscape</a>"
                     }
                   ]
                 }
@@ -452,7 +452,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "TaskList_W1_Bronya_WeakPointProtectController_OnDieOrEscape"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-968447814\">TaskList_W1_Bronya_WeakPointProtectController_OnDieOrEscape</a>"
                     }
                   ]
                 }
@@ -480,7 +480,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W1_Bronya_WeakPointProtected[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
                     }
                   ]
                 }
@@ -490,7 +490,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "TaskList_W1_Bronya_WeakPointProtectController_OnDieOrEscape",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-968447814\">TaskList_W1_Bronya_WeakPointProtectController_OnDieOrEscape</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -524,7 +524,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Enemy_W1_Bronya_WeakPointProtected[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
                       }
                     ]
                   },
@@ -779,7 +779,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -838,7 +838,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_Ability02_PowerUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-209859933\">Enemy_W1_Bronya_Ability02_PowerUp</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -968,7 +968,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Bronya_BattleScore2",
+          "for": "<a class=\"gModGreen\" id=\"mod__236879313\">Bronya_BattleScore2</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -1026,7 +1026,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bronya_BattleScore1",
+          "for": "<a class=\"gModGreen\" id=\"mod__186546456\">Bronya_BattleScore1</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -1108,7 +1108,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_Ability02[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1747978880\">Enemy_W1_Bronya_Ability02</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1140,7 +1140,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TEST_DarkTeamBackRow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1115057368\">TEST_DarkTeamBackRow</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -1192,7 +1192,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_PassiveAbility_Formation2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-247015465\">Enemy_W1_Bronya_PassiveAbility_Formation2</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1229,7 +1229,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Bronya_PassiveAbility_NoLockStance",
+          "for": "<a class=\"gModGreen\" id=\"mod__746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>",
           "stackData": [],
           "latentQueue": []
         }

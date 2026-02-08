@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "TaskList_Stage_EnterBattleUIPerform",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1324868453\">TaskList_Stage_EnterBattleUIPerform</a>",
       "parse": [
         {
           "name": "IF",
@@ -53,7 +53,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Wave_ShowRoleTrialPage",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__2020088159\">Wave_ShowRoleTrialPage</a>",
       "parse": [
         {
           "name": "IF",
@@ -101,12 +101,12 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "TaskList_ShowBattleStartUI",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1116083292\">TaskList_ShowBattleStartUI</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "TaskList_TriggerBattleStartUI",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1447924347\">TaskList_TriggerBattleStartUI</a>",
       "parse": [
         {
           "name": "IF",
@@ -167,7 +167,7 @@ const configAbility = {
           "failed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_ShowBattleStartUI"
+              "functionName": "<a class=\"gTempYellow\" id=\"1116083292\">TaskList_ShowBattleStartUI</a>"
             }
           ]
         }
@@ -175,7 +175,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "TaskList_DelayTriggerBattleStartUI",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-615517588\">TaskList_DelayTriggerBattleStartUI</a>",
       "parse": [
         {
           "name": "IF",
@@ -210,7 +210,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_ShowBattleStartUI"
+              "functionName": "<a class=\"gTempYellow\" id=\"1116083292\">TaskList_ShowBattleStartUI</a>"
             }
           ]
         }
@@ -218,7 +218,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "TaskList_DelayTriggerBattleStartUI_AfterBattlePerform",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__977548376\">TaskList_DelayTriggerBattleStartUI_AfterBattlePerform</a>",
       "parse": [
         {
           "name": "IF",
@@ -255,7 +255,7 @@ const configAbility = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_ShowBattleStartUI"
+              "functionName": "<a class=\"gTempYellow\" id=\"1116083292\">TaskList_ShowBattleStartUI</a>"
             }
           ]
         }
@@ -263,7 +263,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "TaskList_Stage_InfoDetailPage",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__931086496\">TaskList_Stage_InfoDetailPage</a>",
       "parse": []
     }
   ],

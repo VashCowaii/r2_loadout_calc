@@ -10,17 +10,17 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "BlackSwan_Eidolon6"
+      "modifier": "<a class=\"gModGreen\" id=\"1422965526\">BlackSwan_Eidolon6</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_Eidolon6_AddDOTFlag"
+      "for": "<a class=\"gModGreen\" id=\"mod__-1234224732\">M_BlackSwan_Eidolon6_AddDOTFlag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "BlackSwan_Eidolon6_SubOnEnemy",
+      "for": "<a class=\"gModGreen\" id=\"mod__2050002598\">BlackSwan_Eidolon6_SubOnEnemy</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -76,7 +76,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_Eidolon6_AddDOTFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1234224732\">M_BlackSwan_Eidolon6_AddDOTFlag</a>"
                 }
               ]
             }
@@ -96,7 +96,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "BlackSwan_Eidolon6",
+      "for": "<a class=\"gModGreen\" id=\"mod__1422965526\">BlackSwan_Eidolon6</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -118,7 +118,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "BlackSwan_Eidolon6_SubOnEnemy"
+                  "modifier": "<a class=\"gModGreen\" id=\"2050002598\">BlackSwan_Eidolon6_SubOnEnemy</a>"
                 }
               ]
             }
@@ -131,7 +131,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "M_BlackSwan_Eidolon6_AddDOTFlag"
+                "modifier": "<a class=\"gModGreen\" id=\"-1234224732\">M_BlackSwan_Eidolon6_AddDOTFlag</a>"
               },
               "passed": [
                 {
@@ -140,7 +140,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "M_BlackSwan_Eidolon6_AddDOTFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1234224732\">M_BlackSwan_Eidolon6_AddDOTFlag</a>"
                 },
                 {
                   "name": "IF",
@@ -192,7 +192,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                   "baseChance": {
                     "operator": "Variables[0] (0.65) || RETURN",
                     "displayLines": "0.65",

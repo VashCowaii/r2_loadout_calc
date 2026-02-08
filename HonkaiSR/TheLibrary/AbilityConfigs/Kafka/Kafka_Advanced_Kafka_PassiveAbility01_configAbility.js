@@ -25,7 +25,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Kafka_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-748126065\">M_Kafka_Passive</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -77,7 +77,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Advanced_Kafka_Passive_DotSpecialMark_Listen"
+      "modifier": "<a class=\"gModGreen\" id=\"-2072212341\">Advanced_Kafka_Passive_DotSpecialMark_Listen</a>"
     },
     {
       "name": "Update Ability Description",
@@ -97,7 +97,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Advanced_Kafka_Eidolon4"
+          "modifier": "<a class=\"gModGreen\" id=\"1764225041\">Advanced_Kafka_Eidolon4</a>"
         }
       ]
     }
@@ -105,14 +105,14 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Kafka_Passive_CanAttack[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__96932445\">Advanced_Kafka_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
       "description": "The effect of Talent \"Gentle but Cruel\" can now be triggered.",
       "type": "Other",
       "statusName": "Gentle but Cruel"
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Kafka_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-748126065\">M_Kafka_Passive</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -224,7 +224,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Advanced_Kafka_Friend_Mark_Main"
+                          "modifier": "<a class=\"gModGreen\" id=\"-671501657\">Advanced_Kafka_Friend_Mark_Main</a>"
                         },
                         {
                           "name": "Living State",
@@ -257,7 +257,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target's Attack Targets}}"
                           },
-                          "modifier": "Advanced_Kafka_Friend_Mark_Main"
+                          "modifier": "<a class=\"gModGreen\" id=\"-671501657\">Advanced_Kafka_Friend_Mark_Main</a>"
                         }
                       ],
                       "failed": [
@@ -276,7 +276,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Advanced_Kafka_Friend_Mark_Main"
+                              "modifier": "<a class=\"gModGreen\" id=\"-671501657\">Advanced_Kafka_Friend_Mark_Main</a>"
                             }
                           ]
                         }
@@ -300,7 +300,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Advanced_Kafka_Friend_Mark_Main",
+                        "modifier": "<a class=\"gModGreen\" id=\"-671501657\">Advanced_Kafka_Friend_Mark_Main</a>",
                         "justAddedOrActive": true
                       },
                       {
@@ -394,7 +394,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target's Ability Targets}}"
                       },
-                      "modifier": "Advanced_Kafka_Friend_Mark_Main"
+                      "modifier": "<a class=\"gModGreen\" id=\"-671501657\">Advanced_Kafka_Friend_Mark_Main</a>"
                     }
                   ],
                   "failed": [
@@ -404,7 +404,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                       },
-                      "modifier": "Advanced_Kafka_Friend_Mark_Main"
+                      "modifier": "<a class=\"gModGreen\" id=\"-671501657\">Advanced_Kafka_Friend_Mark_Main</a>"
                     },
                     {
                       "name": "Find New Target",
@@ -421,7 +421,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Advanced_Kafka_Friend_Mark_Main"
+                          "modifier": "<a class=\"gModGreen\" id=\"-671501657\">Advanced_Kafka_Friend_Mark_Main</a>"
                         }
                       ]
                     }
@@ -439,7 +439,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Kafka_Passive_DotSpecialMarkTrigger",
+      "for": "<a class=\"gModGreen\" id=\"mod__-956687439\">Advanced_Kafka_Passive_DotSpecialMarkTrigger</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ListenBattleEventSkill",
@@ -583,7 +583,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Kafka_Passive_DotSpecialMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__1443532623\">Advanced_Kafka_Passive_DotSpecialMark</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ListenBattleEventSkill",
@@ -766,7 +766,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Kafka_Passive_DotSpecialMark_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2072212341\">Advanced_Kafka_Passive_DotSpecialMark_Listen</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -777,7 +777,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Advanced_Kafka_Passive_DotSpecialMark"
+              "modifier": "<a class=\"gModGreen\" id=\"1443532623\">Advanced_Kafka_Passive_DotSpecialMark</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -785,7 +785,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Advanced_Kafka_Passive_DotSpecialMarkTrigger"
+              "modifier": "<a class=\"gModGreen\" id=\"-956687439\">Advanced_Kafka_Passive_DotSpecialMarkTrigger</a>"
             }
           ]
         },
@@ -822,7 +822,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Advanced_Kafka_Passive_DotSpecialMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"1443532623\">Advanced_Kafka_Passive_DotSpecialMark</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -830,7 +830,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Advanced_Kafka_Passive_DotSpecialMarkTrigger"
+                  "modifier": "<a class=\"gModGreen\" id=\"-956687439\">Advanced_Kafka_Passive_DotSpecialMarkTrigger</a>"
                 }
               ]
             }
@@ -869,7 +869,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Advanced_Kafka_Passive_DotSpecialMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"1443532623\">Advanced_Kafka_Passive_DotSpecialMark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -877,7 +877,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Advanced_Kafka_Passive_DotSpecialMarkTrigger"
+                  "modifier": "<a class=\"gModGreen\" id=\"-956687439\">Advanced_Kafka_Passive_DotSpecialMarkTrigger</a>"
                 }
               ]
             }

@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "TheHerta_TechniqueInRougeLevel"
+      "modifier": "<a class=\"gModGreen\" id=\"-2036504722\">TheHerta_TechniqueInRougeLevel</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "TheHerta_TechniqueInRougeLevel",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2036504722\">TheHerta_TechniqueInRougeLevel</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

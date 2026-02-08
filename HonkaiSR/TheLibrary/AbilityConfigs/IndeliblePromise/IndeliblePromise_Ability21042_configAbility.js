@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21042_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-988429762\">LC_21042_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21042_Sub[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1919461923\">LC_21042_Sub</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21042_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-988429762\">LC_21042_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -66,7 +66,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_21042_Sub[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1919461923\">LC_21042_Sub</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

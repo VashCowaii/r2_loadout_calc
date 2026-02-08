@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Lynx_Eidolon4_AddAttackRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-96135638\">Lynx_Eidolon4_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -46,7 +46,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lynx_Eidolon2_Resist[<span class=\"descriptionNumberColor\">Debuff RES</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1832848148\">Lynx_Eidolon2_Resist</a>[<span class=\"descriptionNumberColor\">Debuff RES</span>]",
       "modifierFlags": [
         "ImmuneDebuff"
       ],
@@ -60,7 +60,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Lynx_Eidolon2_Resist[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1832848148\">Lynx_Eidolon2_Resist</a>[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
             }
           ]
         }
@@ -73,7 +73,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lynx_Tree02_Resistance",
+      "for": "<a class=\"gModGreen\" id=\"mod__1819426834\">Lynx_Tree02_Resistance</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -104,7 +104,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lynx_Tree01_OnBeforeBeingAttacked",
+      "for": "<a class=\"gModGreen\" id=\"mod__1804592669\">Lynx_Tree01_OnBeforeBeingAttacked</a>",
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",
@@ -123,7 +123,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Lynx_HPAddedRatio01[<span class=\"descriptionNumberColor\">Survival Response</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -131,7 +131,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Lynx_HPAddedRatio02[<span class=\"descriptionNumberColor\">Survival Response</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]"
                       }
                     ]
                   },
@@ -174,7 +174,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -192,7 +192,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Lynx_HPAddedRatio01[<span class=\"descriptionNumberColor\">Survival Response</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -200,7 +200,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Lynx_HPAddedRatio02[<span class=\"descriptionNumberColor\">Survival Response</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]"
                   }
                 ]
               },
@@ -277,7 +277,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lynx_HPAddedRatio02[<span class=\"descriptionNumberColor\">Survival Response</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -289,7 +289,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Lynx_Eidolon2_Resist[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1832848148\">Lynx_Eidolon2_Resist</a>[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
             }
           ]
         },
@@ -393,7 +393,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lynx_HPAddedRatio01[<span class=\"descriptionNumberColor\">Survival Response</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -405,7 +405,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Lynx_Eidolon2_Resist[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1832848148\">Lynx_Eidolon2_Resist</a>[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
             }
           ]
         },

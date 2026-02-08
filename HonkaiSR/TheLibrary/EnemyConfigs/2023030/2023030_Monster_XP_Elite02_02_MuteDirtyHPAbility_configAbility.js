@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_XP_Elite02_02_MuteDirtyHP"
+      "modifier": "<a class=\"gModGreen\" id=\"-241662933\">Monster_XP_Elite02_02_MuteDirtyHP</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_XP_Elite02_02_MuteDirtyHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-241662933\">Monster_XP_Elite02_02_MuteDirtyHP</a>",
       "stackData": [],
       "latentQueue": []
     }

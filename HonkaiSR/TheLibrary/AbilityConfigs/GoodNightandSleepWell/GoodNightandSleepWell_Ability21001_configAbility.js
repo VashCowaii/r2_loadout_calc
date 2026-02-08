@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21001_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-524430399\">LC_21001_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21001_DamageUp_Debuff",
+      "for": "<a class=\"gModGreen\" id=\"mod__448296367\">LC_21001_DamageUp_Debuff</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -78,7 +78,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21001_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-524430399\">LC_21001_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -89,7 +89,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "LC_21001_DamageUp_Debuff",
+              "modifier": "<a class=\"gModGreen\" id=\"448296367\">LC_21001_DamageUp_Debuff</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.12) || RETURN",

@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Feixiao_Modifier_Attack"
+      "modifier": "<a class=\"gModGreen\" id=\"-1813550053\">StageAbility_Maze_Feixiao_Modifier_Attack</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Feixiao_Modifier_GainSP"
+      "modifier": "<a class=\"gModGreen\" id=\"-1813368649\">StageAbility_Maze_Feixiao_Modifier_GainSP</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -34,13 +34,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Feixiao_Maze_ForceCritical"
+      "modifier": "<a class=\"gModGreen\" id=\"-182307548\">M_Feixiao_Maze_ForceCritical</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_Maze_ForceCritical",
+      "for": "<a class=\"gModGreen\" id=\"mod__-182307548\">M_Feixiao_Maze_ForceCritical</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -83,7 +83,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Feixiao_Modifier_Attack",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1813550053\">StageAbility_Maze_Feixiao_Modifier_Attack</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Seele_Eidolon4",
+      "modifier": "<a class=\"gModGreen\" id=\"-268122719\">Seele_Eidolon4</a>",
       "valuePerStack": {
         "MDF_AddSP": {
           "operator": "Variables[0] (15) || RETURN",
@@ -26,7 +26,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Seele_Eidolon4",
+      "for": "<a class=\"gModGreen\" id=\"mod__-268122719\">Seele_Eidolon4</a>",
       "execute": [
         {
           "eventTrigger": "Got a Kill [Owner]",

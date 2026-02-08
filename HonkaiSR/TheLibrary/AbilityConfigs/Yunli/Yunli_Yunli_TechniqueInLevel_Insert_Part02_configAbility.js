@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yunli_AddRegardAsAttackType"
+      "modifier": "<a class=\"gModGreen\" id=\"1898161246\">Yunli_AddRegardAsAttackType</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yunli_TechniqueInLevel"
+      "modifier": "<a class=\"gModGreen\" id=\"37918586\">Yunli_TechniqueInLevel</a>"
     },
     {
       "name": "IF",
@@ -33,7 +33,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Eidolon1",
+          "modifier": "<a class=\"gModGreen\" id=\"275203206\">Yunli_Eidolon1</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.2) || RETURN",

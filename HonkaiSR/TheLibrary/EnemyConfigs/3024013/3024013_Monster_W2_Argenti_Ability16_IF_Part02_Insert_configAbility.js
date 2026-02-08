@@ -6,13 +6,13 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "Collect_Power"
+      "functionName": "<a class=\"gTempYellow\" id=\"1718469723\">Collect_Power</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Argenti_Ability16_IF_MarkModifier"
+      "for": "<a class=\"gModGreen\" id=\"mod__-708808137\">Monster_W2_Argenti_Ability16_IF_MarkModifier</a>"
     }
   ]
 }

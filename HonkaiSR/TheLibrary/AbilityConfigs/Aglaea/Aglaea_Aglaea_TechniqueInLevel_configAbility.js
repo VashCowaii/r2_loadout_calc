@@ -65,7 +65,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Aglaea_Ability02_ChangeSkill"
+          "modifier": "<a class=\"gModGreen\" id=\"755493734\">Aglaea_Ability02_ChangeSkill</a>"
         }
       ]
     },
@@ -75,13 +75,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Aglaea_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1050397411\">StageAbility_Maze_Aglaea_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Aglaea_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1050397411\">StageAbility_Maze_Aglaea_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -158,7 +158,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Aglaea_GoldenSword_Mark[<span class=\"descriptionNumberColor\">Seam Stitch</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"216440055\">Aglaea_GoldenSword_Mark</a>[<span class=\"descriptionNumberColor\">Seam Stitch</span>]",
                       "valuePerStack": {
                         "BombDamagePercentage": {
                           "operator": "Variables[0] (0.3) || RETURN",

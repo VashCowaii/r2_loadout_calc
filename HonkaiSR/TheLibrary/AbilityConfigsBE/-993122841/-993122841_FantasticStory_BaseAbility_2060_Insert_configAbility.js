@@ -41,7 +41,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_ListenBEDelay"
+              "modifier": "<a class=\"gModGreen\" id=\"-1327218064\">Modifier_FantasticStory_BaseAbility_2060_ListenBEDelay</a>"
             }
           ]
         }
@@ -119,7 +119,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura",
+            "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
             "invertCondition": true
           }
         ]
@@ -222,7 +222,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+      "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -254,7 +254,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount[<span class=\"descriptionNumberColor\">\"Resound\"</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]"
     },
     {
       "name": "IF",
@@ -273,7 +273,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+            "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
           }
         ]
       },
@@ -305,7 +305,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_plus4_sub[<span class=\"descriptionNumberColor\">Divine Score</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"906922784\">Modifier_FantasticStory_BaseAbility_2060_plus4_sub</a>[<span class=\"descriptionNumberColor\">Divine Score</span>]",
           "duration": {
             "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2064_ADF_2) || RETURN",
             "displayLines": "DV_FantasticStory_PlusAbility_2064_ADF_2",

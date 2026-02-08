@@ -20,7 +20,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Argenti_IF_EX_ExtraEnhanceController"
+          "modifier": "<a class=\"gModGreen\" id=\"806413908\">Enemy_W2_Argenti_IF_EX_ExtraEnhanceController</a>"
         }
       ]
     }

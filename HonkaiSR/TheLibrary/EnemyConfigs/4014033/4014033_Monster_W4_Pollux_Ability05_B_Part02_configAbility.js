@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_Monster_W4_Pollux_B_HardLockHp_BFAbility05"
+      "modifier": "<a class=\"gModGreen\" id=\"-1324293112\">Modifier_Monster_W4_Pollux_B_HardLockHp_BFAbility05</a>"
     },
     {
       "name": "IF",
@@ -21,7 +21,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+        "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
         "invertCondition": true
       }
     },
@@ -522,7 +522,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+        "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
         "invertCondition": true
       },
       "ifTargetFound": [
@@ -532,7 +532,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
           "valuePerStack": {
             "MDF_DamagePercentage": {
               "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
@@ -562,7 +562,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+        "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
         "invertCondition": true
       },
       "passed": [
@@ -572,7 +572,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team(Exclude Memosprites)}}"
           },
-          "modifier": "Monster_W4_Pollux_BloodRange[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
           "valuePerStack": {
             "_HpLimitRatio": {
               "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
@@ -602,7 +602,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+        "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
         "invertCondition": true
       },
       "passed": [
@@ -612,7 +612,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
           "valuePerStack": {
             "MDF_ShowValue1": {
               "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
@@ -643,7 +643,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_Monster_W4_Pollux_B_HardLockHp_BFAbility05",
+      "modifier": "<a class=\"gModGreen\" id=\"-1324293112\">Modifier_Monster_W4_Pollux_B_HardLockHp_BFAbility05</a>",
       "valuePerStack": {
         "MDF_LockHp": {
           "operator": "Variables[0] (MIN) || Constants[0] (0.9) || Variables[1] ({[PassiveSkill02[5]]}) || Constants[1] (1.2) || MUL || PARAM_2 || FUNCTION || RETURN",

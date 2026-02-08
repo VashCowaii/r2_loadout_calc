@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_002"
+      "modifier": "<a class=\"gModGreen\" id=\"1762335796\">MStrongChallengeEX_Talent_StageAbility_LE_002</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_002_Extra",
+      "for": "<a class=\"gModGreen\" id=\"mod__-32026811\">MStrongChallengeEX_Talent_StageAbility_PLY_002_Extra</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "EnduranceEnemyOnly"
@@ -42,7 +42,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_002",
+      "for": "<a class=\"gModGreen\" id=\"mod__1072831068\">MStrongChallengeEX_Talent_StageAbility_PLY_002</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -70,7 +70,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_002",
+      "for": "<a class=\"gModGreen\" id=\"mod__1762335796\">MStrongChallengeEX_Talent_StageAbility_LE_002</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -97,7 +97,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_002",
+                  "modifier": "<a class=\"gModGreen\" id=\"1072831068\">MStrongChallengeEX_Talent_StageAbility_PLY_002</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -138,7 +138,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_002_Extra"
+                  "modifier": "<a class=\"gModGreen\" id=\"-32026811\">MStrongChallengeEX_Talent_StageAbility_PLY_002_Extra</a>"
                 }
               ]
             }

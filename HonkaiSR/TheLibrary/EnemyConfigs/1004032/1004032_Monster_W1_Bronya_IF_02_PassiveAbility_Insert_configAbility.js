@@ -18,7 +18,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Monster_W1_Gepard_IF_03_PartController"
+        "modifier": "<a class=\"gModGreen\" id=\"2141633429\">Monster_W1_Gepard_IF_03_PartController</a>"
       },
       "ifTargetFound": [
         {
@@ -52,7 +52,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Enemy_W1_Gepard_IF_03_EnhancePerTurn[<span class=\"descriptionNumberColor\">Will of Steel</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -60,7 +60,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_MainHaloEffect[<span class=\"descriptionNumberColor\">Charge</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -68,7 +68,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_AssistantSpeed[<span class=\"descriptionNumberColor\">Defense</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]"
         },
         {
           "name": "Define Custom Variable",
@@ -85,7 +85,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Enemy_W1_Gepard_IF_03_ListenBeingAttacked"
+          "modifier": "<a class=\"gModGreen\" id=\"-1241486816\">Enemy_W1_Gepard_IF_03_ListenBeingAttacked</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -93,7 +93,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Enemy_IF_LimboMark[<span class=\"descriptionNumberColor\">Valor Via Setbacks</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1981216123\">Enemy_IF_LimboMark</a>[<span class=\"descriptionNumberColor\">Valor Via Setbacks</span>]",
           "removeAllInstances": true
         },
         {
@@ -102,7 +102,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_Standard_Endurance"
+          "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -150,7 +150,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "OneMorePerTurn",
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>",
           "removeToBeAdded": true
         },
         {
@@ -159,7 +159,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "MoreOneMorePerTurn",
+          "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>",
           "removeToBeAdded": true
         },
         {
@@ -168,7 +168,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "OneMore",
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>",
           "removeToBeAdded": true
         },
         {
@@ -177,15 +177,15 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Enemy_W1_Soldier04_AbilityP01_Supported[<span class=\"descriptionNumberColor\">Reinforced</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_ChangePhase"
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_ChangePhase_ParamEntity"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1902031976\">Monster_ChangePhase_ParamEntity</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -193,7 +193,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_AssistantSpeed[<span class=\"descriptionNumberColor\">Defense</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
           "valuePerStack": {
             "MDF_SpeedDownRatio": {
               "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
@@ -211,7 +211,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Enemy_W1_Gepard_IF_03_WeaknessProtect"
+          "modifier": "<a class=\"gModGreen\" id=\"1559306113\">Enemy_W1_Gepard_IF_03_WeaknessProtect</a>"
         },
         {
           "name": "Action Advance/Delay",
@@ -237,7 +237,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_WeaknessProtect"
+          "modifier": "<a class=\"gModGreen\" id=\"479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>"
         },
         {
           "name": "Find New Target",
@@ -273,7 +273,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Enemy_W1_Gepard_IF_03_Part2EnhanceInti"
+          "modifier": "<a class=\"gModGreen\" id=\"514811508\">Enemy_W1_Gepard_IF_03_Part2EnhanceInti</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -281,7 +281,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
           "valuePerStack": {
             "MDF_SpeedUpPerLayer": {
               "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
@@ -307,7 +307,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_Standard_Endurance"
+          "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -315,7 +315,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Enemy_W1_Gepard_IF_03_Enhance[<span class=\"descriptionNumberColor\">Thick and Thin</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1430608043\">Enemy_W1_Gepard_IF_03_Enhance</a>[<span class=\"descriptionNumberColor\">Thick and Thin</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -323,7 +323,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_Enhance[<span class=\"descriptionNumberColor\">Shared Hatred</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1364188900\">Enemy_W1_Bronya_IF_02_Enhance</a>[<span class=\"descriptionNumberColor\">Shared Hatred</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -331,7 +331,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Bronya_IF_02_MainHaloEffect[<span class=\"descriptionNumberColor\">Charge</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
         }
       ]
     }

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_20022_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-772520149\">LC_20022_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_20022_Sub2[<span class=\"descriptionNumberColor\">Commemoration</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__394065750\">LC_20022_Sub2</a>[<span class=\"descriptionNumberColor\">Commemoration</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -61,7 +61,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_20022_Sub1",
+      "for": "<a class=\"gModGreen\" id=\"mod__377288131\">LC_20022_Sub1</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -72,7 +72,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "LC_20022_Sub2[<span class=\"descriptionNumberColor\">Commemoration</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"394065750\">LC_20022_Sub2</a>[<span class=\"descriptionNumberColor\">Commemoration</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (4) || RETURN",
                 "displayLines": "4",
@@ -88,7 +88,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "LC_20022_Sub2[<span class=\"descriptionNumberColor\">Commemoration</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"394065750\">LC_20022_Sub2</a>[<span class=\"descriptionNumberColor\">Commemoration</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (4) || RETURN",
                 "displayLines": "4",
@@ -109,7 +109,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "LC_20022_Sub2[<span class=\"descriptionNumberColor\">Commemoration</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"394065750\">LC_20022_Sub2</a>[<span class=\"descriptionNumberColor\">Commemoration</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -117,7 +117,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "LC_20022_Sub2[<span class=\"descriptionNumberColor\">Commemoration</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"394065750\">LC_20022_Sub2</a>[<span class=\"descriptionNumberColor\">Commemoration</span>]"
             }
           ]
         }
@@ -125,7 +125,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_20022_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-772520149\">LC_20022_Main</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -164,7 +164,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_20022_Sub1"
+                  "modifier": "<a class=\"gModGreen\" id=\"377288131\">LC_20022_Sub1</a>"
                 }
               ]
             }

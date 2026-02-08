@@ -57,7 +57,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Enemy_WMonster_W0_Boss_Unselectable[<span class=\"descriptionNumberColor\">Vestige Valor</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"1691894969\">Enemy_WMonster_W0_Boss_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]",
             "invertCondition": true
           }
         }
@@ -89,7 +89,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Monster_W2_Huanlong_Part1"
+            "modifier": "<a class=\"gModGreen\" id=\"461293746\">Monster_W2_Huanlong_Part1</a>"
           },
           "failed": [
             {
@@ -100,7 +100,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Monster_W2_Huanlong_Part2"
+                "modifier": "<a class=\"gModGreen\" id=\"444516127\">Monster_W2_Huanlong_Part2</a>"
               },
               "failed": [
                 {
@@ -111,7 +111,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
                     },
-                    "modifier": "Monster_W2_Huanlong_Part3"
+                    "modifier": "<a class=\"gModGreen\" id=\"427738508\">Monster_W2_Huanlong_Part3</a>"
                   }
                 }
               ]

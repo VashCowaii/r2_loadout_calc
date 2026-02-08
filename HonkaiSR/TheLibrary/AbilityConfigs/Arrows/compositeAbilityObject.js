@@ -18,7 +18,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_20000_Main[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"396468451\">LC_20000_Main</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -32,7 +32,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_20000_Main[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__396468451\">LC_20000_Main</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",

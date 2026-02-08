@@ -83,7 +83,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -91,7 +91,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_CocoliaP2_01_StandByEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"1454706041\">Enemy_W1_CocoliaP2_01_StandByEffect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -99,7 +99,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_CocoliaP2_01_SpinSpeedController"
+          "modifier": "<a class=\"gModGreen\" id=\"-258262082\">Enemy_W1_CocoliaP2_01_SpinSpeedController</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -107,7 +107,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_CocoliaP2_01_BeHitEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1663784958\">Enemy_W1_CocoliaP2_01_BeHitEffect</a>"
         }
       ],
       "references": []
@@ -124,13 +124,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Boss_Cocolia_P1_Weapon_DeathSetCamera"
+          "modifier": "<a class=\"gModGreen\" id=\"1118324770\">Boss_Cocolia_P1_Weapon_DeathSetCamera</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Boss_Cocolia_P1_Weapon_DeathSetCamera",
+          "for": "<a class=\"gModGreen\" id=\"mod__1118324770\">Boss_Cocolia_P1_Weapon_DeathSetCamera</a>",
           "execute": [
             {
               "eventTrigger": "When Put in Deathstate Limbo",
@@ -149,7 +149,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "BOSS_COCOLIA_BOSS_MDF"
+                    "modifier": "<a class=\"gModGreen\" id=\"-79024859\">BOSS_COCOLIA_BOSS_MDF</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -261,13 +261,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Boss_Cocolia_P1_Weapon_DeathEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1847839650\">Boss_Cocolia_P1_Weapon_DeathEffect</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Boss_Cocolia_P1_Weapon_DeathEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1847839650\">Boss_Cocolia_P1_Weapon_DeathEffect</a>",
           "execute": [
             {
               "eventTrigger": "When Put in Deathstate Limbo",
@@ -302,7 +302,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Boss_Cocolia_MuteHitFly_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1485263337\">Boss_Cocolia_MuteHitFly_Modifier</a>"
         }
       ],
       "references": []
@@ -410,7 +410,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_CocoliaP2_01_DieWithoutEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__1494181192\">Enemy_W1_CocoliaP2_01_DieWithoutEffect</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -429,7 +429,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_CocoliaP2_01_BeHitEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1663784958\">Enemy_W1_CocoliaP2_01_BeHitEffect</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Hit"
@@ -440,7 +440,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_CocoliaP2_01_SpinSpeedController",
+          "for": "<a class=\"gModGreen\" id=\"mod__-258262082\">Enemy_W1_CocoliaP2_01_SpinSpeedController</a>",
           "execute": [
             {
               "eventTrigger": "When Put in Deathstate Limbo"
@@ -457,7 +457,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_CocoliaP2_01_StandByEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__1454706041\">Enemy_W1_CocoliaP2_01_StandByEffect</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"

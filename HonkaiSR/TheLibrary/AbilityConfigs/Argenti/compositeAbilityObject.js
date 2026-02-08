@@ -37,13 +37,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Argenti_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-573630990\">StageAbility_Maze_Argenti_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Argenti_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-573630990\">StageAbility_Maze_Argenti_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -59,7 +59,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Level Entity}}"
                         },
-                        "modifier": "StageAbility_MazeStandard_EnterBattle_Monster_Modifier",
+                        "modifier": "<a class=\"gModGreen\" id=\"1904238030\">StageAbility_MazeStandard_EnterBattle_Monster_Modifier</a>",
                         "invertCondition": true
                       },
                       {
@@ -174,7 +174,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Argenti_UltraAbilityPrepare"
+          "modifier": "<a class=\"gModGreen\" id=\"1628831638\">Argenti_UltraAbilityPrepare</a>"
         },
         {
           "name": "IF",
@@ -189,7 +189,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Argenti_Eidolon2_TargetNumberListen"
+              "modifier": "<a class=\"gModGreen\" id=\"886693794\">Argenti_Eidolon2_TargetNumberListen</a>"
             }
           ]
         },
@@ -230,7 +230,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                     "displayLines": "MDF_MaxCount",
@@ -271,7 +271,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Argenti_PointB1_AutoBonusLayerModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"53398910\">Argenti_PointB1_AutoBonusLayerModifier</a>"
             }
           ]
         },
@@ -288,7 +288,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Argenti_PointB2_SummonSpModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-143251630\">Argenti_PointB2_SummonSpModifier</a>"
             }
           ]
         },
@@ -305,7 +305,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Argenti_PointB3_DamageUpModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"1414453443\">Argenti_PointB3_DamageUpModifier</a>"
             }
           ]
         }
@@ -331,7 +331,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Argenti_Eidolon6_DefPentModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-1721941728\">Argenti_Eidolon6_DefPentModifier</a>"
             }
           ]
         },
@@ -381,7 +381,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                     "displayLines": "MDF_MaxCount",
@@ -455,7 +455,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Argenti_Bonus_Modifier01",
+                    "modifier": "<a class=\"gModGreen\" id=\"-105339618\">Argenti_Bonus_Modifier01</a>",
                     "invertCondition": true
                   },
                   {
@@ -477,7 +477,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Argenti_Bonus_Modifier01"
+                  "modifier": "<a class=\"gModGreen\" id=\"-105339618\">Argenti_Bonus_Modifier01</a>"
                 }
               ],
               "noTargetFound": [
@@ -496,7 +496,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Argenti_Bonus_Modifier01",
+                    "modifier": "<a class=\"gModGreen\" id=\"-105339618\">Argenti_Bonus_Modifier01</a>",
                     "invertCondition": true
                   },
                   "ifTargetFound": [
@@ -506,7 +506,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Argenti_Bonus_Modifier01"
+                      "modifier": "<a class=\"gModGreen\" id=\"-105339618\">Argenti_Bonus_Modifier01</a>"
                     }
                   ]
                 }
@@ -527,7 +527,7 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -573,7 +573,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Argenti_Bonus_Modifier01"
+          "modifier": "<a class=\"gModGreen\" id=\"-105339618\">Argenti_Bonus_Modifier01</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -593,7 +593,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Argenti_Eidolon6_DefPentModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-1721941728\">Argenti_Eidolon6_DefPentModifier</a>"
             }
           ]
         },
@@ -667,7 +667,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Argenti_Eidolon6_DefPentModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-1721941728\">Argenti_Eidolon6_DefPentModifier</a>"
             }
           ]
         },
@@ -717,7 +717,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                     "displayLines": "MDF_MaxCount",
@@ -780,7 +780,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Argenti_Eidolon6_DefPentModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-1721941728\">Argenti_Eidolon6_DefPentModifier</a>"
             }
           ]
         },
@@ -881,7 +881,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                     "displayLines": "MDF_MaxCount",
@@ -1003,7 +1003,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                 "displayLines": "MDF_MaxCount",
@@ -1091,7 +1091,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Argenti_Eidolon2_AttackRatioUp[<span class=\"descriptionNumberColor\">Agate's Humility</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1150044679\">Argenti_Eidolon2_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Agate's Humility</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1123,7 +1123,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Argenti_Eidolon2_TargetNumberListen",
+          "for": "<a class=\"gModGreen\" id=\"mod__886693794\">Argenti_Eidolon2_TargetNumberListen</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -1171,7 +1171,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Argenti_Eidolon2_AttackRatioUp[<span class=\"descriptionNumberColor\">Agate's Humility</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1150044679\">Argenti_Eidolon2_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Agate's Humility</span>]",
                           "duration": {
                             "operator": "Variables[0] (1) || RETURN",
                             "displayLines": "1",
@@ -1203,7 +1203,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Argenti_PointB3_DamageUpModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1414453443\">Argenti_PointB3_DamageUpModifier</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1258,7 +1258,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Argenti_PointB2_SummonSpModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-143251630\">Argenti_PointB2_SummonSpModifier</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1300,7 +1300,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Argenti_PointB1_AutoBonusLayerModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__53398910\">Argenti_PointB1_AutoBonusLayerModifier</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -1338,7 +1338,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                             "displayLines": "MDF_MaxCount",
@@ -1360,7 +1360,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Argenti_Eidolon6_DefPentModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1721941728\">Argenti_Eidolon6_DefPentModifier</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1392,7 +1392,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1493,7 +1493,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Argenti_Bonus_Modifier01",
+          "for": "<a class=\"gModGreen\" id=\"mod__-105339618\">Argenti_Bonus_Modifier01</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1505,7 +1505,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Argenti_UltraAbilityPrepare",
+          "for": "<a class=\"gModGreen\" id=\"mod__1628831638\">Argenti_UltraAbilityPrepare</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",

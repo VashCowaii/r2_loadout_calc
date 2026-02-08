@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_005"
+      "modifier": "<a class=\"gModGreen\" id=\"1745558177\">MStrongChallengeEX_Talent_StageAbility_LE_005</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_005",
+      "for": "<a class=\"gModGreen\" id=\"mod__1745558177\">MStrongChallengeEX_Talent_StageAbility_LE_005</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -53,7 +53,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_AttackRatioUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1638600472\">Standard_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_2) || RETURN",
@@ -71,7 +71,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_StatusResistanceUp[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1990889700\">Standard_StatusResistanceUp</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",

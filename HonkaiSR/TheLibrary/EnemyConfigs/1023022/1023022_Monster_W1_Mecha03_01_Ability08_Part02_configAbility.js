@@ -24,7 +24,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha03_01_Overheat[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"2015116315\">Monster_W1_Mecha03_01_Overheat</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
       "valuePerStack": {
         "MDF_DefenceAddedRatio": {
           "operator": "Variables[0] (UnusedUnderThisBase_39) || RETURN",

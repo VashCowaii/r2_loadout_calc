@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Local_SPAdd",
+      "modifier": "<a class=\"gModGreen\" id=\"-205377483\">Local_SPAdd</a>",
       "valuePerStack": {
         "MDF_AddValue": 10
       }
@@ -21,7 +21,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "TriggerStanceCountDown_Test"
+      "modifier": "<a class=\"gModGreen\" id=\"2041921887\">TriggerStanceCountDown_Test</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -29,7 +29,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Standard_TriggerDeparted"
+      "modifier": "<a class=\"gModGreen\" id=\"1176583887\">Standard_TriggerDeparted</a>"
     }
   ],
   "references": []

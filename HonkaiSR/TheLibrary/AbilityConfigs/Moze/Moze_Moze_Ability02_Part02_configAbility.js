@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
     },
     {
       "name": "ATK Scaling DMG",
@@ -130,7 +130,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Moze_Ability02_InShadowModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
         }
       ]
     },

@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_123_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1653302860\">Relic_123_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_123_Sub3[<span class=\"descriptionNumberColor\">Hero of Triumphant Song</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1578671258\">Relic_123_Sub3</a>[<span class=\"descriptionNumberColor\">Hero of Triumphant Song</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -55,7 +55,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_123_Sub2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1561893639\">Relic_123_Sub2</a>",
           "execute": [
             {
               "eventTrigger": "Attack Start [Owner]",
@@ -68,7 +68,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Relic_123_Sub3[<span class=\"descriptionNumberColor\">Hero of Triumphant Song</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1578671258\">Relic_123_Sub3</a>[<span class=\"descriptionNumberColor\">Hero of Triumphant Song</span>]"
                   },
                   "failed": [
                     {
@@ -89,7 +89,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_123_Sub3[<span class=\"descriptionNumberColor\">Hero of Triumphant Song</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1578671258\">Relic_123_Sub3</a>[<span class=\"descriptionNumberColor\">Hero of Triumphant Song</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -115,7 +115,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getSummoner]]"
                   },
-                  "modifier": "Relic_123_Sub3[<span class=\"descriptionNumberColor\">Hero of Triumphant Song</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1578671258\">Relic_123_Sub3</a>[<span class=\"descriptionNumberColor\">Hero of Triumphant Song</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -141,7 +141,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_123_Sub1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1612226496\">Relic_123_Sub1</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -168,7 +168,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_123_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1653302860\">Relic_123_Main</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -207,7 +207,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Relic_123_Sub1"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1612226496\">Relic_123_Sub1</a>"
                     }
                   ]
                 }
@@ -250,7 +250,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Relic_123_Sub1"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1612226496\">Relic_123_Sub1</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -258,7 +258,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Relic_123_Sub2"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1561893639\">Relic_123_Sub2</a>"
                     }
                   ]
                 }
@@ -286,7 +286,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Relic_123_Sub1"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1612226496\">Relic_123_Sub1</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -294,7 +294,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Relic_123_Sub2"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1561893639\">Relic_123_Sub2</a>"
                     }
                   ]
                 }

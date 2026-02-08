@@ -41,7 +41,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
         "displayLines": "{[Skill02[2]]}",
@@ -99,7 +99,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Targets Adjacent(Blast)}}"
       },
-      "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
         "displayLines": "{[Skill02[2]]}",

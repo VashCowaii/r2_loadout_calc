@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23003_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-2070364355\">LC_23003_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23003_TriggerCD[<span class=\"descriptionNumberColor\">Heir</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-491630213\">LC_23003_TriggerCD</a>[<span class=\"descriptionNumberColor\">Heir</span>]",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -70,7 +70,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23003_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-756547598\">LC_23003_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -102,7 +102,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23003_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2070364355\">LC_23003_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -136,7 +136,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23003_TriggerCD[<span class=\"descriptionNumberColor\">Heir</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-491630213\">LC_23003_TriggerCD</a>[<span class=\"descriptionNumberColor\">Heir</span>]"
                     }
                   }
                 ]
@@ -153,7 +153,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23003_TriggerCD[<span class=\"descriptionNumberColor\">Heir</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-491630213\">LC_23003_TriggerCD</a>[<span class=\"descriptionNumberColor\">Heir</span>]"
                 }
               ]
             },
@@ -194,7 +194,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_23003_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-756547598\">LC_23003_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",

@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Fugue_PassiveAbility_ElementDamage",
+      "for": "<a class=\"gModGreen\" id=\"mod__-74108309\">Fugue_PassiveAbility_ElementDamage</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -21,7 +21,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "DealSuperBreakDamage_DamagePerformance",
+              "functionName": "<a class=\"gTempYellow\" id=\"2132906314\">DealSuperBreakDamage_DamagePerformance</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Attack Targets of Modifier Holder}}"
@@ -39,7 +39,7 @@ const configAbility = {
               "damageSequence": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "PursuedDamage_PerformanceDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
@@ -90,7 +90,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Fugue_PassiveAbility_ListenBreakDamage",
+      "for": "<a class=\"gModGreen\" id=\"mod__2001305717\">Fugue_PassiveAbility_ListenBreakDamage</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -106,7 +106,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Fugue_PassiveAbility_ElementDamage",
+              "modifier": "<a class=\"gModGreen\" id=\"-74108309\">Fugue_PassiveAbility_ElementDamage</a>",
               "valuePerStack": {
                 "MDF_SuperBreakDamagePercentage": {
                   "operator": "Variables[0] (MDF_PassiveDamage2) || RETURN",
@@ -130,7 +130,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Fugue_Ability03_WeakType_BUFF",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1376045581\">Fugue_Ability03_WeakType_BUFF</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ForceStanceDamage"
@@ -163,7 +163,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Fugue_StancePreview",
+      "for": "<a class=\"gModGreen\" id=\"mod__873674204\">Fugue_StancePreview</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -183,7 +183,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Fugue_DefenceDown[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-375769760\">Fugue_DefenceDown</a>[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_DefenceDown"
@@ -216,7 +216,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Fugue_Eidolon2_PreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__915939939\">Fugue_Eidolon2_PreShow</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -244,7 +244,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Fugue_Eidolon6_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__696396442\">Fugue_Eidolon6_Listen</a>",
       "stackData": [],
       "latentQueue": [],
       "subModList": [
@@ -254,7 +254,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
           },
-          "modifier": "Fugue_BPAbility_Eidolon4[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
           "aliveOnly": "True",
           "haloStatus": true,
           "valuePerStack": {
@@ -320,7 +320,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Fugue_RedStance[<span class=\"descriptionNumberColor\">Cloudflame Luster</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1774454693\">Fugue_RedStance</a>[<span class=\"descriptionNumberColor\">Cloudflame Luster</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -390,7 +390,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Fugue_BPAbility_Eidolon4[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -398,7 +398,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Fugue_BPAbility_Eidolon1[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1132900651\">Fugue_BPAbility_Eidolon1</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -406,7 +406,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Fugue_BPAbility[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"647019371\">Fugue_BPAbility</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
                   }
                 ]
               },
@@ -417,7 +417,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Fugue_DefenceDown[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-375769760\">Fugue_DefenceDown</a>[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

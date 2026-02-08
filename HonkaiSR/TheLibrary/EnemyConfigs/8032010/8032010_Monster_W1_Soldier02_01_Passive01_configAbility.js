@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Soldier02_01_CoinPassive"
+      "modifier": "<a class=\"gModGreen\" id=\"-288523596\">Monster_W1_Soldier02_01_CoinPassive</a>"
     }
   ],
   "references": []

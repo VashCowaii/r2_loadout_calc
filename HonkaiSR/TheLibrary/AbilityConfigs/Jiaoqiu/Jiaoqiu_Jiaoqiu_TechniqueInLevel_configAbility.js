@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Jiaoqiu_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"174080663\">StageAbility_Maze_Jiaoqiu_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Jiaoqiu_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__174080663\">StageAbility_Maze_Jiaoqiu_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -64,7 +64,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

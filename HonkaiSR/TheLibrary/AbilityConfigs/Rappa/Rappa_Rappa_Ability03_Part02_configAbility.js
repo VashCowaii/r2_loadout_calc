@@ -46,7 +46,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Rappa_UltraMode[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-1748394699\">Rappa_UltraMode</a>[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]"
       },
       "failed": [
         {
@@ -55,7 +55,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Rappa_UltraMode[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1748394699\">Rappa_UltraMode</a>[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.5) || RETURN",
@@ -111,7 +111,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Rappa_UltraMode_BanSKL02_ForCaster"
+      "modifier": "<a class=\"gModGreen\" id=\"685299865\">Rappa_UltraMode_BanSKL02_ForCaster</a>"
     },
     {
       "name": "Inject Extra-Turn",

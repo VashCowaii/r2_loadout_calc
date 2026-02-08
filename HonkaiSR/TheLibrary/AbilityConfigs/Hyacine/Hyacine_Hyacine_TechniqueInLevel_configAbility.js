@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Hyacine_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1135354482\">StageAbility_Maze_Hyacine_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Hyacine_Maze_AddMaxHp[<span class=\"descriptionNumberColor\">Day So Right, Life So Fine!</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1998064298\">Hyacine_Maze_AddMaxHp</a>[<span class=\"descriptionNumberColor\">Day So Right, Life So Fine!</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -54,7 +54,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Hyacine_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1135354482\">StageAbility_Maze_Hyacine_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -98,7 +98,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Hyacine_Maze_AddMaxHp[<span class=\"descriptionNumberColor\">Day So Right, Life So Fine!</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1998064298\">Hyacine_Maze_AddMaxHp</a>[<span class=\"descriptionNumberColor\">Day So Right, Life So Fine!</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

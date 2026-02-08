@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Phainon_Trace03"
+      "modifier": "<a class=\"gModGreen\" id=\"-1080372520\">M_Phainon_Trace03</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Trace03",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1080372520\">M_Phainon_Trace03</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -36,7 +36,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Phainon_Tree03_Property[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-982733816\">Phainon_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

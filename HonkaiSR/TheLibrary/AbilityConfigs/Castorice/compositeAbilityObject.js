@@ -75,7 +75,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Castorice_Ability03_Field"
+          "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>"
         },
         {
           "name": "Summon Memosprite",
@@ -218,7 +218,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Castorice_Eidolon2_Check"
+              "modifier": "<a class=\"gModGreen\" id=\"176252830\">Castorice_Eidolon2_Check</a>"
             }
           ]
         },
@@ -277,7 +277,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "ReduceActionDelay",
+              "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -306,7 +306,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "execute": [
             {
               "name": "Copy Modifier",
@@ -330,7 +330,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Castorice_Modifier",
+          "modifier": "<a class=\"gModGreen\" id=\"689500868\">StageAbility_Maze_Castorice_Modifier</a>",
           "valuePerStack": {
             "MDF_LoseHP": {
               "operator": "Variables[0] (0.4) || RETURN",
@@ -346,7 +346,7 @@ const compositeAbilityObject = {
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Castorice_OnWaveMonsterPerform",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1404094382\">Servant_Castorice_OnWaveMonsterPerform</a>",
           "parse": [
             {
               "name": "Define Custom Variable",
@@ -363,7 +363,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Castorice_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__689500868\">StageAbility_Maze_Castorice_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -447,7 +447,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Castorice_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-197237378\">Castorice_Passive</a>"
         },
         {
           "name": "IF",
@@ -462,7 +462,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Castorice_PointB1_HealTaxes"
+              "modifier": "<a class=\"gModGreen\" id=\"950021136\">Castorice_PointB1_HealTaxes</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -493,7 +493,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_Castorice_PointB2_OnListen",
+              "modifier": "<a class=\"gModGreen\" id=\"115720497\">Memosprite_Castorice_PointB2_OnListen</a>",
               "valuePerStack": {
                 "Castorice_PointB2_HPRatio": {
                   "operator": "Variables[0] (0.5) || RETURN",
@@ -528,7 +528,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Castorice_Eidolon2_OnListenValueChange"
+              "modifier": "<a class=\"gModGreen\" id=\"2083586529\">Castorice_Eidolon2_OnListenValueChange</a>"
             }
           ]
         },
@@ -545,7 +545,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Castorice_Eidolon4_Listen"
+              "modifier": "<a class=\"gModGreen\" id=\"1698152191\">Castorice_Eidolon4_Listen</a>"
             }
           ]
         },
@@ -562,7 +562,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Castorice_Eidolon6_OnListen",
+              "modifier": "<a class=\"gModGreen\" id=\"332176292\">Castorice_Eidolon6_OnListen</a>",
               "valuePerStack": {
                 "MDF_QuantumPenetrate": {
                   "operator": "Variables[0] (0.2) || RETURN",
@@ -582,7 +582,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Castorice_RefreshMaxSpecialSPFlag"
+          "modifier": "<a class=\"gModGreen\" id=\"-1345662684\">Castorice_RefreshMaxSpecialSPFlag</a>"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -611,7 +611,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Castorice_Eidolon6_OnListen",
+          "for": "<a class=\"gModGreen\" id=\"mod__332176292\">Castorice_Eidolon6_OnListen</a>",
           "stackData": [
             "MDF_QuantumPenetrate"
           ],
@@ -625,7 +625,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Castorice_Eidolon6_QuantumPenetrate[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-459849199\">Castorice_Eidolon6_QuantumPenetrate</a>[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
               "aliveOnly": "False",
               "haloStatus": true,
               "valuePerStack": {
@@ -645,7 +645,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "Castorice_Eidolon6_QuantumPenetrate[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-459849199\">Castorice_Eidolon6_QuantumPenetrate</a>[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
               "aliveOnly": "False",
               "haloStatus": true,
               "valuePerStack": {
@@ -663,7 +663,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Castorice_Eidolon4_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__1698152191\">Castorice_Eidolon4_Listen</a>",
           "stackData": [],
           "latentQueue": [
             "OverHeal"
@@ -675,7 +675,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Castorice_Eidolon4_HealTakenRatio[<span class=\"descriptionNumberColor\">Rest in Songs of Gloom</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1861384440\">Castorice_Eidolon4_HealTakenRatio</a>[<span class=\"descriptionNumberColor\">Rest in Songs of Gloom</span>]",
               "aliveOnly": "False",
               "haloStatus": true,
               "valuePerStack": {
@@ -693,7 +693,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Castorice_Passive02_OnListenHPChange",
+          "for": "<a class=\"gModGreen\" id=\"mod__958490815\">Castorice_Passive02_OnListenHPChange</a>",
           "execute": [
             {
               "eventTrigger": "HP Change [Owner]",
@@ -720,7 +720,7 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Variable",
-                            "value1": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                            "value1": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                             "compareType": ">=",
                             "value2": {
                               "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
@@ -739,7 +739,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                               "duration": {
                                 "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                                 "displayLines": "MDF_LifeTime",
@@ -782,7 +782,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster's Memosprite}}"
                               },
-                              "modifier": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                               "duration": {
                                 "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                                 "displayLines": "MDF_LifeTime",
@@ -827,7 +827,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                               "duration": {
                                 "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                                 "displayLines": "MDF_LifeTime",
@@ -870,7 +870,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster's Memosprite}}"
                               },
-                              "modifier": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                               "duration": {
                                 "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                                 "displayLines": "MDF_LifeTime",
@@ -919,7 +919,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Castorice_RefreshMaxSpecialSPFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1345662684\">Castorice_RefreshMaxSpecialSPFlag</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -941,7 +941,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Castorice_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-197237378\">Castorice_Passive</a>",
           "modifierFlags": [
             "ListenBattleEventSkill",
             "RemoveWhenCasterDead"
@@ -982,7 +982,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Castorice_RefreshMaxSpecialSP"
+                      "functionName": "<a class=\"gTempYellow\" id=\"2134704616\">Castorice_RefreshMaxSpecialSP</a>"
                     }
                   ]
                 }
@@ -1040,14 +1040,14 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Castorice_Ability03_Field",
+                            "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>",
                             "invertCondition": true,
                             "justAddedOrActive": true
                           },
                           "passed": [
                             {
                               "name": "Use Custom Character Function",
-                              "functionName": "Castorice_AddSpecialSP",
+                              "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
                               "variables": {
                                 "_FixedAddValue": {
                                   "operator": "Variables[0] (Current_LostHP) || INVERT || RETURN",
@@ -1140,7 +1140,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Castorice_AddSpecialSP",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
                       "variables": {
                         "_FixedAddValue": {
                           "operator": "Variables[0] (Castorice_Passive_MaxCount) || Variables[1] (0.3) || MUL || RETURN",
@@ -1185,7 +1185,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Castorice_Ability03_Field",
+                        "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>",
                         "invertCondition": true,
                         "justAddedOrActive": true
                       },
@@ -1237,7 +1237,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Castorice_CheckCurrentSpecialSPChange"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"
                     }
                   ]
                 }
@@ -1254,7 +1254,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Castorice_CheckCurrentSpecialSPChange"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"
                     }
                   ]
                 }
@@ -1264,7 +1264,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Castorice_RefreshMaxSpecialSP",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__2134704616\">Castorice_RefreshMaxSpecialSP</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable",
@@ -1480,7 +1480,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Castorice_Ability03_Field",
+                    "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>",
                     "invertCondition": true,
                     "justAddedOrActive": true
                   },
@@ -1502,7 +1502,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "CharacterFunctions",
-              "functionName": "Castorice_CheckCurrentSpecialSPChange",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-272315266\">Castorice_CheckCurrentSpecialSPChange</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable with Changes to Stats",
@@ -1540,7 +1540,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Castorice_Passive02_OnListenHPChange",
+              "modifier": "<a class=\"gModGreen\" id=\"958490815\">Castorice_Passive02_OnListenHPChange</a>",
               "aliveOnly": "False",
               "haloStatus": true,
               "valuePerStack": {
@@ -1576,7 +1576,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Caster's Memosprite}}"
               },
-              "modifier": "Castorice_LoseHPPreShow",
+              "modifier": "<a class=\"gModGreen\" id=\"445281600\">Castorice_LoseHPPreShow</a>",
               "aliveOnly": "False",
               "haloStatus": true,
               "valuePerStack": {
@@ -1616,11 +1616,11 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Castorice_Ability03_Field"
+          "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Castorice_ExtraSpecialSPReturn",
+          "functionName": "<a class=\"gTempYellow\" id=\"1186346947\">Castorice_ExtraSpecialSPReturn</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -1757,7 +1757,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Castorice_Eidolon2_Check"
+              "modifier": "<a class=\"gModGreen\" id=\"176252830\">Castorice_Eidolon2_Check</a>"
             }
           ]
         },
@@ -1804,7 +1804,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "execute": [
             {
               "name": "Copy Modifier",
@@ -1840,7 +1840,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "ReduceActionDelay",
+              "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -1957,7 +1957,7 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Castorice_SetDamageRatio"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-815210421\">Castorice_SetDamageRatio</a>"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -2057,7 +2057,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Castorice_Eidolon2_Check"
+                "modifier": "<a class=\"gModGreen\" id=\"176252830\">Castorice_Eidolon2_Check</a>"
               }
             ]
           },
@@ -2073,7 +2073,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Castorice_AddSpecialSP",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
               "variables": {
                 "_FixedAddValue": {
                   "operator": "Variables[0] (Castorice_Rank02_MaxSpecialSP) || Variables[1] (0.3) || MUL || RETURN",
@@ -2092,7 +2092,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Castorice_Eidolon2_Check"
+              "modifier": "<a class=\"gModGreen\" id=\"176252830\">Castorice_Eidolon2_Check</a>"
             }
           ]
         },
@@ -2421,7 +2421,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Castorice_Eidolon6_QuantumPenetrate[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-459849199\">Castorice_Eidolon6_QuantumPenetrate</a>[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2451,7 +2451,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Castorice_Eidolon4_HealTakenRatio[<span class=\"descriptionNumberColor\">Rest in Songs of Gloom</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1861384440\">Castorice_Eidolon4_HealTakenRatio</a>[<span class=\"descriptionNumberColor\">Rest in Songs of Gloom</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2488,7 +2488,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Castorice_Eidolon2_Count[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2513,7 +2513,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Castorice_Eidolon2_OnListenValueChange",
+          "for": "<a class=\"gModGreen\" id=\"mod__2083586529\">Castorice_Eidolon2_OnListenValueChange</a>",
           "stackType": "ReplaceByCaster",
           "variableValueChange": [
             {
@@ -2534,7 +2534,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Castorice_Eidolon2_Count[<span class=\"descriptionNumberColor\">Ardent Will</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]"
                       },
                       "passed": [
                         {
@@ -2543,7 +2543,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Castorice_Eidolon2_Count[<span class=\"descriptionNumberColor\">Ardent Will</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]"
                         }
                       ]
                     },
@@ -2562,7 +2562,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Castorice_Eidolon2_Count[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
                           "counter": {
                             "operator": "Variables[0] (Castorice_Rank02_Count) || RETURN",
                             "displayLines": "Castorice_Rank02_Count",
@@ -2596,7 +2596,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Castorice_Eidolon2_Check",
+          "for": "<a class=\"gModGreen\" id=\"mod__176252830\">Castorice_Eidolon2_Check</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2608,7 +2608,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Castorice_PointB3_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2657,7 +2657,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Castorice_PointB1_HealTaxesListen",
+          "for": "<a class=\"gModGreen\" id=\"mod__2144053419\">Castorice_PointB1_HealTaxesListen</a>",
           "execute": [
             {
               "eventTrigger": "Receiving Heal End [Owner]",
@@ -2741,7 +2741,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster's Memosprite}}"
                         },
-                        "modifier": "Memosprite_CastoriceServant_Passive"
+                        "modifier": "<a class=\"gModGreen\" id=\"1159652346\">Memosprite_CastoriceServant_Passive</a>"
                       },
                       "passed": [
                         {
@@ -2774,7 +2774,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster's Memosprite}}"
                             },
-                            "modifier": "Memosprite_CastoriceServant_GoDie"
+                            "modifier": "<a class=\"gModGreen\" id=\"1793501095\">Memosprite_CastoriceServant_GoDie</a>"
                           },
                           "failed": [
                             {
@@ -2812,7 +2812,7 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Castorice_AddSpecialSP",
+                          "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
                           "variables": {
                             "_FixedAddValue": {
                               "operator": "Variables[0] (HealAmount_CasterAdd) || RETURN",
@@ -2868,7 +2868,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Castorice_PointB1_HealTaxes",
+          "for": "<a class=\"gModGreen\" id=\"mod__950021136\">Castorice_PointB1_HealTaxes</a>",
           "stackData": [],
           "latentQueue": [
             "OverHeal"
@@ -2880,7 +2880,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}} - {{Caster}}.[[getMemosprite]]"
               },
-              "modifier": "Castorice_PointB1_HealTaxesListen",
+              "modifier": "<a class=\"gModGreen\" id=\"2144053419\">Castorice_PointB1_HealTaxesListen</a>",
               "haloStatus": true,
               "valuePerStack": {
                 "Castorice_PointB1_HPPercent": {
@@ -2905,7 +2905,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_Castorice_SpeedRatio[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -2940,7 +2940,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_Castorice_PointB2_OnListen",
+          "for": "<a class=\"gModGreen\" id=\"mod__115720497\">Memosprite_Castorice_PointB2_OnListen</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2972,7 +2972,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Memosprite_Castorice_SpeedRatio[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (Castorice_PointB2_SpeedRatio) || RETURN",
@@ -3026,7 +3026,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "Memosprite_Castorice_SpeedRatio[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
+                            "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
                             "invertCondition": true
                           },
                           "passed": [
@@ -3036,7 +3036,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Memosprite_Castorice_SpeedRatio[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
                                   "operator": "Variables[0] (Castorice_PointB2_SpeedRatio) || RETURN",
@@ -3060,7 +3060,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "Memosprite_Castorice_SpeedRatio[<span class=\"descriptionNumberColor\">Inverted Torch</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]"
                           },
                           "passed": [
                             {
@@ -3069,7 +3069,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Memosprite_Castorice_SpeedRatio[<span class=\"descriptionNumberColor\">Inverted Torch</span>]"
+                              "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]"
                             }
                           ]
                         }
@@ -3090,7 +3090,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3140,7 +3140,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Castorice_Ability03_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-658097441\">Castorice_Ability03_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3174,7 +3174,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Castorice_Ability03_Field",
+          "for": "<a class=\"gModGreen\" id=\"mod__-604294216\">Castorice_Ability03_Field</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "SpecialBattleArea"
@@ -3283,7 +3283,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Castorice_Ability03_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-658097441\">Castorice_Ability03_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
               "aliveOnly": "False",
               "haloStatus": true,
               "valuePerStack": {
@@ -3301,7 +3301,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Castorice_LoseHPPreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__445281600\">Castorice_LoseHPPreShow</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -3353,7 +3353,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Castorice_Ability03_Field"
+                            "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>"
                           },
                           "passed": [
                             {
@@ -3433,7 +3433,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Castorice_SetDamageRatio",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-815210421\">Castorice_SetDamageRatio</a>",
           "parse": [
             {
               "name": "IF",
@@ -3560,7 +3560,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Castorice_AddSpecialSP",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1401999190\">Castorice_AddSpecialSP</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
@@ -3648,7 +3648,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Castorice_ExtraSpecialSPReturn",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1186346947\">Castorice_ExtraSpecialSPReturn</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
@@ -3661,7 +3661,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Castorice_AddSpecialSP",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
               "variables": {
                 "_FixedAddValue": {
                   "operator": "Variables[0] (_CurExtraSpecialSP) || Variables[1] (MDF_ReturnRatio) || MUL || RETURN",
@@ -3709,13 +3709,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_BattleCry"
+          "modifier": "<a class=\"gModGreen\" id=\"53613592\">Memosprite_CastoriceServant_BattleCry</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_BattleCry",
+          "for": "<a class=\"gModGreen\" id=\"mod__53613592\">Memosprite_CastoriceServant_BattleCry</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3726,7 +3726,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-509656395\">Memosprite_CastoriceServant_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -3766,7 +3766,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "Memosprite_CastoriceServant_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-509656395\">Memosprite_CastoriceServant_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -3852,7 +3852,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"1159652346\">Memosprite_CastoriceServant_Passive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3860,7 +3860,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_LoseHPPreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"-858784788\">Memosprite_CastoriceServant_LoseHPPreShow</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3868,7 +3868,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_LifeTime",
+          "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
           "counter": {
             "operator": "Variables[0] (CastoriceServant_LifeTime) || RETURN",
             "displayLines": "CastoriceServant_LifeTime",
@@ -3894,7 +3894,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_Deathrattle"
+          "modifier": "<a class=\"gModGreen\" id=\"-1354985533\">Memosprite_CastoriceServant_Deathrattle</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3902,7 +3902,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_OnListenHitDamageSplit"
+          "modifier": "<a class=\"gModGreen\" id=\"-1340712313\">Memosprite_CastoriceServant_OnListenHitDamageSplit</a>"
         },
         {
           "name": "IF",
@@ -3917,19 +3917,19 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Eidolon6_StancePreview"
+              "modifier": "<a class=\"gModGreen\" id=\"313910489\">Memosprite_CastoriceServant_Eidolon6_StancePreview</a>"
             }
           ]
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Servant_CastoriceServant_GetMaxHP"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1714839092\">Servant_CastoriceServant_GetMaxHP</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_Deathrattle",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1354985533\">Memosprite_CastoriceServant_Deathrattle</a>",
           "modifierFlags": [
             "Deathrattle"
           ],
@@ -3972,7 +3972,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "ClearAvatarArea_ByAbility"
+                        "modifier": "<a class=\"gModGreen\" id=\"253720974\">ClearAvatarArea_ByAbility</a>"
                       },
                       {
                         "name": "Compare: Target",
@@ -4021,7 +4021,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_TiggerKiller",
+          "for": "<a class=\"gModGreen\" id=\"mod__156488588\">Memosprite_CastoriceServant_TiggerKiller</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4039,7 +4039,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_Disable"
+                  "modifier": "<a class=\"gModGreen\" id=\"1341939671\">Memosprite_CastoriceServant_Disable</a>"
                 }
               ]
             }
@@ -4047,7 +4047,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_LifeTime",
+          "for": "<a class=\"gModGreen\" id=\"mod__-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -4059,11 +4059,11 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_TiggerKiller"
+                  "modifier": "<a class=\"gModGreen\" id=\"156488588\">Memosprite_CastoriceServant_TiggerKiller</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_CastoriceServant_RefreshActionBar"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1179778456\">Servant_CastoriceServant_RefreshActionBar</a>"
                 }
               ]
             },
@@ -4159,7 +4159,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_CastoriceServant_RefreshActionBar"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1179778456\">Servant_CastoriceServant_RefreshActionBar</a>"
                 }
               ]
             }
@@ -4171,7 +4171,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__1159652346\">Memosprite_CastoriceServant_Passive</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ImmuneDebuff",
@@ -4187,7 +4187,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "modifier": "Castorice_Ability03_Field"
+                  "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>"
                 }
               ]
             },
@@ -4196,7 +4196,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_CastoriceServant_OnPhase1Change"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-593669759\">Servant_CastoriceServant_OnPhase1Change</a>"
                 },
                 {
                   "name": "IF",
@@ -4224,7 +4224,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_CastoriceServant_BPCost_3"
+                      "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
                     }
                   ]
                 }
@@ -4239,7 +4239,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_PlayCrossHairPreviewFadeIn"
+                  "modifier": "<a class=\"gModGreen\" id=\"-60952050\">Memosprite_CastoriceServant_PlayCrossHairPreviewFadeIn</a>"
                 },
                 {
                   "name": "Mark Entity as Non-Target(Unselectable) [CUSTOM]",
@@ -4325,7 +4325,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_CastoriceServant_GetMaxHP"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1714839092\">Servant_CastoriceServant_GetMaxHP</a>"
                 },
                 {
                   "name": "IF",
@@ -4471,7 +4471,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Memosprite_CastoriceServant_BP_Explode"
+                          "modifier": "<a class=\"gModGreen\" id=\"-256072391\">Memosprite_CastoriceServant_BP_Explode</a>"
                         },
                         {
                           "name": "IF",
@@ -4481,7 +4481,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Memosprite_CastoriceServant_BPCost_3"
+                            "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
                           },
                           "passed": [
                             {
@@ -4490,7 +4490,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Memosprite_CastoriceServant_BPCost_3"
+                              "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
                             },
                             {
                               "name": "IF",
@@ -4507,7 +4507,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "Memosprite_CastoriceServant_BPCost_1"
+                                  "modifier": "<a class=\"gModGreen\" id=\"164818074\">Memosprite_CastoriceServant_BPCost_1</a>"
                                 }
                               ]
                             },
@@ -4526,7 +4526,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "Memosprite_CastoriceServant_BPCost_2"
+                                  "modifier": "<a class=\"gModGreen\" id=\"148040455\">Memosprite_CastoriceServant_BPCost_2</a>"
                                 }
                               ]
                             }
@@ -4536,7 +4536,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Servant_CastoriceServant_RefreshActionBar"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1179778456\">Servant_CastoriceServant_RefreshActionBar</a>"
                     }
                   ]
                 }
@@ -4548,7 +4548,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_PlayCrossHairPreviewFadeIn",
+          "for": "<a class=\"gModGreen\" id=\"mod__-60952050\">Memosprite_CastoriceServant_PlayCrossHairPreviewFadeIn</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
@@ -4887,7 +4887,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
             }
           ]
         },
@@ -4897,7 +4897,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_GoDie"
+          "modifier": "<a class=\"gModGreen\" id=\"1793501095\">Memosprite_CastoriceServant_GoDie</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4905,7 +4905,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_BP_Explode"
+          "modifier": "<a class=\"gModGreen\" id=\"-256072391\">Memosprite_CastoriceServant_BP_Explode</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4913,7 +4913,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_TiggerKiller"
+          "modifier": "<a class=\"gModGreen\" id=\"156488588\">Memosprite_CastoriceServant_TiggerKiller</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4921,11 +4921,11 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_Deathrattle"
+          "modifier": "<a class=\"gModGreen\" id=\"-1354985533\">Memosprite_CastoriceServant_Deathrattle</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Servant_CastoriceServant_GetMaxHP"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1714839092\">Servant_CastoriceServant_GetMaxHP</a>"
         },
         {
           "name": "IF",
@@ -4989,7 +4989,7 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -5004,7 +5004,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Servant_CastoriceServant_SetDamageRatio"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1405272466\">Servant_CastoriceServant_SetDamageRatio</a>"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -5102,7 +5102,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "modifier": "Castorice_Ability03_Field"
+          "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>"
         },
         {
           "name": "IF",
@@ -5117,7 +5117,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
             }
           ]
         },
@@ -5129,7 +5129,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "ClearAvatarArea_ByAbility"
+            "modifier": "<a class=\"gModGreen\" id=\"253720974\">ClearAvatarArea_ByAbility</a>"
           },
           "passed": [
             {
@@ -5138,7 +5138,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "ClearAvatarArea_ByAbility"
+              "modifier": "<a class=\"gModGreen\" id=\"253720974\">ClearAvatarArea_ByAbility</a>"
             },
             {
               "name": "Force Entity Death",
@@ -5231,7 +5231,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
             }
           ]
         },
@@ -5252,7 +5252,7 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_CastoriceServant_SetDamageRatio"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1405272466\">Servant_CastoriceServant_SetDamageRatio</a>"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -5353,7 +5353,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
             }
           ]
         }
@@ -5379,7 +5379,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
             }
           ]
         },
@@ -5389,7 +5389,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_GoDie"
+          "modifier": "<a class=\"gModGreen\" id=\"1793501095\">Memosprite_CastoriceServant_GoDie</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -5397,7 +5397,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_BP_Explode"
+          "modifier": "<a class=\"gModGreen\" id=\"-256072391\">Memosprite_CastoriceServant_BP_Explode</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -5405,7 +5405,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_Ability23Check"
+          "modifier": "<a class=\"gModGreen\" id=\"1420894416\">Memosprite_CastoriceServant_Ability23Check</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -5413,7 +5413,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_TiggerKiller"
+          "modifier": "<a class=\"gModGreen\" id=\"156488588\">Memosprite_CastoriceServant_TiggerKiller</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -5421,11 +5421,11 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_Deathrattle"
+          "modifier": "<a class=\"gModGreen\" id=\"-1354985533\">Memosprite_CastoriceServant_Deathrattle</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Servant_CastoriceServant_GetMaxHP"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1714839092\">Servant_CastoriceServant_GetMaxHP</a>"
         },
         {
           "name": "IF",
@@ -5489,7 +5489,7 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -5504,7 +5504,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Servant_CastoriceServant_SetDamageRatio"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1405272466\">Servant_CastoriceServant_SetDamageRatio</a>"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -5609,7 +5609,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
             }
           ]
         },
@@ -5619,7 +5619,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "modifier": "Castorice_Ability03_Field"
+          "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>"
         },
         {
           "name": "Force Entity Death",
@@ -5671,7 +5671,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Servant_CastoriceServant_FlyToAbility23"
+          "functionName": "<a class=\"gTempYellow\" id=\"1407069104\">Servant_CastoriceServant_FlyToAbility23</a>"
         },
         {
           "name": "Change Battle Arena",
@@ -5737,7 +5737,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
             }
           ]
         },
@@ -5767,7 +5767,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Memosprite_CastoriceServant_BPCost_3"
+                "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
               },
               {
                 "name": "Compare: Variable",
@@ -5797,7 +5797,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_BP_Explode"
+              "modifier": "<a class=\"gModGreen\" id=\"-256072391\">Memosprite_CastoriceServant_BP_Explode</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -5805,7 +5805,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Ability23Check"
+              "modifier": "<a class=\"gModGreen\" id=\"1420894416\">Memosprite_CastoriceServant_Ability23Check</a>"
             }
           ],
           "failed": [
@@ -5831,7 +5831,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Memosprite_CastoriceServant_LifeTime",
+            "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
             "invertCondition": true
           },
           "passed": [
@@ -5863,7 +5863,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Castorice_PointB3_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (CastoriceServant_PointB3_MaxLayer) || RETURN",
                 "displayLines": "CastoriceServant_PointB3_MaxLayer",
@@ -6050,7 +6050,7 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Servant_CastoriceServant_SetDamageRatio"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1405272466\">Servant_CastoriceServant_SetDamageRatio</a>"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -6181,7 +6181,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Servant_CastoriceServant_BP_OneMore_AbilityChange"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1235861704\">Servant_CastoriceServant_BP_OneMore_AbilityChange</a>"
         }
       ],
       "references": []
@@ -6273,7 +6273,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Memosprite_CastoriceServant_BPCost_3"
+                    "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
                   },
                   {
                     "name": "Compare: Variable",
@@ -6313,7 +6313,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
             }
           ]
         },
@@ -6343,7 +6343,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Memosprite_CastoriceServant_BPCost_3"
+                "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
               },
               {
                 "name": "Compare: Variable",
@@ -6373,7 +6373,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_BP_Explode"
+              "modifier": "<a class=\"gModGreen\" id=\"-256072391\">Memosprite_CastoriceServant_BP_Explode</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -6381,7 +6381,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Ability23Check"
+              "modifier": "<a class=\"gModGreen\" id=\"1420894416\">Memosprite_CastoriceServant_Ability23Check</a>"
             }
           ]
         },
@@ -6393,7 +6393,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Memosprite_CastoriceServant_LifeTime",
+            "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
             "invertCondition": true
           },
           "passed": [
@@ -6430,7 +6430,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Castorice_PointB3_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (CastoriceServant_PointB3_MaxLayer) || RETURN",
                 "displayLines": "CastoriceServant_PointB3_MaxLayer",
@@ -6608,7 +6608,7 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Servant_CastoriceServant_SetDamageRatio"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1405272466\">Servant_CastoriceServant_SetDamageRatio</a>"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -6725,7 +6725,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Servant_CastoriceServant_BP_OneMore_AbilityChange"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1235861704\">Servant_CastoriceServant_BP_OneMore_AbilityChange</a>"
         }
       ],
       "references": []
@@ -6838,7 +6838,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
             }
           ]
         },
@@ -6868,7 +6868,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Memosprite_CastoriceServant_BPCost_3"
+                "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
               },
               {
                 "name": "Compare: Variable",
@@ -6898,7 +6898,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_BP_Explode"
+              "modifier": "<a class=\"gModGreen\" id=\"-256072391\">Memosprite_CastoriceServant_BP_Explode</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -6906,7 +6906,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Ability23Check"
+              "modifier": "<a class=\"gModGreen\" id=\"1420894416\">Memosprite_CastoriceServant_Ability23Check</a>"
             }
           ]
         },
@@ -6918,7 +6918,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Memosprite_CastoriceServant_LifeTime",
+            "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
             "invertCondition": true
           },
           "passed": [
@@ -6955,7 +6955,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Castorice_PointB3_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (CastoriceServant_PointB3_MaxLayer) || RETURN",
                 "displayLines": "CastoriceServant_PointB3_MaxLayer",
@@ -7133,7 +7133,7 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Servant_CastoriceServant_SetDamageRatio"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1405272466\">Servant_CastoriceServant_SetDamageRatio</a>"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -7250,7 +7250,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Servant_CastoriceServant_BP_OneMore_AbilityChange"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1235861704\">Servant_CastoriceServant_BP_OneMore_AbilityChange</a>"
         }
       ],
       "references": []
@@ -7304,7 +7304,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Servant_CastoriceServant_BP_OneMore_Clean"
+          "functionName": "<a class=\"gTempYellow\" id=\"-32719272\">Servant_CastoriceServant_BP_OneMore_Clean</a>"
         },
         {
           "name": "IF",
@@ -7319,7 +7319,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
             }
           ]
         },
@@ -7340,7 +7340,7 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_CastoriceServant_SetDamageRatio"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1405272466\">Servant_CastoriceServant_SetDamageRatio</a>"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -7425,7 +7425,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
             }
           ]
         },
@@ -7468,7 +7468,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_StandByOnPhase2"
+              "modifier": "<a class=\"gModGreen\" id=\"1100856476\">Memosprite_CastoriceServant_StandByOnPhase2</a>"
             }
           ]
         }
@@ -7476,7 +7476,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_StandByOnPhase2",
+          "for": "<a class=\"gModGreen\" id=\"mod__1100856476\">Memosprite_CastoriceServant_StandByOnPhase2</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -7558,7 +7558,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_Eidolon6_StancePreview",
+          "for": "<a class=\"gModGreen\" id=\"mod__313910489\">Memosprite_CastoriceServant_Eidolon6_StancePreview</a>",
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
@@ -7608,7 +7608,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage",
+          "for": "<a class=\"gModGreen\" id=\"mod__-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ForceStanceDamage"
@@ -7641,7 +7641,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_Ability23Check",
+          "for": "<a class=\"gModGreen\" id=\"mod__1420894416\">Memosprite_CastoriceServant_Ability23Check</a>",
           "stackData": [],
           "latentQueue": [
             "CL_PlayTimes",
@@ -7650,7 +7650,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_BP_Explode",
+          "for": "<a class=\"gModGreen\" id=\"mod__-256072391\">Memosprite_CastoriceServant_BP_Explode</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -7725,7 +7725,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_Disable"
+                  "modifier": "<a class=\"gModGreen\" id=\"1341939671\">Memosprite_CastoriceServant_Disable</a>"
                 }
               ]
             },
@@ -7738,7 +7738,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_Disable"
+                  "modifier": "<a class=\"gModGreen\" id=\"1341939671\">Memosprite_CastoriceServant_Disable</a>"
                 },
                 {
                   "name": "Update Ability Binding",
@@ -7761,7 +7761,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_Disable",
+          "for": "<a class=\"gModGreen\" id=\"mod__1341939671\">Memosprite_CastoriceServant_Disable</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -7790,7 +7790,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_BPCost_3",
+          "for": "<a class=\"gModGreen\" id=\"mod__131262836\">Memosprite_CastoriceServant_BPCost_3</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -7894,7 +7894,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_BPCost_2",
+          "for": "<a class=\"gModGreen\" id=\"mod__148040455\">Memosprite_CastoriceServant_BPCost_2</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -7923,7 +7923,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_BPCost_1",
+          "for": "<a class=\"gModGreen\" id=\"mod__164818074\">Memosprite_CastoriceServant_BPCost_1</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -7952,7 +7952,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_Flag01",
+          "for": "<a class=\"gModGreen\" id=\"mod__847472600\">Memosprite_CastoriceServant_Flag01</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -7961,7 +7961,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_InsideExplode[<span class=\"descriptionNumberColor\">Back to the Black</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2133723962\">Memosprite_CastoriceServant_InsideExplode</a>[<span class=\"descriptionNumberColor\">Back to the Black</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -7973,7 +7973,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_GoDie",
+          "for": "<a class=\"gModGreen\" id=\"mod__1793501095\">Memosprite_CastoriceServant_GoDie</a>",
           "modifierFlags": [
             "DisableHPBarRefresh"
           ],
@@ -7987,7 +7987,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_HitDamageSplit",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -8002,7 +8002,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "lockHolder": "Memosprite_CastoriceServant_HitDamageSplit"
+                  "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
                 }
               ]
             },
@@ -8020,7 +8020,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Standard_Departed",
+                    "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -8042,7 +8042,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "lockHolder": "Memosprite_CastoriceServant_HitDamageSplit"
+                          "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
                         }
                       ]
                     }
@@ -8061,7 +8061,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Standard_Departed",
+                    "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -8082,7 +8082,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "lockHolder": "Memosprite_CastoriceServant_HitDamageSplit"
+                            "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
                           }
                         ]
                       },
@@ -8118,7 +8118,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "lockHolder": "Memosprite_CastoriceServant_HitDamageSplit"
+                  "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
                 }
               ]
             },
@@ -8131,7 +8131,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "lockHolder": "Memosprite_CastoriceServant_HitDamageSplit"
+                  "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
                 }
               ]
             }
@@ -8139,7 +8139,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_OnListenHitDamageSplit",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1340712313\">Memosprite_CastoriceServant_OnListenHitDamageSplit</a>",
           "stackData": [],
           "latentQueue": [],
           "subModList": [
@@ -8149,14 +8149,14 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]]"
               },
-              "modifier": "Memosprite_CastoriceServant_HitDamageSplit",
+              "modifier": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>",
               "haloStatus": true
             }
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_LoseHPPreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-858784788\">Memosprite_CastoriceServant_LoseHPPreShow</a>",
           "execute": [
             {
               "eventTrigger": "Update Target Selected(UI) [Anyone]",
@@ -8208,7 +8208,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Memosprite_CastoriceServant_LifeTime",
+                        "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
                         "invertCondition": true
                       },
                       "passed": [
@@ -8267,7 +8267,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Memosprite_CastoriceServant_LifeTime",
+                        "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
                         "invertCondition": true
                       },
                       "passed": [
@@ -8354,7 +8354,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_CastoriceServant_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-509656395\">Memosprite_CastoriceServant_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -8404,7 +8404,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_CastoriceServant_RefreshActionBar",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1179778456\">Servant_CastoriceServant_RefreshActionBar</a>",
           "parse": [
             {
               "name": "IF",
@@ -8434,7 +8434,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Memosprite_CastoriceServant_LifeTime"
+                    "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>"
                   }
                 ]
               },
@@ -8472,7 +8472,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_InsideExplode[<span class=\"descriptionNumberColor\">Back to the Black</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"2133723962\">Memosprite_CastoriceServant_InsideExplode</a>[<span class=\"descriptionNumberColor\">Back to the Black</span>]"
                 }
               ],
               "failed": [
@@ -8493,7 +8493,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_InsideExplode[<span class=\"descriptionNumberColor\">Back to the Black</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"2133723962\">Memosprite_CastoriceServant_InsideExplode</a>[<span class=\"descriptionNumberColor\">Back to the Black</span>]"
                 }
               ]
             }
@@ -8501,7 +8501,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_CastoriceServant_SetDamageRatio",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1405272466\">Servant_CastoriceServant_SetDamageRatio</a>",
           "parse": [
             {
               "name": "IF",
@@ -8628,7 +8628,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_CastoriceServant_GetMaxHP",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1714839092\">Servant_CastoriceServant_GetMaxHP</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
@@ -8661,7 +8661,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_CastoriceServant_BP_OneMore_Clean",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-32719272\">Servant_CastoriceServant_BP_OneMore_Clean</a>",
           "parse": [
             {
               "name": "Define Custom Variable",
@@ -8674,7 +8674,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Flag01"
+              "modifier": "<a class=\"gModGreen\" id=\"847472600\">Memosprite_CastoriceServant_Flag01</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -8682,7 +8682,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_BPCost_1"
+              "modifier": "<a class=\"gModGreen\" id=\"164818074\">Memosprite_CastoriceServant_BPCost_1</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -8690,7 +8690,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_BPCost_2"
+              "modifier": "<a class=\"gModGreen\" id=\"148040455\">Memosprite_CastoriceServant_BPCost_2</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -8698,7 +8698,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_BPCost_3"
+              "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -8706,13 +8706,13 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_BP_Explode"
+              "modifier": "<a class=\"gModGreen\" id=\"-256072391\">Memosprite_CastoriceServant_BP_Explode</a>"
             }
           ]
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_CastoriceServant_BP_OneMore_AbilityChange",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1235861704\">Servant_CastoriceServant_BP_OneMore_AbilityChange</a>",
           "parse": [
             {
               "name": "IF",
@@ -8760,7 +8760,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Memosprite_CastoriceServant_LifeTime",
+                "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
                 "invertCondition": true
               },
               "passed": [
@@ -8770,7 +8770,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_Disable"
+                  "modifier": "<a class=\"gModGreen\" id=\"1341939671\">Memosprite_CastoriceServant_Disable</a>"
                 }
               ]
             },
@@ -8787,7 +8787,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_Flag01"
+              "modifier": "<a class=\"gModGreen\" id=\"847472600\">Memosprite_CastoriceServant_Flag01</a>"
             },
             {
               "name": "IF",
@@ -8797,7 +8797,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Memosprite_CastoriceServant_BP_Explode"
+                "modifier": "<a class=\"gModGreen\" id=\"-256072391\">Memosprite_CastoriceServant_BP_Explode</a>"
               },
               "failed": [
                 {
@@ -8826,7 +8826,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_CastoriceServant_BPCost_1"
+                      "modifier": "<a class=\"gModGreen\" id=\"164818074\">Memosprite_CastoriceServant_BPCost_1</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -8834,7 +8834,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_CastoriceServant_BPCost_2"
+                      "modifier": "<a class=\"gModGreen\" id=\"148040455\">Memosprite_CastoriceServant_BPCost_2</a>"
                     },
                     {
                       "name": "IF",
@@ -8851,7 +8851,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Memosprite_CastoriceServant_BPCost_1"
+                          "modifier": "<a class=\"gModGreen\" id=\"164818074\">Memosprite_CastoriceServant_BPCost_1</a>"
                         }
                       ]
                     },
@@ -8870,7 +8870,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Memosprite_CastoriceServant_BPCost_2"
+                          "modifier": "<a class=\"gModGreen\" id=\"148040455\">Memosprite_CastoriceServant_BPCost_2</a>"
                         }
                       ]
                     },
@@ -8880,7 +8880,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_CastoriceServant_BPCost_3"
+                      "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
                     }
                   ],
                   "failed": [
@@ -8899,7 +8899,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Memosprite_CastoriceServant_BPCost_1"
+                          "modifier": "<a class=\"gModGreen\" id=\"164818074\">Memosprite_CastoriceServant_BPCost_1</a>"
                         }
                       ]
                     },
@@ -8918,7 +8918,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Memosprite_CastoriceServant_BPCost_2"
+                          "modifier": "<a class=\"gModGreen\" id=\"148040455\">Memosprite_CastoriceServant_BPCost_2</a>"
                         }
                       ]
                     }
@@ -8945,7 +8945,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Memosprite_CastoriceServant_TiggerKiller",
+                    "modifier": "<a class=\"gModGreen\" id=\"156488588\">Memosprite_CastoriceServant_TiggerKiller</a>",
                     "invertCondition": true
                   }
                 ]
@@ -8964,7 +8964,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_Castorice_SpeedRatio[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -9008,7 +9008,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_CastoriceServant_AnimEvents"
+                  "functionName": "<a class=\"gTempYellow\" id=\"807803738\">Servant_CastoriceServant_AnimEvents</a>"
                 },
                 "Trigger: Attack End",
                 {
@@ -9024,7 +9024,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+                      "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
                     }
                   ]
                 },
@@ -9043,7 +9043,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_Flag01"
+                  "modifier": "<a class=\"gModGreen\" id=\"847472600\">Memosprite_CastoriceServant_Flag01</a>"
                 }
               ],
               "failed": [
@@ -9061,7 +9061,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_CastoriceServant_FlyToAbility23",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1407069104\">Servant_CastoriceServant_FlyToAbility23</a>",
           "parse": [
             {
               "name": "IF",
@@ -9105,13 +9105,13 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_BPCost_3"
+              "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
             }
           ]
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_CastoriceServant_OnPhase1Change",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-593669759\">Servant_CastoriceServant_OnPhase1Change</a>",
           "parse": [
             {
               "name": "IF",
@@ -9128,7 +9128,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_BPCost_2"
+                  "modifier": "<a class=\"gModGreen\" id=\"148040455\">Memosprite_CastoriceServant_BPCost_2</a>"
                 },
                 {
                   "name": "Set Netherwing Skill Phase",
@@ -9175,7 +9175,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_CastoriceServant_BPCost_2"
+                      "modifier": "<a class=\"gModGreen\" id=\"148040455\">Memosprite_CastoriceServant_BPCost_2</a>"
                     },
                     {
                       "name": "Set Netherwing Skill Phase",
@@ -9234,7 +9234,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Memosprite_CastoriceServant_BPCost_1"
+                          "modifier": "<a class=\"gModGreen\" id=\"164818074\">Memosprite_CastoriceServant_BPCost_1</a>"
                         },
                         {
                           "name": "IF",
@@ -9299,7 +9299,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_CastoriceServant_AnimEvents",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__807803738\">Servant_CastoriceServant_AnimEvents</a>",
           "parse": [
             {
               "name": "Force Auto-Battle on Target",
@@ -9341,7 +9341,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CastoriceServant_BPCost_3"
+              "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
             }
           ]
         }

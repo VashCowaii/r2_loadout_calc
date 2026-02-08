@@ -16,7 +16,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_XP_Minion03_EffectController"
+      "modifier": "<a class=\"gModGreen\" id=\"-397507265\">Monster_XP_Minion03_EffectController</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -24,13 +24,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_XP_Minion03_Deathrattle"
+      "modifier": "<a class=\"gModGreen\" id=\"2574934\">Monster_XP_Minion03_Deathrattle</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_XP_Minion03_Deathrattle",
+      "for": "<a class=\"gModGreen\" id=\"mod__2574934\">Monster_XP_Minion03_Deathrattle</a>",
       "modifierFlags": [
         "Deathrattle",
         "KeepOnDeathrattle"
@@ -68,7 +68,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_XP_Minion03_EffectController",
+      "for": "<a class=\"gModGreen\" id=\"mod__-397507265\">Monster_XP_Minion03_EffectController</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"

@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_Ultimate_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__898206024\">Silwolf_Ultimate_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -52,7 +52,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_Eidolon2_StatusResistanceDown[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1573930598\">Silwolf_Eidolon2_StatusResistanceDown</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
         {
@@ -90,7 +90,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_BPAbility_AllDamageTypeResistanceDown[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__50824187\">Silwolf_BPAbility_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -129,7 +129,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedDown"
@@ -170,7 +170,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_DefenceDown"
@@ -211,7 +211,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1783933723\">Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_AttackDown"
@@ -252,7 +252,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_BPAbility_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Extra Imaginary Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-780191838\">Silwolf_BPAbility_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Extra Imaginary Weakness</span>]",
       "stackType": "Replace",
       "description": "Extra Imaginary Weakness implanted. Imaginary RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -260,7 +260,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_BPAbility_WeakType_Quantum[<span class=\"descriptionNumberColor\">Extra Quantum Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-69851026\">Silwolf_BPAbility_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Extra Quantum Weakness</span>]",
       "stackType": "Replace",
       "description": "Extra Quantum Weakness implanted. Quantum RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -268,7 +268,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_BPAbility_WeakType_Thunder[<span class=\"descriptionNumberColor\">Extra Lightning Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__954284461\">Silwolf_BPAbility_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Extra Lightning Weakness</span>]",
       "stackType": "Replace",
       "description": "Extra Lightning Weakness implanted. Lightning RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -276,7 +276,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_BPAbility_WeakType_Physical[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-719977260\">Silwolf_BPAbility_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
       "stackType": "Replace",
       "description": "Extra Physical Weakness implanted. Physical RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -284,7 +284,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_BPAbility_WeakType_Wind[<span class=\"descriptionNumberColor\">Extra Wind Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1411533355\">Silwolf_BPAbility_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Extra Wind Weakness</span>]",
       "stackType": "Replace",
       "description": "Extra Wind Weakness implanted. Wind RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -292,7 +292,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_BPAbility_WeakType_Ice[<span class=\"descriptionNumberColor\">Extra Ice Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__110873612\">Silwolf_BPAbility_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Extra Ice Weakness</span>]",
       "stackType": "Replace",
       "description": "Extra Ice Weakness implanted. Ice RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -300,7 +300,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_BPAbility_WeakType_Fire[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1099669275\">Silwolf_BPAbility_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
       "stackType": "Replace",
       "description": "Extra Fire Weakness implanted. Fire RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -308,7 +308,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_BPAbility_WeakType_Extra[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__551921933\">Silwolf_BPAbility_WeakType_Extra</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "STAT_AttachWeakness"
@@ -350,7 +350,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-56897788\">Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "STAT_AttachWeakness"
@@ -387,7 +387,7 @@ const configAbility = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Silwolf_Ability02_OverrideNameForStatus",
+              "functionName": "<a class=\"gTempYellow\" id=\"958478851\">Silwolf_Ability02_OverrideNameForStatus</a>",
               "variables": {
                 "DF_WeakType": {
                   "operator": "Variables[0] (_BPFlag) || RETURN",

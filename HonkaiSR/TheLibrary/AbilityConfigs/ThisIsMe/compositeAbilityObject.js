@@ -34,17 +34,17 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_21030_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"118529977\">LC_21030_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_21030_Attacked"
+          "for": "<a class=\"gModGreen\" id=\"mod__-516997111\">LC_21030_Attacked</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_21030_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-232615906\">LC_21030_Sub</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -68,7 +68,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "LC_21030_Attacked"
+                          "modifier": "<a class=\"gModGreen\" id=\"-516997111\">LC_21030_Attacked</a>"
                         }
                       }
                     ]
@@ -99,7 +99,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_21030_Attacked"
+                      "modifier": "<a class=\"gModGreen\" id=\"-516997111\">LC_21030_Attacked</a>"
                     }
                   ]
                 }
@@ -114,7 +114,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "LC_21030_Attacked"
+                  "modifier": "<a class=\"gModGreen\" id=\"-516997111\">LC_21030_Attacked</a>"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -123,7 +123,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_21030_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__118529977\">LC_21030_Main</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -141,7 +141,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "LC_21030_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-232615906\">LC_21030_Sub</a>"
                     }
                   ]
                 }

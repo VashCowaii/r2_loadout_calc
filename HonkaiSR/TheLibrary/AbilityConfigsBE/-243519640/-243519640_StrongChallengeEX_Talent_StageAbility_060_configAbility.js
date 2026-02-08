@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_060"
+      "modifier": "<a class=\"gModGreen\" id=\"1460632844\">MStrongChallengeEX_Talent_StageAbility_LE_060</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_060",
+      "for": "<a class=\"gModGreen\" id=\"mod__1308011924\">MStrongChallengeEX_Talent_StageAbility_PLY_060</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -80,7 +80,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_060",
+      "for": "<a class=\"gModGreen\" id=\"mod__1460632844\">MStrongChallengeEX_Talent_StageAbility_LE_060</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -107,7 +107,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_060",
+                  "modifier": "<a class=\"gModGreen\" id=\"1308011924\">MStrongChallengeEX_Talent_StageAbility_PLY_060</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23014_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1205258763\">LC_23014_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23014_Sub[<span class=\"descriptionNumberColor\">Eclipse</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-625916918\">LC_23014_Sub</a>[<span class=\"descriptionNumberColor\">Eclipse</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -118,7 +118,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23014_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-66831165\">LC_23014_Listen</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -154,7 +154,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_23014_Sub[<span class=\"descriptionNumberColor\">Eclipse</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-625916918\">LC_23014_Sub</a>[<span class=\"descriptionNumberColor\">Eclipse</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -177,7 +177,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "LC_23014_Sub[<span class=\"descriptionNumberColor\">Eclipse</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-625916918\">LC_23014_Sub</a>[<span class=\"descriptionNumberColor\">Eclipse</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -193,7 +193,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23014_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1205258763\">LC_23014_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -204,7 +204,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"
               },
-              "modifier": "LC_23014_Listen"
+              "modifier": "<a class=\"gModGreen\" id=\"-66831165\">LC_23014_Listen</a>"
             }
           ]
         },
@@ -227,7 +227,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_23014_Listen"
+                  "modifier": "<a class=\"gModGreen\" id=\"-66831165\">LC_23014_Listen</a>"
                 }
               ]
             }

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Arlan_Tree01"
+      "modifier": "<a class=\"gModGreen\" id=\"-1694658139\">M_Arlan_Tree01</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Arlan_Tree01",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1694658139\">M_Arlan_Tree01</a>",
       "execute": [
         {
           "eventTrigger": "Got a Kill [Owner]",

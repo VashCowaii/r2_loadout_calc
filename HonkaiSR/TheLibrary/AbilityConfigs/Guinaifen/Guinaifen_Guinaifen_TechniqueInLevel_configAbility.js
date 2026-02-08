@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Guinaifen_TechniqueUsage_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1393403826\">Guinaifen_TechniqueUsage_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Guinaifen_TechniqueUsage_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1393403826\">Guinaifen_TechniqueUsage_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -195,7 +195,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Guinaifen_Oil_Sub[<span class=\"descriptionNumberColor\">Firekiss</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"597170239\">Guinaifen_Oil_Sub</a>[<span class=\"descriptionNumberColor\">Firekiss</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",

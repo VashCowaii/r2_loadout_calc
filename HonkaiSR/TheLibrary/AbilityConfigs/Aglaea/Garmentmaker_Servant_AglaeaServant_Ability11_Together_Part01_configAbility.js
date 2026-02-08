@@ -28,7 +28,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_Aglaea_Ability11_Mark"
+      "modifier": "<a class=\"gModGreen\" id=\"-892037211\">Memosprite_Aglaea_Ability11_Mark</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -41,7 +41,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Targets Adjacent(Blast)}}"
       },
-      "modifier": "Memosprite_AglaeaServant_Interwine_AdjoinMark"
+      "modifier": "<a class=\"gModGreen\" id=\"1495039477\">Memosprite_AglaeaServant_Interwine_AdjoinMark</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -124,7 +124,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_Aglaea_Ability11_Mark"
+      "modifier": "<a class=\"gModGreen\" id=\"-892037211\">Memosprite_Aglaea_Ability11_Mark</a>"
     }
   ],
   "references": []

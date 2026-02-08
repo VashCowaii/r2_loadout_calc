@@ -17,7 +17,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "MWPassiveHeal_Speedup",
+          "for": "<a class=\"gModGreen\" id=\"mod__-914207527\">MWPassiveHeal_Speedup</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -61,7 +61,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWNormalAttack_Ultimate_Concentrate",
+          "for": "<a class=\"gModGreen\" id=\"mod__-753898483\">MWNormalAttack_Ultimate_Concentrate</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -91,7 +91,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWCriticalShaman_Passive_StatusProbability",
+          "for": "<a class=\"gModGreen\" id=\"mod__-545997397\">MWCriticalShaman_Passive_StatusProbability</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -134,7 +134,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWSetsugekka_Passive02_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1767263784\">MWSetsugekka_Passive02_Modifier</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -162,7 +162,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWHana_Ultimate_DamageUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-759421126\">MWHana_Ultimate_DamageUp</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -204,7 +204,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWTsuki_BPAbility_DamageUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1373046651\">MWTsuki_BPAbility_DamageUp</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -246,7 +246,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWYuki_Normal_DamageUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__752480867\">MWYuki_Normal_DamageUp</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -288,7 +288,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWZaika_Passive_UltraDamageUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__1796707595\">MWZaika_Passive_UltraDamageUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -337,7 +337,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWZaika_Passive_DamageUpByTargetCount",
+          "for": "<a class=\"gModGreen\" id=\"mod__1856554566\">MWZaika_Passive_DamageUpByTargetCount</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -365,7 +365,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "SpeedAtk_Speedup_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1599984143\">SpeedAtk_Speedup_Modifier</a>",
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
@@ -395,7 +395,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWController_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__560640724\">MWController_Passive</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -423,7 +423,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWCourier_Ultimate_Delivery",
+          "for": "<a class=\"gModGreen\" id=\"mod__850123397\">MWCourier_Ultimate_Delivery</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -436,7 +436,7 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "Layer",
                   "variableName": "DeliveryNumber",
-                  "modifierName": "MWCourier_Ultimate_Delivery",
+                  "modifierName": "<a class=\"gModGreen\" id=\"850123397\">MWCourier_Ultimate_Delivery</a>",
                   "multiplier": 1
                 },
                 {
@@ -488,7 +488,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MWCourier_Ultimate_Delivery"
+                      "modifier": "<a class=\"gModGreen\" id=\"850123397\">MWCourier_Ultimate_Delivery</a>"
                     }
                   ]
                 }
@@ -507,7 +507,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "SqueeAndBros_BigBomb_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1964568152\">SqueeAndBros_BigBomb_Modifier</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [],
@@ -602,7 +602,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWSqueeAndBros_Ultimate_SmallBomb",
+          "for": "<a class=\"gModGreen\" id=\"mod__769105695\">MWSqueeAndBros_Ultimate_SmallBomb</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [],
@@ -697,7 +697,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "WB_IceShield_IceBlast_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-686469537\">WB_IceShield_IceBlast_Modifier</a>",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [],
           "execute": [
@@ -732,7 +732,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWWB_Ultimate_IceShield",
+          "for": "<a class=\"gModGreen\" id=\"mod__1062483065\">MWWB_Ultimate_IceShield</a>",
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"
@@ -805,7 +805,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWLaTiao_Passive_WindDamageUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__709639887\">MWLaTiao_Passive_WindDamageUp</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -832,14 +832,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWTuiTiao_Ultimate_Caculator",
+          "for": "<a class=\"gModGreen\" id=\"mod__1340446337\">MWTuiTiao_Ultimate_Caculator</a>",
           "stackType": "ReplaceByCaster",
           "stackLimit": 10,
           "addStacksPerTrigger": 1
         },
         {
           "name": "Modifier Construction",
-          "for": "MWTuiTiao_Passive_Electric",
+          "for": "<a class=\"gModGreen\" id=\"mod__-317978227\">MWTuiTiao_Passive_Electric</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -883,7 +883,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWAOETuiTiao_SuperAbility1_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2087789633\">MWAOETuiTiao_SuperAbility1_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"

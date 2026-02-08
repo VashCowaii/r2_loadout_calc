@@ -33,7 +33,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Cyrene_AbilityPreloadCtrl"
+      "modifier": "<a class=\"gModGreen\" id=\"1030329555\">Cyrene_AbilityPreloadCtrl</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -41,7 +41,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Cyrene_PassiveAbility"
+      "modifier": "<a class=\"gModGreen\" id=\"1846097202\">Cyrene_PassiveAbility</a>"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -82,7 +82,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cyrene_PointB3"
+          "modifier": "<a class=\"gModGreen\" id=\"1015949385\">Cyrene_PointB3</a>"
         }
       ]
     },
@@ -105,7 +105,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_Ability03_LackOfSP",
+      "for": "<a class=\"gModGreen\" id=\"mod__1534801198\">Cyrene_Ability03_LackOfSP</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -129,7 +129,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "_M_Cyrene_Phainon_ForbidAutoUltraBeforeCyreneUltra",
+      "for": "<a class=\"gModGreen\" id=\"mod__2105697970\">_M_Cyrene_Phainon_ForbidAutoUltraBeforeCyreneUltra</a>",
       "modifierFlags": [
         900,
         "RemoveWhenCasterDead"
@@ -142,7 +142,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Memosprite_CyreneServant_AmazingBonus"
+                "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
               },
               "passed": [
                 "Modifier Deletes Itself"
@@ -154,7 +154,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_PassiveAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__1846097202\">Cyrene_PassiveAbility</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -168,7 +168,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Cyrene_Ability03[<span class=\"descriptionNumberColor\">Ripples of Past Reverie</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1470142416\">Cyrene_Ability03</a>[<span class=\"descriptionNumberColor\">Ripples of Past Reverie</span>]"
               }
             }
           ]
@@ -274,7 +274,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Cyrene_Passive_Teamate[<span class=\"descriptionNumberColor\">Future</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1931471655\">Cyrene_Passive_Teamate</a>[<span class=\"descriptionNumberColor\">Future</span>]",
                   "valuePerStack": {
                     "MDF_SPAdd": {
                       "operator": "Variables[0] (1) || RETURN",
@@ -299,7 +299,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]-{{Caster}}-{{Caster}}.[[getMemosprite]]"
               },
-              "modifier": "Cyrene_Passive_Teamate[<span class=\"descriptionNumberColor\">Future</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1931471655\">Cyrene_Passive_Teamate</a>[<span class=\"descriptionNumberColor\">Future</span>]",
               "valuePerStack": {
                 "MDF_SPAdd": {
                   "operator": "Variables[0] (1) || RETURN",
@@ -337,7 +337,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "Memosprite_CyreneServant_Energy[<span class=\"descriptionNumberColor\">Story</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"684175961\">Memosprite_CyreneServant_Energy</a>[<span class=\"descriptionNumberColor\">Story</span>]",
                   "addStacksPerTrigger": 1,
                   "casterAssign": "TargetSelf"
                 }
@@ -380,7 +380,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "_M_Cyrene_Phainon_ForbidAutoUltraBeforeCyreneUltra"
+                      "modifier": "<a class=\"gModGreen\" id=\"2105697970\">_M_Cyrene_Phainon_ForbidAutoUltraBeforeCyreneUltra</a>"
                     }
                   ]
                 },
@@ -393,7 +393,7 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Cyrene_ChrysosCheck"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-619579107\">Cyrene_ChrysosCheck</a>"
                     },
                     {
                       "name": "Find New Target",
@@ -420,7 +420,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "ChrysosMark"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1865411138\">ChrysosMark</a>"
                           }
                         ]
                       },
@@ -458,7 +458,7 @@ const configAbility = {
                           "execute": [
                             {
                               "name": "Use Custom Character Function",
-                              "functionName": "Cyrene_ChargeEnergy",
+                              "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
                               "variables": {
                                 "parameter[0]_AddValue": {
                                   "operator": "Variables[0] (2) || RETURN",
@@ -478,7 +478,7 @@ const configAbility = {
                           "execute": [
                             {
                               "name": "Use Custom Character Function",
-                              "functionName": "Cyrene_ChargeEnergy",
+                              "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
                               "variables": {
                                 "parameter[0]_AddValue": {
                                   "operator": "Variables[0] (3) || RETURN",
@@ -498,7 +498,7 @@ const configAbility = {
                           "execute": [
                             {
                               "name": "Use Custom Character Function",
-                              "functionName": "Cyrene_ChargeEnergy",
+                              "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
                               "variables": {
                                 "parameter[0]_AddValue": {
                                   "operator": "Variables[0] (6) || RETURN",
@@ -526,7 +526,7 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Cyrene_ChargeEnergy",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
                       "variables": {
                         "parameter[0]_AddValue": {
                           "operator": "Variables[0] (12) || RETURN",
@@ -546,7 +546,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]-{{Caster}}-{{Caster}}.[[getMemosprite]]"
                   },
-                  "modifier": "Cyrene_Passive_Teamate[<span class=\"descriptionNumberColor\">Future</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1931471655\">Cyrene_Passive_Teamate</a>[<span class=\"descriptionNumberColor\">Future</span>]",
                   "valuePerStack": {
                     "MDF_SPAdd": {
                       "operator": "Variables[0] (1) || RETURN",
@@ -687,7 +687,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Cyrene_Ability03_LackOfSP"
+                      "modifier": "<a class=\"gModGreen\" id=\"1534801198\">Cyrene_Ability03_LackOfSP</a>"
                     },
                     {
                       "name": "IF",
@@ -780,7 +780,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Cyrene_Ability03_LackOfSP"
+                  "modifier": "<a class=\"gModGreen\" id=\"1534801198\">Cyrene_Ability03_LackOfSP</a>"
                 }
               ],
               "whenLeavingRange": [
@@ -790,7 +790,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Cyrene_Ability03_LackOfSP"
+                  "modifier": "<a class=\"gModGreen\" id=\"1534801198\">Cyrene_Ability03_LackOfSP</a>"
                 },
                 {
                   "name": "IF",
@@ -867,7 +867,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Cyrene_Passive_Sub[<span class=\"descriptionNumberColor\">Hearts Gather as One</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"619883840\">Cyrene_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Hearts Gather as One</span>]",
           "aliveOnly": "True",
           "haloStatus": true,
           "valuePerStack": {
@@ -885,7 +885,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_AbilityPreloadCtrl",
+      "for": "<a class=\"gModGreen\" id=\"mod__1030329555\">Cyrene_AbilityPreloadCtrl</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -904,7 +904,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Cyrene_Ability03[<span class=\"descriptionNumberColor\">Ripples of Past Reverie</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1470142416\">Cyrene_Ability03</a>[<span class=\"descriptionNumberColor\">Ripples of Past Reverie</span>]"
               },
               "passed": [
                 "Deleted bullshit"

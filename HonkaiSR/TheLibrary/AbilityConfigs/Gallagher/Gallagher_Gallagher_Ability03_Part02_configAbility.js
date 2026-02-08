@@ -38,7 +38,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "MWGallagher_Ability03_DeBonusModifier[<span class=\"descriptionNumberColor\">Besotted</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-606062756\">MWGallagher_Ability03_DeBonusModifier</a>[<span class=\"descriptionNumberColor\">Besotted</span>]",
       "duration": {
         "operator": "Variables[0] (2) || Variables[1] (Rank04_AddLifeTime) || ADD || RETURN",
         "displayLines": "(2 + Rank04_AddLifeTime)",
@@ -95,7 +95,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Gallagher_NormalAttckAlter_Enable"
+      "modifier": "<a class=\"gModGreen\" id=\"1869340095\">Gallagher_NormalAttckAlter_Enable</a>"
     },
     {
       "name": "Update Displayed Energy Bar",

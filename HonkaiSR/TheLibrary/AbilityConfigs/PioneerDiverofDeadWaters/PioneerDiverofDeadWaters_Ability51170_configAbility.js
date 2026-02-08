@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_117_Main2"
+      "modifier": "<a class=\"gModGreen\" id=\"833543165\">Relic_117_Main2</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_117_DamageUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__-491528476\">Relic_117_DamageUp</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -52,7 +52,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_117_Main2",
+      "for": "<a class=\"gModGreen\" id=\"mod__833543165\">Relic_117_Main2</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -63,7 +63,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Relic_117_DamageUp",
+              "modifier": "<a class=\"gModGreen\" id=\"-491528476\">Relic_117_DamageUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.12) || RETURN",

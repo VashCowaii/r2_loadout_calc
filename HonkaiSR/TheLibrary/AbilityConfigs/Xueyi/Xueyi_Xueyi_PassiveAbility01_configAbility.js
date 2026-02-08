@@ -72,7 +72,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Xueyi_PassiveAbility"
+      "modifier": "<a class=\"gModGreen\" id=\"722753902\">Xueyi_PassiveAbility</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -80,7 +80,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Xueyi_EnterBattleFlag"
+      "modifier": "<a class=\"gModGreen\" id=\"2146019182\">Xueyi_EnterBattleFlag</a>"
     },
     {
       "name": "IF",
@@ -95,7 +95,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Xueyi_Passive_Trace01"
+          "modifier": "<a class=\"gModGreen\" id=\"-1229539467\">Xueyi_Passive_Trace01</a>"
         }
       ]
     },
@@ -105,13 +105,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Xueyi_StancePreview"
+      "modifier": "<a class=\"gModGreen\" id=\"-1978430980\">Xueyi_StancePreview</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_EnterBattleFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__2146019182\">Xueyi_EnterBattleFlag</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -141,7 +141,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Xueyi_Passive_AddCount"
+                      "modifier": "<a class=\"gModGreen\" id=\"213600244\">Xueyi_Passive_AddCount</a>"
                     }
                   ],
                   "failed": [
@@ -151,7 +151,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Xueyi_Passive_AddCount",
+                      "modifier": "<a class=\"gModGreen\" id=\"213600244\">Xueyi_Passive_AddCount</a>",
                       "valuePerStack": {
                         "MDF_Passive_StanceMaxCount": {
                           "operator": "Variables[0] (1) || RETURN",
@@ -196,7 +196,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_PassiveAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__722753902\">Xueyi_PassiveAbility</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
@@ -211,7 +211,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "Xueyi_Passive_OnListenStance"
+              "modifier": "<a class=\"gModGreen\" id=\"1316595895\">Xueyi_Passive_OnListenStance</a>"
             }
           ]
         },
@@ -235,7 +235,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Xueyi_Passive_OnListenStance"
+                  "modifier": "<a class=\"gModGreen\" id=\"1316595895\">Xueyi_Passive_OnListenStance</a>"
                 }
               ]
             }
@@ -295,7 +295,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Xueyi_Passive_AddCount"
+                          "modifier": "<a class=\"gModGreen\" id=\"213600244\">Xueyi_Passive_AddCount</a>"
                         }
                       ]
                     }
@@ -321,7 +321,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Xueyi_Passive_AddCount",
+                          "modifier": "<a class=\"gModGreen\" id=\"213600244\">Xueyi_Passive_AddCount</a>",
                           "valuePerStack": {
                             "MDF_Passive_StanceMaxCount": {
                               "operator": "Variables[0] (1) || RETURN",
@@ -465,7 +465,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "Xueyi_Passive_OnListenStance"
+              "modifier": "<a class=\"gModGreen\" id=\"1316595895\">Xueyi_Passive_OnListenStance</a>"
             },
             {
               "name": "IF",
@@ -858,7 +858,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_StancePreview",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1978430980\">Xueyi_StancePreview</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {

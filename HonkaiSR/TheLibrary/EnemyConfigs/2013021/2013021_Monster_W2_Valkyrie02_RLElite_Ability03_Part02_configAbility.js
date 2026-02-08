@@ -74,7 +74,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_Unstable[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
               "invertCondition": true
             },
             {
@@ -83,7 +83,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
               "invertCondition": true
             }
           ]
@@ -107,7 +107,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Standard_Unstable[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
                 "invertCondition": true
               },
               {
@@ -116,7 +116,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
                 "invertCondition": true
               }
             ]
@@ -128,7 +128,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_Unstable[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
                 "displayLines": "{[Skill03[2]]}",
@@ -170,7 +170,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Standard_Unstable[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
                 "invertCondition": true
               },
               {
@@ -179,7 +179,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
                 "invertCondition": true
               }
             ]
@@ -191,7 +191,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_Unstable[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
                 "displayLines": "{[Skill03[2]]}",

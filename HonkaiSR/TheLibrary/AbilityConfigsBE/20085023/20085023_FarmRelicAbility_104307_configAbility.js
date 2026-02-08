@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MFarmRelic_104307"
+      "modifier": "<a class=\"gModGreen\" id=\"1890045281\">MFarmRelic_104307</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104307_DOT",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1343540511\">MFarmRelic_104307_DOT</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking Modifier Instance [Owner]",
@@ -52,7 +52,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                   "duration": 3,
                   "valuePerStack": {
                     "Modifier_Electric_DamagePercentage": 1.5
@@ -67,7 +67,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104307",
+      "for": "<a class=\"gModGreen\" id=\"mod__1890045281\">MFarmRelic_104307</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -131,7 +131,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MFarmRelic_104307_DOT"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1343540511\">MFarmRelic_104307_DOT</a>"
                 }
               ]
             }

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "GlobalAbility_Castorice_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1166883348\">GlobalAbility_Castorice_Main</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
       },
-      "modifier": "GlobalAbility_Castorice_Listen"
+      "modifier": "<a class=\"gModGreen\" id=\"-1718302990\">GlobalAbility_Castorice_Listen</a>"
     },
     {
       "name": "Assign Global Buff State",
@@ -44,7 +44,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "GlobalAbility_Castorice_LimboWakeUpMark"
+        "modifier": "<a class=\"gModGreen\" id=\"-224007130\">GlobalAbility_Castorice_LimboWakeUpMark</a>"
       }
     },
     {
@@ -53,7 +53,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All(with Unselectable)V2}}"
       },
-      "modifier": "GlobalAbility_Castorice_Listen"
+      "modifier": "<a class=\"gModGreen\" id=\"-1718302990\">GlobalAbility_Castorice_Listen</a>"
     },
     {
       "name": "Find New Target",
@@ -69,7 +69,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "GlobalAbility_Castorice_LimboWakeUpMark"
+        "modifier": "<a class=\"gModGreen\" id=\"-224007130\">GlobalAbility_Castorice_LimboWakeUpMark</a>"
       },
       "ifTargetFound": [
         {
@@ -86,7 +86,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "GlobalAbility_Castorice_DeathTime[<span class=\"descriptionNumberColor\">Mooncocoon</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-678658688\">GlobalAbility_Castorice_DeathTime</a>[<span class=\"descriptionNumberColor\">Mooncocoon</span>]",
           "duration": 2
         }
       ]
@@ -97,7 +97,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
       },
-      "modifier": "GlobalAbility_Castorice_LimboWakeUpMark"
+      "modifier": "<a class=\"gModGreen\" id=\"-224007130\">GlobalAbility_Castorice_LimboWakeUpMark</a>"
     }
   ],
   "references": []

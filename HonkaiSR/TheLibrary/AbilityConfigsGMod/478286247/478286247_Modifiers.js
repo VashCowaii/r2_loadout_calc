@@ -10,11 +10,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "BattleEventAbility_Challenge_Month_BETag"
+      "for": "<a class=\"gModGreen\" id=\"mod__-593706658\">BattleEventAbility_Challenge_Month_BETag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_BattleEventAbility_Challenge_Month_21_SingleAttackLimit",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1512051870\">Modifier_BattleEventAbility_Challenge_Month_21_SingleAttackLimit</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -36,7 +36,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_BattleEventAbility_Challenge_Month_21_sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__2100246283\">Modifier_BattleEventAbility_Challenge_Month_21_sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -142,7 +142,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Modifier_BattleEventAbility_Challenge_Month_21_SingleAttackLimit",
+                "modifier": "<a class=\"gModGreen\" id=\"-1512051870\">Modifier_BattleEventAbility_Challenge_Month_21_SingleAttackLimit</a>",
                 "invertCondition": true
               },
               "passed": [
@@ -166,7 +166,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_BattleEventAbility_Challenge_Month_21_SingleAttackLimit"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1512051870\">Modifier_BattleEventAbility_Challenge_Month_21_SingleAttackLimit</a>"
                 }
               ]
             },
@@ -236,7 +236,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_BattleEventAbility_Challenge_Month_18_Sub4[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1989287647\">Modifier_BattleEventAbility_Challenge_Month_18_Sub4</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -250,7 +250,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Trace_AggroDown",
+      "for": "<a class=\"gModGreen\" id=\"mod__946146039\">M_Trace_AggroDown</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -281,7 +281,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Trace_AggroUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1138569970\">M_Trace_AggroUp</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -310,7 +310,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Trace_HealRatioUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__-202375119\">M_Trace_HealRatioUp</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -338,7 +338,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Ultimate_ExtraSP",
+      "for": "<a class=\"gModGreen\" id=\"mod__63874351\">M_Ultimate_ExtraSP</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -374,7 +374,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_LowHP_AggroDown",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1885352252\">M_LowHP_AggroDown</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -406,7 +406,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Trace_AggroDown",
+                  "modifier": "<a class=\"gModGreen\" id=\"946146039\">M_Trace_AggroDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_AggroDown) || RETURN",
@@ -451,7 +451,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Trace_AggroDown",
+                  "modifier": "<a class=\"gModGreen\" id=\"946146039\">M_Trace_AggroDown</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_AggroDown) || RETURN",
@@ -471,7 +471,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Trace_AggroDown",
+                  "modifier": "<a class=\"gModGreen\" id=\"946146039\">M_Trace_AggroDown</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]

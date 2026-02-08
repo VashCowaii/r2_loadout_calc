@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yukong_YuKong_Maze_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"446280574\">Yukong_YuKong_Maze_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Yukong_YuKong_Maze_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__446280574\">Yukong_YuKong_Maze_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

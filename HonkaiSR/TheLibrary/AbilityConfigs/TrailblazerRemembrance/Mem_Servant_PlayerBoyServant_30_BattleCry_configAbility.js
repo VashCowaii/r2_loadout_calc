@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_PlayerBoyServant_30_BattleCry"
+      "modifier": "<a class=\"gModGreen\" id=\"1428217171\">Memosprite_PlayerBoyServant_30_BattleCry</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_PlayerBoyServant_30_BattleCry",
+      "for": "<a class=\"gModGreen\" id=\"mod__1428217171\">Memosprite_PlayerBoyServant_30_BattleCry</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

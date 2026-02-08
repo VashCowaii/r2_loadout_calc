@@ -10,13 +10,13 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Mecha03_02_RLElite_ReFreshMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__769637727\">Enemy_W1_Mecha03_02_RLElite_ReFreshMark</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier02",
+      "for": "<a class=\"gModGreen\" id=\"mod__1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -58,7 +58,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier01",
+      "for": "<a class=\"gModGreen\" id=\"mod__1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",

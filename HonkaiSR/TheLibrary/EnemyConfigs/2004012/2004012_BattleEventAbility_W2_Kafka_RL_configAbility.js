@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_W2_Kafka_RL_BattleEvent"
+      "modifier": "<a class=\"gModGreen\" id=\"-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed"
+      "modifier": "<a class=\"gModGreen\" id=\"1014249439\">Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed</a>"
     },
     {
       "name": "Action Advance/Delay",
@@ -34,7 +34,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed",
+      "for": "<a class=\"gModGreen\" id=\"mod__1014249439\">Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -63,7 +63,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_W2_Kafka_RL_BattleEvent",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
         {

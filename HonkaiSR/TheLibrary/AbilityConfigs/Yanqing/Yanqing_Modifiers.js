@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Yanqing_Ability03_Bonus[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__294496269\">Yanqing_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -50,7 +50,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "Yanqing_Ability03_Bonus[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"294496269\">Yanqing_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
                   "function": "Add",
                   "value": 1,
                   "valueType": "Duration"
@@ -71,7 +71,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Yanqing_BonusTargetMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-348622200\">Yanqing_BonusTargetMark</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -80,7 +80,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Yanqing_FrozenMark[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -286,7 +286,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "Yanqing_FrozenMark[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
                   "function": "Add",
                   "value": 1,
                   "valueType": "Duration"
@@ -326,7 +326,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yanqing_FrozenMark[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]"
                     }
                   ]
                 }
@@ -373,7 +373,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Ability Target List}}"
                       },
-                      "modifier": "Yanqing_BonusTargetMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
                     }
                   ]
                 }
@@ -398,7 +398,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Yanqing_BonusTargetMark"
+                "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
               },
               "ifTargetFound": [
                 {
@@ -442,7 +442,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Yanqing_PassiveAbility_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1507574257\">Yanqing_PassiveAbility_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -460,7 +460,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yanqing_FrozenMark[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_CriticalBoost": {

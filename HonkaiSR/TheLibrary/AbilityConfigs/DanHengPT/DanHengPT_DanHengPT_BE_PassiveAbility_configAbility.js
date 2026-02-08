@@ -20,13 +20,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHengPT_BEModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-516529797\">DanHengPT_BEModifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_BEModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-516529797\">DanHengPT_BEModifier</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -40,7 +40,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{DHPT}}"
                 },
-                "modifier": "DanHengPT_BoostEnergy"
+                "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>"
               },
               "passed": [
                 {
@@ -103,7 +103,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}.[[getSummoner]]"
                     },
-                    "modifier": "Standard_Departed",
+                    "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
                     "invertCondition": true
                   },
                   {
@@ -112,7 +112,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Standard_Departed_Sub"
+                    "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>"
                   }
                 ]
               },
@@ -123,7 +123,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_Departed_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>"
                 },
                 {
                   "name": "Set Action-State",
@@ -146,7 +146,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W2_LycanKing_IF_DisableAction[<span class=\"descriptionNumberColor\">Departed</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-480380135\">Enemy_W2_LycanKing_IF_DisableAction</a>[<span class=\"descriptionNumberColor\">Departed</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -154,7 +154,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W2_LycanKing_IF_DisableActionEndMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"40667951\">Enemy_W2_LycanKing_IF_DisableActionEndMark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -162,7 +162,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
                 }
               ]
             }

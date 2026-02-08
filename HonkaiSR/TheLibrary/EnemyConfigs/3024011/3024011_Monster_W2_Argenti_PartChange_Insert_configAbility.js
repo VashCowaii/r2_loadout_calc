@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Monster_ChangePhase"
+      "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
     },
     {
       "name": "Action Advance/Delay",
@@ -64,7 +64,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_Standard_Endurance"
+      "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
     },
     {
       "name": "Declare Custom Variable",
@@ -102,7 +102,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Argenti_LockHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-912738192\">Enemy_W2_Argenti_LockHP</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

@@ -21,7 +21,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Advanced_Ren_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-669750728\">Advanced_Ren_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -29,7 +29,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Advanced_Ren_LoseHPPreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"634466478\">Advanced_Ren_LoseHPPreShow</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -141,7 +141,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Ren_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-669750728\">Advanced_Ren_Passive</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
@@ -342,7 +342,7 @@ const configAbility = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Ren_CheckHPChange"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1574082321\">Ren_CheckHPChange</a>"
                 },
                 {
                   "name": "IF",
@@ -364,7 +364,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Ren_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
                         "displayLines": "MWRen_Qi_MaxLayer",
@@ -381,7 +381,7 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Compare: Variable",
-                            "value1": "Advanced_Ren_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                            "value1": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                             "compareType": ">=",
                             "value2": {
                               "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
@@ -487,7 +487,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Ren_Eidolon4_Add"
+                      "modifier": "<a class=\"gModGreen\" id=\"740947569\">Advanced_Ren_Eidolon4_Add</a>"
                     }
                   ]
                 }
@@ -566,7 +566,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Advanced_Ren_Trace02[<span class=\"descriptionNumberColor\">Neverending Deaths</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"580817810\">Advanced_Ren_Trace02</a>[<span class=\"descriptionNumberColor\">Neverending Deaths</span>]"
                 }
               ]
             }
@@ -583,7 +583,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Variable",
-                    "value1": "Advanced_Ren_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                     "compareType": ">=",
                     "value2": {
                       "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
@@ -655,7 +655,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Variable",
-                    "value1": "Advanced_Ren_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                     "compareType": ">=",
                     "value2": {
                       "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
@@ -752,7 +752,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Variable",
-                    "value1": "Advanced_Ren_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                     "compareType": ">=",
                     "value2": {
                       "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
@@ -860,7 +860,7 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Ren_CheckHPChange"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1574082321\">Ren_CheckHPChange</a>"
                     }
                   ]
                 }

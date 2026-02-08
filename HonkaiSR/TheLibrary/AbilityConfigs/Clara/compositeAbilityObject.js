@@ -31,7 +31,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Klara_Eidolon6_Passive",
+          "modifier": "<a class=\"gModGreen\" id=\"2032783017\">Klara_Eidolon6_Passive</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.5) || RETURN",
@@ -47,7 +47,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Klara_Eidolon6_ListenBeHit",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1212753345\">Klara_Eidolon6_ListenBeHit</a>",
           "execute": [
             {
               "eventTrigger": "Being Attacked Start [Owner]",
@@ -58,7 +58,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
                 },
                 {
                   "name": "IF",
@@ -93,7 +93,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Klara_PassiveATK_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1426674462\">Klara_PassiveATK_Mark</a>"
                     }
                   ]
                 }
@@ -103,7 +103,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Klara_Eidolon6_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__2032783017\">Klara_Eidolon6_Passive</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -114,7 +114,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
                   },
-                  "modifier": "Klara_Eidolon6_ListenBeHit",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1212753345\">Klara_Eidolon6_ListenBeHit</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -147,7 +147,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
                       },
-                      "modifier": "Klara_Eidolon6_ListenBeHit",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1212753345\">Klara_Eidolon6_ListenBeHit</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -181,7 +181,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "Klara_Eidolon6_ListenBeHit",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1212753345\">Klara_Eidolon6_ListenBeHit</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -206,13 +206,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Klara_Eidolon4_ListenBeingAttack"
+          "modifier": "<a class=\"gModGreen\" id=\"-1780515596\">Klara_Eidolon4_ListenBeingAttack</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Klara_Eidolon4_DamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__202295497\">Klara_Eidolon4_DamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -244,7 +244,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Klara_Eidolon4_ListenBeingAttack",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1780515596\">Klara_Eidolon4_ListenBeingAttack</a>",
           "execute": [
             {
               "eventTrigger": "Being Attacked End [Owner]",
@@ -255,7 +255,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Klara_Eidolon4_DamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"202295497\">Klara_Eidolon4_DamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
                   "duration": 1,
                   "immediateEffect": true,
                   "valuePerStack": {
@@ -314,7 +314,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Klara_Trace01",
+          "modifier": "<a class=\"gModGreen\" id=\"-1111450796\">Klara_Trace01</a>",
           "valuePerStack": {
             "MDF_Chance": {
               "operator": "Variables[0] (0.35) || RETURN",
@@ -330,7 +330,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Klara_Trace01",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1111450796\">Klara_Trace01</a>",
           "execute": [
             {
               "eventTrigger": "Being Attacked Start [Owner]",
@@ -390,13 +390,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Technique_Klara_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1335199985\">Technique_Klara_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Technique_Klara_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1335199985\">Technique_Klara_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -424,7 +424,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Klara_TechniqueUsage_AggroUP[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-459252663\">Klara_TechniqueUsage_AggroUP</a>[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -474,7 +474,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
           }
         },
         {
@@ -485,7 +485,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
           }
         },
         {
@@ -496,7 +496,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
           },
           "passed": [
             {
@@ -541,7 +541,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Klara_Trace03",
+              "modifier": "<a class=\"gModGreen\" id=\"-1077895558\">Klara_Trace03</a>",
               "valuePerStack": {
                 "MDF_AllDamageTypeAddRatio": {
                   "operator": "Variables[0] (0.3) || RETURN",
@@ -563,7 +563,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
           },
           "passed": [
             {
@@ -651,7 +651,7 @@ const compositeAbilityObject = {
             "Trigger: Attack End",
             {
               "name": "Define Modifier Variable",
-              "modifierName": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
               "function": "Add"
             }
           ],
@@ -699,13 +699,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Klara_Trace03"
+          "modifier": "<a class=\"gModGreen\" id=\"-1077895558\">Klara_Trace03</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Klara_Trace03",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1077895558\">Klara_Trace03</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -769,7 +769,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Klara_PassiveAbility01_ListenCounter",
+          "modifier": "<a class=\"gModGreen\" id=\"1664082780\">Klara_PassiveAbility01_ListenCounter</a>",
           "valuePerStack": {
             "MDF_Chance": {
               "operator": "Variables[0] (1) || RETURN",
@@ -787,7 +787,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Klara_PassiveAbility01_AddRevenge"
+          "modifier": "<a class=\"gModGreen\" id=\"-1481439916\">Klara_PassiveAbility01_AddRevenge</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -795,7 +795,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Klara_Passive_DamageReduce[<span class=\"descriptionNumberColor\">Guardian</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-796199138\">Klara_Passive_DamageReduce</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.1) || RETURN",
@@ -811,7 +811,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Klara_PassiveAbility01_AddRevenge",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1481439916\">Klara_PassiveAbility01_AddRevenge</a>",
           "execute": [
             {
               "eventTrigger": "Pre-Death [Owner]",
@@ -822,7 +822,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
                 }
               ]
             },
@@ -835,7 +835,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
                 }
               ]
             }
@@ -845,7 +845,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Klara_PassiveAbility01_ListenCounter",
+          "for": "<a class=\"gModGreen\" id=\"mod__1664082780\">Klara_PassiveAbility01_ListenCounter</a>",
           "execute": [
             {
               "eventTrigger": "Being Attacked Start [Owner]",
@@ -883,7 +883,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Klara_PassiveATK_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1426674462\">Klara_PassiveATK_Mark</a>"
                     }
                   ]
                 }
@@ -942,7 +942,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Klara_Eidolon2_AttackUP[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-632500359\">Klara_Eidolon2_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -978,7 +978,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Klara_Ultimate_WarriorMode[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1618683191\">Klara_Ultimate_WarriorMode</a>[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1013,7 +1013,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
               "counter": {
                 "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                 "displayLines": "(2 + 1)",
@@ -1051,7 +1051,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Klara_Ultimate_WarriorMode[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1618683191\">Klara_Ultimate_WarriorMode</a>[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1086,7 +1086,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
               "counter": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1131,7 +1131,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Klara_Eidolon2_AttackUP[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-632500359\">Klara_Eidolon2_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "Refresh",
           "execute": [
             {
@@ -1167,7 +1167,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Klara_PassiveATK_TeamMember",
+          "for": "<a class=\"gModGreen\" id=\"mod__1513804400\">Klara_PassiveATK_TeamMember</a>",
           "execute": [
             {
               "eventTrigger": "Being Attacked Start [Owner]",
@@ -1189,7 +1189,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Klara_PassiveATK_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1426674462\">Klara_PassiveATK_Mark</a>"
                     }
                   ]
                 }
@@ -1199,7 +1199,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
           "counter": 1,
           "stackType": "ReplaceByCaster",
           "execute": [
@@ -1221,7 +1221,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "Klara_PassiveATK_TeamMember",
+                  "modifier": "<a class=\"gModGreen\" id=\"1513804400\">Klara_PassiveATK_TeamMember</a>",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -1260,7 +1260,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Klara_PassiveATK_TeamMember"
+                  "modifier": "<a class=\"gModGreen\" id=\"1513804400\">Klara_PassiveATK_TeamMember</a>"
                 }
               ]
             },
@@ -1283,7 +1283,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Klara_PassiveATK_TeamMember"
+                      "modifier": "<a class=\"gModGreen\" id=\"1513804400\">Klara_PassiveATK_TeamMember</a>"
                     }
                   ]
                 }
@@ -1307,7 +1307,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "Klara_PassiveATK_TeamMember",
+                  "modifier": "<a class=\"gModGreen\" id=\"1513804400\">Klara_PassiveATK_TeamMember</a>",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -1336,7 +1336,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Klara_Ultimate_WarriorMode[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1618683191\">Klara_Ultimate_WarriorMode</a>[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
           "stackType": "Refresh",
           "modifierFlags": [
             "STAT_Burst"
@@ -1449,7 +1449,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
           }
         },
         {
@@ -1535,7 +1535,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Clara's Counter Target}}"
               },
-              "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
             }
           ]
         },
@@ -1654,12 +1654,12 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Klara_Passive_ShowAmmo",
+          "for": "<a class=\"gModGreen\" id=\"mod__1602537794\">Klara_Passive_ShowAmmo</a>",
           "stackType": "ReplaceByCaster"
         },
         {
           "name": "Modifier Construction",
-          "for": "Klara_Passive_DamageReduce[<span class=\"descriptionNumberColor\">Guardian</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-796199138\">Klara_Passive_DamageReduce</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1694,7 +1694,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -1765,7 +1765,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Klara_TechniqueUsage_AggroUP[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-459252663\">Klara_TechniqueUsage_AggroUP</a>[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1800,7 +1800,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Klara_PassiveATK_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1426674462\">Klara_PassiveATK_Mark</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",

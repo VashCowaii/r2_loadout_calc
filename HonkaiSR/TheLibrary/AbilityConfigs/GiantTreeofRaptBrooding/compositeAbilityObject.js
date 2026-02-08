@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_320_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-592580859\">Relic_320_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_320_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-392110406\">Relic_320_Sub</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -51,7 +51,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_320_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-592580859\">Relic_320_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -82,7 +82,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_320_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -100,7 +100,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Relic_320_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -140,7 +140,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Relic_320_Sub",
+                          "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (0.12) || RETURN",
@@ -158,7 +158,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster's Memosprite}}"
                           },
-                          "modifier": "Relic_320_Sub",
+                          "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (0.12) || RETURN",
@@ -219,7 +219,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Relic_320_Sub",
+                          "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (0.2) || RETURN",
@@ -259,7 +259,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Relic_320_Sub",
+                              "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
                                   "operator": "Variables[0] (0.12) || RETURN",
@@ -303,7 +303,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_320_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                       "onlyRemoveOwnersInstance": true
                     },
                     {
@@ -312,7 +312,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Relic_320_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                       "onlyRemoveOwnersInstance": true
                     }
                   ]
@@ -342,7 +342,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_320_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.12) || RETURN",
@@ -360,7 +360,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Relic_320_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.12) || RETURN",
@@ -391,7 +391,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_320_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -409,7 +409,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Relic_320_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-392110406\">Relic_320_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.2) || RETURN",

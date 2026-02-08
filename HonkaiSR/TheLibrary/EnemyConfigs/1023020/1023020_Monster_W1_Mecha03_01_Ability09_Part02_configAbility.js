@@ -42,7 +42,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target List}}"
       },
-      "modifier": "Monster_W1_Mecha03_01_Frozen[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1137901449\">Monster_W1_Mecha03_01_Frozen</a>[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
       "baseChance": 1,
       "stackLimit": {
         "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
@@ -85,7 +85,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha03_01_Rage[<span class=\"descriptionNumberColor\">Surpass</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1705391722\">Monster_W1_Mecha03_01_Rage</a>[<span class=\"descriptionNumberColor\">Surpass</span>]"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -93,7 +93,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Monster_W1_Mecha03_01_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1421560478\">Monster_W1_Mecha03_01_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
       "onlyRemoveOwnersInstance": true
     },
     {

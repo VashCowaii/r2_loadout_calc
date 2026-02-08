@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_PlayerBoy_20_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-632230246\">StageAbility_Maze_PlayerBoy_20_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_PlayerBoy_20_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-632230246\">StageAbility_Maze_PlayerBoy_20_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -44,7 +44,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "PlayerBoy_20_TechniqueUsage_Bonus[<span class=\"descriptionNumberColor\">Now! I'm the Band!</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1971132539\">PlayerBoy_20_TechniqueUsage_Bonus</a>[<span class=\"descriptionNumberColor\">Now! I'm the Band!</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

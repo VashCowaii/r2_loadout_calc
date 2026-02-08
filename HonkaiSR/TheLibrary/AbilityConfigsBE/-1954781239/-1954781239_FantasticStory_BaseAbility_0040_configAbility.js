@@ -139,7 +139,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_0040",
+      "modifier": "<a class=\"gModGreen\" id=\"1941026382\">Modifier_FantasticStory_BaseAbility_0040</a>",
       "valuePerStack": {
         "ADF_1": {
           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -179,7 +179,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0040_plus3_sub[<span class=\"descriptionNumberColor\">Bonus Charge</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__355925913\">Modifier_FantasticStory_BaseAbility_0040_plus3_sub</a>[<span class=\"descriptionNumberColor\">Bonus Charge</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -220,7 +220,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0040_sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1757806041\">Modifier_FantasticStory_BaseAbility_0040_sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -306,7 +306,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0040",
+      "for": "<a class=\"gModGreen\" id=\"mod__1941026382\">Modifier_FantasticStory_BaseAbility_0040</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -355,7 +355,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0040_plus2_sub[<span class=\"descriptionNumberColor\">Ultimate DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1558011426\">Modifier_FantasticStory_BaseAbility_0040_plus2_sub</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Boost</span>]",
                       "valuePerStack": {
                         "_DamageUpRatio": {
                           "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0042_ADF_1) || RETURN",
@@ -384,7 +384,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0040_plus3_sub[<span class=\"descriptionNumberColor\">Bonus Charge</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"355925913\">Modifier_FantasticStory_BaseAbility_0040_plus3_sub</a>[<span class=\"descriptionNumberColor\">Bonus Charge</span>]",
                       "valuePerStack": {
                         "_Extra_Count": {
                           "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0043_ADF_1) || RETURN",
@@ -417,7 +417,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0040_sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1757806041\">Modifier_FantasticStory_BaseAbility_0040_sub</a>"
                 },
                 {
                   "name": "IF",
@@ -659,7 +659,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0040_sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1757806041\">Modifier_FantasticStory_BaseAbility_0040_sub</a>"
                 },
                 {
                   "name": "IF",
@@ -676,7 +676,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0040_plus2_sub[<span class=\"descriptionNumberColor\">Ultimate DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1558011426\">Modifier_FantasticStory_BaseAbility_0040_plus2_sub</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Boost</span>]",
                       "valuePerStack": {
                         "_DamageUpRatio": {
                           "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0042_ADF_1) || RETURN",
@@ -707,7 +707,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0040_plus3_sub[<span class=\"descriptionNumberColor\">Bonus Charge</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"355925913\">Modifier_FantasticStory_BaseAbility_0040_plus3_sub</a>[<span class=\"descriptionNumberColor\">Bonus Charge</span>]",
                   "valuePerStack": {
                     "_Extra_Count": {
                       "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0043_ADF_1) || RETURN",

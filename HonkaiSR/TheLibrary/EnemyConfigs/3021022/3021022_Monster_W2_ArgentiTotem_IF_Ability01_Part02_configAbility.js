@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>"
     },
     {
       "name": "Define Custom Variable with Team Count",
@@ -31,7 +31,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_W2_Argenti_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
           },
           {
             "name": "Has Modifier",
@@ -39,7 +39,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_W2_Argenti_Power_RL[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
           },
           {
             "name": "Has Modifier",
@@ -47,7 +47,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
           }
         ]
       },
@@ -77,7 +77,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier",
+                "modifier": "<a class=\"gModGreen\" id=\"1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>",
                 "invertCondition": true
               },
               "ifTargetFound": [
@@ -87,7 +87,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -174,7 +174,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier",
+                "modifier": "<a class=\"gModGreen\" id=\"1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>",
                 "invertCondition": true
               },
               "ifTargetFound": [
@@ -184,7 +184,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -223,7 +223,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>",
       "stackData": [],
       "latentQueue": []
     }

@@ -32,7 +32,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Aglaea_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"1078632093\">Aglaea_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -40,7 +40,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Aglaea_Ability03Preshow"
+      "modifier": "<a class=\"gModGreen\" id=\"779865108\">Aglaea_Ability03Preshow</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -48,7 +48,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Aglaea_Ability02Preshow"
+      "modifier": "<a class=\"gModGreen\" id=\"-1390492215\">Aglaea_Ability02Preshow</a>"
     },
     {
       "name": "IF",
@@ -67,7 +67,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Aglaea_Eidolon2_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"-184277426\">Aglaea_Eidolon2_Listen</a>"
         }
       ]
     }
@@ -75,7 +75,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__1078632093\">Aglaea_Passive</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -125,7 +125,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Aglaea_Eidolon2_Listen"
+                  "modifier": "<a class=\"gModGreen\" id=\"-184277426\">Aglaea_Eidolon2_Listen</a>"
                 }
               ]
             }

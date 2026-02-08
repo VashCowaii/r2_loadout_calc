@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Saber_Wind_Ability03_buff",
+      "for": "<a class=\"gModGreen\" id=\"mod__-437296268\">Saber_Wind_Ability03_buff</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -94,7 +94,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_DisableAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__1409895251\">Saber_DisableAbility</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -115,7 +115,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Ability03_CD_02",
+      "for": "<a class=\"gModGreen\" id=\"mod__268332262\">Saber_Ability03_CD_02</a>",
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -148,7 +148,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Ability03_CD[<span class=\"descriptionNumberColor\">Mana Burst</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__879085567\">Saber_Ability03_CD</a>[<span class=\"descriptionNumberColor\">Mana Burst</span>]",
       "stackData": [],
       "latentQueue": [],
       "description": "When Saber has \"Core Resonance,\" and if using Skill and consuming \"Core Resonance\" can fully regenerate her Energy, consumes \"Mana Burst\" to cause Saber to immediately take action and recover 1 Skill Point for allies.",
@@ -158,7 +158,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Trace03_Bonus[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__581836941\">Saber_Trace03_Bonus</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -194,7 +194,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Passive_Bonus[<span class=\"descriptionNumberColor\">Dragon Reactor Core</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-435192710\">Saber_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Dragon Reactor Core</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -229,13 +229,13 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_AIFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__1310791461\">Saber_AIFlag</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1058966793\">Saber_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -264,7 +264,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1328926688\">Saber_Trace03_Bonus_02</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_303_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-412340916\">Relic_303_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_303_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-43633495\">Relic_303_Sub</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -91,7 +91,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_303_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-412340916\">Relic_303_Main</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -134,7 +134,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_303_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-43633495\">Relic_303_Sub</a>",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
                           "operator": "Variables[0] (MDF_StatusProbability) || Variables[1] (0.25) || MUL || RETURN",
@@ -189,7 +189,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_303_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-43633495\">Relic_303_Sub</a>",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
                           "operator": "Variables[0] (MDF_StatusProbability) || Variables[1] (0.25) || MUL || RETURN",
@@ -244,7 +244,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_303_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-43633495\">Relic_303_Sub</a>",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
                           "operator": "Variables[0] (MDF_StatusProbability) || Variables[1] (0.25) || MUL || RETURN",
@@ -299,7 +299,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_303_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-43633495\">Relic_303_Sub</a>",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
                           "operator": "Variables[0] (MDF_StatusProbability) || Variables[1] (0.25) || MUL || RETURN",
@@ -334,7 +334,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_303_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"-43633495\">Relic_303_Sub</a>",
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
                       "operator": "Variables[0] (MDF_StatusProbability) || Variables[1] (0.25) || MUL || RETURN",

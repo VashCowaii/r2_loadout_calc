@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_24003_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1127114900\">LC_24003_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_24003_DotDamageAddedRatio[<span class=\"descriptionNumberColor\">DoT Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1464436876\">LC_24003_DotDamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DoT Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -72,7 +72,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_24003_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1127114900\">LC_24003_Main</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -159,7 +159,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_24003_DotDamageAddedRatio[<span class=\"descriptionNumberColor\">DoT Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1464436876\">LC_24003_DotDamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DoT Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",

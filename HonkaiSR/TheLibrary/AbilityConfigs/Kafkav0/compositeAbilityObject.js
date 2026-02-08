@@ -38,13 +38,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Kafka_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-629359028\">StageAbility_Maze_Kafka_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Kafka_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-629359028\">StageAbility_Maze_Kafka_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -188,7 +188,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
                         "operator": "Variables[0] (Skill03_P3_LifeTime) || RETURN",
                         "displayLines": "Skill03_P3_LifeTime",
@@ -240,13 +240,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Kafka_Eidolon2"
+          "modifier": "<a class=\"gModGreen\" id=\"-1908096467\">Kafka_Eidolon2</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Kafka_Eidolon2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1908096467\">Kafka_Eidolon2</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -266,7 +266,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "Kafka_Eidolon2_Sub[<span class=\"descriptionNumberColor\">Fortississimo</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]"
                 }
               ]
             },
@@ -279,7 +279,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Kafka_Eidolon2_Sub[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.25) || RETURN",
@@ -302,7 +302,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Kafka_Eidolon2_Sub[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.25) || RETURN",
@@ -342,13 +342,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Kafka_Tree02"
+          "modifier": "<a class=\"gModGreen\" id=\"1069611135\">Kafka_Tree02</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Kafka_Tree02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1069611135\">Kafka_Tree02</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -556,7 +556,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Kafka_PassiveDotDamage_Eidolon1[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1710761460\">Kafka_PassiveDotDamage_Eidolon1</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -774,7 +774,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
           "duration": {
             "operator": "Variables[0] (Skill03_P3_LifeTime) || RETURN",
             "displayLines": "Skill03_P3_LifeTime",
@@ -809,7 +809,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Kafka_Passive_CanAttack[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1926104538\">Kafka_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
           "onlyRemoveOwnersInstance": true
         },
         {
@@ -818,13 +818,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Kafka_Passive_CanAttackCD[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-899885235\">Kafka_Passive_CanAttackCD</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Kafka_PassiveDotDamage_Eidolon1[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1710761460\">Kafka_PassiveDotDamage_Eidolon1</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -896,7 +896,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Kafka_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-748126065\">M_Kafka_Passive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -904,7 +904,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Kafka_Passive_CanAttack[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1926104538\">Kafka_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -930,7 +930,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Kafka_Passive_DotSpecialMark_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"42937918\">Kafka_Passive_DotSpecialMark_Listen</a>"
         },
         {
           "name": "IF",
@@ -959,7 +959,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Kafka_Eidolon4"
+              "modifier": "<a class=\"gModGreen\" id=\"-1192521276\">Kafka_Eidolon4</a>"
             }
           ]
         }
@@ -967,7 +967,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Kafka_Passive_CanAttack[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1926104538\">Kafka_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
           "stackData": [],
           "latentQueue": [
             "Kafka_Listen_Rank1"
@@ -978,7 +978,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Kafka_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-748126065\">M_Kafka_Passive</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -992,7 +992,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Kafka_Passive_CanAttack[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1926104538\">Kafka_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1005,7 +1005,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Kafka_Passive_CanAttackCD[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-899885235\">Kafka_Passive_CanAttackCD</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -1049,7 +1049,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Kafka_Passive_CanAttack[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1926104538\">Kafka_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]"
                       }
                     ]
                   },
@@ -1160,7 +1160,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Kafka_Passive_UltraSpecialMarkTrigger",
+          "for": "<a class=\"gModGreen\" id=\"mod__410847021\">Kafka_Passive_UltraSpecialMarkTrigger</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -1247,7 +1247,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Kafka_Passive_DotSpecialMarkTrigger",
+          "for": "<a class=\"gModGreen\" id=\"mod__2055478652\">Kafka_Passive_DotSpecialMarkTrigger</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ListenBattleEventSkill",
@@ -1452,7 +1452,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Kafka_Passive_DotSpecialMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__124377312\">Kafka_Passive_DotSpecialMark</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ListenBattleEventSkill",
@@ -1638,7 +1638,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Kafka_Passive_DotSpecialMark_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__42937918\">Kafka_Passive_DotSpecialMark_Listen</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1649,7 +1649,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Kafka_Passive_DotSpecialMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"124377312\">Kafka_Passive_DotSpecialMark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1657,7 +1657,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Kafka_Passive_DotSpecialMarkTrigger"
+                  "modifier": "<a class=\"gModGreen\" id=\"2055478652\">Kafka_Passive_DotSpecialMarkTrigger</a>"
                 }
               ]
             },
@@ -1694,7 +1694,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Kafka_Passive_DotSpecialMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"124377312\">Kafka_Passive_DotSpecialMark</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1702,7 +1702,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Kafka_Passive_DotSpecialMarkTrigger"
+                      "modifier": "<a class=\"gModGreen\" id=\"2055478652\">Kafka_Passive_DotSpecialMarkTrigger</a>"
                     }
                   ]
                 }
@@ -1741,7 +1741,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Kafka_Passive_DotSpecialMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"124377312\">Kafka_Passive_DotSpecialMark</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1749,7 +1749,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Kafka_Passive_DotSpecialMarkTrigger"
+                      "modifier": "<a class=\"gModGreen\" id=\"2055478652\">Kafka_Passive_DotSpecialMarkTrigger</a>"
                     }
                   ]
                 }
@@ -1903,7 +1903,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
           "duration": {
             "operator": "Variables[0] (Skill03_P3_LifeTime) || RETURN",
             "displayLines": "Skill03_P3_LifeTime",
@@ -2340,7 +2340,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Kafka_Eidolon4_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-287625887\">Kafka_Eidolon4_Sub</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -2421,7 +2421,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Kafka_Eidolon4",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1192521276\">Kafka_Eidolon4</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -2443,7 +2443,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Kafka_Eidolon4_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-287625887\">Kafka_Eidolon4_Sub</a>"
                     }
                   ]
                 }
@@ -2459,7 +2459,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Kafka_Eidolon2_Sub[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -2496,7 +2496,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Kafka_Passive_CanAttackCD[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-899885235\">Kafka_Passive_CanAttackCD</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
           "stackData": [],
           "latentQueue": [],
           "description": "The effect of Talent \"Gentle but Cruel\" cannot be triggered.",

@@ -33,7 +33,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "TriggerStanceCountDown_Monster"
+          "modifier": "<a class=\"gModGreen\" id=\"-1581220157\">TriggerStanceCountDown_Monster</a>"
         }
       ],
       "whenAdded": [],
@@ -59,13 +59,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Standard_BOSSInfoBar_Active"
+          "modifier": "<a class=\"gModGreen\" id=\"-887060833\">Standard_BOSSInfoBar_Active</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Standard_BOSSInfoBar_Active",
+          "for": "<a class=\"gModGreen\" id=\"mod__-887060833\">Standard_BOSSInfoBar_Active</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -83,13 +83,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "RemoveOneMorePerturn"
+          "modifier": "<a class=\"gModGreen\" id=\"-1985606354\">RemoveOneMorePerturn</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "RemoveOneMorePerturn",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1985606354\">RemoveOneMorePerturn</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -100,7 +100,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMorePerTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -108,7 +108,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMore"
+                  "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
                 }
               ]
             },
@@ -121,7 +121,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "OneMorePerTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -129,7 +129,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "OneMore"
+                  "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
                 }
               ]
             }
@@ -152,13 +152,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_Aventurine_GamblingStart"
+          "modifier": "<a class=\"gModGreen\" id=\"-629569625\">Monster_Aventurine_GamblingStart</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_Aventurine_GamblingStart",
+          "for": "<a class=\"gModGreen\" id=\"mod__-629569625\">Monster_Aventurine_GamblingStart</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -194,13 +194,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_XP_Minion04_Huge"
+          "modifier": "<a class=\"gModGreen\" id=\"-1846590132\">Monster_XP_Minion04_Huge</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_XP_Minion04_Huge",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1846590132\">Monster_XP_Minion04_Huge</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -224,13 +224,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_Junk_Special_ChangeWidth"
+          "modifier": "<a class=\"gModGreen\" id=\"1825644415\">Monster_Junk_Special_ChangeWidth</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_Junk_Special_ChangeWidth",
+          "for": "<a class=\"gModGreen\" id=\"mod__1825644415\">Monster_Junk_Special_ChangeWidth</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -254,13 +254,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "WEnemy_Standard_HitAddStun"
+          "modifier": "<a class=\"gModGreen\" id=\"1381171644\">WEnemy_Standard_HitAddStun</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "WEnemy_Standard_HitAddStun",
+          "for": "<a class=\"gModGreen\" id=\"mod__1381171644\">WEnemy_Standard_HitAddStun</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -271,7 +271,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Attack Targets of Modifier Holder}}"
                   },
-                  "modifier": "Standard_CTRL_Stun[<span class=\"descriptionNumberColor\">Stunned</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1162946172\">Standard_CTRL_Stun</a>[<span class=\"descriptionNumberColor\">Stunned</span>]",
                   "duration": 1,
                   "baseChance": 1
                 }
@@ -296,13 +296,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Standard_Formation2_Back"
+          "modifier": "<a class=\"gModGreen\" id=\"665673273\">Standard_Formation2_Back</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Standard_Formation2_Back",
+          "for": "<a class=\"gModGreen\" id=\"mod__665673273\">Standard_Formation2_Back</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -337,13 +337,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_SpecialDieEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"1503068653\">Enemy_SpecialDieEffect</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_SpecialDieEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__1503068653\">Enemy_SpecialDieEffect</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -392,7 +392,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_SpecialDieEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"1503068653\">Enemy_SpecialDieEffect</a>"
             }
           ]
         }
@@ -400,7 +400,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_SpecialDieEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__1503068653\">Enemy_SpecialDieEffect</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -445,13 +445,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Local_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"1010816158\">Local_MuteHitFly</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Local_MuteHitFly",
+          "for": "<a class=\"gModGreen\" id=\"mod__1010816158\">Local_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
           ],
@@ -488,13 +488,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Straight_AIControl"
+          "modifier": "<a class=\"gModGreen\" id=\"-954371893\">Straight_AIControl</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Straight_AIControl",
+          "for": "<a class=\"gModGreen\" id=\"mod__-954371893\">Straight_AIControl</a>",
           "execute": [
             {
               "eventTrigger": "Action End [Owner]",
@@ -609,13 +609,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "RO_015_DeadTimeSlowModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-477903589\">RO_015_DeadTimeSlowModifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "RO_015_DeadTimeSlowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-477903589\">RO_015_DeadTimeSlowModifier</a>",
           "execute": [
             {
               "eventTrigger": "When Put in Deathstate Limbo"
@@ -646,7 +646,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Local_ListenStanceBreak"
+          "modifier": "<a class=\"gModGreen\" id=\"-1767736831\">Local_ListenStanceBreak</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -654,7 +654,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Local_ListenRedStance"
+          "modifier": "<a class=\"gModGreen\" id=\"-694687667\">Local_ListenRedStance</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -662,7 +662,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MonsterAllDamageReduce"
+          "modifier": "<a class=\"gModGreen\" id=\"1705654267\">MonsterAllDamageReduce</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -670,13 +670,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TriggerStanceCountDown_Monster"
+          "modifier": "<a class=\"gModGreen\" id=\"-1581220157\">TriggerStanceCountDown_Monster</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Local_ListenRedStance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-694687667\">Local_ListenRedStance</a>",
           "execute": [
             {
               "eventTrigger": "End Broken State [Owner]",
@@ -687,7 +687,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "RedStanceState"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1775147687\">RedStanceState</a>"
                 }
               ]
             },
@@ -700,7 +700,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "RedStanceState"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1775147687\">RedStanceState</a>"
                 }
               ]
             }
@@ -710,7 +710,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Local_ListenStanceBreak",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1767736831\">Local_ListenStanceBreak</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -724,7 +724,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "StanceBreakState"
+                  "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -732,7 +732,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MonsterAllDamageReduce"
+                  "modifier": "<a class=\"gModGreen\" id=\"1705654267\">MonsterAllDamageReduce</a>"
                 }
               ]
             }

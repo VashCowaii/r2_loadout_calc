@@ -18,13 +18,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_20016_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-629817458\">LC_20016_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_20016_CriticalChance[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1690247274\">LC_20016_CriticalChance</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -56,7 +56,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_20016_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-629817458\">LC_20016_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -87,7 +87,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_20016_CriticalChance[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1690247274\">LC_20016_CriticalChance</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]"
                     }
                   ]
                 }
@@ -122,7 +122,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_20016_CriticalChance[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1690247274\">LC_20016_CriticalChance</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]"
                     }
                   ],
                   "failed": [
@@ -132,7 +132,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_20016_CriticalChance[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1690247274\">LC_20016_CriticalChance</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]"
                     }
                   ]
                 }

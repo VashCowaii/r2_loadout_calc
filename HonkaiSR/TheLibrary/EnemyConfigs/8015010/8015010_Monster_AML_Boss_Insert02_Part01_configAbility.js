@@ -55,7 +55,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_DamageTakenUp",
+      "modifier": "<a class=\"gModGreen\" id=\"-1881731748\">Enemy_AML_Boss_DamageTakenUp</a>",
       "valuePerStack": {
         "MDF_PropertyValue": {
           "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",

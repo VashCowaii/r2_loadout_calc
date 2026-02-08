@@ -31,7 +31,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_Standard_HideMonsterHUD"
+      "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
     },
     {
       "name": "Boss Bar Display",
@@ -47,7 +47,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_Standard_MuteHitFly"
+      "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
     },
     {
       "name": "IF",
@@ -67,7 +67,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_GS_Argenti_SpecialVictory_LockHP"
+          "modifier": "<a class=\"gModGreen\" id=\"-2064984483\">Monster_W2_GS_Argenti_SpecialVictory_LockHP</a>"
         }
       ]
     }
@@ -75,7 +75,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_GS_Argenti_SpecialVictory_LockHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2064984483\">Monster_W2_GS_Argenti_SpecialVictory_LockHP</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -136,7 +136,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Monster_Standard_DisableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"740710426\">Monster_Standard_DisableAction</a>"
                 },
                 {
                   "name": "Declare Custom Variable",

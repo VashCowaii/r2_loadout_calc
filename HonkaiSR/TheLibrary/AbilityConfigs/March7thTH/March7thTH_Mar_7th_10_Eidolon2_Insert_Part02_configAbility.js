@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Mar_7th_10_InsertCheck"
+      "modifier": "<a class=\"gModGreen\" id=\"126431759\">M_Mar_7th_10_InsertCheck</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE, with Unselectables)}}"
       },
-      "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>"
     },
     {
       "name": "Define Custom Variable with Stat",
@@ -35,7 +35,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Mar_7th_10_Eidolon2_CD[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1941685711\">Mar_7th_10_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]"
     },
     {
       "name": "ATK Scaling DMG",
@@ -136,7 +136,8 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Mar_7th_10_Jianshi",
+      "functionName": "<a class=\"gTempYellow\" id=\"1835349740\">Mar_7th_10_Jianshi</a>",
+      "isGlobal": true,
       "variables": {
         "parameter[00]_IsAbility11": 0
       }
@@ -144,7 +145,7 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Use Custom Character Function",
-      "functionName": "Mar_7th_10_GainEnergyWithCheck",
+      "functionName": "<a class=\"gTempYellow\" id=\"-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
       "variables": {
         "parameter[0]_AddValue": {
           "operator": "Variables[0] (1) || RETURN",

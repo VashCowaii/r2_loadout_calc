@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 1}}"
       },
-      "modifier": "Enemy_W0_Boss_Part2_AttackUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
       "duration": 1,
       "valuePerStack": {
         "MDF_AttackAddedRatio": 1
@@ -22,7 +22,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 3}}"
       },
-      "modifier": "Enemy_W0_Boss_Part2_AttackUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
       "duration": 1,
       "valuePerStack": {
         "MDF_AttackAddedRatio": 1

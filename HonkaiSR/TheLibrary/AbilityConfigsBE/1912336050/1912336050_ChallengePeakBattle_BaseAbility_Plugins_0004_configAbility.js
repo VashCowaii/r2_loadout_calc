@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004"
+      "modifier": "<a class=\"gModGreen\" id=\"-2100215869\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_03",
+      "for": "<a class=\"gModGreen\" id=\"mod__-468236083\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_03</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -45,7 +45,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_02[<span class=\"descriptionNumberColor\">Sanguine Vitality</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-485013702\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_02</a>[<span class=\"descriptionNumberColor\">Sanguine Vitality</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -75,7 +75,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2100215869\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -102,7 +102,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_02[<span class=\"descriptionNumberColor\">Sanguine Vitality</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-485013702\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_02</a>[<span class=\"descriptionNumberColor\">Sanguine Vitality</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0004_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -151,7 +151,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_03",
+                  "modifier": "<a class=\"gModGreen\" id=\"-468236083\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_03</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0004_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

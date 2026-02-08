@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Environment_0001"
+      "modifier": "<a class=\"gModGreen\" id=\"850232515\">Modifier_ChallengePeakBattle_BaseAbility_Environment_0001</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_03",
+      "for": "<a class=\"gModGreen\" id=\"mod__1809743821\">Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_03</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -39,7 +39,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_02",
+      "for": "<a class=\"gModGreen\" id=\"mod__1792966202\">Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_02</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -51,7 +51,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_03",
+              "modifier": "<a class=\"gModGreen\" id=\"1809743821\">Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_03</a>",
               "duration": {
                 "operator": "Variables[0] (ChallengePeakBattle_Environment_0001_ADF_2) || RETURN",
                 "displayLines": "ChallengePeakBattle_Environment_0001_ADF_2",
@@ -97,7 +97,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_03",
+                  "modifier": "<a class=\"gModGreen\" id=\"1809743821\">Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_03</a>",
                   "duration": {
                     "operator": "Variables[0] (ChallengePeakBattle_Environment_0001_ADF_2) || RETURN",
                     "displayLines": "ChallengePeakBattle_Environment_0001_ADF_2",
@@ -133,7 +133,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Environment_0001",
+      "for": "<a class=\"gModGreen\" id=\"mod__850232515\">Modifier_ChallengePeakBattle_BaseAbility_Environment_0001</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -155,7 +155,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_02",
+                  "modifier": "<a class=\"gModGreen\" id=\"1792966202\">Modifier_ChallengePeakBattle_BaseAbility_Environment_0001_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_Environment_0001_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

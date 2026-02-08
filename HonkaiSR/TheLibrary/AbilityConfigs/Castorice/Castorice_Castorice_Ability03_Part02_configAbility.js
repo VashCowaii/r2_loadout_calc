@@ -10,11 +10,11 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Castorice_Ability03_Field"
+      "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Castorice_ExtraSpecialSPReturn",
+      "functionName": "<a class=\"gTempYellow\" id=\"1186346947\">Castorice_ExtraSpecialSPReturn</a>",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
@@ -151,7 +151,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Castorice_Eidolon2_Check"
+          "modifier": "<a class=\"gModGreen\" id=\"176252830\">Castorice_Eidolon2_Check</a>"
         }
       ]
     },
@@ -198,7 +198,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "execute": [
         {
           "name": "Copy Modifier",
@@ -234,7 +234,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "ReduceActionDelay",
+          "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_322_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-900579233\">Relic_322_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_322_Sub[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__294149172\">Relic_322_Sub</a>[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -52,7 +52,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_322_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-900579233\">Relic_322_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -83,7 +83,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_322_Sub[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"294149172\">Relic_322_Sub</a>[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.24) || RETURN",
@@ -123,7 +123,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_322_Sub[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"294149172\">Relic_322_Sub</a>[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.12) || RETURN",
@@ -165,7 +165,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_322_Sub[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"294149172\">Relic_322_Sub</a>[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -195,7 +195,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_322_Sub[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"294149172\">Relic_322_Sub</a>[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.12) || RETURN",
@@ -226,7 +226,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_322_Sub[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"294149172\">Relic_322_Sub</a>[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.24) || RETURN",

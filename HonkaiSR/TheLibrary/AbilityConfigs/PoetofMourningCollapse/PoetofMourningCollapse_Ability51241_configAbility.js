@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_124_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-461799437\">Relic_124_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_124_Sub[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-281803576\">Relic_124_Sub</a>[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -76,7 +76,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "Relic_124_Sub[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-281803576\">Relic_124_Sub</a>[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -100,7 +100,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_124_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-461799437\">Relic_124_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -131,7 +131,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Relic_124_Sub[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-281803576\">Relic_124_Sub</a>[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.32) || RETURN",
@@ -149,7 +149,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "Relic_124_Sub[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-281803576\">Relic_124_Sub</a>[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.32) || RETURN",
@@ -189,7 +189,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Relic_124_Sub[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-281803576\">Relic_124_Sub</a>[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -207,7 +207,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Relic_124_Sub[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-281803576\">Relic_124_Sub</a>[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.2) || RETURN",

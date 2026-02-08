@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_HyacineServant_ChallangeScore",
+      "for": "<a class=\"gModGreen\" id=\"mod__1467878909\">Memosprite_HyacineServant_ChallangeScore</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "ServantInherit_ModifierContinuation"
@@ -20,7 +20,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_HyacineServant_Eidolon6_PenetrateRatio[<span class=\"descriptionNumberColor\">O Sky, Heed My Plea</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2026163190\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio</a>[<span class=\"descriptionNumberColor\">O Sky, Heed My Plea</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -50,7 +50,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_HyacineServant_Eidolon6_PenetrateRatio_Halo",
+      "for": "<a class=\"gModGreen\" id=\"mod__3098173\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio_Halo</a>",
       "stackData": [
         "MDF_PenetrateRatio"
       ],
@@ -62,7 +62,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Memosprite_HyacineServant_Eidolon6_PenetrateRatio[<span class=\"descriptionNumberColor\">O Sky, Heed My Plea</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-2026163190\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio</a>[<span class=\"descriptionNumberColor\">O Sky, Heed My Plea</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PenetrateRatio": {
@@ -79,7 +79,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_HyacineServant_Eidolon2SpeedUp[<span class=\"descriptionNumberColor\">Come Sit in My Courtyard</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1897109390\">Memosprite_HyacineServant_Eidolon2SpeedUp</a>[<span class=\"descriptionNumberColor\">Come Sit in My Courtyard</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -114,7 +114,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_HyacineServant_LoseHpFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -123,7 +123,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_HyacineServant_LoseHpSet",
+      "for": "<a class=\"gModGreen\" id=\"mod__889204199\">Memosprite_HyacineServant_LoseHpSet</a>",
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -145,7 +145,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_HyacineServant_Passive_MaxHp_Increase",
+      "for": "<a class=\"gModGreen\" id=\"mod__1255340149\">Memosprite_HyacineServant_Passive_MaxHp_Increase</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -178,7 +178,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_HyacineServant_Passive_Mark[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__492819159\">Memosprite_HyacineServant_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -212,7 +212,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_Hyacine_Resist",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1585516308\">Memosprite_Hyacine_Resist</a>",
       "modifierFlags": [
         "ImmuneDebuff"
       ],
@@ -224,7 +224,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_HyacineServant_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1066684227\">Memosprite_HyacineServant_Passive</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -245,7 +245,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
               },
               "ifTargetFound": [
                 {
@@ -294,7 +294,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_HyacineServant_ChallangeScore",
+                  "modifier": "<a class=\"gModGreen\" id=\"1467878909\">Memosprite_HyacineServant_ChallangeScore</a>",
                   "variable": "_ServantLoseHPValueTotal",
                   "target2": null,
                   "variable2": "_ServantLoseHPValueTotal2"
@@ -305,7 +305,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "Memosprite_HyacineServant_ChallangeScore",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1467878909\">Memosprite_HyacineServant_ChallangeScore</a>",
                   "variableName": "_ServantLoseHPValueTotal",
                   "value": {
                     "operator": "Variables[0] (_ServantLoseHPValueTotal2) || Variables[1] (_ServantLoseHPValue) || ADD || RETURN",
@@ -325,7 +325,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "modifier": "Memosprite_HyacineServant_MaxHpHalo[<span class=\"descriptionNumberColor\">After Rain</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]"
                   },
                   "passed": [
                     {
@@ -340,7 +340,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                       },
                       "ifTargetFound": [
                         {
@@ -376,7 +376,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                         }
                       ]
                     },
@@ -421,7 +421,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                       },
                       "ifTargetFound": [
                         {
@@ -457,7 +457,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                         }
                       ]
                     }
@@ -482,7 +482,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Hyacine_Passive_Effect[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1132518124\">Hyacine_Passive_Effect</a>[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
               "duration": {
                 "operator": "Variables[0] (AbilityP01_P4_LifeTime) || RETURN",
                 "displayLines": "AbilityP01_P4_LifeTime",
@@ -544,7 +544,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Memosprite_HyacineServant_Passive_Mark[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"492819159\">Memosprite_HyacineServant_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]"
             }
           ]
         },
@@ -557,7 +557,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Memosprite_Hyacine_Resist"
+              "modifier": "<a class=\"gModGreen\" id=\"-1585516308\">Memosprite_Hyacine_Resist</a>"
             },
             {
               "name": "Set Action-State",
@@ -612,7 +612,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Memosprite_HyacineServant_Passive_Mark[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"492819159\">Memosprite_HyacineServant_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]",
               "casterAssign": "TargetSelf"
             }
           ]
@@ -684,7 +684,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Memosprite_HyacineServant_LoseHpFlag",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>",
                         "invertCondition": true
                       },
                       {
@@ -708,7 +708,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                     }
                   ]
                 }
@@ -727,7 +727,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster's Summoner}}"
                 },
-                "modifier": "Memosprite_HyacineServant_MaxHpHalo[<span class=\"descriptionNumberColor\">After Rain</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]"
               },
               "passed": [
                 {
@@ -764,7 +764,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -813,7 +813,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_HyacineServant_ChallangeScore",
+                      "modifier": "<a class=\"gModGreen\" id=\"1467878909\">Memosprite_HyacineServant_ChallangeScore</a>",
                       "variable": "_ServantLoseHPValueTotal",
                       "target2": null,
                       "variable2": "_ServantLoseHPValueTotal2"
@@ -824,7 +824,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "Memosprite_HyacineServant_ChallangeScore",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1467878909\">Memosprite_HyacineServant_ChallangeScore</a>",
                       "variableName": "_ServantLoseHPValueTotal",
                       "value": {
                         "operator": "Variables[0] (_ServantLoseHPValueTotal2) || Variables[1] (_ServantLoseHPValue) || ADD || RETURN",
@@ -844,7 +844,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster's Summoner}}"
                         },
-                        "modifier": "Memosprite_HyacineServant_MaxHpHalo[<span class=\"descriptionNumberColor\">After Rain</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]"
                       },
                       "passed": [
                         {
@@ -859,7 +859,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                           },
                           "ifTargetFound": [
                             {
@@ -895,7 +895,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                              "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                             }
                           ]
                         },
@@ -940,7 +940,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                           },
                           "ifTargetFound": [
                             {
@@ -976,7 +976,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                              "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                             }
                           ]
                         }

@@ -40,13 +40,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "modifier": "Enemy_W4_Pollux_ResetStageBGM"
+      "modifier": "<a class=\"gModGreen\" id=\"715173654\">Enemy_W4_Pollux_ResetStageBGM</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_ResetStageBGM",
+      "for": "<a class=\"gModGreen\" id=\"mod__715173654\">Enemy_W4_Pollux_ResetStageBGM</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

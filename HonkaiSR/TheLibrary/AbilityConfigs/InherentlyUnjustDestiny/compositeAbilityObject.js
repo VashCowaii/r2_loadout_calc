@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23023_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-412743509\">LC_23023_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23023_Sub2[<span class=\"descriptionNumberColor\">All-In</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__753842390\">LC_23023_Sub2</a>[<span class=\"descriptionNumberColor\">All-In</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -66,7 +66,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23023_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1911897696\">LC_23023_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -110,7 +110,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23023_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-412743509\">LC_23023_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -133,7 +133,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_23023_Sub2[<span class=\"descriptionNumberColor\">All-In</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"753842390\">LC_23023_Sub2</a>[<span class=\"descriptionNumberColor\">All-In</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -169,7 +169,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "LC_23023_Sub2[<span class=\"descriptionNumberColor\">All-In</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"753842390\">LC_23023_Sub2</a>[<span class=\"descriptionNumberColor\">All-In</span>]",
                         "casterFilter": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
@@ -194,7 +194,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "LC_23023_Sub2[<span class=\"descriptionNumberColor\">All-In</span>]",
+                            "modifier": "<a class=\"gModGreen\" id=\"753842390\">LC_23023_Sub2</a>[<span class=\"descriptionNumberColor\">All-In</span>]",
                             "justAddedOrActive": true,
                             "casterFilter": {
                               "name": "Target Name",
@@ -255,7 +255,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23023_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1911897696\">LC_23023_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",

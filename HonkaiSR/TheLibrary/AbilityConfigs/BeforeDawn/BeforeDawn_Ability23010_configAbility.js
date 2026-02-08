@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23010_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1736863671\">LC_23010_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23010_Sub[<span class=\"descriptionNumberColor\">Somnus Corpus</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-374895026\">LC_23010_Sub</a>[<span class=\"descriptionNumberColor\">Somnus Corpus</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -78,7 +78,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23010_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1736863671\">LC_23010_Main</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -132,7 +132,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23010_Sub[<span class=\"descriptionNumberColor\">Somnus Corpus</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-374895026\">LC_23010_Sub</a>[<span class=\"descriptionNumberColor\">Somnus Corpus</span>]"
                 }
               ]
             }

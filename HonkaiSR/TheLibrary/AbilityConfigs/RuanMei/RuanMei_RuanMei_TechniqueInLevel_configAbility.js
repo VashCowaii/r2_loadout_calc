@@ -19,13 +19,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "RuanMei_Maze_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-2101676749\">RuanMei_Maze_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Maze_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2101676749\">RuanMei_Maze_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

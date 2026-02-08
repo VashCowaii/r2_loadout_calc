@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Boss_Cocolia_P1_Weapon_DeathEffect"
+      "modifier": "<a class=\"gModGreen\" id=\"-1847839650\">Boss_Cocolia_P1_Weapon_DeathEffect</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Boss_Cocolia_P1_Weapon_DeathEffect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1847839650\">Boss_Cocolia_P1_Weapon_DeathEffect</a>",
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo",

@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Technique_Luocha_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-669115084\">Technique_Luocha_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Technique_Luocha_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-669115084\">Technique_Luocha_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -44,7 +44,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Luocha_Passive01Modifier[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-390780291\">Luocha_Passive01Modifier</a>[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
                   "valuePerStack": {
                     "MDF_PassiveLayer": {
                       "operator": "Variables[0] (2) || RETURN",

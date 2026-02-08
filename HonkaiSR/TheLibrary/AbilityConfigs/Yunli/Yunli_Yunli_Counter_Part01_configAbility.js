@@ -74,7 +74,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Yunli_InsertAbility2"
+          "functionName": "<a class=\"gTempYellow\" id=\"-501144556\">Yunli_InsertAbility2</a>"
         },
         {
           "name": "Define Custom Variable",

@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Feixiao_Modifier_GainSP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1813368649\">StageAbility_Maze_Feixiao_Modifier_GainSP</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -53,25 +53,25 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_UltraTarget_FinalHitFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__965737321\">M_Feixiao_UltraTarget_FinalHitFlag</a>",
       "stackType": "ReplaceByCaster",
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "M_Feixiao_UltraTarget_Mark"
+        "dependancyName": "<a class=\"gModGreen\" id=\"176878499\">M_Feixiao_UltraTarget_Mark</a>"
       }
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_UltraTarget_CutFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1145384524\">M_Feixiao_UltraTarget_CutFlag</a>",
       "stackType": "ReplaceByCaster",
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "M_Feixiao_UltraTarget_Mark"
+        "dependancyName": "<a class=\"gModGreen\" id=\"176878499\">M_Feixiao_UltraTarget_Mark</a>"
       }
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_UltraTarget_FadeInFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__385618061\">M_Feixiao_UltraTarget_FadeInFlag</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [
@@ -79,12 +79,12 @@ const configAbility = {
       ],
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "M_Feixiao_UltraTarget_Mark"
+        "dependancyName": "<a class=\"gModGreen\" id=\"176878499\">M_Feixiao_UltraTarget_Mark</a>"
       }
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_UltraTarget_Visual_Stun",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1192517657\">M_Feixiao_UltraTarget_Visual_Stun</a>",
       "modifierFlags": [
         "STAT_Stun_Effect"
       ],
@@ -95,7 +95,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_UltraTarget_Visual_Confine",
+      "for": "<a class=\"gModGreen\" id=\"mod__1169885953\">M_Feixiao_UltraTarget_Visual_Confine</a>",
       "modifierFlags": [
         "STAT_Confine_Effect"
       ],
@@ -106,11 +106,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_AchievementFlag"
+      "for": "<a class=\"gModGreen\" id=\"mod__-1478735185\">M_Feixiao_AchievementFlag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_InsertCheckSelf",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1503840637\">M_Feixiao_InsertCheckSelf</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
@@ -120,7 +120,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_InsertRetargetSelf"
+              "functionName": "<a class=\"gTempYellow\" id=\"393261393\">Feixiao_InsertRetargetSelf</a>"
             }
           ]
         },
@@ -135,7 +135,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_InsertRetargetSelf"
+              "functionName": "<a class=\"gTempYellow\" id=\"393261393\">Feixiao_InsertRetargetSelf</a>"
             }
           ],
           "priorityLevel": -55
@@ -145,7 +145,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_InsertRetargetSelf"
+              "functionName": "<a class=\"gTempYellow\" id=\"393261393\">Feixiao_InsertRetargetSelf</a>"
             }
           ]
         },
@@ -154,7 +154,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_InsertRetargetSelf"
+              "functionName": "<a class=\"gTempYellow\" id=\"393261393\">Feixiao_InsertRetargetSelf</a>"
             }
           ]
         },
@@ -191,7 +191,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_InsertRetargetSelf"
+                  "functionName": "<a class=\"gTempYellow\" id=\"393261393\">Feixiao_InsertRetargetSelf</a>"
                 }
               ]
             }
@@ -201,7 +201,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_InsertRetargetSelf",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__393261393\">Feixiao_InsertRetargetSelf</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -255,7 +255,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_InsertCheck",
+      "for": "<a class=\"gModGreen\" id=\"mod__248447225\">M_Feixiao_InsertCheck</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
@@ -265,7 +265,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"-238911265\">Feixiao_InsertRetarget</a>"
             }
           ]
         },
@@ -280,7 +280,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"-238911265\">Feixiao_InsertRetarget</a>"
             }
           ],
           "priorityLevel": -55
@@ -290,7 +290,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"-238911265\">Feixiao_InsertRetarget</a>"
             }
           ]
         },
@@ -299,7 +299,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"-238911265\">Feixiao_InsertRetarget</a>"
             }
           ]
         },
@@ -336,7 +336,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-238911265\">Feixiao_InsertRetarget</a>"
                 }
               ]
             }
@@ -346,7 +346,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_InsertRetarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-238911265\">Feixiao_InsertRetarget</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -400,7 +400,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Feixiao_Eidolon4_Property[<span class=\"descriptionNumberColor\">Stormward I Hear</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1006222027\">Feixiao_Eidolon4_Property</a>[<span class=\"descriptionNumberColor\">Stormward I Hear</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -441,7 +441,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Feixiao_Eidolon2_CD[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
       "counter": 3,
       "stackData": [
         "MDF_Count"
@@ -453,7 +453,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Feixiao_Eidolon1_Property[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1384650414\">Feixiao_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -470,7 +470,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ModifyDamageData_IndependentDamageAddedRatio",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-446302809\">ModifyDamageData_IndependentDamageAddedRatio</a>",
                   "variables": {
                     "parameter[0]_IndependentDamageAddedRatio": {
                       "operator": "Variables[0] (MDF_PropertyRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -524,7 +524,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Feixiao_InsertIsReady[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
       "stackData": [],
       "latentQueue": [],
       "description": "The Talent's Follow-Up ATK can now be triggered.",
@@ -533,7 +533,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Feixiao_Ultramode_StanceBreakPreshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1539174332\">Feixiao_Ultramode_StanceBreakPreshow</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -601,7 +601,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Feixiao_Ultramode",
+      "for": "<a class=\"gModGreen\" id=\"mod__1525021884\">Feixiao_Ultramode</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ForceStanceDamage"
@@ -782,7 +782,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Feixiao_Ultramode_StanceBreakPreshow"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1539174332\">Feixiao_Ultramode_StanceBreakPreshow</a>"
                 }
               ]
             }

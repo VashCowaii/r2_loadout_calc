@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cipher_Eidolon1_Bonus[<span class=\"descriptionNumberColor\">Read the Room, Seek the Glee</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1467539794\">Cipher_Eidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Read the Room, Seek the Glee</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -45,7 +45,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Cipher_BpKuoSan_Insert_Bonuser"
+      "modifier": "<a class=\"gModGreen\" id=\"-315567514\">Cipher_BpKuoSan_Insert_Bonuser</a>"
     },
     {
       "name": "Define Custom Variable",

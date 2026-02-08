@@ -27,7 +27,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Mar_7th_FrozenFlag"
+          "modifier": "<a class=\"gModGreen\" id=\"329183507\">Mar_7th_FrozenFlag</a>"
         }
       ]
     },
@@ -51,7 +51,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "March7th_UltraTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
             }
           },
           "ifTargetFound": [
@@ -90,7 +90,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "March7th_UltraTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
             }
           ]
         }
@@ -112,7 +112,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "March7th_UltraTarget"
+      "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
     },
     {
       "name": "Looped Event",
@@ -134,7 +134,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "March7th_UltraTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
             }
           },
           "ifTargetFound": [
@@ -173,7 +173,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "March7th_UltraTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
             }
           ]
         }
@@ -195,7 +195,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "March7th_UltraTarget"
+      "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
     },
     {
       "name": "Looped Event",
@@ -217,7 +217,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "March7th_UltraTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
             }
           },
           "ifTargetFound": [
@@ -256,7 +256,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "March7th_UltraTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
             }
           ]
         }
@@ -278,7 +278,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "March7th_UltraTarget"
+      "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
     },
     {
       "name": "Looped Event",
@@ -300,7 +300,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "March7th_UltraTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
             }
           },
           "ifTargetFound": [
@@ -339,7 +339,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "March7th_UltraTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
             }
           ]
         }
@@ -362,7 +362,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "March7th_UltraTarget"
+      "modifier": "<a class=\"gModGreen\" id=\"1349068502\">March7th_UltraTarget</a>"
     },
     {
       "name": "IF",
@@ -426,7 +426,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
       "duration": {
         "operator": "Variables[0] (1) || RETURN",
         "displayLines": "1",
@@ -507,7 +507,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Mar_7th_Ability03_ListenFrozen"
+      "modifier": "<a class=\"gModGreen\" id=\"954113559\">Mar_7th_Ability03_ListenFrozen</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -515,7 +515,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Mar_7th_FrozenFlag"
+      "modifier": "<a class=\"gModGreen\" id=\"329183507\">Mar_7th_FrozenFlag</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -527,7 +527,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "March7th_UltraTarget",
+      "for": "<a class=\"gModGreen\" id=\"mod__1349068502\">March7th_UltraTarget</a>",
       "stackData": [],
       "latentQueue": []
     }

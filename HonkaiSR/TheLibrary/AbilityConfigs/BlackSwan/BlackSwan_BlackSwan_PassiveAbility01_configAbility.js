@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_BlackSwan_P01_ListenAddPoison"
+      "modifier": "<a class=\"gModGreen\" id=\"-1065923980\">M_BlackSwan_P01_ListenAddPoison</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -46,7 +46,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_BlackSwan_Eidolon4_Listener"
+          "modifier": "<a class=\"gModGreen\" id=\"600807065\">M_BlackSwan_Eidolon4_Listener</a>"
         }
       ]
     },
@@ -99,7 +99,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_Eidolon4_Listener",
+      "for": "<a class=\"gModGreen\" id=\"mod__600807065\">M_BlackSwan_Eidolon4_Listener</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -144,7 +144,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                         "justAddedOrActive": true,
                         "includePreDeath": true
                       },
@@ -154,7 +154,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "M_BlackSwan_DOT_Eidolon4_HaveAddedSP",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1409864339\">M_BlackSwan_DOT_Eidolon4_HaveAddedSP</a>",
                         "invertCondition": true,
                         "justAddedOrActive": true,
                         "casterFilter": {
@@ -193,11 +193,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark"
+      "for": "<a class=\"gModGreen\" id=\"mod__2022067398\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_ListenPhase1Mark",
+      "for": "<a class=\"gModGreen\" id=\"mod__1387323269\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_ListenPhase1Mark</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -208,7 +208,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark"
+              "modifier": "<a class=\"gModGreen\" id=\"2022067398\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark</a>"
             }
           ],
           "priorityLevel": 200
@@ -217,7 +217,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy",
+      "for": "<a class=\"gModGreen\" id=\"mod__1560122736\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "ListenBattleEventSkill"
@@ -232,7 +232,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_ListenPhase1Mark"
+              "modifier": "<a class=\"gModGreen\" id=\"1387323269\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_ListenPhase1Mark</a>"
             }
           ]
         },
@@ -245,7 +245,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark"
+              "modifier": "<a class=\"gModGreen\" id=\"2022067398\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark</a>"
             }
           ],
           "priorityLevel": -11
@@ -278,7 +278,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark",
+                        "modifier": "<a class=\"gModGreen\" id=\"2022067398\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark</a>",
                         "justAddedOrActive": true
                       }
                     ]
@@ -302,7 +302,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_P01_AddDOTFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-658722874\">M_BlackSwan_P01_AddDOTFlag</a>"
                 }
               ]
             }
@@ -312,7 +312,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_P01_ListenAddPoison",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1065923980\">M_BlackSwan_P01_ListenAddPoison</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -334,7 +334,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy"
+                  "modifier": "<a class=\"gModGreen\" id=\"1560122736\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy</a>"
                 }
               ]
             }
@@ -347,7 +347,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "M_BlackSwan_P01_AddDOTFlag"
+                "modifier": "<a class=\"gModGreen\" id=\"-658722874\">M_BlackSwan_P01_AddDOTFlag</a>"
               },
               "passed": [
                 {
@@ -402,7 +402,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "M_BlackSwan_ForbidEffectFlag",
+                    "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>",
                     "justAddedOrActive": true
                   },
                   "passed": [
@@ -412,7 +412,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "baseChance": {
                         "operator": "Variables[0] (0.65) || RETURN",
                         "displayLines": "0.65",
@@ -497,7 +497,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "baseChance": {
                         "operator": "Variables[0] (0.65) || RETURN",
                         "displayLines": "0.65",

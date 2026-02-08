@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Minion04_Mark[<span class=\"descriptionNumberColor\">Detonated</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1102385587\">Enemy_AML_Minion04_Mark</a>[<span class=\"descriptionNumberColor\">Detonated</span>]",
       "counter": 4,
       "stackType": "Replace",
       "execute": [
@@ -67,7 +67,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Minion04_Overheat_Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1138460548\">Enemy_AML_Minion04_Overheat_Effect</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -78,7 +78,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Minion04_Overheat[<span class=\"descriptionNumberColor\">Overloaded</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1434034112\">Enemy_AML_Minion04_Overheat</a>[<span class=\"descriptionNumberColor\">Overloaded</span>]",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -89,7 +89,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_AML_Minion04_Overheat_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-1138460548\">Enemy_AML_Minion04_Overheat_Effect</a>"
             }
           ]
         }

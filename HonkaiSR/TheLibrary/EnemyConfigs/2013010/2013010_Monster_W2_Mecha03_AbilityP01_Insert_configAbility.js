@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Mecha03_Overdrive_DelayActive_Controller"
+      "modifier": "<a class=\"gModGreen\" id=\"-286697001\">Enemy_W2_Mecha03_Overdrive_DelayActive_Controller</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate_Display3[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"255287671\">Enemy_W2_Mecha03_Overdrive_Accumulate_Display3</a>[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
     },
     {
       "name": "Define Custom Variable with Added Value",
@@ -125,7 +125,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate"
+      "modifier": "<a class=\"gModGreen\" id=\"618418511\">Enemy_W2_Mecha03_Overdrive_Accumulate</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -133,7 +133,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate_Toast"
+      "modifier": "<a class=\"gModGreen\" id=\"1941111631\">Enemy_W2_Mecha03_Overdrive_Accumulate_Toast</a>"
     },
     {
       "name": "IF",
@@ -167,7 +167,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Mecha03_Overdrive_On_RLElite[<span class=\"descriptionNumberColor\">Sanction Mode: Punisher</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1974297403\">Monster_W2_Mecha03_Overdrive_On_RLElite</a>[<span class=\"descriptionNumberColor\">Sanction Mode: Punisher</span>]",
           "duration": 3,
           "valuePerStack": {
             "MDF_SpeedUpRatio": {
@@ -188,7 +188,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Mecha03_Overdrive_On[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
           "valuePerStack": {
             "MDF_SpeedAddedValue": {
               "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
@@ -332,7 +332,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
     },
     {
       "name": "IF",
@@ -375,7 +375,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Mecha03_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1235993006\">Monster_W2_Mecha03_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
             }
           ]
         }

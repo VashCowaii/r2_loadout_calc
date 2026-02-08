@@ -32,13 +32,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Bronya_Tree03"
+          "modifier": "<a class=\"gModGreen\" id=\"1513749898\">M_Bronya_Tree03</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Bronya_Tree03",
+          "for": "<a class=\"gModGreen\" id=\"mod__1513749898\">M_Bronya_Tree03</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -58,7 +58,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "Bronya_Tree03_DamageUp",
+                  "modifier": "<a class=\"gModGreen\" id=\"-196204909\">Bronya_Tree03_DamageUp</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -72,7 +72,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Bronya_Tree03_DamageUp",
+                  "modifier": "<a class=\"gModGreen\" id=\"-196204909\">Bronya_Tree03_DamageUp</a>",
                   "valuePerStack": {
                     "MDF_AllDamageTypeAddedRatio": {
                       "operator": "Variables[0] (0.1) || RETURN",
@@ -105,7 +105,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Bronya_Tree03_DamageUp",
+                      "modifier": "<a class=\"gModGreen\" id=\"-196204909\">Bronya_Tree03_DamageUp</a>",
                       "valuePerStack": {
                         "MDF_AllDamageTypeAddedRatio": {
                           "operator": "Variables[0] (0.1) || RETURN",
@@ -139,13 +139,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Bronya_Tree02"
+          "modifier": "<a class=\"gModGreen\" id=\"1530527517\">M_Bronya_Tree02</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Bronya_Tree02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1530527517\">M_Bronya_Tree02</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -156,7 +156,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Bronya_Tree02_DefenceUp[<span class=\"descriptionNumberColor\">Battlefield</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2015057793\">Bronya_Tree02_DefenceUp</a>[<span class=\"descriptionNumberColor\">Battlefield</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -197,7 +197,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Bronya_Tree02_DefenceUp[<span class=\"descriptionNumberColor\">Battlefield</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2015057793\">Bronya_Tree02_DefenceUp</a>[<span class=\"descriptionNumberColor\">Battlefield</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -239,7 +239,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bronya_Eidolon4_ATK_Flag"
+          "modifier": "<a class=\"gModGreen\" id=\"-109336730\">Bronya_Eidolon4_ATK_Flag</a>"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -307,7 +307,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bronya_Eidolon4_ATK_Flag"
+          "modifier": "<a class=\"gModGreen\" id=\"-109336730\">Bronya_Eidolon4_ATK_Flag</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -315,19 +315,19 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bronya_Eidolon4_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"49161632\">Bronya_Eidolon4_Listen</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Bronya_Eidolon4_ATK_Flag",
+          "for": "<a class=\"gModGreen\" id=\"mod__-109336730\">Bronya_Eidolon4_ATK_Flag</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Bronya_Eidolon4_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__49161632\">Bronya_Eidolon4_Listen</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -361,7 +361,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Bronya_Eidolon4_ATK_Flag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-109336730\">Bronya_Eidolon4_ATK_Flag</a>"
                 }
               ]
             },
@@ -397,7 +397,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Bronya_Eidolon4_ATK_Flag"
+                        "modifier": "<a class=\"gModGreen\" id=\"-109336730\">Bronya_Eidolon4_ATK_Flag</a>"
                       }
                     ]
                   },
@@ -551,13 +551,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bronya_Maze_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1116100551\">Bronya_Maze_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Bronya_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1915866740\">Bronya_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -589,7 +589,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bronya_Maze_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1116100551\">Bronya_Maze_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -609,7 +609,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "Bronya_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1915866740\">Bronya_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -680,7 +680,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bronya_AttackPreshow"
+          "modifier": "<a class=\"gModGreen\" id=\"-607688311\">Bronya_AttackPreshow</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -688,13 +688,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bronya_AbilityPreshow"
+          "modifier": "<a class=\"gModGreen\" id=\"465486532\">Bronya_AbilityPreshow</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Bronya_AbilityPreshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__465486532\">Bronya_AbilityPreshow</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -728,7 +728,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bronya_AttackPreshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-607688311\">Bronya_AttackPreshow</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -815,7 +815,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{All Team Members}}"
           },
-          "modifier": "Bronya_Ultimate_PowerUp[<span class=\"descriptionNumberColor\">The Belobog March</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-379855100\">Bronya_Ultimate_PowerUp</a>[<span class=\"descriptionNumberColor\">The Belobog March</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -921,7 +921,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Bronya_Eidolon1_CoolDown[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1374988833\">Bronya_Eidolon1_CoolDown</a>[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]"
               },
               "failed": [
                 {
@@ -949,7 +949,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Bronya_Eidolon1_CoolDown[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1374988833\">Bronya_Eidolon1_CoolDown</a>[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]",
                       "duration": 1
                     }
                   ]
@@ -992,7 +992,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Bronya_BPAbility_Eidolon2_Listen",
+              "modifier": "<a class=\"gModGreen\" id=\"-308500305\">Bronya_BPAbility_Eidolon2_Listen</a>",
               "valuePerStack": {
                 "Bronya_SpeedUP_Ratio_01": {
                   "operator": "Variables[0] (0.3) || RETURN",
@@ -1019,7 +1019,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Bronya_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"133730263\">Bronya_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || Variables[1] (1) || ADD || RETURN",
                 "displayLines": "(1 + 1)",
@@ -1048,7 +1048,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Bronya_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"133730263\">Bronya_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1110,7 +1110,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Bronya_Eidolon1_CoolDown[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1374988833\">Bronya_Eidolon1_CoolDown</a>[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]"
               },
               "failed": [
                 {
@@ -1138,7 +1138,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Bronya_Eidolon1_CoolDown[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1374988833\">Bronya_Eidolon1_CoolDown</a>[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]",
                       "duration": 1
                     }
                   ]
@@ -1181,7 +1181,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Bronya_BPAbility_Eidolon2_Listen",
+              "modifier": "<a class=\"gModGreen\" id=\"-308500305\">Bronya_BPAbility_Eidolon2_Listen</a>",
               "valuePerStack": {
                 "Bronya_SpeedUP_Ratio_01": {
                   "operator": "Variables[0] (0.3) || RETURN",
@@ -1208,7 +1208,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Bronya_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"133730263\">Bronya_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || Variables[1] (1) || ADD || RETURN",
                 "displayLines": "(1 + 1)",
@@ -1237,7 +1237,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Bronya_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"133730263\">Bronya_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1356,7 +1356,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "M_Bronya_Critcal"
+              "modifier": "<a class=\"gModGreen\" id=\"1586559461\">M_Bronya_Critcal</a>"
             }
           ]
         },
@@ -1408,13 +1408,13 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "M_Bronya_Critcal"
+              "modifier": "<a class=\"gModGreen\" id=\"1586559461\">M_Bronya_Critcal</a>"
             }
           ]
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "ReduceNextActionDelay",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1527090005\">ReduceNextActionDelay</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -1435,7 +1435,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Bronya_Critcal",
+          "for": "<a class=\"gModGreen\" id=\"mod__1586559461\">M_Bronya_Critcal</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1510,7 +1510,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Bronya_Tree02_DefenceUp[<span class=\"descriptionNumberColor\">Battlefield</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2015057793\">Bronya_Tree02_DefenceUp</a>[<span class=\"descriptionNumberColor\">Battlefield</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1545,7 +1545,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bronya_Tree03_DamageUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-196204909\">Bronya_Tree03_DamageUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1577,7 +1577,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bronya_BPAbility_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-691391461\">Bronya_BPAbility_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -1612,7 +1612,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bronya_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__133730263\">Bronya_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1648,7 +1648,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bronya_Ultimate_PowerUp[<span class=\"descriptionNumberColor\">The Belobog March</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-379855100\">Bronya_Ultimate_PowerUp</a>[<span class=\"descriptionNumberColor\">The Belobog March</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1702,7 +1702,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bronya_Eidolon1_CoolDown[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1374988833\">Bronya_Eidolon1_CoolDown</a>[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]",
           "stackData": [],
           "latentQueue": [],
           "description": "Hone Your Strength effect cannot be triggered.",
@@ -1711,7 +1711,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bronya_BPAbility_Eidolon2_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__-308500305\">Bronya_BPAbility_Eidolon2_Listen</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1723,7 +1723,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Bronya_BPAbility_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-691391461\">Bronya_BPAbility_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": 1,
                   "valuePerStack": {
                     "Bronya_SpeedUP_Ratio": {
@@ -1759,7 +1759,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Bronya_BPAbility_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-691391461\">Bronya_BPAbility_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
               }
             },
             "delayAdvancePreview": {

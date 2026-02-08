@@ -19,13 +19,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23033_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-933070016\">LC_23033_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23033_Sub2",
+      "for": "<a class=\"gModGreen\" id=\"mod__577336397\">LC_23033_Sub2</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "PreShowModifier_Fixed_23033",
+      "for": "<a class=\"gModGreen\" id=\"mod__1244858287\">PreShowModifier_Fixed_23033</a>",
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -79,7 +79,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23033_Sub[<span class=\"descriptionNumberColor\">Raiton</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1465262419\">LC_23033_Sub</a>[<span class=\"descriptionNumberColor\">Raiton</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -191,7 +191,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23033_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-933070016\">LC_23033_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -209,7 +209,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_23033_Sub[<span class=\"descriptionNumberColor\">Raiton</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1465262419\">LC_23033_Sub</a>[<span class=\"descriptionNumberColor\">Raiton</span>]"
                 }
               ]
             }
@@ -249,7 +249,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "PreShowModifier_Fixed_23033"
+                  "modifier": "<a class=\"gModGreen\" id=\"1244858287\">PreShowModifier_Fixed_23033</a>"
                 }
               ]
             }

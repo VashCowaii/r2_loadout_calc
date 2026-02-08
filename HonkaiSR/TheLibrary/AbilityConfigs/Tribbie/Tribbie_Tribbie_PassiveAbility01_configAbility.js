@@ -26,7 +26,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Tribbie_PointB3_AddSpModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-249880334\">Tribbie_PointB3_AddSpModifier</a>"
         }
       ]
     },
@@ -79,7 +79,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Tribbie_Eidolon6_Bonus[<span class=\"descriptionNumberColor\">Morrow of Star Shine</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"559634045\">Tribbie_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">Morrow of Star Shine</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (7.29) || RETURN",
@@ -99,7 +99,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Tribbie_Passive_Listen"
+      "modifier": "<a class=\"gModGreen\" id=\"1013129006\">Tribbie_Passive_Listen</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -126,7 +126,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Tribbie_Passive_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__1013129006\">Tribbie_Passive_Listen</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
@@ -142,14 +142,14 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Tribbie_SKL02_Bonus[<span class=\"descriptionNumberColor\">Numinosity</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1664293665\">Tribbie_SKL02_Bonus</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]"
               },
               "passed": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "LifeTime",
                   "variableName": "Skill02_EnergyBarCount",
-                  "modifierName": "Tribbie_SKL02_Bonus[<span class=\"descriptionNumberColor\">Numinosity</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1664293665\">Tribbie_SKL02_Bonus</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
                   "multiplier": 1
                 }
               ],
@@ -300,7 +300,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1724674064\">Tribbie_CanTriggerInsertTag</a>[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
                       },
                       {
                         "name": "AND",
@@ -332,7 +332,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1724674064\">Tribbie_CanTriggerInsertTag</a>[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -400,7 +400,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]] - {{Caster}}"
                   },
-                  "modifier": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1724674064\">Tribbie_CanTriggerInsertTag</a>[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
                 }
               ]
             }
@@ -664,7 +664,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Tribbie_PointB3_AddSpAura",
+      "for": "<a class=\"gModGreen\" id=\"mod__-421970928\">Tribbie_PointB3_AddSpAura</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -700,7 +700,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Tribbie_PointB3_AddSpModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-249880334\">Tribbie_PointB3_AddSpModifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -745,7 +745,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]  - {{Caster}}"
           },
-          "modifier": "Tribbie_PointB3_AddSpAura",
+          "modifier": "<a class=\"gModGreen\" id=\"-421970928\">Tribbie_PointB3_AddSpAura</a>",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {

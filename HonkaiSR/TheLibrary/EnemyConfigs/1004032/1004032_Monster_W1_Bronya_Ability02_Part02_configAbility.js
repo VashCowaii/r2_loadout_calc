@@ -26,7 +26,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_Ability02_PowerUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__-209859933\">Enemy_W1_Bronya_Ability02_PowerUp</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"

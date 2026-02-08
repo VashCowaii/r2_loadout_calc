@@ -67,7 +67,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_01_EscapingCharge01"
+          "modifier": "<a class=\"gModGreen\" id=\"605655574\">Enemy_XP_Minion04_01_EscapingCharge01</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -75,7 +75,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_01_EscapingCharge02"
+          "modifier": "<a class=\"gModGreen\" id=\"588877955\">Enemy_XP_Minion04_01_EscapingCharge02</a>"
         }
       ],
       "references": []
@@ -93,7 +93,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_01_EscapingCharge02"
+          "modifier": "<a class=\"gModGreen\" id=\"588877955\">Enemy_XP_Minion04_01_EscapingCharge02</a>"
         },
         {
           "name": "Dispel Debuffs",
@@ -151,7 +151,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_01_EscapingCharge01"
+          "modifier": "<a class=\"gModGreen\" id=\"605655574\">Enemy_XP_Minion04_01_EscapingCharge01</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -159,7 +159,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_01_EscapingCharge02"
+          "modifier": "<a class=\"gModGreen\" id=\"588877955\">Enemy_XP_Minion04_01_EscapingCharge02</a>"
         },
         "Trigger: Ability End"
       ],
@@ -203,7 +203,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_01_EscapingCharge01"
+          "modifier": "<a class=\"gModGreen\" id=\"605655574\">Enemy_XP_Minion04_01_EscapingCharge01</a>"
         },
         "Trigger: Ability End"
       ],
@@ -255,7 +255,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_01_EscapingCharge02",
+          "for": "<a class=\"gModGreen\" id=\"mod__588877955\">Enemy_XP_Minion04_01_EscapingCharge02</a>",
           "modifierFlags": [
             "KeepOnDeathrattle",
             "MuteHitFly",
@@ -307,7 +307,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_01_EscapingCharge01",
+          "for": "<a class=\"gModGreen\" id=\"mod__605655574\">Enemy_XP_Minion04_01_EscapingCharge01</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],

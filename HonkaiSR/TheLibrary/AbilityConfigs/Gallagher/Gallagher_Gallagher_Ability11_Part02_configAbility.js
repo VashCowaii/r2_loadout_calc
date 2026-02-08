@@ -101,7 +101,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "MWGallagher_Ability11_AttackDownModifier[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1678215353\">MWGallagher_Ability11_AttackDownModifier</a>[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",

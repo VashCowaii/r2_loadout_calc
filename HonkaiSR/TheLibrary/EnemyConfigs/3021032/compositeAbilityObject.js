@@ -56,7 +56,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Argenti_IF_Power_Trigger"
+          "modifier": "<a class=\"gModGreen\" id=\"-1869945151\">Enemy_W2_Argenti_IF_Power_Trigger</a>"
         },
         {
           "name": "IF",
@@ -186,7 +186,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "DeathCamera_First"
+              "functionName": "<a class=\"gTempYellow\" id=\"1173935247\">DeathCamera_First</a>"
             }
           ]
         },
@@ -213,7 +213,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "W2_ArgentiTotem_01_BattleScore1"
+              "modifier": "<a class=\"gModGreen\" id=\"-444895536\">W2_ArgentiTotem_01_BattleScore1</a>"
             }
           ]
         },
@@ -223,7 +223,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Argenti_IF_Power_Trigger"
+          "modifier": "<a class=\"gModGreen\" id=\"-1869945151\">Enemy_W2_Argenti_IF_Power_Trigger</a>"
         },
         {
           "name": "IF",
@@ -283,7 +283,7 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "DeathCamera_First"
+              "functionName": "<a class=\"gTempYellow\" id=\"1173935247\">DeathCamera_First</a>"
             }
           ]
         },
@@ -366,7 +366,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
             },
             {
               "name": "Add Events/Bonuses",
@@ -374,7 +374,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W2_Argenti_IF_EX_PowerUpDark[<span class=\"descriptionNumberColor\">Regain Enhancement</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1768656268\">Enemy_W2_Argenti_IF_EX_PowerUpDark</a>[<span class=\"descriptionNumberColor\">Regain Enhancement</span>]",
               "casterAssign": "TargetSelf"
             }
           ]
@@ -428,7 +428,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W2_Argenti_IF_EX_PowerUpDark[<span class=\"descriptionNumberColor\">Regain Enhancement</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1768656268\">Enemy_W2_Argenti_IF_EX_PowerUpDark</a>[<span class=\"descriptionNumberColor\">Regain Enhancement</span>]",
               "casterAssign": "TargetSelf"
             },
             {
@@ -437,7 +437,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Argenti_IF_FlowerPower[<span class=\"descriptionNumberColor\">Wreath</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1546767870\">Monster_W2_Argenti_IF_FlowerPower</a>[<span class=\"descriptionNumberColor\">Wreath</span>]",
               "casterAssign": "TargetSelf"
             }
           ]
@@ -448,7 +448,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_ArgentiTotem_01_IF_Initiate"
+          "modifier": "<a class=\"gModGreen\" id=\"-1851629784\">Enemy_W2_ArgentiTotem_01_IF_Initiate</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -456,7 +456,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
         },
         {
           "name": "Force Entity Death",
@@ -525,7 +525,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -533,7 +533,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_ArgentiTotem_01_IF_Initiate"
+          "modifier": "<a class=\"gModGreen\" id=\"-1851629784\">Enemy_W2_ArgentiTotem_01_IF_Initiate</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -541,13 +541,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Argenti_IF_Power_Mute"
+          "modifier": "<a class=\"gModGreen\" id=\"-1914692042\">Enemy_W2_Argenti_IF_Power_Mute</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_ArgentiTotem_01_IF_Initiate",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1851629784\">Enemy_W2_ArgentiTotem_01_IF_Initiate</a>",
           "modifierFlags": [
             "Deathrattle",
             "KeepOnDeathrattle"
@@ -630,7 +630,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
                   }
                 }
               ]
@@ -642,7 +642,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
                   }
                 }
               ]
@@ -674,7 +674,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "DeathCamera_First"
+              "functionName": "<a class=\"gTempYellow\" id=\"1173935247\">DeathCamera_First</a>"
             }
           ]
         },
@@ -714,7 +714,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "W2_ArgentiTotem_02_BattleScore1"
+                  "modifier": "<a class=\"gModGreen\" id=\"1174449239\">W2_ArgentiTotem_02_BattleScore1</a>"
                 }
               ]
             },
@@ -742,7 +742,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
                   },
                   "passed": [
                     {
@@ -752,7 +752,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "modifierNameArray": [
-                        "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]"
+                        "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
                       ],
                       "value": {
                         "operator": "Variables[0] (Monster_IF_InsertCameraFlag) || Variables[1] (_MaxHP) || MUL || RETURN",
@@ -772,7 +772,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": 2,
                       "valuePerStack": {
                         "MDF_ShowValue": {
@@ -817,7 +817,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
                   },
                   "passed": [
                     {
@@ -826,7 +826,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": 2,
                       "valuePerStack": {
                         "MDF_ShowValue": {
@@ -848,7 +848,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "modifierNameArray": [
-                        "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]"
+                        "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
                       ],
                       "value": {
                         "operator": "Variables[0] (Monster_IF_InsertCameraFlag) || Variables[1] (_MaxHP) || MUL || RETURN",
@@ -867,7 +867,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "modifierNameArray": [
-                        "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]"
+                        "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
                       ],
                       "value": {
                         "operator": "Variables[0] (Monster_IF_InsertCameraFlag) || Variables[1] (_MaxHP) || MUL || RETURN",
@@ -887,7 +887,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": 2,
                       "valuePerStack": {
                         "MDF_ShowValue": {
@@ -999,7 +999,7 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "DeathCamera_First"
+              "functionName": "<a class=\"gTempYellow\" id=\"1173935247\">DeathCamera_First</a>"
             }
           ]
         }
@@ -1032,7 +1032,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
               }
             ]
           },
@@ -1043,7 +1043,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": -1,
               "valuePerStack": {
                 "MDF_ShowValue": {
@@ -1066,7 +1066,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": -1,
               "valuePerStack": {
                 "MDF_ShowValue": {
@@ -1120,7 +1120,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Enemy_W2_Argenti_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
               },
               {
                 "name": "Has Modifier",
@@ -1128,7 +1128,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Enemy_W2_Argenti_Power_RL[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
               }
             ]
           },
@@ -1192,7 +1192,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Monster_W2_Argenti_IF_Summon01"
+            "modifier": "<a class=\"gModGreen\" id=\"1783897766\">Monster_W2_Argenti_IF_Summon01</a>"
           },
           "passed": [
             {
@@ -1208,7 +1208,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier"
+                "modifier": "<a class=\"gModGreen\" id=\"-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>"
               },
               "ifTargetFound": [
                 {
@@ -1217,7 +1217,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_CTRL_Taunt_ArgentiTotem_02_IF[<span class=\"descriptionNumberColor\">Taunt</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1008150215\">Standard_CTRL_Taunt_ArgentiTotem_02_IF</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
                   "duration": -1
                 }
               ]
@@ -1232,7 +1232,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Monster_W2_Argenti_IF_Summon02"
+            "modifier": "<a class=\"gModGreen\" id=\"1767120147\">Monster_W2_Argenti_IF_Summon02</a>"
           },
           "passed": [
             {
@@ -1248,7 +1248,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier"
+                "modifier": "<a class=\"gModGreen\" id=\"-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>"
               },
               "ifTargetFound": [
                 {
@@ -1257,7 +1257,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_CTRL_Taunt_ArgentiTotem_02_IF[<span class=\"descriptionNumberColor\">Taunt</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1008150215\">Standard_CTRL_Taunt_ArgentiTotem_02_IF</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
                   "duration": -1
                 }
               ]
@@ -1272,7 +1272,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Monster_W2_Argenti_IF_Summon03"
+            "modifier": "<a class=\"gModGreen\" id=\"1750342528\">Monster_W2_Argenti_IF_Summon03</a>"
           },
           "passed": [
             {
@@ -1288,7 +1288,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier"
+                "modifier": "<a class=\"gModGreen\" id=\"-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>"
               },
               "ifTargetFound": [
                 {
@@ -1297,7 +1297,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_CTRL_Taunt_ArgentiTotem_02_IF[<span class=\"descriptionNumberColor\">Taunt</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1008150215\">Standard_CTRL_Taunt_ArgentiTotem_02_IF</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
                   "duration": -1
                 }
               ]
@@ -1312,7 +1312,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Monster_W2_Argenti_IF_Summon04"
+            "modifier": "<a class=\"gModGreen\" id=\"1867785861\">Monster_W2_Argenti_IF_Summon04</a>"
           },
           "passed": [
             {
@@ -1328,7 +1328,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier"
+                "modifier": "<a class=\"gModGreen\" id=\"1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>"
               },
               "ifTargetFound": [
                 {
@@ -1337,7 +1337,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_CTRL_Taunt_ArgentiTotem_02_IF[<span class=\"descriptionNumberColor\">Taunt</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1008150215\">Standard_CTRL_Taunt_ArgentiTotem_02_IF</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
                   "duration": -1
                 }
               ]
@@ -1364,7 +1364,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
               }
             ]
           },
@@ -1375,7 +1375,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": -1,
               "valuePerStack": {
                 "MDF_ShowValue": {
@@ -1398,7 +1398,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": -1,
               "valuePerStack": {
                 "MDF_ShowValue": {
@@ -1446,7 +1446,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1454,13 +1454,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_ArgentiTotem_02_IF_Initiate"
+          "modifier": "<a class=\"gModGreen\" id=\"2041202953\">Enemy_W2_ArgentiTotem_02_IF_Initiate</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_ArgentiTotem_02_IF_Initiate",
+          "for": "<a class=\"gModGreen\" id=\"mod__2041202953\">Enemy_W2_ArgentiTotem_02_IF_Initiate</a>",
           "modifierFlags": [
             "Deathrattle",
             "KeepOnDeathrattle"
@@ -1483,7 +1483,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Enemy_W2_Argenti_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -1491,7 +1491,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Enemy_W2_Argenti_Power_RL[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
                       }
                     ]
                   },
@@ -1622,7 +1622,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
                   }
                 }
               ]
@@ -1634,7 +1634,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
                   }
                 }
               ]
@@ -1688,7 +1688,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "W2_ArgentiTotem_BattleScore1"
+                  "modifier": "<a class=\"gModGreen\" id=\"64663457\">W2_ArgentiTotem_BattleScore1</a>"
                 }
               ]
             },
@@ -1914,7 +1914,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>"
         },
         {
           "name": "Define Custom Variable with Team Count",
@@ -1935,7 +1935,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Enemy_W2_Argenti_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
               },
               {
                 "name": "Has Modifier",
@@ -1943,7 +1943,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Enemy_W2_Argenti_Power_RL[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
               },
               {
                 "name": "Has Modifier",
@@ -1951,7 +1951,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
               }
             ]
           },
@@ -1981,7 +1981,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier",
+                    "modifier": "<a class=\"gModGreen\" id=\"1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>",
                     "invertCondition": true
                   },
                   "ifTargetFound": [
@@ -1991,7 +1991,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -2078,7 +2078,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier",
+                    "modifier": "<a class=\"gModGreen\" id=\"1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>",
                     "invertCondition": true
                   },
                   "ifTargetFound": [
@@ -2088,7 +2088,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -2127,7 +2127,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -2275,7 +2275,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2283,13 +2283,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_ArgentiTotem_IF_Initiate"
+          "modifier": "<a class=\"gModGreen\" id=\"1639070947\">Enemy_W2_ArgentiTotem_IF_Initiate</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_ArgentiTotem_IF_Initiate",
+          "for": "<a class=\"gModGreen\" id=\"mod__1639070947\">Enemy_W2_ArgentiTotem_IF_Initiate</a>",
           "modifierFlags": [
             "Deathrattle",
             "KeepOnDeathrattle"
@@ -2312,7 +2312,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Enemy_W2_Argenti_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -2320,7 +2320,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Enemy_W2_Argenti_Power_RL[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
                       }
                     ]
                   },
@@ -2423,7 +2423,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
                   }
                 }
               ]
@@ -2435,7 +2435,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
                   }
                 }
               ]
@@ -2458,7 +2458,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"
@@ -2527,7 +2527,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_ArgentiTotem_02_IF_WeaknessChange07",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1652361404\">Enemy_W2_ArgentiTotem_02_IF_WeaknessChange07</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2607,7 +2607,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_ArgentiTotem_02_IF_WeaknessChange06",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1635583785\">Enemy_W2_ArgentiTotem_02_IF_WeaknessChange06</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2687,7 +2687,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_ArgentiTotem_02_IF_WeaknessChange05",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1618806166\">Enemy_W2_ArgentiTotem_02_IF_WeaknessChange05</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2767,7 +2767,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_ArgentiTotem_02_IF_WeaknessChange04",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1602028547\">Enemy_W2_ArgentiTotem_02_IF_WeaknessChange04</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2847,7 +2847,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_ArgentiTotem_02_IF_WeaknessChange03",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1719471880\">Enemy_W2_ArgentiTotem_02_IF_WeaknessChange03</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2927,7 +2927,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_ArgentiTotem_02_IF_WeaknessChange02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1702694261\">Enemy_W2_ArgentiTotem_02_IF_WeaknessChange02</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3007,7 +3007,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_ArgentiTotem_02_IF_WeaknessChange01",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1685916642\">Enemy_W2_ArgentiTotem_02_IF_WeaknessChange01</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3087,7 +3087,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_CTRL_Taunt_ArgentiTotem_02_IF[<span class=\"descriptionNumberColor\">Taunt</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1008150215\">Standard_CTRL_Taunt_ArgentiTotem_02_IF</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
           "stackType": "Replace",
           "targetRestriction": {
             "name": "Target Name",
@@ -3127,7 +3127,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_W2_ArgentiTotem_02_IF_WeaknessChange01",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1685916642\">Enemy_W2_ArgentiTotem_02_IF_WeaknessChange01</a>",
                       "casterAssign": "TargetSelf"
                     }
                   ]
@@ -3152,7 +3152,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_W2_ArgentiTotem_02_IF_WeaknessChange02",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1702694261\">Enemy_W2_ArgentiTotem_02_IF_WeaknessChange02</a>",
                       "casterAssign": "TargetSelf"
                     }
                   ]
@@ -3177,7 +3177,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_W2_ArgentiTotem_02_IF_WeaknessChange03",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1719471880\">Enemy_W2_ArgentiTotem_02_IF_WeaknessChange03</a>",
                       "casterAssign": "TargetSelf"
                     }
                   ]
@@ -3202,7 +3202,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_W2_ArgentiTotem_02_IF_WeaknessChange04",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1602028547\">Enemy_W2_ArgentiTotem_02_IF_WeaknessChange04</a>",
                       "casterAssign": "TargetSelf"
                     }
                   ]
@@ -3227,7 +3227,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_W2_ArgentiTotem_02_IF_WeaknessChange05",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1618806166\">Enemy_W2_ArgentiTotem_02_IF_WeaknessChange05</a>",
                       "casterAssign": "TargetSelf"
                     }
                   ]
@@ -3252,7 +3252,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_W2_ArgentiTotem_02_IF_WeaknessChange06",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1635583785\">Enemy_W2_ArgentiTotem_02_IF_WeaknessChange06</a>",
                       "casterAssign": "TargetSelf"
                     }
                   ]
@@ -3277,7 +3277,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_W2_ArgentiTotem_02_IF_WeaknessChange07",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1652361404\">Enemy_W2_ArgentiTotem_02_IF_WeaknessChange07</a>",
                       "casterAssign": "TargetSelf"
                     }
                   ]
@@ -3308,7 +3308,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "DeathCamera_First",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1173935247\">DeathCamera_First</a>",
           "parse": []
         }
       ],

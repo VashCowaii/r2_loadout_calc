@@ -96,13 +96,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2160_EnterFever"
+      "modifier": "<a class=\"gModGreen\" id=\"29425370\">Modifier_FantasticStory_BaseAbility_2160_EnterFever</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_EnterFever",
+      "for": "<a class=\"gModGreen\" id=\"mod__29425370\">Modifier_FantasticStory_BaseAbility_2160_EnterFever</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": []

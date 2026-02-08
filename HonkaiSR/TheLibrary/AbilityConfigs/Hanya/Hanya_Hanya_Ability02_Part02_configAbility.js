@@ -96,7 +96,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1376832164\">WHanya_BpZhanYin</a>[<span class=\"descriptionNumberColor\">Burden</span>]",
           "valuePerStack": {
             "MDF_Lifetime": {
               "operator": "Variables[0] (2) || RETURN",
@@ -146,7 +146,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "WHanya_BpZhanYin_Self"
+          "modifier": "<a class=\"gModGreen\" id=\"1118030779\">WHanya_BpZhanYin_Self</a>"
         }
       ]
     },

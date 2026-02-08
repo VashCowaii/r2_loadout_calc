@@ -178,7 +178,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_FireTakenRatio[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1249803144\">Standard_FireTakenRatio</a>[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
           "duration": 3,
           "baseChance": 1,
           "valuePerStack": {
@@ -634,13 +634,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_CWMecha_03_Aura_Resistance_Controller"
+          "modifier": "<a class=\"gModGreen\" id=\"456888817\">Enemy_W1_CWMecha_03_Aura_Resistance_Controller</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_CWMecha_03_Aura_Resistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__326849672\">Enemy_W1_CWMecha_03_Aura_Resistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -668,7 +668,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_CWMecha_03_Aura_Resistance_Controller",
+          "for": "<a class=\"gModGreen\" id=\"mod__456888817\">Enemy_W1_CWMecha_03_Aura_Resistance_Controller</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -679,7 +679,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Enemy_W1_CWMecha_03_Aura_Resistance",
+                  "modifier": "<a class=\"gModGreen\" id=\"326849672\">Enemy_W1_CWMecha_03_Aura_Resistance</a>",
                   "valuePerStack": {
                     "MDF_Aura_AllDamageTypeResistance": {
                       "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__27) || RETURN",
@@ -702,7 +702,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Enemy_W1_CWMecha_03_Aura_Resistance",
+                  "modifier": "<a class=\"gModGreen\" id=\"326849672\">Enemy_W1_CWMecha_03_Aura_Resistance</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -726,7 +726,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_W1_CWMecha_03_Aura_Resistance",
+                      "modifier": "<a class=\"gModGreen\" id=\"326849672\">Enemy_W1_CWMecha_03_Aura_Resistance</a>",
                       "valuePerStack": {
                         "MDF_Aura_AllDamageTypeResistance": {
                           "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__27) || RETURN",
@@ -760,13 +760,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_CWMecha_03_Aura_Speed_Controller"
+          "modifier": "<a class=\"gModGreen\" id=\"1749893185\">Enemy_W1_CWMecha_03_Aura_Speed_Controller</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_CWMecha_03_Aura_Speed",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1285136712\">Enemy_W1_CWMecha_03_Aura_Speed</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -794,7 +794,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_CWMecha_03_Aura_Speed_Controller",
+          "for": "<a class=\"gModGreen\" id=\"mod__1749893185\">Enemy_W1_CWMecha_03_Aura_Speed_Controller</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -805,7 +805,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Enemy_W1_CWMecha_03_Aura_Speed",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1285136712\">Enemy_W1_CWMecha_03_Aura_Speed</a>",
                   "valuePerStack": {
                     "MDF_Aura_SpeedUpValue": {
                       "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__26) || RETURN",
@@ -828,7 +828,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Enemy_W1_CWMecha_03_Aura_Speed",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1285136712\">Enemy_W1_CWMecha_03_Aura_Speed</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -852,7 +852,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_W1_CWMecha_03_Aura_Speed",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1285136712\">Enemy_W1_CWMecha_03_Aura_Speed</a>",
                       "valuePerStack": {
                         "MDF_Aura_SpeedUpValue": {
                           "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__26) || RETURN",

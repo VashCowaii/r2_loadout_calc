@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Herta_Ability01_CheckHp"
+          "modifier": "<a class=\"gModGreen\" id=\"1016241896\">Herta_Ability01_CheckHp</a>"
         }
       ]
     },
@@ -131,7 +131,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Herta_Ability01_CheckHp"
+      "modifier": "<a class=\"gModGreen\" id=\"1016241896\">Herta_Ability01_CheckHp</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -143,7 +143,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Herta_Ability01_CheckHp",
+      "for": "<a class=\"gModGreen\" id=\"mod__1016241896\">Herta_Ability01_CheckHp</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",

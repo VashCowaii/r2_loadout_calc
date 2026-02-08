@@ -30,7 +30,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Argenti_Ability09_IF_BOSS_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1847553534\">Monster_W2_Argenti_Ability09_IF_BOSS_Modifier</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -38,7 +38,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Argenti_Ability09_IF_BOSS_Eff01_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-457794649\">Monster_W2_Argenti_Ability09_IF_BOSS_Eff01_Modifier</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -46,7 +46,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Argenti_Ability09_IF_BOSS_Eff02_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1561229936\">Monster_W2_Argenti_Ability09_IF_BOSS_Eff02_Modifier</a>"
         },
         {
           "name": "Trigger Ability",

@@ -66,7 +66,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
                   "casterFilter": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -80,7 +80,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
                   "duration": {
                     "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
                     "displayLines": "{[Skill01[3]]}",
@@ -127,7 +127,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
                   "duration": {
                     "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
                     "displayLines": "{[Skill01[3]]}",
@@ -291,7 +291,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members(Exclude Self)}}"
                   },
-                  "modifier": "Standard_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
                   "duration": {
                     "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
                     "displayLines": "{[SkillP01[3]]}",
@@ -350,7 +350,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Mecha02_Initiate"
+          "modifier": "<a class=\"gModGreen\" id=\"1333978286\">Enemy_W2_Mecha02_Initiate</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -365,7 +365,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha02_Initiate",
+          "for": "<a class=\"gModGreen\" id=\"mod__1333978286\">Enemy_W2_Mecha02_Initiate</a>",
           "modifierFlags": [
             "Deathrattle",
             "KeepOnDeathrattle"

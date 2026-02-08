@@ -17,7 +17,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Standard_Windfury_AbilityNoNeed",
+          "for": "<a class=\"gModGreen\" id=\"mod__1893750937\">Standard_Windfury_AbilityNoNeed</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -59,7 +59,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Modifier-Specific Variable",
-                      "modifierName": "Standard_Windfury",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
                       "variableName": "_ChangeValue",
                       "value": {
                         "operator": "Variables[0] (_ChangeValue) || RETURN",
@@ -121,7 +121,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Modifier-Specific Variable",
-                      "modifierName": "Standard_Windfury",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
                       "variableName": "_ChangeValue",
                       "value": {
                         "operator": "Variables[0] (_ChangeValue) || RETURN",
@@ -153,7 +153,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Windfury_ModifyAbilityPropertyByType_Skill",
+          "for": "<a class=\"gModGreen\" id=\"mod__-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -186,7 +186,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Windfury_ModifyAbilityPropertyByType_Normal",
+          "for": "<a class=\"gModGreen\" id=\"mod__-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -219,7 +219,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Windfury",
+          "for": "<a class=\"gModGreen\" id=\"mod__1031496924\">Standard_Windfury</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -231,7 +231,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_Windfury_AbilityNoNeed",
+                  "modifier": "<a class=\"gModGreen\" id=\"1893750937\">Standard_Windfury_AbilityNoNeed</a>",
                   "valuePerStack": {
                     "_ReplayNormal": {
                       "operator": "Variables[0] (_ReplayNormal) || RETURN",
@@ -272,7 +272,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_Windfury_AbilityNoNeed"
+                  "modifier": "<a class=\"gModGreen\" id=\"1893750937\">Standard_Windfury_AbilityNoNeed</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -280,7 +280,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Skill"
+                  "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -288,7 +288,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Normal"
+                  "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
                 },
                 {
                   "name": "IF",
@@ -594,7 +594,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_Windfury",
+                      "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
                       "immediateEffect": true,
                       "addStacksPerTrigger": -1
                     },
@@ -632,7 +632,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Normal",
+                          "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>",
                           "valuePerStack": {
                             "_ChangeValue": {
                               "operator": "Variables[0] (_ChangeValue) || RETURN",
@@ -696,7 +696,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Normal"
+                                  "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -735,7 +735,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Normal",
+                              "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>",
                               "valuePerStack": {
                                 "_ChangeValue": {
                                   "operator": "Variables[0] (_ChangeValue) || RETURN",
@@ -784,7 +784,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Normal"
+                                      "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
                                     },
                                     {
                                       "name": "Define Custom Variable",
@@ -823,7 +823,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Skill",
+                              "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>",
                               "valuePerStack": {
                                 "_ChangeValue": {
                                   "operator": "Variables[0] (_ChangeValue) || RETURN",
@@ -873,7 +873,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Skill"
+                                      "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>"
                                     },
                                     {
                                       "name": "Define Custom Variable",
@@ -907,7 +907,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_Windfury_AbilityNoNeed"
+                      "modifier": "<a class=\"gModGreen\" id=\"1893750937\">Standard_Windfury_AbilityNoNeed</a>"
                     }
                   ]
                 },
@@ -962,7 +962,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Normal"
+                      "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -970,7 +970,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Skill"
+                      "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1007,7 +1007,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Standard_Windfury_AbilityNoNeed",
+                          "modifier": "<a class=\"gModGreen\" id=\"1893750937\">Standard_Windfury_AbilityNoNeed</a>",
                           "valuePerStack": {
                             "_ReplayNormal": {
                               "operator": "Variables[0] (_ReplayNormal) || RETURN",
@@ -1066,7 +1066,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Normal",
+                          "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>",
                           "valuePerStack": {
                             "_ChangeValue": {
                               "operator": "Variables[0] (_ChangeValue) || RETURN",
@@ -1126,7 +1126,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Normal"
+                                  "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1178,7 +1178,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Normal",
+                                  "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>",
                                   "valuePerStack": {
                                     "_ChangeValue": {
                                       "operator": "Variables[0] (_ChangeValue) || RETURN",
@@ -1223,7 +1223,7 @@ const compositeAbilityObject = {
                                             "name": "Target Name",
                                             "target": "{{Modifier Holder}}"
                                           },
-                                          "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Normal"
+                                          "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
                                         },
                                         {
                                           "name": "Define Custom Variable",
@@ -1264,7 +1264,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Skill",
+                                  "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>",
                                   "valuePerStack": {
                                     "_ChangeValue": {
                                       "operator": "Variables[0] (_ChangeValue) || RETURN",
@@ -1310,7 +1310,7 @@ const compositeAbilityObject = {
                                             "name": "Target Name",
                                             "target": "{{Modifier Holder}}"
                                           },
-                                          "modifier": "Standard_Windfury_ModifyAbilityPropertyByType_Skill"
+                                          "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>"
                                         },
                                         {
                                           "name": "Define Custom Variable",
@@ -1434,7 +1434,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_AbilityTarget",
+          "for": "<a class=\"gModGreen\" id=\"mod__985995630\">Standard_AbilityTarget</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -1447,7 +1447,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ModifyActionDelayOnTurnEnd",
+          "for": "<a class=\"gModGreen\" id=\"mod__564198756\">Standard_ModifyActionDelayOnTurnEnd</a>",
           "stackType": "Multiple",
           "execute": [
             {
@@ -1495,7 +1495,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_GM_Revive",
+          "for": "<a class=\"gModGreen\" id=\"mod__1906668410\">Standard_GM_Revive</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1550,7 +1550,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_ChallengeTurnLimit",
+          "for": "<a class=\"gModGreen\" id=\"mod__-272210701\">Standard_ChallengeTurnLimit</a>",
           "modifierFlags": [
             "STAT_TurnCountAccumulator"
           ],
@@ -1652,7 +1652,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1118024096\">Standard_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttachWeakness"
@@ -1729,7 +1729,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1012677236\">Standard_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttachWeakness"
@@ -1806,7 +1806,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1930557999\">Standard_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttachWeakness"
@@ -1883,7 +1883,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1724958950\">Standard_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttachWeakness"
@@ -1960,7 +1960,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1938125975\">Standard_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttachWeakness"
@@ -2037,7 +2037,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1497676034\">Standard_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttachWeakness"
@@ -2114,7 +2114,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2009288629\">Standard_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttachWeakness"
@@ -2191,7 +2191,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Element_Entangle[<span class=\"descriptionNumberColor\">Entanglement</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-576412017\">Standard_Element_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
           "counter": 1,
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
@@ -2581,7 +2581,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Element_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-838929203\">Standard_Element_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -2653,7 +2653,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Element_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1979618180\">Standard_Element_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -2757,7 +2757,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Element_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-51292629\">Standard_Element_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -2858,7 +2858,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Element_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1852685234\">Standard_Element_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -2966,7 +2966,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Element_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-130814791\">Standard_Element_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "DisableAction",
@@ -3084,7 +3084,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Element_Bleed[<span class=\"descriptionNumberColor\">Bleed</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1797970053\">Standard_Element_Bleed</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -3456,7 +3456,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_LockHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1845786667\">Standard_LockHP</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3471,14 +3471,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Endurance",
+          "for": "<a class=\"gModGreen\" id=\"mod__1404590263\">Standard_Endurance</a>",
           "modifierFlags": [
             "Endurance"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Protect_AbilityRetarget[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1788719875\">Standard_Protect_AbilityRetarget</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -3504,7 +3504,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Protect_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1797420881\">Standard_Protect_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"
@@ -3560,7 +3560,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]",
           "modifierFlags": [
             "ListenUnStage"
           ],
@@ -3616,7 +3616,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Stealth[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__815559009\">Standard_Stealth</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "modifierFlags": [
             "Stealth"
           ],
@@ -3630,7 +3630,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_BAN_Silence[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1445032651\">Standard_BAN_Silence</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "Merge",
           "execute": [
             {
@@ -3655,7 +3655,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_BAN_Heal[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-475439782\">Standard_BAN_Heal</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "Merge",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -3666,7 +3666,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Shake_IgnoreImmune[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1724913010\">Standard_Shake_IgnoreImmune</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
           "modifierFlags": [
             "AlwaysSuccess",
             "DisableAction",
@@ -3770,7 +3770,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_BlackBlood_Stackable",
+          "for": "<a class=\"gModGreen\" id=\"mod__906599448\">Standard_BlackBlood_Stackable</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -3853,7 +3853,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3884,7 +3884,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_CTRL_Crazy[<span class=\"descriptionNumberColor\">Outrage</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1794338335\">Standard_CTRL_Crazy</a>[<span class=\"descriptionNumberColor\">Outrage</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -3947,7 +3947,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_MindControl_LockHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__646228171\">Standard_MindControl_LockHP</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3963,7 +3963,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_MindControl_Damage",
+          "for": "<a class=\"gModGreen\" id=\"mod__1009521621\">Standard_MindControl_Damage</a>",
           "execute": [
             {
               "eventTrigger": "Dealt Damage while Crowd/Mind Controlled [Anyone]",
@@ -4161,7 +4161,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_MindControl_Target",
+          "for": "<a class=\"gModGreen\" id=\"mod__821900269\">Standard_MindControl_Target</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -4173,7 +4173,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_MindControl_DisableAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__160325498\">Standard_MindControl_DisableAction</a>",
           "modifierFlags": [
             "DisableAction"
           ],
@@ -4181,7 +4181,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_MindControl[<span class=\"descriptionNumberColor\">Dominated</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -4202,7 +4202,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Standard_MindControl_Target"
+                  "modifier": "<a class=\"gModGreen\" id=\"821900269\">Standard_MindControl_Target</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -4210,7 +4210,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_MindControl_LockHP"
+                  "modifier": "<a class=\"gModGreen\" id=\"646228171\">Standard_MindControl_LockHP</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -4227,7 +4227,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_MindControl_DisableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"160325498\">Standard_MindControl_DisableAction</a>"
                 },
                 "Reset Triggers: Attack"
               ]
@@ -4276,7 +4276,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Standard_MindControl_DisableAction"
+                          "modifier": "<a class=\"gModGreen\" id=\"160325498\">Standard_MindControl_DisableAction</a>"
                         }
                       ]
                     }
@@ -4335,7 +4335,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_MindControl_Target"
+                          "modifier": "<a class=\"gModGreen\" id=\"821900269\">Standard_MindControl_Target</a>"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -4343,7 +4343,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Standard_MindControl_LockHP"
+                          "modifier": "<a class=\"gModGreen\" id=\"646228171\">Standard_MindControl_LockHP</a>"
                         },
                         {
                           "name": "Use Controlled Ability",
@@ -4368,7 +4368,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Standard_MindControl_Target"
+                  "modifier": "<a class=\"gModGreen\" id=\"821900269\">Standard_MindControl_Target</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -4376,7 +4376,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_MindControl_LockHP"
+                  "modifier": "<a class=\"gModGreen\" id=\"646228171\">Standard_MindControl_LockHP</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -4409,7 +4409,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Standard_MindControl_Damage",
+                  "modifier": "<a class=\"gModGreen\" id=\"1009521621\">Standard_MindControl_Damage</a>",
                   "valuePerStack": {
                     "MDF_MindControlDamagePercentage": {
                       "operator": "Variables[0] (MDF_MindControlDamagePercentage) || RETURN",
@@ -4448,7 +4448,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Standard_MindControl_Target"
+                  "modifier": "<a class=\"gModGreen\" id=\"821900269\">Standard_MindControl_Target</a>"
                 },
                 "Reset Triggers: Attack"
               ]
@@ -4461,7 +4461,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Entangle[<span class=\"descriptionNumberColor\">Entanglement</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
           "counter": 1,
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
@@ -4835,7 +4835,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -4899,7 +4899,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "DisableAction",
@@ -5042,7 +5042,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Stun_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__234868487\">Stun_Effect</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -5051,7 +5051,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_CTRL_Stun[<span class=\"descriptionNumberColor\">Stunned</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1162946172\">Standard_CTRL_Stun</a>[<span class=\"descriptionNumberColor\">Stunned</span>]",
           "stackType": "Merge",
           "modifierFlags": [
             "DisableAction",
@@ -5069,7 +5069,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Stun_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"234868487\">Stun_Effect</a>"
                 }
               ]
             },
@@ -5082,7 +5082,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Stun_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"234868487\">Stun_Effect</a>"
                 },
                 {
                   "name": "IF",
@@ -5141,7 +5141,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_CTRL_Taunt[<span class=\"descriptionNumberColor\">Taunt</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1488319040\">Standard_CTRL_Taunt</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
           "stackType": "Replace",
           "targetRestriction": {
             "name": "Target Name",
@@ -5165,7 +5165,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "BlockDamage_Count[<span class=\"descriptionNumberColor\">Repel</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1364993633\">BlockDamage_Count</a>[<span class=\"descriptionNumberColor\">Repel</span>]",
           "counter": 1,
           "modifierFlags": [
             "BlockDamageExcludeDot"
@@ -5222,7 +5222,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "BlockDamage_Turn",
+          "for": "<a class=\"gModGreen\" id=\"mod__-384231137\">BlockDamage_Turn</a>",
           "modifierFlags": [
             "BlockDamage"
           ],
@@ -5230,7 +5230,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_HOT_SP[<span class=\"descriptionNumberColor\">undefined</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2090146765\">Standard_HOT_SP</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -5262,7 +5262,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_HOT_HPByMaxHP[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1156628335\">Standard_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -5304,7 +5304,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -5598,7 +5598,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -5719,7 +5719,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -5818,7 +5818,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -5964,7 +5964,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_DOT_Bleed[<span class=\"descriptionNumberColor\">Bleed</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1147160586\">Standard_DOT_Bleed</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -6077,7 +6077,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MoreOneMorePerTurn_5",
+          "for": "<a class=\"gModGreen\" id=\"mod__-890737997\">MoreOneMorePerTurn_5</a>",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
             "OneMoreCount"
@@ -6119,7 +6119,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMore",
+                  "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>",
                   "duration": 4
                 }
               ]
@@ -6164,7 +6164,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MoreOneMorePerTurn_4",
+          "for": "<a class=\"gModGreen\" id=\"mod__-907515616\">MoreOneMorePerTurn_4</a>",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
             "OneMoreCount"
@@ -6206,7 +6206,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMore",
+                  "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>",
                   "duration": 3
                 }
               ]
@@ -6251,7 +6251,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MoreOneMorePerTurn",
+          "for": "<a class=\"gModGreen\" id=\"mod__-129923965\">MoreOneMorePerTurn</a>",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
             "OneMoreCount"
@@ -6293,7 +6293,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMore",
+                  "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>",
                   "duration": 2
                 }
               ]
@@ -6338,7 +6338,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "OneMorePerTurn",
+          "for": "<a class=\"gModGreen\" id=\"mod__883139622\">OneMorePerTurn</a>",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
             "OneMoreCount"
@@ -6380,7 +6380,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMore"
+                  "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
                 }
               ]
             },
@@ -6424,7 +6424,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "OneMore",
+          "for": "<a class=\"gModGreen\" id=\"mod__763823194\">OneMore</a>",
           "stackType": "Merge",
           "lifeCyclePhaseAllowed": "ActionPhaseEnd",
           "modifierFlags": [
@@ -6437,11 +6437,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_MazeStandard_EnterBattle_StanceBreakModifier"
+          "for": "<a class=\"gModGreen\" id=\"mod__-666144302\">StageAbility_MazeStandard_EnterBattle_StanceBreakModifier</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "StanceBreakState_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-237425029\">StanceBreakState_Effect</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -6538,7 +6538,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Current Action Owner}}"
                                     },
-                                    "modifier": "Feixiao_Ultramode"
+                                    "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>"
                                   }
                                 ]
                               }
@@ -6601,7 +6601,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Ability Target DEALING DMG}}"
                                 },
-                                "modifier": "Feixiao_Ultramode"
+                                "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>"
                               }
                             ]
                           }
@@ -6639,7 +6639,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MonsterAllDamageReduce",
+          "for": "<a class=\"gModGreen\" id=\"mod__1705654267\">MonsterAllDamageReduce</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6659,7 +6659,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "RedStanceState",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1775147687\">RedStanceState</a>",
           "modifierFlags": [
             "RedStance"
           ],
@@ -6673,7 +6673,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "StanceBreakState_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
                 },
                 {
                   "name": "Action Advance/Delay",
@@ -6691,17 +6691,17 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_MonsterCharge_ActionBarText",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2098906249\">Standard_MonsterCharge_ActionBarText</a>",
           "stackType": "ReplaceByCaster"
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_MonsterBreak_ActionBarText",
+          "for": "<a class=\"gModGreen\" id=\"mod__2089166112\">Standard_MonsterBreak_ActionBarText</a>",
           "stackType": "ReplaceByCaster"
         },
         {
           "name": "Modifier Construction",
-          "for": "StanceBreakState",
+          "for": "<a class=\"gModGreen\" id=\"mod__-898477955\">StanceBreakState</a>",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
             "Break"
@@ -6716,7 +6716,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "StanceBreakState_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
                 },
                 {
                   "name": "Action Advance/Delay",
@@ -6745,7 +6745,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "StanceBreakState_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
                 },
                 {
                   "name": "Reset Toughness",
@@ -6768,7 +6768,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MonsterAllDamageReduce"
+                  "modifier": "<a class=\"gModGreen\" id=\"1705654267\">MonsterAllDamageReduce</a>"
                 },
                 {
                   "name": "IF",
@@ -6787,7 +6787,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_MonsterBreak_ActionBarText"
+                  "modifier": "<a class=\"gModGreen\" id=\"2089166112\">Standard_MonsterBreak_ActionBarText</a>"
                 }
               ]
             },
@@ -6800,7 +6800,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_MonsterBreak_ActionBarText"
+                  "modifier": "<a class=\"gModGreen\" id=\"2089166112\">Standard_MonsterBreak_ActionBarText</a>"
                 }
               ]
             },

@@ -18,13 +18,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_20021_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"674633456\">LC_20021_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_20021_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__674633456\">LC_20021_Main</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",

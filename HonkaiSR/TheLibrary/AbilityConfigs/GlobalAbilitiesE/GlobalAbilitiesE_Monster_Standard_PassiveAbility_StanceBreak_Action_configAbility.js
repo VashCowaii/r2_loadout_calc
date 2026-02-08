@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Local_ListenStanceBreak"
+      "modifier": "<a class=\"gModGreen\" id=\"-1767736831\">Local_ListenStanceBreak</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Local_ListenRedStance"
+      "modifier": "<a class=\"gModGreen\" id=\"-694687667\">Local_ListenRedStance</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MonsterAllDamageReduce"
+      "modifier": "<a class=\"gModGreen\" id=\"1705654267\">MonsterAllDamageReduce</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -34,13 +34,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "TriggerStanceCountDown_Monster"
+      "modifier": "<a class=\"gModGreen\" id=\"-1581220157\">TriggerStanceCountDown_Monster</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Local_ListenRedStance",
+      "for": "<a class=\"gModGreen\" id=\"mod__-694687667\">Local_ListenRedStance</a>",
       "execute": [
         {
           "eventTrigger": "End Broken State [Owner]",
@@ -51,7 +51,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "RedStanceState"
+              "modifier": "<a class=\"gModGreen\" id=\"-1775147687\">RedStanceState</a>"
             }
           ]
         },
@@ -64,7 +64,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "RedStanceState"
+              "modifier": "<a class=\"gModGreen\" id=\"-1775147687\">RedStanceState</a>"
             }
           ]
         }
@@ -74,7 +74,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Local_ListenStanceBreak",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1767736831\">Local_ListenStanceBreak</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -88,7 +88,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "StanceBreakState"
+              "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -96,7 +96,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "MonsterAllDamageReduce"
+              "modifier": "<a class=\"gModGreen\" id=\"1705654267\">MonsterAllDamageReduce</a>"
             }
           ]
         }

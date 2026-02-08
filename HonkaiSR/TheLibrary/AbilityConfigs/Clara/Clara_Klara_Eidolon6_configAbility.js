@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Klara_Eidolon6_Passive",
+      "modifier": "<a class=\"gModGreen\" id=\"2032783017\">Klara_Eidolon6_Passive</a>",
       "valuePerStack": {
         "MDF_PropertyValue": {
           "operator": "Variables[0] (0.5) || RETURN",
@@ -26,7 +26,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Klara_Eidolon6_ListenBeHit",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1212753345\">Klara_Eidolon6_ListenBeHit</a>",
       "execute": [
         {
           "eventTrigger": "Being Attacked Start [Owner]",
@@ -37,7 +37,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
             },
             {
               "name": "IF",
@@ -72,7 +72,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Klara_PassiveATK_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1426674462\">Klara_PassiveATK_Mark</a>"
                 }
               ]
             }
@@ -82,7 +82,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Klara_Eidolon6_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__2032783017\">Klara_Eidolon6_Passive</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -93,7 +93,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
               },
-              "modifier": "Klara_Eidolon6_ListenBeHit",
+              "modifier": "<a class=\"gModGreen\" id=\"-1212753345\">Klara_Eidolon6_ListenBeHit</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -126,7 +126,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
                   },
-                  "modifier": "Klara_Eidolon6_ListenBeHit",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1212753345\">Klara_Eidolon6_ListenBeHit</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -160,7 +160,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "Klara_Eidolon6_ListenBeHit",
+              "modifier": "<a class=\"gModGreen\" id=\"-1212753345\">Klara_Eidolon6_ListenBeHit</a>",
               "onlyRemoveOwnersInstance": true
             }
           ]
