@@ -601,8 +601,8 @@ div {
     /* border-top-left-radius: 10px; */
 
     background:
-        linear-gradient(rgba(255, 255, 255, 0.527) 0 0) top 0 left / calc(5% - 40px) 2px no-repeat,
-        linear-gradient(rgba(255, 255, 255, 0.527) 0 0) bottom 0 left / calc(5% - 40px) 2px no-repeat;
+        linear-gradient(rgba(255, 255, 255, 0.527) 0 0) top 0 left / 15px 2px no-repeat,
+        linear-gradient(rgba(255, 255, 255, 0.527) 0 0) bottom 0 left / 15px 2px no-repeat;
 
     /* outline: 2px solid rgba(255, 255, 255, 0.527);
     outline-offset: -10px; */
@@ -1706,7 +1706,26 @@ div {
     opacity: 0.5;
 }
 
+summary {
+    list-style: none;
+    cursor: pointer;
+}
 
+summary::-webkit-details-marker {
+    display: none;
+}
+summary::before {
+    content: "▶";
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 0;
+    color: rgb(153, 153, 153);
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease;
+} 
+details[open] > summary::before {
+    transform: rotate(90deg);
+}
 
 .menuSwitcherBarTopBox {
     width: 100%;

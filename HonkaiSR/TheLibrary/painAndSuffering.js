@@ -8883,6 +8883,10 @@ const megaParsingFuckeryPain = {
         // );
 
         
+        // ${parseRef.removalDependencies ? `<div class="actionDetailBody2">
+        //     <div class="rotationConditionOperatorHeaderInline">Removal Dependencies:</div>&nbsp;
+        //     ${typeof parseRef.removalDependencies === "object" ? megaParsingFuckery.ValuePerStackParsing(parseRef.removalDependencies,initialCounter) : parseRef.removalDependencies}
+        // </div>` : ""}
         return `
         <details class="rotationsPermaConditionsExpand" open="">
             <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
@@ -8912,10 +8916,7 @@ const megaParsingFuckeryPain = {
                 
                 ${getStandardNameDisplay(initialCounter,parseRef.effectName && parseRef.effectName != parseRef.statusName ? parseRef.effectName : undefined,"Effect")}
 
-                ${parseRef.removalDependencies ? `<div class="actionDetailBody2">
-                    <div class="rotationConditionOperatorHeaderInline">Removal Dependencies:</div>&nbsp;
-                    ${typeof parseRef.removalDependencies === "object" ? megaParsingFuckery.ValuePerStackParsing(parseRef.removalDependencies,initialCounter) : parseRef.removalDependencies}
-                </div>` : ""}
+                
                 ${previewValue ? `<div class="actionDetailBody2Preview">
                     <div class="rotationConditionOperatorHeaderInline">Preview:</div>&nbsp;
                     ${previewValue}
