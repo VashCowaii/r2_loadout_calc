@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Minion04_Overheat_Effect"
+      "modifier": "<a class=\"gModGreen\" id=\"-1138460548\">Enemy_AML_Minion04_Overheat_Effect</a>"
     },
     {
       "name": "Shot Fired",
@@ -104,7 +104,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Enemy_AML_Minion04_Mark[<span class=\"descriptionNumberColor\">Detonated</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1102385587\">Enemy_AML_Minion04_Mark</a>[<span class=\"descriptionNumberColor\">Detonated</span>]",
           "valuePerStack": {
             "Ability01_P2_MarkDamagePercentage": {
               "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
@@ -124,7 +124,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Minion04_Overheat[<span class=\"descriptionNumberColor\">Overloaded</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1434034112\">Enemy_AML_Minion04_Overheat</a>[<span class=\"descriptionNumberColor\">Overloaded</span>]"
     },
     "Trigger: Attack End",
     "Trigger: Ability End"

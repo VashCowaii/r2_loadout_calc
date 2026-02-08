@@ -36,13 +36,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Moze_TechniqueUsage"
+          "modifier": "<a class=\"gModGreen\" id=\"962006239\">Moze_TechniqueUsage</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Moze_TechniqueUsage_DamageUpModifier[<span class=\"descriptionNumberColor\">Bated Wings</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2094982629\">Moze_TechniqueUsage_DamageUpModifier</a>[<span class=\"descriptionNumberColor\">Bated Wings</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -75,7 +75,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Moze_TechniqueUsage",
+          "for": "<a class=\"gModGreen\" id=\"mod__962006239\">Moze_TechniqueUsage</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -103,7 +103,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Moze_TechniqueUsage_DamageUpModifier[<span class=\"descriptionNumberColor\">Bated Wings</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2094982629\">Moze_TechniqueUsage_DamageUpModifier</a>[<span class=\"descriptionNumberColor\">Bated Wings</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -146,7 +146,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Moze_InInsert_Tag"
+          "modifier": "<a class=\"gModGreen\" id=\"-59329108\">Moze_InInsert_Tag</a>"
         },
         {
           "name": "UI Display Event",
@@ -158,11 +158,11 @@ const compositeAbilityObject = {
           "functionList": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Moze_Insert_Part01_Effect"
+              "functionName": "<a class=\"gTempYellow\" id=\"1956058044\">Moze_Insert_Part01_Effect</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Moze_Insert_Part01_LoopDamage",
+              "functionName": "<a class=\"gTempYellow\" id=\"854740786\">Moze_Insert_Part01_LoopDamage</a>",
               "baseDelay": {
                 "operator": "Variables[0] (MOZE_OBJECT_UNUSED_2) || RETURN",
                 "displayLines": "MOZE_OBJECT_UNUSED_2",
@@ -241,7 +241,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Moze_Point01_CD[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"707542368\">Moze_Point01_CD</a>[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
                 "invertCondition": true
               },
               "passed": [
@@ -251,7 +251,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Moze_Point01_CD[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"707542368\">Moze_Point01_CD</a>[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -285,7 +285,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Moze_Ability02_InShadowModifier",
+            "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>",
             "invertCondition": true
           }
         },
@@ -295,7 +295,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Moze_InInsert_Tag"
+          "modifier": "<a class=\"gModGreen\" id=\"-59329108\">Moze_InInsert_Tag</a>"
         }
       ],
       "onAbort": [
@@ -407,7 +407,7 @@ const compositeAbilityObject = {
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Moze_Insert_Part01_LoopDamage",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__854740786\">Moze_Insert_Part01_LoopDamage</a>",
           "parse": [
             {
               "name": "ATK Scaling DMG",
@@ -443,7 +443,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Moze_Insert_Part01_Effect",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1956058044\">Moze_Insert_Part01_Effect</a>",
           "parse": []
         }
       ],
@@ -461,7 +461,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Moze_InInsert_Tag"
+          "modifier": "<a class=\"gModGreen\" id=\"-59329108\">Moze_InInsert_Tag</a>"
         },
         {
           "name": "UI Display Event",
@@ -473,11 +473,11 @@ const compositeAbilityObject = {
           "functionList": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Moze_Insert_Part01_Effect"
+              "functionName": "<a class=\"gTempYellow\" id=\"1956058044\">Moze_Insert_Part01_Effect</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Moze_Insert_Part01_LoopDamage",
+              "functionName": "<a class=\"gTempYellow\" id=\"854740786\">Moze_Insert_Part01_LoopDamage</a>",
               "baseDelay": {
                 "operator": "Variables[0] (MOZE_OBJECT_UNUSED_2) || RETURN",
                 "displayLines": "MOZE_OBJECT_UNUSED_2",
@@ -596,7 +596,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Moze_Ability02_InShadowModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -604,7 +604,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
             }
           ]
         },
@@ -624,7 +624,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Moze_Point01_CD[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"707542368\">Moze_Point01_CD</a>[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
                 "invertCondition": true
               },
               "passed": [
@@ -634,7 +634,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Moze_Point01_CD[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"707542368\">Moze_Point01_CD</a>[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -704,7 +704,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Moze_Ability02_InShadowModifier"
+            "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
           }
         },
         {
@@ -713,7 +713,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Moze_InInsert_Tag"
+          "modifier": "<a class=\"gModGreen\" id=\"-59329108\">Moze_InInsert_Tag</a>"
         },
         {
           "name": "IF",
@@ -793,7 +793,7 @@ const compositeAbilityObject = {
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Moze_Insert_Part01_LoopDamage",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__854740786\">Moze_Insert_Part01_LoopDamage</a>",
           "parse": [
             {
               "name": "ATK Scaling DMG",
@@ -829,7 +829,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Moze_Insert_Part01_Effect",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1956058044\">Moze_Insert_Part01_Effect</a>",
           "parse": []
         }
       ],
@@ -876,7 +876,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Moze_ListenUnstageModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"99483717\">Moze_ListenUnstageModifier</a>"
         },
         {
           "name": "IF",
@@ -927,7 +927,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Moze_Eidolon1_PreChangeUltraToInsertModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-923746792\">Moze_Eidolon1_PreChangeUltraToInsertModifier</a>"
             }
           ]
         },
@@ -944,7 +944,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Moze_Eidolon1_AddSPModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-1809879863\">Moze_Eidolon1_AddSPModifier</a>"
             }
           ]
         },
@@ -954,7 +954,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Moze_PassiveModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"787836470\">Moze_PassiveModifier</a>"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -975,7 +975,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Moze_OnlyMozeOnStageModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-711864046\">Moze_OnlyMozeOnStageModifier</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -986,7 +986,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -994,7 +994,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Moze_Ability02_InShadowModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
                 },
                 {
                   "name": "Disable Abilities",
@@ -1012,7 +1012,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Moze_ListenUnstageModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__99483717\">Moze_ListenUnstageModifier</a>",
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Owner]",
@@ -1085,7 +1085,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Moze_OnlyMozeOnStageModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                     }
                   ],
                   "failed": [
@@ -1097,7 +1097,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Monster_W3_Aventurine_Gambling[<span class=\"descriptionNumberColor\">Gamble</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"1454354819\">Monster_W3_Aventurine_Gambling</a>[<span class=\"descriptionNumberColor\">Gamble</span>]",
                         "invertCondition": true
                       },
                       "passed": [
@@ -1107,7 +1107,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Moze_OnlyMozeOnStageModifier"
+                          "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                         }
                       ]
                     }
@@ -1186,7 +1186,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Moze_OnlyMozeOnStageModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                     }
                   ]
                 }
@@ -1263,7 +1263,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Moze_OnlyMozeOnStageModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                     }
                   ],
                   "failed": [
@@ -1282,7 +1282,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Moze_OnlyMozeOnStageModifier"
+                          "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                         }
                       ]
                     }
@@ -1297,7 +1297,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Monster_W3_Aventurine_Gambling[<span class=\"descriptionNumberColor\">Gamble</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1454354819\">Monster_W3_Aventurine_Gambling</a>[<span class=\"descriptionNumberColor\">Gamble</span>]"
                   },
                   "passed": [
                     {
@@ -1311,7 +1311,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Moze_OnlyMozeOnStageModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                     }
                   ]
                 }
@@ -1324,7 +1324,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Monster_W3_Aventurine_Gambling[<span class=\"descriptionNumberColor\">Gamble</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1454354819\">Monster_W3_Aventurine_Gambling</a>[<span class=\"descriptionNumberColor\">Gamble</span>]"
                   },
                   "passed": [
                     {
@@ -1400,7 +1400,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Moze_OnlyMozeOnStageModifier"
+                          "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                         }
                       ]
                     }
@@ -1466,7 +1466,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Moze_OnlyMozeOnStageModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                     }
                   ],
                   "failed": [
@@ -1485,7 +1485,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Moze_OnlyMozeOnStageModifier"
+                          "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                         }
                       ]
                     }
@@ -1551,7 +1551,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Moze_OnlyMozeOnStageModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                     }
                   ],
                   "failed": [
@@ -1570,7 +1570,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Moze_OnlyMozeOnStageModifier"
+                          "modifier": "<a class=\"gModGreen\" id=\"-711864046\">Moze_OnlyMozeOnStageModifier</a>"
                         }
                       ]
                     }
@@ -1584,7 +1584,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Moze_PassiveModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__787836470\">Moze_PassiveModifier</a>",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
@@ -1657,7 +1657,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
                   },
                   "passed": [
                     {
@@ -1666,7 +1666,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Moze_Ability02_InShadowModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1674,7 +1674,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
                     }
                   ]
                 },
@@ -1739,7 +1739,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -1747,7 +1747,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Moze_Ability02_InShadowModifier"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
                         }
                       ]
                     }
@@ -1890,7 +1890,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Moze_Ability02_InShadowModifier"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
                   },
                   "passed": [
                     {
@@ -2088,7 +2088,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Moze_Ability02_InShadowModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
                 }
               ]
             },
@@ -2202,7 +2202,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Moze_Eidolon1_ChangeUltraToInsertModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-139735837\">Moze_Eidolon1_ChangeUltraToInsertModifier</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2236,7 +2236,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Moze_Eidolon1_PreChangeUltraToInsertModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-923746792\">Moze_Eidolon1_PreChangeUltraToInsertModifier</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -2247,7 +2247,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Moze_Eidolon1_ChangeUltraToInsertModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-139735837\">Moze_Eidolon1_ChangeUltraToInsertModifier</a>"
                 }
               ]
             },
@@ -2267,7 +2267,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Moze_Eidolon1_ChangeUltraToInsertModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-139735837\">Moze_Eidolon1_ChangeUltraToInsertModifier</a>"
                     }
                   ]
                 }
@@ -2279,7 +2279,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Moze_Eidolon1_AddSPModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1809879863\">Moze_Eidolon1_AddSPModifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -2339,7 +2339,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Moze_Ability03_DamageAddModifier[<span class=\"descriptionNumberColor\">Heathprowler</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1395014383\">Moze_Ability03_DamageAddModifier</a>[<span class=\"descriptionNumberColor\">Heathprowler</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -2490,7 +2490,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
           }
         },
         "Trigger: Skip Death Handling",
@@ -2499,7 +2499,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Moze_Ability03_DamageAddModifier[<span class=\"descriptionNumberColor\">Heathprowler</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1395014383\">Moze_Ability03_DamageAddModifier</a>[<span class=\"descriptionNumberColor\">Heathprowler</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2535,7 +2535,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Moze_Ultimate_AddRegardAsAttackType",
+          "for": "<a class=\"gModGreen\" id=\"mod__1536415722\">M_Moze_Ultimate_AddRegardAsAttackType</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2574,7 +2574,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Moze_Ultimate_AddRegardAsAttackType"
+                  "modifier": "<a class=\"gModGreen\" id=\"1536415722\">M_Moze_Ultimate_AddRegardAsAttackType</a>"
                 }
               ]
             }
@@ -2632,7 +2632,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Moze_Ability02_InShadowModifier"
+            "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
           }
         }
       ],
@@ -2650,7 +2650,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
         },
         {
           "name": "ATK Scaling DMG",
@@ -2770,7 +2770,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Moze_Ability02_InShadowModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
             }
           ]
         },
@@ -2912,7 +2912,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Moze_Ability02_InShadowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1726925121\">Moze_Ability02_InShadowModifier</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "Stealth"
@@ -3017,13 +3017,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Moze_InInsert_Tag",
+          "for": "<a class=\"gModGreen\" id=\"mod__-59329108\">Moze_InInsert_Tag</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Moze_Eidolon1_DeBonus[<span class=\"descriptionNumberColor\">Vengewise</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__707417159\">Moze_Eidolon1_DeBonus</a>[<span class=\"descriptionNumberColor\">Vengewise</span>]",
           "modifierFlags": [
             "BlockInfect"
           ],
@@ -3066,7 +3066,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Moze_Point01_CD[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__707542368\">Moze_Point01_CD</a>[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "stackData": [],
@@ -3077,7 +3077,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]",
           "modifierFlags": [
             "KeepOnDeathrattle",
             "BlockInfect",
@@ -3093,7 +3093,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Moze_Eidolon1_DeBonus[<span class=\"descriptionNumberColor\">Vengewise</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"707417159\">Moze_Eidolon1_DeBonus</a>[<span class=\"descriptionNumberColor\">Vengewise</span>]"
                 },
                 {
                   "name": "IF",
@@ -3114,7 +3114,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Moze_Ability02_InShadowModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
                     }
                   ]
                 },
@@ -3153,7 +3153,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Moze_Ability02_InShadowModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -3225,7 +3225,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Moze_Eidolon1_DeBonus[<span class=\"descriptionNumberColor\">Vengewise</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"707417159\">Moze_Eidolon1_DeBonus</a>[<span class=\"descriptionNumberColor\">Vengewise</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.25) || RETURN",
@@ -3257,7 +3257,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "PursuedDamage_PerformanceDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -3318,7 +3318,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Moze_InInsert_Tag",
+                        "modifier": "<a class=\"gModGreen\" id=\"-59329108\">Moze_InInsert_Tag</a>",
                         "invertCondition": true
                       },
                       "passed": [
@@ -3632,7 +3632,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
                   },
                   "passed": [
                     {
@@ -3641,7 +3641,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Moze_Ability02_InShadowModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3649,7 +3649,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
                     }
                   ]
                 }
@@ -3712,7 +3712,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Moze_Ability02_InShadowModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -3727,7 +3727,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Moze_InsertAction_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1728393079\">Moze_InsertAction_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",

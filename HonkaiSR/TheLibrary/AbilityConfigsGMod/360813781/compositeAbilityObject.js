@@ -17,7 +17,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "BattleEventAbility_Challenge_Month_35_FixSub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-16560037\">BattleEventAbility_Challenge_Month_35_FixSub</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -227,7 +227,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "BattleEventAbility_Challenge_Month_35_Fix",
+          "for": "<a class=\"gModGreen\" id=\"mod__1476592663\">BattleEventAbility_Challenge_Month_35_Fix</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -238,7 +238,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Every Battle Entity}}"
                   },
-                  "modifier": "BattleEventAbility_Challenge_Month_35_FixSub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-16560037\">BattleEventAbility_Challenge_Month_35_FixSub</a>"
                 }
               ]
             },
@@ -251,7 +251,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "BattleEventAbility_Challenge_Month_35_FixSub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-16560037\">BattleEventAbility_Challenge_Month_35_FixSub</a>"
                 }
               ]
             },
@@ -264,7 +264,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "BattleEventAbility_Challenge_Month_35_FixSub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-16560037\">BattleEventAbility_Challenge_Month_35_FixSub</a>"
                 }
               ]
             }
@@ -272,7 +272,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MGM_Endurance_00",
+          "for": "<a class=\"gModGreen\" id=\"mod__-115963541\">MGM_Endurance_00</a>",
           "modifierFlags": [
             "EnduranceEnemyOnly"
           ]

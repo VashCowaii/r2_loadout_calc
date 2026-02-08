@@ -31,7 +31,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Himeko_Eidolon2_DamageUP",
+          "modifier": "<a class=\"gModGreen\" id=\"867071212\">Himeko_Eidolon2_DamageUP</a>",
           "valuePerStack": {
             "MDF_HPRatio": {
               "operator": "Variables[0] (0.5) || RETURN",
@@ -55,7 +55,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Himeko_Eidolon2_DamageUP",
+          "for": "<a class=\"gModGreen\" id=\"mod__867071212\">Himeko_Eidolon2_DamageUP</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -115,13 +115,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Himeko_Trace03"
+          "modifier": "<a class=\"gModGreen\" id=\"2030790810\">Himeko_Trace03</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Himeko_CriticalChance[<span class=\"descriptionNumberColor\">Benchmark</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__583790079\">Himeko_CriticalChance</a>[<span class=\"descriptionNumberColor\">Benchmark</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -153,7 +153,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Himeko_Trace03",
+          "for": "<a class=\"gModGreen\" id=\"mod__2030790810\">Himeko_Trace03</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -184,7 +184,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Himeko_CriticalChance[<span class=\"descriptionNumberColor\">Benchmark</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"583790079\">Himeko_CriticalChance</a>[<span class=\"descriptionNumberColor\">Benchmark</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.15) || RETURN",
@@ -229,7 +229,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Himeko_CriticalChance[<span class=\"descriptionNumberColor\">Benchmark</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"583790079\">Himeko_CriticalChance</a>[<span class=\"descriptionNumberColor\">Benchmark</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.15) || RETURN",
@@ -249,7 +249,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Himeko_CriticalChance[<span class=\"descriptionNumberColor\">Benchmark</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"583790079\">Himeko_CriticalChance</a>[<span class=\"descriptionNumberColor\">Benchmark</span>]"
                     }
                   ]
                 }
@@ -273,13 +273,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Himeko_Trace01"
+          "modifier": "<a class=\"gModGreen\" id=\"1997235572\">Himeko_Trace01</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Himeko_Trace01",
+          "for": "<a class=\"gModGreen\" id=\"mod__1997235572\">Himeko_Trace01</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -290,7 +290,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Attack Targets}}"
                   },
-                  "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -347,13 +347,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Himeko_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"836140027\">StageAbility_Maze_Himeko_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Himeko_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__836140027\">StageAbility_Maze_Himeko_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -375,7 +375,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "Himeko_FireTakenRatio[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1013692489\">Himeko_FireTakenRatio</a>[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -426,7 +426,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
         },
         {
           "name": "IF",
@@ -441,7 +441,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Himeko_AbilityEidolon1_SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1931905708\">Himeko_AbilityEidolon1_SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -535,7 +535,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Himeko_AbilityEidolon1_SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1931905708\">Himeko_AbilityEidolon1_SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -640,7 +640,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Himeko_Passive1_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"311390913\">Himeko_Passive1_Modifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -648,7 +648,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
           "stackLimit": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -691,7 +691,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -827,7 +827,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Himeko_Passive_PursuitCD[<span class=\"descriptionNumberColor\">Victory Rush</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__65829546\">Himeko_Passive_PursuitCD</a>[<span class=\"descriptionNumberColor\">Victory Rush</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -840,7 +840,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
                 }
               ]
             }
@@ -852,7 +852,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Himeko_Passive1_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__311390913\">Himeko_Passive1_Modifier</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
@@ -1234,7 +1234,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -1283,7 +1283,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -1311,7 +1311,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -1576,7 +1576,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Himeko_Ability03_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"2052955807\">Himeko_Ability03_Modifier</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -1662,7 +1662,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Himeko_Ability03_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"2052955807\">Himeko_Ability03_Modifier</a>"
         },
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
@@ -1670,7 +1670,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Himeko_Ability03_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__2052955807\">Himeko_Ability03_Modifier</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1778,7 +1778,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Himeko_AbilityBurnDamageUP"
+              "modifier": "<a class=\"gModGreen\" id=\"-708814299\">Himeko_AbilityBurnDamageUP</a>"
             }
           ]
         },
@@ -2008,7 +2008,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Himeko_AbilityBurnDamageUP"
+              "modifier": "<a class=\"gModGreen\" id=\"-708814299\">Himeko_AbilityBurnDamageUP</a>"
             }
           ]
         },
@@ -2017,7 +2017,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Himeko_AbilityBurnDamageUP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-708814299\">Himeko_AbilityBurnDamageUP</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -2204,7 +2204,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Himeko_FireTakenRatio[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1013692489\">Himeko_FireTakenRatio</a>[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [

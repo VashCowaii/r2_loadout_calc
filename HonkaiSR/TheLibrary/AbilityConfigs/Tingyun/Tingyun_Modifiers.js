@@ -10,11 +10,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Tingyun_Eidolon2_CD"
+      "for": "<a class=\"gModGreen\" id=\"mod__-2044109918\">Tingyun_Eidolon2_CD</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Tingyun_Trace_B1_SpeedUp[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1819337398\">Tingyun_Trace_B1_SpeedUp</a>[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -54,7 +54,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Tingyun_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -90,15 +90,15 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "TingYun_PassiveFlag"
+      "for": "<a class=\"gModGreen\" id=\"mod__328360410\">TingYun_PassiveFlag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "TingYun_PassiveATK_Flag"
+      "for": "<a class=\"gModGreen\" id=\"mod__1593929305\">TingYun_PassiveATK_Flag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "TingYun_ByIsTingYun",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1429716226\">TingYun_ByIsTingYun</a>",
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -117,7 +117,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
               },
               "ifTargetFound": [
                 {
@@ -128,7 +128,7 @@ const configAbility = {
                   },
                   "valueType": "LifeTime",
                   "variableName": "TingYun_EnergyBarLayer",
-                  "modifierName": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
                   "multiplier": 1
                 },
                 {
@@ -185,7 +185,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark"
+                "modifier": "<a class=\"gModGreen\" id=\"-1875583300\">MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark</a>"
               },
               "passed": [
                 {
@@ -194,7 +194,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1875583300\">MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark</a>"
                 },
                 {
                   "name": "Find New Target",
@@ -210,7 +210,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
                   },
                   "ifTargetFound": [
                     {
@@ -221,7 +221,7 @@ const configAbility = {
                       },
                       "valueType": "LifeTime",
                       "variableName": "TingYun_EnergyBarLayer",
-                      "modifierName": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
                       "multiplier": 1
                     },
                     {
@@ -290,7 +290,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
               },
               "ifTargetFound": [
                 {
@@ -301,7 +301,7 @@ const configAbility = {
                   },
                   "valueType": "LifeTime",
                   "variableName": "TingYun_EnergyBarLayer",
-                  "modifierName": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
                   "multiplier": 1
                 },
                 {
@@ -368,7 +368,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
               },
               "ifTargetFound": [
                 {
@@ -379,7 +379,7 @@ const configAbility = {
                   },
                   "valueType": "LifeTime",
                   "variableName": "TingYun_EnergyBarLayer",
-                  "modifierName": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
                   "multiplier": 1
                 },
                 {
@@ -435,7 +435,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "TingYun_Passive_LeiLing_Eidolon4",
+      "for": "<a class=\"gModGreen\" id=\"mod__-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -449,7 +449,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
             }
           ]
         },
@@ -462,7 +462,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Tingyun_Eidolon2_CD"
+              "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
             }
           ]
         },
@@ -498,7 +498,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Tingyun_Eidolon2_CD"
+                "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
               },
               "failed": [
                 {
@@ -523,7 +523,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Tingyun_Eidolon2_CD"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
                 }
               ]
             }
@@ -577,7 +577,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "TingYun_PassiveFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
             },
             {
               "name": "IF",
@@ -587,7 +587,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "TingYun_PassiveATK_Flag"
+                "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
               },
               "passed": [
                 {
@@ -618,7 +618,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "TingYun_PassiveATK_Flag"
+                  "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                 }
               ]
             }
@@ -642,7 +642,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Current Action Owner}}"
                     },
-                    "modifier": "TingYun_ByIsTingYun"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
                   }
                 ]
               },
@@ -653,7 +653,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TingYun_PassiveATK_Flag"
+                  "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                 }
               ]
             }
@@ -675,7 +675,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Tingyun_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_Eidolon1_SpeedUp_01": {
@@ -705,7 +705,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "TingYun_Passive_LeiLing_Eidolon2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -719,7 +719,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
             }
           ]
         },
@@ -732,7 +732,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Tingyun_Eidolon2_CD"
+              "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
             }
           ]
         },
@@ -768,7 +768,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Tingyun_Eidolon2_CD"
+                "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
               },
               "failed": [
                 {
@@ -793,7 +793,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Tingyun_Eidolon2_CD"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
                 }
               ]
             }
@@ -846,7 +846,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "TingYun_PassiveFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
             },
             {
               "name": "IF",
@@ -856,7 +856,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "TingYun_PassiveATK_Flag"
+                "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
               },
               "passed": [
                 {
@@ -887,7 +887,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "TingYun_PassiveATK_Flag"
+                  "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                 }
               ]
             }
@@ -911,7 +911,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Current Action Owner}}"
                     },
-                    "modifier": "TingYun_ByIsTingYun"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
                   }
                 ]
               },
@@ -922,7 +922,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TingYun_PassiveATK_Flag"
+                  "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                 }
               ]
             }
@@ -944,7 +944,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Tingyun_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_Eidolon1_SpeedUp_01": {
@@ -973,7 +973,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "TingYun_Passive_LeiLing_Eidolon1",
+      "for": "<a class=\"gModGreen\" id=\"mod__-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -987,7 +987,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
             }
           ]
         },
@@ -1059,7 +1059,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "TingYun_PassiveFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
             },
             {
               "name": "IF",
@@ -1069,7 +1069,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "TingYun_PassiveATK_Flag"
+                "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
               },
               "passed": [
                 {
@@ -1100,7 +1100,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "TingYun_PassiveATK_Flag"
+                  "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                 }
               ]
             }
@@ -1124,7 +1124,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Current Action Owner}}"
                     },
-                    "modifier": "TingYun_ByIsTingYun"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
                   }
                 ]
               },
@@ -1135,7 +1135,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TingYun_PassiveATK_Flag"
+                  "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                 }
               ]
             }
@@ -1157,7 +1157,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Tingyun_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_Eidolon1_SpeedUp_01": {
@@ -1185,7 +1185,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "TingYun_Passive_LeiLing",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1351488572\">TingYun_Passive_LeiLing</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -1199,7 +1199,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
             }
           ]
         },
@@ -1271,7 +1271,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "TingYun_PassiveFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
             },
             {
               "name": "IF",
@@ -1281,7 +1281,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "TingYun_PassiveATK_Flag"
+                "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
               },
               "passed": [
                 {
@@ -1312,7 +1312,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "TingYun_PassiveATK_Flag"
+                  "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                 }
               ]
             }
@@ -1336,7 +1336,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Current Action Owner}}"
                     },
-                    "modifier": "TingYun_ByIsTingYun"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
                   }
                 ]
               },
@@ -1347,7 +1347,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TingYun_PassiveATK_Flag"
+                  "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                 }
               ]
             }
@@ -1363,7 +1363,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Tingyun_Eidolon1_Ability03PreShowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__979112594\">Tingyun_Eidolon1_Ability03PreShowModifier</a>",
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -1382,7 +1382,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Modifier Holder}}"
             },
-            "modifier": "Tingyun_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
           }
         },
         "delayAdvancePreview": {
@@ -1393,7 +1393,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1404,7 +1404,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "TingYun_Passive_LeiLing"
+              "modifier": "<a class=\"gModGreen\" id=\"-1351488572\">TingYun_Passive_LeiLing</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1412,7 +1412,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "TingYun_Passive_LeiLing_Eidolon1"
+              "modifier": "<a class=\"gModGreen\" id=\"-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1420,7 +1420,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "TingYun_Passive_LeiLing_Eidolon2"
+              "modifier": "<a class=\"gModGreen\" id=\"-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1428,7 +1428,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "TingYun_Passive_LeiLing_Eidolon4"
+              "modifier": "<a class=\"gModGreen\" id=\"-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -1456,7 +1456,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Tingyun_Eidolon1_Ability03PreShowModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"979112594\">Tingyun_Eidolon1_Ability03PreShowModifier</a>"
             }
           ]
         },
@@ -1482,7 +1482,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Tingyun_Eidolon1_Ability03PreShowModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"979112594\">Tingyun_Eidolon1_Ability03PreShowModifier</a>"
                 }
               ]
             }
@@ -1510,8 +1510,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark",
-                      "referenceModifier": "MReference_Empty"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1875583300\">MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark</a>",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
                     }
                   ]
                 }

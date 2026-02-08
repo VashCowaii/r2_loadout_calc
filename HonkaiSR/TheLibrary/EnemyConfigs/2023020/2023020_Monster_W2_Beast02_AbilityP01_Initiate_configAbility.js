@@ -14,7 +14,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "W2_Beast02_MuteHitFly"
+      "modifier": "<a class=\"gModGreen\" id=\"2027241011\">W2_Beast02_MuteHitFly</a>"
     },
     {
       "name": "IF",
@@ -60,13 +60,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "W2_Beast02_MuteHitFly",
+      "for": "<a class=\"gModGreen\" id=\"mod__2027241011\">W2_Beast02_MuteHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
       ],

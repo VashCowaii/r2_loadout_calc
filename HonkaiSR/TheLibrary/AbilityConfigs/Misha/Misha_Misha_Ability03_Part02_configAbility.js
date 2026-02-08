@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Misha_Ability03_StatusProbabilityUp[<span class=\"descriptionNumberColor\">Interlock</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-874080613\">Misha_Ability03_StatusProbabilityUp</a>[<span class=\"descriptionNumberColor\">Interlock</span>]",
           "valuePerStack": {
             "MDF_PropertyRatio": {
               "operator": "Variables[0] (0.6) || RETURN",
@@ -127,7 +127,7 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Misha_Ability03_SingleAttack",
+              "functionName": "<a class=\"gTempYellow\" id=\"-469829956\">Misha_Ability03_SingleAttack</a>",
               "variables": {
                 "parameter[01]_StanceRatio": 1,
                 "parameter[02]_Frozen_Chance": {
@@ -156,7 +156,7 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Misha_Ability03_SingleAttack",
+              "functionName": "<a class=\"gTempYellow\" id=\"-469829956\">Misha_Ability03_SingleAttack</a>",
               "variables": {
                 "parameter[01]_StanceRatio": 1,
                 "parameter[02]_Frozen_Chance": {
@@ -204,7 +204,7 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Bounce_SelectTarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
@@ -212,7 +212,7 @@ const configAbility = {
           "paramSequence": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Misha_Ability03_SingleAttack",
+              "functionName": "<a class=\"gTempYellow\" id=\"-469829956\">Misha_Ability03_SingleAttack</a>",
               "variables": {
                 "parameter[01]_StanceRatio": 0.5,
                 "parameter[02]_Frozen_Chance": {
@@ -245,7 +245,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Bounce_SelectTarget",
+      "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
       "target": {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
@@ -253,7 +253,7 @@ const configAbility = {
       "paramSequence": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Misha_Ability03_SingleAttack",
+          "functionName": "<a class=\"gTempYellow\" id=\"-469829956\">Misha_Ability03_SingleAttack</a>",
           "variables": {
             "parameter[01]_StanceRatio": 0.5,
             "parameter[02]_Frozen_Chance": {
@@ -290,14 +290,14 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Misha_Ability03_StatusProbabilityUp[<span class=\"descriptionNumberColor\">Interlock</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-874080613\">Misha_Ability03_StatusProbabilityUp</a>[<span class=\"descriptionNumberColor\">Interlock</span>]"
     },
     "Trigger: Ability End"
   ],
   "functions": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Misha_Ability03_SingleAttack",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-469829956\">Misha_Ability03_SingleAttack</a>",
       "parse": [
         {
           "name": "IF",
@@ -312,7 +312,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Misha_Eidolon2_DefenceDown[<span class=\"descriptionNumberColor\">Yearning of Youth</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1428052703\">Misha_Eidolon2_DefenceDown</a>[<span class=\"descriptionNumberColor\">Yearning of Youth</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -348,7 +348,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
           "duration": 1,
           "baseChance": {
             "operator": "Variables[0] (parameter[02]_Frozen_Chance) || RETURN",
@@ -404,7 +404,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Misha_Eidolon2_DefenceDown[<span class=\"descriptionNumberColor\">Yearning of Youth</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1428052703\">Misha_Eidolon2_DefenceDown</a>[<span class=\"descriptionNumberColor\">Yearning of Youth</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_DefenceDown"
@@ -447,7 +447,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Misha_Ability03_StatusProbabilityUp[<span class=\"descriptionNumberColor\">Interlock</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-874080613\">Misha_Ability03_StatusProbabilityUp</a>[<span class=\"descriptionNumberColor\">Interlock</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

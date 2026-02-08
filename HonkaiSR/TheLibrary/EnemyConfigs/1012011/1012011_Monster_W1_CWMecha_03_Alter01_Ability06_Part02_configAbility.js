@@ -31,7 +31,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Standard_FireTakenRatio[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1249803144\">Standard_FireTakenRatio</a>[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
       "duration": 3,
       "baseChance": 1,
       "valuePerStack": {

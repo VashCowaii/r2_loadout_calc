@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_111_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1931630891\">Relic_111_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_111_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1931630891\">Relic_111_Main</a>",
       "execute": [
         {
           "eventTrigger": "Caused Weakness Break [Owner]",

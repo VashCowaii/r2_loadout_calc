@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Gallagher_PreTechniqueUsage"
+      "modifier": "<a class=\"gModGreen\" id=\"-1721745580\">Gallagher_PreTechniqueUsage</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -35,13 +35,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Gallagher_TechniqueUsage"
+      "modifier": "<a class=\"gModGreen\" id=\"1689555093\">Gallagher_TechniqueUsage</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Gallagher_TechniqueUsage",
+      "for": "<a class=\"gModGreen\" id=\"mod__1689555093\">Gallagher_TechniqueUsage</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -213,7 +213,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Gallagher_PreTechniqueUsage",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1721745580\">Gallagher_PreTechniqueUsage</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -241,7 +241,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "MWGallagher_Ability03_DeBonusModifier[<span class=\"descriptionNumberColor\">Besotted</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-606062756\">MWGallagher_Ability03_DeBonusModifier</a>[<span class=\"descriptionNumberColor\">Besotted</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

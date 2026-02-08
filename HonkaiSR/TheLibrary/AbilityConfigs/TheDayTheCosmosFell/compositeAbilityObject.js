@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_21040_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1257052668\">LC_21040_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_21040_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__852520097\">LC_21040_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -72,7 +72,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_21040_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1257052668\">LC_21040_Main</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -307,7 +307,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "LC_21040_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"852520097\">LC_21040_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
                               "duration": {
                                 "operator": "Variables[0] (2) || RETURN",
                                 "displayLines": "2",

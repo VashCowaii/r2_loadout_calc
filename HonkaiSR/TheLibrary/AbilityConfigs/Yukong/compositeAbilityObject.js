@@ -33,17 +33,17 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yukong_Eidolon2_Bonus"
+          "modifier": "<a class=\"gModGreen\" id=\"153995997\">Yukong_Eidolon2_Bonus</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Eidolon2_BonusCD"
+          "for": "<a class=\"gModGreen\" id=\"mod__-476851750\">Yukong_Eidolon2_BonusCD</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Eidolon2_TeamMemberCheckSP",
+          "for": "<a class=\"gModGreen\" id=\"mod__1787779750\">Yukong_Eidolon2_TeamMemberCheckSP</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -59,7 +59,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Yukong_Eidolon2_BonusCD",
+                        "modifier": "<a class=\"gModGreen\" id=\"-476851750\">Yukong_Eidolon2_BonusCD</a>",
                         "invertCondition": true
                       },
                       {
@@ -97,7 +97,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Yukong_Eidolon2_BonusCD"
+                      "modifier": "<a class=\"gModGreen\" id=\"-476851750\">Yukong_Eidolon2_BonusCD</a>"
                     }
                   ]
                 }
@@ -117,7 +117,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Yukong_Eidolon2_BonusCD",
+                        "modifier": "<a class=\"gModGreen\" id=\"-476851750\">Yukong_Eidolon2_BonusCD</a>",
                         "invertCondition": true
                       },
                       {
@@ -161,7 +161,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Yukong_Eidolon2_BonusCD"
+                      "modifier": "<a class=\"gModGreen\" id=\"-476851750\">Yukong_Eidolon2_BonusCD</a>"
                     }
                   ]
                 }
@@ -171,7 +171,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Eidolon2_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__153995997\">Yukong_Eidolon2_Bonus</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -194,7 +194,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Yukong_Eidolon2_TeamMemberCheckSP"
+                  "modifier": "<a class=\"gModGreen\" id=\"1787779750\">Yukong_Eidolon2_TeamMemberCheckSP</a>"
                 }
               ]
             },
@@ -217,7 +217,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Yukong_Eidolon2_TeamMemberCheckSP"
+                      "modifier": "<a class=\"gModGreen\" id=\"1787779750\">Yukong_Eidolon2_TeamMemberCheckSP</a>"
                     }
                   ]
                 }
@@ -232,7 +232,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Yukong_Eidolon2_TeamMemberCheckSP",
+                  "modifier": "<a class=\"gModGreen\" id=\"1787779750\">Yukong_Eidolon2_TeamMemberCheckSP</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -255,13 +255,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yukong_Eidolon1_Bonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1803156714\">Yukong_Eidolon1_Bonus</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">Aerial Marshal</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-65553749\">Yukong_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">Aerial Marshal</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -292,7 +292,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Eidolon1_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1803156714\">Yukong_Eidolon1_Bonus</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -312,7 +312,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "Yukong_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">Aerial Marshal</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-65553749\">Yukong_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">Aerial Marshal</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -363,13 +363,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yukong_Point02_Bonus"
+          "modifier": "<a class=\"gModGreen\" id=\"1474251407\">Yukong_Point02_Bonus</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Point02_ImaginaryAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__931142386\">Yukong_Point02_ImaginaryAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -397,7 +397,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Point02_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__1474251407\">Yukong_Point02_Bonus</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -408,7 +408,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Yukong_Point02_ImaginaryAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"931142386\">Yukong_Point02_ImaginaryAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_Ratio": {
                       "operator": "Variables[0] (0.12) || RETURN",
@@ -441,7 +441,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Yukong_Point02_ImaginaryAddedRatio",
+                      "modifier": "<a class=\"gModGreen\" id=\"931142386\">Yukong_Point02_ImaginaryAddedRatio</a>",
                       "valuePerStack": {
                         "MDF_Ratio": {
                           "operator": "Variables[0] (0.12) || RETURN",
@@ -466,7 +466,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Yukong_Point02_ImaginaryAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"931142386\">Yukong_Point02_ImaginaryAddedRatio</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -489,13 +489,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yukong_Point01_Bonus"
+          "modifier": "<a class=\"gModGreen\" id=\"8695772\">Yukong_Point01_Bonus</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Point01_ResistCD",
+          "for": "<a class=\"gModGreen\" id=\"mod__-92058280\">Yukong_Point01_ResistCD</a>",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
             {
@@ -507,7 +507,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yukong_Point01_Resist[<span class=\"descriptionNumberColor\">Debuff Block</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-238308601\">Yukong_Point01_Resist</a>[<span class=\"descriptionNumberColor\">Debuff Block</span>]",
                   "valuePerStack": {
                     "MDF_ResistCD": {
                       "operator": "Variables[0] (2) || RETURN",
@@ -525,7 +525,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Point01_Resist[<span class=\"descriptionNumberColor\">Debuff Block</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-238308601\">Yukong_Point01_Resist</a>[<span class=\"descriptionNumberColor\">Debuff Block</span>]",
           "modifierFlags": [
             "ImmuneDebuff"
           ],
@@ -539,7 +539,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yukong_Point01_ResistCD",
+                  "modifier": "<a class=\"gModGreen\" id=\"-92058280\">Yukong_Point01_ResistCD</a>",
                   "duration": {
                     "operator": "Variables[0] (MDF_ResistCD) || RETURN",
                     "displayLines": "MDF_ResistCD",
@@ -555,7 +555,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yukong_Point01_Resist[<span class=\"descriptionNumberColor\">Debuff Block</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-238308601\">Yukong_Point01_Resist</a>[<span class=\"descriptionNumberColor\">Debuff Block</span>]"
                 }
               ]
             }
@@ -570,7 +570,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Point01_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__8695772\">Yukong_Point01_Bonus</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -588,7 +588,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Yukong_Point01_Resist[<span class=\"descriptionNumberColor\">Debuff Block</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-238308601\">Yukong_Point01_Resist</a>[<span class=\"descriptionNumberColor\">Debuff Block</span>]"
                         }
                       },
                       {
@@ -599,7 +599,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Yukong_Point01_ResistCD"
+                          "modifier": "<a class=\"gModGreen\" id=\"-92058280\">Yukong_Point01_ResistCD</a>"
                         }
                       }
                     ]
@@ -611,7 +611,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Yukong_Point01_Resist[<span class=\"descriptionNumberColor\">Debuff Block</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-238308601\">Yukong_Point01_Resist</a>[<span class=\"descriptionNumberColor\">Debuff Block</span>]",
                       "valuePerStack": {
                         "MDF_ResistCD": {
                           "operator": "Variables[0] (2) || RETURN",
@@ -636,7 +636,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yukong_Point01_Resist[<span class=\"descriptionNumberColor\">Debuff Block</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-238308601\">Yukong_Point01_Resist</a>[<span class=\"descriptionNumberColor\">Debuff Block</span>]",
                   "valuePerStack": {
                     "MDF_ResistCD": {
                       "operator": "Variables[0] (2) || RETURN",
@@ -676,13 +676,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yukong_YuKong_Maze_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"446280574\">Yukong_YuKong_Maze_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Yukong_YuKong_Maze_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__446280574\">Yukong_YuKong_Maze_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -735,7 +735,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yukong_Passive_Bonus[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-2029608096\">Yukong_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]",
           "valuePerStack": {
             "MDF_AddDamagePercentage": {
               "operator": "Variables[0] (0.8) || RETURN",
@@ -777,7 +777,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yukong_FlowerListen"
+          "modifier": "<a class=\"gModGreen\" id=\"64466487\">Yukong_FlowerListen</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -785,13 +785,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Yukong_ServantFlowerListen"
+          "modifier": "<a class=\"gModGreen\" id=\"1947872588\">Yukong_ServantFlowerListen</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Yukong_ServantFlowerListen",
+          "for": "<a class=\"gModGreen\" id=\"mod__1947872588\">Yukong_ServantFlowerListen</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -815,7 +815,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Yukong_Flower_ATK[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"432670237\">Yukong_Flower_ATK</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
                       },
                       "passed": [
                         {
@@ -824,7 +824,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Yukong_Flower",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>",
                           "valuePerStack": {
                             "MDF_AttackAddedRatio": {
                               "operator": "Variables[0] (0.8) || RETURN",
@@ -863,7 +863,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Yukong_Flower_ATK_Crit[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1097783562\">Yukong_Flower_ATK_Crit</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
                       },
                       "passed": [
                         {
@@ -872,7 +872,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Yukong_Flower",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>",
                           "valuePerStack": {
                             "MDF_AttackAddedRatio": {
                               "operator": "Variables[0] (0.8) || RETURN",
@@ -907,7 +907,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Yukong's Flower Target}}"
                           },
-                          "modifier": "Yukong_Flower_ATK_Crit[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1097783562\">Yukong_Flower_ATK_Crit</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
                           "valuePerStack": {
                             "MDF_RealAttack": {
                               "operator": "Variables[0] (0.8) || RETURN",
@@ -1018,7 +1018,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Yukong_Ability02_FlowerFlag"
+                "modifier": "<a class=\"gModGreen\" id=\"-1103490299\">Yukong_Ability02_FlowerFlag</a>"
               },
               "passed": [
                 {
@@ -1027,7 +1027,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Yukong_Flower",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>",
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
                       "operator": "Variables[0] (0.8) || RETURN",
@@ -1063,7 +1063,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Yukong_Flower",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>",
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
                       "operator": "Variables[0] (0.8) || RETURN",
@@ -1102,7 +1102,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Yukong_Flower",
+              "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>",
               "valuePerStack": {
                 "MDF_AttackAddedRatio": {
                   "operator": "Variables[0] (0.8) || RETURN",
@@ -1164,7 +1164,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Yukong's Flower Target}}"
           },
-          "modifier": "Yukong_Flower_ATK_Crit[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1097783562\">Yukong_Flower_ATK_Crit</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
           "valuePerStack": {
             "MDF_RealAttack": {
               "operator": "Variables[0] (0.8) || RETURN",
@@ -1230,7 +1230,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
           },
-          "modifier": "Yukong_Eidolon2_BonusCD"
+          "modifier": "<a class=\"gModGreen\" id=\"-476851750\">Yukong_Eidolon2_BonusCD</a>"
         },
         "Trigger: Ability End"
       ],
@@ -1338,7 +1338,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Yukong_Flower"
+              "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>"
             }
           ],
           "failed": [
@@ -1430,7 +1430,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
           },
-          "modifier": "Yukong_Flower",
+          "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>",
           "valuePerStack": {
             "MDF_AttackAddedRatio": {
               "operator": "Variables[0] (0.8) || RETURN",
@@ -1474,7 +1474,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yukong_Ability02_FlowerFlag"
+          "modifier": "<a class=\"gModGreen\" id=\"-1103490299\">Yukong_Ability02_FlowerFlag</a>"
         },
         {
           "name": "Trigger Ability",
@@ -1499,7 +1499,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Ability02_FlowerFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1103490299\">Yukong_Ability02_FlowerFlag</a>",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -1560,7 +1560,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yukong_Passive_BonusCD"
+              "modifier": "<a class=\"gModGreen\" id=\"1203634791\">Yukong_Passive_BonusCD</a>"
             }
           },
           "passed": [
@@ -1585,7 +1585,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yukong_Passive_BonusCD"
+              "modifier": "<a class=\"gModGreen\" id=\"1203634791\">Yukong_Passive_BonusCD</a>"
             }
           },
           "passed": [
@@ -1595,7 +1595,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yukong_Passive_BonusCD",
+              "modifier": "<a class=\"gModGreen\" id=\"1203634791\">Yukong_Passive_BonusCD</a>",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1625,13 +1625,13 @@ const compositeAbilityObject = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Yukong_Ability01_ShootV2"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1583329525\">Yukong_Ability01_ShootV2</a>"
             }
           ],
           "failed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Yukong_Ability01_Shoot"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1033369969\">Yukong_Ability01_Shoot</a>"
             }
           ]
         },
@@ -1649,13 +1649,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yukong_Ability01_Preshow"
+          "modifier": "<a class=\"gModGreen\" id=\"-566337732\">Yukong_Ability01_Preshow</a>"
         }
       ],
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Yukong_Ability01_Shoot",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1033369969\">Yukong_Ability01_Shoot</a>",
           "parse": [
             {
               "name": "Shot Fired",
@@ -1695,7 +1695,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Yukong_Ability01_ShootV2",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1583329525\">Yukong_Ability01_ShootV2</a>",
           "parse": [
             {
               "name": "Shot Fired",
@@ -1820,7 +1820,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Ability01_Preshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-566337732\">Yukong_Ability01_Preshow</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -1833,7 +1833,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yukong_Passive_BonusCD",
+              "modifier": "<a class=\"gModGreen\" id=\"1203634791\">Yukong_Passive_BonusCD</a>",
               "invertCondition": true
             },
             "multiplier": {
@@ -1877,7 +1877,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yukong_Passive_BonusCD"
+              "modifier": "<a class=\"gModGreen\" id=\"1203634791\">Yukong_Passive_BonusCD</a>"
             }
           },
           "passed": [
@@ -1911,7 +1911,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Yukong_FlowerListen",
+          "for": "<a class=\"gModGreen\" id=\"mod__64466487\">Yukong_FlowerListen</a>",
           "execute": [
             {
               "eventTrigger": "Pre-Death [Owner]",
@@ -1922,7 +1922,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Yukong_Flower"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>"
                 }
               ]
             }
@@ -1932,7 +1932,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Eidolon4_Flower_Bonus[<span class=\"descriptionNumberColor\">Zephyrean Echoes</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__781697929\">Yukong_Eidolon4_Flower_Bonus</a>[<span class=\"descriptionNumberColor\">Zephyrean Echoes</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1963,7 +1963,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Passive_BonusCD",
+          "for": "<a class=\"gModGreen\" id=\"mod__1203634791\">Yukong_Passive_BonusCD</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1974,7 +1974,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yukong_Passive_Bonus[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2029608096\">Yukong_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]",
                   "valuePerStack": {
                     "MDF_AddDamagePercentage": {
                       "operator": "Variables[0] (MDF_AddDamagePercentage) || RETURN",
@@ -2005,7 +2005,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yukong_Passive_Bonus[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2029608096\">Yukong_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]"
                 }
               ]
             }
@@ -2018,7 +2018,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Passive_Bonus[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2029608096\">Yukong_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]",
           "execute": [
             {
               "eventTrigger": "Pre-Death [Owner]",
@@ -2029,7 +2029,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Yukong_Flower"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>"
                 }
               ]
             }
@@ -2045,11 +2045,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Flower_ActionTurn"
+          "for": "<a class=\"gModGreen\" id=\"mod__-1932378528\">Yukong_Flower_ActionTurn</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Flower_ATK_Crit[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1097783562\">Yukong_Flower_ATK_Crit</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2061,7 +2061,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yukong_Flower_ATK[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"432670237\">Yukong_Flower_ATK</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -2127,7 +2127,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Flower_ATK[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__432670237\">Yukong_Flower_ATK</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2159,7 +2159,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yukong_Flower",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1617821492\">Yukong_Flower</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2178,7 +2178,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yukong_Eidolon4_Flower_Bonus[<span class=\"descriptionNumberColor\">Zephyrean Echoes</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"781697929\">Yukong_Eidolon4_Flower_Bonus</a>[<span class=\"descriptionNumberColor\">Zephyrean Echoes</span>]",
                       "valuePerStack": {
                         "MDF_AddedRatio": {
                           "operator": "Variables[0] (MDF_Rank04AddedRatio) || RETURN",
@@ -2211,7 +2211,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Yukong_Flower_ATK[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"432670237\">Yukong_Flower_ATK</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
                       "valuePerStack": {
                         "MDF_RealAttack": {
                           "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
@@ -2236,7 +2236,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yukong_Flower_ATK[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"432670237\">Yukong_Flower_ATK</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2244,7 +2244,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yukong_Flower_ATK_Crit[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1097783562\">Yukong_Flower_ATK_Crit</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2252,7 +2252,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yukong_Eidolon4_Flower_Bonus[<span class=\"descriptionNumberColor\">Zephyrean Echoes</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"781697929\">Yukong_Eidolon4_Flower_Bonus</a>[<span class=\"descriptionNumberColor\">Zephyrean Echoes</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2260,7 +2260,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yukong_Flower_ActionTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1932378528\">Yukong_Flower_ActionTurn</a>"
                 }
               ]
             },
@@ -2283,7 +2283,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Yukong_Flower_ActionTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1932378528\">Yukong_Flower_ActionTurn</a>"
                     }
                   ]
                 }
@@ -2310,7 +2310,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Yukong_Flower_ActionTurn"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1932378528\">Yukong_Flower_ActionTurn</a>"
                       },
                       "passed": [
                         {
@@ -2331,7 +2331,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yukong_Flower_ActionTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1932378528\">Yukong_Flower_ActionTurn</a>"
                 }
               ]
             },
@@ -2356,7 +2356,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Yukong_Ability02_FlowerFlag"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1103490299\">Yukong_Ability02_FlowerFlag</a>"
                       },
                       "failed": [
                         {
@@ -2365,7 +2365,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Yukong_Flower_ActionTurn"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1932378528\">Yukong_Flower_ActionTurn</a>"
                         }
                       ]
                     }
@@ -2402,7 +2402,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Yukong_Flower_ActionTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1932378528\">Yukong_Flower_ActionTurn</a>"
                     },
                     {
                       "name": "Define Custom Variable",

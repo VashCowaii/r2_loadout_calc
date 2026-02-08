@@ -34,7 +34,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
         },
         {
           "name": "IF",
@@ -67,7 +67,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Svarog_Part_ListenHP_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"17783365\">Svarog_Part_ListenHP_Modifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -75,7 +75,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Svarog_Part_ListenBreak_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-818415302\">Svarog_Part_ListenBreak_Modifier</a>"
         },
         {
           "name": "Declare Custom Variable",

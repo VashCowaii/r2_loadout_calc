@@ -37,13 +37,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cerydra_Maze_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1690765176\">Cerydra_Maze_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_Maze_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1690765176\">Cerydra_Maze_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -78,7 +78,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "StageAbility_MazeStandard_EnterBattle_MarkTeamLeader"
+                          "modifier": "<a class=\"gModGreen\" id=\"-636149171\">StageAbility_MazeStandard_EnterBattle_MarkTeamLeader</a>"
                         }
                       }
                     ]
@@ -107,13 +107,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cerydra_Eidolon6_AddDamageCarry"
+          "modifier": "<a class=\"gModGreen\" id=\"1076811702\">Cerydra_Eidolon6_AddDamageCarry</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_Eidolon6_AddDamageCarry",
+          "for": "<a class=\"gModGreen\" id=\"mod__1076811702\">Cerydra_Eidolon6_AddDamageCarry</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -160,7 +160,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Cerydra_Template_ReachPromotionEidolon1"
+          "functionName": "<a class=\"gTempYellow\" id=\"1336664335\">Cerydra_Template_ReachPromotionEidolon1</a>"
         }
       ],
       "references": []
@@ -207,7 +207,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cerydra_PassiveAbility"
+          "modifier": "<a class=\"gModGreen\" id=\"2061740004\">Cerydra_PassiveAbility</a>"
         },
         {
           "name": "IF",
@@ -222,7 +222,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Cerydra_PointB1"
+              "modifier": "<a class=\"gModGreen\" id=\"1113467681\">Cerydra_PointB1</a>"
             }
           ]
         },
@@ -239,7 +239,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Cerydra_PointB2_Self",
+              "modifier": "<a class=\"gModGreen\" id=\"35466247\">Cerydra_PointB2_Self</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (1) || RETURN",
@@ -259,13 +259,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cerydra_BP_PreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"1118409627\">Cerydra_BP_PreShow</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_BP_PreShow_End",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2108963231\">Cerydra_BP_PreShow_End</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -284,7 +284,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                       },
                       {
                         "name": "Compare: Target",
@@ -361,7 +361,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                       },
                       {
                         "name": "Compare: Target",
@@ -505,7 +505,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                       },
                       {
                         "name": "Compare: Target",
@@ -638,7 +638,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_BP_PreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__1118409627\">Cerydra_BP_PreShow</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -649,7 +649,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Cerydra_BP_PreShow_End"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2108963231\">Cerydra_BP_PreShow_End</a>"
                 }
               ]
             },
@@ -673,7 +673,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Cerydra_BP_PreShow_End"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2108963231\">Cerydra_BP_PreShow_End</a>"
                     }
                   ]
                 }
@@ -714,7 +714,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Player's Aim Primary-Target}}"
                         },
-                        "modifier": "Cerydra_Ability02_Target"
+                        "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>"
                       }
                     },
                     {
@@ -725,7 +725,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Player's Aim Primary-Target}}"
                         },
-                        "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                       },
                       "passed": [
                         {
@@ -792,7 +792,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Player's Aim Primary-Target}}"
                         },
-                        "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]"
                       },
                       "passed": [
                         {
@@ -1003,7 +1003,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_BonusTargetHandler",
+          "for": "<a class=\"gModGreen\" id=\"mod__1635182298\">Cerydra_BonusTargetHandler</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1023,7 +1023,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_PassiveAbility",
+          "for": "<a class=\"gModGreen\" id=\"mod__2061740004\">Cerydra_PassiveAbility</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1064,7 +1064,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Cerydra_Ability02_Target"
+                    "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>"
                   },
                   "passed": [
                     {
@@ -1126,7 +1126,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Cerydra_Ability02_Target"
+                              "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>"
                             }
                           }
                         ]
@@ -1188,7 +1188,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Cerydra's Promotion Target}}"
                                     },
-                                    "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
+                                    "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]",
                                     "invertCondition": true
                                   }
                                 ]
@@ -1223,7 +1223,7 @@ const compositeAbilityObject = {
                                           "name": "Target Name",
                                           "target": "{{Cerydra's Promotion Target}}"
                                         },
-                                        "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
+                                        "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]",
                                         "invertCondition": true
                                       }
                                     ]
@@ -1309,7 +1309,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Cerydra_BonusTargetHandler",
+              "modifier": "<a class=\"gModGreen\" id=\"1635182298\">Cerydra_BonusTargetHandler</a>",
               "haloStatus": true
             }
           ]
@@ -1349,7 +1349,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Cerydra_Ability02_Target"
+            "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>"
           },
           "noTargetFound": [
             {
@@ -1367,7 +1367,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Cerydra_Ability02_Target",
+                  "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>",
                   "valuePerStack": {
                     "DV_PointAdded_Get": {
                       "operator": "Variables[0] (1) || RETURN",
@@ -1404,7 +1404,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Cerydra_Ability02_Target",
+                      "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>",
                       "valuePerStack": {
                         "DV_PointAdded_Get": {
                           "operator": "Variables[0] (1) || RETURN",
@@ -1424,7 +1424,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Cerydra_Template_MaxPointHandle",
+          "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
           "variables": {
             "DV_AddPoint": {
               "operator": "Variables[0] (2) || RETURN",
@@ -1543,7 +1543,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}} | {{Ability Target(ST)}}"
               },
-              "modifier": "Cerydra_PointB3[<span class=\"descriptionNumberColor\">Vici</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1079912443\">Cerydra_PointB3</a>[<span class=\"descriptionNumberColor\">Vici</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -1609,7 +1609,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Cerydra_Ability02_Target",
+            "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>",
             "invertCondition": true,
             "justAddedOrActive": true
           },
@@ -1620,7 +1620,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Cerydra_Ability02_Target",
+              "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>",
               "valuePerStack": {
                 "DV_PointAdded_Get": {
                   "operator": "Variables[0] (1) || RETURN",
@@ -1634,7 +1634,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Cerydra_Template_MaxPointHandle",
+              "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
               "variables": {
                 "DV_AddPoint": {
                   "operator": "Variables[0] (1) || RETURN",
@@ -1659,7 +1659,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
                     },
-                    "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                   },
                   {
                     "name": "Compare: Variable",
@@ -1685,7 +1685,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Cerydra_Template_MaxPointHandle",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
                   "variables": {
                     "DV_AddPoint": {
                       "operator": "Variables[0] (1) || RETURN",
@@ -1699,13 +1699,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Cerydra_Template_ReachPromotionEidolon1"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1336664335\">Cerydra_Template_ReachPromotionEidolon1</a>"
                 }
               ],
               "failed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Cerydra_Template_MaxPointHandle",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
                   "variables": {
                     "DV_AddPoint": {
                       "operator": "Variables[0] (1) || RETURN",
@@ -1729,7 +1729,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Cerydra_Maze_Modifier"
+            "modifier": "<a class=\"gModGreen\" id=\"1690765176\">Cerydra_Maze_Modifier</a>"
           },
           "passed": [
             {
@@ -1748,7 +1748,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Cerydra_Maze_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"1690765176\">Cerydra_Maze_Modifier</a>"
             }
           ]
         },
@@ -1790,7 +1790,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Cerydra_Ability02_Target",
+            "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>",
             "invertCondition": true,
             "justAddedOrActive": true
           },
@@ -1824,7 +1824,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
               },
               "passed": [
                 {
@@ -1937,7 +1937,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
                     },
-                    "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]"
                   },
                   "passed": [
                     "Deleted bullshit",
@@ -2056,7 +2056,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_Ability02_ListenSelf",
+          "for": "<a class=\"gModGreen\" id=\"mod__358533823\">Cerydra_Ability02_ListenSelf</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2064,7 +2064,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Cerydra_Template_PromotionEidolon0"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1980210861\">Cerydra_Template_PromotionEidolon0</a>"
                 }
               ]
             }
@@ -2079,7 +2079,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Cerydra_Template_PromotionEidolon0"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1980210861\">Cerydra_Template_PromotionEidolon0</a>"
                     }
                   ]
                 }
@@ -2094,7 +2094,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Cerydra_Template_PromotionEidolon0"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1980210861\">Cerydra_Template_PromotionEidolon0</a>"
                     }
                   ]
                 }
@@ -2104,7 +2104,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Cerydra_Template_PromotionEidolon0",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1980210861\">Cerydra_Template_PromotionEidolon0</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
@@ -2174,7 +2174,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Cerydra's Promotion Target}}"
                     },
-                    "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]"
                   },
                   "passed": [
                     {
@@ -2183,7 +2183,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Cerydra's Promotion Target}}"
                       },
-                      "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (PromotionRank_AttackAddedValue) || RETURN",
@@ -2203,7 +2203,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Cerydra's Promotion Target}}"
                       },
-                      "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (PromotionRank_AttackAddedValue) || RETURN",
@@ -2223,7 +2223,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2235,7 +2235,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Cerydra_Ability02_ListenSelf"
+                  "modifier": "<a class=\"gModGreen\" id=\"358533823\">Cerydra_Ability02_ListenSelf</a>"
                 }
               ]
             },
@@ -2265,7 +2265,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Cerydra_Eidolon1[<span class=\"descriptionNumberColor\">Seize the Crowns of All</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1107046497\">Cerydra_Eidolon1</a>[<span class=\"descriptionNumberColor\">Seize the Crowns of All</span>]"
                     }
                   ]
                 },
@@ -2275,7 +2275,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_Windfury",
+                  "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -2362,7 +2362,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Cerydra_Eidolon1[<span class=\"descriptionNumberColor\">Seize the Crowns of All</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1107046497\">Cerydra_Eidolon1</a>[<span class=\"descriptionNumberColor\">Seize the Crowns of All</span>]"
                     }
                   ]
                 },
@@ -2403,7 +2403,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Standard_Windfury"
+                        "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>"
                       }
                     ]
                   },
@@ -2435,7 +2435,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2443,7 +2443,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                     }
                   ]
                 }
@@ -2474,7 +2474,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Standard_Windfury"
+                        "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>"
                       }
                     ]
                   },
@@ -2489,7 +2489,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Standard_Windfury",
+                      "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
                       "execute": [
                         {
                           "name": "Define Custom Variable with Modifier Values",
@@ -2500,7 +2500,7 @@ const compositeAbilityObject = {
                           "scope": "ContextCaster",
                           "valueType": "Layer",
                           "variableName": "InsertActionCount",
-                          "modifierName": "Standard_Windfury",
+                          "modifierName": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
                           "multiplier": 1
                         }
                       ]
@@ -2521,7 +2521,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2533,7 +2533,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Cerydra_Ability02_ListenSelf"
+                  "modifier": "<a class=\"gModGreen\" id=\"358533823\">Cerydra_Ability02_ListenSelf</a>"
                 }
               ]
             },
@@ -2585,7 +2585,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_Ability02_UITop",
+          "for": "<a class=\"gModGreen\" id=\"mod__65541591\">Cerydra_Ability02_UITop</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -2627,7 +2627,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
+                            "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]",
                             "invertCondition": true
                           },
                           "passed": [
@@ -2657,7 +2657,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]"
                           }
                         }
                       ]
@@ -2701,7 +2701,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_Ability02_Target",
+          "for": "<a class=\"gModGreen\" id=\"mod__1716749059\">Cerydra_Ability02_Target</a>",
           "stackType": "RetainGlobalLatest",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -2716,7 +2716,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2724,7 +2724,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2753,7 +2753,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_Windfury",
+                  "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
                   "execute": [
                     {
                       "name": "Define Custom Variable with Copy",
@@ -2761,7 +2761,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_Windfury",
+                      "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
                       "variable": "Windfury_Flag",
                       "target2": {
                         "name": "Target Name",
@@ -2825,7 +2825,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Cerydra_Template_SelfHandle",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1940085870\">Cerydra_Template_SelfHandle</a>",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
@@ -2861,7 +2861,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Cerydra_Template_MaxPointHandle",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
                           "variables": {
                             "DV_AddPoint": {
                               "operator": "Variables[0] (DV_PointAdded_Get) || RETURN",
@@ -2893,7 +2893,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Cerydra_Ability02_ListenSelf",
+              "modifier": "<a class=\"gModGreen\" id=\"358533823\">Cerydra_Ability02_ListenSelf</a>",
               "includeBattleEvent": true
             },
             {
@@ -2902,7 +2902,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Cerydra_PointB2[<span class=\"descriptionNumberColor\">Vidi</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1063134824\">Cerydra_PointB2</a>[<span class=\"descriptionNumberColor\">Vidi</span>]",
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -2939,7 +2939,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Cerydra_PointB3_RecoverEnergy",
+              "modifier": "<a class=\"gModGreen\" id=\"-1552806020\">Cerydra_PointB3_RecoverEnergy</a>",
               "conditions": {
                 "name": "Trace Activated",
                 "conditionList": "Vici",
@@ -2955,7 +2955,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Cerydra_Ability02_UITop"
+              "modifier": "<a class=\"gModGreen\" id=\"65541591\">Cerydra_Ability02_UITop</a>"
             },
             {
               "name": "Add Sub-Events/Bonuses",
@@ -2963,7 +2963,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Cerydra_Eidolon1[<span class=\"descriptionNumberColor\">Seize the Crowns of All</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1107046497\">Cerydra_Eidolon1</a>[<span class=\"descriptionNumberColor\">Seize the Crowns of All</span>]",
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 1,
@@ -2997,7 +2997,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Cerydra_Ability02_Eidolon2_DamageAddedBonus[<span class=\"descriptionNumberColor\">Forge the Dreams of Many</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1571294173\">Cerydra_Ability02_Eidolon2_DamageAddedBonus</a>[<span class=\"descriptionNumberColor\">Forge the Dreams of Many</span>]",
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 2,
@@ -3023,7 +3023,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Cerydra_Eidolon2_DamageAddedBonus_Self[<span class=\"descriptionNumberColor\">Forge the Dreams of Many</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"809988888\">Cerydra_Eidolon2_DamageAddedBonus_Self</a>[<span class=\"descriptionNumberColor\">Forge the Dreams of Many</span>]",
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -3067,7 +3067,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Cerydra_Pursued"
+              "modifier": "<a class=\"gModGreen\" id=\"-1787273880\">Cerydra_Pursued</a>"
             },
             {
               "name": "Add Sub-Events/Bonuses",
@@ -3075,7 +3075,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Cerydra_Ability02_AllDamageTypePenetrate[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"2146072212\">Cerydra_Ability02_AllDamageTypePenetrate</a>[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 6,
@@ -3091,7 +3091,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Cerydra_Eidolon6_AllDamageTypePenetrate[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1564398907\">Cerydra_Eidolon6_AllDamageTypePenetrate</a>[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -3123,7 +3123,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_Eidolon2_DamageAddedBonus_Self[<span class=\"descriptionNumberColor\">Forge the Dreams of Many</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__809988888\">Cerydra_Eidolon2_DamageAddedBonus_Self</a>[<span class=\"descriptionNumberColor\">Forge the Dreams of Many</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3161,7 +3161,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_Ability02_Eidolon2_DamageAddedBonus[<span class=\"descriptionNumberColor\">Forge the Dreams of Many</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1571294173\">Cerydra_Ability02_Eidolon2_DamageAddedBonus</a>[<span class=\"descriptionNumberColor\">Forge the Dreams of Many</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3200,7 +3200,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_Eidolon1[<span class=\"descriptionNumberColor\">Seize the Crowns of All</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1107046497\">Cerydra_Eidolon1</a>[<span class=\"descriptionNumberColor\">Seize the Crowns of All</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3227,7 +3227,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]"
                       },
                       {
                         "name": "Attack Type",
@@ -3263,7 +3263,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]"
                   },
                   "passed": [
                     {
@@ -3290,7 +3290,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_Eidolon6_AllDamageTypePenetrate[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1564398907\">Cerydra_Eidolon6_AllDamageTypePenetrate</a>[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3338,7 +3338,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_Ability02_AllDamageTypePenetrate[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2146072212\">Cerydra_Ability02_AllDamageTypePenetrate</a>[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3387,7 +3387,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_Pursued",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1787273880\">Cerydra_Pursued</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3404,7 +3404,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "PursuedDamage_PerformanceDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Attack Targets of Modifier Holder}}"
@@ -3537,7 +3537,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_PointB3_RecoverEnergy",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1552806020\">Cerydra_PointB3_RecoverEnergy</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3611,7 +3611,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_PointB3[<span class=\"descriptionNumberColor\">Vici</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1079912443\">Cerydra_PointB3</a>[<span class=\"descriptionNumberColor\">Vici</span>]",
           "stackType": "Refresh",
           "execute": [
             {
@@ -3647,7 +3647,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_PointB2_Self",
+          "for": "<a class=\"gModGreen\" id=\"mod__35466247\">Cerydra_PointB2_Self</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3678,7 +3678,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_PointB2[<span class=\"descriptionNumberColor\">Vidi</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1063134824\">Cerydra_PointB2</a>[<span class=\"descriptionNumberColor\">Vidi</span>]",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -3708,7 +3708,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Cerydra_Template_MaxPointHandle",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
                           "variables": {
                             "DV_AddPoint": {
                               "operator": "Variables[0] (1) || RETURN",
@@ -3747,7 +3747,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_PointB1_CriticalDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Veni</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1777978570\">Cerydra_PointB1_CriticalDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Veni</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3840,7 +3840,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Cerydra_PointB1",
+          "for": "<a class=\"gModGreen\" id=\"mod__1113467681\">Cerydra_PointB1</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3848,7 +3848,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Cerydra_PointB1_CriticalCriticalDamageAddedRatio"
+                  "functionName": "<a class=\"gTempYellow\" id=\"285180959\">Cerydra_PointB1_CriticalCriticalDamageAddedRatio</a>"
                 }
               ]
             }
@@ -3863,7 +3863,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Cerydra_PointB1_CriticalCriticalDamageAddedRatio"
+                      "functionName": "<a class=\"gTempYellow\" id=\"285180959\">Cerydra_PointB1_CriticalCriticalDamageAddedRatio</a>"
                     }
                   ]
                 }
@@ -3878,7 +3878,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Cerydra_PointB1_CriticalCriticalDamageAddedRatio"
+                      "functionName": "<a class=\"gTempYellow\" id=\"285180959\">Cerydra_PointB1_CriticalCriticalDamageAddedRatio</a>"
                     }
                   ]
                 }
@@ -3893,7 +3893,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Cerydra_PointB1_CriticalCriticalDamageAddedRatio"
+                      "functionName": "<a class=\"gTempYellow\" id=\"285180959\">Cerydra_PointB1_CriticalCriticalDamageAddedRatio</a>"
                     }
                   ]
                 }
@@ -3903,7 +3903,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Cerydra_PointB1_CriticalCriticalDamageAddedRatio",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__285180959\">Cerydra_PointB1_CriticalCriticalDamageAddedRatio</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
@@ -3961,7 +3961,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Cerydra_PointB1_CriticalDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Veni</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1777978570\">Cerydra_PointB1_CriticalDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Veni</span>]"
                       },
                       "passed": [
                         {
@@ -3970,7 +3970,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Cerydra_PointB1_CriticalDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Veni</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1777978570\">Cerydra_PointB1_CriticalDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Veni</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue2_Max": {
                               "operator": "Variables[0] (3.6) || RETURN",
@@ -3999,7 +3999,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Cerydra_PointB1_CriticalDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Veni</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1777978570\">Cerydra_PointB1_CriticalDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Veni</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue2_Max": {
                               "operator": "Variables[0] (3.6) || RETURN",
@@ -4030,7 +4030,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Cerydra_PointB1_CriticalDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Veni</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1777978570\">Cerydra_PointB1_CriticalDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Veni</span>]"
                     }
                   ]
                 }
@@ -4056,7 +4056,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Cerydra_Template_ReachPromotionEidolon1",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1336664335\">Cerydra_Template_ReachPromotionEidolon1</a>",
           "parse": [
             {
               "name": "Remove Events/Bonuses",
@@ -4064,7 +4064,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Cerydra's Promotion Target}}"
               },
-              "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
             },
             {
               "name": "Add Events/Bonuses",
@@ -4072,7 +4072,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Cerydra's Promotion Target}}"
               },
-              "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (PromotionRank_AttackAddedValue) || RETURN",
@@ -4106,7 +4106,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Cerydra's Promotion Target}}"
               },
-              "modifier": "Standard_Windfury",
+              "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
               "valuePerStack": {
                 "_ReplayAbility": 1
               },
@@ -4130,7 +4130,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "counter": 1,
-              "modifier": "Standard_Windfury",
+              "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
@@ -4141,7 +4141,7 @@ const compositeAbilityObject = {
                   "scope": "ContextCaster",
                   "valueType": "Layer",
                   "variableName": "InsertActionCount",
-                  "modifierName": "Standard_Windfury",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
                   "multiplier": 1
                 }
               ]
@@ -4165,7 +4165,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Cerydra_Template_MaxPointHandle",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1612575312\">Cerydra_Template_MaxPointHandle</a>",
           "parse": [
             {
               "name": "Define Custom Variable",
@@ -4229,7 +4229,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Cerydra_Template_SelfHandle",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1940085870\">Cerydra_Template_SelfHandle</a>",
           "parse": [
             {
               "name": "IF",
@@ -4239,7 +4239,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]",
                 "invertCondition": true
               },
               "passed": [

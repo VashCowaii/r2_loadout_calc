@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Fuka_Beginner_PassiveAbility_Bonus_1"
+      "modifier": "<a class=\"gModGreen\" id=\"969873178\">Fuka_Beginner_PassiveAbility_Bonus_1</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Fuka_Beginner_PassiveAbility_Bonus_1_ForSnapshitEntity",
+      "for": "<a class=\"gModGreen\" id=\"mod__1542765315\">Fuka_Beginner_PassiveAbility_Bonus_1_ForSnapshitEntity</a>",
       "execute": [
         {
           "eventTrigger": "Heal Target Start [Owner]",
@@ -70,7 +70,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Fuka_Beginner_PassiveAbility_Bonus_1",
+      "for": "<a class=\"gModGreen\" id=\"mod__969873178\">Fuka_Beginner_PassiveAbility_Bonus_1</a>",
       "modifierFlags": [
         "MuteDotCasterCallBack"
       ],
@@ -124,7 +124,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Fuka_Beginner_PassiveAbility_Bonus_1_ForSnapshitEntity",
+              "modifier": "<a class=\"gModGreen\" id=\"1542765315\">Fuka_Beginner_PassiveAbility_Bonus_1_ForSnapshitEntity</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.3) || RETURN",

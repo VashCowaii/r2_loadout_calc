@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Beast02_Edict",
+      "for": "<a class=\"gModGreen\" id=\"mod__130206318\">Monster_W2_Beast02_Edict</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -40,7 +40,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Beast02_Weak[<span class=\"descriptionNumberColor\">Exhaustion</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1532177993\">Monster_W2_Beast02_Weak</a>[<span class=\"descriptionNumberColor\">Exhaustion</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -59,7 +59,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Beast02_Bullet[<span class=\"descriptionNumberColor\">Gusto</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__908537899\">Monster_W2_Beast02_Bullet</a>[<span class=\"descriptionNumberColor\">Gusto</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -71,7 +71,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             }
           ]
         },
@@ -84,7 +84,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             }
           ]
         },
@@ -101,7 +101,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -142,7 +142,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -161,7 +161,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Beast02_BlockDamage[<span class=\"descriptionNumberColor\">Barrier</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__162724046\">Enemy_W2_Beast02_BlockDamage</a>[<span class=\"descriptionNumberColor\">Barrier</span>]",
       "counter": 1,
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
@@ -220,7 +220,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_Standard_Layer_DamageUP[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1692594642\">Monster_Standard_Layer_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -269,7 +269,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Beast02_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1917780561\">Enemy_W2_Beast02_Passive</a>",
       "modifierFlags": [
         "MuteHitFly",
         "ListenBattleEventSkill"
@@ -295,7 +295,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -318,7 +318,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Monster_W2_Beast02_Edict"
+                  "modifier": "<a class=\"gModGreen\" id=\"130206318\">Monster_W2_Beast02_Edict</a>"
                 }
               ]
             }
@@ -400,7 +400,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]",
                     "invertCondition": true,
                     "casterFilter": {
                       "name": "Target Name",
@@ -416,7 +416,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -425,7 +425,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                 }
               ]
             }
@@ -447,7 +447,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Beast02_Bullet[<span class=\"descriptionNumberColor\">Gusto</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"908537899\">Monster_W2_Beast02_Bullet</a>[<span class=\"descriptionNumberColor\">Gusto</span>]"
               },
               "ifTargetFound": [
                 {
@@ -467,7 +467,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Monster_W2_Beast02_Edict"
+                  "modifier": "<a class=\"gModGreen\" id=\"130206318\">Monster_W2_Beast02_Edict</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -500,7 +500,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -553,7 +553,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Monster_W2_Beast02_Weak[<span class=\"descriptionNumberColor\">Exhaustion</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1532177993\">Monster_W2_Beast02_Weak</a>[<span class=\"descriptionNumberColor\">Exhaustion</span>]"
               },
               "passed": [
                 {
@@ -562,7 +562,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_W2_Beast02_Weak[<span class=\"descriptionNumberColor\">Exhaustion</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1532177993\">Monster_W2_Beast02_Weak</a>[<span class=\"descriptionNumberColor\">Exhaustion</span>]"
                 }
               ]
             }

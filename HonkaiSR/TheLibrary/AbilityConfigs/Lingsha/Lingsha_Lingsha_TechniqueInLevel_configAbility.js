@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Lingsha_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1869117592\">StageAbility_Maze_Lingsha_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Lingsha_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1869117592\">StageAbility_Maze_Lingsha_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -44,7 +44,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Lingsha_BreakDamageUp[<span class=\"descriptionNumberColor\">Befog</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-637709984\">Lingsha_BreakDamageUp</a>[<span class=\"descriptionNumberColor\">Befog</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -144,7 +144,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Lingsha_Eidolon6_Listen"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1458980452\">Lingsha_Eidolon6_Listen</a>"
                     }
                   ]
                 },
@@ -161,7 +161,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster's Self-Made Battle-Events}}"
                       },
-                      "modifier": "Lingsha_PointB3_OnListen",
+                      "modifier": "<a class=\"gModGreen\" id=\"210278197\">Lingsha_PointB3_OnListen</a>",
                       "valuePerStack": {
                         "MDF_HPRatio": {
                           "operator": "Variables[0] (0.6) || RETURN",

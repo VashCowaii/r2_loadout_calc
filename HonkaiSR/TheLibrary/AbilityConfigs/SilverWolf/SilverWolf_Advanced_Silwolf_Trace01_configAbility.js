@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Advanced_Silwolf_Trace01_Bonus"
+      "modifier": "<a class=\"gModGreen\" id=\"1378139475\">Advanced_Silwolf_Trace01_Bonus</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_Trace01_Bonus",
+      "for": "<a class=\"gModGreen\" id=\"mod__1378139475\">Advanced_Silwolf_Trace01_Bonus</a>",
       "execute": [
         {
           "eventTrigger": "Weakness Break [Anyone]",

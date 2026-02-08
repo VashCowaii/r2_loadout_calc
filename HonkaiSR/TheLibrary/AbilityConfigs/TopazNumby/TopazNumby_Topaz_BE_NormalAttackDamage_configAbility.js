@@ -82,7 +82,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Topaz_Bonus"
+        "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
       },
       "passed": [
         {
@@ -107,7 +107,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_Bonus"
+          "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
         }
       ]
     }

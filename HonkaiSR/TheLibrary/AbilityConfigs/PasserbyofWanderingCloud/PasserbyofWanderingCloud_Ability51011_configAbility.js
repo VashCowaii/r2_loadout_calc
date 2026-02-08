@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_101_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1789506492\">Relic_101_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_101_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1789506492\">Relic_101_Main</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

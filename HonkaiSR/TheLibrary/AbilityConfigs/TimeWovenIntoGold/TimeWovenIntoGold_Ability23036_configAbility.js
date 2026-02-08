@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23036_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"249618925\">LC_23036_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23036_Effect_Servant[<span class=\"descriptionNumberColor\">Brocade</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1248014501\">LC_23036_Effect_Servant</a>[<span class=\"descriptionNumberColor\">Brocade</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -68,7 +68,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "LC_23036_CriticalDamage",
+              "modifier": "<a class=\"gModGreen\" id=\"214727884\">LC_23036_CriticalDamage</a>",
               "valuePerStack": {
                 "_CritDamageRatio": {
                   "operator": "Variables[0] (_CritDamageRatioTotal) || RETURN",
@@ -104,7 +104,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23036_Effect[<span class=\"descriptionNumberColor\">Brocade</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2056335473\">LC_23036_Effect</a>[<span class=\"descriptionNumberColor\">Brocade</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -188,7 +188,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "LC_23036_CriticalDamage",
+              "modifier": "<a class=\"gModGreen\" id=\"214727884\">LC_23036_CriticalDamage</a>",
               "valuePerStack": {
                 "_CritDamageRatio": {
                   "operator": "Variables[0] (_CritDamageRatioTotal) || RETURN",
@@ -250,7 +250,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}.[[getMemosprite]]"
               },
-              "modifier": "LC_23036_Effect_Servant[<span class=\"descriptionNumberColor\">Brocade</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1248014501\">LC_23036_Effect_Servant</a>[<span class=\"descriptionNumberColor\">Brocade</span>]",
               "valuePerStack": {
                 "_CritDamageRatioTotal": {
                   "operator": "Variables[0] (_CritDamageRatioTotal) || RETURN",
@@ -292,7 +292,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Memosprite}}"
           },
-          "modifier": "LC_23036_Effect_Servant[<span class=\"descriptionNumberColor\">Brocade</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1248014501\">LC_23036_Effect_Servant</a>[<span class=\"descriptionNumberColor\">Brocade</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "_CritDamageRatioTotal": {
@@ -325,7 +325,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23036_CriticalDamage",
+      "for": "<a class=\"gModGreen\" id=\"mod__214727884\">LC_23036_CriticalDamage</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -359,7 +359,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23036_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-768418277\">LC_23036_Listen</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Anyone]",
@@ -387,7 +387,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "LC_23036_Effect[<span class=\"descriptionNumberColor\">Brocade</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"2056335473\">LC_23036_Effect</a>[<span class=\"descriptionNumberColor\">Brocade</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -397,7 +397,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}} + {{Caster's Memosprite}}"
                       },
-                      "modifier": "LC_23036_CriticalDamage",
+                      "modifier": "<a class=\"gModGreen\" id=\"214727884\">LC_23036_CriticalDamage</a>",
                       "valuePerStack": {
                         "_CritDamageRatio": {
                           "operator": "Variables[0] (AbilityEquip_P4_CritDamage) || RETURN",
@@ -417,7 +417,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_23036_Effect[<span class=\"descriptionNumberColor\">Brocade</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2056335473\">LC_23036_Effect</a>[<span class=\"descriptionNumberColor\">Brocade</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (AbilityEquip_P2_MaxLayer) || RETURN",
                     "displayLines": "AbilityEquip_P2_MaxLayer",
@@ -458,14 +458,14 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}} + {{Caster's Memosprite}}"
           },
-          "modifier": "LC_23036_CriticalDamage",
+          "modifier": "<a class=\"gModGreen\" id=\"214727884\">LC_23036_CriticalDamage</a>",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23036_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__249618925\">LC_23036_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -476,7 +476,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "LC_23036_Listen",
+              "modifier": "<a class=\"gModGreen\" id=\"-768418277\">LC_23036_Listen</a>",
               "valuePerStack": {
                 "AbilityEquip_P2_MaxLayer": {
                   "operator": "Variables[0] (6) || RETURN",

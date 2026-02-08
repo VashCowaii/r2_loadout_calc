@@ -17,7 +17,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "Cyrene_Preload_ServantReadyEffect",
+      "functionName": "<a class=\"gTempYellow\" id=\"-348324927\">Cyrene_Preload_ServantReadyEffect</a>",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"

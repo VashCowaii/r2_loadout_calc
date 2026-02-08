@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "_M_Constance_InsertCheck",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2093019273\">_M_Constance_InsertCheck</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
@@ -20,7 +20,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Constance_InsertRetargetSelf"
+              "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
             }
           ]
         },
@@ -35,7 +35,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Constance_InsertRetargetSelf"
+              "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
             }
           ],
           "priorityLevel": -55
@@ -45,7 +45,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Constance_InsertRetargetSelf"
+              "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
             }
           ]
         },
@@ -54,7 +54,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Constance_InsertRetargetSelf"
+              "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
             }
           ]
         },
@@ -91,7 +91,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Constance_InsertRetargetSelf"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
                 }
               ]
             }
@@ -101,7 +101,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Constance_InsertRetargetSelf",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-715058594\">Constance_InsertRetargetSelf</a>",
           "parse": [
             {
               "name": "IF",
@@ -148,7 +148,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_InsertCD[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1116970838\">Constance_InsertCD</a>[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -161,7 +161,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Constance_Aura[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-2139860773\">Constance_Aura</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]"
               },
               "passed": [
                 {
@@ -206,7 +206,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Ultimate_Weakness_Sub_Imaginary",
+      "for": "<a class=\"gModGreen\" id=\"mod__628099091\">Constance_Ultimate_Weakness_Sub_Imaginary</a>",
       "stackType": "EntityUnique",
       "execute": [
         {
@@ -229,7 +229,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Ultimate_Weakness_Sub_Quantum",
+      "for": "<a class=\"gModGreen\" id=\"mod__1073816607\">Constance_Ultimate_Weakness_Sub_Quantum</a>",
       "stackType": "EntityUnique",
       "execute": [
         {
@@ -252,7 +252,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Ultimate_Weakness_Sub_Wind",
+      "for": "<a class=\"gModGreen\" id=\"mod__1412482872\">Constance_Ultimate_Weakness_Sub_Wind</a>",
       "stackType": "EntityUnique",
       "execute": [
         {
@@ -275,7 +275,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Ultimate_Weakness_Sub_Thunder",
+      "for": "<a class=\"gModGreen\" id=\"mod__1441945696\">Constance_Ultimate_Weakness_Sub_Thunder</a>",
       "stackType": "EntityUnique",
       "execute": [
         {
@@ -298,7 +298,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Ultimate_Weakness_Sub_Ice",
+      "for": "<a class=\"gModGreen\" id=\"mod__-401157135\">Constance_Ultimate_Weakness_Sub_Ice</a>",
       "stackType": "EntityUnique",
       "execute": [
         {
@@ -321,7 +321,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Ultimate_Weakness_Sub_Fire",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2114479442\">Constance_Ultimate_Weakness_Sub_Fire</a>",
       "stackType": "EntityUnique",
       "execute": [
         {
@@ -344,7 +344,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Ultimate_Weakness_Sub_Physical",
+      "for": "<a class=\"gModGreen\" id=\"mod__-447864201\">Constance_Ultimate_Weakness_Sub_Physical</a>",
       "stackType": "EntityUnique",
       "execute": [
         {
@@ -367,7 +367,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Ultimate_Weakness[<span class=\"descriptionNumberColor\">Wilt</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1539081164\">Constance_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Wilt</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_AttachWeakness",
@@ -397,7 +397,7 @@ const configAbility = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "_T_Constance_RefreshWeakness"
+              "functionName": "<a class=\"gTempYellow\" id=\"-29129894\">_T_Constance_RefreshWeakness</a>"
             }
           ]
         },
@@ -408,12 +408,12 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
               },
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "_T_Constance_RefreshWeakness"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-29129894\">_T_Constance_RefreshWeakness</a>"
                 }
               ]
             }
@@ -423,7 +423,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "_T_Constance_RefreshWeakness",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-29129894\">_T_Constance_RefreshWeakness</a>",
           "parse": [
             {
               "name": "Remove Events/Bonuses",
@@ -431,7 +431,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_Ultimate_Weakness_Sub_Physical",
+              "modifier": "<a class=\"gModGreen\" id=\"-447864201\">Constance_Ultimate_Weakness_Sub_Physical</a>",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -440,7 +440,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_Ultimate_Weakness_Sub_Fire",
+              "modifier": "<a class=\"gModGreen\" id=\"-2114479442\">Constance_Ultimate_Weakness_Sub_Fire</a>",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -449,7 +449,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_Ultimate_Weakness_Sub_Ice",
+              "modifier": "<a class=\"gModGreen\" id=\"-401157135\">Constance_Ultimate_Weakness_Sub_Ice</a>",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -458,7 +458,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_Ultimate_Weakness_Sub_Thunder",
+              "modifier": "<a class=\"gModGreen\" id=\"1441945696\">Constance_Ultimate_Weakness_Sub_Thunder</a>",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -467,7 +467,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_Ultimate_Weakness_Sub_Wind",
+              "modifier": "<a class=\"gModGreen\" id=\"1412482872\">Constance_Ultimate_Weakness_Sub_Wind</a>",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -476,7 +476,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_Ultimate_Weakness_Sub_Quantum",
+              "modifier": "<a class=\"gModGreen\" id=\"1073816607\">Constance_Ultimate_Weakness_Sub_Quantum</a>",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -485,7 +485,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_Ultimate_Weakness_Sub_Imaginary",
+              "modifier": "<a class=\"gModGreen\" id=\"628099091\">Constance_Ultimate_Weakness_Sub_Imaginary</a>",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -517,7 +517,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Constance_Ultimate_Weakness_Sub_Physical",
+                          "modifier": "<a class=\"gModGreen\" id=\"-447864201\">Constance_Ultimate_Weakness_Sub_Physical</a>",
                           "silentAdd": true
                         }
                       ]
@@ -532,7 +532,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Constance_Ultimate_Weakness_Sub_Fire",
+                          "modifier": "<a class=\"gModGreen\" id=\"-2114479442\">Constance_Ultimate_Weakness_Sub_Fire</a>",
                           "silentAdd": true
                         }
                       ]
@@ -547,7 +547,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Constance_Ultimate_Weakness_Sub_Ice",
+                          "modifier": "<a class=\"gModGreen\" id=\"-401157135\">Constance_Ultimate_Weakness_Sub_Ice</a>",
                           "silentAdd": true
                         }
                       ]
@@ -562,7 +562,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Constance_Ultimate_Weakness_Sub_Thunder",
+                          "modifier": "<a class=\"gModGreen\" id=\"1441945696\">Constance_Ultimate_Weakness_Sub_Thunder</a>",
                           "silentAdd": true
                         }
                       ]
@@ -577,7 +577,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Constance_Ultimate_Weakness_Sub_Wind",
+                          "modifier": "<a class=\"gModGreen\" id=\"1412482872\">Constance_Ultimate_Weakness_Sub_Wind</a>",
                           "silentAdd": true
                         }
                       ]
@@ -592,7 +592,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Constance_Ultimate_Weakness_Sub_Quantum",
+                          "modifier": "<a class=\"gModGreen\" id=\"1073816607\">Constance_Ultimate_Weakness_Sub_Quantum</a>",
                           "silentAdd": true
                         }
                       ]
@@ -607,7 +607,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Constance_Ultimate_Weakness_Sub_Imaginary",
+                          "modifier": "<a class=\"gModGreen\" id=\"628099091\">Constance_Ultimate_Weakness_Sub_Imaginary</a>",
                           "silentAdd": true
                         }
                       ]
@@ -631,7 +631,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Aura_OnEnemy[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1701170235\">Constance_Aura_OnEnemy</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
       "modifierFlags": [
         "STAT_ForceSuperBreakDamage"
       ],
@@ -641,7 +641,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Aura[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2139860773\">Constance_Aura</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -758,7 +758,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Constance_Aura_OnEnemy[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1701170235\">Constance_Aura_OnEnemy</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
           "aliveOnly": "False",
           "haloStatus": true
         },
@@ -768,8 +768,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
           },
-          "modifier": "Constance_Aura_OnTeam[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
-          "refModifier": "MReference_StanceBreakAddedRatio",
+          "modifier": "<a class=\"gModGreen\" id=\"-152934148\">Constance_Aura_OnTeam</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+          "refModifier": "<a class=\"gModGreen\" id=\"1782063048\">MReference_StanceBreakAddedRatio</a>",
           "aliveOnly": "False",
           "haloStatus": true,
           "valuePerStack": {

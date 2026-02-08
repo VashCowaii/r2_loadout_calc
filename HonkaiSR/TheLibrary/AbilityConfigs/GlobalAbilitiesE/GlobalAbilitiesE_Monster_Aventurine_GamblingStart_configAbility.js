@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_Aventurine_GamblingStart"
+      "modifier": "<a class=\"gModGreen\" id=\"-629569625\">Monster_Aventurine_GamblingStart</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_Aventurine_GamblingStart",
+      "for": "<a class=\"gModGreen\" id=\"mod__-629569625\">Monster_Aventurine_GamblingStart</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

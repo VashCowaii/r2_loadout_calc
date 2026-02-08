@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Luka_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1202378594\">Luka_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -290,7 +290,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luka_MazeBullet",
+      "for": "<a class=\"gModGreen\" id=\"mod__-752941063\">Luka_MazeBullet</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -334,7 +334,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luka_Eidolon4[<span class=\"descriptionNumberColor\">Never Turning Back</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-811741616\">Luka_Eidolon4</a>[<span class=\"descriptionNumberColor\">Never Turning Back</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -390,7 +390,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luka_Eidolon2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-711075902\">Luka_Eidolon2</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -421,7 +421,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Luka_ReloadBullet",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1275149529\">Luka_ReloadBullet</a>",
                   "valuePerStack": {
                     "MDF_AddValue": {
                       "operator": "Variables[0] (1) || RETURN",
@@ -443,7 +443,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luka_Eidolon1_Sub[<span class=\"descriptionNumberColor\">Fighting Endlessly</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-632542414\">Luka_Eidolon1_Sub</a>[<span class=\"descriptionNumberColor\">Fighting Endlessly</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -479,7 +479,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luka_ReloadBullet",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1275149529\">Luka_ReloadBullet</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -543,7 +543,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Luka_Eidolon4[<span class=\"descriptionNumberColor\">Never Turning Back</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-811741616\">Luka_Eidolon4</a>[<span class=\"descriptionNumberColor\">Never Turning Back</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (4) || RETURN",
                         "displayLines": "4",
@@ -631,7 +631,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Luka_ChangeAttack"
+                  "modifier": "<a class=\"gModGreen\" id=\"1816734330\">Luka_ChangeAttack</a>"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -669,7 +669,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luka_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1778825870\">Luka_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -705,7 +705,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luka_ChangeAttack",
+      "for": "<a class=\"gModGreen\" id=\"mod__1816734330\">Luka_ChangeAttack</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -760,7 +760,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luka_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1297657953\">Luka_Passive</a>",
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Owner]",
@@ -780,7 +780,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Luka_ChangeAttack"
+                  "modifier": "<a class=\"gModGreen\" id=\"1816734330\">Luka_ChangeAttack</a>"
                 },
                 {
                   "name": "Update Displayed Energy Bar",

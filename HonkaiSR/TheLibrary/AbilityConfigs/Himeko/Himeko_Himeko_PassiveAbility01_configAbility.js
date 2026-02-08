@@ -21,7 +21,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Himeko_Passive1_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"311390913\">Himeko_Passive1_Modifier</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -29,7 +29,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "stackLimit": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -72,7 +72,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -208,7 +208,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Himeko_Passive_PursuitCD[<span class=\"descriptionNumberColor\">Victory Rush</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__65829546\">Himeko_Passive_PursuitCD</a>[<span class=\"descriptionNumberColor\">Victory Rush</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -221,7 +221,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
             }
           ]
         }
@@ -233,7 +233,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Himeko_Passive1_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__311390913\">Himeko_Passive1_Modifier</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
@@ -615,7 +615,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -664,7 +664,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -692,7 +692,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",

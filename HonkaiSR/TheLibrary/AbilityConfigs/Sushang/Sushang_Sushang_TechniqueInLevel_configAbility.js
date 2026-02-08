@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Sushang_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"148156557\">StageAbility_Maze_Sushang_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Sushang_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__148156557\">StageAbility_Maze_Sushang_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

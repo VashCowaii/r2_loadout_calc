@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "PlayerBoy_20_AbilityP01_ListenRedShieldModifier",
+      "modifier": "<a class=\"gModGreen\" id=\"610400910\">PlayerBoy_20_AbilityP01_ListenRedShieldModifier</a>",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",

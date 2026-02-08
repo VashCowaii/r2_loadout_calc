@@ -17,7 +17,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_114_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"2114440550\">Relic_114_Main</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -25,13 +25,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_114_AbilityPreShowModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"534587357\">Relic_114_AbilityPreShowModifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_114_AbilityPreShowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__534587357\">Relic_114_AbilityPreShowModifier</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -54,7 +54,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Relic_114_Sub[<span class=\"descriptionNumberColor\">Messenger Traversing Hackerspace</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-293683157\">Relic_114_Sub</a>[<span class=\"descriptionNumberColor\">Messenger Traversing Hackerspace</span>]",
                   "invertCondition": true
                 },
                 {
@@ -75,7 +75,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_114_Sub[<span class=\"descriptionNumberColor\">Messenger Traversing Hackerspace</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-293683157\">Relic_114_Sub</a>[<span class=\"descriptionNumberColor\">Messenger Traversing Hackerspace</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -110,7 +110,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_114_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__2114440550\">Relic_114_Main</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -143,7 +143,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Player Team All}}"
                           },
-                          "modifier": "Relic_114_Sub[<span class=\"descriptionNumberColor\">Messenger Traversing Hackerspace</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-293683157\">Relic_114_Sub</a>[<span class=\"descriptionNumberColor\">Messenger Traversing Hackerspace</span>]",
                           "duration": {
                             "operator": "Variables[0] (1) || RETURN",
                             "displayLines": "1",

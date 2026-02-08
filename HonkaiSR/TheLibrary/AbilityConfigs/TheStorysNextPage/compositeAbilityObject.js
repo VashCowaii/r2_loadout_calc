@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_21054_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"623924115\">LC_21054_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_21054_Sub[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1013040664\">LC_21054_Sub</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -72,7 +72,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_21054_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__623924115\">LC_21054_Main</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Anyone]",
@@ -98,7 +98,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_21054_Sub[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1013040664\">LC_21054_Sub</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -114,7 +114,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "LC_21054_Sub[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1013040664\">LC_21054_Sub</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",

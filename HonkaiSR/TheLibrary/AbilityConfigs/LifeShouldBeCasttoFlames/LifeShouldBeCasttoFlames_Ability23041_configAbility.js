@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23041_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1363174043\">LC_23041_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23041_Sub[<span class=\"descriptionNumberColor\">DEF Reduced</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-969142096\">LC_23041_Sub</a>[<span class=\"descriptionNumberColor\">DEF Reduced</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "STAT_DefenceDown"
@@ -53,7 +53,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23041_SubOnEmemy",
+      "for": "<a class=\"gModGreen\" id=\"mod__1948297476\">LC_23041_SubOnEmemy</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -82,7 +82,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23041_Sub[<span class=\"descriptionNumberColor\">DEF Reduced</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-969142096\">LC_23041_Sub</a>[<span class=\"descriptionNumberColor\">DEF Reduced</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -110,7 +110,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23041_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1363174043\">LC_23041_Main</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -214,7 +214,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "LC_23041_SubOnEmemy",
+          "modifier": "<a class=\"gModGreen\" id=\"1948297476\">LC_23041_SubOnEmemy</a>",
           "aliveOnly": "False",
           "haloStatus": true
         }

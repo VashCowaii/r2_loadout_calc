@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "PlayerBoy_30_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"78289633\">PlayerBoy_30_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_PlayerBoy_30_CreateServantPreshow",
+      "modifier": "<a class=\"gModGreen\" id=\"409195494\">M_PlayerBoy_30_CreateServantPreshow</a>",
       "valuePerStack": {
         "ServantID": {
           "operator": "Variables[0] (ServantID) || RETURN",
@@ -73,7 +73,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "PlayerBoy_30_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__78289633\">PlayerBoy_30_Passive</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -129,7 +129,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "PlayerBoy_30_Halo_ListenSPChange"
+                  "modifier": "<a class=\"gModGreen\" id=\"1937701279\">PlayerBoy_30_Halo_ListenSPChange</a>"
                 }
               ]
             }
@@ -160,7 +160,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "PlayerBoy_30_UltraState[<span class=\"descriptionNumberColor\">Epic</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -184,7 +184,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "PlayerBoy_30_Halo_ListenSPChange"
+              "modifier": "<a class=\"gModGreen\" id=\"1937701279\">PlayerBoy_30_Halo_ListenSPChange</a>"
             }
           ],
           "priorityLevel": -80

@@ -14,7 +14,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yukong_Passive_BonusCD"
+          "modifier": "<a class=\"gModGreen\" id=\"1203634791\">Yukong_Passive_BonusCD</a>"
         }
       },
       "passed": [
@@ -39,7 +39,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yukong_Passive_BonusCD"
+          "modifier": "<a class=\"gModGreen\" id=\"1203634791\">Yukong_Passive_BonusCD</a>"
         }
       },
       "passed": [
@@ -49,7 +49,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yukong_Passive_BonusCD",
+          "modifier": "<a class=\"gModGreen\" id=\"1203634791\">Yukong_Passive_BonusCD</a>",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -79,13 +79,13 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Yukong_Ability01_ShootV2"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1583329525\">Yukong_Ability01_ShootV2</a>"
         }
       ],
       "failed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Yukong_Ability01_Shoot"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1033369969\">Yukong_Ability01_Shoot</a>"
         }
       ]
     },
@@ -103,13 +103,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yukong_Ability01_Preshow"
+      "modifier": "<a class=\"gModGreen\" id=\"-566337732\">Yukong_Ability01_Preshow</a>"
     }
   ],
   "functions": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Yukong_Ability01_Shoot",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1033369969\">Yukong_Ability01_Shoot</a>",
       "parse": [
         {
           "name": "Shot Fired",
@@ -149,7 +149,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Yukong_Ability01_ShootV2",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1583329525\">Yukong_Ability01_ShootV2</a>",
       "parse": [
         {
           "name": "Shot Fired",
@@ -274,7 +274,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Yukong_Ability01_Preshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-566337732\">Yukong_Ability01_Preshow</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -287,7 +287,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yukong_Passive_BonusCD",
+          "modifier": "<a class=\"gModGreen\" id=\"1203634791\">Yukong_Passive_BonusCD</a>",
           "invertCondition": true
         },
         "multiplier": {

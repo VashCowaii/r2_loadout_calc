@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Beast02_RLElite_Weak"
+      "modifier": "<a class=\"gModGreen\" id=\"974234853\">Monster_W2_Beast02_RLElite_Weak</a>"
     },
     "Trigger: Ability End"
   ],

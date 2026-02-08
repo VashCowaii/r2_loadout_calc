@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Feixiao_Tree03"
+      "modifier": "<a class=\"gModGreen\" id=\"79070567\">M_Feixiao_Tree03</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Feixiao_AttackProperty[<span class=\"descriptionNumberColor\">Boltcatch</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2094330090\">Feixiao_AttackProperty</a>[<span class=\"descriptionNumberColor\">Boltcatch</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_Tree03",
+      "for": "<a class=\"gModGreen\" id=\"mod__79070567\">M_Feixiao_Tree03</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -66,7 +66,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Feixiao_AttackProperty[<span class=\"descriptionNumberColor\">Boltcatch</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2094330090\">Feixiao_AttackProperty</a>[<span class=\"descriptionNumberColor\">Boltcatch</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

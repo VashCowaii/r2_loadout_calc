@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Fugue_BPAbilityBonusListen[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
       },
-      "modifier": "Fugue_BPAbility[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"647019371\">Fugue_BPAbility</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
       },
-      "modifier": "Fugue_BPAbility_Eidolon1[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1132900651\">Fugue_BPAbility_Eidolon1</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -34,7 +34,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
       },
-      "modifier": "Fugue_BPAbility_Eidolon4[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -51,7 +51,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Fugue_BPAbilityBonusListen[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -100,7 +100,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Fugue_Eidolon6_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"696396442\">Fugue_Eidolon6_Listen</a>"
         }
       ],
       "failed": [
@@ -117,7 +117,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Fugue_BPAbility_Eidolon4[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
               "valuePerStack": {
                 "MDF_BreakDamageAdd": {
                   "operator": "Variables[0] (0.3) || RETURN",
@@ -192,7 +192,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Fugue_BPAbility_Eidolon1[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1132900651\">Fugue_BPAbility_Eidolon1</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
                   "valuePerStack": {
                     "MDF_BreakDamageAdd": {
                       "operator": "Variables[0] (0.3) || RETURN",
@@ -252,7 +252,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Fugue_BPAbility[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"647019371\">Fugue_BPAbility</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
                   "valuePerStack": {
                     "MDF_BreakDamageAdd": {
                       "operator": "Variables[0] (0.3) || RETURN",
@@ -317,7 +317,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Fugue_BPAbility_Eidolon4[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "Unknow",
       "modifierFlags": [
@@ -342,7 +342,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Fugue_BPAbilityBonusListen[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
                 }
               ]
             }
@@ -450,7 +450,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Fugue_BPAbility_Eidolon1[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1132900651\">Fugue_BPAbility_Eidolon1</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "Unknow",
       "modifierFlags": [
@@ -468,7 +468,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Fugue_BPAbilityBonusListen[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
             }
           ]
         },
@@ -542,7 +542,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Fugue_BPAbility[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__647019371\">Fugue_BPAbility</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "Unknow",
       "modifierFlags": [
@@ -560,7 +560,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Fugue_BPAbilityBonusListen[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]"
             }
           ]
         },
@@ -617,7 +617,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Fugue_BPAbilityBonusListen[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
         {
@@ -638,7 +638,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Fugue_BPAbility[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"647019371\">Fugue_BPAbility</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -646,7 +646,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Fugue_BPAbility_Eidolon1[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1132900651\">Fugue_BPAbility_Eidolon1</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -654,7 +654,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Fugue_BPAbility_Eidolon4[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -662,7 +662,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Fugue_Eidolon6_Listen"
+              "modifier": "<a class=\"gModGreen\" id=\"696396442\">Fugue_Eidolon6_Listen</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -696,7 +696,7 @@ const configAbility = {
               "name": "Define Custom Variable with Modifier Values",
               "valueType": "LifeTime",
               "variableName": "Skill02_EnergyBarCount",
-              "modifierName": "Fugue_BPAbilityBonusListen[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
               "multiplier": 1
             },
             {

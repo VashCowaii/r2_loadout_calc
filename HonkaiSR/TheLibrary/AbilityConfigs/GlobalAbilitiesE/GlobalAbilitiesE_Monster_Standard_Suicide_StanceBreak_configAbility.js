@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "TriggerStanceCountDown_Monster"
+      "modifier": "<a class=\"gModGreen\" id=\"-1581220157\">TriggerStanceCountDown_Monster</a>"
     }
   ],
   "whenAdded": [],

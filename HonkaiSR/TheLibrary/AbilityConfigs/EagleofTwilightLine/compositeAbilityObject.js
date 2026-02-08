@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_110_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1873066358\">Relic_110_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_110_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1873066358\">Relic_110_Main</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",

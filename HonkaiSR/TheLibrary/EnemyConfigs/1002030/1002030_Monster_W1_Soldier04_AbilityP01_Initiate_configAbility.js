@@ -42,7 +42,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W1_Soldier04_AbilityP01_EnterBattle"
+          "modifier": "<a class=\"gModGreen\" id=\"1158230799\">Enemy_W1_Soldier04_AbilityP01_EnterBattle</a>"
         }
       ]
     },
@@ -52,7 +52,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W1_Soldier04_AbilityP01_ListenTeamMateAttack"
+      "modifier": "<a class=\"gModGreen\" id=\"706669150\">Enemy_W1_Soldier04_AbilityP01_ListenTeamMateAttack</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -60,7 +60,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W1_Soldier04_AbilityP01_ListenTeamMateDie"
+      "modifier": "<a class=\"gModGreen\" id=\"-625428932\">Enemy_W1_Soldier04_AbilityP01_ListenTeamMateDie</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -68,7 +68,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W1_Soldier04_AbilityP01_ListenSelfDie"
+      "modifier": "<a class=\"gModGreen\" id=\"2088832510\">Enemy_W1_Soldier04_AbilityP01_ListenSelfDie</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -76,7 +76,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W1_Soldier04_AbilityP01_ListenSelfBreak"
+      "modifier": "<a class=\"gModGreen\" id=\"-146999441\">Enemy_W1_Soldier04_AbilityP01_ListenSelfBreak</a>"
     },
     {
       "name": "Declare Custom Variable",
@@ -91,7 +91,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier04_AbilityP01_ListenSelfBreak",
+      "for": "<a class=\"gModGreen\" id=\"mod__-146999441\">Enemy_W1_Soldier04_AbilityP01_ListenSelfBreak</a>",
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -102,7 +102,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W1_Soldier04_AbilityP01_Supporting[<span class=\"descriptionNumberColor\">Support</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1385757632\">Enemy_W1_Soldier04_AbilityP01_Supporting</a>[<span class=\"descriptionNumberColor\">Support</span>]"
             },
             {
               "name": "Declare Custom Variable",
@@ -119,7 +119,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"
               },
-              "modifier": "Enemy_W1_Soldier04_AbilityP01_Supported[<span class=\"descriptionNumberColor\">Reinforced</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
               "onlyRemoveOwnersInstance": true
             }
           ]
@@ -130,7 +130,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier04_AbilityP01_ListenSelfDie",
+      "for": "<a class=\"gModGreen\" id=\"mod__2088832510\">Enemy_W1_Soldier04_AbilityP01_ListenSelfDie</a>",
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo",
@@ -141,7 +141,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"
               },
-              "modifier": "Enemy_W1_Soldier04_AbilityP01_Supported[<span class=\"descriptionNumberColor\">Reinforced</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
               "onlyRemoveOwnersInstance": true
             }
           ]
@@ -152,14 +152,14 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier04_AbilityP01_ListenTeamMateDie",
+      "for": "<a class=\"gModGreen\" id=\"mod__-625428932\">Enemy_W1_Soldier04_AbilityP01_ListenTeamMateDie</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_W1_Soldier04_AbilityP01_OnDieOrEscape"
+              "functionName": "<a class=\"gTempYellow\" id=\"-653677910\">TaskList_W1_Soldier04_AbilityP01_OnDieOrEscape</a>"
             }
           ]
         },
@@ -168,7 +168,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_W1_Soldier04_AbilityP01_OnDieOrEscape"
+              "functionName": "<a class=\"gTempYellow\" id=\"-653677910\">TaskList_W1_Soldier04_AbilityP01_OnDieOrEscape</a>"
             }
           ]
         }
@@ -176,7 +176,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "TaskList_W1_Soldier04_AbilityP01_OnDieOrEscape",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-653677910\">TaskList_W1_Soldier04_AbilityP01_OnDieOrEscape</a>",
           "parse": [
             {
               "name": "IF",
@@ -197,7 +197,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_W1_Soldier04_AbilityP01_Supported[<span class=\"descriptionNumberColor\">Reinforced</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
@@ -235,7 +235,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Enemy_W1_Soldier04_AbilityP01_Supporting[<span class=\"descriptionNumberColor\">Support</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1385757632\">Enemy_W1_Soldier04_AbilityP01_Supporting</a>[<span class=\"descriptionNumberColor\">Support</span>]"
                         }
                       ]
                     }
@@ -251,7 +251,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier04_AbilityP01_ListenTeamMateAttack",
+      "for": "<a class=\"gModGreen\" id=\"mod__706669150\">Enemy_W1_Soldier04_AbilityP01_ListenTeamMateAttack</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Anyone]",
@@ -299,7 +299,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W1_Soldier04_AbilityP01_Supporting[<span class=\"descriptionNumberColor\">Support</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1385757632\">Enemy_W1_Soldier04_AbilityP01_Supporting</a>[<span class=\"descriptionNumberColor\">Support</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -307,7 +307,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_W1_Soldier04_AbilityP01_Supported[<span class=\"descriptionNumberColor\">Reinforced</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
@@ -328,7 +328,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_W1_Soldier04_AbilityP01_SupportAttackTarget"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1466703715\">Enemy_W1_Soldier04_AbilityP01_SupportAttackTarget</a>"
                     }
                   }
                 ]
@@ -348,7 +348,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_W1_Soldier04_AbilityP01_SupportAttackTarget"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1466703715\">Enemy_W1_Soldier04_AbilityP01_SupportAttackTarget</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -374,7 +374,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "Enemy_W1_Soldier04_AbilityP01_SupportAttackTarget"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1466703715\">Enemy_W1_Soldier04_AbilityP01_SupportAttackTarget</a>"
                     }
                   ]
                 },
@@ -384,7 +384,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_W1_Soldier04_AbilityP01_Supported[<span class=\"descriptionNumberColor\">Reinforced</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -418,7 +418,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W1_Soldier04_AbilityP01_Supporting[<span class=\"descriptionNumberColor\">Support</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1385757632\">Enemy_W1_Soldier04_AbilityP01_Supporting</a>[<span class=\"descriptionNumberColor\">Support</span>]"
                     }
                   ]
                 }
@@ -432,7 +432,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier04_AbilityP01_EnterBattle",
+      "for": "<a class=\"gModGreen\" id=\"mod__1158230799\">Enemy_W1_Soldier04_AbilityP01_EnterBattle</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_GSMecha_01_Initiate"
+      "modifier": "<a class=\"gModGreen\" id=\"1061722899\">Monster_W1_GSMecha_01_Initiate</a>"
     },
     {
       "name": "ATK Scaling DMG",

@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_Eidolon1_Check_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"451418523\">PlayerBoy_Eidolon1_Check_Modifier</a>"
         }
       ]
     },
@@ -34,7 +34,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_Trace03_DamageAddedRatio"
+          "modifier": "<a class=\"gModGreen\" id=\"470799784\">PlayerBoy_Trace03_DamageAddedRatio</a>"
         }
       ]
     },
@@ -80,7 +80,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_Trace03_DamageAddedRatio"
+          "modifier": "<a class=\"gModGreen\" id=\"470799784\">PlayerBoy_Trace03_DamageAddedRatio</a>"
         }
       ]
     },
@@ -126,7 +126,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_Eidolon1_Check_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"451418523\">PlayerBoy_Eidolon1_Check_Modifier</a>"
         }
       ]
     },
@@ -136,7 +136,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "PlayerWarrior_Ultimate_Transform"
+      "modifier": "<a class=\"gModGreen\" id=\"784141078\">PlayerWarrior_Ultimate_Transform</a>"
     },
     {
       "name": "Update Ult Alt Display"

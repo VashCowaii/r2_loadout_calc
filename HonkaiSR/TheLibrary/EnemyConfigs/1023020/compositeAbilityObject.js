@@ -199,7 +199,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Monster_W1_Mecha03_01_Frozen[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1137901449\">Monster_W1_Mecha03_01_Frozen</a>[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
           "baseChance": 1,
           "stackLimit": {
             "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
@@ -355,7 +355,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_01_Rage[<span class=\"descriptionNumberColor\">Surpass</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1705391722\">Monster_W1_Mecha03_01_Rage</a>[<span class=\"descriptionNumberColor\">Surpass</span>]",
           "duration": 1,
           "valuePerStack": {
             "MDF_AttackAddedRatio": {
@@ -374,7 +374,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_01_AOECount[<span class=\"descriptionNumberColor\">Bitterly Cold</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-800128779\">Monster_W1_Mecha03_01_AOECount</a>[<span class=\"descriptionNumberColor\">Bitterly Cold</span>]",
           "duration": 1,
           "addStacksPerTrigger": {
             "operator": "Variables[0] (SummonMonsterEatCount) || RETURN",
@@ -434,7 +434,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_01_Overheat[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2015116315\">Monster_W1_Mecha03_01_Overheat</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "valuePerStack": {
             "MDF_DefenceAddedRatio": {
               "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
@@ -562,7 +562,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W1_Mecha03_01_Rage[<span class=\"descriptionNumberColor\">Surpass</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1705391722\">Monster_W1_Mecha03_01_Rage</a>[<span class=\"descriptionNumberColor\">Surpass</span>]",
               "duration": 1,
               "valuePerStack": {
                 "MDF_AttackAddedRatio": {
@@ -609,7 +609,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W1_Mecha03_01_Rage[<span class=\"descriptionNumberColor\">Surpass</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1705391722\">Monster_W1_Mecha03_01_Rage</a>[<span class=\"descriptionNumberColor\">Surpass</span>]",
               "duration": 1,
               "valuePerStack": {
                 "MDF_AttackAddedRatio": {
@@ -630,7 +630,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_W1_Mecha03_01_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1421560478\">Monster_W1_Mecha03_01_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
           "counter": 1
         },
         "Trigger: Ability End"
@@ -796,7 +796,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Monster_W1_Mecha03_01_Frozen[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1137901449\">Monster_W1_Mecha03_01_Frozen</a>[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
           "baseChance": 1,
           "stackLimit": {
             "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
@@ -928,7 +928,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
         },
         {
           "name": "Find New Target",
@@ -943,7 +943,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W1_Mecha03_01_SummonMark",
+            "modifier": "<a class=\"gModGreen\" id=\"375705017\">Monster_W1_Mecha03_01_SummonMark</a>",
             "invertCondition": true
           }
         },
@@ -961,7 +961,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W1_Mecha03_01_SummonMark",
+            "modifier": "<a class=\"gModGreen\" id=\"375705017\">Monster_W1_Mecha03_01_SummonMark</a>",
             "invertCondition": true
           }
         },
@@ -978,7 +978,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W1_Mecha03_01_SummonMark",
+            "modifier": "<a class=\"gModGreen\" id=\"375705017\">Monster_W1_Mecha03_01_SummonMark</a>",
             "invertCondition": true
           }
         },
@@ -996,7 +996,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Monster_W1_Mecha03_01_SummonMark"
+          "modifier": "<a class=\"gModGreen\" id=\"375705017\">Monster_W1_Mecha03_01_SummonMark</a>"
         },
         "Trigger: Ability End"
       ],
@@ -1088,7 +1088,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target List}}"
           },
-          "modifier": "Monster_W1_Mecha03_01_Frozen[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1137901449\">Monster_W1_Mecha03_01_Frozen</a>[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
           "baseChance": 1,
           "stackLimit": {
             "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
@@ -1131,7 +1131,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_01_Rage[<span class=\"descriptionNumberColor\">Surpass</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1705391722\">Monster_W1_Mecha03_01_Rage</a>[<span class=\"descriptionNumberColor\">Surpass</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1139,7 +1139,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Monster_W1_Mecha03_01_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1421560478\">Monster_W1_Mecha03_01_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
           "onlyRemoveOwnersInstance": true
         },
         {
@@ -1272,7 +1272,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1280,7 +1280,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_01_MureHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"-923896178\">Monster_W1_Mecha03_01_MureHitFly</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1288,7 +1288,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_01_AIChange"
+          "modifier": "<a class=\"gModGreen\" id=\"703130049\">Monster_W1_Mecha03_01_AIChange</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1296,13 +1296,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_01_EffectCommon"
+          "modifier": "<a class=\"gModGreen\" id=\"1952827515\">Monster_W1_Mecha03_01_EffectCommon</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_AIChange",
+          "for": "<a class=\"gModGreen\" id=\"mod__703130049\">Monster_W1_Mecha03_01_AIChange</a>",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -1313,7 +1313,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Monster_W1_Mecha03_01_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1421560478\">Monster_W1_Mecha03_01_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -1339,7 +1339,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_MureHitFly",
+          "for": "<a class=\"gModGreen\" id=\"mod__-923896178\">Monster_W1_Mecha03_01_MureHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
           ],
@@ -1348,7 +1348,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_EffectCommon",
+          "for": "<a class=\"gModGreen\" id=\"mod__1952827515\">Monster_W1_Mecha03_01_EffectCommon</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1380,7 +1380,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1421560478\">Monster_W1_Mecha03_01_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "AttackSign"
@@ -1399,7 +1399,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_Rage[<span class=\"descriptionNumberColor\">Surpass</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1705391722\">Monster_W1_Mecha03_01_Rage</a>[<span class=\"descriptionNumberColor\">Surpass</span>]",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1410,7 +1410,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W1_Mecha03_01_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"643096962\">Monster_W1_Mecha03_01_Effect</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1418,7 +1418,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_APShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                 }
               ]
             },
@@ -1431,7 +1431,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W1_Mecha03_01_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"643096962\">Monster_W1_Mecha03_01_Effect</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1439,7 +1439,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_APShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                 }
               ]
             },
@@ -1489,7 +1489,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__643096962\">Monster_W1_Mecha03_01_Effect</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1503,7 +1503,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_Effect_Fail",
+          "for": "<a class=\"gModGreen\" id=\"mod__1790658643\">Monster_W1_Mecha03_01_Effect_Fail</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1515,7 +1515,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_Charge",
+          "for": "<a class=\"gModGreen\" id=\"mod__-168738441\">Monster_W1_Mecha03_01_Charge</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1555,7 +1555,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__-272775798\">Monster_W1_Mecha03_01_Bonus</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1589,7 +1589,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_Overheat[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2015116315\">Monster_W1_Mecha03_01_Overheat</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Owner]",
@@ -1633,7 +1633,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_Frozen[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1137901449\">Monster_W1_Mecha03_01_Frozen</a>[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
           "stackType": "Replace",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1733,7 +1733,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_Attack",
+          "for": "<a class=\"gModGreen\" id=\"mod__1506657871\">Monster_W1_Mecha03_01_Attack</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1748,7 +1748,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_Shield",
+          "for": "<a class=\"gModGreen\" id=\"mod__488136598\">Monster_W1_Mecha03_01_Shield</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1768,7 +1768,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_Armor",
+          "for": "<a class=\"gModGreen\" id=\"mod__1053325166\">Monster_W1_Mecha03_01_Armor</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1801,13 +1801,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_SummonMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__375705017\">Monster_W1_Mecha03_01_SummonMark</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_01_AOECount[<span class=\"descriptionNumberColor\">Bitterly Cold</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-800128779\">Monster_W1_Mecha03_01_AOECount</a>[<span class=\"descriptionNumberColor\">Bitterly Cold</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",

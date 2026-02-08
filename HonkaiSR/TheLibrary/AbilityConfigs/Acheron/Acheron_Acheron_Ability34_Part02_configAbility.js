@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE, with Unselectables)}}"
       },
-      "modifier": "Acheron_DebuffSpecialMark"
+      "modifier": "<a class=\"gModGreen\" id=\"371708678\">Acheron_DebuffSpecialMark</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "entityType": 6,
         "teamType": "Enemy Team"
       },
-      "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
     },
     {
       "name": "IF",
@@ -185,7 +185,7 @@ const configAbility = {
           "Event": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -270,7 +270,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE, with Unselectables)}}"
       },
-      "modifier": "Acheron_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"447524573\">Acheron_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]"
     },
     {
       "name": "Define Custom Variable",
@@ -293,7 +293,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Acheron_AbilityChange04"
+      "modifier": "<a class=\"gModGreen\" id=\"-317287633\">Acheron_AbilityChange04</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -301,7 +301,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Acheron_Ability03_Special"
+      "modifier": "<a class=\"gModGreen\" id=\"-2096189522\">Acheron_Ability03_Special</a>"
     },
     "Trigger: Skip Death Handling",
     "Trigger: Ability End"

@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Welt_Passive01Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1725603697\">Welt_Passive01Modifier</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "AbilityPreShowModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1621594543\">AbilityPreShowModifier</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -34,7 +34,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "AbilityPreShowModifier2"
+      "modifier": "<a class=\"gModGreen\" id=\"-993379801\">AbilityPreShowModifier2</a>"
     },
     {
       "name": "IF",
@@ -54,7 +54,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Welt_Passive01Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1725603697\">Welt_Passive01Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -127,7 +127,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "AbilityPreShowModifier2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-993379801\">AbilityPreShowModifier2</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -148,7 +148,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
                 "casterFilter": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -175,7 +175,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "AbilityPreShowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1621594543\">AbilityPreShowModifier</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -198,7 +198,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
                   "casterFilter": {
                     "name": "Target Name",
                     "target": "{{Caster}}"

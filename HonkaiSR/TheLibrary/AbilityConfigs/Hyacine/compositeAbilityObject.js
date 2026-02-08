@@ -42,13 +42,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Hyacine_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1135354482\">StageAbility_Maze_Hyacine_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Hyacine_Maze_AddMaxHp[<span class=\"descriptionNumberColor\">Day So Right, Life So Fine!</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1998064298\">Hyacine_Maze_AddMaxHp</a>[<span class=\"descriptionNumberColor\">Day So Right, Life So Fine!</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -78,7 +78,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Hyacine_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1135354482\">StageAbility_Maze_Hyacine_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -122,7 +122,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Hyacine_Maze_AddMaxHp[<span class=\"descriptionNumberColor\">Day So Right, Life So Fine!</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1998064298\">Hyacine_Maze_AddMaxHp</a>[<span class=\"descriptionNumberColor\">Day So Right, Life So Fine!</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -196,12 +196,12 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Hyacine_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-151777328\">Hyacine_Passive</a>"
         },
         {
           "name": "Define Custom Variable with Modifier Values",
           "variableName": "MDF_Energy_Count",
-          "modifierName": "Hyacine_IronWater",
+          "modifierName": "<a class=\"gModGreen\" id=\"1761632932\">Hyacine_IronWater</a>",
           "multiplier": 1
         },
         {
@@ -217,7 +217,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Hyacine_PointB1"
+              "modifier": "<a class=\"gModGreen\" id=\"981474753\">Hyacine_PointB1</a>"
             }
           ]
         },
@@ -234,7 +234,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Hyacine_PointB2",
+              "modifier": "<a class=\"gModGreen\" id=\"931141896\">Hyacine_PointB2</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.5) || RETURN",
@@ -252,7 +252,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Hyacine_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-151777328\">Hyacine_Passive</a>",
           "execute": [
             {
               "eventTrigger": "Heal Target Start [Owner]",
@@ -263,7 +263,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "Hyacine_Passive_Effect[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1132518124\">Hyacine_Passive_Effect</a>[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -383,7 +383,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "Memosprite_HyacineServant_Passive_Mark[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"492819159\">Memosprite_HyacineServant_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]",
                   "casterAssign": "TargetSelf"
                 }
               ]
@@ -404,7 +404,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Hyacine_PointB3"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1888501948\">Hyacine_PointB3</a>"
                     }
                   ]
                 },
@@ -421,7 +421,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Hyacine_Eidolon2_Listen"
+                      "modifier": "<a class=\"gModGreen\" id=\"290730475\">Hyacine_Eidolon2_Listen</a>"
                     }
                   ]
                 }
@@ -459,7 +459,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Hyacine_PointB3"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1888501948\">Hyacine_PointB3</a>"
                     }
                   ]
                 }
@@ -519,7 +519,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Hyacine_PointB3"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1888501948\">Hyacine_PointB3</a>"
                         }
                       ]
                     }
@@ -547,7 +547,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Hyacine_PointB3"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1888501948\">Hyacine_PointB3</a>"
                         }
                       ]
                     }
@@ -575,7 +575,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Hyacine_PointB3"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1888501948\">Hyacine_PointB3</a>"
                         }
                       ]
                     }
@@ -603,7 +603,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Hyacine_PointB3"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1888501948\">Hyacine_PointB3</a>"
                         }
                       ]
                     }
@@ -786,7 +786,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_HyacineServant_MaxHpHalo[<span class=\"descriptionNumberColor\">After Rain</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -1214,7 +1214,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Hyacine_Ability03_MaxHP_Grow[<span class=\"descriptionNumberColor\">After Rain</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__593318455\">Hyacine_Ability03_MaxHP_Grow</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1287,14 +1287,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_HyacineServant_MuteSpeed",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1347756164\">Memosprite_HyacineServant_MuteSpeed</a>",
           "modifierFlags": [
             "MuteSpeed"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Hyacine_Eidolon2_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__290730475\">Hyacine_Eidolon2_Listen</a>",
           "execute": [
             {
               "eventTrigger": "HP Change [Anyone]",
@@ -1331,7 +1331,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Memosprite_HyacineServant_Eidolon2SpeedUp[<span class=\"descriptionNumberColor\">Come Sit in My Courtyard</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1897109390\">Memosprite_HyacineServant_Eidolon2SpeedUp</a>[<span class=\"descriptionNumberColor\">Come Sit in My Courtyard</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -1361,7 +1361,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_HyacineServant_MaxHpHalo[<span class=\"descriptionNumberColor\">After Rain</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1403,7 +1403,7 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "LifeTime",
                   "variableName": "_Energy",
-                  "modifierName": "Memosprite_HyacineServant_MaxHpHalo[<span class=\"descriptionNumberColor\">After Rain</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
                   "multiplier": 1
                 },
                 {
@@ -1495,7 +1495,7 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "LifeTime",
                   "variableName": "_Energy",
-                  "modifierName": "Memosprite_HyacineServant_MaxHpHalo[<span class=\"descriptionNumberColor\">After Rain</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
                   "multiplier": 1
                 },
                 {
@@ -1608,7 +1608,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable with Modifier Values",
                       "valueType": "LifeTime",
                       "variableName": "_Energy",
-                      "modifierName": "Memosprite_HyacineServant_MaxHpHalo[<span class=\"descriptionNumberColor\">After Rain</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
                       "multiplier": 1
                     },
                     {
@@ -1655,7 +1655,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}} - {{Caster}}"
               },
-              "modifier": "Hyacine_Ability03_MaxHP_Grow[<span class=\"descriptionNumberColor\">After Rain</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"593318455\">Hyacine_Ability03_MaxHP_Grow</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
               "aliveOnly": "False",
               "haloStatus": true,
               "valuePerStack": {
@@ -1697,7 +1697,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Hyacine_Passive_Effect[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1132518124\">Hyacine_Passive_Effect</a>[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -1752,7 +1752,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Hyacine_PointB2",
+          "for": "<a class=\"gModGreen\" id=\"mod__931141896\">Hyacine_PointB2</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1783,7 +1783,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Hyacine_PointB1_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__672502407\">Hyacine_PointB1_Effect</a>",
           "execute": [
             {
               "eventTrigger": "Heal Target Start [Owner]",
@@ -1850,7 +1850,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Hyacine_PointB1",
+          "for": "<a class=\"gModGreen\" id=\"mod__981474753\">Hyacine_PointB1</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1861,7 +1861,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Hyacine_PointB1_Effect",
+                  "modifier": "<a class=\"gModGreen\" id=\"672502407\">Hyacine_PointB1_Effect</a>",
                   "valuePerStack": {
                     "MDF_CritChance": {
                       "operator": "Variables[0] (1) || RETURN",
@@ -1914,7 +1914,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Hyacine_PointB1_Effect",
+                      "modifier": "<a class=\"gModGreen\" id=\"672502407\">Hyacine_PointB1_Effect</a>",
                       "valuePerStack": {
                         "MDF_CritChance": {
                           "operator": "Variables[0] (1) || RETURN",
@@ -1952,7 +1952,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Hyacine_PointB3_Effect[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1110430040\">Hyacine_PointB3_Effect</a>[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -2039,7 +2039,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Hyacine_PointB3",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1888501948\">Hyacine_PointB3</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2214,7 +2214,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}+{{Caster's Memosprite}}"
                       },
-                      "modifier": "Hyacine_PointB3_Effect[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1110430040\">Hyacine_PointB3_Effect</a>[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]",
                       "valuePerStack": {
                         "_MaxHPAdd": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -2250,7 +2250,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}+{{Caster's Memosprite}}"
                       },
-                      "modifier": "Hyacine_PointB3_Effect[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1110430040\">Hyacine_PointB3_Effect</a>[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]"
                     }
                   ]
                 }
@@ -2377,7 +2377,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_HyacineServant_Passive_Mark[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"492819159\">Memosprite_HyacineServant_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]"
         },
         {
           "name": "ATK Scaling DMG",
@@ -2484,13 +2484,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_HyacineServant_DeathRattle"
+          "modifier": "<a class=\"gModGreen\" id=\"1268391312\">Memosprite_HyacineServant_DeathRattle</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_HyacineServant_DeathRattle",
+          "for": "<a class=\"gModGreen\" id=\"mod__1268391312\">Memosprite_HyacineServant_DeathRattle</a>",
           "modifierFlags": [
             "Deathrattle"
           ],
@@ -2535,13 +2535,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_HyacineServant_BattleCry"
+          "modifier": "<a class=\"gModGreen\" id=\"1846136142\">Memosprite_HyacineServant_BattleCry</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_HyacineServant_BattleCry",
+          "for": "<a class=\"gModGreen\" id=\"mod__1846136142\">Memosprite_HyacineServant_BattleCry</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2633,7 +2633,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_HyacineServant_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-1066684227\">Memosprite_HyacineServant_Passive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2641,7 +2641,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_HyacineServant_ChallangeScore"
+          "modifier": "<a class=\"gModGreen\" id=\"1467878909\">Memosprite_HyacineServant_ChallangeScore</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2649,7 +2649,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_HyacineServant_LoseHpPassive"
+          "modifier": "<a class=\"gModGreen\" id=\"124089426\">Memosprite_HyacineServant_LoseHpPassive</a>"
         },
         {
           "name": "IF",
@@ -2668,7 +2668,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_HyacineServant_Eidolon6_PenetrateRatio_Halo",
+              "modifier": "<a class=\"gModGreen\" id=\"3098173\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio_Halo</a>",
               "valuePerStack": {
                 "MDF_PenetrateRatio": {
                   "operator": "Variables[0] (0.2) || RETURN",
@@ -2686,7 +2686,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_HyacineServant_LoseHpPassive",
+          "for": "<a class=\"gModGreen\" id=\"mod__124089426\">Memosprite_HyacineServant_LoseHpPassive</a>",
           "stackData": [],
           "latentQueue": [],
           "subModList": [
@@ -2696,7 +2696,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
               },
-              "modifier": "Memosprite_HyacineServant_LoseHpSet",
+              "modifier": "<a class=\"gModGreen\" id=\"889204199\">Memosprite_HyacineServant_LoseHpSet</a>",
               "haloStatus": true
             }
           ]
@@ -2715,7 +2715,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_HyacineServant_ChallangeScore",
+          "for": "<a class=\"gModGreen\" id=\"mod__1467878909\">Memosprite_HyacineServant_ChallangeScore</a>",
           "stackType": "Replace",
           "modifierFlags": [
             "ServantInherit_ModifierContinuation"
@@ -2725,7 +2725,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_HyacineServant_Eidolon6_PenetrateRatio[<span class=\"descriptionNumberColor\">O Sky, Heed My Plea</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2026163190\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio</a>[<span class=\"descriptionNumberColor\">O Sky, Heed My Plea</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2755,7 +2755,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_HyacineServant_Eidolon6_PenetrateRatio_Halo",
+          "for": "<a class=\"gModGreen\" id=\"mod__3098173\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio_Halo</a>",
           "stackData": [
             "MDF_PenetrateRatio"
           ],
@@ -2767,7 +2767,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Memosprite_HyacineServant_Eidolon6_PenetrateRatio[<span class=\"descriptionNumberColor\">O Sky, Heed My Plea</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2026163190\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio</a>[<span class=\"descriptionNumberColor\">O Sky, Heed My Plea</span>]",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PenetrateRatio": {
@@ -2784,7 +2784,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_HyacineServant_Eidolon2SpeedUp[<span class=\"descriptionNumberColor\">Come Sit in My Courtyard</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1897109390\">Memosprite_HyacineServant_Eidolon2SpeedUp</a>[<span class=\"descriptionNumberColor\">Come Sit in My Courtyard</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -2819,7 +2819,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_HyacineServant_LoseHpFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -2828,7 +2828,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_HyacineServant_LoseHpSet",
+          "for": "<a class=\"gModGreen\" id=\"mod__889204199\">Memosprite_HyacineServant_LoseHpSet</a>",
           "execute": [
             {
               "eventTrigger": "HP Change [Owner]",
@@ -2850,7 +2850,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_HyacineServant_Passive_MaxHp_Increase",
+          "for": "<a class=\"gModGreen\" id=\"mod__1255340149\">Memosprite_HyacineServant_Passive_MaxHp_Increase</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -2883,7 +2883,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_HyacineServant_Passive_Mark[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__492819159\">Memosprite_HyacineServant_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -2917,7 +2917,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_Hyacine_Resist",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1585516308\">Memosprite_Hyacine_Resist</a>",
           "modifierFlags": [
             "ImmuneDebuff"
           ],
@@ -2929,7 +2929,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_HyacineServant_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1066684227\">Memosprite_HyacineServant_Passive</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -2950,7 +2950,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -2999,7 +2999,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_HyacineServant_ChallangeScore",
+                      "modifier": "<a class=\"gModGreen\" id=\"1467878909\">Memosprite_HyacineServant_ChallangeScore</a>",
                       "variable": "_ServantLoseHPValueTotal",
                       "target2": null,
                       "variable2": "_ServantLoseHPValueTotal2"
@@ -3010,7 +3010,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "Memosprite_HyacineServant_ChallangeScore",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1467878909\">Memosprite_HyacineServant_ChallangeScore</a>",
                       "variableName": "_ServantLoseHPValueTotal",
                       "value": {
                         "operator": "Variables[0] (_ServantLoseHPValueTotal2) || Variables[1] (_ServantLoseHPValue) || ADD || RETURN",
@@ -3030,7 +3030,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster's Summoner}}"
                         },
-                        "modifier": "Memosprite_HyacineServant_MaxHpHalo[<span class=\"descriptionNumberColor\">After Rain</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]"
                       },
                       "passed": [
                         {
@@ -3045,7 +3045,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                           },
                           "ifTargetFound": [
                             {
@@ -3081,7 +3081,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                              "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                             }
                           ]
                         },
@@ -3126,7 +3126,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                           },
                           "ifTargetFound": [
                             {
@@ -3162,7 +3162,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                              "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                             }
                           ]
                         }
@@ -3187,7 +3187,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Hyacine_Passive_Effect[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1132518124\">Hyacine_Passive_Effect</a>[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
                   "duration": {
                     "operator": "Variables[0] (AbilityP01_P4_LifeTime) || RETURN",
                     "displayLines": "AbilityP01_P4_LifeTime",
@@ -3249,7 +3249,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_HyacineServant_Passive_Mark[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"492819159\">Memosprite_HyacineServant_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]"
                 }
               ]
             },
@@ -3262,7 +3262,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_Hyacine_Resist"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1585516308\">Memosprite_Hyacine_Resist</a>"
                 },
                 {
                   "name": "Set Action-State",
@@ -3317,7 +3317,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_HyacineServant_Passive_Mark[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"492819159\">Memosprite_HyacineServant_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]",
                   "casterAssign": "TargetSelf"
                 }
               ]
@@ -3389,7 +3389,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Memosprite_HyacineServant_LoseHpFlag",
+                            "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>",
                             "invertCondition": true
                           },
                           {
@@ -3413,7 +3413,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                         }
                       ]
                     }
@@ -3432,7 +3432,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "modifier": "Memosprite_HyacineServant_MaxHpHalo[<span class=\"descriptionNumberColor\">After Rain</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]"
                   },
                   "passed": [
                     {
@@ -3469,7 +3469,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                       },
                       "ifTargetFound": [
                         {
@@ -3518,7 +3518,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Memosprite_HyacineServant_ChallangeScore",
+                          "modifier": "<a class=\"gModGreen\" id=\"1467878909\">Memosprite_HyacineServant_ChallangeScore</a>",
                           "variable": "_ServantLoseHPValueTotal",
                           "target2": null,
                           "variable2": "_ServantLoseHPValueTotal2"
@@ -3529,7 +3529,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifierName": "Memosprite_HyacineServant_ChallangeScore",
+                          "modifierName": "<a class=\"gModGreen\" id=\"1467878909\">Memosprite_HyacineServant_ChallangeScore</a>",
                           "variableName": "_ServantLoseHPValueTotal",
                           "value": {
                             "operator": "Variables[0] (_ServantLoseHPValueTotal2) || Variables[1] (_ServantLoseHPValue) || ADD || RETURN",
@@ -3549,7 +3549,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster's Summoner}}"
                             },
-                            "modifier": "Memosprite_HyacineServant_MaxHpHalo[<span class=\"descriptionNumberColor\">After Rain</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]"
                           },
                           "passed": [
                             {
@@ -3564,7 +3564,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                                "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                               },
                               "ifTargetFound": [
                                 {
@@ -3600,7 +3600,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                                 }
                               ]
                             },
@@ -3645,7 +3645,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                                "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                               },
                               "ifTargetFound": [
                                 {
@@ -3681,7 +3681,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Memosprite_HyacineServant_LoseHpFlag"
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1507711781\">Memosprite_HyacineServant_LoseHpFlag</a>"
                                 }
                               ]
                             }

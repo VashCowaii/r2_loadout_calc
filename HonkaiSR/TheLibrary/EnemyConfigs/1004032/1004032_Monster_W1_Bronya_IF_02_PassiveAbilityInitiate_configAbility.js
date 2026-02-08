@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Bronya_BattleScore2"
+      "modifier": "<a class=\"gModGreen\" id=\"236879313\">Bronya_BattleScore2</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Bronya_BattleScore1"
+      "modifier": "<a class=\"gModGreen\" id=\"186546456\">Bronya_BattleScore1</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_Standard_MuteHitFly"
+      "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
     },
     {
       "name": "Declare Custom Variable",
@@ -54,7 +54,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_Standard_HideMonsterHUD"
+      "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -62,7 +62,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W1_Bronya_IF_02_WeaknessProtect"
+      "modifier": "<a class=\"gModGreen\" id=\"479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -70,7 +70,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W1_Bronya_IF_02_ListenSelfBreak"
+      "modifier": "<a class=\"gModGreen\" id=\"-302906078\">Enemy_W1_Bronya_IF_02_ListenSelfBreak</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -78,7 +78,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W1_Bronya_IF_02_AssistantSpeed[<span class=\"descriptionNumberColor\">Defense</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
       "valuePerStack": {
         "MDF_SpeedDownRatio": {
           "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
@@ -96,7 +96,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurnInit"
+      "modifier": "<a class=\"gModGreen\" id=\"1849445154\">Enemy_W1_Bronya_IF_02_EnhancePerTurnInit</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -104,13 +104,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W1_Bronya_IF_02_Part2EnhanceInti"
+      "modifier": "<a class=\"gModGreen\" id=\"-715823219\">Enemy_W1_Bronya_IF_02_Part2EnhanceInti</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_IF_02_EnhancePerTurnInit",
+      "for": "<a class=\"gModGreen\" id=\"mod__1849445154\">Enemy_W1_Bronya_IF_02_EnhancePerTurnInit</a>",
       "execute": [
         {
           "eventTrigger": "Action End [Owner]",
@@ -121,7 +121,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
               "valuePerStack": {
                 "MDF_SpeedUpPerLayer": {
                   "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
@@ -153,7 +153,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_IF_02_ListenSelfBreak",
+      "for": "<a class=\"gModGreen\" id=\"mod__-302906078\">Enemy_W1_Bronya_IF_02_ListenSelfBreak</a>",
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -218,7 +218,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Enemy_W1_Bronya_IF_02_AssistantSpeed[<span class=\"descriptionNumberColor\">Defense</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]"
               },
               "passed": [
                 {
@@ -227,7 +227,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_W1_Bronya_IF_02_WeaknessProtect"
+                  "modifier": "<a class=\"gModGreen\" id=\"479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>"
                 }
               ]
             }

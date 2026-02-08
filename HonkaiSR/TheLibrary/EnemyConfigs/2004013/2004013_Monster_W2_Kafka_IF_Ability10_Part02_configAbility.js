@@ -45,7 +45,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Recently Summoned Enemies}}"
               },
-              "modifier": "Monster_W2_Kafka_IF_SummonRotation"
+              "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
             }
           ],
           "failed": [
@@ -74,7 +74,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Recently Summoned Enemies}}"
               },
-              "modifier": "Monster_W2_Kafka_IF_SummonRotation"
+              "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
             }
           ]
         }
@@ -93,7 +93,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Monster_W2_Kafka_IF_SummonRotation"
+        "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
       },
       "ifTargetFound": [
         {
@@ -102,7 +102,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_BeControled"
+          "modifier": "<a class=\"gModGreen\" id=\"410285383\">Monster_W2_Kafka_IF_BeControled</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -110,7 +110,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_BPAdd"
+          "modifier": "<a class=\"gModGreen\" id=\"-1650363827\">Monster_W2_Kafka_IF_BPAdd</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -118,7 +118,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Monster_W2_Kafka_IF_SummonRotation"
+          "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
         }
       ]
     },
@@ -128,7 +128,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "Monster_W2_Kafka_IF_SummonRotation"
+      "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -136,7 +136,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "Monster_W2_Kafka_IF_StartRotation"
+      "modifier": "<a class=\"gModGreen\" id=\"-54791834\">Monster_W2_Kafka_IF_StartRotation</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -144,14 +144,14 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "Monster_W2_Kafka_IF_SummonRotation"
+      "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
     },
     "Trigger: Ability End"
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_IF_BPAdd",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1650363827\">Monster_W2_Kafka_IF_BPAdd</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -179,7 +179,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_IF_BeControled",
+      "for": "<a class=\"gModGreen\" id=\"mod__410285383\">Monster_W2_Kafka_IF_BeControled</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -190,7 +190,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Kafka_IF_StartRotation",
+      "for": "<a class=\"gModGreen\" id=\"mod__-54791834\">Monster_W2_Kafka_IF_StartRotation</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

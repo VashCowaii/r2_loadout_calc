@@ -157,7 +157,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
             "displayLines": "{[Skill01[2]]}",
@@ -225,13 +225,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Beast01_01_EffectController"
+          "modifier": "<a class=\"gModGreen\" id=\"-1079817125\">Enemy_W2_Beast01_01_EffectController</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Beast01_01_EffectController",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1079817125\">Enemy_W2_Beast01_01_EffectController</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"

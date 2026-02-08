@@ -47,7 +47,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"2036544920\">Standard_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "duration": 3,
               "valuePerStack": {
                 "MDF_PropertyValue": 50
@@ -88,7 +88,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Monster_W2_Feixiao_IF_OnLevel"
+            "modifier": "<a class=\"gModGreen\" id=\"-1393128044\">Monster_W2_Feixiao_IF_OnLevel</a>"
           }
         },
         "Deleted bullshit",
@@ -98,7 +98,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Standard_SuperArmorBreak_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"-641086431\">Standard_SuperArmorBreak_Mark</a>"
         },
         {
           "name": "IF",
@@ -108,7 +108,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_HP"
+            "modifier": "<a class=\"gModGreen\" id=\"-329109669\">MStrongChallengeEX_BEMark_HP</a>"
           },
           "passed": [
             {
@@ -140,7 +140,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_SP"
+            "modifier": "<a class=\"gModGreen\" id=\"709278328\">MStrongChallengeEX_BEMark_SP</a>"
           },
           "passed": [
             {
@@ -252,7 +252,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_BP"
+            "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
           },
           "passed": [
             {
@@ -270,7 +270,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_ActionDelay"
+            "modifier": "<a class=\"gModGreen\" id=\"-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>"
           },
           "passed": [
             {
@@ -330,7 +330,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_DispelCTRL"
+            "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
           },
           "passed": [
             {
@@ -798,7 +798,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+          "modifier": "<a class=\"gModGreen\" id=\"-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -806,7 +806,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+          "modifier": "<a class=\"gModGreen\" id=\"-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -814,7 +814,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+          "modifier": "<a class=\"gModGreen\" id=\"-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
         },
         {
           "name": "IF",
@@ -824,7 +824,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_SpeedUp"
+            "modifier": "<a class=\"gModGreen\" id=\"-1121709349\">MStrongChallengeEX_BEMark_SpeedUp</a>"
           },
           "passed": [
             {
@@ -876,7 +876,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_HP"
+            "modifier": "<a class=\"gModGreen\" id=\"-329109669\">MStrongChallengeEX_BEMark_HP</a>"
           },
           "passed": [
             {
@@ -908,7 +908,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_SP"
+            "modifier": "<a class=\"gModGreen\" id=\"709278328\">MStrongChallengeEX_BEMark_SP</a>"
           },
           "passed": [
             {
@@ -1020,7 +1020,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_BP"
+            "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
           },
           "passed": [
             {
@@ -1038,12 +1038,12 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_ActionDelay"
+            "modifier": "<a class=\"gModGreen\" id=\"-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>"
           },
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "ReduceActionDelay",
+              "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
@@ -1062,7 +1062,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_DispelCTRL"
+            "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
           },
           "passed": [
             {
@@ -1333,7 +1333,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "MModifier_Monster_W3_Theater_IF_MinionsSuperArmorBreak[<span class=\"descriptionNumberColor\">Prolonged Class</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"393225449\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Prolonged Class</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeTakenRatio": 1
               }
@@ -1346,7 +1346,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+          "modifier": "<a class=\"gModGreen\" id=\"-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1354,7 +1354,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+          "modifier": "<a class=\"gModGreen\" id=\"-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1362,7 +1362,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+          "modifier": "<a class=\"gModGreen\" id=\"-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
         },
         {
           "name": "IF",
@@ -1372,7 +1372,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_SpeedUp"
+            "modifier": "<a class=\"gModGreen\" id=\"-1121709349\">MStrongChallengeEX_BEMark_SpeedUp</a>"
           },
           "passed": [
             {
@@ -1410,7 +1410,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_OneMoreAction_OnSub_1",
+          "for": "<a class=\"gModGreen\" id=\"mod__2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1424,7 +1424,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": "MStrongChallengeEX_OneMoreAction_OnSub_1",
+                    "value1": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
                     "compareType": "<=",
                     "value2": {
                       "operator": "Variables[0] (_MaxLayer) || Constants[0] (0.5) || MUL || RETURN",
@@ -1470,7 +1470,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_OneMoreAction_OnAvatar",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1810685690\">MStrongChallengeEX_OneMoreAction_OnAvatar</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1482,7 +1482,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
                 }
               ]
             },
@@ -1497,12 +1497,12 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+                    "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "ReduceActionDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -1532,13 +1532,13 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+                              "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
                             },
                             {
                               "name": "Define Custom Variable with Modifier Values",
                               "valueType": "Layer",
                               "variableName": "ModifierLayers",
-                              "modifierName": "MStrongChallengeEX_OneMoreAction_OnSub_1",
+                              "modifierName": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
                               "multiplier": 1
                             },
                             {
@@ -1560,7 +1560,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+                                  "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
                                 }
                               ]
                             }
@@ -1611,7 +1611,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W4_FireProwler_IF_OffTeamFormation"
+          "modifier": "<a class=\"gModGreen\" id=\"1026601385\">Enemy_W4_FireProwler_IF_OffTeamFormation</a>"
         },
         "Deleted bullshit",
         {
@@ -1622,7 +1622,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_HP"
+            "modifier": "<a class=\"gModGreen\" id=\"-329109669\">MStrongChallengeEX_BEMark_HP</a>"
           },
           "passed": [
             {
@@ -1654,7 +1654,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_SP"
+            "modifier": "<a class=\"gModGreen\" id=\"709278328\">MStrongChallengeEX_BEMark_SP</a>"
           },
           "passed": [
             {
@@ -1766,7 +1766,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_BP"
+            "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
           },
           "passed": [
             {
@@ -1784,12 +1784,12 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_ActionDelay"
+            "modifier": "<a class=\"gModGreen\" id=\"-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>"
           },
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "ReduceActionDelay",
+              "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
@@ -1808,7 +1808,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_DispelCTRL"
+            "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
           },
           "passed": [
             {
@@ -1836,7 +1836,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W4_FireProwler_IF_Overdrive_WeaknessProtect"
+          "modifier": "<a class=\"gModGreen\" id=\"1856204937\">Enemy_W4_FireProwler_IF_Overdrive_WeaknessProtect</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -1883,7 +1883,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W4_FireProwler_IF_Armor"
+          "modifier": "<a class=\"gModGreen\" id=\"1720204821\">Enemy_W4_FireProwler_IF_Armor</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1891,7 +1891,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W4_FireProwler_IF_ArmorBreak"
+          "modifier": "<a class=\"gModGreen\" id=\"203611304\">Enemy_W4_FireProwler_IF_ArmorBreak</a>"
         },
         {
           "name": "Action Advance/Delay",
@@ -1908,7 +1908,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MoreOneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
         },
         {
           "name": "IF",
@@ -1918,7 +1918,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "OneMorePerTurn"
+            "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
           },
           "failed": [
             {
@@ -1927,7 +1927,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "OneMorePerTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
             }
           ]
         },
@@ -1967,7 +1967,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+          "modifier": "<a class=\"gModGreen\" id=\"-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1975,7 +1975,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+          "modifier": "<a class=\"gModGreen\" id=\"-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1983,7 +1983,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+          "modifier": "<a class=\"gModGreen\" id=\"-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
         },
         {
           "name": "IF",
@@ -1993,7 +1993,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_SpeedUp"
+            "modifier": "<a class=\"gModGreen\" id=\"-1121709349\">MStrongChallengeEX_BEMark_SpeedUp</a>"
           },
           "passed": [
             {
@@ -2017,7 +2017,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_OneMoreAction_OnSub_1",
+          "for": "<a class=\"gModGreen\" id=\"mod__2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2031,7 +2031,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": "MStrongChallengeEX_OneMoreAction_OnSub_1",
+                    "value1": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
                     "compareType": "<=",
                     "value2": {
                       "operator": "Variables[0] (_MaxLayer) || Constants[0] (0.5) || MUL || RETURN",
@@ -2077,7 +2077,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_OneMoreAction_OnAvatar",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1810685690\">MStrongChallengeEX_OneMoreAction_OnAvatar</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2089,7 +2089,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
                 }
               ]
             },
@@ -2104,12 +2104,12 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+                    "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "ReduceActionDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -2139,13 +2139,13 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+                              "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
                             },
                             {
                               "name": "Define Custom Variable with Modifier Values",
                               "valueType": "Layer",
                               "variableName": "ModifierLayers",
-                              "modifierName": "MStrongChallengeEX_OneMoreAction_OnSub_1",
+                              "modifierName": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
                               "multiplier": 1
                             },
                             {
@@ -2167,7 +2167,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+                                  "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
                                 }
                               ]
                             }
@@ -2207,7 +2207,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_HP"
+            "modifier": "<a class=\"gModGreen\" id=\"-329109669\">MStrongChallengeEX_BEMark_HP</a>"
           },
           "passed": [
             {
@@ -2256,7 +2256,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_SP"
+            "modifier": "<a class=\"gModGreen\" id=\"709278328\">MStrongChallengeEX_BEMark_SP</a>"
           },
           "passed": [
             {
@@ -2368,7 +2368,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_BP"
+            "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
           },
           "passed": [
             {
@@ -2386,12 +2386,12 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_ActionDelay"
+            "modifier": "<a class=\"gModGreen\" id=\"-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>"
           },
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "ReduceActionDelay",
+              "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
@@ -2410,7 +2410,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_DispelCTRL"
+            "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
           },
           "passed": [
             {
@@ -2497,7 +2497,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+          "modifier": "<a class=\"gModGreen\" id=\"-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2505,7 +2505,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+          "modifier": "<a class=\"gModGreen\" id=\"-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2513,7 +2513,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+          "modifier": "<a class=\"gModGreen\" id=\"-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
         },
         {
           "name": "IF",
@@ -2523,7 +2523,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Level Entity}}"
             },
-            "modifier": "MStrongChallengeEX_BEMark_SpeedUp"
+            "modifier": "<a class=\"gModGreen\" id=\"-1121709349\">MStrongChallengeEX_BEMark_SpeedUp</a>"
           },
           "passed": [
             {
@@ -2561,7 +2561,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_OneMoreAction_OnSub_1",
+          "for": "<a class=\"gModGreen\" id=\"mod__2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2575,7 +2575,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": "MStrongChallengeEX_OneMoreAction_OnSub_1",
+                    "value1": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
                     "compareType": "<=",
                     "value2": {
                       "operator": "Variables[0] (_MaxLayer) || Constants[0] (0.5) || MUL || RETURN",
@@ -2621,7 +2621,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_OneMoreAction_OnAvatar",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1810685690\">MStrongChallengeEX_OneMoreAction_OnAvatar</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2633,7 +2633,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
                 }
               ]
             },
@@ -2648,12 +2648,12 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+                    "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "ReduceActionDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -2683,13 +2683,13 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+                              "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
                             },
                             {
                               "name": "Define Custom Variable with Modifier Values",
                               "valueType": "Layer",
                               "variableName": "ModifierLayers",
-                              "modifierName": "MStrongChallengeEX_OneMoreAction_OnSub_1",
+                              "modifierName": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
                               "multiplier": 1
                             },
                             {
@@ -2711,7 +2711,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+                                  "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
                                 }
                               ]
                             }
@@ -2741,13 +2741,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StrongChallengeEX_Test_StageAbility_LE_001"
+          "modifier": "<a class=\"gModGreen\" id=\"1623304526\">StrongChallengeEX_Test_StageAbility_LE_001</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StrongChallengeEX_Test_StageAbility_LE_001",
+          "for": "<a class=\"gModGreen\" id=\"mod__1623304526\">StrongChallengeEX_Test_StageAbility_LE_001</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2801,13 +2801,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Environment_StageAbility_LE_014"
+          "modifier": "<a class=\"gModGreen\" id=\"837512680\">MStrongChallengeEX_Environment_StageAbility_LE_014</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_BOSS_014",
+          "for": "<a class=\"gModGreen\" id=\"mod__-965706490\">MStrongChallengeEX_Environment_StageAbility_BOSS_014</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2869,7 +2869,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_LE_014",
+          "for": "<a class=\"gModGreen\" id=\"mod__837512680\">MStrongChallengeEX_Environment_StageAbility_LE_014</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2880,7 +2880,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_BP"
+                  "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2888,7 +2888,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_ActionDelay"
+                  "modifier": "<a class=\"gModGreen\" id=\"-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2896,7 +2896,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_DispelCTRL"
+                  "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
                 }
               ]
             },
@@ -2925,7 +2925,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Environment_StageAbility_BOSS_014",
+                      "modifier": "<a class=\"gModGreen\" id=\"-965706490\">MStrongChallengeEX_Environment_StageAbility_BOSS_014</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -2968,13 +2968,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Environment_StageAbility_LE_013"
+          "modifier": "<a class=\"gModGreen\" id=\"954956013\">MStrongChallengeEX_Environment_StageAbility_LE_013</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_BOSS_013",
+          "for": "<a class=\"gModGreen\" id=\"mod__-915373633\">MStrongChallengeEX_Environment_StageAbility_BOSS_013</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3036,7 +3036,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_LE_013",
+          "for": "<a class=\"gModGreen\" id=\"mod__954956013\">MStrongChallengeEX_Environment_StageAbility_LE_013</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3047,7 +3047,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_HP"
+                  "modifier": "<a class=\"gModGreen\" id=\"-329109669\">MStrongChallengeEX_BEMark_HP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3055,7 +3055,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_ActionDelay"
+                  "modifier": "<a class=\"gModGreen\" id=\"-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3063,7 +3063,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_DispelCTRL"
+                  "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
                 }
               ]
             },
@@ -3092,7 +3092,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Environment_StageAbility_BOSS_013",
+                      "modifier": "<a class=\"gModGreen\" id=\"-915373633\">MStrongChallengeEX_Environment_StageAbility_BOSS_013</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -3135,13 +3135,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Environment_StageAbility_LE_012"
+          "modifier": "<a class=\"gModGreen\" id=\"938178394\">MStrongChallengeEX_Environment_StageAbility_LE_012</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_BOSS_012",
+          "for": "<a class=\"gModGreen\" id=\"mod__-932151252\">MStrongChallengeEX_Environment_StageAbility_BOSS_012</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3203,7 +3203,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_LE_012",
+          "for": "<a class=\"gModGreen\" id=\"mod__938178394\">MStrongChallengeEX_Environment_StageAbility_LE_012</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3214,7 +3214,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_HP"
+                  "modifier": "<a class=\"gModGreen\" id=\"-329109669\">MStrongChallengeEX_BEMark_HP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3222,7 +3222,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_SP"
+                  "modifier": "<a class=\"gModGreen\" id=\"709278328\">MStrongChallengeEX_BEMark_SP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3230,7 +3230,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_DispelCTRL"
+                  "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
                 }
               ]
             },
@@ -3259,7 +3259,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Environment_StageAbility_BOSS_012",
+                      "modifier": "<a class=\"gModGreen\" id=\"-932151252\">MStrongChallengeEX_Environment_StageAbility_BOSS_012</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -3302,13 +3302,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Environment_StageAbility_LE_011"
+          "modifier": "<a class=\"gModGreen\" id=\"921400775\">MStrongChallengeEX_Environment_StageAbility_LE_011</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_BOSS_011",
+          "for": "<a class=\"gModGreen\" id=\"mod__-881818395\">MStrongChallengeEX_Environment_StageAbility_BOSS_011</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3370,7 +3370,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_LE_011",
+          "for": "<a class=\"gModGreen\" id=\"mod__921400775\">MStrongChallengeEX_Environment_StageAbility_LE_011</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3381,7 +3381,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_SP"
+                  "modifier": "<a class=\"gModGreen\" id=\"709278328\">MStrongChallengeEX_BEMark_SP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3389,7 +3389,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_BP"
+                  "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3397,7 +3397,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_DispelCTRL"
+                  "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
                 }
               ]
             },
@@ -3426,7 +3426,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Environment_StageAbility_BOSS_011",
+                      "modifier": "<a class=\"gModGreen\" id=\"-881818395\">MStrongChallengeEX_Environment_StageAbility_BOSS_011</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -3469,13 +3469,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Environment_StageAbility_LE_010"
+          "modifier": "<a class=\"gModGreen\" id=\"904623156\">MStrongChallengeEX_Environment_StageAbility_LE_010</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_BOSS_010",
+          "for": "<a class=\"gModGreen\" id=\"mod__-898596014\">MStrongChallengeEX_Environment_StageAbility_BOSS_010</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3512,7 +3512,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_LE_010",
+          "for": "<a class=\"gModGreen\" id=\"mod__904623156\">MStrongChallengeEX_Environment_StageAbility_LE_010</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3523,7 +3523,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_SP"
+                  "modifier": "<a class=\"gModGreen\" id=\"709278328\">MStrongChallengeEX_BEMark_SP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3531,7 +3531,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_BP"
+                  "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3539,7 +3539,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_DispelCTRL"
+                  "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
                 }
               ]
             },
@@ -3568,7 +3568,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Environment_StageAbility_BOSS_010",
+                      "modifier": "<a class=\"gModGreen\" id=\"-898596014\">MStrongChallengeEX_Environment_StageAbility_BOSS_010</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -3603,13 +3603,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Environment_StageAbility_LE_009"
+          "modifier": "<a class=\"gModGreen\" id=\"854437394\">MStrongChallengeEX_Environment_StageAbility_LE_009</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_AVT_009",
+          "for": "<a class=\"gModGreen\" id=\"mod__-930723394\">MStrongChallengeEX_Environment_StageAbility_AVT_009</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3637,7 +3637,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_LE_009",
+          "for": "<a class=\"gModGreen\" id=\"mod__854437394\">MStrongChallengeEX_Environment_StageAbility_LE_009</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3648,7 +3648,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_SP"
+                  "modifier": "<a class=\"gModGreen\" id=\"709278328\">MStrongChallengeEX_BEMark_SP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3656,7 +3656,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_BP"
+                  "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3664,7 +3664,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_DispelCTRL"
+                  "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
                 }
               ]
             },
@@ -3693,7 +3693,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Environment_StageAbility_AVT_009",
+                      "modifier": "<a class=\"gModGreen\" id=\"-930723394\">MStrongChallengeEX_Environment_StageAbility_AVT_009</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -3728,13 +3728,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Environment_StageAbility_LE_008"
+          "modifier": "<a class=\"gModGreen\" id=\"871215013\">MStrongChallengeEX_Environment_StageAbility_LE_008</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_BOSS_008",
+          "for": "<a class=\"gModGreen\" id=\"mod__-932004157\">MStrongChallengeEX_Environment_StageAbility_BOSS_008</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3796,7 +3796,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_LE_008",
+          "for": "<a class=\"gModGreen\" id=\"mod__871215013\">MStrongChallengeEX_Environment_StageAbility_LE_008</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3807,7 +3807,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_HP"
+                  "modifier": "<a class=\"gModGreen\" id=\"-329109669\">MStrongChallengeEX_BEMark_HP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3815,7 +3815,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_ActionDelay"
+                  "modifier": "<a class=\"gModGreen\" id=\"-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3823,7 +3823,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_DispelCTRL"
+                  "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
                 }
               ]
             },
@@ -3852,7 +3852,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Environment_StageAbility_BOSS_008",
+                      "modifier": "<a class=\"gModGreen\" id=\"-932004157\">MStrongChallengeEX_Environment_StageAbility_BOSS_008</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -3895,13 +3895,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Environment_StageAbility_LE_007"
+          "modifier": "<a class=\"gModGreen\" id=\"887992632\">MStrongChallengeEX_Environment_StageAbility_LE_007</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_BOSS_007",
+          "for": "<a class=\"gModGreen\" id=\"mod__-713895110\">MStrongChallengeEX_Environment_StageAbility_BOSS_007</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3963,7 +3963,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_LE_007",
+          "for": "<a class=\"gModGreen\" id=\"mod__887992632\">MStrongChallengeEX_Environment_StageAbility_LE_007</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3974,7 +3974,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_HP"
+                  "modifier": "<a class=\"gModGreen\" id=\"-329109669\">MStrongChallengeEX_BEMark_HP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3982,7 +3982,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_BP"
+                  "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3990,7 +3990,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_DispelCTRL"
+                  "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
                 }
               ]
             },
@@ -4019,7 +4019,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Environment_StageAbility_BOSS_007",
+                      "modifier": "<a class=\"gModGreen\" id=\"-713895110\">MStrongChallengeEX_Environment_StageAbility_BOSS_007</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -4062,13 +4062,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Environment_StageAbility_LE_006"
+          "modifier": "<a class=\"gModGreen\" id=\"904770251\">MStrongChallengeEX_Environment_StageAbility_LE_006</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_BOSS_006",
+          "for": "<a class=\"gModGreen\" id=\"mod__-697117491\">MStrongChallengeEX_Environment_StageAbility_BOSS_006</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4130,7 +4130,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_LE_006",
+          "for": "<a class=\"gModGreen\" id=\"mod__904770251\">MStrongChallengeEX_Environment_StageAbility_LE_006</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4141,7 +4141,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_SP"
+                  "modifier": "<a class=\"gModGreen\" id=\"709278328\">MStrongChallengeEX_BEMark_SP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -4149,7 +4149,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_BP"
+                  "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -4157,7 +4157,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_DispelCTRL"
+                  "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
                 }
               ]
             },
@@ -4186,7 +4186,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Environment_StageAbility_BOSS_006",
+                      "modifier": "<a class=\"gModGreen\" id=\"-697117491\">MStrongChallengeEX_Environment_StageAbility_BOSS_006</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -4229,13 +4229,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Environment_StageAbility_LE_005"
+          "modifier": "<a class=\"gModGreen\" id=\"921547870\">MStrongChallengeEX_Environment_StageAbility_LE_005</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_BOSS_005",
+          "for": "<a class=\"gModGreen\" id=\"mod__-747450348\">MStrongChallengeEX_Environment_StageAbility_BOSS_005</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4297,7 +4297,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_LE_005",
+          "for": "<a class=\"gModGreen\" id=\"mod__921547870\">MStrongChallengeEX_Environment_StageAbility_LE_005</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4308,7 +4308,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_BP"
+                  "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -4316,7 +4316,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_ActionDelay"
+                  "modifier": "<a class=\"gModGreen\" id=\"-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>"
                 }
               ]
             },
@@ -4345,7 +4345,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Environment_StageAbility_BOSS_005",
+                      "modifier": "<a class=\"gModGreen\" id=\"-747450348\">MStrongChallengeEX_Environment_StageAbility_BOSS_005</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -4388,13 +4388,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Environment_StageAbility_LE_004"
+          "modifier": "<a class=\"gModGreen\" id=\"938325489\">MStrongChallengeEX_Environment_StageAbility_LE_004</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_BOSS_004",
+          "for": "<a class=\"gModGreen\" id=\"mod__-730672729\">MStrongChallengeEX_Environment_StageAbility_BOSS_004</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4456,7 +4456,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_LE_004",
+          "for": "<a class=\"gModGreen\" id=\"mod__938325489\">MStrongChallengeEX_Environment_StageAbility_LE_004</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4467,7 +4467,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_SP"
+                  "modifier": "<a class=\"gModGreen\" id=\"709278328\">MStrongChallengeEX_BEMark_SP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -4475,7 +4475,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_BP"
+                  "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
                 }
               ]
             },
@@ -4504,7 +4504,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Environment_StageAbility_BOSS_004",
+                      "modifier": "<a class=\"gModGreen\" id=\"-730672729\">MStrongChallengeEX_Environment_StageAbility_BOSS_004</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -4547,13 +4547,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Environment_StageAbility_LE_003"
+          "modifier": "<a class=\"gModGreen\" id=\"955103108\">MStrongChallengeEX_Environment_StageAbility_LE_003</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_BOSS_003",
+          "for": "<a class=\"gModGreen\" id=\"mod__-781005586\">MStrongChallengeEX_Environment_StageAbility_BOSS_003</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4615,7 +4615,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_LE_003",
+          "for": "<a class=\"gModGreen\" id=\"mod__955103108\">MStrongChallengeEX_Environment_StageAbility_LE_003</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4626,7 +4626,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_BP"
+                  "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -4634,7 +4634,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_ActionDelay"
+                  "modifier": "<a class=\"gModGreen\" id=\"-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>"
                 }
               ]
             },
@@ -4663,7 +4663,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Environment_StageAbility_BOSS_003",
+                      "modifier": "<a class=\"gModGreen\" id=\"-781005586\">MStrongChallengeEX_Environment_StageAbility_BOSS_003</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -4706,13 +4706,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Environment_StageAbility_LE_002"
+          "modifier": "<a class=\"gModGreen\" id=\"971880727\">MStrongChallengeEX_Environment_StageAbility_LE_002</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_BOSS_002",
+          "for": "<a class=\"gModGreen\" id=\"mod__-764227967\">MStrongChallengeEX_Environment_StageAbility_BOSS_002</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4770,7 +4770,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_LE_002",
+          "for": "<a class=\"gModGreen\" id=\"mod__971880727\">MStrongChallengeEX_Environment_StageAbility_LE_002</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4781,7 +4781,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_SP"
+                  "modifier": "<a class=\"gModGreen\" id=\"709278328\">MStrongChallengeEX_BEMark_SP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -4789,7 +4789,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_ActionDelay"
+                  "modifier": "<a class=\"gModGreen\" id=\"-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>"
                 }
               ]
             },
@@ -4818,7 +4818,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Environment_StageAbility_BOSS_002",
+                      "modifier": "<a class=\"gModGreen\" id=\"-764227967\">MStrongChallengeEX_Environment_StageAbility_BOSS_002</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -4861,13 +4861,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MStrongChallengeEX_Environment_StageAbility_LE_001"
+          "modifier": "<a class=\"gModGreen\" id=\"988658346\">MStrongChallengeEX_Environment_StageAbility_LE_001</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_BOSS_001",
+          "for": "<a class=\"gModGreen\" id=\"mod__-814560824\">MStrongChallengeEX_Environment_StageAbility_BOSS_001</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4925,7 +4925,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_Environment_StageAbility_LE_001",
+          "for": "<a class=\"gModGreen\" id=\"mod__988658346\">MStrongChallengeEX_Environment_StageAbility_LE_001</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4936,7 +4936,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_SP"
+                  "modifier": "<a class=\"gModGreen\" id=\"709278328\">MStrongChallengeEX_BEMark_SP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -4944,7 +4944,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "modifier": "MStrongChallengeEX_BEMark_BP"
+                  "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
                 }
               ]
             },
@@ -4973,7 +4973,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Environment_StageAbility_BOSS_001",
+                      "modifier": "<a class=\"gModGreen\" id=\"-814560824\">MStrongChallengeEX_Environment_StageAbility_BOSS_001</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -5015,7 +5015,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Cocolia_IF_DyingSound",
+          "for": "<a class=\"gModGreen\" id=\"mod__-666804517\">Enemy_W2_Cocolia_IF_DyingSound</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -5050,7 +5050,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Cocolia_IF_SoundController",
+          "for": "<a class=\"gModGreen\" id=\"mod__-995521094\">Enemy_W2_Cocolia_IF_SoundController</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -5130,7 +5130,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_W2_Cocolia_IF_DyingSound"
+                      "modifier": "<a class=\"gModGreen\" id=\"-666804517\">Enemy_W2_Cocolia_IF_DyingSound</a>"
                     }
                   ]
                 }
@@ -5170,7 +5170,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_W2_Cocolia_IF_DyingSound"
+                      "modifier": "<a class=\"gModGreen\" id=\"-666804517\">Enemy_W2_Cocolia_IF_DyingSound</a>"
                     }
                   ]
                 }
@@ -5187,7 +5187,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Standard_MinionsTag_IF",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1480331177\">Standard_MinionsTag_IF</a>",
                     "invertCondition": true
                   }
                 }
@@ -5200,7 +5200,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Monster_APShow"
+                    "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                   }
                 }
               ]
@@ -5212,7 +5212,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Monster_APShow"
+                    "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                   }
                 }
               ]
@@ -5221,7 +5221,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Cocolia_IF_Frenzy[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5260,7 +5260,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Cocolia_IF_SoftFrenzyController",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5285,7 +5285,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "FrenzeyInit"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1540751716\">FrenzeyInit</a>"
                 }
               ]
             },
@@ -5318,7 +5318,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Enemy_W2_Cocolia_IF_Frenzy[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
                           "valuePerStack": {
                             "MDF_TokenDMGAddRatioPerLayer": {
                               "operator": "Variables[0] (MDF_TokenDMGAddRatioPerLayer) || RETURN",
@@ -5374,7 +5374,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "FrenzeyInit"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1540751716\">FrenzeyInit</a>"
                     }
                   ]
                 }
@@ -5405,7 +5405,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "FrenzeyInit"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1540751716\">FrenzeyInit</a>"
                     }
                   ]
                 },
@@ -5481,7 +5481,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "modifier": "Enemy_W2_Cocolia_IF_Frenzy[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -5489,7 +5489,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team Unselectables}}"
                           },
-                          "modifier": "Enemy_W2_Cocolia_IF_Frenzy[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -5497,7 +5497,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "modifier": "Enemy_W2_Cocolia_IF_Frenzy[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
                           "valuePerStack": {
                             "MDF_TokenDMGAddRatioPerLayer": {
                               "operator": "Variables[0] (MDF_TokenDMGAddRatioPerLayer) || RETURN",
@@ -5523,7 +5523,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team Unselectables}}"
                           },
-                          "modifier": "Enemy_W2_Cocolia_IF_Frenzy[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
                           "valuePerStack": {
                             "MDF_TokenDMGAddRatioPerLayer": {
                               "operator": "Variables[0] (MDF_TokenDMGAddRatioPerLayer) || RETURN",
@@ -5553,7 +5553,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "FrenzeyInit",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1540751716\">FrenzeyInit</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable",
@@ -5579,7 +5579,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_W2_Cocolia_IF_Frenzy[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]"
                 }
               ]
             }
@@ -5587,17 +5587,17 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_MinionsTag_IF"
+          "for": "<a class=\"gModGreen\" id=\"mod__-1480331177\">Standard_MinionsTag_IF</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_SuperArmorBreak_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-641086431\">Standard_SuperArmorBreak_Mark</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_MinionsSuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-178829988\">Standard_MinionsSuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
           "modifierFlags": [
             "STAT_SuperArmorBreak",
             "STAT_AITargetKeepActionDelay"
@@ -5612,7 +5612,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "StanceBreakState_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
                 }
               ]
             },
@@ -5644,7 +5644,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "StanceBreakState_Effect"
+                    "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
                   },
                   "passed": [
                     {
@@ -5653,7 +5653,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "StanceBreakState_Effect"
+                      "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
                     }
                   ]
                 }
@@ -5667,14 +5667,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_MinionsSuperArmor_MuteHitH_IF",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1945148324\">Standard_MinionsSuperArmor_MuteHitH_IF</a>",
           "modifierFlags": [
             "MuteHitH"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_MinionsSuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1963095263\">Standard_MinionsSuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
           "modifierFlags": [
             "STAT_SuperArmor"
           ],
@@ -5688,7 +5688,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_MinionsSuperArmor_MuteHitH_IF"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1945148324\">Standard_MinionsSuperArmor_MuteHitH_IF</a>"
                 },
                 {
                   "name": "Set Hit-Class",
@@ -5915,7 +5915,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_MinionsSuperArmor_MuteHitH_IF"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1945148324\">Standard_MinionsSuperArmor_MuteHitH_IF</a>"
                 }
               ]
             },
@@ -5928,7 +5928,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_MinionsSuperArmor_MuteHitH_IF"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1945148324\">Standard_MinionsSuperArmor_MuteHitH_IF</a>"
                 }
               ]
             },
@@ -5941,7 +5941,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_MinionsSuperArmor_MuteHitH_IF"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1945148324\">Standard_MinionsSuperArmor_MuteHitH_IF</a>"
                 }
               ]
             }
@@ -5953,7 +5953,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_SuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
           "modifierFlags": [
             "STAT_SuperArmorBreak",
             "STAT_AITargetKeepActionDelay"
@@ -5968,7 +5968,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "StanceBreakState_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
                 }
               ]
             },
@@ -6000,7 +6000,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "StanceBreakState_Effect"
+                    "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
                   },
                   "passed": [
                     {
@@ -6009,7 +6009,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "StanceBreakState_Effect"
+                      "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
                     }
                   ]
                 }
@@ -6023,7 +6023,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
           "modifierFlags": [
             "MuteHitH",
             "STAT_SuperArmor"
@@ -6264,7 +6264,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_StrongChallengeEX_SuperArmorController_MultiNew",
+          "for": "<a class=\"gModGreen\" id=\"mod__72353298\">Standard_StrongChallengeEX_SuperArmorController_MultiNew</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -6275,7 +6275,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}"
                   },
-                  "modifier": "Standard_MinionsTag_IF"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1480331177\">Standard_MinionsTag_IF</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -6283,7 +6283,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
                       "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -6301,7 +6301,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Standard_MinionsSuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1963095263\">Standard_MinionsSuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
                       "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -6319,7 +6319,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_W2_Cocolia_IF_SoundController"
+                  "modifier": "<a class=\"gModGreen\" id=\"-995521094\">Enemy_W2_Cocolia_IF_SoundController</a>"
                 },
                 {
                   "name": "Add Stage Ability",
@@ -6342,7 +6342,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
                   },
-                  "modifier": "MModifier_Standard_IF_SetMaxBonusCount"
+                  "modifier": "<a class=\"gModGreen\" id=\"1220035238\">MModifier_Standard_IF_SetMaxBonusCount</a>"
                 }
               ]
             },
@@ -6380,7 +6380,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MModifier_Standard_IF_SetMaxBonusCount"
+                      "modifier": "<a class=\"gModGreen\" id=\"1220035238\">MModifier_Standard_IF_SetMaxBonusCount</a>"
                     }
                   ]
                 }
@@ -6408,7 +6408,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeResistance": {
                           "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -6426,7 +6426,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Standard_MinionsSuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1963095263\">Standard_MinionsSuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeResistance": {
                           "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -6453,7 +6453,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak",
+                    "modifier": "<a class=\"gModGreen\" id=\"1972197914\">Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -6480,7 +6480,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -6488,7 +6488,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Standard_MinionsSuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1963095263\">Standard_MinionsSuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -6496,7 +6496,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_SuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeTakenRatio": {
                           "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
@@ -6514,7 +6514,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Standard_MinionsSuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-178829988\">Standard_MinionsSuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeTakenRatio": {
                           "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
@@ -6608,7 +6608,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -6616,7 +6616,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}"
                   },
-                  "modifier": "Standard_SuperArmorBreak_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-641086431\">Standard_SuperArmorBreak_Mark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -6624,7 +6624,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Standard_MinionsSuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-178829988\">Standard_MinionsSuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
                 }
               ]
             },
@@ -6650,7 +6650,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Standard_SuperArmorBreak_Mark"
+                        "modifier": "<a class=\"gModGreen\" id=\"-641086431\">Standard_SuperArmorBreak_Mark</a>"
                       }
                     ]
                   },
@@ -6677,7 +6677,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_StrongChallengeEX_SuperArmorController_Multi",
+          "for": "<a class=\"gModGreen\" id=\"mod__1623952916\">Standard_StrongChallengeEX_SuperArmorController_Multi</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -6688,7 +6688,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
                       "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -6706,7 +6706,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W2_Cocolia_IF_SoundController"
+                  "modifier": "<a class=\"gModGreen\" id=\"-995521094\">Enemy_W2_Cocolia_IF_SoundController</a>"
                 },
                 {
                   "name": "Add Stage Ability",
@@ -6729,7 +6729,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
                   },
-                  "modifier": "MModifier_Standard_IF_SetMaxBonusCount"
+                  "modifier": "<a class=\"gModGreen\" id=\"1220035238\">MModifier_Standard_IF_SetMaxBonusCount</a>"
                 }
               ]
             },
@@ -6767,7 +6767,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MModifier_Standard_IF_SetMaxBonusCount"
+                      "modifier": "<a class=\"gModGreen\" id=\"1220035238\">MModifier_Standard_IF_SetMaxBonusCount</a>"
                     }
                   ]
                 }
@@ -6795,7 +6795,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeResistance": {
                           "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -6822,7 +6822,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak",
+                    "modifier": "<a class=\"gModGreen\" id=\"1972197914\">Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -6849,7 +6849,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -6890,7 +6890,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_SuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeTakenRatio": {
                           "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
@@ -6944,7 +6944,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
                 }
               ]
             }
@@ -6952,7 +6952,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Cocolia_IF_SuperArmorController",
+          "for": "<a class=\"gModGreen\" id=\"mod__1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -6963,7 +6963,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
                       "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -6981,7 +6981,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W2_Cocolia_IF_SoundController"
+                  "modifier": "<a class=\"gModGreen\" id=\"-995521094\">Enemy_W2_Cocolia_IF_SoundController</a>"
                 },
                 {
                   "name": "Add Stage Ability",
@@ -7004,7 +7004,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
                   },
-                  "modifier": "MModifier_Standard_IF_SetMaxBonusCount"
+                  "modifier": "<a class=\"gModGreen\" id=\"1220035238\">MModifier_Standard_IF_SetMaxBonusCount</a>"
                 }
               ]
             },
@@ -7042,7 +7042,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MModifier_Standard_IF_SetMaxBonusCount"
+                      "modifier": "<a class=\"gModGreen\" id=\"1220035238\">MModifier_Standard_IF_SetMaxBonusCount</a>"
                     }
                   ]
                 }
@@ -7070,7 +7070,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeResistance": {
                           "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -7097,7 +7097,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak",
+                    "modifier": "<a class=\"gModGreen\" id=\"1972197914\">Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -7124,7 +7124,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -7165,7 +7165,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_SuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageTypeTakenRatio": {
                           "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
@@ -7236,7 +7236,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
                 }
               ]
             }
@@ -7244,39 +7244,39 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak"
+          "for": "<a class=\"gModGreen\" id=\"mod__1972197914\">Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_BEMark_HP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-329109669\">MStrongChallengeEX_BEMark_HP</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_BEMark_DispelCTRL",
+          "for": "<a class=\"gModGreen\" id=\"mod__114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_BEMark_SpeedUp"
+          "for": "<a class=\"gModGreen\" id=\"mod__-1121709349\">MStrongChallengeEX_BEMark_SpeedUp</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_BEMark_ActionDelay",
+          "for": "<a class=\"gModGreen\" id=\"mod__-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_BEMark_BP",
+          "for": "<a class=\"gModGreen\" id=\"mod__812754161\">MStrongChallengeEX_BEMark_BP</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "MStrongChallengeEX_BEMark_SP",
+          "for": "<a class=\"gModGreen\" id=\"mod__709278328\">MStrongChallengeEX_BEMark_SP</a>",
           "stackData": [],
           "latentQueue": []
         }

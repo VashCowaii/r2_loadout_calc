@@ -30,7 +30,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "BlockDamage_Count[<span class=\"descriptionNumberColor\">Repel</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1364993633\">BlockDamage_Count</a>[<span class=\"descriptionNumberColor\">Repel</span>]"
         }
       ]
     }

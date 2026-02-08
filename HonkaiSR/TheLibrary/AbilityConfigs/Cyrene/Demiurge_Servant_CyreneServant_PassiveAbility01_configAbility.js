@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_CyreneServant_Energy[<span class=\"descriptionNumberColor\">Story</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"684175961\">Memosprite_CyreneServant_Energy</a>[<span class=\"descriptionNumberColor\">Story</span>]",
       "addStacksPerTrigger": 1
     },
     {
@@ -28,7 +28,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Summoner}}"
       },
-      "modifier": "Memosprite_CyreneServant_AmazingBonus"
+      "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -36,7 +36,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Summoner}}"
       },
-      "modifier": "Cyrene_UITop"
+      "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -44,7 +44,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_CyreneServant_PassiveAbility01"
+      "modifier": "<a class=\"gModGreen\" id=\"-335355360\">Memosprite_CyreneServant_PassiveAbility01</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -52,7 +52,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_CyreneServant_PreShowForDanHengPT"
+      "modifier": "<a class=\"gModGreen\" id=\"-839103023\">Memosprite_CyreneServant_PreShowForDanHengPT</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -60,13 +60,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_CyreneServant_PreShowForMydeimos"
+      "modifier": "<a class=\"gModGreen\" id=\"-1827457473\">Memosprite_CyreneServant_PreShowForMydeimos</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_PreShowForMydeimos",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1827457473\">Memosprite_CyreneServant_PreShowForMydeimos</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -94,7 +94,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player's Aim Target List}}"
               },
-              "modifier": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]",
               "invertCondition": true
             }
           ]
@@ -107,7 +107,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_PreShowForDanHengPT",
+      "for": "<a class=\"gModGreen\" id=\"mod__-839103023\">Memosprite_CyreneServant_PreShowForDanHengPT</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -134,7 +134,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_Ability01CostCaster",
+      "for": "<a class=\"gModGreen\" id=\"mod__848098524\">Memosprite_CyreneServant_Ability01CostCaster</a>",
       "stackType": "ReplaceByCaster",
       "variableValueChange": [
         {
@@ -146,7 +146,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_PassiveAbility01_HPIncrease",
+      "for": "<a class=\"gModGreen\" id=\"mod__340897413\">Memosprite_CyreneServant_PassiveAbility01_HPIncrease</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -173,7 +173,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CyreneServant_PassiveAbility01",
+      "for": "<a class=\"gModGreen\" id=\"mod__-335355360\">Memosprite_CyreneServant_PassiveAbility01</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "Endurance"
@@ -187,7 +187,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "HPSync"
+              "functionName": "<a class=\"gTempYellow\" id=\"-255863654\">HPSync</a>"
             },
             {
               "name": "Stack Target Stat Value",
@@ -233,7 +233,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "HPSync"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-255863654\">HPSync</a>"
                 }
               ]
             }
@@ -339,7 +339,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_CyreneServant_Eidolon4_Count[<span class=\"descriptionNumberColor\">Please Write On, With a Smile</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-156616153\">Memosprite_CyreneServant_Eidolon4_Count</a>[<span class=\"descriptionNumberColor\">Please Write On, With a Smile</span>]",
                       "valuePerStack": {
                         "MDF_Count": {
                           "operator": "Variables[0] (Skill01Count) || RETURN",
@@ -377,7 +377,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Memosprite_CyreneServant_Ability02Disable"
+              "modifier": "<a class=\"gModGreen\" id=\"339481432\">Memosprite_CyreneServant_Ability02Disable</a>"
             },
             {
               "name": "IF",
@@ -459,7 +459,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_CyreneServant_AbilityReady_LightTeamMirrorChosenEffect"
+                  "functionName": "<a class=\"gTempYellow\" id=\"344221092\">Servant_CyreneServant_AbilityReady_LightTeamMirrorChosenEffect</a>"
                 }
               ]
             }
@@ -605,7 +605,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}+{{Caster's Summoner}}"
           },
-          "modifier": "Memosprite_CyreneServant_PassiveAbility01_HPIncrease",
+          "modifier": "<a class=\"gModGreen\" id=\"340897413\">Memosprite_CyreneServant_PassiveAbility01_HPIncrease</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.24) || RETURN",

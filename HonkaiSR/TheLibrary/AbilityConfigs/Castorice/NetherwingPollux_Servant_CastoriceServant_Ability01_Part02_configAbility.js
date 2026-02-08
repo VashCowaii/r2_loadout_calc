@@ -6,7 +6,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "Servant_CastoriceServant_BP_OneMore_Clean"
+      "functionName": "<a class=\"gTempYellow\" id=\"-32719272\">Servant_CastoriceServant_BP_OneMore_Clean</a>"
     },
     {
       "name": "IF",
@@ -21,7 +21,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
         }
       ]
     },
@@ -42,7 +42,7 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_CastoriceServant_SetDamageRatio"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1405272466\">Servant_CastoriceServant_SetDamageRatio</a>"
             },
             {
               "name": "ATK Scaling DMG",
@@ -127,7 +127,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
         }
       ]
     },
@@ -170,7 +170,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_StandByOnPhase2"
+          "modifier": "<a class=\"gModGreen\" id=\"1100856476\">Memosprite_CastoriceServant_StandByOnPhase2</a>"
         }
       ]
     }
@@ -178,7 +178,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_StandByOnPhase2",
+      "for": "<a class=\"gModGreen\" id=\"mod__1100856476\">Memosprite_CastoriceServant_StandByOnPhase2</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",

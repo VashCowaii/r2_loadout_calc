@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_BattleEventAbility_ChallengePeakBattle_CountDown",
+      "modifier": "<a class=\"gModGreen\" id=\"-1148970670\">Modifier_BattleEventAbility_ChallengePeakBattle_CountDown</a>",
       "valuePerStack": {
         "BattleEventTurnLeftParam": {
           "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
@@ -47,7 +47,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_BattleEventAbility_ChallengePeakBattle_Rage[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-936105590\">Modifier_BattleEventAbility_ChallengePeakBattle_Rage</a>[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -87,7 +87,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_BattleEventAbility_ChallengePeakBattle_CountDown",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1148970670\">Modifier_BattleEventAbility_ChallengePeakBattle_CountDown</a>",
       "modifierFlags": [
         "STAT_TurnCountAccumulator"
       ],
@@ -220,7 +220,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}"
                   },
-                  "modifier": "Modifier_BattleEventAbility_ChallengePeakBattle_Rage[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-936105590\">Modifier_BattleEventAbility_ChallengePeakBattle_Rage</a>[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
                   "valuePerStack": {
                     "BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio": {
                       "operator": "Variables[0] (RageTime) || RETURN",
@@ -322,7 +322,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_BattleEventAbility_ChallengePeakBattle_Rage[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-936105590\">Modifier_BattleEventAbility_ChallengePeakBattle_Rage</a>[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
                   "valuePerStack": {
                     "BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio": {
                       "operator": "Variables[0] (RageTime) || RETURN",

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Aventurine_Ability02_ShieldEffect"
+      "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>"
     },
     {
       "name": "Define Custom Variable with Stat",
@@ -23,7 +23,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Aventurine_RecordCurrentShield"
+      "functionName": "<a class=\"gTempYellow\" id=\"-969049614\">Aventurine_RecordCurrentShield</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -31,7 +31,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "modifier": "Aventurine_StackableShield",
+      "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -130,7 +130,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Aventurine_Ability02_ShieldEffect",
+          "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
           "valuePerStack": {
             "MDF_CanTriggerShieldEffect": 1,
             "MDF_ResistanceRatio": {

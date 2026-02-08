@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23007_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1660301455\">LC_23007_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23007_DamageTakenUp[<span class=\"descriptionNumberColor\">Aether Code</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2037149365\">LC_23007_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Aether Code</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -48,11 +48,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23007_Target"
+      "for": "<a class=\"gModGreen\" id=\"mod__167551741\">LC_23007_Target</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23007_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1660301455\">LC_23007_Main</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -114,7 +114,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_23007_Target"
+                  "modifier": "<a class=\"gModGreen\" id=\"167551741\">LC_23007_Target</a>"
                 }
               ]
             }
@@ -150,7 +150,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "LC_23007_Target"
+                    "modifier": "<a class=\"gModGreen\" id=\"167551741\">LC_23007_Target</a>"
                   },
                   {
                     "name": "NOT",
@@ -160,7 +160,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_23007_DamageTakenUp[<span class=\"descriptionNumberColor\">Aether Code</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"2037149365\">LC_23007_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Aether Code</span>]"
                     }
                   }
                 ]
@@ -172,7 +172,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_23007_DamageTakenUp[<span class=\"descriptionNumberColor\">Aether Code</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2037149365\">LC_23007_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Aether Code</span>]",
                   "duration": 1,
                   "baseChance": {
                     "operator": "Variables[0] (1) || RETURN",
@@ -196,7 +196,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "LC_23007_Target"
+              "modifier": "<a class=\"gModGreen\" id=\"167551741\">LC_23007_Target</a>"
             }
           ]
         }

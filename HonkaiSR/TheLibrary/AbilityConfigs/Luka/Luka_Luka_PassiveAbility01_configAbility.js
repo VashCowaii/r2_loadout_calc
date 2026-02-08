@@ -96,7 +96,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Luka_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-1297657953\">Luka_Passive</a>"
     },
     {
       "name": "IF",
@@ -111,7 +111,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Luka_Eidolon2"
+          "modifier": "<a class=\"gModGreen\" id=\"-711075902\">Luka_Eidolon2</a>"
         }
       ]
     },

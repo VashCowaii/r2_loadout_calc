@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Gepard_PassiveAbility_UnDead[<span class=\"descriptionNumberColor\">Unyielding Will</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-179604795\">Gepard_PassiveAbility_UnDead</a>[<span class=\"descriptionNumberColor\">Unyielding Will</span>]"
     },
     {
       "name": "IF",
@@ -55,7 +55,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Gepard_Eidolon4"
+          "modifier": "<a class=\"gModGreen\" id=\"-507520261\">Gepard_Eidolon4</a>"
         }
       ]
     }
@@ -63,7 +63,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Gepard_PassiveAbility_UnDead[<span class=\"descriptionNumberColor\">Unyielding Will</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-179604795\">Gepard_PassiveAbility_UnDead</a>[<span class=\"descriptionNumberColor\">Unyielding Will</span>]",
       "counter": 1,
       "execute": [
         {
@@ -191,7 +191,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Gepard_Eidolon4",
+      "for": "<a class=\"gModGreen\" id=\"mod__-507520261\">Gepard_Eidolon4</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -202,7 +202,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Gepard_Eidolon4_AddStatusResistance[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1307422316\">Gepard_Eidolon4_AddStatusResistance</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
               "valuePerStack": {
                 "MDF_AddStatusResistance": {
                   "operator": "Variables[0] (0.2) || RETURN",
@@ -235,7 +235,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Gepard_Eidolon4_AddStatusResistance[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1307422316\">Gepard_Eidolon4_AddStatusResistance</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
                   "valuePerStack": {
                     "MDF_AddStatusResistance": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -269,7 +269,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "Gepard_Eidolon4_AddStatusResistance[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1307422316\">Gepard_Eidolon4_AddStatusResistance</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
               "onlyRemoveOwnersInstance": true
             }
           ]

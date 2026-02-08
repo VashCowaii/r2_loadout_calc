@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Moze_Ability02_InShadowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1726925121\">Moze_Ability02_InShadowModifier</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "Stealth"
@@ -115,13 +115,13 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Moze_InInsert_Tag",
+      "for": "<a class=\"gModGreen\" id=\"mod__-59329108\">Moze_InInsert_Tag</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Moze_Eidolon1_DeBonus[<span class=\"descriptionNumberColor\">Vengewise</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__707417159\">Moze_Eidolon1_DeBonus</a>[<span class=\"descriptionNumberColor\">Vengewise</span>]",
       "modifierFlags": [
         "BlockInfect"
       ],
@@ -164,7 +164,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Moze_Point01_CD[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__707542368\">Moze_Point01_CD</a>[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "stackData": [],
@@ -175,7 +175,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]",
       "modifierFlags": [
         "KeepOnDeathrattle",
         "BlockInfect",
@@ -191,7 +191,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Moze_Eidolon1_DeBonus[<span class=\"descriptionNumberColor\">Vengewise</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"707417159\">Moze_Eidolon1_DeBonus</a>[<span class=\"descriptionNumberColor\">Vengewise</span>]"
             },
             {
               "name": "IF",
@@ -212,7 +212,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Moze_Ability02_InShadowModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
                 }
               ]
             },
@@ -251,7 +251,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Moze_Ability02_InShadowModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -323,7 +323,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Moze_Eidolon1_DeBonus[<span class=\"descriptionNumberColor\">Vengewise</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"707417159\">Moze_Eidolon1_DeBonus</a>[<span class=\"descriptionNumberColor\">Vengewise</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.25) || RETURN",
@@ -355,7 +355,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "PursuedDamage_PerformanceDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -416,7 +416,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Moze_InInsert_Tag",
+                    "modifier": "<a class=\"gModGreen\" id=\"-59329108\">Moze_InInsert_Tag</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -730,7 +730,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
               },
               "passed": [
                 {
@@ -739,7 +739,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Moze_Ability02_InShadowModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -747,7 +747,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
                 }
               ]
             }
@@ -810,7 +810,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Moze_Ability02_InShadowModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
             },
             "Modifier Deletes Itself"
           ]
@@ -825,7 +825,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Moze_InsertAction_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1728393079\">Moze_InsertAction_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",

@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Natasha_BPAbility_DefenceRatioUp[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1227965702\">Natasha_BPAbility_DefenceRatioUp</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -43,7 +43,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Natasha_Passive_FatigueRatio[<span class=\"descriptionNumberColor\">Weaken</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__453099626\">Natasha_Passive_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_Fatigue"
@@ -82,7 +82,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Natasha_HOT_HPByMaxHP[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1462346849\">Natasha_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Constance_Eidolon6"
+      "modifier": "<a class=\"gModGreen\" id=\"-919146628\">Constance_Eidolon6</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Constance_Eidolon6",
+      "for": "<a class=\"gModGreen\" id=\"mod__-919146628\">Constance_Eidolon6</a>",
       "stackData": [],
       "latentQueue": []
     }

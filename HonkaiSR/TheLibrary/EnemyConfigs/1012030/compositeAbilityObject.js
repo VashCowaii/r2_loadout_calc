@@ -19,7 +19,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Mecha_BlockDamage[<span class=\"descriptionNumberColor\">Barrier</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-696028198\">Enemy_Mecha_BlockDamage</a>[<span class=\"descriptionNumberColor\">Barrier</span>]"
         },
         "Ability Start",
         {
@@ -85,20 +85,20 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha01_01_KlaraSpecialVictory_LockHP"
+          "modifier": "<a class=\"gModGreen\" id=\"-411560977\">Monster_W1_Mecha01_01_KlaraSpecialVictory_LockHP</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha01_01_Instance_DisableAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__266091507\">Monster_W1_Mecha01_01_Instance_DisableAction</a>",
           "modifierFlags": [
             "DisableAction"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha01_01_KlaraSpecialVictory_LockHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-411560977\">Monster_W1_Mecha01_01_KlaraSpecialVictory_LockHP</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -118,7 +118,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Monster_W1_Mecha01_01_Instance_DisableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"266091507\">Monster_W1_Mecha01_01_Instance_DisableAction</a>"
                 }
               ]
             }

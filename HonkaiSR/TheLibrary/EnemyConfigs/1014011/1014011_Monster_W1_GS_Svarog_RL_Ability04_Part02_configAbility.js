@@ -41,7 +41,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Monster_W1_Svarog_RL_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"864989347\">Monster_W1_Svarog_RL_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
         "displayLines": "{[Skill04[2]]}",

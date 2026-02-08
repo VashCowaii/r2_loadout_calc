@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha04_01_HeadEffect"
+      "modifier": "<a class=\"gModGreen\" id=\"-1466752435\">Monster_W1_Mecha04_01_HeadEffect</a>"
     },
     "Trigger: Ability End"
   ],

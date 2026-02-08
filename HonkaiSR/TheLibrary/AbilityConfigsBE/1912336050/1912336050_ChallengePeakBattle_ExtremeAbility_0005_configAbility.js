@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0005"
+      "modifier": "<a class=\"gModGreen\" id=\"1175197252\">Modifier_ChallengePeakBattle_ExtremeAbility_0005</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0005_02[<span class=\"descriptionNumberColor\">Energy Absorption++</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1840788035\">Modifier_ChallengePeakBattle_ExtremeAbility_0005_02</a>[<span class=\"descriptionNumberColor\">Energy Absorption++</span>]",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -143,7 +143,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0005",
+      "for": "<a class=\"gModGreen\" id=\"mod__1175197252\">Modifier_ChallengePeakBattle_ExtremeAbility_0005</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -165,7 +165,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0005_02[<span class=\"descriptionNumberColor\">Energy Absorption++</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1840788035\">Modifier_ChallengePeakBattle_ExtremeAbility_0005_02</a>[<span class=\"descriptionNumberColor\">Energy Absorption++</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0005_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

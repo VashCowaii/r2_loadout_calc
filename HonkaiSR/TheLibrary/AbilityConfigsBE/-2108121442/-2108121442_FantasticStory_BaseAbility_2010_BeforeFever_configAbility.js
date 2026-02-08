@@ -28,13 +28,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2010_BeforeFever"
+      "modifier": "<a class=\"gModGreen\" id=\"1695475457\">Modifier_FantasticStory_BaseAbility_2010_BeforeFever</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2010_BeforeFever",
+      "for": "<a class=\"gModGreen\" id=\"mod__1695475457\">Modifier_FantasticStory_BaseAbility_2010_BeforeFever</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -67,7 +67,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2010_aura",
+                    "modifier": "<a class=\"gModGreen\" id=\"-465768831\">Modifier_FantasticStory_BaseAbility_2010_aura</a>",
                     "invertCondition": true
                   }
                 ]
@@ -208,7 +208,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2010_BeforeFever_ForShow[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1101088336\">Modifier_FantasticStory_BaseAbility_2010_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
           "haloStatus": true
         }
       ]

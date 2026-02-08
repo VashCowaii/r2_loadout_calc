@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Summoner_Standard_PassiveModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1237494040\">Summoner_Standard_PassiveModifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Summoner_Standard_PassiveModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1237494040\">Summoner_Standard_PassiveModifier</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",

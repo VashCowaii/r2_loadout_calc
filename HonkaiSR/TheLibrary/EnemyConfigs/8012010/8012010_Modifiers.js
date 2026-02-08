@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_AML_Minion02_Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1582498358\">Monster_AML_Minion02_Effect</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -21,7 +21,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_AML_Minion02_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1771820857\">Monster_AML_Minion02_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [

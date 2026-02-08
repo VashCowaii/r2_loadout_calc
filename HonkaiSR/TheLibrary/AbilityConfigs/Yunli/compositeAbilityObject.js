@@ -35,7 +35,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_AddRegardAsAttackType"
+          "modifier": "<a class=\"gModGreen\" id=\"1898161246\">Yunli_AddRegardAsAttackType</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -43,7 +43,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_TechniqueInLevel"
+          "modifier": "<a class=\"gModGreen\" id=\"37918586\">Yunli_TechniqueInLevel</a>"
         },
         {
           "name": "IF",
@@ -58,7 +58,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yunli_Eidolon1",
+              "modifier": "<a class=\"gModGreen\" id=\"275203206\">Yunli_Eidolon1</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.2) || RETURN",
@@ -214,13 +214,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Yunli_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1638028001\">StageAbility_Maze_Yunli_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Yunli_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1638028001\">StageAbility_Maze_Yunli_Modifier</a>",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
@@ -449,7 +449,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-1181889244\">Yunli_Passive</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -485,7 +485,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yunli_Trace03",
+              "modifier": "<a class=\"gModGreen\" id=\"-762526263\">Yunli_Trace03</a>",
               "valuePerStack": {
                 "MDF_ProbabilityValue2": {
                   "operator": "Variables[0] (0.3) || RETURN",
@@ -512,7 +512,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yunli_Eidolon2",
+              "modifier": "<a class=\"gModGreen\" id=\"258425587\">Yunli_Eidolon2</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.2) || RETURN",
@@ -539,7 +539,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yunli_Eidolon6",
+              "modifier": "<a class=\"gModGreen\" id=\"325536063\">Yunli_Eidolon6</a>",
               "valuePerStack": {
                 "MDF_CritChance": {
                   "operator": "Variables[0] (0.15) || RETURN",
@@ -565,7 +565,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1181889244\">Yunli_Passive</a>",
           "execute": [
             {
               "eventTrigger": "Turn Start [Anyone]",
@@ -616,7 +616,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yunli_Blocking_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1693627544\">Yunli_Blocking_Effect</a>"
                 }
               ]
             },
@@ -650,7 +650,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -836,7 +836,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Yunli_Blocking_Effect"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1693627544\">Yunli_Blocking_Effect</a>"
                         },
                         {
                           "name": "Change Character Transformation",
@@ -880,7 +880,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]"
         },
         {
           "name": "Update Energy",
@@ -969,7 +969,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yunli_Blocking_CritDamage[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1896809372\">Yunli_Blocking_CritDamage</a>[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
             },
             "Trigger: Attack End"
           ]
@@ -1058,7 +1058,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Yunli_InsertAbility2"
+              "functionName": "<a class=\"gTempYellow\" id=\"-501144556\">Yunli_InsertAbility2</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -1082,7 +1082,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_SuperCounter_Achevement"
+          "modifier": "<a class=\"gModGreen\" id=\"1386061477\">Yunli_SuperCounter_Achevement</a>"
         },
         {
           "name": "Change Character Transformation",
@@ -1384,7 +1384,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_AddRegardAsAttackType"
+          "modifier": "<a class=\"gModGreen\" id=\"1898161246\">Yunli_AddRegardAsAttackType</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1392,7 +1392,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Blocking_CritDamage[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1896809372\">Yunli_Blocking_CritDamage</a>[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
         },
         "Trigger: Attack End",
         {
@@ -1401,7 +1401,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Eidolon1"
+          "modifier": "<a class=\"gModGreen\" id=\"275203206\">Yunli_Eidolon1</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -1414,7 +1414,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_SuperCounter_Achevement"
+          "modifier": "<a class=\"gModGreen\" id=\"1386061477\">Yunli_SuperCounter_Achevement</a>"
         },
         {
           "name": "IF",
@@ -1424,7 +1424,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Yunli_Blocking_BeingAttackMark"
+            "modifier": "<a class=\"gModGreen\" id=\"1705533057\">Yunli_Blocking_BeingAttackMark</a>"
           },
           "passed": [
             {
@@ -1433,7 +1433,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yunli_Blocking_BeingAttackMark"
+              "modifier": "<a class=\"gModGreen\" id=\"1705533057\">Yunli_Blocking_BeingAttackMark</a>"
             }
           ],
           "failed": [
@@ -1503,7 +1503,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yunli_Eidolon4[<span class=\"descriptionNumberColor\">Artisan's Ironsong</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"359091301\">Yunli_Eidolon4</a>[<span class=\"descriptionNumberColor\">Artisan's Ironsong</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1556,7 +1556,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Blocking_BeingAttackMark"
+          "modifier": "<a class=\"gModGreen\" id=\"1705533057\">Yunli_Blocking_BeingAttackMark</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -1635,7 +1635,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_AddRegardAsAttackType"
+          "modifier": "<a class=\"gModGreen\" id=\"1898161246\">Yunli_AddRegardAsAttackType</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1643,7 +1643,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Blocking_CritDamage[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1896809372\">Yunli_Blocking_CritDamage</a>[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
         },
         "Trigger: Attack End",
         {
@@ -1671,7 +1671,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yunli_Eidolon4[<span class=\"descriptionNumberColor\">Artisan's Ironsong</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"359091301\">Yunli_Eidolon4</a>[<span class=\"descriptionNumberColor\">Artisan's Ironsong</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1721,7 +1721,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Eidolon1"
+          "modifier": "<a class=\"gModGreen\" id=\"275203206\">Yunli_Eidolon1</a>"
         }
       ],
       "references": []
@@ -1762,7 +1762,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yunli_AddRegardAsAttackType"
+              "modifier": "<a class=\"gModGreen\" id=\"1898161246\">Yunli_AddRegardAsAttackType</a>"
             },
             {
               "name": "IF",
@@ -1777,7 +1777,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yunli_Eidolon1",
+                  "modifier": "<a class=\"gModGreen\" id=\"275203206\">Yunli_Eidolon1</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -1817,7 +1817,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Yunli_SuperCounter_Mark"
+                    "modifier": "<a class=\"gModGreen\" id=\"-77264210\">Yunli_SuperCounter_Mark</a>"
                   }
                 ]
               },
@@ -1832,7 +1832,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yunli_SuperCounter_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-77264210\">Yunli_SuperCounter_Mark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1840,7 +1840,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]",
                   "onlyRemoveOwnersInstance": true
                 },
                 "Deleted bullshit",
@@ -1870,7 +1870,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -1931,7 +1931,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yunli_AddRegardAsAttackType"
+                  "modifier": "<a class=\"gModGreen\" id=\"1898161246\">Yunli_AddRegardAsAttackType</a>"
                 },
                 {
                   "name": "IF",
@@ -1946,7 +1946,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yunli_Eidolon1",
+                      "modifier": "<a class=\"gModGreen\" id=\"275203206\">Yunli_Eidolon1</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -1986,7 +1986,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Yunli_SuperCounter_Mark"
+                        "modifier": "<a class=\"gModGreen\" id=\"-77264210\">Yunli_SuperCounter_Mark</a>"
                       }
                     ]
                   },
@@ -2001,7 +2001,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yunli_SuperCounter_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-77264210\">Yunli_SuperCounter_Mark</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -2009,7 +2009,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]",
                       "onlyRemoveOwnersInstance": true
                     },
                     "Deleted bullshit",
@@ -2039,7 +2039,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]",
                       "onlyRemoveOwnersInstance": true
                     },
                     {
@@ -2121,7 +2121,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Yunli_InsertAbility1"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-450811699\">Yunli_InsertAbility1</a>"
                 }
               ]
             },
@@ -2152,7 +2152,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Ability03_ForBidUltra"
+          "modifier": "<a class=\"gModGreen\" id=\"183026830\">Yunli_Ability03_ForBidUltra</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2160,7 +2160,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]"
         },
         {
           "name": "Update Energy",
@@ -2178,7 +2178,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2186,7 +2186,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Blocking_CritDamage[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1896809372\">Yunli_Blocking_CritDamage</a>[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2194,7 +2194,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Standard_CTRL_Taunt[<span class=\"descriptionNumberColor\">Taunt</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1488319040\">Standard_CTRL_Taunt</a>[<span class=\"descriptionNumberColor\">Taunt</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -2457,7 +2457,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Trace02_ControlResist[<span class=\"descriptionNumberColor\">Demon Quell</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-77031042\">Yunli_Trace02_ControlResist</a>[<span class=\"descriptionNumberColor\">Demon Quell</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "Endurance",
@@ -2522,7 +2522,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Blocking_BeingAttackMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__1705533057\">Yunli_Blocking_BeingAttackMark</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2532,7 +2532,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
@@ -2547,7 +2547,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yunli_Ability03_ForBidUltra"
+                  "modifier": "<a class=\"gModGreen\" id=\"183026830\">Yunli_Ability03_ForBidUltra</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2555,7 +2555,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}"
                   },
-                  "modifier": "Standard_CTRL_Taunt[<span class=\"descriptionNumberColor\">Taunt</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1488319040\">Standard_CTRL_Taunt</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -2564,7 +2564,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Yunli_Blocking_ContinuousMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-983470553\">Yunli_Blocking_ContinuousMark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2572,7 +2572,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Yunli_Trace02_ControlResist[<span class=\"descriptionNumberColor\">Demon Quell</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-77031042\">Yunli_Trace02_ControlResist</a>[<span class=\"descriptionNumberColor\">Demon Quell</span>]"
                 }
               ]
             },
@@ -2610,7 +2610,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Yunli_Blocking_BeingAttackMark",
+                        "modifier": "<a class=\"gModGreen\" id=\"1705533057\">Yunli_Blocking_BeingAttackMark</a>",
                         "invertCondition": true
                       },
                       "passed": [
@@ -2721,7 +2721,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Yunli_Blocking_BeingAttackMark"
+                              "modifier": "<a class=\"gModGreen\" id=\"1705533057\">Yunli_Blocking_BeingAttackMark</a>"
                             },
                             {
                               "name": "Remove Events/Bonuses",
@@ -2729,7 +2729,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Yunli_SuperCounter_Mark"
+                              "modifier": "<a class=\"gModGreen\" id=\"-77264210\">Yunli_SuperCounter_Mark</a>"
                             }
                           ],
                           "failed": [
@@ -2748,7 +2748,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "Yunli_Blocking_BeingAttackMark"
+                                  "modifier": "<a class=\"gModGreen\" id=\"1705533057\">Yunli_Blocking_BeingAttackMark</a>"
                                 },
                                 {
                                   "name": "Remove Events/Bonuses",
@@ -2756,7 +2756,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "Yunli_SuperCounter_Mark"
+                                  "modifier": "<a class=\"gModGreen\" id=\"-77264210\">Yunli_SuperCounter_Mark</a>"
                                 },
                                 {
                                   "name": "Inject Ability Use",
@@ -2845,7 +2845,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Yunli_Blocking_BeingAttackMark"
+                          "modifier": "<a class=\"gModGreen\" id=\"1705533057\">Yunli_Blocking_BeingAttackMark</a>"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -2853,7 +2853,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Yunli_SuperCounter_Mark"
+                          "modifier": "<a class=\"gModGreen\" id=\"-77264210\">Yunli_SuperCounter_Mark</a>"
                         }
                       ]
                     }
@@ -2890,7 +2890,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Yunli_Trace02_ControlResist[<span class=\"descriptionNumberColor\">Demon Quell</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-77031042\">Yunli_Trace02_ControlResist</a>[<span class=\"descriptionNumberColor\">Demon Quell</span>]",
                       "valuePerStack": {
                         "Yunli_DamageResistance_Value01": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -2941,7 +2941,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yunli_Blocking_BeingAttackMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"1705533057\">Yunli_Blocking_BeingAttackMark</a>"
                     },
                     {
                       "name": "Change Character Transformation",
@@ -2957,7 +2957,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yunli_SuperCounter_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-77264210\">Yunli_SuperCounter_Mark</a>"
                     },
                     {
                       "name": "IF",
@@ -3072,7 +3072,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "Yunli_Blocking_BeingAttackMark",
+                            "modifier": "<a class=\"gModGreen\" id=\"1705533057\">Yunli_Blocking_BeingAttackMark</a>",
                             "invertCondition": true
                           }
                         ]
@@ -3084,7 +3084,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Yunli_Blocking_BeingAttackMark"
+                          "modifier": "<a class=\"gModGreen\" id=\"1705533057\">Yunli_Blocking_BeingAttackMark</a>"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -3092,7 +3092,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Yunli_SuperCounter_Mark"
+                          "modifier": "<a class=\"gModGreen\" id=\"-77264210\">Yunli_SuperCounter_Mark</a>"
                         },
                         {
                           "name": "Inject Ability Use",
@@ -3176,7 +3176,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Yunli_Blocking_BeingAttackMark"
+                            "modifier": "<a class=\"gModGreen\" id=\"1705533057\">Yunli_Blocking_BeingAttackMark</a>"
                           },
                           {
                             "name": "Compare: Variable",
@@ -3191,7 +3191,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Yunli_InsertAbility1"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-450811699\">Yunli_InsertAbility1</a>"
                     }
                   ]
                 }
@@ -3248,7 +3248,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Yunli_Blocking_BeingAttackMark"
+                            "modifier": "<a class=\"gModGreen\" id=\"1705533057\">Yunli_Blocking_BeingAttackMark</a>"
                           },
                           {
                             "name": "Compare: Variable",
@@ -3263,7 +3263,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Yunli_InsertAbility1"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-450811699\">Yunli_InsertAbility1</a>"
                     }
                   ]
                 }
@@ -3281,7 +3281,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_WeaponCharge",
+          "for": "<a class=\"gModGreen\" id=\"mod__1668815419\">Yunli_WeaponCharge</a>",
           "counter": 1,
           "execute": [
             {
@@ -3294,7 +3294,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Ability03_ForBidUltra",
+          "for": "<a class=\"gModGreen\" id=\"mod__183026830\">Yunli_Ability03_ForBidUltra</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3320,7 +3320,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_AddAggro",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1581545844\">Yunli_AddAggro</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3347,11 +3347,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_WeaponCharge_Free"
+          "for": "<a class=\"gModGreen\" id=\"mod__332588002\">Yunli_WeaponCharge_Free</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Eidolon6",
+          "for": "<a class=\"gModGreen\" id=\"mod__325536063\">Yunli_Eidolon6</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -3396,7 +3396,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Eidolon4[<span class=\"descriptionNumberColor\">Artisan's Ironsong</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__359091301\">Yunli_Eidolon4</a>[<span class=\"descriptionNumberColor\">Artisan's Ironsong</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3432,7 +3432,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Eidolon2",
+          "for": "<a class=\"gModGreen\" id=\"mod__258425587\">Yunli_Eidolon2</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -3468,7 +3468,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Eidolon1",
+          "for": "<a class=\"gModGreen\" id=\"mod__275203206\">Yunli_Eidolon1</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3503,7 +3503,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Trace03_CritChance",
+          "for": "<a class=\"gModGreen\" id=\"mod__215174918\">Yunli_Trace03_CritChance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3537,7 +3537,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Blocking_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1693627544\">Yunli_Blocking_Effect</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -3578,7 +3578,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Blocking_CritDamage[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1896809372\">Yunli_Blocking_CritDamage</a>[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -3648,7 +3648,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Trace03_Sub[<span class=\"descriptionNumberColor\">True Sunder</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1909212480\">Yunli_Trace03_Sub</a>[<span class=\"descriptionNumberColor\">True Sunder</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3680,7 +3680,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Trace03",
+          "for": "<a class=\"gModGreen\" id=\"mod__-762526263\">Yunli_Trace03</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3701,7 +3701,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yunli_Trace03_Sub[<span class=\"descriptionNumberColor\">True Sunder</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1909212480\">Yunli_Trace03_Sub</a>[<span class=\"descriptionNumberColor\">True Sunder</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_ProbabilityValue": {
@@ -3726,7 +3726,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Trace01_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__1292151382\">Yunli_Trace01_Sub</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3746,7 +3746,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Trace01",
+          "for": "<a class=\"gModGreen\" id=\"mod__-796081501\">Yunli_Trace01</a>",
           "execute": [
             {
               "eventTrigger": "Being Attacked Start [Owner]"
@@ -3755,7 +3755,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_AddRegardAsAttackType",
+          "for": "<a class=\"gModGreen\" id=\"mod__1898161246\">Yunli_AddRegardAsAttackType</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3792,7 +3792,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_Passive_AddDamage",
+          "for": "<a class=\"gModGreen\" id=\"mod__426455178\">Yunli_Passive_AddDamage</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3843,7 +3843,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_TechniqueInLevel",
+          "for": "<a class=\"gModGreen\" id=\"mod__37918586\">Yunli_TechniqueInLevel</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -3881,14 +3881,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_SuperCounter_Achevement",
+          "for": "<a class=\"gModGreen\" id=\"mod__1386061477\">Yunli_SuperCounter_Achevement</a>",
           "stackType": "Replace",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Yunli_SuperCounter_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-77264210\">Yunli_SuperCounter_Mark</a>",
           "stackType": "Replace",
           "stackData": [],
           "latentQueue": [
@@ -3913,7 +3913,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Yunli_InsertAbility1",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-450811699\">Yunli_InsertAbility1</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -3955,7 +3955,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Yunli_InsertAbility2",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-501144556\">Yunli_InsertAbility2</a>",
           "parse": [
             {
               "name": "Find New Target",

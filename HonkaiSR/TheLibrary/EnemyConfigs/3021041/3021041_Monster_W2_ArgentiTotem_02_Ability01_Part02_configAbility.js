@@ -15,7 +15,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_W2_Argenti_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
           },
           {
             "name": "Has Modifier",
@@ -23,7 +23,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_W2_Argenti_Power_RL[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
           }
         ]
       },
@@ -34,7 +34,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members}}"
           },
-          "modifier": "Enemy_W2_Beast02_BlockDamage[<span class=\"descriptionNumberColor\">Barrier</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"162724046\">Enemy_W2_Beast02_BlockDamage</a>[<span class=\"descriptionNumberColor\">Barrier</span>]",
           "duration": -1
         }
       ],
@@ -62,7 +62,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W2_Beast02_BlockDamage[<span class=\"descriptionNumberColor\">Barrier</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"162724046\">Enemy_W2_Beast02_BlockDamage</a>[<span class=\"descriptionNumberColor\">Barrier</span>]",
               "duration": -1
             }
           ]

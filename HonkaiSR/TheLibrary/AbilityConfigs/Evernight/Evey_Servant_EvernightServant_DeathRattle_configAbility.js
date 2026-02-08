@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_EvernightServant_DeathRattle"
+      "modifier": "<a class=\"gModGreen\" id=\"-182017003\">Memosprite_EvernightServant_DeathRattle</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_DeathRattle",
+      "for": "<a class=\"gModGreen\" id=\"mod__-182017003\">Memosprite_EvernightServant_DeathRattle</a>",
       "modifierFlags": [
         "Deathrattle"
       ],
@@ -38,7 +38,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Memosprite_EvernightServant_DeathRattle_Speed[<span class=\"descriptionNumberColor\">You, Parting, Beyond Reach</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2040095871\">Memosprite_EvernightServant_DeathRattle_Speed</a>[<span class=\"descriptionNumberColor\">You, Parting, Beyond Reach</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.1) || RETURN",

@@ -37,13 +37,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Robin_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1129624601\">StageAbility_Maze_Robin_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Robin_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1129624601\">StageAbility_Maze_Robin_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -93,7 +93,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Robin_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"1781438521\">Robin_Passive</a>"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -127,7 +127,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Robin_PassiveAbility01_BattleEvent"
+          "modifier": "<a class=\"gModGreen\" id=\"594877276\">Robin_PassiveAbility01_BattleEvent</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -135,7 +135,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Robin_PassiveAbility01_BattleEvent_BaseSpeed"
+          "modifier": "<a class=\"gModGreen\" id=\"906631439\">Robin_PassiveAbility01_BattleEvent_BaseSpeed</a>"
         },
         {
           "name": "Block Advance/Delay Effects",
@@ -153,7 +153,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Robin_PassiveAbility01_BattleEvent_BaseSpeed",
+          "for": "<a class=\"gModGreen\" id=\"mod__906631439\">Robin_PassiveAbility01_BattleEvent_BaseSpeed</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -194,7 +194,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Robin_Ability03Area"
+          "modifier": "<a class=\"gModGreen\" id=\"32210681\">Robin_Ability03Area</a>"
         },
         {
           "name": "Update Energy",
@@ -266,7 +266,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Robin_Ability02_DmgUpCasterListener[<span class=\"descriptionNumberColor\">Aria</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-341772219\">Robin_Ability02_DmgUpCasterListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -274,7 +274,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Robin_Ability02_Aura"
+          "modifier": "<a class=\"gModGreen\" id=\"853884831\">Robin_Ability02_Aura</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -282,7 +282,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Robin_Ability02_DmgUpCasterListener[<span class=\"descriptionNumberColor\">Aria</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-341772219\">Robin_Ability02_DmgUpCasterListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -546,7 +546,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Robin_AbilityEidolon6_ExtraRatioForShow[<span class=\"descriptionNumberColor\">Moonless Midnight</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-24245169\">Robin_AbilityEidolon6_ExtraRatioForShow</a>[<span class=\"descriptionNumberColor\">Moonless Midnight</span>]",
           "stackType": "ReplaceByCaster",
           "description": "Additionally increases the CRIT DMG for the Ultimate's Physical Additional DMG dealt by <span class=\"descriptionNumberColor\">SkillRank_Rank06_P2_ExtraRatio</span>. The remaining triggerable count is <span class=\"descriptionNumberColor\">_Rank06_BigDmgCount</span>.",
           "type": "Buff",
@@ -555,7 +555,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_PassiveAbility_CritDmgUp[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-893534812\">Robin_PassiveAbility_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -586,7 +586,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_PassiveAbility_UltraPreshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__1748268273\">Robin_PassiveAbility_UltraPreshow</a>",
           "stackType": "ReplaceByCaster",
           "previewValue": {
             "name": "Modifier: UI Preview",
@@ -606,7 +606,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Ability03_AtkUp_FriendForShow[<span class=\"descriptionNumberColor\">Concerto</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-169791812\">Robin_Ability03_AtkUp_FriendForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -620,7 +620,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Ability03_AtkUp_CasterForShow[<span class=\"descriptionNumberColor\">Concerto</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1126110528\">Robin_Ability03_AtkUp_CasterForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -634,7 +634,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Ability02_DmgUpFriendListener[<span class=\"descriptionNumberColor\">Aria</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__601034929\">Robin_Ability02_DmgUpFriendListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]",
           "stackType": "ReplaceByCaster",
           "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">Skill02_P1_DmgUpForShow</span>.",
           "type": "Buff",
@@ -643,7 +643,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Ability02_DmgUpCasterListener[<span class=\"descriptionNumberColor\">Aria</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-341772219\">Robin_Ability02_DmgUpCasterListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -656,7 +656,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_Ability02_Aura"
+                  "modifier": "<a class=\"gModGreen\" id=\"853884831\">Robin_Ability02_Aura</a>"
                 }
               ]
             }
@@ -670,7 +670,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Ability02_DmgUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-746794403\">Robin_Ability02_DmgUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -710,7 +710,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Ability03_BonusAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-418120914\">Robin_Ability03_BonusAction</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -731,7 +731,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Ability03_PursuedDmg",
+          "for": "<a class=\"gModGreen\" id=\"mod__1181361675\">Robin_Ability03_PursuedDmg</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -739,7 +739,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "PursuedDamage_PerformanceDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Attack Targets of Modifier Holder}}"
@@ -790,7 +790,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Robin_AbilityEidolon6_ExtraRatioForShow[<span class=\"descriptionNumberColor\">Moonless Midnight</span>]"
+                              "modifier": "<a class=\"gModGreen\" id=\"-24245169\">Robin_AbilityEidolon6_ExtraRatioForShow</a>[<span class=\"descriptionNumberColor\">Moonless Midnight</span>]"
                             }
                           ]
                         }
@@ -828,7 +828,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Ability03_AtkUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__102391588\">Robin_Ability03_AtkUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -856,14 +856,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Ability03Area_sub_disableAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1180409879\">Robin_Ability03Area_sub_disableAction</a>",
           "modifierFlags": [
             "DisableAction"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Ability03Area_sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__505362608\">Robin_Ability03Area_sub</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "Endurance"
@@ -890,7 +890,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_Ability03Area_sub_disableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1180409879\">Robin_Ability03Area_sub_disableAction</a>"
                 }
               ]
             },
@@ -929,7 +929,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_Ability03Area_sub_disableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1180409879\">Robin_Ability03Area_sub_disableAction</a>"
                 }
               ]
             },
@@ -962,7 +962,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Robin_Ability03Area"
+                      "modifier": "<a class=\"gModGreen\" id=\"32210681\">Robin_Ability03Area</a>"
                     }
                   ]
                 }
@@ -972,7 +972,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_AbilityEidolon4_ResistAll[<span class=\"descriptionNumberColor\">Raindrop Key</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-184831783\">Robin_AbilityEidolon4_ResistAll</a>[<span class=\"descriptionNumberColor\">Raindrop Key</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1004,7 +1004,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_AbilityEidolon4_DispelControl",
+          "for": "<a class=\"gModGreen\" id=\"mod__1430501646\">Robin_AbilityEidolon4_DispelControl</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1064,7 +1064,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_AbilityEidolon2_Bonus[<span class=\"descriptionNumberColor\">Afternoon Tea For Two</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-644782265\">Robin_AbilityEidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Afternoon Tea For Two</span>]",
           "stackType": "Replace",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -1100,7 +1100,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_AbilityEidolon1_Bonus[<span class=\"descriptionNumberColor\">Land of Smiles</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__712086196\">Robin_AbilityEidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Land of Smiles</span>]",
           "stackType": "Replace",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1133,7 +1133,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Ability03Area",
+          "for": "<a class=\"gModGreen\" id=\"mod__32210681\">Robin_Ability03Area</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1145,7 +1145,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_Ability03_AtkUp_CasterForShow[<span class=\"descriptionNumberColor\">Concerto</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1126110528\">Robin_Ability03_AtkUp_CasterForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1153,7 +1153,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_Ability03Area_sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"505362608\">Robin_Ability03Area_sub</a>"
                 },
                 {
                   "name": "Set Action-State",
@@ -1259,7 +1259,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_Ability03_AtkUp_CasterForShow[<span class=\"descriptionNumberColor\">Concerto</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1126110528\">Robin_Ability03_AtkUp_CasterForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1267,7 +1267,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_Ability03Area_sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"505362608\">Robin_Ability03Area_sub</a>"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1287,7 +1287,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_Ability03Area_sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"505362608\">Robin_Ability03Area_sub</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1295,7 +1295,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members(Exclude Self)}}"
                   },
-                  "modifier": "Robin_Ability03_BonusAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"-418120914\">Robin_Ability03_BonusAction</a>"
                 },
                 {
                   "name": "IF",
@@ -1310,7 +1310,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Robin_AbilityEidolon4_DispelControl"
+                      "modifier": "<a class=\"gModGreen\" id=\"1430501646\">Robin_AbilityEidolon4_DispelControl</a>"
                     }
                   ]
                 },
@@ -1435,7 +1435,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_Ability03_AtkUp_CasterForShow[<span class=\"descriptionNumberColor\">Concerto</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1126110528\">Robin_Ability03_AtkUp_CasterForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
                   "valuePerStack": {
                     "BaseAttack_Total": {
                       "operator": "Variables[0] (Skill03_BaseAttack_Total) || RETURN",
@@ -1458,7 +1458,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_Ability03_AtkUp_CasterForShow[<span class=\"descriptionNumberColor\">Concerto</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1126110528\">Robin_Ability03_AtkUp_CasterForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1466,7 +1466,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_Ability03Area_sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"505362608\">Robin_Ability03Area_sub</a>"
                 },
                 {
                   "name": "Set Action-State",
@@ -1485,7 +1485,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
               },
-              "modifier": "Robin_Ability03_AtkUp_FriendForShow[<span class=\"descriptionNumberColor\">Concerto</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-169791812\">Robin_Ability03_AtkUp_FriendForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
               "haloStatus": true,
               "valuePerStack": {
                 "BaseAttack_Total": {
@@ -1504,7 +1504,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Robin_Ability03_AtkUp",
+              "modifier": "<a class=\"gModGreen\" id=\"102391588\">Robin_Ability03_AtkUp</a>",
               "haloStatus": true,
               "valuePerStack": {
                 "Ability03_AtkUpValue": {
@@ -1523,7 +1523,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Robin_Ability03_PursuedDmg",
+              "modifier": "<a class=\"gModGreen\" id=\"1181361675\">Robin_Ability03_PursuedDmg</a>",
               "haloStatus": true,
               "valuePerStack": {
                 "Ability03_DmgRatio": {
@@ -1542,7 +1542,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Robin_Trace02_InsertDmgUp[<span class=\"descriptionNumberColor\">Impromptu Flourish</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1854203506\">Robin_Trace02_InsertDmgUp</a>[<span class=\"descriptionNumberColor\">Impromptu Flourish</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Trace Activated",
@@ -1565,7 +1565,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Robin_AbilityEidolon1_Bonus[<span class=\"descriptionNumberColor\">Land of Smiles</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"712086196\">Robin_AbilityEidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Land of Smiles</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Eidolon Activated",
@@ -1578,7 +1578,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Robin_AbilityEidolon2_Bonus[<span class=\"descriptionNumberColor\">Afternoon Tea For Two</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-644782265\">Robin_AbilityEidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Afternoon Tea For Two</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Eidolon Activated",
@@ -1591,7 +1591,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Robin_AbilityEidolon4_ResistAll[<span class=\"descriptionNumberColor\">Raindrop Key</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-184831783\">Robin_AbilityEidolon4_ResistAll</a>[<span class=\"descriptionNumberColor\">Raindrop Key</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Eidolon Activated",
@@ -1604,7 +1604,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Robin_AbilityEidolon6_ExtraRatioForShow[<span class=\"descriptionNumberColor\">Moonless Midnight</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-24245169\">Robin_AbilityEidolon6_ExtraRatioForShow</a>[<span class=\"descriptionNumberColor\">Moonless Midnight</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Eidolon Activated",
@@ -1625,7 +1625,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Ability02_Aura",
+          "for": "<a class=\"gModGreen\" id=\"mod__853884831\">Robin_Ability02_Aura</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -1636,7 +1636,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Robin_Ability02_DmgUp",
+              "modifier": "<a class=\"gModGreen\" id=\"-746794403\">Robin_Ability02_DmgUp</a>",
               "haloStatus": true
             },
             {
@@ -1645,14 +1645,14 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
               },
-              "modifier": "Robin_Ability02_DmgUpFriendListener[<span class=\"descriptionNumberColor\">Aria</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"601034929\">Robin_Ability02_DmgUpFriendListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]",
               "haloStatus": true
             }
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_PassiveAbility01_setSp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1918215907\">Robin_PassiveAbility01_setSp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1708,7 +1708,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_Passive_PassiveCharge"
+                  "modifier": "<a class=\"gModGreen\" id=\"9911415\">Robin_Passive_PassiveCharge</a>"
                 }
               ]
             }
@@ -1716,7 +1716,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_PassiveAbility01_BattleEvent",
+          "for": "<a class=\"gModGreen\" id=\"mod__594877276\">Robin_PassiveAbility01_BattleEvent</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1742,7 +1742,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Battle Event's Caster}}"
                   },
-                  "modifier": "Robin_Ability03Area"
+                  "modifier": "<a class=\"gModGreen\" id=\"32210681\">Robin_Ability03Area</a>"
                 },
                 {
                   "name": "Force Entity Death",
@@ -1761,7 +1761,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Passive_PassiveCharge",
+          "for": "<a class=\"gModGreen\" id=\"mod__9911415\">Robin_Passive_PassiveCharge</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1785,7 +1785,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": "Robin_Passive_PassiveCharge",
+                    "value1": "<a class=\"gModGreen\" id=\"9911415\">Robin_Passive_PassiveCharge</a>",
                     "compareType": "=",
                     "value2": {
                       "operator": "Variables[0] (MDF_CurrentActionCount) || RETURN",
@@ -1804,7 +1804,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Robin_PassiveAbility01_setSp"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1918215907\">Robin_PassiveAbility01_setSp</a>"
                     }
                   ]
                 }
@@ -1814,7 +1814,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Trace02_InsertDmgUp[<span class=\"descriptionNumberColor\">Impromptu Flourish</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1854203506\">Robin_Trace02_InsertDmgUp</a>[<span class=\"descriptionNumberColor\">Impromptu Flourish</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1858,7 +1858,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Ability03AreaRefresh",
+          "for": "<a class=\"gModGreen\" id=\"mod__979681608\">Robin_Ability03AreaRefresh</a>",
           "stackType": "ReplaceByCaster",
           "abilityValueChange": [
             {
@@ -1876,7 +1876,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Robin_Ability03Area"
+                        "modifier": "<a class=\"gModGreen\" id=\"32210681\">Robin_Ability03Area</a>"
                       },
                       "passed": [
                         {
@@ -1979,7 +1979,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Robin_Ability03_AtkUp_CasterForShow[<span class=\"descriptionNumberColor\">Concerto</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1126110528\">Robin_Ability03_AtkUp_CasterForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
                           "valuePerStack": {
                             "BaseAttack_Total": {
                               "operator": "Variables[0] (Skill03_BaseAttack_Total) || RETURN",
@@ -1997,7 +1997,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
                           },
-                          "modifier": "Robin_Ability03_AtkUp_FriendForShow[<span class=\"descriptionNumberColor\">Concerto</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-169791812\">Robin_Ability03_AtkUp_FriendForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
                           "valuePerStack": {
                             "BaseAttack_Total": {
                               "operator": "Variables[0] (Skill03_BaseAttack_Total) || RETURN",
@@ -2015,7 +2015,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{All Team Members with Unselectables}}"
                           },
-                          "modifier": "Robin_Ability03_AtkUp",
+                          "modifier": "<a class=\"gModGreen\" id=\"102391588\">Robin_Ability03_AtkUp</a>",
                           "valuePerStack": {
                             "Ability03_AtkUpValue": {
                               "operator": "Variables[0] (Skill03_BaseAttack_Total) || RETURN",
@@ -2056,7 +2056,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Robin_Ability03Area"
+                        "modifier": "<a class=\"gModGreen\" id=\"32210681\">Robin_Ability03Area</a>"
                       },
                       "passed": [
                         {
@@ -2159,7 +2159,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Robin_Ability03_AtkUp_CasterForShow[<span class=\"descriptionNumberColor\">Concerto</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1126110528\">Robin_Ability03_AtkUp_CasterForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
                           "valuePerStack": {
                             "BaseAttack_Total": {
                               "operator": "Variables[0] (Skill03_BaseAttack_Total) || RETURN",
@@ -2177,7 +2177,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
                           },
-                          "modifier": "Robin_Ability03_AtkUp_FriendForShow[<span class=\"descriptionNumberColor\">Concerto</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-169791812\">Robin_Ability03_AtkUp_FriendForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
                           "valuePerStack": {
                             "BaseAttack_Total": {
                               "operator": "Variables[0] (Skill03_BaseAttack_Total) || RETURN",
@@ -2195,7 +2195,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{All Team Members with Unselectables}}"
                           },
-                          "modifier": "Robin_Ability03_AtkUp",
+                          "modifier": "<a class=\"gModGreen\" id=\"102391588\">Robin_Ability03_AtkUp</a>",
                           "valuePerStack": {
                             "Ability03_AtkUpValue": {
                               "operator": "Variables[0] (Skill03_BaseAttack_Total) || RETURN",
@@ -2225,7 +2225,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Robin_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__1781438521\">Robin_Passive</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2237,7 +2237,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_PassiveAbility_UltraPreshow"
+                  "modifier": "<a class=\"gModGreen\" id=\"1748268273\">Robin_PassiveAbility_UltraPreshow</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2245,7 +2245,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Robin_PassiveAbility_CritDmgUp[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-893534812\">Robin_PassiveAbility_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]"
                 }
               ]
             },
@@ -2260,14 +2260,14 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Robin_Ability02_DmgUpCasterListener[<span class=\"descriptionNumberColor\">Aria</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-341772219\">Robin_Ability02_DmgUpCasterListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]"
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
                       "valueType": "LifeTime",
                       "variableName": "Skill02_EnergyBarCount",
-                      "modifierName": "Robin_Ability02_DmgUpCasterListener[<span class=\"descriptionNumberColor\">Aria</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-341772219\">Robin_Ability02_DmgUpCasterListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]",
                       "multiplier": 1
                     }
                   ],
@@ -2326,7 +2326,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_PassiveAbility_UltraPreshow"
+                  "modifier": "<a class=\"gModGreen\" id=\"1748268273\">Robin_PassiveAbility_UltraPreshow</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2334,7 +2334,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Robin_PassiveAbility_CritDmgUp[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-893534812\">Robin_PassiveAbility_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2367,7 +2367,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Robin_PassiveAbility_CritDmgUp[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-893534812\">Robin_PassiveAbility_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]"
                     }
                   ]
                 }
@@ -2382,7 +2382,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_PassiveAbility_UltraPreshow"
+                  "modifier": "<a class=\"gModGreen\" id=\"1748268273\">Robin_PassiveAbility_UltraPreshow</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2390,7 +2390,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Robin_PassiveAbility_CritDmgUp[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-893534812\">Robin_PassiveAbility_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]"
                 }
               ]
             },
@@ -2418,7 +2418,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Robin_Passive_PassiveCharge",
+                      "modifier": "<a class=\"gModGreen\" id=\"9911415\">Robin_Passive_PassiveCharge</a>",
                       "stackLimit": {
                         "operator": "Variables[0] (MDF_CurrentActionCount) || RETURN",
                         "displayLines": "MDF_CurrentActionCount",
@@ -2471,7 +2471,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Robin_Ability03AreaRefresh"
+                  "modifier": "<a class=\"gModGreen\" id=\"979681608\">Robin_Ability03AreaRefresh</a>"
                 }
               ],
               "priorityLevel": -80

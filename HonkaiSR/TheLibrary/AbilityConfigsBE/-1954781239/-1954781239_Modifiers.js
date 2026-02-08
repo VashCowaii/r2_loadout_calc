@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0050_plus3_sub2",
+      "for": "<a class=\"gModGreen\" id=\"mod__1715545326\">Modifier_FantasticStory_BaseAbility_0050_plus3_sub2</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ForceStanceDamage"
@@ -34,7 +34,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0050_plus3_sub[<span class=\"descriptionNumberColor\">Free Writing</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-28797912\">Modifier_FantasticStory_BaseAbility_0050_plus3_sub</a>[<span class=\"descriptionNumberColor\">Free Writing</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -53,7 +53,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0050_plus3_sub2"
+                  "modifier": "<a class=\"gModGreen\" id=\"1715545326\">Modifier_FantasticStory_BaseAbility_0050_plus3_sub2</a>"
                 }
               ]
             }
@@ -68,7 +68,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_0050_plus3_sub2"
+              "modifier": "<a class=\"gModGreen\" id=\"1715545326\">Modifier_FantasticStory_BaseAbility_0050_plus3_sub2</a>"
             }
           ]
         }
@@ -92,7 +92,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0050_plus2_sub[<span class=\"descriptionNumberColor\">Picturesque</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__805201127\">Modifier_FantasticStory_BaseAbility_0050_plus2_sub</a>[<span class=\"descriptionNumberColor\">Picturesque</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -140,7 +140,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0050_plus1_sub2[<span class=\"descriptionNumberColor\">Arioso</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__225763044\">Modifier_FantasticStory_BaseAbility_0050_plus1_sub2</a>[<span class=\"descriptionNumberColor\">Arioso</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -188,7 +188,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0050_plus1_sub[<span class=\"descriptionNumberColor\">Arioso</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__937919550\">Modifier_FantasticStory_BaseAbility_0050_plus1_sub</a>[<span class=\"descriptionNumberColor\">Arioso</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -294,7 +294,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0040_plus2_sub[<span class=\"descriptionNumberColor\">Ultimate DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1558011426\">Modifier_FantasticStory_BaseAbility_0040_plus2_sub</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Boost</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -367,7 +367,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0030_plus6_sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1083847243\">Modifier_FantasticStory_BaseAbility_0030_plus6_sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -427,7 +427,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
       "stackType": "ReplaceByCaster",
       "description": "This unit has <span class=\"descriptionNumberColor\">EntityStockSPForShow</span> points of extra Energy. This will be consumed first when using the Ultimate.",
       "type": "Other",
@@ -436,7 +436,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0030_plus5_AddStockedSP",
+      "for": "<a class=\"gModGreen\" id=\"mod__1117415883\">Modifier_FantasticStory_BaseAbility_0030_plus5_AddStockedSP</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -502,7 +502,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow[<span class=\"descriptionNumberColor\">Energy Overflow</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]"
                     },
                     "Modifier Deletes Itself"
                   ],
@@ -544,7 +544,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
                       "valuePerStack": {
                         "EntityStockSPForShow": {
                           "operator": "Variables[0] (EntityStockSP) || RETURN",
@@ -572,7 +572,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0030_plus5_AddSP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1329142430\">Modifier_FantasticStory_BaseAbility_0030_plus5_AddSP</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -710,7 +710,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
                       "valuePerStack": {
                         "EntityStockSPForShow": {
                           "operator": "Variables[0] (EntityStockSP) || RETURN",
@@ -745,7 +745,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0010_plus6_sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1737739841\">Modifier_FantasticStory_BaseAbility_0010_plus6_sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -773,7 +773,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0010_plus6_ultraDmgUp[<span class=\"descriptionNumberColor\">Splash</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2046125016\">Modifier_FantasticStory_BaseAbility_0010_plus6_ultraDmgUp</a>[<span class=\"descriptionNumberColor\">Splash</span>]",
                   "duration": {
                     "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0016_ADF_2) || RETURN",
                     "displayLines": "DV_FantasticStory_PlusAbility_0016_ADF_2",
@@ -844,7 +844,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0010_plus5_sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__1440555734\">Modifier_FantasticStory_BaseAbility_0010_plus5_sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -882,7 +882,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder and Adjacent Targets}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp[<span class=\"descriptionNumberColor\">Scalded</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_2) || RETURN",
                     "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2",
@@ -942,7 +942,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder and Adjacent Targets}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp[<span class=\"descriptionNumberColor\">Scalded</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_2) || RETURN",
                     "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2",
@@ -978,7 +978,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp[<span class=\"descriptionNumberColor\">Scalded</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
       "stackType": "Replace",
       "execute": [
         {

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W1_Bronya_M1LockHP"
+      "modifier": "<a class=\"gModGreen\" id=\"-589353924\">Enemy_W1_Bronya_M1LockHP</a>"
     },
     {
       "name": "Declare Custom Variable",
@@ -25,14 +25,14 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_Instance_DisableAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1556370949\">Enemy_W1_Bronya_Instance_DisableAction</a>",
       "modifierFlags": [
         "DisableAction"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_M1LockHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-589353924\">Enemy_W1_Bronya_M1LockHP</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -83,7 +83,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Enemy_W1_Bronya_Instance_DisableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1556370949\">Enemy_W1_Bronya_Instance_DisableAction</a>"
                 },
                 {
                   "name": "Declare Custom Variable",

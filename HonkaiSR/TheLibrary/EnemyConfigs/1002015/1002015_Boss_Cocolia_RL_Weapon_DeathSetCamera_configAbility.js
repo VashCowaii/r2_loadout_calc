@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Boss_Cocolia_RL_Weapon_DeathSetCamera"
+      "modifier": "<a class=\"gModGreen\" id=\"-1267346449\">Boss_Cocolia_RL_Weapon_DeathSetCamera</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Boss_Cocolia_RL_Weapon_DeathSetCamera",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1267346449\">Boss_Cocolia_RL_Weapon_DeathSetCamera</a>",
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo",
@@ -36,7 +36,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "BOSS_COCOLIA_BOSS_MDF"
+                "modifier": "<a class=\"gModGreen\" id=\"-79024859\">BOSS_COCOLIA_BOSS_MDF</a>"
               },
               "ifTargetFound": [
                 {

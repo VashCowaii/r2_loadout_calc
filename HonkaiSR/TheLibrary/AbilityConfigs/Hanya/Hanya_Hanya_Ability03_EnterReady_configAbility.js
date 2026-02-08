@@ -8,7 +8,8 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Use Custom Character Function",
-      "functionName": "FaceDirOffsetConfigByFormationIndex"
+      "functionName": "<a class=\"gTempYellow\" id=\"-844871622\">FaceDirOffsetConfigByFormationIndex</a>",
+      "isGlobal": true
     }
   ],
   "references": []

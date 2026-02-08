@@ -29,7 +29,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Enemy_W2_Kafka_IF_EX04_Boss"
+        "modifier": "<a class=\"gModGreen\" id=\"1162350754\">Enemy_W2_Kafka_IF_EX04_Boss</a>"
       },
       "passed": [
         {
@@ -274,7 +274,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Enemy_W2_Kafka_IF_EX04_Boss"
+                "modifier": "<a class=\"gModGreen\" id=\"1162350754\">Enemy_W2_Kafka_IF_EX04_Boss</a>"
               },
               {
                 "name": "Has Flag",
@@ -348,7 +348,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Enemy_W2_Kafka_IF_EX04_Boss"
+                "modifier": "<a class=\"gModGreen\" id=\"1162350754\">Enemy_W2_Kafka_IF_EX04_Boss</a>"
               },
               {
                 "name": "Has Flag",

@@ -61,7 +61,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
           },
-          "modifier": "Yukong_Flower"
+          "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>"
         }
       ],
       "failed": [

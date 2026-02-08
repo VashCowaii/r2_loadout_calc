@@ -36,13 +36,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_Trace03"
+          "modifier": "<a class=\"gModGreen\" id=\"639807639\">DanHengIL_Trace03</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_Trace03",
+          "for": "<a class=\"gModGreen\" id=\"mod__639807639\">DanHengIL_Trace03</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -90,7 +90,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_Trace02_Resistance",
+          "modifier": "<a class=\"gModGreen\" id=\"-223874388\">DanHengIL_Trace02_Resistance</a>",
           "valuePerStack": {
             "MDF_Resistance": {
               "operator": "Variables[0] (0.35) || RETURN",
@@ -106,7 +106,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_Trace02_Resistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-223874388\">DanHengIL_Trace02_Resistance</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -157,7 +157,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_DanHengIL_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1145539876\">StageAbility_Maze_DanHengIL_Modifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -165,13 +165,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_DanHengILDamage_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1215340363\">StageAbility_Maze_DanHengILDamage_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_DanHengILDamage_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1215340363\">StageAbility_Maze_DanHengILDamage_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -228,7 +228,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_DanHengIL_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1145539876\">StageAbility_Maze_DanHengIL_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -312,7 +312,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
                       "value": {
                         "operator": "Variables[0] (BPExChange) || RETURN",
                         "displayLines": "BPExChange",
@@ -328,7 +328,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
                       "counter": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -403,7 +403,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Ability03PreShowModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-247396096\">Ability03PreShowModifier</a>"
             }
           ]
         },
@@ -413,7 +413,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_PassiveModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"329396483\">DanHengIL_PassiveModifier</a>"
         },
         {
           "name": "Modify Skill-Point Extras",
@@ -474,7 +474,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengIL_Eidolon6"
+              "modifier": "<a class=\"gModGreen\" id=\"-1339168225\">DanHengIL_Eidolon6</a>"
             }
           ]
         }
@@ -482,7 +482,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1587455609\">DanHengIL_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -502,7 +502,7 @@ const compositeAbilityObject = {
                   },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
-                  "modifierName": "DanHengIL_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1587455609\">DanHengIL_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
                   "multiplier": 1
                 },
                 {
@@ -533,7 +533,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_PassiveModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__329396483\">DanHengIL_PassiveModifier</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -579,7 +579,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHengIL_BPDisable"
+                      "modifier": "<a class=\"gModGreen\" id=\"1468527103\">DanHengIL_BPDisable</a>"
                     }
                   ],
                   "failed": [
@@ -589,7 +589,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHengIL_BPDisable"
+                      "modifier": "<a class=\"gModGreen\" id=\"1468527103\">DanHengIL_BPDisable</a>"
                     }
                   ]
                 }
@@ -645,7 +645,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHengIL_BPCost_1"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1633577543\">DanHengIL_BPCost_1</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -653,7 +653,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHengIL_BPCost_2"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1683910400\">DanHengIL_BPCost_2</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -661,7 +661,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHengIL_BPCost_3"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1667132781\">DanHengIL_BPCost_3</a>"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -763,7 +763,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHengIL_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1587455609\">DanHengIL_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
                       "duration": 1,
                       "stackLimit": {
                         "operator": "Variables[0] (6) || Variables[1] (AddMaxLayer) || ADD || RETURN",
@@ -810,7 +810,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHengIL_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1587455609\">DanHengIL_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
                       "duration": 1,
                       "stackLimit": {
                         "operator": "Variables[0] (6) || Variables[1] (AddMaxLayer) || ADD || RETURN",
@@ -859,7 +859,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Ability03PreShowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-247396096\">Ability03PreShowModifier</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -939,7 +939,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "DanHengIL_Ability03Target",
+                "modifier": "<a class=\"gModGreen\" id=\"-1340732042\">DanHengIL_Ability03Target</a>",
                 "invertCondition": true
               },
               "ifTargetFound": [
@@ -977,7 +977,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "DanHengIL_Ability03Target"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1340732042\">DanHengIL_Ability03Target</a>"
                 }
               ]
             }
@@ -1003,7 +1003,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "DanHengIL_Ability03Target"
+          "modifier": "<a class=\"gModGreen\" id=\"-1340732042\">DanHengIL_Ability03Target</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -1053,7 +1053,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "DanHengIL_Ability03Target",
+                "modifier": "<a class=\"gModGreen\" id=\"-1340732042\">DanHengIL_Ability03Target</a>",
                 "invertCondition": true
               },
               "ifTargetFound": [
@@ -1091,7 +1091,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "DanHengIL_Ability03Target"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1340732042\">DanHengIL_Ability03Target</a>"
                 }
               ]
             }
@@ -1117,7 +1117,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "DanHengIL_Ability03Target"
+          "modifier": "<a class=\"gModGreen\" id=\"-1340732042\">DanHengIL_Ability03Target</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -1199,7 +1199,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "DanHengIL_Ability03Target"
+          "modifier": "<a class=\"gModGreen\" id=\"-1340732042\">DanHengIL_Ability03Target</a>"
         },
         {
           "name": "IF",
@@ -1272,7 +1272,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifierName": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
               "value": {
                 "operator": "Variables[0] (BPExChange) || RETURN",
                 "displayLines": "BPExChange",
@@ -1288,7 +1288,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
               "counter": {
                 "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(2 + 1)",
@@ -1393,7 +1393,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifierName": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
               "value": {
                 "operator": "Variables[0] (BPExChange) || RETURN",
                 "displayLines": "BPExChange",
@@ -1409,7 +1409,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
               "counter": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1445,7 +1445,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_Ability03Target",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1340732042\">DanHengIL_Ability03Target</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -1506,7 +1506,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPCost_1"
+          "modifier": "<a class=\"gModGreen\" id=\"-1633577543\">DanHengIL_BPCost_1</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1514,7 +1514,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPCost_2"
+          "modifier": "<a class=\"gModGreen\" id=\"-1683910400\">DanHengIL_BPCost_2</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1522,7 +1522,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPCost_3"
+          "modifier": "<a class=\"gModGreen\" id=\"-1667132781\">DanHengIL_BPCost_3</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1530,7 +1530,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_CancelAbility"
+          "modifier": "<a class=\"gModGreen\" id=\"-171519647\">DanHengIL_CancelAbility</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1538,7 +1538,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPDisable"
+          "modifier": "<a class=\"gModGreen\" id=\"1468527103\">DanHengIL_BPDisable</a>"
         },
         "Trigger: Ability End"
       ],
@@ -1606,7 +1606,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengIL_BPCost_1"
+              "modifier": "<a class=\"gModGreen\" id=\"-1633577543\">DanHengIL_BPCost_1</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1614,7 +1614,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengIL_CancelAbility"
+              "modifier": "<a class=\"gModGreen\" id=\"-171519647\">DanHengIL_CancelAbility</a>"
             }
           ],
           "failed": [
@@ -1633,7 +1633,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHengIL_BPCost_2"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1683910400\">DanHengIL_BPCost_2</a>"
                 }
               ],
               "failed": [
@@ -1652,7 +1652,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHengIL_BPCost_3"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1667132781\">DanHengIL_BPCost_3</a>"
                     }
                   ]
                 }
@@ -1694,7 +1694,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengIL_BPDisable"
+              "modifier": "<a class=\"gModGreen\" id=\"1468527103\">DanHengIL_BPDisable</a>"
             }
           ],
           "failed": [
@@ -1704,7 +1704,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengIL_BPDisable"
+              "modifier": "<a class=\"gModGreen\" id=\"1468527103\">DanHengIL_BPDisable</a>"
             }
           ]
         },
@@ -1714,7 +1714,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_CancelAbility",
+          "for": "<a class=\"gModGreen\" id=\"mod__-171519647\">DanHengIL_CancelAbility</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1752,7 +1752,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_BPCost_3",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1667132781\">DanHengIL_BPCost_3</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1785,7 +1785,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHengIL_CancelAbility"
+                  "modifier": "<a class=\"gModGreen\" id=\"-171519647\">DanHengIL_CancelAbility</a>"
                 },
                 {
                   "name": "Update Displayed Energy Bar"
@@ -1842,7 +1842,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_BPCost_2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1683910400\">DanHengIL_BPCost_2</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1875,7 +1875,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHengIL_CancelAbility"
+                  "modifier": "<a class=\"gModGreen\" id=\"-171519647\">DanHengIL_CancelAbility</a>"
                 },
                 {
                   "name": "Update Displayed Energy Bar"
@@ -1920,7 +1920,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_BPCost_1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1633577543\">DanHengIL_BPCost_1</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1953,7 +1953,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHengIL_CancelAbility"
+                  "modifier": "<a class=\"gModGreen\" id=\"-171519647\">DanHengIL_CancelAbility</a>"
                 },
                 {
                   "name": "Update Displayed Energy Bar"
@@ -2124,7 +2124,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]"
             }
           ],
           "failed": [
@@ -2134,7 +2134,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifierName": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
               "value": {
                 "operator": "Variables[0] (BPExChange) || RETURN",
                 "displayLines": "BPExChange",
@@ -2317,7 +2317,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_Ability02_CriticalDamage[<span class=\"descriptionNumberColor\">Outroar</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
           "duration": {
             "operator": "Variables[0] (SkillRank_Rank04_LifeTime) || RETURN",
             "displayLines": "SkillRank_Rank04_LifeTime",
@@ -2434,7 +2434,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_Ability02_CriticalDamage[<span class=\"descriptionNumberColor\">Outroar</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
           "duration": {
             "operator": "Variables[0] (SkillRank_Rank04_LifeTime) || RETURN",
             "displayLines": "SkillRank_Rank04_LifeTime",
@@ -2551,7 +2551,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_Ability02_CriticalDamage[<span class=\"descriptionNumberColor\">Outroar</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
           "duration": {
             "operator": "Variables[0] (SkillRank_Rank04_LifeTime) || RETURN",
             "displayLines": "SkillRank_Rank04_LifeTime",
@@ -2668,7 +2668,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_Ability02_CriticalDamage[<span class=\"descriptionNumberColor\">Outroar</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
           "duration": {
             "operator": "Variables[0] (SkillRank_Rank04_LifeTime) || RETURN",
             "displayLines": "SkillRank_Rank04_LifeTime",
@@ -2788,7 +2788,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPCost_1"
+          "modifier": "<a class=\"gModGreen\" id=\"-1633577543\">DanHengIL_BPCost_1</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2796,7 +2796,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPCost_2"
+          "modifier": "<a class=\"gModGreen\" id=\"-1683910400\">DanHengIL_BPCost_2</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2804,7 +2804,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPCost_3"
+          "modifier": "<a class=\"gModGreen\" id=\"-1667132781\">DanHengIL_BPCost_3</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -2900,7 +2900,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]"
             }
           ],
           "failed": [
@@ -2910,7 +2910,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifierName": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
               "value": {
                 "operator": "Variables[0] (BPExChange) || RETURN",
                 "displayLines": "BPExChange",
@@ -3093,7 +3093,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_Ability02_CriticalDamage[<span class=\"descriptionNumberColor\">Outroar</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
           "duration": {
             "operator": "Variables[0] (SkillRank_Rank04_LifeTime) || RETURN",
             "displayLines": "SkillRank_Rank04_LifeTime",
@@ -3181,7 +3181,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "DanHengIL_Ability12Target",
+                "modifier": "<a class=\"gModGreen\" id=\"-216777096\">DanHengIL_Ability12Target</a>",
                 "invertCondition": true
               },
               "ifTargetFound": [
@@ -3219,7 +3219,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "DanHengIL_Ability12Target"
+                  "modifier": "<a class=\"gModGreen\" id=\"-216777096\">DanHengIL_Ability12Target</a>"
                 }
               ]
             }
@@ -3245,7 +3245,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "DanHengIL_Ability12Target"
+          "modifier": "<a class=\"gModGreen\" id=\"-216777096\">DanHengIL_Ability12Target</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3253,7 +3253,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_Ability02_CriticalDamage[<span class=\"descriptionNumberColor\">Outroar</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
           "duration": {
             "operator": "Variables[0] (SkillRank_Rank04_LifeTime) || RETURN",
             "displayLines": "SkillRank_Rank04_LifeTime",
@@ -3339,7 +3339,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "DanHengIL_Ability12Target"
+              "modifier": "<a class=\"gModGreen\" id=\"-216777096\">DanHengIL_Ability12Target</a>"
             }
           },
           "ifTargetFound": [
@@ -3377,7 +3377,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "DanHengIL_Ability12Target"
+              "modifier": "<a class=\"gModGreen\" id=\"-216777096\">DanHengIL_Ability12Target</a>"
             }
           ]
         },
@@ -3398,7 +3398,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "DanHengIL_Ability12Target"
+              "modifier": "<a class=\"gModGreen\" id=\"-216777096\">DanHengIL_Ability12Target</a>"
             }
           },
           "ifTargetFound": [
@@ -3453,7 +3453,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "DanHengIL_Ability12Target"
+          "modifier": "<a class=\"gModGreen\" id=\"-216777096\">DanHengIL_Ability12Target</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3461,7 +3461,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPCost_1"
+          "modifier": "<a class=\"gModGreen\" id=\"-1633577543\">DanHengIL_BPCost_1</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3469,7 +3469,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPCost_2"
+          "modifier": "<a class=\"gModGreen\" id=\"-1683910400\">DanHengIL_BPCost_2</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3477,7 +3477,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPCost_3"
+          "modifier": "<a class=\"gModGreen\" id=\"-1667132781\">DanHengIL_BPCost_3</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -3489,7 +3489,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_Ability12Target",
+          "for": "<a class=\"gModGreen\" id=\"mod__-216777096\">DanHengIL_Ability12Target</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -3580,7 +3580,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]"
             }
           ],
           "failed": [
@@ -3590,7 +3590,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifierName": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
               "value": {
                 "operator": "Variables[0] (BPExChange) || RETURN",
                 "displayLines": "BPExChange",
@@ -3765,7 +3765,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPCost_1"
+          "modifier": "<a class=\"gModGreen\" id=\"-1633577543\">DanHengIL_BPCost_1</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3773,7 +3773,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPCost_2"
+          "modifier": "<a class=\"gModGreen\" id=\"-1683910400\">DanHengIL_BPCost_2</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3781,7 +3781,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPCost_3"
+          "modifier": "<a class=\"gModGreen\" id=\"-1667132781\">DanHengIL_BPCost_3</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -3970,7 +3970,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_CancelCamera",
+          "for": "<a class=\"gModGreen\" id=\"mod__-807307973\">DanHengIL_CancelCamera</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -3989,7 +3989,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "DanHengIL_CancelCameraFlag"
+                        "modifier": "<a class=\"gModGreen\" id=\"-345032011\">DanHengIL_CancelCameraFlag</a>"
                       },
                       {
                         "name": "Compare: Target",
@@ -4011,7 +4011,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_Eidolon6_ImaginaryPenetrate[<span class=\"descriptionNumberColor\">Reign, Returned</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-330148584\">DanHengIL_Eidolon6_ImaginaryPenetrate</a>[<span class=\"descriptionNumberColor\">Reign, Returned</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4078,7 +4078,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_Eidolon6",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1339168225\">DanHengIL_Eidolon6</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -4124,7 +4124,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHengIL_Eidolon6_ImaginaryPenetrate[<span class=\"descriptionNumberColor\">Reign, Returned</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-330148584\">DanHengIL_Eidolon6_ImaginaryPenetrate</a>[<span class=\"descriptionNumberColor\">Reign, Returned</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -4154,7 +4154,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_BPDisable",
+          "for": "<a class=\"gModGreen\" id=\"mod__1468527103\">DanHengIL_BPDisable</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4252,7 +4252,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_Ability02_CriticalDamage[<span class=\"descriptionNumberColor\">Outroar</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4300,7 +4300,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"

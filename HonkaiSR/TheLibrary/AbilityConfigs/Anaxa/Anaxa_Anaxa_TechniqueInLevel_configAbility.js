@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Anaxa_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1935874220\">StageAbility_Maze_Anaxa_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Anaxa_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1935874220\">StageAbility_Maze_Anaxa_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -40,7 +40,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Level Entity}}"
                     },
-                    "modifier": "StageAbility_MazeStandard_EnterBattle_Monster_Modifier",
+                    "modifier": "<a class=\"gModGreen\" id=\"1904238030\">StageAbility_MazeStandard_EnterBattle_Monster_Modifier</a>",
                     "invertCondition": true
                   },
                   {
@@ -90,7 +90,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Hostile Entities(AOE)}}"
                           },
-                          "modifier": "Standard_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1724958950\">Standard_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -122,7 +122,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Hostile Entities(AOE)}}"
                           },
-                          "modifier": "Standard_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-2009288629\">Standard_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -154,7 +154,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Hostile Entities(AOE)}}"
                           },
-                          "modifier": "Standard_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1497676034\">Standard_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -186,7 +186,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Hostile Entities(AOE)}}"
                           },
-                          "modifier": "Standard_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1930557999\">Standard_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -218,7 +218,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Hostile Entities(AOE)}}"
                           },
-                          "modifier": "Standard_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1938125975\">Standard_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -250,7 +250,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Hostile Entities(AOE)}}"
                           },
-                          "modifier": "Standard_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1012677236\">Standard_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -282,7 +282,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Hostile Entities(AOE)}}"
                           },
-                          "modifier": "Standard_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1118024096\">Standard_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",

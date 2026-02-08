@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "CameraConfigByFormationIndex",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1199284040\">CameraConfigByFormationIndex</a>",
       "parse": [
         {
           "name": "IF",
@@ -155,7 +155,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "PositionConfigByFormationIndex",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-179852500\">PositionConfigByFormationIndex</a>",
       "parse": [
         {
           "name": "IF",
@@ -309,7 +309,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "FaceDirOffsetConfigByFormationIndex",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-844871622\">FaceDirOffsetConfigByFormationIndex</a>",
       "parse": [
         {
           "name": "IF",
@@ -463,7 +463,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "CameraConfigByFormationIndex_ForSunday",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__564661868\">CameraConfigByFormationIndex_ForSunday</a>",
       "parse": [
         {
           "name": "IF",

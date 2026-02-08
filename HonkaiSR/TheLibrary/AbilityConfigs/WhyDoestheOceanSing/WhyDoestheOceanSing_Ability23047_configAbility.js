@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23047_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1292240461\">LC_23047_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23047_Sub3[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-852967101\">LC_23047_Sub3</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -51,7 +51,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23047_Sub2[<span class=\"descriptionNumberColor\">Enthrallment</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-869744720\">LC_23047_Sub2</a>[<span class=\"descriptionNumberColor\">Enthrallment</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -92,7 +92,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_LC_23047_CheckCasterDebuffCount"
+              "functionName": "<a class=\"gTempYellow\" id=\"143684104\">TaskList_LC_23047_CheckCasterDebuffCount</a>"
             }
           ]
         },
@@ -124,7 +124,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_23047_Sub3[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-852967101\">LC_23047_Sub3</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_SpeedUpLifeTimeTemp) || RETURN",
                     "displayLines": "MDF_SpeedUpLifeTimeTemp",
@@ -160,7 +160,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "TaskList_LC_23047_CheckCasterDebuffCount"
+                  "functionName": "<a class=\"gTempYellow\" id=\"143684104\">TaskList_LC_23047_CheckCasterDebuffCount</a>"
                 }
               ]
             }
@@ -171,7 +171,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_LC_23047_CheckCasterDebuffCount"
+              "functionName": "<a class=\"gTempYellow\" id=\"143684104\">TaskList_LC_23047_CheckCasterDebuffCount</a>"
             }
           ]
         }
@@ -179,7 +179,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "TaskList_LC_23047_CheckCasterDebuffCount",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__143684104\">TaskList_LC_23047_CheckCasterDebuffCount</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Status Counter",
@@ -250,7 +250,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23047_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1292240461\">LC_23047_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking Modifier Instance [Anyone]",
@@ -298,7 +298,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_23047_Sub2[<span class=\"descriptionNumberColor\">Enthrallment</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-869744720\">LC_23047_Sub2</a>[<span class=\"descriptionNumberColor\">Enthrallment</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

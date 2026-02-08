@@ -17,7 +17,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "MReference_LastestTargetMark_RemoveOnAttackEnd",
+          "for": "<a class=\"gModGreen\" id=\"mod__1887620427\">MReference_LastestTargetMark_RemoveOnAttackEnd</a>",
           "stackType": "RetainGlobalLatest",
           "execute": [
             {
@@ -30,7 +30,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_Mark_RemoveOnAttackEnd",
+          "for": "<a class=\"gModGreen\" id=\"mod__1201071934\">MReference_Mark_RemoveOnAttackEnd</a>",
           "execute": [
             {
               "eventTrigger": "Attack Action Completed [Anyone]",
@@ -42,7 +42,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_Mark_RemoveOnTurnEnd",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1664553013\">MReference_Mark_RemoveOnTurnEnd</a>",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -54,11 +54,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_Empty"
+          "for": "<a class=\"gModGreen\" id=\"mod__1832901043\">MReference_Empty</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_AggroDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__161914776\">MReference_AggroDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -88,7 +88,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_AggroUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-40909935\">MReference_AggroUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -116,7 +116,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_SPRatioDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1747560048\">MReference_SPRatioDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -146,7 +146,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_SPRatioUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__518257321\">MReference_SPRatioUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -174,7 +174,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_StatusResistanceDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__1806321589\">MReference_StatusResistanceDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -204,7 +204,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_StatusResistanceUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__173188288\">MReference_StatusResistanceUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -232,7 +232,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_StatusProbability",
+          "for": "<a class=\"gModGreen\" id=\"mod__1430860919\">MReference_StatusProbability</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -260,7 +260,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_HealTakenRatioDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__219345962\">MReference_HealTakenRatioDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -290,7 +290,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_HealTakenRatioUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__1401712623\">MReference_HealTakenRatioUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -318,7 +318,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_HealRatioDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2003954801\">MReference_HealRatioDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -348,7 +348,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_HealRatioUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1884227322\">MReference_HealRatioUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -376,7 +376,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_SpeedRatioDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2103710956\">MReference_SpeedRatioDown</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedDown"
@@ -409,7 +409,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_SpeedRatioUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__1020254741\">MReference_SpeedRatioUp</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -440,7 +440,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_SpeedDeltaDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-619484091\">MReference_SpeedDeltaDown</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedDown"
@@ -473,7 +473,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_SpeedDeltaUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__75146672\">MReference_SpeedDeltaUp</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -504,7 +504,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_PhysicalStanceBreakResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-912953941\">MReference_PhysicalStanceBreakResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -532,7 +532,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_ImaginaryStanceBreakResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1362660121\">MReference_ImaginaryStanceBreakResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -560,7 +560,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_QuantumStanceBreakResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-361817765\">MReference_QuantumStanceBreakResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -588,7 +588,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_WindStanceBreakResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__1626651914\">MReference_WindStanceBreakResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -616,7 +616,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_ThunderStanceBreakResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1309608854\">MReference_ThunderStanceBreakResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -644,7 +644,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_IceStanceBreakResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__1239185437\">MReference_IceStanceBreakResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -672,7 +672,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_FireStanceBreakResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-497711728\">MReference_FireStanceBreakResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -700,7 +700,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_StanceBreakTakenRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-301094777\">MReference_StanceBreakTakenRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -728,7 +728,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_StanceBreakResistanceAll",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1750184001\">MReference_StanceBreakResistanceAll</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -795,7 +795,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_StanceBreakResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-370084284\">MReference_StanceBreakResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -823,7 +823,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_StanceBreakAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__1782063048\">MReference_StanceBreakAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -851,7 +851,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_ImaginaryAbsorb",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1937211834\">MReference_ImaginaryAbsorb</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -879,7 +879,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_QuantumAbsorb",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1485908294\">MReference_QuantumAbsorb</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -907,7 +907,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_WindAbsorb",
+          "for": "<a class=\"gModGreen\" id=\"mod__555056457\">MReference_WindAbsorb</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -935,7 +935,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_ThunderAbsorb",
+          "for": "<a class=\"gModGreen\" id=\"mod__571726889\">MReference_ThunderAbsorb</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -963,7 +963,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_IceAbsorb",
+          "for": "<a class=\"gModGreen\" id=\"mod__-473985160\">MReference_IceAbsorb</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -991,7 +991,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_FireAbsorb",
+          "for": "<a class=\"gModGreen\" id=\"mod__1972817579\">MReference_FireAbsorb</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1019,7 +1019,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_PhysicalAbsorb",
+          "for": "<a class=\"gModGreen\" id=\"mod__1435501578\">MReference_PhysicalAbsorb</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1047,7 +1047,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_ImaginaryTakenRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1386699531\">MReference_ImaginaryTakenRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1075,7 +1075,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_QuantumTakenRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__272252201\">MReference_QuantumTakenRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1103,7 +1103,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_WindTakenRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-342703602\">MReference_WindTakenRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1131,7 +1131,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_ThunderTakenRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1256019922\">MReference_ThunderTakenRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1159,7 +1159,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_IceTakenRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__361318635\">MReference_IceTakenRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1187,7 +1187,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_FireTakenRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1859253020\">MReference_FireTakenRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1215,7 +1215,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_PhysicalTakenRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__1233925081\">MReference_PhysicalTakenRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1243,7 +1243,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_AllDamageTypeTakenRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1553319646\">MReference_AllDamageTypeTakenRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1271,7 +1271,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_ImaginaryPenetrate",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1578100847\">MReference_ImaginaryPenetrate</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1299,7 +1299,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_QuantumPenetrate",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1493739723\">MReference_QuantumPenetrate</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1327,7 +1327,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_WindPenetrate",
+          "for": "<a class=\"gModGreen\" id=\"mod__1185372396\">MReference_WindPenetrate</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1355,7 +1355,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_ThunderPenetrate",
+          "for": "<a class=\"gModGreen\" id=\"mod__61792844\">MReference_ThunderPenetrate</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1383,7 +1383,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_IcePenetrate",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2142678925\">MReference_IcePenetrate</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1411,7 +1411,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_FirePenetrate",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1318010482\">MReference_FirePenetrate</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1439,7 +1439,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_PhysicalPenetrate",
+          "for": "<a class=\"gModGreen\" id=\"mod__-158144027\">MReference_PhysicalPenetrate</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1467,7 +1467,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_ImaginaryResistanceDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__159769214\">MReference_ImaginaryResistanceDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1497,7 +1497,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_QuantumResistanceDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__482897370\">MReference_QuantumResistanceDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1527,7 +1527,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_WindResistanceDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1591915719\">MReference_WindResistanceDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1557,7 +1557,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_ThunderResistanceDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-410285863\">MReference_ThunderResistanceDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1587,7 +1587,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_IceResistanceDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1711688500\">MReference_IceResistanceDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1617,7 +1617,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_FireResistanceDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__188020335\">MReference_FireResistanceDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1647,7 +1647,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_PhysicalResistanceDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__1093639178\">MReference_PhysicalResistanceDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1677,7 +1677,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_AllDamageTypeResistanceDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1864228635\">MReference_AllDamageTypeResistanceDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1707,7 +1707,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_ImaginaryResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2139683242\">MReference_ImaginaryResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1735,7 +1735,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_QuantumResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-711606494\">MReference_QuantumResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1763,7 +1763,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_WindResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-925856119\">MReference_WindResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1791,7 +1791,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_ThunderResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-252705431\">MReference_ThunderResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1819,7 +1819,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_IceResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-80357888\">MReference_IceResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1847,7 +1847,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_FireResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1316625389\">MReference_FireResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1875,7 +1875,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_PhysicalResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__1974025522\">MReference_PhysicalResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1903,7 +1903,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_AllDamageTypeResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-471452843\">MReference_AllDamageTypeResistance</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1931,7 +1931,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_BreakDamageAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__51723505\">MReference_BreakDamageAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1959,7 +1959,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_ImaginaryAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__2139919158\">MReference_ImaginaryAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1987,7 +1987,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_QuantumAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__1039420114\">MReference_QuantumAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2015,7 +2015,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_WindAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__95107701\">MReference_WindAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2043,7 +2043,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_ThunderAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__206737685\">MReference_ThunderAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2071,7 +2071,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_IceAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__759675012\">MReference_IceAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2099,7 +2099,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_FireAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__1107362275\">MReference_FireAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2127,7 +2127,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_PhysicalAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-253190878\">MReference_PhysicalAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2155,7 +2155,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_AllDamageTypeAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__1337385649\">MReference_AllDamageTypeAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2183,7 +2183,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_AllDamageReduce",
+          "for": "<a class=\"gModGreen\" id=\"mod__2037632902\">MReference_AllDamageReduce</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2211,7 +2211,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_FatigueRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__1586922206\">MReference_FatigueRatio</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_Fatigue"
@@ -2242,7 +2242,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_CriticalResistanceDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-619681726\">MReference_CriticalResistanceDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2272,7 +2272,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_CriticalResistanceUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-746892793\">MReference_CriticalResistanceUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2300,7 +2300,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_CriticalDamageDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-624839742\">MReference_CriticalDamageDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2330,7 +2330,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_CriticalDamageUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__1042665863\">MReference_CriticalDamageUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2358,7 +2358,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_CriticalChanceDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-668180649\">MReference_CriticalChanceDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2388,7 +2388,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_CriticalChanceUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-143754898\">MReference_CriticalChanceUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2416,7 +2416,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_LevelAllDamageAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1811716105\">MReference_LevelAllDamageAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2444,7 +2444,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_DefenceDeltaDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__1643246488\">MReference_DefenceDeltaDown</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_DefenceDown"
@@ -2477,7 +2477,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_DefenceDeltaUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__1607333777\">MReference_DefenceDeltaUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2505,7 +2505,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_DefenceRatioDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__779501689\">MReference_DefenceRatioDown</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_DefenceDown"
@@ -2539,7 +2539,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_DefenceRatioUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__1669631468\">MReference_DefenceRatioUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2567,7 +2567,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_AttackDeltaDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1256121256\">MReference_AttackDeltaDown</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttackDown"
@@ -2600,7 +2600,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_AttackDeltaUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-202153391\">MReference_AttackDeltaUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2628,7 +2628,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_AttackRatioDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__-704051399\">MReference_AttackRatioDown</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttackDown"
@@ -2661,7 +2661,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MReference_AttackRatioUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__924156076\">MReference_AttackRatioUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {

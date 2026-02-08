@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_306_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1059014671\">Relic_306_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_306_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-622213418\">Relic_306_Sub</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -49,7 +49,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_306_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1059014671\">Relic_306_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -80,7 +80,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_306_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-622213418\">Relic_306_Sub</a>"
                 }
               ]
             }
@@ -110,7 +110,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_306_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"-622213418\">Relic_306_Sub</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ],
@@ -121,7 +121,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_306_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-622213418\">Relic_306_Sub</a>"
                 }
               ]
             }

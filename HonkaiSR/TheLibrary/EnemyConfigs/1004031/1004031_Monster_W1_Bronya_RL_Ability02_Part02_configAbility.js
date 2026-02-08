@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Enemy_W1_Bronya_RL_Ability02_PowerUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-409658375\">Enemy_W1_Bronya_RL_Ability02_PowerUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
         "displayLines": "{[Skill02[1]]}",
@@ -52,7 +52,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_RL_Ability02_PowerUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-409658375\">Enemy_W1_Bronya_RL_Ability02_PowerUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"

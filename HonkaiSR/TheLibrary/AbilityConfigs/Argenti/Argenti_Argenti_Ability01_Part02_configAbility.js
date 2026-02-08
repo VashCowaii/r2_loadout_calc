@@ -42,7 +42,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
           "stackLimit": {
             "operator": "Variables[0] (MDF_MaxCount) || RETURN",
             "displayLines": "MDF_MaxCount",

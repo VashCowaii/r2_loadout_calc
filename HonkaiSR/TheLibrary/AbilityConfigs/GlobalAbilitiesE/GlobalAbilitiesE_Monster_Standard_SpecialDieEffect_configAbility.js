@@ -23,7 +23,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_SpecialDieEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"1503068653\">Enemy_SpecialDieEffect</a>"
         }
       ]
     }
@@ -31,7 +31,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_SpecialDieEffect",
+      "for": "<a class=\"gModGreen\" id=\"mod__1503068653\">Enemy_SpecialDieEffect</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

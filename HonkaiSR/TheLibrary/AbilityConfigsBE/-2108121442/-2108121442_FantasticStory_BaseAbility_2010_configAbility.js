@@ -256,13 +256,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2010"
+      "modifier": "<a class=\"gModGreen\" id=\"-1152534927\">Modifier_FantasticStory_BaseAbility_2010</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2010_sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__1215795608\">Modifier_FantasticStory_BaseAbility_2010_sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -291,7 +291,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2010_Plus1AddOn"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2085135947\">Modifier_FantasticStory_BaseAbility_2010_Plus1AddOn</a>"
                 }
               ]
             },
@@ -310,7 +310,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2010_Plus2AddOn"
+                  "modifier": "<a class=\"gModGreen\" id=\"406324874\">Modifier_FantasticStory_BaseAbility_2010_Plus2AddOn</a>"
                 }
               ]
             },
@@ -329,7 +329,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2010_Plus3AddOn"
+                  "modifier": "<a class=\"gModGreen\" id=\"1224313035\">Modifier_FantasticStory_BaseAbility_2010_Plus3AddOn</a>"
                 }
               ]
             },
@@ -348,7 +348,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]]"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2010_Plus4AddOn"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1827065640\">Modifier_FantasticStory_BaseAbility_2010_Plus4AddOn</a>"
                 }
               ]
             },
@@ -367,7 +367,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[getMemosprite]]"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2010_Plus5AddOn[<span class=\"descriptionNumberColor\">Grit Mechanics: Ballad</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-454840159\">Modifier_FantasticStory_BaseAbility_2010_Plus5AddOn</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Ballad</span>]"
                 }
               ]
             },
@@ -386,7 +386,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2010_Plus6AddOn"
+                  "modifier": "<a class=\"gModGreen\" id=\"1848051030\">Modifier_FantasticStory_BaseAbility_2010_Plus6AddOn</a>"
                 }
               ]
             },
@@ -405,7 +405,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2010_Plus8AddOn"
+                  "modifier": "<a class=\"gModGreen\" id=\"1238380036\">Modifier_FantasticStory_BaseAbility_2010_Plus8AddOn</a>"
                 }
               ]
             }
@@ -440,7 +440,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2010_Plus5AddOn[<span class=\"descriptionNumberColor\">Grit Mechanics: Ballad</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-454840159\">Modifier_FantasticStory_BaseAbility_2010_Plus5AddOn</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Ballad</span>]"
                     }
                   ]
                 }
@@ -643,7 +643,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2010",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1152534927\">Modifier_FantasticStory_BaseAbility_2010</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -701,7 +701,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "MDF_NoScore"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1135719358\">MDF_NoScore</a>"
                     },
                     {
                       "name": "Force Entity Death",
@@ -720,7 +720,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "MDF_NoScore"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1135719358\">MDF_NoScore</a>"
                       },
                       "failed": [
                         {
@@ -731,7 +731,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Modifier_FantasticStory_BaseAbility_2010_aura"
+                            "modifier": "<a class=\"gModGreen\" id=\"-465768831\">Modifier_FantasticStory_BaseAbility_2010_aura</a>"
                           },
                           "passed": [
                             {
@@ -751,7 +751,7 @@ const configAbility = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "modifier": "Modifier_FantasticStory_BaseAbility_2010_ListenBEDelay"
+                                      "modifier": "<a class=\"gModGreen\" id=\"759083839\">Modifier_FantasticStory_BaseAbility_2010_ListenBEDelay</a>"
                                     }
                                   }
                                 ]
@@ -1106,7 +1106,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_HPParentChild[<span class=\"descriptionNumberColor\">Binding Obligation</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-149468610\">Modifier_FantasticStory_HPParentChild</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]"
                     }
                   ]
                 }
@@ -1123,7 +1123,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2010_sub"
+              "modifier": "<a class=\"gModGreen\" id=\"1215795608\">Modifier_FantasticStory_BaseAbility_2010_sub</a>"
             },
             {
               "name": "Find New Target",
@@ -1162,7 +1162,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_FantasticStory_HPParentChild[<span class=\"descriptionNumberColor\">Binding Obligation</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-149468610\">Modifier_FantasticStory_HPParentChild</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]"
                 },
                 {
                   "name": "Boss Bar Display",
@@ -1193,7 +1193,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_HPParentChildForShow[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1532586988\">Modifier_FantasticStory_HPParentChildForShow</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
       "stackType": "ReplaceByCaster",
       "description": "After being defeated, deal DMG based on a certain percentage of their Max HP to the Elite enemy target.",
       "type": "Buff",
@@ -1202,7 +1202,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_HPParentChild[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-149468610\">Modifier_FantasticStory_HPParentChild</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1222,7 +1222,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "Modifier_FantasticStory_HPParentChildForShow[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1532586988\">Modifier_FantasticStory_HPParentChildForShow</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]"
             }
           ]
         },
@@ -1247,7 +1247,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}} - {{Modifier Holder}}"
               },
-              "modifier": "Modifier_FantasticStory_HPParentChildForShow[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1532586988\">Modifier_FantasticStory_HPParentChildForShow</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]"
             }
           ]
         }

@@ -13,7 +13,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Boothill_Ultimate_PhysicalWeakness[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1234556186\">Boothill_Ultimate_PhysicalWeakness</a>[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -105,13 +105,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Boothill_Ability03PreShowModifierTarget"
+      "modifier": "<a class=\"gModGreen\" id=\"-913559917\">Boothill_Ability03PreShowModifierTarget</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Boothill_Ability03PreShowModifierTarget",
+      "for": "<a class=\"gModGreen\" id=\"mod__-913559917\">Boothill_Ability03PreShowModifierTarget</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {

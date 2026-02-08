@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever"
+      "modifier": "<a class=\"gModGreen\" id=\"931941990\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever",
+      "for": "<a class=\"gModGreen\" id=\"mod__931941990\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -54,7 +54,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
                   "addStacksPerTrigger": 1
                 }
               ]
@@ -96,7 +96,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
                   "addStacksPerTrigger": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_BirdAttackCount) || RETURN",
                     "displayLines": "DV_FantasticStory_BaseAbility_BirdAttackCount",
@@ -120,7 +120,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_ForShow[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1271014269\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
           "haloStatus": true
         }
       ]

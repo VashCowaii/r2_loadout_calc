@@ -18,13 +18,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_20001_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"1091611202\">LC_20001_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_20001_HealRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__1856885896\">LC_20001_HealRatio</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -51,7 +51,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_20001_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__1091611202\">LC_20001_Main</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -78,7 +78,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "LC_20001_HealRatio"
+                      "modifier": "<a class=\"gModGreen\" id=\"1856885896\">LC_20001_HealRatio</a>"
                     }
                   ]
                 }
@@ -93,7 +93,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_20001_HealRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"1856885896\">LC_20001_HealRatio</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]

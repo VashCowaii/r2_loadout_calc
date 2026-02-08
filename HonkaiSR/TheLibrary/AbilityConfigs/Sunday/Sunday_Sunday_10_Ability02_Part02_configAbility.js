@@ -119,7 +119,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}} + {{Summoner/Memosprite of Ability Target(ST)}}"
               },
-              "modifier": "Sunday_10_Ability02_Property[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"2015662270\">Sunday_10_Ability02_Property</a>[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -148,7 +148,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}} + {{Summoner/Memosprite of Ability Target(ST)}}"
               },
-              "modifier": "Sunday_10_Ability02_Property[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"2015662270\">Sunday_10_Ability02_Property</a>[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -178,7 +178,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Sunday_10_Ability02_Property[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2015662270\">Sunday_10_Ability02_Property</a>[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -209,7 +209,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Sunday_10_MazeBonus_ForCaster[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-1449149515\">Sunday_10_MazeBonus_ForCaster</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
       },
       "passed": [
         {
@@ -218,7 +218,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sunday_10_MazeBonus_ForCaster[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1449149515\">Sunday_10_MazeBonus_ForCaster</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -226,7 +226,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}} + {{Ability Target(ST)}}.[[getMemosprite]]"
           },
-          "modifier": "Sunday_10_MazeBonus[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2041266105\">Sunday_10_MazeBonus</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -256,7 +256,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "modifier": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]"
       },
       "passed": [
         {
@@ -355,7 +355,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}} + {{Ability Target(ST)}}.[[getMemosprite]]"
               },
-              "modifier": "Sunday_10_CritUp[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
               "duration": {
                 "operator": "Variables[0] (_P01_LifeTime) || RETURN",
                 "displayLines": "_P01_LifeTime",
@@ -392,7 +392,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}} + {{Ability Target(ST)}}.[[getMemosprite]]"
               },
-              "modifier": "Sunday_10_CritUp[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
               "duration": {
                 "operator": "Variables[0] (_P01_LifeTime) || RETURN",
                 "displayLines": "_P01_LifeTime",
@@ -429,7 +429,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Sunday_10_CritUp[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
               "duration": {
                 "operator": "Variables[0] (_P01_LifeTime) || RETURN",
                 "displayLines": "_P01_LifeTime",
@@ -466,7 +466,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Sunday_10_CritUp[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
               "duration": {
                 "operator": "Variables[0] (_P01_LifeTime) || RETURN",
                 "displayLines": "_P01_LifeTime",
@@ -522,7 +522,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Sunday_10_Eidolon1_SuperBonus[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-817980433\">Sunday_10_Eidolon1_SuperBonus</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -569,7 +569,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Sunday_10_Eidolon1_SuperBonusForServant[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1698887691\">Sunday_10_Eidolon1_SuperBonusForServant</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -610,7 +610,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_Ability02_Property[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2015662270\">Sunday_10_Ability02_Property</a>[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

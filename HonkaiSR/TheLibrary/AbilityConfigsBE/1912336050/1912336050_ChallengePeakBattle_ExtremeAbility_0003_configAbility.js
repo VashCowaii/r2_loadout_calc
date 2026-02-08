@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0003"
+      "modifier": "<a class=\"gModGreen\" id=\"1141642014\">Modifier_ChallengePeakBattle_ExtremeAbility_0003</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0003_02[<span class=\"descriptionNumberColor\">Inversion++</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-577906191\">Modifier_ChallengePeakBattle_ExtremeAbility_0003_02</a>[<span class=\"descriptionNumberColor\">Inversion++</span>]",
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",
@@ -58,7 +58,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0003",
+      "for": "<a class=\"gModGreen\" id=\"mod__1141642014\">Modifier_ChallengePeakBattle_ExtremeAbility_0003</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -80,7 +80,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0003_02[<span class=\"descriptionNumberColor\">Inversion++</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-577906191\">Modifier_ChallengePeakBattle_ExtremeAbility_0003_02</a>[<span class=\"descriptionNumberColor\">Inversion++</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0003_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

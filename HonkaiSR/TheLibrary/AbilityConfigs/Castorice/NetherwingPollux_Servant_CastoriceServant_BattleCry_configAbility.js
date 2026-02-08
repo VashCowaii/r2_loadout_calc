@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_CastoriceServant_BattleCry"
+      "modifier": "<a class=\"gModGreen\" id=\"53613592\">Memosprite_CastoriceServant_BattleCry</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_CastoriceServant_BattleCry",
+      "for": "<a class=\"gModGreen\" id=\"mod__53613592\">Memosprite_CastoriceServant_BattleCry</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -35,7 +35,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Memosprite_CastoriceServant_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-509656395\">Memosprite_CastoriceServant_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -75,7 +75,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Memosprite_CastoriceServant_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-509656395\">Memosprite_CastoriceServant_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

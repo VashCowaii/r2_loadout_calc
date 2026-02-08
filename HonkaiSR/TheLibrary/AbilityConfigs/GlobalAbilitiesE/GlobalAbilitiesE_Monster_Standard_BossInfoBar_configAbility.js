@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Standard_BOSSInfoBar_Active"
+      "modifier": "<a class=\"gModGreen\" id=\"-887060833\">Standard_BOSSInfoBar_Active</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Standard_BOSSInfoBar_Active",
+      "for": "<a class=\"gModGreen\" id=\"mod__-887060833\">Standard_BOSSInfoBar_Active</a>",
       "stackData": [],
       "latentQueue": []
     }

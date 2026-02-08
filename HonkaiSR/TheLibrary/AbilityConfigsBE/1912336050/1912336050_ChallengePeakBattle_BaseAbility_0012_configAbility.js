@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012"
+      "modifier": "<a class=\"gModGreen\" id=\"-187022719\">Modifier_ChallengePeakBattle_BaseAbility_0012</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -71,7 +71,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0012_02",
+      "for": "<a class=\"gModGreen\" id=\"mod__-575697244\">Modifier_ChallengePeakBattle_BaseAbility_0012_02</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -82,7 +82,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement</span>]"
             },
             {
               "name": "Add Events/Bonuses",
@@ -90,7 +90,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (ChallengePeakBattle_0012_ADF_2) || RETURN",
                 "displayLines": "ChallengePeakBattle_0012_ADF_2",
@@ -138,7 +138,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (ChallengePeakBattle_0012_ADF_2) || RETURN",
                 "displayLines": "ChallengePeakBattle_0012_ADF_2",
@@ -198,7 +198,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0012_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -239,7 +239,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement</span>]"
             },
             {
               "name": "Add Events/Bonuses",
@@ -247,7 +247,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012_03[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (ChallengePeakBattle_0012_ADF_2) || RETURN",
                 "displayLines": "ChallengePeakBattle_0012_ADF_2",
@@ -290,7 +290,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0012",
+      "for": "<a class=\"gModGreen\" id=\"mod__-187022719\">Modifier_ChallengePeakBattle_BaseAbility_0012</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -312,7 +312,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0012_02",
+                  "modifier": "<a class=\"gModGreen\" id=\"-575697244\">Modifier_ChallengePeakBattle_BaseAbility_0012_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0012_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

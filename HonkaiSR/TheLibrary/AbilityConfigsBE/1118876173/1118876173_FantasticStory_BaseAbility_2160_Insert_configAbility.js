@@ -41,7 +41,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2160_ListenBEDelay"
+              "modifier": "<a class=\"gModGreen\" id=\"-1851952501\">Modifier_FantasticStory_BaseAbility_2160_ListenBEDelay</a>"
             }
           ]
         }
@@ -59,7 +59,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1010904189\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT</a>[<span class=\"descriptionNumberColor\">Echo Enigma</span>]",
       "duration": {
         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime) || RETURN",
         "displayLines": "DV_FantasticStory_BaseAbility_2160_BeforeFever_P4_LifeTime",
@@ -126,7 +126,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2160_Aura",
+      "modifier": "<a class=\"gModGreen\" id=\"-898765267\">Modifier_FantasticStory_BaseAbility_2160_Aura</a>",
       "valuePerStack": {
         "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio": {
           "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio) || RETURN",

@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_Eidolon2_1",
+      "for": "<a class=\"gModGreen\" id=\"mod__1161189096\">Cyrene_Eidolon2_1</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -75,7 +75,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Cyrene_Ability02_Bonus_Main[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1356425425\">Cyrene_Ability02_Bonus_Main</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
               "valuePerStack": {
                 "MDF_OriginDamagePercentage": {
                   "operator": "Variables[0] (0.24) || RETURN",
@@ -93,7 +93,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_PointB3_Sub3[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__827249673\">Cyrene_PointB3_Sub3</a>[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -127,7 +127,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_PointB3_Sub2[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__810472054\">Cyrene_PointB3_Sub2</a>[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -172,18 +172,18 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "ChrysosMark"
+      "for": "<a class=\"gModGreen\" id=\"mod__-1865411138\">ChrysosMark</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_PointB3",
+      "for": "<a class=\"gModGreen\" id=\"mod__1015949385\">Cyrene_PointB3</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Cyrene_PointB3_CheckSpeed"
+              "functionName": "<a class=\"gTempYellow\" id=\"1194720287\">Cyrene_PointB3_CheckSpeed</a>"
             }
           ]
         },
@@ -203,7 +203,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Cyrene_PointB3_CheckSpeed"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1194720287\">Cyrene_PointB3_CheckSpeed</a>"
                 }
               ]
             }
@@ -220,7 +220,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Cyrene_PointB3_CheckSpeed"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1194720287\">Cyrene_PointB3_CheckSpeed</a>"
                 }
               ]
             }
@@ -235,7 +235,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Cyrene_PointB3_CheckSpeed"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1194720287\">Cyrene_PointB3_CheckSpeed</a>"
                 }
               ]
             }
@@ -250,7 +250,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Cyrene_PointB3_CheckSpeed"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1194720287\">Cyrene_PointB3_CheckSpeed</a>"
                 }
               ]
             }
@@ -262,7 +262,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_Passive_Sub[<span class=\"descriptionNumberColor\">Hearts Gather as One</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__619883840\">Cyrene_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Hearts Gather as One</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -296,7 +296,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_Ability03_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1765178435\">Cyrene_Ability03_Sub</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -323,7 +323,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_Ability03[<span class=\"descriptionNumberColor\">Ripples of Past Reverie</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1470142416\">Cyrene_Ability03</a>[<span class=\"descriptionNumberColor\">Ripples of Past Reverie</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [],
       "execute": [
@@ -434,7 +434,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}+{{Caster's Memosprite}}"
           },
-          "modifier": "Cyrene_Ability03_Sub",
+          "modifier": "<a class=\"gModGreen\" id=\"-1765178435\">Cyrene_Ability03_Sub</a>",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_CritChance": {
@@ -451,7 +451,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_Ability02_Bonus[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-556268195\">Cyrene_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -499,7 +499,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Cyrene_Eidolon2_1"
+                        "modifier": "<a class=\"gModGreen\" id=\"1161189096\">Cyrene_Eidolon2_1</a>"
                       },
                       "passed": [
                         {
@@ -508,7 +508,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Cyrene_Eidolon2_1",
+                          "modifier": "<a class=\"gModGreen\" id=\"1161189096\">Cyrene_Eidolon2_1</a>",
                           "variable": "MDF_PropertyValue",
                           "target2": null,
                           "variable2": "MDF_ExtraDamagePercentage"
@@ -578,7 +578,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Cyrene_Eidolon2_1"
+                "modifier": "<a class=\"gModGreen\" id=\"1161189096\">Cyrene_Eidolon2_1</a>"
               },
               "passed": [
                 {
@@ -587,7 +587,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Cyrene_Eidolon2_1",
+                  "modifier": "<a class=\"gModGreen\" id=\"1161189096\">Cyrene_Eidolon2_1</a>",
                   "variable": "MDF_PropertyValue",
                   "target2": null,
                   "variable2": "MDF_ExtraDamagePercentage"
@@ -616,7 +616,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_Ability02_Bonus_Main[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1356425425\">Cyrene_Ability02_Bonus_Main</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -665,7 +665,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Cyrene_Eidolon2_1"
+                        "modifier": "<a class=\"gModGreen\" id=\"1161189096\">Cyrene_Eidolon2_1</a>"
                       },
                       "passed": [
                         {
@@ -674,7 +674,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Cyrene_Eidolon2_1",
+                          "modifier": "<a class=\"gModGreen\" id=\"1161189096\">Cyrene_Eidolon2_1</a>",
                           "variable": "MDF_PropertyValue",
                           "target2": null,
                           "variable2": "MDF_ExtraDamagePercentage"
@@ -744,7 +744,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Cyrene_Ability03[<span class=\"descriptionNumberColor\">Ripples of Past Reverie</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1470142416\">Cyrene_Ability03</a>[<span class=\"descriptionNumberColor\">Ripples of Past Reverie</span>]"
               }
             },
             {
@@ -755,7 +755,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Cyrene_Eidolon2_1"
+                "modifier": "<a class=\"gModGreen\" id=\"1161189096\">Cyrene_Eidolon2_1</a>"
               },
               "passed": [
                 {
@@ -764,7 +764,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Cyrene_Eidolon2_1",
+                  "modifier": "<a class=\"gModGreen\" id=\"1161189096\">Cyrene_Eidolon2_1</a>",
                   "variable": "MDF_PropertyValue",
                   "target2": null,
                   "variable2": "MDF_ExtraDamagePercentage"
@@ -801,7 +801,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]-{{Caster}}"
           },
-          "modifier": "Cyrene_Ability02_Bonus[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-556268195\">Cyrene_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
           "aliveOnly": "True",
           "haloStatus": true,
           "valuePerStack": {
@@ -819,7 +819,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_Passive_Teamate_ThanksGift",
+      "for": "<a class=\"gModGreen\" id=\"mod__386083249\">Cyrene_Passive_Teamate_ThanksGift</a>",
       "modifierFlags": [
         "ServantInherit_ModifierContinuation",
         "RemoveWhenCasterDead"
@@ -911,7 +911,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cyrene_Passive_Teamate[<span class=\"descriptionNumberColor\">Future</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1931471655\">Cyrene_Passive_Teamate</a>[<span class=\"descriptionNumberColor\">Future</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -922,7 +922,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Cyrene_ChargeEnergy",
+              "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
               "variables": {
                 "parameter[0]_AddValue": {
                   "operator": "Variables[0] (MDF_SPAdd) || RETURN",
@@ -940,7 +940,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Cyrene_Passive_Teamate_ThanksGift"
+              "modifier": "<a class=\"gModGreen\" id=\"386083249\">Cyrene_Passive_Teamate_ThanksGift</a>"
             },
             {
               "name": "IF",
@@ -976,7 +976,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Cyrene_ChargeEnergy",
+              "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
               "variables": {
                 "parameter[0]_AddValue": {
                   "operator": "Variables[0] (MDF_SPAdd) || RETURN",
@@ -994,7 +994,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Cyrene_Passive_Teamate_ThanksGift"
+              "modifier": "<a class=\"gModGreen\" id=\"386083249\">Cyrene_Passive_Teamate_ThanksGift</a>"
             },
             {
               "name": "IF",

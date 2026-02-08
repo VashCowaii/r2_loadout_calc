@@ -34,7 +34,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Tribbie_Eidolon6_Bonus_Active",
+              "modifier": "<a class=\"gModGreen\" id=\"1011992176\">Tribbie_Eidolon6_Bonus_Active</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (7.29) || RETURN",
@@ -102,7 +102,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Tribbie_Eidolon6_Bonus_Active"
+              "modifier": "<a class=\"gModGreen\" id=\"1011992176\">Tribbie_Eidolon6_Bonus_Active</a>"
             }
           ]
         },
@@ -119,7 +119,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Tribbie_PointB1_DamageUpModifier[<span class=\"descriptionNumberColor\">Lamb Outside the Wall...</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"361990450\">Tribbie_PointB1_DamageUpModifier</a>[<span class=\"descriptionNumberColor\">Lamb Outside the Wall...</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -249,13 +249,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Tribbie_Maze_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-888581137\">Tribbie_Maze_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_Maze_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-888581137\">Tribbie_Maze_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -275,7 +275,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Tribbie_SKL02_Bonus[<span class=\"descriptionNumberColor\">Numinosity</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1664293665\">Tribbie_SKL02_Bonus</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -358,7 +358,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Tribbie_PointB3_AddSpModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-249880334\">Tribbie_PointB3_AddSpModifier</a>"
             }
           ]
         },
@@ -411,7 +411,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Tribbie_Eidolon6_Bonus[<span class=\"descriptionNumberColor\">Morrow of Star Shine</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"559634045\">Tribbie_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">Morrow of Star Shine</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (7.29) || RETURN",
@@ -431,7 +431,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Tribbie_Passive_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"1013129006\">Tribbie_Passive_Listen</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -458,7 +458,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_Passive_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__1013129006\">Tribbie_Passive_Listen</a>",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
@@ -474,14 +474,14 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Tribbie_SKL02_Bonus[<span class=\"descriptionNumberColor\">Numinosity</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1664293665\">Tribbie_SKL02_Bonus</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]"
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
                       "valueType": "LifeTime",
                       "variableName": "Skill02_EnergyBarCount",
-                      "modifierName": "Tribbie_SKL02_Bonus[<span class=\"descriptionNumberColor\">Numinosity</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1664293665\">Tribbie_SKL02_Bonus</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
                       "multiplier": 1
                     }
                   ],
@@ -632,7 +632,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1724674064\">Tribbie_CanTriggerInsertTag</a>[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
                           },
                           {
                             "name": "AND",
@@ -664,7 +664,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1724674064\">Tribbie_CanTriggerInsertTag</a>[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -732,7 +732,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]] - {{Caster}}"
                       },
-                      "modifier": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1724674064\">Tribbie_CanTriggerInsertTag</a>[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
                     }
                   ]
                 }
@@ -996,7 +996,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_PointB3_AddSpAura",
+          "for": "<a class=\"gModGreen\" id=\"mod__-421970928\">Tribbie_PointB3_AddSpAura</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -1032,7 +1032,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_PointB3_AddSpModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-249880334\">Tribbie_PointB3_AddSpModifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -1077,7 +1077,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]  - {{Caster}}"
               },
-              "modifier": "Tribbie_PointB3_AddSpAura",
+              "modifier": "<a class=\"gModGreen\" id=\"-421970928\">Tribbie_PointB3_AddSpAura</a>",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -1106,7 +1106,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]] - {{Caster}}"
           },
-          "modifier": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1724674064\">Tribbie_CanTriggerInsertTag</a>[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1114,7 +1114,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Tribbie_SKL03_Bonus[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1351986018\">Tribbie_SKL03_Bonus</a>[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -1320,7 +1320,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Tribbie_SKL02_Bonus[<span class=\"descriptionNumberColor\">Numinosity</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1664293665\">Tribbie_SKL02_Bonus</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -1528,7 +1528,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1724674064\">Tribbie_CanTriggerInsertTag</a>[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -1541,7 +1541,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_SKL03_Bonus_Debuff[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1508822063\">Tribbie_SKL03_Bonus_Debuff</a>[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1572,7 +1572,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_SKL03_Bonus_Buff",
+          "for": "<a class=\"gModGreen\" id=\"mod__2033842878\">Tribbie_SKL03_Bonus_Buff</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1588,7 +1588,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Tribbie_SKL03_Bonus_Mark",
+                        "modifier": "<a class=\"gModGreen\" id=\"1926771974\">Tribbie_SKL03_Bonus_Mark</a>",
                         "invertCondition": true
                       },
                       {
@@ -1613,7 +1613,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Tribbie_SKL03_Bonus_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"1926771974\">Tribbie_SKL03_Bonus_Mark</a>"
                     }
                   ]
                 }
@@ -1643,7 +1643,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}"
                   },
-                  "modifier": "Tribbie_SKL03_Bonus_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"1926771974\">Tribbie_SKL03_Bonus_Mark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1651,7 +1651,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}"
                   },
-                  "modifier": "Tribbie_SKL03_Bonus_HighestHPMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"890101932\">Tribbie_SKL03_Bonus_HighestHPMark</a>"
                 }
               ]
             },
@@ -1727,7 +1727,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Tribbie_SKL03_Bonus_Mark",
+                              "modifier": "<a class=\"gModGreen\" id=\"1926771974\">Tribbie_SKL03_Bonus_Mark</a>",
                               "justAddedOrActive": true
                             }
                           },
@@ -1754,11 +1754,11 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Tribbie_SKL03_Bonus_HighestHPMark"
+                          "modifier": "<a class=\"gModGreen\" id=\"890101932\">Tribbie_SKL03_Bonus_HighestHPMark</a>"
                         },
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "PursuedDamage_PerformanceDelay",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Attack Targets of Modifier Holder}}"
@@ -1781,7 +1781,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Tribbie_SKL03_Bonus_Mark",
+                                  "modifier": "<a class=\"gModGreen\" id=\"1926771974\">Tribbie_SKL03_Bonus_Mark</a>",
                                   "justAddedOrActive": true
                                 }
                               }
@@ -1794,7 +1794,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Tribbie_SKL03_Bonus_HighestHPMark",
+                            "modifier": "<a class=\"gModGreen\" id=\"890101932\">Tribbie_SKL03_Bonus_HighestHPMark</a>",
                             "invertCondition": true
                           },
                           "ifTargetFound": [
@@ -1887,7 +1887,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_SKL03_Eidolon1Listener",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1144541934\">Tribbie_SKL03_Eidolon1Listener</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Anyone]: Any",
@@ -2063,12 +2063,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_SKL03_Bonus_AttackCount",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1275056390\">Tribbie_SKL03_Bonus_AttackCount</a>",
           "counter": 1
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_SKL03_Bonus_HighestHPMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__890101932\">Tribbie_SKL03_Bonus_HighestHPMark</a>",
           "stackData": [],
           "latentQueue": [
             "MDF_Attacked",
@@ -2077,7 +2077,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_SKL03_Bonus_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__1926771974\">Tribbie_SKL03_Bonus_Mark</a>",
           "stackData": [],
           "latentQueue": [
             "MDF_Attacked"
@@ -2085,7 +2085,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_SKL03_PointB2[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2096,7 +2096,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
                   },
-                  "modifier": "Tribbie_SKL03_PointB2_ListenHPChange"
+                  "modifier": "<a class=\"gModGreen\" id=\"781452723\">Tribbie_SKL03_PointB2_ListenHPChange</a>"
                 }
               ]
             },
@@ -2109,7 +2109,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
                   },
-                  "modifier": "Tribbie_SKL03_PointB2_ListenHPChange"
+                  "modifier": "<a class=\"gModGreen\" id=\"781452723\">Tribbie_SKL03_PointB2_ListenHPChange</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2248,7 +2248,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_SKL03_PointB2_ListenHPChange",
+          "for": "<a class=\"gModGreen\" id=\"mod__781452723\">Tribbie_SKL03_PointB2_ListenHPChange</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -2339,7 +2339,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "Tribbie_SKL03_PointB2[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
                   "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2446,7 +2446,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "Tribbie_SKL03_PointB2[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
                       "variableName": "MDF_PropertyValue",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2553,7 +2553,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "Tribbie_SKL03_PointB2[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
                       "variableName": "MDF_PropertyValue",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2574,7 +2574,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_SKL03_Bonus[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1351986018\">Tribbie_SKL03_Bonus</a>[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2599,7 +2599,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Tribbie_SKL03_Bonus_Debuff[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1508822063\">Tribbie_SKL03_Bonus_Debuff</a>[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -2626,7 +2626,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Tribbie_SKL03_Bonus_Buff",
+              "modifier": "<a class=\"gModGreen\" id=\"2033842878\">Tribbie_SKL03_Bonus_Buff</a>",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue2": {
@@ -2645,7 +2645,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Tribbie_SKL03_Eidolon1Listener",
+              "modifier": "<a class=\"gModGreen\" id=\"-1144541934\">Tribbie_SKL03_Eidolon1Listener</a>",
               "haloStatus": true,
               "conditions": {
                 "name": "Eidolon Activated",
@@ -2658,7 +2658,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Tribbie_SKL03_PointB2[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Trace Activated",
@@ -2669,7 +2669,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_SKL02_Bonus_Buff[<span class=\"descriptionNumberColor\">Numinosity</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1699792479\">Tribbie_SKL02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2701,7 +2701,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">Peace of Empathy Bond</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__357538519\">Tribbie_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">Peace of Empathy Bond</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2727,7 +2727,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_SKL02_Bonus[<span class=\"descriptionNumberColor\">Numinosity</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1664293665\">Tribbie_SKL02_Bonus</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2768,7 +2768,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}-{{Caster}}"
               },
-              "modifier": "Tribbie_SKL02_Bonus_Buff[<span class=\"descriptionNumberColor\">Numinosity</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1699792479\">Tribbie_SKL02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
               "haloStatus": true,
               "includeBattleEvent": true,
               "valuePerStack": {
@@ -2788,7 +2788,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}"
               },
-              "modifier": "Tribbie_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">Peace of Empathy Bond</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"357538519\">Tribbie_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">Peace of Empathy Bond</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Eidolon Activated",
@@ -2810,7 +2810,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_PointB1_DamageUpModifier[<span class=\"descriptionNumberColor\">Lamb Outside the Wall...</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__361990450\">Tribbie_PointB1_DamageUpModifier</a>[<span class=\"descriptionNumberColor\">Lamb Outside the Wall...</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2870,7 +2870,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_Eidolon6_Bonus_Active",
+          "for": "<a class=\"gModGreen\" id=\"mod__1011992176\">Tribbie_Eidolon6_Bonus_Active</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2907,7 +2907,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tribbie_Eidolon6_Bonus[<span class=\"descriptionNumberColor\">Morrow of Star Shine</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__559634045\">Tribbie_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">Morrow of Star Shine</span>]",
           "stackType": "ReplaceByCaster",
           "stackData": [
             "MDF_PropertyValue"

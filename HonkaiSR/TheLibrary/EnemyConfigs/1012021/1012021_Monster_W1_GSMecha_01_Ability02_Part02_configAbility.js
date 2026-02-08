@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_GSMecha_01_ExplodeCharge_Effect"
+      "modifier": "<a class=\"gModGreen\" id=\"-693920097\">Monster_W1_GSMecha_01_ExplodeCharge_Effect</a>"
     },
     {
       "name": "UI Display Event (On Entity)",
@@ -55,7 +55,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_GSMecha_01_ExplodeCharge_Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-693920097\">Monster_W1_GSMecha_01_ExplodeCharge_Effect</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"

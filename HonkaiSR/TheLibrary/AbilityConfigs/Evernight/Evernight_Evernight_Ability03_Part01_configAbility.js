@@ -32,7 +32,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_SizeControl_STB2"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1393796287\">function_Evernight_Group_SizeControl_STB2</a>"
     }
   ],
   "references": []

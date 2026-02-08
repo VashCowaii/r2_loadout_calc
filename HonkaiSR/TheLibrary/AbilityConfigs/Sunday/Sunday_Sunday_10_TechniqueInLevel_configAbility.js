@@ -18,20 +18,20 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sunday_10_Maze_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-484835695\">Sunday_10_Maze_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_MazeBonus_ForCaster[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1449149515\">Sunday_10_MazeBonus_ForCaster</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
       "description": "The next time this unit uses an ability on an ally target, the target's DMG dealt increases.",
       "type": "Other",
       "statusName": "The Glorious Mysteries"
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_Maze_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-484835695\">Sunday_10_Maze_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -51,7 +51,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sunday_10_MazeBonus_ForCaster[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1449149515\">Sunday_10_MazeBonus_ForCaster</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
                 }
               ]
             }

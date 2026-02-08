@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Soldier01_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1864245059\">Monster_W1_Soldier01_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [

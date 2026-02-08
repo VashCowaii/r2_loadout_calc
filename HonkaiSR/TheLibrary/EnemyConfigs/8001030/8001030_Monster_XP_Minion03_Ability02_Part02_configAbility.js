@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{All Team Members}}"
       },
-      "modifier": "Monster_XP_Minion03_Attack[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1727496698\">Monster_XP_Minion03_Attack</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
         "displayLines": "{[Skill02[1]]}",

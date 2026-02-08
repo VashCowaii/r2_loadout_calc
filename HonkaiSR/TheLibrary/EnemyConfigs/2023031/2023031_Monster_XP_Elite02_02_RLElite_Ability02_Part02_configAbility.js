@@ -21,7 +21,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
       },
       "passed": [
         {
@@ -30,7 +30,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+          "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
         }
       ]
     },
@@ -62,7 +62,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
         "displayLines": "{[Skill02[2]]}",
@@ -99,7 +99,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Target Right of Ability Target(ST)}}"
         },
-        "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
       },
       "passed": [
         {
@@ -108,7 +108,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Right of Ability Target(ST)}}"
           },
-          "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+          "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
         }
       ]
     },
@@ -120,7 +120,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Target Left of Ability Target(ST)}}"
         },
-        "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
       },
       "passed": [
         {
@@ -129,7 +129,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Left of Ability Target(ST)}}"
           },
-          "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+          "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
         }
       ]
     },
@@ -161,7 +161,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Targets Adjacent(Blast)}}"
       },
-      "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
         "displayLines": "{[Skill02[2]]}",

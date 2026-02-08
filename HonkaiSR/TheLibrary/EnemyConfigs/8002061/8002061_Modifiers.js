@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_EscapingCharge02",
+      "for": "<a class=\"gModGreen\" id=\"mod__1449818532\">Enemy_XP_Minion04_02_EscapingCharge02</a>",
       "modifierFlags": [
         "MuteHitFly",
         "Endurance",
@@ -61,7 +61,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_EscapingCharge01",
+      "for": "<a class=\"gModGreen\" id=\"mod__1500151389\">Enemy_XP_Minion04_02_EscapingCharge01</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -95,7 +95,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Bonus_Pre",
+      "for": "<a class=\"gModGreen\" id=\"mod__1457189805\">Enemy_XP_Minion04_02_Bonus_Pre</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -104,7 +104,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion",
+      "for": "<a class=\"gModGreen\" id=\"mod__-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -116,7 +116,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On"
+              "modifier": "<a class=\"gModGreen\" id=\"224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>"
             }
           ]
         },
@@ -147,7 +147,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On"
+                    "modifier": "<a class=\"gModGreen\" id=\"224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>"
                   },
                   {
                     "name": "Compare: Variable",
@@ -164,7 +164,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On"
+                  "modifier": "<a class=\"gModGreen\" id=\"224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -233,7 +233,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On",
+      "for": "<a class=\"gModGreen\" id=\"mod__224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -244,7 +244,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Huimie_EffectRound",
+      "for": "<a class=\"gModGreen\" id=\"mod__24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "KeepOnDeathrattle"
@@ -262,7 +262,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Huimie_EffectPaths",
+      "for": "<a class=\"gModGreen\" id=\"mod__1715207705\">Enemy_XP_Minion04_02_Huimie_EffectPaths</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -274,7 +274,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Huimie_EffectGround",
+      "for": "<a class=\"gModGreen\" id=\"mod__1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -286,7 +286,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Bonus_Huimie_Caster",
+      "for": "<a class=\"gModGreen\" id=\"mod__-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -320,7 +320,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion"
+              "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -328,7 +328,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On"
+              "modifier": "<a class=\"gModGreen\" id=\"224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>"
             }
           ]
         },
@@ -465,7 +465,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On"
+              "modifier": "<a class=\"gModGreen\" id=\"224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>"
             }
           ]
         }
@@ -475,7 +475,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Fengrao_Caster",
+      "for": "<a class=\"gModGreen\" id=\"mod__93806967\">Enemy_XP_Minion04_02_Fengrao_Caster</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -486,7 +486,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Fengrao_Minion"
+              "modifier": "<a class=\"gModGreen\" id=\"-1146816007\">Enemy_XP_Minion04_02_Fengrao_Minion</a>"
             }
           ]
         },
@@ -524,7 +524,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Fengrao_BeHit"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>"
                     }
                   }
                 ]
@@ -547,7 +547,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Fengrao_BeHit"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>"
                     }
                   },
                   "abilityName": "Monster_XP_Minion04_02_AbilityP01_InsertAbility_Fengrao",
@@ -572,7 +572,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Fengrao_BeHit"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>"
                 }
               ]
             }
@@ -584,7 +584,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Fengrao_Minion",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1146816007\">Enemy_XP_Minion04_02_Fengrao_Minion</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -647,7 +647,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Fengrao_BeHit"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>"
                     }
                   ]
                 }
@@ -685,7 +685,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Enemy_XP_Minion04_02_Fengrao_Trigger1"
+                "modifier": "<a class=\"gModGreen\" id=\"1933857712\">Enemy_XP_Minion04_02_Fengrao_Trigger1</a>"
               },
               "passed": [
                 {
@@ -703,7 +703,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Enemy_XP_Minion04_02_Fengrao_SelfDamage"
+                "modifier": "<a class=\"gModGreen\" id=\"956566396\">Enemy_XP_Minion04_02_Fengrao_SelfDamage</a>"
               },
               "passed": [
                 {
@@ -763,7 +763,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Enemy_XP_Minion04_02_Fengrao_Trigger"
+                "modifier": "<a class=\"gModGreen\" id=\"1608084385\">Enemy_XP_Minion04_02_Fengrao_Trigger</a>"
               },
               "passed": [
                 {
@@ -836,17 +836,17 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Fengrao_BeHit",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Fengrao_Mark"
+      "for": "<a class=\"gModGreen\" id=\"mod__-763398934\">Enemy_XP_Minion04_02_Fengrao_Mark</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_EffectTrigger2",
+      "for": "<a class=\"gModGreen\" id=\"mod__1331247877\">Enemy_XP_Minion04_02_EffectTrigger2</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -856,7 +856,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_EffectTrigger",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1094709195\">Enemy_XP_Minion04_02_EffectTrigger</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -868,7 +868,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_EffectRound",
+      "for": "<a class=\"gModGreen\" id=\"mod__-801636319\">Enemy_XP_Minion04_02_EffectRound</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -880,7 +880,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_EffectPaths",
+      "for": "<a class=\"gModGreen\" id=\"mod__1306349309\">Enemy_XP_Minion04_02_EffectPaths</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -892,7 +892,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_EffectGround",
+      "for": "<a class=\"gModGreen\" id=\"mod__196303828\">Enemy_XP_Minion04_02_EffectGround</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -904,7 +904,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Fengrao_Bonus",
+      "for": "<a class=\"gModGreen\" id=\"mod__1613326370\">Enemy_XP_Minion04_02_Fengrao_Bonus</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -914,7 +914,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
       "counter": 20,
       "modifierFlags": [
         "BlockDamageExcludeDot",
@@ -954,7 +954,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable with Modifier Values",
                   "variableName": "MDF_Count",
-                  "modifierName": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                   "multiplier": 1
                 },
                 {
@@ -979,7 +979,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Cunhu_EffectBreak"
+                      "modifier": "<a class=\"gModGreen\" id=\"803541260\">Enemy_XP_Minion04_02_Cunhu_EffectBreak</a>"
                     },
                     {
                       "name": "Define Modifier Variable",
@@ -987,7 +987,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifierName": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                       "function": "Add"
                     }
                   ],
@@ -998,13 +998,13 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifierName": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                       "function": "Add"
                     },
                     {
                       "name": "Define Custom Variable with Modifier Values",
                       "variableName": "MDF_Count",
-                      "modifierName": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                       "multiplier": 1
                     },
                     {
@@ -1042,7 +1042,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Cunhu_Caster"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1092716228\">Enemy_XP_Minion04_02_Cunhu_Caster</a>"
                     }
                   ]
                 }
@@ -1060,7 +1060,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Cunhu_EffectBreak",
+      "for": "<a class=\"gModGreen\" id=\"mod__803541260\">Enemy_XP_Minion04_02_Cunhu_EffectBreak</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1071,7 +1071,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Cunhu_Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-841398551\">Enemy_XP_Minion04_02_Cunhu_Effect</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1082,7 +1082,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Cunhu_EffectBreak"
+              "modifier": "<a class=\"gModGreen\" id=\"803541260\">Enemy_XP_Minion04_02_Cunhu_EffectBreak</a>"
             }
           ]
         },
@@ -1093,7 +1093,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Cunhu_Caster",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1092716228\">Enemy_XP_Minion04_02_Cunhu_Caster</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1104,7 +1104,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Cunhu_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-841398551\">Enemy_XP_Minion04_02_Cunhu_Effect</a>"
             }
           ]
         },
@@ -1117,7 +1117,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Cunhu_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-841398551\">Enemy_XP_Minion04_02_Cunhu_Effect</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1125,7 +1125,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1133,7 +1133,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Cunhu_EffectBreak"
+              "modifier": "<a class=\"gModGreen\" id=\"803541260\">Enemy_XP_Minion04_02_Cunhu_EffectBreak</a>"
             }
           ]
         },

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Jade_Ultimate_Insert[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1732030848\">Jade_Ultimate_Insert</a>[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]",
       "counter": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",
@@ -51,7 +51,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Jade_Eidolon4_DefPenetrate[<span class=\"descriptionNumberColor\">Sincerity? Put Option Only</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1189146824\">Jade_Eidolon4_DefPenetrate</a>[<span class=\"descriptionNumberColor\">Sincerity? Put Option Only</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -110,7 +110,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Jade_Ultimate_Insert[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1732030848\">Jade_Ultimate_Insert</a>[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

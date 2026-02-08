@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Tingyun_Trace_B1_SpeedUp[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1819337398\">Tingyun_Trace_B1_SpeedUp</a>[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]",
           "duration": 1,
           "valuePerStack": {
             "Tingyun_SpeedUP_Ratio": {
@@ -135,7 +135,7 @@ const configAbility = {
           }
         ]
       },
-      "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
     },
     {
       "name": "Define Custom Variable",
@@ -155,7 +155,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -192,7 +192,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -238,7 +238,7 @@ const configAbility = {
           }
         ]
       },
-      "modifier": "TingYun_Passive_LeiLing"
+      "modifier": "<a class=\"gModGreen\" id=\"-1351488572\">TingYun_Passive_LeiLing</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -255,7 +255,7 @@ const configAbility = {
           }
         ]
       },
-      "modifier": "TingYun_Passive_LeiLing_Eidolon1"
+      "modifier": "<a class=\"gModGreen\" id=\"-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -272,7 +272,7 @@ const configAbility = {
           }
         ]
       },
-      "modifier": "TingYun_Passive_LeiLing_Eidolon2"
+      "modifier": "<a class=\"gModGreen\" id=\"-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -289,7 +289,7 @@ const configAbility = {
           }
         ]
       },
-      "modifier": "TingYun_Passive_LeiLing_Eidolon4"
+      "modifier": "<a class=\"gModGreen\" id=\"-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>"
     },
     {
       "name": "IF",
@@ -304,7 +304,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "TingYun_Passive_LeiLing_Eidolon4",
+          "modifier": "<a class=\"gModGreen\" id=\"-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>",
           "valuePerStack": {
             "MDF_Passive_DamagePercentage": {
               "operator": "Variables[0] (0.4) || RETURN",
@@ -372,7 +372,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "TingYun_Passive_LeiLing_Eidolon2",
+              "modifier": "<a class=\"gModGreen\" id=\"-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>",
               "valuePerStack": {
                 "MDF_Passive_DamagePercentage": {
                   "operator": "Variables[0] (0.4) || RETURN",
@@ -432,7 +432,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "TingYun_Passive_LeiLing_Eidolon1",
+                  "modifier": "<a class=\"gModGreen\" id=\"-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>",
                   "valuePerStack": {
                     "MDF_Passive_DamagePercentage": {
                       "operator": "Variables[0] (0.4) || RETURN",
@@ -477,7 +477,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "TingYun_Passive_LeiLing",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1351488572\">TingYun_Passive_LeiLing</a>",
                   "valuePerStack": {
                     "MDF_Passive_DamagePercentage": {
                       "operator": "Variables[0] (0.4) || RETURN",

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Trace_HealRatioUp",
+      "modifier": "<a class=\"gModGreen\" id=\"-202375119\">M_Trace_HealRatioUp</a>",
       "valuePerStack": {
         "MDF_PropertyValue": {
           "operator": "Variables[0] (0.1) || RETURN",

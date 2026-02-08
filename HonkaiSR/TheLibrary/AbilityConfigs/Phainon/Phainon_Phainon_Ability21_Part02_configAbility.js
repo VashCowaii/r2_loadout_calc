@@ -68,7 +68,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
       "valuePerStack": {
         "MDF_PropertyRatio": {
           "operator": "Variables[0] (0.75) || RETURN",
@@ -94,7 +94,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Phainon_Guard_VisualOnStack"
+      "modifier": "<a class=\"gModGreen\" id=\"211331230\">Phainon_Guard_VisualOnStack</a>"
     },
     {
       "name": "Action Advance/Delay",
@@ -111,7 +111,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "M_Phainon_Ability21_Mark"
+      "modifier": "<a class=\"gModGreen\" id=\"-89935936\">M_Phainon_Ability21_Mark</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -119,7 +119,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Phainon_Guard_VisualAfterAbilityUse"
+      "modifier": "<a class=\"gModGreen\" id=\"-833311189\">Phainon_Guard_VisualAfterAbilityUse</a>"
     },
     "Trigger: Ability End"
   ],
@@ -130,13 +130,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Phainon_Ability21_Insert_Preshow"
+      "modifier": "<a class=\"gModGreen\" id=\"-389259557\">M_Phainon_Ability21_Insert_Preshow</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Ability21_Mark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-89935936\">M_Phainon_Ability21_Mark</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "RemoveWhenOwnerUnselectable"
@@ -154,7 +154,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Guard_Visual_ReadyForHitBack",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1586210896\">Phainon_Guard_Visual_ReadyForHitBack</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -178,7 +178,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Guard_Visual_ReadyForHitBack_OverrideHitEffect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1918462169\">Phainon_Guard_Visual_ReadyForHitBack_OverrideHitEffect</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -190,7 +190,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Phainon_Guard_OverrideHitEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"1157662577\">Phainon_Guard_OverrideHitEffect</a>"
             }
           ]
         },
@@ -203,7 +203,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Phainon_Guard_OverrideHitEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"1157662577\">Phainon_Guard_OverrideHitEffect</a>"
             }
           ]
         }
@@ -211,7 +211,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Guard_OverrideHitEffect",
+      "for": "<a class=\"gModGreen\" id=\"mod__1157662577\">Phainon_Guard_OverrideHitEffect</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -222,7 +222,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Guard_VisualAfterAbilityUse",
+      "for": "<a class=\"gModGreen\" id=\"mod__-833311189\">Phainon_Guard_VisualAfterAbilityUse</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -250,7 +250,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Phainon_Guard_OverrideHitEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"1157662577\">Phainon_Guard_OverrideHitEffect</a>"
             },
             {
               "name": "Set Hit-Class"
@@ -271,7 +271,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Guard_VisualOnStack",
+      "for": "<a class=\"gModGreen\" id=\"mod__211331230\">Phainon_Guard_VisualOnStack</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -282,7 +282,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -338,7 +338,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "M_Phainon_Ability21_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-89935936\">M_Phainon_Ability21_Mark</a>"
                 },
                 {
                   "name": "IF",
@@ -348,7 +348,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Phainon_Ultimate_LimboMark",
+                    "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -368,7 +368,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                           },
                           {
                             "name": "Has Modifier",
@@ -376,7 +376,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Phainon_Ultimate_LimboMark",
+                            "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>",
                             "invertCondition": true
                           }
                         ]
@@ -440,7 +440,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Phainon_Ultimate_LimboMark",
+                    "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>",
                     "invertCondition": true
                   },
                   {
@@ -451,7 +451,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_Phainon_Ability21_Mark",
+                      "modifier": "<a class=\"gModGreen\" id=\"-89935936\">M_Phainon_Ability21_Mark</a>",
                       "invertCondition": true
                     },
                     "target": {
@@ -468,7 +468,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Phainon_Guard_Visual_ReadyForHitBack",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1586210896\">Phainon_Guard_Visual_ReadyForHitBack</a>",
                   "silentAdd": true
                 }
               ]
@@ -495,7 +495,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
                   "addStacksPerTrigger": 1
                 },
                 {
@@ -507,7 +507,7 @@ const configAbility = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Phainon_HitBackCheck"
+              "functionName": "<a class=\"gTempYellow\" id=\"1370742512\">function_Phainon_HitBackCheck</a>"
             }
           ]
         },
@@ -547,7 +547,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
                   "addStacksPerTrigger": 1
                 }
               ]
@@ -559,7 +559,7 @@ const configAbility = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Phainon_HitBackCheck"
+              "functionName": "<a class=\"gTempYellow\" id=\"1370742512\">function_Phainon_HitBackCheck</a>"
             }
           ]
         },
@@ -595,7 +595,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_Phainon_Ability21_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-89935936\">M_Phainon_Ability21_Mark</a>"
                     }
                   ]
                 }
@@ -612,7 +612,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Phainon_Ultimate_LimboMark",
+                    "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>",
                     "invertCondition": true
                   },
                   {
@@ -623,7 +623,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_Phainon_Ability21_Mark",
+                      "modifier": "<a class=\"gModGreen\" id=\"-89935936\">M_Phainon_Ability21_Mark</a>",
                       "invertCondition": true
                     },
                     "target": {
@@ -640,7 +640,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Phainon_Guard_Visual_ReadyForHitBack_OverrideHitEffect",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1918462169\">Phainon_Guard_Visual_ReadyForHitBack_OverrideHitEffect</a>",
                   "silentAdd": true
                 }
               ]
@@ -675,7 +675,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "function_Phainon_HitBackCheck",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1370742512\">function_Phainon_HitBackCheck</a>",
           "parse": [
             {
               "name": "IF",
@@ -685,7 +685,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Phainon_Ultimate_LimboMark",
+                "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>",
                 "invertCondition": true
               },
               "passed": [
@@ -702,7 +702,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "M_Phainon_Ability21_Mark"
+                    "modifier": "<a class=\"gModGreen\" id=\"-89935936\">M_Phainon_Ability21_Mark</a>"
                   },
                   "noTargetFound": [
                     {
@@ -731,7 +731,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                               },
                               {
                                 "name": "Has Modifier",
@@ -739,7 +739,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Phainon_Ultimate_LimboMark",
+                                "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>",
                                 "invertCondition": true
                               }
                             ]
@@ -770,7 +770,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "M_Phainon_Ability21_InsertCheck"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1520947056\">M_Phainon_Ability21_InsertCheck</a>"
                         }
                       ]
                     }
@@ -792,12 +792,12 @@ const configAbility = {
       "stackLimit": 9999,
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+        "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
       }
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Ability21_Insert_Preshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-389259557\">M_Phainon_Ability21_Insert_Preshow</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {

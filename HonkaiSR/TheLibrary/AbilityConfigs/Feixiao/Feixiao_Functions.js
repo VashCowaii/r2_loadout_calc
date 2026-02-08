@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Feixiao_Passive_ChargeTeamAttackCount",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1045121925\">Feixiao_Passive_ChargeTeamAttackCount</a>",
       "parse": [
         {
           "name": "Define Custom Variable",
@@ -60,13 +60,13 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Passive_CostTeamAttackCountToGainSP"
+          "functionName": "<a class=\"gTempYellow\" id=\"683713803\">Feixiao_Passive_CostTeamAttackCountToGainSP</a>"
         }
       ]
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Feixiao_Passive_CostTeamAttackCountToGainSP",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__683713803\">Feixiao_Passive_CostTeamAttackCountToGainSP</a>",
       "parse": [
         {
           "name": "IF",
@@ -138,7 +138,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Feixiao_ResetAnimSpeed",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__2050569712\">Feixiao_ResetAnimSpeed</a>",
       "parse": [
         {
           "name": "Define Custom Variable",
@@ -149,7 +149,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Feixiao_ComboStartCheck",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1125040676\">Feixiao_ComboStartCheck</a>",
       "parse": [
         {
           "name": "IF",
@@ -169,12 +169,12 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Feixiao_Combo1_CostSPBeforeDamage",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__69209893\">Feixiao_Combo1_CostSPBeforeDamage</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Feixiao_Combo1_DealSubDamage",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1161841910\">Feixiao_Combo1_DealSubDamage</a>",
       "parse": [
         {
           "name": "ATK Scaling DMG",
@@ -211,7 +211,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Feixiao_Combo1_DealDamage",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-14625690\">Feixiao_Combo1_DealDamage</a>",
       "parse": [
         {
           "name": "IF",
@@ -385,7 +385,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Feixiao_Combo2_DealDamage",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1999111375\">Feixiao_Combo2_DealDamage</a>",
       "parse": [
         {
           "name": "Declare Custom Variable",
@@ -503,7 +503,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Feixiao_TriggerBreak",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1982785786\">Feixiao_TriggerBreak</a>",
       "parse": [
         {
           "name": "Define Custom Variable",
@@ -531,7 +531,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Feixiao_Combo1_AfterDamageCheck",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1394849956\">Feixiao_Combo1_AfterDamageCheck</a>",
       "parse": [
         {
           "name": "IF",
@@ -546,7 +546,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Feixiao_Eidolon1_Property[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1384650414\">Feixiao_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (5) || RETURN",
                 "displayLines": "5",
@@ -585,7 +585,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "M_Feixiao_UltraTarget_CutFlag"
+          "modifier": "<a class=\"gModGreen\" id=\"-1145384524\">M_Feixiao_UltraTarget_CutFlag</a>"
         },
         {
           "name": "IF",
@@ -654,7 +654,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_TriggerBreak"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1982785786\">Feixiao_TriggerBreak</a>"
             }
           ]
         }
@@ -662,7 +662,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Feixiao_Combo2_AfterDamageCheck",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1389767451\">Feixiao_Combo2_AfterDamageCheck</a>",
       "parse": [
         {
           "name": "IF",
@@ -677,7 +677,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Feixiao_Eidolon1_Property[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1384650414\">Feixiao_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (5) || RETURN",
                 "displayLines": "5",
@@ -716,7 +716,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "M_Feixiao_UltraTarget_CutFlag"
+          "modifier": "<a class=\"gModGreen\" id=\"-1145384524\">M_Feixiao_UltraTarget_CutFlag</a>"
         },
         {
           "name": "IF",
@@ -765,7 +765,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Feixiao_ComboPerformFinish",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__342687242\">Feixiao_ComboPerformFinish</a>",
       "parse": [
         {
           "name": "IF",
@@ -821,7 +821,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Feixiao_EnterFinish",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1207472342\">Feixiao_EnterFinish</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Added Value",
@@ -876,7 +876,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "M_Feixiao_AchievementFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"-1478735185\">M_Feixiao_AchievementFlag</a>"
             }
           ]
         },
@@ -892,7 +892,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "M_Feixiao_UltraTarget_FinalHitFlag"
+          "modifier": "<a class=\"gModGreen\" id=\"965737321\">M_Feixiao_UltraTarget_FinalHitFlag</a>"
         },
         {
           "name": "IF",
@@ -918,7 +918,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_TriggerBreak"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1982785786\">Feixiao_TriggerBreak</a>"
             }
           ],
           "failed": [
@@ -947,7 +947,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Monster_W2_Feixiao_MainEnd"
+            "modifier": "<a class=\"gModGreen\" id=\"908013757\">Monster_W2_Feixiao_MainEnd</a>"
           },
           "passed": [
             {
@@ -974,7 +974,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Feixiao_ReturnComboLoopOnCombo",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1990296654\">Feixiao_ReturnComboLoopOnCombo</a>",
       "parse": [
         {
           "name": "IF",
@@ -997,7 +997,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Feixiao_FrameHaltRealTime",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__293207912\">Feixiao_FrameHaltRealTime</a>",
       "parse": []
     }
   ],

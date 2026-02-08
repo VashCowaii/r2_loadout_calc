@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Luocha_Eidolon6_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Reunion With the Dust</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-470154310\">Luocha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Reunion With the Dust</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luocha_Eidolon1_ATKUp[<span class=\"descriptionNumberColor\">Ablution of the Quick</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1394916865\">Luocha_Eidolon1_ATKUp</a>[<span class=\"descriptionNumberColor\">Ablution of the Quick</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -86,7 +86,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luocha_Passive01_InsertMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__905229597\">Luocha_Passive01_InsertMark</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -97,7 +97,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Luocha_Passive01_DisableActionInsertMark"
+              "modifier": "<a class=\"gModGreen\" id=\"1784149745\">Luocha_Passive01_DisableActionInsertMark</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -185,7 +185,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luocha_Passive01Modifier[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-390780291\">Luocha_Passive01Modifier</a>[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -219,7 +219,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Luocha_Passive01_InsertMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"905229597\">Luocha_Passive01_InsertMark</a>"
                 }
               ],
               "failed": [
@@ -252,7 +252,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luocha_Passive01_HealHPCD[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1468187936\">Luocha_Passive01_HealHPCD</a>[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "stackData": [],
       "latentQueue": [
@@ -265,7 +265,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luocha_Ability02_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1298017769\">Luocha_Ability02_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "Shield"
@@ -337,7 +337,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luocha_Ability02_AddHealRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__774057346\">Luocha_Ability02_AddHealRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -367,7 +367,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luocha_Passive01_DisableActionInsertMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__1784149745\">Luocha_Passive01_DisableActionInsertMark</a>",
       "execute": [
         {
           "eventTrigger": "When Losing Modifier [Anyone]",
@@ -416,7 +416,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Luocha_Passive01_InsertMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"905229597\">Luocha_Passive01_InsertMark</a>"
                     }
                   ]
                 }

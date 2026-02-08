@@ -34,7 +34,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Ability03PreShowModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-247396096\">Ability03PreShowModifier</a>"
         }
       ]
     },
@@ -44,7 +44,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHengIL_PassiveModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"329396483\">DanHengIL_PassiveModifier</a>"
     },
     {
       "name": "Modify Skill-Point Extras",
@@ -105,7 +105,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_Eidolon6"
+          "modifier": "<a class=\"gModGreen\" id=\"-1339168225\">DanHengIL_Eidolon6</a>"
         }
       ]
     }
@@ -113,7 +113,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "DanHengIL_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1587455609\">DanHengIL_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -133,7 +133,7 @@ const configAbility = {
               },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
-              "modifierName": "DanHengIL_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"1587455609\">DanHengIL_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
               "multiplier": 1
             },
             {
@@ -164,7 +164,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengIL_PassiveModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__329396483\">DanHengIL_PassiveModifier</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -210,7 +210,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHengIL_BPDisable"
+                  "modifier": "<a class=\"gModGreen\" id=\"1468527103\">DanHengIL_BPDisable</a>"
                 }
               ],
               "failed": [
@@ -220,7 +220,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHengIL_BPDisable"
+                  "modifier": "<a class=\"gModGreen\" id=\"1468527103\">DanHengIL_BPDisable</a>"
                 }
               ]
             }
@@ -276,7 +276,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHengIL_BPCost_1"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1633577543\">DanHengIL_BPCost_1</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -284,7 +284,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHengIL_BPCost_2"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1683910400\">DanHengIL_BPCost_2</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -292,7 +292,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHengIL_BPCost_3"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1667132781\">DanHengIL_BPCost_3</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -394,7 +394,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHengIL_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1587455609\">DanHengIL_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
                   "duration": 1,
                   "stackLimit": {
                     "operator": "Variables[0] (6) || Variables[1] (AddMaxLayer) || ADD || RETURN",
@@ -441,7 +441,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHengIL_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1587455609\">DanHengIL_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
                   "duration": 1,
                   "stackLimit": {
                     "operator": "Variables[0] (6) || Variables[1] (AddMaxLayer) || ADD || RETURN",
@@ -490,7 +490,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Ability03PreShowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-247396096\">Ability03PreShowModifier</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {

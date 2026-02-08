@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Phainon_Eidolon1"
+      "modifier": "<a class=\"gModGreen\" id=\"1978367285\">M_Phainon_Eidolon1</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,8 +18,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Phainon_Eidolon1_AddSpeedRatio[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
-      "referenceModifier": "MReference_Empty",
+      "modifier": "<a class=\"gModGreen\" id=\"-847336142\">Phainon_Eidolon1_AddSpeedRatio</a>[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
+      "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>",
       "valuePerStack": {
         "MDF_SpeedRatio": {
           "operator": "Variables[0] (0.66) || RETURN",
@@ -51,7 +51,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Eidolon1",
+      "for": "<a class=\"gModGreen\" id=\"mod__1978367285\">M_Phainon_Eidolon1</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -123,7 +123,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "Phainon_Eidolon1_AddSpeedRatio[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-847336142\">Phainon_Eidolon1_AddSpeedRatio</a>[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
                       "variableName": "MDF_SpeedRatio",
                       "value": {
                         "operator": "Variables[0] (CDF_SpeedConvertRatio) || RETURN",
@@ -147,7 +147,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifierName": "Phainon_Ability03_BattleEvent_BaseSpeed",
+                          "modifierName": "<a class=\"gModGreen\" id=\"320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
                           "variableName": "MDF_PropertyValue",
                           "value": {
                             "operator": "Variables[0] (CDF_SpeedConvertRatio) || Variables[1] (Phainon_BaseSpeed) || MUL || RETURN",
@@ -183,7 +183,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Phainon_Eidolon1_Property[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1114586000\">Phainon_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -192,7 +192,7 @@ const configAbility = {
                       3
                     ]
                   },
-                  "referenceModifier": "MReference_CriticalDamageUp",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.5) || RETURN",

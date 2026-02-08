@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_XP_Minion01_EffectController"
+      "modifier": "<a class=\"gModGreen\" id=\"-1878716990\">Enemy_XP_Minion01_EffectController</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion01_EffectController",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1878716990\">Enemy_XP_Minion01_EffectController</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"

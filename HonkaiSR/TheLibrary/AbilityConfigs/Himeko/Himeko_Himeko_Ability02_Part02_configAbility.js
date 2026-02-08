@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Himeko_AbilityBurnDamageUP"
+          "modifier": "<a class=\"gModGreen\" id=\"-708814299\">Himeko_AbilityBurnDamageUP</a>"
         }
       ]
     },
@@ -247,7 +247,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Himeko_AbilityBurnDamageUP"
+          "modifier": "<a class=\"gModGreen\" id=\"-708814299\">Himeko_AbilityBurnDamageUP</a>"
         }
       ]
     },
@@ -256,7 +256,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Himeko_AbilityBurnDamageUP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-708814299\">Himeko_AbilityBurnDamageUP</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",

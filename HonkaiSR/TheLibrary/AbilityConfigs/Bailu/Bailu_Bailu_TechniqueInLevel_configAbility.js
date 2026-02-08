@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Bailu_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1621855586\">StageAbility_Maze_Bailu_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Bailu_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1621855586\">StageAbility_Maze_Bailu_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -128,7 +128,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -193,7 +193,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{All Team Members}}"
                           },
-                          "modifier": "Bailu_PointB3[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"249464740\">Bailu_PointB3</a>[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
                           "valuePerStack": {
                             "MDF_DamageResistance": {
                               "operator": "Variables[0] (MDF_SkillTree03_DamageResistance) || RETURN",

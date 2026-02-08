@@ -22,7 +22,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MWRen_Trace03"
+          "modifier": "<a class=\"gModGreen\" id=\"-476823607\">MWRen_Trace03</a>"
         }
       ]
     },
@@ -169,7 +169,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -200,7 +200,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MWRen_Trace03"
+          "modifier": "<a class=\"gModGreen\" id=\"-476823607\">MWRen_Trace03</a>"
         }
       ]
     }

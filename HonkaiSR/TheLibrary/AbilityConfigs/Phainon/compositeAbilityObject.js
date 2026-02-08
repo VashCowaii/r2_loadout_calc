@@ -52,13 +52,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Phainon_Eidolon6"
+          "modifier": "<a class=\"gModGreen\" id=\"1860923952\">M_Phainon_Eidolon6</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Ability22_Eidolon6Listener",
+          "for": "<a class=\"gModGreen\" id=\"mod__-770714134\">M_Phainon_Ability22_Eidolon6Listener</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Anyone]: Any",
@@ -176,7 +176,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Eidolon6",
+          "for": "<a class=\"gModGreen\" id=\"mod__1860923952\">M_Phainon_Eidolon6</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -194,7 +194,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Phainon_Ability22_Eidolon6Listener"
+                      "modifier": "<a class=\"gModGreen\" id=\"-770714134\">M_Phainon_Ability22_Eidolon6Listener</a>"
                     }
                   ]
                 }
@@ -214,7 +214,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+                      "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                       "variables": {
                         "parameter[0]_AddValue": {
                           "operator": "Variables[0] (6) || RETURN",
@@ -257,7 +257,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Phainon_Eidolon1"
+          "modifier": "<a class=\"gModGreen\" id=\"1978367285\">M_Phainon_Eidolon1</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -265,8 +265,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_Eidolon1_AddSpeedRatio[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
-          "referenceModifier": "MReference_Empty",
+          "modifier": "<a class=\"gModGreen\" id=\"-847336142\">Phainon_Eidolon1_AddSpeedRatio</a>[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
+          "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>",
           "valuePerStack": {
             "MDF_SpeedRatio": {
               "operator": "Variables[0] (0.66) || RETURN",
@@ -298,7 +298,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Eidolon1",
+          "for": "<a class=\"gModGreen\" id=\"mod__1978367285\">M_Phainon_Eidolon1</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -370,7 +370,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifierName": "Phainon_Eidolon1_AddSpeedRatio[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-847336142\">Phainon_Eidolon1_AddSpeedRatio</a>[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
                           "variableName": "MDF_SpeedRatio",
                           "value": {
                             "operator": "Variables[0] (CDF_SpeedConvertRatio) || RETURN",
@@ -394,7 +394,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifierName": "Phainon_Ability03_BattleEvent_BaseSpeed",
+                              "modifierName": "<a class=\"gModGreen\" id=\"320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
                               "variableName": "MDF_PropertyValue",
                               "value": {
                                 "operator": "Variables[0] (CDF_SpeedConvertRatio) || Variables[1] (Phainon_BaseSpeed) || MUL || RETURN",
@@ -430,7 +430,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Phainon_Eidolon1_Property[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1114586000\">Phainon_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -439,7 +439,7 @@ const compositeAbilityObject = {
                           3
                         ]
                       },
-                      "referenceModifier": "MReference_CriticalDamageUp",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.5) || RETURN",
@@ -473,13 +473,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Phainon_Trace03"
+          "modifier": "<a class=\"gModGreen\" id=\"-1080372520\">M_Phainon_Trace03</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Trace03",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1080372520\">M_Phainon_Trace03</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -499,7 +499,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Phainon_Tree03_Property[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-982733816\">Phainon_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -543,13 +543,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Phainon_Trace02"
+          "modifier": "<a class=\"gModGreen\" id=\"-1063594901\">M_Phainon_Trace02</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Trace02_SubListener",
+          "for": "<a class=\"gModGreen\" id=\"mod__-805051886\">M_Phainon_Trace02_SubListener</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -633,7 +633,7 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+                          "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                           "variables": {
                             "parameter[0]_AddValue": {
                               "operator": "Variables[0] (1) || RETURN",
@@ -655,7 +655,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Trace02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1063594901\">M_Phainon_Trace02</a>",
           "execute": [
             {
               "eventTrigger": "Receiving Heal End [Owner]",
@@ -683,7 +683,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "M_Phainon_Tree02_CD",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1458521528\">M_Phainon_Tree02_CD</a>",
                         "invertCondition": true
                       }
                     ]
@@ -695,8 +695,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_Phainon_Tree02_CD",
-                      "referenceModifier": "MReference_Mark_RemoveOnTurnEnd"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1458521528\">M_Phainon_Tree02_CD</a>",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"-1664553013\">MReference_Mark_RemoveOnTurnEnd</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -704,7 +704,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Phainon_Trace02_Property[<span class=\"descriptionNumberColor\">Bide in Flames</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1218793056\">Phainon_Trace02_Property</a>[<span class=\"descriptionNumberColor\">Bide in Flames</span>]",
                       "duration": {
                         "operator": "Variables[0] (4) || RETURN",
                         "displayLines": "4",
@@ -713,7 +713,7 @@ const compositeAbilityObject = {
                           4
                         ]
                       },
-                      "referenceModifier": "MReference_AllDamageTypeAddedRatio",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"1337385649\">MReference_AllDamageTypeAddedRatio</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.45) || RETURN",
@@ -753,7 +753,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_Phainon_Trace02_SubListener",
+                      "modifier": "<a class=\"gModGreen\" id=\"-805051886\">M_Phainon_Trace02_SubListener</a>",
                       "silentAdd": true
                     }
                   ]
@@ -769,7 +769,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Phainon_Trace02_SubListener"
+                  "modifier": "<a class=\"gModGreen\" id=\"-805051886\">M_Phainon_Trace02_SubListener</a>"
                 }
               ]
             },
@@ -810,7 +810,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "M_Phainon_Tree02_CD",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1458521528\">M_Phainon_Tree02_CD</a>",
                         "invertCondition": true
                       }
                     ]
@@ -822,8 +822,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_Phainon_Tree02_CD",
-                      "referenceModifier": "MReference_Mark_RemoveOnTurnEnd"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1458521528\">M_Phainon_Tree02_CD</a>",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"-1664553013\">MReference_Mark_RemoveOnTurnEnd</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -831,7 +831,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Phainon_Trace02_Property[<span class=\"descriptionNumberColor\">Bide in Flames</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1218793056\">Phainon_Trace02_Property</a>[<span class=\"descriptionNumberColor\">Bide in Flames</span>]",
                       "duration": {
                         "operator": "Variables[0] (4) || RETURN",
                         "displayLines": "4",
@@ -840,7 +840,7 @@ const compositeAbilityObject = {
                           4
                         ]
                       },
-                      "referenceModifier": "MReference_AllDamageTypeAddedRatio",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"1337385649\">MReference_AllDamageTypeAddedRatio</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.45) || RETURN",
@@ -874,13 +874,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Phainon_Trace01"
+          "modifier": "<a class=\"gModGreen\" id=\"-1046817282\">M_Phainon_Trace01</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Trace01",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1046817282\">M_Phainon_Trace01</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -896,7 +896,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+                      "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                       "variables": {
                         "parameter[0]_AddValue": {
                           "operator": "Variables[0] (1) || RETURN",
@@ -939,7 +939,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Technique_Phainon_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1290197285\">Technique_Phainon_Modifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -947,13 +947,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Technique_Phainon_Modifier_Charge"
+          "modifier": "<a class=\"gModGreen\" id=\"220977838\">Technique_Phainon_Modifier_Charge</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Technique_Phainon_Modifier_Charge",
+          "for": "<a class=\"gModGreen\" id=\"mod__220977838\">Technique_Phainon_Modifier_Charge</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -1023,7 +1023,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Technique_Phainon_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1290197285\">Technique_Phainon_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1139,7 +1139,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_PassiveAbility02"
+          "modifier": "<a class=\"gModGreen\" id=\"-1463150719\">Phainon_PassiveAbility02</a>"
         },
         {
           "name": "IF",
@@ -1216,7 +1216,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Ability22_Disable",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1504968507\">Phainon_Ability22_Disable</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1239,7 +1239,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Ultimate_Energy[<span class=\"descriptionNumberColor\">Scourge</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-330015598\">Phainon_Ultimate_Energy</a>[<span class=\"descriptionNumberColor\">Scourge</span>]",
           "counter": 1,
           "stackType": "ReplaceByCaster",
           "description": "\"Scourge\" points. \"Scourge\" can be consumed to use Skill \"Foundation: Stardeath Verdict.\"",
@@ -1248,7 +1248,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_PassiveAbility02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1463150719\">Phainon_PassiveAbility02</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1418,7 +1418,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Phainon_Ultimate_Energy[<span class=\"descriptionNumberColor\">Scourge</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-330015598\">Phainon_Ultimate_Energy</a>[<span class=\"descriptionNumberColor\">Scourge</span>]"
                       },
                       "passed": [
                         {
@@ -1427,7 +1427,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifierName": "Phainon_Ultimate_Energy[<span class=\"descriptionNumberColor\">Scourge</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-330015598\">Phainon_Ultimate_Energy</a>[<span class=\"descriptionNumberColor\">Scourge</span>]",
                           "value": {
                             "operator": "Variables[0] (Skill22_Energy) || RETURN",
                             "displayLines": "Skill22_Energy",
@@ -1447,7 +1447,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                       },
                       "passed": [
                         {
@@ -1476,7 +1476,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Phainon_Ultimate_Energy[<span class=\"descriptionNumberColor\">Scourge</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-330015598\">Phainon_Ultimate_Energy</a>[<span class=\"descriptionNumberColor\">Scourge</span>]",
                       "counter": {
                         "operator": "Variables[0] (Skill22_Energy) || RETURN",
                         "displayLines": "Skill22_Energy",
@@ -1492,7 +1492,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Phainon_Ability22_Disable"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1504968507\">Phainon_Ability22_Disable</a>"
                     }
                   ],
                   "whenLeavingRange": [
@@ -1502,7 +1502,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Phainon_Ultimate_Energy[<span class=\"descriptionNumberColor\">Scourge</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-330015598\">Phainon_Ultimate_Energy</a>[<span class=\"descriptionNumberColor\">Scourge</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1510,7 +1510,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Phainon_Ability22_Disable"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1504968507\">Phainon_Ability22_Disable</a>"
                     }
                   ]
                 },
@@ -1626,20 +1626,20 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_PassiveAbility01"
+          "modifier": "<a class=\"gModGreen\" id=\"-1513483576\">Phainon_PassiveAbility01</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_AbilityTargetSubListener",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1686592838\">M_Phainon_AbilityTargetSubListener</a>",
           "execute": [
             {
               "eventTrigger": "Being Attacked Start [Owner]",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Phainon_Passive_AsAbilityTarget",
+                  "functionName": "<a class=\"gTempYellow\" id=\"722514042\">Phainon_Passive_AsAbilityTarget</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
@@ -1672,22 +1672,22 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Modifier Was",
-                        "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                       },
                       {
                         "name": "Modifier Was",
-                        "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                       },
                       {
                         "name": "Modifier Was",
-                        "modifier": "Standard_AbilityTarget"
+                        "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
                       }
                     ]
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Phainon_Passive_AsAbilityTarget",
+                      "functionName": "<a class=\"gTempYellow\" id=\"722514042\">Phainon_Passive_AsAbilityTarget</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target 2}}"
@@ -1702,7 +1702,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_PassiveAbility01",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1513483576\">Phainon_PassiveAbility01</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -1739,7 +1739,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
                         "invertCondition": true
                       },
                       {
@@ -1770,7 +1770,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "M_Phainon_AbilityTargetSubListener",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1686592838\">M_Phainon_AbilityTargetSubListener</a>",
                           "silentAdd": true
                         }
                       ],
@@ -1809,7 +1809,7 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Use Custom Character Function",
-                              "functionName": "Phainon_Passive_AsAbilityTarget",
+                              "functionName": "<a class=\"gTempYellow\" id=\"722514042\">Phainon_Passive_AsAbilityTarget</a>",
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
@@ -1841,7 +1841,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
                         "invertCondition": true
                       },
                       "passed": [
@@ -1897,7 +1897,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "modifier": "Phainon_SPOverflow[<span class=\"descriptionNumberColor\">Coreflame</span>]",
+                                "modifier": "<a class=\"gModGreen\" id=\"151398776\">Phainon_SPOverflow</a>[<span class=\"descriptionNumberColor\">Coreflame</span>]",
                                 "invertCondition": true
                               },
                               "passed": [
@@ -1907,7 +1907,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "Phainon_SPOverflow[<span class=\"descriptionNumberColor\">Coreflame</span>]",
+                                  "modifier": "<a class=\"gModGreen\" id=\"151398776\">Phainon_SPOverflow</a>[<span class=\"descriptionNumberColor\">Coreflame</span>]",
                                   "valuePerStack": {
                                     "MDF_Count": {
                                       "operator": "Variables[0] (CurOverflowSpecialSP) || RETURN",
@@ -1927,7 +1927,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifierName": "Phainon_SPOverflow[<span class=\"descriptionNumberColor\">Coreflame</span>]",
+                                  "modifierName": "<a class=\"gModGreen\" id=\"151398776\">Phainon_SPOverflow</a>[<span class=\"descriptionNumberColor\">Coreflame</span>]",
                                   "variableName": "MDF_Count",
                                   "value": {
                                     "operator": "Variables[0] (CurOverflowSpecialSP) || RETURN",
@@ -1974,7 +1974,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
                         "invertCondition": true
                       },
                       "passed": [
@@ -2048,7 +2048,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifierName": "Phainon_Ability03_BattleEvent_BaseSpeed",
+                          "modifierName": "<a class=\"gModGreen\" id=\"320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
                           "variableName": "MDF_PropertyValue",
                           "value": {
                             "operator": "Variables[0] (CDF_SpeedConvertRatio) || Variables[1] (Phainon_BaseSpeed) || MUL || RETURN",
@@ -2086,7 +2086,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "MStory_Main_Phainon_UltraNeverEnd[<span class=\"descriptionNumberColor\">Futile Flames</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1508237621\">MStory_Main_Phainon_UltraNeverEnd</a>[<span class=\"descriptionNumberColor\">Futile Flames</span>]"
           },
           "passed": [
             {
@@ -2095,7 +2095,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "MStory_Stage10441070_Ability31"
+              "modifier": "<a class=\"gModGreen\" id=\"7558249\">MStory_Stage10441070_Ability31</a>"
             }
           ],
           "failed": [
@@ -2110,7 +2110,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Memosprite_CyreneServant_AmazingBonus_Phainon_Sub[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-277317282\">Memosprite_CyreneServant_AmazingBonus_Phainon_Sub</a>[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]"
                   },
                   {
                     "name": "Compare: Variable",
@@ -2128,8 +2128,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Phainon_IsAbility31",
-                  "referenceModifier": "MReference_Empty"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1382374787\">M_Phainon_IsAbility31</a>",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
                 }
               ]
             }
@@ -2141,7 +2141,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_Ultimate_LimboMark"
+          "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2149,7 +2149,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
         },
         {
           "name": "Define Custom Variable with Team Count",
@@ -2233,7 +2233,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "MStory_Main_Phainon_UltraNeverEnd[<span class=\"descriptionNumberColor\">Futile Flames</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1508237621\">MStory_Main_Phainon_UltraNeverEnd</a>[<span class=\"descriptionNumberColor\">Futile Flames</span>]"
               },
               {
                 "name": "AND",
@@ -2244,7 +2244,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Memosprite_CyreneServant_AmazingBonus_Phainon_Sub[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-277317282\">Memosprite_CyreneServant_AmazingBonus_Phainon_Sub</a>[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]"
                   },
                   {
                     "name": "Compare: Variable",
@@ -2277,7 +2277,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "MStory_Main_Phainon_UltraNeverEnd[<span class=\"descriptionNumberColor\">Futile Flames</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1508237621\">MStory_Main_Phainon_UltraNeverEnd</a>[<span class=\"descriptionNumberColor\">Futile Flames</span>]"
               },
               "failed": [
                 {
@@ -2288,7 +2288,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Memosprite_CyreneServant_AmazingBonus_Phainon_Sub[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-277317282\">Memosprite_CyreneServant_AmazingBonus_Phainon_Sub</a>[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]"
                   },
                   "passed": [
                     {
@@ -2297,7 +2297,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Memosprite_CyreneServant_AmazingBonus_Phainon[<span class=\"descriptionNumberColor\">Ode to Worldbearing</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-484368069\">Memosprite_CyreneServant_AmazingBonus_Phainon</a>[<span class=\"descriptionNumberColor\">Ode to Worldbearing</span>]",
                       "variable": "MDF_ChargeEnergy",
                       "target2": null,
                       "variable2": "ADF_ExtraEnergy"
@@ -2395,11 +2395,11 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Phainon_Ultimate_VisualManager"
+              "modifier": "<a class=\"gModGreen\" id=\"1662843541\">Phainon_Ultimate_VisualManager</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Phainon_ClearAvatarArea",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1545922215\">Phainon_ClearAvatarArea</a>",
               "variables": {
                 "IsAsyncLoad": 1
               }
@@ -2410,7 +2410,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
             },
             {
               "name": "UI Display Event (On Entity)",
@@ -2428,13 +2428,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Phainon_IsAbility31"
+          "modifier": "<a class=\"gModGreen\" id=\"-1382374787\">M_Phainon_IsAbility31</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MStory_Stage10441070_Ability31",
+          "for": "<a class=\"gModGreen\" id=\"mod__7558249\">MStory_Stage10441070_Ability31</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -2601,7 +2601,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
               },
               "abilityName": "Phainon_Ability31_SelectTarget",
               "abilitySource": {
@@ -2639,7 +2639,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_Ability03_BattleEvent_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"62975260\">Phainon_Ability03_BattleEvent_Passive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2647,7 +2647,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_Ability03_BattleEvent_BaseSpeed",
+          "modifier": "<a class=\"gModGreen\" id=\"320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (BE_Speed) || RETURN",
@@ -2727,7 +2727,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Phainon_FinalBE_Hint"
+              "modifier": "<a class=\"gModGreen\" id=\"-1074413210\">Phainon_FinalBE_Hint</a>"
             }
           ],
           "failed": [
@@ -2745,7 +2745,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Phainon_NormalBE_Hint"
+              "modifier": "<a class=\"gModGreen\" id=\"133453837\">Phainon_NormalBE_Hint</a>"
             }
           ]
         },
@@ -2766,7 +2766,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_10_TriggerSoundOnTurnStart_Advantage",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1583163696\">M_Phainon_10_TriggerSoundOnTurnStart_Advantage</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -2833,7 +2833,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_10_TriggerSoundOnTurnStart",
+          "for": "<a class=\"gModGreen\" id=\"mod__2106985142\">M_Phainon_10_TriggerSoundOnTurnStart</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -2865,7 +2865,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Ability03_BattleEvent_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__62975260\">Phainon_Ability03_BattleEvent_Passive</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2891,7 +2891,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Phainon_FinalBE_Hint"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1074413210\">Phainon_FinalBE_Hint</a>"
                   },
                   "passed": [
                     {
@@ -2907,7 +2907,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                       },
                       "abilityName": "Phainon_Ability31_SelectTarget",
                       "abilitySource": {
@@ -2956,7 +2956,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Battle Event's Caster}}"
                             },
-                            "modifier": "M_Phainon_10_TriggerSoundOnTurnStart_Advantage"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1583163696\">M_Phainon_10_TriggerSoundOnTurnStart_Advantage</a>"
                           },
                           "passed": [
                             {
@@ -2965,7 +2965,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Battle Event's Caster}}"
                               },
-                              "modifier": "M_Phainon_10_TriggerSoundOnTurnStart",
+                              "modifier": "<a class=\"gModGreen\" id=\"2106985142\">M_Phainon_10_TriggerSoundOnTurnStart</a>",
                               "casterAssign": "TargetSelf"
                             }
                           ]
@@ -2976,7 +2976,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Battle Event's Caster}}"
                           },
-                          "modifier": "M_Phainon_10_TriggerSoundOnTurnStart_Advantage",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1583163696\">M_Phainon_10_TriggerSoundOnTurnStart_Advantage</a>",
                           "casterAssign": "TargetSelf"
                         }
                       ],
@@ -2987,7 +2987,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Battle Event's Caster}}"
                           },
-                          "modifier": "M_Phainon_10_TriggerSoundOnTurnStart",
+                          "modifier": "<a class=\"gModGreen\" id=\"2106985142\">M_Phainon_10_TriggerSoundOnTurnStart</a>",
                           "casterAssign": "TargetSelf"
                         }
                       ]
@@ -3019,7 +3019,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Ability03_BattleEvent_BaseSpeed",
+          "for": "<a class=\"gModGreen\" id=\"mod__320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3097,7 +3097,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
           "valuePerStack": {
             "MDF_PropertyRatio": {
               "operator": "Variables[0] (0.8) || RETURN",
@@ -3395,7 +3395,7 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -3455,7 +3455,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "M_Phainon_Ability22_v2_TargetTimeslow",
+          "modifier": "<a class=\"gModGreen\" id=\"423192378\">M_Phainon_Ability22_v2_TargetTimeslow</a>",
           "silentAdd": true
         },
         {
@@ -3579,13 +3579,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Phainon_Ability22_Insert"
+          "modifier": "<a class=\"gModGreen\" id=\"45709795\">M_Phainon_Ability22_Insert</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Ability22_v2_TargetTimeslow",
+          "for": "<a class=\"gModGreen\" id=\"mod__423192378\">M_Phainon_Ability22_v2_TargetTimeslow</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -3605,7 +3605,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Ability22_Insert",
+          "for": "<a class=\"gModGreen\" id=\"mod__45709795\">M_Phainon_Ability22_Insert</a>",
           "execute": [
             {
               "eventTrigger": "Extra Turn Action Injection: Start",
@@ -3799,7 +3799,7 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -3826,7 +3826,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "M_Phainon_Ability22_TargetTimeslow",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1753185453\">M_Phainon_Ability22_TargetTimeslow</a>",
                   "silentAdd": true
                 },
                 {
@@ -3868,7 +3868,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Ability22_TargetTimeslow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1753185453\">M_Phainon_Ability22_TargetTimeslow</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3981,7 +3981,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Phainon_Ability21_InsertCheck"
+          "modifier": "<a class=\"gModGreen\" id=\"-1520947056\">M_Phainon_Ability21_InsertCheck</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3989,7 +3989,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_Guard_Visual_ReadyForHitBack"
+          "modifier": "<a class=\"gModGreen\" id=\"-1586210896\">Phainon_Guard_Visual_ReadyForHitBack</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3997,7 +3997,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_Guard_VisualOnStack"
+          "modifier": "<a class=\"gModGreen\" id=\"211331230\">Phainon_Guard_VisualOnStack</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4005,14 +4005,14 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_Guard_VisualAfterAbilityUse"
+          "modifier": "<a class=\"gModGreen\" id=\"-833311189\">Phainon_Guard_VisualAfterAbilityUse</a>"
         },
         {
           "name": "Define Custom Variable with Modifier Values",
           "scope": "ContextAbility",
           "valueType": "Layer",
           "variableName": "ADF_GuardLayer",
-          "modifierName": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
           "multiplier": 1
         },
         {
@@ -4031,7 +4031,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "M_Phainon_Ability21_TargetTimeslow",
+          "modifier": "<a class=\"gModGreen\" id=\"554403436\">M_Phainon_Ability21_TargetTimeslow</a>",
           "silentAdd": true
         },
         {
@@ -4085,7 +4085,7 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -4150,13 +4150,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Ability21_TargetTimeslow",
+          "for": "<a class=\"gModGreen\" id=\"mod__554403436\">M_Phainon_Ability21_TargetTimeslow</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -4205,7 +4205,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Phainon_Ability21_InsertCheck"
+          "modifier": "<a class=\"gModGreen\" id=\"-1520947056\">M_Phainon_Ability21_InsertCheck</a>"
         }
       ],
       "references": []
@@ -4280,7 +4280,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
           "valuePerStack": {
             "MDF_PropertyRatio": {
               "operator": "Variables[0] (0.75) || RETURN",
@@ -4306,7 +4306,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_Guard_VisualOnStack"
+          "modifier": "<a class=\"gModGreen\" id=\"211331230\">Phainon_Guard_VisualOnStack</a>"
         },
         {
           "name": "Action Advance/Delay",
@@ -4323,7 +4323,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "M_Phainon_Ability21_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"-89935936\">M_Phainon_Ability21_Mark</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4331,7 +4331,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_Guard_VisualAfterAbilityUse"
+          "modifier": "<a class=\"gModGreen\" id=\"-833311189\">Phainon_Guard_VisualAfterAbilityUse</a>"
         },
         "Trigger: Ability End"
       ],
@@ -4342,13 +4342,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Phainon_Ability21_Insert_Preshow"
+          "modifier": "<a class=\"gModGreen\" id=\"-389259557\">M_Phainon_Ability21_Insert_Preshow</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Ability21_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-89935936\">M_Phainon_Ability21_Mark</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "RemoveWhenOwnerUnselectable"
@@ -4366,7 +4366,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Guard_Visual_ReadyForHitBack",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1586210896\">Phainon_Guard_Visual_ReadyForHitBack</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -4390,7 +4390,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Guard_Visual_ReadyForHitBack_OverrideHitEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1918462169\">Phainon_Guard_Visual_ReadyForHitBack_OverrideHitEffect</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -4402,7 +4402,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Phainon_Guard_OverrideHitEffect"
+                  "modifier": "<a class=\"gModGreen\" id=\"1157662577\">Phainon_Guard_OverrideHitEffect</a>"
                 }
               ]
             },
@@ -4415,7 +4415,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Phainon_Guard_OverrideHitEffect"
+                  "modifier": "<a class=\"gModGreen\" id=\"1157662577\">Phainon_Guard_OverrideHitEffect</a>"
                 }
               ]
             }
@@ -4423,7 +4423,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Guard_OverrideHitEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__1157662577\">Phainon_Guard_OverrideHitEffect</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -4434,7 +4434,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Guard_VisualAfterAbilityUse",
+          "for": "<a class=\"gModGreen\" id=\"mod__-833311189\">Phainon_Guard_VisualAfterAbilityUse</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4462,7 +4462,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Phainon_Guard_OverrideHitEffect"
+                  "modifier": "<a class=\"gModGreen\" id=\"1157662577\">Phainon_Guard_OverrideHitEffect</a>"
                 },
                 {
                   "name": "Set Hit-Class"
@@ -4483,7 +4483,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Guard_VisualOnStack",
+          "for": "<a class=\"gModGreen\" id=\"mod__211331230\">Phainon_Guard_VisualOnStack</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -4494,7 +4494,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4550,7 +4550,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "M_Phainon_Ability21_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-89935936\">M_Phainon_Ability21_Mark</a>"
                     },
                     {
                       "name": "IF",
@@ -4560,7 +4560,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Phainon_Ultimate_LimboMark",
+                        "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>",
                         "invertCondition": true
                       },
                       "passed": [
@@ -4580,7 +4580,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                               },
                               {
                                 "name": "Has Modifier",
@@ -4588,7 +4588,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Phainon_Ultimate_LimboMark",
+                                "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>",
                                 "invertCondition": true
                               }
                             ]
@@ -4652,7 +4652,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Phainon_Ultimate_LimboMark",
+                        "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>",
                         "invertCondition": true
                       },
                       {
@@ -4663,7 +4663,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "M_Phainon_Ability21_Mark",
+                          "modifier": "<a class=\"gModGreen\" id=\"-89935936\">M_Phainon_Ability21_Mark</a>",
                           "invertCondition": true
                         },
                         "target": {
@@ -4680,7 +4680,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Phainon_Guard_Visual_ReadyForHitBack",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1586210896\">Phainon_Guard_Visual_ReadyForHitBack</a>",
                       "silentAdd": true
                     }
                   ]
@@ -4707,7 +4707,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
                       "addStacksPerTrigger": 1
                     },
                     {
@@ -4719,7 +4719,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Phainon_HitBackCheck"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1370742512\">function_Phainon_HitBackCheck</a>"
                 }
               ]
             },
@@ -4759,7 +4759,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
                       "addStacksPerTrigger": 1
                     }
                   ]
@@ -4771,7 +4771,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Phainon_HitBackCheck"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1370742512\">function_Phainon_HitBackCheck</a>"
                 }
               ]
             },
@@ -4807,7 +4807,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "M_Phainon_Ability21_Mark"
+                          "modifier": "<a class=\"gModGreen\" id=\"-89935936\">M_Phainon_Ability21_Mark</a>"
                         }
                       ]
                     }
@@ -4824,7 +4824,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Phainon_Ultimate_LimboMark",
+                        "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>",
                         "invertCondition": true
                       },
                       {
@@ -4835,7 +4835,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "M_Phainon_Ability21_Mark",
+                          "modifier": "<a class=\"gModGreen\" id=\"-89935936\">M_Phainon_Ability21_Mark</a>",
                           "invertCondition": true
                         },
                         "target": {
@@ -4852,7 +4852,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Phainon_Guard_Visual_ReadyForHitBack_OverrideHitEffect",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1918462169\">Phainon_Guard_Visual_ReadyForHitBack_OverrideHitEffect</a>",
                       "silentAdd": true
                     }
                   ]
@@ -4887,7 +4887,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "function_Phainon_HitBackCheck",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1370742512\">function_Phainon_HitBackCheck</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -4897,7 +4897,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Phainon_Ultimate_LimboMark",
+                    "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -4914,7 +4914,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "M_Phainon_Ability21_Mark"
+                        "modifier": "<a class=\"gModGreen\" id=\"-89935936\">M_Phainon_Ability21_Mark</a>"
                       },
                       "noTargetFound": [
                         {
@@ -4943,7 +4943,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                                    "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                                   },
                                   {
                                     "name": "Has Modifier",
@@ -4951,7 +4951,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "modifier": "Phainon_Ultimate_LimboMark",
+                                    "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>",
                                     "invertCondition": true
                                   }
                                 ]
@@ -4982,7 +4982,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "M_Phainon_Ability21_InsertCheck"
+                              "modifier": "<a class=\"gModGreen\" id=\"-1520947056\">M_Phainon_Ability21_InsertCheck</a>"
                             }
                           ]
                         }
@@ -5004,12 +5004,12 @@ const compositeAbilityObject = {
           "stackLimit": 9999,
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
           }
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Ability21_Insert_Preshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-389259557\">M_Phainon_Ability21_Insert_Preshow</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -5107,7 +5107,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}} + {{Ability Targets Adjacent(Blast)}}"
           },
-          "modifier": "M_Phainon_Ability11_TargetTimeslow",
+          "modifier": "<a class=\"gModGreen\" id=\"-2014540503\">M_Phainon_Ability11_TargetTimeslow</a>",
           "silentAdd": true
         },
         {
@@ -5176,7 +5176,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}} + {{Ability Targets Adjacent(Blast)}}"
           },
-          "modifier": "M_Phainon_Ability11_TargetTimeslow"
+          "modifier": "<a class=\"gModGreen\" id=\"-2014540503\">M_Phainon_Ability11_TargetTimeslow</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -5244,7 +5244,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Ability11_TargetTimeslow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2014540503\">M_Phainon_Ability11_TargetTimeslow</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -5371,7 +5371,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+          "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
           "variables": {
             "parameter[0]_AddValue": {
               "operator": "Variables[0] (2) || RETURN",
@@ -5389,7 +5389,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}} + {{Ability Targets Adjacent(Blast)}}"
           },
-          "modifier": "M_Phainon_Ability02_TargetTimeslow",
+          "modifier": "<a class=\"gModGreen\" id=\"1602739833\">M_Phainon_Ability02_TargetTimeslow</a>",
           "silentAdd": true
         },
         {
@@ -5454,7 +5454,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Ability02_TargetTimeslow",
+          "for": "<a class=\"gModGreen\" id=\"mod__1602739833\">M_Phainon_Ability02_TargetTimeslow</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -5582,7 +5582,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "M_Phainon_Ability21_InsertCheck",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1520947056\">M_Phainon_Ability21_InsertCheck</a>",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
@@ -5592,7 +5592,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Phainon_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"262452933\">Phainon_InsertRetarget</a>"
                 }
               ]
             },
@@ -5607,7 +5607,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Phainon_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"262452933\">Phainon_InsertRetarget</a>"
                 }
               ],
               "priorityLevel": -55
@@ -5617,7 +5617,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Phainon_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"262452933\">Phainon_InsertRetarget</a>"
                 }
               ]
             },
@@ -5626,7 +5626,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Phainon_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"262452933\">Phainon_InsertRetarget</a>"
                 }
               ]
             },
@@ -5663,7 +5663,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Phainon_InsertRetarget"
+                      "functionName": "<a class=\"gTempYellow\" id=\"262452933\">Phainon_InsertRetarget</a>"
                     }
                   ]
                 }
@@ -5673,7 +5673,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Phainon_InsertRetarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__262452933\">Phainon_InsertRetarget</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -5683,7 +5683,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Phainon_Ultimate_LimboMark"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>"
                   },
                   "passed": [
                     "Modifier Deletes Itself"
@@ -5715,7 +5715,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                               },
                               {
                                 "name": "Has Modifier",
@@ -5723,7 +5723,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Phainon_Ultimate_LimboMark",
+                                "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>",
                                 "invertCondition": true
                               }
                             ]
@@ -5760,7 +5760,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Tree03_Property[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-982733816\">Phainon_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -5796,7 +5796,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Eidolon2_Property[<span class=\"descriptionNumberColor\">Sky and Earth Churn Mortal Froth</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1152823097\">Phainon_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Sky and Earth Churn Mortal Froth</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5825,12 +5825,12 @@ const compositeAbilityObject = {
           "statusName": "Sky and Earth Churn Mortal Froth",
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
           }
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -5851,7 +5851,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_SPOverflow[<span class=\"descriptionNumberColor\">Coreflame</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__151398776\">Phainon_SPOverflow</a>[<span class=\"descriptionNumberColor\">Coreflame</span>]",
           "stackType": "Multiple",
           "execute": [
             {
@@ -5864,7 +5864,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+                  "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
                       "operator": "Variables[0] (MDF_Count) || RETURN",
@@ -5888,7 +5888,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                       },
                       {
                         "name": "Compare: Variable",
@@ -5919,7 +5919,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Ultimate_Weakness[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__529435553\">Phainon_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttachWeakness"
@@ -5948,19 +5948,19 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_FinalBE_Hint",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1074413210\">Phainon_FinalBE_Hint</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_NormalBE_Hint",
+          "for": "<a class=\"gModGreen\" id=\"mod__133453837\">Phainon_NormalBE_Hint</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Ultimate_ActionBarManager",
+          "for": "<a class=\"gModGreen\" id=\"mod__1942089860\">Phainon_Ultimate_ActionBarManager</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5976,7 +5976,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Sort by Modifier Value",
-                        "modifier": "M_Phainon_Ultimate_ActionOrder"
+                        "modifier": "<a class=\"gModGreen\" id=\"1889470699\">M_Phainon_Ultimate_ActionOrder</a>"
                       }
                     ]
                   },
@@ -6008,7 +6008,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
                         }
                       ]
                     }
@@ -6020,7 +6020,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[addBattleEvents]]"
                   },
-                  "modifier": "M_Phainon_Ultimate_ActionOrder"
+                  "modifier": "<a class=\"gModGreen\" id=\"1889470699\">M_Phainon_Ultimate_ActionOrder</a>"
                 },
                 {
                   "name": "Block Advance/Delay Effects",
@@ -6036,9 +6036,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Phainon_UltraEnd_Property[<span class=\"descriptionNumberColor\">He Who Bears the World Must Burn</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-98821838\">Phainon_UltraEnd_Property</a>[<span class=\"descriptionNumberColor\">He Who Bears the World Must Burn</span>]",
                   "duration": 1,
-                  "referenceModifier": "MReference_SpeedRatioUp",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"1020254741\">MReference_SpeedRatioUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.15) || RETURN",
@@ -6073,7 +6073,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_Phainon_Ultimate_ActionOrder",
+                      "modifier": "<a class=\"gModGreen\" id=\"1889470699\">M_Phainon_Ultimate_ActionOrder</a>",
                       "counter": {
                         "operator": "Variables[0] (MDF_ActionOrderIndex) || RETURN",
                         "displayLines": "MDF_ActionOrderIndex",
@@ -6082,7 +6082,7 @@ const compositeAbilityObject = {
                           "MDF_ActionOrderIndex"
                         ]
                       },
-                      "referenceModifier": "MReference_Empty"
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -6184,7 +6184,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
                       }
                     ]
                   },
@@ -6195,7 +6195,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
                     },
                     {
                       "name": "Remove Flags from Modifier",
@@ -6206,7 +6206,7 @@ const compositeAbilityObject = {
                       "flagName": [
                         "FormationAssetCenterWhenSingle"
                       ],
-                      "modifierName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
                       "casterFilter": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -6255,7 +6255,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
                         "invertCondition": true
                       }
                     ]
@@ -6267,7 +6267,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
                     },
                     {
                       "name": "IF",
@@ -6290,7 +6290,7 @@ const compositeAbilityObject = {
                           "flagName": [
                             "FormationAssetCenterWhenSingle"
                           ],
-                          "modifierName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
                           "casterFilter": {
                             "name": "Target Name",
                             "target": "{{Caster}}"
@@ -6310,19 +6310,19 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "({{All Team Members with Unselectable Team Members(Exclude Self)}} - {{Phainon's Forced-Action Teammates}}).[[addBattleEvents]]"
               },
-              "modifier": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
               "haloStatus": true,
               "includeBattleEvent": true
             }
           ],
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
           }
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Ultimate_VisualManager",
+          "for": "<a class=\"gModGreen\" id=\"mod__1662843541\">Phainon_Ultimate_VisualManager</a>",
           "modifierFlags": [
             "KeepOnDeathrattle",
             "ListenBattleEventSkill"
@@ -6343,7 +6343,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "M_Phainon_IsAbility31",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1382374787\">M_Phainon_IsAbility31</a>",
                     "invertCondition": true
                   }
                 },
@@ -6625,7 +6625,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
                   },
                   "passed": [
                     {
@@ -6892,12 +6892,12 @@ const compositeAbilityObject = {
           ],
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
           }
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Ultimate_LimboMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2124559598\">Phainon_Ultimate_LimboMark</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -6905,12 +6905,12 @@ const compositeAbilityObject = {
           ],
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
           }
         },
         {
           "name": "Modifier Construction",
-          "for": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ListenBattleEventSkill",
@@ -6937,7 +6937,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -6945,7 +6945,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                   },
-                  "modifier": "Phainon_Ultimate_Weakness[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"529435553\">Phainon_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
                 },
                 {
                   "name": "IF",
@@ -6955,13 +6955,13 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "M_Phainon_IsAbility31",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1382374787\">M_Phainon_IsAbility31</a>",
                     "invertCondition": true
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Phainon_ClearAvatarArea",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1545922215\">Phainon_ClearAvatarArea</a>",
                       "variables": {
                         "IsAsyncLoad": 0
                       }
@@ -6977,7 +6977,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+                      "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                       "variables": {
                         "parameter[0]_AddValue": {
                           "operator": "Variables[0] (3) || RETURN",
@@ -7004,7 +7004,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Phainon_Tree03_Property[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-982733816\">Phainon_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -7062,7 +7062,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Phainon_UltraEndCheck"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-471089353\">function_Phainon_UltraEndCheck</a>"
                 }
               ]
             },
@@ -7075,7 +7075,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Phainon_Ultimate_ActionBarManager"
+                  "modifier": "<a class=\"gModGreen\" id=\"1942089860\">Phainon_Ultimate_ActionBarManager</a>"
                 },
                 {
                   "name": "IF",
@@ -7113,7 +7113,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Current Turn Owner}}"
                           },
-                          "modifierName": "ParamModifier",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-228290033\">ParamModifier</a>",
                           "function": "Add",
                           "value": 1,
                           "valueType": "Duration"
@@ -7204,7 +7204,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Phainon_Ultimate_LimboMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -7267,7 +7267,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Phainon_UltraEndCheck"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-471089353\">function_Phainon_UltraEndCheck</a>"
                 }
               ]
             },
@@ -7276,7 +7276,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Phainon_UltraEndCheck"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-471089353\">function_Phainon_UltraEndCheck</a>"
                 }
               ],
               "priorityLevel": -55
@@ -7286,7 +7286,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Phainon_UltraEndCheck"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-471089353\">function_Phainon_UltraEndCheck</a>"
                 }
               ]
             },
@@ -7315,7 +7315,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "ClearAvatarArea_ByAbility"
+                    "modifier": "<a class=\"gModGreen\" id=\"253720974\">ClearAvatarArea_ByAbility</a>"
                   },
                   "passed": [
                     {
@@ -7331,7 +7331,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                       },
                       "abilityName": "Phainon_Ability31_SelectTarget",
                       "abilitySource": {
@@ -7360,7 +7360,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Phainon_UltraEndCheck"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-471089353\">function_Phainon_UltraEndCheck</a>"
                 }
               ]
             },
@@ -7384,7 +7384,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "function_Phainon_UltraEndCheck"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-471089353\">function_Phainon_UltraEndCheck</a>"
                     }
                   ]
                 }
@@ -7462,7 +7462,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "function_Phainon_UltraEndCheck",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-471089353\">function_Phainon_UltraEndCheck</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -7475,7 +7475,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Phainon_Ultimate_LimboMark"
+                        "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>"
                       },
                       {
                         "name": "AND",
@@ -7519,7 +7519,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                       },
                       "abilityName": "Phainon_Ability31_SelectTarget",
                       "abilitySource": {
@@ -7560,7 +7560,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Phainon_Ultimate_VisualManager"
+              "modifier": "<a class=\"gModGreen\" id=\"1662843541\">Phainon_Ultimate_VisualManager</a>"
             },
             {
               "name": "Add Sub-Events/Bonuses",
@@ -7568,7 +7568,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Phainon_Eidolon2_Property[<span class=\"descriptionNumberColor\">Sky and Earth Churn Mortal Froth</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1152823097\">Phainon_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Sky and Earth Churn Mortal Froth</span>]",
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 2
@@ -7590,7 +7590,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Phainon_Ultimate_Weakness[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"529435553\">Phainon_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
               "haloStatus": true
             }
           ]
@@ -7611,11 +7611,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Phainon_Passive_AsAbilityTarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__722514042\">Phainon_Passive_AsAbilityTarget</a>",
           "parse": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+              "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
               "variables": {
                 "parameter[0]_AddValue": 1
               }
@@ -7641,7 +7641,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Phainon_Passive_Property[<span class=\"descriptionNumberColor\">Pyric Corpus</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1491786902\">Phainon_Passive_Property</a>[<span class=\"descriptionNumberColor\">Pyric Corpus</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -7650,7 +7650,7 @@ const compositeAbilityObject = {
                       3
                     ]
                   },
-                  "referenceModifier": "MReference_CriticalDamageUp",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.3) || RETURN",
@@ -7668,7 +7668,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
           "parse": [
             {
               "name": "Looped Event",
@@ -7725,7 +7725,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Phainon_ClearAvatarArea",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1545922215\">Phainon_ClearAvatarArea</a>",
           "parse": [
             {
               "name": "Change Battle Arena",

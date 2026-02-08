@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23021_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"1829739857\">LC_23021_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23021_Sub3[<span class=\"descriptionNumberColor\">Mask</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1355560609\">LC_23021_Sub3</a>[<span class=\"descriptionNumberColor\">Mask</span>]",
           "stackType": "ReplaceByCaster",
           "description": "Increases teammates' CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue4</span>.",
           "type": "Buff",
@@ -53,7 +53,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[removeBattleEvents]]"
               },
-              "modifier": "LC_23021_Sub[<span class=\"descriptionNumberColor\">CRIT Rate and CRIT DMG Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"918300854\">LC_23021_Sub</a>[<span class=\"descriptionNumberColor\">CRIT Rate and CRIT DMG Boost</span>]",
               "aliveOnly": "True",
               "haloStatus": true,
               "valuePerStack": {
@@ -79,7 +79,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23021_Sub2[<span class=\"descriptionNumberColor\">Radiant Flame</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1372338228\">LC_23021_Sub2</a>[<span class=\"descriptionNumberColor\">Radiant Flame</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -112,7 +112,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23021_Sub3[<span class=\"descriptionNumberColor\">Mask</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1355560609\">LC_23021_Sub3</a>[<span class=\"descriptionNumberColor\">Mask</span>]",
                       "duration": {
                         "operator": "Variables[0] (4) || RETURN",
                         "displayLines": "4",
@@ -152,7 +152,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23021_Sub[<span class=\"descriptionNumberColor\">CRIT Rate and CRIT DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__918300854\">LC_23021_Sub</a>[<span class=\"descriptionNumberColor\">CRIT Rate and CRIT DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -208,7 +208,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23021_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__1829739857\">LC_23021_Main</a>",
           "execute": [
             {
               "eventTrigger": "Skill Point Changes",
@@ -250,7 +250,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23021_Sub2[<span class=\"descriptionNumberColor\">Radiant Flame</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1372338228\">LC_23021_Sub2</a>[<span class=\"descriptionNumberColor\">Radiant Flame</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (4) || RETURN",
                         "displayLines": "4",
@@ -300,7 +300,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23021_Sub3[<span class=\"descriptionNumberColor\">Mask</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1355560609\">LC_23021_Sub3</a>[<span class=\"descriptionNumberColor\">Mask</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",

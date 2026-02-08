@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "GM_Test01",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1966027219\">GM_Test01</a>",
       "parse": [
         {
           "name": "Stack Target Application Chance",

@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "JingYuan_Tree03_CriticalChanceUp[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-110303717\">JingYuan_Tree03_CriticalChanceUp</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -46,7 +46,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "JingYuan_CriticalDamageUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1778616310\">JingYuan_CriticalDamageUp</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -80,7 +80,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "JingYuan_Eidolon6_AllDamageTypeTakenRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -95,7 +95,7 @@ const configAbility = {
               },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
-              "modifierName": "JingYuan_Eidolon6_AllDamageTypeTakenRatio",
+              "modifierName": "<a class=\"gModGreen\" id=\"767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>",
               "multiplier": 1
             },
             {
@@ -128,7 +128,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "JingYuan_Eidolon2_DamageAddedRatio[<span class=\"descriptionNumberColor\">Dharma Corpora</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1088669628\">JingYuan_Eidolon2_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">Dharma Corpora</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -172,7 +172,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "JingYuan_BattleEvent_SpeedUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -189,7 +189,7 @@ const configAbility = {
               },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
-              "modifierName": "JingYuan_BattleEvent_SpeedUp",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
               "multiplier": 1
             },
             {
@@ -220,7 +220,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "JingYuan_BattleEvent",
+      "for": "<a class=\"gModGreen\" id=\"mod__1222558059\">JingYuan_BattleEvent</a>",
       "stackType": "Prolong",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -254,7 +254,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "JingYuan_BattleEvent_UltraATKCount[<span class=\"descriptionNumberColor\">Lightbringer</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1804861609\">JingYuan_BattleEvent_UltraATKCount</a>[<span class=\"descriptionNumberColor\">Lightbringer</span>]",
       "stackType": "ReplaceByCaster",
       "description": "Lightning-Lord's Enhanced ATK count.",
       "type": "Other",
@@ -263,7 +263,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [],
@@ -274,7 +274,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "JingYuan_BattleEvent_ATKCountShowText",
+      "for": "<a class=\"gModGreen\" id=\"mod__1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [
         "ATKCount"

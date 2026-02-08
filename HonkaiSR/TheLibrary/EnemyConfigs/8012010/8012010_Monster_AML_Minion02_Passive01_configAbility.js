@@ -12,13 +12,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_AML_Minion02_EffectController"
+      "modifier": "<a class=\"gModGreen\" id=\"1098566226\">Monster_AML_Minion02_EffectController</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_AML_Minion02_EffectController",
+      "for": "<a class=\"gModGreen\" id=\"mod__1098566226\">Monster_AML_Minion02_EffectController</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -31,7 +31,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "StanceBreakState"
+                "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
               },
               "failed": [
                 {
@@ -40,7 +40,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_AML_Minion02_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1582498358\">Monster_AML_Minion02_Effect</a>"
                 }
               ]
             }
@@ -55,7 +55,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_AML_Minion02_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-1582498358\">Monster_AML_Minion02_Effect</a>"
             }
           ]
         },
@@ -68,7 +68,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_AML_Minion02_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-1582498358\">Monster_AML_Minion02_Effect</a>"
             }
           ]
         }
@@ -78,7 +78,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_AML_Minion02_PassiveSpeedUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__-128058290\">Monster_AML_Minion02_PassiveSpeedUp</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -89,7 +89,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_AML_Minion02_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1771820857\">Monster_AML_Minion02_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "duration": {
                 "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
                 "displayLines": "{[PassiveSkill01[1]]}",

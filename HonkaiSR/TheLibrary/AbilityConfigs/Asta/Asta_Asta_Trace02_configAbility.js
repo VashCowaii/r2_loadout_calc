@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Asta_Tree02"
+      "modifier": "<a class=\"gModGreen\" id=\"-895121187\">M_Asta_Tree02</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Asta_Tree02",
+      "for": "<a class=\"gModGreen\" id=\"mod__-895121187\">M_Asta_Tree02</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -36,7 +36,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "Asta_FireAddedRatio",
+              "modifier": "<a class=\"gModGreen\" id=\"-653161821\">Asta_FireAddedRatio</a>",
               "onlyRemoveOwnersInstance": true
             }
           ]
@@ -50,7 +50,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Asta_FireAddedRatio",
+              "modifier": "<a class=\"gModGreen\" id=\"-653161821\">Asta_FireAddedRatio</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.18) || RETURN",
@@ -83,7 +83,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Asta_FireAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"-653161821\">Asta_FireAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.18) || RETURN",

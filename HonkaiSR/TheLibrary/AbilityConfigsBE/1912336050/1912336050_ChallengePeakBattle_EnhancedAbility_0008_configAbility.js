@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0008"
+      "modifier": "<a class=\"gModGreen\" id=\"1883967933\">Modifier_ChallengePeakBattle_EnhancedAbility_0008</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting+</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2147319581\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting+</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -70,7 +70,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_02_PreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-427871213\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_02_PreShow</a>",
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -93,7 +93,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "value1": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting+</span>]",
+              "value1": "<a class=\"gModGreen\" id=\"-2147319581\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting+</span>]",
               "compareType": ">=",
               "value2": {
                 "operator": "Variables[0] (ChallengePeakBattle_0008_ADF_1) || Constants[0] (1) || SUB || RETURN",
@@ -127,7 +127,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_02",
+      "for": "<a class=\"gModGreen\" id=\"mod__2130870096\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_02</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -139,7 +139,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting+</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-2147319581\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting+</span>]"
             },
             {
               "name": "Add Events/Bonuses",
@@ -147,7 +147,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting+</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2147319581\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting+</span>]",
               "valuePerStack": {
                 "ChallengePeakBattle_0008_ADF_1": {
                   "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -171,7 +171,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting+</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2147319581\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting+</span>]",
               "valuePerStack": {
                 "ChallengePeakBattle_0008_ADF_1": {
                   "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -195,7 +195,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_03[<span class=\"descriptionNumberColor\">Taunting+</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2147319581\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting+</span>]",
               "valuePerStack": {
                 "ChallengePeakBattle_0008_ADF_1": {
                   "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -214,7 +214,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0008",
+      "for": "<a class=\"gModGreen\" id=\"mod__1883967933\">Modifier_ChallengePeakBattle_EnhancedAbility_0008</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -236,7 +236,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_02",
+                  "modifier": "<a class=\"gModGreen\" id=\"2130870096\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0008_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -267,7 +267,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_02_PreShow",
+                  "modifier": "<a class=\"gModGreen\" id=\"-427871213\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_02_PreShow</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0008_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

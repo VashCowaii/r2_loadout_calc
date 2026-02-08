@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_054"
+      "modifier": "<a class=\"gModGreen\" id=\"-451471269\">MStrongChallengeEX_Talent_StageAbility_LE_054</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_MST_054",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1995909540\">MStrongChallengeEX_Talent_StageAbility_MST_054</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_054",
+      "for": "<a class=\"gModGreen\" id=\"mod__-451471269\">MStrongChallengeEX_Talent_StageAbility_LE_054</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -74,7 +74,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_054",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1995909540\">MStrongChallengeEX_Talent_StageAbility_MST_054</a>",
                   "valuePerStack": {
                     "MDF_QuantumResistanceDelta": {
                       "operator": "Variables[0] (#ADF_1) || Variables[1] (_CharacterCount) || MUL || RETURN",
@@ -120,7 +120,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_054",
+              "modifier": "<a class=\"gModGreen\" id=\"-1995909540\">MStrongChallengeEX_Talent_StageAbility_MST_054</a>",
               "valuePerStack": {
                 "MDF_QuantumResistanceDelta": {
                   "operator": "Variables[0] (#ADF_1) || Variables[1] (_CharacterCount) || MUL || RETURN",

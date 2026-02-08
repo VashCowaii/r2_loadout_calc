@@ -10,18 +10,18 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_24002_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1534751779\">LC_24002_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_24002_CD",
+      "for": "<a class=\"gModGreen\" id=\"mod__1590345463\">LC_24002_CD</a>",
       "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_24002_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1791888969\">LC_24002_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "Shield"
@@ -85,7 +85,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_24002_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1534751779\">LC_24002_Main</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -142,7 +142,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_24002_CD"
+                      "modifier": "<a class=\"gModGreen\" id=\"1590345463\">LC_24002_CD</a>"
                     }
                   }
                 ]
@@ -176,7 +176,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_24002_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1791888969\">LC_24002_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -210,7 +210,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_24002_CD",
+                  "modifier": "<a class=\"gModGreen\" id=\"1590345463\">LC_24002_CD</a>",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21020_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1797943434\">LC_21020_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21020_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1496959259\">LC_21020_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21020_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1797943434\">LC_21020_Main</a>",
       "execute": [
         {
           "eventTrigger": "Got a Kill [Owner]",
@@ -59,7 +59,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "LC_21020_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1496959259\">LC_21020_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",

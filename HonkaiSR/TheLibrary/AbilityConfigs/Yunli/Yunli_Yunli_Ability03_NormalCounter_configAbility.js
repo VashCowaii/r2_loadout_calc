@@ -25,7 +25,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yunli_Blocking_BeingAttackMark"
+      "modifier": "<a class=\"gModGreen\" id=\"1705533057\">Yunli_Blocking_BeingAttackMark</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -104,7 +104,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yunli_AddRegardAsAttackType"
+      "modifier": "<a class=\"gModGreen\" id=\"1898161246\">Yunli_AddRegardAsAttackType</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -112,7 +112,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yunli_Blocking_CritDamage[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1896809372\">Yunli_Blocking_CritDamage</a>[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
     },
     "Trigger: Attack End",
     {
@@ -140,7 +140,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Eidolon4[<span class=\"descriptionNumberColor\">Artisan's Ironsong</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"359091301\">Yunli_Eidolon4</a>[<span class=\"descriptionNumberColor\">Artisan's Ironsong</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -190,7 +190,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yunli_Eidolon1"
+      "modifier": "<a class=\"gModGreen\" id=\"275203206\">Yunli_Eidolon1</a>"
     }
   ],
   "references": []

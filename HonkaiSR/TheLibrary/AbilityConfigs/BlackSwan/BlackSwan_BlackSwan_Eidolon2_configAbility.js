@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "BlackSwan_Eidolon2"
+      "modifier": "<a class=\"gModGreen\" id=\"1490076002\">BlackSwan_Eidolon2</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "BlackSwan_Eidolon2",
+      "for": "<a class=\"gModGreen\" id=\"mod__1490076002\">BlackSwan_Eidolon2</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -64,7 +64,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "M_BlackSwan_DOTFlag",
+                            "modifier": "<a class=\"gModGreen\" id=\"616609195\">M_BlackSwan_DOTFlag</a>",
                             "justAddedOrActive": true
                           },
                           {
@@ -73,7 +73,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "M_BlackSwan_P01_AddDOTFlag",
+                            "modifier": "<a class=\"gModGreen\" id=\"-658722874\">M_BlackSwan_P01_AddDOTFlag</a>",
                             "justAddedOrActive": true
                           },
                           {
@@ -82,7 +82,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "M_BlackSwan_Tree02_AddDOTFlag",
+                            "modifier": "<a class=\"gModGreen\" id=\"375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>",
                             "justAddedOrActive": true
                           }
                         ]
@@ -148,7 +148,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                           "baseChance": {
                             "operator": "Variables[0] (1) || RETURN",
                             "displayLines": "1",

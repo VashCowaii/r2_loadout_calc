@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Aventurine_Maze_Modifier_00"
+      "modifier": "<a class=\"gModGreen\" id=\"-674345683\">Aventurine_Maze_Modifier_00</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Maze_Modifier_00",
+      "for": "<a class=\"gModGreen\" id=\"mod__-674345683\">Aventurine_Maze_Modifier_00</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -28,7 +28,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Aventurine_Maze_Defence[<span class=\"descriptionNumberColor\">The Red or the Black</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-314126453\">Aventurine_Maze_Defence</a>[<span class=\"descriptionNumberColor\">The Red or the Black</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",

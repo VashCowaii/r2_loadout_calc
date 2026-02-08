@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Fugue_TechniqueUsage_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1034016164\">Fugue_TechniqueUsage_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Fugue_TechniqueUsage_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1034016164\">Fugue_TechniqueUsage_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -40,7 +40,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Level Entity}}"
                     },
-                    "modifier": "StageAbility_MazeStandard_EnterBattle_Monster_Modifier",
+                    "modifier": "<a class=\"gModGreen\" id=\"1904238030\">StageAbility_MazeStandard_EnterBattle_Monster_Modifier</a>",
                     "invertCondition": true
                   },
                   {
@@ -70,7 +70,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Fugue_DefenceDown[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-375769760\">Fugue_DefenceDown</a>[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

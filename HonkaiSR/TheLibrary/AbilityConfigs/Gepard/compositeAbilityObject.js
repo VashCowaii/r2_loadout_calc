@@ -30,7 +30,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Gepard_AttackConvert",
+          "modifier": "<a class=\"gModGreen\" id=\"1558938344\">M_Gepard_AttackConvert</a>",
           "valuePerStack": {
             "MDF_ConvertRatio": {
               "operator": "Variables[0] (0.35) || RETURN",
@@ -46,7 +46,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Gepard_AttackConvert",
+          "for": "<a class=\"gModGreen\" id=\"mod__1558938344\">M_Gepard_AttackConvert</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -75,7 +75,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Gepard_Passive02_AttackDeltaUp",
+                  "modifier": "<a class=\"gModGreen\" id=\"567771648\">Gepard_Passive02_AttackDeltaUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (Avatar_Gepard_DefenceValue) || Variables[1] (Avatar_Gepard_DefenceConvert) || SUB || Variables[2] (MDF_ConvertRatio) || MUL || RETURN",
@@ -118,7 +118,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Gepard_Passive02_AttackDeltaUp",
+                  "modifier": "<a class=\"gModGreen\" id=\"567771648\">Gepard_Passive02_AttackDeltaUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (Avatar_Gepard_DefenceValue) || Variables[1] (Avatar_Gepard_DefenceConvert) || SUB || Variables[2] (MDF_ConvertRatio) || MUL || RETURN",
@@ -162,7 +162,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Trace_AggroUp",
+          "modifier": "<a class=\"gModGreen\" id=\"-1138569970\">M_Trace_AggroUp</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (3) || RETURN",
@@ -197,13 +197,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Gepard_Maze_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-584513989\">Gepard_Maze_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Gepard_Maze_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-584513989\">Gepard_Maze_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -232,7 +232,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "Gepard_Ultimate_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-176429589\">Gepard_Ultimate_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -325,7 +325,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Gepard_Eidolon6ActionDelay0",
+                  "modifier": "<a class=\"gModGreen\" id=\"793899382\">Gepard_Eidolon6ActionDelay0</a>",
                   "duration": 1,
                   "immediateEffect": true
                 }
@@ -380,7 +380,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Modifier Variable",
-          "modifierName": "Gepard_PassiveAbility_UnDead[<span class=\"descriptionNumberColor\">Unyielding Will</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"-179604795\">Gepard_PassiveAbility_UnDead</a>[<span class=\"descriptionNumberColor\">Unyielding Will</span>]",
           "function": "Add"
         },
         {
@@ -403,7 +403,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Gepard_Eidolon6ActionDelay0",
+          "for": "<a class=\"gModGreen\" id=\"mod__793899382\">Gepard_Eidolon6ActionDelay0</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "OneMore"
@@ -442,7 +442,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Gepard_PassiveAbility_UnDead[<span class=\"descriptionNumberColor\">Unyielding Will</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-179604795\">Gepard_PassiveAbility_UnDead</a>[<span class=\"descriptionNumberColor\">Unyielding Will</span>]"
         },
         {
           "name": "IF",
@@ -478,7 +478,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Gepard_Eidolon4"
+              "modifier": "<a class=\"gModGreen\" id=\"-507520261\">Gepard_Eidolon4</a>"
             }
           ]
         }
@@ -486,7 +486,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Gepard_PassiveAbility_UnDead[<span class=\"descriptionNumberColor\">Unyielding Will</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-179604795\">Gepard_PassiveAbility_UnDead</a>[<span class=\"descriptionNumberColor\">Unyielding Will</span>]",
           "counter": 1,
           "execute": [
             {
@@ -614,7 +614,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Gepard_Eidolon4",
+          "for": "<a class=\"gModGreen\" id=\"mod__-507520261\">Gepard_Eidolon4</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -625,7 +625,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Gepard_Eidolon4_AddStatusResistance[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1307422316\">Gepard_Eidolon4_AddStatusResistance</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
                   "valuePerStack": {
                     "MDF_AddStatusResistance": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -658,7 +658,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Gepard_Eidolon4_AddStatusResistance[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1307422316\">Gepard_Eidolon4_AddStatusResistance</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
                       "valuePerStack": {
                         "MDF_AddStatusResistance": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -692,7 +692,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "Gepard_Eidolon4_AddStatusResistance[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1307422316\">Gepard_Eidolon4_AddStatusResistance</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -724,7 +724,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{All Team Members}}"
           },
-          "modifier": "Gepard_Ultimate_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-176429589\">Gepard_Ultimate_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -909,7 +909,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -951,7 +951,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Gepard_Eidolon2_Delay",
+                  "modifier": "<a class=\"gModGreen\" id=\"-367770919\">Gepard_Eidolon2_Delay</a>",
                   "valuePerStack": {
                     "MDF_SPD": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -1127,7 +1127,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Gepard_Eidolon4_AddStatusResistance[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1307422316\">Gepard_Eidolon4_AddStatusResistance</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1162,7 +1162,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Gepard_Eidolon2_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1613152679\">Gepard_Eidolon2_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "STAT_SpeedDown"
@@ -1199,7 +1199,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Gepard_Eidolon2_Delay",
+          "for": "<a class=\"gModGreen\" id=\"mod__-367770919\">Gepard_Eidolon2_Delay</a>",
           "execute": [
             {
               "eventTrigger": "When Losing Modifier [Anyone]",
@@ -1215,7 +1215,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -1223,7 +1223,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Gepard_Eidolon2_Delay"
+                        "modifier": "<a class=\"gModGreen\" id=\"-367770919\">Gepard_Eidolon2_Delay</a>"
                       }
                     ]
                   },
@@ -1234,7 +1234,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Gepard_Eidolon2_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1613152679\">Gepard_Eidolon2_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Lifetime) || RETURN",
                         "displayLines": "MDF_Lifetime",
@@ -1268,7 +1268,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Gepard_Passive02_AttackDeltaUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__567771648\">Gepard_Passive02_AttackDeltaUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1300,7 +1300,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Gepard_Ultimate_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-176429589\">Gepard_Ultimate_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"

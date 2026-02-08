@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_323_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1805247346\">Relic_323_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_323_Sub3[<span class=\"descriptionNumberColor\">Amphoreus, The Eternal Land</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1051103648\">Relic_323_Sub3</a>[<span class=\"descriptionNumberColor\">Amphoreus, The Eternal Land</span>]",
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
@@ -56,7 +56,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_323_Sub2",
+          "for": "<a class=\"gModGreen\" id=\"mod__1067881267\">Relic_323_Sub2</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -66,7 +66,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Relic_323_Sub3[<span class=\"descriptionNumberColor\">Amphoreus, The Eternal Land</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1051103648\">Relic_323_Sub3</a>[<span class=\"descriptionNumberColor\">Amphoreus, The Eternal Land</span>]"
                   },
                   "passed": [
                     {
@@ -75,7 +75,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Relic_323_Sub3[<span class=\"descriptionNumberColor\">Amphoreus, The Eternal Land</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1051103648\">Relic_323_Sub3</a>[<span class=\"descriptionNumberColor\">Amphoreus, The Eternal Land</span>]"
                     }
                   ]
                 }
@@ -89,14 +89,14 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Relic_323_Sub3[<span class=\"descriptionNumberColor\">Amphoreus, The Eternal Land</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1051103648\">Relic_323_Sub3</a>[<span class=\"descriptionNumberColor\">Amphoreus, The Eternal Land</span>]",
               "haloStatus": true
             }
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_323_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1805247346\">Relic_323_Main</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -121,7 +121,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Relic_323_Sub2"
+                      "modifier": "<a class=\"gModGreen\" id=\"1067881267\">Relic_323_Sub2</a>"
                     }
                   ]
                 }

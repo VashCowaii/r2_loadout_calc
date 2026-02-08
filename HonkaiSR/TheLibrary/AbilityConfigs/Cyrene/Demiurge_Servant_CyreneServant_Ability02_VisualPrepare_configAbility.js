@@ -21,11 +21,11 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Use Custom Character Function",
-      "functionName": "Servant_CyreneServant_AbilityReady_MirrorSetup"
+      "functionName": "<a class=\"gTempYellow\" id=\"-668366939\">Servant_CyreneServant_AbilityReady_MirrorSetup</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Servant_CyreneServant_AbilityReady_LightTeamMirrorChosenEffect"
+      "functionName": "<a class=\"gTempYellow\" id=\"344221092\">Servant_CyreneServant_AbilityReady_LightTeamMirrorChosenEffect</a>"
     }
   ],
   "references": []

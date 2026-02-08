@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Dr_Ratio_InsertAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__1051620439\">Dr_Ratio_InsertAbility</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -21,7 +21,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Dr_Ratio_InsertAbility"
+              "modifier": "<a class=\"gModGreen\" id=\"1051620439\">Dr_Ratio_InsertAbility</a>"
             }
           ]
         },
@@ -37,7 +37,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Dr_Ratio_InsertAbility"
+              "modifier": "<a class=\"gModGreen\" id=\"1051620439\">Dr_Ratio_InsertAbility</a>"
             }
           ]
         }
@@ -45,11 +45,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Dr_Ratio_Eidolon6_CD"
+      "for": "<a class=\"gModGreen\" id=\"mod__142304732\">Dr_Ratio_Eidolon6_CD</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1351658038\">Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -87,7 +87,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Dr_Ratio_PointB3_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1222801493\">Dr_Ratio_PointB3_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -275,7 +275,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Dr_Ratio_Insert_Flag_Caster",
+      "for": "<a class=\"gModGreen\" id=\"mod__1963870595\">Dr_Ratio_Insert_Flag_Caster</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -286,7 +286,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Dr_Ratio_InsertAbility"
+              "modifier": "<a class=\"gModGreen\" id=\"1051620439\">Dr_Ratio_InsertAbility</a>"
             }
           ]
         },
@@ -336,7 +336,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Dr_Ratio_Insert_Flag",
+      "for": "<a class=\"gModGreen\" id=\"mod__-253275642\">Dr_Ratio_Insert_Flag</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -356,7 +356,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Dr_Ratio_Insert_Flag_Caster",
+                  "modifier": "<a class=\"gModGreen\" id=\"1963870595\">Dr_Ratio_Insert_Flag_Caster</a>",
                   "valuePerStack": {
                     "MDF_Ability03_Insert_Flag": 1,
                     "MDF_Insert_Flag_ByTeamMate": 1
@@ -375,7 +375,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Dr_Ratio_Insert_Flag_Caster",
+                  "modifier": "<a class=\"gModGreen\" id=\"1963870595\">Dr_Ratio_Insert_Flag_Caster</a>",
                   "valuePerStack": {
                     "MDF_Ability03_Insert_Flag": 0,
                     "MDF_Insert_Flag_ByTeamMate": 0
@@ -394,7 +394,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Dr_Ratio_Ability03_InsertAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__466849960\">Dr_Ratio_Ability03_InsertAbility</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -407,12 +407,12 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Dr_Ratio_Insert_Flag_Caster"
+                "modifier": "<a class=\"gModGreen\" id=\"1963870595\">Dr_Ratio_Insert_Flag_Caster</a>"
               },
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Dr_Ratio_InsertAbility"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1506583423\">Dr_Ratio_InsertAbility</a>"
                 }
               ]
             },
@@ -423,7 +423,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1828934114\">Dr_Ratio_Ability03_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Summation</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -461,7 +461,7 @@ const configAbility = {
               },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
-              "modifierName": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1828934114\">Dr_Ratio_Ability03_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Summation</span>]",
               "multiplier": 1
             },
             {
@@ -517,7 +517,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1000967262\">Dr_Ratio_Ability03_TheFool</a>[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -555,7 +555,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1000967262\">Dr_Ratio_Ability03_TheFool</a>[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]"
                 }
               ]
             }
@@ -750,7 +750,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Dr_Ratio_Insert_Flag_Caster",
+                    "modifier": "<a class=\"gModGreen\" id=\"1963870595\">Dr_Ratio_Insert_Flag_Caster</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -767,7 +767,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Dr_Ratio_Insert_Flag",
+                          "modifier": "<a class=\"gModGreen\" id=\"-253275642\">Dr_Ratio_Insert_Flag</a>",
                           "valuePerStack": {
                             "MDF_Insert_Flag": 1,
                             "MDF_Eidolon6_Flag": 1
@@ -781,7 +781,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Dr_Ratio_Insert_Flag",
+                          "modifier": "<a class=\"gModGreen\" id=\"-253275642\">Dr_Ratio_Insert_Flag</a>",
                           "valuePerStack": {
                             "MDF_Insert_Flag": 1,
                             "MDF_Eidolon6_Flag": 0
@@ -809,7 +809,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Dr_Ratio_Insert_Flag_Caster"
+                    "modifier": "<a class=\"gModGreen\" id=\"1963870595\">Dr_Ratio_Insert_Flag_Caster</a>"
                   },
                   {
                     "name": "Is Part Of Team",
@@ -839,7 +839,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Dr_Ratio_Ability03_InsertAbility"
+                      "modifier": "<a class=\"gModGreen\" id=\"466849960\">Dr_Ratio_Ability03_InsertAbility</a>"
                     }
                   ]
                 }

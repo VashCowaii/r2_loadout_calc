@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Harscyline_DOT_MaskCheck",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-660722285\">Harscyline_DOT_MaskCheck</a>",
       "parse": [
         {
           "name": "Define Custom Variable",
@@ -46,7 +46,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"850932122\">Harscyline_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
             "invertCondition": true
           },
           "passed": [
@@ -72,7 +72,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"-593885923\">Harscyline_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
             "invertCondition": true
           },
           "passed": [
@@ -98,7 +98,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"566707275\">Harscyline_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
             "invertCondition": true
           },
           "passed": [
@@ -124,7 +124,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"1250170394\">Harscyline_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
             "invertCondition": true
           },
           "passed": [
@@ -192,7 +192,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Harscyline_RandomDOT_Maze",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1526500029\">Harscyline_RandomDOT_Maze</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -203,7 +203,7 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Harscyline_DOT_MaskCheck"
+              "functionName": "<a class=\"gTempYellow\" id=\"-660722285\">Harscyline_DOT_MaskCheck</a>"
             },
             {
               "name": "Random Event",
@@ -255,7 +255,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"850932122\">Harscyline_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -297,7 +297,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Harscyline_DOT_Tear2[<span class=\"descriptionNumberColor\">Bleed</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2146839416\">Harscyline_DOT_Tear2</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -341,7 +341,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"850932122\">Harscyline_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -392,7 +392,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-593885923\">Harscyline_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -426,7 +426,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Harscyline_DOT_Electric2[<span class=\"descriptionNumberColor\">Shock</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1970678013\">Harscyline_DOT_Electric2</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -462,7 +462,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-593885923\">Harscyline_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -505,7 +505,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"566707275\">Harscyline_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -539,7 +539,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Harscyline_DOT_Burn2[<span class=\"descriptionNumberColor\">Burn</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1515140485\">Harscyline_DOT_Burn2</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -575,7 +575,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"566707275\">Harscyline_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -618,7 +618,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1250170394\">Harscyline_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -652,7 +652,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Harscyline_DOT_Poison2[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1978589432\">Harscyline_DOT_Poison2</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -688,7 +688,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1250170394\">Harscyline_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -726,11 +726,11 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Harscyline_RandomDOT_PassiveRandomDOT",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__824285103\">Harscyline_RandomDOT_PassiveRandomDOT</a>",
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Harscyline_DOT_MaskCheck"
+          "functionName": "<a class=\"gTempYellow\" id=\"-660722285\">Harscyline_DOT_MaskCheck</a>"
         },
         {
           "name": "Random Event",
@@ -782,7 +782,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"850932122\">Harscyline_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -824,7 +824,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Harscyline_DOT_Tear2[<span class=\"descriptionNumberColor\">Bleed</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2146839416\">Harscyline_DOT_Tear2</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -868,7 +868,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"850932122\">Harscyline_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -919,7 +919,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-593885923\">Harscyline_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -953,7 +953,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Harscyline_DOT_Electric2[<span class=\"descriptionNumberColor\">Shock</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1970678013\">Harscyline_DOT_Electric2</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -989,7 +989,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-593885923\">Harscyline_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1032,7 +1032,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"566707275\">Harscyline_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1066,7 +1066,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Harscyline_DOT_Burn2[<span class=\"descriptionNumberColor\">Burn</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1515140485\">Harscyline_DOT_Burn2</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1102,7 +1102,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"566707275\">Harscyline_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1145,7 +1145,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1250170394\">Harscyline_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1179,7 +1179,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Harscyline_DOT_Poison2[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1978589432\">Harscyline_DOT_Poison2</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1215,7 +1215,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1250170394\">Harscyline_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

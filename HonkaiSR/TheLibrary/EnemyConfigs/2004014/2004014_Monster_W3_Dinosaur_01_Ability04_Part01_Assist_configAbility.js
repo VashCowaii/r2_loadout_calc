@@ -15,7 +15,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W3_Dinosaur_01_MonsterAssistBonus[<span class=\"descriptionNumberColor\">Terrathorn</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-130810153\">Monster_W3_Dinosaur_01_MonsterAssistBonus</a>[<span class=\"descriptionNumberColor\">Terrathorn</span>]",
       "stackLimit": {
         "operator": "Variables[0] (AIFlag_IF) || RETURN",
         "displayLines": "AIFlag_IF",
@@ -31,7 +31,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W3_Dinosaur_01_Standard_Growth[<span class=\"descriptionNumberColor\">Obscure Blaze</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1395319081\">Enemy_W3_Dinosaur_01_Standard_Growth</a>[<span class=\"descriptionNumberColor\">Obscure Blaze</span>]",
       "addStacksPerTrigger": 1
     },
     {
@@ -40,7 +40,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W3_Dinosaur_01_Standard_Growth[<span class=\"descriptionNumberColor\">Obscure Blaze</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1395319081\">Enemy_W3_Dinosaur_01_Standard_Growth</a>[<span class=\"descriptionNumberColor\">Obscure Blaze</span>]",
       "addStacksPerTrigger": 1
     },
     {
@@ -49,7 +49,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W3_Dinosaur_01_Standard_Growth[<span class=\"descriptionNumberColor\">Obscure Blaze</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1395319081\">Enemy_W3_Dinosaur_01_Standard_Growth</a>[<span class=\"descriptionNumberColor\">Obscure Blaze</span>]",
       "addStacksPerTrigger": 1
     },
     {
@@ -60,7 +60,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Modifier Holder}}"
         },
-        "value1": "Enemy_W3_Dinosaur_01_Standard_Growth[<span class=\"descriptionNumberColor\">Obscure Blaze</span>]",
+        "value1": "<a class=\"gModGreen\" id=\"-1395319081\">Enemy_W3_Dinosaur_01_Standard_Growth</a>[<span class=\"descriptionNumberColor\">Obscure Blaze</span>]",
         "compareType": "<",
         "value2": 5,
         "valueType": "Layer"

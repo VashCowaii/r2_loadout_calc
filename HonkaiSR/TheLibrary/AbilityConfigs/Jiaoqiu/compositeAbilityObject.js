@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Jiaoqiu_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"174080663\">StageAbility_Maze_Jiaoqiu_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Jiaoqiu_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__174080663\">StageAbility_Maze_Jiaoqiu_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -80,7 +80,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -195,13 +195,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Jiaoqiu_PassiveAbility"
+          "modifier": "<a class=\"gModGreen\" id=\"-1097387552\">Jiaoqiu_PassiveAbility</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_Tree01_recoverSP",
+          "for": "<a class=\"gModGreen\" id=\"mod__674970009\">Jiaoqiu_Tree01_recoverSP</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -240,7 +240,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_PassiveAbility",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1097387552\">Jiaoqiu_PassiveAbility</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -254,14 +254,14 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Jiaoqiu_Aura"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1304078651\">Jiaoqiu_Aura</a>"
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
                       "valueType": "LifeTime",
                       "variableName": "EnergyBarCount",
-                      "modifierName": "Jiaoqiu_Aura",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1304078651\">Jiaoqiu_Aura</a>",
                       "multiplier": 1
                     }
                   ],
@@ -332,7 +332,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Jiaoqiu_PassiveAbility_Debuff"
+                  "modifier": "<a class=\"gModGreen\" id=\"-666615841\">Jiaoqiu_PassiveAbility_Debuff</a>"
                 },
                 {
                   "name": "IF",
@@ -347,7 +347,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Jiaoqiu_Tree01_recoverSP"
+                      "modifier": "<a class=\"gModGreen\" id=\"674970009\">Jiaoqiu_Tree01_recoverSP</a>"
                     }
                   ]
                 },
@@ -364,7 +364,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Jiaoqiu_Tree02_StatusProbabilityShow"
+                      "modifier": "<a class=\"gModGreen\" id=\"-122400477\">Jiaoqiu_Tree02_StatusProbabilityShow</a>"
                     }
                   ]
                 },
@@ -381,7 +381,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Jiaoqiu_Eidolon6_ListenFlavor"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1908309004\">Jiaoqiu_Eidolon6_ListenFlavor</a>"
                     }
                   ]
                 },
@@ -458,7 +458,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Jiaoqiu_PassiveAbility_Debuff"
+                      "modifier": "<a class=\"gModGreen\" id=\"-666615841\">Jiaoqiu_PassiveAbility_Debuff</a>"
                     }
                   ]
                 }
@@ -474,7 +474,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Jiaoqiu_Eidolon1_ListenDamage[<span class=\"descriptionNumberColor\">Pentapathic Transference</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"453883342\">Jiaoqiu_Eidolon1_ListenDamage</a>[<span class=\"descriptionNumberColor\">Pentapathic Transference</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Eidolon Activated",
@@ -510,7 +510,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
           },
           "ifTargetFound": [
             {
@@ -521,7 +521,7 @@ const compositeAbilityObject = {
               },
               "valueType": "Layer",
               "variableName": "_Temp_Val",
-              "modifierName": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
               "multiplier": 1
             },
             {
@@ -586,7 +586,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
                   },
                   "passed": [
                     {
@@ -597,7 +597,7 @@ const compositeAbilityObject = {
                       },
                       "valueType": "Layer",
                       "variableName": "_Temp_Val",
-                      "modifierName": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                       "multiplier": 1
                     }
                   ]
@@ -624,7 +624,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -705,7 +705,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Jiaoqiu_Aura",
+          "modifier": "<a class=\"gModGreen\" id=\"-1304078651\">Jiaoqiu_Aura</a>",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -780,7 +780,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1002,7 +1002,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{ST and Blast}}"
           },
-          "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -1142,7 +1142,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -1293,7 +1293,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -1444,7 +1444,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_AbilityEidolon6_ResistDown[<span class=\"descriptionNumberColor\">Nonamorphic Pyrobind</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1036174530\">Jiaoqiu_AbilityEidolon6_ResistDown</a>[<span class=\"descriptionNumberColor\">Nonamorphic Pyrobind</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1476,12 +1476,12 @@ const compositeAbilityObject = {
           "statusName": "Nonamorphic Pyrobind",
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
+            "dependancyName": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
           }
         },
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_Eidolon4_AttackDown[<span class=\"descriptionNumberColor\">Leisure In, Luster Out</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-524635455\">Jiaoqiu_Eidolon4_AttackDown</a>[<span class=\"descriptionNumberColor\">Leisure In, Luster Out</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttackDown"
@@ -1517,17 +1517,17 @@ const compositeAbilityObject = {
           "statusName": "Leisure In, Luster Out",
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
+            "dependancyName": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
           }
         },
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_AbilityEidolon6_Flag",
+          "for": "<a class=\"gModGreen\" id=\"mod__679986078\">Jiaoqiu_AbilityEidolon6_Flag</a>",
           "stackType": "ReplaceByCaster"
         },
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_Eidolon6_ListenFlavor",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1908309004\">Jiaoqiu_Eidolon6_ListenFlavor</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1554,7 +1554,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
                           },
                           {
                             "name": "Is Part Of Team",
@@ -1580,7 +1580,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Jiaoqiu_Eidolon6_Sub"
+                          "functionName": "<a class=\"gTempYellow\" id=\"1069991214\">Jiaoqiu_Eidolon6_Sub</a>"
                         }
                       ]
                     }
@@ -1592,7 +1592,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Jiaoqiu_Eidolon6_Sub",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1069991214\">Jiaoqiu_Eidolon6_Sub</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -1609,7 +1609,7 @@ const compositeAbilityObject = {
                       },
                       "valueType": "Layer",
                       "variableName": "MDF_Layer",
-                      "modifierName": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                       "multiplier": 1
                     },
                     {
@@ -1626,7 +1626,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                         "invertCondition": true
                       },
                       "ifTargetFound": [
@@ -1636,7 +1636,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All(with Unselectable)}}"
                           },
-                          "modifier": "Jiaoqiu_AbilityEidolon6_Flag"
+                          "modifier": "<a class=\"gModGreen\" id=\"679986078\">Jiaoqiu_AbilityEidolon6_Flag</a>"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1644,7 +1644,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Jiaoqiu_AbilityEidolon6_Flag"
+                          "modifier": "<a class=\"gModGreen\" id=\"679986078\">Jiaoqiu_AbilityEidolon6_Flag</a>"
                         }
                       ],
                       "noTargetFound": [
@@ -1665,7 +1665,7 @@ const compositeAbilityObject = {
                               },
                               "valueType": "Layer",
                               "variableName": "_TempLayer",
-                              "modifierName": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                              "modifierName": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                               "multiplier": 1
                             },
                             {
@@ -1702,7 +1702,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Enemy Team All(with Unselectable)}}"
                                   },
-                                  "modifier": "Jiaoqiu_AbilityEidolon6_Flag"
+                                  "modifier": "<a class=\"gModGreen\" id=\"679986078\">Jiaoqiu_AbilityEidolon6_Flag</a>"
                                 },
                                 {
                                   "name": "Add Events/Bonuses",
@@ -1710,7 +1710,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Jiaoqiu_AbilityEidolon6_Flag"
+                                  "modifier": "<a class=\"gModGreen\" id=\"679986078\">Jiaoqiu_AbilityEidolon6_Flag</a>"
                                 }
                               ]
                             }
@@ -1731,7 +1731,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Jiaoqiu_AbilityEidolon6_Flag"
+                        "modifier": "<a class=\"gModGreen\" id=\"679986078\">Jiaoqiu_AbilityEidolon6_Flag</a>"
                       },
                       "ifTargetFound": [
                         {
@@ -1740,7 +1740,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",
@@ -1814,7 +1814,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All(with Unselectable)}}"
                           },
-                          "modifier": "Jiaoqiu_AbilityEidolon6_Flag"
+                          "modifier": "<a class=\"gModGreen\" id=\"679986078\">Jiaoqiu_AbilityEidolon6_Flag</a>"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1833,7 +1833,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_Eidolon1_ListenDamage[<span class=\"descriptionNumberColor\">Pentapathic Transference</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__453883342\">Jiaoqiu_Eidolon1_ListenDamage</a>[<span class=\"descriptionNumberColor\">Pentapathic Transference</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1847,7 +1847,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                     "justAddedOrActive": true
                   },
                   "passed": [
@@ -1874,7 +1874,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_Aura",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1304078651\">Jiaoqiu_Aura</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1971,7 +1971,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
                           },
                           "ifTargetFound": [
                             {
@@ -1982,7 +1982,7 @@ const compositeAbilityObject = {
                               },
                               "valueType": "Layer",
                               "variableName": "_Temp_Val",
-                              "modifierName": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                              "modifierName": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                               "multiplier": 1
                             },
                             {
@@ -2023,7 +2023,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",
@@ -2124,7 +2124,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
               },
-              "modifier": "Jiaoqiu_Ultimate_FriendForShow",
+              "modifier": "<a class=\"gModGreen\" id=\"-1053970623\">Jiaoqiu_Ultimate_FriendForShow</a>",
               "haloStatus": true
             },
             {
@@ -2133,7 +2133,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Jiaoqiu_Aura_DebuffForShow",
+              "modifier": "<a class=\"gModGreen\" id=\"8266626\">Jiaoqiu_Aura_DebuffForShow</a>",
               "haloStatus": true
             },
             {
@@ -2142,7 +2142,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Jiaoqiu_Debuff_Ultra[<span class=\"descriptionNumberColor\">Pyrograph Arcanum</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1256261973\">Jiaoqiu_Debuff_Ultra</a>[<span class=\"descriptionNumberColor\">Pyrograph Arcanum</span>]",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -2161,7 +2161,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Jiaoqiu_Eidolon4_AttackDown[<span class=\"descriptionNumberColor\">Leisure In, Luster Out</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-524635455\">Jiaoqiu_Eidolon4_AttackDown</a>[<span class=\"descriptionNumberColor\">Leisure In, Luster Out</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Eidolon Activated",
@@ -2182,7 +2182,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_Tree02_AttackUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__1102373100\">Jiaoqiu_Tree02_AttackUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2210,7 +2210,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_Ultimate_FriendForShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1053970623\">Jiaoqiu_Ultimate_FriendForShow</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2228,7 +2228,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_PassiveAbility_Debuff",
+          "for": "<a class=\"gModGreen\" id=\"mod__-666615841\">Jiaoqiu_PassiveAbility_Debuff</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -2240,7 +2240,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_Aura_DebuffForShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__8266626\">Jiaoqiu_Aura_DebuffForShow</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [
@@ -2253,7 +2253,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -2330,7 +2330,7 @@ const compositeAbilityObject = {
                   "flagName": [
                     "STAT_DOT_Burn"
                   ],
-                  "modifierName": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                   "casterFilter": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -2344,7 +2344,7 @@ const compositeAbilityObject = {
                   },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
-                  "modifierName": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                   "multiplier": 1
                 },
                 {
@@ -2460,7 +2460,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Jiaoqiu_AbilityEidolon6_ResistDown[<span class=\"descriptionNumberColor\">Nonamorphic Pyrobind</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1036174530\">Jiaoqiu_AbilityEidolon6_ResistDown</a>[<span class=\"descriptionNumberColor\">Nonamorphic Pyrobind</span>]",
                       "valuePerStack": {
                         "ResistDownRatio": {
                           "operator": "Variables[0] (MDF_Layer) || Variables[1] (SkillRank_Rank06_P3_DownRatio) || MUL || RETURN",
@@ -2549,7 +2549,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_Debuff_Ultra[<span class=\"descriptionNumberColor\">Pyrograph Arcanum</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1256261973\">Jiaoqiu_Debuff_Ultra</a>[<span class=\"descriptionNumberColor\">Pyrograph Arcanum</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2637,7 +2637,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -2764,7 +2764,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Jiaoqiu_Debuff_Flavor[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -2875,16 +2875,16 @@ const compositeAbilityObject = {
           "statusName": "Pyrograph Arcanum",
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "Jiaoqiu_Aura"
+            "dependancyName": "<a class=\"gModGreen\" id=\"-1304078651\">Jiaoqiu_Aura</a>"
           }
         },
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_Passive_TargetMark"
+          "for": "<a class=\"gModGreen\" id=\"mod__476489800\">Jiaoqiu_Passive_TargetMark</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Jiaoqiu_Tree02_StatusProbabilityShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-122400477\">Jiaoqiu_Tree02_StatusProbabilityShow</a>",
           "stackType": "ReplaceByCaster",
           "abilityValueChange": [
             {
@@ -2898,13 +2898,13 @@ const compositeAbilityObject = {
                   "whenEnteringRange": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Jiaoqiu_Tree02_Sub"
+                      "functionName": "<a class=\"gTempYellow\" id=\"525838576\">Jiaoqiu_Tree02_Sub</a>"
                     }
                   ],
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Jiaoqiu_Tree02_Sub"
+                      "functionName": "<a class=\"gTempYellow\" id=\"525838576\">Jiaoqiu_Tree02_Sub</a>"
                     }
                   ]
                 }
@@ -2914,7 +2914,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Jiaoqiu_Tree02_Sub",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__525838576\">Jiaoqiu_Tree02_Sub</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
@@ -2962,7 +2962,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Jiaoqiu_Tree02_AttackUp"
+                      "modifier": "<a class=\"gModGreen\" id=\"1102373100\">Jiaoqiu_Tree02_AttackUp</a>"
                     }
                   ],
                   "failed": [
@@ -3003,7 +3003,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Jiaoqiu_Tree02_AttackUp"
+                      "modifier": "<a class=\"gModGreen\" id=\"1102373100\">Jiaoqiu_Tree02_AttackUp</a>"
                     }
                   ]
                 }

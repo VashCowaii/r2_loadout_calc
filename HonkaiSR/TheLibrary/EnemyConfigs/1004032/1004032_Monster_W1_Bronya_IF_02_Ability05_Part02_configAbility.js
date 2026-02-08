@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "Standard_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"2036544920\">Standard_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
         "displayLines": "{[Skill05[1]]}",

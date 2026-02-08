@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
         }
       ]
     },
@@ -38,7 +38,7 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_CastoriceServant_SetDamageRatio"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1405272466\">Servant_CastoriceServant_SetDamageRatio</a>"
             },
             {
               "name": "ATK Scaling DMG",
@@ -139,7 +139,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
         }
       ]
     }

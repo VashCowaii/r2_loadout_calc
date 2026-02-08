@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "TheHerta_SKL02",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1142002606\">TheHerta_SKL02</a>",
       "parse": [
         {
           "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
           "stackLimit": {
             "operator": "Variables[0] (DV_MarkMaxLayer) || RETURN",
             "displayLines": "DV_MarkMaxLayer",
@@ -50,7 +50,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "TheHerta_Trace03_ExtraDamage[<span class=\"descriptionNumberColor\">Answer</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
                 "displayLines": "_SkillTree03_MaxCount",
@@ -76,7 +76,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{ST and Blast}}"
           },
-          "modifier": "TheHerta_SKL02_Mark_Pre"
+          "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -122,13 +122,13 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TheHerta_SKL02_Mark_Pre",
+                  "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>",
                   "includePreDeath": true
                 }
               }
             ]
           },
-          "modifier": "TheHerta_SKL02_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
         },
         {
           "name": "Find New Target",
@@ -144,7 +144,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "TheHerta_SKL02_Mark",
+            "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>",
             "includePreDeath": true
           },
           "ifTargetFound": [
@@ -154,7 +154,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Targets Adjacent to Parameter Target}}"
               },
-              "modifier": "TheHerta_SKL02_Mark_Pre"
+              "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
             }
           ]
         },
@@ -172,7 +172,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "TheHerta_SKL02_Mark",
+            "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>",
             "includePreDeath": true
           },
           "ifTargetFound": [
@@ -276,13 +276,13 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TheHerta_SKL02_Mark_Pre",
+                  "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>",
                   "includePreDeath": true
                 }
               }
             ]
           },
-          "modifier": "TheHerta_SKL02_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
         },
         {
           "name": "Find New Target",
@@ -298,7 +298,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "TheHerta_SKL02_Mark",
+            "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>",
             "includePreDeath": true
           },
           "ifTargetFound": [
@@ -308,7 +308,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Targets Adjacent to Parameter Target}}"
               },
-              "modifier": "TheHerta_SKL02_Mark_Pre"
+              "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
             }
           ]
         },
@@ -346,7 +346,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "TheHerta_SKL02_Mark",
+            "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>",
             "includePreDeath": true
           },
           "ifTargetFound": [

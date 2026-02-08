@@ -105,7 +105,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Hook_BPAbilityAlter_Enable[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1319656232\">Hook_BPAbilityAlter_Enable</a>[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]"
     },
     {
       "name": "IF",
@@ -120,7 +120,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Hook_Eidolon1_AddDamageRatio",
+          "modifier": "<a class=\"gModGreen\" id=\"372814598\">Hook_Eidolon1_AddDamageRatio</a>",
           "valuePerStack": {
             "MDF_AddRatio": {
               "operator": "Variables[0] (0.2) || RETURN",
@@ -174,7 +174,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Hook_Eidolon1_AddDamageRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__372814598\">Hook_Eidolon1_AddDamageRatio</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",

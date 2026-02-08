@@ -29,13 +29,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Misha_Eidolon6"
+          "modifier": "<a class=\"gModGreen\" id=\"-1756447027\">M_Misha_Eidolon6</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Misha_Eidolon6_RecoverBP[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1472142053\">Misha_Eidolon6_RecoverBP</a>[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -72,7 +72,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Misha_Eidolon6_DamageUp[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-186724559\">Misha_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -111,7 +111,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Misha_Eidolon6",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1756447027\">M_Misha_Eidolon6</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -129,7 +129,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Misha_Eidolon6_DamageUp[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-186724559\">Misha_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
@@ -148,7 +148,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Misha_Eidolon6_RecoverBP[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1472142053\">Misha_Eidolon6_RecoverBP</a>[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
                       "valuePerStack": {
                         "MDF_Value": {
                           "operator": "Variables[0] (1) || RETURN",
@@ -182,13 +182,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Misha_Eidolon2"
+          "modifier": "<a class=\"gModGreen\" id=\"-1823557503\">M_Misha_Eidolon2</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Misha_Eidolon2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1823557503\">M_Misha_Eidolon2</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -206,13 +206,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Misha_Tree03"
+          "modifier": "<a class=\"gModGreen\" id=\"670883616\">M_Misha_Tree03</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Misha_Tree03",
+          "for": "<a class=\"gModGreen\" id=\"mod__670883616\">M_Misha_Tree03</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -281,13 +281,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Misha_TechniqueBonus"
+          "modifier": "<a class=\"gModGreen\" id=\"-1784728857\">StageAbility_Misha_TechniqueBonus</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Misha_TechniqueBonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1784728857\">StageAbility_Misha_TechniqueBonus</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -347,7 +347,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Misha_Passive_Sub_EnergyBar"
+          "modifier": "<a class=\"gModGreen\" id=\"6214973\">M_Misha_Passive_Sub_EnergyBar</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -384,7 +384,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Misha_EnergyCount[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
           "counter": {
             "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
             "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",
@@ -469,7 +469,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Misha_EnergyCount[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
           "counter": 1,
           "stackType": "ReplaceByCaster",
           "execute": [
@@ -482,7 +482,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Misha_EnergyCount[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
                   "counter": {
                     "operator": "Variables[0] (BasicAttack) || RETURN",
                     "displayLines": "BasicAttack",
@@ -505,7 +505,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Misha_Passive_Sub_EnergyBar",
+          "for": "<a class=\"gModGreen\" id=\"mod__6214973\">M_Misha_Passive_Sub_EnergyBar</a>",
           "execute": [
             {
               "eventTrigger": "Skill Point Changes",
@@ -629,7 +629,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "Misha_EnergyCount[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
                       "value": {
                         "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
                         "displayLines": "(EnergyBar_ExtraUltraAttack + EnergyBar_BasicUltraAttack)",
@@ -739,7 +739,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Misha_Ability03_StatusProbabilityUp[<span class=\"descriptionNumberColor\">Interlock</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-874080613\">Misha_Ability03_StatusProbabilityUp</a>[<span class=\"descriptionNumberColor\">Interlock</span>]",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
                   "operator": "Variables[0] (0.6) || RETURN",
@@ -849,7 +849,7 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Misha_Ability03_SingleAttack",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-469829956\">Misha_Ability03_SingleAttack</a>",
                   "variables": {
                     "parameter[01]_StanceRatio": 1,
                     "parameter[02]_Frozen_Chance": {
@@ -878,7 +878,7 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Misha_Ability03_SingleAttack",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-469829956\">Misha_Ability03_SingleAttack</a>",
                   "variables": {
                     "parameter[01]_StanceRatio": 1,
                     "parameter[02]_Frozen_Chance": {
@@ -926,7 +926,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -934,7 +934,7 @@ const compositeAbilityObject = {
               "paramSequence": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Misha_Ability03_SingleAttack",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-469829956\">Misha_Ability03_SingleAttack</a>",
                   "variables": {
                     "parameter[01]_StanceRatio": 0.5,
                     "parameter[02]_Frozen_Chance": {
@@ -967,7 +967,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Bounce_SelectTarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
@@ -975,7 +975,7 @@ const compositeAbilityObject = {
           "paramSequence": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Misha_Ability03_SingleAttack",
+              "functionName": "<a class=\"gTempYellow\" id=\"-469829956\">Misha_Ability03_SingleAttack</a>",
               "variables": {
                 "parameter[01]_StanceRatio": 0.5,
                 "parameter[02]_Frozen_Chance": {
@@ -1012,14 +1012,14 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Misha_Ability03_StatusProbabilityUp[<span class=\"descriptionNumberColor\">Interlock</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-874080613\">Misha_Ability03_StatusProbabilityUp</a>[<span class=\"descriptionNumberColor\">Interlock</span>]"
         },
         "Trigger: Ability End"
       ],
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Misha_Ability03_SingleAttack",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-469829956\">Misha_Ability03_SingleAttack</a>",
           "parse": [
             {
               "name": "IF",
@@ -1034,7 +1034,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Misha_Eidolon2_DefenceDown[<span class=\"descriptionNumberColor\">Yearning of Youth</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1428052703\">Misha_Eidolon2_DefenceDown</a>[<span class=\"descriptionNumberColor\">Yearning of Youth</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -1070,7 +1070,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
               "duration": 1,
               "baseChance": {
                 "operator": "Variables[0] (parameter[02]_Frozen_Chance) || RETURN",
@@ -1126,7 +1126,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Misha_Eidolon2_DefenceDown[<span class=\"descriptionNumberColor\">Yearning of Youth</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1428052703\">Misha_Eidolon2_DefenceDown</a>[<span class=\"descriptionNumberColor\">Yearning of Youth</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_DefenceDown"
@@ -1169,7 +1169,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Misha_Ability03_StatusProbabilityUp[<span class=\"descriptionNumberColor\">Interlock</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-874080613\">Misha_Ability03_StatusProbabilityUp</a>[<span class=\"descriptionNumberColor\">Interlock</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {

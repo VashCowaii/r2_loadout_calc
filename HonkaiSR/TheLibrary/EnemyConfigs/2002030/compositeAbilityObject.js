@@ -47,7 +47,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Standard_Unstable[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
                 "invertCondition": true
               },
               {
@@ -56,7 +56,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
                 "invertCondition": true
               }
             ]
@@ -68,7 +68,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Standard_Unstable[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
                 "displayLines": "{[Skill01[2]]}",
@@ -132,7 +132,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
           "modifierFlags": [
             "DisableAction",
             "STAT_CTRL_Shake",
@@ -226,7 +226,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Unstable[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -240,7 +240,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_ActionDelayRatio": {

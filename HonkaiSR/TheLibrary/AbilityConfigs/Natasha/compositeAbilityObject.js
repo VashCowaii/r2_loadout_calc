@@ -55,7 +55,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Natasha_Eidolon1_Check"
+          "modifier": "<a class=\"gModGreen\" id=\"-1397815058\">Natasha_Eidolon1_Check</a>"
         }
       ],
       "references": []
@@ -91,13 +91,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Natasha_Eidolon1_Check"
+          "modifier": "<a class=\"gModGreen\" id=\"-1397815058\">Natasha_Eidolon1_Check</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Natasha_Eidolon1_Check",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1397815058\">Natasha_Eidolon1_Check</a>",
           "execute": [
             {
               "eventTrigger": "Being Attacked End [Owner]",
@@ -164,13 +164,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Natasha_Eidolon4_Check"
+          "modifier": "<a class=\"gModGreen\" id=\"1974553501\">Natasha_Eidolon4_Check</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Natasha_Eidolon4_Check",
+          "for": "<a class=\"gModGreen\" id=\"mod__1974553501\">Natasha_Eidolon4_Check</a>",
           "execute": [
             {
               "eventTrigger": "Being Attacked End [Owner]",
@@ -211,7 +211,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Trace_HealRatioUp",
+          "modifier": "<a class=\"gModGreen\" id=\"-202375119\">M_Trace_HealRatioUp</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.1) || RETURN",
@@ -246,13 +246,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Technique_Natasha_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-2040265582\">Technique_Natasha_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Technique_Natasha_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2040265582\">Technique_Natasha_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -315,7 +315,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "Natasha_Passive_FatigueRatio[<span class=\"descriptionNumberColor\">Weaken</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"453099626\">Natasha_Passive_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -374,13 +374,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Fuka_Beginner_PassiveAbility_Bonus_1"
+          "modifier": "<a class=\"gModGreen\" id=\"969873178\">Fuka_Beginner_PassiveAbility_Bonus_1</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Fuka_Beginner_PassiveAbility_Bonus_1_ForSnapshitEntity",
+          "for": "<a class=\"gModGreen\" id=\"mod__1542765315\">Fuka_Beginner_PassiveAbility_Bonus_1_ForSnapshitEntity</a>",
           "execute": [
             {
               "eventTrigger": "Heal Target Start [Owner]",
@@ -426,7 +426,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Fuka_Beginner_PassiveAbility_Bonus_1",
+          "for": "<a class=\"gModGreen\" id=\"mod__969873178\">Fuka_Beginner_PassiveAbility_Bonus_1</a>",
           "modifierFlags": [
             "MuteDotCasterCallBack"
           ],
@@ -480,7 +480,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Fuka_Beginner_PassiveAbility_Bonus_1_ForSnapshitEntity",
+                  "modifier": "<a class=\"gModGreen\" id=\"1542765315\">Fuka_Beginner_PassiveAbility_Bonus_1_ForSnapshitEntity</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.3) || RETURN",
@@ -544,7 +544,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Natasha_Eidolon2_HOT_HPByMaxHP[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-251008638\">Natasha_Eidolon2_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -637,7 +637,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Natasha_Eidolon2_HOT_HPByMaxHP[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-251008638\">Natasha_Eidolon2_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -826,7 +826,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Natasha_HOT_HPByMaxHP[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1462346849\">Natasha_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
           "duration": {
             "operator": "Variables[0] (2) || Variables[1] (SkillTree_LifeTime) || ADD || RETURN",
             "displayLines": "(2 + SkillTree_LifeTime)",
@@ -1052,7 +1052,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Natasha_BPAbility_DefenceRatioUp[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1227965702\">Natasha_BPAbility_DefenceRatioUp</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1085,7 +1085,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Natasha_Passive_FatigueRatio[<span class=\"descriptionNumberColor\">Weaken</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__453099626\">Natasha_Passive_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_Fatigue"
@@ -1124,7 +1124,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Natasha_HOT_HPByMaxHP[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1462346849\">Natasha_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [

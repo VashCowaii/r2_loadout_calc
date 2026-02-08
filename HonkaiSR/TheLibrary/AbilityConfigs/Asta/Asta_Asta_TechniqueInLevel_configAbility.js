@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Asta_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1978268527\">StageAbility_Maze_Asta_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Asta_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1978268527\">StageAbility_Maze_Asta_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008"
+      "modifier": "<a class=\"gModGreen\" id=\"-1898884441\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_Halo",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2126925530\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_Halo</a>",
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -36,13 +36,13 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1577099167\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
                   "invertCondition": true
                 }
               }
             ]
           },
-          "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_04",
+          "modifier": "<a class=\"gModGreen\" id=\"-1560321548\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_04</a>",
           "haloStatus": true,
           "valuePerStack": {
             "ChallengePeakBattle_Plugins_0008_ADF_1": {
@@ -75,7 +75,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_04",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1560321548\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_04</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -86,7 +86,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1577099167\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
               "stackLimit": 999,
               "valuePerStack": {
                 "ChallengePeakBattle_Plugins_0008_ADF_1": {
@@ -127,7 +127,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1577099167\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -172,7 +172,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_02[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1593876786\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_02</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -202,7 +202,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1898884441\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -243,7 +243,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_02[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1593876786\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_02</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0008_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -277,7 +277,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "MissionBattleEvent60038_BE_Trigger"
+                    "modifier": "<a class=\"gModGreen\" id=\"1690022498\">MissionBattleEvent60038_BE_Trigger</a>"
                   }
                 ]
               },
@@ -288,7 +288,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable, exclude Netherwing)}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1577099167\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
                   "stackLimit": 999,
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0008_ADF_1": {
@@ -315,7 +315,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_Halo",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2126925530\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_Halo</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0008_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

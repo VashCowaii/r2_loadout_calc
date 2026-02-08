@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_AbilityEidolon1_InserteDamageRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__900132102\">Xueyi_AbilityEidolon1_InserteDamageRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -49,7 +49,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_Passive01_InsertMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__142213103\">Xueyi_Passive01_InsertMark</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -85,7 +85,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_BP_Passive02",
+      "for": "<a class=\"gModGreen\" id=\"mod__461375302\">Xueyi_BP_Passive02</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -150,7 +150,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_Passive_Trace03[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1263094705\">Xueyi_Passive_Trace03</a>[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -185,7 +185,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_AllDamageTypeAddedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__-319233826\">Xueyi_AllDamageTypeAddedRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -213,7 +213,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_Passive_Trace01",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1229539467\">Xueyi_Passive_Trace01</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -223,7 +223,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Xueyi_CheckBreakDamageAddedRatioChange"
+              "functionName": "<a class=\"gTempYellow\" id=\"1730434775\">Xueyi_CheckBreakDamageAddedRatioChange</a>"
             }
           ],
           "priorityLevel": -80
@@ -240,7 +240,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Xueyi_CheckBreakDamageAddedRatioChange"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1730434775\">Xueyi_CheckBreakDamageAddedRatioChange</a>"
                 }
               ]
             }
@@ -250,7 +250,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Xueyi_CheckBreakDamageAddedRatioChange",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1730434775\">Xueyi_CheckBreakDamageAddedRatioChange</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
@@ -310,7 +310,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Xueyi_AllDamageTypeAddedRatio",
+              "modifier": "<a class=\"gModGreen\" id=\"-319233826\">Xueyi_AllDamageTypeAddedRatio</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
@@ -330,7 +330,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_BP_Passive01[<span class=\"descriptionNumberColor\">Karma</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__444597683\">Xueyi_BP_Passive01</a>[<span class=\"descriptionNumberColor\">Karma</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -374,7 +374,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Xueyi_BP_Passive02"
+                  "modifier": "<a class=\"gModGreen\" id=\"461375302\">Xueyi_BP_Passive02</a>"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -436,7 +436,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_Passive_AddCount",
+      "for": "<a class=\"gModGreen\" id=\"mod__213600244\">Xueyi_Passive_AddCount</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -578,7 +578,7 @@ const configAbility = {
                       "name": "Define Custom Variable with Modifier Values",
                       "valueType": "Layer",
                       "variableName": "PointB3_CurrentPassive01_Count",
-                      "modifierName": "Xueyi_BP_Passive01[<span class=\"descriptionNumberColor\">Karma</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"444597683\">Xueyi_BP_Passive01</a>[<span class=\"descriptionNumberColor\">Karma</span>]",
                       "multiplier": 1
                     },
                     {
@@ -661,13 +661,13 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Xueyi_Passive_Trace03[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1263094705\">Xueyi_Passive_Trace03</a>[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]"
                           },
                           "passed": [
                             {
                               "name": "Define Custom Variable with Modifier Values",
                               "variableName": "PointB3_CurrentPassive01_Count",
-                              "modifierName": "Xueyi_Passive_Trace03[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]",
+                              "modifierName": "<a class=\"gModGreen\" id=\"-1263094705\">Xueyi_Passive_Trace03</a>[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]",
                               "multiplier": 1
                             },
                             {
@@ -719,7 +719,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Xueyi_Passive_Trace03[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1263094705\">Xueyi_Passive_Trace03</a>[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]",
                               "counter": {
                                 "operator": "Variables[0] (PointB3_DifferencePassive01_Count) || RETURN",
                                 "displayLines": "PointB3_DifferencePassive01_Count",
@@ -737,7 +737,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Xueyi_Passive_Trace03[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1263094705\">Xueyi_Passive_Trace03</a>[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]",
                               "counter": {
                                 "operator": "Variables[0] (PointB3_DifferencePassive01_Count) || RETURN",
                                 "displayLines": "PointB3_DifferencePassive01_Count",
@@ -761,14 +761,14 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Xueyi_BP_Passive01[<span class=\"descriptionNumberColor\">Karma</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"444597683\">Xueyi_BP_Passive01</a>[<span class=\"descriptionNumberColor\">Karma</span>]"
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
                       "valueType": "Layer",
                       "variableName": "_Passive_Num",
-                      "modifierName": "Xueyi_BP_Passive01[<span class=\"descriptionNumberColor\">Karma</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"444597683\">Xueyi_BP_Passive01</a>[<span class=\"descriptionNumberColor\">Karma</span>]",
                       "multiplier": 1
                     },
                     {
@@ -862,7 +862,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Xueyi_BP_Passive01[<span class=\"descriptionNumberColor\">Karma</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"444597683\">Xueyi_BP_Passive01</a>[<span class=\"descriptionNumberColor\">Karma</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (_Xueyi_Count) || RETURN",
                         "displayLines": "_Xueyi_Count",
@@ -926,7 +926,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_AbilityEidolon4[<span class=\"descriptionNumberColor\">Break Effect Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__674322254\">Xueyi_AbilityEidolon4</a>[<span class=\"descriptionNumberColor\">Break Effect Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -964,7 +964,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_Trace02",
+      "for": "<a class=\"gModGreen\" id=\"mod__462393770\">Xueyi_Trace02</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -991,7 +991,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_Ability03_WeakType_BUFF",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1101528365\">Xueyi_Ability03_WeakType_BUFF</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ForceStanceDamage"
@@ -1026,7 +1026,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_Ability03_AddAttackRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__456113055\">Xueyi_Ability03_AddAttackRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1178,7 +1178,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Xueyi_Passive_OnListenStance",
+      "for": "<a class=\"gModGreen\" id=\"mod__1316595895\">Xueyi_Passive_OnListenStance</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -1253,7 +1253,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Xueyi_Passive_AddCount"
+                      "modifier": "<a class=\"gModGreen\" id=\"213600244\">Xueyi_Passive_AddCount</a>"
                     }
                   ],
                   "failed": [

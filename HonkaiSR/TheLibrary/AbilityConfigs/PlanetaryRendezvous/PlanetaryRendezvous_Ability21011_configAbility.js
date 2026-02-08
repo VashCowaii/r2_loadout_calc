@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21011_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1400030410\">LC_21011_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21011_Imaginary",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1351327636\">LC_21011_Imaginary</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21011_Quantum",
+      "for": "<a class=\"gModGreen\" id=\"mod__460774160\">LC_21011_Quantum</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -78,7 +78,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21011_Wind",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1962386467\">LC_21011_Wind</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -109,7 +109,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21011_Thunder",
+      "for": "<a class=\"gModGreen\" id=\"mod__95855723\">LC_21011_Thunder</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -140,7 +140,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21011_Ice",
+      "for": "<a class=\"gModGreen\" id=\"mod__989690158\">LC_21011_Ice</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -171,7 +171,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21011_Fire",
+      "for": "<a class=\"gModGreen\" id=\"mod__498882599\">LC_21011_Fire</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -202,7 +202,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21011_Physical",
+      "for": "<a class=\"gModGreen\" id=\"mod__671898606\">LC_21011_Physical</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -233,7 +233,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21011_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1400030410\">LC_21011_Main</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -269,7 +269,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_21011_Physical"
+                      "modifier": "<a class=\"gModGreen\" id=\"671898606\">LC_21011_Physical</a>"
                     }
                   ]
                 },
@@ -293,7 +293,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_21011_Fire"
+                      "modifier": "<a class=\"gModGreen\" id=\"498882599\">LC_21011_Fire</a>"
                     }
                   ]
                 },
@@ -317,7 +317,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_21011_Ice"
+                      "modifier": "<a class=\"gModGreen\" id=\"989690158\">LC_21011_Ice</a>"
                     }
                   ]
                 },
@@ -341,7 +341,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_21011_Wind"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1962386467\">LC_21011_Wind</a>"
                     }
                   ]
                 },
@@ -365,7 +365,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_21011_Thunder"
+                      "modifier": "<a class=\"gModGreen\" id=\"95855723\">LC_21011_Thunder</a>"
                     }
                   ]
                 },
@@ -389,7 +389,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_21011_Quantum"
+                      "modifier": "<a class=\"gModGreen\" id=\"460774160\">LC_21011_Quantum</a>"
                     }
                   ]
                 },
@@ -413,7 +413,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_21011_Imaginary"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1351327636\">LC_21011_Imaginary</a>"
                     }
                   ]
                 }
@@ -453,7 +453,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "LC_21011_Physical"
+                      "modifier": "<a class=\"gModGreen\" id=\"671898606\">LC_21011_Physical</a>"
                     }
                   ]
                 },
@@ -477,7 +477,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "LC_21011_Fire"
+                      "modifier": "<a class=\"gModGreen\" id=\"498882599\">LC_21011_Fire</a>"
                     }
                   ]
                 },
@@ -501,7 +501,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "LC_21011_Ice"
+                      "modifier": "<a class=\"gModGreen\" id=\"989690158\">LC_21011_Ice</a>"
                     }
                   ]
                 },
@@ -525,7 +525,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "LC_21011_Wind"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1962386467\">LC_21011_Wind</a>"
                     }
                   ]
                 },
@@ -549,7 +549,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "LC_21011_Thunder"
+                      "modifier": "<a class=\"gModGreen\" id=\"95855723\">LC_21011_Thunder</a>"
                     }
                   ]
                 },
@@ -573,7 +573,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "LC_21011_Quantum"
+                      "modifier": "<a class=\"gModGreen\" id=\"460774160\">LC_21011_Quantum</a>"
                     }
                   ]
                 },
@@ -597,7 +597,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "LC_21011_Imaginary"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1351327636\">LC_21011_Imaginary</a>"
                     }
                   ]
                 }

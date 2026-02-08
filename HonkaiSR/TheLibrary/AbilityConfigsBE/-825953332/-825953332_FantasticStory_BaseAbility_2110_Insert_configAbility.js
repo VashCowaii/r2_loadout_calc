@@ -41,7 +41,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2110_ListenBEDelay"
+              "modifier": "<a class=\"gModGreen\" id=\"1391985236\">Modifier_FantasticStory_BaseAbility_2110_ListenBEDelay</a>"
             }
           ]
         }
@@ -59,7 +59,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]]"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2110_AddSP",
+      "modifier": "<a class=\"gModGreen\" id=\"773567825\">Modifier_FantasticStory_BaseAbility_2110_AddSP</a>",
       "valuePerStack": {
         "BattleEvent_P1_ADF_Get": {
           "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2110_EnterFever_P1_Ratio) || RETURN",
@@ -78,7 +78,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]]"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2110_ReturnSP",
+      "modifier": "<a class=\"gModGreen\" id=\"-384544290\">Modifier_FantasticStory_BaseAbility_2110_ReturnSP</a>",
       "casterAssign": "TargetSelf"
     },
     "Trigger: Attack End",
@@ -88,7 +88,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2110_aura"
+      "modifier": "<a class=\"gModGreen\" id=\"1923363748\">Modifier_FantasticStory_BaseAbility_2110_aura</a>"
     },
     {
       "name": "Define Custom Variable",

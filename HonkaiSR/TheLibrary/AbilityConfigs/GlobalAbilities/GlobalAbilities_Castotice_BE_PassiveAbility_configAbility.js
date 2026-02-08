@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "GlobalAbility_Castorice_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1166883348\">GlobalAbility_Castorice_Main</a>"
     }
   ],
   "references": []

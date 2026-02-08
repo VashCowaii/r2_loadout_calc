@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "TServant_PlayerBoyServant_30_RefreshDamagePercentage",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-763533094\">TServant_PlayerBoyServant_30_RefreshDamagePercentage</a>",
       "parse": [
         {
           "name": "Define Custom Variable",

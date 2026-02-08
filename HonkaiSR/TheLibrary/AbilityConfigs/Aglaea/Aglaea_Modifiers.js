@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Eidolon6_Effect[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -26,7 +26,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Aglaea_Eidolon6_SpeedValue"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1952576234\">Aglaea_Eidolon6_SpeedValue</a>"
                 },
                 {
                   "name": "Adjust Target Stats",
@@ -63,7 +63,7 @@ const configAbility = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Aglaea_Eidolon6_SpeedValue"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1952576234\">Aglaea_Eidolon6_SpeedValue</a>"
             },
             {
               "name": "IF",
@@ -99,7 +99,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Aglaea_Eidolon6_SpeedValue"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1952576234\">Aglaea_Eidolon6_SpeedValue</a>"
                 },
                 {
                   "name": "IF",
@@ -135,7 +135,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Aglaea_Eidolon6_SpeedValue"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1952576234\">Aglaea_Eidolon6_SpeedValue</a>"
                 }
               ]
             }
@@ -150,7 +150,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Aglaea_Eidolon6_SpeedValue"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1952576234\">Aglaea_Eidolon6_SpeedValue</a>"
                 }
               ]
             }
@@ -167,7 +167,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Eidolon2_Effect[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -216,7 +216,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Eidolon2_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-184277426\">Aglaea_Eidolon2_Listen</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ListenBattleEventSkill"
@@ -246,7 +246,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}} + {{Caster's Memosprite}}"
                   },
-                  "modifier": "Aglaea_Eidolon2_Effect[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -271,7 +271,7 @@ const configAbility = {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "Layer",
                   "variableName": "ModifierLayers",
-                  "modifierName": "Aglaea_Eidolon2_Effect[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
                   "multiplier": 1
                 }
               ],
@@ -282,7 +282,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}} + {{Caster's Memosprite}}"
                   },
-                  "modifier": "Aglaea_Eidolon2_Effect[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]"
                 }
               ]
             }
@@ -312,7 +312,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}} + {{Caster's Memosprite}}"
                   },
-                  "modifier": "Aglaea_Eidolon2_Effect[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -337,7 +337,7 @@ const configAbility = {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "Layer",
                   "variableName": "ModifierLayers",
-                  "modifierName": "Aglaea_Eidolon2_Effect[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
                   "multiplier": 1
                 }
               ]
@@ -350,7 +350,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_Aglaea_Ability03_Summon",
+      "for": "<a class=\"gModGreen\" id=\"mod__66782842\">Memosprite_Aglaea_Ability03_Summon</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "Endurance"
@@ -375,7 +375,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Ability03_Servant_PointB3",
+      "for": "<a class=\"gModGreen\" id=\"mod__1647958272\">Aglaea_Ability03_Servant_PointB3</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -385,7 +385,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Ability03_PointB3",
+      "for": "<a class=\"gModGreen\" id=\"mod__1372388410\">Aglaea_Ability03_PointB3</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -400,7 +400,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "Aglaea_Ability03_Servant_PointB3"
+              "modifier": "<a class=\"gModGreen\" id=\"1647958272\">Aglaea_Ability03_Servant_PointB3</a>"
             },
             "Modifier Deletes Itself"
           ]
@@ -409,7 +409,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Ability03_PointB2",
+      "for": "<a class=\"gModGreen\" id=\"mod__1389166029\">Aglaea_Ability03_PointB2</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -418,7 +418,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_Aglaea_Ability11_Mark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-892037211\">Memosprite_Aglaea_Ability11_Mark</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -431,12 +431,12 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Ability11_Mark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-952843319\">Aglaea_Ability11_Mark</a>",
       "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Ability03_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-498968511\">Aglaea_Ability03_Sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -480,7 +480,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "Memosprite_Aglaea_Ability03_Summon"
+              "modifier": "<a class=\"gModGreen\" id=\"66782842\">Memosprite_Aglaea_Ability03_Summon</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -488,7 +488,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Aglaea_Ability03_ForbidSkill"
+              "modifier": "<a class=\"gModGreen\" id=\"-1725518252\">Aglaea_Ability03_ForbidSkill</a>"
             }
           ]
         },
@@ -501,7 +501,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "Memosprite_Aglaea_Ability03_Summon"
+              "modifier": "<a class=\"gModGreen\" id=\"66782842\">Memosprite_Aglaea_Ability03_Summon</a>"
             },
             {
               "name": "Update Ability Binding",
@@ -575,7 +575,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Ability03[<span class=\"descriptionNumberColor\">Supreme Stance</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__518821924\">Aglaea_Ability03</a>[<span class=\"descriptionNumberColor\">Supreme Stance</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -587,7 +587,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}} + {{Caster's Memosprite}}"
               },
-              "modifier": "Aglaea_Ability03_Servant_PointB1"
+              "modifier": "<a class=\"gModGreen\" id=\"1681513510\">Aglaea_Ability03_Servant_PointB1</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -595,7 +595,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}} + {{Caster's Memosprite}}"
               },
-              "modifier": "Aglaea_Ability03_Servant_PointB1_AddAttack[<span class=\"descriptionNumberColor\">The Myopic's Doom</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"2055277226\">Aglaea_Ability03_Servant_PointB1_AddAttack</a>[<span class=\"descriptionNumberColor\">The Myopic's Doom</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -603,7 +603,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}} + {{Caster's Memosprite}}"
               },
-              "modifier": "Aglaea_Eidolon6_Effect[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]"
             },
             {
               "name": "Define Custom Variable",
@@ -627,7 +627,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Aglaea_Ability03[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"518821924\">Aglaea_Ability03</a>[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
                   },
                   {
                     "name": "Compare: Variable",
@@ -656,7 +656,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Memosprite_AglaeaServant_SummonerAddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]"
             },
             {
               "name": "IF",
@@ -666,7 +666,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster's Memosprite}}"
                 },
-                "modifier": "Memosprite_AglaeaServant_AddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]"
               },
               "passed": [
                 {
@@ -675,7 +675,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "Memosprite_AglaeaServant_AddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                   "variable": "_Layer",
                   "target2": {
                     "name": "Target Name",
@@ -689,7 +689,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_AglaeaServant_SummonerAddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                   "addStacksPerTrigger": {
                     "operator": "Variables[0] (_SpeedLayer) || RETURN",
                     "displayLines": "_SpeedLayer",
@@ -731,7 +731,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}} + {{Caster's Memosprite}}"
                   },
-                  "modifier": "Aglaea_Ability03_Servant_PointB1"
+                  "modifier": "<a class=\"gModGreen\" id=\"1681513510\">Aglaea_Ability03_Servant_PointB1</a>"
                 }
               ]
             },
@@ -774,7 +774,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_SummonSpeedUp_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-93298298\">Aglaea_SummonSpeedUp_Sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -805,7 +805,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_SummonSpeedUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__641156083\">Aglaea_SummonSpeedUp</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -855,7 +855,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_HPAddedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__275138353\">Aglaea_HPAddedRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -893,7 +893,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Ability02_ChangeSkill",
+      "for": "<a class=\"gModGreen\" id=\"mod__755493734\">Aglaea_Ability02_ChangeSkill</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -914,7 +914,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Aglaea_Ability02Preshow"
+              "modifier": "<a class=\"gModGreen\" id=\"-1390492215\">Aglaea_Ability02Preshow</a>"
             }
           ]
         },
@@ -937,7 +937,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Aglaea_Ability02Preshow"
+              "modifier": "<a class=\"gModGreen\" id=\"-1390492215\">Aglaea_Ability02Preshow</a>"
             }
           ]
         }
@@ -949,7 +949,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Passive_SummonCount",
+      "for": "<a class=\"gModGreen\" id=\"mod__609645332\">Aglaea_Passive_SummonCount</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -977,7 +977,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Passive_SummonCount2",
+      "for": "<a class=\"gModGreen\" id=\"mod__1511474386\">Aglaea_Passive_SummonCount2</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1175,7 +1175,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_GoldenSword_Mark[<span class=\"descriptionNumberColor\">Seam Stitch</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__216440055\">Aglaea_GoldenSword_Mark</a>[<span class=\"descriptionNumberColor\">Seam Stitch</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -1212,7 +1212,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Aglaea_GoldenSword_Mark[<span class=\"descriptionNumberColor\">Seam Stitch</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"216440055\">Aglaea_GoldenSword_Mark</a>[<span class=\"descriptionNumberColor\">Seam Stitch</span>]"
                 }
               ]
             }
@@ -1293,7 +1293,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Memosprite_AglaeaServant_AddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                     "justAddedOrActive": true
                   }
                 },
@@ -1357,7 +1357,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}.[[getMemosprite]]"
                             },
-                            "modifier": "Memosprite_AglaeaServant_AddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]"
                           },
                           "passed": [
                             {
@@ -1366,7 +1366,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}.[[getMemosprite]]"
                               },
-                              "modifier": "Memosprite_AglaeaServant_AddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                               "variable": "_Layer",
                               "target2": {
                                 "name": "Target Name",
@@ -1409,7 +1409,7 @@ const configAbility = {
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "PursuedDamage_PerformanceDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -1459,7 +1459,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Ability03_ForbidSkill",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1725518252\">Aglaea_Ability03_ForbidSkill</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1483,7 +1483,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_AglaeaServant_SummonerAddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -1536,7 +1536,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Ability03_Servant_PointB1_AddAttack[<span class=\"descriptionNumberColor\">The Myopic's Doom</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2055277226\">Aglaea_Ability03_Servant_PointB1_AddAttack</a>[<span class=\"descriptionNumberColor\">The Myopic's Doom</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -1658,7 +1658,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Ability03_Servant_PointB1",
+      "for": "<a class=\"gModGreen\" id=\"mod__1681513510\">Aglaea_Ability03_Servant_PointB1</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1670,7 +1670,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}} + {{Caster's Memosprite}}"
               },
-              "modifier": "Aglaea_Ability03_Servant_PointB1_AddAttack[<span class=\"descriptionNumberColor\">The Myopic's Doom</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"2055277226\">Aglaea_Ability03_Servant_PointB1_AddAttack</a>[<span class=\"descriptionNumberColor\">The Myopic's Doom</span>]"
             }
           ]
         }
@@ -1689,7 +1689,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}} + {{Caster's Memosprite}}"
                   },
-                  "modifier": "Aglaea_Ability03_Servant_PointB1_AddAttack[<span class=\"descriptionNumberColor\">The Myopic's Doom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"2055277226\">Aglaea_Ability03_Servant_PointB1_AddAttack</a>[<span class=\"descriptionNumberColor\">The Myopic's Doom</span>]"
                 }
               ]
             }
@@ -1708,7 +1708,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}} + {{Caster's Memosprite}}"
                   },
-                  "modifier": "Aglaea_Ability03_Servant_PointB1_AddAttack[<span class=\"descriptionNumberColor\">The Myopic's Doom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"2055277226\">Aglaea_Ability03_Servant_PointB1_AddAttack</a>[<span class=\"descriptionNumberColor\">The Myopic's Doom</span>]"
                 }
               ]
             }
@@ -1727,7 +1727,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}} + {{Caster's Memosprite}}"
                   },
-                  "modifier": "Aglaea_Ability03_Servant_PointB1_AddAttack[<span class=\"descriptionNumberColor\">The Myopic's Doom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"2055277226\">Aglaea_Ability03_Servant_PointB1_AddAttack</a>[<span class=\"descriptionNumberColor\">The Myopic's Doom</span>]"
                 }
               ]
             }
@@ -1739,7 +1739,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Ability03Preshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__779865108\">Aglaea_Ability03Preshow</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -1768,7 +1768,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_Ability02Preshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1390492215\">Aglaea_Ability02Preshow</a>",
       "stackData": [],
       "latentQueue": [
         "_CasterEnergy"

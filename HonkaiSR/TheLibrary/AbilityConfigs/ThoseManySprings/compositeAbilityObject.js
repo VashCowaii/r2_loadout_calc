@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23029_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1266362919\">LC_23029_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23029_Sub2[<span class=\"descriptionNumberColor\">Cornered</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-326179996\">LC_23029_Sub2</a>[<span class=\"descriptionNumberColor\">Cornered</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -52,7 +52,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23029_Sub[<span class=\"descriptionNumberColor\">Unarmored</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1943682494\">LC_23029_Sub</a>[<span class=\"descriptionNumberColor\">Unarmored</span>]",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -81,7 +81,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23029_Sub[<span class=\"descriptionNumberColor\">Unarmored</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1943682494\">LC_23029_Sub</a>[<span class=\"descriptionNumberColor\">Unarmored</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -113,7 +113,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23029_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1266362919\">LC_23029_Main</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -131,7 +131,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "LC_23029_Sub2[<span class=\"descriptionNumberColor\">Cornered</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-326179996\">LC_23029_Sub2</a>[<span class=\"descriptionNumberColor\">Cornered</span>]",
                     "invertCondition": true,
                     "casterFilter": {
                       "name": "Target Name",
@@ -165,7 +165,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "LC_23029_Sub[<span class=\"descriptionNumberColor\">Unarmored</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1943682494\">LC_23029_Sub</a>[<span class=\"descriptionNumberColor\">Unarmored</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",
@@ -200,7 +200,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "LC_23029_Sub2[<span class=\"descriptionNumberColor\">Cornered</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-326179996\">LC_23029_Sub2</a>[<span class=\"descriptionNumberColor\">Cornered</span>]",
                     "invertCondition": true,
                     "casterFilter": {
                       "name": "Target Name",
@@ -219,7 +219,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "LC_23029_Sub[<span class=\"descriptionNumberColor\">Unarmored</span>]",
+                            "modifier": "<a class=\"gModGreen\" id=\"1943682494\">LC_23029_Sub</a>[<span class=\"descriptionNumberColor\">Unarmored</span>]",
                             "justAddedOrActive": true,
                             "casterFilter": {
                               "name": "Target Name",
@@ -247,7 +247,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "LC_23029_Sub2[<span class=\"descriptionNumberColor\">Cornered</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-326179996\">LC_23029_Sub2</a>[<span class=\"descriptionNumberColor\">Cornered</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",

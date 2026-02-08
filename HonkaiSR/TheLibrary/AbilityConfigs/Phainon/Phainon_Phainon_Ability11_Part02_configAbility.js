@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}} + {{Ability Targets Adjacent(Blast)}}"
       },
-      "modifier": "M_Phainon_Ability11_TargetTimeslow",
+      "modifier": "<a class=\"gModGreen\" id=\"-2014540503\">M_Phainon_Ability11_TargetTimeslow</a>",
       "silentAdd": true
     },
     {
@@ -96,7 +96,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}} + {{Ability Targets Adjacent(Blast)}}"
       },
-      "modifier": "M_Phainon_Ability11_TargetTimeslow"
+      "modifier": "<a class=\"gModGreen\" id=\"-2014540503\">M_Phainon_Ability11_TargetTimeslow</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -164,7 +164,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Ability11_TargetTimeslow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2014540503\">M_Phainon_Ability11_TargetTimeslow</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

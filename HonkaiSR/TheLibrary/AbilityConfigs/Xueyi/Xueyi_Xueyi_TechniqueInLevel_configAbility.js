@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Xueyi_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1401234770\">StageAbility_Maze_Xueyi_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Xueyi_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1401234770\">StageAbility_Maze_Xueyi_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -88,7 +88,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Xueyi_Passive_AddCount"
+                      "modifier": "<a class=\"gModGreen\" id=\"213600244\">Xueyi_Passive_AddCount</a>"
                     }
                   ]
                 },

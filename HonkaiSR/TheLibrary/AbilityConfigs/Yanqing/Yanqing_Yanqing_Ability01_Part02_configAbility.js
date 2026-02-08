@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Yanqing_BonusTargetMark"
+      "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
     },
     {
       "name": "ATK Scaling DMG",

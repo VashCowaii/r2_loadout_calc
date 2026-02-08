@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Standard_Formation2_Back"
+      "modifier": "<a class=\"gModGreen\" id=\"665673273\">Standard_Formation2_Back</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Standard_Formation2_Back",
+      "for": "<a class=\"gModGreen\" id=\"mod__665673273\">Standard_Formation2_Back</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

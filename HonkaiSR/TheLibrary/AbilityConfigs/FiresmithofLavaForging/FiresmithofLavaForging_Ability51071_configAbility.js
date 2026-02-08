@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_107_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"496104730\">Relic_107_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_107_FireDamageAddRatio[<span class=\"descriptionNumberColor\">Firesmith of Lava-Forging</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2026250788\">Relic_107_FireDamageAddRatio</a>[<span class=\"descriptionNumberColor\">Firesmith of Lava-Forging</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -53,7 +53,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_107_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__496104730\">Relic_107_Main</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -97,7 +97,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Relic_107_FireDamageAddRatio[<span class=\"descriptionNumberColor\">Firesmith of Lava-Forging</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"2026250788\">Relic_107_FireDamageAddRatio</a>[<span class=\"descriptionNumberColor\">Firesmith of Lava-Forging</span>]"
                 }
               ]
             }

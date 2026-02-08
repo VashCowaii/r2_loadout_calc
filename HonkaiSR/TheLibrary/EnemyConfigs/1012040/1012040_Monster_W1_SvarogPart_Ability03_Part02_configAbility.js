@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Boss_Cocolia_Endurance"
+      "modifier": "<a class=\"gModGreen\" id=\"-1440219637\">Boss_Cocolia_Endurance</a>"
     },
     {
       "name": "IF",
@@ -31,7 +31,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Svarog_ListenPlayerDie_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-920895050\">Svarog_ListenPlayerDie_Modifier</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -39,7 +39,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Svarog_ListenBreak_RemoveControl_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -47,7 +47,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Svarog_Part_ListenHP_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"17783365\">Svarog_Part_ListenHP_Modifier</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -55,7 +55,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -63,7 +63,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Svarog_Control_OnPart_Modifier",
+      "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>",
       "valuePerStack": {
         "Modifier_DamagePercentage": {
           "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
@@ -89,7 +89,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Svarog_ListenPlayerAllDie_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-545618319\">Svarog_ListenPlayerAllDie_Modifier</a>"
     },
     {
       "name": "IF",
@@ -99,7 +99,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Modifier Holder}}"
         },
-        "modifier": "Svarog_Control_OnPart_Modifier"
+        "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
       },
       "passed": [
         {
@@ -150,7 +150,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Svarog_ListenPlayerAllDie_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-545618319\">Svarog_ListenPlayerAllDie_Modifier</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -177,7 +177,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -185,7 +185,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Svarog_Control_OnPart_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -193,7 +193,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Svarog_ListenBreak_RemoveControl_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -201,7 +201,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Svarog_Part_OnTurnEndChangePhaseModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-463045993\">Svarog_Part_OnTurnEndChangePhaseModifier</a>"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -214,7 +214,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Svarog_ListenBreak_RemoveControl_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -250,7 +250,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
                     }
                   ]
                 },
@@ -260,7 +260,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Svarog_Control_OnPart_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
                 }
               ]
             }
@@ -284,7 +284,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
                 }
               ]
             },
@@ -305,7 +305,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Svarog_Control_OnPart_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
             },
             {
               "name": "Change Character Transformation",

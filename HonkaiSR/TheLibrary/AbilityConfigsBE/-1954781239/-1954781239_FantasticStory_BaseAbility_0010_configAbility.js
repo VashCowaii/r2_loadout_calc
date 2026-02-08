@@ -106,7 +106,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_0010",
+      "modifier": "<a class=\"gModGreen\" id=\"-508947277\">Modifier_FantasticStory_BaseAbility_0010</a>",
       "valuePerStack": {
         "ADF_1": {
           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -138,7 +138,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0010_plus6_ultraDmgUp[<span class=\"descriptionNumberColor\">Splash</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2046125016\">Modifier_FantasticStory_BaseAbility_0010_plus6_ultraDmgUp</a>[<span class=\"descriptionNumberColor\">Splash</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -170,7 +170,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0010_plus3_ultraDmgUp[<span class=\"descriptionNumberColor\">Rupture</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__637313409\">Modifier_FantasticStory_BaseAbility_0010_plus3_ultraDmgUp</a>[<span class=\"descriptionNumberColor\">Rupture</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -233,7 +233,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0010_sub2[<span class=\"descriptionNumberColor\">Shatter</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "Deathrattle"
@@ -268,7 +268,7 @@ const configAbility = {
                   },
                   "valueType": "Layer",
                   "variableName": "Plus5_Layer",
-                  "modifierName": "Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp[<span class=\"descriptionNumberColor\">Scalded</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
                   "multiplier": 1
                 },
                 {
@@ -327,7 +327,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp[<span class=\"descriptionNumberColor\">Scalded</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]"
                       },
                       "passed": [
                         {
@@ -338,7 +338,7 @@ const configAbility = {
                           },
                           "valueType": "Layer",
                           "variableName": "Plus5_Layer",
-                          "modifierName": "Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp[<span class=\"descriptionNumberColor\">Scalded</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
                           "multiplier": 1
                         }
                       ],
@@ -435,7 +435,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Targets Adjacent to Modifier Holder}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0010_sub2[<span class=\"descriptionNumberColor\">Shatter</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (Bomb_MaxLayer) || RETURN",
                         "displayLines": "Bomb_MaxLayer",
@@ -574,7 +574,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0010_plus3_ultraDmgUp[<span class=\"descriptionNumberColor\">Rupture</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"637313409\">Modifier_FantasticStory_BaseAbility_0010_plus3_ultraDmgUp</a>[<span class=\"descriptionNumberColor\">Rupture</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0013_ADF_2) || RETURN",
                     "displayLines": "DV_FantasticStory_PlusAbility_0013_ADF_2",
@@ -713,7 +713,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Targets Adjacent to Modifier Holder}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0010_sub2[<span class=\"descriptionNumberColor\">Shatter</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (Bomb_MaxLayer) || RETURN",
                         "displayLines": "Bomb_MaxLayer",
@@ -828,7 +828,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0010_sub2_pre",
+      "for": "<a class=\"gModGreen\" id=\"mod__-808848134\">Modifier_FantasticStory_BaseAbility_0010_sub2_pre</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -863,7 +863,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0010_sub2[<span class=\"descriptionNumberColor\">Shatter</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (ADF_2_get_pre) || RETURN",
                         "displayLines": "ADF_2_get_pre",
@@ -952,7 +952,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Modifier_FantasticStory_BaseAbility_0010_sub2[<span class=\"descriptionNumberColor\">Shatter</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (ADF_2_get_pre) || RETURN",
                             "displayLines": "ADF_2_get_pre",
@@ -1039,7 +1039,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "modifier": "Modifier_FantasticStory_BaseAbility_0010_sub2[<span class=\"descriptionNumberColor\">Shatter</span>]",
+                                  "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                                   "stackLimit": {
                                     "operator": "Variables[0] (ADF_2_get_pre) || RETURN",
                                     "displayLines": "ADF_2_get_pre",
@@ -1094,7 +1094,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Modifier_FantasticStory_BaseAbility_0010_sub2[<span class=\"descriptionNumberColor\">Shatter</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                               "stackLimit": {
                                 "operator": "Variables[0] (ADF_2_get_pre) || RETURN",
                                 "displayLines": "ADF_2_get_pre",
@@ -1143,7 +1143,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0010_sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__891295398\">Modifier_FantasticStory_BaseAbility_0010_sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1162,7 +1162,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0010_sub2_pre",
+                  "modifier": "<a class=\"gModGreen\" id=\"-808848134\">Modifier_FantasticStory_BaseAbility_0010_sub2_pre</a>",
                   "valuePerStack": {
                     "TempHP_get_pre": {
                       "operator": "Variables[0] (TempHP_get) || RETURN",
@@ -1217,7 +1217,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0010_sub2_pre",
+                  "modifier": "<a class=\"gModGreen\" id=\"-808848134\">Modifier_FantasticStory_BaseAbility_0010_sub2_pre</a>",
                   "valuePerStack": {
                     "TempHP_get_pre": {
                       "operator": "Variables[0] (TempHP_get) || RETURN",
@@ -1274,7 +1274,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0010_sub2_pre",
+                  "modifier": "<a class=\"gModGreen\" id=\"-808848134\">Modifier_FantasticStory_BaseAbility_0010_sub2_pre</a>",
                   "valuePerStack": {
                     "TempHP_get_pre": {
                       "operator": "Variables[0] (TempHP_get) || RETURN",
@@ -1317,7 +1317,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
                 },
-                "modifier": "Modifier_FantasticStory_BaseAbility_0010_sub2_pre"
+                "modifier": "<a class=\"gModGreen\" id=\"-808848134\">Modifier_FantasticStory_BaseAbility_0010_sub2_pre</a>"
               },
               "passed": [
                 {
@@ -1326,7 +1326,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0010_sub2_pre"
+                  "modifier": "<a class=\"gModGreen\" id=\"-808848134\">Modifier_FantasticStory_BaseAbility_0010_sub2_pre</a>"
                 }
               ]
             }
@@ -1336,7 +1336,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0010",
+      "for": "<a class=\"gModGreen\" id=\"mod__-508947277\">Modifier_FantasticStory_BaseAbility_0010</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1348,7 +1348,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_0010_sub",
+              "modifier": "<a class=\"gModGreen\" id=\"891295398\">Modifier_FantasticStory_BaseAbility_0010_sub</a>",
               "valuePerStack": {
                 "TempHP_get": {
                   "operator": "Variables[0] (TempHP) || RETURN",
@@ -1398,7 +1398,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0010_sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"891295398\">Modifier_FantasticStory_BaseAbility_0010_sub</a>",
                   "valuePerStack": {
                     "TempHP_get": {
                       "operator": "Variables[0] (TempHP) || RETURN",
@@ -1442,7 +1442,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0010_plus6_sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1737739841\">Modifier_FantasticStory_BaseAbility_0010_plus6_sub</a>"
                     }
                   ]
                 }
@@ -1488,7 +1488,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0010_sub2[<span class=\"descriptionNumberColor\">Shatter</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (ADF_2) || RETURN",
                     "displayLines": "ADF_2",
@@ -1549,7 +1549,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0010_plus5_sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"1440555734\">Modifier_FantasticStory_BaseAbility_0010_plus5_sub</a>"
                 }
               ]
             }
@@ -1608,7 +1608,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Modifier_FantasticStory_BaseAbility_0010_sub2[<span class=\"descriptionNumberColor\">Shatter</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"897813244\">Modifier_FantasticStory_BaseAbility_0010_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (ADF_2) || RETURN",
                             "displayLines": "ADF_2",
@@ -1660,7 +1660,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0010_plus5_sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"1440555734\">Modifier_FantasticStory_BaseAbility_0010_plus5_sub</a>"
                 }
               ]
             },
@@ -1680,7 +1680,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0010_plus6_sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1737739841\">Modifier_FantasticStory_BaseAbility_0010_plus6_sub</a>"
                 }
               ]
             }

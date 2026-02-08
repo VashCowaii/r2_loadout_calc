@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MFarmRelic_104308"
+      "modifier": "<a class=\"gModGreen\" id=\"1772601948\">MFarmRelic_104308</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104308_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__789627689\">MFarmRelic_104308_Sub</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -87,7 +87,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104308",
+      "for": "<a class=\"gModGreen\" id=\"mod__1772601948\">MFarmRelic_104308</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -109,7 +109,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MFarmRelic_104308_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"789627689\">MFarmRelic_104308_Sub</a>"
                 }
               ]
             }

@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
         }
       ]
     },
@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_CastoriceServant_GoDie"
+      "modifier": "<a class=\"gModGreen\" id=\"1793501095\">Memosprite_CastoriceServant_GoDie</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -35,7 +35,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_CastoriceServant_BP_Explode"
+      "modifier": "<a class=\"gModGreen\" id=\"-256072391\">Memosprite_CastoriceServant_BP_Explode</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -43,7 +43,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_CastoriceServant_Ability23Check"
+      "modifier": "<a class=\"gModGreen\" id=\"1420894416\">Memosprite_CastoriceServant_Ability23Check</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -51,7 +51,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_CastoriceServant_TiggerKiller"
+      "modifier": "<a class=\"gModGreen\" id=\"156488588\">Memosprite_CastoriceServant_TiggerKiller</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -59,11 +59,11 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_CastoriceServant_Deathrattle"
+      "modifier": "<a class=\"gModGreen\" id=\"-1354985533\">Memosprite_CastoriceServant_Deathrattle</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Servant_CastoriceServant_GetMaxHP"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1714839092\">Servant_CastoriceServant_GetMaxHP</a>"
     },
     {
       "name": "IF",
@@ -127,7 +127,7 @@ const configAbility = {
       "Event": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Bounce_SelectTarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
@@ -142,7 +142,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_CastoriceServant_SetDamageRatio"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1405272466\">Servant_CastoriceServant_SetDamageRatio</a>"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -247,7 +247,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
         }
       ]
     },
@@ -257,7 +257,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Summoner}}"
       },
-      "modifier": "Castorice_Ability03_Field"
+      "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>"
     },
     {
       "name": "Force Entity Death",

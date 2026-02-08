@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_050"
+      "modifier": "<a class=\"gModGreen\" id=\"-384360793\">MStrongChallengeEX_Talent_StageAbility_LE_050</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_050",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1073865521\">MStrongChallengeEX_Talent_StageAbility_PLY_050</a>",
       "execute": [
         {
           "eventTrigger": "Caused Weakness Break [Owner]",
@@ -28,7 +28,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Monster_Standard_SpeedAddedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1551178382\">Monster_Standard_SpeedAddedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (#ADF_2) || RETURN",
                 "displayLines": "#ADF_2",
@@ -54,7 +54,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_050",
+      "for": "<a class=\"gModGreen\" id=\"mod__-384360793\">MStrongChallengeEX_Talent_StageAbility_LE_050</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -81,7 +81,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_050"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1073865521\">MStrongChallengeEX_Talent_StageAbility_PLY_050</a>"
                 }
               ]
             }

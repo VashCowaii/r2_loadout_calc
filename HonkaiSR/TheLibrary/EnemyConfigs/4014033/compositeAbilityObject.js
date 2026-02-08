@@ -46,7 +46,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_Monster_W4_Pollux_B_HardLockHp"
+          "modifier": "<a class=\"gModGreen\" id=\"1292838645\">Modifier_Monster_W4_Pollux_B_HardLockHp</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -59,7 +59,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W4_Pollux_FX_Ground"
+          "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
         },
         {
           "name": "Show BattleEvent Button",
@@ -83,7 +83,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
             "invertCondition": true
           },
           "ifTargetFound": [
@@ -93,7 +93,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
               "valuePerStack": {
                 "MDF_DamagePercentage": {
                   "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
@@ -133,7 +133,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W4_Pollux_FX_Ground"
+          "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -141,7 +141,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_APShow"
+          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -172,7 +172,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_Monster_W4_Pollux_B_HardLockHp",
+          "modifier": "<a class=\"gModGreen\" id=\"1292838645\">Modifier_Monster_W4_Pollux_B_HardLockHp</a>",
           "valuePerStack": {
             "MDF_LockHp": {
               "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
@@ -225,7 +225,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_Monster_W4_Pollux_B_HardLockHp_BFAbility05"
+          "modifier": "<a class=\"gModGreen\" id=\"-1324293112\">Modifier_Monster_W4_Pollux_B_HardLockHp_BFAbility05</a>"
         },
         {
           "name": "IF",
@@ -235,7 +235,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
             "invertCondition": true
           }
         },
@@ -736,7 +736,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
             "invertCondition": true
           },
           "ifTargetFound": [
@@ -746,7 +746,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
               "valuePerStack": {
                 "MDF_DamagePercentage": {
                   "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
@@ -776,7 +776,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
             "invertCondition": true
           },
           "passed": [
@@ -786,7 +786,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team(Exclude Memosprites)}}"
               },
-              "modifier": "Monster_W4_Pollux_BloodRange[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
               "valuePerStack": {
                 "_HpLimitRatio": {
                   "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
@@ -816,7 +816,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
             "invertCondition": true
           },
           "passed": [
@@ -826,7 +826,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
               "valuePerStack": {
                 "MDF_ShowValue1": {
                   "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
@@ -857,7 +857,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_Monster_W4_Pollux_B_HardLockHp_BFAbility05",
+          "modifier": "<a class=\"gModGreen\" id=\"-1324293112\">Modifier_Monster_W4_Pollux_B_HardLockHp_BFAbility05</a>",
           "valuePerStack": {
             "MDF_LockHp": {
               "operator": "Variables[0] (MIN) || Constants[0] (0.9) || Variables[1] ({[PassiveSkill02[5]]}) || Constants[1] (1.2) || MUL || PARAM_2 || FUNCTION || RETURN",
@@ -913,7 +913,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Monster_W4_Pollux_Main_DisableAction"
+          "modifier": "<a class=\"gModGreen\" id=\"276281376\">Monster_W4_Pollux_Main_DisableAction</a>"
         },
         {
           "name": "IF",
@@ -1158,7 +1158,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W4_Pollux_Strengthen_Break"
+          "modifier": "<a class=\"gModGreen\" id=\"-888665654\">Monster_W4_Pollux_Strengthen_Break</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1166,7 +1166,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W4_Pollux_DisableAction"
+          "modifier": "<a class=\"gModGreen\" id=\"891735658\">Monster_W4_Pollux_DisableAction</a>"
         },
         {
           "name": "IF",
@@ -1176,7 +1176,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "HeiShengBei_PreAddBEModifier"
+            "modifier": "<a class=\"gModGreen\" id=\"-1075172229\">HeiShengBei_PreAddBEModifier</a>"
           },
           "passed": [
             {
@@ -1259,7 +1259,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1267,7 +1267,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W4_Pollux_DisableAction"
+          "modifier": "<a class=\"gModGreen\" id=\"891735658\">Monster_W4_Pollux_DisableAction</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1275,7 +1275,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W4_Pollux_Endurance"
+          "modifier": "<a class=\"gModGreen\" id=\"1688517080\">Enemy_W4_Pollux_Endurance</a>"
         },
         {
           "name": "Action Advance/Delay",
@@ -1288,7 +1288,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_ChangePhase"
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
         },
         {
           "name": "Find New Target",
@@ -1300,7 +1300,7 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Monster_ChangePhase_ParamEntity"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1902031976\">Monster_ChangePhase_ParamEntity</a>"
             }
           ]
         },
@@ -1319,7 +1319,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W4_Pollux_PartController_LockHP"
+          "modifier": "<a class=\"gModGreen\" id=\"-720682465\">Monster_W4_Pollux_PartController_LockHP</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1327,7 +1327,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W4_Pollux_Strengthen_Break"
+          "modifier": "<a class=\"gModGreen\" id=\"-888665654\">Monster_W4_Pollux_Strengthen_Break</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1335,7 +1335,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Monster_W4_Pollux_Strengthen_BreakMark"
+          "modifier": "<a class=\"gModGreen\" id=\"586169347\">Monster_W4_Pollux_Strengthen_BreakMark</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -1381,7 +1381,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W4_Pollux_StoryMode_LockHP"
+              "modifier": "<a class=\"gModGreen\" id=\"-289587260\">Monster_W4_Pollux_StoryMode_LockHP</a>"
             }
           ]
         },
@@ -1414,7 +1414,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}} + {{Caster's Minions}}"
               },
-              "modifier": "Standard_Monster_AllDamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (UnusedUnderThisBase_76) || RETURN",
@@ -1434,7 +1434,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}} + {{Caster's Minions}}"
               },
-              "modifier": "Standard_Monster_AllDamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
@@ -1497,7 +1497,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "W4_Pollux_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"1132979046\">W4_Pollux_BattleScore1</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1505,7 +1505,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "W4_Pollux_BattleScore2"
+          "modifier": "<a class=\"gModGreen\" id=\"1116201427\">W4_Pollux_BattleScore2</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1513,7 +1513,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "W4_Pollux_BattleScore3"
+          "modifier": "<a class=\"gModGreen\" id=\"1099423808\">W4_Pollux_BattleScore3</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1521,7 +1521,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W4_Pollux_Status"
+          "modifier": "<a class=\"gModGreen\" id=\"1927341406\">Monster_W4_Pollux_Status</a>"
         },
         {
           "name": "Create Enemies",
@@ -1551,7 +1551,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Recently Summoned Enemies}}"
           },
-          "modifier": "Monster_W4_PolluxPart_L"
+          "modifier": "<a class=\"gModGreen\" id=\"-193308861\">Monster_W4_PolluxPart_L</a>"
         },
         {
           "name": "Create Enemies",
@@ -1582,7 +1582,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Recently Summoned Enemies}}"
           },
-          "modifier": "Monster_W4_PolluxPart_R"
+          "modifier": "<a class=\"gModGreen\" id=\"-226864099\">Monster_W4_PolluxPart_R</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1590,7 +1590,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
         },
         {
           "name": "Create Shared HP Group",
@@ -1633,7 +1633,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}} + {{Caster's Minions}}"
               },
-              "modifier": "Standard_Monster_AllDamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (UnusedUnderThisBase_76) || RETURN",
@@ -1653,7 +1653,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}} + {{Caster's Minions}}"
               },
-              "modifier": "Standard_Monster_AllDamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
@@ -1673,7 +1673,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W4_Pollux_BloodPool[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-977406110\">Monster_W4_Pollux_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
         },
         {
           "name": "Boss Bar Display",
@@ -1689,7 +1689,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
           "name": "IF",
@@ -1713,7 +1713,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W4_Pollux_PartController_LockHP"
+              "modifier": "<a class=\"gModGreen\" id=\"-720682465\">Monster_W4_Pollux_PartController_LockHP</a>"
             }
           ],
           "failed": [
@@ -1845,7 +1845,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W4_Pollux_WaveStart"
+              "modifier": "<a class=\"gModGreen\" id=\"1130988503\">Monster_W4_Pollux_WaveStart</a>"
             }
           ]
         }
@@ -1857,25 +1857,25 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W4_Pollux_FX_Ground"
+          "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_PolluxPart_R",
+          "for": "<a class=\"gModGreen\" id=\"mod__-226864099\">Monster_W4_PolluxPart_R</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_PolluxPart_L",
+          "for": "<a class=\"gModGreen\" id=\"mod__-193308861\">Monster_W4_PolluxPart_L</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_Status",
+          "for": "<a class=\"gModGreen\" id=\"mod__1927341406\">Monster_W4_Pollux_Status</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -1918,7 +1918,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "OneMore",
+                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>",
                         "invertCondition": true
                       }
                     ]
@@ -2011,7 +2011,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W4_Pollux_StoryMode_SpecailAbility05"
+                          "modifier": "<a class=\"gModGreen\" id=\"1061433740\">Monster_W4_Pollux_StoryMode_SpecailAbility05</a>"
                         }
                       ]
                     }
@@ -2033,7 +2033,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W4_Pollux_FX_Ground"
+                  "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2061,7 +2061,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W4_Pollux_EnergyBar"
+                  "modifier": "<a class=\"gModGreen\" id=\"2086497725\">Monster_W4_Pollux_EnergyBar</a>"
                 }
               ]
             },
@@ -2114,7 +2114,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                         "invertCondition": true
                       },
                       {
@@ -2123,7 +2123,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Monster_W4_Pollux_Strengthen_BreakMark",
+                        "modifier": "<a class=\"gModGreen\" id=\"586169347\">Monster_W4_Pollux_Strengthen_BreakMark</a>",
                         "invertCondition": true
                       },
                       {
@@ -2320,7 +2320,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "OneMorePerTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                     }
                   ]
                 },
@@ -2367,7 +2367,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "OneMorePerTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                     }
                   ]
                 }
@@ -2403,7 +2403,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_APShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                 },
                 {
                   "name": "IF",
@@ -2420,7 +2420,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "OneMorePerTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                     }
                   ]
                 }
@@ -2447,7 +2447,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                         "invertCondition": true
                       },
                       "passed": [
@@ -2462,7 +2462,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "OneMorePerTurn"
+                          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                         }
                       ]
                     }
@@ -2479,7 +2479,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "OneMorePerTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                     }
                   ]
                 }
@@ -2491,7 +2491,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_WaveStart",
+          "for": "<a class=\"gModGreen\" id=\"mod__1130988503\">Monster_W4_Pollux_WaveStart</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -2553,7 +2553,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W4_Pollux_FX_Ground"
+          "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
         },
         {
           "name": "Find New Target",
@@ -2714,7 +2714,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_Pollux_BloodRange[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]"
               },
               "passed": [
                 {
@@ -2751,7 +2751,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_Entangle[<span class=\"descriptionNumberColor\">Entanglement</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
                   "duration": {
                     "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
                     "displayLines": "{[Skill06[3]]}",
@@ -2827,7 +2827,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
             "invertCondition": true
           },
           "ifTargetFound": [
@@ -2837,7 +2837,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
               "valuePerStack": {
                 "MDF_DamagePercentage": {
                   "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
@@ -2877,7 +2877,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W4_Pollux_FX_Ground"
+          "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2885,7 +2885,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_APShow"
+          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -3485,7 +3485,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
             "invertCondition": true
           },
           "ifTargetFound": [
@@ -3495,7 +3495,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
               "valuePerStack": {
                 "MDF_DamagePercentage": {
                   "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
@@ -3546,7 +3546,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team(Exclude Memosprites)}}"
               },
-              "modifier": "Monster_W4_Pollux_BloodRange[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
               "valuePerStack": {
                 "_HpLimitRatio": {
                   "operator": "Variables[0] (UnusedUnderThisBase_74) || RETURN",
@@ -3574,7 +3574,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team(Exclude Memosprites)}}"
               },
-              "modifier": "Monster_W4_Pollux_BloodRange[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
               "valuePerStack": {
                 "_HpLimitRatio": {
                   "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
@@ -3625,7 +3625,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
               "valuePerStack": {
                 "MDF_ShowValue1": {
                   "operator": "Variables[0] (UnusedUnderThisBase_82) || RETURN",
@@ -3653,7 +3653,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
               "valuePerStack": {
                 "MDF_ShowValue1": {
                   "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
@@ -3736,7 +3736,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W4_Pollux_StoryMode_SpecailAbility05"
+              "modifier": "<a class=\"gModGreen\" id=\"1061433740\">Monster_W4_Pollux_StoryMode_SpecailAbility05</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -3786,7 +3786,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_W4_PolluxPart_Shield[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2034261592\">Monster_W4_PolluxPart_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
             "displayLines": "{[Skill04[1]]}",
@@ -3859,7 +3859,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Ability03_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>"
                 }
               ]
             }
@@ -3880,7 +3880,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Ability03_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>"
                 }
               ]
             },
@@ -3898,7 +3898,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_Pollux_Ability03_Mark",
+                "modifier": "<a class=\"gModGreen\" id=\"-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>",
                 "invertCondition": true
               },
               "ifTargetFound": [
@@ -3908,7 +3908,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Ability03_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>"
                 }
               ]
             }
@@ -4281,7 +4281,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
             "invertCondition": true
           },
           "ifTargetFound": [
@@ -4291,7 +4291,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
               "valuePerStack": {
                 "MDF_DamagePercentage": {
                   "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
@@ -4315,11 +4315,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_W4_Pollux_Strengthen_EggAbsorb_FX"
+          "functionName": "<a class=\"gTempYellow\" id=\"189344788\">Monster_W4_Pollux_Strengthen_EggAbsorb_FX</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_W4_Pollux_Strengthen_EggAbsorb"
+          "functionName": "<a class=\"gTempYellow\" id=\"2062281585\">Monster_W4_Pollux_Strengthen_EggAbsorb</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4327,7 +4327,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Monster_W4_Pollux_Ability03_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>"
         },
         "Trigger: Ability End"
       ],
@@ -4489,7 +4489,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
             "invertCondition": true
           },
           "ifTargetFound": [
@@ -4499,7 +4499,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
               "valuePerStack": {
                 "MDF_DamagePercentage": {
                   "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
@@ -4523,11 +4523,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_W4_Pollux_Strengthen_EggAbsorb_FX"
+          "functionName": "<a class=\"gTempYellow\" id=\"189344788\">Monster_W4_Pollux_Strengthen_EggAbsorb_FX</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_W4_Pollux_Strengthen_EggAbsorb"
+          "functionName": "<a class=\"gTempYellow\" id=\"2062281585\">Monster_W4_Pollux_Strengthen_EggAbsorb</a>"
         },
         "Trigger: Ability End"
       ],
@@ -4681,7 +4681,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
                 "invertCondition": true
               },
               {
@@ -4701,7 +4701,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
               "valuePerStack": {
                 "MDF_DamagePercentage": {
                   "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
@@ -4725,11 +4725,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_W4_Pollux_Strengthen_EggAbsorb_FX"
+          "functionName": "<a class=\"gTempYellow\" id=\"189344788\">Monster_W4_Pollux_Strengthen_EggAbsorb_FX</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_W4_Pollux_Strengthen_EggAbsorb"
+          "functionName": "<a class=\"gTempYellow\" id=\"2062281585\">Monster_W4_Pollux_Strengthen_EggAbsorb</a>"
         },
         "Trigger: Ability End"
       ],
@@ -4802,13 +4802,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "modifier": "Enemy_W4_Pollux_ResetStageBGM"
+          "modifier": "<a class=\"gModGreen\" id=\"715173654\">Enemy_W4_Pollux_ResetStageBGM</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W4_Pollux_ResetStageBGM",
+          "for": "<a class=\"gModGreen\" id=\"mod__715173654\">Enemy_W4_Pollux_ResetStageBGM</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4870,7 +4870,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_Monster_W4_Pollux_B_HardLockHp",
+          "for": "<a class=\"gModGreen\" id=\"mod__1292838645\">Modifier_Monster_W4_Pollux_B_HardLockHp</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4897,7 +4897,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_StageSpecialAbility_MuteBreak"
+                  "modifier": "<a class=\"gModGreen\" id=\"-460415799\">Modifier_StageSpecialAbility_MuteBreak</a>"
                 },
                 {
                   "name": "IF",
@@ -4978,7 +4978,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_StageSpecialAbility_SoftRage",
+                      "modifier": "<a class=\"gModGreen\" id=\"1398737430\">Modifier_StageSpecialAbility_SoftRage</a>",
                       "valuePerStack": {
                         "MDF_DamageAddedRatio": {
                           "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
@@ -5005,7 +5005,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_Monster_W4_Pollux_B_HardLockHp_BFAbility05",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1324293112\">Modifier_Monster_W4_Pollux_B_HardLockHp_BFAbility05</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5031,7 +5031,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "W4_Pollux_BattleScore3",
+          "for": "<a class=\"gModGreen\" id=\"mod__1099423808\">W4_Pollux_BattleScore3</a>",
           "execute": [
             {
               "eventTrigger": "Pre-Death [Owner]",
@@ -5084,7 +5084,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "W4_Pollux_BattleScore2",
+          "for": "<a class=\"gModGreen\" id=\"mod__1116201427\">W4_Pollux_BattleScore2</a>",
           "execute": [
             {
               "eventTrigger": "Pre-Death [Owner]",
@@ -5150,7 +5150,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "W4_Pollux_BattleScore1",
+          "for": "<a class=\"gModGreen\" id=\"mod__1132979046\">W4_Pollux_BattleScore1</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -5181,7 +5181,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Monster_W4_Pollux_BloodRange[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]"
                               }
                             }
                           ]
@@ -5214,7 +5214,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_StoryMode_SpecailAbility05",
+          "for": "<a class=\"gModGreen\" id=\"mod__1061433740\">Monster_W4_Pollux_StoryMode_SpecailAbility05</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -5261,7 +5261,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
           "stackType": "Replace",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -5384,7 +5384,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W4_Pollux_Endurance",
+          "for": "<a class=\"gModGreen\" id=\"mod__1688517080\">Enemy_W4_Pollux_Endurance</a>",
           "modifierFlags": [
             "Endurance"
           ],
@@ -5407,7 +5407,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_StoryMode_LockHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-289587260\">Monster_W4_Pollux_StoryMode_LockHP</a>",
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -5456,7 +5456,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Monster_W4_Pollux_DisableAction"
+                      "modifier": "<a class=\"gModGreen\" id=\"891735658\">Monster_W4_Pollux_DisableAction</a>"
                     },
                     {
                       "name": "Dispel Debuffs",
@@ -5472,7 +5472,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_W4_Pollux_Endurance"
+                      "modifier": "<a class=\"gModGreen\" id=\"1688517080\">Enemy_W4_Pollux_Endurance</a>"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -5508,7 +5508,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_PartController_LockHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-720682465\">Monster_W4_Pollux_PartController_LockHP</a>",
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -5542,7 +5542,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_W4_Pollux_Endurance"
+                      "modifier": "<a class=\"gModGreen\" id=\"1688517080\">Enemy_W4_Pollux_Endurance</a>"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -5580,11 +5580,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_PartStrong"
+          "for": "<a class=\"gModGreen\" id=\"mod__1861751766\">Monster_W4_Pollux_PartStrong</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_Fatigue",
+          "for": "<a class=\"gModGreen\" id=\"mod__931855053\">Monster_W4_Pollux_Fatigue</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -5606,7 +5606,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_BloodRange[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "RemoveWhenCasterUnstage"
@@ -5621,7 +5621,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Fatigue"
+                  "modifier": "<a class=\"gModGreen\" id=\"931855053\">Monster_W4_Pollux_Fatigue</a>"
                 }
               ]
             },
@@ -5682,7 +5682,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Fatigue",
+                  "modifier": "<a class=\"gModGreen\" id=\"931855053\">Monster_W4_Pollux_Fatigue</a>",
                   "valuePerStack": {
                     "_FatigueRatio": {
                       "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
@@ -5813,7 +5813,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_W4_Pollux_Fatigue",
+                      "modifier": "<a class=\"gModGreen\" id=\"931855053\">Monster_W4_Pollux_Fatigue</a>",
                       "valuePerStack": {
                         "_FatigueRatio": {
                           "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
@@ -5859,7 +5859,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_PolluxPart_Shield[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2034261592\">Monster_W4_PolluxPart_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "Endurance"
@@ -5887,7 +5887,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "modifier": "Monster_W4_Pollux_PartStrong"
+                  "modifier": "<a class=\"gModGreen\" id=\"1861751766\">Monster_W4_Pollux_PartStrong</a>"
                 }
               ]
             },
@@ -5979,7 +5979,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Summoner of Modifier Holder}}"
                       },
-                      "modifier": "Monster_W4_Pollux_PartStrong"
+                      "modifier": "<a class=\"gModGreen\" id=\"1861751766\">Monster_W4_Pollux_PartStrong</a>"
                     }
                   ],
                   "failed": [
@@ -6002,7 +6002,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "Monster_W4_PolluxPart_Shield[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"2034261592\">Monster_W4_PolluxPart_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]"
                               }
                             }
                           ]
@@ -6018,7 +6018,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Summoner of Modifier Holder}}"
                           },
-                          "modifier": "Monster_W4_Pollux_PartStrong"
+                          "modifier": "<a class=\"gModGreen\" id=\"1861751766\">Monster_W4_Pollux_PartStrong</a>"
                         }
                       ]
                     }
@@ -6036,7 +6036,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_Main_DisableAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__276281376\">Monster_W4_Pollux_Main_DisableAction</a>",
           "modifierFlags": [
             "DisableAction"
           ],
@@ -6045,7 +6045,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_DisableAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__891735658\">Monster_W4_Pollux_DisableAction</a>",
           "modifierFlags": [
             "DisableAction"
           ],
@@ -6057,7 +6057,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_Strengthen_Break",
+          "for": "<a class=\"gModGreen\" id=\"mod__-888665654\">Monster_W4_Pollux_Strengthen_Break</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6073,7 +6073,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Strengthen_BreakMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"586169347\">Monster_W4_Pollux_Strengthen_BreakMark</a>"
                 },
                 {
                   "name": "Change Character Transformation",
@@ -6115,7 +6115,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W4_Pollux_DisableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"891735658\">Monster_W4_Pollux_DisableAction</a>"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -6128,11 +6128,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_Strengthen_BreakMark"
+          "for": "<a class=\"gModGreen\" id=\"mod__586169347\">Monster_W4_Pollux_Strengthen_BreakMark</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_Strengthen_Shield",
+          "for": "<a class=\"gModGreen\" id=\"mod__1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -6170,7 +6170,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Monster_W4_Pollux_Strengthen_BreakMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"586169347\">Monster_W4_Pollux_Strengthen_BreakMark</a>"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -6201,7 +6201,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
                 }
               ]
             },
@@ -6284,7 +6284,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Monster_W4_Pollux_RLBoss_Status"
+                            "modifier": "<a class=\"gModGreen\" id=\"-891601506\">Monster_W4_Pollux_RLBoss_Status</a>"
                           },
                           {
                             "name": "Compare: Variable",
@@ -6341,7 +6341,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "Modifier_StageSpecialAbility_10441065_OnPollux",
+                            "modifier": "<a class=\"gModGreen\" id=\"23603986\">Modifier_StageSpecialAbility_10441065_OnPollux</a>",
                             "invertCondition": true
                           }
                         ]
@@ -6397,7 +6397,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "modifier": "Monster_W4_Pollux_RLBoss_Status",
+                                "modifier": "<a class=\"gModGreen\" id=\"-891601506\">Monster_W4_Pollux_RLBoss_Status</a>",
                                 "invertCondition": true
                               },
                               {
@@ -6576,7 +6576,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Monster_W4_Pollux_RLBoss_Status"
+                            "modifier": "<a class=\"gModGreen\" id=\"-891601506\">Monster_W4_Pollux_RLBoss_Status</a>"
                           },
                           {
                             "name": "Compare: Variable",
@@ -6633,7 +6633,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_Strengthen_SpeedAdded",
+          "for": "<a class=\"gModGreen\" id=\"mod__1777171408\">Monster_W4_Pollux_Strengthen_SpeedAdded</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -6661,7 +6661,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_Strengthen_Property[<span class=\"descriptionNumberColor\">Weakness Protected</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-501677850\">Monster_W4_Pollux_Strengthen_Property</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]",
           "modifierFlags": [
             "MuteBreak",
             "Endurance"
@@ -6731,7 +6731,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -6745,7 +6745,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}} + {{Caster's Minions}}"
                   },
-                  "modifier": "Standard_Monster_AllDamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -6758,7 +6758,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_W4_Pollux_BloodPool[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-977406110\">Monster_W4_Pollux_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
                 },
                 {
                   "name": "IF",
@@ -6789,7 +6789,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Monster_W4_Pollux_Strengthen_Shield",
+                      "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
                           "operator": "Variables[0] (UnusedUnderThisBase_71) || RETURN",
@@ -6817,7 +6817,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Monster_W4_Pollux_Strengthen_Shield",
+                      "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
                           "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
@@ -6871,7 +6871,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Monster_W4_Pollux_RLBoss_Status",
+                        "modifier": "<a class=\"gModGreen\" id=\"-891601506\">Monster_W4_Pollux_RLBoss_Status</a>",
                         "invertCondition": true
                       },
                       "passed": [
@@ -6881,7 +6881,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W4_Pollux_Strengthen_Property[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-501677850\">Monster_W4_Pollux_Strengthen_Property</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
                         }
                       ]
                     },
@@ -6891,7 +6891,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_APShow"
+                      "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                     }
                   ]
                 }
@@ -6943,7 +6943,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Strengthen_Shield"
+                  "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -6951,7 +6951,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Strengthen_SpeedAdded"
+                  "modifier": "<a class=\"gModGreen\" id=\"1777171408\">Monster_W4_Pollux_Strengthen_SpeedAdded</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -6959,7 +6959,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_W4_Pollux_BloodPool[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-977406110\">Monster_W4_Pollux_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -6967,7 +6967,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Strengthen_Property[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-501677850\">Monster_W4_Pollux_Strengthen_Property</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -6975,7 +6975,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_APShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -7009,7 +7009,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Strengthen_Property[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-501677850\">Monster_W4_Pollux_Strengthen_Property</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
                 }
               ]
             },
@@ -7035,7 +7035,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W4_Pollux_Strengthen_SpeedAdded",
+                  "modifier": "<a class=\"gModGreen\" id=\"1777171408\">Monster_W4_Pollux_Strengthen_SpeedAdded</a>",
                   "valuePerStack": {
                     "MDF_ShowValue1": {
                       "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
@@ -7079,7 +7079,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_W1_CocoliaP1_RL_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
                           "operator": "Variables[0] (MDF_DamageUpRatio) || RETURN",
@@ -7138,7 +7138,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_EnergyBar",
+          "for": "<a class=\"gModGreen\" id=\"mod__2086497725\">Monster_W4_Pollux_EnergyBar</a>",
           "stackData": [],
           "latentQueue": [
             "_TempAIFlag",
@@ -7149,7 +7149,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_BloodPool[<span class=\"descriptionNumberColor\">Dream of Demise</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-977406110\">Monster_W4_Pollux_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]",
           "stackData": [],
           "latentQueue": [
             "_WorldLevel",
@@ -7161,13 +7161,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_Ability03_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W4_Pollux_FX_Ground",
+          "for": "<a class=\"gModGreen\" id=\"mod__599310144\">Monster_W4_Pollux_FX_Ground</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -7223,7 +7223,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Monster_W4_Pollux_Strengthen_EggAbsorb_FX",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__189344788\">Monster_W4_Pollux_Strengthen_EggAbsorb_FX</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -7241,7 +7241,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                     "invertCondition": true
                   },
                   {
@@ -7250,7 +7250,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W4_Pollux_EnergyBar"
+                    "modifier": "<a class=\"gModGreen\" id=\"2086497725\">Monster_W4_Pollux_EnergyBar</a>"
                   }
                 ]
               }
@@ -7259,7 +7259,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Monster_W4_Pollux_Strengthen_EggAbsorb",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__2062281585\">Monster_W4_Pollux_Strengthen_EggAbsorb</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -7277,7 +7277,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W4_Pollux_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                     "invertCondition": true
                   },
                   {
@@ -7286,7 +7286,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W4_Pollux_EnergyBar"
+                    "modifier": "<a class=\"gModGreen\" id=\"2086497725\">Monster_W4_Pollux_EnergyBar</a>"
                   }
                 ]
               },

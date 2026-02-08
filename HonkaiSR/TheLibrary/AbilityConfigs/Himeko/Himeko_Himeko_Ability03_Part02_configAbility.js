@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Himeko_Ability03_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"2052955807\">Himeko_Ability03_Modifier</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -96,7 +96,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Himeko_Ability03_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"2052955807\">Himeko_Ability03_Modifier</a>"
     },
     "Trigger: Skip Death Handling",
     "Trigger: Ability End"
@@ -104,7 +104,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Himeko_Ability03_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__2052955807\">Himeko_Ability03_Modifier</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

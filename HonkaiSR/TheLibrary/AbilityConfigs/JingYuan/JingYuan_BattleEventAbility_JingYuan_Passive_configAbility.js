@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "JingYuan_BattleEvent"
+      "modifier": "<a class=\"gModGreen\" id=\"1222558059\">JingYuan_BattleEvent</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "JingYuan_BattleEvent_BaseSpeed"
+      "modifier": "<a class=\"gModGreen\" id=\"1172851188\">JingYuan_BattleEvent_BaseSpeed</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -27,13 +27,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "JingYuan_BattleEvent_ForceKill"
+      "modifier": "<a class=\"gModGreen\" id=\"845727839\">JingYuan_BattleEvent_ForceKill</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "JingYuan_BattleEvent_ForceKill",
+      "for": "<a class=\"gModGreen\" id=\"mod__845727839\">JingYuan_BattleEvent_ForceKill</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -46,7 +46,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "JingYuan_ListenFlag"
+                "modifier": "<a class=\"gModGreen\" id=\"-2008282890\">JingYuan_ListenFlag</a>"
               },
               "passed": [
                 {
@@ -73,7 +73,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "JingYuan_BattleEvent_BaseSpeed",
+      "for": "<a class=\"gModGreen\" id=\"mod__1172851188\">JingYuan_BattleEvent_BaseSpeed</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

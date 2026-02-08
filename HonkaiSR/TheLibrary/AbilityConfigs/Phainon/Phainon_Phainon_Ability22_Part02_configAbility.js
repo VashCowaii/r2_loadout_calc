@@ -129,7 +129,7 @@ const configAbility = {
       "Event": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Bounce_SelectTarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
@@ -156,7 +156,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "M_Phainon_Ability22_TargetTimeslow",
+              "modifier": "<a class=\"gModGreen\" id=\"-1753185453\">M_Phainon_Ability22_TargetTimeslow</a>",
               "silentAdd": true
             },
             {
@@ -198,7 +198,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Ability22_TargetTimeslow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1753185453\">M_Phainon_Ability22_TargetTimeslow</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

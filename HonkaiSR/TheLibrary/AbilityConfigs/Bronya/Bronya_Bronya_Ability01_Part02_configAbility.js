@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Bronya_Critcal"
+          "modifier": "<a class=\"gModGreen\" id=\"1586559461\">M_Bronya_Critcal</a>"
         }
       ]
     },
@@ -69,13 +69,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Bronya_Critcal"
+          "modifier": "<a class=\"gModGreen\" id=\"1586559461\">M_Bronya_Critcal</a>"
         }
       ]
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "ReduceNextActionDelay",
+      "functionName": "<a class=\"gTempYellow\" id=\"-1527090005\">ReduceNextActionDelay</a>",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
@@ -96,7 +96,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Bronya_Critcal",
+      "for": "<a class=\"gModGreen\" id=\"mod__1586559461\">M_Bronya_Critcal</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",

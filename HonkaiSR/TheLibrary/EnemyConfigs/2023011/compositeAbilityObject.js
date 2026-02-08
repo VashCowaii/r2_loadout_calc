@@ -32,7 +32,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Abomi04_Command"
+          "modifier": "<a class=\"gModGreen\" id=\"125847833\">Monster_W2_Abomi04_Command</a>"
         },
         "Ability Start",
         {
@@ -41,7 +41,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Monster_W2_Abomi04_Attack_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-488885736\">Monster_W2_Abomi04_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
         },
         {
           "name": "IF",
@@ -70,7 +70,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_Abomi01_Revive[<span class=\"descriptionNumberColor\">Rebirth</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
                 }
               }
             ]
@@ -82,7 +82,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W2_Abomi04_HitToHeal_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-98608309\">Enemy_W2_Abomi04_HitToHeal_Effect</a>"
             }
           ]
         },
@@ -410,7 +410,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Abomi01_Revive[<span class=\"descriptionNumberColor\">Rebirth</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
             }
           },
           "passed": [
@@ -420,7 +420,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W2_Abomi04_HitToHeal[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
             }
           ]
         },
@@ -430,7 +430,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Enemy_W2_Abomi04_SummonedMinions"
+          "modifier": "<a class=\"gModGreen\" id=\"-453804030\">Enemy_W2_Abomi04_SummonedMinions</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -438,7 +438,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -446,7 +446,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_W2_Abomi04_Attack_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-488885736\">Monster_W2_Abomi04_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
           "duration": 2
         },
         "Trigger: Ability End"
@@ -512,7 +512,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_Abomi01_Revive[<span class=\"descriptionNumberColor\">Rebirth</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
                 }
               }
             ]
@@ -524,7 +524,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W2_Abomi04_HitToHeal_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-98608309\">Enemy_W2_Abomi04_HitToHeal_Effect</a>"
             }
           ]
         },
@@ -665,7 +665,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Abomi01_Revive[<span class=\"descriptionNumberColor\">Rebirth</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
             }
           },
           "passed": [
@@ -675,7 +675,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W2_Abomi04_HitToHeal[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
             }
           ]
         },
@@ -685,7 +685,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Enemy_W2_Abomi04_SummonedMinions"
+          "modifier": "<a class=\"gModGreen\" id=\"-453804030\">Enemy_W2_Abomi04_SummonedMinions</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -693,7 +693,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -927,7 +927,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_W2_Abomi04_HitToHeal[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
           }
         },
         "Trigger: Ability End"
@@ -1112,7 +1112,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Abomi04_PassiveAbility_Formation2"
+          "modifier": "<a class=\"gModGreen\" id=\"-502774281\">Enemy_W2_Abomi04_PassiveAbility_Formation2</a>"
         }
       ],
       "references": []
@@ -1129,7 +1129,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Enemy_W2_Abomi04_HitToHeal[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
         },
         {
           "name": "Declare Custom Variable",
@@ -1160,7 +1160,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Abomi04_HitToHeal_Controller"
+          "modifier": "<a class=\"gModGreen\" id=\"378580326\">Enemy_W2_Abomi04_HitToHeal_Controller</a>"
         }
       ],
       "references": []
@@ -1188,7 +1188,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_HideMonsterHUD"
+          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1196,7 +1196,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1204,7 +1204,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         }
       ],
       "references": []
@@ -1221,13 +1221,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Abomi04_PassiveAbility_DanHeng"
+          "modifier": "<a class=\"gModGreen\" id=\"-1529984302\">Monster_W2_Abomi04_PassiveAbility_DanHeng</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi04_PassiveAbility_DanHeng",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1529984302\">Monster_W2_Abomi04_PassiveAbility_DanHeng</a>",
           "execute": [
             {
               "eventTrigger": "Got a Kill [Owner]",
@@ -1238,7 +1238,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMorePerTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1246,7 +1246,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMore"
+                  "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
                 }
               ]
             }
@@ -1268,7 +1268,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Abomi04_PassiveAbility_Formation2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-502774281\">Enemy_W2_Abomi04_PassiveAbility_Formation2</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1305,7 +1305,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi04_Attack_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-488885736\">Monster_W2_Abomi04_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
           "modifierFlags": [
             "TeamAction",
             "RemoveWhenCasterDead"
@@ -1324,7 +1324,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi04_Command",
+          "for": "<a class=\"gModGreen\" id=\"mod__125847833\">Monster_W2_Abomi04_Command</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1350,7 +1350,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Abomi04_Attack_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-488885736\">Monster_W2_Abomi04_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
                   },
                   "abilityName": "Abomi04Command"
                 }
@@ -1362,13 +1362,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Abomi04_SummonedMinions",
+          "for": "<a class=\"gModGreen\" id=\"mod__-453804030\">Enemy_W2_Abomi04_SummonedMinions</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Abomi04_HitToHeal_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-98608309\">Enemy_W2_Abomi04_HitToHeal_Effect</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1395,7 +1395,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Abomi04_HitToHeal[<span class=\"descriptionNumberColor\">Draining Hit</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1406,7 +1406,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W2_Abomi04_HitToHeal_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-98608309\">Enemy_W2_Abomi04_HitToHeal_Effect</a>"
                 }
               ]
             },
@@ -1441,7 +1441,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Abomi04_HitToHeal_Controller",
+          "for": "<a class=\"gModGreen\" id=\"mod__378580326\">Enemy_W2_Abomi04_HitToHeal_Controller</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -1465,7 +1465,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1500255012\">TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape</a>"
                 }
               ]
             },
@@ -1474,7 +1474,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1500255012\">TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape</a>"
                 }
               ]
             },
@@ -1486,7 +1486,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1500255012\">TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape</a>"
                 }
               ]
             },
@@ -1498,7 +1498,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1500255012\">TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape</a>"
                 }
               ]
             }
@@ -1506,7 +1506,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1500255012\">TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -1530,7 +1530,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Enemy_W2_Abomi04_HitToHeal[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
                       },
                       {
                         "name": "Compare: Target Count SUM",
@@ -1544,7 +1544,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Monster_W2_Abomi01_Revive[<span class=\"descriptionNumberColor\">Rebirth</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
                         },
                         "invertCondition": true
                       }

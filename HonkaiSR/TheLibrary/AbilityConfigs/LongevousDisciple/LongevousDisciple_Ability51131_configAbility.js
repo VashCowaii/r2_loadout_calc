@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_113_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-120853039\">Relic_113_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_113_Sub[<span class=\"descriptionNumberColor\">Longevous Disciple</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1696785974\">Relic_113_Sub</a>[<span class=\"descriptionNumberColor\">Longevous Disciple</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -61,7 +61,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_113_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-120853039\">Relic_113_Main</a>",
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -101,7 +101,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_113_Sub[<span class=\"descriptionNumberColor\">Longevous Disciple</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1696785974\">Relic_113_Sub</a>[<span class=\"descriptionNumberColor\">Longevous Disciple</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -132,7 +132,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Relic_113_Sub[<span class=\"descriptionNumberColor\">Longevous Disciple</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1696785974\">Relic_113_Sub</a>[<span class=\"descriptionNumberColor\">Longevous Disciple</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",

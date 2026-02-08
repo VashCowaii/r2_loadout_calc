@@ -21,7 +21,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Topaz_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -29,7 +29,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Topaz_Passive_Sub_ListenAction"
+      "modifier": "<a class=\"gModGreen\" id=\"1550373829\">Topaz_Passive_Sub_ListenAction</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -37,7 +37,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Topaz_BPAbility_ModifyBEAction"
+      "modifier": "<a class=\"gModGreen\" id=\"1586235241\">Topaz_BPAbility_ModifyBEAction</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -45,7 +45,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Topaz_Ultimate_Normal_ModifyBEAction"
+      "modifier": "<a class=\"gModGreen\" id=\"633100540\">Topaz_Ultimate_Normal_ModifyBEAction</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -53,7 +53,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Topaz_Ultimate_BPAbility_ModifyBEAction"
+      "modifier": "<a class=\"gModGreen\" id=\"-1215069030\">Topaz_Ultimate_BPAbility_ModifyBEAction</a>"
     },
     {
       "name": "IF",
@@ -68,7 +68,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_Normal_ModifyBEAction"
+          "modifier": "<a class=\"gModGreen\" id=\"1158310225\">Topaz_Normal_ModifyBEAction</a>"
         }
       ]
     },
@@ -120,7 +120,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Numby}}"
       },
-      "modifier": "Topaz_BE_BaseSpeed"
+      "modifier": "<a class=\"gModGreen\" id=\"-1168141322\">Topaz_BE_BaseSpeed</a>"
     },
     {
       "name": "IF",
@@ -135,7 +135,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_PointB2Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"828054091\">Topaz_PointB2Effect</a>"
         }
       ]
     },
@@ -152,7 +152,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Numby}}"
           },
-          "modifier": "Topaz_BE_ReduceDelay"
+          "modifier": "<a class=\"gModGreen\" id=\"-182734853\">Topaz_BE_ReduceDelay</a>"
         }
       ]
     },
@@ -176,7 +176,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Topaz_Passive_Sub_ListenAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1550373829\">Topaz_Passive_Sub_ListenAction</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -213,7 +213,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                     },
                     "invertCondition": true
                   }
@@ -226,7 +226,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Topaz_BE_FindNoTargetFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-93497222\">Topaz_BE_FindNoTargetFlag</a>"
                 }
               ]
             }
@@ -264,7 +264,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                     },
                     "invertCondition": true
                   }
@@ -277,7 +277,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"-373546697\">Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn</a>"
                 }
               ]
             }
@@ -315,7 +315,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                     },
                     "invertCondition": true
                   }
@@ -328,7 +328,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"-373546697\">Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn</a>"
                 }
               ]
             }
@@ -366,7 +366,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                     },
                     "invertCondition": true
                   }
@@ -379,7 +379,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Topaz_BE_FindNoTargetFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-93497222\">Topaz_BE_FindNoTargetFlag</a>"
                 }
               ]
             }
@@ -391,7 +391,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Topaz_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1965719686\">Topaz_Passive</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -429,7 +429,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Topaz_Ultimate_Listen_ModifyBEAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"786181068\">Topaz_Ultimate_Listen_ModifyBEAction</a>"
                 }
               ]
             }
@@ -444,7 +444,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Numby}}"
               },
-              "modifier": "Topaz_BE_HitEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"-1899526189\">Topaz_BE_HitEffect</a>"
             }
           ]
         },
@@ -457,7 +457,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"
               },
-              "modifier": "Topaz_Ultimate_Listen_ModifyBEAction"
+              "modifier": "<a class=\"gModGreen\" id=\"786181068\">Topaz_Ultimate_Listen_ModifyBEAction</a>"
             }
           ],
           "priorityLevel": -80
@@ -469,7 +469,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Topaz_BE_FindNoTargetFlag"
+                "modifier": "<a class=\"gModGreen\" id=\"-93497222\">Topaz_BE_FindNoTargetFlag</a>"
               },
               "passed": [
                 {
@@ -478,7 +478,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Topaz_BE_FindNoTargetFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-93497222\">Topaz_BE_FindNoTargetFlag</a>"
                 },
                 {
                   "name": "Find New Target",
@@ -495,7 +495,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue1_DamageAdd": {
                           "operator": "Variables[0] (0.5) || RETURN",
@@ -533,7 +533,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn"
+                "modifier": "<a class=\"gModGreen\" id=\"-373546697\">Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn</a>"
               },
               "passed": [
                 {
@@ -542,7 +542,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"-373546697\">Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn</a>"
                 },
                 {
                   "name": "Find New Target",
@@ -559,7 +559,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue1_DamageAdd": {
                           "operator": "Variables[0] (0.5) || RETURN",
@@ -597,7 +597,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Topaz_BETargetTagHitFlag"
+                "modifier": "<a class=\"gModGreen\" id=\"1594870654\">Topaz_BETargetTagHitFlag</a>"
               },
               "passed": [
                 {
@@ -606,7 +606,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Topaz_BETargetTagHitFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"1594870654\">Topaz_BETargetTagHitFlag</a>"
                 },
                 {
                   "name": "IF",
@@ -616,7 +616,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
                   },
                   "passed": [
                     {
@@ -649,7 +649,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Topaz_BETargetTagInsertHitFlag"
+                "modifier": "<a class=\"gModGreen\" id=\"-1346057059\">Topaz_BETargetTagInsertHitFlag</a>"
               },
               "passed": [
                 {
@@ -658,7 +658,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Topaz_BETargetTagInsertHitFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1346057059\">Topaz_BETargetTagInsertHitFlag</a>"
                 },
                 {
                   "name": "IF",
@@ -711,7 +711,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Topaz_PointB2Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__828054091\">Topaz_PointB2Effect</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -747,13 +747,13 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Topaz_BE_ReduceDelay",
+      "for": "<a class=\"gModGreen\" id=\"mod__-182734853\">Topaz_BE_ReduceDelay</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Topaz_BE_BaseSpeed",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1168141322\">Topaz_BE_BaseSpeed</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -782,7 +782,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Topaz_Ultimate_Listen_ModifyBEAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__786181068\">Topaz_Ultimate_Listen_ModifyBEAction</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -815,7 +815,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
               }
             },
             {
@@ -824,7 +824,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
             },
             {
               "name": "Current Turn Is",
@@ -851,7 +851,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Topaz_Ultimate_BPAbility_ModifyBEAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1215069030\">Topaz_Ultimate_BPAbility_ModifyBEAction</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -873,7 +873,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
             },
             {
               "name": "Current Turn Is",
@@ -900,7 +900,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Topaz_Ultimate_Normal_ModifyBEAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__633100540\">Topaz_Ultimate_Normal_ModifyBEAction</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -922,7 +922,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team Ability Target Lock}}"
               },
-              "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
             },
             {
               "name": "Has Modifier",
@@ -930,7 +930,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
             },
             {
               "name": "Current Turn Is",
@@ -957,7 +957,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Topaz_BPAbility_ModifyBEAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1586235241\">Topaz_BPAbility_ModifyBEAction</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -993,7 +993,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Topaz_Normal_ModifyBEAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1158310225\">Topaz_Normal_ModifyBEAction</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -1015,7 +1015,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team Ability Target Lock}}"
               },
-              "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
             },
             {
               "name": "Current Turn Is",

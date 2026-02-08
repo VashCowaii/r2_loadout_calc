@@ -64,7 +64,7 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Use Custom Character Function",
-      "functionName": "AddDot",
+      "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
       "variables": {
         "Arg01": {
           "operator": "Variables[0] (1) || RETURN",
@@ -96,7 +96,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "AddDot",
+              "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
               "variables": {
                 "Arg01": {
                   "operator": "Variables[0] (0.65) || RETURN",
@@ -123,7 +123,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "AddDot",
+              "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
               "variables": {
                 "Arg01": {
                   "operator": "Variables[0] (0.65) || RETURN",
@@ -150,7 +150,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "AddDot",
+              "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
               "variables": {
                 "Arg01": {
                   "operator": "Variables[0] (0.65) || RETURN",
@@ -177,7 +177,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "AddDot",
+              "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
               "variables": {
                 "Arg01": {
                   "operator": "Variables[0] (0.65) || RETURN",
@@ -252,7 +252,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
           "baseChance": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -337,7 +337,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "BlackSwan_DefenceDown[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"2093125302\">BlackSwan_DefenceDown</a>[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -380,7 +380,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "BlackSwan_DefenceDown[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2093125302\">BlackSwan_DefenceDown</a>[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -415,7 +415,7 @@ const configAbility = {
   "functions": [
     {
       "name": "CharacterFunctions",
-      "functionName": "AddDot",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1367341755\">AddDot</a>",
       "parse": [
         {
           "name": "IF",
@@ -467,7 +467,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
           "baseChance": {
             "operator": "Variables[0] (Arg01) || RETURN",
             "displayLines": "Arg01",
@@ -550,7 +550,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "BlackSwan_DefenceDown[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2093125302\">BlackSwan_DefenceDown</a>[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_DefenceDown"

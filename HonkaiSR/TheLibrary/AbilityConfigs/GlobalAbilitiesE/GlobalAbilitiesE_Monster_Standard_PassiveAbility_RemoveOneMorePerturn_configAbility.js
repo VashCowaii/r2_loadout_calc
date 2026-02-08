@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "RemoveOneMorePerturn"
+      "modifier": "<a class=\"gModGreen\" id=\"-1985606354\">RemoveOneMorePerturn</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "RemoveOneMorePerturn",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1985606354\">RemoveOneMorePerturn</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -27,7 +27,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "OneMorePerTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -35,7 +35,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "OneMore"
+              "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
             }
           ]
         },
@@ -48,7 +48,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "OneMorePerTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -56,7 +56,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "OneMore"
+              "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
             }
           ]
         }

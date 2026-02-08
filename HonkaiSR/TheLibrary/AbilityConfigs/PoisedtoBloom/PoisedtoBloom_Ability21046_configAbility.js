@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21046_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"978087138\">LC_21046_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21046_Bonus[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__33731582\">LC_21046_Bonus</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21046_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__229629943\">LC_21046_Sub</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -79,7 +79,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_21046_Bonus[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"33731582\">LC_21046_Bonus</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
                 }
               ]
             }
@@ -89,7 +89,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21046_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__978087138\">LC_21046_Main</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -100,7 +100,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}.[[removeMemosprite]]"
               },
-              "modifier": "LC_21046_Sub"
+              "modifier": "<a class=\"gModGreen\" id=\"229629943\">LC_21046_Sub</a>"
             }
           ],
           "priorityLevel": -80

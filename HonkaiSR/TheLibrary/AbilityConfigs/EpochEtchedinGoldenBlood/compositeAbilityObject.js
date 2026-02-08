@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23048_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"635815778\">LC_23048_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23048_Sub[<span class=\"descriptionNumberColor\">Skill DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__361999223\">LC_23048_Sub</a>[<span class=\"descriptionNumberColor\">Skill DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -77,7 +77,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23048_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__635815778\">LC_23048_Main</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -148,7 +148,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target List}}"
                       },
-                      "modifier": "LC_23048_Sub[<span class=\"descriptionNumberColor\">Skill DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"361999223\">LC_23048_Sub</a>[<span class=\"descriptionNumberColor\">Skill DMG Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",

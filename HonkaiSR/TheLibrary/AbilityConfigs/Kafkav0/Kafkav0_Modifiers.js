@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Kafka_Eidolon4_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-287625887\">Kafka_Eidolon4_Sub</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -91,7 +91,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Kafka_Eidolon4",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1192521276\">Kafka_Eidolon4</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -113,7 +113,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Kafka_Eidolon4_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-287625887\">Kafka_Eidolon4_Sub</a>"
                 }
               ]
             }
@@ -129,7 +129,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Kafka_Eidolon2_Sub[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -166,7 +166,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Kafka_Passive_CanAttackCD[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-899885235\">Kafka_Passive_CanAttackCD</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
       "stackData": [],
       "latentQueue": [],
       "description": "The effect of Talent \"Gentle but Cruel\" cannot be triggered.",

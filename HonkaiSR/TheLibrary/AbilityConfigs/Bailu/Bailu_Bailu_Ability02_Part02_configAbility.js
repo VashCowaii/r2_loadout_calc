@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bailu_Eidolon4"
+          "modifier": "<a class=\"gModGreen\" id=\"-1229024343\">Bailu_Eidolon4</a>"
         }
       ]
     },
@@ -55,7 +55,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_AbilityTarget"
+          "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
         }
       ]
     },
@@ -156,7 +156,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Projectile's Target}}"
               },
-              "modifier": "Standard_AbilityTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
             }
           ]
         }
@@ -248,7 +248,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Projectile's Target}}"
                   },
-                  "modifier": "Standard_AbilityTarget"
+                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
                 }
               ]
             }
@@ -279,7 +279,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bailu_Eidolon4"
+          "modifier": "<a class=\"gModGreen\" id=\"-1229024343\">Bailu_Eidolon4</a>"
         }
       ]
     },

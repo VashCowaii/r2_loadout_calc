@@ -42,7 +42,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Rappa_Modifier_Dmg"
+          "modifier": "<a class=\"gModGreen\" id=\"496713366\">StageAbility_Maze_Rappa_Modifier_Dmg</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -50,13 +50,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Rappa_Modifier_Bonus"
+          "modifier": "<a class=\"gModGreen\" id=\"307934607\">StageAbility_Maze_Rappa_Modifier_Bonus</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Rappa_Modifier_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__307934607\">StageAbility_Maze_Rappa_Modifier_Bonus</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -105,7 +105,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Rappa_Modifier_Dmg",
+          "for": "<a class=\"gModGreen\" id=\"mod__496713366\">StageAbility_Maze_Rappa_Modifier_Dmg</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -281,7 +281,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Rappa_Passive_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"823190278\">Rappa_Passive_Modifier</a>"
         },
         {
           "name": "Read Variable Value",
@@ -393,7 +393,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Rappa_Break_Modifier_ForShow[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (_PassiveBreakCountMax) || RETURN",
                 "displayLines": "_PassiveBreakCountMax",
@@ -417,7 +417,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Rappa_Break_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-200121332\">Rappa_Break_Modifier</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -438,7 +438,7 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Template_Rappa_PassiveBreak"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1176541882\">Template_Rappa_PassiveBreak</a>"
                     }
                   ]
                 }
@@ -449,7 +449,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Template_Rappa_PassiveBreak"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1176541882\">Template_Rappa_PassiveBreak</a>"
                 }
               ]
             },
@@ -458,7 +458,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Template_Rappa_PassiveBreak"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1176541882\">Template_Rappa_PassiveBreak</a>"
                 }
               ]
             }
@@ -466,7 +466,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_Passive_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__823190278\">Rappa_Passive_Modifier</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -573,7 +573,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Rappa_Trace03"
+                      "modifier": "<a class=\"gModGreen\" id=\"421544848\">Rappa_Trace03</a>"
                     }
                   ]
                 },
@@ -611,7 +611,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Rappa_Break_Modifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-200121332\">Rappa_Break_Modifier</a>"
                     }
                   ]
                 }
@@ -642,7 +642,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Rappa_Break_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-200121332\">Rappa_Break_Modifier</a>"
                 }
               ],
               "priorityLevel": -80
@@ -771,7 +771,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Rappa_UltraMode[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1748394699\">Rappa_UltraMode</a>[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]"
           },
           "failed": [
             {
@@ -780,7 +780,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Rappa_UltraMode[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1748394699\">Rappa_UltraMode</a>[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.5) || RETURN",
@@ -836,7 +836,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Rappa_UltraMode_BanSKL02_ForCaster"
+          "modifier": "<a class=\"gModGreen\" id=\"685299865\">Rappa_UltraMode_BanSKL02_ForCaster</a>"
         },
         {
           "name": "Inject Extra-Turn",
@@ -1063,7 +1063,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Rappa_ForceStanceDamage"
+                  "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -1101,7 +1101,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Rappa_ForceStanceDamage"
+                  "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
                 }
               ],
               "failed": [
@@ -1185,7 +1185,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Rappa_ForceStanceDamage_ForPassive"
+              "modifier": "<a class=\"gModGreen\" id=\"185730135\">Rappa_ForceStanceDamage_ForPassive</a>"
             },
             {
               "name": "ATK Scaling DMG",
@@ -1230,7 +1230,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Rappa_ForceStanceDamage_ForPassive"
+              "modifier": "<a class=\"gModGreen\" id=\"185730135\">Rappa_ForceStanceDamage_ForPassive</a>"
             }
           ]
         },
@@ -1241,7 +1241,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Rappa_Break_Modifier_ForShow[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]"
         },
         {
           "name": "IF",
@@ -1269,7 +1269,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Rappa_Break_Modifier_ForShow[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (_PassiveBreakCountMax) || RETURN",
                 "displayLines": "_PassiveBreakCountMax",
@@ -1296,7 +1296,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Rappa_UltraMode_BanSKL02_ForCaster"
+          "modifier": "<a class=\"gModGreen\" id=\"685299865\">Rappa_UltraMode_BanSKL02_ForCaster</a>"
         },
         {
           "name": "Update Energy",
@@ -1314,7 +1314,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Rappa_Ability13_StanceDamagePreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"-1369082619\">Rappa_Ability13_StanceDamagePreShow</a>"
         },
         {
           "name": "Update Ability Binding",
@@ -1464,7 +1464,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Rappa_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
             },
             {
               "name": "IF",
@@ -1546,7 +1546,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Rappa_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
             }
           ],
           "failed": [
@@ -1653,7 +1653,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Rappa_ForceStanceDamage"
+                  "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -1691,7 +1691,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Rappa_ForceStanceDamage"
+                  "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
                 }
               ],
               "failed": [
@@ -1766,7 +1766,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Rappa_Ability13_StanceDamagePreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"-1369082619\">Rappa_Ability13_StanceDamagePreShow</a>"
         },
         {
           "name": "Force-Trigger Ability Next-Phase",
@@ -1883,7 +1883,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Rappa_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
             },
             {
               "name": "IF",
@@ -1965,7 +1965,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Rappa_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
             }
           ],
           "failed": [
@@ -2072,7 +2072,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Rappa_ForceStanceDamage"
+                  "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -2110,7 +2110,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Rappa_ForceStanceDamage"
+                  "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
                 }
               ],
               "failed": [
@@ -2329,7 +2329,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Rappa_Break_Modifier_ForShow[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2378,7 +2378,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_AbilityEidolon4[<span class=\"descriptionNumberColor\">Lost Is the Nindō Devoured by Time</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1496582647\">Rappa_AbilityEidolon4</a>[<span class=\"descriptionNumberColor\">Lost Is the Nindō Devoured by Time</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -2412,7 +2412,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_AbilityEidolon1[<span class=\"descriptionNumberColor\">Returned Is the Revenant With No Ferry Toll</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1412694552\">Rappa_AbilityEidolon1</a>[<span class=\"descriptionNumberColor\">Returned Is the Revenant With No Ferry Toll</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2437,7 +2437,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_Ability03_Eidolon2_StanceDamagePreShow_Imaginary",
+          "for": "<a class=\"gModGreen\" id=\"mod__-103751501\">Rappa_Ability03_Eidolon2_StanceDamagePreShow_Imaginary</a>",
           "stackType": "ReplaceByCaster",
           "previewValue": {
             "name": "Modifier: UI Preview",
@@ -2452,7 +2452,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Rappa_UltraMode[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1748394699\">Rappa_UltraMode</a>[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]"
                 },
                 {
                   "name": "Has Modifier",
@@ -2460,7 +2460,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Rappa_Ability13_StanceDamagePreShow",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1369082619\">Rappa_Ability13_StanceDamagePreShow</a>",
                   "invertCondition": true
                 },
                 {
@@ -2489,7 +2489,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_Ability13_StanceDamagePreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1369082619\">Rappa_Ability13_StanceDamagePreShow</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -2534,7 +2534,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_Ability03_StanceDamagePreShow_NoImaginary",
+          "for": "<a class=\"gModGreen\" id=\"mod__1932054955\">Rappa_Ability03_StanceDamagePreShow_NoImaginary</a>",
           "stackType": "ReplaceByCaster",
           "previewValue": {
             "name": "Modifier: UI Preview",
@@ -2549,7 +2549,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Rappa_UltraMode[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1748394699\">Rappa_UltraMode</a>[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]"
                 }
               ]
             },
@@ -2566,7 +2566,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_PointB3_Enemy[<span class=\"descriptionNumberColor\">Ninjutsu Inscription: Withered Leaf</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1239346790\">Rappa_PointB3_Enemy</a>[<span class=\"descriptionNumberColor\">Ninjutsu Inscription: Withered Leaf</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2593,7 +2593,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Rappa_PointB3_Enemy_Aura",
+                        "modifier": "<a class=\"gModGreen\" id=\"615135704\">Rappa_PointB3_Enemy_Aura</a>",
                         "invertCondition": true
                       }
                     ]
@@ -2620,7 +2620,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_PointB3_Enemy_Aura",
+          "for": "<a class=\"gModGreen\" id=\"mod__615135704\">Rappa_PointB3_Enemy_Aura</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2647,7 +2647,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Rappa_PointB3_Enemy[<span class=\"descriptionNumberColor\">Ninjutsu Inscription: Withered Leaf</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"1239346790\">Rappa_PointB3_Enemy</a>[<span class=\"descriptionNumberColor\">Ninjutsu Inscription: Withered Leaf</span>]",
                         "justAddedOrActive": true
                       }
                     ]
@@ -2689,7 +2689,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Rappa_PointB3_Enemy[<span class=\"descriptionNumberColor\">Ninjutsu Inscription: Withered Leaf</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1239346790\">Rappa_PointB3_Enemy</a>[<span class=\"descriptionNumberColor\">Ninjutsu Inscription: Withered Leaf</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -2715,7 +2715,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_Trace03_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1957135459\">Rappa_Trace03_Sub</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2785,7 +2785,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_Trace03",
+          "for": "<a class=\"gModGreen\" id=\"mod__421544848\">Rappa_Trace03</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2793,7 +2793,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Rappa_Trace03_Sub"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1198981265\">Rappa_Trace03_Sub</a>"
                 }
               ]
             }
@@ -2808,7 +2808,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Rappa_Trace03_Sub"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1198981265\">Rappa_Trace03_Sub</a>"
                     }
                   ]
                 }
@@ -2818,7 +2818,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Rappa_Trace03_Sub",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1198981265\">Rappa_Trace03_Sub</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
@@ -2855,7 +2855,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Rappa_Trace03_Sub"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1957135459\">Rappa_Trace03_Sub</a>"
                       },
                       "passed": [
                         {
@@ -2864,7 +2864,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Rappa_Trace03_Sub",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1957135459\">Rappa_Trace03_Sub</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (MDF_CurrentAttackReal) || Variables[1] (2400) || SUB || RETURN",
@@ -2885,7 +2885,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Rappa_Trace03_Sub",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1957135459\">Rappa_Trace03_Sub</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (MDF_CurrentAttackReal) || Variables[1] (2400) || SUB || RETURN",
@@ -2921,14 +2921,14 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "Rappa_PointB3_Enemy_Aura",
+              "modifier": "<a class=\"gModGreen\" id=\"615135704\">Rappa_PointB3_Enemy_Aura</a>",
               "haloStatus": true
             }
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_PointB2_Enemy",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1498869655\">Rappa_PointB2_Enemy</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -2979,7 +2979,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Rappa_UltraMode[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1748394699\">Rappa_UltraMode</a>[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]"
                       },
                       {
                         "name": "Has DMG Instance Tag",
@@ -2990,7 +2990,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "BeingDealSuperBreakDamage",
+                      "functionName": "<a class=\"gTempYellow\" id=\"932403897\">BeingDealSuperBreakDamage</a>",
                       "variables": {
                         "value_0_DamagePercentage": {
                           "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
@@ -3076,7 +3076,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_ForceStanceDamage_ForPassive",
+          "for": "<a class=\"gModGreen\" id=\"mod__185730135\">Rappa_ForceStanceDamage_ForPassive</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ForceStanceDamage"
@@ -3102,7 +3102,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_ForceStanceDamage",
+          "for": "<a class=\"gModGreen\" id=\"mod__2114229234\">Rappa_ForceStanceDamage</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ForceStanceDamage"
@@ -3137,7 +3137,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_Explosive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1991409749\">Rappa_Explosive</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "KeepOnDeathrattle"
@@ -3145,7 +3145,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_UltraMode_BanSKL03_ForCaster",
+          "for": "<a class=\"gModGreen\" id=\"mod__1328811210\">Rappa_UltraMode_BanSKL03_ForCaster</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3166,7 +3166,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_UltraMode_BanSKL02_ForCaster",
+          "for": "<a class=\"gModGreen\" id=\"mod__685299865\">Rappa_UltraMode_BanSKL02_ForCaster</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3191,7 +3191,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Rappa_UltraMode[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1748394699\">Rappa_UltraMode</a>[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
             {
@@ -3268,7 +3268,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Rappa_UltraMode_BanSKL02_ForCaster"
+                      "modifier": "<a class=\"gModGreen\" id=\"685299865\">Rappa_UltraMode_BanSKL02_ForCaster</a>"
                     },
                     {
                       "name": "Update Ability Binding",
@@ -3336,7 +3336,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Rappa_Ability03_StanceDamagePreShow_NoImaginary"
+                  "modifier": "<a class=\"gModGreen\" id=\"1932054955\">Rappa_Ability03_StanceDamagePreShow_NoImaginary</a>"
                 },
                 {
                   "name": "IF",
@@ -3351,7 +3351,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Rappa_Ability03_Eidolon2_StanceDamagePreShow_Imaginary"
+                      "modifier": "<a class=\"gModGreen\" id=\"-103751501\">Rappa_Ability03_Eidolon2_StanceDamagePreShow_Imaginary</a>"
                     }
                   ]
                 }
@@ -3402,7 +3402,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Rappa_UltraMode_BanSKL03_ForCaster"
+                      "modifier": "<a class=\"gModGreen\" id=\"1328811210\">Rappa_UltraMode_BanSKL03_ForCaster</a>"
                     },
                     {
                       "name": "IF",
@@ -3419,7 +3419,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Rappa_UltraMode_BanSKL03_ForCaster"
+                          "modifier": "<a class=\"gModGreen\" id=\"1328811210\">Rappa_UltraMode_BanSKL03_ForCaster</a>"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -3427,7 +3427,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Rappa_UltraMode[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1748394699\">Rappa_UltraMode</a>[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]"
                         },
                         {
                           "name": "Update Displayed Energy Bar",
@@ -3492,7 +3492,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Rappa_UltraMode_BanSKL02_ForCaster"
+                          "modifier": "<a class=\"gModGreen\" id=\"685299865\">Rappa_UltraMode_BanSKL02_ForCaster</a>"
                         },
                         {
                           "name": "Update Ability Binding",
@@ -3527,7 +3527,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "Rappa_PointB2_Enemy",
+              "modifier": "<a class=\"gModGreen\" id=\"-1498869655\">Rappa_PointB2_Enemy</a>",
               "haloStatus": true,
               "conditions": {
                 "name": "Trace Activated",
@@ -3550,7 +3550,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Rappa_AbilityEidolon1[<span class=\"descriptionNumberColor\">Returned Is the Revenant With No Ferry Toll</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1412694552\">Rappa_AbilityEidolon1</a>[<span class=\"descriptionNumberColor\">Returned Is the Revenant With No Ferry Toll</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Eidolon Activated",
@@ -3573,7 +3573,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Rappa_AbilityEidolon4[<span class=\"descriptionNumberColor\">Lost Is the Nindō Devoured by Time</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1496582647\">Rappa_AbilityEidolon4</a>[<span class=\"descriptionNumberColor\">Lost Is the Nindō Devoured by Time</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Eidolon Activated",
@@ -3598,7 +3598,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Template_Rappa_PassiveBreak",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1176541882\">Template_Rappa_PassiveBreak</a>",
           "parse": [
             {
               "name": "IF",
@@ -3637,7 +3637,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Rappa_Break_Modifier_ForShow[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (_PassiveBreakCountMax) || RETURN",
                     "displayLines": "_PassiveBreakCountMax",
@@ -3740,7 +3740,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Rappa_Break_Modifier_ForShow[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (_PassiveBreakCountMax) || RETURN",
                             "displayLines": "_PassiveBreakCountMax",
@@ -3781,7 +3781,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Rappa_Break_Modifier_ForShow[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (_PassiveBreakCountMax) || RETURN",
                             "displayLines": "_PassiveBreakCountMax",

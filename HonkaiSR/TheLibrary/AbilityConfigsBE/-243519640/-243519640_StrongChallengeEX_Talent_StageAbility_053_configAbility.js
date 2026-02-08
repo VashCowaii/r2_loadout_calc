@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_053"
+      "modifier": "<a class=\"gModGreen\" id=\"-367583174\">MStrongChallengeEX_Talent_StageAbility_LE_053</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_SVT_053",
+      "for": "<a class=\"gModGreen\" id=\"mod__1308834030\">MStrongChallengeEX_Talent_StageAbility_SVT_053</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -66,7 +66,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_053",
+      "for": "<a class=\"gModGreen\" id=\"mod__-367583174\">MStrongChallengeEX_Talent_StageAbility_LE_053</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -101,7 +101,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_SVT_053",
+                  "modifier": "<a class=\"gModGreen\" id=\"1308834030\">MStrongChallengeEX_Talent_StageAbility_SVT_053</a>",
                   "valuePerStack": {
                     "MDF_DefaultStanceBreakRatio": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

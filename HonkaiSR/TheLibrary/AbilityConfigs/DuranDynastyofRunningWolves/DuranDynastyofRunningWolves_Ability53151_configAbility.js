@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_315_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1346958753\">Relic_315_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_315_Sub[<span class=\"descriptionNumberColor\">Merit</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1040962330\">Relic_315_Sub</a>[<span class=\"descriptionNumberColor\">Merit</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -108,7 +108,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_315_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__550315167\">Relic_315_Listen</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -134,14 +134,14 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Relic_315_Sub[<span class=\"descriptionNumberColor\">Merit</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1040962330\">Relic_315_Sub</a>[<span class=\"descriptionNumberColor\">Merit</span>]"
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
                       "valueType": "Layer",
                       "variableName": "CasterLayer",
-                      "modifierName": "Relic_315_Sub[<span class=\"descriptionNumberColor\">Merit</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1040962330\">Relic_315_Sub</a>[<span class=\"descriptionNumberColor\">Merit</span>]",
                       "multiplier": 1
                     }
                   ],
@@ -159,7 +159,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Relic_315_Sub[<span class=\"descriptionNumberColor\">Merit</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1040962330\">Relic_315_Sub</a>[<span class=\"descriptionNumberColor\">Merit</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
@@ -224,7 +224,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_315_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1346958753\">Relic_315_Main</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -246,7 +246,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Relic_315_Listen"
+                  "modifier": "<a class=\"gModGreen\" id=\"550315167\">Relic_315_Listen</a>"
                 }
               ]
             }
@@ -270,7 +270,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Relic_315_Listen"
+                  "modifier": "<a class=\"gModGreen\" id=\"550315167\">Relic_315_Listen</a>"
                 }
               ]
             }

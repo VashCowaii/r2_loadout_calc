@@ -57,13 +57,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Feixiao_Eidolon6"
+          "modifier": "<a class=\"gModGreen\" id=\"1082253554\">M_Feixiao_Eidolon6</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_Eidolon6",
+          "for": "<a class=\"gModGreen\" id=\"mod__1082253554\">M_Feixiao_Eidolon6</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -109,13 +109,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Feixiao_Tree03"
+          "modifier": "<a class=\"gModGreen\" id=\"79070567\">M_Feixiao_Tree03</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Feixiao_AttackProperty[<span class=\"descriptionNumberColor\">Boltcatch</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2094330090\">Feixiao_AttackProperty</a>[<span class=\"descriptionNumberColor\">Boltcatch</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -147,7 +147,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_Tree03",
+          "for": "<a class=\"gModGreen\" id=\"mod__79070567\">M_Feixiao_Tree03</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -165,7 +165,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Feixiao_AttackProperty[<span class=\"descriptionNumberColor\">Boltcatch</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2094330090\">Feixiao_AttackProperty</a>[<span class=\"descriptionNumberColor\">Boltcatch</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -207,13 +207,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Feixiao_Trace02"
+          "modifier": "<a class=\"gModGreen\" id=\"-226054239\">M_Feixiao_Trace02</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_Trace02_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__694697928\">M_Feixiao_Trace02_Sub</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -247,7 +247,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_Trace02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-226054239\">M_Feixiao_Trace02</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -284,7 +284,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Feixiao_Trace02_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"694697928\">M_Feixiao_Trace02_Sub</a>"
                 }
               ]
             },
@@ -304,7 +304,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_Feixiao_Trace02_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"694697928\">M_Feixiao_Trace02_Sub</a>"
                     }
                   ]
                 }
@@ -328,13 +328,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Feixiao_Trace01"
+          "modifier": "<a class=\"gModGreen\" id=\"-276387096\">M_Feixiao_Trace01</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_Trace01",
+          "for": "<a class=\"gModGreen\" id=\"mod__-276387096\">M_Feixiao_Trace01</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -397,7 +397,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Feixiao_Modifier_Attack"
+          "modifier": "<a class=\"gModGreen\" id=\"-1813550053\">StageAbility_Maze_Feixiao_Modifier_Attack</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -405,7 +405,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Feixiao_Modifier_GainSP"
+          "modifier": "<a class=\"gModGreen\" id=\"-1813368649\">StageAbility_Maze_Feixiao_Modifier_GainSP</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -413,13 +413,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Feixiao_Maze_ForceCritical"
+          "modifier": "<a class=\"gModGreen\" id=\"-182307548\">M_Feixiao_Maze_ForceCritical</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_Maze_ForceCritical",
+          "for": "<a class=\"gModGreen\" id=\"mod__-182307548\">M_Feixiao_Maze_ForceCritical</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -462,7 +462,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Feixiao_Modifier_Attack",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1813550053\">StageAbility_Maze_Feixiao_Modifier_Attack</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -582,7 +582,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Feixiao_Modifier_GainSP"
+          "modifier": "<a class=\"gModGreen\" id=\"-1813368649\">StageAbility_Maze_Feixiao_Modifier_GainSP</a>"
         }
       ],
       "references": []
@@ -599,7 +599,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Feixiao_InsertCheck"
+          "modifier": "<a class=\"gModGreen\" id=\"248447225\">M_Feixiao_InsertCheck</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -607,7 +607,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Feixiao_InsertCheckSelf"
+          "modifier": "<a class=\"gModGreen\" id=\"-1503840637\">M_Feixiao_InsertCheckSelf</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -615,7 +615,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "M_Feixiao_Friend_Mark_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
         },
         {
           "name": "IF",
@@ -632,7 +632,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Feixiao_InsertIsReady[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
             }
           ],
           "failed": [
@@ -649,7 +649,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Feixiao_DamageProperty[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1116070545\">Feixiao_DamageProperty</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -682,7 +682,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Feixiao_Eidolon4_Property[<span class=\"descriptionNumberColor\">Stormward I Hear</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1006222027\">Feixiao_Eidolon4_Property</a>[<span class=\"descriptionNumberColor\">Stormward I Hear</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -778,7 +778,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Feixiao_DamageProperty[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1116070545\">Feixiao_DamageProperty</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -878,7 +878,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Feixiao_Ultramode",
+            "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>",
             "invertCondition": true
           },
           "passed": [
@@ -907,7 +907,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "M_Feixiao_Friend_Mark_Self"
+                    "modifier": "<a class=\"gModGreen\" id=\"158143017\">M_Feixiao_Friend_Mark_Self</a>"
                   }
                 ]
               },
@@ -975,7 +975,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Feixiao_InsertCheckSelf"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1503840637\">M_Feixiao_InsertCheckSelf</a>"
                     }
                   ]
                 }
@@ -991,7 +991,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Feixiao_InsertCheckSelf"
+          "modifier": "<a class=\"gModGreen\" id=\"-1503840637\">M_Feixiao_InsertCheckSelf</a>"
         }
       ],
       "references": []
@@ -1010,7 +1010,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Feixiao_Ultramode",
+            "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>",
             "invertCondition": true
           },
           "passed": [
@@ -1039,7 +1039,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "M_Feixiao_Friend_Mark_Main"
+                    "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
                   }
                 ]
               },
@@ -1097,7 +1097,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Feixiao_InsertCheck"
+                      "modifier": "<a class=\"gModGreen\" id=\"248447225\">M_Feixiao_InsertCheck</a>"
                     }
                   ]
                 }
@@ -1113,7 +1113,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Feixiao_InsertCheck"
+          "modifier": "<a class=\"gModGreen\" id=\"248447225\">M_Feixiao_InsertCheck</a>"
         }
       ],
       "references": []
@@ -1143,7 +1143,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Feixiao_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-342757676\">Feixiao_Passive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1151,7 +1151,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Feixiao_InsertIsReady[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
         },
         {
           "name": "IF",
@@ -1166,7 +1166,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Feixiao_Eidolon2_CD[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
               "counter": {
                 "operator": "Variables[0] (6) || RETURN",
                 "displayLines": "6",
@@ -1304,7 +1304,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_Friend_Mark_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-349901882\">M_Feixiao_Friend_Mark_Main</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -1325,7 +1325,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "M_Feixiao_Friend_Mark_Main"
+                    "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -1334,7 +1334,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_Feixiao_Friend_Mark_Main"
+                      "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
                     }
                   ]
                 }
@@ -1384,7 +1384,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Feixiao_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-342757676\">Feixiao_Passive</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -1404,14 +1404,14 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Feixiao_InsertIsReady[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
                       }
                     ]
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Feixiao_Passive_ChargeTeamAttackCount",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1045121925\">Feixiao_Passive_ChargeTeamAttackCount</a>",
                       "variables": {
                         "parameter[0]_AddValue": 1
                       }
@@ -1424,7 +1424,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Feixiao_InsertIsReady[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
                 }
               ]
             },
@@ -1444,7 +1444,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Feixiao_Eidolon2_CD[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1452,7 +1452,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Feixiao_Eidolon2_CD[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
                       "counter": {
                         "operator": "Variables[0] (6) || RETURN",
                         "displayLines": "6",
@@ -1516,7 +1516,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Feixiao_Ultramode",
+                        "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>",
                         "invertCondition": true
                       },
                       "passed": [
@@ -1545,14 +1545,14 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "modifier": "Feixiao_Eidolon2_CD[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]"
                               }
                             ]
                           },
                           "passed": [
                             {
                               "name": "Use Custom Character Function",
-                              "functionName": "Feixiao_Passive_ChargeTeamAttackCount",
+                              "functionName": "<a class=\"gTempYellow\" id=\"1045121925\">Feixiao_Passive_ChargeTeamAttackCount</a>",
                               "variables": {
                                 "parameter[0]_AddValue": 2
                               }
@@ -1563,7 +1563,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifierName": "Feixiao_Eidolon2_CD[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
+                              "modifierName": "<a class=\"gModGreen\" id=\"-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
                               "function": "Add"
                             },
                             {
@@ -1572,7 +1572,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifierName": "Feixiao_Eidolon2_CD[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
+                              "modifierName": "<a class=\"gModGreen\" id=\"-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
                               "adjustmentType": "+",
                               "variableName": "MDF_Count",
                               "value": -1
@@ -1581,7 +1581,7 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Use Custom Character Function",
-                              "functionName": "Feixiao_Passive_ChargeTeamAttackCount",
+                              "functionName": "<a class=\"gTempYellow\" id=\"1045121925\">Feixiao_Passive_ChargeTeamAttackCount</a>",
                               "variables": {
                                 "parameter[0]_AddValue": 1
                               }
@@ -1626,7 +1626,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "M_Feixiao_Friend_Mark_Main"
+                          "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
                         },
                         "invertCondition": true
                       },
@@ -1649,7 +1649,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target's Attack Targets}}"
                               },
-                              "modifier": "M_Feixiao_Friend_Mark_Main"
+                              "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
                             }
                           ],
                           "failed": [
@@ -1668,7 +1668,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "M_Feixiao_Friend_Mark_Main"
+                                  "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
                                 }
                               ]
                             }
@@ -1678,7 +1678,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Feixiao_InsertCheck"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-432640007\">Feixiao_InsertCheck</a>"
                     }
                   ]
                 }
@@ -1734,7 +1734,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target's Ability Targets}}"
                           },
-                          "modifier": "M_Feixiao_Friend_Mark_Main"
+                          "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
                         }
                       ],
                       "failed": [
@@ -1744,7 +1744,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                           },
-                          "modifier": "M_Feixiao_Friend_Mark_Main"
+                          "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
                         }
                       ]
                     }
@@ -1900,7 +1900,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Feixiao_InsertCheck",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-432640007\">Feixiao_InsertCheck</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -1931,7 +1931,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Feixiao_InsertIsReady[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
                       }
                     ]
                   },
@@ -1978,7 +1978,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "M_Feixiao_InsertCheck"
+                          "modifier": "<a class=\"gModGreen\" id=\"248447225\">M_Feixiao_InsertCheck</a>"
                         }
                       ]
                     }
@@ -2016,7 +2016,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "M_Feixiao_UltraTarget_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"176878499\">M_Feixiao_UltraTarget_Mark</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -2050,7 +2050,7 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Passive_CostTeamAttackCountToGainSP"
+          "functionName": "<a class=\"gTempYellow\" id=\"683713803\">Feixiao_Passive_CostTeamAttackCountToGainSP</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2058,7 +2058,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "M_Feixiao_UltraTarget"
+          "modifier": "<a class=\"gModGreen\" id=\"550698929\">M_Feixiao_UltraTarget</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2066,7 +2066,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Feixiao_Ultramode"
+          "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>"
         },
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
@@ -2110,7 +2110,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_CostSPBeforeDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"69209893\">Feixiao_Combo1_CostSPBeforeDamage</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -2144,7 +2144,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_EnterFinish"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1207472342\">Feixiao_EnterFinish</a>"
         }
       ],
       "references": []
@@ -2167,15 +2167,15 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_CostSPBeforeDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"69209893\">Feixiao_Combo1_CostSPBeforeDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo2_DealDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1999111375\">Feixiao_Combo2_DealDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo2_AfterDamageCheck"
+          "functionName": "<a class=\"gTempYellow\" id=\"1389767451\">Feixiao_Combo2_AfterDamageCheck</a>"
         },
         {
           "name": "IF",
@@ -2201,7 +2201,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_TriggerBreak"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1982785786\">Feixiao_TriggerBreak</a>"
             }
           ],
           "failed": [
@@ -2213,7 +2213,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_FrameHaltRealTime",
+                  "functionName": "<a class=\"gTempYellow\" id=\"293207912\">Feixiao_FrameHaltRealTime</a>",
                   "variables": {
                     "parameter[0]_Realtime": 0.1,
                     "parameter[1]_TimeScale": 0.025
@@ -2223,7 +2223,7 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_FrameHaltRealTime",
+                  "functionName": "<a class=\"gTempYellow\" id=\"293207912\">Feixiao_FrameHaltRealTime</a>",
                   "variables": {
                     "parameter[0]_Realtime": 0.1,
                     "parameter[1]_TimeScale": 0.05
@@ -2235,7 +2235,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_ComboPerformFinish"
+          "functionName": "<a class=\"gTempYellow\" id=\"342687242\">Feixiao_ComboPerformFinish</a>"
         }
       ],
       "references": []
@@ -2287,15 +2287,15 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_CostSPBeforeDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"69209893\">Feixiao_Combo1_CostSPBeforeDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo2_DealDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1999111375\">Feixiao_Combo2_DealDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo2_AfterDamageCheck"
+          "functionName": "<a class=\"gTempYellow\" id=\"1389767451\">Feixiao_Combo2_AfterDamageCheck</a>"
         },
         {
           "name": "IF",
@@ -2321,7 +2321,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_TriggerBreak"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1982785786\">Feixiao_TriggerBreak</a>"
             }
           ],
           "failed": [
@@ -2333,7 +2333,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_FrameHaltRealTime",
+                  "functionName": "<a class=\"gTempYellow\" id=\"293207912\">Feixiao_FrameHaltRealTime</a>",
                   "variables": {
                     "parameter[0]_Realtime": 0.1,
                     "parameter[1]_TimeScale": 0.025
@@ -2343,7 +2343,7 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_FrameHaltRealTime",
+                  "functionName": "<a class=\"gTempYellow\" id=\"293207912\">Feixiao_FrameHaltRealTime</a>",
                   "variables": {
                     "parameter[0]_Realtime": 0.1,
                     "parameter[1]_TimeScale": 0.05
@@ -2355,7 +2355,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_ComboPerformFinish"
+          "functionName": "<a class=\"gTempYellow\" id=\"342687242\">Feixiao_ComboPerformFinish</a>"
         }
       ],
       "references": []
@@ -2464,7 +2464,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_ResetAnimSpeed"
+          "functionName": "<a class=\"gTempYellow\" id=\"2050569712\">Feixiao_ResetAnimSpeed</a>"
         },
         {
           "name": "IF",
@@ -2548,7 +2548,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_ComboStartCheck"
+          "functionName": "<a class=\"gTempYellow\" id=\"1125040676\">Feixiao_ComboStartCheck</a>"
         },
         {
           "name": "IF",
@@ -2753,11 +2753,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_CostSPBeforeDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"69209893\">Feixiao_Combo1_CostSPBeforeDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_DealSubDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1161841910\">Feixiao_Combo1_DealSubDamage</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -2792,7 +2792,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_EnterFinish"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1207472342\">Feixiao_EnterFinish</a>"
         }
       ],
       "references": []
@@ -2831,19 +2831,19 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_CostSPBeforeDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"69209893\">Feixiao_Combo1_CostSPBeforeDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_DealSubDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1161841910\">Feixiao_Combo1_DealSubDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_DealDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"-14625690\">Feixiao_Combo1_DealDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_AfterDamageCheck"
+          "functionName": "<a class=\"gTempYellow\" id=\"1394849956\">Feixiao_Combo1_AfterDamageCheck</a>"
         },
         {
           "name": "IF",
@@ -2853,7 +2853,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_ComboPerformFinish"
+          "functionName": "<a class=\"gTempYellow\" id=\"342687242\">Feixiao_ComboPerformFinish</a>"
         }
       ],
       "references": []
@@ -2885,19 +2885,19 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_CostSPBeforeDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"69209893\">Feixiao_Combo1_CostSPBeforeDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_DealSubDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1161841910\">Feixiao_Combo1_DealSubDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_DealDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"-14625690\">Feixiao_Combo1_DealDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_AfterDamageCheck"
+          "functionName": "<a class=\"gTempYellow\" id=\"1394849956\">Feixiao_Combo1_AfterDamageCheck</a>"
         },
         {
           "name": "IF",
@@ -2907,7 +2907,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_ComboPerformFinish"
+          "functionName": "<a class=\"gTempYellow\" id=\"342687242\">Feixiao_ComboPerformFinish</a>"
         }
       ],
       "references": []
@@ -2939,19 +2939,19 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_CostSPBeforeDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"69209893\">Feixiao_Combo1_CostSPBeforeDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_DealSubDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1161841910\">Feixiao_Combo1_DealSubDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_DealDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"-14625690\">Feixiao_Combo1_DealDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_AfterDamageCheck"
+          "functionName": "<a class=\"gTempYellow\" id=\"1394849956\">Feixiao_Combo1_AfterDamageCheck</a>"
         },
         {
           "name": "IF",
@@ -2961,7 +2961,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_ComboPerformFinish"
+          "functionName": "<a class=\"gTempYellow\" id=\"342687242\">Feixiao_ComboPerformFinish</a>"
         }
       ],
       "references": []
@@ -2982,19 +2982,19 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_CostSPBeforeDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"69209893\">Feixiao_Combo1_CostSPBeforeDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_DealSubDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1161841910\">Feixiao_Combo1_DealSubDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_DealDamage"
+          "functionName": "<a class=\"gTempYellow\" id=\"-14625690\">Feixiao_Combo1_DealDamage</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_Combo1_AfterDamageCheck"
+          "functionName": "<a class=\"gTempYellow\" id=\"1394849956\">Feixiao_Combo1_AfterDamageCheck</a>"
         },
         {
           "name": "IF",
@@ -3004,7 +3004,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_ComboPerformFinish"
+          "functionName": "<a class=\"gTempYellow\" id=\"342687242\">Feixiao_ComboPerformFinish</a>"
         }
       ],
       "references": []
@@ -3096,7 +3096,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_ResetAnimSpeed"
+          "functionName": "<a class=\"gTempYellow\" id=\"2050569712\">Feixiao_ResetAnimSpeed</a>"
         },
         {
           "name": "IF",
@@ -3180,7 +3180,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_ComboStartCheck"
+          "functionName": "<a class=\"gTempYellow\" id=\"1125040676\">Feixiao_ComboStartCheck</a>"
         },
         {
           "name": "IF",
@@ -3410,7 +3410,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Feixiao_Ultramode"
+          "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3418,7 +3418,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "M_Feixiao_UltraTarget"
+          "modifier": "<a class=\"gModGreen\" id=\"550698929\">M_Feixiao_UltraTarget</a>"
         },
         {
           "name": "IF",
@@ -3463,7 +3463,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Feixiao_Ultramode_StanceBreakPreshow"
+              "modifier": "<a class=\"gModGreen\" id=\"-1539174332\">Feixiao_Ultramode_StanceBreakPreshow</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -3508,7 +3508,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "M_Feixiao_UltraTarget_Visual_Stun"
+              "modifier": "<a class=\"gModGreen\" id=\"-1192517657\">M_Feixiao_UltraTarget_Visual_Stun</a>"
             }
           ],
           "failed": [
@@ -3518,7 +3518,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "M_Feixiao_UltraTarget_Visual_Confine"
+              "modifier": "<a class=\"gModGreen\" id=\"1169885953\">M_Feixiao_UltraTarget_Visual_Confine</a>"
             }
           ]
         },
@@ -3528,7 +3528,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "M_Feixiao_UltraTarget_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"176878499\">M_Feixiao_UltraTarget_Mark</a>"
         },
         {
           "name": "IF",
@@ -3560,7 +3560,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "M_Feixiao_UltraTarget_FadeInFlag"
+          "modifier": "<a class=\"gModGreen\" id=\"385618061\">M_Feixiao_UltraTarget_FadeInFlag</a>"
         },
         {
           "name": "Trigger: Ability End",
@@ -3574,7 +3574,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Feixiao_Ability03_ForceStance"
+          "modifier": "<a class=\"gModGreen\" id=\"-233737306\">M_Feixiao_Ability03_ForceStance</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3582,17 +3582,17 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Feixiao_Ability03_StanceAddedPreshow"
+          "modifier": "<a class=\"gModGreen\" id=\"922102305\">M_Feixiao_Ability03_StanceAddedPreshow</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_BreakableElite_Mark"
+          "for": "<a class=\"gModGreen\" id=\"mod__802330220\">M_Feixiao_BreakableElite_Mark</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_BreakableElite_Listener",
+          "for": "<a class=\"gModGreen\" id=\"mod__1999108381\">M_Feixiao_BreakableElite_Listener</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -3602,7 +3602,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_RefreshUltraFrame"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1135796130\">Feixiao_RefreshUltraFrame</a>"
                 }
               ]
             },
@@ -3611,7 +3611,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_RefreshUltraFrame"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1135796130\">Feixiao_RefreshUltraFrame</a>"
                 }
               ]
             },
@@ -3620,7 +3620,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_RefreshUltraFrame"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1135796130\">Feixiao_RefreshUltraFrame</a>"
                 }
               ]
             },
@@ -3629,7 +3629,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_RefreshUltraFrame"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1135796130\">Feixiao_RefreshUltraFrame</a>"
                 }
               ]
             },
@@ -3638,7 +3638,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_RefreshUltraFrame"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1135796130\">Feixiao_RefreshUltraFrame</a>"
                 }
               ]
             }
@@ -3646,7 +3646,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Feixiao_RefreshUltraFrame",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-1135796130\">Feixiao_RefreshUltraFrame</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
@@ -3724,7 +3724,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_Feixiao_BreakableElite_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"802330220\">M_Feixiao_BreakableElite_Mark</a>"
                     }
                   ],
                   "failed": [
@@ -3734,7 +3734,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_Feixiao_BreakableElite_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"802330220\">M_Feixiao_BreakableElite_Mark</a>"
                     }
                   ]
                 }
@@ -3744,7 +3744,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_BreakableEliteMarker",
+          "for": "<a class=\"gModGreen\" id=\"mod__224032294\">M_Feixiao_BreakableEliteMarker</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -3780,7 +3780,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_Feixiao_BreakableElite_Listener",
+                      "modifier": "<a class=\"gModGreen\" id=\"1999108381\">M_Feixiao_BreakableElite_Listener</a>",
                       "valuePerStack": {
                         "MDF_BaseStance": {
                           "operator": "Variables[0] (ST Toughness Value) || RETURN",
@@ -3823,7 +3823,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_Feixiao_BreakableElite_Listener",
+                      "modifier": "<a class=\"gModGreen\" id=\"1999108381\">M_Feixiao_BreakableElite_Listener</a>",
                       "valuePerStack": {
                         "MDF_BaseStance": {
                           "operator": "Variables[0] (ST Toughness Value) || RETURN",
@@ -3846,7 +3846,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "M_Feixiao_BreakableElite_Mark"
+                    "modifier": "<a class=\"gModGreen\" id=\"802330220\">M_Feixiao_BreakableElite_Mark</a>"
                   }
                 }
               ]
@@ -3858,7 +3858,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "M_Feixiao_BreakableElite_Mark"
+                    "modifier": "<a class=\"gModGreen\" id=\"802330220\">M_Feixiao_BreakableElite_Mark</a>"
                   },
                   "passed": [
                     {
@@ -3875,7 +3875,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "M_Feixiao_BreakableElite_Mark"
+                          "modifier": "<a class=\"gModGreen\" id=\"802330220\">M_Feixiao_BreakableElite_Mark</a>"
                         },
                         "invertCondition": true
                       }
@@ -3888,7 +3888,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_Ability03_StanceAddedPreshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__922102305\">M_Feixiao_Ability03_StanceAddedPreshow</a>",
           "stackData": [],
           "latentQueue": [
             "First_Break_Effect"
@@ -3906,7 +3906,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Feixiao_Ultramode",
+                  "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>",
                   "invertCondition": true
                 },
                 {
@@ -3932,7 +3932,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_Ability03_ForceStance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-233737306\">M_Feixiao_Ability03_ForceStance</a>",
           "stackData": [],
           "latentQueue": [
             "First_Break_Effect"
@@ -3947,7 +3947,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Feixiao_Ultramode",
+              "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>",
               "invertCondition": true
             },
             "toughnessForcedReductionPreview": 1,
@@ -3956,7 +3956,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_UltraTarget_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__176878499\">M_Feixiao_UltraTarget_Mark</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3973,7 +3973,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "M_Feixiao_UltraTarget_FadeInFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"385618061\">M_Feixiao_UltraTarget_FadeInFlag</a>"
                   },
                   "passed": [
                     {
@@ -3987,7 +3987,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "M_Feixiao_UltraTarget_CutFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1145384524\">M_Feixiao_UltraTarget_CutFlag</a>"
                   },
                   "passed": [
                     {
@@ -4001,7 +4001,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "M_Feixiao_UltraTarget_FinalHitFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"965737321\">M_Feixiao_UltraTarget_FinalHitFlag</a>"
                   },
                   "passed": [
                     {
@@ -4020,12 +4020,12 @@ const compositeAbilityObject = {
           ],
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "M_Feixiao_UltraTarget"
+            "dependancyName": "<a class=\"gModGreen\" id=\"550698929\">M_Feixiao_UltraTarget</a>"
           }
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_UltraTarget",
+          "for": "<a class=\"gModGreen\" id=\"mod__550698929\">M_Feixiao_UltraTarget</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4036,7 +4036,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                   },
-                  "modifier": "M_Feixiao_UltraTarget_Visual_Confine"
+                  "modifier": "<a class=\"gModGreen\" id=\"1169885953\">M_Feixiao_UltraTarget_Visual_Confine</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -4044,7 +4044,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                   },
-                  "modifier": "M_Feixiao_UltraTarget_Visual_Stun"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1192517657\">M_Feixiao_UltraTarget_Visual_Stun</a>"
                 }
               ]
             },
@@ -4062,7 +4062,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Feixiao_Ultramode",
+                    "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -4185,7 +4185,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "M_Feixiao_Friend_Mark_Self"
+          "modifier": "<a class=\"gModGreen\" id=\"158143017\">M_Feixiao_Friend_Mark_Self</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -4295,7 +4295,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "M_Feixiao_InsertCheckSelf"
+              "modifier": "<a class=\"gModGreen\" id=\"-1503840637\">M_Feixiao_InsertCheckSelf</a>"
             }
           ]
         },
@@ -4305,7 +4305,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_Friend_Mark_Self",
+          "for": "<a class=\"gModGreen\" id=\"mod__158143017\">M_Feixiao_Friend_Mark_Self</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -4326,7 +4326,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "M_Feixiao_Friend_Mark_Self"
+                    "modifier": "<a class=\"gModGreen\" id=\"158143017\">M_Feixiao_Friend_Mark_Self</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -4335,7 +4335,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_Feixiao_Friend_Mark_Self"
+                      "modifier": "<a class=\"gModGreen\" id=\"158143017\">M_Feixiao_Friend_Mark_Self</a>"
                     }
                   ]
                 }
@@ -4530,7 +4530,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Feixiao_Modifier_GainSP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1813368649\">StageAbility_Maze_Feixiao_Modifier_GainSP</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -4573,25 +4573,25 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_UltraTarget_FinalHitFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__965737321\">M_Feixiao_UltraTarget_FinalHitFlag</a>",
           "stackType": "ReplaceByCaster",
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "M_Feixiao_UltraTarget_Mark"
+            "dependancyName": "<a class=\"gModGreen\" id=\"176878499\">M_Feixiao_UltraTarget_Mark</a>"
           }
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_UltraTarget_CutFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1145384524\">M_Feixiao_UltraTarget_CutFlag</a>",
           "stackType": "ReplaceByCaster",
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "M_Feixiao_UltraTarget_Mark"
+            "dependancyName": "<a class=\"gModGreen\" id=\"176878499\">M_Feixiao_UltraTarget_Mark</a>"
           }
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_UltraTarget_FadeInFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__385618061\">M_Feixiao_UltraTarget_FadeInFlag</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [
@@ -4599,12 +4599,12 @@ const compositeAbilityObject = {
           ],
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "M_Feixiao_UltraTarget_Mark"
+            "dependancyName": "<a class=\"gModGreen\" id=\"176878499\">M_Feixiao_UltraTarget_Mark</a>"
           }
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_UltraTarget_Visual_Stun",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1192517657\">M_Feixiao_UltraTarget_Visual_Stun</a>",
           "modifierFlags": [
             "STAT_Stun_Effect"
           ],
@@ -4615,7 +4615,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_UltraTarget_Visual_Confine",
+          "for": "<a class=\"gModGreen\" id=\"mod__1169885953\">M_Feixiao_UltraTarget_Visual_Confine</a>",
           "modifierFlags": [
             "STAT_Confine_Effect"
           ],
@@ -4626,11 +4626,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_AchievementFlag"
+          "for": "<a class=\"gModGreen\" id=\"mod__-1478735185\">M_Feixiao_AchievementFlag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_InsertCheckSelf",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1503840637\">M_Feixiao_InsertCheckSelf</a>",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
@@ -4640,7 +4640,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_InsertRetargetSelf"
+                  "functionName": "<a class=\"gTempYellow\" id=\"393261393\">Feixiao_InsertRetargetSelf</a>"
                 }
               ]
             },
@@ -4655,7 +4655,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_InsertRetargetSelf"
+                  "functionName": "<a class=\"gTempYellow\" id=\"393261393\">Feixiao_InsertRetargetSelf</a>"
                 }
               ],
               "priorityLevel": -55
@@ -4665,7 +4665,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_InsertRetargetSelf"
+                  "functionName": "<a class=\"gTempYellow\" id=\"393261393\">Feixiao_InsertRetargetSelf</a>"
                 }
               ]
             },
@@ -4674,7 +4674,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_InsertRetargetSelf"
+                  "functionName": "<a class=\"gTempYellow\" id=\"393261393\">Feixiao_InsertRetargetSelf</a>"
                 }
               ]
             },
@@ -4711,7 +4711,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Feixiao_InsertRetargetSelf"
+                      "functionName": "<a class=\"gTempYellow\" id=\"393261393\">Feixiao_InsertRetargetSelf</a>"
                     }
                   ]
                 }
@@ -4721,7 +4721,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Feixiao_InsertRetargetSelf",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__393261393\">Feixiao_InsertRetargetSelf</a>",
               "parse": [
                 {
                   "name": "Find New Target",
@@ -4775,7 +4775,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Feixiao_InsertCheck",
+          "for": "<a class=\"gModGreen\" id=\"mod__248447225\">M_Feixiao_InsertCheck</a>",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
@@ -4785,7 +4785,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-238911265\">Feixiao_InsertRetarget</a>"
                 }
               ]
             },
@@ -4800,7 +4800,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-238911265\">Feixiao_InsertRetarget</a>"
                 }
               ],
               "priorityLevel": -55
@@ -4810,7 +4810,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-238911265\">Feixiao_InsertRetarget</a>"
                 }
               ]
             },
@@ -4819,7 +4819,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-238911265\">Feixiao_InsertRetarget</a>"
                 }
               ]
             },
@@ -4856,7 +4856,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Feixiao_InsertRetarget"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-238911265\">Feixiao_InsertRetarget</a>"
                     }
                   ]
                 }
@@ -4866,7 +4866,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Feixiao_InsertRetarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-238911265\">Feixiao_InsertRetarget</a>",
               "parse": [
                 {
                   "name": "Find New Target",
@@ -4920,7 +4920,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Feixiao_Eidolon4_Property[<span class=\"descriptionNumberColor\">Stormward I Hear</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1006222027\">Feixiao_Eidolon4_Property</a>[<span class=\"descriptionNumberColor\">Stormward I Hear</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -4961,7 +4961,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Feixiao_Eidolon2_CD[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
           "counter": 3,
           "stackData": [
             "MDF_Count"
@@ -4973,7 +4973,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Feixiao_Eidolon1_Property[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1384650414\">Feixiao_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4990,7 +4990,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "ModifyDamageData_IndependentDamageAddedRatio",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-446302809\">ModifyDamageData_IndependentDamageAddedRatio</a>",
                       "variables": {
                         "parameter[0]_IndependentDamageAddedRatio": {
                           "operator": "Variables[0] (MDF_PropertyRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -5044,7 +5044,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Feixiao_InsertIsReady[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
           "stackData": [],
           "latentQueue": [],
           "description": "The Talent's Follow-Up ATK can now be triggered.",
@@ -5053,7 +5053,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Feixiao_Ultramode_StanceBreakPreshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1539174332\">Feixiao_Ultramode_StanceBreakPreshow</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -5121,7 +5121,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Feixiao_Ultramode",
+          "for": "<a class=\"gModGreen\" id=\"mod__1525021884\">Feixiao_Ultramode</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ForceStanceDamage"
@@ -5302,7 +5302,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Feixiao_Ultramode_StanceBreakPreshow"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1539174332\">Feixiao_Ultramode_StanceBreakPreshow</a>"
                     }
                   ]
                 }
@@ -5333,7 +5333,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_Passive_ChargeTeamAttackCount",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1045121925\">Feixiao_Passive_ChargeTeamAttackCount</a>",
           "parse": [
             {
               "name": "Define Custom Variable",
@@ -5382,13 +5382,13 @@ const compositeAbilityObject = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_Passive_CostTeamAttackCountToGainSP"
+              "functionName": "<a class=\"gTempYellow\" id=\"683713803\">Feixiao_Passive_CostTeamAttackCountToGainSP</a>"
             }
           ]
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_Passive_CostTeamAttackCountToGainSP",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__683713803\">Feixiao_Passive_CostTeamAttackCountToGainSP</a>",
           "parse": [
             {
               "name": "IF",
@@ -5460,7 +5460,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_ResetAnimSpeed",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__2050569712\">Feixiao_ResetAnimSpeed</a>",
           "parse": [
             {
               "name": "Define Custom Variable",
@@ -5471,7 +5471,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_ComboStartCheck",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1125040676\">Feixiao_ComboStartCheck</a>",
           "parse": [
             {
               "name": "IF",
@@ -5491,12 +5491,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_Combo1_CostSPBeforeDamage",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__69209893\">Feixiao_Combo1_CostSPBeforeDamage</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_Combo1_DealSubDamage",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1161841910\">Feixiao_Combo1_DealSubDamage</a>",
           "parse": [
             {
               "name": "ATK Scaling DMG",
@@ -5533,7 +5533,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_Combo1_DealDamage",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-14625690\">Feixiao_Combo1_DealDamage</a>",
           "parse": [
             {
               "name": "IF",
@@ -5707,7 +5707,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_Combo2_DealDamage",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1999111375\">Feixiao_Combo2_DealDamage</a>",
           "parse": [
             {
               "name": "Declare Custom Variable",
@@ -5825,7 +5825,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_TriggerBreak",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1982785786\">Feixiao_TriggerBreak</a>",
           "parse": [
             {
               "name": "Define Custom Variable",
@@ -5853,7 +5853,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_Combo1_AfterDamageCheck",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1394849956\">Feixiao_Combo1_AfterDamageCheck</a>",
           "parse": [
             {
               "name": "IF",
@@ -5868,7 +5868,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Feixiao_Eidolon1_Property[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1384650414\">Feixiao_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
@@ -5907,7 +5907,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "M_Feixiao_UltraTarget_CutFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"-1145384524\">M_Feixiao_UltraTarget_CutFlag</a>"
             },
             {
               "name": "IF",
@@ -5976,7 +5976,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_TriggerBreak"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1982785786\">Feixiao_TriggerBreak</a>"
                 }
               ]
             }
@@ -5984,7 +5984,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_Combo2_AfterDamageCheck",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1389767451\">Feixiao_Combo2_AfterDamageCheck</a>",
           "parse": [
             {
               "name": "IF",
@@ -5999,7 +5999,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Feixiao_Eidolon1_Property[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1384650414\">Feixiao_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
@@ -6038,7 +6038,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "M_Feixiao_UltraTarget_CutFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"-1145384524\">M_Feixiao_UltraTarget_CutFlag</a>"
             },
             {
               "name": "IF",
@@ -6087,7 +6087,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_ComboPerformFinish",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__342687242\">Feixiao_ComboPerformFinish</a>",
           "parse": [
             {
               "name": "IF",
@@ -6143,7 +6143,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_EnterFinish",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1207472342\">Feixiao_EnterFinish</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Added Value",
@@ -6198,7 +6198,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Feixiao_AchievementFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1478735185\">M_Feixiao_AchievementFlag</a>"
                 }
               ]
             },
@@ -6214,7 +6214,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "M_Feixiao_UltraTarget_FinalHitFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"965737321\">M_Feixiao_UltraTarget_FinalHitFlag</a>"
             },
             {
               "name": "IF",
@@ -6240,7 +6240,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_TriggerBreak"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1982785786\">Feixiao_TriggerBreak</a>"
                 }
               ],
               "failed": [
@@ -6269,7 +6269,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Monster_W2_Feixiao_MainEnd"
+                "modifier": "<a class=\"gModGreen\" id=\"908013757\">Monster_W2_Feixiao_MainEnd</a>"
               },
               "passed": [
                 {
@@ -6296,7 +6296,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_ReturnComboLoopOnCombo",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1990296654\">Feixiao_ReturnComboLoopOnCombo</a>",
           "parse": [
             {
               "name": "IF",
@@ -6319,7 +6319,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_FrameHaltRealTime",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__293207912\">Feixiao_FrameHaltRealTime</a>",
           "parse": []
         }
       ],

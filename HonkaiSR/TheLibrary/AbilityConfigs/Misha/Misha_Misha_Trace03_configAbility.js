@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Misha_Tree03"
+      "modifier": "<a class=\"gModGreen\" id=\"670883616\">M_Misha_Tree03</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Misha_Tree03",
+      "for": "<a class=\"gModGreen\" id=\"mod__670883616\">M_Misha_Tree03</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",

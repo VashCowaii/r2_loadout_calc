@@ -36,7 +36,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -44,7 +44,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "AML_Boss_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"2028329566\">AML_Boss_BattleScore1</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -52,7 +52,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-323890115\">Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -60,7 +60,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_OnBreakRecoverChangeWeak"
+          "modifier": "<a class=\"gModGreen\" id=\"-1140477295\">Enemy_AML_Boss_Part2_OnBreakRecoverChangeWeak</a>"
         },
         {
           "name": "IF",
@@ -81,7 +81,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_HitEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-743479497\">Enemy_AML_Boss_Part2_HitEffect</a>"
         },
         {
           "name": "IF",
@@ -102,7 +102,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "OneMorePerTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
             }
           ],
           "failed": [
@@ -112,7 +112,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "MoreOneMorePerTurn"
+              "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
             }
           ]
         },
@@ -122,13 +122,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_RemoveOneMore"
+          "modifier": "<a class=\"gModGreen\" id=\"-864984736\">Enemy_AML_Boss_Part2_IF_RemoveOneMore</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_HitEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-743479497\">Enemy_AML_Boss_Part2_HitEffect</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage End [Owner]: Hit",
@@ -187,7 +187,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-323890115\">Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -223,7 +223,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_OnBreakRecoverChangeWeak",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1140477295\">Enemy_AML_Boss_Part2_OnBreakRecoverChangeWeak</a>",
           "execute": [
             {
               "eventTrigger": "End Broken State [Owner]",
@@ -234,7 +234,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_Monster_AML_Boss_Part2_Ability07"
+                  "modifier": "<a class=\"gModGreen\" id=\"-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>"
                 }
               ]
             }
@@ -410,7 +410,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_AML_Boss_IF_AbilityEX03"
+            "modifier": "<a class=\"gModGreen\" id=\"-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
           },
           "passed": [
             {
@@ -419,7 +419,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Standard_AttackRatioUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1638600472\">Standard_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "duration": 1,
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -505,7 +505,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Enemy_AML_Boss_IF_Enhance_Quantum[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-291765317\">Enemy_AML_Boss_IF_Enhance_Quantum</a>[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]"
           }
         },
         {
@@ -522,7 +522,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Enemy_AML_Boss_IF_Enhance_Imaginary[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1433767937\">Enemy_AML_Boss_IF_Enhance_Imaginary</a>[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]"
           }
         },
         {
@@ -542,7 +542,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_AML_Boss_Part2_IF_Ability13_Mark",
+              "modifier": "<a class=\"gModGreen\" id=\"1178360880\">Enemy_AML_Boss_Part2_IF_Ability13_Mark</a>",
               "invertCondition": true
             }
           },
@@ -561,7 +561,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_AML_Boss_Part2_IF_Ability13_Mark",
+                "modifier": "<a class=\"gModGreen\" id=\"1178360880\">Enemy_AML_Boss_Part2_IF_Ability13_Mark</a>",
                 "invertCondition": true
               },
               "ifTargetFound": [
@@ -573,7 +573,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_AML_Boss_IF_Enhance_Quantum[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-291765317\">Enemy_AML_Boss_IF_Enhance_Quantum</a>[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]"
                   },
                   "passed": [
                     {
@@ -582,7 +582,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_AML_Boss_ReactTarget_Q"
+                      "modifier": "<a class=\"gModGreen\" id=\"554191527\">Enemy_AML_Boss_ReactTarget_Q</a>"
                     }
                   ],
                   "failed": [
@@ -594,7 +594,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Enemy_AML_Boss_IF_Enhance_Imaginary[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1433767937\">Enemy_AML_Boss_IF_Enhance_Imaginary</a>[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]"
                       },
                       "passed": [
                         {
@@ -603,7 +603,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Enemy_AML_Boss_ReactTarget_I"
+                          "modifier": "<a class=\"gModGreen\" id=\"151528671\">Enemy_AML_Boss_ReactTarget_I</a>"
                         }
                       ],
                       "failed": [
@@ -622,7 +622,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Enemy_AML_Boss_IF_Enhance_Imaginary[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1433767937\">Enemy_AML_Boss_IF_Enhance_Imaginary</a>[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]",
                               "valuePerStack": {
                                 "MDF_DamagePercentage": {
                                   "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
@@ -680,7 +680,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Enemy_AML_Boss_IF_Enhance_Quantum[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-291765317\">Enemy_AML_Boss_IF_Enhance_Quantum</a>[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]",
                               "valuePerStack": {
                                 "MDF_DamagePercentage": {
                                   "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
@@ -744,7 +744,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Ability13_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"1178360880\">Enemy_AML_Boss_Part2_IF_Ability13_Mark</a>"
                 }
               ]
             }
@@ -763,7 +763,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Enemy_AML_Boss_ReactTarget_Q"
+            "modifier": "<a class=\"gModGreen\" id=\"554191527\">Enemy_AML_Boss_ReactTarget_Q</a>"
           },
           "ifTargetFound": [
             {
@@ -825,7 +825,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_AML_Boss_IF_CTRL_ConfineAndEntangle[<span class=\"descriptionNumberColor\">Snarelock</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"975559492\">Enemy_AML_Boss_IF_CTRL_ConfineAndEntangle</a>[<span class=\"descriptionNumberColor\">Snarelock</span>]",
               "duration": 1,
               "baseChance": {
                 "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
@@ -869,7 +869,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_AML_Boss_IF_Enhance_Quantum[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-291765317\">Enemy_AML_Boss_IF_Enhance_Quantum</a>[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -877,7 +877,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_AML_Boss_ReactTarget_Q"
+              "modifier": "<a class=\"gModGreen\" id=\"554191527\">Enemy_AML_Boss_ReactTarget_Q</a>"
             }
           ]
         },
@@ -894,7 +894,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Enemy_AML_Boss_ReactTarget_I"
+            "modifier": "<a class=\"gModGreen\" id=\"151528671\">Enemy_AML_Boss_ReactTarget_I</a>"
           },
           "ifTargetFound": [
             {
@@ -956,7 +956,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_AML_Boss_IF_CTRL_ConfineAndEntangle[<span class=\"descriptionNumberColor\">Snarelock</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"975559492\">Enemy_AML_Boss_IF_CTRL_ConfineAndEntangle</a>[<span class=\"descriptionNumberColor\">Snarelock</span>]",
               "duration": 1,
               "baseChance": {
                 "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
@@ -1000,7 +1000,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_AML_Boss_IF_Enhance_Imaginary[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1433767937\">Enemy_AML_Boss_IF_Enhance_Imaginary</a>[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1008,7 +1008,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_AML_Boss_ReactTarget_I"
+              "modifier": "<a class=\"gModGreen\" id=\"151528671\">Enemy_AML_Boss_ReactTarget_I</a>"
             }
           ]
         },
@@ -1030,7 +1030,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_Ability13_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"1178360880\">Enemy_AML_Boss_Part2_IF_Ability13_Mark</a>"
         },
         "Trigger: Ability End"
       ],
@@ -1082,7 +1082,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_Ability11_ListenSelfDieModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-842741041\">Enemy_AML_Boss_Part2_Ability11_ListenSelfDieModifier</a>"
         },
         "Ability Start",
         {
@@ -1145,7 +1145,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_Ability11_Charge"
+          "modifier": "<a class=\"gModGreen\" id=\"-1128742763\">Enemy_AML_Boss_Part2_Ability11_Charge</a>"
         },
         {
           "name": "Looped Event",
@@ -1164,7 +1164,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_AML_Boss_Part2_IF_Ability13_Mark",
+              "modifier": "<a class=\"gModGreen\" id=\"1178360880\">Enemy_AML_Boss_Part2_IF_Ability13_Mark</a>",
               "invertCondition": true
             }
           },
@@ -1183,7 +1183,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_AML_Boss_Part2_IF_Ability13_Mark",
+                "modifier": "<a class=\"gModGreen\" id=\"1178360880\">Enemy_AML_Boss_Part2_IF_Ability13_Mark</a>",
                 "invertCondition": true
               },
               "ifTargetFound": [
@@ -1195,7 +1195,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_AML_Boss_IF_Enhance_Quantum[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-291765317\">Enemy_AML_Boss_IF_Enhance_Quantum</a>[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]"
                   },
                   "passed": [
                     {
@@ -1204,7 +1204,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_AML_Boss_ReactTarget_Q"
+                      "modifier": "<a class=\"gModGreen\" id=\"554191527\">Enemy_AML_Boss_ReactTarget_Q</a>"
                     }
                   ],
                   "failed": [
@@ -1216,7 +1216,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Enemy_AML_Boss_IF_Enhance_Imaginary[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1433767937\">Enemy_AML_Boss_IF_Enhance_Imaginary</a>[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]"
                       },
                       "passed": [
                         {
@@ -1225,7 +1225,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Enemy_AML_Boss_ReactTarget_I"
+                          "modifier": "<a class=\"gModGreen\" id=\"151528671\">Enemy_AML_Boss_ReactTarget_I</a>"
                         }
                       ],
                       "failed": [
@@ -1244,7 +1244,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Enemy_AML_Boss_IF_Enhance_Imaginary[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1433767937\">Enemy_AML_Boss_IF_Enhance_Imaginary</a>[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]",
                               "valuePerStack": {
                                 "MDF_DamagePercentage": {
                                   "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
@@ -1302,7 +1302,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Enemy_AML_Boss_IF_Enhance_Quantum[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-291765317\">Enemy_AML_Boss_IF_Enhance_Quantum</a>[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]",
                               "valuePerStack": {
                                 "MDF_DamagePercentage": {
                                   "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
@@ -1366,7 +1366,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Ability13_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"1178360880\">Enemy_AML_Boss_Part2_IF_Ability13_Mark</a>"
                 }
               ]
             }
@@ -1385,7 +1385,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Enemy_AML_Boss_ReactTarget_Q"
+            "modifier": "<a class=\"gModGreen\" id=\"554191527\">Enemy_AML_Boss_ReactTarget_Q</a>"
           },
           "ifTargetFound": [
             {
@@ -1442,7 +1442,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_AML_Boss_IF_CTRL_ConfineAndEntangle[<span class=\"descriptionNumberColor\">Snarelock</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"975559492\">Enemy_AML_Boss_IF_CTRL_ConfineAndEntangle</a>[<span class=\"descriptionNumberColor\">Snarelock</span>]",
               "duration": 1,
               "baseChance": {
                 "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
@@ -1486,7 +1486,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_AML_Boss_IF_Enhance_Quantum[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-291765317\">Enemy_AML_Boss_IF_Enhance_Quantum</a>[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1494,7 +1494,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_AML_Boss_ReactTarget_Q"
+              "modifier": "<a class=\"gModGreen\" id=\"554191527\">Enemy_AML_Boss_ReactTarget_Q</a>"
             }
           ]
         },
@@ -1511,7 +1511,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Enemy_AML_Boss_ReactTarget_I"
+            "modifier": "<a class=\"gModGreen\" id=\"151528671\">Enemy_AML_Boss_ReactTarget_I</a>"
           },
           "ifTargetFound": [
             {
@@ -1568,7 +1568,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_AML_Boss_IF_CTRL_ConfineAndEntangle[<span class=\"descriptionNumberColor\">Snarelock</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"975559492\">Enemy_AML_Boss_IF_CTRL_ConfineAndEntangle</a>[<span class=\"descriptionNumberColor\">Snarelock</span>]",
               "duration": 1,
               "baseChance": {
                 "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
@@ -1612,7 +1612,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_AML_Boss_IF_Enhance_Imaginary[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1433767937\">Enemy_AML_Boss_IF_Enhance_Imaginary</a>[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1620,7 +1620,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_AML_Boss_ReactTarget_I"
+              "modifier": "<a class=\"gModGreen\" id=\"151528671\">Enemy_AML_Boss_ReactTarget_I</a>"
             }
           ]
         },
@@ -1631,7 +1631,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_Ability13_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"1178360880\">Enemy_AML_Boss_Part2_IF_Ability13_Mark</a>"
         },
         {
           "name": "IF",
@@ -1641,7 +1641,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_AML_Boss_IF_AbilityEX03"
+            "modifier": "<a class=\"gModGreen\" id=\"-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
           },
           "passed": [
             {
@@ -1650,7 +1650,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Standard_AttackRatioUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1638600472\">Standard_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "duration": 1,
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -1749,7 +1749,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_Ability11_ListenSelfDieModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-842741041\">Enemy_AML_Boss_Part2_Ability11_ListenSelfDieModifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1757,7 +1757,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_Ability11_Charge"
+          "modifier": "<a class=\"gModGreen\" id=\"-1128742763\">Enemy_AML_Boss_Part2_Ability11_Charge</a>"
         },
         {
           "name": "Change Character Transformation",
@@ -1882,7 +1882,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_AML_Boss_IF_AbilityEX03"
+            "modifier": "<a class=\"gModGreen\" id=\"-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
           },
           "passed": [
             {
@@ -1891,7 +1891,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Standard_SpeedRatioUp",
+              "modifier": "<a class=\"gModGreen\" id=\"2003084081\">Standard_SpeedRatioUp</a>",
               "duration": 1,
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -1947,7 +1947,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1366215328\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Effect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1955,7 +1955,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"651084439\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Effect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1963,7 +1963,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Frensnel"
+          "modifier": "<a class=\"gModGreen\" id=\"-1548805762\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Frensnel</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1971,7 +1971,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Frensnel"
+          "modifier": "<a class=\"gModGreen\" id=\"-1797898351\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Frensnel</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1979,7 +1979,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement",
+          "modifier": "<a class=\"gModGreen\" id=\"-2123264245\">Enemy_AML_Boss_Part2_IF_Enhancement</a>",
           "addStacksPerTrigger": 1
         },
         {
@@ -1988,7 +1988,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement",
+          "modifier": "<a class=\"gModGreen\" id=\"-2123264245\">Enemy_AML_Boss_Part2_IF_Enhancement</a>",
           "addStacksPerTrigger": 1
         },
         "Ability Start",
@@ -2000,7 +2000,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_AML_Boss_IF_AbilityEX03"
+            "modifier": "<a class=\"gModGreen\" id=\"-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
           },
           "passed": [
             {
@@ -2029,7 +2029,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_AML_Boss_IF_AbilityEX03"
+            "modifier": "<a class=\"gModGreen\" id=\"-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
           },
           "passed": [
             {
@@ -2091,7 +2091,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"651084439\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Effect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2099,7 +2099,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Frensnel"
+          "modifier": "<a class=\"gModGreen\" id=\"-1797898351\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Frensnel</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2107,7 +2107,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement",
+          "modifier": "<a class=\"gModGreen\" id=\"-2123264245\">Enemy_AML_Boss_Part2_IF_Enhancement</a>",
           "addStacksPerTrigger": 1
         },
         "Ability Start",
@@ -2119,7 +2119,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_AML_Boss_IF_AbilityEX03"
+            "modifier": "<a class=\"gModGreen\" id=\"-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
           },
           "passed": [
             {
@@ -2181,7 +2181,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1366215328\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Effect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2189,7 +2189,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Frensnel"
+          "modifier": "<a class=\"gModGreen\" id=\"-1548805762\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Frensnel</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2197,7 +2197,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement",
+          "modifier": "<a class=\"gModGreen\" id=\"-2123264245\">Enemy_AML_Boss_Part2_IF_Enhancement</a>",
           "addStacksPerTrigger": 1
         },
         "Ability Start",
@@ -2209,7 +2209,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Enemy_AML_Boss_IF_AbilityEX03"
+            "modifier": "<a class=\"gModGreen\" id=\"-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
           },
           "passed": [
             {
@@ -2271,7 +2271,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3[<span class=\"descriptionNumberColor\">Imaginary Mark</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__216530002\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3</a>[<span class=\"descriptionNumberColor\">Imaginary Mark</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2298,7 +2298,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1[<span class=\"descriptionNumberColor\">Quantum Mark</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__182974764\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1</a>[<span class=\"descriptionNumberColor\">Quantum Mark</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2325,7 +2325,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_IF_AbilityP01_WeaknessControll",
+          "for": "<a class=\"gModGreen\" id=\"mod__-909037772\">Enemy_AML_Boss_Part2_IF_AbilityP01_WeaknessControll</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2354,11 +2354,11 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Enemy_AML_Boss_IF_Sign_Part1"
+                        "modifier": "<a class=\"gModGreen\" id=\"1787283303\">Enemy_AML_Boss_IF_Sign_Part1</a>"
                       },
                       {
                         "name": "Modifier Was",
-                        "modifier": "Enemy_AML_Boss_IF_Part_Unselectable"
+                        "modifier": "<a class=\"gModGreen\" id=\"1248604534\">Enemy_AML_Boss_IF_Part_Unselectable</a>"
                       }
                     ]
                   },
@@ -2369,7 +2369,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1[<span class=\"descriptionNumberColor\">Quantum Mark</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"182974764\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1</a>[<span class=\"descriptionNumberColor\">Quantum Mark</span>]"
                     }
                   ]
                 },
@@ -2384,11 +2384,11 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Enemy_AML_Boss_IF_Sign_Part3"
+                        "modifier": "<a class=\"gModGreen\" id=\"1820838541\">Enemy_AML_Boss_IF_Sign_Part3</a>"
                       },
                       {
                         "name": "Modifier Was",
-                        "modifier": "Enemy_AML_Boss_IF_Part_Unselectable"
+                        "modifier": "<a class=\"gModGreen\" id=\"1248604534\">Enemy_AML_Boss_IF_Part_Unselectable</a>"
                       }
                     ]
                   },
@@ -2399,7 +2399,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3[<span class=\"descriptionNumberColor\">Imaginary Mark</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"216530002\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3</a>[<span class=\"descriptionNumberColor\">Imaginary Mark</span>]"
                     }
                   ]
                 }
@@ -2409,7 +2409,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_IF_Ability13_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__1178360880\">Enemy_AML_Boss_Part2_IF_Ability13_Mark</a>",
           "stackData": [],
           "latentQueue": [
             "AML_Boss_00_BattleScore2_Flag"
@@ -2417,7 +2417,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_IF_RemoveOneMore",
+          "for": "<a class=\"gModGreen\" id=\"mod__-864984736\">Enemy_AML_Boss_Part2_IF_RemoveOneMore</a>",
           "execute": [
             {
               "eventTrigger": "Action End [Owner]",
@@ -2455,7 +2455,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "MoreOneMorePerTurn"
+                          "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                         }
                       ],
                       "failed": [
@@ -2467,7 +2467,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "MoreOneMorePerTurn"
+                            "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                           },
                           "failed": [
                             {
@@ -2476,7 +2476,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "MoreOneMorePerTurn"
+                              "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                             }
                           ]
                         }
@@ -2564,7 +2564,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "OneMorePerTurn"
+                        "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                       },
                       "failed": [
                         {
@@ -2573,7 +2573,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "OneMorePerTurn"
+                          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                         }
                       ]
                     }
@@ -2640,7 +2640,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "MoreOneMorePerTurn"
+                            "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                           },
                           "failed": [
                             {
@@ -2649,7 +2649,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "MoreOneMorePerTurn"
+                              "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                             }
                           ]
                         }
@@ -2703,7 +2703,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "MoreOneMorePerTurn"
+                            "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                           },
                           "failed": [
                             {
@@ -2712,7 +2712,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "MoreOneMorePerTurn"
+                              "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                             }
                           ]
                         }
@@ -2747,7 +2747,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_Ability11_Charge",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1128742763\">Enemy_AML_Boss_Part2_Ability11_Charge</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2758,7 +2758,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_APShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                 }
               ]
             },
@@ -2803,7 +2803,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_APShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                 }
               ]
             },
@@ -2831,7 +2831,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_AML_Boss_Part2_Ability11_Charge"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1128742763\">Enemy_AML_Boss_Part2_Ability11_Charge</a>"
                   }
                 }
               ]
@@ -2845,14 +2845,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Charge_DisableAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__214857158\">Enemy_AML_Boss_Charge_DisableAction</a>",
           "modifierFlags": [
             "DisableAction"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Charge_DisableAction_Controller",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1395729801\">Enemy_AML_Boss_Charge_DisableAction_Controller</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier is Added [Anyone]",
@@ -2861,7 +2861,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Enemy_AML_Boss_Part2_Ability11_Charge"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1128742763\">Enemy_AML_Boss_Part2_Ability11_Charge</a>"
                   },
                   "passed": [
                     {
@@ -2870,7 +2870,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_AML_Boss_Charge_DisableAction"
+                      "modifier": "<a class=\"gModGreen\" id=\"214857158\">Enemy_AML_Boss_Charge_DisableAction</a>"
                     }
                   ]
                 }
@@ -2883,7 +2883,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Enemy_AML_Boss_Part2_Ability11_Charge"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1128742763\">Enemy_AML_Boss_Part2_Ability11_Charge</a>"
                   },
                   "passed": [
                     {
@@ -2892,7 +2892,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_AML_Boss_Charge_DisableAction"
+                      "modifier": "<a class=\"gModGreen\" id=\"214857158\">Enemy_AML_Boss_Charge_DisableAction</a>"
                     }
                   ]
                 }
@@ -2902,7 +2902,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Frensnel",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1797898351\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Frensnel</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -2914,7 +2914,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__651084439\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Effect</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -2974,7 +2974,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Frensnel",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1548805762\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Frensnel</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -2986,7 +2986,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1366215328\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Effect</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -3046,7 +3046,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part3",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1204086808\">Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part3</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -3097,7 +3097,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1170531570\">Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part1</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -3148,7 +3148,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2[<span class=\"descriptionNumberColor\">Amplification</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__150642610\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3161,7 +3161,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_AML_Boss_IF_Sign_Part1"
+                    "modifier": "<a class=\"gModGreen\" id=\"1787283303\">Enemy_AML_Boss_IF_Sign_Part1</a>"
                   },
                   "passed": [
                     {
@@ -3170,7 +3170,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part1"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1170531570\">Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part1</a>"
                     }
                   ]
                 },
@@ -3182,7 +3182,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_AML_Boss_IF_Sign_Part3"
+                    "modifier": "<a class=\"gModGreen\" id=\"1820838541\">Enemy_AML_Boss_IF_Sign_Part3</a>"
                   },
                   "passed": [
                     {
@@ -3191,7 +3191,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part3"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1204086808\">Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part3</a>"
                     }
                   ]
                 }
@@ -3206,7 +3206,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part1"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1170531570\">Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part1</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3214,7 +3214,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part3"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1204086808\">Enemy_AML_Boss_Part2_IF_Enhancement_LV2Effect_Part3</a>"
                 }
               ]
             }
@@ -3226,7 +3226,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1[<span class=\"descriptionNumberColor\">Amplification</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__133864991\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "description": "Skill is enhanced. Current Enhancement Level: 1",
           "type": "Other",
           "effectName": "Amplification",
@@ -3234,7 +3234,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_IF_Enhancement",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2123264245\">Enemy_AML_Boss_Part2_IF_Enhancement</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3246,7 +3246,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1366215328\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Effect</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3254,7 +3254,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Frensnel"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1548805762\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Frensnel</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3262,7 +3262,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"651084439\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Effect</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3270,7 +3270,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Frensnel"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1797898351\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Frensnel</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3278,7 +3278,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_Monster_AML_Boss_Part2_Ability07"
+                  "modifier": "<a class=\"gModGreen\" id=\"-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -3296,7 +3296,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1[<span class=\"descriptionNumberColor\">Amplification</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"133864991\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1</a>[<span class=\"descriptionNumberColor\">Amplification</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3304,7 +3304,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2[<span class=\"descriptionNumberColor\">Amplification</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"150642610\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2</a>[<span class=\"descriptionNumberColor\">Amplification</span>]"
                 }
               ]
             },
@@ -3337,7 +3337,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2[<span class=\"descriptionNumberColor\">Amplification</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"150642610\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2</a>[<span class=\"descriptionNumberColor\">Amplification</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -3345,7 +3345,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1[<span class=\"descriptionNumberColor\">Amplification</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"133864991\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1</a>[<span class=\"descriptionNumberColor\">Amplification</span>]"
                     }
                   ]
                 },
@@ -3369,7 +3369,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1[<span class=\"descriptionNumberColor\">Amplification</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"133864991\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1</a>[<span class=\"descriptionNumberColor\">Amplification</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -3377,7 +3377,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2[<span class=\"descriptionNumberColor\">Amplification</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"150642610\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2</a>[<span class=\"descriptionNumberColor\">Amplification</span>]"
                     }
                   ]
                 },
@@ -3413,7 +3413,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Part2_OnPhase3SpeedUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__661636354\">Enemy_AML_Boss_Part2_OnPhase3SpeedUp</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",

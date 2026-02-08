@@ -31,13 +31,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHeng_Eidolon1"
+          "modifier": "<a class=\"gModGreen\" id=\"-1099783557\">DanHeng_Eidolon1</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHeng_Eidolon1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1099783557\">DanHeng_Eidolon1</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -94,13 +94,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_DanHeng_Tree02"
+          "modifier": "<a class=\"gModGreen\" id=\"1828112803\">M_DanHeng_Tree02</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHeng_PointB2_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1050755614\">DanHeng_PointB2_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -135,7 +135,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_DanHeng_Tree02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1828112803\">M_DanHeng_Tree02</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -160,7 +160,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "DanHeng_PointB2_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1050755614\">DanHeng_PointB2_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -202,7 +202,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHeng_LowHP_AggroDown",
+          "modifier": "<a class=\"gModGreen\" id=\"1715636734\">DanHeng_LowHP_AggroDown</a>",
           "valuePerStack": {
             "MDF_HPRatio": {
               "operator": "Variables[0] (0.5) || RETURN",
@@ -226,7 +226,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHeng_Trace_AggroDown[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1338494483\">DanHeng_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -261,7 +261,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHeng_LowHP_AggroDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__1715636734\">DanHeng_LowHP_AggroDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -293,7 +293,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "DanHeng_Trace_AggroDown[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1338494483\">DanHeng_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_AggroDown) || RETURN",
@@ -338,7 +338,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "DanHeng_Trace_AggroDown[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1338494483\">DanHeng_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_AggroDown) || RETURN",
@@ -358,7 +358,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "DanHeng_Trace_AggroDown[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1338494483\">DanHeng_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
                   ]
@@ -394,13 +394,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Technique_DanHeng_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1614350483\">Technique_DanHeng_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHeng_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">Splitting Spearhead</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1978717144\">DanHeng_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Splitting Spearhead</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -432,7 +432,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Technique_DanHeng_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1614350483\">Technique_DanHeng_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -452,7 +452,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHeng_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">Splitting Spearhead</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1978717144\">DanHeng_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Splitting Spearhead</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -495,7 +495,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
           "valuePerStack": {
             "DanHeng_PassivePene": {
               "operator": "Variables[0] (0.36) || RETURN",
@@ -572,7 +572,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "AbilityPreShowModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"1621594543\">AbilityPreShowModifier</a>"
             }
           ]
         },
@@ -582,7 +582,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "AbilityPreShowModifier2"
+          "modifier": "<a class=\"gModGreen\" id=\"-993379801\">AbilityPreShowModifier2</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -590,7 +590,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHeng_CheckSelfBeingTarget"
+          "modifier": "<a class=\"gModGreen\" id=\"-1693166190\">DanHeng_CheckSelfBeingTarget</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -598,7 +598,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -611,7 +611,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHeng_CheckSelfBeingTarget",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1693166190\">DanHeng_CheckSelfBeingTarget</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -653,7 +653,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                         }
                       },
                       {
@@ -664,7 +664,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                         }
                       },
                       {
@@ -727,7 +727,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "valuePerStack": {
                         "DanHeng_PassivePene": {
                           "operator": "Variables[0] (0.36) || RETURN",
@@ -752,7 +752,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   ]
                 }
@@ -774,7 +774,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                         }
                       },
                       {
@@ -785,7 +785,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                         }
                       },
                       {
@@ -831,7 +831,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "valuePerStack": {
                         "DanHeng_PassivePene": {
                           "operator": "Variables[0] (0.36) || RETURN",
@@ -856,7 +856,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   ]
                 }
@@ -878,7 +878,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                         }
                       },
                       {
@@ -889,7 +889,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                         }
                       },
                       {
@@ -935,7 +935,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "valuePerStack": {
                         "DanHeng_PassivePene": {
                           "operator": "Variables[0] (0.36) || RETURN",
@@ -960,7 +960,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   ]
                 }
@@ -972,7 +972,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "AbilityPreShowModifier2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-993379801\">AbilityPreShowModifier2</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -989,7 +989,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "DanHeng_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1147035290\">DanHeng_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]"
               }
             },
             "delayAdvancePreview": {
@@ -1000,7 +1000,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "AbilityPreShowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1621594543\">AbilityPreShowModifier</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -1018,7 +1018,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "DanHeng_PointB2_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1050755614\">DanHeng_PointB2_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
               }
             },
             "delayAdvancePreview": {
@@ -1048,7 +1048,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHeng_Eidolon4_Trigger"
+              "modifier": "<a class=\"gModGreen\" id=\"1201134558\">DanHeng_Eidolon4_Trigger</a>"
             }
           ]
         },
@@ -1140,7 +1140,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHeng_Eidolon4_Trigger"
+              "modifier": "<a class=\"gModGreen\" id=\"1201134558\">DanHeng_Eidolon4_Trigger</a>"
             }
           ]
         },
@@ -1150,7 +1150,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHeng_Eidolon4_Trigger",
+          "for": "<a class=\"gModGreen\" id=\"mod__1201134558\">DanHeng_Eidolon4_Trigger</a>",
           "execute": [
             {
               "eventTrigger": "Got a Kill [Owner]",
@@ -1269,7 +1269,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHeng_Ability02_CheckCritical_Modifier",
+          "modifier": "<a class=\"gModGreen\" id=\"-2025698986\">DanHeng_Ability02_CheckCritical_Modifier</a>",
           "valuePerStack": {
             "MDF_Chance": {
               "operator": "Variables[0] (1) || RETURN",
@@ -1405,14 +1405,14 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHeng_Ability02_CheckCritical_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-2025698986\">DanHeng_Ability02_CheckCritical_Modifier</a>"
         },
         "Trigger: Ability End"
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHeng_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1147035290\">DanHeng_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedDown"
@@ -1449,7 +1449,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHeng_Ability02_CheckCritical_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2025698986\">DanHeng_Ability02_CheckCritical_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -1466,7 +1466,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "DanHeng_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1147035290\">DanHeng_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -1555,7 +1555,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHeng_Tree03_DamageAddedRatio"
+              "modifier": "<a class=\"gModGreen\" id=\"-1129129025\">DanHeng_Tree03_DamageAddedRatio</a>"
             }
           ]
         },
@@ -1632,7 +1632,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHeng_Tree03_DamageAddedRatio"
+              "modifier": "<a class=\"gModGreen\" id=\"-1129129025\">DanHeng_Tree03_DamageAddedRatio</a>"
             }
           ]
         },
@@ -1641,7 +1641,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHeng_Tree03_DamageAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1129129025\">DanHeng_Tree03_DamageAddedRatio</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1719,7 +1719,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1789,7 +1789,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(2 - 1)",
@@ -1826,7 +1826,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",
@@ -1859,7 +1859,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   ]
                 },
@@ -1892,7 +1892,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(2 - 1)",
@@ -1928,7 +1928,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",
@@ -1960,7 +1960,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   ]
                 }
@@ -1978,7 +1978,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1990,7 +1990,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -2008,7 +2008,7 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "LifeTime",
                   "variableName": "DanHeng_00_Passive_BeginTargetEnhance_CD",
-                  "modifierName": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                   "multiplier": 1
                 },
                 {
@@ -2048,7 +2048,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],

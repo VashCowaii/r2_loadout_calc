@@ -31,7 +31,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha_Fire_Initiate"
+          "modifier": "<a class=\"gModGreen\" id=\"1782341316\">Monster_W1_Mecha_Fire_Initiate</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -39,7 +39,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha04_01_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"-1525735107\">Monster_W1_Mecha04_01_MuteHitFly</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -47,7 +47,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "HideMonsterHUD"
+          "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
         }
       ],
       "whenAdded": [
@@ -57,13 +57,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "HideMonsterHUD"
+          "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha04_01_MuteHitFly",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1525735107\">Monster_W1_Mecha04_01_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
           ],
@@ -72,7 +72,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha_Fire_Initiate",
+          "for": "<a class=\"gModGreen\" id=\"mod__1782341316\">Monster_W1_Mecha_Fire_Initiate</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -85,7 +85,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target TAKING DMG}}"
                     },
-                    "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
                   },
                   "passed": [
                     {
@@ -115,7 +115,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Monster_W1_Mecha_Fire_Passive[<span class=\"descriptionNumberColor\">Out of Control</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1848655652\">Monster_W1_Mecha_Fire_Passive</a>[<span class=\"descriptionNumberColor\">Out of Control</span>]",
                       "duration": {
                         "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
                         "displayLines": "{[PassiveSkillInitiate[1]]}",
@@ -179,7 +179,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "HideMonsterHUD",
+          "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]"
@@ -206,7 +206,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha04_01_HeadEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1466752435\">Monster_W1_Mecha04_01_HeadEffect</a>"
         },
         "Trigger: Ability End"
       ],
@@ -302,7 +302,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
               },
               "ifTargetFound": [
                 {
@@ -353,7 +353,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
                 }
               ]
             }
@@ -366,7 +366,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha04_01_HeadEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1466752435\">Monster_W1_Mecha04_01_HeadEffect</a>"
         },
         "Trigger: Ability End"
       ],
@@ -557,7 +557,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
             "displayLines": "{[Skill06[2]]}",
@@ -674,7 +674,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
               },
               "passed": [
                 {
@@ -718,7 +718,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
                     }
                   ]
                 }
@@ -744,7 +744,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
                 "displayLines": "{[Skill06[2]]}",
@@ -811,7 +811,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha_Fire_Burning[<span class=\"descriptionNumberColor\">Mania</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"188036182\">Monster_W1_Mecha_Fire_Burning</a>[<span class=\"descriptionNumberColor\">Mania</span>]",
           "valuePerStack": {
             "Modifier_AttackAddedRatio": {
               "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
@@ -872,7 +872,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha_Fire_Burning_CD",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1129963596\">Monster_W1_Mecha_Fire_Burning_CD</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -884,7 +884,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha_Fire_Burning[<span class=\"descriptionNumberColor\">Mania</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__188036182\">Monster_W1_Mecha_Fire_Burning</a>[<span class=\"descriptionNumberColor\">Mania</span>]",
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
@@ -901,7 +901,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W1_Mecha_Fire_Burning_CD"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1129963596\">Monster_W1_Mecha_Fire_Burning_CD</a>"
                 }
               ]
             },
@@ -961,7 +961,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha_Fire_Passive[<span class=\"descriptionNumberColor\">Out of Control</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1848655652\">Monster_W1_Mecha_Fire_Passive</a>[<span class=\"descriptionNumberColor\">Out of Control</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -1033,7 +1033,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha04_01_HeadEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1466752435\">Monster_W1_Mecha04_01_HeadEffect</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"

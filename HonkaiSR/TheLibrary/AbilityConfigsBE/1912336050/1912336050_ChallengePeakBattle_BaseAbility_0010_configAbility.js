@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010"
+      "modifier": "<a class=\"gModGreen\" id=\"-220577957\">Modifier_ChallengePeakBattle_BaseAbility_0010</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5",
+      "for": "<a class=\"gModGreen\" id=\"mod__1607072781\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -45,7 +45,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4",
+      "for": "<a class=\"gModGreen\" id=\"mod__1590295162\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -73,7 +73,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3",
+      "for": "<a class=\"gModGreen\" id=\"mod__1506407067\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -101,7 +101,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2",
+      "for": "<a class=\"gModGreen\" id=\"mod__1489629448\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -129,7 +129,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1",
+      "for": "<a class=\"gModGreen\" id=\"mod__1539962305\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -157,7 +157,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0010_02",
+      "for": "<a class=\"gModGreen\" id=\"mod__1208937842\">Modifier_ChallengePeakBattle_BaseAbility_0010_02</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -197,7 +197,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1"
+                    "modifier": "<a class=\"gModGreen\" id=\"1539962305\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1</a>"
                   },
                   "passed": [
                     {
@@ -206,7 +206,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1",
+                      "modifier": "<a class=\"gModGreen\" id=\"1539962305\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                         "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -276,7 +276,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2"
+                    "modifier": "<a class=\"gModGreen\" id=\"1489629448\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2</a>"
                   },
                   "passed": [
                     {
@@ -285,7 +285,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2",
+                      "modifier": "<a class=\"gModGreen\" id=\"1489629448\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                         "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -355,7 +355,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3"
+                    "modifier": "<a class=\"gModGreen\" id=\"1506407067\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3</a>"
                   },
                   "passed": [
                     {
@@ -364,7 +364,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3",
+                      "modifier": "<a class=\"gModGreen\" id=\"1506407067\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                         "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -434,7 +434,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4"
+                    "modifier": "<a class=\"gModGreen\" id=\"1590295162\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4</a>"
                   },
                   "passed": [
                     {
@@ -443,7 +443,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4",
+                      "modifier": "<a class=\"gModGreen\" id=\"1590295162\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                         "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -513,7 +513,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5"
+                    "modifier": "<a class=\"gModGreen\" id=\"1607072781\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5</a>"
                   },
                   "passed": [
                     {
@@ -522,7 +522,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5",
+                      "modifier": "<a class=\"gModGreen\" id=\"1607072781\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                         "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -599,7 +599,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1"
+                "modifier": "<a class=\"gModGreen\" id=\"1539962305\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1</a>"
               },
               "passed": [
                 {
@@ -624,7 +624,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2"
+                "modifier": "<a class=\"gModGreen\" id=\"1489629448\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2</a>"
               },
               "passed": [
                 {
@@ -649,7 +649,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3"
+                "modifier": "<a class=\"gModGreen\" id=\"1506407067\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3</a>"
               },
               "passed": [
                 {
@@ -674,7 +674,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4"
+                "modifier": "<a class=\"gModGreen\" id=\"1590295162\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4</a>"
               },
               "passed": [
                 {
@@ -699,7 +699,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5"
+                "modifier": "<a class=\"gModGreen\" id=\"1607072781\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5</a>"
               },
               "passed": [
                 {
@@ -727,7 +727,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1"
+                    "modifier": "<a class=\"gModGreen\" id=\"1539962305\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1</a>"
                   },
                   {
                     "name": "Has Modifier",
@@ -735,7 +735,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2"
+                    "modifier": "<a class=\"gModGreen\" id=\"1489629448\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2</a>"
                   },
                   {
                     "name": "Has Modifier",
@@ -743,7 +743,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3"
+                    "modifier": "<a class=\"gModGreen\" id=\"1506407067\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3</a>"
                   },
                   {
                     "name": "Has Modifier",
@@ -751,7 +751,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4"
+                    "modifier": "<a class=\"gModGreen\" id=\"1590295162\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4</a>"
                   },
                   {
                     "name": "Has Modifier",
@@ -759,7 +759,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5"
+                    "modifier": "<a class=\"gModGreen\" id=\"1607072781\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5</a>"
                   }
                 ]
               },
@@ -858,7 +858,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getSummoner]]"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1",
+                      "modifier": "<a class=\"gModGreen\" id=\"1539962305\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                         "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -924,7 +924,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getSummoner]]"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2",
+                      "modifier": "<a class=\"gModGreen\" id=\"1489629448\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                         "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -990,7 +990,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getSummoner]]"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3",
+                      "modifier": "<a class=\"gModGreen\" id=\"1506407067\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                         "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -1056,7 +1056,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getSummoner]]"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4",
+                      "modifier": "<a class=\"gModGreen\" id=\"1590295162\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                         "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -1122,7 +1122,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getSummoner]]"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5",
+                      "modifier": "<a class=\"gModGreen\" id=\"1607072781\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                         "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -1237,7 +1237,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1",
+                      "modifier": "<a class=\"gModGreen\" id=\"1539962305\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff1</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                         "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -1303,7 +1303,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2",
+                      "modifier": "<a class=\"gModGreen\" id=\"1489629448\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff2</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                         "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -1369,7 +1369,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3",
+                      "modifier": "<a class=\"gModGreen\" id=\"1506407067\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff3</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                         "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -1435,7 +1435,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4",
+                      "modifier": "<a class=\"gModGreen\" id=\"1590295162\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff4</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                         "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -1501,7 +1501,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5",
+                      "modifier": "<a class=\"gModGreen\" id=\"1607072781\">Modifier_ChallengePeakBattle_BaseAbility_0010_Debuff5</a>",
                       "duration": {
                         "operator": "Variables[0] (ChallengePeakBattle_0010_ADF_1) || RETURN",
                         "displayLines": "ChallengePeakBattle_0010_ADF_1",
@@ -1571,7 +1571,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0010",
+      "for": "<a class=\"gModGreen\" id=\"mod__-220577957\">Modifier_ChallengePeakBattle_BaseAbility_0010</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -1593,7 +1593,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0010_02",
+                  "modifier": "<a class=\"gModGreen\" id=\"1208937842\">Modifier_ChallengePeakBattle_BaseAbility_0010_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0010_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

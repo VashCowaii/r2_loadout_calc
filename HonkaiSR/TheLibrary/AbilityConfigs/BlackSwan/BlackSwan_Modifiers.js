@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_DOT_Eidolon4_HaveAddedSP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1409864339\">M_BlackSwan_DOT_Eidolon4_HaveAddedSP</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -19,7 +19,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_P01_AddDOTFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__-658722874\">M_BlackSwan_P01_AddDOTFlag</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -30,7 +30,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_Maze_StopAddDot",
+      "for": "<a class=\"gModGreen\" id=\"mod__465925451\">M_BlackSwan_Maze_StopAddDot</a>",
       "counter": 1,
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -44,7 +44,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_ForbidEffectFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__-288826770\">M_BlackSwan_ForbidEffectFlag</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -62,7 +62,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
               }
             }
           ]
@@ -71,7 +71,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_DOT_Eidolon4_AddSP",
+      "for": "<a class=\"gModGreen\" id=\"mod__1557426074\">M_BlackSwan_DOT_Eidolon4_AddSP</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -104,7 +104,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_BlackSwan_DOT_Eidolon4_HaveAddedSP"
+              "modifier": "<a class=\"gModGreen\" id=\"-1409864339\">M_BlackSwan_DOT_Eidolon4_HaveAddedSP</a>"
             },
             "Modifier Deletes Itself"
           ],
@@ -114,7 +114,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
       "counter": 1,
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
@@ -138,7 +138,7 @@ const configAbility = {
                 "STAT_DOT_Bleed",
                 "STAT_DOT_Electric"
               ],
-              "modifierName": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+              "modifierName": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
             }
           ]
         },
@@ -207,7 +207,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_DOT_Eidolon4_HaveAddedSP"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1409864339\">M_BlackSwan_DOT_Eidolon4_HaveAddedSP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -215,7 +215,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_DOT_Eidolon4_AddSP",
+                  "modifier": "<a class=\"gModGreen\" id=\"1557426074\">M_BlackSwan_DOT_Eidolon4_AddSP</a>",
                   "valuePerStack": {
                     "Eidolon4_SPAdded": {
                       "operator": "Variables[0] (8) || RETURN",
@@ -249,7 +249,7 @@ const configAbility = {
                 "STAT_DOT_Bleed",
                 "STAT_DOT_Electric"
               ],
-              "modifierName": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+              "modifierName": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
             }
           ]
         }
@@ -270,7 +270,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_DOTFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__616609195\">M_BlackSwan_DOTFlag</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "KeepOnDeathrattle"
@@ -287,7 +287,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                 "invertCondition": true
               },
               "passed": [
@@ -310,7 +310,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                     "invertCondition": true
                   },
                   {
@@ -333,7 +333,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_DOT_DefenceIgnore",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -371,7 +371,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -388,7 +388,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_BlackSwan_P01_AddDOTFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"-658722874\">M_BlackSwan_P01_AddDOTFlag</a>"
             }
           ]
         },
@@ -439,7 +439,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_ForbidEffectFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>"
                 },
                 {
                   "name": "IF",
@@ -470,7 +470,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       }
                     }
                   ],
@@ -533,7 +533,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           }
                         }
                       ],
@@ -546,7 +546,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           }
                         }
                       ]
@@ -580,7 +580,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_BlackSwan_DOT_DefenceIgnore",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (DefenceIgnore) || RETURN",
@@ -598,7 +598,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
                       },
-                      "modifier": "M_BlackSwan_DOT_DefenceIgnore",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (DefenceIgnore) || RETURN",
@@ -641,7 +641,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       },
                       "passed": [
                         {
@@ -702,7 +702,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       }
                     }
                   ],
@@ -736,7 +736,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           },
                           "passed": [
                             {
@@ -797,7 +797,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           }
                         }
                       ],
@@ -810,7 +810,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           },
                           "passed": [
                             {
@@ -871,7 +871,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           }
                         }
                       ]
@@ -907,7 +907,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       },
                       "passed": [
                         {
@@ -922,7 +922,7 @@ const configAbility = {
                             "STAT_DOT_Bleed",
                             "STAT_DOT_Electric"
                           ],
-                          "modifierName": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+                          "modifierName": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
                         },
                         {
                           "name": "ATK Scaling DMG",
@@ -957,7 +957,7 @@ const configAbility = {
                             "STAT_DOT_Bleed",
                             "STAT_DOT_Electric"
                           ],
-                          "modifierName": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+                          "modifierName": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
                         }
                       ],
                       "failed": [
@@ -998,7 +998,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "M_BlackSwan_P01_AddDOTFlag"
+                          "modifier": "<a class=\"gModGreen\" id=\"-658722874\">M_BlackSwan_P01_AddDOTFlag</a>"
                         },
                         {
                           "name": "IF",
@@ -1029,7 +1029,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               }
                             }
                           ],
@@ -1042,7 +1042,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               }
                             }
                           ]
@@ -1057,7 +1057,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_DOT_DefenceIgnore"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1065,7 +1065,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
                   },
-                  "modifier": "M_BlackSwan_DOT_DefenceIgnore"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1073,7 +1073,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_ForbidEffectFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>"
                 }
               ],
               "failed": [
@@ -1083,7 +1083,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_ForbidEffectFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -1116,7 +1116,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                   }
                 },
                 {
@@ -1125,7 +1125,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_ForbidEffectFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>"
                 }
               ]
             },
@@ -1140,7 +1140,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                   },
                   {
                     "name": "Compare: Variable",
@@ -1148,7 +1148,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                     "compareType": ">=",
                     "value2": 1
                   }
@@ -1162,12 +1162,12 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "variableName": "_enhance_count",
-                  "modifierName": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                   "multiplier": 1
                 },
                 {
                   "name": "Define Modifier Variable",
-                  "modifierName": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                   "value": {
                     "operator": "Variables[0] (_enhance_count) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(_enhance_count - 1)",
@@ -1181,7 +1181,7 @@ const configAbility = {
                 },
                 {
                   "name": "Define Modifier-Specific Variable",
-                  "modifierName": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                   "variableName": "MDF_Count",
                   "value": {
                     "operator": "Variables[0] (_enhance_count) || Constants[0] (1) || SUB || RETURN",
@@ -1202,7 +1202,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_ForbidEffectFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>"
                 },
                 {
                   "name": "Define Custom Variable with Modifier Values",
@@ -1221,7 +1221,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                   "addStacksPerTrigger": {
                     "operator": "Constants[0] (1) || Variables[0] (ExtraLayer_DamagePercentage) || SUB || RETURN",
                     "displayLines": "(1 - ExtraLayer_DamagePercentage)",
@@ -1248,7 +1248,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_ForbidEffectFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>"
                 }
               ]
             }
@@ -1278,7 +1278,7 @@ const configAbility = {
               "flagName": [
                 "STAT_DOT_Poison"
               ],
-              "modifierName": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
               "casterFilter": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -1292,7 +1292,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                 "justAddedOrActive": true
               },
               "passed": [
@@ -1307,7 +1307,7 @@ const configAbility = {
                     "STAT_DOT_Bleed",
                     "STAT_DOT_Electric"
                   ],
-                  "modifierName": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
                 }
               ]
             },
@@ -1317,7 +1317,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_BlackSwan_DOTFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"616609195\">M_BlackSwan_DOTFlag</a>"
             },
             {
               "name": "IF",
@@ -1330,7 +1330,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "M_BlackSwan_ForbidEffectFlag",
+                    "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>",
                     "invertCondition": true,
                     "justAddedOrActive": true
                   },
@@ -1356,7 +1356,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                   },
                   "passed": [
                     {
@@ -1477,7 +1477,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
               },
               "passed": [
                 {

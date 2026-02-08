@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0002"
+      "modifier": "<a class=\"gModGreen\" id=\"-354946004\">Modifier_ChallengePeakBattle_BaseAbility_0002</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0002_03",
+      "for": "<a class=\"gModGreen\" id=\"mod__872000024\">Modifier_ChallengePeakBattle_BaseAbility_0002_03</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -88,7 +88,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0002_02[<span class=\"descriptionNumberColor\">Tempering</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__888777643\">Modifier_ChallengePeakBattle_BaseAbility_0002_02</a>[<span class=\"descriptionNumberColor\">Tempering</span>]",
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -99,7 +99,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0002_03",
+              "modifier": "<a class=\"gModGreen\" id=\"872000024\">Modifier_ChallengePeakBattle_BaseAbility_0002_03</a>",
               "valuePerStack": {
                 "ChallengePeakBattle_0002_ADF_1": {
                   "operator": "Variables[0] (ChallengePeakBattle_0002_ADF_1) || RETURN",
@@ -120,7 +120,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0002",
+      "for": "<a class=\"gModGreen\" id=\"mod__-354946004\">Modifier_ChallengePeakBattle_BaseAbility_0002</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -142,7 +142,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0002_02[<span class=\"descriptionNumberColor\">Tempering</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"888777643\">Modifier_ChallengePeakBattle_BaseAbility_0002_02</a>[<span class=\"descriptionNumberColor\">Tempering</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_0002_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

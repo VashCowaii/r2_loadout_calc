@@ -45,13 +45,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Technique_Jingliu_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1289509358\">Technique_Jingliu_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Technique_Jingliu_Modifier_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1060785735\">Technique_Jingliu_Modifier_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "DisableAction",
@@ -197,7 +197,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Jingliu_TechniqueUsage",
+          "for": "<a class=\"gModGreen\" id=\"mod__1042369095\">Advanced_Jingliu_TechniqueUsage</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -249,7 +249,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Technique_Jingliu_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1289509358\">Technique_Jingliu_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -266,7 +266,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "Technique_Jingliu_Modifier_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1060785735\">Technique_Jingliu_Modifier_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -327,7 +327,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Jingliu_TechniqueUsage",
+                      "modifier": "<a class=\"gModGreen\" id=\"1042369095\">Advanced_Jingliu_TechniqueUsage</a>",
                       "valuePerStack": {
                         "MDF_MazeMoonFlag": {
                           "operator": "Variables[0] (1) || RETURN",
@@ -380,7 +380,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Advanced_Jingliu_Eidolon1_CriticalDamage[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1838091998\">Advanced_Jingliu_Eidolon1_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -912,7 +912,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Jingliu_Frozen_Perform"
+          "modifier": "<a class=\"gModGreen\" id=\"-724768260\">Jingliu_Frozen_Perform</a>"
         },
         {
           "name": "IF",
@@ -940,7 +940,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Targets Adjacent(Blast)}}"
                   },
-                  "modifier": "Jingliu_Frozen_Perform"
+                  "modifier": "<a class=\"gModGreen\" id=\"-724768260\">Jingliu_Frozen_Perform</a>"
                 }
               ]
             }
@@ -952,7 +952,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Targets Adjacent(Blast)}}"
               },
-              "modifier": "Jingliu_Frozen_Perform"
+              "modifier": "<a class=\"gModGreen\" id=\"-724768260\">Jingliu_Frozen_Perform</a>"
             }
           ]
         },
@@ -962,7 +962,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Jingliu_Frozen_Perform"
+          "modifier": "<a class=\"gModGreen\" id=\"-724768260\">Jingliu_Frozen_Perform</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -1132,7 +1132,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Advanced_Jingliu_Eidolon2[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"57193716\">Advanced_Jingliu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]"
         },
         {
           "name": "IF",
@@ -1173,7 +1173,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Jingliu_Frozen_Perform",
+          "for": "<a class=\"gModGreen\" id=\"mod__-724768260\">Jingliu_Frozen_Perform</a>",
           "modifierFlags": [
             "STAT_AnimStop"
           ],
@@ -1282,7 +1282,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "AdvancedJingliu_Attack_Transfer",
+          "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>",
           "valuePerStack": {
             "AbilityP01_P1_HpConsumption": {
               "operator": "Variables[0] (0.3) || RETURN",
@@ -1304,7 +1304,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "ReduceActionDelay",
+          "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -1345,7 +1345,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Advanced_Jingliu_LoseHPPreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"1453058731\">Advanced_Jingliu_LoseHPPreShow</a>"
         },
         {
           "name": "Read Variable Value",
@@ -1453,7 +1453,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Advanced_Jingliu_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-908005903\">Advanced_Jingliu_Passive</a>"
         }
       ],
       "references": []
@@ -1477,7 +1477,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Advanced_Jingliu_Eidolon1_CriticalDamage[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1838091998\">Advanced_Jingliu_Eidolon1_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1629,7 +1629,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "AdvancedJingliu_Attack_Transfer"
+            "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>"
           },
           "passed": [
             {
@@ -1766,7 +1766,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Advanced_Jingliu_Eidolon2[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"57193716\">Advanced_Jingliu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.8) || RETURN",
@@ -2078,7 +2078,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Jingliu_MoonMad[<span class=\"descriptionNumberColor\">Moonlight</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-44910835\">Advanced_Jingliu_MoonMad</a>[<span class=\"descriptionNumberColor\">Moonlight</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -2155,7 +2155,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Jingliu_LoseHPPreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__1453058731\">Advanced_Jingliu_LoseHPPreShow</a>",
           "execute": [
             {
               "eventTrigger": "Update Target Selected(UI) [Owner]",
@@ -2182,7 +2182,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "AdvancedJingliu_Attack_Transfer"
+                        "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>"
                       }
                     ]
                   },
@@ -2237,7 +2237,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Jingliu_Passive_CriticalUp[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1354140510\">Advanced_Jingliu_Passive_CriticalUp</a>[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2268,7 +2268,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Jingliu_Trace_B1_Resist[<span class=\"descriptionNumberColor\">Deathrealm</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__291641534\">Advanced_Jingliu_Trace_B1_Resist</a>[<span class=\"descriptionNumberColor\">Deathrealm</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2330,7 +2330,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Jingliu_Passive_ATK",
+          "for": "<a class=\"gModGreen\" id=\"mod__-284171684\">Advanced_Jingliu_Passive_ATK</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2376,7 +2376,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Advanced_Jingliu_Passive2"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1877587463\">Advanced_Jingliu_Passive2</a>"
                 }
               ]
             }
@@ -2384,7 +2384,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "AdvancedJingliu_PointB3[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__596888368\">AdvancedJingliu_PointB3</a>[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2447,7 +2447,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "AdvancedJingliu_Attack_Transfer",
+          "for": "<a class=\"gModGreen\" id=\"mod__1784507575\">AdvancedJingliu_Attack_Transfer</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2459,7 +2459,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Advanced_Jingliu_MoonMad[<span class=\"descriptionNumberColor\">Moonlight</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-44910835\">Advanced_Jingliu_MoonMad</a>[<span class=\"descriptionNumberColor\">Moonlight</span>]"
                 },
                 {
                   "name": "Update Ability Binding",
@@ -2495,7 +2495,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Advanced_Jingliu_Eidolon6[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-9916760\">Advanced_Jingliu_Eidolon6</a>[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]"
                 },
                 {
                   "name": "IF",
@@ -2534,7 +2534,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Advanced_Jingliu_Trace_B1_Resist[<span class=\"descriptionNumberColor\">Deathrealm</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"291641534\">Advanced_Jingliu_Trace_B1_Resist</a>[<span class=\"descriptionNumberColor\">Deathrealm</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2542,7 +2542,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Advanced_Jingliu_Trace_B2_SpeedUp"
+                  "modifier": "<a class=\"gModGreen\" id=\"-833990909\">Advanced_Jingliu_Trace_B2_SpeedUp</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2550,7 +2550,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Advanced_Jingliu_Passive_CriticalUp[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1354140510\">Advanced_Jingliu_Passive_CriticalUp</a>[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]"
                 }
               ]
             },
@@ -2602,7 +2602,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Jingliu_Eidolon6[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-9916760\">Advanced_Jingliu_Eidolon6</a>[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]",
                       "valuePerStack": {
                         "MDF_IcePenetrate": {
                           "operator": "Variables[0] (0.3) || RETURN",
@@ -2637,7 +2637,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Jingliu_Trace_B1_Resist[<span class=\"descriptionNumberColor\">Deathrealm</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"291641534\">Advanced_Jingliu_Trace_B1_Resist</a>[<span class=\"descriptionNumberColor\">Deathrealm</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.35) || RETURN",
@@ -2665,7 +2665,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Advanced_Jingliu_Passive_CriticalUp[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1354140510\">Advanced_Jingliu_Passive_CriticalUp</a>[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
                   "valuePerStack": {
                     "MDF_CriticalRatio": {
                       "operator": "Variables[0] (0.5) || RETURN",
@@ -2811,7 +2811,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Jingliu_Eidolon6[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-9916760\">Advanced_Jingliu_Eidolon6</a>[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2846,7 +2846,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Jingliu_Eidolon2[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__57193716\">Advanced_Jingliu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -2868,7 +2868,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "AdvancedJingliu_Attack_Transfer"
+                        "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>"
                       }
                     ]
                   },
@@ -2898,7 +2898,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Jingliu_Eidolon1_CriticalDamage[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1838091998\">Advanced_Jingliu_Eidolon1_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2934,7 +2934,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Jingliu_Passive2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1877587463\">Advanced_Jingliu_Passive2</a>",
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -2971,7 +2971,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "AdvancedJingliu_Attack_Transfer"
+                        "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>"
                       },
                       "passed": [
                         {
@@ -3005,7 +3005,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Jingliu_Passive_ATK"
+                      "modifier": "<a class=\"gModGreen\" id=\"-284171684\">Advanced_Jingliu_Passive_ATK</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3013,7 +3013,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "AdvancedJingliu_Attack_Transfer"
+                      "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -3040,7 +3040,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "AdvancedJingliu_Attack_Transfer"
+                        "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>"
                       },
                       "passed": [
                         {
@@ -3074,7 +3074,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Jingliu_Passive_ATK"
+                      "modifier": "<a class=\"gModGreen\" id=\"-284171684\">Advanced_Jingliu_Passive_ATK</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3082,7 +3082,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "AdvancedJingliu_Attack_Transfer"
+                      "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -3109,7 +3109,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "AdvancedJingliu_Attack_Transfer"
+                        "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>"
                       },
                       "passed": [
                         {
@@ -3143,7 +3143,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Jingliu_Passive_ATK"
+                      "modifier": "<a class=\"gModGreen\" id=\"-284171684\">Advanced_Jingliu_Passive_ATK</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3151,7 +3151,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "AdvancedJingliu_Attack_Transfer"
+                      "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -3191,7 +3191,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "AdvancedJingliu_Attack_Transfer"
+                        "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>"
                       },
                       "passed": [
                         {
@@ -3225,7 +3225,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Jingliu_Passive_ATK"
+                      "modifier": "<a class=\"gModGreen\" id=\"-284171684\">Advanced_Jingliu_Passive_ATK</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3233,7 +3233,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "AdvancedJingliu_Attack_Transfer"
+                      "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -3246,7 +3246,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Jingliu_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-908005903\">Advanced_Jingliu_Passive</a>",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
@@ -3307,7 +3307,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Jingliu_Passive_ATK"
+                      "modifier": "<a class=\"gModGreen\" id=\"-284171684\">Advanced_Jingliu_Passive_ATK</a>"
                     },
                     {
                       "name": "IF",
@@ -3539,7 +3539,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "modifier": "AdvancedJingliu_Attack_Transfer"
+                                "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>"
                               },
                               "passed": [
                                 {
@@ -3656,7 +3656,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Advanced_Jingliu_LoseHPCount[<span class=\"descriptionNumberColor\">Crescent Transmigration</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"37722324\">Advanced_Jingliu_LoseHPCount</a>[<span class=\"descriptionNumberColor\">Crescent Transmigration</span>]",
                           "valuePerStack": {
                             "Jingliu_LoseHPCount": {
                               "operator": "Variables[0] (Jingliu_LoseHPCount) || RETURN",
@@ -3678,7 +3678,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "AdvancedJingliu_Attack_Transfer"
+                        "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>"
                       },
                       "passed": [
                         {
@@ -3687,7 +3687,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Advanced_Jingliu_MoonMad[<span class=\"descriptionNumberColor\">Moonlight</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-44910835\">Advanced_Jingliu_MoonMad</a>[<span class=\"descriptionNumberColor\">Moonlight</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (5) || RETURN",
                             "displayLines": "5",
@@ -3811,7 +3811,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Jingliu_Passive_ATK"
+                      "modifier": "<a class=\"gModGreen\" id=\"-284171684\">Advanced_Jingliu_Passive_ATK</a>"
                     },
                     {
                       "name": "IF",
@@ -3947,7 +3947,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Jingliu_Passive_ATK"
+                      "modifier": "<a class=\"gModGreen\" id=\"-284171684\">Advanced_Jingliu_Passive_ATK</a>"
                     },
                     {
                       "name": "IF",
@@ -4014,7 +4014,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "AdvancedJingliu_Attack_Transfer"
+                    "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>"
                   },
                   "passed": [
                     {
@@ -4101,7 +4101,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Advanced_Jingliu_Passive_ATK"
+                          "modifier": "<a class=\"gModGreen\" id=\"-284171684\">Advanced_Jingliu_Passive_ATK</a>"
                         },
                         {
                           "name": "IF",
@@ -4207,7 +4207,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Jingliu_Passive_ATK"
+                      "modifier": "<a class=\"gModGreen\" id=\"-284171684\">Advanced_Jingliu_Passive_ATK</a>"
                     },
                     {
                       "name": "IF",
@@ -4319,7 +4319,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Jingliu_Passive_ATK"
+                      "modifier": "<a class=\"gModGreen\" id=\"-284171684\">Advanced_Jingliu_Passive_ATK</a>"
                     },
                     {
                       "name": "IF",
@@ -4394,7 +4394,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Jingliu_Transfer_PreShow"
+                      "modifier": "<a class=\"gModGreen\" id=\"970052184\">Advanced_Jingliu_Transfer_PreShow</a>"
                     }
                   ],
                   "whenLeavingRange": [
@@ -4404,7 +4404,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Jingliu_Transfer_PreShow"
+                      "modifier": "<a class=\"gModGreen\" id=\"970052184\">Advanced_Jingliu_Transfer_PreShow</a>"
                     }
                   ]
                 },
@@ -4435,7 +4435,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "AdvancedJingliu_PointB3[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"596888368\">AdvancedJingliu_PointB3</a>[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (0.25) || RETURN",
@@ -4503,7 +4503,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "AdvancedJingliu_PointB3[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"596888368\">AdvancedJingliu_PointB3</a>[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (0.25) || RETURN",
@@ -4527,7 +4527,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Jingliu_Transfer_PreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__970052184\">Advanced_Jingliu_Transfer_PreShow</a>",
           "stackData": [],
           "latentQueue": [
             "LoseHPTrigger",
@@ -4559,7 +4559,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Jingliu_LoseHPCount[<span class=\"descriptionNumberColor\">Crescent Transmigration</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__37722324\">Advanced_Jingliu_LoseHPCount</a>[<span class=\"descriptionNumberColor\">Crescent Transmigration</span>]",
           "stackType": "ReplaceByCaster",
           "stackData": [
             "Jingliu_LoseHPCount"

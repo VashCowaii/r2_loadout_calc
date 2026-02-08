@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_068"
+      "modifier": "<a class=\"gModGreen\" id=\"1594853796\">MStrongChallengeEX_Talent_StageAbility_LE_068</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_EMY_068",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1134570198\">MStrongChallengeEX_Talent_StageAbility_EMY_068</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -46,7 +46,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_068",
+      "for": "<a class=\"gModGreen\" id=\"mod__1173790972\">MStrongChallengeEX_Talent_StageAbility_PLY_068</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -73,7 +73,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_068",
+      "for": "<a class=\"gModGreen\" id=\"mod__1594853796\">MStrongChallengeEX_Talent_StageAbility_LE_068</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -100,7 +100,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_068",
+                  "modifier": "<a class=\"gModGreen\" id=\"1173790972\">MStrongChallengeEX_Talent_StageAbility_PLY_068</a>",
                   "valuePerStack": {
                     "MDF_PhysicalAddedRatio": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -136,7 +136,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_068",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1134570198\">MStrongChallengeEX_Talent_StageAbility_EMY_068</a>",
                   "valuePerStack": {
                     "MDF_PhysicalResistanceDelta": {
                       "operator": "Variables[0] (#ADF_2) || RETURN",

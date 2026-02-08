@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Svarog_Control_OnPart_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-733983508\">Svarog_Control_OnPart_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Svarog_Ability07_AllDamageUp_Modifier[<span class=\"descriptionNumberColor\">Amplification</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1854522558\">Svarog_Ability07_AllDamageUp_Modifier</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -63,7 +63,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Svarog_Part_ListenBreak_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-818415302\">Svarog_Part_ListenBreak_Modifier</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -149,7 +149,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Svarog_Part_OnTurnEndChangePhaseModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-463045993\">Svarog_Part_OnTurnEndChangePhaseModifier</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -171,7 +171,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Svarog_ListenPlayerDie_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-920895050\">Svarog_ListenPlayerDie_Modifier</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -195,7 +195,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
                 }
               ]
             },
@@ -205,7 +205,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Svarog_Control_OnPart_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -213,7 +213,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Svarog_ListenBreak_RemoveControl_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -221,7 +221,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Svarog_Part_OnTurnEndChangePhaseModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-463045993\">Svarog_Part_OnTurnEndChangePhaseModifier</a>"
             },
             {
               "name": "Declare Custom Variable",
@@ -256,7 +256,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Svarog_Part_OnTurnEndChangePhaseModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-463045993\">Svarog_Part_OnTurnEndChangePhaseModifier</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -264,7 +264,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Svarog_Control_OnPart_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -272,7 +272,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Svarog_ListenBreak_RemoveControl_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
             },
             {
               "name": "Declare Custom Variable",
@@ -303,7 +303,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Svarog_Ability06_Bonus",
+      "for": "<a class=\"gModGreen\" id=\"mod__-41812969\">Svarog_Ability06_Bonus</a>",
       "modifierFlags": [
         "Endurance"
       ],
@@ -320,7 +320,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "W1_Mecha02_AttackBonus_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"1364752860\">W1_Mecha02_AttackBonus_Effect</a>"
             }
           ]
         },
@@ -351,7 +351,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Svarog_Part0_DamageReduceModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__73747832\">Svarog_Part0_DamageReduceModifier</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -405,7 +405,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Svarog_Kaboom_Modifier[<span class=\"descriptionNumberColor\">Overheat</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1496711585\">Svarog_Kaboom_Modifier</a>[<span class=\"descriptionNumberColor\">Overheat</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
         {
@@ -453,7 +453,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Svarog_Part_ListenHP_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__17783365\">Svarog_Part_ListenHP_Modifier</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -476,7 +476,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
                 }
               ]
             },
@@ -486,7 +486,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Svarog_Control_OnPart_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
             }
           ]
         }
@@ -501,7 +501,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Svarog_Ability06_Insert_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1501253853\">Svarog_Ability06_Insert_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -520,7 +520,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Svarog_CTRL",
+      "for": "<a class=\"gModGreen\" id=\"mod__1035250951\">M_Svarog_CTRL</a>",
       "stackType": "Merge",
       "modifierFlags": [
         "DisableAction",
@@ -539,7 +539,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Stun_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"234868487\">Stun_Effect</a>"
             }
           ]
         },
@@ -552,7 +552,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Stun_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"234868487\">Stun_Effect</a>"
             },
             {
               "name": "IF",
@@ -629,7 +629,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Svarog_Electric_Modifier[<span class=\"descriptionNumberColor\">Grievous</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__700810271\">Svarog_Electric_Modifier</a>[<span class=\"descriptionNumberColor\">Grievous</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
         "STAT_DefenceDown"
@@ -692,7 +692,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]",
       "modifierFlags": [
         "Stealth",
         "DisableHealHP",
@@ -735,7 +735,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_Svarog_CTRL"
+              "modifier": "<a class=\"gModGreen\" id=\"1035250951\">M_Svarog_CTRL</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -743,7 +743,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Svarog_ListenPlayerDie_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-920895050\">Svarog_ListenPlayerDie_Modifier</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -751,7 +751,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Svarog_ListenPlayerAllDie_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-545618319\">Svarog_ListenPlayerAllDie_Modifier</a>"
             },
             {
               "name": "Declare Custom Variable",
@@ -787,7 +787,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_Svarog_CTRL",
+              "modifier": "<a class=\"gModGreen\" id=\"1035250951\">M_Svarog_CTRL</a>",
               "valuePerStack": {
                 "Modifier_Frozen_DamagePercentage": 0
               }
@@ -806,7 +806,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_GS_Svarog_Level_SpecialWin",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1443371257\">Monster_W1_GS_Svarog_Level_SpecialWin</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End"
@@ -817,7 +817,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_GS_Svarog_DisableAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-353224873\">Monster_W1_GS_Svarog_DisableAction</a>",
       "modifierFlags": [
         "DisableAction"
       ],
@@ -829,7 +829,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_SvarogPart_CD",
+      "for": "<a class=\"gModGreen\" id=\"mod__2115356635\">Monster_W1_SvarogPart_CD</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -837,7 +837,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_SvarogPart_Overload[<span class=\"descriptionNumberColor\">Overload</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__419784878\">Monster_W1_SvarogPart_Overload</a>[<span class=\"descriptionNumberColor\">Overload</span>]",
       "description": "Casts Controlled Blasting in the next action.",
       "type": "Other",
       "effectName": "Overload",
@@ -845,7 +845,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_SvarogPart_CountDown[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-770745937\">Monster_W1_SvarogPart_CountDown</a>[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
         {

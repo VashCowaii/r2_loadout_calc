@@ -111,7 +111,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 1}}"
       },
-      "modifier": "Enemy_AML_Boss_IF_Sign_Part1"
+      "modifier": "<a class=\"gModGreen\" id=\"1787283303\">Enemy_AML_Boss_IF_Sign_Part1</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -119,7 +119,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 2}}"
       },
-      "modifier": "Enemy_AML_Boss_IF_Sign_Part2"
+      "modifier": "<a class=\"gModGreen\" id=\"1804060922\">Enemy_AML_Boss_IF_Sign_Part2</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -127,7 +127,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 3}}"
       },
-      "modifier": "Enemy_AML_Boss_IF_Sign_Part3"
+      "modifier": "<a class=\"gModGreen\" id=\"1820838541\">Enemy_AML_Boss_IF_Sign_Part3</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -135,7 +135,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 1}}"
       },
-      "modifier": "Enemy_AML_Boss_IF_Part_Revive",
+      "modifier": "<a class=\"gModGreen\" id=\"-2081849040\">Enemy_AML_Boss_IF_Part_Revive</a>",
       "valuePerStack": {
         "MDF_PartReviveDelay": {
           "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
@@ -153,7 +153,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 2}}"
       },
-      "modifier": "Enemy_AML_Boss_IF_Part_Revive",
+      "modifier": "<a class=\"gModGreen\" id=\"-2081849040\">Enemy_AML_Boss_IF_Part_Revive</a>",
       "valuePerStack": {
         "MDF_PartReviveDelay": {
           "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
@@ -171,7 +171,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 3}}"
       },
-      "modifier": "Enemy_AML_Boss_IF_Part_Revive",
+      "modifier": "<a class=\"gModGreen\" id=\"-2081849040\">Enemy_AML_Boss_IF_Part_Revive</a>",
       "valuePerStack": {
         "MDF_PartReviveDelay": {
           "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
@@ -189,7 +189,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 1}}"
       },
-      "modifier": "Enemy_AML_Boss_Charge_DisableAction_Controller"
+      "modifier": "<a class=\"gModGreen\" id=\"-1395729801\">Enemy_AML_Boss_Charge_DisableAction_Controller</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -197,7 +197,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 3}}"
       },
-      "modifier": "Enemy_AML_Boss_Charge_DisableAction_Controller"
+      "modifier": "<a class=\"gModGreen\" id=\"-1395729801\">Enemy_AML_Boss_Charge_DisableAction_Controller</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -205,7 +205,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_ListenPartDie"
+      "modifier": "<a class=\"gModGreen\" id=\"651799441\">Enemy_AML_Boss_ListenPartDie</a>"
     },
     {
       "name": "IF",
@@ -215,7 +215,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Enemy_AML_Boss_IF_AbilityEX01"
+        "modifier": "<a class=\"gModGreen\" id=\"-1835739852\">Enemy_AML_Boss_IF_AbilityEX01</a>"
       },
       "passed": [
         {
@@ -224,7 +224,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Standard_SuperArmorController",
+          "modifier": "<a class=\"gModGreen\" id=\"532367944\">Standard_SuperArmorController</a>",
           "valuePerStack": {
             "MDF_SuperArmorDamageResistance": {
               "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
@@ -258,7 +258,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Standard_SuperArmorController",
+          "modifier": "<a class=\"gModGreen\" id=\"532367944\">Standard_SuperArmorController</a>",
           "valuePerStack": {
             "MDF_SuperArmorDamageResistance": {
               "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
@@ -292,7 +292,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 0}}"
           },
-          "modifier": "Enemy_W2_Cocolia_IF_SuperArmorController",
+          "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
           "valuePerStack": {
             "MDF_IF_BOSS_BreakDelay": {
               "operator": "Variables[0] ({[SkillEX01[5]]}) || RETURN",
@@ -326,7 +326,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 0}}"
           },
-          "modifier": "Enemy_W2_Cocolia_IF_SoftFrenzyController",
+          "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
           "valuePerStack": {
             "MDF_FrenzyStartDelay": {
               "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
@@ -372,7 +372,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Enemy_AML_Boss_IF_AbilityEX02"
+        "modifier": "<a class=\"gModGreen\" id=\"-1785406995\">Enemy_AML_Boss_IF_AbilityEX02</a>"
       },
       "passed": [
         {
@@ -381,7 +381,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 2}}"
           },
-          "modifier": "Enemy_AML_Boss_Part2_IF_AbilityP01_WeaknessControll"
+          "modifier": "<a class=\"gModGreen\" id=\"-909037772\">Enemy_AML_Boss_Part2_IF_AbilityP01_WeaknessControll</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -427,7 +427,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Enemy_AML_Boss_IF_AbilityEX03"
+        "modifier": "<a class=\"gModGreen\" id=\"-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
       },
       "passed": [
         {
@@ -436,7 +436,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_AML_Boss_IF_AbilityEX03"
+          "modifier": "<a class=\"gModGreen\" id=\"-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -444,7 +444,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 2}}"
           },
-          "modifier": "Enemy_AML_Boss_IF_AbilityEX03"
+          "modifier": "<a class=\"gModGreen\" id=\"-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -452,7 +452,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_AML_Boss_IF_AbilityEX03"
+          "modifier": "<a class=\"gModGreen\" id=\"-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -668,7 +668,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Enemy_AML_Boss_IF_AbilityEX04"
+        "modifier": "<a class=\"gModGreen\" id=\"-1886072709\">Enemy_AML_Boss_IF_AbilityEX04</a>"
       },
       "passed": [
         {
@@ -677,7 +677,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_W2_Cocolia_IF_WeaknessCount",
+          "modifier": "<a class=\"gModGreen\" id=\"-146543153\">Enemy_W2_Cocolia_IF_WeaknessCount</a>",
           "valuePerStack": {
             "MDF_TokenDamageReduceRatio": {
               "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
@@ -703,7 +703,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 2}}"
           },
-          "modifier": "Enemy_W2_Cocolia_IF_WeaknessCount",
+          "modifier": "<a class=\"gModGreen\" id=\"-146543153\">Enemy_W2_Cocolia_IF_WeaknessCount</a>",
           "valuePerStack": {
             "MDF_TokenDamageReduceRatio": {
               "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
@@ -729,7 +729,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_W2_Cocolia_IF_WeaknessCount",
+          "modifier": "<a class=\"gModGreen\" id=\"-146543153\">Enemy_W2_Cocolia_IF_WeaknessCount</a>",
           "valuePerStack": {
             "MDF_TokenDamageReduceRatio": {
               "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
@@ -757,7 +757,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_AML_Boss_IF_BattleAlert"
+      "modifier": "<a class=\"gModGreen\" id=\"-630308982\">Monster_AML_Boss_IF_BattleAlert</a>"
     }
   ],
   "references": []

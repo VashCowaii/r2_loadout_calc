@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23008_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1747972242\">LC_23008_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23008_SpeedDeltaAddedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1558750701\">LC_23008_SpeedDeltaAddedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -75,7 +75,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23008_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1747972242\">LC_23008_Main</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -153,7 +153,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "LC_23008_SpeedDeltaAddedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1558750701\">LC_23008_SpeedDeltaAddedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_SpeedDeltaAdd": {
@@ -193,7 +193,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_23008_SpeedDeltaAddedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1558750701\">LC_23008_SpeedDeltaAddedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
                     }
                   }
                 }

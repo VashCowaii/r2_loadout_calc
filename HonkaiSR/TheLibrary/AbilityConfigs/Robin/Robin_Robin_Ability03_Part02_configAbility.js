@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Robin_Ability03Area"
+      "modifier": "<a class=\"gModGreen\" id=\"32210681\">Robin_Ability03Area</a>"
     },
     {
       "name": "Update Energy",

@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "AML_Boss_BattleScore1",
+      "for": "<a class=\"gModGreen\" id=\"mod__2028329566\">AML_Boss_BattleScore1</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -90,7 +90,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W0_Boss_Part2_Ability11_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -101,7 +101,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             }
           ]
         },
@@ -128,7 +128,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Target Part 1}}"
                   },
-                  "modifier": "Enemy_W0_Boss_Charge_DisableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>"
                 }
               ]
             },
@@ -152,7 +152,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Target Part 3}}"
                   },
-                  "modifier": "Enemy_W0_Boss_Charge_DisableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>"
                 }
               ]
             },
@@ -162,7 +162,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             }
           ]
         },
@@ -205,7 +205,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Target Part 1}}"
                   },
-                  "modifier": "Enemy_W0_Boss_Charge_DisableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>"
                 }
               ]
             },
@@ -229,7 +229,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Target Part 3}}"
                   },
-                  "modifier": "Enemy_W0_Boss_Charge_DisableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>"
                 }
               ]
             },
@@ -254,7 +254,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_W0_Boss_Part2_Ability11_Modifier"
+                "modifier": "<a class=\"gModGreen\" id=\"596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>"
               }
             }
           ]
@@ -270,7 +270,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W0_Boss_Charge_DisableAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>",
       "modifierFlags": [
         "DisableAction"
       ],
@@ -281,7 +281,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel",
+      "for": "<a class=\"gModGreen\" id=\"mod__-859851761\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -293,7 +293,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-846464827\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -335,7 +335,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W0_Boss_Part2_AttackUp_Ability07_Frensnel",
+      "for": "<a class=\"gModGreen\" id=\"mod__-354136848\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Frensnel</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -347,7 +347,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W0_Boss_Part2_AttackUp_Ability07_Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1761279918\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Effect</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -389,7 +389,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W0_Boss_Part2_AttackUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -400,7 +400,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability07_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-1761279918\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Effect</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -408,7 +408,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability07_Frensnel"
+              "modifier": "<a class=\"gModGreen\" id=\"-354136848\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Frensnel</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -416,7 +416,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-846464827\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -424,7 +424,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel"
+              "modifier": "<a class=\"gModGreen\" id=\"-859851761\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -432,7 +432,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_Monster_AML_Boss_Part2_Ability07"
+              "modifier": "<a class=\"gModGreen\" id=\"-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>"
             }
           ]
         },
@@ -470,7 +470,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_WMonster_W0_Boss_Part_Passive_WeakPhysical",
+      "for": "<a class=\"gModGreen\" id=\"mod__-632703033\">Enemy_WMonster_W0_Boss_Part_Passive_WeakPhysical</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -528,7 +528,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_WMonster_W0_Boss_Part_Passive_WeakWind",
+      "for": "<a class=\"gModGreen\" id=\"mod__-42840376\">Enemy_WMonster_W0_Boss_Part_Passive_WeakWind</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -586,7 +586,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_WMonster_W0_Boss_Part_Passive_WeakFire",
+      "for": "<a class=\"gModGreen\" id=\"mod__1832434558\">Enemy_WMonster_W0_Boss_Part_Passive_WeakFire</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -644,7 +644,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_WMonster_W0_Boss_Part_Passive_WeakIce",
+      "for": "<a class=\"gModGreen\" id=\"mod__-748933759\">Enemy_WMonster_W0_Boss_Part_Passive_WeakIce</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -702,7 +702,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_Monster_AML_Boss_Part2_Ability07",
+      "for": "<a class=\"gModGreen\" id=\"mod__-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -724,7 +724,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W0_Boss_Part2_OnPhase3SpeedUp[<span class=\"descriptionNumberColor\">Burst</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1383210331\">Enemy_W0_Boss_Part2_OnPhase3SpeedUp</a>[<span class=\"descriptionNumberColor\">Burst</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -759,7 +759,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_Ability11_ListenSelfDieModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-842741041\">Enemy_AML_Boss_Part2_Ability11_ListenSelfDieModifier</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"

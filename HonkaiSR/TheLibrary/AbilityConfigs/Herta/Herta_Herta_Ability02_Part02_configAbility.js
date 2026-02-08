@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Herta_Ability02_CheckHp"
+      "modifier": "<a class=\"gModGreen\" id=\"1288583281\">Herta_Ability02_CheckHp</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -79,14 +79,14 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Herta_Ability02_CheckHp"
+      "modifier": "<a class=\"gModGreen\" id=\"1288583281\">Herta_Ability02_CheckHp</a>"
     },
     "Trigger: Ability End"
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Herta_Ability02_CheckHp",
+      "for": "<a class=\"gModGreen\" id=\"mod__1288583281\">Herta_Ability02_CheckHp</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",

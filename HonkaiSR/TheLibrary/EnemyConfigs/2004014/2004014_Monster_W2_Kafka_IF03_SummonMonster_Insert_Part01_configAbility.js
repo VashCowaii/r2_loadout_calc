@@ -159,7 +159,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical"
+              "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -167,7 +167,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W2_Kafka_IF_Weakness_Imaginary"
+              "modifier": "<a class=\"gModGreen\" id=\"1168051970\">Enemy_W2_Kafka_IF_Weakness_Imaginary</a>"
             }
           ]
         },
@@ -217,7 +217,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire"
+              "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -225,7 +225,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W2_Kafka_IF_Weakness_Wind"
+              "modifier": "<a class=\"gModGreen\" id=\"-1358847221\">Enemy_W2_Kafka_IF_Weakness_Wind</a>"
             }
           ]
         }
@@ -237,7 +237,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -245,7 +245,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "modifier": "Monster_W2_Kafka_IF03_SummonHitDamageSplit",
+      "modifier": "<a class=\"gModGreen\" id=\"-1171418484\">Monster_W2_Kafka_IF03_SummonHitDamageSplit</a>",
       "casterAssign": "CasterSelf"
     },
     {
@@ -254,7 +254,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "modifier": "Enemy_W2_Kafka_IF_SummonDeathrattle",
+      "modifier": "<a class=\"gModGreen\" id=\"206643728\">Enemy_W2_Kafka_IF_SummonDeathrattle</a>",
       "valuePerStack": {
         "MDF_KillBonus": {
           "operator": "Variables[0] ({[SkillIF01[2]]}) || RETURN",
@@ -281,7 +281,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Kafka_IF_SummonDeathrattle",
+      "for": "<a class=\"gModGreen\" id=\"mod__206643728\">Enemy_W2_Kafka_IF_SummonDeathrattle</a>",
       "modifierFlags": [
         "KeepOnDeathrattle",
         "Deathrattle"

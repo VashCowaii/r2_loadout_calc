@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21032_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1943507571\">LC_21032_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21032_Bonus3[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-182810700\">LC_21032_Bonus3</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
       "stackType": "ReplaceByCasterOrUnStack",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21032_Bonus2[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-166033081\">LC_21032_Bonus2</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
       "stackType": "ReplaceByCasterOrUnStack",
       "execute": [
         {
@@ -80,7 +80,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21032_Bonus1[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-149255462\">LC_21032_Bonus1</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCasterOrUnStack",
       "execute": [
         {
@@ -112,7 +112,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21032_Sub3",
+      "for": "<a class=\"gModGreen\" id=\"mod__423750049\">LC_21032_Sub3</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -132,7 +132,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "LC_21032_Bonus3[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-182810700\">LC_21032_Bonus3</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -148,7 +148,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_21032_Sub1"
+                  "modifier": "<a class=\"gModGreen\" id=\"390194811\">LC_21032_Sub1</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -156,7 +156,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_21032_Sub2"
+                  "modifier": "<a class=\"gModGreen\" id=\"406972430\">LC_21032_Sub2</a>"
                 }
               ]
             },
@@ -172,7 +172,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "LC_21032_Bonus3[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-182810700\">LC_21032_Bonus3</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
             }
           ]
         },
@@ -196,7 +196,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_21032_Bonus3[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-182810700\">LC_21032_Bonus3</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
                 }
               ]
             }
@@ -206,7 +206,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21032_Sub2",
+      "for": "<a class=\"gModGreen\" id=\"mod__406972430\">LC_21032_Sub2</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -226,7 +226,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "LC_21032_Bonus2[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-166033081\">LC_21032_Bonus2</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -242,7 +242,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_21032_Sub1"
+                  "modifier": "<a class=\"gModGreen\" id=\"390194811\">LC_21032_Sub1</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -250,7 +250,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_21032_Sub3"
+                  "modifier": "<a class=\"gModGreen\" id=\"423750049\">LC_21032_Sub3</a>"
                 }
               ]
             },
@@ -266,7 +266,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "LC_21032_Bonus2[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-166033081\">LC_21032_Bonus2</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
             }
           ]
         },
@@ -290,7 +290,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_21032_Bonus2[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-166033081\">LC_21032_Bonus2</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
                 }
               ]
             }
@@ -302,7 +302,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21032_Sub1",
+      "for": "<a class=\"gModGreen\" id=\"mod__390194811\">LC_21032_Sub1</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -322,7 +322,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "LC_21032_Bonus1[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-149255462\">LC_21032_Bonus1</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -338,7 +338,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_21032_Sub2"
+                  "modifier": "<a class=\"gModGreen\" id=\"406972430\">LC_21032_Sub2</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -346,7 +346,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_21032_Sub3"
+                  "modifier": "<a class=\"gModGreen\" id=\"423750049\">LC_21032_Sub3</a>"
                 }
               ]
             },
@@ -362,7 +362,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "LC_21032_Bonus1[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-149255462\">LC_21032_Bonus1</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
             }
           ]
         },
@@ -386,7 +386,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_21032_Bonus1[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-149255462\">LC_21032_Bonus1</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
                 }
               ]
             }
@@ -398,7 +398,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21032_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1943507571\">LC_21032_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -418,7 +418,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "LC_21032_Bonus1[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-149255462\">LC_21032_Bonus1</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -436,7 +436,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "LC_21032_Bonus2[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-166033081\">LC_21032_Bonus2</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -454,7 +454,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "LC_21032_Bonus3[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-182810700\">LC_21032_Bonus3</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
               "onlyRemoveOwnersInstance": true
             }
           ]
@@ -485,7 +485,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "LC_21032_Sub1"
+                      "modifier": "<a class=\"gModGreen\" id=\"390194811\">LC_21032_Sub1</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -493,7 +493,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "LC_21032_Sub2"
+                      "modifier": "<a class=\"gModGreen\" id=\"406972430\">LC_21032_Sub2</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -501,7 +501,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "LC_21032_Sub3"
+                      "modifier": "<a class=\"gModGreen\" id=\"423750049\">LC_21032_Sub3</a>"
                     }
                   ]
                 }

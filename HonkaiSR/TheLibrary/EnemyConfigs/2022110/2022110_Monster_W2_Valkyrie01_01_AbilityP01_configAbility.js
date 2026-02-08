@@ -14,14 +14,14 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Valkyrie01_01_AbilityP01_ComboAttack[<span class=\"descriptionNumberColor\">Maddened</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1604945835\">Enemy_W2_Valkyrie01_01_AbilityP01_ComboAttack</a>[<span class=\"descriptionNumberColor\">Maddened</span>]"
     }
   ],
   "whenAdded": [],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Valkyrie01_01_AbilityP01_ComboAttack[<span class=\"descriptionNumberColor\">Maddened</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1604945835\">Enemy_W2_Valkyrie01_01_AbilityP01_ComboAttack</a>[<span class=\"descriptionNumberColor\">Maddened</span>]",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"

@@ -58,7 +58,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Hanya_AbilityPreShowModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-255935213\">Hanya_AbilityPreShowModifier</a>"
     },
     {
       "name": "IF",
@@ -73,7 +73,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Hanya_Eidolon2_Pre"
+          "modifier": "<a class=\"gModGreen\" id=\"-888545750\">Hanya_Eidolon2_Pre</a>"
         }
       ]
     }
@@ -81,7 +81,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Hanya_AbilityPreShowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-255935213\">Hanya_AbilityPreShowModifier</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -139,7 +139,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "WHanya_Ability03Bonus[<span class=\"descriptionNumberColor\">Edict</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1743228292\">WHanya_Ability03Bonus</a>[<span class=\"descriptionNumberColor\">Edict</span>]",
           "invertCondition": true
         },
         "delayAdvancePreview": {

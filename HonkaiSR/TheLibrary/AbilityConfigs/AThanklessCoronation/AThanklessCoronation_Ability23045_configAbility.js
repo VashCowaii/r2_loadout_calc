@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23045_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1714968103\">LC_23045_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23045_Bonus2[<span class=\"descriptionNumberColor\">King of Knights</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1567261515\">LC_23045_Bonus2</a>[<span class=\"descriptionNumberColor\">King of Knights</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23045_Bonus[<span class=\"descriptionNumberColor\">King of Knights</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1662085723\">LC_23045_Bonus</a>[<span class=\"descriptionNumberColor\">King of Knights</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -79,7 +79,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23045_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1714968103\">LC_23045_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -97,7 +97,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23045_Bonus[<span class=\"descriptionNumberColor\">King of Knights</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1662085723\">LC_23045_Bonus</a>[<span class=\"descriptionNumberColor\">King of Knights</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -164,7 +164,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23045_Bonus2[<span class=\"descriptionNumberColor\">King of Knights</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1567261515\">LC_23045_Bonus2</a>[<span class=\"descriptionNumberColor\">King of Knights</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",

@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Cerydra_Maze_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1690765176\">Cerydra_Maze_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Cerydra_Maze_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1690765176\">Cerydra_Maze_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -59,7 +59,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "StageAbility_MazeStandard_EnterBattle_MarkTeamLeader"
+                      "modifier": "<a class=\"gModGreen\" id=\"-636149171\">StageAbility_MazeStandard_EnterBattle_MarkTeamLeader</a>"
                     }
                   }
                 ]

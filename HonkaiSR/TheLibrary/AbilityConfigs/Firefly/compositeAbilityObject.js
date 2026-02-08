@@ -94,13 +94,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_Eidolon1"
+          "modifier": "<a class=\"gModGreen\" id=\"626123002\">Sam_Eidolon1</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Sam_Eidolon1_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1464889709\">Sam_Eidolon1_Sub</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -122,7 +122,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_Eidolon1",
+          "for": "<a class=\"gModGreen\" id=\"mod__626123002\">Sam_Eidolon1</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -177,7 +177,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sam_Eidolon1_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1464889709\">Sam_Eidolon1_Sub</a>"
                     }
                   ]
                 }
@@ -192,7 +192,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_Eidolon1_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1464889709\">Sam_Eidolon1_Sub</a>"
                 }
               ]
             }
@@ -214,13 +214,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_Trace03_BreakDamageAddedRatio"
+          "modifier": "<a class=\"gModGreen\" id=\"-48653263\">Sam_Trace03_BreakDamageAddedRatio</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Sam_Trace03_BreakDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-146915656\">Sam_Trace03_BreakDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -278,7 +278,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_Trace03_BreakDamageAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-48653263\">Sam_Trace03_BreakDamageAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -286,7 +286,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Sam_Trace03_BreakDamageAddedRatio"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
                 }
               ]
             }
@@ -301,7 +301,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Sam_Trace03_BreakDamageAddedRatio"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
                     }
                   ]
                 }
@@ -316,7 +316,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Sam_Trace03_BreakDamageAddedRatio"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
                     }
                   ]
                 }
@@ -331,7 +331,7 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Sam_Trace03_BreakDamageAddedRatio"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
                     }
                   ]
                 }
@@ -341,7 +341,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Sam_Trace03_BreakDamageAddedRatio",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
@@ -399,7 +399,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Sam_Trace03_BreakDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-146915656\">Sam_Trace03_BreakDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]"
                       },
                       "passed": [
                         {
@@ -408,7 +408,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Sam_Trace03_BreakDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-146915656\">Sam_Trace03_BreakDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (MDF_CurrentAttack2) || Variables[1] (1800) || SUB || RETURN",
@@ -429,7 +429,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Sam_Trace03_BreakDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-146915656\">Sam_Trace03_BreakDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (MDF_CurrentAttack2) || Variables[1] (1800) || SUB || RETURN",
@@ -452,7 +452,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sam_Trace03_BreakDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-146915656\">Sam_Trace03_BreakDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]"
                     }
                   ]
                 }
@@ -500,7 +500,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_Maze_AddWeakness"
+          "modifier": "<a class=\"gModGreen\" id=\"-2073901601\">Sam_Maze_AddWeakness</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -508,13 +508,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_Maze"
+          "modifier": "<a class=\"gModGreen\" id=\"-2024354192\">Sam_Maze</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Sam_Maze",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2024354192\">Sam_Maze</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -599,7 +599,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_Maze_AddWeakness",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2073901601\">Sam_Maze_AddWeakness</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -610,7 +610,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Sam_Ability21_FireWeakType[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"639093534\">Sam_Ability21_FireWeakType</a>[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -661,7 +661,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
             }
           ],
           "failed": [
@@ -671,7 +671,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sam_PassiveAbility01_ExitRedMode"
+              "modifier": "<a class=\"gModGreen\" id=\"-1258419380\">Sam_PassiveAbility01_ExitRedMode</a>"
             }
           ]
         }
@@ -679,7 +679,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Sam_PassiveAbility01_ExitRedMode",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1258419380\">Sam_PassiveAbility01_ExitRedMode</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -716,7 +716,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sam_PassiveAbility01_ExitRedMode"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1258419380\">Sam_PassiveAbility01_ExitRedMode</a>"
                     }
                   ]
                 }
@@ -741,7 +741,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_PassiveAbility01_BattleEvent"
+          "modifier": "<a class=\"gModGreen\" id=\"92987575\">Sam_PassiveAbility01_BattleEvent</a>"
         },
         {
           "name": "Block Advance/Delay Effects",
@@ -759,7 +759,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Sam_PassiveAbility01_BattleEvent",
+          "for": "<a class=\"gModGreen\" id=\"mod__92987575\">Sam_PassiveAbility01_BattleEvent</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -850,7 +850,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_PassiveAbility"
+          "modifier": "<a class=\"gModGreen\" id=\"618387317\">Sam_PassiveAbility</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -858,7 +858,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_UltraPreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"1214391345\">Sam_UltraPreShow</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -866,7 +866,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_LoseHPPreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"1839227070\">Sam_LoseHPPreShow</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -874,7 +874,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_Ability11_StanceDamagePreShow_Fire"
+          "modifier": "<a class=\"gModGreen\" id=\"-342359297\">Sam_Ability11_StanceDamagePreShow_Fire</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -882,7 +882,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_Ability11_StanceDamagePreShow_NoFire"
+          "modifier": "<a class=\"gModGreen\" id=\"1576215372\">Sam_Ability11_StanceDamagePreShow_NoFire</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -890,7 +890,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_Ability21_AddWeaknessPreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"1454050150\">Sam_Ability21_AddWeaknessPreShow</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -898,7 +898,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_Ability21_StanceDamagePreShow_Fire"
+          "modifier": "<a class=\"gModGreen\" id=\"1595550658\">Sam_Ability21_StanceDamagePreShow_Fire</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -906,7 +906,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_Ability21_StanceDamagePreShow_NoFire"
+          "modifier": "<a class=\"gModGreen\" id=\"-1713306799\">Sam_Ability21_StanceDamagePreShow_NoFire</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -914,7 +914,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Sam_Ability02_DelayReduce"
+          "modifier": "<a class=\"gModGreen\" id=\"390294012\">Sam_Ability02_DelayReduce</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -922,7 +922,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Sam_BreakPreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"1701719398\">Sam_BreakPreShow</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -930,7 +930,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Sam_BreakedPreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"765639261\">Sam_BreakedPreShow</a>"
         },
         {
           "name": "Change Character UI",
@@ -940,7 +940,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Sam_BreakedPreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__765639261\">Sam_BreakedPreShow</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -989,7 +989,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
                               }
                             ]
                           }
@@ -1006,7 +1006,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_BreakPreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__1701719398\">Sam_BreakPreShow</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1062,7 +1062,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_Ability02_DelayReduce",
+          "for": "<a class=\"gModGreen\" id=\"mod__390294012\">Sam_Ability02_DelayReduce</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1077,7 +1077,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "ReduceNextActionDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1527090005\">ReduceNextActionDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -1116,7 +1116,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
               "invertCondition": true
             },
             "delayAdvancePreview": {
@@ -1134,7 +1134,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_Ability21_AddWeaknessPreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__1454050150\">Sam_Ability21_AddWeaknessPreShow</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -1162,7 +1162,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
                 }
               ]
             },
@@ -1182,7 +1182,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_Ability21_StanceDamagePreShow_NoFire",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1713306799\">Sam_Ability21_StanceDamagePreShow_NoFire</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -1199,7 +1199,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
                 },
                 {
                   "name": "Is Weak to Attacker",
@@ -1249,7 +1249,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_Ability21_StanceDamagePreShow_Fire",
+          "for": "<a class=\"gModGreen\" id=\"mod__1595550658\">Sam_Ability21_StanceDamagePreShow_Fire</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -1266,7 +1266,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
                 },
                 {
                   "name": "Is Weak to Attacker",
@@ -1306,7 +1306,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_Ability11_StanceDamagePreShow_NoFire",
+          "for": "<a class=\"gModGreen\" id=\"mod__1576215372\">Sam_Ability11_StanceDamagePreShow_NoFire</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -1323,7 +1323,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
                 },
                 {
                   "name": "Is Weak to Attacker",
@@ -1361,7 +1361,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_Ability11_StanceDamagePreShow_Fire",
+          "for": "<a class=\"gModGreen\" id=\"mod__-342359297\">Sam_Ability11_StanceDamagePreShow_Fire</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -1378,7 +1378,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
                 },
                 {
                   "name": "Is Weak to Attacker",
@@ -1406,7 +1406,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_LoseHPPreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__1839227070\">Sam_LoseHPPreShow</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1434,7 +1434,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
                         "invertCondition": true
                       }
                     ]
@@ -1480,7 +1480,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_UltraPreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__1214391345\">Sam_UltraPreShow</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -1509,7 +1509,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_PassiveAbility",
+          "for": "<a class=\"gModGreen\" id=\"mod__618387317\">Sam_PassiveAbility</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1532,7 +1532,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Sam_PassiveAbility01_BattleEvent"
+                          "modifier": "<a class=\"gModGreen\" id=\"92987575\">Sam_PassiveAbility01_BattleEvent</a>"
                         }
                       }
                     ]
@@ -1584,7 +1584,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.4) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
@@ -1692,7 +1692,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
                         "invertCondition": true
                       },
                       "passed": [
@@ -1702,7 +1702,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]"
                         }
                       ]
                     }
@@ -1747,7 +1747,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (0.4) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
@@ -1768,7 +1768,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]"
                         }
                       ]
                     }
@@ -2006,7 +2006,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
           "valuePerStack": {
             "MDF_SpeedUP": {
               "operator": "Variables[0] (60) || RETURN",
@@ -2108,7 +2108,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_Ultimate_BreakDamageAddRatio",
+          "modifier": "<a class=\"gModGreen\" id=\"64395692\">Sam_Ultimate_BreakDamageAddRatio</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.2) || RETURN",
@@ -2142,7 +2142,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Sam_Ability21_FireWeakType[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"639093534\">Sam_Ability21_FireWeakType</a>[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -2183,7 +2183,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sam_ForceStanceDamage"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
                 }
               ]
             },
@@ -2227,7 +2227,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sam_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
             },
             {
               "name": "Find New Target",
@@ -2265,7 +2265,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sam_ForceStanceDamage"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
                     }
                   ]
                 },
@@ -2308,7 +2308,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sam_ForceStanceDamage"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
                 }
               ]
             }
@@ -2341,7 +2341,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sam_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
             }
           ]
         },
@@ -2385,7 +2385,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
         },
         {
           "name": "Find New Target",
@@ -2423,7 +2423,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sam_ForceStanceDamage"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
                 }
               ]
             },
@@ -2466,7 +2466,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sam_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
             }
           ]
         },
@@ -2477,7 +2477,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_Ultimate_BreakDamageAddRatio"
+          "modifier": "<a class=\"gModGreen\" id=\"64395692\">Sam_Ultimate_BreakDamageAddRatio</a>"
         },
         "Trigger: Ability End"
       ],
@@ -2665,7 +2665,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_Ultimate_BreakDamageAddRatio",
+          "modifier": "<a class=\"gModGreen\" id=\"64395692\">Sam_Ultimate_BreakDamageAddRatio</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.2) || RETURN",
@@ -2720,7 +2720,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sam_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
             }
           ]
         },
@@ -2763,7 +2763,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
         },
         {
           "name": "IF",
@@ -2792,7 +2792,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sam_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
             }
           ]
         },
@@ -2835,7 +2835,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
         },
         {
           "name": "IF",
@@ -2864,7 +2864,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sam_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
             }
           ]
         },
@@ -2907,7 +2907,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
         },
         {
           "name": "IF",
@@ -2936,7 +2936,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sam_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
             }
           ]
         },
@@ -2980,7 +2980,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
         },
         {
           "name": "IF",
@@ -3009,7 +3009,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sam_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
             }
           ]
         },
@@ -3053,7 +3053,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"-2077791877\">Sam_ForceStanceDamage</a>"
         },
         "Trigger: Attack End",
         {
@@ -3062,7 +3062,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sam_Ultimate_BreakDamageAddRatio"
+          "modifier": "<a class=\"gModGreen\" id=\"64395692\">Sam_Ultimate_BreakDamageAddRatio</a>"
         },
         "Trigger: Ability End"
       ],
@@ -3185,7 +3185,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Sam_PassiveAbility_RedMode_DisableUltraSkill",
+          "for": "<a class=\"gModGreen\" id=\"mod__-340351438\">Sam_PassiveAbility_RedMode_DisableUltraSkill</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3208,7 +3208,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_ActionBarPreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1084322434\">Sam_ActionBarPreShow</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3254,7 +3254,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Sam_PassiveAbility01_BattleEvent"
+                          "modifier": "<a class=\"gModGreen\" id=\"92987575\">Sam_PassiveAbility01_BattleEvent</a>"
                         }
                       }
                     ]
@@ -3279,7 +3279,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Sam_PassiveAbility01_BattleEvent"
+                              "modifier": "<a class=\"gModGreen\" id=\"92987575\">Sam_PassiveAbility01_BattleEvent</a>"
                             }
                           }
                         ]
@@ -3321,7 +3321,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "Sam_PassiveAbility01_BattleEvent"
+                                  "modifier": "<a class=\"gModGreen\" id=\"92987575\">Sam_PassiveAbility01_BattleEvent</a>"
                                 }
                               }
                             ]
@@ -3337,7 +3337,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_Eidolon2_BonusCD[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__881956526\">Sam_Eidolon2_BonusCD</a>[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]",
           "stackType": "ReplaceByCaster",
           "description": "The \"From Shattered Sky, I Free Fall\" effect cannot be triggered yet.",
           "type": "Other",
@@ -3345,7 +3345,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_Eidolon2_BonusCD_LuoJi",
+          "for": "<a class=\"gModGreen\" id=\"mod__539387692\">Sam_Eidolon2_BonusCD_LuoJi</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3374,7 +3374,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_Eidolon4_Endurance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1135525513\">Sam_Eidolon4_Endurance</a>",
           "counter": 2,
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
@@ -3409,7 +3409,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_Ultimate_BreakDamageAddRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__64395692\">Sam_Ultimate_BreakDamageAddRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3446,7 +3446,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_ForceStanceDamage",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2077791877\">Sam_ForceStanceDamage</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ForceStanceDamage"
@@ -3479,7 +3479,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_Eidolon6_UltraDamageTypeAddRatio[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__154726309\">Sam_Eidolon6_UltraDamageTypeAddRatio</a>[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3511,7 +3511,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_PointB2_SuperBreakBonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__100735339\">Sam_PointB2_SuperBreakBonus</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SuperBreakBuff"
@@ -3542,7 +3542,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "DealSuperBreakDamage",
+                      "functionName": "<a class=\"gTempYellow\" id=\"795502164\">DealSuperBreakDamage</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Attack Targets of Modifier Holder}}"
@@ -3582,7 +3582,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "DealSuperBreakDamage",
+                          "functionName": "<a class=\"gTempYellow\" id=\"795502164\">DealSuperBreakDamage</a>",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Attack Targets of Modifier Holder}}"
@@ -3609,7 +3609,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_Ability21_FireWeakType[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__639093534\">Sam_Ability21_FireWeakType</a>[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttachWeakness"
@@ -3641,7 +3641,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3677,7 +3677,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3760,7 +3760,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sam_Eidolon6_UltraDamageTypeAddRatio[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"154726309\">Sam_Eidolon6_UltraDamageTypeAddRatio</a>[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3768,7 +3768,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_Eidolon2_BonusCD[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"881956526\">Sam_Eidolon2_BonusCD</a>[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]"
                 },
                 {
                   "name": "IF",
@@ -3789,7 +3789,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]"
                     }
                   ],
                   "failed": [
@@ -3823,7 +3823,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.4) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
@@ -3902,7 +3902,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Sam_Eidolon2_BonusCD[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"881956526\">Sam_Eidolon2_BonusCD</a>[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]"
                         }
                       ]
                     }
@@ -4036,7 +4036,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.4) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
@@ -4179,7 +4179,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sam_Eidolon6_UltraDamageTypeAddRatio[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"154726309\">Sam_Eidolon6_UltraDamageTypeAddRatio</a>[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -4485,7 +4485,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sam_Eidolon2_BonusCD[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"881956526\">Sam_Eidolon2_BonusCD</a>[<span class=\"descriptionNumberColor\">From Shattered Sky, I Free Fall</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -4493,7 +4493,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sam_Eidolon2_BonusCD_LuoJi"
+                      "modifier": "<a class=\"gModGreen\" id=\"539387692\">Sam_Eidolon2_BonusCD_LuoJi</a>"
                     },
                     {
                       "name": "UI Display Event",
@@ -4539,7 +4539,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Sam_PointB2_SuperBreakBonus"
+                          "modifier": "<a class=\"gModGreen\" id=\"100735339\">Sam_PointB2_SuperBreakBonus</a>"
                         }
                       ]
                     }
@@ -4551,7 +4551,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sam_PointB2_SuperBreakBonus"
+                      "modifier": "<a class=\"gModGreen\" id=\"100735339\">Sam_PointB2_SuperBreakBonus</a>"
                     }
                   ]
                 }
@@ -4575,7 +4575,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Sam_PassiveAbility_RedMode_DisableUltraSkill",
+              "modifier": "<a class=\"gModGreen\" id=\"-340351438\">Sam_PassiveAbility_RedMode_DisableUltraSkill</a>",
               "aliveOnly": "True",
               "haloStatus": true
             },
@@ -4585,7 +4585,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Sam_PointB2_SuperBreakBonus",
+              "modifier": "<a class=\"gModGreen\" id=\"100735339\">Sam_PointB2_SuperBreakBonus</a>",
               "aliveOnly": "True",
               "haloStatus": true,
               "conditions": {

@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_Tree03_AttackUp[<span class=\"descriptionNumberColor\">Side Note</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1388519324\">Advanced_Silwolf_Tree03_AttackUp</a>[<span class=\"descriptionNumberColor\">Side Note</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -42,7 +42,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_Tree03_StatusProbabilityShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1562790381\">Advanced_Silwolf_Tree03_StatusProbabilityShow</a>",
       "stackType": "ReplaceByCaster",
       "abilityValueChange": [
         {
@@ -56,13 +56,13 @@ const configAbility = {
               "whenEnteringRange": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Silwolf_Tree03_Sub"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1211488535\">Silwolf_Tree03_Sub</a>"
                 }
               ],
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Silwolf_Tree03_Sub"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1211488535\">Silwolf_Tree03_Sub</a>"
                 }
               ]
             }
@@ -72,7 +72,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Silwolf_Tree03_Sub",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1211488535\">Silwolf_Tree03_Sub</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
@@ -141,7 +141,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Advanced_Silwolf_Tree03_AttackUp[<span class=\"descriptionNumberColor\">Side Note</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1388519324\">Advanced_Silwolf_Tree03_AttackUp</a>[<span class=\"descriptionNumberColor\">Side Note</span>]"
                 }
               ],
               "failed": [
@@ -182,7 +182,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Advanced_Silwolf_Tree03_AttackUp[<span class=\"descriptionNumberColor\">Side Note</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1388519324\">Advanced_Silwolf_Tree03_AttackUp</a>[<span class=\"descriptionNumberColor\">Side Note</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (SkillTree_PointB3_StatusProbabilityValue) || RETURN",
@@ -204,7 +204,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_Ultimate_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-46466503\">Advanced_Silwolf_Ultimate_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -246,7 +246,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-860979758\">Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
         {
@@ -282,7 +282,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_BPAbility_AllDamageTypeResistanceDown[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1155855512\">Advanced_Silwolf_BPAbility_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -321,7 +321,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedDown"
@@ -362,7 +362,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_DefenceDown"
@@ -403,7 +403,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_AttackDown"
@@ -444,7 +444,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_BPAbility_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1384846161\">Advanced_Silwolf_BPAbility_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
       "stackType": "Replace",
       "description": "Additionally implanted Imaginary Weakness. Imaginary RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -453,7 +453,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_BPAbility_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1901191893\">Advanced_Silwolf_BPAbility_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
       "stackType": "Replace",
       "description": "Additionally implanted Quantum Weakness. Quantum RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -462,7 +462,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_BPAbility_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1824019324\">Advanced_Silwolf_BPAbility_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
       "stackType": "Replace",
       "description": "Additionally implanted Lightning Weakness. Lightning RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -471,7 +471,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_BPAbility_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1062446229\">Advanced_Silwolf_BPAbility_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
       "stackType": "Replace",
       "description": "Additionally implanted Physical Weakness. Physical RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -480,7 +480,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_BPAbility_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1784823028\">Advanced_Silwolf_BPAbility_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
       "stackType": "Replace",
       "description": "Additionally implanted Wind Weakness. Wind RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -489,7 +489,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_BPAbility_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1570756707\">Advanced_Silwolf_BPAbility_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
       "stackType": "Replace",
       "description": "Additionally implanted Ice Weakness. Ice RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -498,7 +498,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_BPAbility_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__860600554\">Advanced_Silwolf_BPAbility_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
       "stackType": "Replace",
       "description": "Additionally implanted Fire Weakness. Fire RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -507,7 +507,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_BPAbility_WeakType_Extra[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1797889012\">Advanced_Silwolf_BPAbility_WeakType_Extra</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "STAT_AttachWeakness"
@@ -549,7 +549,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_Passive_Deathrattle_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1084383828\">Advanced_Silwolf_Passive_Deathrattle_Sub</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "KeepOnDeathrattle"
@@ -572,7 +572,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1273458995\">Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer</a>",
                   "variables": {
                     "_WeakType": {
                       "operator": "Variables[0] (_WeakType) || RETURN",
@@ -592,7 +592,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_AttachWeakness",
@@ -1275,7 +1275,7 @@ const configAbility = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Advanced_Silwolf_Ability02_OverrideNameForStatus",
+              "functionName": "<a class=\"gTempYellow\" id=\"-509776970\">Advanced_Silwolf_Ability02_OverrideNameForStatus</a>",
               "variables": {
                 "DF_WeakType": {
                   "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
@@ -1306,7 +1306,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1273458995\">Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer</a>",
                   "variables": {
                     "_WeakType": {
                       "operator": "Variables[0] (_WeakType) || RETURN",
@@ -1331,7 +1331,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Advanced_Silwolf_Passive_Deathrattle_Sub",
+              "modifier": "<a class=\"gModGreen\" id=\"-1084383828\">Advanced_Silwolf_Passive_Deathrattle_Sub</a>",
               "valuePerStack": {
                 "_WeakType": {
                   "operator": "Variables[0] (_WeakType) || RETURN",

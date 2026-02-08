@@ -33,7 +33,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPCost_1"
+          "modifier": "<a class=\"gModGreen\" id=\"-1633577543\">DanHengIL_BPCost_1</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -41,7 +41,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_CancelAbility"
+          "modifier": "<a class=\"gModGreen\" id=\"-171519647\">DanHengIL_CancelAbility</a>"
         }
       ],
       "failed": [
@@ -60,7 +60,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengIL_BPCost_2"
+              "modifier": "<a class=\"gModGreen\" id=\"-1683910400\">DanHengIL_BPCost_2</a>"
             }
           ],
           "failed": [
@@ -79,7 +79,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHengIL_BPCost_3"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1667132781\">DanHengIL_BPCost_3</a>"
                 }
               ]
             }
@@ -121,7 +121,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPDisable"
+          "modifier": "<a class=\"gModGreen\" id=\"1468527103\">DanHengIL_BPDisable</a>"
         }
       ],
       "failed": [
@@ -131,7 +131,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_BPDisable"
+          "modifier": "<a class=\"gModGreen\" id=\"1468527103\">DanHengIL_BPDisable</a>"
         }
       ]
     },
@@ -141,7 +141,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "DanHengIL_CancelAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__-171519647\">DanHengIL_CancelAbility</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -179,7 +179,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengIL_BPCost_3",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1667132781\">DanHengIL_BPCost_3</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -212,7 +212,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengIL_CancelAbility"
+              "modifier": "<a class=\"gModGreen\" id=\"-171519647\">DanHengIL_CancelAbility</a>"
             },
             {
               "name": "Update Displayed Energy Bar"
@@ -269,7 +269,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengIL_BPCost_2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1683910400\">DanHengIL_BPCost_2</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -302,7 +302,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengIL_CancelAbility"
+              "modifier": "<a class=\"gModGreen\" id=\"-171519647\">DanHengIL_CancelAbility</a>"
             },
             {
               "name": "Update Displayed Energy Bar"
@@ -347,7 +347,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengIL_BPCost_1",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1633577543\">DanHengIL_BPCost_1</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -380,7 +380,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengIL_CancelAbility"
+              "modifier": "<a class=\"gModGreen\" id=\"-171519647\">DanHengIL_CancelAbility</a>"
             },
             {
               "name": "Update Displayed Energy Bar"

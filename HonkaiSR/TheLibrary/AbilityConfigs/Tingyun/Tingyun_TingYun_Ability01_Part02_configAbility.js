@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Tingyun_Ability01_Trace_B2"
+      "modifier": "<a class=\"gModGreen\" id=\"1522370778\">Tingyun_Ability01_Trace_B2</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -79,14 +79,14 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Tingyun_Ability01_Trace_B2"
+      "modifier": "<a class=\"gModGreen\" id=\"1522370778\">Tingyun_Ability01_Trace_B2</a>"
     },
     "Trigger: Ability End"
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Tingyun_Ability01_Trace_B2",
+      "for": "<a class=\"gModGreen\" id=\"mod__1522370778\">Tingyun_Ability01_Trace_B2</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",

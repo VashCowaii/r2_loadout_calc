@@ -69,7 +69,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Yukong_Ability02_FlowerFlag"
+            "modifier": "<a class=\"gModGreen\" id=\"-1103490299\">Yukong_Ability02_FlowerFlag</a>"
           },
           "passed": [
             {
@@ -78,7 +78,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Yukong_Flower",
+              "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>",
               "valuePerStack": {
                 "MDF_AttackAddedRatio": {
                   "operator": "Variables[0] (0.8) || RETURN",
@@ -114,7 +114,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Yukong_Flower",
+              "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>",
               "valuePerStack": {
                 "MDF_AttackAddedRatio": {
                   "operator": "Variables[0] (0.8) || RETURN",
@@ -153,7 +153,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
           },
-          "modifier": "Yukong_Flower",
+          "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>",
           "valuePerStack": {
             "MDF_AttackAddedRatio": {
               "operator": "Variables[0] (0.8) || RETURN",

@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Misha_TechniqueBonus"
+      "modifier": "<a class=\"gModGreen\" id=\"-1784728857\">StageAbility_Misha_TechniqueBonus</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Misha_TechniqueBonus",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1784728857\">StageAbility_Misha_TechniqueBonus</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Pela_Ultimate_DroneAnalysis[<span class=\"descriptionNumberColor\">Exposed</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"275559829\">Pela_Ultimate_DroneAnalysis</a>[<span class=\"descriptionNumberColor\">Exposed</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",
@@ -74,7 +74,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Pela_Ultimate_DroneAnalysis[<span class=\"descriptionNumberColor\">Exposed</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__275559829\">Pela_Ultimate_DroneAnalysis</a>[<span class=\"descriptionNumberColor\">Exposed</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_DefenceDown"

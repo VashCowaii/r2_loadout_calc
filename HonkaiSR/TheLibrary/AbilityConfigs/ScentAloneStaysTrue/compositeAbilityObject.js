@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23032_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"745671969\">LC_23032_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23032_Sub[<span class=\"descriptionNumberColor\">Woefree</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-887920794\">LC_23032_Sub</a>[<span class=\"descriptionNumberColor\">Woefree</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -72,7 +72,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23032_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__745671969\">LC_23032_Main</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -135,7 +135,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "LC_23032_Sub[<span class=\"descriptionNumberColor\">Woefree</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-887920794\">LC_23032_Sub</a>[<span class=\"descriptionNumberColor\">Woefree</span>]",
                               "duration": {
                                 "operator": "Variables[0] (2) || RETURN",
                                 "displayLines": "2",
@@ -164,7 +164,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "LC_23032_Sub[<span class=\"descriptionNumberColor\">Woefree</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-887920794\">LC_23032_Sub</a>[<span class=\"descriptionNumberColor\">Woefree</span>]",
                               "duration": {
                                 "operator": "Variables[0] (2) || RETURN",
                                 "displayLines": "2",

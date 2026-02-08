@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_20006_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-45630443\">LC_20006_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_20006_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-45630443\">LC_20006_Main</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",

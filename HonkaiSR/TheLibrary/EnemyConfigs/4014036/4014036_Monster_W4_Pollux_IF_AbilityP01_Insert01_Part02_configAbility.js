@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Controller",
+      "modifier": "<a class=\"gModGreen\" id=\"-2037214572\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Controller</a>",
       "valuePerStack": {
         "MDF_NegativeBlood_Target_DeathCountDown": {
           "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
@@ -44,7 +44,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "modifier": "Enemy_W4_PolluxPart_IF_Reflex[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1112261788\">Enemy_W4_PolluxPart_IF_Reflex</a>[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]",
       "valuePerStack": {
         "MDF_ReflexDamageValue": {
           "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",

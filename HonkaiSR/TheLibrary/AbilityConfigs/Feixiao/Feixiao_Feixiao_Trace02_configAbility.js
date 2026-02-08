@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Feixiao_Trace02"
+      "modifier": "<a class=\"gModGreen\" id=\"-226054239\">M_Feixiao_Trace02</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_Trace02_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__694697928\">M_Feixiao_Trace02_Sub</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -50,7 +50,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_Trace02",
+      "for": "<a class=\"gModGreen\" id=\"mod__-226054239\">M_Feixiao_Trace02</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -87,7 +87,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_Feixiao_Trace02_Sub"
+              "modifier": "<a class=\"gModGreen\" id=\"694697928\">M_Feixiao_Trace02_Sub</a>"
             }
           ]
         },
@@ -107,7 +107,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Feixiao_Trace02_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"694697928\">M_Feixiao_Trace02_Sub</a>"
                 }
               ]
             }

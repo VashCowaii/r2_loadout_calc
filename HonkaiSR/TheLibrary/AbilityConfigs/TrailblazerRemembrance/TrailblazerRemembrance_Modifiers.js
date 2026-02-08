@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "PlayerBoy_30_UltraState_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-915997562\">PlayerBoy_30_UltraState_Sub</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -61,7 +61,7 @@ const configAbility = {
       ],
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "PlayerBoy_30_UltraState[<span class=\"descriptionNumberColor\">Epic</span>]",
+        "dependancyName": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
         "casterFilter": {
           "name": "Target Name",
           "target": "{{Caster}}"
@@ -70,7 +70,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "PlayerBoy_30_UltraState[<span class=\"descriptionNumberColor\">Epic</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -112,7 +112,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "PlayerBoy_30_UltraState_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                     }
                   ],
                   "failed": [
@@ -122,7 +122,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "PlayerBoy_30_UltraState_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                     }
                   ]
                 }
@@ -152,7 +152,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "PlayerBoy_30_UltraState_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                 }
               ],
               "failed": [
@@ -162,7 +162,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "PlayerBoy_30_UltraState_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                 }
               ]
             }
@@ -190,7 +190,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "PlayerBoy_30_UltraState_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                 }
               ],
               "failed": [
@@ -200,7 +200,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "PlayerBoy_30_UltraState_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                 }
               ]
             }
@@ -226,7 +226,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "PlayerBoy_30_UltraState_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                 }
               ]
             }
@@ -268,7 +268,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "PlayerBoy_30_UltraState_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
                 }
               ]
             }
@@ -286,7 +286,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_PlayerBoy_30_CreateServantPreshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__409195494\">M_PlayerBoy_30_CreateServantPreshow</a>",
       "stackData": [
         "ServantID"
       ],
@@ -313,7 +313,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "PlayerBoy_30_Halo_ListenSPChange",
+      "for": "<a class=\"gModGreen\" id=\"mod__1937701279\">PlayerBoy_30_Halo_ListenSPChange</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23050_Main",
+      "modifier": "<a class=\"gModGreen\" id=\"-345651043\">LC_23050_Main</a>",
       "valuePerStack": {
         "MDF_BreakRatioIncrease": {
           "operator": "Variables[0] (0.32) || RETURN",
@@ -26,7 +26,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23050_SubTriggerControl",
+      "for": "<a class=\"gModGreen\" id=\"mod__1087896711\">LC_23050_SubTriggerControl</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23050_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-345651043\">LC_23050_Main</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -67,7 +67,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_23050_Sub[<span class=\"descriptionNumberColor\">Immolation</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"503983570\">LC_23050_Sub</a>[<span class=\"descriptionNumberColor\">Immolation</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_BreakRatioIncrease) || RETURN",
@@ -101,7 +101,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_23050_Sub[<span class=\"descriptionNumberColor\">Immolation</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"503983570\">LC_23050_Sub</a>[<span class=\"descriptionNumberColor\">Immolation</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_BreakRatioIncrease) || RETURN",
@@ -121,7 +121,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[sortByBreakEffect]].[[reverse]].[[index0]]"
                       },
-                      "modifier": "LC_23050_Sub[<span class=\"descriptionNumberColor\">Immolation</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"503983570\">LC_23050_Sub</a>[<span class=\"descriptionNumberColor\">Immolation</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_BreakRatioIncrease) || RETURN",
@@ -151,7 +151,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "LC_23050_SubTriggerControl"
+                "modifier": "<a class=\"gModGreen\" id=\"1087896711\">LC_23050_SubTriggerControl</a>"
               },
               "failed": [
                 {
@@ -172,7 +172,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23050_SubTriggerControl"
+                  "modifier": "<a class=\"gModGreen\" id=\"1087896711\">LC_23050_SubTriggerControl</a>"
                 }
               ]
             }
@@ -186,7 +186,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23050_Sub[<span class=\"descriptionNumberColor\">Immolation</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__503983570\">LC_23050_Sub</a>[<span class=\"descriptionNumberColor\">Immolation</span>]",
       "stackType": "Replace",
       "execute": [
         {

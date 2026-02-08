@@ -58,7 +58,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "W1_Mecha02_AttackBonus_Effect"
+      "modifier": "<a class=\"gModGreen\" id=\"1364752860\">W1_Mecha02_AttackBonus_Effect</a>"
     },
     "Trigger: Ability End"
   ],

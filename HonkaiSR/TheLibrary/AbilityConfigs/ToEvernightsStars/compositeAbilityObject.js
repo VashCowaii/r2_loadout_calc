@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23049_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"931180035\">LC_23049_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23049_Sub[<span class=\"descriptionNumberColor\">Noctis</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__474890872\">LC_23049_Sub</a>[<span class=\"descriptionNumberColor\">Noctis</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -52,7 +52,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getMemosprite]]"
                   },
-                  "modifier": "LC_23049_Sub2[<span class=\"descriptionNumberColor\">Sleepless</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-651011458\">LC_23049_Sub2</a>[<span class=\"descriptionNumberColor\">Sleepless</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -66,7 +66,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getMemosprite]]"
                   },
-                  "modifier": "LC_23049_Sub2[<span class=\"descriptionNumberColor\">Sleepless</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-651011458\">LC_23049_Sub2</a>[<span class=\"descriptionNumberColor\">Sleepless</span>]",
                   "valuePerStack": {
                     "MDF_Show": {
                       "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
@@ -84,7 +84,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)}}.[[getMemosprite]]"
                   },
-                  "modifier": "LC_23049_Sub3[<span class=\"descriptionNumberColor\">Sleepless</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-634233839\">LC_23049_Sub3</a>[<span class=\"descriptionNumberColor\">Sleepless</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -112,7 +112,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "LC_23049_Sub[<span class=\"descriptionNumberColor\">Noctis</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"474890872\">LC_23049_Sub</a>[<span class=\"descriptionNumberColor\">Noctis</span>]"
                       },
                       {
                         "name": "Compare: Target",
@@ -135,7 +135,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)}}.[[getMemosprite]]"
                       },
-                      "modifier": "LC_23049_Sub3[<span class=\"descriptionNumberColor\">Sleepless</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-634233839\">LC_23049_Sub3</a>[<span class=\"descriptionNumberColor\">Sleepless</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -174,7 +174,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getMemosprite]]"
                       },
-                      "modifier": "LC_23049_Sub2[<span class=\"descriptionNumberColor\">Sleepless</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-651011458\">LC_23049_Sub2</a>[<span class=\"descriptionNumberColor\">Sleepless</span>]",
                       "valuePerStack": {
                         "MDF_Show": {
                           "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
@@ -205,7 +205,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_23049_Sub3[<span class=\"descriptionNumberColor\">Sleepless</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-634233839\">LC_23049_Sub3</a>[<span class=\"descriptionNumberColor\">Sleepless</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -229,7 +229,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23049_Sub3[<span class=\"descriptionNumberColor\">Sleepless</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-634233839\">LC_23049_Sub3</a>[<span class=\"descriptionNumberColor\">Sleepless</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -261,7 +261,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23049_Sub2[<span class=\"descriptionNumberColor\">Sleepless</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-651011458\">LC_23049_Sub2</a>[<span class=\"descriptionNumberColor\">Sleepless</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -299,7 +299,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23049_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__1202124053\">LC_23049_Listen</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "Deathrattle"
@@ -316,7 +316,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "LC_23049_Sub[<span class=\"descriptionNumberColor\">Noctis</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"474890872\">LC_23049_Sub</a>[<span class=\"descriptionNumberColor\">Noctis</span>]"
                   },
                   "passed": [
                     {
@@ -348,7 +348,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_23049_Sub[<span class=\"descriptionNumberColor\">Noctis</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"474890872\">LC_23049_Sub</a>[<span class=\"descriptionNumberColor\">Noctis</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -382,7 +382,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23049_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__931180035\">LC_23049_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -393,7 +393,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "LC_23049_Listen",
+                  "modifier": "<a class=\"gModGreen\" id=\"1202124053\">LC_23049_Listen</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -446,7 +446,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_23049_Listen",
+                      "modifier": "<a class=\"gModGreen\" id=\"1202124053\">LC_23049_Listen</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.2) || RETURN",

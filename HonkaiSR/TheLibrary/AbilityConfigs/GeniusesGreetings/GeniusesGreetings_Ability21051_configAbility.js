@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21051_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-659675954\">LC_21051_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21051_Sub[<span class=\"descriptionNumberColor\">Basic ATK DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-833650413\">LC_21051_Sub</a>[<span class=\"descriptionNumberColor\">Basic ATK DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -53,7 +53,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21051_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-659675954\">LC_21051_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -71,7 +71,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_21051_Sub[<span class=\"descriptionNumberColor\">Basic ATK DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-833650413\">LC_21051_Sub</a>[<span class=\"descriptionNumberColor\">Basic ATK DMG Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -87,7 +87,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "LC_21051_Sub[<span class=\"descriptionNumberColor\">Basic ATK DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-833650413\">LC_21051_Sub</a>[<span class=\"descriptionNumberColor\">Basic ATK DMG Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

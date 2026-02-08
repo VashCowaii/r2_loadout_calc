@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_118_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-155256910\">Relic_118_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_118_Sub[<span class=\"descriptionNumberColor\">Watchmaker, Master of Dream Machinations</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-663861721\">Relic_118_Sub</a>[<span class=\"descriptionNumberColor\">Watchmaker, Master of Dream Machinations</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_118_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-155256910\">Relic_118_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -81,7 +81,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "Relic_118_Sub[<span class=\"descriptionNumberColor\">Watchmaker, Master of Dream Machinations</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-663861721\">Relic_118_Sub</a>[<span class=\"descriptionNumberColor\">Watchmaker, Master of Dream Machinations</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",

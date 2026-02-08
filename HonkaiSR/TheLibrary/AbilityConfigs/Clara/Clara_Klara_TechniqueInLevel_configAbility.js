@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Technique_Klara_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1335199985\">Technique_Klara_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Technique_Klara_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1335199985\">Technique_Klara_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -52,7 +52,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Klara_TechniqueUsage_AggroUP[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-459252663\">Klara_TechniqueUsage_AggroUP</a>[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

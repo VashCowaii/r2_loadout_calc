@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21052_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"553093701\">LC_21052_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1410775302\">LC_21052_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21052_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__553093701\">LC_21052_Main</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -86,7 +86,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1410775302\">LC_21052_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -94,7 +94,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1410775302\">LC_21052_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 }
               ]
             }
@@ -137,7 +137,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1410775302\">LC_21052_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -145,7 +145,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1410775302\">LC_21052_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 }
               ]
             }
@@ -173,7 +173,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1410775302\">LC_21052_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -181,7 +181,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1410775302\">LC_21052_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 }
               ]
             }

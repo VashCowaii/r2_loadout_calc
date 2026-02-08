@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Argenti_Eidolon6_DefPentModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1721941728\">Argenti_Eidolon6_DefPentModifier</a>"
         }
       ]
     },
@@ -67,7 +67,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                 "displayLines": "MDF_MaxCount",
@@ -141,7 +141,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Argenti_Bonus_Modifier01",
+                "modifier": "<a class=\"gModGreen\" id=\"-105339618\">Argenti_Bonus_Modifier01</a>",
                 "invertCondition": true
               },
               {
@@ -163,7 +163,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Argenti_Bonus_Modifier01"
+              "modifier": "<a class=\"gModGreen\" id=\"-105339618\">Argenti_Bonus_Modifier01</a>"
             }
           ],
           "noTargetFound": [
@@ -182,7 +182,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Argenti_Bonus_Modifier01",
+                "modifier": "<a class=\"gModGreen\" id=\"-105339618\">Argenti_Bonus_Modifier01</a>",
                 "invertCondition": true
               },
               "ifTargetFound": [
@@ -192,7 +192,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Argenti_Bonus_Modifier01"
+                  "modifier": "<a class=\"gModGreen\" id=\"-105339618\">Argenti_Bonus_Modifier01</a>"
                 }
               ]
             }
@@ -213,7 +213,7 @@ const configAbility = {
       "Event": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Bounce_SelectTarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
@@ -259,7 +259,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Argenti_Bonus_Modifier01"
+      "modifier": "<a class=\"gModGreen\" id=\"-105339618\">Argenti_Bonus_Modifier01</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -279,7 +279,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Argenti_Eidolon6_DefPentModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1721941728\">Argenti_Eidolon6_DefPentModifier</a>"
         }
       ]
     },

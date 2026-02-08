@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Bailu_PointB1"
+      "modifier": "<a class=\"gModGreen\" id=\"283019978\">Bailu_PointB1</a>"
     }
   ],
   "references": []

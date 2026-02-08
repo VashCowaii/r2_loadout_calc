@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Aglaea_PassiveAbility01_BattleEvent"
+      "modifier": "<a class=\"gModGreen\" id=\"-1954638967\">Aglaea_PassiveAbility01_BattleEvent</a>"
     },
     {
       "name": "Block Advance/Delay Effects",
@@ -29,7 +29,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Aglaea_PassiveAbility01_BattleEvent",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1954638967\">Aglaea_PassiveAbility01_BattleEvent</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -54,7 +54,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Memosprite_AglaeaServant_Passive"
+                "modifier": "<a class=\"gModGreen\" id=\"68059554\">Memosprite_AglaeaServant_Passive</a>"
               },
               "ifTargetFound": [
                 {
@@ -83,7 +83,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Battle Event's Caster}}"
               },
-              "modifier": "Aglaea_Ability03[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"518821924\">Aglaea_Ability03</a>[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -91,7 +91,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Battle Event's Caster}}"
               },
-              "modifier": "Aglaea_Ability03_Sub"
+              "modifier": "<a class=\"gModGreen\" id=\"-498968511\">Aglaea_Ability03_Sub</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -99,7 +99,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Battle Event's Caster}}"
               },
-              "modifier": "Aglaea_Ability02_ChangeSkill"
+              "modifier": "<a class=\"gModGreen\" id=\"755493734\">Aglaea_Ability02_ChangeSkill</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -107,7 +107,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Battle Event's Caster}}"
               },
-              "modifier": "Aglaea_Ability03_ForbidSkill"
+              "modifier": "<a class=\"gModGreen\" id=\"-1725518252\">Aglaea_Ability03_ForbidSkill</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -115,7 +115,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Battle Event's Caster}}"
               },
-              "modifier": "Memosprite_AglaeaServant_SummonerAddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -123,7 +123,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}} + {{Caster's Memosprite}}"
               },
-              "modifier": "Aglaea_Eidolon6_Effect[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]"
             },
             {
               "name": "Force Entity Death",

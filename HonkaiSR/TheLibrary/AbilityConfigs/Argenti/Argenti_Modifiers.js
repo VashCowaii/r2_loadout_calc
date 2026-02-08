@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Argenti_Eidolon2_AttackRatioUp[<span class=\"descriptionNumberColor\">Agate's Humility</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1150044679\">Argenti_Eidolon2_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Agate's Humility</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -42,7 +42,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Argenti_Eidolon2_TargetNumberListen",
+      "for": "<a class=\"gModGreen\" id=\"mod__886693794\">Argenti_Eidolon2_TargetNumberListen</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -90,7 +90,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Argenti_Eidolon2_AttackRatioUp[<span class=\"descriptionNumberColor\">Agate's Humility</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1150044679\">Argenti_Eidolon2_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Agate's Humility</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -122,7 +122,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Argenti_PointB3_DamageUpModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1414453443\">Argenti_PointB3_DamageUpModifier</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -177,7 +177,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Argenti_PointB2_SummonSpModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-143251630\">Argenti_PointB2_SummonSpModifier</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -219,7 +219,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Argenti_PointB1_AutoBonusLayerModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__53398910\">Argenti_PointB1_AutoBonusLayerModifier</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -257,7 +257,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                         "displayLines": "MDF_MaxCount",
@@ -279,7 +279,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Argenti_Eidolon6_DefPentModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1721941728\">Argenti_Eidolon6_DefPentModifier</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -311,7 +311,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -412,7 +412,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Argenti_Bonus_Modifier01",
+      "for": "<a class=\"gModGreen\" id=\"mod__-105339618\">Argenti_Bonus_Modifier01</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -424,7 +424,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Argenti_UltraAbilityPrepare",
+      "for": "<a class=\"gModGreen\" id=\"mod__1628831638\">Argenti_UltraAbilityPrepare</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",

@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "FuXuan_Eidolon2TeamCheck",
+      "for": "<a class=\"gModGreen\" id=\"mod__-72449608\">FuXuan_Eidolon2TeamCheck</a>",
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -30,7 +30,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
             }
           ]
         },
@@ -52,7 +52,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
             }
           ]
         },
@@ -74,7 +74,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
             }
           ]
         },
@@ -96,7 +96,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
             }
           ]
         },
@@ -118,7 +118,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
             }
           ]
         }
@@ -126,7 +126,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -177,7 +177,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "FuXuan_Eidolon2TeamCheck"
+                  "modifier": "<a class=\"gModGreen\" id=\"-72449608\">FuXuan_Eidolon2TeamCheck</a>"
                 }
               ]
             }
@@ -192,7 +192,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "FuXuan_Tree02TeamCheck",
+      "for": "<a class=\"gModGreen\" id=\"mod__227742730\">FuXuan_Tree02TeamCheck</a>",
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -212,7 +212,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
             },
             "Modifier Deletes Itself"
           ]
@@ -235,7 +235,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
             },
             "Modifier Deletes Itself"
           ]
@@ -258,7 +258,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
             },
             "Modifier Deletes Itself"
           ]
@@ -281,7 +281,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
             },
             "Modifier Deletes Itself"
           ]
@@ -304,7 +304,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
             },
             "Modifier Deletes Itself"
           ]
@@ -327,7 +327,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
             },
             "Modifier Deletes Itself"
           ]
@@ -336,7 +336,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "EnduranceEnemyOnly"
@@ -358,7 +358,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "FuXuan_Tree02TeamCheck"
+                  "modifier": "<a class=\"gModGreen\" id=\"227742730\">FuXuan_Tree02TeamCheck</a>"
                 }
               ]
             }
@@ -374,7 +374,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "FuXuan_Eidolon6[<span class=\"descriptionNumberColor\">Total HP lost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1862182829\">FuXuan_Eidolon6</a>[<span class=\"descriptionNumberColor\">Total HP lost</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -408,7 +408,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "FuXuan_ListenLifeTime[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
                   }
                 ]
               },
@@ -600,7 +600,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "FuXuan_ListenLifeTime[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -621,7 +621,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_HitDamageSplit[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1553530097\">FuXuan_HitDamageSplit</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -638,7 +638,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -655,7 +655,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_JianZhi_Eidolon1[<span class=\"descriptionNumberColor\">Knowledge</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-281320728\">FuXuan_JianZhi_Eidolon1</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -672,7 +672,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_JianZhi[<span class=\"descriptionNumberColor\">Knowledge</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1745888668\">FuXuan_JianZhi</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -689,7 +689,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
             }
           ]
         },
@@ -754,7 +754,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "FuXuan_Eidolon2TeamCheck",
+                    "modifier": "<a class=\"gModGreen\" id=\"-72449608\">FuXuan_Eidolon2TeamCheck</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -764,7 +764,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]]"
                       },
-                      "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]",
                       "valuePerStack": {
                         "MDF_HealPercentage": {
                           "operator": "Variables[0] (0.7) || RETURN",
@@ -828,7 +828,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "FuXuan_JianZhi_Eidolon1[<span class=\"descriptionNumberColor\">Knowledge</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-281320728\">FuXuan_JianZhi_Eidolon1</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]",
                   "valuePerStack": {
                     "MDF_MaxHPUpRatio": {
                       "operator": "Variables[0] (0.06) || RETURN",
@@ -864,7 +864,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "FuXuan_JianZhi[<span class=\"descriptionNumberColor\">Knowledge</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1745888668\">FuXuan_JianZhi</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]",
                   "valuePerStack": {
                     "MDF_MaxHPUpRatio": {
                       "operator": "Variables[0] (0.06) || RETURN",
@@ -908,7 +908,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "FuXuan_HitDamageSplit[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1553530097\">FuXuan_HitDamageSplit</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
                   "valuePerStack": {
                     "MDF_SplitPercentage": {
                       "operator": "Variables[0] (0.65) || RETURN",
@@ -942,7 +942,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
                 },
                 {
                   "name": "IF",
@@ -957,7 +957,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "FuXuan_JianZhi_Eidolon1[<span class=\"descriptionNumberColor\">Knowledge</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-281320728\">FuXuan_JianZhi_Eidolon1</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]",
                       "valuePerStack": {
                         "MDF_MaxHPUpRatio": {
                           "operator": "Variables[0] (0.06) || RETURN",
@@ -993,7 +993,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "FuXuan_JianZhi[<span class=\"descriptionNumberColor\">Knowledge</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1745888668\">FuXuan_JianZhi</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]",
                       "valuePerStack": {
                         "MDF_MaxHPUpRatio": {
                           "operator": "Variables[0] (0.06) || RETURN",
@@ -1030,7 +1030,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "FuXuan_ExChangeHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2001636468\">FuXuan_ExChangeHP</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1370,7 +1370,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "FuXuan_JianZhi_Eidolon1[<span class=\"descriptionNumberColor\">Knowledge</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-281320728\">FuXuan_JianZhi_Eidolon1</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1474,7 +1474,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "FuXuan_JianZhi[<span class=\"descriptionNumberColor\">Knowledge</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1745888668\">FuXuan_JianZhi</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1561,7 +1561,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "FuXuan_DamageReduce[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1598,7 +1598,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "FuXuan_HitDamageSplit[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1553530097\">FuXuan_HitDamageSplit</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"

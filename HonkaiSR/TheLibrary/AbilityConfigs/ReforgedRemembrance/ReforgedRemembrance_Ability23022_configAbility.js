@@ -10,29 +10,29 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23022_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"77526538\">LC_23022_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23022_ElectricFlag"
+      "for": "<a class=\"gModGreen\" id=\"mod__-1502445366\">LC_23022_ElectricFlag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23022_BurnFlag"
+      "for": "<a class=\"gModGreen\" id=\"mod__674296252\">LC_23022_BurnFlag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23022_BleedFlag"
+      "for": "<a class=\"gModGreen\" id=\"mod__-843939589\">LC_23022_BleedFlag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23022_PoisonFlag"
+      "for": "<a class=\"gModGreen\" id=\"mod__716498665\">LC_23022_PoisonFlag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23022_Sub[<span class=\"descriptionNumberColor\">Prophet</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1313207201\">LC_23022_Sub</a>[<span class=\"descriptionNumberColor\">Prophet</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -98,7 +98,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23022_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__77526538\">LC_23022_Main</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -122,7 +122,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "LC_23022_PoisonFlag",
+                    "modifier": "<a class=\"gModGreen\" id=\"716498665\">LC_23022_PoisonFlag</a>",
                     "invertCondition": true,
                     "justAddedOrActive": true
                   }
@@ -135,7 +135,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23022_PoisonFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"716498665\">LC_23022_PoisonFlag</a>"
                 },
                 {
                   "name": "Adjust Target Stats",
@@ -153,7 +153,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23022_Sub[<span class=\"descriptionNumberColor\">Prophet</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1313207201\">LC_23022_Sub</a>[<span class=\"descriptionNumberColor\">Prophet</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (4) || RETURN",
                     "displayLines": "4",
@@ -211,7 +211,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "LC_23022_BleedFlag",
+                    "modifier": "<a class=\"gModGreen\" id=\"-843939589\">LC_23022_BleedFlag</a>",
                     "invertCondition": true,
                     "justAddedOrActive": true
                   }
@@ -224,7 +224,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23022_BleedFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-843939589\">LC_23022_BleedFlag</a>"
                 },
                 {
                   "name": "Adjust Target Stats",
@@ -242,7 +242,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23022_Sub[<span class=\"descriptionNumberColor\">Prophet</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1313207201\">LC_23022_Sub</a>[<span class=\"descriptionNumberColor\">Prophet</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (4) || RETURN",
                     "displayLines": "4",
@@ -300,7 +300,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "LC_23022_BurnFlag",
+                    "modifier": "<a class=\"gModGreen\" id=\"674296252\">LC_23022_BurnFlag</a>",
                     "invertCondition": true,
                     "justAddedOrActive": true
                   }
@@ -313,7 +313,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23022_BurnFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"674296252\">LC_23022_BurnFlag</a>"
                 },
                 {
                   "name": "Adjust Target Stats",
@@ -331,7 +331,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23022_Sub[<span class=\"descriptionNumberColor\">Prophet</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1313207201\">LC_23022_Sub</a>[<span class=\"descriptionNumberColor\">Prophet</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (4) || RETURN",
                     "displayLines": "4",
@@ -389,7 +389,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "LC_23022_ElectricFlag",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1502445366\">LC_23022_ElectricFlag</a>",
                     "invertCondition": true,
                     "justAddedOrActive": true
                   }
@@ -402,7 +402,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23022_ElectricFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1502445366\">LC_23022_ElectricFlag</a>"
                 },
                 {
                   "name": "Adjust Target Stats",
@@ -420,7 +420,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23022_Sub[<span class=\"descriptionNumberColor\">Prophet</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1313207201\">LC_23022_Sub</a>[<span class=\"descriptionNumberColor\">Prophet</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (4) || RETURN",
                     "displayLines": "4",

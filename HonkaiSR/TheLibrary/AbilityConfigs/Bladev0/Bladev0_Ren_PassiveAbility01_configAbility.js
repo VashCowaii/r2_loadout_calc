@@ -21,7 +21,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MWRen_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"1035052836\">MWRen_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -29,7 +29,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MWRen_LoseHPPreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"-480743382\">MWRen_LoseHPPreShow</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -146,7 +146,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MWRen_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__1035052836\">MWRen_Passive</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
@@ -411,7 +411,7 @@ const configAbility = {
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Ren_CheckHPChange"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1574082321\">Ren_CheckHPChange</a>"
                     },
                     {
                       "name": "IF",
@@ -433,7 +433,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
                             "displayLines": "MWRen_Qi_MaxLayer",
@@ -450,7 +450,7 @@ const configAbility = {
                             "conditionList": [
                               {
                                 "name": "Compare: Variable",
-                                "value1": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                                "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                                 "compareType": ">=",
                                 "value2": {
                                   "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
@@ -542,7 +542,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "MWRen_Trace01[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-510378845\">MWRen_Trace01</a>[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
                       "valuePerStack": {
                         "MDF_HealEnhanceRatio": {
                           "operator": "Variables[0] (0.5) || RETURN",
@@ -585,7 +585,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "MWRen_Eidolon4_Add"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2019393203\">MWRen_Eidolon4_Add</a>"
                     }
                   ]
                 }
@@ -597,7 +597,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "MWRen_Trace01[<span class=\"descriptionNumberColor\">Vita Infinita</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-510378845\">MWRen_Trace01</a>[<span class=\"descriptionNumberColor\">Vita Infinita</span>]"
                 },
                 {
                   "name": "IF",
@@ -685,7 +685,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "MWRen_Trace01[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-510378845\">MWRen_Trace01</a>[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
                       "valuePerStack": {
                         "MDF_HealEnhanceRatio": {
                           "operator": "Variables[0] (0.5) || RETURN",
@@ -713,7 +713,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Variable",
-                    "value1": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                     "compareType": ">=",
                     "value2": {
                       "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
@@ -785,7 +785,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Variable",
-                    "value1": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                     "compareType": ">=",
                     "value2": {
                       "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
@@ -882,7 +882,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Variable",
-                    "value1": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                     "compareType": ">=",
                     "value2": {
                       "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
@@ -990,7 +990,7 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Ren_CheckHPChange"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1574082321\">Ren_CheckHPChange</a>"
                     }
                   ]
                 }
@@ -1023,7 +1023,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Ren_CheckHPChange",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1574082321\">Ren_CheckHPChange</a>",
           "parse": [
             {
               "name": "IF",
@@ -1101,7 +1101,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "MWRen_Ability03_Listen[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-870658235\">MWRen_Ability03_Listen</a>[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (CasterFinalLostHP) || RETURN",

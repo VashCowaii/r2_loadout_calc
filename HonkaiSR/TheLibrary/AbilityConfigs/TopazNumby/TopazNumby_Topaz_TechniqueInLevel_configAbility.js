@@ -18,18 +18,18 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Technique_Topaz_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"520958214\">Technique_Topaz_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Topaz_Bonus",
+      "for": "<a class=\"gModGreen\" id=\"mod__285365186\">Topaz_Bonus</a>",
       "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
-      "for": "Technique_Topaz_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__520958214\">Technique_Topaz_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -49,7 +49,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Topaz_Bonus"
+                  "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
                 }
               ]
             }

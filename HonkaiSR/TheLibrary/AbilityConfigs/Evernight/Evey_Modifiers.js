@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_TriggerDeathrattle",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1418513049\">Memosprite_EvernightServant_TriggerDeathrattle</a>",
       "execute": [
         {
           "eventTrigger": "Got a Queued Kill [Owner]",
@@ -32,7 +32,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_TriggerNormal",
+      "for": "<a class=\"gModGreen\" id=\"mod__683715754\">Memosprite_EvernightServant_TriggerNormal</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -79,7 +79,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Memosprite_EvernightServant_TriggerNormal_NoEnemy"
+              "modifier": "<a class=\"gModGreen\" id=\"-373711832\">Memosprite_EvernightServant_TriggerNormal_NoEnemy</a>"
             },
             {
               "name": "Define Custom Variable (VFX)",
@@ -388,11 +388,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_TriggerNormal_NoEnemy"
+      "for": "<a class=\"gModGreen\" id=\"mod__-373711832\">Memosprite_EvernightServant_TriggerNormal_NoEnemy</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_PassiveBonus[<span class=\"descriptionNumberColor\">Solitude, Drifting, In Murk</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1678641611\">Memosprite_EvernightServant_PassiveBonus</a>[<span class=\"descriptionNumberColor\">Solitude, Drifting, In Murk</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -430,7 +430,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_DeathRattle_Speed[<span class=\"descriptionNumberColor\">You, Parting, Beyond Reach</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2040095871\">Memosprite_EvernightServant_DeathRattle_Speed</a>[<span class=\"descriptionNumberColor\">You, Parting, Beyond Reach</span>]",
       "modifierFlags": [
         "STAT_SpeedUp"
       ],

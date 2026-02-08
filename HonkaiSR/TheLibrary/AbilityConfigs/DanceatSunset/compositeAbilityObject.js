@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23030_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1082799685\">LC_23030_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23030_Sub[<span class=\"descriptionNumberColor\">Firedance</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__703724880\">LC_23030_Sub</a>[<span class=\"descriptionNumberColor\">Firedance</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -101,7 +101,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23030_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1082799685\">LC_23030_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -140,7 +140,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23030_Sub[<span class=\"descriptionNumberColor\">Firedance</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"703724880\">LC_23030_Sub</a>[<span class=\"descriptionNumberColor\">Firedance</span>]",
                       "duration": 2,
                       "stackLimit": {
                         "operator": "Variables[0] (2) || RETURN",

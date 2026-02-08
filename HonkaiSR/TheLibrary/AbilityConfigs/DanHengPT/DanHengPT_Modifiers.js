@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_LongLingExtraShield",
+      "for": "<a class=\"gModGreen\" id=\"mod__297054432\">DanHengPT_LongLingExtraShield</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -18,7 +18,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_LongLingAttackExtraDamage",
+      "for": "<a class=\"gModGreen\" id=\"mod__-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -79,7 +79,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_LongLingFreeImmediateAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1866376122\">DanHengPT_LongLingFreeImmediateAction</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -94,7 +94,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{DHPT}}"
               },
-              "modifier": "DanHengPT_BoostEnergy",
+              "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>",
               "valuePerStack": {
                 "MDF_IsStack": 1
               },
@@ -111,7 +111,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{DHPT}}"
               },
-              "modifier": "DanHengPT_ImmediateAction"
+              "modifier": "<a class=\"gModGreen\" id=\"-1169230\">DanHengPT_ImmediateAction</a>"
             }
           ]
         }
@@ -123,7 +123,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_Eidolon6_Bonus[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1272476867\">DanHengPT_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -147,7 +147,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_Eidolon6_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1040309000\">DanHengPT_Eidolon6_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -177,7 +177,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_Eidolon4",
+      "for": "<a class=\"gModGreen\" id=\"mod__1985070537\">DanHengPT_Eidolon4</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -221,7 +221,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">By Oath, This Vessel Is I</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-452137321\">DanHengPT_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">By Oath, This Vessel Is I</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -251,7 +251,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_Eidolon1[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2035403394\">DanHengPT_Eidolon1</a>[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -289,7 +289,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "Shield"
@@ -368,7 +368,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_PointB1_AddAttackRatio[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -409,7 +409,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -473,7 +473,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}"
               },
-              "modifier": "DanHengPT_PointB1_AddAttackRatio[<span class=\"descriptionNumberColor\">Empyreanity</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]"
             },
             {
               "name": "IF",
@@ -568,7 +568,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Souldragon}}"
@@ -648,7 +648,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "DanHengPT_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">By Oath, This Vessel Is I</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-452137321\">DanHengPT_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">By Oath, This Vessel Is I</span>]",
           "aliveOnly": "False",
           "haloStatus": true,
           "conditions": {
@@ -674,7 +674,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "DanHengPT_Eidolon6_Bonus[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1272476867\">DanHengPT_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
           "aliveOnly": "False",
           "haloStatus": true,
           "conditions": {
@@ -700,7 +700,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "DanHengPT_Eidolon6_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1040309000\">DanHengPT_Eidolon6_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
           "aliveOnly": "False",
           "haloStatus": true,
           "conditions": {
@@ -724,11 +724,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_Eidolon2_LastBoostEnergyFlag"
+      "for": "<a class=\"gModGreen\" id=\"mod__1941107033\">DanHengPT_Eidolon2_LastBoostEnergyFlag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_BoostEnergy",
+      "for": "<a class=\"gModGreen\" id=\"mod__1300423082\">DanHengPT_BoostEnergy</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -801,7 +801,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "DanHengPT_Eidolon2_LastBoostEnergyFlag"
+                          "modifier": "<a class=\"gModGreen\" id=\"1941107033\">DanHengPT_Eidolon2_LastBoostEnergyFlag</a>"
                         }
                       ]
                     },

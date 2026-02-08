@@ -41,7 +41,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_FatigueRatio[<span class=\"descriptionNumberColor\">Weaken</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
             "displayLines": "{[Skill01[3]]}",
@@ -109,7 +109,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha01_StandByLoopEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-127926766\">Enemy_W2_Mecha01_StandByLoopEffect</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"

@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Advanced_Silwolf_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-1496157762\">Advanced_Silwolf_Passive</a>"
     },
     {
       "name": "IF",
@@ -69,7 +69,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Advanced_Silwolf_Tree03_StatusProbabilityShow"
+          "modifier": "<a class=\"gModGreen\" id=\"-1562790381\">Advanced_Silwolf_Tree03_StatusProbabilityShow</a>"
         }
       ]
     },
@@ -86,7 +86,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Advanced_Silwolf_Eidolon1"
+          "modifier": "<a class=\"gModGreen\" id=\"-204094420\">Advanced_Silwolf_Eidolon1</a>"
         }
       ]
     },
@@ -103,7 +103,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Advanced_Silwolf_Eidolon4"
+          "modifier": "<a class=\"gModGreen\" id=\"-254427277\">Advanced_Silwolf_Eidolon4</a>"
         }
       ]
     },
@@ -126,7 +126,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_Eidolon4",
+      "for": "<a class=\"gModGreen\" id=\"mod__-254427277\">Advanced_Silwolf_Eidolon4</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -242,7 +242,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_Eidolon1",
+      "for": "<a class=\"gModGreen\" id=\"mod__-204094420\">Advanced_Silwolf_Eidolon1</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -348,7 +348,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Advanced_Silwolf_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1496157762\">Advanced_Silwolf_Passive</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

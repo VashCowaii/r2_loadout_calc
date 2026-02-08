@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Natasha_Eidolon4_Check"
+      "modifier": "<a class=\"gModGreen\" id=\"1974553501\">Natasha_Eidolon4_Check</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Natasha_Eidolon4_Check",
+      "for": "<a class=\"gModGreen\" id=\"mod__1974553501\">Natasha_Eidolon4_Check</a>",
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",

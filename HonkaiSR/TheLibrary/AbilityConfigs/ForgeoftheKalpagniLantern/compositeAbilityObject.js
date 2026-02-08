@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_316_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1246982886\">Relic_316_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_316_Sub[<span class=\"descriptionNumberColor\">Forge of the Kalpagni Lantern</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1101990991\">Relic_316_Sub</a>[<span class=\"descriptionNumberColor\">Forge of the Kalpagni Lantern</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -55,7 +55,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_316_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1246982886\">Relic_316_Main</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -86,7 +86,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Relic_316_Sub[<span class=\"descriptionNumberColor\">Forge of the Kalpagni Lantern</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1101990991\">Relic_316_Sub</a>[<span class=\"descriptionNumberColor\">Forge of the Kalpagni Lantern</span>]",
                           "duration": {
                             "operator": "Variables[0] (1) || RETURN",
                             "displayLines": "1",

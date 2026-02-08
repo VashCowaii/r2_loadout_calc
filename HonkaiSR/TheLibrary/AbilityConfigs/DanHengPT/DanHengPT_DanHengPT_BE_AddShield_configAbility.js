@@ -15,7 +15,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "DanHengPT_BE_AddShield"
+      "functionName": "<a class=\"gTempYellow\" id=\"124728741\">DanHengPT_BE_AddShield</a>"
     }
   ],
   "references": []

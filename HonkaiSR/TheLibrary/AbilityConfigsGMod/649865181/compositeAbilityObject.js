@@ -17,7 +17,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Element_TeamBonus_Frost",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1075380141\">Enemy_XP_Element_TeamBonus_Frost</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -38,7 +38,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Monster_W1_Mecha03_01_Frozen[<span class=\"descriptionNumberColor\">Deep Freeze</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1137901449\">Monster_W1_Mecha03_01_Frozen</a>[<span class=\"descriptionNumberColor\">Deep Freeze</span>]"
                   },
                   "passed": [
                     {
@@ -47,7 +47,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_XP_Element_TeamBonus_Frost",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1075380141\">Enemy_XP_Element_TeamBonus_Frost</a>",
                       "addStacksPerTrigger": 1,
                       "casterAssign": "TargetSelf"
                     },
@@ -71,7 +71,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
                           "duration": 1,
                           "baseChance": 1,
                           "casterAssign": "TargetSelf"
@@ -85,7 +85,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]"
                   },
                   "passed": [
                     "Modifier Deletes Itself"
@@ -95,7 +95,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Enemy_XP_Element_TeamBonus_Frost"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1075380141\">Enemy_XP_Element_TeamBonus_Frost</a>"
                   },
                   "passed": [
                     {
@@ -118,7 +118,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
                           "duration": 1,
                           "baseChance": 1,
                           "casterAssign": "TargetSelf"
@@ -137,7 +137,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Element_TeamBonus_ElementSurge",
+          "for": "<a class=\"gModGreen\" id=\"mod__1689392141\">Enemy_XP_Element_TeamBonus_ElementSurge</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -150,7 +150,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]"
                   },
                   "failed": [
                     {
@@ -176,7 +176,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Enemy_XP_Element_TeamBonus_Frost",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1075380141\">Enemy_XP_Element_TeamBonus_Frost</a>",
                           "addStacksPerTrigger": 4,
                           "casterAssign": "TargetSelf"
                         }
@@ -188,7 +188,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Enemy_XP_Element_TeamBonus_Frost",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1075380141\">Enemy_XP_Element_TeamBonus_Frost</a>",
                           "addStacksPerTrigger": 1,
                           "casterAssign": "TargetSelf"
                         }
@@ -202,7 +202,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Mecha_TeamBonus_AttackUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-376212446\">Enemy_W1_Mecha_TeamBonus_AttackUp</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -250,7 +250,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Mecha_TeamBonus_SpeedUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__411638775\">Enemy_W1_Mecha_TeamBonus_SpeedUp</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -298,7 +298,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Mecha_TeamBonus_PowerDeliver",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1698123087\">Enemy_W1_Mecha_TeamBonus_PowerDeliver</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -408,7 +408,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Enemy_W1_Mecha_TeamBonus_AttackUp"
+                      "modifier": "<a class=\"gModGreen\" id=\"-376212446\">Enemy_W1_Mecha_TeamBonus_AttackUp</a>"
                     }
                   ]
                 },
@@ -522,7 +522,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Enemy_W1_Mecha_TeamBonus_SpeedUp"
+                      "modifier": "<a class=\"gModGreen\" id=\"411638775\">Enemy_W1_Mecha_TeamBonus_SpeedUp</a>"
                     }
                   ]
                 }
@@ -532,7 +532,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Abomi_TeamBonus_BuffUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__1265575978\">Enemy_W2_Abomi_TeamBonus_BuffUp</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -635,7 +635,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Abomi_TeamBonus_DeathRattle",
+          "for": "<a class=\"gModGreen\" id=\"mod__2011009042\">Enemy_W2_Abomi_TeamBonus_DeathRattle</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -646,7 +646,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
                   },
-                  "modifier": "Enemy_W2_Abomi_TeamBonus_BuffUp"
+                  "modifier": "<a class=\"gModGreen\" id=\"1265575978\">Enemy_W2_Abomi_TeamBonus_BuffUp</a>"
                 }
               ]
             },
@@ -676,7 +676,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
                       },
-                      "modifier": "Enemy_W2_Abomi_TeamBonus_BuffUp"
+                      "modifier": "<a class=\"gModGreen\" id=\"1265575978\">Enemy_W2_Abomi_TeamBonus_BuffUp</a>"
                     }
                   ]
                 }
@@ -686,7 +686,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Soldier_TeamBonus_TeamSupport",
+          "for": "<a class=\"gModGreen\" id=\"mod__254895023\">Enemy_W1_Soldier_TeamBonus_TeamSupport</a>",
           "execute": [
             {
               "eventTrigger": "Action End [Owner]"
@@ -818,7 +818,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_WRSoldier_01_UnFeverResistance[<span class=\"descriptionNumberColor\">Helmet and Armor</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-980276025\">Enemy_WRSoldier_01_UnFeverResistance</a>[<span class=\"descriptionNumberColor\">Helmet and Armor</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -849,7 +849,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Boss_Cocolia_P2_Shield_Dark",
+          "for": "<a class=\"gModGreen\" id=\"mod__274282965\">Boss_Cocolia_P2_Shield_Dark</a>",
           "counter": 6,
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -888,7 +888,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Boss_Cocolia_P2_Mirror_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__-706022142\">Boss_Cocolia_P2_Mirror_Bonus</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -915,7 +915,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Boss_Cocolia_P2_GlobalShield",
+          "for": "<a class=\"gModGreen\" id=\"mod__982542315\">Boss_Cocolia_P2_GlobalShield</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -943,7 +943,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_Gepard_IceCounter",
+          "for": "<a class=\"gModGreen\" id=\"mod__-582091938\">Enemy_Gepard_IceCounter</a>",
           "stackType": "Merge",
           "execute": [
             {
@@ -984,7 +984,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "Modifier_Frozen_DamagePercentage": {

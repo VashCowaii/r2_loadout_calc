@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Mar_7th_10_Jianshi",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1835349740\">Mar_7th_10_Jianshi</a>",
       "parse": [
         {
           "name": "IF",
@@ -30,7 +30,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
                 }
               },
               {
@@ -126,7 +126,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Mar_7th_10_GainEnergyWithCheck",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
       "parse": [
         {
           "name": "Adjust Variable Value",
@@ -198,7 +198,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Mar_7th_10_Enhance",
+              "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
                   "operator": "Variables[0] (0.8) || RETURN",
@@ -218,7 +218,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Mar_7th_10_Enhance"
+              "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>"
             }
           ]
         }

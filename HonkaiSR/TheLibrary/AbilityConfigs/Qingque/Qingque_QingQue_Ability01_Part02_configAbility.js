@@ -19,7 +19,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "QingQue_Passive_Tiao"
+          "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -27,7 +27,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "QingQue_Passive_Tong"
+          "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -35,7 +35,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "QingQue_Passive_Wan"
+          "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -99,7 +99,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "QingQue_Passive_Wan"
+                          "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -123,7 +123,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "QingQue_Passive_Tong"
+                          "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -176,7 +176,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "QingQue_Passive_Wan"
+                          "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -191,7 +191,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "QingQue_Passive_Tiao"
+                          "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -224,7 +224,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "QingQue_Passive_Tong"
+                              "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -239,7 +239,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "QingQue_Passive_Tiao"
+                              "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -269,7 +269,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "QingQue_Passive_Wan"
+                  "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -302,7 +302,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "QingQue_Passive_Tong"
+                  "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -335,7 +335,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "QingQue_Passive_Tiao"
+                  "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -402,7 +402,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "QingQue_Passive_Tiao"
+                          "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -435,7 +435,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "QingQue_Passive_Wan"
+                          "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -468,7 +468,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "QingQue_Passive_Tiao"
+                          "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -501,7 +501,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "QingQue_Passive_Wan"
+                          "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -545,7 +545,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "QingQue_Passive_Tong"
+                              "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -578,7 +578,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "QingQue_Passive_Wan"
+                              "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -611,7 +611,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "QingQue_Passive_Tong"
+                              "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -644,7 +644,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "QingQue_Passive_Wan"
+                              "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -688,7 +688,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "QingQue_Passive_Tong"
+                                  "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -721,7 +721,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "QingQue_Passive_Tiao"
+                                  "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -754,7 +754,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "QingQue_Passive_Tong"
+                                  "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -787,7 +787,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "QingQue_Passive_Tiao"
+                                  "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -851,7 +851,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "QingQue_Passive_Wan"
+                                  "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -882,7 +882,7 @@ const configAbility = {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
                                       },
-                                      "modifier": "QingQue_Passive_Tiao"
+                                      "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>"
                                     },
                                     {
                                       "name": "Define Custom Variable",
@@ -906,7 +906,7 @@ const configAbility = {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
                                       },
-                                      "modifier": "QingQue_Passive_Tong"
+                                      "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>"
                                     },
                                     {
                                       "name": "Define Custom Variable",
@@ -972,7 +972,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "QingQue_Passive_Wan"
+                          "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -985,7 +985,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "QingQue_Passive_Tiao"
+                          "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1009,7 +1009,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "QingQue_Passive_Wan"
+                              "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -1022,7 +1022,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "QingQue_Passive_Tong"
+                              "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -1046,7 +1046,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "QingQue_Passive_Tiao"
+                                  "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1059,7 +1059,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "QingQue_Passive_Tong"
+                                  "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1103,7 +1103,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "QingQue_Passive_Wan"
+                                  "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1118,7 +1118,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "QingQue_Passive_Tiao"
+                                  "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1151,7 +1151,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "QingQue_Passive_Tong"
+                                  "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1166,7 +1166,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "QingQue_Passive_Tiao"
+                                  "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1199,7 +1199,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "QingQue_Passive_Wan"
+                                  "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1214,7 +1214,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "QingQue_Passive_Tong"
+                                  "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1267,7 +1267,7 @@ const configAbility = {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
                                       },
-                                      "modifier": "QingQue_Passive_Wan"
+                                      "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>"
                                     },
                                     {
                                       "name": "Define Custom Variable",
@@ -1282,7 +1282,7 @@ const configAbility = {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
                                       },
-                                      "modifier": "QingQue_Passive_Tong"
+                                      "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>"
                                     },
                                     {
                                       "name": "Define Custom Variable",
@@ -1317,7 +1317,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "QingQue_Passive_Wan"
+                                  "modifier": "<a class=\"gModGreen\" id=\"1921510139\">QingQue_Passive_Wan</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1332,7 +1332,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "QingQue_Passive_Tiao"
+                                  "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1385,7 +1385,7 @@ const configAbility = {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
                                       },
-                                      "modifier": "QingQue_Passive_Tong"
+                                      "modifier": "<a class=\"gModGreen\" id=\"1184170005\">QingQue_Passive_Tong</a>"
                                     },
                                     {
                                       "name": "Define Custom Variable",
@@ -1400,7 +1400,7 @@ const configAbility = {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
                                       },
-                                      "modifier": "QingQue_Passive_Tiao"
+                                      "modifier": "<a class=\"gModGreen\" id=\"659202160\">QingQue_Passive_Tiao</a>"
                                     },
                                     {
                                       "name": "Define Custom Variable",

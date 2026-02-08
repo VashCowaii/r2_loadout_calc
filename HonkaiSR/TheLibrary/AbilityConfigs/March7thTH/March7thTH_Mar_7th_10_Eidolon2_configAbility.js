@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Mar_7th_10_Eidolon2"
+      "modifier": "<a class=\"gModGreen\" id=\"-825387091\">Mar_7th_10_Eidolon2</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Mar_7th_10_Eidolon2_Mark_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -36,7 +36,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
+                "modifier": "<a class=\"gModGreen\" id=\"-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>"
               },
               "ifTargetFound": [
                 {
@@ -45,7 +45,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
+                  "modifier": "<a class=\"gModGreen\" id=\"-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>"
                 }
               ]
             }
@@ -55,7 +55,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_Eidolon2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-825387091\">Mar_7th_10_Eidolon2</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Anyone]",
@@ -77,7 +77,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -85,7 +85,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Mar_7th_10_Eidolon2_CD[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1941685711\">Mar_7th_10_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]",
                     "invertCondition": true
                   },
                   {
@@ -151,7 +151,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Mar_7th_10_InsertCheck"
+                      "modifier": "<a class=\"gModGreen\" id=\"126431759\">M_Mar_7th_10_InsertCheck</a>"
                     }
                   ]
                 }
@@ -173,7 +173,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
                   },
                   {
                     "name": "OR",
@@ -223,7 +223,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target's Ability Targets}}"
                       },
-                      "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
+                      "modifier": "<a class=\"gModGreen\" id=\"-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>"
                     }
                   ],
                   "failed": [
@@ -233,7 +233,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                       },
-                      "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
+                      "modifier": "<a class=\"gModGreen\" id=\"-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>"
                     }
                   ]
                 }

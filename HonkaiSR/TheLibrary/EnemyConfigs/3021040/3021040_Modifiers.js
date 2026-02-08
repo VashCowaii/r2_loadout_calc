@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_ArgentiTotem_ListenToSummer",
+      "for": "<a class=\"gModGreen\" id=\"mod__-899723889\">Monster_ArgentiTotem_ListenToSummer</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -32,7 +32,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_W2_ArgentiTotem_Initiate"
+                  "modifier": "<a class=\"gModGreen\" id=\"1996205483\">Enemy_W2_ArgentiTotem_Initiate</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -40,7 +40,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_W2_ArgentiTotem_01_Initiate"
+                  "modifier": "<a class=\"gModGreen\" id=\"-463337026\">Enemy_W2_ArgentiTotem_01_Initiate</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -48,7 +48,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_W2_ArgentiTotem_02_Initiate"
+                  "modifier": "<a class=\"gModGreen\" id=\"803386037\">Enemy_W2_ArgentiTotem_02_Initiate</a>"
                 },
                 {
                   "name": "Force Entity Death",

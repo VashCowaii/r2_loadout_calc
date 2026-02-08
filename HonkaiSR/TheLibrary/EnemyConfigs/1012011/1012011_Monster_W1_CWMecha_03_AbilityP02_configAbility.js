@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W1_CWMecha_03_Aura_Resistance_Controller"
+      "modifier": "<a class=\"gModGreen\" id=\"456888817\">Enemy_W1_CWMecha_03_Aura_Resistance_Controller</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_CWMecha_03_Aura_Resistance",
+      "for": "<a class=\"gModGreen\" id=\"mod__326849672\">Enemy_W1_CWMecha_03_Aura_Resistance</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -44,7 +44,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_CWMecha_03_Aura_Resistance_Controller",
+      "for": "<a class=\"gModGreen\" id=\"mod__456888817\">Enemy_W1_CWMecha_03_Aura_Resistance_Controller</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -55,7 +55,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Enemy_W1_CWMecha_03_Aura_Resistance",
+              "modifier": "<a class=\"gModGreen\" id=\"326849672\">Enemy_W1_CWMecha_03_Aura_Resistance</a>",
               "valuePerStack": {
                 "MDF_Aura_AllDamageTypeResistance": {
                   "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__27) || RETURN",
@@ -78,7 +78,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Enemy_W1_CWMecha_03_Aura_Resistance",
+              "modifier": "<a class=\"gModGreen\" id=\"326849672\">Enemy_W1_CWMecha_03_Aura_Resistance</a>",
               "onlyRemoveOwnersInstance": true
             }
           ]
@@ -102,7 +102,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_W1_CWMecha_03_Aura_Resistance",
+                  "modifier": "<a class=\"gModGreen\" id=\"326849672\">Enemy_W1_CWMecha_03_Aura_Resistance</a>",
                   "valuePerStack": {
                     "MDF_Aura_AllDamageTypeResistance": {
                       "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__27) || RETURN",

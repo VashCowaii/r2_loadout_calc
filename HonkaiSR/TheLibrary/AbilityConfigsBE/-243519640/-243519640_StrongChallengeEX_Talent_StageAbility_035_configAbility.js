@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_035"
+      "modifier": "<a class=\"gModGreen\" id=\"-402124150\">MStrongChallengeEX_Talent_StageAbility_LE_035</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_035",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1091628878\">MStrongChallengeEX_Talent_StageAbility_PLY_035</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -44,7 +44,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_035",
+      "for": "<a class=\"gModGreen\" id=\"mod__-402124150\">MStrongChallengeEX_Talent_StageAbility_LE_035</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -87,7 +87,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_035",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1091628878\">MStrongChallengeEX_Talent_StageAbility_PLY_035</a>",
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -137,7 +137,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_035",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1091628878\">MStrongChallengeEX_Talent_StageAbility_PLY_035</a>",
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

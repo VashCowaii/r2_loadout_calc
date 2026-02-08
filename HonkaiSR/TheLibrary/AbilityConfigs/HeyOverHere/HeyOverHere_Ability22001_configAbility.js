@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_22001_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-542348416\">LC_22001_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_22001_Sub[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__222357741\">LC_22001_Sub</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_22001_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-542348416\">LC_22001_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -66,7 +66,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_22001_Sub[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"222357741\">LC_22001_Sub</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

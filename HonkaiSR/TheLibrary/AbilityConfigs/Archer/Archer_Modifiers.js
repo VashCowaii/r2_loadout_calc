@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Archer_BonusTrigger[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1612899858\">Archer_BonusTrigger</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -21,7 +21,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Archer_BonusAbility02Ready"
+              "modifier": "<a class=\"gModGreen\" id=\"-130031811\">Archer_BonusAbility02Ready</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -34,7 +34,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Archer_BPAbility_AddDamagePercentage[<span class=\"descriptionNumberColor\">Circuit Connection</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"308886295\">Archer_BPAbility_AddDamagePercentage</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]"
             },
             {
               "name": "Define Custom Variable",
@@ -127,7 +127,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Archer_BonusAbility02Ready"
+                  "modifier": "<a class=\"gModGreen\" id=\"-130031811\">Archer_BonusAbility02Ready</a>"
                 },
                 {
                   "name": "IF",
@@ -261,7 +261,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Archer_BonusAbility02Ready",
+      "for": "<a class=\"gModGreen\" id=\"mod__-130031811\">Archer_BonusAbility02Ready</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -316,7 +316,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Archer_BPAbility_AddDamagePercentage[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__308886295\">Archer_BPAbility_AddDamagePercentage</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -382,7 +382,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Archer_Eidolon2_AddWeak[<span class=\"descriptionNumberColor\">The Unfulfilled Happiness</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1473893661\">Archer_Eidolon2_AddWeak</a>[<span class=\"descriptionNumberColor\">The Unfulfilled Happiness</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_AttachWeakness"
@@ -421,7 +421,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Archer_Insert_Target",
+      "for": "<a class=\"gModGreen\" id=\"mod__496562314\">Archer_Insert_Target</a>",
       "stackData": [],
       "latentQueue": [
         "MDF_InsertUsed",

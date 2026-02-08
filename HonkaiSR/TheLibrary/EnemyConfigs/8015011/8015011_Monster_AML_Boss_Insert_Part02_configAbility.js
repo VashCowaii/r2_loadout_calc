@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_HitEffect"
+      "modifier": "<a class=\"gModGreen\" id=\"1605741417\">Enemy_AML_Boss_HitEffect</a>"
     },
     {
       "name": "Boss Bar Display",
@@ -80,7 +80,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 1}}"
       },
-      "modifier": "Enemy_WMonster_W0_Boss_Sign_Part1"
+      "modifier": "<a class=\"gModGreen\" id=\"999315308\">Enemy_WMonster_W0_Boss_Sign_Part1</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -88,7 +88,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 2}}"
       },
-      "modifier": "Enemy_WMonster_W0_Boss_Sign_Part2"
+      "modifier": "<a class=\"gModGreen\" id=\"1049648165\">Enemy_WMonster_W0_Boss_Sign_Part2</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -96,7 +96,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 3}}"
       },
-      "modifier": "Enemy_WMonster_W0_Boss_Sign_Part3"
+      "modifier": "<a class=\"gModGreen\" id=\"1032870546\">Enemy_WMonster_W0_Boss_Sign_Part3</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -104,7 +104,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_WMonster_W0_Boss_Unselectable[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1691894969\">Enemy_WMonster_W0_Boss_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
     }
   ],
   "references": []

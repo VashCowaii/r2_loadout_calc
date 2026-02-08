@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_21002_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1715123014\">LC_21002_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_21002_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1715123014\">LC_21002_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -60,7 +60,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "LC_EquipUnique_DamageResistance",
+                  "modifier": "<a class=\"gModGreen\" id=\"-992676615\">LC_EquipUnique_DamageResistance</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -85,7 +85,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_EquipUnique_DamageResistance",
+                      "modifier": "<a class=\"gModGreen\" id=\"-992676615\">LC_EquipUnique_DamageResistance</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.08) || RETURN",
@@ -119,7 +119,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "LC_EquipUnique_DamageResistance",
+                      "modifier": "<a class=\"gModGreen\" id=\"-992676615\">LC_EquipUnique_DamageResistance</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.08) || RETURN",
@@ -168,7 +168,7 @@ const compositeAbilityObject = {
       "referencesGlobal": [
         {
           "name": "Modifier Construction",
-          "for": "LC_EquipUnique_DamageResistance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-992676615\">LC_EquipUnique_DamageResistance</a>",
           "stackType": "ReplaceByCasterOrUnStack",
           "execute": [
             {

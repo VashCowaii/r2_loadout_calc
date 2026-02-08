@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Moze_TechniqueUsage"
+      "modifier": "<a class=\"gModGreen\" id=\"962006239\">Moze_TechniqueUsage</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Moze_TechniqueUsage_DamageUpModifier[<span class=\"descriptionNumberColor\">Bated Wings</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2094982629\">Moze_TechniqueUsage_DamageUpModifier</a>[<span class=\"descriptionNumberColor\">Bated Wings</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -57,7 +57,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Moze_TechniqueUsage",
+      "for": "<a class=\"gModGreen\" id=\"mod__962006239\">Moze_TechniqueUsage</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -85,7 +85,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Moze_TechniqueUsage_DamageUpModifier[<span class=\"descriptionNumberColor\">Bated Wings</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2094982629\">Moze_TechniqueUsage_DamageUpModifier</a>[<span class=\"descriptionNumberColor\">Bated Wings</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_105_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"1411304384\">Relic_105_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_105_Sub[<span class=\"descriptionNumberColor\">Champion of Streetwise Boxing</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-686777299\">Relic_105_Sub</a>[<span class=\"descriptionNumberColor\">Champion of Streetwise Boxing</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -68,7 +68,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_105_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__1411304384\">Relic_105_Main</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -79,7 +79,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Relic_105_Sub[<span class=\"descriptionNumberColor\">Champion of Streetwise Boxing</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-686777299\">Relic_105_Sub</a>[<span class=\"descriptionNumberColor\">Champion of Streetwise Boxing</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
@@ -100,7 +100,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Relic_105_Sub[<span class=\"descriptionNumberColor\">Champion of Streetwise Boxing</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-686777299\">Relic_105_Sub</a>[<span class=\"descriptionNumberColor\">Champion of Streetwise Boxing</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",

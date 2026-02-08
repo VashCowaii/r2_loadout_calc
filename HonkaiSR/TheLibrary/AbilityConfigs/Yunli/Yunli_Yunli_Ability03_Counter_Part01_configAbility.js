@@ -34,7 +34,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_AddRegardAsAttackType"
+          "modifier": "<a class=\"gModGreen\" id=\"1898161246\">Yunli_AddRegardAsAttackType</a>"
         },
         {
           "name": "IF",
@@ -49,7 +49,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yunli_Eidolon1",
+              "modifier": "<a class=\"gModGreen\" id=\"275203206\">Yunli_Eidolon1</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.2) || RETURN",
@@ -89,7 +89,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Yunli_SuperCounter_Mark"
+                "modifier": "<a class=\"gModGreen\" id=\"-77264210\">Yunli_SuperCounter_Mark</a>"
               }
             ]
           },
@@ -104,7 +104,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yunli_SuperCounter_Mark"
+              "modifier": "<a class=\"gModGreen\" id=\"-77264210\">Yunli_SuperCounter_Mark</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -112,7 +112,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]",
               "onlyRemoveOwnersInstance": true
             },
             "Deleted bullshit",
@@ -142,7 +142,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -203,7 +203,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yunli_AddRegardAsAttackType"
+              "modifier": "<a class=\"gModGreen\" id=\"1898161246\">Yunli_AddRegardAsAttackType</a>"
             },
             {
               "name": "IF",
@@ -218,7 +218,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yunli_Eidolon1",
+                  "modifier": "<a class=\"gModGreen\" id=\"275203206\">Yunli_Eidolon1</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -258,7 +258,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Yunli_SuperCounter_Mark"
+                    "modifier": "<a class=\"gModGreen\" id=\"-77264210\">Yunli_SuperCounter_Mark</a>"
                   }
                 ]
               },
@@ -273,7 +273,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yunli_SuperCounter_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-77264210\">Yunli_SuperCounter_Mark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -281,7 +281,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]",
                   "onlyRemoveOwnersInstance": true
                 },
                 "Deleted bullshit",
@@ -311,7 +311,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -393,7 +393,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Yunli_InsertAbility1"
+              "functionName": "<a class=\"gTempYellow\" id=\"-450811699\">Yunli_InsertAbility1</a>"
             }
           ]
         },

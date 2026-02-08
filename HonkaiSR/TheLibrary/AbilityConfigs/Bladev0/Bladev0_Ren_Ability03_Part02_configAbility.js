@@ -284,7 +284,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MWRen_Ability03_Listen[<span class=\"descriptionNumberColor\">Death Sentence</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-870658235\">MWRen_Ability03_Listen</a>[<span class=\"descriptionNumberColor\">Death Sentence</span>]"
     },
     "Trigger: Attack End",
     "Trigger: Skip Death Handling",

@@ -64,7 +64,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_ChangeWeakness"
+      "modifier": "<a class=\"gModGreen\" id=\"228774752\">Enemy_AML_Boss_ChangeWeakness</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -72,7 +72,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 1}}"
       },
-      "modifier": "Enemy_WMonster_W0_Boss_Sign_Part1"
+      "modifier": "<a class=\"gModGreen\" id=\"999315308\">Enemy_WMonster_W0_Boss_Sign_Part1</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -80,7 +80,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 2}}"
       },
-      "modifier": "Enemy_WMonster_W0_Boss_Sign_Part2"
+      "modifier": "<a class=\"gModGreen\" id=\"1049648165\">Enemy_WMonster_W0_Boss_Sign_Part2</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -88,7 +88,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 3}}"
       },
-      "modifier": "Enemy_WMonster_W0_Boss_Sign_Part3"
+      "modifier": "<a class=\"gModGreen\" id=\"1032870546\">Enemy_WMonster_W0_Boss_Sign_Part3</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -96,13 +96,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_LockActionDelay"
+      "modifier": "<a class=\"gModGreen\" id=\"1424068909\">Enemy_AML_Boss_LockActionDelay</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_LockActionDelay",
+      "for": "<a class=\"gModGreen\" id=\"mod__1424068909\">Enemy_AML_Boss_LockActionDelay</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -127,7 +127,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_ChangeWeakness",
+      "for": "<a class=\"gModGreen\" id=\"mod__228774752\">Enemy_AML_Boss_ChangeWeakness</a>",
       "modifierFlags": [
         "MuteHitH",
         "MuteAttachWeakness"

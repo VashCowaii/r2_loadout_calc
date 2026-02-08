@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Himeko_Trace03"
+      "modifier": "<a class=\"gModGreen\" id=\"2030790810\">Himeko_Trace03</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Himeko_CriticalChance[<span class=\"descriptionNumberColor\">Benchmark</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__583790079\">Himeko_CriticalChance</a>[<span class=\"descriptionNumberColor\">Benchmark</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Himeko_Trace03",
+      "for": "<a class=\"gModGreen\" id=\"mod__2030790810\">Himeko_Trace03</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -79,7 +79,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Himeko_CriticalChance[<span class=\"descriptionNumberColor\">Benchmark</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"583790079\">Himeko_CriticalChance</a>[<span class=\"descriptionNumberColor\">Benchmark</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.15) || RETURN",
@@ -124,7 +124,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Himeko_CriticalChance[<span class=\"descriptionNumberColor\">Benchmark</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"583790079\">Himeko_CriticalChance</a>[<span class=\"descriptionNumberColor\">Benchmark</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.15) || RETURN",
@@ -144,7 +144,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Himeko_CriticalChance[<span class=\"descriptionNumberColor\">Benchmark</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"583790079\">Himeko_CriticalChance</a>[<span class=\"descriptionNumberColor\">Benchmark</span>]"
                 }
               ]
             }

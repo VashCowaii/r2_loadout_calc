@@ -93,7 +93,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_W1_Soldier01_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1864245059\">Monster_W1_Soldier01_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
             "displayLines": "{[Skill01[2]]}",
@@ -234,7 +234,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_W1_Soldier01_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1864245059\">Monster_W1_Soldier01_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
             "displayLines": "{[Skill01[2]]}",
@@ -313,7 +313,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Soldier01_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1864245059\">Monster_W1_Soldier01_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "stackType": "Replace",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [

@@ -48,13 +48,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Ren_TechniqueUsage_AOE"
+          "modifier": "<a class=\"gModGreen\" id=\"1996360275\">Ren_TechniqueUsage_AOE</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Ren_TechniqueUsage_AOE",
+          "for": "<a class=\"gModGreen\" id=\"mod__1996360275\">Ren_TechniqueUsage_AOE</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -183,7 +183,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "MWRen_Trace03"
+              "modifier": "<a class=\"gModGreen\" id=\"-476823607\">MWRen_Trace03</a>"
             }
           ]
         },
@@ -330,7 +330,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -361,7 +361,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "MWRen_Trace03"
+              "modifier": "<a class=\"gModGreen\" id=\"-476823607\">MWRen_Trace03</a>"
             }
           ]
         }
@@ -436,7 +436,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MWRen_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"1035052836\">MWRen_Passive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -444,7 +444,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MWRen_LoseHPPreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"-480743382\">MWRen_LoseHPPreShow</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -561,7 +561,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MWRen_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__1035052836\">MWRen_Passive</a>",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
@@ -826,7 +826,7 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Ren_CheckHPChange"
+                          "functionName": "<a class=\"gTempYellow\" id=\"1574082321\">Ren_CheckHPChange</a>"
                         },
                         {
                           "name": "IF",
@@ -848,7 +848,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                               "stackLimit": {
                                 "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
                                 "displayLines": "MWRen_Qi_MaxLayer",
@@ -865,7 +865,7 @@ const compositeAbilityObject = {
                                 "conditionList": [
                                   {
                                     "name": "Compare: Variable",
-                                    "value1": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                                    "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                                     "compareType": ">=",
                                     "value2": {
                                       "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
@@ -957,7 +957,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "MWRen_Trace01[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-510378845\">MWRen_Trace01</a>[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
                           "valuePerStack": {
                             "MDF_HealEnhanceRatio": {
                               "operator": "Variables[0] (0.5) || RETURN",
@@ -1000,7 +1000,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "MWRen_Eidolon4_Add"
+                          "modifier": "<a class=\"gModGreen\" id=\"-2019393203\">MWRen_Eidolon4_Add</a>"
                         }
                       ]
                     }
@@ -1012,7 +1012,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "MWRen_Trace01[<span class=\"descriptionNumberColor\">Vita Infinita</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-510378845\">MWRen_Trace01</a>[<span class=\"descriptionNumberColor\">Vita Infinita</span>]"
                     },
                     {
                       "name": "IF",
@@ -1100,7 +1100,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "MWRen_Trace01[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-510378845\">MWRen_Trace01</a>[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
                           "valuePerStack": {
                             "MDF_HealEnhanceRatio": {
                               "operator": "Variables[0] (0.5) || RETURN",
@@ -1128,7 +1128,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "value1": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                        "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                         "compareType": ">=",
                         "value2": {
                           "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
@@ -1200,7 +1200,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "value1": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                        "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                         "compareType": ">=",
                         "value2": {
                           "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
@@ -1297,7 +1297,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "value1": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                        "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                         "compareType": ">=",
                         "value2": {
                           "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
@@ -1405,7 +1405,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Ren_CheckHPChange"
+                          "functionName": "<a class=\"gTempYellow\" id=\"1574082321\">Ren_CheckHPChange</a>"
                         }
                       ]
                     }
@@ -1438,7 +1438,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Ren_CheckHPChange",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1574082321\">Ren_CheckHPChange</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -1516,7 +1516,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "MWRen_Ability03_Listen[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-870658235\">MWRen_Ability03_Listen</a>[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (CasterFinalLostHP) || RETURN",
@@ -1822,7 +1822,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MWRen_Ability03_Listen[<span class=\"descriptionNumberColor\">Death Sentence</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-870658235\">MWRen_Ability03_Listen</a>[<span class=\"descriptionNumberColor\">Death Sentence</span>]"
         },
         "Trigger: Attack End",
         "Trigger: Skip Death Handling",
@@ -1917,7 +1917,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MWRen_Attack_Transfer[<span class=\"descriptionNumberColor\">Hellscape</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-922781705\">MWRen_Attack_Transfer</a>[<span class=\"descriptionNumberColor\">Hellscape</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -1933,7 +1933,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MWRen_Attack[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1915467315\">MWRen_Attack</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.4) || RETURN",
@@ -2006,7 +2006,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "MWRen_Trace02"
+              "modifier": "<a class=\"gModGreen\" id=\"-493601226\">MWRen_Trace02</a>"
             }
           ]
         },
@@ -2297,7 +2297,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "MWRen_LoseHPPreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-480743382\">MWRen_LoseHPPreShow</a>",
           "execute": [
             {
               "eventTrigger": "Update Target Selected(UI) [Owner]",
@@ -2354,7 +2354,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "MWRen_Attack_Transfer[<span class=\"descriptionNumberColor\">Hellscape</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-922781705\">MWRen_Attack_Transfer</a>[<span class=\"descriptionNumberColor\">Hellscape</span>]"
                       },
                       "passed": [
                         {
@@ -2437,7 +2437,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWRen_Eidolon2[<span class=\"descriptionNumberColor\">Grievous Penitence</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1862549747\">MWRen_Eidolon2</a>[<span class=\"descriptionNumberColor\">Grievous Penitence</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2481,7 +2481,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWRen_Eidolon4_Add",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2019393203\">MWRen_Eidolon4_Add</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2492,7 +2492,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "MWRen_Eidolon4[<span class=\"descriptionNumberColor\">Heal All Bones</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1963215461\">MWRen_Eidolon4</a>[<span class=\"descriptionNumberColor\">Heal All Bones</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -2522,7 +2522,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWRen_Eidolon4[<span class=\"descriptionNumberColor\">Heal All Bones</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1963215461\">MWRen_Eidolon4</a>[<span class=\"descriptionNumberColor\">Heal All Bones</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2587,7 +2587,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWRen_Trace03",
+          "for": "<a class=\"gModGreen\" id=\"mod__-476823607\">MWRen_Trace03</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2624,7 +2624,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWRen_Trace02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-493601226\">MWRen_Trace02</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2697,7 +2697,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWRen_Trace01[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-510378845\">MWRen_Trace01</a>[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2739,7 +2739,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWRen_Ability03_Listen[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-870658235\">MWRen_Ability03_Listen</a>[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2763,7 +2763,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2876,14 +2876,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "value1": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                        "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                         "compareType": ">=",
                         "value2": 1,
                         "valueType": "Layer"
                       },
                       {
                         "name": "Compare: Variable",
-                        "value1": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                        "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                         "compareType": "<=",
                         "value2": 2,
                         "valueType": "Layer"
@@ -2898,14 +2898,14 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Compare: Variable",
-                            "value1": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                            "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                             "compareType": ">=",
                             "value2": 3,
                             "valueType": "Layer"
                           },
                           {
                             "name": "Compare: Variable",
-                            "value1": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                            "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                             "compareType": "<=",
                             "value2": {
                               "operator": "Variables[0] (MWRen_Qi_MaxLayer) || Constants[0] (1) || SUB || RETURN",
@@ -2926,7 +2926,7 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Variable",
-                            "value1": "MWRen_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
+                            "value1": "<a class=\"gModGreen\" id=\"1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                             "compareType": "=",
                             "value2": {
                               "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
@@ -2960,7 +2960,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWRen_Attack[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1915467315\">MWRen_Attack</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2997,7 +2997,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWRen_Attack_Transfer[<span class=\"descriptionNumberColor\">Hellscape</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-922781705\">MWRen_Attack_Transfer</a>[<span class=\"descriptionNumberColor\">Hellscape</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3018,7 +3018,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MWRen_Attack[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1915467315\">MWRen_Attack</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3026,7 +3026,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MWRen_Eidolon2[<span class=\"descriptionNumberColor\">Grievous Penitence</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1862549747\">MWRen_Eidolon2</a>[<span class=\"descriptionNumberColor\">Grievous Penitence</span>]"
                 },
                 {
                   "name": "Update Ability Enhance Button",
@@ -3083,7 +3083,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MWRen_Eidolon2[<span class=\"descriptionNumberColor\">Grievous Penitence</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1862549747\">MWRen_Eidolon2</a>[<span class=\"descriptionNumberColor\">Grievous Penitence</span>]"
                     }
                   ]
                 }

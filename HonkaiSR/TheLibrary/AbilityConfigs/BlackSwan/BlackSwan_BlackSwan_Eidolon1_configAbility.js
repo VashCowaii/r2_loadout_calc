@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "BlackSwan_Eidolon1"
+      "modifier": "<a class=\"gModGreen\" id=\"1473298383\">BlackSwan_Eidolon1</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
       "stackType": "EntityUnique",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -52,7 +52,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
       "stackType": "EntityUnique",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -88,7 +88,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
       "stackType": "EntityUnique",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -124,7 +124,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
       "stackType": "EntityUnique",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -160,7 +160,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "BlackSwan_Eidolon1_SubOnEnemy",
+      "for": "<a class=\"gModGreen\" id=\"mod__1077373681\">BlackSwan_Eidolon1_SubOnEnemy</a>",
       "stackType": "EntityUnique",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -180,7 +180,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -188,7 +188,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                   }
                 ]
               },
@@ -199,7 +199,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -217,7 +217,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -235,7 +235,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -253,7 +253,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -284,7 +284,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -315,7 +315,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -346,7 +346,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -377,7 +377,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -402,7 +402,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -410,7 +410,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -418,7 +418,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -426,7 +426,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
             }
           ]
         },
@@ -452,7 +452,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -474,7 +474,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -494,7 +494,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
             },
@@ -517,7 +517,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -539,7 +539,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -559,7 +559,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
             },
@@ -582,7 +582,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -604,7 +604,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -624,7 +624,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
             },
@@ -647,7 +647,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -669,7 +669,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -689,7 +689,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
             }
@@ -705,7 +705,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -713,7 +713,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
                   }
                 ]
               },
@@ -724,7 +724,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -742,7 +742,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -760,7 +760,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -778,7 +778,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -817,7 +817,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
             },
@@ -841,7 +841,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
             },
@@ -865,7 +865,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
             },
@@ -889,7 +889,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
             }
@@ -905,7 +905,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -913,7 +913,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                   }
                 ]
               },
@@ -924,7 +924,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -942,7 +942,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -960,7 +960,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -978,7 +978,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1005,7 +1005,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1032,7 +1032,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1059,7 +1059,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1086,7 +1086,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1106,7 +1106,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "BlackSwan_Eidolon1",
+      "for": "<a class=\"gModGreen\" id=\"mod__1473298383\">BlackSwan_Eidolon1</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -1128,7 +1128,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_SubOnEnemy",
+                  "modifier": "<a class=\"gModGreen\" id=\"1077373681\">BlackSwan_Eidolon1_SubOnEnemy</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.25) || RETURN",
@@ -1153,7 +1153,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "BlackSwan_Eidolon1_SubOnEnemy",
+              "modifier": "<a class=\"gModGreen\" id=\"1077373681\">BlackSwan_Eidolon1_SubOnEnemy</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.25) || RETURN",

@@ -50,7 +50,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Sampo_Ultimate_DOTTakenUp[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-2131103330\">Sampo_Ultimate_DOTTakenUp</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",

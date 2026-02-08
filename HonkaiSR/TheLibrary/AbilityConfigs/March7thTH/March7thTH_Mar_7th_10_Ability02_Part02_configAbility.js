@@ -20,7 +20,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Mar_7th_10_AchievementFlag"
+          "modifier": "<a class=\"gModGreen\" id=\"591989145\">M_Mar_7th_10_AchievementFlag</a>"
         }
       ]
     },
@@ -30,7 +30,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -38,7 +38,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Mar_7th_10_Ability02_Master_SpeedUp[<span class=\"descriptionNumberColor\">Master, It's Tea Time!</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-178417190\">Mar_7th_10_Ability02_Master_SpeedUp</a>[<span class=\"descriptionNumberColor\">Master, It's Tea Time!</span>]",
       "valuePerStack": {
         "MDF_PropertyRatio": {
           "operator": "Variables[0] (0.1) || RETURN",
@@ -69,7 +69,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Mar_7th_10_AbilityPreShowModifier_Self"
+      "modifier": "<a class=\"gModGreen\" id=\"7821473\">M_Mar_7th_10_AbilityPreShowModifier_Self</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -77,7 +77,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Mar_7th_10_AbilityPreShowModifier_Target"
+      "modifier": "<a class=\"gModGreen\" id=\"955806322\">M_Mar_7th_10_AbilityPreShowModifier_Target</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -85,13 +85,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Mar_7th_10_SpecialMark_Adder"
+      "modifier": "<a class=\"gModGreen\" id=\"-297375959\">M_Mar_7th_10_SpecialMark_Adder</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Mar_7th_10_SpecialMark_2",
+      "for": "<a class=\"gModGreen\" id=\"mod__847986139\">M_Mar_7th_10_SpecialMark_2</a>",
       "modifierFlags": [
         "ListenBattleEventSkill",
         "RemoveWhenCasterDead"
@@ -192,7 +192,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Mar_7th_10_SpecialMark_1",
+      "for": "<a class=\"gModGreen\" id=\"mod__864763758\">M_Mar_7th_10_SpecialMark_1</a>",
       "modifierFlags": [
         "ListenBattleEventSkill",
         "RemoveWhenCasterDead"
@@ -293,7 +293,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Mar_7th_10_SpecialMark_Adder",
+      "for": "<a class=\"gModGreen\" id=\"mod__-297375959\">M_Mar_7th_10_SpecialMark_Adder</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -335,7 +335,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_Mar_7th_10_SpecialMark_1"
+                      "modifier": "<a class=\"gModGreen\" id=\"864763758\">M_Mar_7th_10_SpecialMark_1</a>"
                     }
                   ],
                   "failed": [
@@ -361,7 +361,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "M_Mar_7th_10_SpecialMark_2"
+                          "modifier": "<a class=\"gModGreen\" id=\"847986139\">M_Mar_7th_10_SpecialMark_2</a>"
                         }
                       ]
                     }
@@ -404,7 +404,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_Mar_7th_10_SpecialMark_1"
+                      "modifier": "<a class=\"gModGreen\" id=\"864763758\">M_Mar_7th_10_SpecialMark_1</a>"
                     }
                   ],
                   "failed": [
@@ -430,7 +430,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "M_Mar_7th_10_SpecialMark_2"
+                          "modifier": "<a class=\"gModGreen\" id=\"847986139\">M_Mar_7th_10_SpecialMark_2</a>"
                         }
                       ]
                     }
@@ -447,7 +447,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Mar_7th_10_AbilityPreShowModifier_Target",
+      "for": "<a class=\"gModGreen\" id=\"mod__955806322\">M_Mar_7th_10_AbilityPreShowModifier_Target</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -466,7 +466,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Mar_7th_10_Ability02_Master_SpeedUp[<span class=\"descriptionNumberColor\">Master, It's Tea Time!</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-178417190\">Mar_7th_10_Ability02_Master_SpeedUp</a>[<span class=\"descriptionNumberColor\">Master, It's Tea Time!</span>]",
           "invertCondition": true
         },
         "delayAdvancePreview": {
@@ -477,7 +477,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Mar_7th_10_AbilityPreShowModifier_Self",
+      "for": "<a class=\"gModGreen\" id=\"mod__7821473\">M_Mar_7th_10_AbilityPreShowModifier_Self</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -499,7 +499,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Mar_7th_10_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-237230767\">Mar_7th_10_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]",
               "invertCondition": true
             },
             {
@@ -516,7 +516,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Mar_7th_10_AchievementFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__591989145\">M_Mar_7th_10_AchievementFlag</a>",
       "stackData": [],
       "latentQueue": []
     }

@@ -11,7 +11,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "SlowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1203290559\">SlowModifier</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -38,7 +38,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "OnBreakSlowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__512006331\">OnBreakSlowModifier</a>",
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -49,7 +49,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "SlowModifier",
+              "modifier": "<a class=\"gModGreen\" id=\"-1203290559\">SlowModifier</a>",
               "duration": 1,
               "valuePerStack": {
                 "PassiveAbility04_SpeedDelta": {

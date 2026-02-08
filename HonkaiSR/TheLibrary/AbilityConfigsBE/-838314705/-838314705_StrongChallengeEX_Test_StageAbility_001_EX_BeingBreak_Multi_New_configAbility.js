@@ -12,7 +12,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Monster_W2_Feixiao_IF_OnLevel"
+        "modifier": "<a class=\"gModGreen\" id=\"-1393128044\">Monster_W2_Feixiao_IF_OnLevel</a>"
       }
     },
     "Deleted bullshit",
@@ -22,7 +22,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All(with Unselectable)}}"
       },
-      "modifier": "Standard_SuperArmorBreak_Mark"
+      "modifier": "<a class=\"gModGreen\" id=\"-641086431\">Standard_SuperArmorBreak_Mark</a>"
     },
     {
       "name": "IF",
@@ -32,7 +32,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Level Entity}}"
         },
-        "modifier": "MStrongChallengeEX_BEMark_HP"
+        "modifier": "<a class=\"gModGreen\" id=\"-329109669\">MStrongChallengeEX_BEMark_HP</a>"
       },
       "passed": [
         {
@@ -64,7 +64,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Level Entity}}"
         },
-        "modifier": "MStrongChallengeEX_BEMark_SP"
+        "modifier": "<a class=\"gModGreen\" id=\"709278328\">MStrongChallengeEX_BEMark_SP</a>"
       },
       "passed": [
         {
@@ -176,7 +176,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Level Entity}}"
         },
-        "modifier": "MStrongChallengeEX_BEMark_BP"
+        "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
       },
       "passed": [
         {
@@ -194,7 +194,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Level Entity}}"
         },
-        "modifier": "MStrongChallengeEX_BEMark_ActionDelay"
+        "modifier": "<a class=\"gModGreen\" id=\"-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>"
       },
       "passed": [
         {
@@ -254,7 +254,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Level Entity}}"
         },
-        "modifier": "MStrongChallengeEX_BEMark_DispelCTRL"
+        "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
       },
       "passed": [
         {
@@ -722,7 +722,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+      "modifier": "<a class=\"gModGreen\" id=\"-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -730,7 +730,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+      "modifier": "<a class=\"gModGreen\" id=\"-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -738,7 +738,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+      "modifier": "<a class=\"gModGreen\" id=\"-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
     },
     {
       "name": "IF",
@@ -748,7 +748,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Level Entity}}"
         },
-        "modifier": "MStrongChallengeEX_BEMark_SpeedUp"
+        "modifier": "<a class=\"gModGreen\" id=\"-1121709349\">MStrongChallengeEX_BEMark_SpeedUp</a>"
       },
       "passed": [
         {

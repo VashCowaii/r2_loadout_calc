@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Anaxa_BPAbility_ModifyDamage"
+      "modifier": "<a class=\"gModGreen\" id=\"1091558079\">M_Anaxa_BPAbility_ModifyDamage</a>"
     },
     {
       "name": "IF",
@@ -25,7 +25,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Anaxa_BPAbility_Bonus[<span class=\"descriptionNumberColor\">Blaze, Plunged to Canyon</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"671072840\">Anaxa_BPAbility_Bonus</a>[<span class=\"descriptionNumberColor\">Blaze, Plunged to Canyon</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -111,7 +111,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "M_Anaxa_Ability02_HitMark"
+      "modifier": "<a class=\"gModGreen\" id=\"1764573952\">M_Anaxa_Ability02_HitMark</a>"
     },
     {
       "name": "Looped Event",
@@ -148,19 +148,19 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "M_Anaxa_Ability02_HitMark",
+            "modifier": "<a class=\"gModGreen\" id=\"1764573952\">M_Anaxa_Ability02_HitMark</a>",
             "invertCondition": true
           },
           "ifTargetFound": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Anaxa_Ability02_SingleHit"
+              "functionName": "<a class=\"gTempYellow\" id=\"662224417\">Anaxa_Ability02_SingleHit</a>"
             }
           ],
           "noTargetFound": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -168,7 +168,7 @@ const configAbility = {
               "paramSequence": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Anaxa_Ability02_SingleHit"
+                  "functionName": "<a class=\"gTempYellow\" id=\"662224417\">Anaxa_Ability02_SingleHit</a>"
                 }
               ]
             }
@@ -182,7 +182,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Anaxa_BPAbility_Bonus[<span class=\"descriptionNumberColor\">Blaze, Plunged to Canyon</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__671072840\">Anaxa_BPAbility_Bonus</a>[<span class=\"descriptionNumberColor\">Blaze, Plunged to Canyon</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -219,7 +219,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Anaxa_Ability02_HitMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__1764573952\">M_Anaxa_Ability02_HitMark</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -240,7 +240,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Anaxa_BPAbility_ModifyDamage",
+      "for": "<a class=\"gModGreen\" id=\"mod__1091558079\">M_Anaxa_BPAbility_ModifyDamage</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",

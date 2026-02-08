@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Tribbie_Maze_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-888581137\">Tribbie_Maze_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Tribbie_Maze_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-888581137\">Tribbie_Maze_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -44,7 +44,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Tribbie_SKL02_Bonus[<span class=\"descriptionNumberColor\">Numinosity</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1664293665\">Tribbie_SKL02_Bonus</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

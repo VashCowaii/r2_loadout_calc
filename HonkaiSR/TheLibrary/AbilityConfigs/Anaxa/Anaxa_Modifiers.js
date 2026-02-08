@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "M_Anaxa_StartFreeBP",
+      "for": "<a class=\"gModGreen\" id=\"mod__1815988112\">M_Anaxa_StartFreeBP</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -45,12 +45,12 @@ const configAbility = {
       ],
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "M_Anaxa_PrepareFreeBP"
+        "dependancyName": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>"
       }
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Anaxa_PrepareFreeBP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1540917869\">M_Anaxa_PrepareFreeBP</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -70,7 +70,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "M_Anaxa_StartFreeBP"
+                "modifier": "<a class=\"gModGreen\" id=\"1815988112\">M_Anaxa_StartFreeBP</a>"
               },
               "passed": [
                 {
@@ -79,7 +79,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Anaxa_StartFreeBP"
+                  "modifier": "<a class=\"gModGreen\" id=\"1815988112\">M_Anaxa_StartFreeBP</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -87,7 +87,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Anaxa_PrepareFreeBP",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
                   "addStacksPerTrigger": -1
                 }
               ]
@@ -111,7 +111,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Anaxa_StartFreeBP"
+                  "modifier": "<a class=\"gModGreen\" id=\"1815988112\">M_Anaxa_StartFreeBP</a>"
                 },
                 {
                   "name": "UI Display Event",
@@ -128,7 +128,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Anaxa_InsertActionCheck",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1929414079\">M_Anaxa_InsertActionCheck</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
@@ -139,7 +139,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Anaxa_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
             }
           ]
         },
@@ -154,7 +154,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Anaxa_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
             }
           ],
           "priorityLevel": -55
@@ -164,7 +164,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Anaxa_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
             }
           ]
         },
@@ -173,7 +173,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Anaxa_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
             }
           ]
         },
@@ -210,7 +210,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Anaxa_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
                 }
               ]
             }
@@ -220,7 +220,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Anaxa_InsertRetarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1862868553\">Anaxa_InsertRetarget</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -256,7 +256,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Anaxa_PrepareFreeBP",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
                       "addStacksPerTrigger": 1
                     },
                     {
@@ -275,7 +275,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "M_Anaxa_PrepareFreeBP",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
                           "addStacksPerTrigger": -1
                         },
                         {
@@ -284,7 +284,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "M_Anaxa_InsertActionCheck",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1929414079\">M_Anaxa_InsertActionCheck</a>",
                           "addStacksPerTrigger": 1
                         }
                       ],
@@ -304,7 +304,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Anaxa_UltraDebuff[<span class=\"descriptionNumberColor\">Sublimation</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1588888193\">Anaxa_UltraDebuff</a>[<span class=\"descriptionNumberColor\">Sublimation</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -437,7 +437,7 @@ const configAbility = {
                     "STAT_CTRL_Frozen_Effect",
                     "FixedPerformTime"
                   ],
-                  "modifierName": "Anaxa_UltraDebuff[<span class=\"descriptionNumberColor\">Sublimation</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1588888193\">Anaxa_UltraDebuff</a>[<span class=\"descriptionNumberColor\">Sublimation</span>]",
                   "casterFilter": {
                     "name": "Target Name",
                     "target": "{{Caster}}"

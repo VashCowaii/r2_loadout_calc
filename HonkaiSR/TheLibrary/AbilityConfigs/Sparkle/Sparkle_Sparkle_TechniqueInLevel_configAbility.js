@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sparkle_Maze_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1062791672\">Sparkle_Maze_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Sparkle_Maze_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1062791672\">Sparkle_Maze_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

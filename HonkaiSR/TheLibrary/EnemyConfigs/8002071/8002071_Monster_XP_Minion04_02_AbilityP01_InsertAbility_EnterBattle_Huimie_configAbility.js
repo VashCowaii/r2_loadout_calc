@@ -52,7 +52,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Huimie_EffectPaths"
+          "modifier": "<a class=\"gModGreen\" id=\"1715207705\">Enemy_XP_Minion04_02_Huimie_EffectPaths</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -60,7 +60,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Huimie_EffectRound"
+          "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -68,7 +68,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Huimie_EffectGround"
+          "modifier": "<a class=\"gModGreen\" id=\"1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -76,7 +76,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Caster"
+          "modifier": "<a class=\"gModGreen\" id=\"-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -84,7 +84,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion"
+          "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
         }
       ],
       "failed": [
@@ -105,7 +105,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Huimie_EffectPaths"
+                  "modifier": "<a class=\"gModGreen\" id=\"1715207705\">Enemy_XP_Minion04_02_Huimie_EffectPaths</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -113,7 +113,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Huimie_EffectRound"
+                  "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -121,7 +121,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Huimie_EffectGround"
+                  "modifier": "<a class=\"gModGreen\" id=\"1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>"
                 }
               ]
             },
@@ -137,7 +137,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Caster"
+                  "modifier": "<a class=\"gModGreen\" id=\"-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -145,7 +145,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion"
+                  "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
                 }
               ]
             }

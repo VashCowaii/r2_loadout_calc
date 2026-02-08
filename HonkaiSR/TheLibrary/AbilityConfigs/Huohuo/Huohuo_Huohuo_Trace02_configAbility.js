@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Huohuo_Trace02",
+      "modifier": "<a class=\"gModGreen\" id=\"1538917301\">M_Huohuo_Trace02</a>",
       "valuePerStack": {
         "MDF_Resistance": {
           "operator": "Variables[0] (0.35) || RETURN",
@@ -26,7 +26,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Huohuo_Trace02",
+      "for": "<a class=\"gModGreen\" id=\"mod__1538917301\">M_Huohuo_Trace02</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

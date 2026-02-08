@@ -43,7 +43,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Acheron_PassiveUltra"
+      "modifier": "<a class=\"gModGreen\" id=\"1476751803\">Acheron_PassiveUltra</a>"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -66,7 +66,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Acheron_BlockModifySp"
+      "modifier": "<a class=\"gModGreen\" id=\"-317541958\">Acheron_BlockModifySp</a>"
     },
     {
       "name": "IF",
@@ -81,7 +81,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Acheron_Eidolon1_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"-1580542257\">Acheron_Eidolon1_Listen</a>"
         }
       ]
     },
@@ -98,7 +98,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Acheron_Eidolon4_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"-2053212342\">Acheron_Eidolon4_Listen</a>"
         }
       ]
     },
@@ -115,7 +115,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Acheron_Eidolon6_AddRegardAsAbilityType",
+          "modifier": "<a class=\"gModGreen\" id=\"-84702346\">Acheron_Eidolon6_AddRegardAsAbilityType</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.2) || RETURN",
@@ -133,7 +133,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Acheron_Eidolon4_Listen_OnCharacterCreate",
+      "for": "<a class=\"gModGreen\" id=\"mod__-67963083\">Acheron_Eidolon4_Listen_OnCharacterCreate</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -155,7 +155,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Acheron_Eidolon4_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Ultimate DMG Vulnerability</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1111481031\">Acheron_Eidolon4_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Vulnerability</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.08) || RETURN",
@@ -175,7 +175,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_Eidolon4_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2053212342\">Acheron_Eidolon4_Listen</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -186,7 +186,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Acheron_Eidolon4_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Ultimate DMG Vulnerability</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1111481031\">Acheron_Eidolon4_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Vulnerability</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.08) || RETURN",
@@ -204,7 +204,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Acheron_Eidolon4_Listen_OnCharacterCreate"
+              "modifier": "<a class=\"gModGreen\" id=\"-67963083\">Acheron_Eidolon4_Listen_OnCharacterCreate</a>"
             }
           ],
           "priorityLevel": -80
@@ -218,7 +218,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_Eidolon1_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1580542257\">Acheron_Eidolon1_Listen</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -266,7 +266,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_PassiveUltra",
+      "for": "<a class=\"gModGreen\" id=\"mod__1476751803\">Acheron_PassiveUltra</a>",
       "modifierFlags": [
         "ListenBattleEventSkill",
         "RemoveWhenCasterDead"
@@ -281,7 +281,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Acheron_DebuffSpecialMark01_Empty"
+              "modifier": "<a class=\"gModGreen\" id=\"-318443993\">Acheron_DebuffSpecialMark01_Empty</a>"
             }
           ]
         },
@@ -315,7 +315,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Acheron_LimboTransfer"
+              "functionName": "<a class=\"gTempYellow\" id=\"1830638488\">Acheron_LimboTransfer</a>"
             }
           ]
         },
@@ -530,7 +530,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "Acheron_OnListenDeBonusAdd"
+              "modifier": "<a class=\"gModGreen\" id=\"-533288835\">Acheron_OnListenDeBonusAdd</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -538,7 +538,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "Acheron_DebuffSpecialMark01_Empty"
+              "modifier": "<a class=\"gModGreen\" id=\"-318443993\">Acheron_DebuffSpecialMark01_Empty</a>"
             }
           ],
           "priorityLevel": -80
@@ -569,7 +569,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Acheron_RuondDeBonusCD",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1065497457\">Acheron_RuondDeBonusCD</a>",
                     "invertCondition": true,
                     "justAddedOrActive": true
                   },
@@ -579,7 +579,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Acheron_Ability03_Special",
+                    "modifier": "<a class=\"gModGreen\" id=\"-2096189522\">Acheron_Ability03_Special</a>",
                     "invertCondition": true
                   },
                   {
@@ -624,11 +624,11 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Acheron_RuondDeBonusCD"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1065497457\">Acheron_RuondDeBonusCD</a>"
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Acheron_SetEnergyBarState"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1427559472\">Acheron_SetEnergyBarState</a>"
                     }
                   ],
                   "failed": [
@@ -656,7 +656,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Acheron_RuondDeBonusCD"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1065497457\">Acheron_RuondDeBonusCD</a>"
                         }
                       ]
                     }
@@ -687,7 +687,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Acheron_RuondDeBonusCD",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1065497457\">Acheron_RuondDeBonusCD</a>",
                     "invertCondition": true,
                     "justAddedOrActive": true
                   },
@@ -697,7 +697,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Acheron_Ability03_Special",
+                    "modifier": "<a class=\"gModGreen\" id=\"-2096189522\">Acheron_Ability03_Special</a>",
                     "invertCondition": true
                   },
                   {
@@ -736,7 +736,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Acheron_LimboTransfer"
+              "functionName": "<a class=\"gTempYellow\" id=\"1830638488\">Acheron_LimboTransfer</a>"
             }
           ]
         },
@@ -767,7 +767,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Acheron_OnListenDeBonusAdd"
+                      "modifier": "<a class=\"gModGreen\" id=\"-533288835\">Acheron_OnListenDeBonusAdd</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -775,7 +775,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Acheron_DebuffSpecialMark01_Empty"
+                      "modifier": "<a class=\"gModGreen\" id=\"-318443993\">Acheron_DebuffSpecialMark01_Empty</a>"
                     },
                     {
                       "name": "IF",
@@ -816,7 +816,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Acheron_OnListenDeBonusAdd"
+                  "modifier": "<a class=\"gModGreen\" id=\"-533288835\">Acheron_OnListenDeBonusAdd</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -824,7 +824,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Acheron_DebuffSpecialMark01_Empty"
+                  "modifier": "<a class=\"gModGreen\" id=\"-318443993\">Acheron_DebuffSpecialMark01_Empty</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -837,7 +837,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Acheron_RuondDeBonusCD"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1065497457\">Acheron_RuondDeBonusCD</a>"
                 }
               ]
             },
@@ -859,7 +859,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Acheron_RuondDeBonusCD"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1065497457\">Acheron_RuondDeBonusCD</a>"
                 }
               ]
             },
@@ -876,7 +876,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Acheron_RuondDeBonusCD"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1065497457\">Acheron_RuondDeBonusCD</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -944,7 +944,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Acheron_RuondDeBonusCD"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1065497457\">Acheron_RuondDeBonusCD</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -973,7 +973,7 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Acheron_LimboTransfer"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1830638488\">Acheron_LimboTransfer</a>"
                     }
                   ]
                 },
@@ -1018,7 +1018,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Acheron_Passive01Modifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-98170223\">Acheron_Passive01Modifier</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1026,7 +1026,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Acheron_Ability03_Special"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2096189522\">Acheron_Ability03_Special</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1034,7 +1034,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Acheron_Ability03_Special",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2096189522\">Acheron_Ability03_Special</a>",
                       "immediateEffect": true
                     }
                   ]
@@ -1090,7 +1090,7 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Acheron_AddFlower_Passiv01"
+                          "functionName": "<a class=\"gTempYellow\" id=\"-1879158642\">Acheron_AddFlower_Passiv01</a>"
                         }
                       ]
                     }
@@ -1123,7 +1123,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Acheron_Ability03_Special",
+                        "modifier": "<a class=\"gModGreen\" id=\"-2096189522\">Acheron_Ability03_Special</a>",
                         "invertCondition": true
                       }
                     ]
@@ -1140,7 +1140,7 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Acheron_AddFlower_Passiv01"
+                          "functionName": "<a class=\"gTempYellow\" id=\"-1879158642\">Acheron_AddFlower_Passiv01</a>"
                         }
                       ]
                     }
@@ -1148,7 +1148,7 @@ const configAbility = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Acheron_LimboTransfer"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1830638488\">Acheron_LimboTransfer</a>"
                 }
               ]
             }
@@ -1167,7 +1167,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Acheron_CheckCurrentSpecialSPChange"
+                  "functionName": "<a class=\"gTempYellow\" id=\"492194909\">Acheron_CheckCurrentSpecialSPChange</a>"
                 },
                 {
                   "name": "IF",
@@ -1209,7 +1209,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Acheron_UltraAbilitySpareCount_PointB1[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"62451815\">Acheron_UltraAbilitySpareCount_PointB1</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
                               "stackLimit": {
                                 "operator": "Variables[0] (3) || RETURN",
                                 "displayLines": "3",
@@ -1256,7 +1256,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Acheron_CheckCurrentSpecialSPChange",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__492194909\">Acheron_CheckCurrentSpecialSPChange</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Changes to Stats",
@@ -1340,7 +1340,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Acheron_Ability03_Special",
+                    "modifier": "<a class=\"gModGreen\" id=\"-2096189522\">Acheron_Ability03_Special</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -1386,7 +1386,7 @@ const configAbility = {
                         },
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Acheron_SetEnergyBarState"
+                          "functionName": "<a class=\"gTempYellow\" id=\"-1427559472\">Acheron_SetEnergyBarState</a>"
                         }
                       ],
                       "failed": [
@@ -1405,7 +1405,7 @@ const configAbility = {
                         },
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Acheron_SetEnergyBarState"
+                          "functionName": "<a class=\"gTempYellow\" id=\"-1427559472\">Acheron_SetEnergyBarState</a>"
                         },
                         {
                           "name": "Find New Target",
@@ -1418,7 +1418,7 @@ const configAbility = {
                           "ifTargetFound": [
                             {
                               "name": "Use Custom Character Function",
-                              "functionName": "Acheron_AddFlower_Passiv01"
+                              "functionName": "<a class=\"gTempYellow\" id=\"-1879158642\">Acheron_AddFlower_Passiv01</a>"
                             }
                           ]
                         }

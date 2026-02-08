@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Numby}}"
       },
-      "modifier": "Topaz_BE_UltraEnhance_Text"
+      "modifier": "<a class=\"gModGreen\" id=\"-1524167625\">Topaz_BE_UltraEnhance_Text</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Numby}}"
       },
-      "modifier": "Topaz_BE_UltraEnhance_Text"
+      "modifier": "<a class=\"gModGreen\" id=\"-1524167625\">Topaz_BE_UltraEnhance_Text</a>"
     },
     {
       "name": "Update Energy",
@@ -44,7 +44,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
       "counter": {
         "operator": "Variables[0] (MaxEnhance) || RETURN",
         "displayLines": "MaxEnhance",
@@ -119,7 +119,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Numby}}"
       },
-      "modifier": "Topaz_BE_UltraEnhance_ShowText",
+      "modifier": "<a class=\"gModGreen\" id=\"1361568506\">Topaz_BE_UltraEnhance_ShowText</a>",
       "valuePerStack": {
         "ATKCount": {
           "operator": "Variables[0] (MaxEnhance) || RETURN",

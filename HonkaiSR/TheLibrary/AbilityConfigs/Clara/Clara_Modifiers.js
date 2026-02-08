@@ -10,12 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Klara_Passive_ShowAmmo",
+      "for": "<a class=\"gModGreen\" id=\"mod__1602537794\">Klara_Passive_ShowAmmo</a>",
       "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
-      "for": "Klara_Passive_DamageReduce[<span class=\"descriptionNumberColor\">Guardian</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-796199138\">Klara_Passive_DamageReduce</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -50,7 +50,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -121,7 +121,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Klara_TechniqueUsage_AggroUP[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-459252663\">Klara_TechniqueUsage_AggroUP</a>[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -156,7 +156,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Klara_PassiveATK_Mark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1426674462\">Klara_PassiveATK_Mark</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",

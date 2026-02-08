@@ -55,13 +55,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_Maze"
+          "modifier": "<a class=\"gModGreen\" id=\"-878367179\">Evernight_Maze</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Maze",
+          "for": "<a class=\"gModGreen\" id=\"mod__-878367179\">Evernight_Maze</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -263,7 +263,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Evernight_Ability02_Bonus[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1894879081\">Evernight_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -335,7 +335,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_SummonServantPreshow"
+          "modifier": "<a class=\"gModGreen\" id=\"1910251570\">Evernight_SummonServantPreshow</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -343,7 +343,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_LoseHPPreshow"
+          "modifier": "<a class=\"gModGreen\" id=\"-397490275\">Evernight_LoseHPPreshow</a>"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -378,7 +378,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_PointB1_Crit[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.35) || RETURN",
@@ -396,7 +396,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_PointB1_Aura",
+              "modifier": "<a class=\"gModGreen\" id=\"557640561\">Evernight_PointB1_Aura</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.15) || RETURN",
@@ -439,7 +439,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_Eidolon2_Crit[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.4) || RETURN",
@@ -459,7 +459,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_EnergyBar"
+          "modifier": "<a class=\"gModGreen\" id=\"-1478400557\">Evernight_EnergyBar</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -467,7 +467,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_Passive_Endurance_Control"
+          "modifier": "<a class=\"gModGreen\" id=\"1552058759\">Evernight_Passive_Endurance_Control</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -475,7 +475,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"208363119\">Evernight_Passive</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -488,7 +488,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_HPChange",
+          "modifier": "<a class=\"gModGreen\" id=\"2043260870\">Evernight_HPChange</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (2) || RETURN",
@@ -559,7 +559,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_Eidolon1_ListenDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"531716506\">Evernight_Eidolon1_ListenDamage</a>"
             }
           ]
         },
@@ -576,7 +576,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_Eidolon4_Aura"
+              "modifier": "<a class=\"gModGreen\" id=\"1433121158\">Evernight_Eidolon4_Aura</a>"
             }
           ]
         },
@@ -593,7 +593,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_Eidolon6_Aura"
+              "modifier": "<a class=\"gModGreen\" id=\"-1327507720\">Evernight_Eidolon6_Aura</a>"
             }
           ]
         },
@@ -610,7 +610,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_PointB2_EnterBattle"
+              "modifier": "<a class=\"gModGreen\" id=\"-1315509793\">Evernight_PointB2_EnterBattle</a>"
             }
           ]
         },
@@ -620,13 +620,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_ViewMode_Control"
+          "modifier": "<a class=\"gModGreen\" id=\"1224536114\">Evernight_ViewMode_Control</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Evernight_EnergyBar",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1478400557\">Evernight_EnergyBar</a>",
           "variableValueChange": [
             {
               "name": "Variable Value Changes",
@@ -672,7 +672,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Passive_Endurance_Control",
+          "for": "<a class=\"gModGreen\" id=\"mod__1552058759\">Evernight_Passive_Endurance_Control</a>",
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -695,7 +695,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster's Memosprite}}"
                         },
-                        "modifier": "Memosprite_EvernightServant_TriggerNormal_NoEnemy"
+                        "modifier": "<a class=\"gModGreen\" id=\"-373711832\">Memosprite_EvernightServant_TriggerNormal_NoEnemy</a>"
                       }
                     ]
                   },
@@ -706,7 +706,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Memosprite_EvernightServant_TriggerNormal",
+                      "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>",
                       "casterAssign": "TargetSelf"
                     }
                   ]
@@ -727,7 +727,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster's Memosprite}}"
                         },
-                        "modifier": "Memosprite_EvernightServant_TriggerNormal",
+                        "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>",
                         "invertCondition": true
                       },
                       {
@@ -764,7 +764,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Evernight_Passive_Endurance"
+                      "modifier": "<a class=\"gModGreen\" id=\"1513194905\">Evernight_Passive_Endurance</a>"
                     },
                     {
                       "name": "IF",
@@ -782,7 +782,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster's Memosprite}}"
                           },
-                          "modifier": "Memosprite_EvernightServant_TriggerNormal",
+                          "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>",
                           "casterAssign": "TargetSelf"
                         }
                       ],
@@ -793,7 +793,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster's Memosprite}}"
                           },
-                          "modifier": "Memosprite_EvernightServant_TriggerNormal_NoEnemy"
+                          "modifier": "<a class=\"gModGreen\" id=\"-373711832\">Memosprite_EvernightServant_TriggerNormal_NoEnemy</a>"
                         }
                       ]
                     }
@@ -826,7 +826,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Evernight_Passive_Endurance"
+                      "modifier": "<a class=\"gModGreen\" id=\"1513194905\">Evernight_Passive_Endurance</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -834,7 +834,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Memosprite_EvernightServant_TriggerNormal_NoEnemy"
+                      "modifier": "<a class=\"gModGreen\" id=\"-373711832\">Memosprite_EvernightServant_TriggerNormal_NoEnemy</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -842,7 +842,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Memosprite_EvernightServant_TriggerNormal"
+                      "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>"
                     }
                   ],
                   "whenValueChanges": [
@@ -852,7 +852,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Evernight_Passive_Endurance"
+                      "modifier": "<a class=\"gModGreen\" id=\"1513194905\">Evernight_Passive_Endurance</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -860,7 +860,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Memosprite_EvernightServant_TriggerNormal_NoEnemy"
+                      "modifier": "<a class=\"gModGreen\" id=\"-373711832\">Memosprite_EvernightServant_TriggerNormal_NoEnemy</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -868,7 +868,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Memosprite_EvernightServant_TriggerNormal"
+                      "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>"
                     }
                   ]
                 },
@@ -902,7 +902,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Evernight_Passive_Endurance"
+                      "modifier": "<a class=\"gModGreen\" id=\"1513194905\">Evernight_Passive_Endurance</a>"
                     },
                     {
                       "name": "IF",
@@ -920,7 +920,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster's Memosprite}}"
                           },
-                          "modifier": "Memosprite_EvernightServant_TriggerNormal",
+                          "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>",
                           "casterAssign": "TargetSelf"
                         }
                       ],
@@ -931,7 +931,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster's Memosprite}}"
                           },
-                          "modifier": "Memosprite_EvernightServant_TriggerNormal_NoEnemy"
+                          "modifier": "<a class=\"gModGreen\" id=\"-373711832\">Memosprite_EvernightServant_TriggerNormal_NoEnemy</a>"
                         }
                       ]
                     }
@@ -955,7 +955,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Evernight_Passive_Endurance"
+                      "modifier": "<a class=\"gModGreen\" id=\"1513194905\">Evernight_Passive_Endurance</a>"
                     },
                     {
                       "name": "IF",
@@ -973,7 +973,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster's Memosprite}}"
                           },
-                          "modifier": "Memosprite_EvernightServant_TriggerNormal",
+                          "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>",
                           "casterAssign": "TargetSelf"
                         }
                       ],
@@ -984,7 +984,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster's Memosprite}}"
                           },
-                          "modifier": "Memosprite_EvernightServant_TriggerNormal_NoEnemy"
+                          "modifier": "<a class=\"gModGreen\" id=\"-373711832\">Memosprite_EvernightServant_TriggerNormal_NoEnemy</a>"
                         }
                       ]
                     }
@@ -998,7 +998,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Passive_Endurance",
+          "for": "<a class=\"gModGreen\" id=\"mod__1513194905\">Evernight_Passive_Endurance</a>",
           "modifierFlags": [
             "EnduranceLogicOnly"
           ],
@@ -1007,7 +1007,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__208363119\">Evernight_Passive</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Anyone]: Start",
@@ -1126,7 +1126,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "function_Evernight_TryCreateServant",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1497424763\">function_Evernight_TryCreateServant</a>",
                       "variables": {
                         "DV_Partner_Count": {
                           "operator": "Variables[0] (_Partner_Count) || RETURN",
@@ -1151,7 +1151,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_PointB2_EnterBattle",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1315509793\">Evernight_PointB2_EnterBattle</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -1228,7 +1228,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Eidolon1_ListenDamage",
+          "for": "<a class=\"gModGreen\" id=\"mod__531716506\">Evernight_Eidolon1_ListenDamage</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Anyone]: Any",
@@ -1415,7 +1415,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Eidolon4_Aura",
+          "for": "<a class=\"gModGreen\" id=\"mod__1433121158\">Evernight_Eidolon4_Aura</a>",
           "stackData": [],
           "latentQueue": [
             "_Evernight_PL_Layer"
@@ -1427,7 +1427,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
               },
-              "modifier": "Evernight_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">Wake Up, the Tomorrow is Yours</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"86729012\">Evernight_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">Wake Up, the Tomorrow is Yours</span>]",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue_1": {
@@ -1452,7 +1452,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Eidolon6_Aura",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1327507720\">Evernight_Eidolon6_Aura</a>",
           "stackData": [],
           "latentQueue": [
             "_Evernight_PL_Layer"
@@ -1464,7 +1464,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Evernight_Eidolon6_Bonus[<span class=\"descriptionNumberColor\">Like This, Always</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"376015846\">Evernight_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">Like This, Always</span>]",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -1481,7 +1481,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_ViewMode_Control",
+          "for": "<a class=\"gModGreen\" id=\"mod__1224536114\">Evernight_ViewMode_Control</a>",
           "execute": [
             {
               "eventTrigger": "Enter View-Mode [Anyone]",
@@ -1519,7 +1519,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_LoseHPPreshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-397490275\">Evernight_LoseHPPreshow</a>",
           "execute": [
             {
               "eventTrigger": "Update Target Selected(UI) [Owner]",
@@ -1590,7 +1590,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_UltraMode_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1598,11 +1598,11 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_S03"
+          "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_TryCreateServant",
+          "functionName": "<a class=\"gTempYellow\" id=\"1497424763\">function_Evernight_TryCreateServant</a>",
           "variables": {
             "DV_Partner_Count": {
               "operator": "Variables[0] (_Partner_Count) || RETURN",
@@ -1631,7 +1631,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.6) || RETURN",
@@ -1659,7 +1659,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Evernight_UltraMode_Energy[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           },
           "passed": [
             {
@@ -1668,7 +1668,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifierName": "Evernight_UltraMode_Energy[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
               "function": "Add",
               "value": {
                 "operator": "Variables[0] (S03_Duration) || RETURN",
@@ -1687,7 +1687,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_UltraMode_Energy[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
               "counter": {
                 "operator": "Variables[0] (S03_Duration) || RETURN",
                 "displayLines": "S03_Duration",
@@ -1748,7 +1748,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_UltraMode_Effect",
+          "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>",
           "casterAssign": "TargetSelf"
         },
         "Trigger: Ability End"
@@ -1756,7 +1756,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Evernight_S03",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1950285194\">Evernight_S03</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -1866,7 +1866,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_SizeControl_STB2"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1393796287\">function_Evernight_Group_SizeControl_STB2</a>"
         }
       ],
       "references": []
@@ -1879,16 +1879,16 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_SizeControl_Perf"
+          "functionName": "<a class=\"gTempYellow\" id=\"294638745\">function_Evernight_Group_SizeControl_Perf</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_FollowControl_00"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
         },
         "Deleted bullshit",
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_FollowControl_STB"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1896,11 +1896,11 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "modifier": "Evernight_S03"
+          "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_FollowControl_STB"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
         },
         {
           "name": "IF",
@@ -1978,37 +1978,37 @@ const compositeAbilityObject = {
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability03_TriggerAnim_Man",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-367389928\">Evernight_Ability03_TriggerAnim_Man</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability03_TriggerAnim_01",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__431919247\">Evernight_Ability03_TriggerAnim_01</a>",
           "parse": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Evernight_Group_FollowControl_STB"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
             }
           ]
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability03_TriggerAnim_02",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__448696866\">Evernight_Ability03_TriggerAnim_02</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability03_TriggerAnim_03",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__465474485\">Evernight_Ability03_TriggerAnim_03</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability03_TriggerAnim_04",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__348031152\">Evernight_Ability03_TriggerAnim_04</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability03_TriggerAnim_05",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__364808771\">Evernight_Ability03_TriggerAnim_05</a>",
           "parse": []
         }
       ],
@@ -2027,7 +2027,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_SizeControl_STB2"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1393796287\">function_Evernight_Group_SizeControl_STB2</a>"
         }
       ],
       "references": []
@@ -2061,7 +2061,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_UltraMode_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>"
         },
         {
           "name": "Define Custom Variable with Added Value",
@@ -2253,7 +2253,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           },
           "passed": [
             {
@@ -2322,7 +2322,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_Ability02_Bonus[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1894879081\">Evernight_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -2385,7 +2385,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_Ability02_Bonus[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1894879081\">Evernight_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -2424,7 +2424,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           },
           "passed": [
             {
@@ -2433,7 +2433,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "Evernight_UltraMode_Effect_Normal",
+              "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>",
               "casterAssign": "TargetSelf"
             }
           ]
@@ -2471,11 +2471,11 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_UltraMode_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_TryCreateServant",
+          "functionName": "<a class=\"gTempYellow\" id=\"1497424763\">function_Evernight_TryCreateServant</a>",
           "variables": {
             "DV_Partner_Count": {
               "operator": "Variables[0] (_Partner_Count) || RETURN",
@@ -2497,7 +2497,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           },
           "passed": [
             {
@@ -2524,7 +2524,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_SizeControl_Perf2"
+          "functionName": "<a class=\"gTempYellow\" id=\"1349241137\">function_Evernight_Group_SizeControl_Perf2</a>"
         },
         {
           "name": "Define Custom Variable with Added Value",
@@ -2716,7 +2716,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           },
           "passed": [
             {
@@ -2769,7 +2769,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_Ability02_Bonus[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1894879081\">Evernight_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -2816,7 +2816,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_Ability02_Bonus[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1894879081\">Evernight_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -2855,7 +2855,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           },
           "passed": [
             {
@@ -2864,7 +2864,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "Evernight_UltraMode_Effect_Normal",
+              "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>",
               "casterAssign": "TargetSelf"
             }
           ]
@@ -2890,7 +2890,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_SizeControl_Perf2"
+          "functionName": "<a class=\"gTempYellow\" id=\"1349241137\">function_Evernight_Group_SizeControl_Perf2</a>"
         },
         {
           "name": "IF",
@@ -2900,7 +2900,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           },
           "passed": [
             {
@@ -2928,7 +2928,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_UltraMode_Effect",
+              "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>",
               "casterAssign": "TargetSelf"
             }
           ],
@@ -2956,7 +2956,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_SizeControl_STB2"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1393796287\">function_Evernight_Group_SizeControl_STB2</a>"
         }
       ],
       "references": []
@@ -2973,11 +2973,11 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_UltraMode_Effect_Normal"
+          "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_FollowControl_00"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
         },
         {
           "name": "Trigger Multiple Functions",
@@ -2985,27 +2985,27 @@ const compositeAbilityObject = {
           "functionList": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Evernight_Ability02_2_TriggerAnim_Pos"
+              "functionName": "<a class=\"gTempYellow\" id=\"-293387564\">Evernight_Ability02_2_TriggerAnim_Pos</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Evernight_Ability02_2_TriggerAnim_01"
+              "functionName": "<a class=\"gTempYellow\" id=\"448281105\">Evernight_Ability02_2_TriggerAnim_01</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Evernight_Ability02_2_TriggerAnim_02"
+              "functionName": "<a class=\"gTempYellow\" id=\"397948248\">Evernight_Ability02_2_TriggerAnim_02</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Evernight_Ability02_2_TriggerAnim_03"
+              "functionName": "<a class=\"gTempYellow\" id=\"414725867\">Evernight_Ability02_2_TriggerAnim_03</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Evernight_Ability02_2_TriggerAnim_04"
+              "functionName": "<a class=\"gTempYellow\" id=\"498613962\">Evernight_Ability02_2_TriggerAnim_04</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Evernight_Ability02_2_TriggerAnim_05"
+              "functionName": "<a class=\"gTempYellow\" id=\"515391581\">Evernight_Ability02_2_TriggerAnim_05</a>"
             }
           ]
         }
@@ -3013,37 +3013,37 @@ const compositeAbilityObject = {
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability02_2_TriggerAnim_Pos",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-293387564\">Evernight_Ability02_2_TriggerAnim_Pos</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability02_2_TriggerAnim_01",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__448281105\">Evernight_Ability02_2_TriggerAnim_01</a>",
           "parse": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Evernight_Group_FollowControl_STB"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
             }
           ]
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability02_2_TriggerAnim_02",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__397948248\">Evernight_Ability02_2_TriggerAnim_02</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability02_2_TriggerAnim_03",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__414725867\">Evernight_Ability02_2_TriggerAnim_03</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability02_2_TriggerAnim_04",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__498613962\">Evernight_Ability02_2_TriggerAnim_04</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability02_2_TriggerAnim_05",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__515391581\">Evernight_Ability02_2_TriggerAnim_05</a>",
           "parse": []
         }
       ],
@@ -3057,7 +3057,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_FollowControl_00"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
         },
         {
           "name": "Trigger Multiple Functions",
@@ -3065,27 +3065,27 @@ const compositeAbilityObject = {
           "functionList": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Evernight_Ability02_TriggerAnim_Pos"
+              "functionName": "<a class=\"gTempYellow\" id=\"462618785\">Evernight_Ability02_TriggerAnim_Pos</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Evernight_Ability02_TriggerAnim_01"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1560757358\">Evernight_Ability02_TriggerAnim_01</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Evernight_Ability02_TriggerAnim_02"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1577534977\">Evernight_Ability02_TriggerAnim_02</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Evernight_Ability02_TriggerAnim_03"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1594312596\">Evernight_Ability02_TriggerAnim_03</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Evernight_Ability02_TriggerAnim_04"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1611090215\">Evernight_Ability02_TriggerAnim_04</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Evernight_Ability02_TriggerAnim_05"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1627867834\">Evernight_Ability02_TriggerAnim_05</a>"
             }
           ]
         }
@@ -3093,37 +3093,37 @@ const compositeAbilityObject = {
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability02_TriggerAnim_Pos",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__462618785\">Evernight_Ability02_TriggerAnim_Pos</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability02_TriggerAnim_01",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1560757358\">Evernight_Ability02_TriggerAnim_01</a>",
           "parse": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Evernight_Group_FollowControl_STB"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
             }
           ]
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability02_TriggerAnim_02",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1577534977\">Evernight_Ability02_TriggerAnim_02</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability02_TriggerAnim_03",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1594312596\">Evernight_Ability02_TriggerAnim_03</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability02_TriggerAnim_04",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1611090215\">Evernight_Ability02_TriggerAnim_04</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Evernight_Ability02_TriggerAnim_05",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1627867834\">Evernight_Ability02_TriggerAnim_05</a>",
           "parse": []
         }
       ],
@@ -3148,7 +3148,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_SizeControl_Perf2"
+          "functionName": "<a class=\"gTempYellow\" id=\"1349241137\">function_Evernight_Group_SizeControl_Perf2</a>"
         },
         {
           "name": "IF",
@@ -3158,7 +3158,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           },
           "passed": [
             {
@@ -3177,7 +3177,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_UltraMode_Effect",
+              "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>",
               "casterAssign": "TargetSelf"
             }
           ],
@@ -3196,7 +3196,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_SizeControl_STB2"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1393796287\">function_Evernight_Group_SizeControl_STB2</a>"
         }
       ],
       "references": []
@@ -3213,7 +3213,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Evernight_ServantTarget"
+          "modifier": "<a class=\"gModGreen\" id=\"-895132658\">Evernight_ServantTarget</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3221,7 +3221,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Evernight_ServantTarget"
+          "modifier": "<a class=\"gModGreen\" id=\"-895132658\">Evernight_ServantTarget</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -3342,7 +3342,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Weapon_Show_2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1080789313\">Evernight_Weapon_Show_2</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -3352,7 +3352,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Weapon_Show_1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1064011694\">Evernight_Weapon_Show_1</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -3362,7 +3362,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "EnduranceLogicOnly"
@@ -3418,7 +3418,7 @@ const compositeAbilityObject = {
                   }
                 ]
               },
-              "modifier": "Evernight_UltraMode_Bonus",
+              "modifier": "<a class=\"gModGreen\" id=\"778280081\">Evernight_UltraMode_Bonus</a>",
               "aliveOnly": "True",
               "haloStatus": true,
               "valuePerStack": {
@@ -3438,7 +3438,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Evernight_UltraMode_Debuff[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1347842886\">Evernight_UltraMode_Debuff</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
               "aliveOnly": "True",
               "haloStatus": true,
               "valuePerStack": {
@@ -3456,7 +3456,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_UltraMode_Debuff[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1347842886\">Evernight_UltraMode_Debuff</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -3494,7 +3494,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_UltraMode_Energy_0[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
           "execute": [
             {
               "eventTrigger": "Turn Start [Anyone]",
@@ -3519,7 +3519,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Evernight_TryRemoveUltra_Flag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-960144998\">Evernight_TryRemoveUltra_Flag</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3527,7 +3527,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Evernight_UltraMode_Effect"
+                      "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3535,7 +3535,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "modifier": "Evernight_UltraMode_Effect_Normal"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3543,7 +3543,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3551,7 +3551,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Evernight_UltraMode_Energy[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3559,7 +3559,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Evernight_UltraMode_Energy_0[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
                     }
                   ]
                 }
@@ -3572,11 +3572,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_TryRemoveUltra_Flag"
+          "for": "<a class=\"gModGreen\" id=\"mod__-960144998\">Evernight_TryRemoveUltra_Flag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_UltraMode_Energy[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
           "counter": 1,
           "execute": [
             {
@@ -3588,7 +3588,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Evernight_UltraMode_Energy_0[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
                 }
               ]
             },
@@ -3603,7 +3603,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Evernight_UltraMode_Energy_Cost"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1643770860\">Evernight_UltraMode_Energy_Cost</a>"
                   },
                   "passed": [
                     {
@@ -3612,7 +3612,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Evernight_UltraMode_Energy_Cost"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1643770860\">Evernight_UltraMode_Energy_Cost</a>"
                     },
                     {
                       "name": "IF",
@@ -3622,7 +3622,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value1": "Evernight_UltraMode_Energy[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+                        "value1": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
                         "compareType": ">",
                         "value2": 1
                       },
@@ -3640,7 +3640,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Evernight_UltraMode_Energy_0[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
                         },
                         "Modifier Deletes Itself"
                       ]
@@ -3658,11 +3658,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_UltraMode_Energy_Cost"
+          "for": "<a class=\"gModGreen\" id=\"mod__-1643770860\">Evernight_UltraMode_Energy_Cost</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_UltraMode_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__1307478561\">Evernight_UltraMode_Effect</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3677,7 +3677,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "Evernight_UltraMode_Effect_Normal",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>",
                   "casterAssign": "TargetSelf"
                 }
               ]
@@ -3688,7 +3688,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_UltraMode_Effect_Normal",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1807727255\">Evernight_UltraMode_Effect_Normal</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3702,7 +3702,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_ServantTarget",
+          "for": "<a class=\"gModGreen\" id=\"mod__-895132658\">Evernight_ServantTarget</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -3711,7 +3711,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Ability02_ChangeSkill",
+          "for": "<a class=\"gModGreen\" id=\"mod__132344239\">Evernight_Ability02_ChangeSkill</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3747,11 +3747,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_TryKillServant_Flag"
+          "for": "<a class=\"gModGreen\" id=\"mod__-1586544037\">Evernight_TryKillServant_Flag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_UltraMode_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__778280081\">Evernight_UltraMode_Bonus</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3783,7 +3783,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Ability02_Bonus_PointB3[<span class=\"descriptionNumberColor\">Kindle the Morn, Drop the Rain</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__645822293\">Evernight_Ability02_Bonus_PointB3</a>[<span class=\"descriptionNumberColor\">Kindle the Morn, Drop the Rain</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -3817,7 +3817,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -3907,7 +3907,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Ability02_Bonus[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1894879081\">Evernight_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "variableValueChange": [
@@ -3969,7 +3969,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]"
                           },
                           "passed": [
                             {
@@ -3978,7 +3978,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifierName": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+                              "modifierName": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
                               "variableName": "MDF_PropertyValue",
                               "value": {
                                 "operator": "Variables[0] (_TMP_NEW_VAL) || RETURN",
@@ -3997,7 +3997,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
                               "valuePerStack": {
                                 "MDF_Conv": {
                                   "operator": "Variables[0] (MDF_CritBase) || RETURN",
@@ -4063,7 +4063,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]"
                           },
                           "passed": [
                             {
@@ -4072,7 +4072,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifierName": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+                              "modifierName": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
                               "variableName": "MDF_PropertyValue",
                               "value": {
                                 "operator": "Variables[0] (_TMP_NEW_VAL) || RETURN",
@@ -4091,7 +4091,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
                               "valuePerStack": {
                                 "MDF_Conv": {
                                   "operator": "Variables[0] (MDF_CritBase) || RETURN",
@@ -4129,7 +4129,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
               },
-              "modifier": "Evernight_Ability02_Bonus_Buff[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_Conv": {
@@ -4148,7 +4148,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
               },
-              "modifier": "Evernight_Ability02_Bonus_PointB3[<span class=\"descriptionNumberColor\">Kindle the Morn, Drop the Rain</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"645822293\">Evernight_Ability02_Bonus_PointB3</a>[<span class=\"descriptionNumberColor\">Kindle the Morn, Drop the Rain</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "AND",
@@ -4180,7 +4180,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Eidolon2_Crit[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4215,7 +4215,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Passive_Bonus[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4247,7 +4247,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_HPChange_Trigger",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1356856923\">Evernight_HPChange_Trigger</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -4259,7 +4259,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Evernight_Passive_Bonus[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -4285,7 +4285,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "Evernight_Passive_Bonus[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -4312,7 +4312,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">Wake Up, the Tomorrow is Yours</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__86729012\">Evernight_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">Wake Up, the Tomorrow is Yours</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -4396,7 +4396,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_Eidolon6_Bonus[<span class=\"descriptionNumberColor\">Like This, Always</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__376015846\">Evernight_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">Like This, Always</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -4436,7 +4436,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_HPChange",
+          "for": "<a class=\"gModGreen\" id=\"mod__2043260870\">Evernight_HPChange</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -4728,7 +4728,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Evernight_HPChange_Trigger",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1356856923\">Evernight_HPChange_Trigger</a>",
                               "casterAssign": "TargetSelf"
                             }
                           ]
@@ -4774,7 +4774,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_PointB1_Crit[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -4811,7 +4811,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_SummonServantPreshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__1910251570\">Evernight_SummonServantPreshow</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -4841,7 +4841,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_PointB1_Bonus[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -4876,7 +4876,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_PointB1_Servant",
+          "for": "<a class=\"gModGreen\" id=\"mod__720331211\">Evernight_PointB1_Servant</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -4908,7 +4908,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Evernight_PointB1_Bonus[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                     "displayLines": "MDF_LifeTime",
@@ -4934,7 +4934,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "Evernight_PointB1_Bonus[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                     "displayLines": "MDF_LifeTime",
@@ -4960,7 +4960,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Evernight_PointB1_Aura",
+          "for": "<a class=\"gModGreen\" id=\"mod__557640561\">Evernight_PointB1_Aura</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -4989,7 +4989,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Evernight_PointB1_Bonus[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                     "displayLines": "MDF_LifeTime",
@@ -5015,7 +5015,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "Evernight_PointB1_Bonus[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                     "displayLines": "MDF_LifeTime",
@@ -5051,7 +5051,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "Evernight_PointB1_Servant",
+              "modifier": "<a class=\"gModGreen\" id=\"720331211\">Evernight_PointB1_Servant</a>",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -5098,42 +5098,42 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "function_Evernight_Group_FollowControl_00",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1711321550\">function_Evernight_Group_FollowControl_00</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "function_Evernight_Group_FollowControl_STB",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1551336747\">function_Evernight_Group_FollowControl_STB</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "function_Evernight_Group_FollowControl_ViewMode",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__724548436\">function_Evernight_Group_FollowControl_ViewMode</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "function_Evernight_Group_SizeControl_STB",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1946909591\">function_Evernight_Group_SizeControl_STB</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "function_Evernight_Group_SizeControl_STB2",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1393796287\">function_Evernight_Group_SizeControl_STB2</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "function_Evernight_Group_SizeControl_Perf2",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1349241137\">function_Evernight_Group_SizeControl_Perf2</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "function_Evernight_Group_SizeControl_Perf",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__294638745\">function_Evernight_Group_SizeControl_Perf</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "function_Evernight_TryCreateServant",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1497424763\">function_Evernight_TryCreateServant</a>",
           "parse": [
             {
               "name": "IF",
@@ -5224,7 +5224,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Evernight_PointB1_Crit[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (0.35) || RETURN",
@@ -5255,7 +5255,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Evernight_Eidolon2_Crit[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (0.4) || RETURN",
@@ -5275,7 +5275,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Evernight_HPChange",
+                      "modifier": "<a class=\"gModGreen\" id=\"2043260870\">Evernight_HPChange</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (2) || RETURN",
@@ -5319,7 +5319,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Evernight_Ability02_ChangeSkill"
+                      "modifier": "<a class=\"gModGreen\" id=\"132344239\">Evernight_Ability02_ChangeSkill</a>"
                     },
                     {
                       "name": "IF",
@@ -5329,7 +5329,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
                       },
                       "passed": [
                         {
@@ -5352,7 +5352,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
                           },
                           {
                             "name": "Has Modifier",
@@ -5360,7 +5360,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Evernight_S03",
+                            "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>",
                             "invertCondition": true
                           }
                         ]
@@ -5372,7 +5372,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Evernight_UltraMode_Effect",
+                          "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>",
                           "casterAssign": "TargetSelf"
                         }
                       ]
@@ -5406,13 +5406,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_DeathRattle"
+          "modifier": "<a class=\"gModGreen\" id=\"-182017003\">Memosprite_EvernightServant_DeathRattle</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_DeathRattle",
+          "for": "<a class=\"gModGreen\" id=\"mod__-182017003\">Memosprite_EvernightServant_DeathRattle</a>",
           "modifierFlags": [
             "Deathrattle"
           ],
@@ -5426,7 +5426,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "modifier": "Memosprite_EvernightServant_DeathRattle_Speed[<span class=\"descriptionNumberColor\">You, Parting, Beyond Reach</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2040095871\">Memosprite_EvernightServant_DeathRattle_Speed</a>[<span class=\"descriptionNumberColor\">You, Parting, Beyond Reach</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.1) || RETURN",
@@ -5530,11 +5530,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_FollowControl_STB"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_SizeControl_STB"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1946909591\">function_Evernight_Group_SizeControl_STB</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -5542,7 +5542,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"1561903532\">Memosprite_EvernightServant_Passive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -5550,7 +5550,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_Sync"
+          "modifier": "<a class=\"gModGreen\" id=\"1745226180\">Memosprite_EvernightServant_Sync</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -5558,7 +5558,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_PartnerControl"
+          "modifier": "<a class=\"gModGreen\" id=\"1040270840\">Memosprite_EvernightServant_PartnerControl</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -5566,7 +5566,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_InsertControl"
+          "modifier": "<a class=\"gModGreen\" id=\"-1298744969\">Memosprite_EvernightServant_InsertControl</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -5574,7 +5574,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_View"
+          "modifier": "<a class=\"gModGreen\" id=\"51738454\">Memosprite_EvernightServant_View</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -5582,7 +5582,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_PassiveBonus_Aura"
+          "modifier": "<a class=\"gModGreen\" id=\"1232599773\">Memosprite_EvernightServant_PassiveBonus_Aura</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -5614,7 +5614,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_TryKill"
+          "modifier": "<a class=\"gModGreen\" id=\"-1842559180\">Memosprite_EvernightServant_TryKill</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -5622,7 +5622,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_HitAnimControl"
+          "modifier": "<a class=\"gModGreen\" id=\"2112363426\">Memosprite_EvernightServant_HitAnimControl</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -5630,7 +5630,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_Ability11_StancePreshow"
+          "modifier": "<a class=\"gModGreen\" id=\"339933329\">Memosprite_EvernightServant_Ability11_StancePreshow</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -5638,13 +5638,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_Ability11_LoseHPPreshow"
+          "modifier": "<a class=\"gModGreen\" id=\"1971728394\">Memosprite_EvernightServant_Ability11_LoseHPPreshow</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_PartnerControl",
+          "for": "<a class=\"gModGreen\" id=\"mod__1040270840\">Memosprite_EvernightServant_PartnerControl</a>",
           "variableValueChange": [
             {
               "name": "Variable Value Changes",
@@ -5673,7 +5673,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster's Summoner}}"
                         },
-                        "modifier": "Evernight_S03"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                       }
                     }
                   ],
@@ -5686,7 +5686,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster's Summoner}}"
                         },
-                        "modifier": "Evernight_S03"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                       }
                     }
                   ]
@@ -5723,7 +5723,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster's Summoner}}"
                         },
-                        "modifier": "Evernight_S03"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                       }
                     }
                   ],
@@ -5736,7 +5736,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster's Summoner}}"
                         },
-                        "modifier": "Evernight_S03"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                       }
                     }
                   ]
@@ -5774,7 +5774,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster's Summoner}}"
                         },
-                        "modifier": "Evernight_S03"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                       }
                     }
                   ],
@@ -5787,7 +5787,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster's Summoner}}"
                         },
-                        "modifier": "Evernight_S03"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                       }
                     }
                   ]
@@ -5825,7 +5825,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster's Summoner}}"
                         },
-                        "modifier": "Evernight_S03"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                       }
                     }
                   ],
@@ -5838,7 +5838,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster's Summoner}}"
                         },
-                        "modifier": "Evernight_S03"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                       }
                     }
                   ]
@@ -5866,7 +5866,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster's Summoner}}"
                         },
-                        "modifier": "Evernight_S03"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                       }
                     }
                   ],
@@ -5879,7 +5879,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster's Summoner}}"
                         },
-                        "modifier": "Evernight_S03"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                       }
                     }
                   ]
@@ -5892,7 +5892,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_InsertControl",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1298744969\">Memosprite_EvernightServant_InsertControl</a>",
           "modifierFlags": [
             "EnduranceLogicOnly"
           ],
@@ -5938,7 +5938,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Memosprite_EvernightServant_TriggerNormal"
+                          "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>"
                         }
                       ]
                     }
@@ -5952,7 +5952,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_Sync",
+          "for": "<a class=\"gModGreen\" id=\"mod__1745226180\">Memosprite_EvernightServant_Sync</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6031,7 +6031,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_View",
+          "for": "<a class=\"gModGreen\" id=\"mod__51738454\">Memosprite_EvernightServant_View</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Anyone]: Start",
@@ -6074,11 +6074,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "function_Evernight_Group_FollowControl_STB"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "function_Evernight_Group_SizeControl_STB"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1946909591\">function_Evernight_Group_SizeControl_STB</a>"
                     }
                   ]
                 },
@@ -6094,7 +6094,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Evernight_Group_FollowControl_ViewMode"
+                  "functionName": "<a class=\"gTempYellow\" id=\"724548436\">function_Evernight_Group_FollowControl_ViewMode</a>"
                 }
               ]
             },
@@ -6112,13 +6112,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "function_Evernight_Group_FollowControl_00"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "function_Evernight_Group_FollowControl_STB"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
                     }
                   ]
                 }
@@ -6130,7 +6130,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__1561903532\">Memosprite_EvernightServant_Passive</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6141,7 +6141,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "modifier": "Evernight_Ability02_ChangeSkill"
+                  "modifier": "<a class=\"gModGreen\" id=\"132344239\">Evernight_Ability02_ChangeSkill</a>"
                 }
               ]
             },
@@ -6175,7 +6175,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "modifier": "Evernight_Ability02_ChangeSkill"
+                  "modifier": "<a class=\"gModGreen\" id=\"132344239\">Evernight_Ability02_ChangeSkill</a>"
                 }
               ]
             }
@@ -6185,7 +6185,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_HitAnimControl",
+          "for": "<a class=\"gModGreen\" id=\"mod__2112363426\">Memosprite_EvernightServant_HitAnimControl</a>",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -6206,7 +6206,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "function_Evernight_Group_SizeControl_STB"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1946909591\">function_Evernight_Group_SizeControl_STB</a>"
                     }
                   ]
                 }
@@ -6241,7 +6241,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "function_Evernight_Group_SizeControl_STB"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1946909591\">function_Evernight_Group_SizeControl_STB</a>"
                     }
                   ]
                 }
@@ -6255,7 +6255,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_Ability11_StancePreshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__339933329\">Memosprite_EvernightServant_Ability11_StancePreshow</a>",
           "stackData": [],
           "latentQueue": [
             "_Partner_Size"
@@ -6263,7 +6263,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_PassiveBonus_Aura",
+          "for": "<a class=\"gModGreen\" id=\"mod__1232599773\">Memosprite_EvernightServant_PassiveBonus_Aura</a>",
           "stackData": [],
           "latentQueue": [],
           "subModList": [
@@ -6273,7 +6273,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}} + {{Caster's Summoner}}"
               },
-              "modifier": "Memosprite_EvernightServant_PassiveBonus[<span class=\"descriptionNumberColor\">Solitude, Drifting, In Murk</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1678641611\">Memosprite_EvernightServant_PassiveBonus</a>[<span class=\"descriptionNumberColor\">Solitude, Drifting, In Murk</span>]",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -6290,7 +6290,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_Ability11_LoseHPPreshow",
+          "for": "<a class=\"gModGreen\" id=\"mod__1971728394\">Memosprite_EvernightServant_Ability11_LoseHPPreshow</a>",
           "execute": [
             {
               "eventTrigger": "Update Target Selected(UI) [Owner]",
@@ -6303,7 +6303,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Memosprite_EvernightServant_TriggerNormal"
+                    "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>"
                   },
                   "passed": [
                     {
@@ -6344,7 +6344,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_TryKill",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1842559180\">Memosprite_EvernightServant_TryKill</a>",
           "execute": [
             {
               "eventTrigger": "Action Completed [Anyone]",
@@ -6357,7 +6357,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "modifier": "Evernight_TryKillServant_Flag"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1586544037\">Evernight_TryKillServant_Flag</a>"
                   },
                   "passed": [
                     {
@@ -6366,7 +6366,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Summoner}}"
                       },
-                      "modifier": "Evernight_TryKillServant_Flag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1586544037\">Evernight_TryKillServant_Flag</a>"
                     },
                     {
                       "name": "Define Custom Variable with Copy",
@@ -6419,7 +6419,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_TriggerDeathrattle"
+          "modifier": "<a class=\"gModGreen\" id=\"-1418513049\">Memosprite_EvernightServant_TriggerDeathrattle</a>"
         },
         {
           "name": "IF",
@@ -6429,7 +6429,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "Evernight_UltraMode_Energy[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           },
           "passed": [
             {
@@ -6438,7 +6438,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Evernight_UltraMode_Energy_Cost",
+              "modifier": "<a class=\"gModGreen\" id=\"-1643770860\">Evernight_UltraMode_Energy_Cost</a>",
               "casterAssign": "TargetSelf"
             }
           ]
@@ -6449,7 +6449,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_UltraMode_Effect_Normal"
+          "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -6457,7 +6457,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_UltraMode_Effect_Normal"
+          "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -6465,7 +6465,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "modifier": "Evernight_TryKillServant_Flag",
+          "modifier": "<a class=\"gModGreen\" id=\"-1586544037\">Evernight_TryKillServant_Flag</a>",
           "casterAssign": "TargetSelf"
         },
         {
@@ -6476,7 +6476,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "Evernight_UltraMode_Energy_0[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           },
           "passed": [
             {
@@ -6485,7 +6485,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Evernight_TryRemoveUltra_Flag",
+              "modifier": "<a class=\"gModGreen\" id=\"-960144998\">Evernight_TryRemoveUltra_Flag</a>",
               "casterAssign": "TargetSelf"
             }
           ]
@@ -6496,7 +6496,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_TriggerNormal"
+          "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>"
         },
         {
           "name": "IF",
@@ -6604,7 +6604,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_TriggerDeathrattle"
+          "modifier": "<a class=\"gModGreen\" id=\"-1418513049\">Memosprite_EvernightServant_TriggerDeathrattle</a>"
         },
         {
           "name": "IF",
@@ -6729,7 +6729,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           },
           "passed": [
             {
@@ -6738,7 +6738,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_UltraMode_Effect_Normal"
+              "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>"
             }
           ]
         },
@@ -6758,7 +6758,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_TriggerDeathrattle"
+          "modifier": "<a class=\"gModGreen\" id=\"-1418513049\">Memosprite_EvernightServant_TriggerDeathrattle</a>"
         },
         {
           "name": "IF",
@@ -6768,7 +6768,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "Evernight_UltraMode_Energy[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           },
           "passed": [
             {
@@ -6777,7 +6777,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Evernight_UltraMode_Energy_Cost",
+              "modifier": "<a class=\"gModGreen\" id=\"-1643770860\">Evernight_UltraMode_Energy_Cost</a>",
               "casterAssign": "TargetSelf"
             }
           ]
@@ -6788,7 +6788,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_UltraMode_Effect_Normal"
+          "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -6796,7 +6796,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "modifier": "Evernight_TryKillServant_Flag",
+          "modifier": "<a class=\"gModGreen\" id=\"-1586544037\">Evernight_TryKillServant_Flag</a>",
           "casterAssign": "TargetSelf"
         },
         {
@@ -6807,7 +6807,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "Evernight_UltraMode_Energy_0[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           },
           "passed": [
             {
@@ -6816,7 +6816,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Evernight_TryRemoveUltra_Flag",
+              "modifier": "<a class=\"gModGreen\" id=\"-960144998\">Evernight_TryRemoveUltra_Flag</a>",
               "casterAssign": "TargetSelf"
             }
           ]
@@ -6827,7 +6827,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_TriggerNormal"
+          "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>"
         },
         {
           "name": "IF",
@@ -6935,7 +6935,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_EvernightServant_TriggerDeathrattle"
+          "modifier": "<a class=\"gModGreen\" id=\"-1418513049\">Memosprite_EvernightServant_TriggerDeathrattle</a>"
         },
         {
           "name": "IF",
@@ -7082,11 +7082,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_SizeControl_Perf"
+          "functionName": "<a class=\"gTempYellow\" id=\"294638745\">function_Evernight_Group_SizeControl_Perf</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_FollowControl_00"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
         },
         {
           "name": "IF",
@@ -7096,7 +7096,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           },
           "passed": [
             {
@@ -7115,31 +7115,31 @@ const compositeAbilityObject = {
               "functionList": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_Evernight_Ability12_TriggerAnim_Tuowei"
+                  "functionName": "<a class=\"gTempYellow\" id=\"996483879\">Servant_Evernight_Ability12_TriggerAnim_Tuowei</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_Evernight_Ability12_TriggerAnim_Man"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1426186916\">Servant_Evernight_Ability12_TriggerAnim_Man</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_Evernight_Ability12_TriggerAnim_01"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1684581797\">Servant_Evernight_Ability12_TriggerAnim_01</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_Evernight_Ability12_TriggerAnim_02"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1667804178\">Servant_Evernight_Ability12_TriggerAnim_02</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_Evernight_Ability12_TriggerAnim_03"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1651026559\">Servant_Evernight_Ability12_TriggerAnim_03</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_Evernight_Ability12_TriggerAnim_04"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1634248940\">Servant_Evernight_Ability12_TriggerAnim_04</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_Evernight_Ability12_TriggerAnim_05"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1617471321\">Servant_Evernight_Ability12_TriggerAnim_05</a>"
                 }
               ]
             }
@@ -7180,27 +7180,27 @@ const compositeAbilityObject = {
               "functionList": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_Evernight_Ability11_TriggerAnim_Man"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1828267341\">Servant_Evernight_Ability11_TriggerAnim_Man</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_Evernight_Ability11_TriggerAnim_01"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1582823768\">Servant_Evernight_Ability11_TriggerAnim_01</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_Evernight_Ability11_TriggerAnim_02"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1532490911\">Servant_Evernight_Ability11_TriggerAnim_02</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_Evernight_Ability11_TriggerAnim_03"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1549268530\">Servant_Evernight_Ability11_TriggerAnim_03</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_Evernight_Ability11_TriggerAnim_04"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1498935673\">Servant_Evernight_Ability11_TriggerAnim_04</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Servant_Evernight_Ability11_TriggerAnim_05"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1515713292\">Servant_Evernight_Ability11_TriggerAnim_05</a>"
                 }
               ]
             }
@@ -7214,82 +7214,82 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           }
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_FollowControl_STB"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_SizeControl_STB"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1946909591\">function_Evernight_Group_SizeControl_STB</a>"
         }
       ],
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability11_TriggerAnim_Man",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1828267341\">Servant_Evernight_Ability11_TriggerAnim_Man</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability11_TriggerAnim_01",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1582823768\">Servant_Evernight_Ability11_TriggerAnim_01</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability11_TriggerAnim_02",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1532490911\">Servant_Evernight_Ability11_TriggerAnim_02</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability11_TriggerAnim_03",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1549268530\">Servant_Evernight_Ability11_TriggerAnim_03</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability11_TriggerAnim_04",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1498935673\">Servant_Evernight_Ability11_TriggerAnim_04</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability11_TriggerAnim_05",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1515713292\">Servant_Evernight_Ability11_TriggerAnim_05</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability12_TriggerAnim_Tuowei",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__996483879\">Servant_Evernight_Ability12_TriggerAnim_Tuowei</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability12_TriggerAnim_Man",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1426186916\">Servant_Evernight_Ability12_TriggerAnim_Man</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability12_TriggerAnim_01",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1684581797\">Servant_Evernight_Ability12_TriggerAnim_01</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability12_TriggerAnim_02",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1667804178\">Servant_Evernight_Ability12_TriggerAnim_02</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability12_TriggerAnim_03",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1651026559\">Servant_Evernight_Ability12_TriggerAnim_03</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability12_TriggerAnim_04",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1634248940\">Servant_Evernight_Ability12_TriggerAnim_04</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability12_TriggerAnim_05",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1617471321\">Servant_Evernight_Ability12_TriggerAnim_05</a>",
           "parse": []
         }
       ],
@@ -7308,11 +7308,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_SizeControl_Perf"
+          "functionName": "<a class=\"gTempYellow\" id=\"294638745\">function_Evernight_Group_SizeControl_Perf</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_FollowControl_00"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
         },
         {
           "name": "IF",
@@ -7322,7 +7322,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           }
         },
         {
@@ -7360,7 +7360,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_UltraMode_Effect_Normal"
+          "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>"
         },
         {
           "name": "IF",
@@ -7370,7 +7370,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           }
         },
         {
@@ -7381,7 +7381,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           }
         },
         {
@@ -7454,7 +7454,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           }
         },
         {
@@ -7645,7 +7645,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           }
         },
         {
@@ -7726,7 +7726,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           },
           "passed": [
             {
@@ -7735,7 +7735,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Evernight_UltraMode_Effect_Normal"
+              "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>"
             }
           ]
         },
@@ -7761,11 +7761,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_SizeControl_Perf"
+          "functionName": "<a class=\"gTempYellow\" id=\"294638745\">function_Evernight_Group_SizeControl_Perf</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_FollowControl_00"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
         },
         {
           "name": "Trigger Ability",
@@ -7783,27 +7783,27 @@ const compositeAbilityObject = {
           "functionList": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability01_TriggerEffect"
+              "functionName": "<a class=\"gTempYellow\" id=\"575337399\">Servant_Evernight_Ability01_TriggerEffect</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability01_TriggerAnim_01"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1580786153\">Servant_Evernight_Ability01_TriggerAnim_01</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability01_TriggerAnim_02"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1564008534\">Servant_Evernight_Ability01_TriggerAnim_02</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability01_TriggerAnim_03"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1547230915\">Servant_Evernight_Ability01_TriggerAnim_03</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability01_TriggerAnim_04"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1664674248\">Servant_Evernight_Ability01_TriggerAnim_04</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_Evernight_Ability01_TriggerAnim_05"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1647896629\">Servant_Evernight_Ability01_TriggerAnim_05</a>"
             }
           ]
         }
@@ -7811,7 +7811,7 @@ const compositeAbilityObject = {
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability01_TriggerEffect",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__575337399\">Servant_Evernight_Ability01_TriggerEffect</a>",
           "parse": [
             {
               "name": "IF",
@@ -7821,14 +7821,14 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster's Summoner}}"
                 },
-                "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
               }
             }
           ]
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability01_TriggerAnim_01",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1580786153\">Servant_Evernight_Ability01_TriggerAnim_01</a>",
           "parse": [
             {
               "name": "IF",
@@ -7855,11 +7855,11 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "function_Evernight_Group_FollowControl_STB"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "function_Evernight_Group_SizeControl_STB"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1946909591\">function_Evernight_Group_SizeControl_STB</a>"
                     }
                   ]
                 }
@@ -7867,11 +7867,11 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Evernight_Group_FollowControl_STB"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Evernight_Group_SizeControl_STB"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1946909591\">function_Evernight_Group_SizeControl_STB</a>"
                 }
               ]
             }
@@ -7879,7 +7879,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability01_TriggerAnim_02",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1564008534\">Servant_Evernight_Ability01_TriggerAnim_02</a>",
           "parse": [
             {
               "name": "IF",
@@ -7910,7 +7910,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability01_TriggerAnim_03",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1547230915\">Servant_Evernight_Ability01_TriggerAnim_03</a>",
           "parse": [
             {
               "name": "IF",
@@ -7941,7 +7941,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability01_TriggerAnim_04",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1664674248\">Servant_Evernight_Ability01_TriggerAnim_04</a>",
           "parse": [
             {
               "name": "IF",
@@ -7972,7 +7972,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_Evernight_Ability01_TriggerAnim_05",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1647896629\">Servant_Evernight_Ability01_TriggerAnim_05</a>",
           "parse": [
             {
               "name": "IF",
@@ -8016,23 +8016,23 @@ const compositeAbilityObject = {
           "functionList": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_EvernightServant_PassiveAbility01_Resummon_Junk01TriggerAnim"
+              "functionName": "<a class=\"gTempYellow\" id=\"102906663\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk01TriggerAnim</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_EvernightServant_PassiveAbility01_Resummon_Junk02TriggerAnim"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1662147576\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk02TriggerAnim</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_EvernightServant_PassiveAbility01_Resummon_Junk03TriggerAnim"
+              "functionName": "<a class=\"gTempYellow\" id=\"537057537\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk03TriggerAnim</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_EvernightServant_PassiveAbility01_Resummon_Junk04TriggerAnim"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1934801254\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk04TriggerAnim</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Servant_EvernightServant_PassiveAbility01_Resummon_TriggerAnim"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1334839220\">Servant_EvernightServant_PassiveAbility01_Resummon_TriggerAnim</a>"
             }
           ]
         }
@@ -8040,27 +8040,27 @@ const compositeAbilityObject = {
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_EvernightServant_PassiveAbility01_Resummon_TriggerAnim",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1334839220\">Servant_EvernightServant_PassiveAbility01_Resummon_TriggerAnim</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_EvernightServant_PassiveAbility01_Resummon_Junk01TriggerAnim",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__102906663\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk01TriggerAnim</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_EvernightServant_PassiveAbility01_Resummon_Junk02TriggerAnim",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1662147576\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk02TriggerAnim</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_EvernightServant_PassiveAbility01_Resummon_Junk03TriggerAnim",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__537057537\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk03TriggerAnim</a>",
           "parse": []
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Servant_EvernightServant_PassiveAbility01_Resummon_Junk04TriggerAnim",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1934801254\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk04TriggerAnim</a>",
           "parse": []
         }
       ],
@@ -8078,7 +8078,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_TriggerDeathrattle",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1418513049\">Memosprite_EvernightServant_TriggerDeathrattle</a>",
           "execute": [
             {
               "eventTrigger": "Got a Queued Kill [Owner]",
@@ -8100,7 +8100,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_TriggerNormal",
+          "for": "<a class=\"gModGreen\" id=\"mod__683715754\">Memosprite_EvernightServant_TriggerNormal</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -8147,7 +8147,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_EvernightServant_TriggerNormal_NoEnemy"
+                  "modifier": "<a class=\"gModGreen\" id=\"-373711832\">Memosprite_EvernightServant_TriggerNormal_NoEnemy</a>"
                 },
                 {
                   "name": "Define Custom Variable (VFX)",
@@ -8456,11 +8456,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_TriggerNormal_NoEnemy"
+          "for": "<a class=\"gModGreen\" id=\"mod__-373711832\">Memosprite_EvernightServant_TriggerNormal_NoEnemy</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_PassiveBonus[<span class=\"descriptionNumberColor\">Solitude, Drifting, In Murk</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1678641611\">Memosprite_EvernightServant_PassiveBonus</a>[<span class=\"descriptionNumberColor\">Solitude, Drifting, In Murk</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -8498,7 +8498,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Memosprite_EvernightServant_DeathRattle_Speed[<span class=\"descriptionNumberColor\">You, Parting, Beyond Reach</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2040095871\">Memosprite_EvernightServant_DeathRattle_Speed</a>[<span class=\"descriptionNumberColor\">You, Parting, Beyond Reach</span>]",
           "modifierFlags": [
             "STAT_SpeedUp"
           ],

@@ -91,7 +91,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_W2_Abomi02_Mark[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]"
         },
         {
           "name": "Define Custom Variable with Added Value",
@@ -121,7 +121,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Abomi02_TargetList[<span class=\"descriptionNumberColor\">Core Formation</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1723051927\">Monster_W2_Abomi02_TargetList</a>[<span class=\"descriptionNumberColor\">Core Formation</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -318,7 +318,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W2_Abomi02_Mark[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
             "casterFilter": {
               "name": "Target Name",
               "target": "{{Caster}}"
@@ -355,7 +355,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Monster_W2_Abomi02_Mark[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
           "onlyRemoveOwnersInstance": true
         },
         "Trigger: Attack End",
@@ -401,7 +401,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Abomi02_Initiate"
+          "modifier": "<a class=\"gModGreen\" id=\"-59206779\">Monster_W2_Abomi02_Initiate</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -436,13 +436,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Abomi02_EffectControl"
+          "modifier": "<a class=\"gModGreen\" id=\"-1599810700\">Monster_W2_Abomi02_EffectControl</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi02_Initiate",
+          "for": "<a class=\"gModGreen\" id=\"mod__-59206779\">Monster_W2_Abomi02_Initiate</a>",
           "modifierFlags": [
             "Deathrattle",
             "KeepOnDeathrattle"
@@ -496,7 +496,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W2_Abomi02_Mark[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
@@ -581,7 +581,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi02_EffectControl",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1599810700\">Monster_W2_Abomi02_EffectControl</a>",
           "variableValueChange": [
             {
               "name": "Variable Value Changes",
@@ -617,7 +617,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi02_Mark[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
           "stackType": "Multiple",
           "execute": [
             {
@@ -661,7 +661,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Abomi02_TargetList[<span class=\"descriptionNumberColor\">Core Formation</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1723051927\">Monster_W2_Abomi02_TargetList</a>[<span class=\"descriptionNumberColor\">Core Formation</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -730,7 +730,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Abomi02_Mark[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
                         "casterFilter": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
@@ -803,7 +803,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Monster_W2_Abomi02_Mark[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
                         "casterFilter": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
@@ -838,7 +838,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_W2_Abomi02_TargetList[<span class=\"descriptionNumberColor\">Core Formation</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1723051927\">Monster_W2_Abomi02_TargetList</a>[<span class=\"descriptionNumberColor\">Core Formation</span>]"
                     }
                   ]
                 }

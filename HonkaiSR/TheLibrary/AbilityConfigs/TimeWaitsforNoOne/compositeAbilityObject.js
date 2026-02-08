@@ -39,13 +39,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23013_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-768874206\">LC_23013_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23013_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__1443016247\">LC_23013_Sub</a>",
           "modifierFlags": [
             "MuteDotCasterCallBack",
             "RemoveWhenCasterDead"
@@ -81,7 +81,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23013_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-768874206\">LC_23013_Main</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -102,7 +102,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23013_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"1443016247\">LC_23013_Sub</a>"
                 }
               ]
             },
@@ -204,7 +204,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_23013_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"1443016247\">LC_23013_Sub</a>"
                 }
               ]
             }

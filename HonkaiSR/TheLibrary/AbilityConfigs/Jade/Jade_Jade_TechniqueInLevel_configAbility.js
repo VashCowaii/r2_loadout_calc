@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Jade_Modifier",
+      "modifier": "<a class=\"gModGreen\" id=\"-78900852\">StageAbility_Maze_Jade_Modifier</a>",
       "valuePerStack": {
         "MDF_HitNumb_Maze": 0
       }
@@ -27,7 +27,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Jade_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-78900852\">StageAbility_Maze_Jade_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -43,7 +43,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Level Entity}}"
                     },
-                    "modifier": "StageAbility_MazeStandard_EnterBattle_Monster_Modifier",
+                    "modifier": "<a class=\"gModGreen\" id=\"1904238030\">StageAbility_MazeStandard_EnterBattle_Monster_Modifier</a>",
                     "invertCondition": true
                   },
                   {
@@ -110,7 +110,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jade_Passive_Rate[<span class=\"descriptionNumberColor\">Pawned Asset</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2143808418\">Jade_Passive_Rate</a>[<span class=\"descriptionNumberColor\">Pawned Asset</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (50) || RETURN",
                     "displayLines": "50",

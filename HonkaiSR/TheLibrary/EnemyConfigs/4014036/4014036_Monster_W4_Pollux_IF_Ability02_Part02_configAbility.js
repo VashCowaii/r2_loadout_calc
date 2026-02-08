@@ -45,7 +45,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
       },
       "passed": [
         {
@@ -105,7 +105,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Enemy_W4_Pollux_IF_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+        "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
         "invertCondition": true
       },
       "ifTargetFound": [
@@ -115,7 +115,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Enemy_W4_Pollux_IF_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
           "valuePerStack": {
             "MDF_DamagePercentage": {
               "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
@@ -139,11 +139,11 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb_FX"
+      "functionName": "<a class=\"gTempYellow\" id=\"1601406944\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb_FX</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb"
+      "functionName": "<a class=\"gTempYellow\" id=\"-766570299\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb</a>"
     },
     "Trigger: Ability End"
   ],

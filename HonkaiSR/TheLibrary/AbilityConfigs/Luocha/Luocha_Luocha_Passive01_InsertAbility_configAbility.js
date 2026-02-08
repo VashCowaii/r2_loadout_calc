@@ -25,7 +25,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Luocha_Passive01_HealHPArea",
+      "modifier": "<a class=\"gModGreen\" id=\"-1807885982\">Luocha_Passive01_HealHPArea</a>",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",
@@ -99,7 +99,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Luocha_Passive01Modifier[<span class=\"descriptionNumberColor\">Abyss Flower</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-390780291\">Luocha_Passive01Modifier</a>[<span class=\"descriptionNumberColor\">Abyss Flower</span>]"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -107,13 +107,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Luocha_Passive01_InsertMark"
+      "modifier": "<a class=\"gModGreen\" id=\"905229597\">Luocha_Passive01_InsertMark</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Luocha_Eidolon4_Fatigue[<span class=\"descriptionNumberColor\">Weaken</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__572527518\">Luocha_Eidolon4_Fatigue</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_Fatigue"
@@ -148,7 +148,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luocha_Passive01_HealHPSelf[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1838655775\">Luocha_Passive01_HealHPSelf</a>[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -218,7 +218,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luocha_Passive01_HealHP[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1378311281\">Luocha_Passive01_HealHP</a>[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -288,7 +288,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Luocha_Passive01_HealHPArea",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1807885982\">Luocha_Passive01_HealHPArea</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -335,7 +335,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Luocha_Passive01_HealHPSelf[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1838655775\">Luocha_Passive01_HealHPSelf</a>[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
           "duration": {
             "operator": "Variables[0] (MDF_LifeTime) || RETURN",
             "displayLines": "MDF_LifeTime",
@@ -385,7 +385,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
           },
-          "modifier": "Luocha_Passive01_HealHP[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1378311281\">Luocha_Passive01_HealHP</a>[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -428,7 +428,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
           },
-          "modifier": "Luocha_Eidolon1_ATKUp[<span class=\"descriptionNumberColor\">Ablution of the Quick</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1394916865\">Luocha_Eidolon1_ATKUp</a>[<span class=\"descriptionNumberColor\">Ablution of the Quick</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "Eidolon Activated",
@@ -451,7 +451,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Luocha_Eidolon4_Fatigue[<span class=\"descriptionNumberColor\">Weaken</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"572527518\">Luocha_Eidolon4_Fatigue</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "Eidolon Activated",

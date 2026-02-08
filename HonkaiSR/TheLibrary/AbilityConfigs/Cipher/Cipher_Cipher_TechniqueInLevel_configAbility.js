@@ -19,14 +19,14 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Cipher_Modifier",
+      "modifier": "<a class=\"gModGreen\" id=\"377231131\">StageAbility_Maze_Cipher_Modifier</a>",
       "valuePerStack": {}
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Cipher_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__377231131\">StageAbility_Maze_Cipher_Modifier</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],

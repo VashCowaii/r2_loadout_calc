@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier04_AbilityP01_SupportAttackTarget",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1466703715\">Enemy_W1_Soldier04_AbilityP01_SupportAttackTarget</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -19,7 +19,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier04_AbilityP01_Supported_Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__1954777775\">Enemy_W1_Soldier04_AbilityP01_Supported_Effect</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -30,7 +30,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier04_AbilityP01_Supported[<span class=\"descriptionNumberColor\">Reinforced</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -118,7 +118,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Current Action Target List}}"
                   },
-                  "modifier": "Enemy_W1_Soldier04_AbilityP01_SupportAttackTarget"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1466703715\">Enemy_W1_Soldier04_AbilityP01_SupportAttackTarget</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -155,7 +155,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier04_AbilityP01_Supporting[<span class=\"descriptionNumberColor\">Support</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1385757632\">Enemy_W1_Soldier04_AbilityP01_Supporting</a>[<span class=\"descriptionNumberColor\">Support</span>]",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"

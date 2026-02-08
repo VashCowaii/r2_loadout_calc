@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Fugue_Ability03_WeakType_BUFF"
+      "modifier": "<a class=\"gModGreen\" id=\"-1376045581\">Fugue_Ability03_WeakType_BUFF</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -174,7 +174,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Fugue_Ability03_WeakType_BUFF"
+      "modifier": "<a class=\"gModGreen\" id=\"-1376045581\">Fugue_Ability03_WeakType_BUFF</a>"
     },
     "Trigger: Skip Death Handling",
     "Trigger: Ability End"

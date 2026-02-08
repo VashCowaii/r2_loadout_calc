@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_Mecha_BlockDamage[<span class=\"descriptionNumberColor\">Barrier</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-696028198\">Enemy_Mecha_BlockDamage</a>[<span class=\"descriptionNumberColor\">Barrier</span>]"
     },
     "Ability Start",
     {

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_20018_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"478308272\">LC_20018_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_20018_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1144870723\">LC_20018_Sub</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -150,7 +150,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_20018_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__478308272\">LC_20018_Main</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -168,7 +168,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_20018_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1144870723\">LC_20018_Sub</a>"
                 }
               ]
             }

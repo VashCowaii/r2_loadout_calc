@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "M_Feixiao_UltraTarget_Mark"
+      "modifier": "<a class=\"gModGreen\" id=\"176878499\">M_Feixiao_UltraTarget_Mark</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -44,7 +44,7 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Use Custom Character Function",
-      "functionName": "Feixiao_Passive_CostTeamAttackCountToGainSP"
+      "functionName": "<a class=\"gTempYellow\" id=\"683713803\">Feixiao_Passive_CostTeamAttackCountToGainSP</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -52,7 +52,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "M_Feixiao_UltraTarget"
+      "modifier": "<a class=\"gModGreen\" id=\"550698929\">M_Feixiao_UltraTarget</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -60,7 +60,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Feixiao_Ultramode"
+      "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>"
     },
     "Trigger: Skip Death Handling",
     "Trigger: Ability End"

@@ -18,13 +18,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_20011_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1542360295\">LC_20011_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_20011_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1542360295\">LC_20011_Main</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",

@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Ability21_InsertCheck",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1520947056\">M_Phainon_Ability21_InsertCheck</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
@@ -20,7 +20,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Phainon_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"262452933\">Phainon_InsertRetarget</a>"
             }
           ]
         },
@@ -35,7 +35,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Phainon_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"262452933\">Phainon_InsertRetarget</a>"
             }
           ],
           "priorityLevel": -55
@@ -45,7 +45,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Phainon_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"262452933\">Phainon_InsertRetarget</a>"
             }
           ]
         },
@@ -54,7 +54,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Phainon_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"262452933\">Phainon_InsertRetarget</a>"
             }
           ]
         },
@@ -91,7 +91,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Phainon_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"262452933\">Phainon_InsertRetarget</a>"
                 }
               ]
             }
@@ -101,7 +101,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Phainon_InsertRetarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__262452933\">Phainon_InsertRetarget</a>",
           "parse": [
             {
               "name": "IF",
@@ -111,7 +111,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Phainon_Ultimate_LimboMark"
+                "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>"
               },
               "passed": [
                 "Modifier Deletes Itself"
@@ -143,7 +143,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                           },
                           {
                             "name": "Has Modifier",
@@ -151,7 +151,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Phainon_Ultimate_LimboMark",
+                            "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>",
                             "invertCondition": true
                           }
                         ]
@@ -188,7 +188,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Tree03_Property[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-982733816\">Phainon_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -224,7 +224,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Eidolon2_Property[<span class=\"descriptionNumberColor\">Sky and Earth Churn Mortal Froth</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1152823097\">Phainon_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Sky and Earth Churn Mortal Froth</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -253,12 +253,12 @@ const configAbility = {
       "statusName": "Sky and Earth Churn Mortal Froth",
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+        "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
       }
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -279,7 +279,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_SPOverflow[<span class=\"descriptionNumberColor\">Coreflame</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__151398776\">Phainon_SPOverflow</a>[<span class=\"descriptionNumberColor\">Coreflame</span>]",
       "stackType": "Multiple",
       "execute": [
         {
@@ -292,7 +292,7 @@ const configAbility = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+              "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
               "variables": {
                 "parameter[0]_AddValue": {
                   "operator": "Variables[0] (MDF_Count) || RETURN",
@@ -316,7 +316,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                   },
                   {
                     "name": "Compare: Variable",
@@ -347,7 +347,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Ultimate_Weakness[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__529435553\">Phainon_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_AttachWeakness"
@@ -376,19 +376,19 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_FinalBE_Hint",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1074413210\">Phainon_FinalBE_Hint</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_NormalBE_Hint",
+      "for": "<a class=\"gModGreen\" id=\"mod__133453837\">Phainon_NormalBE_Hint</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Ultimate_ActionBarManager",
+      "for": "<a class=\"gModGreen\" id=\"mod__1942089860\">Phainon_Ultimate_ActionBarManager</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -404,7 +404,7 @@ const configAbility = {
                   },
                   {
                     "name": "Sort by Modifier Value",
-                    "modifier": "M_Phainon_Ultimate_ActionOrder"
+                    "modifier": "<a class=\"gModGreen\" id=\"1889470699\">M_Phainon_Ultimate_ActionOrder</a>"
                   }
                 ]
               },
@@ -436,7 +436,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
                     }
                   ]
                 }
@@ -448,7 +448,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[addBattleEvents]]"
               },
-              "modifier": "M_Phainon_Ultimate_ActionOrder"
+              "modifier": "<a class=\"gModGreen\" id=\"1889470699\">M_Phainon_Ultimate_ActionOrder</a>"
             },
             {
               "name": "Block Advance/Delay Effects",
@@ -464,9 +464,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Phainon_UltraEnd_Property[<span class=\"descriptionNumberColor\">He Who Bears the World Must Burn</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-98821838\">Phainon_UltraEnd_Property</a>[<span class=\"descriptionNumberColor\">He Who Bears the World Must Burn</span>]",
               "duration": 1,
-              "referenceModifier": "MReference_SpeedRatioUp",
+              "referenceModifier": "<a class=\"gModGreen\" id=\"1020254741\">MReference_SpeedRatioUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.15) || RETURN",
@@ -501,7 +501,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "M_Phainon_Ultimate_ActionOrder",
+                  "modifier": "<a class=\"gModGreen\" id=\"1889470699\">M_Phainon_Ultimate_ActionOrder</a>",
                   "counter": {
                     "operator": "Variables[0] (MDF_ActionOrderIndex) || RETURN",
                     "displayLines": "MDF_ActionOrderIndex",
@@ -510,7 +510,7 @@ const configAbility = {
                       "MDF_ActionOrderIndex"
                     ]
                   },
-                  "referenceModifier": "MReference_Empty"
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -612,7 +612,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
                   }
                 ]
               },
@@ -623,7 +623,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
                 },
                 {
                   "name": "Remove Flags from Modifier",
@@ -634,7 +634,7 @@ const configAbility = {
                   "flagName": [
                     "FormationAssetCenterWhenSingle"
                   ],
-                  "modifierName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
                   "casterFilter": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -683,7 +683,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
                     "invertCondition": true
                   }
                 ]
@@ -695,7 +695,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
                 },
                 {
                   "name": "IF",
@@ -718,7 +718,7 @@ const configAbility = {
                       "flagName": [
                         "FormationAssetCenterWhenSingle"
                       ],
-                      "modifierName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
                       "casterFilter": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -738,19 +738,19 @@ const configAbility = {
             "name": "Target Name",
             "target": "({{All Team Members with Unselectable Team Members(Exclude Self)}} - {{Phainon's Forced-Action Teammates}}).[[addBattleEvents]]"
           },
-          "modifier": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
           "haloStatus": true,
           "includeBattleEvent": true
         }
       ],
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+        "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
       }
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Ultimate_VisualManager",
+      "for": "<a class=\"gModGreen\" id=\"mod__1662843541\">Phainon_Ultimate_VisualManager</a>",
       "modifierFlags": [
         "KeepOnDeathrattle",
         "ListenBattleEventSkill"
@@ -771,7 +771,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "M_Phainon_IsAbility31",
+                "modifier": "<a class=\"gModGreen\" id=\"-1382374787\">M_Phainon_IsAbility31</a>",
                 "invertCondition": true
               }
             },
@@ -1053,7 +1053,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
               },
               "passed": [
                 {
@@ -1320,12 +1320,12 @@ const configAbility = {
       ],
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+        "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
       }
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Ultimate_LimboMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2124559598\">Phainon_Ultimate_LimboMark</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1333,12 +1333,12 @@ const configAbility = {
       ],
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+        "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
       }
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ListenBattleEventSkill",
@@ -1365,7 +1365,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Phainon_Guard[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1373,7 +1373,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Phainon_Ultimate_Weakness[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"529435553\">Phainon_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
             },
             {
               "name": "IF",
@@ -1383,13 +1383,13 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "M_Phainon_IsAbility31",
+                "modifier": "<a class=\"gModGreen\" id=\"-1382374787\">M_Phainon_IsAbility31</a>",
                 "invertCondition": true
               },
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Phainon_ClearAvatarArea",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1545922215\">Phainon_ClearAvatarArea</a>",
                   "variables": {
                     "IsAsyncLoad": 0
                   }
@@ -1405,7 +1405,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+                  "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
                       "operator": "Variables[0] (3) || RETURN",
@@ -1432,7 +1432,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Phainon_Tree03_Property[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-982733816\">Phainon_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1490,7 +1490,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Phainon_UltraEndCheck"
+              "functionName": "<a class=\"gTempYellow\" id=\"-471089353\">function_Phainon_UltraEndCheck</a>"
             }
           ]
         },
@@ -1503,7 +1503,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Phainon_Ultimate_ActionBarManager"
+              "modifier": "<a class=\"gModGreen\" id=\"1942089860\">Phainon_Ultimate_ActionBarManager</a>"
             },
             {
               "name": "IF",
@@ -1541,7 +1541,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Current Turn Owner}}"
                       },
-                      "modifierName": "ParamModifier",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-228290033\">ParamModifier</a>",
                       "function": "Add",
                       "value": 1,
                       "valueType": "Duration"
@@ -1632,7 +1632,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Phainon_Ultimate_LimboMark"
+              "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>"
             },
             {
               "name": "Inject Ability Use",
@@ -1695,7 +1695,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Phainon_UltraEndCheck"
+              "functionName": "<a class=\"gTempYellow\" id=\"-471089353\">function_Phainon_UltraEndCheck</a>"
             }
           ]
         },
@@ -1704,7 +1704,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Phainon_UltraEndCheck"
+              "functionName": "<a class=\"gTempYellow\" id=\"-471089353\">function_Phainon_UltraEndCheck</a>"
             }
           ],
           "priorityLevel": -55
@@ -1714,7 +1714,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Phainon_UltraEndCheck"
+              "functionName": "<a class=\"gTempYellow\" id=\"-471089353\">function_Phainon_UltraEndCheck</a>"
             }
           ]
         },
@@ -1743,7 +1743,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "ClearAvatarArea_ByAbility"
+                "modifier": "<a class=\"gModGreen\" id=\"253720974\">ClearAvatarArea_ByAbility</a>"
               },
               "passed": [
                 {
@@ -1759,7 +1759,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                   },
                   "abilityName": "Phainon_Ability31_SelectTarget",
                   "abilitySource": {
@@ -1788,7 +1788,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Phainon_UltraEndCheck"
+              "functionName": "<a class=\"gTempYellow\" id=\"-471089353\">function_Phainon_UltraEndCheck</a>"
             }
           ]
         },
@@ -1812,7 +1812,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Phainon_UltraEndCheck"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-471089353\">function_Phainon_UltraEndCheck</a>"
                 }
               ]
             }
@@ -1890,7 +1890,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "function_Phainon_UltraEndCheck",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-471089353\">function_Phainon_UltraEndCheck</a>",
           "parse": [
             {
               "name": "IF",
@@ -1903,7 +1903,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Phainon_Ultimate_LimboMark"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>"
                   },
                   {
                     "name": "AND",
@@ -1947,7 +1947,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                   },
                   "abilityName": "Phainon_Ability31_SelectTarget",
                   "abilitySource": {
@@ -1988,7 +1988,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_Ultimate_VisualManager"
+          "modifier": "<a class=\"gModGreen\" id=\"1662843541\">Phainon_Ultimate_VisualManager</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1996,7 +1996,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_Eidolon2_Property[<span class=\"descriptionNumberColor\">Sky and Earth Churn Mortal Froth</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1152823097\">Phainon_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Sky and Earth Churn Mortal Froth</span>]",
           "conditions": {
             "name": "Eidolon Activated",
             "eidolon": 2
@@ -2018,7 +2018,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Phainon_Ultimate_Weakness[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"529435553\">Phainon_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
           "haloStatus": true
         }
       ]

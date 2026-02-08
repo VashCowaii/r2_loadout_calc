@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_22000_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"1177970273\">LC_22000_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_22000_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__1177970273\">LC_22000_Main</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",

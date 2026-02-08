@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23002_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1013627700\">LC_23002_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23002_Effect[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-66885584\">LC_23002_Effect</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -80,7 +80,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23002_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1013627700\">LC_23002_Main</a>",
       "execute": [
         {
           "eventTrigger": "Got a Kill [Owner]",
@@ -93,7 +93,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "LC_23002_Effect[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-66885584\">LC_23002_Effect</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
               },
               "failed": [
                 {
@@ -117,7 +117,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23002_Effect[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-66885584\">LC_23002_Effect</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 }
               ]
             }
@@ -134,7 +134,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "LC_23002_Effect[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-66885584\">LC_23002_Effect</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
               },
               "failed": [
                 {
@@ -158,7 +158,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23002_Effect[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-66885584\">LC_23002_Effect</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 }
               ]
             }

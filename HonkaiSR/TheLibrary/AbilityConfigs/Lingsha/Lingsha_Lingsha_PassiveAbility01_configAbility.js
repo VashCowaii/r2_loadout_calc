@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Lingsha_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-1977976670\">Lingsha_Passive</a>"
     },
     {
       "name": "Preload Battle Event(s)",
@@ -55,7 +55,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Lingsha_PointB1_OnListen"
+          "modifier": "<a class=\"gModGreen\" id=\"237515927\">Lingsha_PointB1_OnListen</a>"
         }
       ]
     },
@@ -65,7 +65,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Lingsha_Olisten_BE_Create"
+      "modifier": "<a class=\"gModGreen\" id=\"-1482372912\">Lingsha_Olisten_BE_Create</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -73,7 +73,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Lingsha_Ability_ModifyBEAction"
+      "modifier": "<a class=\"gModGreen\" id=\"285427978\">Lingsha_Ability_ModifyBEAction</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -81,7 +81,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Lingsha_Ultimate_ModifyBEAction"
+      "modifier": "<a class=\"gModGreen\" id=\"-1907662117\">Lingsha_Ultimate_ModifyBEAction</a>"
     },
     {
       "name": "IF",
@@ -96,7 +96,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Lingsha_Eidolon1_Listen",
+          "modifier": "<a class=\"gModGreen\" id=\"-1721297245\">Lingsha_Eidolon1_Listen</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.5) || RETURN",
@@ -137,7 +137,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_Ultimate_ModifyBEAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1907662117\">Lingsha_Ultimate_ModifyBEAction</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -171,7 +171,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_Ability_ModifyBEAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__285427978\">Lingsha_Ability_ModifyBEAction</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -205,7 +205,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_Olisten_BE_Create",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1482372912\">Lingsha_Olisten_BE_Create</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -237,7 +237,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_PointB1_Sub2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-835950999\">Lingsha_PointB1_Sub2</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -265,7 +265,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_PointB1_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-988682847\">Lingsha_PointB1_Sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -303,7 +303,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_PointB1_OnListen",
+      "for": "<a class=\"gModGreen\" id=\"mod__237515927\">Lingsha_PointB1_OnListen</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -326,7 +326,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Lingsha_PointB1_Sub",
+              "modifier": "<a class=\"gModGreen\" id=\"-988682847\">Lingsha_PointB1_Sub</a>",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
                   "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.25) || MUL || Variables[3] (0.5) || PARAM_2 || FUNCTION || RETURN",
@@ -347,7 +347,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Lingsha_PointB1_Sub2",
+              "modifier": "<a class=\"gModGreen\" id=\"-835950999\">Lingsha_PointB1_Sub2</a>",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
                   "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.2) || PARAM_2 || FUNCTION || RETURN",
@@ -391,7 +391,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Lingsha_PointB1_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"-988682847\">Lingsha_PointB1_Sub</a>",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.25) || MUL || Variables[3] (0.5) || PARAM_2 || FUNCTION || RETURN",
@@ -412,7 +412,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Lingsha_PointB1_Sub2",
+                  "modifier": "<a class=\"gModGreen\" id=\"-835950999\">Lingsha_PointB1_Sub2</a>",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.2) || PARAM_2 || FUNCTION || RETURN",
@@ -437,7 +437,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1977976670\">Lingsha_Passive</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -481,7 +481,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Lingsha_Eidolon1_PassiveStackProperty"
+                      "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -489,7 +489,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Lingsha_Eidolon1_ListenBreak",
+                      "modifier": "<a class=\"gModGreen\" id=\"1709120566\">Lingsha_Eidolon1_ListenBreak</a>",
                       "valuePerStack": {
                         "Eidolon1_MDF_PropertyValue": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -523,7 +523,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                   },
-                  "modifier": "Lingsha_Eidolon1_PassiveStackProperty"
+                  "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -531,7 +531,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                   },
-                  "modifier": "Lingsha_Eidolon1_ListenBreak",
+                  "modifier": "<a class=\"gModGreen\" id=\"1709120566\">Lingsha_Eidolon1_ListenBreak</a>",
                   "valuePerStack": {
                     "Eidolon1_MDF_PropertyValue": {
                       "operator": "Variables[0] (0.2) || RETURN",

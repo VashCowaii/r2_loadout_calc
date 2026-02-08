@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MFarmRelic_104313"
+      "modifier": "<a class=\"gModGreen\" id=\"1957302852\">MFarmRelic_104313</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104313_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__741582093\">MFarmRelic_104313_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -62,7 +62,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104313_HealTakenRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__55814789\">MFarmRelic_104313_HealTakenRatio</a>",
       "execute": [
         {
           "eventTrigger": "Receiving Heal End [Owner]",
@@ -73,7 +73,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "MFarmRelic_104313_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"741582093\">MFarmRelic_104313_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "valuePerStack": {
                 "DamageAddedRatio": 0.06,
                 "MaxLayer": 10
@@ -99,7 +99,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104313",
+      "for": "<a class=\"gModGreen\" id=\"mod__1957302852\">MFarmRelic_104313</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -121,7 +121,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MFarmRelic_104313_HealTakenRatio"
+                  "modifier": "<a class=\"gModGreen\" id=\"55814789\">MFarmRelic_104313_HealTakenRatio</a>"
                 }
               ]
             }

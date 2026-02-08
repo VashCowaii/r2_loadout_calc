@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23028_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-681605416\">LC_23028_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23028_Sub[<span class=\"descriptionNumberColor\">Promise</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__5448581\">LC_23028_Sub</a>[<span class=\"descriptionNumberColor\">Promise</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -78,7 +78,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23028_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-681605416\">LC_23028_Main</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -226,7 +226,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23028_Sub[<span class=\"descriptionNumberColor\">Promise</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"5448581\">LC_23028_Sub</a>[<span class=\"descriptionNumberColor\">Promise</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -268,7 +268,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23028_Sub[<span class=\"descriptionNumberColor\">Promise</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"5448581\">LC_23028_Sub</a>[<span class=\"descriptionNumberColor\">Promise</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",

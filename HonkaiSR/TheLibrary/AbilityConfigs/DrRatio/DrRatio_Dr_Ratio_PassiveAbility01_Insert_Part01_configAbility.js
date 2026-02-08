@@ -18,7 +18,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Dr_Ratio_Insert_Flag"
+        "modifier": "<a class=\"gModGreen\" id=\"-253275642\">Dr_Ratio_Insert_Flag</a>"
       },
       "ifTargetFound": [
         {
@@ -80,7 +80,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Dr_Ratio_Insert_Flag_Caster"
+            "modifier": "<a class=\"gModGreen\" id=\"1963870595\">Dr_Ratio_Insert_Flag_Caster</a>"
           },
           {
             "name": "Has Flag",
@@ -132,7 +132,7 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Dr_Ratio_InsertAbility"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1506583423\">Dr_Ratio_InsertAbility</a>"
         }
       ]
     }

@@ -115,7 +115,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_0020",
+      "modifier": "<a class=\"gModGreen\" id=\"1872930168\">Modifier_FantasticStory_BaseAbility_0020</a>",
       "valuePerStack": {
         "ADF_1": {
           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -155,7 +155,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0020_sub7",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1420491994\">Modifier_FantasticStory_BaseAbility_0020_sub7</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -854,7 +854,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0020_sub8",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1235938185\">Modifier_FantasticStory_BaseAbility_0020_sub8</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "Endurance"
@@ -862,7 +862,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0020_sub6_dot[<span class=\"descriptionNumberColor\">Gimmick</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1431018009\">Modifier_FantasticStory_BaseAbility_0020_sub6_dot</a>[<span class=\"descriptionNumberColor\">Gimmick</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -959,7 +959,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0020_sub6",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1403714375\">Modifier_FantasticStory_BaseAbility_0020_sub6</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -971,7 +971,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub6_dot[<span class=\"descriptionNumberColor\">Gimmick</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1431018009\">Modifier_FantasticStory_BaseAbility_0020_sub6_dot</a>[<span class=\"descriptionNumberColor\">Gimmick</span>]",
               "duration": {
                 "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0027_ADF_4) || RETURN",
                 "displayLines": "DV_FantasticStory_PlusAbility_0027_ADF_4",
@@ -1007,7 +1007,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0020_sub5[<span class=\"descriptionNumberColor\">Gimmick</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1454047232\">Modifier_FantasticStory_BaseAbility_0020_sub5</a>[<span class=\"descriptionNumberColor\">Gimmick</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1038,7 +1038,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0020_sub4[<span class=\"descriptionNumberColor\">Verification</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1437269613\">Modifier_FantasticStory_BaseAbility_0020_sub4</a>[<span class=\"descriptionNumberColor\">Verification</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1086,7 +1086,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0020_sub3_dot[<span class=\"descriptionNumberColor\">Argument</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-19171630\">Modifier_FantasticStory_BaseAbility_0020_sub3_dot</a>[<span class=\"descriptionNumberColor\">Argument</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -1183,7 +1183,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0020_sub3",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1353381518\">Modifier_FantasticStory_BaseAbility_0020_sub3</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -1195,7 +1195,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder and Adjacent Targets}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub3_dot[<span class=\"descriptionNumberColor\">Argument</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-19171630\">Modifier_FantasticStory_BaseAbility_0020_sub3_dot</a>[<span class=\"descriptionNumberColor\">Argument</span>]",
               "duration": {
                 "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0025_ADF_5) || RETURN",
                 "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_5",
@@ -1236,7 +1236,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub3_dot[<span class=\"descriptionNumberColor\">Argument</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-19171630\">Modifier_FantasticStory_BaseAbility_0020_sub3_dot</a>[<span class=\"descriptionNumberColor\">Argument</span>]",
               "duration": {
                 "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0025_ADF_5) || RETURN",
                 "displayLines": "DV_FantasticStory_PlusAbility_0025_ADF_5",
@@ -1272,7 +1272,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0020_sub2_dot[<span class=\"descriptionNumberColor\">Rumor</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1561743765\">Modifier_FantasticStory_BaseAbility_0020_sub2_dot</a>[<span class=\"descriptionNumberColor\">Rumor</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -1369,7 +1369,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0020_sub2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1336603899\">Modifier_FantasticStory_BaseAbility_0020_sub2</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -1381,7 +1381,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Attack Targets of Modifier Holder}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub2_dot[<span class=\"descriptionNumberColor\">Rumor</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1561743765\">Modifier_FantasticStory_BaseAbility_0020_sub2_dot</a>[<span class=\"descriptionNumberColor\">Rumor</span>]",
               "duration": {
                 "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0022_ADF_3) || RETURN",
                 "displayLines": "DV_FantasticStory_PlusAbility_0022_ADF_3",
@@ -1410,7 +1410,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0020_sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__444006453\">Modifier_FantasticStory_BaseAbility_0020_sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1843,7 +1843,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0020_sub_preshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-769619478\">Modifier_FantasticStory_BaseAbility_0020_sub_preshow</a>",
       "stackType": "ReplaceByCaster",
       "previewValue": {
         "name": "Modifier: UI Preview",
@@ -1895,7 +1895,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0020",
+      "for": "<a class=\"gModGreen\" id=\"mod__1872930168\">Modifier_FantasticStory_BaseAbility_0020</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1907,7 +1907,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub",
+              "modifier": "<a class=\"gModGreen\" id=\"444006453\">Modifier_FantasticStory_BaseAbility_0020_sub</a>",
               "valuePerStack": {
                 "TempHP_get": {
                   "operator": "Variables[0] (TempHP) || RETURN",
@@ -1965,7 +1965,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"444006453\">Modifier_FantasticStory_BaseAbility_0020_sub</a>",
                   "valuePerStack": {
                     "TempHP_get": {
                       "operator": "Variables[0] (TempHP) || RETURN",
@@ -2017,7 +2017,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub3",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1353381518\">Modifier_FantasticStory_BaseAbility_0020_sub3</a>",
                       "valuePerStack": {
                         "TempHP_get": {
                           "operator": "Variables[0] (TempHP) || RETURN",
@@ -2047,7 +2047,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub8"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1235938185\">Modifier_FantasticStory_BaseAbility_0020_sub8</a>"
                     }
                   ]
                 }
@@ -2070,7 +2070,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub_preshow",
+                  "modifier": "<a class=\"gModGreen\" id=\"-769619478\">Modifier_FantasticStory_BaseAbility_0020_sub_preshow</a>",
                   "valuePerStack": {
                     "ADF_3_get": {
                       "operator": "Variables[0] (ADF_3) || RETURN",
@@ -2098,7 +2098,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub5[<span class=\"descriptionNumberColor\">Gimmick</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1454047232\">Modifier_FantasticStory_BaseAbility_0020_sub5</a>[<span class=\"descriptionNumberColor\">Gimmick</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2106,7 +2106,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub6",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1403714375\">Modifier_FantasticStory_BaseAbility_0020_sub6</a>",
                       "valuePerStack": {
                         "TempHP_get": {
                           "operator": "Variables[0] (TempHP) || RETURN",
@@ -2136,7 +2136,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub7"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1420491994\">Modifier_FantasticStory_BaseAbility_0020_sub7</a>"
                     }
                   ]
                 }
@@ -2169,7 +2169,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub2",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1336603899\">Modifier_FantasticStory_BaseAbility_0020_sub2</a>",
                       "valuePerStack": {
                         "TempHP_get": {
                           "operator": "Variables[0] (TempHP) || RETURN",
@@ -2196,7 +2196,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub_preshow",
+              "modifier": "<a class=\"gModGreen\" id=\"-769619478\">Modifier_FantasticStory_BaseAbility_0020_sub_preshow</a>",
               "valuePerStack": {
                 "ADF_3_get": {
                   "operator": "Variables[0] (ADF_3) || RETURN",
@@ -2224,7 +2224,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub2",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1336603899\">Modifier_FantasticStory_BaseAbility_0020_sub2</a>",
                   "valuePerStack": {
                     "TempHP_get": {
                       "operator": "Variables[0] (TempHP) || RETURN",
@@ -2254,7 +2254,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub3",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1353381518\">Modifier_FantasticStory_BaseAbility_0020_sub3</a>",
                   "valuePerStack": {
                     "TempHP_get": {
                       "operator": "Variables[0] (TempHP) || RETURN",
@@ -2338,7 +2338,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub4[<span class=\"descriptionNumberColor\">Verification</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1437269613\">Modifier_FantasticStory_BaseAbility_0020_sub4</a>[<span class=\"descriptionNumberColor\">Verification</span>]",
                       "valuePerStack": {
                         "DmgAddedRatio": {
                           "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0026_ADF_1) || RETURN",
@@ -2378,7 +2378,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub5[<span class=\"descriptionNumberColor\">Gimmick</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1454047232\">Modifier_FantasticStory_BaseAbility_0020_sub5</a>[<span class=\"descriptionNumberColor\">Gimmick</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2386,7 +2386,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub6",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1403714375\">Modifier_FantasticStory_BaseAbility_0020_sub6</a>",
                   "valuePerStack": {
                     "TempHP_get": {
                       "operator": "Variables[0] (TempHP) || RETURN",
@@ -2404,7 +2404,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub8"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1235938185\">Modifier_FantasticStory_BaseAbility_0020_sub8</a>"
                 }
               ]
             },
@@ -2424,7 +2424,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0020_sub7"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1420491994\">Modifier_FantasticStory_BaseAbility_0020_sub7</a>"
                 }
               ]
             }

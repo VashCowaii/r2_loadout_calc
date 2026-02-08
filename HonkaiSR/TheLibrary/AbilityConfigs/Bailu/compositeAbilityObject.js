@@ -37,7 +37,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bailu_PointB1"
+          "modifier": "<a class=\"gModGreen\" id=\"283019978\">Bailu_PointB1</a>"
         }
       ],
       "references": []
@@ -62,13 +62,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Bailu_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1621855586\">StageAbility_Maze_Bailu_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Bailu_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1621855586\">StageAbility_Maze_Bailu_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -172,7 +172,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -237,7 +237,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{All Team Members}}"
                               },
-                              "modifier": "Bailu_PointB3[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"249464740\">Bailu_PointB3</a>[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
                               "valuePerStack": {
                                 "MDF_DamageResistance": {
                                   "operator": "Variables[0] (MDF_SkillTree03_DamageResistance) || RETURN",
@@ -289,7 +289,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifierName": "Bailu_ReviveEvent",
+              "modifierName": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
               "function": "Add"
             },
             "Deleted bullshit",
@@ -337,13 +337,13 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Bailu_ReviveEvent"
+                "modifier": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>"
               },
               "passed": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
                   "variableName": "MDF_ReviveTime2",
-                  "modifierName": "Bailu_ReviveEvent",
+                  "modifierName": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
                   "multiplier": {
                     "operator": "Constants[0] (1) || RETURN",
                     "displayLines": "1",
@@ -419,7 +419,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Bailu_Revive_Mark"
+              "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
             }
           ]
         }
@@ -489,7 +489,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bailu_DieEvent"
+          "modifier": "<a class=\"gModGreen\" id=\"1633727189\">Bailu_DieEvent</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -497,7 +497,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Bailu_ReviveEvent",
+          "modifier": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
           "counter": {
             "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
             "displayLines": "MDF_ReviveTime",
@@ -511,13 +511,13 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Bailu_ReviveEvent",
+          "for": "<a class=\"gModGreen\" id=\"mod__339980930\">Bailu_ReviveEvent</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Bailu_DieEvent",
+          "for": "<a class=\"gModGreen\" id=\"mod__1633727189\">Bailu_DieEvent</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -528,7 +528,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members(Exclude Self)}}.[[removeMemosprite]]"
                   },
-                  "modifier": "Bailu_Revive_Ready"
+                  "modifier": "<a class=\"gModGreen\" id=\"835934303\">Bailu_Revive_Ready</a>"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -574,7 +574,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members(Exclude Self)}}.[[removeMemosprite]]"
                       },
-                      "modifier": "Bailu_Revive_Ready"
+                      "modifier": "<a class=\"gModGreen\" id=\"835934303\">Bailu_Revive_Ready</a>"
                     }
                   ]
                 }
@@ -589,7 +589,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Bailu_Revive_Ready"
+                  "modifier": "<a class=\"gModGreen\" id=\"835934303\">Bailu_Revive_Ready</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -597,7 +597,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Bailu_Revive_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
                 }
               ]
             },
@@ -611,7 +611,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "Bailu_Revive_Mark"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
                       },
                       {
                         "name": "Has Modifier",
@@ -619,7 +619,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Bailu_ReviveEvent",
+                        "modifier": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
                         "invertCondition": true
                       }
                     ]
@@ -631,7 +631,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}"
                       },
-                      "modifier": "Bailu_Revive_Ready",
+                      "modifier": "<a class=\"gModGreen\" id=\"835934303\">Bailu_Revive_Ready</a>",
                       "onlyRemoveOwnersInstance": true
                     },
                     {
@@ -649,7 +649,7 @@ const compositeAbilityObject = {
                           }
                         ]
                       },
-                      "modifier": "Bailu_Revive_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
                     }
                   ]
                 }
@@ -707,7 +707,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]"
               },
               "passed": [
                 {
@@ -716,7 +716,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifierName": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
                   "function": "Add",
                   "value": 1,
                   "valueType": "Duration"
@@ -813,7 +813,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -879,7 +879,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Bailu_PointB3[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"249464740\">Bailu_PointB3</a>[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
                           "valuePerStack": {
                             "MDF_DamageResistance": {
                               "operator": "Variables[0] (MDF_SkillTree03_DamageResistance) || RETURN",
@@ -912,7 +912,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Bailu_Eidolon2[<span class=\"descriptionNumberColor\">Sylphic Slumber</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1195469105\">Bailu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Sylphic Slumber</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1026,7 +1026,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Bailu_Eidolon4"
+              "modifier": "<a class=\"gModGreen\" id=\"-1229024343\">Bailu_Eidolon4</a>"
             }
           ]
         },
@@ -1064,7 +1064,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Standard_AbilityTarget"
+              "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
             }
           ]
         },
@@ -1165,7 +1165,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Projectile's Target}}"
                   },
-                  "modifier": "Standard_AbilityTarget"
+                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
                 }
               ]
             }
@@ -1257,7 +1257,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Projectile's Target}}"
                       },
-                      "modifier": "Standard_AbilityTarget"
+                      "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
                     }
                   ]
                 }
@@ -1288,7 +1288,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Bailu_Eidolon4"
+              "modifier": "<a class=\"gModGreen\" id=\"-1229024343\">Bailu_Eidolon4</a>"
             }
           ]
         },
@@ -1429,7 +1429,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Bailu_Revive_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1496935031\">Bailu_Revive_Mark</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1522,7 +1522,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bailu_Eidolon4_AttackUp[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2145916157\">Bailu_Eidolon4_AttackUp</a>[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1577,7 +1577,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bailu_Eidolon4",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1229024343\">Bailu_Eidolon4</a>",
           "execute": [
             {
               "eventTrigger": "Heal Target End [Owner]",
@@ -1588,7 +1588,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Bailu_Eidolon4_AttackUp[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2145916157\">Bailu_Eidolon4_AttackUp</a>[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1625,7 +1625,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bailu_Eidolon2[<span class=\"descriptionNumberColor\">Sylphic Slumber</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1195469105\">Bailu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Sylphic Slumber</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1661,7 +1661,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bailu_PointB3[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__249464740\">Bailu_PointB3</a>[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1696,7 +1696,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bailu_PointB1_HPIncrease[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1728,7 +1728,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bailu_PointB1_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__996331331\">Bailu_PointB1_Sub</a>",
           "execute": [
             {
               "eventTrigger": "Heal Target End [Owner]",
@@ -1757,7 +1757,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Bailu_PointB1_HPIncrease[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                         "displayLines": "MDF_LifeTime",
@@ -1785,7 +1785,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bailu_PointB1",
+          "for": "<a class=\"gModGreen\" id=\"mod__283019978\">Bailu_PointB1</a>",
           "modifierFlags": [
             "MuteDotCasterCallBack"
           ],
@@ -1817,7 +1817,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Bailu_PointB1_HPIncrease[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -1850,7 +1850,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Bailu_PointB1_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"996331331\">Bailu_PointB1_Sub</a>",
                   "valuePerStack": {
                     "MDF_LifeTime": {
                       "operator": "Variables[0] (2) || RETURN",
@@ -1879,7 +1879,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
           "counter": 1,
           "stackType": "ReplaceByCaster",
           "execute": [
@@ -1939,7 +1939,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Bailu_PointB3[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"249464740\">Bailu_PointB3</a>[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]"
                 }
               ]
             },
@@ -1948,7 +1948,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Modifier Variable",
-                  "modifierName": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
                   "value": {
                     "operator": "Variables[0] (MDF_HealCount) || Variables[1] (MDF_HealCountExtra) || ADD || RETURN",
                     "displayLines": "(MDF_HealCount + MDF_HealCountExtra)",
@@ -2003,7 +2003,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Modifier Variable",
-                      "modifierName": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
                       "function": "Add"
                     }
                   ]
@@ -2027,7 +2027,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Bailu_Revive_Ready",
+          "for": "<a class=\"gModGreen\" id=\"mod__835934303\">Bailu_Revive_Ready</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2043,7 +2043,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "value1": "Bailu_ReviveEvent",
+                        "value1": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
                         "compareType": ">",
                         "value2": 0
                       }
@@ -2126,7 +2126,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "modifier": "Bailu_Revive_Mark"
+                                      "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
                                     }
                                   ]
                                 }

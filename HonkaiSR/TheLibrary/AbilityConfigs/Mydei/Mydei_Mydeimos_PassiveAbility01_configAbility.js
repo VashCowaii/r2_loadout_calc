@@ -21,7 +21,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Mydeimos_Passive01Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1001366743\">Mydeimos_Passive01Modifier</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -29,7 +29,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Mydeimos_BPAbility_PreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"-863542474\">Mydeimos_BPAbility_PreShow</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -37,7 +37,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Mydeimos_InsertActionAbortFlag"
+      "modifier": "<a class=\"gModGreen\" id=\"18109462\">Mydeimos_InsertActionAbortFlag</a>"
     },
     {
       "name": "Read Variable Value",
@@ -76,7 +76,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Mydeimos_Trace01[<span class=\"descriptionNumberColor\">Earth and Water</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"951504069\">Mydeimos_Trace01</a>[<span class=\"descriptionNumberColor\">Earth and Water</span>]",
           "counter": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -139,7 +139,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Mydeimos_BPAbility_PreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-863542474\">Mydeimos_BPAbility_PreShow</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -246,7 +246,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mydeimos_Passive01Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1001366743\">Mydeimos_Passive01Modifier</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -371,11 +371,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Mydeimos_PassiveAbility_Transfer"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-796211194\">Mydeimos_PassiveAbility_Transfer</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Mydeimos_Ability22_Predicate"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-778096199\">Mydeimos_Ability22_Predicate</a>"
                 }
               ]
             }
@@ -420,11 +420,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Mydeimos_PassiveAbility_Transfer"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-796211194\">Mydeimos_PassiveAbility_Transfer</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Mydeimos_Ability22_Predicate"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-778096199\">Mydeimos_Ability22_Predicate</a>"
                 }
               ]
             }
@@ -495,7 +495,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Mydeimos_Trace03"
+                  "modifier": "<a class=\"gModGreen\" id=\"917948831\">Mydeimos_Trace03</a>"
                 }
               ]
             },
@@ -578,11 +578,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Mydeimos_PassiveAbility_Transfer"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-796211194\">Mydeimos_PassiveAbility_Transfer</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Mydeimos_Ability22_Predicate"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-778096199\">Mydeimos_Ability22_Predicate</a>"
                 }
               ]
             }
@@ -627,11 +627,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Mydeimos_PassiveAbility_Transfer"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-796211194\">Mydeimos_PassiveAbility_Transfer</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Mydeimos_Ability22_Predicate"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-778096199\">Mydeimos_Ability22_Predicate</a>"
                 }
               ]
             }
@@ -682,12 +682,12 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Mydeimos_Ability22_Predicate"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-778096199\">Mydeimos_Ability22_Predicate</a>"
                     }
                   ],
                   "failed": [
@@ -795,11 +795,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Mydeimos_PassiveAbility_Transfer"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-796211194\">Mydeimos_PassiveAbility_Transfer</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Mydeimos_Ability22_Predicate"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-778096199\">Mydeimos_Ability22_Predicate</a>"
                 }
               ]
             }
@@ -823,7 +823,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -925,7 +925,7 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Mydeimos_Ability22_Predicate"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-778096199\">Mydeimos_Ability22_Predicate</a>"
                     }
                   ]
                 }
@@ -943,7 +943,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All(with Unselectable)}}"
           },
-          "modifier": "Mydeimos_UltraTargetSpecialMark",
+          "modifier": "<a class=\"gModGreen\" id=\"1569520574\">Mydeimos_UltraTargetSpecialMark</a>",
           "aliveOnly": "False",
           "haloStatus": true
         }

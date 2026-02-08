@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Acheron_AbilityChange03"
+      "modifier": "<a class=\"gModGreen\" id=\"-367620490\">Acheron_AbilityChange03</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Acheron_AbilityChange04"
+      "modifier": "<a class=\"gModGreen\" id=\"-317287633\">Acheron_AbilityChange04</a>"
     },
     {
       "name": "IF",
@@ -29,7 +29,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Acheron_HitFlower"
+          "functionName": "<a class=\"gTempYellow\" id=\"77299136\">Acheron_HitFlower</a>"
         }
       ]
     },
@@ -111,12 +111,12 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
       },
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Acheron_TiggerFlower"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1252175641\">Acheron_TiggerFlower</a>"
         }
       ]
     },

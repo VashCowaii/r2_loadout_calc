@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Evernight_Maze"
+      "modifier": "<a class=\"gModGreen\" id=\"-878367179\">Evernight_Maze</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Evernight_Maze",
+      "for": "<a class=\"gModGreen\" id=\"mod__-878367179\">Evernight_Maze</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -226,7 +226,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Evernight_Ability02_Bonus[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1894879081\">Evernight_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

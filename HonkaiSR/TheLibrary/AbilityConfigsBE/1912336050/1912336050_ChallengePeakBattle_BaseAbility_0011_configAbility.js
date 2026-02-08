@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0011"
+      "modifier": "<a class=\"gModGreen\" id=\"-237355576\">Modifier_ChallengePeakBattle_BaseAbility_0011</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0011_02",
+      "for": "<a class=\"gModGreen\" id=\"mod__1228128919\">Modifier_ChallengePeakBattle_BaseAbility_0011_02</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0011",
+      "for": "<a class=\"gModGreen\" id=\"mod__-237355576\">Modifier_ChallengePeakBattle_BaseAbility_0011</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -70,7 +70,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0011_02",
+                  "modifier": "<a class=\"gModGreen\" id=\"1228128919\">Modifier_ChallengePeakBattle_BaseAbility_0011_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0011_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

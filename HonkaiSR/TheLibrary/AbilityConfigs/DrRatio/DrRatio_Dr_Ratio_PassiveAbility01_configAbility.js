@@ -78,7 +78,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Dr_Ratio_PassiveInsertListen"
+      "modifier": "<a class=\"gModGreen\" id=\"-1074663831\">Dr_Ratio_PassiveInsertListen</a>"
     },
     {
       "name": "IF",
@@ -93,7 +93,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Dr_Ratio_PointB3_Modifier",
+          "modifier": "<a class=\"gModGreen\" id=\"1222801493\">Dr_Ratio_PointB3_Modifier</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.1) || RETURN",
@@ -145,7 +145,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Dr_Ratio_Eidolon1"
+          "modifier": "<a class=\"gModGreen\" id=\"-169609449\">Dr_Ratio_Eidolon1</a>"
         }
       ]
     }
@@ -153,7 +153,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Dr_Ratio_Eidolon1",
+      "for": "<a class=\"gModGreen\" id=\"mod__-169609449\">Dr_Ratio_Eidolon1</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -164,7 +164,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1828934114\">Dr_Ratio_Ability03_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Summation</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (6) || Variables[1] (4) || ADD || RETURN",
                 "displayLines": "(6 + 4)",
@@ -211,7 +211,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Dr_Ratio_Passive_SpecialMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1712485914\">Dr_Ratio_Passive_SpecialMark</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "ListenBattleEventSkill"
@@ -679,7 +679,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Dr_Ratio_PassiveInsertListen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1074663831\">Dr_Ratio_PassiveInsertListen</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
@@ -704,7 +704,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Dr_Ratio_Passive_SpecialMark",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1712485914\">Dr_Ratio_Passive_SpecialMark</a>",
                   "valuePerStack": {
                     "MDF_DebuffChance": {
                       "operator": "Variables[0] (0.4) || RETURN",
@@ -761,7 +761,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Dr_Ratio_Insert_Flag_Caster"
+                    "modifier": "<a class=\"gModGreen\" id=\"1963870595\">Dr_Ratio_Insert_Flag_Caster</a>"
                   },
                   "passed": [
                     {
@@ -777,7 +777,7 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Dr_Ratio_InsertAbility"
+                          "functionName": "<a class=\"gTempYellow\" id=\"-1506583423\">Dr_Ratio_InsertAbility</a>"
                         }
                       ]
                     }
@@ -796,7 +796,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "Dr_Ratio_Passive_SpecialMark",
+              "modifier": "<a class=\"gModGreen\" id=\"-1712485914\">Dr_Ratio_Passive_SpecialMark</a>",
               "valuePerStack": {
                 "MDF_DebuffChance": {
                   "operator": "Variables[0] (0.4) || RETURN",
@@ -842,7 +842,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Dr_Ratio_Insert_Flag_Caster"
+                        "modifier": "<a class=\"gModGreen\" id=\"1963870595\">Dr_Ratio_Insert_Flag_Caster</a>"
                       },
                       {
                         "name": "Has Flag",
@@ -858,7 +858,7 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Dr_Ratio_InsertAbility"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1506583423\">Dr_Ratio_InsertAbility</a>"
                     }
                   ]
                 }
@@ -889,7 +889,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Dr_Ratio_Insert_Flag_Caster"
+                        "modifier": "<a class=\"gModGreen\" id=\"1963870595\">Dr_Ratio_Insert_Flag_Caster</a>"
                       },
                       {
                         "name": "Has Flag",
@@ -905,7 +905,7 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Dr_Ratio_InsertAbility"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1506583423\">Dr_Ratio_InsertAbility</a>"
                     }
                   ]
                 }

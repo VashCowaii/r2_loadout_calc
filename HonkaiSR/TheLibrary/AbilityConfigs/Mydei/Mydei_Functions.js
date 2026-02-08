@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Mydeimos_Ability22_Predicate",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-778096199\">Mydeimos_Ability22_Predicate</a>",
       "parse": [
         {
           "name": "IF",
@@ -21,7 +21,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]"
           },
           "passed": [
             {
@@ -86,7 +86,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Mydeimos_Transfer[<span class=\"descriptionNumberColor\">Vendetta</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]"
                           },
                           "passed": [
                             {
@@ -254,7 +254,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Mydeimos_PassiveAbility_Transfer",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-796211194\">Mydeimos_PassiveAbility_Transfer</a>",
       "parse": [
         {
           "name": "IF",

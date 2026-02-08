@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_071"
+      "modifier": "<a class=\"gModGreen\" id=\"-602764030\">MStrongChallengeEX_Talent_StageAbility_LE_071</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_MST_071",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -44,7 +44,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_071",
+      "for": "<a class=\"gModGreen\" id=\"mod__-602764030\">MStrongChallengeEX_Talent_StageAbility_LE_071</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -75,7 +75,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_071",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_3) || RETURN",
@@ -104,7 +104,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_071",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (#ADF_2) || RETURN",
@@ -133,7 +133,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All}}"
                               },
-                              "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_071",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
                                   "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -184,7 +184,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_071",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_3) || RETURN",
@@ -213,7 +213,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_071",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (#ADF_2) || RETURN",
@@ -242,7 +242,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "modifier": "MStrongChallengeEX_Talent_StageAbility_MST_071",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1844616779\">MStrongChallengeEX_Talent_StageAbility_MST_071</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (#ADF_1) || RETURN",

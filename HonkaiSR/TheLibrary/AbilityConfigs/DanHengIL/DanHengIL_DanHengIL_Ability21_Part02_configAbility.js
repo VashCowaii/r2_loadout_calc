@@ -15,7 +15,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHengIL_BPCost_1"
+      "modifier": "<a class=\"gModGreen\" id=\"-1633577543\">DanHengIL_BPCost_1</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -23,7 +23,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHengIL_BPCost_2"
+      "modifier": "<a class=\"gModGreen\" id=\"-1683910400\">DanHengIL_BPCost_2</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -31,7 +31,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHengIL_BPCost_3"
+      "modifier": "<a class=\"gModGreen\" id=\"-1667132781\">DanHengIL_BPCost_3</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -39,7 +39,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHengIL_CancelAbility"
+      "modifier": "<a class=\"gModGreen\" id=\"-171519647\">DanHengIL_CancelAbility</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -47,7 +47,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHengIL_BPDisable"
+      "modifier": "<a class=\"gModGreen\" id=\"1468527103\">DanHengIL_BPDisable</a>"
     },
     "Trigger: Ability End"
   ],

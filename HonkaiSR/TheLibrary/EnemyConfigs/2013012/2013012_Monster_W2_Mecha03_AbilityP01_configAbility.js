@@ -17,7 +17,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Mecha03_Overdrive_Controller"
+      "modifier": "<a class=\"gModGreen\" id=\"1970609621\">Enemy_W2_Mecha03_Overdrive_Controller</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -25,7 +25,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Enemy_W2_Mecha03_Overdrive_Hint"
+      "modifier": "<a class=\"gModGreen\" id=\"516569012\">Enemy_W2_Mecha03_Overdrive_Hint</a>"
     }
   ],
   "references": []

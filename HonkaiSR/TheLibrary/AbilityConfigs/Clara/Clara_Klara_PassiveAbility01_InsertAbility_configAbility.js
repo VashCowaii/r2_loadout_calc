@@ -17,7 +17,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
       }
     },
     {
@@ -28,7 +28,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
       }
     },
     {
@@ -39,7 +39,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
       },
       "passed": [
         {
@@ -84,7 +84,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Klara_Trace03",
+          "modifier": "<a class=\"gModGreen\" id=\"-1077895558\">Klara_Trace03</a>",
           "valuePerStack": {
             "MDF_AllDamageTypeAddRatio": {
               "operator": "Variables[0] (0.3) || RETURN",
@@ -106,7 +106,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
       },
       "passed": [
         {
@@ -194,7 +194,7 @@ const configAbility = {
         "Trigger: Attack End",
         {
           "name": "Define Modifier Variable",
-          "modifierName": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
           "function": "Add"
         }
       ],
@@ -242,13 +242,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Klara_Trace03"
+      "modifier": "<a class=\"gModGreen\" id=\"-1077895558\">Klara_Trace03</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Klara_Trace03",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1077895558\">Klara_Trace03</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",

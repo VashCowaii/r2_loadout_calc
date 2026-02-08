@@ -32,7 +32,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Standard_FatigueRatio[<span class=\"descriptionNumberColor\">Weaken</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
         "displayLines": "{[Skill01[3]]}",

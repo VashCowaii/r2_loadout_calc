@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "M_Feixiao_Friend_Mark_Self"
+      "modifier": "<a class=\"gModGreen\" id=\"158143017\">M_Feixiao_Friend_Mark_Self</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -120,7 +120,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Feixiao_InsertCheckSelf"
+          "modifier": "<a class=\"gModGreen\" id=\"-1503840637\">M_Feixiao_InsertCheckSelf</a>"
         }
       ]
     },
@@ -130,7 +130,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_Friend_Mark_Self",
+      "for": "<a class=\"gModGreen\" id=\"mod__158143017\">M_Feixiao_Friend_Mark_Self</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -151,7 +151,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "M_Feixiao_Friend_Mark_Self"
+                "modifier": "<a class=\"gModGreen\" id=\"158143017\">M_Feixiao_Friend_Mark_Self</a>"
               },
               "ifTargetFound": [
                 {
@@ -160,7 +160,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "M_Feixiao_Friend_Mark_Self"
+                  "modifier": "<a class=\"gModGreen\" id=\"158143017\">M_Feixiao_Friend_Mark_Self</a>"
                 }
               ]
             }

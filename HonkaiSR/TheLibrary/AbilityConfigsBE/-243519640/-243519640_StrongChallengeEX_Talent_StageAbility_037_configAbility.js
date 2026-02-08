@@ -11,20 +11,20 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_037"
+      "modifier": "<a class=\"gModGreen\" id=\"-435679388\">MStrongChallengeEX_Talent_StageAbility_LE_037</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_037",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1125184116\">MStrongChallengeEX_Talent_StageAbility_PLY_037</a>",
       "execute": [
         {
           "eventTrigger": "Caused Weakness Break [Owner]",
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "ReduceActionDelay",
+              "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -46,7 +46,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_037",
+      "for": "<a class=\"gModGreen\" id=\"mod__-435679388\">MStrongChallengeEX_Talent_StageAbility_LE_037</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -73,7 +73,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_037"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1125184116\">MStrongChallengeEX_Talent_StageAbility_PLY_037</a>"
                 }
               ]
             }

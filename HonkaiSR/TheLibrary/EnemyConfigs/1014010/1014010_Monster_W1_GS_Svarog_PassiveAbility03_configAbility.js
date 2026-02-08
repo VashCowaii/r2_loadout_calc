@@ -22,7 +22,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "modifier": "Svarog_Part_ListenHP_Modifier",
+      "modifier": "<a class=\"gModGreen\" id=\"17783365\">Svarog_Part_ListenHP_Modifier</a>",
       "valuePerStack": {
         "PassiveAbility02_P2_HPRatio": {
           "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__35) || RETURN",

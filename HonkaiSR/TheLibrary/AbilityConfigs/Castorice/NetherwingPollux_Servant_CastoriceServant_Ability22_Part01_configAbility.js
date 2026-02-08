@@ -85,7 +85,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Memosprite_CastoriceServant_BPCost_3"
+                "modifier": "<a class=\"gModGreen\" id=\"131262836\">Memosprite_CastoriceServant_BPCost_3</a>"
               },
               {
                 "name": "Compare: Variable",

@@ -10,18 +10,18 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21038_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1080231375\">LC_21038_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21038_CD",
+      "for": "<a class=\"gModGreen\" id=\"mod__1257826563\">LC_21038_CD</a>",
       "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21038_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1257997546\">LC_21038_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -53,7 +53,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21038_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1080231375\">LC_21038_Main</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -160,7 +160,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_21038_CD"
+                      "modifier": "<a class=\"gModGreen\" id=\"1257826563\">LC_21038_CD</a>"
                     }
                   }
                 ]
@@ -172,7 +172,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_21038_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1257997546\">LC_21038_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -224,7 +224,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_21038_CD",
+                  "modifier": "<a class=\"gModGreen\" id=\"1257826563\">LC_21038_CD</a>",
                   "duration": {
                     "operator": "Variables[0] (3) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(3 - 1)",
@@ -289,7 +289,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_21038_CD"
+                      "modifier": "<a class=\"gModGreen\" id=\"1257826563\">LC_21038_CD</a>"
                     }
                   }
                 ]
@@ -301,7 +301,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_21038_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1257997546\">LC_21038_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -353,7 +353,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_21038_CD",
+                  "modifier": "<a class=\"gModGreen\" id=\"1257826563\">LC_21038_CD</a>",
                   "duration": {
                     "operator": "Variables[0] (3) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(3 - 1)",

@@ -40,20 +40,20 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_XP_Elite02_02_RLElite_BattlePerform_LockHP"
+          "modifier": "<a class=\"gModGreen\" id=\"752842393\">Monster_XP_Elite02_02_RLElite_BattlePerform_LockHP</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_XP_Elite02_02_RLElite_Instance_DisableAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1548498812\">Monster_XP_Elite02_02_RLElite_Instance_DisableAction</a>",
           "modifierFlags": [
             "DisableAction"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_XP_Elite02_02_RLElite_BattlePerform_LockHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__752842393\">Monster_XP_Elite02_02_RLElite_BattlePerform_LockHP</a>",
           "execute": [
             {
               "eventTrigger": "When Put in Deathstate Limbo"
@@ -95,13 +95,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_XP_Elite02_02_RLElite_MuteDirtyHP"
+          "modifier": "<a class=\"gModGreen\" id=\"233985809\">Monster_XP_Elite02_02_RLElite_MuteDirtyHP</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_XP_Elite02_02_RLElite_MuteDirtyHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__233985809\">Monster_XP_Elite02_02_RLElite_MuteDirtyHP</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -120,7 +120,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_XP_Elite02_02_RLElite_ChargeEffect[<span class=\"descriptionNumberColor\">Japa</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-773012193\">Monster_XP_Elite02_02_RLElite_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -128,7 +128,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Monster_XP_Elite02_02_RLElite_DirtyHPListener",
+          "modifier": "<a class=\"gModGreen\" id=\"-1807594786\">Monster_XP_Elite02_02_RLElite_DirtyHPListener</a>",
           "valuePerStack": {
             "MDF_DirtyHPAddedRatio": {
               "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
@@ -182,7 +182,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_XP_Elite02_02_RLElite_ChargeEffect[<span class=\"descriptionNumberColor\">Japa</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-773012193\">Monster_XP_Elite02_02_RLElite_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]"
         },
         {
           "name": "IF",
@@ -232,7 +232,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
           },
           "passed": [
             {
@@ -241,7 +241,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+              "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
             }
           ]
         },
@@ -273,7 +273,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
             "displayLines": "{[Skill03[2]]}",
@@ -318,7 +318,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_XP_Elite02_02_RLElite_ChargeEffect[<span class=\"descriptionNumberColor\">Japa</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-773012193\">Monster_XP_Elite02_02_RLElite_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]"
             }
           ]
         },
@@ -374,7 +374,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
           },
           "passed": [
             {
@@ -383,7 +383,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+              "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
             }
           ]
         },
@@ -415,7 +415,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
             "displayLines": "{[Skill02[2]]}",
@@ -452,7 +452,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Target Right of Ability Target(ST)}}"
             },
-            "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
           },
           "passed": [
             {
@@ -461,7 +461,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Right of Ability Target(ST)}}"
               },
-              "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+              "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
             }
           ]
         },
@@ -473,7 +473,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Target Left of Ability Target(ST)}}"
             },
-            "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
           },
           "passed": [
             {
@@ -482,7 +482,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Left of Ability Target(ST)}}"
               },
-              "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+              "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
             }
           ]
         },
@@ -514,7 +514,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Targets Adjacent(Blast)}}"
           },
-          "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
             "displayLines": "{[Skill02[2]]}",
@@ -582,19 +582,19 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect_FirstHit"
+          "functionName": "<a class=\"gTempYellow\" id=\"-506001002\">Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect_FirstHit</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect"
+          "functionName": "<a class=\"gTempYellow\" id=\"1394287032\">Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect"
+          "functionName": "<a class=\"gTempYellow\" id=\"1394287032\">Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect"
+          "functionName": "<a class=\"gTempYellow\" id=\"1394287032\">Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect</a>"
         },
         {
           "name": "Find New Target",
@@ -613,7 +613,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
               },
               "passed": [
                 {
@@ -622,7 +622,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+                  "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
                 }
               ]
             },
@@ -655,7 +655,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
                 "displayLines": "{[Skill01[2]]}",
@@ -711,7 +711,7 @@ const compositeAbilityObject = {
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect_FirstHit",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-506001002\">Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect_FirstHit</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -730,7 +730,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
                   },
                   "passed": [
                     {
@@ -739,7 +739,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+                      "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
                     }
                   ]
                 },
@@ -772,7 +772,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
                     "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
                     "displayLines": "{[Skill01[2]]}",
@@ -823,7 +823,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1394287032\">Monster_XP_Elite02_02_RLElite_Ability01_TaskTemplate_DamageWithRandomEffect</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -842,7 +842,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
                   },
                   "passed": [
                     {
@@ -851,7 +851,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+                      "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
                     }
                   ]
                 },
@@ -884,7 +884,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
                     "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
                     "displayLines": "{[Skill01[2]]}",
@@ -1000,7 +1000,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1008,7 +1008,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         }
       ],
       "whenAdded": [
@@ -1018,13 +1018,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_XP_Elite02_02_RLElite_PartControl"
+          "modifier": "<a class=\"gModGreen\" id=\"-826764478\">Monster_XP_Elite02_02_RLElite_PartControl</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_XP_Elite02_02_RLElite_PartControl",
+          "for": "<a class=\"gModGreen\" id=\"mod__-826764478\">Monster_XP_Elite02_02_RLElite_PartControl</a>",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -1059,7 +1059,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -1082,7 +1082,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                       "duration": {
                         "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
                         "displayLines": "{[Skill05[1]]}",
@@ -1101,7 +1101,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+                      "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
                     }
                   ]
                 }
@@ -1113,7 +1113,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_XP_Elite02_02_RLElite_DirtyHPListener",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1807594786\">Monster_XP_Elite02_02_RLElite_DirtyHPListener</a>",
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -1192,7 +1192,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
                   },
                   "passed": [
                     {
@@ -1221,7 +1221,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                           "duration": {
                             "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
                             "displayLines": "{[Skill05[1]]}",
@@ -1249,7 +1249,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1257,7 +1257,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                           "duration": {
                             "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
                             "displayLines": "{[Skill05[1]]}",
@@ -1287,7 +1287,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                       "duration": {
                         "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
                         "displayLines": "{[Skill05[1]]}",
@@ -1333,7 +1333,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
                       },
                       {
                         "name": "Enemy ID",
@@ -1373,7 +1373,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
                       },
                       {
                         "name": "Enemy ID",
@@ -1437,7 +1437,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+                        "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
                       },
                       "passed": [
                         {
@@ -1446,7 +1446,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1454,7 +1454,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Standard_BlackBlood[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                           "duration": {
                             "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
                             "displayLines": "{[Skill05[1]]}",
@@ -1480,7 +1480,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_XP_Elite02_02_RLElite_TryAddDirtyHP"
+                          "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
                         }
                       ]
                     }
@@ -1510,7 +1510,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_XP_Elite02_02_RLElite_ChargeEffect[<span class=\"descriptionNumberColor\">Japa</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-773012193\">Monster_XP_Elite02_02_RLElite_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1528,7 +1528,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_XP_Elite02_02_RLElite_ChargeEffect[<span class=\"descriptionNumberColor\">Japa</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-773012193\">Monster_XP_Elite02_02_RLElite_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]"
                 }
               ]
             }

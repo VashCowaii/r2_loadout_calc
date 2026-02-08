@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Enemy_AML_Minion03_Target[<span class=\"descriptionNumberColor\">Lock On</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1906134144\">Enemy_AML_Minion03_Target</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
           "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",

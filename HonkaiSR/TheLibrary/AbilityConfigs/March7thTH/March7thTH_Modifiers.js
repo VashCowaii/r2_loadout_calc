@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "M_Mar_7th_10_InsertCheck",
+      "for": "<a class=\"gModGreen\" id=\"mod__126431759\">M_Mar_7th_10_InsertCheck</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
@@ -20,7 +20,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Mar_7th_10_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"-922050191\">Mar_7th_10_InsertRetarget</a>"
             }
           ]
         },
@@ -35,7 +35,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Mar_7th_10_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"-922050191\">Mar_7th_10_InsertRetarget</a>"
             }
           ],
           "priorityLevel": -55
@@ -45,7 +45,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Mar_7th_10_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"-922050191\">Mar_7th_10_InsertRetarget</a>"
             }
           ]
         },
@@ -54,7 +54,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Mar_7th_10_InsertRetarget"
+              "functionName": "<a class=\"gTempYellow\" id=\"-922050191\">Mar_7th_10_InsertRetarget</a>"
             }
           ]
         },
@@ -91,7 +91,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Mar_7th_10_InsertRetarget"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-922050191\">Mar_7th_10_InsertRetarget</a>"
                 }
               ]
             }
@@ -101,7 +101,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Mar_7th_10_InsertRetarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-922050191\">Mar_7th_10_InsertRetarget</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -155,7 +155,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_Eidolon2_CD[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1941685711\">Mar_7th_10_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -174,7 +174,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Mar_7th_10_ForbidBP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-220132928\">M_Mar_7th_10_ForbidBP</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -195,7 +195,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Mar_7th_10_MasterAttackEnergyPreshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2037642738\">M_Mar_7th_10_MasterAttackEnergyPreshow</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -245,7 +245,7 @@ const configAbility = {
       },
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]",
+        "dependancyName": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]",
         "casterFilter": {
           "name": "Target Name",
           "target": "{{Caster}}"
@@ -254,7 +254,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Mar_7th_10_MasterUltraEnergyPreshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__1499889908\">M_Mar_7th_10_MasterUltraEnergyPreshow</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -295,7 +295,7 @@ const configAbility = {
       },
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]",
+        "dependancyName": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]",
         "casterFilter": {
           "name": "Target Name",
           "target": "{{Caster}}"
@@ -304,7 +304,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_Enhance_Visual",
+      "for": "<a class=\"gModGreen\" id=\"mod__754306422\">Mar_7th_10_Enhance_Visual</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -324,7 +324,7 @@ const configAbility = {
       ],
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "Mar_7th_10_Enhance",
+        "dependancyName": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
         "casterFilter": {
           "name": "Target Name",
           "target": "{{Caster}}"
@@ -333,7 +333,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_Enhance",
+      "for": "<a class=\"gModGreen\" id=\"mod__2055743569\">Mar_7th_10_Enhance</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -344,7 +344,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_Mar_7th_10_ForbidBP"
+              "modifier": "<a class=\"gModGreen\" id=\"-220132928\">M_Mar_7th_10_ForbidBP</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -384,7 +384,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Mar_7th_10_Enhance_Visual"
+              "modifier": "<a class=\"gModGreen\" id=\"754306422\">Mar_7th_10_Enhance_Visual</a>"
             }
           ]
         },
@@ -435,7 +435,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_Mar_7th_10_ForbidBP"
+              "modifier": "<a class=\"gModGreen\" id=\"-220132928\">M_Mar_7th_10_ForbidBP</a>"
             }
           ]
         }
@@ -449,7 +449,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-237230767\">Mar_7th_10_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -484,7 +484,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_Ability02_Master_SpeedUp[<span class=\"descriptionNumberColor\">Master, It's Tea Time!</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-178417190\">Mar_7th_10_Ability02_Master_SpeedUp</a>[<span class=\"descriptionNumberColor\">Master, It's Tea Time!</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -521,7 +521,7 @@ const configAbility = {
       "statusName": "Master, It's Tea Time!",
       "removalDependencies": {
         "name": "Removal Dependency",
-        "dependancyName": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]",
+        "dependancyName": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]",
         "casterFilter": {
           "name": "Target Name",
           "target": "{{Caster}}"
@@ -530,11 +530,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_Ability02_HaveMaster"
+      "for": "<a class=\"gModGreen\" id=\"mod__1861443977\">Mar_7th_10_Ability02_HaveMaster</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -570,7 +570,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
                 }
               ]
             }
@@ -588,7 +588,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Mar_7th_10_Ability02_HaveMaster"
+              "modifier": "<a class=\"gModGreen\" id=\"1861443977\">Mar_7th_10_Ability02_HaveMaster</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -596,7 +596,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Mar_7th_10_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-237230767\">Mar_7th_10_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]"
             }
           ]
         },
@@ -609,7 +609,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_Mar_7th_10_MasterUltraEnergyPreshow"
+              "modifier": "<a class=\"gModGreen\" id=\"1499889908\">M_Mar_7th_10_MasterUltraEnergyPreshow</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -617,7 +617,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_Mar_7th_10_MasterAttackEnergyPreshow"
+              "modifier": "<a class=\"gModGreen\" id=\"-2037642738\">M_Mar_7th_10_MasterAttackEnergyPreshow</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -625,7 +625,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Mar_7th_10_Ability02_HaveMaster"
+              "modifier": "<a class=\"gModGreen\" id=\"1861443977\">Mar_7th_10_Ability02_HaveMaster</a>"
             },
             {
               "name": "IF",
@@ -640,7 +640,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Mar_7th_10_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-237230767\">Mar_7th_10_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (0.1) || RETURN",
@@ -734,7 +734,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Mar_7th_10_GainEnergyWithCheck",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
               "variables": {
                 "parameter[0]_AddValue": {
                   "operator": "Variables[0] (Gain_Energy_Value) || RETURN",
@@ -787,7 +787,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Mar_7th_10_GainEnergyWithCheck",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
                       "operator": "Variables[0] (Gain_Energy_Value) || RETURN",
@@ -818,7 +818,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_Energy[<span class=\"descriptionNumberColor\">Charge</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-388995203\">Mar_7th_10_Energy</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "counter": 1,
       "stackType": "ReplaceByCaster",
       "modifierFlags": [

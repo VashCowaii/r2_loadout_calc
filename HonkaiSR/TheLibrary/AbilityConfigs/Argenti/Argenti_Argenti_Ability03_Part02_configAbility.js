@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Argenti_Eidolon6_DefPentModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1721941728\">Argenti_Eidolon6_DefPentModifier</a>"
         }
       ]
     },
@@ -67,7 +67,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                 "displayLines": "MDF_MaxCount",
@@ -130,7 +130,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Argenti_Eidolon6_DefPentModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1721941728\">Argenti_Eidolon6_DefPentModifier</a>"
         }
       ]
     },

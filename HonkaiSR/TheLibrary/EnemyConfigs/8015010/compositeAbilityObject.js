@@ -49,7 +49,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_WMonster_W0_Boss_Unselectable[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1691894969\">Enemy_WMonster_W0_Boss_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
         },
         {
           "name": "Boss Bar Display",
@@ -74,13 +74,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_HitEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"1605741417\">Enemy_AML_Boss_HitEffect</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_WMonster_W0_Boss_CharacterAdded",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1808633435\">Enemy_WMonster_W0_Boss_CharacterAdded</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -107,7 +107,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_WMonster_W0_Boss_NoSpeed",
+          "for": "<a class=\"gModGreen\" id=\"mod__1544253052\">Enemy_WMonster_W0_Boss_NoSpeed</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -184,7 +184,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_DamageTakenUp",
+          "modifier": "<a class=\"gModGreen\" id=\"-1881731748\">Enemy_AML_Boss_DamageTakenUp</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
@@ -211,7 +211,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_HitEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"1605741417\">Enemy_AML_Boss_HitEffect</a>"
         },
         {
           "name": "Boss Bar Display",
@@ -281,7 +281,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_WMonster_W0_Boss_Sign_Part1"
+          "modifier": "<a class=\"gModGreen\" id=\"999315308\">Enemy_WMonster_W0_Boss_Sign_Part1</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -289,7 +289,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 2}}"
           },
-          "modifier": "Enemy_WMonster_W0_Boss_Sign_Part2"
+          "modifier": "<a class=\"gModGreen\" id=\"1049648165\">Enemy_WMonster_W0_Boss_Sign_Part2</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -297,7 +297,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_WMonster_W0_Boss_Sign_Part3"
+          "modifier": "<a class=\"gModGreen\" id=\"1032870546\">Enemy_WMonster_W0_Boss_Sign_Part3</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -305,7 +305,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_WMonster_W0_Boss_Unselectable[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1691894969\">Enemy_WMonster_W0_Boss_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
         }
       ],
       "references": []
@@ -352,7 +352,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_AML_Boss_HitEffect"
+                  "modifier": "<a class=\"gModGreen\" id=\"1605741417\">Enemy_AML_Boss_HitEffect</a>"
                 }
               ]
             },
@@ -421,7 +421,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Target Part 1}}"
                   },
-                  "modifier": "Enemy_WMonster_W0_Boss_Sign_Part1"
+                  "modifier": "<a class=\"gModGreen\" id=\"999315308\">Enemy_WMonster_W0_Boss_Sign_Part1</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -429,7 +429,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Target Part 2}}"
                   },
-                  "modifier": "Enemy_WMonster_W0_Boss_Sign_Part2"
+                  "modifier": "<a class=\"gModGreen\" id=\"1049648165\">Enemy_WMonster_W0_Boss_Sign_Part2</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -437,7 +437,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Target Part 3}}"
                   },
-                  "modifier": "Enemy_WMonster_W0_Boss_Sign_Part3"
+                  "modifier": "<a class=\"gModGreen\" id=\"1032870546\">Enemy_WMonster_W0_Boss_Sign_Part3</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -445,11 +445,11 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_WMonster_W0_Boss_Unselectable[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1691894969\">Enemy_WMonster_W0_Boss_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Monster_ChangePhase"
+                  "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -457,7 +457,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_WMonster_W0_Boss_LockHP_1"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1741877307\">Enemy_WMonster_W0_Boss_LockHP_1</a>"
                 }
               ]
             },
@@ -496,7 +496,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_DamageTakenUp"
+          "modifier": "<a class=\"gModGreen\" id=\"-1881731748\">Enemy_AML_Boss_DamageTakenUp</a>"
         },
         {
           "name": "Change Character Transformation",
@@ -541,7 +541,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_WMonster_W0_Boss_Unselectable[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1691894969\">Enemy_WMonster_W0_Boss_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
         },
         {
           "name": "Assign Unique Name",
@@ -567,7 +567,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_WMonster_W0_Boss_LockHP_1"
+              "modifier": "<a class=\"gModGreen\" id=\"-1741877307\">Enemy_WMonster_W0_Boss_LockHP_1</a>"
             }
           ],
           "failed": [
@@ -587,7 +587,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_WMonster_W0_Boss_ListenAllPartDie"
+          "modifier": "<a class=\"gModGreen\" id=\"489144285\">Enemy_WMonster_W0_Boss_ListenAllPartDie</a>"
         }
       ],
       "references": []
@@ -658,7 +658,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_ChangeWeakness"
+          "modifier": "<a class=\"gModGreen\" id=\"228774752\">Enemy_AML_Boss_ChangeWeakness</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -666,7 +666,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_WMonster_W0_Boss_Sign_Part1"
+          "modifier": "<a class=\"gModGreen\" id=\"999315308\">Enemy_WMonster_W0_Boss_Sign_Part1</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -674,7 +674,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 2}}"
           },
-          "modifier": "Enemy_WMonster_W0_Boss_Sign_Part2"
+          "modifier": "<a class=\"gModGreen\" id=\"1049648165\">Enemy_WMonster_W0_Boss_Sign_Part2</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -682,7 +682,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_WMonster_W0_Boss_Sign_Part3"
+          "modifier": "<a class=\"gModGreen\" id=\"1032870546\">Enemy_WMonster_W0_Boss_Sign_Part3</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -690,13 +690,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_LockActionDelay"
+          "modifier": "<a class=\"gModGreen\" id=\"1424068909\">Enemy_AML_Boss_LockActionDelay</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_LockActionDelay",
+          "for": "<a class=\"gModGreen\" id=\"mod__1424068909\">Enemy_AML_Boss_LockActionDelay</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -721,7 +721,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_ChangeWeakness",
+          "for": "<a class=\"gModGreen\" id=\"mod__228774752\">Enemy_AML_Boss_ChangeWeakness</a>",
           "modifierFlags": [
             "MuteHitH",
             "MuteAttachWeakness"
@@ -819,7 +819,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_Ability11_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>"
         },
         "Trigger: Attack End",
         "Trigger: Ability End"
@@ -858,7 +858,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_Ability11_Modifier",
+          "modifier": "<a class=\"gModGreen\" id=\"596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>",
           "valuePerStack": {
             "MDF_AttackAddedRatio": 1
           }
@@ -998,7 +998,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_AttackUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "duration": 1,
           "valuePerStack": {
             "MDF_AttackAddedRatio": 1
@@ -1010,7 +1010,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_AttackUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "duration": 1,
           "valuePerStack": {
             "MDF_AttackAddedRatio": 1
@@ -1332,7 +1332,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
           "duration": 1,
           "baseChance": 1,
           "immediateEffect": true,
@@ -1448,13 +1448,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Boss_Die_Camera"
+          "modifier": "<a class=\"gModGreen\" id=\"524667231\">Enemy_AML_Boss_Die_Camera</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_Die_Camera",
+          "for": "<a class=\"gModGreen\" id=\"mod__524667231\">Enemy_AML_Boss_Die_Camera</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -1467,7 +1467,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_AML_Boss_Die_Camera"
+                    "modifier": "<a class=\"gModGreen\" id=\"524667231\">Enemy_AML_Boss_Die_Camera</a>"
                   }
                 }
               ]
@@ -1490,7 +1490,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_DamageTakenUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1881731748\">Enemy_AML_Boss_DamageTakenUp</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1523,7 +1523,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_WMonster_W0_Boss_Sign_Part3",
+          "for": "<a class=\"gModGreen\" id=\"mod__1032870546\">Enemy_WMonster_W0_Boss_Sign_Part3</a>",
           "modifierFlags": [],
           "execute": [
             {
@@ -1561,7 +1561,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_WMonster_W0_Boss_Sign_Part2",
+          "for": "<a class=\"gModGreen\" id=\"mod__1049648165\">Enemy_WMonster_W0_Boss_Sign_Part2</a>",
           "modifierFlags": [],
           "execute": [
             {
@@ -1599,7 +1599,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_WMonster_W0_Boss_Sign_Part1",
+          "for": "<a class=\"gModGreen\" id=\"mod__999315308\">Enemy_WMonster_W0_Boss_Sign_Part1</a>",
           "modifierFlags": [],
           "execute": [
             {
@@ -1637,7 +1637,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_Monster_AML_Boss_Passive_WeakPhysical",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1032417957\">Enemy_Monster_AML_Boss_Passive_WeakPhysical</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1695,7 +1695,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_Monster_AML_Boss_Passive_WeakWind",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1376978052\">Enemy_Monster_AML_Boss_Passive_WeakWind</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1753,7 +1753,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_Monster_AML_Boss_Passive_WeakFire",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1305712230\">Enemy_Monster_AML_Boss_Passive_WeakFire</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1811,7 +1811,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_Monster_AML_Boss_Passive_WeakIce",
+          "for": "<a class=\"gModGreen\" id=\"mod__1597601869\">Enemy_Monster_AML_Boss_Passive_WeakIce</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1869,7 +1869,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_WMonster_W0_Boss_ListenAllPartDie",
+          "for": "<a class=\"gModGreen\" id=\"mod__489144285\">Enemy_WMonster_W0_Boss_ListenAllPartDie</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -1949,7 +1949,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_WMonster_W0_Boss_LockHP_1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1741877307\">Enemy_WMonster_W0_Boss_LockHP_1</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2019,7 +2019,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_WMonster_W0_Boss_Unselectable[<span class=\"descriptionNumberColor\">Vestige Valor</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1691894969\">Enemy_WMonster_W0_Boss_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]",
           "modifierFlags": [
             "Stealth",
             "BlockDamage",
@@ -2042,7 +2042,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Boss_HitEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__1605741417\">Enemy_AML_Boss_HitEffect</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage End [Owner]: Hit"

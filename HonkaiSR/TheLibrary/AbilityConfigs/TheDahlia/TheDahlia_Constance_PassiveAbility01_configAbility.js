@@ -22,7 +22,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Constance_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-2129474083\">Constance_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -30,7 +30,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Constance_Ultimate_AddWeaknessPreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"-157877441\">Constance_Ultimate_AddWeaknessPreShow</a>"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -73,7 +73,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Constance_ReduceStanceTriggerCD",
+      "for": "<a class=\"gModGreen\" id=\"mod__-534697171\">Constance_ReduceStanceTriggerCD</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -128,7 +128,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Constance_ReduceStanceTriggerCD",
+                      "modifier": "<a class=\"gModGreen\" id=\"-534697171\">Constance_ReduceStanceTriggerCD</a>",
                       "removeToBeAdded": true
                     }
                   ]
@@ -141,7 +141,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_ReduceStanceTriggerCD",
+              "modifier": "<a class=\"gModGreen\" id=\"-534697171\">Constance_ReduceStanceTriggerCD</a>",
               "removeToBeAdded": true
             }
           ]
@@ -150,7 +150,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Eidolon1_ReduceStance",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1348225368\">Constance_Eidolon1_ReduceStance</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -195,7 +195,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Constance_ReduceStanceTriggerCD",
+                    "modifier": "<a class=\"gModGreen\" id=\"-534697171\">Constance_ReduceStanceTriggerCD</a>",
                     "invertCondition": true
                   }
                 ]
@@ -258,7 +258,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Constance_ReduceStanceTriggerCD"
+                  "modifier": "<a class=\"gModGreen\" id=\"-534697171\">Constance_ReduceStanceTriggerCD</a>"
                 }
               ]
             }
@@ -268,7 +268,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_StancePreview",
+      "for": "<a class=\"gModGreen\" id=\"mod__-935652084\">Constance_StancePreview</a>",
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -334,7 +334,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Constance_ReduceStanceTriggerCD",
+              "modifier": "<a class=\"gModGreen\" id=\"-534697171\">Constance_ReduceStanceTriggerCD</a>",
               "invertCondition": true
             }
           ]
@@ -343,7 +343,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "_M_Constance_Aura_ElementDamage",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1409392867\">_M_Constance_Aura_ElementDamage</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -361,7 +361,7 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "DealSuperBreakDamage_DamagePerformance",
+                  "functionName": "<a class=\"gTempYellow\" id=\"2132906314\">DealSuperBreakDamage_DamagePerformance</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
@@ -379,7 +379,7 @@ const configAbility = {
                   "damageSequence": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "PursuedDamage_PerformanceDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
@@ -428,7 +428,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Eidolon1_SuperBreak[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__793524292\">Constance_Eidolon1_SuperBreak</a>[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "STAT_SuperBreakBuff"
@@ -443,7 +443,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "_M_Constance_Aura_ElementDamage",
+              "modifier": "<a class=\"gModGreen\" id=\"-1409392867\">_M_Constance_Aura_ElementDamage</a>",
               "valuePerStack": {
                 "MDF_SuperBreakDamagePercentage": {
                   "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -466,7 +466,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
               },
               "passed": [
                 "Modifier Deletes Itself"
@@ -481,7 +481,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_DancerSuperBreak",
+      "for": "<a class=\"gModGreen\" id=\"mod__262562001\">Constance_DancerSuperBreak</a>",
       "modifierFlags": [
         "STAT_SuperBreakBuff"
       ],
@@ -491,7 +491,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Modifier-Specific Variable",
-              "modifierName": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]",
               "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -513,7 +513,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "_M_Constance_Aura_ElementDamage",
+              "modifier": "<a class=\"gModGreen\" id=\"-1409392867\">_M_Constance_Aura_ElementDamage</a>",
               "valuePerStack": {
                 "MDF_SuperBreakDamagePercentage": {
                   "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -533,7 +533,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Dancer_UITOP",
+      "for": "<a class=\"gModGreen\" id=\"mod__856745501\">Constance_Dancer_UITOP</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -558,7 +558,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -588,7 +588,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}} - {{Modifier Holder}}"
                   },
-                  "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                 }
               ]
             }
@@ -605,7 +605,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Constance_DancerSuperBreak",
+          "modifier": "<a class=\"gModGreen\" id=\"262562001\">Constance_DancerSuperBreak</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (Rank01_Activated) || Variables[1] (0.6) || Variables[2] (0.4) || ADD || Variables[1] (0.6) || CHECK || RETURN",
@@ -625,7 +625,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Constance_Dancer_UITOP"
+          "modifier": "<a class=\"gModGreen\" id=\"856745501\">Constance_Dancer_UITOP</a>"
         },
         {
           "name": "Add Sub-Events/Bonuses",
@@ -633,7 +633,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Constance_StancePreview",
+          "modifier": "<a class=\"gModGreen\" id=\"-935652084\">Constance_StancePreview</a>",
           "conditions": {
             "name": "Eidolon Activated",
             "eidolon": 1
@@ -671,7 +671,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Constance_Eidolon1_ReduceStance",
+          "modifier": "<a class=\"gModGreen\" id=\"-1348225368\">Constance_Eidolon1_ReduceStance</a>",
           "conditions": {
             "name": "Eidolon Activated",
             "eidolon": 1
@@ -707,7 +707,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "_M_Constance_ListenInsert_SubOnEnemy",
+      "for": "<a class=\"gModGreen\" id=\"mod__-783629950\">_M_Constance_ListenInsert_SubOnEnemy</a>",
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",
@@ -741,7 +741,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Constance_InsertCD[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1116970838\">Constance_InsertCD</a>[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]",
                     "invertCondition": true
                   },
                   {
@@ -762,7 +762,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                   }
                 ]
               },
@@ -810,7 +810,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "_M_Constance_InsertCheck"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2093019273\">_M_Constance_InsertCheck</a>"
                     }
                   ]
                 }
@@ -822,7 +822,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "_M_Constance_DancerManager",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1358334362\">_M_Constance_DancerManager</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -833,7 +833,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
             },
             {
               "name": "Find New Target",
@@ -857,7 +857,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                 }
               ],
               "noTargetFound": [
@@ -867,7 +867,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[livingOrLimbo]].[[sortByBreakEffect]].[[reverse]].[[index0]]"
                   },
-                  "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                 }
               ]
             },
@@ -890,7 +890,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[removeMemosprite]] - {{Dahlia's Dance Partners}}"
                   },
-                  "modifier": "Constance_Eidolon1_SuperBreak[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"793524292\">Constance_Eidolon1_SuperBreak</a>[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.6) || RETURN",
@@ -945,7 +945,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[livingOrLimbo]].[[sortByBreakEffect]].[[reverse]].[[index0]]"
                   },
-                  "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                 }
               ]
             },
@@ -972,7 +972,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]",
                     "invertCondition": true
                   },
                   {
@@ -994,7 +994,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Constance_Eidolon1_SuperBreak[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"793524292\">Constance_Eidolon1_SuperBreak</a>[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.6) || RETURN",
@@ -1020,7 +1020,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                   },
                   {
                     "name": "Living State",
@@ -1049,7 +1049,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[livingOrLimbo]].[[sortByBreakEffect]].[[reverse]].[[index0]]"
                   },
-                  "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                 }
               ]
             }
@@ -1059,7 +1059,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Ultimate_AddWeaknessPreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-157877441\">Constance_Ultimate_AddWeaknessPreShow</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -1074,7 +1074,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Eidolon2_PropertyValue[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1624350031\">Constance_Eidolon2_PropertyValue</a>[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -1111,7 +1111,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Eidolon2_Halo",
+      "for": "<a class=\"gModGreen\" id=\"mod__-817970553\">Constance_Eidolon2_Halo</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1122,7 +1122,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Constance_Eidolon2_PropertyValue[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1624350031\">Constance_Eidolon2_PropertyValue</a>[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1160,7 +1160,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Constance_Eidolon2_PropertyValue[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1624350031\">Constance_Eidolon2_PropertyValue</a>[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1180,7 +1180,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_MonsterPhaseChangeControl",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1614707802\">Constance_MonsterPhaseChangeControl</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "CustomEvent_MonsterChangePhaseTrigger"
@@ -1211,7 +1211,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_Standard_ChangephaseMark"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2049832737\">Enemy_Standard_ChangephaseMark</a>"
                   }
                 ]
               },
@@ -1222,7 +1222,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Constance_ReduceStanceTriggerCD",
+                  "modifier": "<a class=\"gModGreen\" id=\"-534697171\">Constance_ReduceStanceTriggerCD</a>",
                   "removeToBeAdded": true
                 }
               ]
@@ -1233,7 +1233,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Eidolon6_Property[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1127015724\">Constance_Eidolon6_Property</a>[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -1267,7 +1267,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Eidolon6_PropertyListen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-293054449\">Constance_Eidolon6_PropertyListen</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -1278,7 +1278,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Dahlia's Dance Partners}}"
               },
-              "modifier": "Constance_Eidolon6_Property[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1127015724\">Constance_Eidolon6_Property</a>[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1300,7 +1300,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
               },
               "passed": [
                 {
@@ -1309,7 +1309,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Constance_Eidolon6_Property[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1127015724\">Constance_Eidolon6_Property</a>[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1329,7 +1329,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Tree01_Property[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1852842917\">Constance_Tree01_Property</a>[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1390,7 +1390,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_ListenTrace01",
+      "for": "<a class=\"gModGreen\" id=\"mod__1188679067\">Constance_ListenTrace01</a>",
       "execute": [
         {
           "eventTrigger": "Receiving Heal End [Owner]",
@@ -1418,7 +1418,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "_M_Constance_Tree01_CD",
+                    "modifier": "<a class=\"gModGreen\" id=\"1979766411\">_M_Constance_Tree01_CD</a>",
                     "invertCondition": true
                   }
                 ]
@@ -1430,8 +1430,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "_M_Constance_Tree01_CD",
-                  "referenceModifier": "MReference_Mark_RemoveOnTurnEnd"
+                  "modifier": "<a class=\"gModGreen\" id=\"1979766411\">_M_Constance_Tree01_CD</a>",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"-1664553013\">MReference_Mark_RemoveOnTurnEnd</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1439,7 +1439,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]] - {{Caster}}"
                   },
-                  "modifier": "Constance_Tree01_Property[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1852842917\">Constance_Tree01_Property</a>[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -1471,7 +1471,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]] - {{Caster}}"
                   },
-                  "modifier": "Constance_Tree01_Property[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1852842917\">Constance_Tree01_Property</a>[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -1523,7 +1523,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "_M_Constance_Tree01_CD",
+                    "modifier": "<a class=\"gModGreen\" id=\"1979766411\">_M_Constance_Tree01_CD</a>",
                     "invertCondition": true
                   }
                 ]
@@ -1535,8 +1535,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "_M_Constance_Tree01_CD",
-                  "referenceModifier": "MReference_Mark_RemoveOnTurnEnd"
+                  "modifier": "<a class=\"gModGreen\" id=\"1979766411\">_M_Constance_Tree01_CD</a>",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"-1664553013\">MReference_Mark_RemoveOnTurnEnd</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1544,7 +1544,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]] - {{Caster}}"
                   },
-                  "modifier": "Constance_Tree01_Property[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1852842917\">Constance_Tree01_Property</a>[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -1562,7 +1562,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2129474083\">Constance_Passive</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1601,7 +1601,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "_M_Constance_DancerManager"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1358334362\">_M_Constance_DancerManager</a>"
                 }
               ]
             }
@@ -1618,7 +1618,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Constance_MonsterPhaseChangeControl",
+          "modifier": "<a class=\"gModGreen\" id=\"-1614707802\">Constance_MonsterPhaseChangeControl</a>",
           "conditions": {
             "name": "Eidolon Activated",
             "eidolon": 1
@@ -1630,7 +1630,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Constance_Eidolon6_PropertyListen",
+          "modifier": "<a class=\"gModGreen\" id=\"-293054449\">Constance_Eidolon6_PropertyListen</a>",
           "conditions": {
             "name": "Eidolon Activated",
             "eidolon": 6
@@ -1652,7 +1652,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Constance_ListenTrace01",
+          "modifier": "<a class=\"gModGreen\" id=\"1188679067\">Constance_ListenTrace01</a>",
           "conditions": {
             "name": "Trace Activated",
             "conditionList": "Yet Another Funeral"
@@ -1664,7 +1664,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Constance_Eidolon2_Halo",
+          "modifier": "<a class=\"gModGreen\" id=\"-817970553\">Constance_Eidolon2_Halo</a>",
           "conditions": {
             "name": "Eidolon Activated",
             "eidolon": 2
@@ -1686,7 +1686,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "_M_Constance_ListenInsert_SubOnEnemy",
+          "modifier": "<a class=\"gModGreen\" id=\"-783629950\">_M_Constance_ListenInsert_SubOnEnemy</a>",
           "aliveOnly": "False",
           "haloStatus": true
         }

@@ -50,7 +50,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "AddDot",
+          "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
           "variables": {
             "Arg01": {
               "operator": "Variables[0] (0.65) || RETURN",
@@ -75,7 +75,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "AddDot",
+              "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
               "variables": {
                 "Arg01": {
                   "operator": "Variables[0] (0.65) || RETURN",
@@ -102,7 +102,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "AddDot",
+              "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
               "variables": {
                 "Arg01": {
                   "operator": "Variables[0] (0.65) || RETURN",
@@ -129,7 +129,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "AddDot",
+              "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
               "variables": {
                 "Arg01": {
                   "operator": "Variables[0] (0.65) || RETURN",
@@ -156,7 +156,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "AddDot",
+              "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
               "variables": {
                 "Arg01": {
                   "operator": "Variables[0] (0.65) || RETURN",
@@ -177,7 +177,7 @@ const configAbility = {
   "functions": [
     {
       "name": "CharacterFunctions",
-      "functionName": "AddDot",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1367341755\">AddDot</a>",
       "parse": [
         {
           "name": "IF",
@@ -229,7 +229,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
           "baseChance": {
             "operator": "Variables[0] (Arg01) || RETURN",
             "displayLines": "Arg01",

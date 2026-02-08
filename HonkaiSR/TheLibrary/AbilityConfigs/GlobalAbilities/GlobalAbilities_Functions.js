@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "GlobalFunction_ClearAvatarArea_ByAbility",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-777670637\">GlobalFunction_ClearAvatarArea_ByAbility</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -49,7 +49,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "ClearAvatarArea_ByAbility"
+              "modifier": "<a class=\"gModGreen\" id=\"253720974\">ClearAvatarArea_ByAbility</a>"
             }
           ]
         }

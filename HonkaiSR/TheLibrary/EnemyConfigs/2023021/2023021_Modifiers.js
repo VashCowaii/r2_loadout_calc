@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Beast02_RLElite_Edict",
+      "for": "<a class=\"gModGreen\" id=\"mod__1835721372\">Monster_W2_Beast02_RLElite_Edict</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -36,7 +36,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Beast02_RLElite_Weak",
+      "for": "<a class=\"gModGreen\" id=\"mod__974234853\">Monster_W2_Beast02_RLElite_Weak</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -49,7 +49,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Beast02_RLElite_Bullet",
+      "for": "<a class=\"gModGreen\" id=\"mod__296260861\">Monster_W2_Beast02_RLElite_Bullet</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -64,7 +64,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "KeepOnDeathrattle",
@@ -105,7 +105,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -126,7 +126,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Beast02_RLElite_BreakListener",
+      "for": "<a class=\"gModGreen\" id=\"mod__1589154351\">Enemy_W2_Beast02_RLElite_BreakListener</a>",
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo"
@@ -158,7 +158,7 @@ const configAbility = {
             },
             {
               "name": "Define Modifier Variable",
-              "modifierName": "Monster_W2_Beast02_RLElite_Bullet",
+              "modifierName": "<a class=\"gModGreen\" id=\"296260861\">Monster_W2_Beast02_RLElite_Bullet</a>",
               "value": 0
             },
             {
@@ -178,7 +178,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Enemy_W2_Beast02_RLElite_GennkiMark[<span class=\"descriptionNumberColor\">Gather Courage</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>[<span class=\"descriptionNumberColor\">Gather Courage</span>]"
               },
               "passed": [
                 {
@@ -187,7 +187,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W2_Beast02_RLElite_GennkiMark[<span class=\"descriptionNumberColor\">Gather Courage</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>[<span class=\"descriptionNumberColor\">Gather Courage</span>]"
                 }
               ]
             },
@@ -238,7 +238,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Beast02_RLElite_ActionCheck",
+      "for": "<a class=\"gModGreen\" id=\"mod__16551050\">Enemy_W2_Beast02_RLElite_ActionCheck</a>",
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -296,7 +296,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Beast02_RLElite_GennkiMark[<span class=\"descriptionNumberColor\">Gather Courage</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>[<span class=\"descriptionNumberColor\">Gather Courage</span>]",
       "stackType": "Replace",
       "execute": [
         {

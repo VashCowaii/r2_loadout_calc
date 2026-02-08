@@ -13,7 +13,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Level Entity}}"
         },
-        "modifier": "MStrongChallengeEX_BEMark_HP"
+        "modifier": "<a class=\"gModGreen\" id=\"-329109669\">MStrongChallengeEX_BEMark_HP</a>"
       },
       "passed": [
         {
@@ -62,7 +62,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Level Entity}}"
         },
-        "modifier": "MStrongChallengeEX_BEMark_SP"
+        "modifier": "<a class=\"gModGreen\" id=\"709278328\">MStrongChallengeEX_BEMark_SP</a>"
       },
       "passed": [
         {
@@ -174,7 +174,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Level Entity}}"
         },
-        "modifier": "MStrongChallengeEX_BEMark_BP"
+        "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
       },
       "passed": [
         {
@@ -192,12 +192,12 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Level Entity}}"
         },
-        "modifier": "MStrongChallengeEX_BEMark_ActionDelay"
+        "modifier": "<a class=\"gModGreen\" id=\"-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>"
       },
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "ReduceActionDelay",
+          "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
@@ -216,7 +216,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Level Entity}}"
         },
-        "modifier": "MStrongChallengeEX_BEMark_DispelCTRL"
+        "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
       },
       "passed": [
         {
@@ -303,7 +303,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01"
+      "modifier": "<a class=\"gModGreen\" id=\"-2098034018\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger01</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -311,7 +311,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02"
+      "modifier": "<a class=\"gModGreen\" id=\"-2114811637\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger02</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -319,7 +319,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03"
+      "modifier": "<a class=\"gModGreen\" id=\"-2131589256\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGTrigger03</a>"
     },
     {
       "name": "IF",
@@ -329,7 +329,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Level Entity}}"
         },
-        "modifier": "MStrongChallengeEX_BEMark_SpeedUp"
+        "modifier": "<a class=\"gModGreen\" id=\"-1121709349\">MStrongChallengeEX_BEMark_SpeedUp</a>"
       },
       "passed": [
         {
@@ -367,7 +367,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_OneMoreAction_OnSub_1",
+      "for": "<a class=\"gModGreen\" id=\"mod__2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -381,7 +381,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value1": "MStrongChallengeEX_OneMoreAction_OnSub_1",
+                "value1": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
                 "compareType": "<=",
                 "value2": {
                   "operator": "Variables[0] (_MaxLayer) || Constants[0] (0.5) || MUL || RETURN",
@@ -427,7 +427,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_OneMoreAction_OnAvatar",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1810685690\">MStrongChallengeEX_OneMoreAction_OnAvatar</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -439,7 +439,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+              "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
             }
           ]
         },
@@ -454,12 +454,12 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+                "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
               },
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -489,13 +489,13 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+                          "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
                         },
                         {
                           "name": "Define Custom Variable with Modifier Values",
                           "valueType": "Layer",
                           "variableName": "ModifierLayers",
-                          "modifierName": "MStrongChallengeEX_OneMoreAction_OnSub_1",
+                          "modifierName": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
                           "multiplier": 1
                         },
                         {
@@ -517,7 +517,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "MStrongChallengeEX_OneMoreAction_OnSub_1"
+                              "modifier": "<a class=\"gModGreen\" id=\"2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>"
                             }
                           ]
                         }

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "RO_015_DeadTimeSlowModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-477903589\">RO_015_DeadTimeSlowModifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "RO_015_DeadTimeSlowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-477903589\">RO_015_DeadTimeSlowModifier</a>",
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo"

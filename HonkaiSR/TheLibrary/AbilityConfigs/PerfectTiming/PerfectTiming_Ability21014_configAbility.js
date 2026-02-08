@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21014_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1209684215\">LC_21014_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21014_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__1918533900\">LC_21014_Sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -74,7 +74,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21014_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1209684215\">LC_21014_Main</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -97,7 +97,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "LC_21014_Sub",
+              "modifier": "<a class=\"gModGreen\" id=\"1918533900\">LC_21014_Sub</a>",
               "valuePerStack": {
                 "MDF_HealRatio": {
                   "operator": "Variables[0] (CasterStatusResistance) || Variables[1] (0.33) || MUL || RETURN",
@@ -137,7 +137,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_21014_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"1918533900\">LC_21014_Sub</a>",
                   "valuePerStack": {
                     "MDF_HealRatio": {
                       "operator": "Variables[0] (CasterStatusResistance) || Variables[1] (0.33) || MUL || RETURN",

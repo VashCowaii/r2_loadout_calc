@@ -14,7 +14,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -22,7 +22,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_Standard_MuteHitFly"
+      "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
     }
   ],
   "whenAdded": [
@@ -32,13 +32,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_XP_Elite02_02_PartControl"
+      "modifier": "<a class=\"gModGreen\" id=\"853497156\">Monster_XP_Elite02_02_PartControl</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_XP_Elite02_02_PartControl",
+      "for": "<a class=\"gModGreen\" id=\"mod__853497156\">Monster_XP_Elite02_02_PartControl</a>",
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",

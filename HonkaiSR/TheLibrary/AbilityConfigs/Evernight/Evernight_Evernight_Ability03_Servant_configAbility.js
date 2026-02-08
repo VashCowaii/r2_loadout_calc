@@ -6,16 +6,16 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_SizeControl_Perf"
+      "functionName": "<a class=\"gTempYellow\" id=\"294638745\">function_Evernight_Group_SizeControl_Perf</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_FollowControl_00"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
     },
     "Deleted bullshit",
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_FollowControl_STB"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -23,11 +23,11 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Summoner}}"
       },
-      "modifier": "Evernight_S03"
+      "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_FollowControl_STB"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
     },
     {
       "name": "IF",
@@ -105,37 +105,37 @@ const configAbility = {
   "functions": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Evernight_Ability03_TriggerAnim_Man",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-367389928\">Evernight_Ability03_TriggerAnim_Man</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Evernight_Ability03_TriggerAnim_01",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__431919247\">Evernight_Ability03_TriggerAnim_01</a>",
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "function_Evernight_Group_FollowControl_STB"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
         }
       ]
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Evernight_Ability03_TriggerAnim_02",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__448696866\">Evernight_Ability03_TriggerAnim_02</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Evernight_Ability03_TriggerAnim_03",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__465474485\">Evernight_Ability03_TriggerAnim_03</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Evernight_Ability03_TriggerAnim_04",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__348031152\">Evernight_Ability03_TriggerAnim_04</a>",
       "parse": []
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Evernight_Ability03_TriggerAnim_05",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__364808771\">Evernight_Ability03_TriggerAnim_05</a>",
       "parse": []
     }
   ],

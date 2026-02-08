@@ -152,11 +152,11 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb_FX"
+      "functionName": "<a class=\"gTempYellow\" id=\"1601406944\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb_FX</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb"
+      "functionName": "<a class=\"gTempYellow\" id=\"-766570299\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb</a>"
     },
     "Trigger: Ability End"
   ],

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yanqing_Eidolon1",
+      "modifier": "<a class=\"gModGreen\" id=\"1494385561\">Yanqing_Eidolon1</a>",
       "valuePerStack": {
         "MDF_DamageRatio": {
           "operator": "Variables[0] (0.6) || RETURN",
@@ -26,11 +26,11 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Yanqing_Eidolon1_TargetMark"
+      "for": "<a class=\"gModGreen\" id=\"mod__125262534\">Yanqing_Eidolon1_TargetMark</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Yanqing_Eidolon1",
+      "for": "<a class=\"gModGreen\" id=\"mod__1494385561\">Yanqing_Eidolon1</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",

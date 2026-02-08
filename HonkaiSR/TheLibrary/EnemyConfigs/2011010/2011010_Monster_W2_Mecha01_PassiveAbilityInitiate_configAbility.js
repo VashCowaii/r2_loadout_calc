@@ -8,7 +8,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Mecha01_StandByLoopEffect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-127926766\">Enemy_W2_Mecha01_StandByLoopEffect</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"

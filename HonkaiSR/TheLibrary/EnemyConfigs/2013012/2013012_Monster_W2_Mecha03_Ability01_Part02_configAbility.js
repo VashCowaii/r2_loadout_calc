@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate",
+      "modifier": "<a class=\"gModGreen\" id=\"618418511\">Enemy_W2_Mecha03_Overdrive_Accumulate</a>",
       "stackLimit": 3,
       "addStacksPerTrigger": 1
     },
@@ -21,7 +21,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate_Toast",
+      "modifier": "<a class=\"gModGreen\" id=\"1941111631\">Enemy_W2_Mecha03_Overdrive_Accumulate_Toast</a>",
       "stackLimit": 3,
       "addStacksPerTrigger": 1
     },
@@ -53,7 +53,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Standard_FatigueRatio[<span class=\"descriptionNumberColor\">Weaken</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
         "displayLines": "{[Skill01[3]]}",

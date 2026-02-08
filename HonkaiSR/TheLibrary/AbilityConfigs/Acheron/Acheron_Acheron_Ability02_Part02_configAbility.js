@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Acheron_Eidolon6_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"946113051\">Acheron_Eidolon6_ForceStanceDamage</a>"
         }
       ]
     },
@@ -89,7 +89,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
                   },
                   "ifTargetFound": [
                     {
@@ -104,7 +104,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "variableName": "MDF_CurrentCountFlag01",
-                      "modifierName": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                       "multiplier": 1
                     },
                     {
@@ -140,7 +140,7 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Acheron_AddFlower_Ability"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-64481768\">Acheron_AddFlower_Ability</a>"
                     }
                   ]
                 },
@@ -706,7 +706,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Acheron_Eidolon6_ForceStanceDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"946113051\">Acheron_Eidolon6_ForceStanceDamage</a>"
         }
       ]
     },

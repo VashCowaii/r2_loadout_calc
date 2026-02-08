@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_PassiveAbility01_BattleEvent"
+      "modifier": "<a class=\"gModGreen\" id=\"92987575\">Sam_PassiveAbility01_BattleEvent</a>"
     },
     {
       "name": "Block Advance/Delay Effects",
@@ -29,7 +29,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Sam_PassiveAbility01_BattleEvent",
+      "for": "<a class=\"gModGreen\" id=\"mod__92987575\">Sam_PassiveAbility01_BattleEvent</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

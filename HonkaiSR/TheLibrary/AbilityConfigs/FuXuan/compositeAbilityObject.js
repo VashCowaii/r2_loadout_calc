@@ -37,7 +37,7 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
         },
         {
           "name": "Dispel Debuffs",
@@ -86,13 +86,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_FuXuan_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-642485039\">StageAbility_Maze_FuXuan_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_FuXuan_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-642485039\">StageAbility_Maze_FuXuan_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -120,7 +120,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "FuXuan_ListenLifeTime[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -146,7 +146,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
                       },
-                      "modifier": "FuXuan_HitDamageSplit[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1553530097\">FuXuan_HitDamageSplit</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
                       "valuePerStack": {
                         "MDF_SplitPercentage": {
                           "operator": "Variables[0] (0.65) || RETURN",
@@ -187,7 +187,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{All Team Members with Unselectables}}"
                           },
-                          "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
                         }
                       ]
                     }
@@ -331,7 +331,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "FuXuan_PassiveAbility"
+          "modifier": "<a class=\"gModGreen\" id=\"302655931\">FuXuan_PassiveAbility</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -339,7 +339,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "FuXuan_ExChangeHP"
+          "modifier": "<a class=\"gModGreen\" id=\"-2001636468\">FuXuan_ExChangeHP</a>"
         },
         {
           "name": "IF",
@@ -354,7 +354,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "FuXuan_Eidolon6[<span class=\"descriptionNumberColor\">Total HP lost</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1862182829\">FuXuan_Eidolon6</a>[<span class=\"descriptionNumberColor\">Total HP lost</span>]"
             }
           ]
         },
@@ -378,7 +378,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "FuXuan_PassiveAbility",
+          "for": "<a class=\"gModGreen\" id=\"mod__302655931\">FuXuan_PassiveAbility</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -398,7 +398,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_DamageReduce[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]"
                 }
               ]
             },
@@ -421,7 +421,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "FuXuan_DamageReduce[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
                   "valuePerStack": {
                     "MDF_DamageResistanceRatio": {
                       "operator": "Variables[0] (0.18) || RETURN",
@@ -455,7 +455,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "FuXuan_DamageReduce[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
                       "valuePerStack": {
                         "MDF_DamageResistanceRatio": {
                           "operator": "Variables[0] (0.18) || RETURN",
@@ -848,7 +848,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "FuXuan_ListenLifeTime[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
               }
             ]
           },
@@ -879,7 +879,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "FuXuan_ListenLifeTime[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
           }
         },
         {
@@ -897,7 +897,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "FuXuan_ListenLifeTime[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -923,7 +923,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
           },
-          "modifier": "FuXuan_HitDamageSplit[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1553530097\">FuXuan_HitDamageSplit</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
           "valuePerStack": {
             "MDF_SplitPercentage": {
               "operator": "Variables[0] (0.65) || RETURN",
@@ -964,7 +964,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
             }
           ]
         },
@@ -1097,7 +1097,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "FuXuan_Eidolon2TeamCheck",
+          "for": "<a class=\"gModGreen\" id=\"mod__-72449608\">FuXuan_Eidolon2TeamCheck</a>",
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -1117,7 +1117,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
                 }
               ]
             },
@@ -1139,7 +1139,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
                 }
               ]
             },
@@ -1161,7 +1161,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
                 }
               ]
             },
@@ -1183,7 +1183,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
                 }
               ]
             },
@@ -1205,7 +1205,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
                 }
               ]
             }
@@ -1213,7 +1213,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1264,7 +1264,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "FuXuan_Eidolon2TeamCheck"
+                      "modifier": "<a class=\"gModGreen\" id=\"-72449608\">FuXuan_Eidolon2TeamCheck</a>"
                     }
                   ]
                 }
@@ -1279,7 +1279,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "FuXuan_Tree02TeamCheck",
+          "for": "<a class=\"gModGreen\" id=\"mod__227742730\">FuXuan_Tree02TeamCheck</a>",
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -1299,7 +1299,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1322,7 +1322,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1345,7 +1345,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1368,7 +1368,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1391,7 +1391,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1414,7 +1414,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1423,7 +1423,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "EnduranceEnemyOnly"
@@ -1445,7 +1445,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "FuXuan_Tree02TeamCheck"
+                      "modifier": "<a class=\"gModGreen\" id=\"227742730\">FuXuan_Tree02TeamCheck</a>"
                     }
                   ]
                 }
@@ -1461,7 +1461,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "FuXuan_Eidolon6[<span class=\"descriptionNumberColor\">Total HP lost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1862182829\">FuXuan_Eidolon6</a>[<span class=\"descriptionNumberColor\">Total HP lost</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -1495,7 +1495,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "FuXuan_ListenLifeTime[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
                       }
                     ]
                   },
@@ -1687,7 +1687,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "FuXuan_ListenLifeTime[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1708,7 +1708,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_HitDamageSplit[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1553530097\">FuXuan_HitDamageSplit</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1725,7 +1725,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1742,7 +1742,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_JianZhi_Eidolon1[<span class=\"descriptionNumberColor\">Knowledge</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-281320728\">FuXuan_JianZhi_Eidolon1</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1759,7 +1759,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_JianZhi[<span class=\"descriptionNumberColor\">Knowledge</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1745888668\">FuXuan_JianZhi</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1776,7 +1776,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
                 }
               ]
             },
@@ -1841,7 +1841,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "FuXuan_Eidolon2TeamCheck",
+                        "modifier": "<a class=\"gModGreen\" id=\"-72449608\">FuXuan_Eidolon2TeamCheck</a>",
                         "invertCondition": true
                       },
                       "passed": [
@@ -1851,7 +1851,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]]"
                           },
-                          "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]",
                           "valuePerStack": {
                             "MDF_HealPercentage": {
                               "operator": "Variables[0] (0.7) || RETURN",
@@ -1915,7 +1915,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}"
                       },
-                      "modifier": "FuXuan_JianZhi_Eidolon1[<span class=\"descriptionNumberColor\">Knowledge</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-281320728\">FuXuan_JianZhi_Eidolon1</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]",
                       "valuePerStack": {
                         "MDF_MaxHPUpRatio": {
                           "operator": "Variables[0] (0.06) || RETURN",
@@ -1951,7 +1951,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}"
                       },
-                      "modifier": "FuXuan_JianZhi[<span class=\"descriptionNumberColor\">Knowledge</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1745888668\">FuXuan_JianZhi</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]",
                       "valuePerStack": {
                         "MDF_MaxHPUpRatio": {
                           "operator": "Variables[0] (0.06) || RETURN",
@@ -1995,7 +1995,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "FuXuan_HitDamageSplit[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1553530097\">FuXuan_HitDamageSplit</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
                       "valuePerStack": {
                         "MDF_SplitPercentage": {
                           "operator": "Variables[0] (0.65) || RETURN",
@@ -2029,7 +2029,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
                     },
                     {
                       "name": "IF",
@@ -2044,7 +2044,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "FuXuan_JianZhi_Eidolon1[<span class=\"descriptionNumberColor\">Knowledge</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-281320728\">FuXuan_JianZhi_Eidolon1</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]",
                           "valuePerStack": {
                             "MDF_MaxHPUpRatio": {
                               "operator": "Variables[0] (0.06) || RETURN",
@@ -2080,7 +2080,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "FuXuan_JianZhi[<span class=\"descriptionNumberColor\">Knowledge</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1745888668\">FuXuan_JianZhi</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]",
                           "valuePerStack": {
                             "MDF_MaxHPUpRatio": {
                               "operator": "Variables[0] (0.06) || RETURN",
@@ -2117,7 +2117,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "FuXuan_ExChangeHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2001636468\">FuXuan_ExChangeHP</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2457,7 +2457,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "FuXuan_JianZhi_Eidolon1[<span class=\"descriptionNumberColor\">Knowledge</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-281320728\">FuXuan_JianZhi_Eidolon1</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2561,7 +2561,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "FuXuan_JianZhi[<span class=\"descriptionNumberColor\">Knowledge</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1745888668\">FuXuan_JianZhi</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2648,7 +2648,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "FuXuan_DamageReduce[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2685,7 +2685,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "FuXuan_HitDamageSplit[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1553530097\">FuXuan_HitDamageSplit</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"

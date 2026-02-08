@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics: Epiphany</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1198694676\">Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Epiphany</span>]",
       "stackType": "ReplaceByCaster",
       "description": "After using a Skill to attack, every enemy target hit additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2068_ADF_3</span> Grit Value for allies.",
       "type": "Buff",
@@ -18,7 +18,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn",
+      "for": "<a class=\"gModGreen\" id=\"mod__1135541973\">Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -51,7 +51,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
                     "invertCondition": true
                   }
                 ]
@@ -169,14 +169,14 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics: Epiphany</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1198694676\">Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Epiphany</span>]",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics: Memory</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1785697589\">Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Memory</span>]",
       "stackType": "ReplaceByCaster",
       "description": "After receiving DoT, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2067_ADF_3</span> Grit Value for allies.",
       "type": "Debuff",
@@ -184,7 +184,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn",
+      "for": "<a class=\"gModGreen\" id=\"mod__1529724462\">Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -224,7 +224,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
                     "invertCondition": true
                   }
                 ]
@@ -325,19 +325,19 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics: Memory</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1785697589\">Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Memory</span>]",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2065_Plus5_ForShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__178355252\">Modifier_FantasticStory_BaseAbility_2065_Plus5_ForShow</a>",
       "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus2065",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1835466532\">Modifier_FantasticStory_BaseAbility_2060_Plus2065</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -415,7 +415,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
                     "invertCondition": true
                   }
                 ]
@@ -586,19 +586,19 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2065_Plus5_ForShow",
+          "modifier": "<a class=\"gModGreen\" id=\"178355252\">Modifier_FantasticStory_BaseAbility_2065_Plus5_ForShow</a>",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus3AddOn_ForShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-704281529\">Modifier_FantasticStory_BaseAbility_2060_Plus3AddOn_ForShow</a>",
       "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus3AddOn",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1535721214\">Modifier_FantasticStory_BaseAbility_2060_Plus3AddOn</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -676,7 +676,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
                     "invertCondition": true
                   }
                 ]
@@ -841,14 +841,14 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus3AddOn_ForShow",
+          "modifier": "<a class=\"gModGreen\" id=\"-704281529\">Modifier_FantasticStory_BaseAbility_2060_Plus3AddOn_ForShow</a>",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics_Universality</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__155042142\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Universality</span>]",
       "stackType": "ReplaceByCaster",
       "description": "After using Skill to attack enemy targets, every enemy target attacked additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2062_ADF_2</span> Grit Value.",
       "type": "Buff",
@@ -856,7 +856,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1465286557\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -889,7 +889,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
                     "invertCondition": true
                   }
                 ]
@@ -1005,14 +1005,14 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics_Universality</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"155042142\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Universality</span>]",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics_Radiance</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__278893341\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Radiance</span>]",
       "stackType": "ReplaceByCaster",
       "description": "After launching a Follow-Up ATK, every enemy target attacked additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2061_ADF_2</span> Grit Value.",
       "type": "Buff",
@@ -1020,7 +1020,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1964611804\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1107,7 +1107,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
                     "invertCondition": true
                   }
                 ]
@@ -1222,14 +1222,14 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics_Radiance</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"278893341\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Radiance</span>]",
           "haloStatus": true
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus8_Sub[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1428129204\">Modifier_FantasticStory_BaseAbility_2060_Plus8_Sub</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -1283,7 +1283,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
                   "addStacksPerTrigger": 1
                 }
               ]
@@ -1297,7 +1297,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus7_Sub[<span class=\"descriptionNumberColor\">Memory</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__412492093\">Modifier_FantasticStory_BaseAbility_2060_Plus7_Sub</a>[<span class=\"descriptionNumberColor\">Memory</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1337,7 +1337,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY[<span class=\"descriptionNumberColor\">Reminiscence</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1211620586\">Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY</a>[<span class=\"descriptionNumberColor\">Reminiscence</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -1377,7 +1377,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-290304906\">Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1413,7 +1413,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY[<span class=\"descriptionNumberColor\">Reminiscence</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1211620586\">Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY</a>[<span class=\"descriptionNumberColor\">Reminiscence</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2066_ADF_2) || RETURN",
                     "displayLines": "DV_FantasticStory_PlusAbility_2066_ADF_2",
@@ -1431,7 +1431,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub[<span class=\"descriptionNumberColor\">Paradox</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1773154335\">Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub</a>[<span class=\"descriptionNumberColor\">Paradox</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1471,7 +1471,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub_PLY[<span class=\"descriptionNumberColor\">Paradox</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1645086487\">Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub_PLY</a>[<span class=\"descriptionNumberColor\">Paradox</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ForceStanceDamage"
@@ -1968,7 +1968,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_plus4_sub[<span class=\"descriptionNumberColor\">Divine Score</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__906922784\">Modifier_FantasticStory_BaseAbility_2060_plus4_sub</a>[<span class=\"descriptionNumberColor\">Divine Score</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -2006,7 +2006,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_plus3_sub[<span class=\"descriptionNumberColor\">Potential</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__391899273\">Modifier_FantasticStory_BaseAbility_2060_plus3_sub</a>[<span class=\"descriptionNumberColor\">Potential</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -2040,7 +2040,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_plus2_sub[<span class=\"descriptionNumberColor\">Universality</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__514411026\">Modifier_FantasticStory_BaseAbility_2060_plus2_sub</a>[<span class=\"descriptionNumberColor\">Universality</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -2071,7 +2071,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_plus1_sub2[<span class=\"descriptionNumberColor\">Radiance</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-54375589\">Modifier_FantasticStory_BaseAbility_2060_plus1_sub2</a>[<span class=\"descriptionNumberColor\">Radiance</span>]",
       "stackType": "ReplaceByCaster",
       "description": "When defeated, there is a <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2061_ADF_1</span> chance to additionally accumulate 1 \"Resound\" stack.",
       "type": "Debuff",
@@ -2079,7 +2079,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_plus1_sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__1746652203\">Modifier_FantasticStory_BaseAbility_2060_plus1_sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -2132,7 +2132,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
                   "addStacksPerTrigger": 1
                 }
               ]
@@ -2143,7 +2143,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -2166,7 +2166,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_BaseAddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-398018983\">Modifier_FantasticStory_BaseAbility_2060_BaseAddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
       "stackType": "ReplaceByCaster",
       "stackData": [
         "DV_Ratio"
@@ -2178,7 +2178,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_ForShow[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1271014269\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [],
@@ -2189,7 +2189,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1981060014\">Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -2227,7 +2227,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_aura",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2250,7 +2250,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY[<span class=\"descriptionNumberColor\">Reminiscence</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1211620586\">Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY</a>[<span class=\"descriptionNumberColor\">Reminiscence</span>]"
             },
             {
               "name": "Update Surging Grit[PF]",
@@ -2327,7 +2327,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_plus1_sub",
+          "modifier": "<a class=\"gModGreen\" id=\"1746652203\">Modifier_FantasticStory_BaseAbility_2060_plus1_sub</a>",
           "haloStatus": true,
           "conditions": {
             "name": "Compare: Variable",
@@ -2342,7 +2342,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_plus1_sub2[<span class=\"descriptionNumberColor\">Radiance</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-54375589\">Modifier_FantasticStory_BaseAbility_2060_plus1_sub2</a>[<span class=\"descriptionNumberColor\">Radiance</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "Compare: Variable",
@@ -2357,7 +2357,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_plus2_sub[<span class=\"descriptionNumberColor\">Universality</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"514411026\">Modifier_FantasticStory_BaseAbility_2060_plus2_sub</a>[<span class=\"descriptionNumberColor\">Universality</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "Compare: Variable",
@@ -2372,7 +2372,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Far Left Player Entity(no Memosprite)}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_plus3_sub[<span class=\"descriptionNumberColor\">Potential</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"391899273\">Modifier_FantasticStory_BaseAbility_2060_plus3_sub</a>[<span class=\"descriptionNumberColor\">Potential</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "Compare: Variable",
@@ -2387,7 +2387,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub[<span class=\"descriptionNumberColor\">Paradox</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1773154335\">Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub</a>[<span class=\"descriptionNumberColor\">Paradox</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "Compare: Variable",
@@ -2402,7 +2402,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub",
+          "modifier": "<a class=\"gModGreen\" id=\"-290304906\">Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub</a>",
           "haloStatus": true,
           "conditions": {
             "name": "Compare: Variable",
@@ -2417,7 +2417,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus7_Sub[<span class=\"descriptionNumberColor\">Memory</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"412492093\">Modifier_FantasticStory_BaseAbility_2060_Plus7_Sub</a>[<span class=\"descriptionNumberColor\">Memory</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "Compare: Variable",
@@ -2432,7 +2432,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus8_Sub[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1428129204\">Modifier_FantasticStory_BaseAbility_2060_Plus8_Sub</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "Compare: Variable",
@@ -2445,7 +2445,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_ListenBEDelay",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1327218064\">Modifier_FantasticStory_BaseAbility_2060_ListenBEDelay</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

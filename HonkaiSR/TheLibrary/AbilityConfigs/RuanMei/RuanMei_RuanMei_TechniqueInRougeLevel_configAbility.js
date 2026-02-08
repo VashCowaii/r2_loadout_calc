@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "RuanMei_Maze_Modifier_BeforeStanceBreak"
+      "modifier": "<a class=\"gModGreen\" id=\"1378168590\">RuanMei_Maze_Modifier_BeforeStanceBreak</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Maze_Modifier_StanceBreakAdd",
+      "for": "<a class=\"gModGreen\" id=\"mod__319066734\">RuanMei_Maze_Modifier_StanceBreakAdd</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -52,7 +52,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "StageAbility_MazeStandard_EnterBattle_IgnoreWeakness_Modifier"
+                "modifier": "<a class=\"gModGreen\" id=\"1987343235\">StageAbility_MazeStandard_EnterBattle_IgnoreWeakness_Modifier</a>"
               },
               "passed": [
                 {
@@ -165,7 +165,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Maze_Modifier_StanceBreakAdd_EnterBattleRemove",
+      "for": "<a class=\"gModGreen\" id=\"mod__-50472691\">RuanMei_Maze_Modifier_StanceBreakAdd_EnterBattleRemove</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -179,7 +179,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "RuanMei_Maze_Modifier_StanceBreakAdd"
+              "modifier": "<a class=\"gModGreen\" id=\"319066734\">RuanMei_Maze_Modifier_StanceBreakAdd</a>"
             },
             "Modifier Deletes Itself"
           ],
@@ -189,7 +189,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Maze_Modifier_BeforeStanceBreak",
+      "for": "<a class=\"gModGreen\" id=\"mod__1378168590\">RuanMei_Maze_Modifier_BeforeStanceBreak</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -200,7 +200,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "RuanMei_Maze_Modifier_StanceBreakAdd_EnterBattleRemove"
+              "modifier": "<a class=\"gModGreen\" id=\"-50472691\">RuanMei_Maze_Modifier_StanceBreakAdd_EnterBattleRemove</a>"
             }
           ]
         },
@@ -247,7 +247,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "RuanMei_Maze_Modifier_StanceBreakAdd",
+                  "modifier": "<a class=\"gModGreen\" id=\"319066734\">RuanMei_Maze_Modifier_StanceBreakAdd</a>",
                   "valuePerStack": {
                     "MDF_StanceBreakAdded": {
                       "operator": "Variables[0] (1) || Variables[1] (MIN) || Variables[2] (20) || Variables[3] (BuffNumber) || PARAM_2 || FUNCTION || MUL || RETURN",
@@ -287,7 +287,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "StageAbility_MazeStandard_EnterBattle_IgnoreWeakness_Modifier"
+                    "modifier": "<a class=\"gModGreen\" id=\"1987343235\">StageAbility_MazeStandard_EnterBattle_IgnoreWeakness_Modifier</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -296,7 +296,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifierName": "StageAbility_MazeStandard_EnterBattle_IgnoreWeakness_Modifier",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1987343235\">StageAbility_MazeStandard_EnterBattle_IgnoreWeakness_Modifier</a>",
                       "adjustmentType": "+",
                       "variableName": "Stance_Added_Ratio",
                       "value": {

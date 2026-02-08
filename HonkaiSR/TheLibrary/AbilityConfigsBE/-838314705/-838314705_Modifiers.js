@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Cocolia_IF_DyingSound",
+      "for": "<a class=\"gModGreen\" id=\"mod__-666804517\">Enemy_W2_Cocolia_IF_DyingSound</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -45,7 +45,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Cocolia_IF_SoundController",
+      "for": "<a class=\"gModGreen\" id=\"mod__-995521094\">Enemy_W2_Cocolia_IF_SoundController</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -125,7 +125,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_W2_Cocolia_IF_DyingSound"
+                  "modifier": "<a class=\"gModGreen\" id=\"-666804517\">Enemy_W2_Cocolia_IF_DyingSound</a>"
                 }
               ]
             }
@@ -165,7 +165,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_W2_Cocolia_IF_DyingSound"
+                  "modifier": "<a class=\"gModGreen\" id=\"-666804517\">Enemy_W2_Cocolia_IF_DyingSound</a>"
                 }
               ]
             }
@@ -182,7 +182,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Standard_MinionsTag_IF",
+                "modifier": "<a class=\"gModGreen\" id=\"-1480331177\">Standard_MinionsTag_IF</a>",
                 "invertCondition": true
               }
             }
@@ -195,7 +195,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Monster_APShow"
+                "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
               }
             }
           ]
@@ -207,7 +207,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Monster_APShow"
+                "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
               }
             }
           ]
@@ -216,7 +216,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Cocolia_IF_Frenzy[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -255,7 +255,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Cocolia_IF_SoftFrenzyController",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -280,7 +280,7 @@ const configAbility = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "FrenzeyInit"
+              "functionName": "<a class=\"gTempYellow\" id=\"1540751716\">FrenzeyInit</a>"
             }
           ]
         },
@@ -313,7 +313,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_W2_Cocolia_IF_Frenzy[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
                       "valuePerStack": {
                         "MDF_TokenDMGAddRatioPerLayer": {
                           "operator": "Variables[0] (MDF_TokenDMGAddRatioPerLayer) || RETURN",
@@ -369,7 +369,7 @@ const configAbility = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "FrenzeyInit"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1540751716\">FrenzeyInit</a>"
                 }
               ]
             }
@@ -400,7 +400,7 @@ const configAbility = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "FrenzeyInit"
+                  "functionName": "<a class=\"gTempYellow\" id=\"1540751716\">FrenzeyInit</a>"
                 }
               ]
             },
@@ -476,7 +476,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Enemy_W2_Cocolia_IF_Frenzy[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -484,7 +484,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team Unselectables}}"
                       },
-                      "modifier": "Enemy_W2_Cocolia_IF_Frenzy[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -492,7 +492,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Enemy_W2_Cocolia_IF_Frenzy[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
                       "valuePerStack": {
                         "MDF_TokenDMGAddRatioPerLayer": {
                           "operator": "Variables[0] (MDF_TokenDMGAddRatioPerLayer) || RETURN",
@@ -518,7 +518,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team Unselectables}}"
                       },
-                      "modifier": "Enemy_W2_Cocolia_IF_Frenzy[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
                       "valuePerStack": {
                         "MDF_TokenDMGAddRatioPerLayer": {
                           "operator": "Variables[0] (MDF_TokenDMGAddRatioPerLayer) || RETURN",
@@ -548,7 +548,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "FrenzeyInit",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1540751716\">FrenzeyInit</a>",
           "parse": [
             {
               "name": "Define Custom Variable",
@@ -574,7 +574,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Enemy_W2_Cocolia_IF_Frenzy[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]"
             }
           ]
         }
@@ -582,17 +582,17 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Standard_MinionsTag_IF"
+      "for": "<a class=\"gModGreen\" id=\"mod__-1480331177\">Standard_MinionsTag_IF</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Standard_SuperArmorBreak_Mark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-641086431\">Standard_SuperArmorBreak_Mark</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Standard_MinionsSuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-178829988\">Standard_MinionsSuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
       "modifierFlags": [
         "STAT_SuperArmorBreak",
         "STAT_AITargetKeepActionDelay"
@@ -607,7 +607,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "StanceBreakState_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
             }
           ]
         },
@@ -639,7 +639,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "StanceBreakState_Effect"
+                "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
               },
               "passed": [
                 {
@@ -648,7 +648,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "StanceBreakState_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
                 }
               ]
             }
@@ -662,14 +662,14 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Standard_MinionsSuperArmor_MuteHitH_IF",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1945148324\">Standard_MinionsSuperArmor_MuteHitH_IF</a>",
       "modifierFlags": [
         "MuteHitH"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Standard_MinionsSuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1963095263\">Standard_MinionsSuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
       "modifierFlags": [
         "STAT_SuperArmor"
       ],
@@ -683,7 +683,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_MinionsSuperArmor_MuteHitH_IF"
+              "modifier": "<a class=\"gModGreen\" id=\"-1945148324\">Standard_MinionsSuperArmor_MuteHitH_IF</a>"
             },
             {
               "name": "Set Hit-Class",
@@ -910,7 +910,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_MinionsSuperArmor_MuteHitH_IF"
+              "modifier": "<a class=\"gModGreen\" id=\"-1945148324\">Standard_MinionsSuperArmor_MuteHitH_IF</a>"
             }
           ]
         },
@@ -923,7 +923,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_MinionsSuperArmor_MuteHitH_IF"
+              "modifier": "<a class=\"gModGreen\" id=\"-1945148324\">Standard_MinionsSuperArmor_MuteHitH_IF</a>"
             }
           ]
         },
@@ -936,7 +936,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_MinionsSuperArmor_MuteHitH_IF"
+              "modifier": "<a class=\"gModGreen\" id=\"-1945148324\">Standard_MinionsSuperArmor_MuteHitH_IF</a>"
             }
           ]
         }
@@ -948,7 +948,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Standard_SuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
       "modifierFlags": [
         "STAT_SuperArmorBreak",
         "STAT_AITargetKeepActionDelay"
@@ -963,7 +963,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "StanceBreakState_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
             }
           ]
         },
@@ -995,7 +995,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "StanceBreakState_Effect"
+                "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
               },
               "passed": [
                 {
@@ -1004,7 +1004,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "StanceBreakState_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
                 }
               ]
             }
@@ -1018,7 +1018,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
       "modifierFlags": [
         "MuteHitH",
         "STAT_SuperArmor"
@@ -1259,7 +1259,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Standard_StrongChallengeEX_SuperArmorController_MultiNew",
+      "for": "<a class=\"gModGreen\" id=\"mod__72353298\">Standard_StrongChallengeEX_SuperArmorController_MultiNew</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1270,7 +1270,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "Standard_MinionsTag_IF"
+              "modifier": "<a class=\"gModGreen\" id=\"-1480331177\">Standard_MinionsTag_IF</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1278,7 +1278,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
                   "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -1296,7 +1296,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Standard_MinionsSuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1963095263\">Standard_MinionsSuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
                   "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -1314,7 +1314,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Enemy_W2_Cocolia_IF_SoundController"
+              "modifier": "<a class=\"gModGreen\" id=\"-995521094\">Enemy_W2_Cocolia_IF_SoundController</a>"
             },
             {
               "name": "Add Stage Ability",
@@ -1337,7 +1337,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
               },
-              "modifier": "MModifier_Standard_IF_SetMaxBonusCount"
+              "modifier": "<a class=\"gModGreen\" id=\"1220035238\">MModifier_Standard_IF_SetMaxBonusCount</a>"
             }
           ]
         },
@@ -1375,7 +1375,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MModifier_Standard_IF_SetMaxBonusCount"
+                  "modifier": "<a class=\"gModGreen\" id=\"1220035238\">MModifier_Standard_IF_SetMaxBonusCount</a>"
                 }
               ]
             }
@@ -1403,7 +1403,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
                       "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -1421,7 +1421,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Standard_MinionsSuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1963095263\">Standard_MinionsSuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
                       "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -1448,7 +1448,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak",
+                "modifier": "<a class=\"gModGreen\" id=\"1972197914\">Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak</a>",
                 "invertCondition": true
               },
               "passed": [
@@ -1475,7 +1475,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1483,7 +1483,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Standard_MinionsSuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1963095263\">Standard_MinionsSuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1491,7 +1491,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
                       "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
@@ -1509,7 +1509,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Standard_MinionsSuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-178829988\">Standard_MinionsSuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
                       "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
@@ -1603,7 +1603,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_SuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1611,7 +1611,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "Standard_SuperArmorBreak_Mark"
+              "modifier": "<a class=\"gModGreen\" id=\"-641086431\">Standard_SuperArmorBreak_Mark</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1619,7 +1619,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Standard_MinionsSuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-178829988\">Standard_MinionsSuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
             }
           ]
         },
@@ -1645,7 +1645,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Standard_SuperArmorBreak_Mark"
+                    "modifier": "<a class=\"gModGreen\" id=\"-641086431\">Standard_SuperArmorBreak_Mark</a>"
                   }
                 ]
               },
@@ -1672,7 +1672,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Standard_StrongChallengeEX_SuperArmorController_Multi",
+      "for": "<a class=\"gModGreen\" id=\"mod__1623952916\">Standard_StrongChallengeEX_SuperArmorController_Multi</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1683,7 +1683,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
                   "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -1701,7 +1701,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W2_Cocolia_IF_SoundController"
+              "modifier": "<a class=\"gModGreen\" id=\"-995521094\">Enemy_W2_Cocolia_IF_SoundController</a>"
             },
             {
               "name": "Add Stage Ability",
@@ -1724,7 +1724,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
               },
-              "modifier": "MModifier_Standard_IF_SetMaxBonusCount"
+              "modifier": "<a class=\"gModGreen\" id=\"1220035238\">MModifier_Standard_IF_SetMaxBonusCount</a>"
             }
           ]
         },
@@ -1762,7 +1762,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MModifier_Standard_IF_SetMaxBonusCount"
+                  "modifier": "<a class=\"gModGreen\" id=\"1220035238\">MModifier_Standard_IF_SetMaxBonusCount</a>"
                 }
               ]
             }
@@ -1790,7 +1790,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
                       "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -1817,7 +1817,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak",
+                "modifier": "<a class=\"gModGreen\" id=\"1972197914\">Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak</a>",
                 "invertCondition": true
               },
               "passed": [
@@ -1844,7 +1844,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -1885,7 +1885,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
                       "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
@@ -1939,7 +1939,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_SuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
             }
           ]
         }
@@ -1947,7 +1947,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Cocolia_IF_SuperArmorController",
+      "for": "<a class=\"gModGreen\" id=\"mod__1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1958,7 +1958,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
                   "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -1976,7 +1976,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W2_Cocolia_IF_SoundController"
+              "modifier": "<a class=\"gModGreen\" id=\"-995521094\">Enemy_W2_Cocolia_IF_SoundController</a>"
             },
             {
               "name": "Add Stage Ability",
@@ -1999,7 +1999,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
               },
-              "modifier": "MModifier_Standard_IF_SetMaxBonusCount"
+              "modifier": "<a class=\"gModGreen\" id=\"1220035238\">MModifier_Standard_IF_SetMaxBonusCount</a>"
             }
           ]
         },
@@ -2037,7 +2037,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MModifier_Standard_IF_SetMaxBonusCount"
+                  "modifier": "<a class=\"gModGreen\" id=\"1220035238\">MModifier_Standard_IF_SetMaxBonusCount</a>"
                 }
               ]
             }
@@ -2065,7 +2065,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
                       "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
@@ -2092,7 +2092,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak",
+                "modifier": "<a class=\"gModGreen\" id=\"1972197914\">Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak</a>",
                 "invertCondition": true
               },
               "passed": [
@@ -2119,7 +2119,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -2160,7 +2160,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_SuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
                       "operator": "Variables[0] (MDF_IF_BOSS_WeaknessDMGUpRatio) || RETURN",
@@ -2231,7 +2231,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_SuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
             }
           ]
         }
@@ -2239,39 +2239,39 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak"
+      "for": "<a class=\"gModGreen\" id=\"mod__1972197914\">Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_BEMark_HP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-329109669\">MStrongChallengeEX_BEMark_HP</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_BEMark_DispelCTRL",
+      "for": "<a class=\"gModGreen\" id=\"mod__114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_BEMark_SpeedUp"
+      "for": "<a class=\"gModGreen\" id=\"mod__-1121709349\">MStrongChallengeEX_BEMark_SpeedUp</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_BEMark_ActionDelay",
+      "for": "<a class=\"gModGreen\" id=\"mod__-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_BEMark_BP",
+      "for": "<a class=\"gModGreen\" id=\"mod__812754161\">MStrongChallengeEX_BEMark_BP</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_BEMark_SP",
+      "for": "<a class=\"gModGreen\" id=\"mod__709278328\">MStrongChallengeEX_BEMark_SP</a>",
       "stackData": [],
       "latentQueue": []
     }

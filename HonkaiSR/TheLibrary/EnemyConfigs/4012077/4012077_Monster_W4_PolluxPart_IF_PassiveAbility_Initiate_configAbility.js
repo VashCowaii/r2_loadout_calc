@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W4_PolluxPart_IF_Status"
+      "modifier": "<a class=\"gModGreen\" id=\"385444056\">Enemy_W4_PolluxPart_IF_Status</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W4_PolluxPart_IF_MinionsSuperArmorController",
+      "modifier": "<a class=\"gModGreen\" id=\"-1636257193\">Enemy_W4_PolluxPart_IF_MinionsSuperArmorController</a>",
       "valuePerStack": {
         "MDF_MinionsSuperArmor_AllDamageReduce": {
           "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",

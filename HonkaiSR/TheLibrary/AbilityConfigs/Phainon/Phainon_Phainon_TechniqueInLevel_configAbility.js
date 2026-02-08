@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Technique_Phainon_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1290197285\">Technique_Phainon_Modifier</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,13 +26,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Technique_Phainon_Modifier_Charge"
+      "modifier": "<a class=\"gModGreen\" id=\"220977838\">Technique_Phainon_Modifier_Charge</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Technique_Phainon_Modifier_Charge",
+      "for": "<a class=\"gModGreen\" id=\"mod__220977838\">Technique_Phainon_Modifier_Charge</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -102,7 +102,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Technique_Phainon_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1290197285\">Technique_Phainon_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

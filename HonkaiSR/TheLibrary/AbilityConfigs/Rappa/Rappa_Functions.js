@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Template_Rappa_PassiveBreak",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1176541882\">Template_Rappa_PassiveBreak</a>",
       "parse": [
         {
           "name": "IF",
@@ -50,7 +50,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Rappa_Break_Modifier_ForShow[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (_PassiveBreakCountMax) || RETURN",
                 "displayLines": "_PassiveBreakCountMax",
@@ -153,7 +153,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Rappa_Break_Modifier_ForShow[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (_PassiveBreakCountMax) || RETURN",
                         "displayLines": "_PassiveBreakCountMax",
@@ -194,7 +194,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Rappa_Break_Modifier_ForShow[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (_PassiveBreakCountMax) || RETURN",
                         "displayLines": "_PassiveBreakCountMax",

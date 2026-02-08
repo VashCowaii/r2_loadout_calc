@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHeng_Tree03_DamageAddedRatio"
+          "modifier": "<a class=\"gModGreen\" id=\"-1129129025\">DanHeng_Tree03_DamageAddedRatio</a>"
         }
       ]
     },
@@ -94,7 +94,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHeng_Tree03_DamageAddedRatio"
+          "modifier": "<a class=\"gModGreen\" id=\"-1129129025\">DanHeng_Tree03_DamageAddedRatio</a>"
         }
       ]
     },
@@ -103,7 +103,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "DanHeng_Tree03_DamageAddedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1129129025\">DanHeng_Tree03_DamageAddedRatio</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",

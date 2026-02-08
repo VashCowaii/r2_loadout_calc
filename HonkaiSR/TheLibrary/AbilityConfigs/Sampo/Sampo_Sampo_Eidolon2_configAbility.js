@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sampo_Eidolon2"
+      "modifier": "<a class=\"gModGreen\" id=\"704207985\">Sampo_Eidolon2</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Sampo_Eidolon2",
+      "for": "<a class=\"gModGreen\" id=\"mod__704207985\">Sampo_Eidolon2</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -128,7 +128,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || Variables[1] (_Tree01_LifeTimeAdd) || ADD || RETURN",
                         "displayLines": "(3 + _Tree01_LifeTimeAdd)",

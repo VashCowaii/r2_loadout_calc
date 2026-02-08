@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Luka_TechniqueUsage"
+      "modifier": "<a class=\"gModGreen\" id=\"-1462410667\">Luka_TechniqueUsage</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Luka_TechniqueUsage",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1462410667\">Luka_TechniqueUsage</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -85,7 +85,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Luka_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1202378594\">Luka_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -129,7 +129,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Luka_ReloadBullet",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1275149529\">Luka_ReloadBullet</a>",
                   "valuePerStack": {
                     "MDF_AddValue": 1
                   }

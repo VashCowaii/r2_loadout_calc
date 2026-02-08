@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "RuanMei_Ability02_Area",
+      "modifier": "<a class=\"gModGreen\" id=\"461506636\">RuanMei_Ability02_Area</a>",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -61,7 +61,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "RuanMei_Maze_Modifier"
+        "modifier": "<a class=\"gModGreen\" id=\"-2101676749\">RuanMei_Maze_Modifier</a>"
       },
       "passed": [
         {
@@ -80,7 +80,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "RuanMei_Maze_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-2101676749\">RuanMei_Maze_Modifier</a>"
         }
       ]
     },
@@ -89,7 +89,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Ability02_Area_Caster[<span class=\"descriptionNumberColor\">Overtone</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1509368163\">RuanMei_Ability02_Area_Caster</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "variableValueChange": [
@@ -115,7 +115,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "RuanMei_Ability02_Area",
+                      "modifierName": "<a class=\"gModGreen\" id=\"461506636\">RuanMei_Ability02_Area</a>",
                       "value": {
                         "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                         "displayLines": "MDF_LifeTime",
@@ -151,7 +151,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Ability02_StanceBreakAdded",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1526325038\">RuanMei_Ability02_StanceBreakAdded</a>",
       "stackType": "Refresh",
       "execute": [
         {
@@ -179,7 +179,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Ability02_Area",
+      "for": "<a class=\"gModGreen\" id=\"mod__461506636\">RuanMei_Ability02_Area</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -192,7 +192,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "RuanMei_Ability02_DamageUp"
+              "modifier": "<a class=\"gModGreen\" id=\"-1426523\">RuanMei_Ability02_DamageUp</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -200,7 +200,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "RuanMei_Ability02_StanceBreakAdded"
+              "modifier": "<a class=\"gModGreen\" id=\"-1526325038\">RuanMei_Ability02_StanceBreakAdded</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -208,7 +208,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "RuanMei_Ability02_Eidolon1_AttackUp"
+              "modifier": "<a class=\"gModGreen\" id=\"118087020\">RuanMei_Ability02_Eidolon1_AttackUp</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -216,7 +216,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "RuanMei_Ability02_Area_Caster[<span class=\"descriptionNumberColor\">Overtone</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1509368163\">RuanMei_Ability02_Area_Caster</a>[<span class=\"descriptionNumberColor\">Overtone</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -224,7 +224,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "RuanMei_Ability02_Area_Friend[<span class=\"descriptionNumberColor\">Overtone</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]"
             }
           ]
         },
@@ -237,7 +237,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "RuanMei_Ability02_DamageUp"
+              "modifier": "<a class=\"gModGreen\" id=\"-1426523\">RuanMei_Ability02_DamageUp</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -245,7 +245,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "RuanMei_Ability02_StanceBreakAdded",
+              "modifier": "<a class=\"gModGreen\" id=\"-1526325038\">RuanMei_Ability02_StanceBreakAdded</a>",
               "valuePerStack": {
                 "Ability02_StanceBreakAddedRatio": {
                   "operator": "Variables[0] (0.5) || RETURN",
@@ -263,7 +263,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "RuanMei_Ability02_Area_Caster[<span class=\"descriptionNumberColor\">Overtone</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1509368163\">RuanMei_Ability02_Area_Caster</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -279,7 +279,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
               },
-              "modifier": "RuanMei_Ability02_Area_Friend[<span class=\"descriptionNumberColor\">Overtone</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
               "valuePerStack": {
                 "Ability02_P1_DamageAddedRatio_Friend": {
                   "operator": "Variables[0] (Skill02_P1_DamageAddedRatioFinal) || RETURN",
@@ -325,7 +325,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "RuanMei_Ability02_DamageUp"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1426523\">RuanMei_Ability02_DamageUp</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -333,7 +333,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "RuanMei_Ability02_StanceBreakAdded",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1526325038\">RuanMei_Ability02_StanceBreakAdded</a>",
                   "valuePerStack": {
                     "Ability02_StanceBreakAddedRatio": {
                       "operator": "Variables[0] (0.5) || RETURN",
@@ -351,7 +351,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "RuanMei_Ability02_Area_Friend[<span class=\"descriptionNumberColor\">Overtone</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
                   "valuePerStack": {
                     "Ability02_P1_DamageAddedRatio_Friend": {
                       "operator": "Variables[0] (Skill02_P1_DamageAddedRatioFinal) || RETURN",

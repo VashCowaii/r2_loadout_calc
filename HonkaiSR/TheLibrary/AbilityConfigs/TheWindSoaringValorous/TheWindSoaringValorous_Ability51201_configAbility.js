@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_120_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-511039617\">Relic_120_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_120_Sub[<span class=\"descriptionNumberColor\">The Wind-Soaring Valorous</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1900399572\">Relic_120_Sub</a>[<span class=\"descriptionNumberColor\">The Wind-Soaring Valorous</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -53,7 +53,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_120_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-511039617\">Relic_120_Main</a>",
       "execute": [
         {
           "eventTrigger": "Attack Start [Owner]",
@@ -73,7 +73,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_120_Sub[<span class=\"descriptionNumberColor\">The Wind-Soaring Valorous</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1900399572\">Relic_120_Sub</a>[<span class=\"descriptionNumberColor\">The Wind-Soaring Valorous</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",

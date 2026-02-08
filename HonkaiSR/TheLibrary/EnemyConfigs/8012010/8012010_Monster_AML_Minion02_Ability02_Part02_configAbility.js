@@ -204,7 +204,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_AML_Minion02_Effect"
+      "modifier": "<a class=\"gModGreen\" id=\"-1582498358\">Monster_AML_Minion02_Effect</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -212,7 +212,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_AML_Minion02_Effect"
+      "modifier": "<a class=\"gModGreen\" id=\"-1582498358\">Monster_AML_Minion02_Effect</a>"
     },
     "Trigger: Ability End"
   ],

@@ -38,7 +38,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Bronya_AttackPreshow"
+      "modifier": "<a class=\"gModGreen\" id=\"-607688311\">Bronya_AttackPreshow</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -46,13 +46,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Bronya_AbilityPreshow"
+      "modifier": "<a class=\"gModGreen\" id=\"465486532\">Bronya_AbilityPreshow</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Bronya_AbilityPreshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__465486532\">Bronya_AbilityPreshow</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -86,7 +86,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Bronya_AttackPreshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-607688311\">Bronya_AttackPreshow</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {

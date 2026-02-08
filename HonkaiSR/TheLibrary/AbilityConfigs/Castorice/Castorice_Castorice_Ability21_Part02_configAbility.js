@@ -43,7 +43,7 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Castorice_SetDamageRatio"
+              "functionName": "<a class=\"gTempYellow\" id=\"-815210421\">Castorice_SetDamageRatio</a>"
             },
             {
               "name": "ATK Scaling DMG",
@@ -143,7 +143,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Castorice_Eidolon2_Check"
+            "modifier": "<a class=\"gModGreen\" id=\"176252830\">Castorice_Eidolon2_Check</a>"
           }
         ]
       },
@@ -159,7 +159,7 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Castorice_AddSpecialSP",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
           "variables": {
             "_FixedAddValue": {
               "operator": "Variables[0] (Castorice_Rank02_MaxSpecialSP) || Variables[1] (0.3) || MUL || RETURN",
@@ -178,7 +178,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Castorice_Eidolon2_Check"
+          "modifier": "<a class=\"gModGreen\" id=\"176252830\">Castorice_Eidolon2_Check</a>"
         }
       ]
     },

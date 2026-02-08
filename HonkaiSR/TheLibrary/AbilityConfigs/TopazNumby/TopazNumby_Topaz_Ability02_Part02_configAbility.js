@@ -15,7 +15,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Topaz_BPAbility_AddRegardAsAttackType"
+      "modifier": "<a class=\"gModGreen\" id=\"-934416652\">M_Topaz_BPAbility_AddRegardAsAttackType</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -23,7 +23,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Numby}}"
       },
-      "modifier": "M_Topaz_BPAbility_AddRegardAsAttackType"
+      "modifier": "<a class=\"gModGreen\" id=\"-934416652\">M_Topaz_BPAbility_AddRegardAsAttackType</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -31,7 +31,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
       "valuePerStack": {
         "MDF_PropertyValue1_DamageAdd": {
           "operator": "Variables[0] (0.5) || RETURN",
@@ -68,7 +68,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
       }
     },
     {
@@ -112,13 +112,13 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
       },
       "passed": [
         {
           "name": "Define Custom Variable with Modifier Values",
           "variableName": "CurEnhance",
-          "modifierName": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
           "multiplier": 1
         },
         {
@@ -193,7 +193,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_BE_CriticalChance"
+          "modifier": "<a class=\"gModGreen\" id=\"1213282515\">Topaz_BE_CriticalChance</a>"
         },
         {
           "name": "Looped Event",
@@ -304,7 +304,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Topaz_Bonus"
+            "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
           },
           "passed": [
             {
@@ -329,13 +329,13 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Topaz_Bonus"
+              "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
             }
           ]
         },
         {
           "name": "Define Modifier Variable",
-          "modifierName": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
           "function": "Add"
         },
         {
@@ -367,7 +367,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Numby}}"
               },
-              "modifier": "Topaz_BE_UltraEnhance_ShowText",
+              "modifier": "<a class=\"gModGreen\" id=\"1361568506\">Topaz_BE_UltraEnhance_ShowText</a>",
               "valuePerStack": {
                 "ATKCount": {
                   "operator": "Variables[0] (CurEnhance) || RETURN",
@@ -392,7 +392,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Numby}}"
               },
-              "modifier": "Topaz_BE_UltraEnhance_ShowText"
+              "modifier": "<a class=\"gModGreen\" id=\"1361568506\">Topaz_BE_UltraEnhance_ShowText</a>"
             }
           ]
         },
@@ -402,7 +402,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Topaz_BE_CriticalChance"
+          "modifier": "<a class=\"gModGreen\" id=\"1213282515\">Topaz_BE_CriticalChance</a>"
         }
       ],
       "failed": [
@@ -459,7 +459,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Topaz_Bonus"
+            "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
           },
           "passed": [
             {
@@ -484,7 +484,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Topaz_Bonus"
+              "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
             }
           ]
         }
@@ -499,13 +499,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Topaz_Ability02_SpecialMarkAdder"
+      "modifier": "<a class=\"gModGreen\" id=\"1891120358\">Topaz_Ability02_SpecialMarkAdder</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Topaz_BETargetTagActive_BP",
+      "for": "<a class=\"gModGreen\" id=\"mod__264491546\">Topaz_BETargetTagActive_BP</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ListenBattleEventSkill",
@@ -588,7 +588,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Topaz_Ability02_SpecialMarkAdder",
+      "for": "<a class=\"gModGreen\" id=\"mod__1891120358\">Topaz_Ability02_SpecialMarkAdder</a>",
       "stackData": [],
       "latentQueue": [
         "_damageStart"
@@ -600,7 +600,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Topaz_BETargetTagActive_BP",
+          "modifier": "<a class=\"gModGreen\" id=\"264491546\">Topaz_BETargetTagActive_BP</a>",
           "aliveOnly": "True",
           "haloStatus": true
         }
@@ -608,7 +608,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Topaz_BPAbility_AddRegardAsAttackType",
+      "for": "<a class=\"gModGreen\" id=\"mod__-934416652\">M_Topaz_BPAbility_AddRegardAsAttackType</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -647,7 +647,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "M_Topaz_BPAbility_AddRegardAsAttackType"
+              "modifier": "<a class=\"gModGreen\" id=\"-934416652\">M_Topaz_BPAbility_AddRegardAsAttackType</a>"
             }
           ]
         }

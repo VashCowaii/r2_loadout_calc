@@ -11,7 +11,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Cyrene_ExtraSpecialSPReturn",
+      "functionName": "<a class=\"gTempYellow\" id=\"-1728765029\">Cyrene_ExtraSpecialSPReturn</a>",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
@@ -50,7 +50,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Cyrene_Ability03[<span class=\"descriptionNumberColor\">Ripples of Past Reverie</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1470142416\">Cyrene_Ability03</a>[<span class=\"descriptionNumberColor\">Ripples of Past Reverie</span>]"
     },
     {
       "name": "Define Custom Variable",
@@ -140,7 +140,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Cyrene_Ability02_Bonus_Main[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1356425425\">Cyrene_Ability02_Bonus_Main</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
       "valuePerStack": {
         "MDF_OriginDamagePercentage": {
           "operator": "Variables[0] (0.24) || RETURN",

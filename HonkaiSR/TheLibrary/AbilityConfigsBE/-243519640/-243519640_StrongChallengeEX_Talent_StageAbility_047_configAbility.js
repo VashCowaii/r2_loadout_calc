@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_047"
+      "modifier": "<a class=\"gModGreen\" id=\"-434840745\">MStrongChallengeEX_Talent_StageAbility_LE_047</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_047",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1124345473\">MStrongChallengeEX_Talent_StageAbility_PLY_047</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -44,7 +44,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_047",
+      "for": "<a class=\"gModGreen\" id=\"mod__-434840745\">MStrongChallengeEX_Talent_StageAbility_LE_047</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -89,7 +89,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_047"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1124345473\">MStrongChallengeEX_Talent_StageAbility_PLY_047</a>"
                     }
                   ]
                 }

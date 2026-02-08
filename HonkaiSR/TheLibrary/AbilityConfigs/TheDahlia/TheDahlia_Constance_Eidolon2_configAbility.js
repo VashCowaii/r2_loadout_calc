@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Constance_Eidolon2"
+      "modifier": "<a class=\"gModGreen\" id=\"-986257104\">Constance_Eidolon2</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Constance_Eidolon2_Bonus_OnCharacterCreate",
+      "for": "<a class=\"gModGreen\" id=\"mod__1789407747\">Constance_Eidolon2_Bonus_OnCharacterCreate</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -38,7 +38,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Constance_Ultimate_Weakness[<span class=\"descriptionNumberColor\">Wilt</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1539081164\">Constance_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Wilt</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -66,7 +66,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Constance_Eidolon2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-986257104\">Constance_Eidolon2</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -84,7 +84,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Constance_Ultimate_Weakness[<span class=\"descriptionNumberColor\">Wilt</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1539081164\">Constance_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Wilt</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -112,7 +112,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Constance_Eidolon2_Bonus_OnCharacterCreate"
+              "modifier": "<a class=\"gModGreen\" id=\"1789407747\">Constance_Eidolon2_Bonus_OnCharacterCreate</a>"
             },
             "Modifier Deletes Itself"
           ],

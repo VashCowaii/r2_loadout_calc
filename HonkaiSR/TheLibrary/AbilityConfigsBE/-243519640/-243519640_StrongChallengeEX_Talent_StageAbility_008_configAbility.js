@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_008"
+      "modifier": "<a class=\"gModGreen\" id=\"1661670082\">MStrongChallengeEX_Talent_StageAbility_LE_008</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-847062697\">MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -54,11 +54,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark"
+      "for": "<a class=\"gModGreen\" id=\"mod__-770987134\">MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_008[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1240607258\">MStrongChallengeEX_Talent_StageAbility_PLY_008</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Owner]: Any",
@@ -80,7 +80,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark",
+                    "modifier": "<a class=\"gModGreen\" id=\"-770987134\">MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -90,7 +90,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-770987134\">MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark</a>"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -147,7 +147,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-847062697\">MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]"
             },
             {
               "name": "Define Custom Variable",
@@ -179,7 +179,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark"
+              "modifier": "<a class=\"gModGreen\" id=\"-770987134\">MStrongChallengeEX_Talent_StageAbility_PLY_008_MonsterMark</a>"
             },
             {
               "name": "IF",
@@ -201,7 +201,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-847062697\">MStrongChallengeEX_Talent_StageAbility_PLY_008_SpeedUp</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_PropertyValue4) || RETURN",
                     "displayLines": "MDF_PropertyValue4",
@@ -238,7 +238,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_008",
+      "for": "<a class=\"gModGreen\" id=\"mod__1661670082\">MStrongChallengeEX_Talent_StageAbility_LE_008</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -265,7 +265,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_008[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1240607258\">MStrongChallengeEX_Talent_StageAbility_PLY_008</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

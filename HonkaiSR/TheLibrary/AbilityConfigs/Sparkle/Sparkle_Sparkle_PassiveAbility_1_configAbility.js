@@ -23,7 +23,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sparkle_PassiveAbility_Listen"
+      "modifier": "<a class=\"gModGreen\" id=\"1311234937\">Sparkle_PassiveAbility_Listen</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -31,7 +31,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sparkle_AbilityPreshow"
+      "modifier": "<a class=\"gModGreen\" id=\"705433852\">Sparkle_AbilityPreshow</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -49,7 +49,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Sparkle_PassiveAbility_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__1311234937\">Sparkle_PassiveAbility_Listen</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -172,7 +172,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Sparkle_PointB3_Mark",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1668382571\">Sparkle_PointB3_Mark</a>",
                         "invertCondition": true
                       }
                     ]
@@ -199,7 +199,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Sparkle_PointB3_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1668382571\">Sparkle_PointB3_Mark</a>"
                     }
                   ]
                 },
@@ -218,7 +218,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.15) || RETURN",
@@ -255,7 +255,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Player Team All}}"
                           },
-                          "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (0.15) || RETURN",
@@ -292,7 +292,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Player Team All}}"
                               },
-                              "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
                                   "operator": "Variables[0] (0.15) || RETURN",
@@ -371,7 +371,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Sparkle_PassiveAbility_AllDamageAddedRatio02[<span class=\"descriptionNumberColor\">Red Herring</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1017813291\">Sparkle_PassiveAbility_AllDamageAddedRatio02</a>[<span class=\"descriptionNumberColor\">Red Herring</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -468,7 +468,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Sparkle_PointB3_Mark",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1668382571\">Sparkle_PointB3_Mark</a>",
                         "invertCondition": true
                       }
                     ]
@@ -495,7 +495,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Sparkle_PointB3_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1668382571\">Sparkle_PointB3_Mark</a>"
                     }
                   ]
                 },
@@ -514,7 +514,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.15) || RETURN",
@@ -551,7 +551,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Player Team All}}"
                           },
-                          "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (0.15) || RETURN",
@@ -588,7 +588,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Player Team All}}"
                               },
-                              "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
                                   "operator": "Variables[0] (0.15) || RETURN",
@@ -625,7 +625,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sparkle_AbilityPreshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__705433852\">Sparkle_AbilityPreshow</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {

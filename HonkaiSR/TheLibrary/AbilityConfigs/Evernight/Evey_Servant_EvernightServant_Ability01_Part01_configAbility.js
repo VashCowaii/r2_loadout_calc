@@ -16,11 +16,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_SizeControl_Perf"
+      "functionName": "<a class=\"gTempYellow\" id=\"294638745\">function_Evernight_Group_SizeControl_Perf</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_FollowControl_00"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
     },
     {
       "name": "Trigger Ability",
@@ -38,27 +38,27 @@ const configAbility = {
       "functionList": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Servant_Evernight_Ability01_TriggerEffect"
+          "functionName": "<a class=\"gTempYellow\" id=\"575337399\">Servant_Evernight_Ability01_TriggerEffect</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Servant_Evernight_Ability01_TriggerAnim_01"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1580786153\">Servant_Evernight_Ability01_TriggerAnim_01</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Servant_Evernight_Ability01_TriggerAnim_02"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1564008534\">Servant_Evernight_Ability01_TriggerAnim_02</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Servant_Evernight_Ability01_TriggerAnim_03"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1547230915\">Servant_Evernight_Ability01_TriggerAnim_03</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Servant_Evernight_Ability01_TriggerAnim_04"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1664674248\">Servant_Evernight_Ability01_TriggerAnim_04</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Servant_Evernight_Ability01_TriggerAnim_05"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1647896629\">Servant_Evernight_Ability01_TriggerAnim_05</a>"
         }
       ]
     }
@@ -66,7 +66,7 @@ const configAbility = {
   "functions": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability01_TriggerEffect",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__575337399\">Servant_Evernight_Ability01_TriggerEffect</a>",
       "parse": [
         {
           "name": "IF",
@@ -76,14 +76,14 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
           }
         }
       ]
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability01_TriggerAnim_01",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1580786153\">Servant_Evernight_Ability01_TriggerAnim_01</a>",
       "parse": [
         {
           "name": "IF",
@@ -110,11 +110,11 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Evernight_Group_FollowControl_STB"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Evernight_Group_SizeControl_STB"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1946909591\">function_Evernight_Group_SizeControl_STB</a>"
                 }
               ]
             }
@@ -122,11 +122,11 @@ const configAbility = {
           "failed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Evernight_Group_FollowControl_STB"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Evernight_Group_SizeControl_STB"
+              "functionName": "<a class=\"gTempYellow\" id=\"-1946909591\">function_Evernight_Group_SizeControl_STB</a>"
             }
           ]
         }
@@ -134,7 +134,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability01_TriggerAnim_02",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1564008534\">Servant_Evernight_Ability01_TriggerAnim_02</a>",
       "parse": [
         {
           "name": "IF",
@@ -165,7 +165,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability01_TriggerAnim_03",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1547230915\">Servant_Evernight_Ability01_TriggerAnim_03</a>",
       "parse": [
         {
           "name": "IF",
@@ -196,7 +196,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability01_TriggerAnim_04",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1664674248\">Servant_Evernight_Ability01_TriggerAnim_04</a>",
       "parse": [
         {
           "name": "IF",
@@ -227,7 +227,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Servant_Evernight_Ability01_TriggerAnim_05",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1647896629\">Servant_Evernight_Ability01_TriggerAnim_05</a>",
       "parse": [
         {
           "name": "IF",

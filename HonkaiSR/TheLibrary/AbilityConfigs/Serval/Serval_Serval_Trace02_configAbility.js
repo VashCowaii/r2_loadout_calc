@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Serval_Trace02"
+      "modifier": "<a class=\"gModGreen\" id=\"-1880079656\">M_Serval_Trace02</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Serval_Trace02",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1880079656\">M_Serval_Trace02</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

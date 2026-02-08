@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Aventurine_Passive_AddDefence[<span class=\"descriptionNumberColor\">Unexpected Hanging Paradox</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"674084232\">Aventurine_Passive_AddDefence</a>[<span class=\"descriptionNumberColor\">Unexpected Hanging Paradox</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -54,7 +54,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Aventurine_Trace03_Trigger"
+          "modifier": "<a class=\"gModGreen\" id=\"-1927939151\">Aventurine_Trace03_Trigger</a>"
         }
       ]
     },
@@ -62,7 +62,7 @@ const configAbility = {
       "name": "Define Custom Variable with Modifier Values",
       "valueType": "Layer",
       "variableName": "MDF_Layer2",
-      "modifierName": "Aventurine_Passive_ShieldEnergy",
+      "modifierName": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
       "multiplier": 1
     },
     {
@@ -71,7 +71,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Aventurine_Passive_ShieldEnergy"
+      "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -79,7 +79,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Aventurine_Passive_ShieldEnergy",
+      "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
       "addStacksPerTrigger": {
         "operator": "Variables[0] (MDF_Layer2) || Constants[0] (7) || SUB || RETURN",
         "displayLines": "(MDF_Layer2 - 7)",
@@ -125,7 +125,7 @@ const configAbility = {
       "Event": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Bounce_SelectTarget",
+          "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
           "target": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"

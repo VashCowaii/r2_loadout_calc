@@ -48,7 +48,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "AdvancedJingliu_Attack_Transfer",
+      "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>",
       "valuePerStack": {
         "AbilityP01_P1_HpConsumption": {
           "operator": "Variables[0] (0.3) || RETURN",
@@ -70,7 +70,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "ReduceActionDelay",
+      "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"

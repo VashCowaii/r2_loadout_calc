@@ -47,11 +47,11 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_FollowControl_STB"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_Group_SizeControl_STB"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1946909591\">function_Evernight_Group_SizeControl_STB</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -59,7 +59,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_EvernightServant_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"1561903532\">Memosprite_EvernightServant_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -67,7 +67,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_EvernightServant_Sync"
+      "modifier": "<a class=\"gModGreen\" id=\"1745226180\">Memosprite_EvernightServant_Sync</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -75,7 +75,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_EvernightServant_PartnerControl"
+      "modifier": "<a class=\"gModGreen\" id=\"1040270840\">Memosprite_EvernightServant_PartnerControl</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -83,7 +83,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_EvernightServant_InsertControl"
+      "modifier": "<a class=\"gModGreen\" id=\"-1298744969\">Memosprite_EvernightServant_InsertControl</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -91,7 +91,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_EvernightServant_View"
+      "modifier": "<a class=\"gModGreen\" id=\"51738454\">Memosprite_EvernightServant_View</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -99,7 +99,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_EvernightServant_PassiveBonus_Aura"
+      "modifier": "<a class=\"gModGreen\" id=\"1232599773\">Memosprite_EvernightServant_PassiveBonus_Aura</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -131,7 +131,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_EvernightServant_TryKill"
+      "modifier": "<a class=\"gModGreen\" id=\"-1842559180\">Memosprite_EvernightServant_TryKill</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -139,7 +139,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_EvernightServant_HitAnimControl"
+      "modifier": "<a class=\"gModGreen\" id=\"2112363426\">Memosprite_EvernightServant_HitAnimControl</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -147,7 +147,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_EvernightServant_Ability11_StancePreshow"
+      "modifier": "<a class=\"gModGreen\" id=\"339933329\">Memosprite_EvernightServant_Ability11_StancePreshow</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -155,13 +155,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_EvernightServant_Ability11_LoseHPPreshow"
+      "modifier": "<a class=\"gModGreen\" id=\"1971728394\">Memosprite_EvernightServant_Ability11_LoseHPPreshow</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_PartnerControl",
+      "for": "<a class=\"gModGreen\" id=\"mod__1040270840\">Memosprite_EvernightServant_PartnerControl</a>",
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
@@ -190,7 +190,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "modifier": "Evernight_S03"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                   }
                 }
               ],
@@ -203,7 +203,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "modifier": "Evernight_S03"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                   }
                 }
               ]
@@ -240,7 +240,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "modifier": "Evernight_S03"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                   }
                 }
               ],
@@ -253,7 +253,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "modifier": "Evernight_S03"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                   }
                 }
               ]
@@ -291,7 +291,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "modifier": "Evernight_S03"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                   }
                 }
               ],
@@ -304,7 +304,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "modifier": "Evernight_S03"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                   }
                 }
               ]
@@ -342,7 +342,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "modifier": "Evernight_S03"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                   }
                 }
               ],
@@ -355,7 +355,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "modifier": "Evernight_S03"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                   }
                 }
               ]
@@ -383,7 +383,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "modifier": "Evernight_S03"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                   }
                 }
               ],
@@ -396,7 +396,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "modifier": "Evernight_S03"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
                   }
                 }
               ]
@@ -409,7 +409,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_InsertControl",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1298744969\">Memosprite_EvernightServant_InsertControl</a>",
       "modifierFlags": [
         "EnduranceLogicOnly"
       ],
@@ -455,7 +455,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Memosprite_EvernightServant_TriggerNormal"
+                      "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>"
                     }
                   ]
                 }
@@ -469,7 +469,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_Sync",
+      "for": "<a class=\"gModGreen\" id=\"mod__1745226180\">Memosprite_EvernightServant_Sync</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -548,7 +548,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_View",
+      "for": "<a class=\"gModGreen\" id=\"mod__51738454\">Memosprite_EvernightServant_View</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: Start",
@@ -591,11 +591,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Evernight_Group_FollowControl_STB"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Evernight_Group_SizeControl_STB"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1946909591\">function_Evernight_Group_SizeControl_STB</a>"
                 }
               ]
             },
@@ -611,7 +611,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Evernight_Group_FollowControl_ViewMode"
+              "functionName": "<a class=\"gTempYellow\" id=\"724548436\">function_Evernight_Group_FollowControl_ViewMode</a>"
             }
           ]
         },
@@ -629,13 +629,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Evernight_Group_FollowControl_00"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
                 }
               ],
               "failed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Evernight_Group_FollowControl_STB"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
                 }
               ]
             }
@@ -647,7 +647,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__1561903532\">Memosprite_EvernightServant_Passive</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -658,7 +658,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Evernight_Ability02_ChangeSkill"
+              "modifier": "<a class=\"gModGreen\" id=\"132344239\">Evernight_Ability02_ChangeSkill</a>"
             }
           ]
         },
@@ -692,7 +692,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Evernight_Ability02_ChangeSkill"
+              "modifier": "<a class=\"gModGreen\" id=\"132344239\">Evernight_Ability02_ChangeSkill</a>"
             }
           ]
         }
@@ -702,7 +702,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_HitAnimControl",
+      "for": "<a class=\"gModGreen\" id=\"mod__2112363426\">Memosprite_EvernightServant_HitAnimControl</a>",
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -723,7 +723,7 @@ const configAbility = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Evernight_Group_SizeControl_STB"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1946909591\">function_Evernight_Group_SizeControl_STB</a>"
                 }
               ]
             }
@@ -758,7 +758,7 @@ const configAbility = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Evernight_Group_SizeControl_STB"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1946909591\">function_Evernight_Group_SizeControl_STB</a>"
                 }
               ]
             }
@@ -772,7 +772,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_Ability11_StancePreshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__339933329\">Memosprite_EvernightServant_Ability11_StancePreshow</a>",
       "stackData": [],
       "latentQueue": [
         "_Partner_Size"
@@ -780,7 +780,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_PassiveBonus_Aura",
+      "for": "<a class=\"gModGreen\" id=\"mod__1232599773\">Memosprite_EvernightServant_PassiveBonus_Aura</a>",
       "stackData": [],
       "latentQueue": [],
       "subModList": [
@@ -790,7 +790,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}} + {{Caster's Summoner}}"
           },
-          "modifier": "Memosprite_EvernightServant_PassiveBonus[<span class=\"descriptionNumberColor\">Solitude, Drifting, In Murk</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1678641611\">Memosprite_EvernightServant_PassiveBonus</a>[<span class=\"descriptionNumberColor\">Solitude, Drifting, In Murk</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -807,7 +807,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_Ability11_LoseHPPreshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__1971728394\">Memosprite_EvernightServant_Ability11_LoseHPPreshow</a>",
       "execute": [
         {
           "eventTrigger": "Update Target Selected(UI) [Owner]",
@@ -820,7 +820,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Memosprite_EvernightServant_TriggerNormal"
+                "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>"
               },
               "passed": [
                 {
@@ -861,7 +861,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_EvernightServant_TryKill",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1842559180\">Memosprite_EvernightServant_TryKill</a>",
       "execute": [
         {
           "eventTrigger": "Action Completed [Anyone]",
@@ -874,7 +874,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster's Summoner}}"
                 },
-                "modifier": "Evernight_TryKillServant_Flag"
+                "modifier": "<a class=\"gModGreen\" id=\"-1586544037\">Evernight_TryKillServant_Flag</a>"
               },
               "passed": [
                 {
@@ -883,7 +883,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "modifier": "Evernight_TryKillServant_Flag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1586544037\">Evernight_TryKillServant_Flag</a>"
                 },
                 {
                   "name": "Define Custom Variable with Copy",

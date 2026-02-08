@@ -34,17 +34,17 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23024_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"9255980\">LC_23024_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23024_Sub02"
+          "for": "<a class=\"gModGreen\" id=\"mod__746039723\">LC_23024_Sub02</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23024_Sub[<span class=\"descriptionNumberColor\">Mirage Fizzle</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1868046089\">LC_23024_Sub</a>[<span class=\"descriptionNumberColor\">Mirage Fizzle</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -58,7 +58,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23024_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__9255980\">LC_23024_Main</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -71,7 +71,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "LC_23024_Sub02",
+                    "modifier": "<a class=\"gModGreen\" id=\"746039723\">LC_23024_Sub02</a>",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
@@ -84,7 +84,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "LC_23024_Sub[<span class=\"descriptionNumberColor\">Mirage Fizzle</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1868046089\">LC_23024_Sub</a>[<span class=\"descriptionNumberColor\">Mirage Fizzle</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_PropertyValue01": {
@@ -111,7 +111,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "LC_23024_Sub02"
+                          "modifier": "<a class=\"gModGreen\" id=\"746039723\">LC_23024_Sub02</a>"
                         }
                       ]
                     }
@@ -130,7 +130,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "LC_23024_Sub[<span class=\"descriptionNumberColor\">Mirage Fizzle</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1868046089\">LC_23024_Sub</a>[<span class=\"descriptionNumberColor\">Mirage Fizzle</span>]",
                     "justAddedOrActive": true,
                     "casterFilter": {
                       "name": "Target Name",
@@ -184,7 +184,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                   },
-                  "modifier": "LC_23024_Sub02"
+                  "modifier": "<a class=\"gModGreen\" id=\"746039723\">LC_23024_Sub02</a>"
                 }
               ]
             }

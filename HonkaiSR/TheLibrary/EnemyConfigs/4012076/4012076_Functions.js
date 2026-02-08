@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb_FX",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1601406944\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb_FX</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -29,7 +29,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                 "invertCondition": true
               },
               {
@@ -38,7 +38,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_Pollux_EnergyBar"
+                "modifier": "<a class=\"gModGreen\" id=\"2086497725\">Monster_W4_Pollux_EnergyBar</a>"
               }
             ]
           },
@@ -51,7 +51,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_W4_Pollux_IF_Strengthen_Break",
+                "modifier": "<a class=\"gModGreen\" id=\"-2005725125\">Enemy_W4_Pollux_IF_Strengthen_Break</a>",
                 "invertCondition": true
               }
             }
@@ -61,7 +61,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-766570299\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -79,7 +79,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                 "invertCondition": true
               },
               {
@@ -88,7 +88,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_Pollux_EnergyBar"
+                "modifier": "<a class=\"gModGreen\" id=\"2086497725\">Monster_W4_Pollux_EnergyBar</a>"
               }
             ]
           },
@@ -101,7 +101,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_W4_Pollux_IF_Strengthen_Break",
+                "modifier": "<a class=\"gModGreen\" id=\"-2005725125\">Enemy_W4_Pollux_IF_Strengthen_Break</a>",
                 "invertCondition": true
               },
               "passed": [

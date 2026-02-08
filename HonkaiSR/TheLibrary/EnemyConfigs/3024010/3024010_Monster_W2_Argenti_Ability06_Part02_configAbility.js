@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     },
     "Ability Start",
     {
@@ -45,7 +45,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
           },
-          "modifier": "Enemy_W2_Argenti_Power_RL[<span class=\"descriptionNumberColor\">Soul Ascension</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
             "displayLines": "{[Skill04[0]]}",
@@ -63,7 +63,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
           },
-          "modifier": "Enemy_W2_Argenti_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
             "displayLines": "{[Skill04[0]]}",

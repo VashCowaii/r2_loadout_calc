@@ -13,7 +13,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster's Summoner}}"
         },
-        "modifier": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
       },
       "passed": [
         {
@@ -24,7 +24,7 @@ const configAbility = {
           },
           "valueType": "Layer",
           "variableName": "AttackUpLayer",
-          "modifierName": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "multiplier": 1
         },
         {
@@ -33,7 +33,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
               "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
@@ -81,7 +81,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_SvarogPart_RL_CountDown[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"764270214\">Monster_W1_SvarogPart_RL_CountDown</a>[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "({[Skill06[0]]} + 1)",
@@ -101,7 +101,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_SvarogPart_RL_LowHP"
+      "modifier": "<a class=\"gModGreen\" id=\"-2117333561\">Monster_W1_SvarogPart_RL_LowHP</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -109,13 +109,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_SvarogPart_BattleScore1"
+      "modifier": "<a class=\"gModGreen\" id=\"968585055\">Monster_W1_SvarogPart_BattleScore1</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_SvarogPart_RL_LowHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2117333561\">Monster_W1_SvarogPart_RL_LowHP</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

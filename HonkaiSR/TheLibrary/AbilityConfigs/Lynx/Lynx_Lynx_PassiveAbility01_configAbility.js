@@ -25,7 +25,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Lynx_Tree01_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"199115984\">Lynx_Tree01_Listen</a>"
         }
       ]
     },
@@ -42,7 +42,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Lynx_Tree02_Resistance",
+          "modifier": "<a class=\"gModGreen\" id=\"1819426834\">Lynx_Tree02_Resistance</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.35) || RETURN",
@@ -69,7 +69,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Lynx_Eidolon1_ListenBeforeDealHeal01"
+          "modifier": "<a class=\"gModGreen\" id=\"1732085386\">Lynx_Eidolon1_ListenBeforeDealHeal01</a>"
         }
       ]
     }
@@ -77,7 +77,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Lynx_Eidolon1_ListenBeforeDealHeal02",
+      "for": "<a class=\"gModGreen\" id=\"mod__1715307767\">Lynx_Eidolon1_ListenBeforeDealHeal02</a>",
       "execute": [
         {
           "eventTrigger": "Heal Target Start [Owner]",
@@ -123,7 +123,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lynx_Eidolon1_ListenBeforeDealHeal01",
+      "for": "<a class=\"gModGreen\" id=\"mod__1732085386\">Lynx_Eidolon1_ListenBeforeDealHeal01</a>",
       "modifierFlags": [
         "MuteDotCasterCallBack"
       ],
@@ -177,7 +177,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Lynx_Eidolon1_ListenBeforeDealHeal02",
+              "modifier": "<a class=\"gModGreen\" id=\"1715307767\">Lynx_Eidolon1_ListenBeforeDealHeal02</a>",
               "valuePerStack": {
                 "MDF_Target_HpRatio": {
                   "operator": "Variables[0] (0.5) || RETURN",
@@ -205,7 +205,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lynx_Tree01_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__199115984\">Lynx_Tree01_Listen</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -216,7 +216,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Lynx_Tree01_OnBeforeBeingAttacked",
+              "modifier": "<a class=\"gModGreen\" id=\"1804592669\">Lynx_Tree01_OnBeforeBeingAttacked</a>",
               "valuePerStack": {
                 "MDF_Lynx_PointB1_AddSpValue": {
                   "operator": "Variables[0] (2) || RETURN",
@@ -252,7 +252,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Lynx_Tree01_OnBeforeBeingAttacked",
+                    "modifier": "<a class=\"gModGreen\" id=\"1804592669\">Lynx_Tree01_OnBeforeBeingAttacked</a>",
                     "invertCondition": true
                   }
                 ]
@@ -264,7 +264,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Lynx_Tree01_OnBeforeBeingAttacked",
+                  "modifier": "<a class=\"gModGreen\" id=\"1804592669\">Lynx_Tree01_OnBeforeBeingAttacked</a>",
                   "valuePerStack": {
                     "MDF_Lynx_PointB1_AddSpValue": {
                       "operator": "Variables[0] (2) || RETURN",

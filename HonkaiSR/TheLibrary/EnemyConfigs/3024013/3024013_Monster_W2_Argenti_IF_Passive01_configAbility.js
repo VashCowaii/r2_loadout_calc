@@ -47,7 +47,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "W2_Argenti_BattleScore1"
+      "modifier": "<a class=\"gModGreen\" id=\"1028252906\">W2_Argenti_BattleScore1</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -55,7 +55,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "W2_Argenti_BattleScore2"
+      "modifier": "<a class=\"gModGreen\" id=\"1011475287\">W2_Argenti_BattleScore2</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -63,7 +63,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -71,7 +71,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Argenti_IF_Boss_Enhance"
+      "modifier": "<a class=\"gModGreen\" id=\"1334735657\">Enemy_W2_Argenti_IF_Boss_Enhance</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -79,7 +79,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Argenti_IF_AIController"
+      "modifier": "<a class=\"gModGreen\" id=\"2120668767\">Enemy_W2_Argenti_IF_AIController</a>"
     },
     {
       "name": "Action Advance/Delay",
@@ -103,7 +103,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Argenti_IF_PowerCollecterController"
+      "modifier": "<a class=\"gModGreen\" id=\"-1109870649\">Enemy_W2_Argenti_IF_PowerCollecterController</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -111,13 +111,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Argenti_IF_EnterCombatAlert"
+      "modifier": "<a class=\"gModGreen\" id=\"278285473\">Enemy_W2_Argenti_IF_EnterCombatAlert</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Argenti_IF_EnterCombatAlert",
+      "for": "<a class=\"gModGreen\" id=\"mod__278285473\">Enemy_W2_Argenti_IF_EnterCombatAlert</a>",
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -149,7 +149,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Argenti_IF_PowerCollecterController",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1109870649\">Enemy_W2_Argenti_IF_PowerCollecterController</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -188,7 +188,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_W2_Argenti_IF_Power[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
                   },
                   "ifTargetFound": [
                     {
@@ -224,7 +224,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Argenti_IF_AIController",
+      "for": "<a class=\"gModGreen\" id=\"mod__2120668767\">Enemy_W2_Argenti_IF_AIController</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

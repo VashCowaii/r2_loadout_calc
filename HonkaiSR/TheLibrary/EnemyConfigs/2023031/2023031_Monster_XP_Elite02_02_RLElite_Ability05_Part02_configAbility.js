@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_XP_Elite02_02_RLElite_ChargeEffect[<span class=\"descriptionNumberColor\">Japa</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-773012193\">Monster_XP_Elite02_02_RLElite_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "modifier": "Monster_XP_Elite02_02_RLElite_DirtyHPListener",
+      "modifier": "<a class=\"gModGreen\" id=\"-1807594786\">Monster_XP_Elite02_02_RLElite_DirtyHPListener</a>",
       "valuePerStack": {
         "MDF_DirtyHPAddedRatio": {
           "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",

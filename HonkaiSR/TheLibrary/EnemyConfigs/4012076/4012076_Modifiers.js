@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -144,7 +144,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W4_Pollux_IF_PartController_LockHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1837027601\">Monster_W4_Pollux_IF_PartController_LockHP</a>",
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -178,7 +178,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_W4_Pollux_Endurance"
+                  "modifier": "<a class=\"gModGreen\" id=\"1688517080\">Enemy_W4_Pollux_Endurance</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -214,7 +214,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_AbilityP01_Part02_Weakness",
+      "for": "<a class=\"gModGreen\" id=\"mod__-600749923\">Enemy_W4_Pollux_IF_AbilityP01_Part02_Weakness</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -237,7 +237,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_AbilityP01_Part01_Weakness",
+      "for": "<a class=\"gModGreen\" id=\"mod__-992661142\">Enemy_W4_Pollux_IF_AbilityP01_Part01_Weakness</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -260,7 +260,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_AbilityP01_WeaknessControl",
+      "for": "<a class=\"gModGreen\" id=\"mod__-354779130\">Enemy_W4_Pollux_IF_AbilityP01_WeaknessControl</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -286,7 +286,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_PolluxPart_L"
+                "modifier": "<a class=\"gModGreen\" id=\"-193308861\">Monster_W4_PolluxPart_L</a>"
               },
               "passed": [
                 {
@@ -295,7 +295,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}} + {{Pollux Right Tentacle}}"
                   },
-                  "modifier": "Enemy_W4_Pollux_IF_AbilityP01_Part01_Weakness"
+                  "modifier": "<a class=\"gModGreen\" id=\"-992661142\">Enemy_W4_Pollux_IF_AbilityP01_Part01_Weakness</a>"
                 }
               ]
             },
@@ -307,7 +307,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_PolluxPart_R"
+                "modifier": "<a class=\"gModGreen\" id=\"-226864099\">Monster_W4_PolluxPart_R</a>"
               },
               "passed": [
                 {
@@ -316,7 +316,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}} + {{Pollux Left Tentacle}}"
                   },
-                  "modifier": "Enemy_W4_Pollux_IF_AbilityP01_Part02_Weakness"
+                  "modifier": "<a class=\"gModGreen\" id=\"-600749923\">Enemy_W4_Pollux_IF_AbilityP01_Part02_Weakness</a>"
                 }
               ]
             }
@@ -333,7 +333,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_PolluxPart_L"
+                "modifier": "<a class=\"gModGreen\" id=\"-193308861\">Monster_W4_PolluxPart_L</a>"
               },
               "passed": [
                 {
@@ -342,7 +342,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_W4_Pollux_IF_AbilityP01_Part01_Weakness"
+                  "modifier": "<a class=\"gModGreen\" id=\"-992661142\">Enemy_W4_Pollux_IF_AbilityP01_Part01_Weakness</a>"
                 }
               ]
             },
@@ -354,7 +354,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W4_PolluxPart_R"
+                "modifier": "<a class=\"gModGreen\" id=\"-226864099\">Monster_W4_PolluxPart_R</a>"
               },
               "passed": [
                 {
@@ -363,7 +363,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_W4_Pollux_IF_AbilityP01_Part02_Weakness"
+                  "modifier": "<a class=\"gModGreen\" id=\"-600749923\">Enemy_W4_Pollux_IF_AbilityP01_Part02_Weakness</a>"
                 }
               ]
             }
@@ -375,7 +375,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_HintToastController",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1922809357\">Enemy_W4_Pollux_IF_HintToastController</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -393,7 +393,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
               },
               "passed": [
                 {
@@ -406,7 +406,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Enemy_W4_Pollux_IF_BloodPool[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-740454395\">Enemy_W4_Pollux_IF_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
               },
               "passed": [
                 {
@@ -424,7 +424,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
               }
             }
           ]
@@ -436,7 +436,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display[<span class=\"descriptionNumberColor\">Death Rattle</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"235074644\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display</a>[<span class=\"descriptionNumberColor\">Death Rattle</span>]"
               },
               "passed": [
                 {
@@ -457,7 +457,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display[<span class=\"descriptionNumberColor\">Death Rattle</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"235074644\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display</a>[<span class=\"descriptionNumberColor\">Death Rattle</span>]"
                   },
                   {
                     "name": "Compare: Variable",
@@ -474,7 +474,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display[<span class=\"descriptionNumberColor\">Death Rattle</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"235074644\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display</a>[<span class=\"descriptionNumberColor\">Death Rattle</span>]"
                     }
                   }
                 ]
@@ -488,7 +488,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_PolluxPart_IF_Shield[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2030876773\">Enemy_W4_PolluxPart_IF_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "Endurance"
@@ -541,31 +541,31 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_AbilityEX04",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1339116785\">Enemy_W4_Pollux_IF_AbilityEX04</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_AbilityEX03",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1389449642\">Enemy_W4_Pollux_IF_AbilityEX03</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_AbilityEX02",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1372672023\">Enemy_W4_Pollux_IF_AbilityEX02</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_AbilityEX01",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1423004880\">Enemy_W4_Pollux_IF_AbilityEX01</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_PolluxPart_IF_Status",
+      "for": "<a class=\"gModGreen\" id=\"mod__385444056\">Enemy_W4_PolluxPart_IF_Status</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -593,7 +593,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_W4_Pollux_IF_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
                     "invertCondition": true
                   },
                   {
@@ -613,7 +613,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_W4_Pollux_IF_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
                   "valuePerStack": {
                     "MDF_DamagePercentage": {
                       "operator": "Variables[0] (ThirstBlood_Dot_DamagePercentage) || RETURN",
@@ -673,7 +673,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Enemy_W4_PolluxPart_IF_Shield[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-2030876773\">Enemy_W4_PolluxPart_IF_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]"
               }
             }
           ]
@@ -684,7 +684,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_BloodPool[<span class=\"descriptionNumberColor\">Dream of Demise</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-740454395\">Enemy_W4_Pollux_IF_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]",
       "stackData": [],
       "latentQueue": [],
       "description": "When ally targets' HP reduces, accumulates \"Desperate Bubble.\" When \"Desperate Bubble\" reaches the limit, this unit enters the \"Fragrance of Death\" state.",
@@ -693,7 +693,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_EnterBattle",
+      "for": "<a class=\"gModGreen\" id=\"mod__-261920057\">Enemy_W4_Pollux_IF_EnterBattle</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -729,7 +729,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_Strengthen_Break",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2005725125\">Enemy_W4_Pollux_IF_Strengthen_Break</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -745,7 +745,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W4_Pollux_IF_Strengthen_BreakMark"
+              "modifier": "<a class=\"gModGreen\" id=\"1288968302\">Enemy_W4_Pollux_IF_Strengthen_BreakMark</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -753,7 +753,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Minions of Modifier Holder}}"
               },
-              "modifier": "Enemy_W4_PolluxPart_IF_Link"
+              "modifier": "<a class=\"gModGreen\" id=\"-1989762066\">Enemy_W4_PolluxPart_IF_Link</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -761,7 +761,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W4_Pollux_IF_BloodPool[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-740454395\">Enemy_W4_Pollux_IF_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
             },
             {
               "name": "Add Events/Bonuses",
@@ -769,7 +769,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Minions of Modifier Holder}}"
               },
-              "modifier": "Enemy_W4_PolluxPart_IF_Reflex[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1112261788\">Enemy_W4_PolluxPart_IF_Reflex</a>[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]",
               "valuePerStack": {
                 "MDF_ReflexDamageValue": {
                   "operator": "Variables[0] (UnusedUnderThisBase_102) || RETURN",
@@ -803,7 +803,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_Strengthen_BreakMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__1288968302\">Enemy_W4_Pollux_IF_Strengthen_BreakMark</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -941,7 +941,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_Strengthen_Shield",
+      "for": "<a class=\"gModGreen\" id=\"mod__1512844653\">Enemy_W4_Pollux_IF_Strengthen_Shield</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -993,7 +993,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_W4_Pollux_IF_Strengthen_BreakMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"1288968302\">Enemy_W4_Pollux_IF_Strengthen_BreakMark</a>"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -1024,7 +1024,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
             }
           ]
         },
@@ -1156,7 +1156,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Modifier_StageSpecialAbility_10441065_OnPollux",
+                        "modifier": "<a class=\"gModGreen\" id=\"23603986\">Modifier_StageSpecialAbility_10441065_OnPollux</a>",
                         "invertCondition": true
                       }
                     ]
@@ -1431,7 +1431,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -1445,7 +1445,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Standard_Monster_AllDamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1453,7 +1453,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_Standard_WeakControl[<span class=\"descriptionNumberColor\">Toughness Protection</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1754480095\">Monster_Standard_WeakControl</a>[<span class=\"descriptionNumberColor\">Toughness Protection</span>]"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -1466,7 +1466,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W4_Pollux_IF_BloodPool[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-740454395\">Enemy_W4_Pollux_IF_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1474,7 +1474,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W4_Pollux_IF_Strengthen_Shield",
+              "modifier": "<a class=\"gModGreen\" id=\"1512844653\">Enemy_W4_Pollux_IF_Strengthen_Shield</a>",
               "valuePerStack": {
                 "MDF_ShieldPercentage": {
                   "operator": "Variables[0] (UnusedUnderThisBase_112) || RETURN",
@@ -1509,7 +1509,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_APShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                 }
               ]
             },
@@ -1519,7 +1519,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W4_Pollux_Strengthen_SpeedAdded",
+              "modifier": "<a class=\"gModGreen\" id=\"1777171408\">Monster_W4_Pollux_Strengthen_SpeedAdded</a>",
               "valuePerStack": {
                 "MDF_ShowValue1": {
                   "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
@@ -1579,7 +1579,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W4_Pollux_IF_Strengthen_Shield"
+              "modifier": "<a class=\"gModGreen\" id=\"1512844653\">Enemy_W4_Pollux_IF_Strengthen_Shield</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1587,7 +1587,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W4_Pollux_Strengthen_SpeedAdded"
+              "modifier": "<a class=\"gModGreen\" id=\"1777171408\">Monster_W4_Pollux_Strengthen_SpeedAdded</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1595,7 +1595,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -1642,7 +1642,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W4_Pollux_Strengthen_SpeedAdded",
+              "modifier": "<a class=\"gModGreen\" id=\"1777171408\">Monster_W4_Pollux_Strengthen_SpeedAdded</a>",
               "valuePerStack": {
                 "MDF_ShowValue1": {
                   "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
@@ -1680,7 +1680,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_PolluxPart_IF_Link",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1989762066\">Enemy_W4_PolluxPart_IF_Link</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1736,7 +1736,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Enemy_W4_PolluxPart_IF_MinionsSuperArmorBreak[<span class=\"descriptionNumberColor\">Physical Falter</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"129075822\">Enemy_W4_PolluxPart_IF_MinionsSuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Physical Falter</span>]",
                         "invertCondition": true
                       }
                     ]
@@ -1783,13 +1783,13 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Enemy_W4_PolluxPart_IF_Shield[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-2030876773\">Enemy_W4_PolluxPart_IF_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]"
         }
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_PolluxPart_IF_Reflex_EffectLoop",
+      "for": "<a class=\"gModGreen\" id=\"mod__-95813586\">Enemy_W4_PolluxPart_IF_Reflex_EffectLoop</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1823,7 +1823,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_PolluxPart_IF_Reflex[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1112261788\">Enemy_W4_PolluxPart_IF_Reflex</a>[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1834,7 +1834,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W4_PolluxPart_IF_Reflex_EffectLoop"
+              "modifier": "<a class=\"gModGreen\" id=\"-95813586\">Enemy_W4_PolluxPart_IF_Reflex_EffectLoop</a>"
             }
           ]
         },
@@ -1847,7 +1847,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W4_PolluxPart_IF_Reflex_EffectLoop"
+              "modifier": "<a class=\"gModGreen\" id=\"-95813586\">Enemy_W4_PolluxPart_IF_Reflex_EffectLoop</a>"
             }
           ]
         },
@@ -1926,7 +1926,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W4_PolluxPart_IF_Reflex_EffectLoop"
+              "modifier": "<a class=\"gModGreen\" id=\"-95813586\">Enemy_W4_PolluxPart_IF_Reflex_EffectLoop</a>"
             }
           ]
         },
@@ -1939,7 +1939,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W4_PolluxPart_IF_Reflex_EffectLoop"
+              "modifier": "<a class=\"gModGreen\" id=\"-95813586\">Enemy_W4_PolluxPart_IF_Reflex_EffectLoop</a>"
             }
           ]
         },
@@ -1991,7 +1991,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Enemy_W4_PolluxPart_IF_MinionsSuperArmorBreak[<span class=\"descriptionNumberColor\">Physical Falter</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"129075822\">Enemy_W4_PolluxPart_IF_MinionsSuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Physical Falter</span>]",
                         "invertCondition": true
                       }
                     ]
@@ -2040,7 +2040,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_PolluxPart_IF_MinionsSuperArmorBreak[<span class=\"descriptionNumberColor\">Physical Falter</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__129075822\">Enemy_W4_PolluxPart_IF_MinionsSuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Physical Falter</span>]",
       "modifierFlags": [
         "STAT_SuperArmorBreak",
         "STAT_AITargetKeepActionDelay"
@@ -2055,7 +2055,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "StanceBreakState_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -2141,7 +2141,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "StanceBreakState_Effect"
+                "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
               },
               "passed": [
                 {
@@ -2150,7 +2150,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "StanceBreakState_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
                 }
               ]
             }
@@ -2163,7 +2163,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_PolluxPart_IF_MinionsSuperArmor[<span class=\"descriptionNumberColor\">Physical Enhancement</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2031085573\">Enemy_W4_PolluxPart_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Physical Enhancement</span>]",
       "modifierFlags": [],
       "execute": [
         {
@@ -2400,7 +2400,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_PolluxPart_IF_MinionsSuperArmorController",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1636257193\">Enemy_W4_PolluxPart_IF_MinionsSuperArmorController</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2411,7 +2411,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W4_PolluxPart_IF_MinionsSuperArmor[<span class=\"descriptionNumberColor\">Physical Enhancement</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2031085573\">Enemy_W4_PolluxPart_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Physical Enhancement</span>]",
               "valuePerStack": {
                 "MDF_AllDamageReduce": {
                   "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageReduce) || RETURN",
@@ -2436,7 +2436,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Controller"
+                "modifier": "<a class=\"gModGreen\" id=\"-2037214572\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Controller</a>"
               },
               "passed": [
                 {
@@ -2445,7 +2445,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W4_PolluxPart_IF_MinionsSuperArmor[<span class=\"descriptionNumberColor\">Physical Enhancement</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2031085573\">Enemy_W4_PolluxPart_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Physical Enhancement</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2453,7 +2453,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W4_PolluxPart_IF_MinionsSuperArmorBreak[<span class=\"descriptionNumberColor\">Physical Falter</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"129075822\">Enemy_W4_PolluxPart_IF_MinionsSuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Physical Falter</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeTakenRatio": {
                       "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageTypeTakenRatio) || RETURN",
@@ -2480,7 +2480,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Controller"
+                "modifier": "<a class=\"gModGreen\" id=\"-2037214572\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Controller</a>"
               },
               "passed": [
                 {
@@ -2489,7 +2489,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W4_PolluxPart_IF_MinionsSuperArmorBreak[<span class=\"descriptionNumberColor\">Physical Falter</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"129075822\">Enemy_W4_PolluxPart_IF_MinionsSuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Physical Falter</span>]"
                 },
                 {
                   "name": "Exit Broken-State",
@@ -2506,7 +2506,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Standard_SuperArmor_IF[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
                   },
                   "passed": [
                     {
@@ -2515,7 +2515,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W4_PolluxPart_IF_MinionsSuperArmor[<span class=\"descriptionNumberColor\">Physical Enhancement</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2031085573\">Enemy_W4_PolluxPart_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Physical Enhancement</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageReduce": {
                           "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageReduce) || RETURN",
@@ -2551,7 +2551,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_RemoveOneMore",
+      "for": "<a class=\"gModGreen\" id=\"mod__-313862182\">Enemy_W4_Pollux_IF_RemoveOneMore</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -2589,7 +2589,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "OneMorePerTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2597,7 +2597,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_APShow"
+                      "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
                     }
                   ],
                   "failed": [
@@ -2609,7 +2609,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "OneMorePerTurn"
+                        "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                       },
                       "failed": [
                         {
@@ -2618,7 +2618,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "OneMorePerTurn"
+                          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                         }
                       ]
                     }
@@ -2647,7 +2647,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_APShow"
+              "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             },
             {
               "name": "IF",
@@ -2657,7 +2657,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "OneMorePerTurn"
+                "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
               },
               "failed": [
                 {
@@ -2666,7 +2666,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMorePerTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                 }
               ]
             }
@@ -2678,7 +2678,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_Status",
+      "for": "<a class=\"gModGreen\" id=\"mod__-147958761\">Enemy_W4_Pollux_IF_Status</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -2715,7 +2715,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                     "invertCondition": true
                   },
                   {
@@ -2775,7 +2775,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                         "invertCondition": true
                       }
                     ]
@@ -2817,7 +2817,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W4_Pollux_FX_Ground"
+              "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -2845,7 +2845,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W4_Pollux_EnergyBar"
+              "modifier": "<a class=\"gModGreen\" id=\"2086497725\">Monster_W4_Pollux_EnergyBar</a>"
             }
           ]
         },
@@ -2889,7 +2889,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                     "invertCondition": true
                   },
                   {
@@ -2898,7 +2898,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Enemy_W4_Pollux_IF_Strengthen_BreakMark",
+                    "modifier": "<a class=\"gModGreen\" id=\"1288968302\">Enemy_W4_Pollux_IF_Strengthen_BreakMark</a>",
                     "invertCondition": true
                   },
                   {
@@ -2907,7 +2907,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Standard_SuperArmorBreak_IF[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]",
                     "invertCondition": true
                   },
                   {
@@ -3015,7 +3015,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                     "invertCondition": true
                   },
                   {
@@ -3076,7 +3076,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                         "invertCondition": true
                       }
                     ]
@@ -3120,7 +3120,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Enemy_W4_Pollux_IF_BloodPool[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-740454395\">Enemy_W4_Pollux_IF_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
               },
               "passed": [
                 {
@@ -3129,7 +3129,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Minions of Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W4_PolluxPart_IF_Reflex[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1112261788\">Enemy_W4_PolluxPart_IF_Reflex</a>[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3137,7 +3137,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_Monster_AllDamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3145,7 +3145,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_Standard_WeakControl[<span class=\"descriptionNumberColor\">Toughness Protection</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1754480095\">Monster_Standard_WeakControl</a>[<span class=\"descriptionNumberColor\">Toughness Protection</span>]"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -3162,7 +3162,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W4_Pollux_IF_BloodPool[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-740454395\">Enemy_W4_Pollux_IF_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3170,7 +3170,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W4_Pollux_IF_Strengthen_Break"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2005725125\">Enemy_W4_Pollux_IF_Strengthen_Break</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3178,7 +3178,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W4_Pollux_IF_Strengthen_BreakMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"1288968302\">Enemy_W4_Pollux_IF_Strengthen_BreakMark</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -3223,7 +3223,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                     "invertCondition": true
                   },
                   {
@@ -3284,7 +3284,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                         "invertCondition": true
                       }
                     ]
@@ -3328,7 +3328,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_W4_PolluxPart_IF_Status"
+                "modifier": "<a class=\"gModGreen\" id=\"385444056\">Enemy_W4_PolluxPart_IF_Status</a>"
               },
               "passed": [
                 {
@@ -3379,7 +3379,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -3407,7 +3407,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display[<span class=\"descriptionNumberColor\">Death Rattle</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__235074644\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display</a>[<span class=\"descriptionNumberColor\">Death Rattle</span>]",
       "modifierFlags": [
         "STAT_Fatigue"
       ],
@@ -3528,7 +3528,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP"
+                      "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -3590,7 +3590,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP"
+              "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>"
             }
           ],
           "priorityLevel": -10
@@ -3922,7 +3922,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP",
+      "for": "<a class=\"gModGreen\" id=\"mod__1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3938,14 +3938,14 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target[<span class=\"descriptionNumberColor\">Overloadable</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__267358493\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target</a>[<span class=\"descriptionNumberColor\">Overloadable</span>]",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_Monster_W4_Pollux_IF_NegativeBlood_Update"
+              "functionName": "<a class=\"gTempYellow\" id=\"-678977749\">TaskList_Monster_W4_Pollux_IF_NegativeBlood_Update</a>"
             }
           ]
         },
@@ -3958,7 +3958,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP"
+              "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>"
             }
           ]
         },
@@ -3971,7 +3971,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP"
+              "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>"
             }
           ]
         },
@@ -3980,7 +3980,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_Monster_W4_Pollux_IF_NegativeBlood_Update"
+              "functionName": "<a class=\"gTempYellow\" id=\"-678977749\">TaskList_Monster_W4_Pollux_IF_NegativeBlood_Update</a>"
             }
           ]
         },
@@ -3989,7 +3989,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_Monster_W4_Pollux_IF_NegativeBlood_Update"
+              "functionName": "<a class=\"gTempYellow\" id=\"-678977749\">TaskList_Monster_W4_Pollux_IF_NegativeBlood_Update</a>"
             }
           ]
         },
@@ -4004,7 +4004,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display[<span class=\"descriptionNumberColor\">Death Rattle</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"235074644\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display</a>[<span class=\"descriptionNumberColor\">Death Rattle</span>]",
                 "invertCondition": true
               }
             }
@@ -4019,7 +4019,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP"
+              "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>"
             }
           ]
         }
@@ -4027,7 +4027,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "TaskList_Monster_W4_Pollux_IF_NegativeBlood_Update",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-678977749\">TaskList_Monster_W4_Pollux_IF_NegativeBlood_Update</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
@@ -4070,7 +4070,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display[<span class=\"descriptionNumberColor\">Death Rattle</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"235074644\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display</a>[<span class=\"descriptionNumberColor\">Death Rattle</span>]"
                 }
               ],
               "failed": [
@@ -4082,12 +4082,12 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display[<span class=\"descriptionNumberColor\">Death Rattle</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"235074644\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display</a>[<span class=\"descriptionNumberColor\">Death Rattle</span>]"
                   },
                   "passed": [
                     {
                       "name": "Define Modifier-Specific Variable",
-                      "modifierName": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display[<span class=\"descriptionNumberColor\">Death Rattle</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"235074644\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display</a>[<span class=\"descriptionNumberColor\">Death Rattle</span>]",
                       "variableName": "MDF_NegativeBlood",
                       "value": {
                         "operator": "Variables[0] (MDF_NegativeHP) || RETURN",
@@ -4106,7 +4106,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display[<span class=\"descriptionNumberColor\">Death Rattle</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"235074644\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display</a>[<span class=\"descriptionNumberColor\">Death Rattle</span>]",
                       "valuePerStack": {
                         "MDF_NegativeBlood": {
                           "operator": "Variables[0] (MDF_NegativeHP) || RETURN",
@@ -4156,7 +4156,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Controller",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2037214572\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Controller</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -4175,7 +4175,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display[<span class=\"descriptionNumberColor\">Death Rattle</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"235074644\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display</a>[<span class=\"descriptionNumberColor\">Death Rattle</span>]"
               },
               "passed": [
                 {
@@ -4212,7 +4212,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target[<span class=\"descriptionNumberColor\">Overloadable</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"267358493\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target</a>[<span class=\"descriptionNumberColor\">Overloadable</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_NegativeBlood_DeathCountDown": {
@@ -4245,7 +4245,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W4_Pollux_IF_UltraReadyMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-822435931\">Enemy_W4_Pollux_IF_UltraReadyMark</a>",
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",

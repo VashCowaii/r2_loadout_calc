@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21003_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-578487717\">LC_21003_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21003_CriticalChance",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1646066849\">LC_21003_CriticalChance</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -44,14 +44,14 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21003_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-578487717\">LC_21003_Main</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_LC_21003_OnDieOrEscape"
+              "functionName": "<a class=\"gTempYellow\" id=\"-311979758\">TaskList_LC_21003_OnDieOrEscape</a>"
             }
           ]
         },
@@ -60,7 +60,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_LC_21003_OnDieOrEscape"
+              "functionName": "<a class=\"gTempYellow\" id=\"-311979758\">TaskList_LC_21003_OnDieOrEscape</a>"
             }
           ]
         },
@@ -91,7 +91,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_21003_CriticalChance",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1646066849\">LC_21003_CriticalChance</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.12) || RETURN",
@@ -111,7 +111,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_21003_CriticalChance"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1646066849\">LC_21003_CriticalChance</a>"
                 }
               ]
             }
@@ -121,7 +121,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "TaskList_LC_21003_OnDieOrEscape",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-311979758\">TaskList_LC_21003_OnDieOrEscape</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Team Count",
@@ -147,7 +147,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_21003_CriticalChance",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1646066849\">LC_21003_CriticalChance</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.12) || RETURN",
@@ -167,7 +167,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_21003_CriticalChance"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1646066849\">LC_21003_CriticalChance</a>"
                 }
               ]
             }

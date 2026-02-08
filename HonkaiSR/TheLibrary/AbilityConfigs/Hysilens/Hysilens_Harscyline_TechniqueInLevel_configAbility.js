@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Harscyline_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1754712944\">StageAbility_Maze_Harscyline_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Harscyline_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1754712944\">StageAbility_Maze_Harscyline_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -53,7 +53,7 @@ const configAbility = {
                   "Event": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Harscyline_RandomDOT_Maze"
+                      "functionName": "<a class=\"gTempYellow\" id=\"1526500029\">Harscyline_RandomDOT_Maze</a>"
                     }
                   ]
                 }

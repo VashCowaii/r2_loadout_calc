@@ -11,11 +11,11 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Phainon_Passive_AsAbilityTarget",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__722514042\">Phainon_Passive_AsAbilityTarget</a>",
       "parse": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+          "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
           "variables": {
             "parameter[0]_AddValue": 1
           }
@@ -41,7 +41,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Phainon_Passive_Property[<span class=\"descriptionNumberColor\">Pyric Corpus</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1491786902\">Phainon_Passive_Property</a>[<span class=\"descriptionNumberColor\">Pyric Corpus</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -50,7 +50,7 @@ const configAbility = {
                   3
                 ]
               },
-              "referenceModifier": "MReference_CriticalDamageUp",
+              "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.3) || RETURN",
@@ -68,7 +68,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
       "parse": [
         {
           "name": "Looped Event",
@@ -125,7 +125,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Phainon_ClearAvatarArea",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1545922215\">Phainon_ClearAvatarArea</a>",
       "parse": [
         {
           "name": "Change Battle Arena",

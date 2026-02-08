@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Boss_Cocolia_MuteHitFly_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1485263337\">Boss_Cocolia_MuteHitFly_Modifier</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Boss_Cocolia_RL_ResetSummonCD"
+      "modifier": "<a class=\"gModGreen\" id=\"1565715964\">Boss_Cocolia_RL_ResetSummonCD</a>"
     },
     {
       "name": "IF",
@@ -29,7 +29,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster's Summoner}}"
         },
-        "modifier": "Monster_W1_CocoliaP1_RL_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
       },
       "passed": [
         {
@@ -40,7 +40,7 @@ const configAbility = {
           },
           "valueType": "Layer",
           "variableName": "AttackUpLayer",
-          "modifierName": "Monster_W1_CocoliaP1_RL_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "multiplier": 1
         },
         {
@@ -49,7 +49,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_CocoliaP1_RL_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
               "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
@@ -75,7 +75,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Boss_Cocolia_RL_ResetSummonCD",
+      "for": "<a class=\"gModGreen\" id=\"mod__1565715964\">Boss_Cocolia_RL_ResetSummonCD</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",

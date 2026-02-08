@@ -21,7 +21,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Saber_AIFlag"
+      "modifier": "<a class=\"gModGreen\" id=\"1310791461\">Saber_AIFlag</a>"
     },
     {
       "name": "Read Variable Value",
@@ -65,7 +65,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Saber_PassiveAbility01"
+      "modifier": "<a class=\"gModGreen\" id=\"2036606296\">Saber_PassiveAbility01</a>"
     },
     {
       "name": "IF",
@@ -80,7 +80,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Saber_Ability03_CD[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"879085567\">Saber_Ability03_CD</a>[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -88,7 +88,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Saber_Trace01_Bonus[<span class=\"descriptionNumberColor\">Knight of the Dragon</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1437622489\">Saber_Trace01_Bonus</a>[<span class=\"descriptionNumberColor\">Knight of the Dragon</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.2) || RETURN",
@@ -150,7 +150,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Saber_Passive_ReturnSpValue"
+          "modifier": "<a class=\"gModGreen\" id=\"1086940279\">Saber_Passive_ReturnSpValue</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -158,7 +158,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Saber_Passive_StockSpValue"
+          "modifier": "<a class=\"gModGreen\" id=\"-278261367\">Saber_Passive_StockSpValue</a>"
         }
       ]
     },
@@ -175,7 +175,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Saber_Trace03"
+          "modifier": "<a class=\"gModGreen\" id=\"21439187\">Saber_Trace03</a>"
         }
       ]
     },
@@ -192,7 +192,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Saber_Eidolon1"
+          "modifier": "<a class=\"gModGreen\" id=\"-998377488\">Saber_Eidolon1</a>"
         }
       ]
     },
@@ -209,7 +209,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Saber_Eidolon4[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-914489393\">Saber_Eidolon4</a>[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]"
         }
       ]
     },
@@ -226,7 +226,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Saber_Eidolon6"
+          "modifier": "<a class=\"gModGreen\" id=\"-880934155\">Saber_Eidolon6</a>"
         }
       ]
     }
@@ -234,12 +234,12 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Saber_Trace03_CD",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1137742605\">Saber_Trace03_CD</a>",
       "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Trace03",
+      "for": "<a class=\"gModGreen\" id=\"mod__21439187\">Saber_Trace03</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -263,7 +263,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Saber_Trace03_Bonus[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"581836941\">Saber_Trace03_Bonus</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -293,7 +293,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Trace02",
+      "for": "<a class=\"gModGreen\" id=\"mod__4661568\">Saber_Trace02</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -303,7 +303,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_PassiveAbility01",
+      "for": "<a class=\"gModGreen\" id=\"mod__2036606296\">Saber_PassiveAbility01</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -311,7 +311,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Saber_SurgeCheck",
+              "functionName": "<a class=\"gTempYellow\" id=\"-2003815504\">function_Saber_SurgeCheck</a>",
               "variables": {
                 "_MaxSP": 0,
                 "_C_SP": 0,
@@ -357,7 +357,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Saber_Passive_Bonus[<span class=\"descriptionNumberColor\">Dragon Reactor Core</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-435192710\">Saber_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Dragon Reactor Core</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -407,7 +407,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1328926688\">Saber_Trace03_Bonus_02</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (8) || RETURN",
                         "displayLines": "8",
@@ -450,7 +450,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1058966793\">Saber_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (15) || RETURN",
                         "displayLines": "15",
@@ -500,7 +500,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Saber_SurgeCheck",
+              "functionName": "<a class=\"gTempYellow\" id=\"-2003815504\">function_Saber_SurgeCheck</a>",
               "variables": {
                 "_MaxSP": 0,
                 "_C_SP": 0,
@@ -574,7 +574,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1328926688\">Saber_Trace03_Bonus_02</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (8) || RETURN",
                         "displayLines": "8",
@@ -617,7 +617,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1058966793\">Saber_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (15) || RETURN",
                         "displayLines": "15",
@@ -720,7 +720,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Saber_SurgeCheck",
+              "functionName": "<a class=\"gTempYellow\" id=\"-2003815504\">function_Saber_SurgeCheck</a>",
               "variables": {
                 "_MaxSP": 0,
                 "_C_SP": 0,
@@ -757,7 +757,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Saber_Energy_Count[<span class=\"descriptionNumberColor\">Core Resonance</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1386884047\">Saber_Energy_Count</a>[<span class=\"descriptionNumberColor\">Core Resonance</span>]",
                       "counter": {
                         "operator": "Variables[0] (DV_SurgePoint) || RETURN",
                         "displayLines": "DV_SurgePoint",
@@ -775,13 +775,13 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Saber_Energy_Count[<span class=\"descriptionNumberColor\">Core Resonance</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1386884047\">Saber_Energy_Count</a>[<span class=\"descriptionNumberColor\">Core Resonance</span>]"
                     }
                   ]
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Saber_SurgeCheck",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2003815504\">function_Saber_SurgeCheck</a>",
                   "variables": {
                     "_MaxSP": 0,
                     "_C_SP": 0,
@@ -806,7 +806,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Saber_Energy_Count[<span class=\"descriptionNumberColor\">Core Resonance</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1386884047\">Saber_Energy_Count</a>[<span class=\"descriptionNumberColor\">Core Resonance</span>]",
                       "counter": {
                         "operator": "Variables[0] (DV_SurgePoint) || RETURN",
                         "displayLines": "DV_SurgePoint",
@@ -824,13 +824,13 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Saber_Energy_Count[<span class=\"descriptionNumberColor\">Core Resonance</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1386884047\">Saber_Energy_Count</a>[<span class=\"descriptionNumberColor\">Core Resonance</span>]"
                     }
                   ]
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "function_Saber_SurgeCheck",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2003815504\">function_Saber_SurgeCheck</a>",
                   "variables": {
                     "_MaxSP": 0,
                     "_C_SP": 0,
@@ -848,7 +848,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Energy_Count[<span class=\"descriptionNumberColor\">Core Resonance</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1386884047\">Saber_Energy_Count</a>[<span class=\"descriptionNumberColor\">Core Resonance</span>]",
       "counter": 1,
       "stackType": "ReplaceByCaster",
       "stackData": [],
@@ -859,7 +859,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Trace01_Bonus[<span class=\"descriptionNumberColor\">Knight of the Dragon</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1437622489\">Saber_Trace01_Bonus</a>[<span class=\"descriptionNumberColor\">Knight of the Dragon</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -893,7 +893,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
       "counter": 1,
       "stackType": "ReplaceByCaster",
       "execute": [
@@ -915,7 +915,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                   "value": {
                     "operator": "Variables[0] (WHOLE) || Variables[1] (Saber_00_EntityStockSPForShow) || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(Saber_00_EntityStockSPForShow)",
@@ -934,7 +934,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                   "value": 1
                 }
               ]
@@ -948,7 +948,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Passive_StockSpValue",
+      "for": "<a class=\"gModGreen\" id=\"mod__-278261367\">Saber_Passive_StockSpValue</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1104,7 +1104,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]"
                           },
                           "passed": [
                             {
@@ -1113,7 +1113,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                               "variable": "Saber_00_EntityStockSPForShow",
                               "target2": {
                                 "name": "Target Name",
@@ -1147,7 +1147,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                                   "valuePerStack": {
                                     "value_0_Saber_EntityStockSPForShow": {
                                       "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
@@ -1169,7 +1169,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                               "valuePerStack": {
                                 "value_0_Saber_EntityStockSPForShow": {
                                   "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
@@ -1197,7 +1197,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Passive_ReturnSpValue",
+      "for": "<a class=\"gModGreen\" id=\"mod__1086940279\">Saber_Passive_ReturnSpValue</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1251,7 +1251,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]"
                 },
                 {
                   "name": "Update Energy",
@@ -1279,7 +1279,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Eidolon1",
+      "for": "<a class=\"gModGreen\" id=\"mod__-998377488\">Saber_Eidolon1</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1367,7 +1367,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1328926688\">Saber_Trace03_Bonus_02</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (8) || RETURN",
                         "displayLines": "8",
@@ -1410,7 +1410,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1058966793\">Saber_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (15) || RETURN",
                         "displayLines": "15",
@@ -1450,7 +1450,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-269544975\">Saber_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1483,7 +1483,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Eidolon4[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-914489393\">Saber_Eidolon4</a>[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1522,7 +1522,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Saber_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-269544975\">Saber_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -1564,7 +1564,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Eidolon6",
+      "for": "<a class=\"gModGreen\" id=\"mod__-880934155\">Saber_Eidolon6</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1601,7 +1601,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Saber_Eidolon6_Count[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1658820893\">Saber_Eidolon6_Count</a>[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
               "counter": 1
             }
           ]
@@ -1612,7 +1612,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Saber_Eidolon6_Count[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1658820893\">Saber_Eidolon6_Count</a>[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
       "counter": 1,
       "execute": [
         {
@@ -1633,21 +1633,21 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": "Saber_Eidolon6_Count[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"1658820893\">Saber_Eidolon6_Count</a>[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
                     "compareType": ">",
                     "value2": 1
                   },
                   "passed": [
                     {
                       "name": "Define Modifier Variable",
-                      "modifierName": "Saber_Eidolon6_Count[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1658820893\">Saber_Eidolon6_Count</a>[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
                       "function": "Add"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Modifier Variable",
-                      "modifierName": "Saber_Eidolon6_Count[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1658820893\">Saber_Eidolon6_Count</a>[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
                       "value": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",

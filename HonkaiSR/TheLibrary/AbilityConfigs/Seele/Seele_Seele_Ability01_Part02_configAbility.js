@@ -93,7 +93,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Seele_Trace02_ModifyAction",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1624938404\">Seele_Trace02_ModifyAction</a>",
                   "valuePerStack": {
                     "MDF_DelayCost": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -138,7 +138,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Ability01PreShowModifier_AppliedRatio",
+              "modifier": "<a class=\"gModGreen\" id=\"333617615\">Ability01PreShowModifier_AppliedRatio</a>",
               "valuePerStack": {
                 "MDF_Ability01_Delay": {
                   "operator": "Variables[0] (0.2) || RETURN",
@@ -159,7 +159,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Ability01PreShowModifier_AppliedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__333617615\">Ability01PreShowModifier_AppliedRatio</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -198,7 +198,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Seele_Trace02_ModifyAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1624938404\">Seele_Trace02_ModifyAction</a>",
       "stackType": "Multiple",
       "execute": [
         {

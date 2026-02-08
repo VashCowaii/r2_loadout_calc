@@ -20,13 +20,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Yunli_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1638028001\">StageAbility_Maze_Yunli_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Yunli_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1638028001\">StageAbility_Maze_Yunli_Modifier</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],

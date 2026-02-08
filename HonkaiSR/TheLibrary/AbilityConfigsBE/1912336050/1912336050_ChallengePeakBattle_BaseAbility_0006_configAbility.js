@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0006"
+      "modifier": "<a class=\"gModGreen\" id=\"-422056480\">Modifier_ChallengePeakBattle_BaseAbility_0006</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0006_03[<span class=\"descriptionNumberColor\">Anguish</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__82931580\">Modifier_ChallengePeakBattle_BaseAbility_0006_03</a>[<span class=\"descriptionNumberColor\">Anguish</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -57,7 +57,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0006_02",
+      "for": "<a class=\"gModGreen\" id=\"mod__99709199\">Modifier_ChallengePeakBattle_BaseAbility_0006_02</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -68,7 +68,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0006_03[<span class=\"descriptionNumberColor\">Anguish</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"82931580\">Modifier_ChallengePeakBattle_BaseAbility_0006_03</a>[<span class=\"descriptionNumberColor\">Anguish</span>]",
               "baseChance": {
                 "operator": "Variables[0] (ChallengePeakBattle_0006_ADF_1) || RETURN",
                 "displayLines": "ChallengePeakBattle_0006_ADF_1",
@@ -118,7 +118,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0006",
+      "for": "<a class=\"gModGreen\" id=\"mod__-422056480\">Modifier_ChallengePeakBattle_BaseAbility_0006</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -154,7 +154,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0006_02",
+                  "modifier": "<a class=\"gModGreen\" id=\"99709199\">Modifier_ChallengePeakBattle_BaseAbility_0006_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0006_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

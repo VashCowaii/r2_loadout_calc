@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_056"
+      "modifier": "<a class=\"gModGreen\" id=\"-417916031\">MStrongChallengeEX_Talent_StageAbility_LE_056</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_056[<span class=\"descriptionNumberColor\">Bold Leader</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1107420759\">MStrongChallengeEX_Talent_StageAbility_PLY_056</a>[<span class=\"descriptionNumberColor\">Bold Leader</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_056",
+      "for": "<a class=\"gModGreen\" id=\"mod__-417916031\">MStrongChallengeEX_Talent_StageAbility_LE_056</a>",
       "execute": [
         {
           "eventTrigger": "Skill Point Changes",
@@ -176,7 +176,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Far Left Player Entity(no Memosprite)}}"
               },
-              "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_056[<span class=\"descriptionNumberColor\">Bold Leader</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1107420759\">MStrongChallengeEX_Talent_StageAbility_PLY_056</a>[<span class=\"descriptionNumberColor\">Bold Leader</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeAddedRatio": {
                   "operator": "Variables[0] (#ADF_1) || RETURN",

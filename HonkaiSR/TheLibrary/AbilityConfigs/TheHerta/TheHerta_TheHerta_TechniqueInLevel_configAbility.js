@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Technique_TheHerta_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"1753550945\">Technique_TheHerta_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "TheHerta_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">Vibe Checker</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__127317606\">TheHerta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Vibe Checker</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -56,7 +56,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Technique_TheHerta_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1753550945\">Technique_TheHerta_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -76,7 +76,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "TheHerta_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">Vibe Checker</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"127317606\">TheHerta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Vibe Checker</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

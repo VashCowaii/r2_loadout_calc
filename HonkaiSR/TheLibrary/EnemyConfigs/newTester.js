@@ -374,6 +374,7 @@ let scalingElite = null;
 let scalingHard = null;
 let levelIndex = 95;
 let waveSpecificArray = [0,0];
+let firstPageLoad = false;
 
 
 
@@ -481,13 +482,73 @@ const megaParsingFuckery = {
             loadFile = loadFile ?? abilityListInstance[abilityListInstance.length >= 2 ? 1 : 0];
             let configAbility = abilityObjectInstance[loadFile];
 
-            if (!configAbility && abilityListInstance.length) {
-                loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName,compositeAbilityObject.trimSummonName);
-                // console.log(loadFile)
-                configAbility = abilityObjectInstance[loadFile];
-                // compositeAbilityObject.trimSummonName
 
+            if (!configAbility || location.hash) {
+                let foundValidFile = false;
+                
+                if (location.hash) {
+                    const elemIDAfter = decodeURIComponent(location.hash.slice(1));
+                    // const elemIDAfter = location.hash.slice(1);
+                    
+                    // console.log(elemIDAfter,readSelection(decodeURIComponent((elemIDAfter))))
+                    if (!firstPageLoad && elemIDAfter && (elemIDAfter.includes("mod__") || elemIDAfter.includes("fun__"))) {
+                        // readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+    
+                        firstPageLoad = true;
+                        
+                        for (let loadFileEntry in compositeAbilityObject.abilityObject) {
+                            let currentEntry = JSON.stringify(compositeAbilityObject.abilityObject[loadFileEntry]);
+    
+                            console.log(elemIDAfter,currentEntry.includes(elemIDAfter))
+                            if (currentEntry.includes(elemIDAfter)) {
+                                configAbility = compositeAbilityObject.abilityObject[loadFileEntry];
+                                loadFile = loadFileEntry;
+                                currentEntry = "";
+                                foundValidFile = true;
+                                break;
+                            }
+                            currentEntry = "";
+                        }
+    
+                        // console.log(elemIDAfter)
+                        // if (elemIDAfter.includes("mod__") || elemIDAfter.includes("fun__")) {
+                        //     readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+                        // }
+                        // else {
+                        //     readSelection("fileSelectionSelector").value = `${currentCharFilePrefix}_${elemIDAfter}`;
+                        //     megaParsingFuckery.renewFileSelected()
+                        // }
+    
+                        if (!foundValidFile) {
+                            alert(`Couldn't find a matching file under this entity, for the link you were provided.\n\nIf you believe this is in error and you didn't just fuck with the URL like an idiot, then join the discord and let Vash know.`)
+                        }
+                    };
+                }
+    
+    
+    
+                if ((!firstPageLoad || !foundValidFile) && !configAbility) {
+                    firstPageLoad = true;
+                    // loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName + "_Servant",compositeAbilityObject.trimSummonName);
+                    loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName,compositeAbilityObject.trimSummonName);
+                    // console.log(loadFile)
+                    // console.log(loadFile)
+                    configAbility = compositeAbilityObject.abilityObject[loadFile];
+                    // compositeAbilityObject.trimSummonName
+                }
+    
+                
+                
+    
             }
+
+            // if (!configAbility && abilityListInstance.length) {
+            //     loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName,compositeAbilityObject.trimSummonName);
+            //     // console.log(loadFile)
+            //     configAbility = abilityObjectInstance[loadFile];
+            //     // compositeAbilityObject.trimSummonName
+
+            // }
 
 
 
@@ -741,7 +802,7 @@ const megaParsingFuckery = {
 
             let lightconeStatRow = "";
 
-            console.log(compositeAbilityObject.fixedStats)
+            // console.log(compositeAbilityObject.fixedStats)
             if (isRelic) {
                 if (compositeAbilityObject.fixedStats[2]) {
                     const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[2]);
@@ -865,6 +926,11 @@ const megaParsingFuckery = {
             
 
             bodyBox.innerHTML = mainAbilityString;
+
+
+
+            megaParsingFuckery.populateLinkedEntriesGlobal("gModGreen")
+            megaParsingFuckery.populateLinkedEntriesGlobal("gTempYellow")
         }
     },
     ...megaParsingFuckeryPain
@@ -889,7 +955,18 @@ if (location.hash) {
     // const elemIDAfter = location.hash.slice(1);
 
     // console.log(elemIDAfter,readSelection(decodeURIComponent((elemIDAfter))))
-    if (elemIDAfter) {readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});};
+    if (elemIDAfter) {
+        console.log(elemIDAfter)
+        if (elemIDAfter.includes("mod__") || elemIDAfter.includes("fun__")) {
+            userTriggers.updateMainMenuDisplayed(1);
+            readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+        }
+        else {
+            readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+        }
+
+        
+    };
 }
 
 

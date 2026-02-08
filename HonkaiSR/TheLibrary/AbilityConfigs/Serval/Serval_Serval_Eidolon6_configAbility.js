@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Serval_Eidolon6"
+      "modifier": "<a class=\"gModGreen\" id=\"-955881111\">Serval_Eidolon6</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Serval_Eidolon6",
+      "for": "<a class=\"gModGreen\" id=\"mod__-955881111\">Serval_Eidolon6</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",

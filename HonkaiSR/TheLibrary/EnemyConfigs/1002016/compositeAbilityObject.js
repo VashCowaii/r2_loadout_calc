@@ -22,13 +22,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Boss_Cocolia_RL_Weapon_DeathSetCamera"
+          "modifier": "<a class=\"gModGreen\" id=\"-1267346449\">Boss_Cocolia_RL_Weapon_DeathSetCamera</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Boss_Cocolia_RL_Weapon_DeathSetCamera",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1267346449\">Boss_Cocolia_RL_Weapon_DeathSetCamera</a>",
           "execute": [
             {
               "eventTrigger": "When Put in Deathstate Limbo",
@@ -47,7 +47,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "BOSS_COCOLIA_BOSS_MDF"
+                    "modifier": "<a class=\"gModGreen\" id=\"-79024859\">BOSS_COCOLIA_BOSS_MDF</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -157,13 +157,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Boss_Cocolia_RL_Weapon_DeathEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1262423423\">Boss_Cocolia_RL_Weapon_DeathEffect</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Boss_Cocolia_RL_Weapon_DeathEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1262423423\">Boss_Cocolia_RL_Weapon_DeathEffect</a>",
           "execute": [
             {
               "eventTrigger": "When Put in Deathstate Limbo",
@@ -199,7 +199,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Boss_Cocolia_MuteHitFly_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1485263337\">Boss_Cocolia_MuteHitFly_Modifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -207,7 +207,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Boss_Cocolia_RL_ResetSummonCD"
+          "modifier": "<a class=\"gModGreen\" id=\"1565715964\">Boss_Cocolia_RL_ResetSummonCD</a>"
         },
         {
           "name": "IF",
@@ -217,7 +217,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "modifier": "Monster_W1_CocoliaP1_RL_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
           },
           "passed": [
             {
@@ -228,7 +228,7 @@ const compositeAbilityObject = {
               },
               "valueType": "Layer",
               "variableName": "AttackUpLayer",
-              "modifierName": "Monster_W1_CocoliaP1_RL_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "multiplier": 1
             },
             {
@@ -237,7 +237,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W1_CocoliaP1_RL_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
                   "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
@@ -263,7 +263,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Boss_Cocolia_RL_ResetSummonCD",
+          "for": "<a class=\"gModGreen\" id=\"mod__1565715964\">Boss_Cocolia_RL_ResetSummonCD</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",

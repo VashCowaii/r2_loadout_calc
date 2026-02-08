@@ -52,7 +52,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
+          "modifier": "<a class=\"gModGreen\" id=\"2041908574\">Enemy_XP_Minion04_02_Fengrao_02_Caster</a>",
           "counter": {
             "operator": "Variables[0] (Enemy_XP_Minion04_02_Fengrao_02_Caster) || RETURN",
             "displayLines": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
@@ -68,7 +68,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion"
+          "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -76,7 +76,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion"
+          "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
         }
       ],
       "failed": [
@@ -100,7 +100,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
+                  "modifier": "<a class=\"gModGreen\" id=\"2041908574\">Enemy_XP_Minion04_02_Fengrao_02_Caster</a>",
                   "counter": {
                     "operator": "Variables[0] (Enemy_XP_Minion04_02_Fengrao_02_Caster) || RETURN",
                     "displayLines": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
@@ -116,7 +116,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion"
+                  "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -124,7 +124,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion"
+                  "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
                 }
               ]
             }
@@ -136,7 +136,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
+      "for": "<a class=\"gModGreen\" id=\"mod__2041908574\">Enemy_XP_Minion04_02_Fengrao_02_Caster</a>",
       "counter": 100,
       "modifierFlags": [
         "ListenBattleEventSkill"
@@ -154,7 +154,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion"
+              "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -162,7 +162,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion"
+              "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
             }
           ]
         },
@@ -190,7 +190,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
                   },
                   {
                     "name": "Compare: Variable",
@@ -286,7 +286,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
                   },
                   {
                     "name": "Compare: Variable",
@@ -371,7 +371,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit"
+              "modifier": "<a class=\"gModGreen\" id=\"-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -379,12 +379,12 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit"
+              "modifier": "<a class=\"gModGreen\" id=\"-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
             },
             {
               "name": "Define Custom Variable with Modifier Values",
               "variableName": "CostCount",
-              "modifierName": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
+              "modifierName": "<a class=\"gModGreen\" id=\"2041908574\">Enemy_XP_Minion04_02_Fengrao_02_Caster</a>",
               "multiplier": 1
             },
             {
@@ -423,7 +423,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifierName": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
+              "modifierName": "<a class=\"gModGreen\" id=\"2041908574\">Enemy_XP_Minion04_02_Fengrao_02_Caster</a>",
               "function": "Add",
               "value": {
                 "operator": "Variables[0] (CurrentCount) || INVERT || RETURN",
@@ -442,11 +442,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit"
+      "for": "<a class=\"gModGreen\" id=\"mod__-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_XP_Minion04_02_Fengrao_02_Minion",
+      "for": "<a class=\"gModGreen\" id=\"mod__1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage End [Owner]: Hit",
@@ -457,7 +457,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit"
+              "modifier": "<a class=\"gModGreen\" id=\"-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
             }
           ]
         }

@@ -21,7 +21,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_AglaeaServant_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"68059554\">Memosprite_AglaeaServant_Passive</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -46,7 +46,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "modifier": "Memosprite_Aglaea_Eidolon4_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"1355909707\">Memosprite_Aglaea_Eidolon4_Listen</a>"
         }
       ]
     }
@@ -54,7 +54,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_AglaeaServantPassive_DamageAddedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1197305850\">Memosprite_AglaeaServantPassive_DamageAddedRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -84,7 +84,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_AglaeaServant_CritDmg",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1555515053\">Memosprite_AglaeaServant_CritDmg</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -115,7 +115,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_AglaeaServant_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__68059554\">Memosprite_AglaeaServant_Passive</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -137,7 +137,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Aglaea_Ability03[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"518821924\">Aglaea_Ability03</a>[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -145,7 +145,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Aglaea_Ability03_Sub"
+              "modifier": "<a class=\"gModGreen\" id=\"-498968511\">Aglaea_Ability03_Sub</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -153,7 +153,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Memosprite_AglaeaServant_SummonerAddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -161,7 +161,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Servant_Aglaea_Summon_PursuedDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"-1289898164\">Servant_Aglaea_Summon_PursuedDamage</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -169,7 +169,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Aglaea_Ability03_ForbidSkill"
+              "modifier": "<a class=\"gModGreen\" id=\"-1725518252\">Aglaea_Ability03_ForbidSkill</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -177,7 +177,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Aglaea_Ability02_ChangeSkill"
+              "modifier": "<a class=\"gModGreen\" id=\"755493734\">Aglaea_Ability02_ChangeSkill</a>"
             }
           ]
         },
@@ -192,7 +192,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Aglaea_GoldenSword_Mark[<span class=\"descriptionNumberColor\">Seam Stitch</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"216440055\">Aglaea_GoldenSword_Mark</a>[<span class=\"descriptionNumberColor\">Seam Stitch</span>]",
                 "justAddedOrActive": true,
                 "includePreDeath": true
               },
@@ -287,7 +287,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "modifier": "Memosprite_AglaeaServant_SummonerKeepSpeed"
+                    "modifier": "<a class=\"gModGreen\" id=\"783183170\">Memosprite_AglaeaServant_SummonerKeepSpeed</a>"
                   },
                   "passed": [
                     {
@@ -306,7 +306,7 @@ const configAbility = {
                       },
                       "valueType": "Layer",
                       "variableName": "_KeepSpeedLayer",
-                      "modifierName": "Memosprite_AglaeaServant_SummonerKeepSpeed",
+                      "modifierName": "<a class=\"gModGreen\" id=\"783183170\">Memosprite_AglaeaServant_SummonerKeepSpeed</a>",
                       "multiplier": 1
                     },
                     {
@@ -331,7 +331,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Memosprite_AglaeaServant_AddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (_MaxLayer) || RETURN",
                             "displayLines": "_MaxLayer",
@@ -357,7 +357,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Memosprite_AglaeaServant_AddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (_MaxLayer) || RETURN",
                             "displayLines": "_MaxLayer",
@@ -383,7 +383,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster's Summoner}}"
                       },
-                      "modifier": "Memosprite_AglaeaServant_SummonerKeepSpeed"
+                      "modifier": "<a class=\"gModGreen\" id=\"783183170\">Memosprite_AglaeaServant_SummonerKeepSpeed</a>"
                     }
                   ]
                 }
@@ -413,7 +413,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Memosprite_AglaeaServant_AddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]"
                   },
                   "passed": [
                     {
@@ -428,7 +428,7 @@ const configAbility = {
                       "name": "Define Custom Variable with Modifier Values",
                       "valueType": "Layer",
                       "variableName": "_AddSpeedLayer",
-                      "modifierName": "Memosprite_AglaeaServant_AddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                       "multiplier": 1
                     },
                     {
@@ -437,7 +437,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster's Summoner}}"
                       },
-                      "modifier": "Memosprite_AglaeaServant_SummonerKeepSpeed",
+                      "modifier": "<a class=\"gModGreen\" id=\"783183170\">Memosprite_AglaeaServant_SummonerKeepSpeed</a>",
                       "addStacksPerTrigger": {
                         "operator": "Variables[0] (_AddSpeedLayer) || RETURN",
                         "displayLines": "_AddSpeedLayer",
@@ -457,7 +457,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Aglaea_Ability02_ChangeSkill"
+              "modifier": "<a class=\"gModGreen\" id=\"755493734\">Aglaea_Ability02_ChangeSkill</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -465,7 +465,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Aglaea_Eidolon6_Effect2[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1984850438\">Aglaea_Eidolon6_Effect2</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -473,7 +473,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "modifier": "Aglaea_Eidolon6_Listen"
+              "modifier": "<a class=\"gModGreen\" id=\"1917871114\">Aglaea_Eidolon6_Listen</a>"
             },
             {
               "name": "Change Character UI",
@@ -538,7 +538,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Memosprite_AglaeaServant_AddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (_MaxLayer) || RETURN",
                     "displayLines": "_MaxLayer",
@@ -557,7 +557,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "modifier": "Aglaea_Ability03[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"518821924\">Aglaea_Ability03</a>[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
                   },
                   "passed": [
                     {
@@ -566,7 +566,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster's Summoner}}"
                       },
-                      "modifier": "Memosprite_AglaeaServant_SummonerAddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (_MaxLayer) || RETURN",
                         "displayLines": "_MaxLayer",

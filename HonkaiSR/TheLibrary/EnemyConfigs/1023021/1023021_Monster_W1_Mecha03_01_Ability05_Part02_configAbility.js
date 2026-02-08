@@ -56,7 +56,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
     },
     {
       "name": "Find New Target",
@@ -71,7 +71,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Monster_W1_Mecha03_01_SummonMark",
+        "modifier": "<a class=\"gModGreen\" id=\"375705017\">Monster_W1_Mecha03_01_SummonMark</a>",
         "invertCondition": true
       }
     },
@@ -89,7 +89,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Monster_W1_Mecha03_01_SummonMark",
+        "modifier": "<a class=\"gModGreen\" id=\"375705017\">Monster_W1_Mecha03_01_SummonMark</a>",
         "invertCondition": true
       }
     },
@@ -106,7 +106,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "Monster_W1_Mecha03_01_SummonMark",
+        "modifier": "<a class=\"gModGreen\" id=\"375705017\">Monster_W1_Mecha03_01_SummonMark</a>",
         "invertCondition": true
       }
     },
@@ -124,7 +124,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "modifier": "Monster_W1_Mecha03_01_SummonMark"
+      "modifier": "<a class=\"gModGreen\" id=\"375705017\">Monster_W1_Mecha03_01_SummonMark</a>"
     },
     "Trigger: Ability End"
   ],

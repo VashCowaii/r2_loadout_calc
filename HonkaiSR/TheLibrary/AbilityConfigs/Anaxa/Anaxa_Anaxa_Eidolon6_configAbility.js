@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Anaxa_Eidolon6_DamageUp[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"2017566930\">Anaxa_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
       "valuePerStack": {
         "MDF_PropertyRatio": {
           "operator": "Variables[0] (1.3) || RETURN",
@@ -26,14 +26,14 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Anaxa_Eidolon6_DamageUp[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2017566930\">Anaxa_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "ModifyDamageData_IndependentDamageAddedRatio",
+              "functionName": "<a class=\"gTempYellow\" id=\"-446302809\">ModifyDamageData_IndependentDamageAddedRatio</a>",
               "variables": {
                 "parameter[0]_IndependentDamageAddedRatio": {
                   "operator": "Variables[0] (MDF_PropertyRatio) || Constants[0] (1) || SUB || RETURN",

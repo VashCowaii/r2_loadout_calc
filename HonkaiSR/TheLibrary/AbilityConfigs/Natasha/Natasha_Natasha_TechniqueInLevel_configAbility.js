@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Technique_Natasha_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-2040265582\">Technique_Natasha_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Technique_Natasha_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2040265582\">Technique_Natasha_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -87,7 +87,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Natasha_Passive_FatigueRatio[<span class=\"descriptionNumberColor\">Weaken</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"453099626\">Natasha_Passive_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",

@@ -23,7 +23,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Feixiao_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-342757676\">Feixiao_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -31,7 +31,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Feixiao_InsertIsReady[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
     },
     {
       "name": "IF",
@@ -46,7 +46,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Feixiao_Eidolon2_CD[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
           "counter": {
             "operator": "Variables[0] (6) || RETURN",
             "displayLines": "6",
@@ -184,7 +184,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Feixiao_Friend_Mark_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-349901882\">M_Feixiao_Friend_Mark_Main</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -205,7 +205,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "M_Feixiao_Friend_Mark_Main"
+                "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
               },
               "ifTargetFound": [
                 {
@@ -214,7 +214,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "M_Feixiao_Friend_Mark_Main"
+                  "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
                 }
               ]
             }
@@ -264,7 +264,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Feixiao_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-342757676\">Feixiao_Passive</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -284,14 +284,14 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Feixiao_InsertIsReady[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
                   }
                 ]
               },
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_Passive_ChargeTeamAttackCount",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1045121925\">Feixiao_Passive_ChargeTeamAttackCount</a>",
                   "variables": {
                     "parameter[0]_AddValue": 1
                   }
@@ -304,7 +304,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Feixiao_InsertIsReady[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
             }
           ]
         },
@@ -324,7 +324,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Feixiao_Eidolon2_CD[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -332,7 +332,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Feixiao_Eidolon2_CD[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
                   "counter": {
                     "operator": "Variables[0] (6) || RETURN",
                     "displayLines": "6",
@@ -396,7 +396,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Feixiao_Ultramode",
+                    "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -425,14 +425,14 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Feixiao_Eidolon2_CD[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]"
                           }
                         ]
                       },
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Feixiao_Passive_ChargeTeamAttackCount",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1045121925\">Feixiao_Passive_ChargeTeamAttackCount</a>",
                           "variables": {
                             "parameter[0]_AddValue": 2
                           }
@@ -443,7 +443,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifierName": "Feixiao_Eidolon2_CD[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
                           "function": "Add"
                         },
                         {
@@ -452,7 +452,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifierName": "Feixiao_Eidolon2_CD[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
                           "adjustmentType": "+",
                           "variableName": "MDF_Count",
                           "value": -1
@@ -461,7 +461,7 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Feixiao_Passive_ChargeTeamAttackCount",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1045121925\">Feixiao_Passive_ChargeTeamAttackCount</a>",
                           "variables": {
                             "parameter[0]_AddValue": 1
                           }
@@ -506,7 +506,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_Feixiao_Friend_Mark_Main"
+                      "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
                     },
                     "invertCondition": true
                   },
@@ -529,7 +529,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target's Attack Targets}}"
                           },
-                          "modifier": "M_Feixiao_Friend_Mark_Main"
+                          "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
                         }
                       ],
                       "failed": [
@@ -548,7 +548,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "M_Feixiao_Friend_Mark_Main"
+                              "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
                             }
                           ]
                         }
@@ -558,7 +558,7 @@ const configAbility = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Feixiao_InsertCheck"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-432640007\">Feixiao_InsertCheck</a>"
                 }
               ]
             }
@@ -614,7 +614,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target's Ability Targets}}"
                       },
-                      "modifier": "M_Feixiao_Friend_Mark_Main"
+                      "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
                     }
                   ],
                   "failed": [
@@ -624,7 +624,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                       },
-                      "modifier": "M_Feixiao_Friend_Mark_Main"
+                      "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
                     }
                   ]
                 }
@@ -780,7 +780,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Feixiao_InsertCheck",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-432640007\">Feixiao_InsertCheck</a>",
           "parse": [
             {
               "name": "IF",
@@ -811,7 +811,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Feixiao_InsertIsReady[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
                   }
                 ]
               },
@@ -858,7 +858,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Feixiao_InsertCheck"
+                      "modifier": "<a class=\"gModGreen\" id=\"248447225\">M_Feixiao_InsertCheck</a>"
                     }
                   ]
                 }

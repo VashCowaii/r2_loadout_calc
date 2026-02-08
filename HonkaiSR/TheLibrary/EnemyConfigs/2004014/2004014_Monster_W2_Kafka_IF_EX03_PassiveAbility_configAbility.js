@@ -20,7 +20,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Kafka_IF_EX03_Boss"
+          "modifier": "<a class=\"gModGreen\" id=\"-1524558983\">Enemy_W2_Kafka_IF_EX03_Boss</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -28,7 +28,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Kafka_IF_EnemyCount",
+          "modifier": "<a class=\"gModGreen\" id=\"-1727559793\">Enemy_W2_Kafka_IF_EnemyCount</a>",
           "valuePerStack": {
             "MDF_ShowValue1": {
               "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
@@ -54,7 +54,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Kafka_IF_EX03_Boss",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1524558983\">Enemy_W2_Kafka_IF_EX03_Boss</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

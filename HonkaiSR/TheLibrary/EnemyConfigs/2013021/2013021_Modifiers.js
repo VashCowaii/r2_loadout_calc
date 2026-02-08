@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Valkyrie02_RLElite_AimMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1672379364\">Enemy_W2_Valkyrie02_RLElite_AimMark</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -24,7 +24,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Valkyrie02_RLElite_RemoveOneMore",
+      "for": "<a class=\"gModGreen\" id=\"mod__-186638571\">Enemy_W2_Valkyrie02_RLElite_RemoveOneMore</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -46,7 +46,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
                     }
                   },
                   {
@@ -55,7 +55,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1870683085\">Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect</a>[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]",
                     "invertCondition": true
                   },
                   {
@@ -155,7 +155,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
                           }
                         ]
                       },
@@ -165,7 +165,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
                       }
                     ]
                   },
@@ -199,7 +199,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "OneMorePerTurn"
+                    "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                   },
                   "failed": [
                     {
@@ -208,7 +208,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "OneMorePerTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                     }
                   ]
                 }
@@ -222,7 +222,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1870683085\">Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect</a>[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
               },
               "passed": [
                 {
@@ -231,7 +231,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMorePerTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                 }
               ]
             }
@@ -259,7 +259,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Enemy_W2_Valkyrie02_RLElite_AimMark",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1672379364\">Enemy_W2_Valkyrie02_RLElite_AimMark</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -320,7 +320,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "OneMorePerTurn"
+                "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
               },
               "failed": [
                 {
@@ -329,7 +329,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMorePerTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                 }
               ]
             },
@@ -339,7 +339,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1870683085\">Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect</a>[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -347,7 +347,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "Enemy_W2_Valkyrie02_Ability04_Target[<span class=\"descriptionNumberColor\">Lock On</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1513487927\">Enemy_W2_Valkyrie02_Ability04_Target</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -355,7 +355,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "Enemy_W2_Valkyrie02_RLElite_AimMark"
+              "modifier": "<a class=\"gModGreen\" id=\"-1672379364\">Enemy_W2_Valkyrie02_RLElite_AimMark</a>"
             },
             {
               "name": "Declare Custom Variable",
@@ -390,7 +390,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -398,7 +398,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1870683085\">Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect</a>[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]",
                     "invertCondition": true
                   },
                   {
@@ -498,7 +498,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
                           }
                         ]
                       },
@@ -508,7 +508,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Standard_Shake[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
                       }
                     ]
                   },

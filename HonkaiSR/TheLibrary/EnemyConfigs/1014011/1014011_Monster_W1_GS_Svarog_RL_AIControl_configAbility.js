@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Straight_AIControl"
+      "modifier": "<a class=\"gModGreen\" id=\"-954371893\">Straight_AIControl</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Straight_AIControl",
+      "for": "<a class=\"gModGreen\" id=\"mod__-954371893\">Straight_AIControl</a>",
       "execute": [
         {
           "eventTrigger": "Action End [Owner]",

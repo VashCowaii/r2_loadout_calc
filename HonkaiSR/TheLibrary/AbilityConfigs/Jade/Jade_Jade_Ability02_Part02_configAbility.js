@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Jade_BPAbilityBonusListen"
+      "modifier": "<a class=\"gModGreen\" id=\"-252730677\">Jade_BPAbilityBonusListen</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{All Team Members}}"
       },
-      "modifier": "Jade_BPAbility[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1749110767\">Jade_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{All Team Members}}"
       },
-      "modifier": "Jade_BPAbilitySelf[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1687174133\">Jade_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
     },
     {
       "name": "IF",
@@ -41,7 +41,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members}}"
           },
-          "modifier": "Jade_Eidolon6_BPAbility[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"119818662\">Jade_Eidolon6_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -49,7 +49,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members}}"
           },
-          "modifier": "Jade_Eidolon6_BPAbilitySelf[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"553729296\">Jade_Eidolon6_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
         }
       ]
     },
@@ -80,7 +80,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Jade_Eidolon6_BPAbilitySelf[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"553729296\">Jade_Eidolon6_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -108,7 +108,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Jade_BPAbilitySelf[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1687174133\">Jade_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -128,7 +128,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Jade_BPAbilityBonusListen",
+          "modifier": "<a class=\"gModGreen\" id=\"-252730677\">Jade_BPAbilityBonusListen</a>",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -151,7 +151,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Jade_Eidolon6_BPAbility[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"119818662\">Jade_Eidolon6_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -220,7 +220,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Jade_BPAbility[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1749110767\">Jade_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -274,7 +274,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Jade_BPAbility[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1749110767\">Jade_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -327,7 +327,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Jade_Eidolon6_BPAbilitySelf[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__553729296\">Jade_Eidolon6_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -340,7 +340,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Jade_Eidolon6_QuantumPenetrate"
+              "modifier": "<a class=\"gModGreen\" id=\"68476876\">Jade_Eidolon6_QuantumPenetrate</a>"
             }
           ]
         },
@@ -370,7 +370,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Jade_Eidolon6_QuantumPenetrate",
+                  "modifier": "<a class=\"gModGreen\" id=\"68476876\">Jade_Eidolon6_QuantumPenetrate</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -434,7 +434,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jade_Eidolon6_BPAbility[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__119818662\">Jade_Eidolon6_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "Unknow",
       "modifierFlags": [
@@ -452,7 +452,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Jade_BPAbilityBonusListen"
+              "modifier": "<a class=\"gModGreen\" id=\"-252730677\">Jade_BPAbilityBonusListen</a>"
             }
           ]
         },
@@ -488,7 +488,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Modifier Variable",
-                  "modifierName": "Jade_Eidolon6_BPAbility[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"119818662\">Jade_Eidolon6_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
                   "function": "Add",
                   "valueType": "Duration"
                 }
@@ -528,7 +528,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jade_Eidolon6_BPAbilitySelf[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"553729296\">Jade_Eidolon6_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -698,7 +698,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jade_BPAbilitySelf[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1687174133\">Jade_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -763,7 +763,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jade_BPAbility[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1749110767\">Jade_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "Unknow",
       "modifierFlags": [
@@ -781,7 +781,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Jade_BPAbilityBonusListen"
+              "modifier": "<a class=\"gModGreen\" id=\"-252730677\">Jade_BPAbilityBonusListen</a>"
             }
           ]
         },
@@ -817,7 +817,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Modifier Variable",
-                  "modifierName": "Jade_BPAbility[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1749110767\">Jade_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
                   "function": "Add",
                   "valueType": "Duration"
                 }
@@ -991,7 +991,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jade_BPAbilityBonusListen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-252730677\">Jade_BPAbilityBonusListen</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -1004,7 +1004,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Jade_BPAbility[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1749110767\">Jade_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
             },
             {
               "name": "IF",
@@ -1019,7 +1019,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jade_BPAbilitySelf[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1687174133\">Jade_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1027,7 +1027,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jade_Eidolon6_BPAbilitySelf[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"553729296\">Jade_Eidolon6_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1035,7 +1035,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Jade_Eidolon6_BPAbility[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"119818662\">Jade_Eidolon6_BPAbility</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1043,7 +1043,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Jade_Eidolon6_BPAbilitySelf[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"553729296\">Jade_Eidolon6_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]"
                 }
               ]
             }

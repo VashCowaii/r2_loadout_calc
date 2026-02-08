@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W1_Soldier01_02_BreakEffectController"
+      "modifier": "<a class=\"gModGreen\" id=\"-1112575387\">Enemy_W1_Soldier01_02_BreakEffectController</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier01_02_IceEffectController",
+      "for": "<a class=\"gModGreen\" id=\"mod__2137687005\">Enemy_W1_Soldier01_02_IceEffectController</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -29,7 +29,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier01_02_MaterialsChange",
+      "for": "<a class=\"gModGreen\" id=\"mod__449580385\">Enemy_W1_Soldier01_02_MaterialsChange</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -41,7 +41,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Soldier01_02_BreakEffectController",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1112575387\">Enemy_W1_Soldier01_02_BreakEffectController</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -54,7 +54,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "StanceBreakState"
+                "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
               },
               "failed": [
                 {
@@ -63,7 +63,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W1_Soldier01_02_IceEffectController"
+                  "modifier": "<a class=\"gModGreen\" id=\"2137687005\">Enemy_W1_Soldier01_02_IceEffectController</a>"
                 }
               ]
             }
@@ -78,7 +78,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W1_Soldier01_02_IceEffectController"
+              "modifier": "<a class=\"gModGreen\" id=\"2137687005\">Enemy_W1_Soldier01_02_IceEffectController</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -86,7 +86,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W1_Soldier01_02_MaterialsChange"
+              "modifier": "<a class=\"gModGreen\" id=\"449580385\">Enemy_W1_Soldier01_02_MaterialsChange</a>"
             }
           ]
         },
@@ -99,7 +99,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W1_Soldier01_02_IceEffectController"
+              "modifier": "<a class=\"gModGreen\" id=\"2137687005\">Enemy_W1_Soldier01_02_IceEffectController</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -107,7 +107,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W1_Soldier01_02_MaterialsChange"
+              "modifier": "<a class=\"gModGreen\" id=\"449580385\">Enemy_W1_Soldier01_02_MaterialsChange</a>"
             }
           ]
         }

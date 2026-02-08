@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Boothill_Eidolon1"
+      "modifier": "<a class=\"gModGreen\" id=\"925135298\">Boothill_Eidolon1</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Boothill_Eidolon1",
+      "for": "<a class=\"gModGreen\" id=\"mod__925135298\">Boothill_Eidolon1</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -107,7 +107,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Boothill_SelfModification[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1894494257\">Boothill_SelfModification</a>[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Aventurine_Eidolon2_ResistanceDown[<span class=\"descriptionNumberColor\">Bounded Rationality</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1438365222\">Aventurine_Eidolon2_ResistanceDown</a>[<span class=\"descriptionNumberColor\">Bounded Rationality</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",

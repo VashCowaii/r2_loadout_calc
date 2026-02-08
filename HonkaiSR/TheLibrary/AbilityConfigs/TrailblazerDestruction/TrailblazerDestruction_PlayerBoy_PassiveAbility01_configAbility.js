@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Player_PassiveAbility"
+      "modifier": "<a class=\"gModGreen\" id=\"1780517119\">M_Player_PassiveAbility</a>"
     },
     {
       "name": "IF",
@@ -33,7 +33,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_Eidolon4_Break_Check"
+          "modifier": "<a class=\"gModGreen\" id=\"922416060\">PlayerBoy_Eidolon4_Break_Check</a>"
         }
       ]
     },
@@ -50,7 +50,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_Eidolon2_Heal_Check"
+          "modifier": "<a class=\"gModGreen\" id=\"-556710801\">PlayerBoy_Eidolon2_Heal_Check</a>"
         }
       ]
     }
@@ -58,7 +58,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "PlayerWarrior_SkilTree02_BreakDefUp[<span class=\"descriptionNumberColor\">Tenacity</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1618202918\">PlayerWarrior_SkilTree02_BreakDefUp</a>[<span class=\"descriptionNumberColor\">Tenacity</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -103,7 +103,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "PlayerWarrior_Passive_BreakAtkUp[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-417743675\">PlayerWarrior_Passive_BreakAtkUp</a>[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -148,7 +148,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Player_PassiveAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__1780517119\">M_Player_PassiveAbility</a>",
       "execute": [
         {
           "eventTrigger": "Got a Kill [Owner]",
@@ -179,7 +179,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "PlayerWarrior_Passive_BreakAtkUp[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-417743675\">PlayerWarrior_Passive_BreakAtkUp</a>[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
                     "displayLines": "(2 + MDF_Max_Layer)",
@@ -213,7 +213,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "PlayerWarrior_SkilTree02_BreakDefUp[<span class=\"descriptionNumberColor\">Tenacity</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1618202918\">PlayerWarrior_SkilTree02_BreakDefUp</a>[<span class=\"descriptionNumberColor\">Tenacity</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
                         "displayLines": "(2 + MDF_Max_Layer)",
@@ -262,7 +262,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "PlayerWarrior_Passive_BreakAtkUp[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-417743675\">PlayerWarrior_Passive_BreakAtkUp</a>[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
                 "displayLines": "(2 + MDF_Max_Layer)",
@@ -296,7 +296,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "PlayerWarrior_SkilTree02_BreakDefUp[<span class=\"descriptionNumberColor\">Tenacity</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1618202918\">PlayerWarrior_SkilTree02_BreakDefUp</a>[<span class=\"descriptionNumberColor\">Tenacity</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
                     "displayLines": "(2 + MDF_Max_Layer)",
@@ -327,7 +327,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "PlayerBoy_Eidolon4_Break_Check",
+      "for": "<a class=\"gModGreen\" id=\"mod__922416060\">PlayerBoy_Eidolon4_Break_Check</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -363,7 +363,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "PlayerBoy_Eidolon2_Heal_Check",
+      "for": "<a class=\"gModGreen\" id=\"mod__-556710801\">PlayerBoy_Eidolon2_Heal_Check</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",

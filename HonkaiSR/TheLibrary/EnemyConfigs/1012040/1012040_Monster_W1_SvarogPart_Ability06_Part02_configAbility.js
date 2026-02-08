@@ -12,7 +12,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Modifier Holder}}"
         },
-        "modifier": "Svarog_Control_OnPart_Modifier"
+        "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
       },
       "passed": [
         {
@@ -30,7 +30,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
             }
           ]
         },
@@ -40,7 +40,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Svarog_Control_OnPart_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -48,7 +48,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Svarog_ListenBreak_RemoveControl_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -97,7 +97,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_SvarogPart_Overload[<span class=\"descriptionNumberColor\">Overload</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"419784878\">Monster_W1_SvarogPart_Overload</a>[<span class=\"descriptionNumberColor\">Overload</span>]"
     },
     {
       "name": "IF",

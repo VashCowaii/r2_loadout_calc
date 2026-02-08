@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Hanya_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-429927791\">StageAbility_Maze_Hanya_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Hanya_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-429927791\">StageAbility_Maze_Hanya_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -125,7 +125,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"1376832164\">WHanya_BpZhanYin</a>[<span class=\"descriptionNumberColor\">Burden</span>]",
                               "valuePerStack": {
                                 "MDF_Lifetime": {
                                   "operator": "Variables[0] (2) || RETURN",
@@ -175,7 +175,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "WHanya_BpZhanYin_Self"
+                              "modifier": "<a class=\"gModGreen\" id=\"1118030779\">WHanya_BpZhanYin_Self</a>"
                             }
                           ]
                         }
@@ -252,7 +252,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Hanya_AbilityPreShowModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-255935213\">Hanya_AbilityPreShowModifier</a>"
         },
         {
           "name": "IF",
@@ -267,7 +267,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Hanya_Eidolon2_Pre"
+              "modifier": "<a class=\"gModGreen\" id=\"-888545750\">Hanya_Eidolon2_Pre</a>"
             }
           ]
         }
@@ -275,7 +275,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Hanya_AbilityPreShowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-255935213\">Hanya_AbilityPreShowModifier</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -333,7 +333,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "WHanya_Ability03Bonus[<span class=\"descriptionNumberColor\">Edict</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1743228292\">WHanya_Ability03Bonus</a>[<span class=\"descriptionNumberColor\">Edict</span>]",
               "invertCondition": true
             },
             "delayAdvancePreview": {
@@ -423,7 +423,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "WHanya_Ability03Bonus[<span class=\"descriptionNumberColor\">Edict</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1743228292\">WHanya_Ability03Bonus</a>[<span class=\"descriptionNumberColor\">Edict</span>]",
           "duration": {
             "operator": "Variables[0] (MDF_Skill03_LifeTime) || RETURN",
             "displayLines": "MDF_Skill03_LifeTime",
@@ -472,7 +472,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Hanya_Eidolon1_Other",
+              "modifier": "<a class=\"gModGreen\" id=\"-1742049492\">Hanya_Eidolon1_Other</a>",
               "duration": {
                 "operator": "Variables[0] (MDF_Skill03_LifeTime) || RETURN",
                 "displayLines": "MDF_Skill03_LifeTime",
@@ -497,7 +497,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Hanya_Eidolon1"
+              "modifier": "<a class=\"gModGreen\" id=\"-154421851\">Hanya_Eidolon1</a>"
             }
           ]
         },
@@ -555,7 +555,8 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Use Custom Character Function",
-          "functionName": "FaceDirOffsetConfigByFormationIndex"
+          "functionName": "<a class=\"gTempYellow\" id=\"-844871622\">FaceDirOffsetConfigByFormationIndex</a>",
+          "isGlobal": true
         }
       ],
       "references": []
@@ -658,7 +659,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1376832164\">WHanya_BpZhanYin</a>[<span class=\"descriptionNumberColor\">Burden</span>]",
               "valuePerStack": {
                 "MDF_Lifetime": {
                   "operator": "Variables[0] (2) || RETURN",
@@ -708,7 +709,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "WHanya_BpZhanYin_Self"
+              "modifier": "<a class=\"gModGreen\" id=\"1118030779\">WHanya_BpZhanYin_Self</a>"
             }
           ]
         },
@@ -826,7 +827,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "WHanya_BpZhanYin_SpecialMark_Listen4",
+          "for": "<a class=\"gModGreen\" id=\"mod__1573793887\">WHanya_BpZhanYin_SpecialMark_Listen4</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -889,7 +890,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "WHanya_BpZhanYin_SpecialMark_Listen3",
+          "for": "<a class=\"gModGreen\" id=\"mod__1523461030\">WHanya_BpZhanYin_SpecialMark_Listen3</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -952,7 +953,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "WHanya_BpZhanYin_SpecialMark_Listen2",
+          "for": "<a class=\"gModGreen\" id=\"mod__1540238649\">WHanya_BpZhanYin_SpecialMark_Listen2</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -1015,7 +1016,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "WHanya_BpZhanYin_SpecialMark_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1248557647\">WHanya_BpZhanYin_SpecialMark_Listen</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -1078,7 +1079,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Hanya_Eidolon2[<span class=\"descriptionNumberColor\">Two Views</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-204754708\">Hanya_Eidolon2</a>[<span class=\"descriptionNumberColor\">Two Views</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -1113,7 +1114,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Hanya_Eidolon2_Pre",
+          "for": "<a class=\"gModGreen\" id=\"mod__-888545750\">Hanya_Eidolon2_Pre</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1132,7 +1133,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Hanya_Eidolon2[<span class=\"descriptionNumberColor\">Two Views</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-204754708\">Hanya_Eidolon2</a>[<span class=\"descriptionNumberColor\">Two Views</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -1177,7 +1178,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Hanya_Eidolon2[<span class=\"descriptionNumberColor\">Two Views</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-204754708\">Hanya_Eidolon2</a>[<span class=\"descriptionNumberColor\">Two Views</span>]"
               }
             },
             "delayAdvancePreview": {
@@ -1188,7 +1189,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Hanya_Eidolon1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-154421851\">Hanya_Eidolon1</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1207,7 +1208,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Hanya_PointB1[<span class=\"descriptionNumberColor\">Scrivener</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1658392739\">Hanya_PointB1</a>[<span class=\"descriptionNumberColor\">Scrivener</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1239,7 +1240,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "WHanya_BpZhanYin_Self",
+          "for": "<a class=\"gModGreen\" id=\"mod__1118030779\">WHanya_BpZhanYin_Self</a>",
           "stackType": "Replace",
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -1292,7 +1293,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1376832164\">WHanya_BpZhanYin</a>[<span class=\"descriptionNumberColor\">Burden</span>]"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -1336,7 +1337,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1376832164\">WHanya_BpZhanYin</a>[<span class=\"descriptionNumberColor\">Burden</span>]"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -1407,7 +1408,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1376832164\">WHanya_BpZhanYin</a>[<span class=\"descriptionNumberColor\">Burden</span>]"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -1466,7 +1467,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Hanya_Passive_AddDamage[<span class=\"descriptionNumberColor\">Sanction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2003572748\">Hanya_Passive_AddDamage</a>[<span class=\"descriptionNumberColor\">Sanction</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1498,7 +1499,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1376832164\">WHanya_BpZhanYin</a>[<span class=\"descriptionNumberColor\">Burden</span>]",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -1533,7 +1534,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1376832164\">WHanya_BpZhanYin</a>[<span class=\"descriptionNumberColor\">Burden</span>]"
                     }
                   ]
                 },
@@ -1548,7 +1549,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1248557647\">WHanya_BpZhanYin_SpecialMark_Listen</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1556,7 +1557,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
+                  "modifier": "<a class=\"gModGreen\" id=\"1540238649\">WHanya_BpZhanYin_SpecialMark_Listen2</a>"
                 }
               ]
             },
@@ -1569,7 +1570,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1248557647\">WHanya_BpZhanYin_SpecialMark_Listen</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1577,7 +1578,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
+                  "modifier": "<a class=\"gModGreen\" id=\"1540238649\">WHanya_BpZhanYin_SpecialMark_Listen2</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1585,7 +1586,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "WHanya_BpZhanYin_SpecialMark_Listen3"
+                  "modifier": "<a class=\"gModGreen\" id=\"1523461030\">WHanya_BpZhanYin_SpecialMark_Listen3</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1593,7 +1594,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "WHanya_BpZhanYin_SpecialMark_Listen4"
+                  "modifier": "<a class=\"gModGreen\" id=\"1573793887\">WHanya_BpZhanYin_SpecialMark_Listen4</a>"
                 }
               ]
             },
@@ -1627,7 +1628,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "WHanya_BpZhanYin_Self"
+                      "modifier": "<a class=\"gModGreen\" id=\"1118030779\">WHanya_BpZhanYin_Self</a>"
                     }
                   ]
                 }
@@ -1668,7 +1669,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "WHanya_BPRecover",
+                      "modifier": "<a class=\"gModGreen\" id=\"-659711141\">WHanya_BPRecover</a>",
                       "valuePerStack": {
                         "MDF_RecoverValue": {
                           "operator": "Variables[0] (MDF_BPRecover) || RETURN",
@@ -1688,7 +1689,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "WHanya_BpZhanYin_Self"
+                  "modifier": "<a class=\"gModGreen\" id=\"1118030779\">WHanya_BpZhanYin_Self</a>"
                 }
               ]
             },
@@ -1773,7 +1774,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Hanya_Passive_AddDamage[<span class=\"descriptionNumberColor\">Sanction</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-2003572748\">Hanya_Passive_AddDamage</a>[<span class=\"descriptionNumberColor\">Sanction</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Lifetime) || RETURN",
                             "displayLines": "MDF_Lifetime",
@@ -1802,7 +1803,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Hanya_Passive_AddDamage[<span class=\"descriptionNumberColor\">Sanction</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-2003572748\">Hanya_Passive_AddDamage</a>[<span class=\"descriptionNumberColor\">Sanction</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Lifetime) || RETURN",
                             "displayLines": "MDF_Lifetime",
@@ -1927,7 +1928,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1248557647\">WHanya_BpZhanYin_SpecialMark_Listen</a>"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -1935,7 +1936,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
+                          "modifier": "<a class=\"gModGreen\" id=\"1540238649\">WHanya_BpZhanYin_SpecialMark_Listen2</a>"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1943,7 +1944,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "WHanya_BpZhanYin_SpecialMark_Listen3"
+                          "modifier": "<a class=\"gModGreen\" id=\"1523461030\">WHanya_BpZhanYin_SpecialMark_Listen3</a>"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1951,7 +1952,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "WHanya_BpZhanYin_SpecialMark_Listen4"
+                          "modifier": "<a class=\"gModGreen\" id=\"1573793887\">WHanya_BpZhanYin_SpecialMark_Listen4</a>"
                         }
                       ],
                       "failed": [
@@ -1961,7 +1962,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "WHanya_BpZhanYin_SpecialMark_Listen3"
+                          "modifier": "<a class=\"gModGreen\" id=\"1523461030\">WHanya_BpZhanYin_SpecialMark_Listen3</a>"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -1969,7 +1970,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "WHanya_BpZhanYin_SpecialMark_Listen4"
+                          "modifier": "<a class=\"gModGreen\" id=\"1573793887\">WHanya_BpZhanYin_SpecialMark_Listen4</a>"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -2033,7 +2034,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "WHanya_BPRecover",
+                          "modifier": "<a class=\"gModGreen\" id=\"-659711141\">WHanya_BPRecover</a>",
                           "valuePerStack": {
                             "MDF_RecoverValue": 1
                           }
@@ -2051,7 +2052,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Hanya_PointB1[<span class=\"descriptionNumberColor\">Scrivener</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"1658392739\">Hanya_PointB1</a>[<span class=\"descriptionNumberColor\">Scrivener</span>]",
                               "duration": {
                                 "operator": "Variables[0] (1) || RETURN",
                                 "displayLines": "1",
@@ -2113,7 +2114,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]"
+                              "modifier": "<a class=\"gModGreen\" id=\"1376832164\">WHanya_BpZhanYin</a>[<span class=\"descriptionNumberColor\">Burden</span>]"
                             },
                             {
                               "name": "Remove Events/Bonuses",
@@ -2121,7 +2122,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "WHanya_BpZhanYin_Self"
+                              "modifier": "<a class=\"gModGreen\" id=\"1118030779\">WHanya_BpZhanYin_Self</a>"
                             },
                             {
                               "name": "Remove Events/Bonuses",
@@ -2129,7 +2130,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
+                              "modifier": "<a class=\"gModGreen\" id=\"-1248557647\">WHanya_BpZhanYin_SpecialMark_Listen</a>"
                             },
                             {
                               "name": "Remove Events/Bonuses",
@@ -2137,7 +2138,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
+                              "modifier": "<a class=\"gModGreen\" id=\"1540238649\">WHanya_BpZhanYin_SpecialMark_Listen2</a>"
                             },
                             {
                               "name": "Remove Events/Bonuses",
@@ -2145,7 +2146,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "WHanya_BpZhanYin_SpecialMark_Listen3"
+                              "modifier": "<a class=\"gModGreen\" id=\"1523461030\">WHanya_BpZhanYin_SpecialMark_Listen3</a>"
                             },
                             {
                               "name": "Remove Events/Bonuses",
@@ -2153,7 +2154,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "WHanya_BpZhanYin_SpecialMark_Listen4"
+                              "modifier": "<a class=\"gModGreen\" id=\"1573793887\">WHanya_BpZhanYin_SpecialMark_Listen4</a>"
                             }
                           ],
                           "failed": [
@@ -2163,7 +2164,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
+                              "modifier": "<a class=\"gModGreen\" id=\"-1248557647\">WHanya_BpZhanYin_SpecialMark_Listen</a>"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -2171,7 +2172,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
+                              "modifier": "<a class=\"gModGreen\" id=\"1540238649\">WHanya_BpZhanYin_SpecialMark_Listen2</a>"
                             }
                           ]
                         }
@@ -2200,7 +2201,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "WHanya_BpZhanYin_Self"
+                      "modifier": "<a class=\"gModGreen\" id=\"1118030779\">WHanya_BpZhanYin_Self</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -2208,7 +2209,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1248557647\">WHanya_BpZhanYin_SpecialMark_Listen</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -2216,7 +2217,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
+                      "modifier": "<a class=\"gModGreen\" id=\"1540238649\">WHanya_BpZhanYin_SpecialMark_Listen2</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -2224,7 +2225,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "WHanya_BpZhanYin_SpecialMark_Listen3"
+                      "modifier": "<a class=\"gModGreen\" id=\"1523461030\">WHanya_BpZhanYin_SpecialMark_Listen3</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -2232,7 +2233,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "WHanya_BpZhanYin_SpecialMark_Listen4"
+                      "modifier": "<a class=\"gModGreen\" id=\"1573793887\">WHanya_BpZhanYin_SpecialMark_Listen4</a>"
                     }
                   ]
                 }
@@ -2254,7 +2255,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Hanya_Eidolon1_Other",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1742049492\">Hanya_Eidolon1_Other</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -2378,7 +2379,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "WHanya_Ability03Bonus[<span class=\"descriptionNumberColor\">Edict</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1743228292\">WHanya_Ability03Bonus</a>[<span class=\"descriptionNumberColor\">Edict</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -2461,7 +2462,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "WHanya_BPRecover",
+          "for": "<a class=\"gModGreen\" id=\"mod__-659711141\">WHanya_BPRecover</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {

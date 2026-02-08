@@ -77,7 +77,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "QingQue_PassiveCount",
+      "modifier": "<a class=\"gModGreen\" id=\"-1424511139\">QingQue_PassiveCount</a>",
       "valuePerStack": {
         "MDF_PropertyValue01": {
           "operator": "Variables[0] (0.72) || RETURN",

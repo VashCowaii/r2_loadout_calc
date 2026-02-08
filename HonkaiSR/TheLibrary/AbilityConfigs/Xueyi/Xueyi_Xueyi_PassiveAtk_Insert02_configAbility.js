@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Xueyi_BP_Passive01[<span class=\"descriptionNumberColor\">Karma</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"444597683\">Xueyi_BP_Passive01</a>[<span class=\"descriptionNumberColor\">Karma</span>]"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -45,7 +45,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Xueyi_Ability03_WeakType_BUFF"
+          "modifier": "<a class=\"gModGreen\" id=\"-1101528365\">Xueyi_Ability03_WeakType_BUFF</a>"
         },
         {
           "name": "Heal",
@@ -78,7 +78,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Xueyi_AbilityEidolon1_InserteDamageRatio",
+          "modifier": "<a class=\"gModGreen\" id=\"900132102\">Xueyi_AbilityEidolon1_InserteDamageRatio</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.4) || RETURN",
@@ -94,7 +94,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Bounce_SelectTarget",
+      "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
       "target": {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
@@ -134,7 +134,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Bounce_SelectTarget",
+      "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
       "target": {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
@@ -174,7 +174,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Bounce_SelectTarget",
+      "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
       "target": {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
@@ -226,7 +226,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Xueyi_Ability03_WeakType_BUFF"
+          "modifier": "<a class=\"gModGreen\" id=\"-1101528365\">Xueyi_Ability03_WeakType_BUFF</a>"
         }
       ]
     },
@@ -261,7 +261,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Xueyi_BP_Passive01[<span class=\"descriptionNumberColor\">Karma</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"444597683\">Xueyi_BP_Passive01</a>[<span class=\"descriptionNumberColor\">Karma</span>]",
           "stackLimit": {
             "operator": "Variables[0] (_Xueyi_Count) || RETURN",
             "displayLines": "_Xueyi_Count",
@@ -295,7 +295,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Xueyi_Passive_Trace03[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1263094705\">Xueyi_Passive_Trace03</a>[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]"
         }
       ]
     },
@@ -312,7 +312,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Xueyi_AbilityEidolon1_InserteDamageRatio"
+          "modifier": "<a class=\"gModGreen\" id=\"900132102\">Xueyi_AbilityEidolon1_InserteDamageRatio</a>"
         }
       ]
     },

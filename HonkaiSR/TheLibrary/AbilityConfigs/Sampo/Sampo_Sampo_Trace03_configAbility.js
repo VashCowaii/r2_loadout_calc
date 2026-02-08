@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Sampo_Tree03"
+      "modifier": "<a class=\"gModGreen\" id=\"759323043\">M_Sampo_Tree03</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Sampo_Tree03",
+      "for": "<a class=\"gModGreen\" id=\"mod__759323043\">M_Sampo_Tree03</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",

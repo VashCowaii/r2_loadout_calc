@@ -504,6 +504,44 @@ const megaParsingFuckery = {
         3: modifiersEnemy,
         4: modifiersExtraEffects,
     },
+    populateLinkedEntriesGlobal(coloring) {
+        const mappingColor = {
+            "gTempYellow": megaGlobalFunctionMap,
+            "gModGreen": megaGlobalModifierMap,
+        }
+        const mappingPrefix = {
+            "gTempYellow": "fun__",
+            "gModGreen": "mod__",
+        }
+
+        document.querySelectorAll(`.${coloring}`).forEach(a => {
+            const id = a.id;
+            if (!id) return;
+
+            const currentMapping = mappingColor[coloring];
+            const mappingPrefixFinal = mappingPrefix[coloring];
+
+            // console.log(id,id.split("__")?.[1])
+            // const modifierPathing = id.includes(mappingPrefixFinal) ? currentMapping[id.split("__")[1]].split(".") : currentMapping[id].split(".");
+            const modifierPathing = id.includes(mappingPrefixFinal) ? currentMapping[id.split("__")[1]]?.split(".") : currentMapping[id]?.split(".");
+            if (!modifierPathing) {
+                console.log(`Unmapped pathing on: ${id}, ${a.innerHTML}`)
+                return
+            }
+
+            const prefixPath = modifierPathing[0];
+            const filePath = modifierPathing[1];
+
+            const finalPrefixPath = megaMappingPathing[prefixPath] + "/" + filePath + "/";
+            const finalDepositPath = `/HonkaiSR/TheLibrary/` + finalPrefixPath + `${id.includes(mappingPrefixFinal) ? `#${id}` : `#${mappingPrefixFinal + id}`}`;
+
+            // megaMappingPathing
+
+            // encodeURIComponent(id)
+            a.href = finalDepositPath;
+            a.target = "_blank";
+        });
+    },
     generateInitialTable() {
         // let attacksArray = tableGeneration.generateAttacksArray(isAllAttacks);
 
@@ -708,7 +746,8 @@ const megaParsingFuckery = {
         // readSelection("mainListHeaders").innerHTML = tableHeaders;
         readSelection("eventBodyMainBox").innerHTML = levelString;//"";
 
-
+        megaParsingFuckery.populateLinkedEntriesGlobal("gModGreen")
+        megaParsingFuckery.populateLinkedEntriesGlobal("gTempYellow")
         // tooltips.loadTooltips();//update tooltips for things that were just generated
         
     },

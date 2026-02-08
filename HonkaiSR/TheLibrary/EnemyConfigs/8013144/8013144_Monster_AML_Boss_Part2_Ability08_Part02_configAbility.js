@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 3}}"
       },
-      "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect"
+      "modifier": "<a class=\"gModGreen\" id=\"-846464827\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 3}}"
       },
-      "modifier": "Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel"
+      "modifier": "<a class=\"gModGreen\" id=\"-859851761\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 3}}"
       },
-      "modifier": "Enemy_W0_Boss_Part2_AttackUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill08[1]]}) || RETURN",
         "displayLines": "{[Skill08[1]]}",
@@ -52,7 +52,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 3}}"
       },
-      "modifier": "Enemy_Monster_AML_Boss_Part2_Ability07"
+      "modifier": "<a class=\"gModGreen\" id=\"-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>"
     },
     "Ability Start",
     "Trigger: Ability End"

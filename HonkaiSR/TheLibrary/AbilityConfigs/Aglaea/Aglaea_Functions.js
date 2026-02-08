@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Aglaea_Eidolon6_SpeedValue",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1952576234\">Aglaea_Eidolon6_SpeedValue</a>",
       "parse": [
         {
           "name": "IF",
@@ -28,7 +28,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Modifier-Specific Variable",
-              "modifierName": "Aglaea_Eidolon6_Effect[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
               "variableName": "MDF_PropertyValue2",
               "value": {
                 "operator": "Variables[0] (0.6) || RETURN",
@@ -56,7 +56,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Modifier-Specific Variable",
-                  "modifierName": "Aglaea_Eidolon6_Effect[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                   "variableName": "MDF_PropertyValue2",
                   "value": {
                     "operator": "Variables[0] (0.3) || RETURN",
@@ -84,7 +84,7 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Modifier-Specific Variable",
-                      "modifierName": "Aglaea_Eidolon6_Effect[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                       "variableName": "MDF_PropertyValue2",
                       "value": {
                         "operator": "Variables[0] (0.1) || RETURN",
@@ -99,7 +99,7 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Modifier-Specific Variable",
-                      "modifierName": "Aglaea_Eidolon6_Effect[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                       "variableName": "MDF_PropertyValue2",
                       "value": 0
                     }

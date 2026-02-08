@@ -10,11 +10,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_LoseHPPreShow_RealShow"
+      "for": "<a class=\"gModGreen\" id=\"mod__-950469386\">Jingliu_LoseHPPreShow_RealShow</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_LoseHPPreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__11983250\">Jingliu_LoseHPPreShow</a>",
       "execute": [
         {
           "eventTrigger": "Update Target Selected(UI) [Owner]",
@@ -41,7 +41,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "MWJingliu_Attack_Transfer"
+                    "modifier": "<a class=\"gModGreen\" id=\"1566484434\">MWJingliu_Attack_Transfer</a>"
                   }
                 ]
               },
@@ -96,7 +96,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_Passive_CriticalUp[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1857615455\">Jingliu_Passive_CriticalUp</a>[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -127,7 +127,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_Trace_B1_Resist[<span class=\"descriptionNumberColor\">Deathrealm</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-89851365\">Jingliu_Trace_B1_Resist</a>[<span class=\"descriptionNumberColor\">Deathrealm</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -158,7 +158,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_Trace01",
+      "for": "<a class=\"gModGreen\" id=\"mod__564417211\">Jingliu_Trace01</a>",
       "execute": [
         {
           "eventTrigger": "Action End [Anyone]",
@@ -277,7 +277,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_Passive_ATK",
+      "for": "<a class=\"gModGreen\" id=\"mod__1617016029\">Jingliu_Passive_ATK</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -323,7 +323,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Jingliu_Passive2"
+              "modifier": "<a class=\"gModGreen\" id=\"1467260954\">Jingliu_Passive2</a>"
             }
           ]
         }
@@ -331,7 +331,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MWJingliu_Attack_Transfer_AddATK[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__828232276\">MWJingliu_Attack_Transfer_AddATK</a>[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -373,7 +373,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MWJingliu_PointB3[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-62616171\">MWJingliu_PointB3</a>[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -415,7 +415,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MWJingliu_Attack_Transfer",
+      "for": "<a class=\"gModGreen\" id=\"mod__1566484434\">MWJingliu_Attack_Transfer</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -434,7 +434,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jingliu_AbilityPreShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"-582112064\">Jingliu_AbilityPreShow</a>"
                 }
               ]
             },
@@ -472,7 +472,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Jingliu_Eidolon6[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1827977639\">Jingliu_Eidolon6</a>[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]"
             },
             {
               "name": "IF",
@@ -511,7 +511,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Jingliu_Trace_B1_Resist[<span class=\"descriptionNumberColor\">Deathrealm</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-89851365\">Jingliu_Trace_B1_Resist</a>[<span class=\"descriptionNumberColor\">Deathrealm</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -519,7 +519,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Jingliu_Trace_B2_SpeedUp[<span class=\"descriptionNumberColor\">Sword Champion</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1230142412\">Jingliu_Trace_B2_SpeedUp</a>[<span class=\"descriptionNumberColor\">Sword Champion</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -527,7 +527,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "MWJingliu_PointB3[<span class=\"descriptionNumberColor\">Frost Wraith</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-62616171\">MWJingliu_PointB3</a>[<span class=\"descriptionNumberColor\">Frost Wraith</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -535,7 +535,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Jingliu_Passive_CriticalUp[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1857615455\">Jingliu_Passive_CriticalUp</a>[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]"
             }
           ]
         },
@@ -587,7 +587,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jingliu_Eidolon6[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1827977639\">Jingliu_Eidolon6</a>[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]",
                   "valuePerStack": {
                     "MDF_CriticalDamage": {
                       "operator": "Variables[0] (0.5) || RETURN",
@@ -622,7 +622,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jingliu_Trace_B1_Resist[<span class=\"descriptionNumberColor\">Deathrealm</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-89851365\">Jingliu_Trace_B1_Resist</a>[<span class=\"descriptionNumberColor\">Deathrealm</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.35) || RETURN",
@@ -649,7 +649,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "MWJingliu_PointB3[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-62616171\">MWJingliu_PointB3</a>[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.25) || RETURN",
@@ -669,7 +669,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Jingliu_Passive_CriticalUp[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1857615455\">Jingliu_Passive_CriticalUp</a>[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
               "valuePerStack": {
                 "MDF_CriticalRatio": {
                   "operator": "Variables[0] (0.5) || RETURN",
@@ -687,7 +687,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Jingliu_AbilityPreShow"
+              "modifier": "<a class=\"gModGreen\" id=\"-582112064\">Jingliu_AbilityPreShow</a>"
             }
           ]
         },
@@ -936,7 +936,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "MWJingliu_Attack_Transfer_AddATK[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"828232276\">MWJingliu_Attack_Transfer_AddATK</a>[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
                   "valuePerStack": {
                     "MDF_AttackDelta1": {
                       "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
@@ -1045,7 +1045,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_Eidolon6[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1827977639\">Jingliu_Eidolon6</a>[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1083,7 +1083,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_Eidolon2[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1760867163\">Jingliu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1105,7 +1105,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "MWJingliu_Attack_Transfer"
+                    "modifier": "<a class=\"gModGreen\" id=\"1566484434\">MWJingliu_Attack_Transfer</a>"
                   }
                 ]
               },
@@ -1135,7 +1135,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_Eidolon1_CriticalDamage[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1949094753\">Jingliu_Eidolon1_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1171,7 +1171,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_Passive2",
+      "for": "<a class=\"gModGreen\" id=\"mod__1467260954\">Jingliu_Passive2</a>",
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -1208,7 +1208,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "MWJingliu_Attack_Transfer"
+                    "modifier": "<a class=\"gModGreen\" id=\"1566484434\">MWJingliu_Attack_Transfer</a>"
                   },
                   "passed": [
                     {
@@ -1242,7 +1242,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jingliu_Passive_ATK"
+                  "modifier": "<a class=\"gModGreen\" id=\"1617016029\">Jingliu_Passive_ATK</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1255,7 +1255,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "MWJingliu_Attack_Transfer"
+                  "modifier": "<a class=\"gModGreen\" id=\"1566484434\">MWJingliu_Attack_Transfer</a>"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1282,7 +1282,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "MWJingliu_Attack_Transfer"
+                    "modifier": "<a class=\"gModGreen\" id=\"1566484434\">MWJingliu_Attack_Transfer</a>"
                   },
                   "passed": [
                     {
@@ -1316,7 +1316,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jingliu_Passive_ATK"
+                  "modifier": "<a class=\"gModGreen\" id=\"1617016029\">Jingliu_Passive_ATK</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1329,7 +1329,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "MWJingliu_Attack_Transfer"
+                  "modifier": "<a class=\"gModGreen\" id=\"1566484434\">MWJingliu_Attack_Transfer</a>"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1356,7 +1356,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "MWJingliu_Attack_Transfer"
+                    "modifier": "<a class=\"gModGreen\" id=\"1566484434\">MWJingliu_Attack_Transfer</a>"
                   },
                   "passed": [
                     {
@@ -1390,7 +1390,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jingliu_Passive_ATK"
+                  "modifier": "<a class=\"gModGreen\" id=\"1617016029\">Jingliu_Passive_ATK</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1403,7 +1403,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "MWJingliu_Attack_Transfer"
+                  "modifier": "<a class=\"gModGreen\" id=\"1566484434\">MWJingliu_Attack_Transfer</a>"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1443,7 +1443,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "MWJingliu_Attack_Transfer"
+                    "modifier": "<a class=\"gModGreen\" id=\"1566484434\">MWJingliu_Attack_Transfer</a>"
                   },
                   "passed": [
                     {
@@ -1477,7 +1477,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jingliu_Passive_ATK"
+                  "modifier": "<a class=\"gModGreen\" id=\"1617016029\">Jingliu_Passive_ATK</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1490,7 +1490,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "MWJingliu_Attack_Transfer"
+                  "modifier": "<a class=\"gModGreen\" id=\"1566484434\">MWJingliu_Attack_Transfer</a>"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1503,7 +1503,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-537143412\">Jingliu_Passive</a>",
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo"
@@ -1564,7 +1564,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jingliu_Passive_ATK"
+                  "modifier": "<a class=\"gModGreen\" id=\"1617016029\">Jingliu_Passive_ATK</a>"
                 },
                 {
                   "name": "IF",
@@ -1627,7 +1627,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "MWJingliu_Attack_Transfer"
+                "modifier": "<a class=\"gModGreen\" id=\"1566484434\">MWJingliu_Attack_Transfer</a>"
               },
               "passed": [
                 {
@@ -1714,7 +1714,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Jingliu_Passive_ATK"
+                      "modifier": "<a class=\"gModGreen\" id=\"1617016029\">Jingliu_Passive_ATK</a>"
                     },
                     {
                       "name": "IF",
@@ -1816,7 +1816,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jingliu_Passive_ATK"
+                  "modifier": "<a class=\"gModGreen\" id=\"1617016029\">Jingliu_Passive_ATK</a>"
                 },
                 {
                   "name": "IF",
@@ -1924,7 +1924,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jingliu_Passive_ATK"
+                  "modifier": "<a class=\"gModGreen\" id=\"1617016029\">Jingliu_Passive_ATK</a>"
                 },
                 {
                   "name": "IF",
@@ -1995,7 +1995,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jingliu_Transfer_PreShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1865477749\">Jingliu_Transfer_PreShow</a>"
                 }
               ],
               "whenLeavingRange": [
@@ -2005,7 +2005,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Jingliu_Transfer_PreShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1865477749\">Jingliu_Transfer_PreShow</a>"
                 }
               ]
             }
@@ -2017,7 +2017,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_Transfer_PreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1865477749\">Jingliu_Transfer_PreShow</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {
@@ -2046,7 +2046,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_AbilityPreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-582112064\">Jingliu_AbilityPreShow</a>",
       "stackData": [],
       "latentQueue": [
         "SkillRank_Rank04_P2_DamageUpLimit",
@@ -2077,7 +2077,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_Trace02_ModifyAction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1713327141\">Jingliu_Trace02_ModifyAction</a>",
       "stackType": "Multiple",
       "execute": [
         {

@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MFarmRelic_104305"
+      "modifier": "<a class=\"gModGreen\" id=\"1856490043\">MFarmRelic_104305</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104305_DamageAddedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1133771252\">MFarmRelic_104305_DamageAddedRatio</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -37,7 +37,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104305",
+      "for": "<a class=\"gModGreen\" id=\"mod__1856490043\">MFarmRelic_104305</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -59,7 +59,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MFarmRelic_104305_DamageAddedRatio"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1133771252\">MFarmRelic_104305_DamageAddedRatio</a>"
                 }
               ]
             }

@@ -5056,7 +5056,7 @@ const userTriggers = {
             wave: waveSpecificArray
         };
         const serialized = new URLSearchParams(seralize);
-        history.replaceState(null, "", `?${serialized.toString()}`);
+        history.replaceState(null, "", `?${serialized.toString()}${location.hash ?? ""}`);
 
         
         newSkillsObject = null;

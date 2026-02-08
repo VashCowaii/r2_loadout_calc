@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MBattleEvent_FantasticStory_BaseAbility_2060_sub"
+      "modifier": "<a class=\"gModGreen\" id=\"-2003756275\">MBattleEvent_FantasticStory_BaseAbility_2060_sub</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MBattleEvent_FantasticStory_BaseAbility_2060_BaseSpeed"
+      "modifier": "<a class=\"gModGreen\" id=\"571479179\">MBattleEvent_FantasticStory_BaseAbility_2060_BaseSpeed</a>"
     },
     {
       "name": "Block Advance/Delay Effects",
@@ -37,7 +37,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MBattleEvent_FantasticStory_BaseAbility_2060_sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2003756275\">MBattleEvent_FantasticStory_BaseAbility_2060_sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -49,7 +49,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Battle Event's Caster}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+              "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
             },
             {
               "name": "Force Entity Death",
@@ -66,7 +66,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MBattleEvent_FantasticStory_BaseAbility_2060_BaseSpeed",
+      "for": "<a class=\"gModGreen\" id=\"mod__571479179\">MBattleEvent_FantasticStory_BaseAbility_2060_BaseSpeed</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

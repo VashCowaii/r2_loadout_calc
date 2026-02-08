@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Bronya_IF_02_PartController",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1546214500\">Monster_W1_Bronya_IF_02_PartController</a>",
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -42,7 +42,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W1_Gepard_IF_03_PartController"
+                    "modifier": "<a class=\"gModGreen\" id=\"2141633429\">Monster_W1_Gepard_IF_03_PartController</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -66,7 +66,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_IF_LimboMark[<span class=\"descriptionNumberColor\">Valor Via Setbacks</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1981216123\">Enemy_IF_LimboMark</a>[<span class=\"descriptionNumberColor\">Valor Via Setbacks</span>]"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -83,7 +83,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MoreOneMorePerTurn"
+                      "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
                     },
                     {
                       "name": "IF",
@@ -310,7 +310,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_W1_Gepard_IF_03_PartController"
+                    "modifier": "<a class=\"gModGreen\" id=\"2141633429\">Monster_W1_Gepard_IF_03_PartController</a>"
                   },
                   "ifTargetFound": [
                     {
@@ -352,7 +352,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_IF_02_Part2EnhanceInti",
+      "for": "<a class=\"gModGreen\" id=\"mod__-715823219\">Enemy_W1_Bronya_IF_02_Part2EnhanceInti</a>",
       "stackType": "Refresh",
       "execute": [
         {
@@ -377,7 +377,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
                       "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
@@ -411,7 +411,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_IF_02_AssistantSpeed[<span class=\"descriptionNumberColor\">Defense</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -453,7 +453,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_IF_02_WeaknessProtect",
+      "for": "<a class=\"gModGreen\" id=\"mod__479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>",
       "modifierFlags": [
         "MuteBreak"
       ],
@@ -480,7 +480,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_IF_02_MainHaloEffect[<span class=\"descriptionNumberColor\">Charge</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -514,7 +514,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -539,7 +539,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
                       "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
@@ -567,7 +567,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
                       "operator": "Variables[0] ({[SkillP04[2]]}) || RETURN",
@@ -663,7 +663,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_IF_02_Enhance[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1364188900\">Enemy_W1_Bronya_IF_02_Enhance</a>[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
@@ -703,7 +703,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Bronya_BattleScore2",
+      "for": "<a class=\"gModGreen\" id=\"mod__236879313\">Bronya_BattleScore2</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -761,7 +761,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Bronya_BattleScore1",
+      "for": "<a class=\"gModGreen\" id=\"mod__186546456\">Bronya_BattleScore1</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -843,7 +843,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_Ability02[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1747978880\">Enemy_W1_Bronya_Ability02</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -875,7 +875,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "TEST_DarkTeamBackRow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1115057368\">TEST_DarkTeamBackRow</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -927,7 +927,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_PassiveAbility_Formation2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-247015465\">Enemy_W1_Bronya_PassiveAbility_Formation2</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -964,7 +964,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W1_Bronya_PassiveAbility_NoLockStance",
+      "for": "<a class=\"gModGreen\" id=\"mod__746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>",
       "stackData": [],
       "latentQueue": []
     }

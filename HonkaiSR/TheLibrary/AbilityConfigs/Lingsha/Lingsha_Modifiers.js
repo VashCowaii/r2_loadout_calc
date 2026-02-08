@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_Eidolon6_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Arcadia Under Deep Seclusion</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1203114075\">Lingsha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Arcadia Under Deep Seclusion</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -43,7 +43,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_Eidolon6_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1458980452\">Lingsha_Eidolon6_Listen</a>",
       "stackData": [],
       "latentQueue": [],
       "subModList": [
@@ -53,7 +53,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Lingsha_Eidolon6_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Arcadia Under Deep Seclusion</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1203114075\">Lingsha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Arcadia Under Deep Seclusion</span>]",
           "aliveOnly": "False",
           "haloStatus": true,
           "valuePerStack": {
@@ -71,7 +71,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_Eidolon2_BreakDamageAttackRatio[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-962483629\">Lingsha_Eidolon2_BreakDamageAttackRatio</a>[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -107,7 +107,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_Eidolon1_DefenceRatioDown[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-127930650\">Lingsha_Eidolon1_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -118,7 +118,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Lingsha_Eidolon1_PassiveStackProperty"
+              "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>"
             }
           ]
         },
@@ -133,7 +133,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_Eidolon1_PassiveStackProperty",
+      "for": "<a class=\"gModGreen\" id=\"mod__-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_DefenceDown"
@@ -168,7 +168,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_Eidolon1_ListenBreak",
+      "for": "<a class=\"gModGreen\" id=\"mod__1709120566\">Lingsha_Eidolon1_ListenBreak</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -182,7 +182,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Lingsha_Eidolon1_PassiveStackProperty",
+              "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (Rank01_MDF_PropertyValue) || RETURN",
@@ -200,7 +200,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Lingsha_Eidolon1_DefenceRatioDown[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-127930650\">Lingsha_Eidolon1_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (Rank01_MDF_PropertyValue) || RETURN",
@@ -222,7 +222,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_Eidolon1_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1721297245\">Lingsha_Eidolon1_Listen</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -253,7 +253,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_PointB3_CD[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "stackData": [],
       "latentQueue": [
@@ -266,7 +266,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_PointB3_OnListen",
+      "for": "<a class=\"gModGreen\" id=\"mod__210278197\">Lingsha_PointB3_OnListen</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
@@ -325,7 +325,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Battle Event's Caster}}"
                         },
-                        "modifier": "Lingsha_PointB3_CD[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
                         "invertCondition": true
                       },
                       "passed": [
@@ -608,7 +608,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_BPAbility_BattleEvent_LifeTime",
+      "for": "<a class=\"gModGreen\" id=\"mod__1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -754,7 +754,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Lingsha_BreakDamageUp[<span class=\"descriptionNumberColor\">Befog</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-637709984\">Lingsha_BreakDamageUp</a>[<span class=\"descriptionNumberColor\">Befog</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

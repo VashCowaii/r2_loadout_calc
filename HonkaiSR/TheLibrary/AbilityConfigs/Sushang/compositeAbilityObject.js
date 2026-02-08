@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Sushang_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"148156557\">StageAbility_Maze_Sushang_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Sushang_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__148156557\">StageAbility_Maze_Sushang_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -117,7 +117,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Ability03PreShowModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-247396096\">Ability03PreShowModifier</a>"
         },
         {
           "name": "IF",
@@ -132,7 +132,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Ability01PreShowModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"1540905078\">Ability01PreShowModifier</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -140,7 +140,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Ability02PreShowModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-894890999\">Ability02PreShowModifier</a>"
             }
           ]
         },
@@ -150,7 +150,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_P01_Check"
+          "modifier": "<a class=\"gModGreen\" id=\"1122395035\">Sushang_P01_Check</a>"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -188,7 +188,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_LowHP_AggroDown",
+              "modifier": "<a class=\"gModGreen\" id=\"136105164\">Sushang_LowHP_AggroDown</a>",
               "valuePerStack": {
                 "MDF_HPRatio": {
                   "operator": "Variables[0] (0.5) || RETURN",
@@ -223,7 +223,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_P01_Eidolon6[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-995993731\">Sushang_P01_Eidolon6</a>[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -259,7 +259,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_Eidolon4"
+              "modifier": "<a class=\"gModGreen\" id=\"1549572923\">Sushang_Eidolon4</a>"
             }
           ]
         }
@@ -267,7 +267,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Sushang_P01_Check",
+          "for": "<a class=\"gModGreen\" id=\"mod__1122395035\">Sushang_P01_Check</a>",
           "execute": [
             {
               "eventTrigger": "Weakness Break [Anyone]",
@@ -285,7 +285,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sushang_P01_Eidolon6[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-995993731\">Sushang_P01_Eidolon6</a>[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -314,7 +314,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sushang_P01[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"326660748\">Sushang_P01</a>[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -344,7 +344,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sushang_Eidolon4",
+          "for": "<a class=\"gModGreen\" id=\"mod__1549572923\">Sushang_Eidolon4</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -373,7 +373,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Ability02PreShowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-894890999\">Ability02PreShowModifier</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -426,7 +426,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Ability01PreShowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1540905078\">Ability01PreShowModifier</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -479,7 +479,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Ability03PreShowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-247396096\">Ability03PreShowModifier</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -551,7 +551,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_UltraBonus[<span class=\"descriptionNumberColor\">Dawn Herald</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1472874588\">Sushang_UltraBonus</a>[<span class=\"descriptionNumberColor\">Dawn Herald</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -650,7 +650,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_BreakCheck_Before"
+          "modifier": "<a class=\"gModGreen\" id=\"-1715450419\">Sushang_BP_BreakCheck_Before</a>"
         },
         {
           "name": "IF",
@@ -669,7 +669,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_BreakCheck_Before"
+              "modifier": "<a class=\"gModGreen\" id=\"-1715450419\">Sushang_BP_BreakCheck_Before</a>"
             }
           ]
         },
@@ -716,7 +716,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Sushang_UltraBonus[<span class=\"descriptionNumberColor\">Dawn Herald</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1472874588\">Sushang_UltraBonus</a>[<span class=\"descriptionNumberColor\">Dawn Herald</span>]"
               }
             ]
           }
@@ -727,7 +727,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_PassiveCheck"
+          "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -735,7 +735,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_PassiveCheck_01"
+          "modifier": "<a class=\"gModGreen\" id=\"1401762003\">Sushang_BP_PassiveCheck_01</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -743,7 +743,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_PassiveCheck_02"
+          "modifier": "<a class=\"gModGreen\" id=\"1418539622\">Sushang_BP_PassiveCheck_02</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -786,7 +786,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Sushang_UltraBonus[<span class=\"descriptionNumberColor\">Dawn Herald</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1472874588\">Sushang_UltraBonus</a>[<span class=\"descriptionNumberColor\">Dawn Herald</span>]"
           },
           "passed": [
             {
@@ -806,7 +806,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_BP_PassiveCheck_01"
+                  "modifier": "<a class=\"gModGreen\" id=\"1401762003\">Sushang_BP_PassiveCheck_01</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -814,7 +814,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_BP_PassiveCheck_02"
+                  "modifier": "<a class=\"gModGreen\" id=\"1418539622\">Sushang_BP_PassiveCheck_02</a>"
                 }
               ],
               "failed": [
@@ -824,7 +824,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_BP_PassiveCheck_01",
+                  "modifier": "<a class=\"gModGreen\" id=\"1401762003\">Sushang_BP_PassiveCheck_01</a>",
                   "baseChance": {
                     "operator": "Variables[0] (0.33) || RETURN",
                     "displayLines": "0.33",
@@ -840,7 +840,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_BP_PassiveCheck_02",
+                  "modifier": "<a class=\"gModGreen\" id=\"1418539622\">Sushang_BP_PassiveCheck_02</a>",
                   "baseChance": {
                     "operator": "Variables[0] (0.33) || RETURN",
                     "displayLines": "0.33",
@@ -871,7 +871,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PassiveCheck"
+              "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>"
             }
           ],
           "failed": [
@@ -881,7 +881,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PassiveCheck",
+              "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>",
               "baseChance": {
                 "operator": "Variables[0] (0.33) || RETURN",
                 "displayLines": "0.33",
@@ -906,7 +906,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_BP_PassiveCheck"
+                  "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>"
                 },
                 {
                   "name": "Has Modifier",
@@ -914,7 +914,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_BP_PassiveCheck_01"
+                  "modifier": "<a class=\"gModGreen\" id=\"1401762003\">Sushang_BP_PassiveCheck_01</a>"
                 },
                 {
                   "name": "Has Modifier",
@@ -922,7 +922,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_BP_PassiveCheck_02"
+                  "modifier": "<a class=\"gModGreen\" id=\"1418539622\">Sushang_BP_PassiveCheck_02</a>"
                 }
               ]
             }
@@ -942,7 +942,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Sushang_BP_PassiveCheck_01"
+                "modifier": "<a class=\"gModGreen\" id=\"1401762003\">Sushang_BP_PassiveCheck_01</a>"
               }
             ]
           },
@@ -962,14 +962,14 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]"
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
                       "valueType": "Layer",
                       "variableName": "PointB2_Layer",
-                      "modifierName": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
                       "multiplier": 1
                     }
                   ]
@@ -982,7 +982,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PointB2_DMGModifier",
+              "modifier": "<a class=\"gModGreen\" id=\"-236050172\">Sushang_BP_PointB2_DMGModifier</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (PointB2_Layer) || Variables[1] (0.025) || MUL || RETURN",
@@ -1023,7 +1023,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PointB2_DMGModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-236050172\">Sushang_BP_PointB2_DMGModifier</a>"
             },
             {
               "name": "IF",
@@ -1040,7 +1040,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]"
                   },
                   "failed": [
                     {
@@ -1049,7 +1049,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1079,7 +1079,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (10) || RETURN",
                     "displayLines": "10",
@@ -1122,7 +1122,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sushang_BP_PassiveCheck"
+                      "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>"
                     },
                     {
                       "name": "Has Modifier",
@@ -1130,7 +1130,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sushang_BP_PassiveCheck_02"
+                      "modifier": "<a class=\"gModGreen\" id=\"1418539622\">Sushang_BP_PassiveCheck_02</a>"
                     }
                   ]
                 }
@@ -1147,7 +1147,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_PassiveCheck_01"
+          "modifier": "<a class=\"gModGreen\" id=\"1401762003\">Sushang_BP_PassiveCheck_01</a>"
         },
         {
           "name": "IF",
@@ -1160,7 +1160,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Sushang_BP_PassiveCheck_02"
+                "modifier": "<a class=\"gModGreen\" id=\"1418539622\">Sushang_BP_PassiveCheck_02</a>"
               }
             ]
           },
@@ -1180,14 +1180,14 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]"
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
                       "valueType": "Layer",
                       "variableName": "PointB2_Layer",
-                      "modifierName": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
                       "multiplier": 1
                     }
                   ]
@@ -1200,7 +1200,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PointB2_DMGModifier",
+              "modifier": "<a class=\"gModGreen\" id=\"-236050172\">Sushang_BP_PointB2_DMGModifier</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (PointB2_Layer) || Variables[1] (0.025) || MUL || RETURN",
@@ -1241,7 +1241,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PointB2_DMGModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-236050172\">Sushang_BP_PointB2_DMGModifier</a>"
             },
             {
               "name": "IF",
@@ -1258,7 +1258,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]"
                   },
                   "failed": [
                     {
@@ -1267,7 +1267,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1297,7 +1297,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (10) || RETURN",
                     "displayLines": "10",
@@ -1337,7 +1337,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_BP_PassiveCheck"
+                  "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>"
                 }
               },
               "passed": [
@@ -1354,7 +1354,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Sushang_BP_PassiveCheck"
+            "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>"
           },
           "passed": [
             {
@@ -1372,14 +1372,14 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]"
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
                       "valueType": "Layer",
                       "variableName": "PointB2_Layer",
-                      "modifierName": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
                       "multiplier": 1
                     }
                   ]
@@ -1392,7 +1392,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PointB2_DMGModifier",
+              "modifier": "<a class=\"gModGreen\" id=\"-236050172\">Sushang_BP_PointB2_DMGModifier</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (PointB2_Layer) || Variables[1] (0.025) || MUL || RETURN",
@@ -1432,7 +1432,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PointB2_DMGModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-236050172\">Sushang_BP_PointB2_DMGModifier</a>"
             },
             {
               "name": "IF",
@@ -1449,7 +1449,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]"
                   },
                   "failed": [
                     {
@@ -1458,7 +1458,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1488,7 +1488,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (10) || RETURN",
                     "displayLines": "10",
@@ -1527,7 +1527,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_PassiveCheck"
+          "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1535,7 +1535,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_PassiveCheck_01"
+          "modifier": "<a class=\"gModGreen\" id=\"1401762003\">Sushang_BP_PassiveCheck_01</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1543,7 +1543,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_PassiveCheck_02"
+          "modifier": "<a class=\"gModGreen\" id=\"1418539622\">Sushang_BP_PassiveCheck_02</a>"
         },
         {
           "name": "IF",
@@ -1553,7 +1553,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Sushang_BP_BreakCheck_Before"
+            "modifier": "<a class=\"gModGreen\" id=\"-1715450419\">Sushang_BP_BreakCheck_Before</a>"
           },
           "passed": [
             {
@@ -1578,7 +1578,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_BreakCheck_Before"
+          "modifier": "<a class=\"gModGreen\" id=\"-1715450419\">Sushang_BP_BreakCheck_Before</a>"
         },
         {
           "name": "Find New Target",
@@ -1606,7 +1606,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -1631,7 +1631,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Sushang_BP_PointB2_DMGModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-236050172\">Sushang_BP_PointB2_DMGModifier</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1656,25 +1656,25 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sushang_BP_BreakCheck_Before",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1715450419\">Sushang_BP_BreakCheck_Before</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Sushang_BP_PassiveCheck_02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1418539622\">Sushang_BP_PassiveCheck_02</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Sushang_BP_PassiveCheck_01",
+          "for": "<a class=\"gModGreen\" id=\"mod__1401762003\">Sushang_BP_PassiveCheck_01</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Sushang_BP_PassiveCheck",
+          "for": "<a class=\"gModGreen\" id=\"mod__699476095\">Sushang_BP_PassiveCheck</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -1727,7 +1727,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Sushang_UltraBonus[<span class=\"descriptionNumberColor\">Dawn Herald</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1472874588\">Sushang_UltraBonus</a>[<span class=\"descriptionNumberColor\">Dawn Herald</span>]"
               }
             ]
           }
@@ -1792,7 +1792,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -1858,7 +1858,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -1895,7 +1895,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sushang_P01_Eidolon6[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-995993731\">Sushang_P01_Eidolon6</a>[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -1912,7 +1912,7 @@ const compositeAbilityObject = {
                   },
                   "valueType": "Layer",
                   "variableName": "Rank06_SpeedUp_Count",
-                  "modifierName": "Sushang_P01_Eidolon6[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-995993731\">Sushang_P01_Eidolon6</a>[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
                   "multiplier": 1
                 },
                 {
@@ -1948,7 +1948,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sushang_P01[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__326660748\">Sushang_P01</a>[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -1987,7 +1987,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
           "stackType": "ReplaceByCaster",
           "stackData": [
             "MDF_PropertyValue",
@@ -2002,7 +2002,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sushang_UltraBonus[<span class=\"descriptionNumberColor\">Dawn Herald</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1472874588\">Sushang_UltraBonus</a>[<span class=\"descriptionNumberColor\">Dawn Herald</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2119,7 +2119,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sushang_Trace_AggroDown[<span class=\"descriptionNumberColor\">Guileless</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__420113807\">Sushang_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Guileless</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2154,7 +2154,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Sushang_LowHP_AggroDown",
+          "for": "<a class=\"gModGreen\" id=\"mod__136105164\">Sushang_LowHP_AggroDown</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2186,7 +2186,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sushang_Trace_AggroDown[<span class=\"descriptionNumberColor\">Guileless</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"420113807\">Sushang_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Guileless</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_AggroDown) || RETURN",
@@ -2231,7 +2231,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sushang_Trace_AggroDown[<span class=\"descriptionNumberColor\">Guileless</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"420113807\">Sushang_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Guileless</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_AggroDown) || RETURN",
@@ -2251,7 +2251,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sushang_Trace_AggroDown[<span class=\"descriptionNumberColor\">Guileless</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"420113807\">Sushang_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Guileless</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
                   ]

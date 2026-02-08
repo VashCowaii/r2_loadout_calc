@@ -19,7 +19,7 @@ const configAbility = {
           }
         ]
       },
-      "modifier": "FuXuan_Eidolon2[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
     },
     {
       "name": "Dispel Debuffs",

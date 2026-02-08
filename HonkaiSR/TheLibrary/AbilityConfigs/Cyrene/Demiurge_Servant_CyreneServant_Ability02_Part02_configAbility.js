@@ -122,7 +122,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Hyacine[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-588160151\">Memosprite_CyreneServant_AmazingBonus_Hyacine</a>[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
           "valuePerStack": {
             "MDF_HyacineRatio": {
               "operator": "Variables[0] (0.72) || RETURN",
@@ -175,7 +175,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Memosprite_CyreneServant_AmazingBonus_Hyacine[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-588160151\">Memosprite_CyreneServant_AmazingBonus_Hyacine</a>[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
               "valuePerStack": {
                 "MDF_HyacineRatio": {
                   "operator": "Variables[0] (0.72) || RETURN",
@@ -210,7 +210,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Harscyline[<span class=\"descriptionNumberColor\">Ode to Ocean</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-716696180\">Memosprite_CyreneServant_AmazingBonus_Harscyline</a>[<span class=\"descriptionNumberColor\">Ode to Ocean</span>]",
           "valuePerStack": {
             "MDF_HarscylineRatio": {
               "operator": "Variables[0] (1.2) || RETURN",
@@ -244,7 +244,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Harscyline_Sub[<span class=\"descriptionNumberColor\">Flowing Warmth</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-814125319\">Memosprite_CyreneServant_AmazingBonus_Harscyline_Sub</a>[<span class=\"descriptionNumberColor\">Flowing Warmth</span>]",
           "valuePerStack": {
             "MDF_SPAdd": {
               "operator": "Variables[0] (60) || RETURN",
@@ -292,7 +292,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Evernight[<span class=\"descriptionNumberColor\">Ode to Time</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"81139284\">Memosprite_CyreneServant_AmazingBonus_Evernight</a>[<span class=\"descriptionNumberColor\">Ode to Time</span>]",
           "valuePerStack": {
             "MDF_EverNightRatio": {
               "operator": "Variables[0] (0.18) || RETURN",
@@ -332,7 +332,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_DanHengPT[<span class=\"descriptionNumberColor\">Ode to Earth</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1655562855\">Memosprite_CyreneServant_AmazingBonus_DanHengPT</a>[<span class=\"descriptionNumberColor\">Ode to Earth</span>]",
           "valuePerStack": {
             "MDF_DamageIncrease": {
               "operator": "Variables[0] (0.24) || RETURN",
@@ -366,7 +366,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "DanHengPT_LongLingAttackExtraDamage",
+          "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
           "valuePerStack": {
             "MDF_Count": {
               "operator": "Variables[0] (3) || RETURN",
@@ -400,7 +400,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "DanHengPT_LongLingExtraShield",
+          "modifier": "<a class=\"gModGreen\" id=\"297054432\">DanHengPT_LongLingExtraShield</a>",
           "valuePerStack": {
             "MDF_ShieldRatio": {
               "operator": "Variables[0] (1.5) || RETURN",
@@ -437,7 +437,7 @@ const configAbility = {
               }
             ]
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_DanHengPT[<span class=\"descriptionNumberColor\">Ode to Earth</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1655562855\">Memosprite_CyreneServant_AmazingBonus_DanHengPT</a>[<span class=\"descriptionNumberColor\">Ode to Earth</span>]",
           "valuePerStack": {
             "MDF_DamageIncrease": {
               "operator": "Variables[0] (0.24) || RETURN",
@@ -488,7 +488,7 @@ const configAbility = {
               }
             ]
           },
-          "modifier": "DanHengPT_LongLingAttackExtraDamage",
+          "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
           "valuePerStack": {
             "MDF_Count": {
               "operator": "Variables[0] (3) || RETURN",
@@ -536,7 +536,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Castorice[<span class=\"descriptionNumberColor\">Ode to Life and Death</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-331286977\">Memosprite_CyreneServant_AmazingBonus_Castorice</a>[<span class=\"descriptionNumberColor\">Ode to Life and Death</span>]",
           "valuePerStack": {
             "MDF_SuicideRatioBase": {
               "operator": "Variables[0] (0.0024) || RETURN",
@@ -600,7 +600,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Phainon[<span class=\"descriptionNumberColor\">Ode to Worldbearing</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-484368069\">Memosprite_CyreneServant_AmazingBonus_Phainon</a>[<span class=\"descriptionNumberColor\">Ode to Worldbearing</span>]",
           "valuePerStack": {
             "MDF_DamageIncrease": {
               "operator": "Variables[0] (0.16) || RETURN",
@@ -711,7 +711,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Player[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"937032379\">Memosprite_CyreneServant_AmazingBonus_Player</a>[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]",
           "valuePerStack": {
             "MDF_HPTransferRatio": {
               "operator": "Variables[0] (0.16) || RETURN",
@@ -751,7 +751,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Tribbie[<span class=\"descriptionNumberColor\">Ode to Passage</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1569324375\">Memosprite_CyreneServant_AmazingBonus_Tribbie</a>[<span class=\"descriptionNumberColor\">Ode to Passage</span>]",
           "valuePerStack": {
             "MDF_TribbieLoopCount": {
               "operator": "Variables[0] (1) || RETURN",
@@ -801,7 +801,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Memosprite_CyreneServant_AmazingBonus_Mydeimos"
+            "modifier": "<a class=\"gModGreen\" id=\"-431200233\">Memosprite_CyreneServant_AmazingBonus_Mydeimos</a>"
           },
           "passed": [
             {
@@ -811,7 +811,7 @@ const configAbility = {
                 "target": "{{Ability Target(ST)}}"
               },
               "variableName": "_AmazingBuff_Mydeimos_ModifierCount",
-              "modifierName": "Memosprite_CyreneServant_AmazingBonus_Mydeimos",
+              "modifierName": "<a class=\"gModGreen\" id=\"-431200233\">Memosprite_CyreneServant_AmazingBonus_Mydeimos</a>",
               "multiplier": 1
             },
             {
@@ -820,7 +820,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Memosprite_CyreneServant_AmazingBonus_Mydeimos",
+              "modifier": "<a class=\"gModGreen\" id=\"-431200233\">Memosprite_CyreneServant_AmazingBonus_Mydeimos</a>",
               "counter": {
                 "operator": "Variables[0] (_AmazingBuff_Mydeimos_ModifierCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(_AmazingBuff_Mydeimos_ModifierCount + 1)",
@@ -858,7 +858,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Memosprite_CyreneServant_AmazingBonus_Mydeimos",
+              "modifier": "<a class=\"gModGreen\" id=\"-431200233\">Memosprite_CyreneServant_AmazingBonus_Mydeimos</a>",
               "counter": 1,
               "valuePerStack": {
                 "MDF_CritDamage": {
@@ -901,7 +901,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Aglaea[<span class=\"descriptionNumberColor\">Ode to Romance</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1654237423\">Memosprite_CyreneServant_AmazingBonus_Aglaea</a>[<span class=\"descriptionNumberColor\">Ode to Romance</span>]",
           "valuePerStack": {
             "MDF_DamageIncrease": {
               "operator": "Variables[0] (0.72) || RETURN",
@@ -927,7 +927,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Aglaea_Sub2[<span class=\"descriptionNumberColor\">Romantic</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-313440704\">Memosprite_CyreneServant_AmazingBonus_Aglaea_Sub2</a>[<span class=\"descriptionNumberColor\">Romantic</span>]",
           "valuePerStack": {
             "MDF_SPAdd": {
               "operator": "Variables[0] (70) || RETURN",
@@ -980,7 +980,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Anaxa[<span class=\"descriptionNumberColor\">Ode to Reason</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"84592407\">Memosprite_CyreneServant_AmazingBonus_Anaxa</a>[<span class=\"descriptionNumberColor\">Ode to Reason</span>]",
           "duration": 1,
           "valuePerStack": {
             "MDF_AnaxaCount": {
@@ -1016,7 +1016,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Anaxa_HaloMain",
+          "modifier": "<a class=\"gModGreen\" id=\"-1645914465\">Memosprite_CyreneServant_AmazingBonus_Anaxa_HaloMain</a>",
           "valuePerStack": {
             "MDF_AnaxaCount": {
               "operator": "Variables[0] (3) || RETURN",
@@ -1065,7 +1065,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Cipher[<span class=\"descriptionNumberColor\">Ode to Trickery</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1139724287\">Memosprite_CyreneServant_AmazingBonus_Cipher</a>[<span class=\"descriptionNumberColor\">Ode to Trickery</span>]",
           "valuePerStack": {
             "MDF_DamageIncrease": {
               "operator": "Variables[0] (0.36) || RETURN",
@@ -1113,7 +1113,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Cerydra[<span class=\"descriptionNumberColor\">Ode to Law</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"609996020\">Memosprite_CyreneServant_AmazingBonus_Cerydra</a>[<span class=\"descriptionNumberColor\">Ode to Law</span>]",
           "valuePerStack": {
             "MDF_DamageIncrease": {
               "operator": "Variables[0] (0.3) || RETURN",
@@ -1153,7 +1153,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Memosprite_CyreneServant_AmazingBonus_Normal[<span class=\"descriptionNumberColor\">This Ode, to All Lives</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"42532209\">Memosprite_CyreneServant_AmazingBonus_Normal</a>[<span class=\"descriptionNumberColor\">This Ode, to All Lives</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",

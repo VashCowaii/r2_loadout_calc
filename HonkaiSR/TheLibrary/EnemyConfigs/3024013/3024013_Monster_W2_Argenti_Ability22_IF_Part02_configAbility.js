@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Argenti_Ability09_IF_BOSS_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1847553534\">Monster_W2_Argenti_Ability09_IF_BOSS_Modifier</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Argenti_Ability09_IF_BOSS_Eff01_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-457794649\">Monster_W2_Argenti_Ability09_IF_BOSS_Eff01_Modifier</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Argenti_Ability09_IF_BOSS_Eff02_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1561229936\">Monster_W2_Argenti_Ability09_IF_BOSS_Eff02_Modifier</a>"
     },
     "Ability Start",
     {
@@ -55,7 +55,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Shake_Small"
+      "functionName": "<a class=\"gTempYellow\" id=\"416766717\">Shake_Small</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -82,7 +82,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Shake_Small"
+      "functionName": "<a class=\"gTempYellow\" id=\"416766717\">Shake_Small</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -109,7 +109,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Shake_Small"
+      "functionName": "<a class=\"gTempYellow\" id=\"416766717\">Shake_Small</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -136,7 +136,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Shake_Small"
+      "functionName": "<a class=\"gTempYellow\" id=\"416766717\">Shake_Small</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -163,11 +163,11 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Shake_Small"
+      "functionName": "<a class=\"gTempYellow\" id=\"416766717\">Shake_Small</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Shake_Big"
+      "functionName": "<a class=\"gTempYellow\" id=\"-2094171200\">Shake_Big</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -205,7 +205,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Argenti_IF_FlowerPower[<span class=\"descriptionNumberColor\">Wreath</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1546767870\">Monster_W2_Argenti_IF_FlowerPower</a>[<span class=\"descriptionNumberColor\">Wreath</span>]"
     },
     "Trigger: Ability End"
   ],

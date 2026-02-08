@@ -19,7 +19,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "DeathCamera_First"
+          "functionName": "<a class=\"gTempYellow\" id=\"1173935247\">DeathCamera_First</a>"
         }
       ]
     },
@@ -59,7 +59,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "W2_ArgentiTotem_02_BattleScore1"
+              "modifier": "<a class=\"gModGreen\" id=\"1174449239\">W2_ArgentiTotem_02_BattleScore1</a>"
             }
           ]
         },
@@ -87,7 +87,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
               },
               "passed": [
                 {
@@ -97,7 +97,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "modifierNameArray": [
-                    "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]"
+                    "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
                   ],
                   "value": {
                     "operator": "Variables[0] ({[SkillP01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
@@ -117,7 +117,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": 2,
                   "valuePerStack": {
                     "MDF_ShowValue": {
@@ -162,7 +162,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
               },
               "passed": [
                 {
@@ -171,7 +171,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": 2,
                   "valuePerStack": {
                     "MDF_ShowValue": {
@@ -193,7 +193,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "modifierNameArray": [
-                    "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]"
+                    "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
                   ],
                   "value": {
                     "operator": "Variables[0] ({[SkillP01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
@@ -212,7 +212,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "modifierNameArray": [
-                    "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]"
+                    "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
                   ],
                   "value": {
                     "operator": "Variables[0] ({[SkillP01[0]]}) || Variables[1] (_MaxHP) || MUL || RETURN",
@@ -232,7 +232,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": 2,
                   "valuePerStack": {
                     "MDF_ShowValue": {

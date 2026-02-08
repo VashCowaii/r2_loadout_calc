@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_Trace03_DamageAddedRatio"
+          "modifier": "<a class=\"gModGreen\" id=\"470799784\">PlayerBoy_Trace03_DamageAddedRatio</a>"
         }
       ]
     },
@@ -63,7 +63,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "PlayerBoy_Trace03_DamageAddedRatio"
+          "modifier": "<a class=\"gModGreen\" id=\"470799784\">PlayerBoy_Trace03_DamageAddedRatio</a>"
         }
       ]
     },

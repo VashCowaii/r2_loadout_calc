@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_022"
+      "modifier": "<a class=\"gModGreen\" id=\"-519714578\">MStrongChallengeEX_Talent_StageAbility_LE_022</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_EMY_022",
+      "for": "<a class=\"gModGreen\" id=\"mod__711556272\">MStrongChallengeEX_Talent_StageAbility_EMY_022</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -79,7 +79,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_022",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1209219306\">MStrongChallengeEX_Talent_StageAbility_PLY_022</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -106,7 +106,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_022",
+      "for": "<a class=\"gModGreen\" id=\"mod__-519714578\">MStrongChallengeEX_Talent_StageAbility_LE_022</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -133,7 +133,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_022"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1209219306\">MStrongChallengeEX_Talent_StageAbility_PLY_022</a>"
                 }
               ]
             }

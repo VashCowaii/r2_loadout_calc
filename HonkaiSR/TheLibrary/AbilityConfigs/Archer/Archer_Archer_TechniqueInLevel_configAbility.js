@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Archer_PreMaze"
+      "modifier": "<a class=\"gModGreen\" id=\"1394006307\">Archer_PreMaze</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,13 +26,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Archer_Maze"
+      "modifier": "<a class=\"gModGreen\" id=\"-1353149844\">Archer_Maze</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Archer_Maze",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1353149844\">Archer_Maze</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -88,7 +88,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Archer_PreMaze",
+      "for": "<a class=\"gModGreen\" id=\"mod__1394006307\">Archer_PreMaze</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

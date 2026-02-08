@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_PlayerBoy_Trace01"
+      "modifier": "<a class=\"gModGreen\" id=\"1966656323\">M_PlayerBoy_Trace01</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_PlayerBoy_Trace01",
+      "for": "<a class=\"gModGreen\" id=\"mod__1966656323\">M_PlayerBoy_Trace01</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

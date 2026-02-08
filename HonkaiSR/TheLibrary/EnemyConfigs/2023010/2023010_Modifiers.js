@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Abomi04_PassiveAbility_Formation2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-502774281\">Enemy_W2_Abomi04_PassiveAbility_Formation2</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Abomi04_Attack_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-488885736\">Monster_W2_Abomi04_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
       "modifierFlags": [
         "TeamAction",
         "RemoveWhenCasterDead"
@@ -66,7 +66,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Abomi04_Command",
+      "for": "<a class=\"gModGreen\" id=\"mod__125847833\">Monster_W2_Abomi04_Command</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -92,7 +92,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W2_Abomi04_Attack_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-488885736\">Monster_W2_Abomi04_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
               },
               "abilityName": "Abomi04Command"
             }
@@ -104,13 +104,13 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Abomi04_SummonedMinions",
+      "for": "<a class=\"gModGreen\" id=\"mod__-453804030\">Enemy_W2_Abomi04_SummonedMinions</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Abomi04_HitToHeal_Effect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-98608309\">Enemy_W2_Abomi04_HitToHeal_Effect</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -137,7 +137,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Abomi04_HitToHeal[<span class=\"descriptionNumberColor\">Draining Hit</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -148,7 +148,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_W2_Abomi04_HitToHeal_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-98608309\">Enemy_W2_Abomi04_HitToHeal_Effect</a>"
             }
           ]
         },
@@ -183,7 +183,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Abomi04_HitToHeal_Controller",
+      "for": "<a class=\"gModGreen\" id=\"mod__378580326\">Enemy_W2_Abomi04_HitToHeal_Controller</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -207,7 +207,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape"
+              "functionName": "<a class=\"gTempYellow\" id=\"1500255012\">TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape</a>"
             }
           ]
         },
@@ -216,7 +216,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape"
+              "functionName": "<a class=\"gTempYellow\" id=\"1500255012\">TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape</a>"
             }
           ]
         },
@@ -228,7 +228,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape"
+              "functionName": "<a class=\"gTempYellow\" id=\"1500255012\">TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape</a>"
             }
           ]
         },
@@ -240,7 +240,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape"
+              "functionName": "<a class=\"gTempYellow\" id=\"1500255012\">TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape</a>"
             }
           ]
         }
@@ -248,7 +248,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1500255012\">TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape</a>",
           "parse": [
             {
               "name": "IF",
@@ -272,7 +272,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W2_Abomi04_HitToHeal[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
                   },
                   {
                     "name": "Compare: Target Count SUM",
@@ -286,7 +286,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W2_Abomi01_Revive[<span class=\"descriptionNumberColor\">Rebirth</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
                     },
                     "invertCondition": true
                   }

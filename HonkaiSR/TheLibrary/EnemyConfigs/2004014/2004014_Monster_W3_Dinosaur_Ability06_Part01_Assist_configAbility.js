@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W3_Dinosaur_MonsterAssistBonus"
+      "modifier": "<a class=\"gModGreen\" id=\"680214868\">Monster_W3_Dinosaur_MonsterAssistBonus</a>"
     },
     {
       "name": "Remove Modifier Behavior Flag(s)",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     },
     {
       "name": "Declare Custom Variable",
@@ -46,7 +46,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "MModifier_Monster_W3_Dinosaur_Fury[<span class=\"descriptionNumberColor\">Boil</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-1287806639\">MModifier_Monster_W3_Dinosaur_Fury</a>[<span class=\"descriptionNumberColor\">Boil</span>]"
       },
       "passed": [
         {
@@ -80,7 +80,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MModifier_Monster_W3_Dinosaur_MonsterEnergyBar",
+          "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
           "valuePerStack": {
             "MDF_MaxCount": {
               "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
@@ -110,7 +110,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MModifier_Monster_W3_Dinosaur_AttackUpRatio[<span class=\"descriptionNumberColor\">Stove Heating</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -118,7 +118,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MModifier_Monster_W3_Dinosaur_MonsterEnergyBar",
+          "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
           "valuePerStack": {
             "MDF_MaxCount": {
               "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
@@ -137,7 +137,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMore"
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -145,7 +145,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MModifier_Monster_W3_Dinosaur_Calm[<span class=\"descriptionNumberColor\">Simmer</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1583693402\">MModifier_Monster_W3_Dinosaur_Calm</a>[<span class=\"descriptionNumberColor\">Simmer</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -153,7 +153,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MModifier_Monster_W3_Dinosaur_Fury[<span class=\"descriptionNumberColor\">Boil</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1287806639\">MModifier_Monster_W3_Dinosaur_Fury</a>[<span class=\"descriptionNumberColor\">Boil</span>]"
         },
         {
           "name": "Action Advance/Delay",

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21010_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1292641131\">LC_21010_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21010_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__90221710\">LC_21010_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -60,12 +60,12 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21010_Target",
+      "for": "<a class=\"gModGreen\" id=\"mod__1472940227\">LC_21010_Target</a>",
       "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21010_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1292641131\">LC_21010_Main</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -78,7 +78,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ability Target TAKING DMG}}"
                 },
-                "modifier": "LC_21010_Target",
+                "modifier": "<a class=\"gModGreen\" id=\"1472940227\">LC_21010_Target</a>",
                 "casterFilter": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -93,7 +93,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "LC_21010_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"90221710\">LC_21010_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                   },
                   "passed": [
                     {
@@ -104,7 +104,7 @@ const configAbility = {
                       },
                       "valueType": "Layer",
                       "variableName": "MDF_Layer",
-                      "modifierName": "LC_21010_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"90221710\">LC_21010_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "multiplier": 1
                     },
                     {
@@ -123,7 +123,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "LC_21010_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"90221710\">LC_21010_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -131,7 +131,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "LC_21010_Target",
+                      "modifier": "<a class=\"gModGreen\" id=\"1472940227\">LC_21010_Target</a>",
                       "onlyRemoveOwnersInstance": true
                     },
                     {
@@ -140,7 +140,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Ability Target TAKING DMG}}"
                       },
-                      "modifier": "LC_21010_Target"
+                      "modifier": "<a class=\"gModGreen\" id=\"1472940227\">LC_21010_Target</a>"
                     }
                   ],
                   "failed": [
@@ -150,7 +150,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "LC_21010_Target",
+                      "modifier": "<a class=\"gModGreen\" id=\"1472940227\">LC_21010_Target</a>",
                       "onlyRemoveOwnersInstance": true
                     },
                     {
@@ -159,7 +159,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Ability Target TAKING DMG}}"
                       },
-                      "modifier": "LC_21010_Target"
+                      "modifier": "<a class=\"gModGreen\" id=\"1472940227\">LC_21010_Target</a>"
                     }
                   ]
                 }
@@ -178,14 +178,14 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "LC_21010_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"90221710\">LC_21010_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
               },
               "passed": [
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "value1": "LC_21010_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"90221710\">LC_21010_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                     "compareType": "<",
                     "value2": {
                       "operator": "Variables[0] (5) || RETURN",
@@ -204,7 +204,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "LC_21010_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"90221710\">LC_21010_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (5) || RETURN",
                         "displayLines": "5",
@@ -234,7 +234,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_21010_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"90221710\">LC_21010_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",

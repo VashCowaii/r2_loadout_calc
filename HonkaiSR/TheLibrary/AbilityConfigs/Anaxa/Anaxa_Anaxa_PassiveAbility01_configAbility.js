@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Anaxa_PassiveAbility"
+      "modifier": "<a class=\"gModGreen\" id=\"-1905813937\">Anaxa_PassiveAbility</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Anaxa_Passive_Mark_Property",
+      "for": "<a class=\"gModGreen\" id=\"mod__-552811494\">Anaxa_Passive_Mark_Property</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -77,7 +77,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__140202366\">Anaxa_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "ListenBattleEventSkill"
@@ -176,7 +176,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Anaxa_Passive_WeaknessListener",
+      "for": "<a class=\"gModGreen\" id=\"mod__-353589008\">Anaxa_Passive_WeaknessListener</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -263,7 +263,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"140202366\">Anaxa_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (0.3) || RETURN",
@@ -277,7 +277,7 @@ const configAbility = {
                 },
                 {
                   "name": "Define Modifier-Specific Variable",
-                  "modifierName": "Anaxa_Passive_Mark_Property",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
                   "variableName": "MDF_PropertyRatio",
                   "value": {
                     "operator": "Variables[0] (0.3) || RETURN",
@@ -354,7 +354,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"140202366\">Anaxa_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (0.3) || RETURN",
@@ -368,7 +368,7 @@ const configAbility = {
                 },
                 {
                   "name": "Define Modifier-Specific Variable",
-                  "modifierName": "Anaxa_Passive_Mark_Property",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
                   "variableName": "MDF_PropertyRatio",
                   "value": {
                     "operator": "Variables[0] (0.3) || RETURN",
@@ -387,11 +387,11 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"140202366\">Anaxa_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
                 },
                 {
                   "name": "Define Modifier-Specific Variable",
-                  "modifierName": "Anaxa_Passive_Mark_Property",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
                   "variableName": "MDF_PropertyRatio",
                   "value": 0
                 }
@@ -403,7 +403,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Anaxa_InsertMainTargetMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1965386380\">M_Anaxa_InsertMainTargetMark</a>",
       "stackType": "RetainGlobalLatest",
       "execute": [
         {
@@ -416,7 +416,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Anaxa_PassiveAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1905813937\">Anaxa_PassiveAbility</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -452,7 +452,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"140202366\">Anaxa_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
                     },
                     "invertCondition": true
                   },
@@ -489,7 +489,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "function_Anaxa_AddWeakness",
+              "functionName": "<a class=\"gTempYellow\" id=\"-2143749742\">function_Anaxa_AddWeakness</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
@@ -524,7 +524,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Ability Target List}}"
                     },
-                    "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"140202366\">Anaxa_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
                   },
                   {
                     "name": "Has Modifier",
@@ -532,7 +532,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "M_Anaxa_StartFreeBP",
+                    "modifier": "<a class=\"gModGreen\" id=\"1815988112\">M_Anaxa_StartFreeBP</a>",
                     "invertCondition": true
                   }
                 ]
@@ -544,7 +544,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Ability Target List}}"
                   },
-                  "modifier": "M_Anaxa_InsertMainTargetMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1965386380\">M_Anaxa_InsertMainTargetMark</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -552,7 +552,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Anaxa_PrepareFreeBP",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
                   "addStacksPerTrigger": 1
                 },
                 {
@@ -571,7 +571,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Anaxa_PrepareFreeBP",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
                       "addStacksPerTrigger": -1
                     },
                     {
@@ -580,7 +580,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Anaxa_InsertActionCheck",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1929414079\">M_Anaxa_InsertActionCheck</a>",
                       "addStacksPerTrigger": 1
                     }
                   ],
@@ -600,7 +600,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Anaxa_Passive_Mark_Property",
+          "modifier": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
           "haloStatus": true
         },
         {
@@ -609,7 +609,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Anaxa_Passive_WeaknessListener",
+          "modifier": "<a class=\"gModGreen\" id=\"-353589008\">Anaxa_Passive_WeaknessListener</a>",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_WeaknessNeed": {

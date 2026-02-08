@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_GS_Svarog_BattleScore1",
+      "for": "<a class=\"gModGreen\" id=\"mod__340882576\">Monster_W1_GS_Svarog_BattleScore1</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
@@ -125,7 +125,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_SvarogPart_BattleScore1",
+      "for": "<a class=\"gModGreen\" id=\"mod__968585055\">Monster_W1_SvarogPart_BattleScore1</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",

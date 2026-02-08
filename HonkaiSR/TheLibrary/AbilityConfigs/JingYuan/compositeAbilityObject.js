@@ -31,7 +31,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "JingYuan_BattleEvent_SpeedUp"
+          "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>"
         }
       ],
       "references": []
@@ -50,14 +50,14 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]"
           },
           "passed": [
             {
               "name": "Define Custom Variable with Modifier Values",
               "valueType": "Layer",
               "variableName": "ATKCount",
-              "modifierName": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
               "multiplier": 1
             }
           ]
@@ -70,14 +70,14 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "JingYuan_BattleEvent_UltraATKCount[<span class=\"descriptionNumberColor\">Lightbringer</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1804861609\">JingYuan_BattleEvent_UltraATKCount</a>[<span class=\"descriptionNumberColor\">Lightbringer</span>]"
           },
           "passed": [
             {
               "name": "Define Custom Variable with Modifier Values",
               "valueType": "Layer",
               "variableName": "UltraATKCount",
-              "modifierName": "JingYuan_BattleEvent_UltraATKCount[<span class=\"descriptionNumberColor\">Lightbringer</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1804861609\">JingYuan_BattleEvent_UltraATKCount</a>[<span class=\"descriptionNumberColor\">Lightbringer</span>]",
               "multiplier": 1
             }
           ]
@@ -124,7 +124,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "JingYuan_CriticalDamageUp",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1778616310\">JingYuan_CriticalDamageUp</a>",
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -154,7 +154,7 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -291,7 +291,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "JingYuan_Eidolon6_AllDamageTypeTakenRatio",
+                      "modifier": "<a class=\"gModGreen\" id=\"767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -341,7 +341,7 @@ const compositeAbilityObject = {
               "Event": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Bounce_SelectTarget",
+                  "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
@@ -481,7 +481,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "JingYuan_Eidolon6_AllDamageTypeTakenRatio",
+                          "modifier": "<a class=\"gModGreen\" id=\"767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>",
                           "stackLimit": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -519,7 +519,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -527,7 +527,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "JingYuan_BattleEvent_UltraATKCount[<span class=\"descriptionNumberColor\">Lightbringer</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1804861609\">JingYuan_BattleEvent_UltraATKCount</a>[<span class=\"descriptionNumberColor\">Lightbringer</span>]"
         },
         {
           "name": "IF",
@@ -542,7 +542,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "JingYuan_Eidolon2_DamageAddedRatio[<span class=\"descriptionNumberColor\">Dharma Corpora</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1088669628\">JingYuan_Eidolon2_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">Dharma Corpora</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -570,7 +570,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "JingYuan_Eidolon6_AllDamageTypeTakenRatio"
+          "modifier": "<a class=\"gModGreen\" id=\"767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -578,7 +578,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "JingYuan_CriticalDamageUp"
+          "modifier": "<a class=\"gModGreen\" id=\"-1778616310\">JingYuan_CriticalDamageUp</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -613,7 +613,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "stackLimit": {
             "operator": "Variables[0] (10) || RETURN",
             "displayLines": "10",
@@ -681,7 +681,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Self-Made Battle-Events}}"
           },
-          "modifier": "JingYuan_BattleEvent_ATKCountShowText",
+          "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
           "valuePerStack": {
             "ATKCount": {
               "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
@@ -699,7 +699,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Self-Made Battle-Events}}"
           },
-          "modifier": "JingYuan_BattleEvent_SpeedUp"
+          "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>"
         }
       ],
       "references": []
@@ -740,7 +740,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "JingYuan_BattleEvent"
+          "modifier": "<a class=\"gModGreen\" id=\"1222558059\">JingYuan_BattleEvent</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -748,7 +748,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "JingYuan_BattleEvent_BaseSpeed"
+          "modifier": "<a class=\"gModGreen\" id=\"1172851188\">JingYuan_BattleEvent_BaseSpeed</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -756,13 +756,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "JingYuan_BattleEvent_ForceKill"
+          "modifier": "<a class=\"gModGreen\" id=\"845727839\">JingYuan_BattleEvent_ForceKill</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "JingYuan_BattleEvent_ForceKill",
+          "for": "<a class=\"gModGreen\" id=\"mod__845727839\">JingYuan_BattleEvent_ForceKill</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -775,7 +775,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "JingYuan_ListenFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2008282890\">JingYuan_ListenFlag</a>"
                   },
                   "passed": [
                     {
@@ -802,7 +802,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "JingYuan_BattleEvent_BaseSpeed",
+          "for": "<a class=\"gModGreen\" id=\"mod__1172851188\">JingYuan_BattleEvent_BaseSpeed</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -851,13 +851,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_JingYuan_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1753288775\">StageAbility_Maze_JingYuan_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_JingYuan_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1753288775\">StageAbility_Maze_JingYuan_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -885,7 +885,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (10) || RETURN",
                         "displayLines": "10",
@@ -907,7 +907,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable with Modifier Values",
                       "valueType": "Layer",
                       "variableName": "EnergyBar_ATKCount",
-                      "modifierName": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
                       "multiplier": 1
                     },
                     {
@@ -973,7 +973,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Self-Made Battle-Events}}"
                       },
-                      "modifier": "JingYuan_BattleEvent_ATKCountShowText",
+                      "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
                       "valuePerStack": {
                         "ATKCount": {
                           "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
@@ -991,7 +991,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Self-Made Battle-Events}}"
                       },
-                      "modifier": "JingYuan_BattleEvent_SpeedUp",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
                       "stackLimit": {
                         "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
                         "displayLines": "(10 - 3)",
@@ -1054,7 +1054,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "JingYuan_ListenFlag"
+          "modifier": "<a class=\"gModGreen\" id=\"-2008282890\">JingYuan_ListenFlag</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1062,7 +1062,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "JingYuan_Trace02"
+          "modifier": "<a class=\"gModGreen\" id=\"-1065142274\">JingYuan_Trace02</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1070,7 +1070,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "stackLimit": {
             "operator": "Variables[0] (10) || RETURN",
             "displayLines": "10",
@@ -1157,7 +1157,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Self-Made Battle-Events}}"
           },
-          "modifier": "JingYuan_BattleEvent_ATKCountShowText",
+          "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
           "valuePerStack": {
             "ATKCount": {
               "operator": "Variables[0] (3) || RETURN",
@@ -1175,7 +1175,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "JingYuan_Ability02_PreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"1804998877\">JingYuan_Ability02_PreShow</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1183,13 +1183,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "JingYuan_Ability03_PreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"664482430\">JingYuan_Ability03_PreShow</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "JingYuan_Ability03_PreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__664482430\">JingYuan_Ability03_PreShow</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1330,7 +1330,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "JingYuan_Ability02_PreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__1804998877\">JingYuan_Ability02_PreShow</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1471,7 +1471,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "JingYuan_Trace02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1065142274\">JingYuan_Trace02</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -1521,7 +1521,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "JingYuan_ListenFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2008282890\">JingYuan_ListenFlag</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -1570,7 +1570,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "stackLimit": {
             "operator": "Variables[0] (10) || RETURN",
             "displayLines": "10",
@@ -1592,14 +1592,14 @@ const compositeAbilityObject = {
           "name": "Define Custom Variable with Modifier Values",
           "valueType": "Layer",
           "variableName": "EnergyBar_UltraATKCount",
-          "modifierName": "JingYuan_BattleEvent_UltraATKCount[<span class=\"descriptionNumberColor\">Lightbringer</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"-1804861609\">JingYuan_BattleEvent_UltraATKCount</a>[<span class=\"descriptionNumberColor\">Lightbringer</span>]",
           "multiplier": 1
         },
         {
           "name": "Define Custom Variable with Modifier Values",
           "valueType": "Layer",
           "variableName": "EnergyBar_ATKCount",
-          "modifierName": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "multiplier": 1
         },
         {
@@ -1665,7 +1665,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Self-Made Battle-Events}}"
           },
-          "modifier": "JingYuan_BattleEvent_ATKCountShowText",
+          "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
           "valuePerStack": {
             "ATKCount": {
               "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
@@ -1683,7 +1683,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Self-Made Battle-Events}}"
           },
-          "modifier": "JingYuan_BattleEvent_SpeedUp",
+          "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
           "stackLimit": {
             "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
             "displayLines": "(10 - 3)",
@@ -1767,7 +1767,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "stackLimit": {
             "operator": "Variables[0] (10) || RETURN",
             "displayLines": "10",
@@ -1789,7 +1789,7 @@ const compositeAbilityObject = {
           "name": "Define Custom Variable with Modifier Values",
           "valueType": "Layer",
           "variableName": "EnergyBar_ATKCount",
-          "modifierName": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "multiplier": 1
         },
         {
@@ -1855,7 +1855,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Self-Made Battle-Events}}"
           },
-          "modifier": "JingYuan_BattleEvent_ATKCountShowText",
+          "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
           "valuePerStack": {
             "ATKCount": {
               "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
@@ -1873,7 +1873,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Self-Made Battle-Events}}"
           },
-          "modifier": "JingYuan_BattleEvent_SpeedUp",
+          "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
           "stackLimit": {
             "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
             "displayLines": "(10 - 3)",
@@ -2182,7 +2182,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "JingYuan_Tree03_CriticalChanceUp[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-110303717\">JingYuan_Tree03_CriticalChanceUp</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -2351,7 +2351,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "JingYuan_Tree03_CriticalChanceUp[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-110303717\">JingYuan_Tree03_CriticalChanceUp</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2387,7 +2387,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "JingYuan_CriticalDamageUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1778616310\">JingYuan_CriticalDamageUp</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2421,7 +2421,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "JingYuan_Eidolon6_AllDamageTypeTakenRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2436,7 +2436,7 @@ const compositeAbilityObject = {
                   },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
-                  "modifierName": "JingYuan_Eidolon6_AllDamageTypeTakenRatio",
+                  "modifierName": "<a class=\"gModGreen\" id=\"767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>",
                   "multiplier": 1
                 },
                 {
@@ -2469,7 +2469,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "JingYuan_Eidolon2_DamageAddedRatio[<span class=\"descriptionNumberColor\">Dharma Corpora</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1088669628\">JingYuan_Eidolon2_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">Dharma Corpora</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2513,7 +2513,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "JingYuan_BattleEvent_SpeedUp",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
@@ -2530,7 +2530,7 @@ const compositeAbilityObject = {
                   },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
-                  "modifierName": "JingYuan_BattleEvent_SpeedUp",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
                   "multiplier": 1
                 },
                 {
@@ -2561,7 +2561,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "JingYuan_BattleEvent",
+          "for": "<a class=\"gModGreen\" id=\"mod__1222558059\">JingYuan_BattleEvent</a>",
           "stackType": "Prolong",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2595,7 +2595,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "JingYuan_BattleEvent_UltraATKCount[<span class=\"descriptionNumberColor\">Lightbringer</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1804861609\">JingYuan_BattleEvent_UltraATKCount</a>[<span class=\"descriptionNumberColor\">Lightbringer</span>]",
           "stackType": "ReplaceByCaster",
           "description": "Lightning-Lord's Enhanced ATK count.",
           "type": "Other",
@@ -2604,7 +2604,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -2615,7 +2615,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "JingYuan_BattleEvent_ATKCountShowText",
+          "for": "<a class=\"gModGreen\" id=\"mod__1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
           "stackType": "ReplaceByCaster",
           "stackData": [
             "ATKCount"

@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23040_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"184962042\">LC_23040_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23040_Sub[<span class=\"descriptionNumberColor\">Death Flower</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1983557807\">LC_23040_Sub</a>[<span class=\"descriptionNumberColor\">Death Flower</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -66,7 +66,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23040_Main02[<span class=\"descriptionNumberColor\">Death Flower</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-414774492\">LC_23040_Main02</a>[<span class=\"descriptionNumberColor\">Death Flower</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -96,7 +96,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "modifier": "LC_23040_Sub[<span class=\"descriptionNumberColor\">Death Flower</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1983557807\">LC_23040_Sub</a>[<span class=\"descriptionNumberColor\">Death Flower</span>]",
               "aliveOnly": "False",
               "haloStatus": true,
               "valuePerStack": {
@@ -114,7 +114,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23040_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__184962042\">LC_23040_Main</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
@@ -302,7 +302,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "LC_23040_Main02[<span class=\"descriptionNumberColor\">Death Flower</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-414774492\">LC_23040_Main02</a>[<span class=\"descriptionNumberColor\">Death Flower</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",

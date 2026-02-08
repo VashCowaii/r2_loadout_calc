@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_XP_Minion04_Huge"
+      "modifier": "<a class=\"gModGreen\" id=\"-1846590132\">Monster_XP_Minion04_Huge</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_XP_Minion04_Huge",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1846590132\">Monster_XP_Minion04_Huge</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

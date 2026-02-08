@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Minion04_Overheat[<span class=\"descriptionNumberColor\">Overloaded</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1434034112\">Enemy_AML_Minion04_Overheat</a>[<span class=\"descriptionNumberColor\">Overloaded</span>]"
     },
     "Trigger: Ability End"
   ],

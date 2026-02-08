@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "GuiNaiFen_PassiveAbility01_Modifier",
+      "modifier": "<a class=\"gModGreen\" id=\"-1214365283\">GuiNaiFen_PassiveAbility01_Modifier</a>",
       "valuePerStack": {
         "MDF_Chance": {
           "operator": "Variables[0] (1) || RETURN",

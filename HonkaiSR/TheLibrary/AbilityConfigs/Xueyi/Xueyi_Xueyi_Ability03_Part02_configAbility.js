@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Xueyi_Ability03_AddAttackRatio"
+      "modifier": "<a class=\"gModGreen\" id=\"456113055\">Xueyi_Ability03_AddAttackRatio</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -30,7 +30,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Xueyi_AbilityEidolon4[<span class=\"descriptionNumberColor\">Break Effect Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"674322254\">Xueyi_AbilityEidolon4</a>[<span class=\"descriptionNumberColor\">Break Effect Boost</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -58,7 +58,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Xueyi_Ability03_WeakType_BUFF"
+      "modifier": "<a class=\"gModGreen\" id=\"-1101528365\">Xueyi_Ability03_WeakType_BUFF</a>"
     },
     {
       "name": "IF",
@@ -94,7 +94,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Xueyi_Trace02",
+              "modifier": "<a class=\"gModGreen\" id=\"462393770\">Xueyi_Trace02</a>",
               "valuePerStack": {
                 "MDF_Trace02_AllDamageTypeAddedRatio": {
                   "operator": "Variables[0] (0.1) || RETURN",
@@ -147,7 +147,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Xueyi_Trace02"
+      "modifier": "<a class=\"gModGreen\" id=\"462393770\">Xueyi_Trace02</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -165,7 +165,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Xueyi_Ability03_WeakType_BUFF"
+      "modifier": "<a class=\"gModGreen\" id=\"-1101528365\">Xueyi_Ability03_WeakType_BUFF</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -173,7 +173,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Xueyi_Ability03_AddAttackRatio"
+      "modifier": "<a class=\"gModGreen\" id=\"456113055\">Xueyi_Ability03_AddAttackRatio</a>"
     },
     "Trigger: Skip Death Handling",
     "Trigger: Ability End"

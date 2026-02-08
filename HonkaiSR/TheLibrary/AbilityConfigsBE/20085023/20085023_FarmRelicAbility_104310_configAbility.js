@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MFarmRelic_104310"
+      "modifier": "<a class=\"gModGreen\" id=\"2007635709\">MFarmRelic_104310</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104310_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__2058515140\">MFarmRelic_104310_Sub</a>",
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -28,7 +28,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-43160834\">Standard_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": 0.5
               }
@@ -44,7 +44,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Standard_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-43160834\">Standard_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
               "onlyRemoveOwnersInstance": true
             }
           ]
@@ -53,7 +53,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104310",
+      "for": "<a class=\"gModGreen\" id=\"mod__2007635709\">MFarmRelic_104310</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -75,7 +75,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_StanceBreakAddedRatio[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1910965732\">Standard_StanceBreakAddedRatio</a>[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": 0.5
                   }
@@ -99,7 +99,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MFarmRelic_104310_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"2058515140\">MFarmRelic_104310_Sub</a>"
                 }
               ]
             }

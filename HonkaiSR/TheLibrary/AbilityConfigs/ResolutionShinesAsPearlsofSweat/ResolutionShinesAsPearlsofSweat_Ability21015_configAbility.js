@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21015_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1138333018\">LC_21015_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21015_Sub[<span class=\"descriptionNumberColor\">Ensnarement</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1118663317\">LC_21015_Sub</a>[<span class=\"descriptionNumberColor\">Ensnarement</span>]",
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
@@ -50,7 +50,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21015_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1138333018\">LC_21015_Main</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -63,7 +63,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "LC_21015_Sub[<span class=\"descriptionNumberColor\">Ensnarement</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"-1118663317\">LC_21015_Sub</a>[<span class=\"descriptionNumberColor\">Ensnarement</span>]",
                 "casterFilter": {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
@@ -76,7 +76,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_21015_Sub[<span class=\"descriptionNumberColor\">Ensnarement</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1118663317\">LC_21015_Sub</a>[<span class=\"descriptionNumberColor\">Ensnarement</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",

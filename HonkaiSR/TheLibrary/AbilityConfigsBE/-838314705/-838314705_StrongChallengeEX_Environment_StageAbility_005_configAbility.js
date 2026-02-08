@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Environment_StageAbility_LE_005"
+      "modifier": "<a class=\"gModGreen\" id=\"921547870\">MStrongChallengeEX_Environment_StageAbility_LE_005</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Environment_StageAbility_BOSS_005",
+      "for": "<a class=\"gModGreen\" id=\"mod__-747450348\">MStrongChallengeEX_Environment_StageAbility_BOSS_005</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -79,7 +79,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Environment_StageAbility_LE_005",
+      "for": "<a class=\"gModGreen\" id=\"mod__921547870\">MStrongChallengeEX_Environment_StageAbility_LE_005</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -90,7 +90,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "modifier": "MStrongChallengeEX_BEMark_BP"
+              "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -98,7 +98,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "modifier": "MStrongChallengeEX_BEMark_ActionDelay"
+              "modifier": "<a class=\"gModGreen\" id=\"-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>"
             }
           ]
         },
@@ -127,7 +127,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Environment_StageAbility_BOSS_005",
+                  "modifier": "<a class=\"gModGreen\" id=\"-747450348\">MStrongChallengeEX_Environment_StageAbility_BOSS_005</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

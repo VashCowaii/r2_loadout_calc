@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Argenti_Ability09_IF_BOSS_Eff01_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-457794649\">Monster_W2_Argenti_Ability09_IF_BOSS_Eff01_Modifier</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Argenti_Ability09_IF_BOSS_Eff02_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1561229936\">Monster_W2_Argenti_Ability09_IF_BOSS_Eff02_Modifier</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Argenti_IF_FlowerTeam"
+      "modifier": "<a class=\"gModGreen\" id=\"899890368\">Monster_W2_Argenti_IF_FlowerTeam</a>"
     },
     {
       "name": "IF",
@@ -43,7 +43,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W2_Argenti_Ability09_IF_BOSS_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1847553534\">Monster_W2_Argenti_Ability09_IF_BOSS_Modifier</a>"
         }
       ]
     },
@@ -52,7 +52,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Argenti_Ability09_IF_BOSS_Eff02_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1561229936\">Monster_W2_Argenti_Ability09_IF_BOSS_Eff02_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -69,7 +69,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Argenti_Ability09_IF_BOSS_Eff01_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-457794649\">Monster_W2_Argenti_Ability09_IF_BOSS_Eff01_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -86,7 +86,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W2_Argenti_Ability09_IF_BOSS_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1847553534\">Monster_W2_Argenti_Ability09_IF_BOSS_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

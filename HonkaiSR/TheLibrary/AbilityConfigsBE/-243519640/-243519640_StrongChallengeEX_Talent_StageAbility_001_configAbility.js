@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_001"
+      "modifier": "<a class=\"gModGreen\" id=\"1812668653\">MStrongChallengeEX_Talent_StageAbility_LE_001</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_BOSS_001",
+      "for": "<a class=\"gModGreen\" id=\"mod__1766547919\">MStrongChallengeEX_Talent_StageAbility_BOSS_001</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -52,7 +52,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_001",
+      "for": "<a class=\"gModGreen\" id=\"mod__1123163925\">MStrongChallengeEX_Talent_StageAbility_PLY_001</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -80,7 +80,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_001",
+      "for": "<a class=\"gModGreen\" id=\"mod__1812668653\">MStrongChallengeEX_Talent_StageAbility_LE_001</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -107,7 +107,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_001",
+                  "modifier": "<a class=\"gModGreen\" id=\"1123163925\">MStrongChallengeEX_Talent_StageAbility_PLY_001</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -148,7 +148,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_001",
+                  "modifier": "<a class=\"gModGreen\" id=\"1766547919\">MStrongChallengeEX_Talent_StageAbility_BOSS_001</a>",
                   "stackLimit": {
                     "operator": "Variables[0] (#ADF_3) || RETURN",
                     "displayLines": "#ADF_3",

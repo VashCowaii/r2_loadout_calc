@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Boothill_StancePreview"
+      "modifier": "<a class=\"gModGreen\" id=\"909277085\">Boothill_StancePreview</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Boothill_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-748622640\">Boothill_Passive</a>"
     },
     {
       "name": "IF",
@@ -90,7 +90,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Boothill_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-748622640\">Boothill_Passive</a>",
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -135,7 +135,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                       }
                     ]
                   },
@@ -146,7 +146,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_Boothill_AutoWinDuelTag",
+                      "modifier": "<a class=\"gModGreen\" id=\"837506667\">M_Boothill_AutoWinDuelTag</a>",
                       "addStacksPerTrigger": 1
                     }
                   ]
@@ -175,7 +175,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "M_Boothill_AutoWinDuelTag"
+                    "modifier": "<a class=\"gModGreen\" id=\"837506667\">M_Boothill_AutoWinDuelTag</a>"
                   },
                   {
                     "name": "Has Modifier",
@@ -183,7 +183,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                   }
                 ]
               },
@@ -194,7 +194,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Boothill_SelfModification[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1894494257\">Boothill_SelfModification</a>[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -382,7 +382,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Boothill_StancePreview",
+      "for": "<a class=\"gModGreen\" id=\"mod__909277085\">Boothill_StancePreview</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {

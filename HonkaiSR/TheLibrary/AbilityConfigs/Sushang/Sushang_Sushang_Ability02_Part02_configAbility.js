@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sushang_BP_BreakCheck_Before"
+      "modifier": "<a class=\"gModGreen\" id=\"-1715450419\">Sushang_BP_BreakCheck_Before</a>"
     },
     {
       "name": "IF",
@@ -29,7 +29,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_BreakCheck_Before"
+          "modifier": "<a class=\"gModGreen\" id=\"-1715450419\">Sushang_BP_BreakCheck_Before</a>"
         }
       ]
     },
@@ -76,7 +76,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Sushang_UltraBonus[<span class=\"descriptionNumberColor\">Dawn Herald</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1472874588\">Sushang_UltraBonus</a>[<span class=\"descriptionNumberColor\">Dawn Herald</span>]"
           }
         ]
       }
@@ -87,7 +87,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sushang_BP_PassiveCheck"
+      "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -95,7 +95,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sushang_BP_PassiveCheck_01"
+      "modifier": "<a class=\"gModGreen\" id=\"1401762003\">Sushang_BP_PassiveCheck_01</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -103,7 +103,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sushang_BP_PassiveCheck_02"
+      "modifier": "<a class=\"gModGreen\" id=\"1418539622\">Sushang_BP_PassiveCheck_02</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -146,7 +146,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Sushang_UltraBonus[<span class=\"descriptionNumberColor\">Dawn Herald</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-1472874588\">Sushang_UltraBonus</a>[<span class=\"descriptionNumberColor\">Dawn Herald</span>]"
       },
       "passed": [
         {
@@ -166,7 +166,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PassiveCheck_01"
+              "modifier": "<a class=\"gModGreen\" id=\"1401762003\">Sushang_BP_PassiveCheck_01</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -174,7 +174,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PassiveCheck_02"
+              "modifier": "<a class=\"gModGreen\" id=\"1418539622\">Sushang_BP_PassiveCheck_02</a>"
             }
           ],
           "failed": [
@@ -184,7 +184,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PassiveCheck_01",
+              "modifier": "<a class=\"gModGreen\" id=\"1401762003\">Sushang_BP_PassiveCheck_01</a>",
               "baseChance": {
                 "operator": "Variables[0] (0.33) || RETURN",
                 "displayLines": "0.33",
@@ -200,7 +200,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PassiveCheck_02",
+              "modifier": "<a class=\"gModGreen\" id=\"1418539622\">Sushang_BP_PassiveCheck_02</a>",
               "baseChance": {
                 "operator": "Variables[0] (0.33) || RETURN",
                 "displayLines": "0.33",
@@ -231,7 +231,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_PassiveCheck"
+          "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>"
         }
       ],
       "failed": [
@@ -241,7 +241,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_PassiveCheck",
+          "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>",
           "baseChance": {
             "operator": "Variables[0] (0.33) || RETURN",
             "displayLines": "0.33",
@@ -266,7 +266,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PassiveCheck"
+              "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>"
             },
             {
               "name": "Has Modifier",
@@ -274,7 +274,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PassiveCheck_01"
+              "modifier": "<a class=\"gModGreen\" id=\"1401762003\">Sushang_BP_PassiveCheck_01</a>"
             },
             {
               "name": "Has Modifier",
@@ -282,7 +282,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PassiveCheck_02"
+              "modifier": "<a class=\"gModGreen\" id=\"1418539622\">Sushang_BP_PassiveCheck_02</a>"
             }
           ]
         }
@@ -302,7 +302,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Sushang_BP_PassiveCheck_01"
+            "modifier": "<a class=\"gModGreen\" id=\"1401762003\">Sushang_BP_PassiveCheck_01</a>"
           }
         ]
       },
@@ -322,14 +322,14 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]"
               },
               "passed": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "Layer",
                   "variableName": "PointB2_Layer",
-                  "modifierName": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
                   "multiplier": 1
                 }
               ]
@@ -342,7 +342,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_PointB2_DMGModifier",
+          "modifier": "<a class=\"gModGreen\" id=\"-236050172\">Sushang_BP_PointB2_DMGModifier</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (PointB2_Layer) || Variables[1] (0.025) || MUL || RETURN",
@@ -383,7 +383,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_PointB2_DMGModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-236050172\">Sushang_BP_PointB2_DMGModifier</a>"
         },
         {
           "name": "IF",
@@ -400,7 +400,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]"
               },
               "failed": [
                 {
@@ -409,7 +409,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -439,7 +439,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (10) || RETURN",
                 "displayLines": "10",
@@ -482,7 +482,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_BP_PassiveCheck"
+                  "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>"
                 },
                 {
                   "name": "Has Modifier",
@@ -490,7 +490,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_BP_PassiveCheck_02"
+                  "modifier": "<a class=\"gModGreen\" id=\"1418539622\">Sushang_BP_PassiveCheck_02</a>"
                 }
               ]
             }
@@ -507,7 +507,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sushang_BP_PassiveCheck_01"
+      "modifier": "<a class=\"gModGreen\" id=\"1401762003\">Sushang_BP_PassiveCheck_01</a>"
     },
     {
       "name": "IF",
@@ -520,7 +520,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Sushang_BP_PassiveCheck_02"
+            "modifier": "<a class=\"gModGreen\" id=\"1418539622\">Sushang_BP_PassiveCheck_02</a>"
           }
         ]
       },
@@ -540,14 +540,14 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]"
               },
               "passed": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "Layer",
                   "variableName": "PointB2_Layer",
-                  "modifierName": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
                   "multiplier": 1
                 }
               ]
@@ -560,7 +560,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_PointB2_DMGModifier",
+          "modifier": "<a class=\"gModGreen\" id=\"-236050172\">Sushang_BP_PointB2_DMGModifier</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (PointB2_Layer) || Variables[1] (0.025) || MUL || RETURN",
@@ -601,7 +601,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_PointB2_DMGModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-236050172\">Sushang_BP_PointB2_DMGModifier</a>"
         },
         {
           "name": "IF",
@@ -618,7 +618,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]"
               },
               "failed": [
                 {
@@ -627,7 +627,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -657,7 +657,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (10) || RETURN",
                 "displayLines": "10",
@@ -697,7 +697,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_BP_PassiveCheck"
+              "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>"
             }
           },
           "passed": [
@@ -714,7 +714,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Sushang_BP_PassiveCheck"
+        "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>"
       },
       "passed": [
         {
@@ -732,14 +732,14 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]"
               },
               "passed": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "Layer",
                   "variableName": "PointB2_Layer",
-                  "modifierName": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
                   "multiplier": 1
                 }
               ]
@@ -752,7 +752,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_PointB2_DMGModifier",
+          "modifier": "<a class=\"gModGreen\" id=\"-236050172\">Sushang_BP_PointB2_DMGModifier</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (PointB2_Layer) || Variables[1] (0.025) || MUL || RETURN",
@@ -792,7 +792,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sushang_BP_PointB2_DMGModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-236050172\">Sushang_BP_PointB2_DMGModifier</a>"
         },
         {
           "name": "IF",
@@ -809,7 +809,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]"
               },
               "failed": [
                 {
@@ -818,7 +818,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -848,7 +848,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (10) || RETURN",
                 "displayLines": "10",
@@ -887,7 +887,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sushang_BP_PassiveCheck"
+      "modifier": "<a class=\"gModGreen\" id=\"699476095\">Sushang_BP_PassiveCheck</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -895,7 +895,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sushang_BP_PassiveCheck_01"
+      "modifier": "<a class=\"gModGreen\" id=\"1401762003\">Sushang_BP_PassiveCheck_01</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -903,7 +903,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sushang_BP_PassiveCheck_02"
+      "modifier": "<a class=\"gModGreen\" id=\"1418539622\">Sushang_BP_PassiveCheck_02</a>"
     },
     {
       "name": "IF",
@@ -913,7 +913,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Sushang_BP_BreakCheck_Before"
+        "modifier": "<a class=\"gModGreen\" id=\"-1715450419\">Sushang_BP_BreakCheck_Before</a>"
       },
       "passed": [
         {
@@ -938,7 +938,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sushang_BP_BreakCheck_Before"
+      "modifier": "<a class=\"gModGreen\" id=\"-1715450419\">Sushang_BP_BreakCheck_Before</a>"
     },
     {
       "name": "Find New Target",
@@ -966,7 +966,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "ReduceActionDelay",
+              "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -991,7 +991,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Sushang_BP_PointB2_DMGModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-236050172\">Sushang_BP_PointB2_DMGModifier</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1016,25 +1016,25 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sushang_BP_BreakCheck_Before",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1715450419\">Sushang_BP_BreakCheck_Before</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Sushang_BP_PassiveCheck_02",
+      "for": "<a class=\"gModGreen\" id=\"mod__1418539622\">Sushang_BP_PassiveCheck_02</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Sushang_BP_PassiveCheck_01",
+      "for": "<a class=\"gModGreen\" id=\"mod__1401762003\">Sushang_BP_PassiveCheck_01</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Sushang_BP_PassiveCheck",
+      "for": "<a class=\"gModGreen\" id=\"mod__699476095\">Sushang_BP_PassiveCheck</a>",
       "stackData": [],
       "latentQueue": []
     }

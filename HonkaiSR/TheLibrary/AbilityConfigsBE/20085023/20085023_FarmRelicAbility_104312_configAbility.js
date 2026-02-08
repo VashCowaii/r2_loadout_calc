@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MFarmRelic_104312"
+      "modifier": "<a class=\"gModGreen\" id=\"1974080471\">MFarmRelic_104312</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "FarmRelicAbility_104312_Sub2",
+      "for": "<a class=\"gModGreen\" id=\"mod__1290780977\">FarmRelicAbility_104312_Sub2</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -46,7 +46,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "FarmRelicAbility_104312_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__592903321\">FarmRelicAbility_104312_Sub</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -78,7 +78,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MFarmRelic_104312",
+      "for": "<a class=\"gModGreen\" id=\"mod__1974080471\">MFarmRelic_104312</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -100,7 +100,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "FarmRelicAbility_104312_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"592903321\">FarmRelicAbility_104312_Sub</a>",
                   "valuePerStack": {
                     "MDF_DamageTakenRatio": 0.3
                   }
@@ -124,7 +124,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "FarmRelicAbility_104312_Sub2"
+                  "modifier": "<a class=\"gModGreen\" id=\"1290780977\">FarmRelicAbility_104312_Sub2</a>"
                 }
               ]
             }

@@ -32,7 +32,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
         },
         {
           "name": "IF",
@@ -61,7 +61,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                 "invertCondition": true
               },
               "ifTargetFound": [
@@ -71,7 +71,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_W1_Mecha03_02_RLElite_ReFreshMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"769637727\">Enemy_W1_Mecha03_02_RLElite_ReFreshMark</a>"
                 },
                 {
                   "name": "Exit Broken-State",
@@ -106,7 +106,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Enemy_W1_Mecha03_02_RLElite_ReFreshMark"
+            "modifier": "<a class=\"gModGreen\" id=\"769637727\">Enemy_W1_Mecha03_02_RLElite_ReFreshMark</a>"
           },
           "ifTargetFound": [
             {
@@ -123,7 +123,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier01"
+              "modifier": "<a class=\"gModGreen\" id=\"1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -131,7 +131,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier02"
+              "modifier": "<a class=\"gModGreen\" id=\"1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>"
             },
             {
               "name": "Force Entity Death",
@@ -177,7 +177,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Recently Summoned Enemies}}"
                   },
-                  "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier02"
+                  "modifier": "<a class=\"gModGreen\" id=\"1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>"
                 }
               ]
             },
@@ -218,7 +218,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Recently Summoned Enemies}}"
                   },
-                  "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier01"
+                  "modifier": "<a class=\"gModGreen\" id=\"1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>"
                 }
               ]
             },
@@ -228,7 +228,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
             },
             {
               "name": "Define Custom Variable",
@@ -243,7 +243,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
         },
         {
           "name": "IF",
@@ -278,7 +278,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                     "invertCondition": true
                   },
                   {
@@ -299,7 +299,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio": {
                       "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
@@ -362,7 +362,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -440,7 +440,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
         },
         "Trigger: Ability End"
       ],
@@ -484,7 +484,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
         },
         {
           "name": "IF",
@@ -513,7 +513,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                 "invertCondition": true
               },
               "ifTargetFound": [
@@ -523,7 +523,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_W1_Mecha03_02_RLElite_ReFreshMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"769637727\">Enemy_W1_Mecha03_02_RLElite_ReFreshMark</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -586,7 +586,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Recently Summoned Enemies}}"
               },
-              "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier02"
+              "modifier": "<a class=\"gModGreen\" id=\"1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>"
             },
             {
               "name": "Create Enemies",
@@ -612,7 +612,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Recently Summoned Enemies}}"
               },
-              "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier02"
+              "modifier": "<a class=\"gModGreen\" id=\"1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>"
             }
           ]
         },
@@ -665,7 +665,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Recently Summoned Enemies}}"
                   },
-                  "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier02"
+                  "modifier": "<a class=\"gModGreen\" id=\"1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>"
                 }
               ],
               "failed": [
@@ -693,7 +693,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Recently Summoned Enemies}}"
                   },
-                  "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier02"
+                  "modifier": "<a class=\"gModGreen\" id=\"1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>"
                 }
               ]
             }
@@ -736,7 +736,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Recently Summoned Enemies}}"
               },
-              "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier01"
+              "modifier": "<a class=\"gModGreen\" id=\"1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>"
             },
             {
               "name": "Create Enemies",
@@ -762,7 +762,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Recently Summoned Enemies}}"
               },
-              "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier01"
+              "modifier": "<a class=\"gModGreen\" id=\"1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>"
             }
           ]
         },
@@ -815,7 +815,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Recently Summoned Enemies}}"
                   },
-                  "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier01"
+                  "modifier": "<a class=\"gModGreen\" id=\"1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>"
                 }
               ],
               "failed": [
@@ -843,7 +843,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Recently Summoned Enemies}}"
                   },
-                  "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier01"
+                  "modifier": "<a class=\"gModGreen\" id=\"1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>"
                 }
               ]
             }
@@ -877,7 +877,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_W1_Mecha03_02_RLElite_ReFreshMark"
+                "modifier": "<a class=\"gModGreen\" id=\"769637727\">Enemy_W1_Mecha03_02_RLElite_ReFreshMark</a>"
               },
               "ifTargetFound": [
                 {
@@ -894,7 +894,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier01"
+                  "modifier": "<a class=\"gModGreen\" id=\"1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -902,7 +902,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier02"
+                  "modifier": "<a class=\"gModGreen\" id=\"1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>"
                 },
                 {
                   "name": "Force Entity Death",
@@ -948,7 +948,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Recently Summoned Enemies}}"
                       },
-                      "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier02"
+                      "modifier": "<a class=\"gModGreen\" id=\"1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>"
                     }
                   ]
                 },
@@ -989,7 +989,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Recently Summoned Enemies}}"
                       },
-                      "modifier": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier01"
+                      "modifier": "<a class=\"gModGreen\" id=\"1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>"
                     }
                   ]
                 }
@@ -1003,7 +1003,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1011,7 +1011,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
         },
         {
           "name": "Find New Target",
@@ -1037,7 +1037,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                 "invertCondition": true
               },
               {
@@ -1058,7 +1058,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio": {
                   "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
@@ -1123,7 +1123,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
           }
         },
         {
@@ -1143,7 +1143,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
               },
               {
                 "name": "Has Modifier",
@@ -1151,7 +1151,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W1_Mecha03_02_Ability04Mark",
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>",
                 "invertCondition": true
               }
             ]
@@ -1163,7 +1163,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W1_Mecha03_02_Ability04Mark"
+              "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
             }
           ]
         },
@@ -1184,7 +1184,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
               },
               {
                 "name": "Has Modifier",
@@ -1192,7 +1192,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W1_Mecha03_02_Ability04Mark",
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>",
                 "invertCondition": true
               }
             ]
@@ -1204,7 +1204,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W1_Mecha03_02_Ability04Mark"
+              "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
             }
           ]
         },
@@ -1225,7 +1225,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
               },
               {
                 "name": "Has Modifier",
@@ -1233,7 +1233,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W1_Mecha03_02_Ability04Mark",
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>",
                 "invertCondition": true
               }
             ]
@@ -1245,7 +1245,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W1_Mecha03_02_Ability04Mark"
+              "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
             }
           ]
         },
@@ -1266,7 +1266,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
               },
               {
                 "name": "Has Modifier",
@@ -1274,7 +1274,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W1_Mecha03_02_Ability04Mark",
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>",
                 "invertCondition": true
               }
             ]
@@ -1286,7 +1286,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W1_Mecha03_02_Ability04Mark"
+              "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
             }
           ]
         },
@@ -1307,7 +1307,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
               },
               {
                 "name": "Has Modifier",
@@ -1315,7 +1315,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W1_Mecha03_02_Ability04Mark"
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
               }
             ]
           },
@@ -1329,7 +1329,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
             }
           ]
         },
@@ -1350,7 +1350,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
               },
               {
                 "name": "Has Modifier",
@@ -1358,7 +1358,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W1_Mecha03_02_Ability04Mark"
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
               }
             ]
           },
@@ -1372,7 +1372,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
             }
           ]
         },
@@ -1393,7 +1393,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
               },
               {
                 "name": "Has Modifier",
@@ -1401,7 +1401,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W1_Mecha03_02_Ability04Mark"
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
               }
             ]
           },
@@ -1415,7 +1415,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
             }
           ]
         },
@@ -1436,7 +1436,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
               },
               {
                 "name": "Has Modifier",
@@ -1444,7 +1444,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W1_Mecha03_02_Ability04Mark"
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
               }
             ]
           },
@@ -1458,7 +1458,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_Company_Coin[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
             }
           ]
         },
@@ -1475,7 +1475,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Monster_W1_Mecha03_02_Ability04Mark"
+            "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
           },
           "ifTargetFound": [
             {
@@ -1484,7 +1484,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_Company_Coin_Elite[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
                   "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
@@ -1502,7 +1502,7 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Variable",
-            "value1": "Monster_Company_Coin_Elite[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+            "value1": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
             "compareType": "=",
             "value2": 3,
             "valueType": "Layer"
@@ -1512,7 +1512,7 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "value1": "Monster_Company_Coin_Elite[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+                "value1": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                 "compareType": "=",
                 "value2": 2,
                 "valueType": "Layer"
@@ -1522,7 +1522,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "value1": "Monster_Company_Coin_Elite[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                     "compareType": "=",
                     "value2": 1,
                     "valueType": "Layer"
@@ -1538,7 +1538,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_Ability04Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1546,7 +1546,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_Ability04After"
+          "modifier": "<a class=\"gModGreen\" id=\"1080547453\">Monster_W1_Mecha03_02_Ability04After</a>"
         },
         "Trigger: Ability End"
       ],
@@ -1590,7 +1590,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1598,7 +1598,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_ChargeEffect[<span class=\"descriptionNumberColor\">In Training</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1515004059\">Monster_W1_Mecha03_02_ChargeEffect</a>[<span class=\"descriptionNumberColor\">In Training</span>]"
         },
         {
           "name": "Looped Event",
@@ -1657,7 +1657,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
         },
         "Trigger: Ability End"
       ],
@@ -1702,7 +1702,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Monster_W1_Mecha03_02_Ability04After"
+            "modifier": "<a class=\"gModGreen\" id=\"1080547453\">Monster_W1_Mecha03_02_Ability04After</a>"
           },
           "passed": [
             {
@@ -1711,7 +1711,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W1_Mecha03_02_Ability04After"
+              "modifier": "<a class=\"gModGreen\" id=\"1080547453\">Monster_W1_Mecha03_02_Ability04After</a>"
             }
           ]
         },
@@ -1722,7 +1722,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_ChargeEffect[<span class=\"descriptionNumberColor\">In Training</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1515004059\">Monster_W1_Mecha03_02_ChargeEffect</a>[<span class=\"descriptionNumberColor\">In Training</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -1826,7 +1826,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "W1_Mecha03_02_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"908704672\">W1_Mecha03_02_BattleScore1</a>"
         },
         {
           "name": "IF",
@@ -1884,7 +1884,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1892,7 +1892,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_RLElite_ResetAI"
+          "modifier": "<a class=\"gModGreen\" id=\"-738247645\">Monster_W1_Mecha03_02_RLElite_ResetAI</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1900,7 +1900,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_RLElite_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"502646193\">Monster_W1_Mecha03_02_RLElite_MuteHitFly</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1908,7 +1908,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_CoinPassive"
+          "modifier": "<a class=\"gModGreen\" id=\"1161336022\">Monster_W1_Mecha03_02_CoinPassive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1916,7 +1916,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_EffectController"
+          "modifier": "<a class=\"gModGreen\" id=\"1215936421\">Monster_W1_Mecha03_02_EffectController</a>"
         }
       ],
       "whenAdded": [
@@ -1926,13 +1926,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Monster_W1_Mecha03_02_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_02_RLElite_MuteHitFly",
+          "for": "<a class=\"gModGreen\" id=\"mod__502646193\">Monster_W1_Mecha03_02_RLElite_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
           ],
@@ -1944,7 +1944,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Mecha03_02_RLElite_ResetAI",
+          "for": "<a class=\"gModGreen\" id=\"mod__-738247645\">Monster_W1_Mecha03_02_RLElite_ResetAI</a>",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -2010,13 +2010,13 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Mecha03_02_RLElite_ReFreshMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__769637727\">Enemy_W1_Mecha03_02_RLElite_ReFreshMark</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2058,7 +2058,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Mecha03_02_RLElite_CountingSoldier01",
+          "for": "<a class=\"gModGreen\" id=\"mod__1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",

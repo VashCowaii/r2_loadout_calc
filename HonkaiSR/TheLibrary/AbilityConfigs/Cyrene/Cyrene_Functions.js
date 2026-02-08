@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Cyrene_PointB3_CheckSpeed",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1194720287\">Cyrene_PointB3_CheckSpeed</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -44,7 +44,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Cyrene_PointB3_Sub3[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"827249673\">Cyrene_PointB3_Sub3</a>[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]",
               "valuePerStack": {
                 "MDF_DamageIncrease": {
                   "operator": "Variables[0] (0.2) || RETURN",
@@ -136,7 +136,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}+{{Modifier Holder}}.[[getMemosprite]]"
                   },
-                  "modifier": "Cyrene_PointB3_Sub2[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"810472054\">Cyrene_PointB3_Sub2</a>[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (_CurrentSpeed) || RETURN",
@@ -164,7 +164,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}+{{Modifier Holder}}.[[getMemosprite]]"
                   },
-                  "modifier": "Cyrene_PointB3_Sub2[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"810472054\">Cyrene_PointB3_Sub2</a>[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]"
                 }
               ]
             }
@@ -176,7 +176,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}"
               },
-              "modifier": "Cyrene_PointB3_Sub3[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"827249673\">Cyrene_PointB3_Sub3</a>[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -184,7 +184,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}+{{Modifier Holder}}.[[getMemosprite]]"
               },
-              "modifier": "Cyrene_PointB3_Sub2[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"810472054\">Cyrene_PointB3_Sub2</a>[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]"
             }
           ]
         }
@@ -192,7 +192,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Cyrene_ChrysosCheck",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-619579107\">Cyrene_ChrysosCheck</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -230,7 +230,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "ChrysosMark"
+              "modifier": "<a class=\"gModGreen\" id=\"-1865411138\">ChrysosMark</a>"
             }
           ]
         }
@@ -238,7 +238,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Cyrene_ChargeEnergy",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1682831339\">Cyrene_ChargeEnergy</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -326,7 +326,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Cyrene_ExtraSpecialSPReturn",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1728765029\">Cyrene_ExtraSpecialSPReturn</a>",
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
@@ -339,7 +339,7 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Cyrene_ChargeEnergy",
+          "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
           "variables": {
             "parameter[0]_AddValue": {
               "operator": "Variables[0] (_CurExtraSpecialSP) || RETURN",
@@ -365,7 +365,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Cyrene_Preload_ServantReadyEffect",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-348324927\">Cyrene_Preload_ServantReadyEffect</a>",
       "parse": [
         {
           "name": "IF",

@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0001"
+      "modifier": "<a class=\"gModGreen\" id=\"-304613147\">Modifier_ChallengePeakBattle_BaseAbility_0001</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0001_02[<span class=\"descriptionNumberColor\">Resilient Armor</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1656944184\">Modifier_ChallengePeakBattle_BaseAbility_0001_02</a>[<span class=\"descriptionNumberColor\">Resilient Armor</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -43,7 +43,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0001_02[<span class=\"descriptionNumberColor\">Resilient Armor</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1656944184\">Modifier_ChallengePeakBattle_BaseAbility_0001_02</a>[<span class=\"descriptionNumberColor\">Resilient Armor</span>]"
                 }
               ]
             }
@@ -95,7 +95,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0001_02[<span class=\"descriptionNumberColor\">Resilient Armor</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1656944184\">Modifier_ChallengePeakBattle_BaseAbility_0001_02</a>[<span class=\"descriptionNumberColor\">Resilient Armor</span>]"
                 }
               ]
             }
@@ -109,7 +109,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_0001",
+      "for": "<a class=\"gModGreen\" id=\"mod__-304613147\">Modifier_ChallengePeakBattle_BaseAbility_0001</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -131,7 +131,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_0001_02[<span class=\"descriptionNumberColor\">Resilient Armor</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1656944184\">Modifier_ChallengePeakBattle_BaseAbility_0001_02</a>[<span class=\"descriptionNumberColor\">Resilient Armor</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (#ADF_1) || RETURN",
                     "displayLines": "#ADF_1",

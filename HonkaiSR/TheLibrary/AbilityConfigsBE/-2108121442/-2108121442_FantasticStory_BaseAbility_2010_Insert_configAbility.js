@@ -25,7 +25,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2010_ListenBEDelay"
+          "modifier": "<a class=\"gModGreen\" id=\"759083839\">Modifier_FantasticStory_BaseAbility_2010_ListenBEDelay</a>"
         }
       ]
     },
@@ -37,7 +37,7 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Use Custom Character Function",
-      "functionName": "ReduceActionDelay",
+      "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
       "target": {
         "name": "Target Name",
         "target": "{{Player Team All}}"
@@ -59,7 +59,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2010_aura"
+      "modifier": "<a class=\"gModGreen\" id=\"-465768831\">Modifier_FantasticStory_BaseAbility_2010_aura</a>"
     },
     {
       "name": "IF",
@@ -262,7 +262,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "StanceBreak_Physical",
+                  "functionName": "<a class=\"gTempYellow\" id=\"485608192\">StanceBreak_Physical</a>",
                   "variables": {}
                 }
               ]
@@ -285,7 +285,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "StanceBreak_Ice",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-687043424\">StanceBreak_Ice</a>",
                   "variables": {}
                 }
               ]
@@ -308,7 +308,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "StanceBreak_Fire",
+                  "functionName": "<a class=\"gTempYellow\" id=\"483030905\">StanceBreak_Fire</a>",
                   "variables": {}
                 }
               ]
@@ -331,7 +331,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "StanceBreak_Wind",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1573629529\">StanceBreak_Wind</a>",
                   "variables": {}
                 }
               ]
@@ -354,7 +354,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "StanceBreak_Thunder",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1796036529\">StanceBreak_Thunder</a>",
                   "variables": {}
                 }
               ]
@@ -377,7 +377,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "StanceBreak_Imaginary",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-433289498\">StanceBreak_Imaginary</a>",
                   "variables": {}
                 }
               ]
@@ -400,7 +400,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "StanceBreak_Quantum",
+                  "functionName": "<a class=\"gTempYellow\" id=\"789833122\">StanceBreak_Quantum</a>",
                   "variables": {}
                 }
               ]

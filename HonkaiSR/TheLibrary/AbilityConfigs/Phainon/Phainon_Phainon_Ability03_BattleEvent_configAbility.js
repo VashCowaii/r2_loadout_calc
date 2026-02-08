@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Phainon_Ability03_BattleEvent_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"62975260\">Phainon_Ability03_BattleEvent_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Phainon_Ability03_BattleEvent_BaseSpeed",
+      "modifier": "<a class=\"gModGreen\" id=\"320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
       "valuePerStack": {
         "MDF_PropertyValue": {
           "operator": "Variables[0] (BE_Speed) || RETURN",
@@ -99,7 +99,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_FinalBE_Hint"
+          "modifier": "<a class=\"gModGreen\" id=\"-1074413210\">Phainon_FinalBE_Hint</a>"
         }
       ],
       "failed": [
@@ -117,7 +117,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Phainon_NormalBE_Hint"
+          "modifier": "<a class=\"gModGreen\" id=\"133453837\">Phainon_NormalBE_Hint</a>"
         }
       ]
     },
@@ -138,7 +138,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_10_TriggerSoundOnTurnStart_Advantage",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1583163696\">M_Phainon_10_TriggerSoundOnTurnStart_Advantage</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -205,7 +205,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_10_TriggerSoundOnTurnStart",
+      "for": "<a class=\"gModGreen\" id=\"mod__2106985142\">M_Phainon_10_TriggerSoundOnTurnStart</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -237,7 +237,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Ability03_BattleEvent_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__62975260\">Phainon_Ability03_BattleEvent_Passive</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -263,7 +263,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Phainon_FinalBE_Hint"
+                "modifier": "<a class=\"gModGreen\" id=\"-1074413210\">Phainon_FinalBE_Hint</a>"
               },
               "passed": [
                 {
@@ -279,7 +279,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                   },
                   "abilityName": "Phainon_Ability31_SelectTarget",
                   "abilitySource": {
@@ -328,7 +328,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Battle Event's Caster}}"
                         },
-                        "modifier": "M_Phainon_10_TriggerSoundOnTurnStart_Advantage"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1583163696\">M_Phainon_10_TriggerSoundOnTurnStart_Advantage</a>"
                       },
                       "passed": [
                         {
@@ -337,7 +337,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Battle Event's Caster}}"
                           },
-                          "modifier": "M_Phainon_10_TriggerSoundOnTurnStart",
+                          "modifier": "<a class=\"gModGreen\" id=\"2106985142\">M_Phainon_10_TriggerSoundOnTurnStart</a>",
                           "casterAssign": "TargetSelf"
                         }
                       ]
@@ -348,7 +348,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Battle Event's Caster}}"
                       },
-                      "modifier": "M_Phainon_10_TriggerSoundOnTurnStart_Advantage",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1583163696\">M_Phainon_10_TriggerSoundOnTurnStart_Advantage</a>",
                       "casterAssign": "TargetSelf"
                     }
                   ],
@@ -359,7 +359,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Battle Event's Caster}}"
                       },
-                      "modifier": "M_Phainon_10_TriggerSoundOnTurnStart",
+                      "modifier": "<a class=\"gModGreen\" id=\"2106985142\">M_Phainon_10_TriggerSoundOnTurnStart</a>",
                       "casterAssign": "TargetSelf"
                     }
                   ]
@@ -391,7 +391,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Ability03_BattleEvent_BaseSpeed",
+      "for": "<a class=\"gModGreen\" id=\"mod__320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

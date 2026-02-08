@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Welt_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1756861226\">StageAbility_Maze_Welt_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Welt_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1756861226\">StageAbility_Maze_Welt_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -46,7 +46,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
                   "duration": 1,
                   "baseChance": {
                     "operator": "Variables[0] (1) || RETURN",

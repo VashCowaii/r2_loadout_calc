@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Phainon_PassiveAbility02"
+      "modifier": "<a class=\"gModGreen\" id=\"-1463150719\">Phainon_PassiveAbility02</a>"
     },
     {
       "name": "IF",
@@ -95,7 +95,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Ability22_Disable",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1504968507\">Phainon_Ability22_Disable</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -118,7 +118,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_Ultimate_Energy[<span class=\"descriptionNumberColor\">Scourge</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-330015598\">Phainon_Ultimate_Energy</a>[<span class=\"descriptionNumberColor\">Scourge</span>]",
       "counter": 1,
       "stackType": "ReplaceByCaster",
       "description": "\"Scourge\" points. \"Scourge\" can be consumed to use Skill \"Foundation: Stardeath Verdict.\"",
@@ -127,7 +127,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_PassiveAbility02",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1463150719\">Phainon_PassiveAbility02</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -297,7 +297,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Phainon_Ultimate_Energy[<span class=\"descriptionNumberColor\">Scourge</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-330015598\">Phainon_Ultimate_Energy</a>[<span class=\"descriptionNumberColor\">Scourge</span>]"
                   },
                   "passed": [
                     {
@@ -306,7 +306,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "Phainon_Ultimate_Energy[<span class=\"descriptionNumberColor\">Scourge</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-330015598\">Phainon_Ultimate_Energy</a>[<span class=\"descriptionNumberColor\">Scourge</span>]",
                       "value": {
                         "operator": "Variables[0] (Skill22_Energy) || RETURN",
                         "displayLines": "Skill22_Energy",
@@ -326,7 +326,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
                   },
                   "passed": [
                     {
@@ -355,7 +355,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Phainon_Ultimate_Energy[<span class=\"descriptionNumberColor\">Scourge</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-330015598\">Phainon_Ultimate_Energy</a>[<span class=\"descriptionNumberColor\">Scourge</span>]",
                   "counter": {
                     "operator": "Variables[0] (Skill22_Energy) || RETURN",
                     "displayLines": "Skill22_Energy",
@@ -371,7 +371,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Phainon_Ability22_Disable"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1504968507\">Phainon_Ability22_Disable</a>"
                 }
               ],
               "whenLeavingRange": [
@@ -381,7 +381,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Phainon_Ultimate_Energy[<span class=\"descriptionNumberColor\">Scourge</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-330015598\">Phainon_Ultimate_Energy</a>[<span class=\"descriptionNumberColor\">Scourge</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -389,7 +389,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Phainon_Ability22_Disable"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1504968507\">Phainon_Ability22_Disable</a>"
                 }
               ]
             },

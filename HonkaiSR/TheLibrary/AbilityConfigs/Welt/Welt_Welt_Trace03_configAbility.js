@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Welt_Tree03"
+      "modifier": "<a class=\"gModGreen\" id=\"1626960995\">M_Welt_Tree03</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Welt_Tree03",
+      "for": "<a class=\"gModGreen\" id=\"mod__1626960995\">M_Welt_Tree03</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -29,7 +29,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ability Target TAKING DMG}}"
                 },
-                "modifier": "StanceBreakState"
+                "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
               },
               "passed": [
                 {

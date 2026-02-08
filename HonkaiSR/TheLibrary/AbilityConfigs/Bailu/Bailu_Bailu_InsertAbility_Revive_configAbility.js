@@ -23,7 +23,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "Bailu_ReviveEvent",
+          "modifierName": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
           "function": "Add"
         },
         "Deleted bullshit",
@@ -71,13 +71,13 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Bailu_ReviveEvent"
+            "modifier": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>"
           },
           "passed": [
             {
               "name": "Define Custom Variable with Modifier Values",
               "variableName": "MDF_ReviveTime2",
-              "modifierName": "Bailu_ReviveEvent",
+              "modifierName": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
               "multiplier": {
                 "operator": "Constants[0] (1) || RETURN",
                 "displayLines": "1",
@@ -153,7 +153,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Bailu_Revive_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
         }
       ]
     }

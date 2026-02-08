@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21056_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1234382425\">LC_21056_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21056_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1234382425\">LC_21056_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -36,7 +36,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "LC_EquipUnique_BreakExrtaAddedRatio",
+              "modifier": "<a class=\"gModGreen\" id=\"-442124181\">LC_EquipUnique_BreakExrtaAddedRatio</a>",
               "onlyRemoveOwnersInstance": true
             }
           ]
@@ -61,7 +61,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_EquipUnique_BreakExrtaAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"-442124181\">LC_EquipUnique_BreakExrtaAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.16) || RETURN",
@@ -95,7 +95,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "LC_EquipUnique_BreakExrtaAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"-442124181\">LC_EquipUnique_BreakExrtaAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.16) || RETURN",
@@ -139,7 +139,7 @@ const configAbility = {
   "referencesGlobal": [
     {
       "name": "Modifier Construction",
-      "for": "LC_EquipUnique_BreakExrtaAddedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__-442124181\">LC_EquipUnique_BreakExrtaAddedRatio</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

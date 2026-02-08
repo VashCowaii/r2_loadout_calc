@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_314_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-331783232\">Relic_314_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_314_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1618303955\">Relic_314_Sub</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -50,7 +50,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_314_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-331783232\">Relic_314_Main</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -82,7 +82,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_314_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1618303955\">Relic_314_Sub</a>"
                     }
                   ]
                 }

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23042_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-954357088\">LC_23042_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23042_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__1569683085\">LC_23042_Sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -28,7 +28,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}.[[getSummoner]]"
               },
-              "modifier": "LC_23042_Main",
+              "modifier": "<a class=\"gModGreen\" id=\"-954357088\">LC_23042_Main</a>",
               "variable": "_LoseHPTotal",
               "target2": {
                 "name": "Target Name",
@@ -86,7 +86,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "modifierName": "LC_23042_Main",
+              "modifierName": "<a class=\"gModGreen\" id=\"-954357088\">LC_23042_Main</a>",
               "variableName": "_LoseHPTotal",
               "value": 0
             }
@@ -108,7 +108,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "LC_23042_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Tolerant</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1169158629\">LC_23042_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Tolerant</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                     "displayLines": "MDF_LifeTime",
@@ -136,7 +136,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23042_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-954357088\">LC_23042_Main</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -162,7 +162,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "LC_23042_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"1569683085\">LC_23042_Sub</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0) || RETURN",
@@ -331,7 +331,7 @@ const configAbility = {
   "referencesGlobal": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23042_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Tolerant</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1169158629\">LC_23042_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Tolerant</span>]",
       "stackType": "Replace",
       "execute": [
         {

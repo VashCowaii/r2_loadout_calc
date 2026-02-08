@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Maze_Defence[<span class=\"descriptionNumberColor\">The Red or the Black</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-314126453\">Aventurine_Maze_Defence</a>[<span class=\"descriptionNumberColor\">The Red or the Black</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -55,7 +55,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_ResistCtrlCD[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__462082235\">Aventurine_ResistCtrlCD</a>[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
         {
@@ -69,7 +69,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Aventurine_StackableShield"
+                "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>"
               },
               "passed": [
                 {
@@ -78,7 +78,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Aventurine_ResistCtrl"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2133893396\">Aventurine_ResistCtrl</a>"
                 }
               ]
             }
@@ -91,7 +91,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_ResistCtrl",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2133893396\">Aventurine_ResistCtrl</a>",
       "modifierFlags": [
         "Endurance"
       ],
@@ -114,7 +114,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Aventurine_ResistCtrlCD[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"462082235\">Aventurine_ResistCtrlCD</a>[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
                     "invertCondition": true
                   }
                 ]
@@ -126,7 +126,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Aventurine_ResistCtrlCD[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"462082235\">Aventurine_ResistCtrlCD</a>[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -147,12 +147,12 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_PointB3_ShieldMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-545204368\">Aventurine_PointB3_ShieldMark</a>",
       "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Eidolon1_Status[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -165,7 +165,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Trace03_Status[<span class=\"descriptionNumberColor\">Bingo!</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -178,7 +178,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Trace03_AddShield",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1822642729\">Aventurine_Trace03_AddShield</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -188,7 +188,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Trace03_Trigger",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1927939151\">Aventurine_Trace03_Trigger</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -293,13 +293,13 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Aventurine_PointB3_ShieldMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-545204368\">Aventurine_PointB3_ShieldMark</a>"
                 }
               ]
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Aventurine_RecordCurrentShield"
+              "functionName": "<a class=\"gTempYellow\" id=\"-969049614\">Aventurine_RecordCurrentShield</a>"
             },
             {
               "name": "IF",
@@ -309,7 +309,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Aventurine_StackableShield"
+                "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>"
               },
               "passed": [
                 {
@@ -318,7 +318,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Aventurine_StackableShield",
+                  "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -366,7 +366,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Aventurine_StackableShield",
+                  "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                   "duration": 3,
                   "valuePerStack": {
                     "MDF_InitShieldValue": {
@@ -415,12 +415,12 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Aventurine_PointB3_ShieldMark"
+                "modifier": "<a class=\"gModGreen\" id=\"-545204368\">Aventurine_PointB3_ShieldMark</a>"
               },
               "ifTargetFound": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Aventurine_RecordCurrentShield"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-969049614\">Aventurine_RecordCurrentShield</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -428,7 +428,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Aventurine_StackableShield",
+                  "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                   "duration": 3,
                   "valuePerStack": {
                     "MDF_InitShieldValue": {
@@ -477,7 +477,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Aventurine_PointB3_ShieldMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-545204368\">Aventurine_PointB3_ShieldMark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -485,7 +485,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Aventurine_Ability02_ShieldEffect"
+                  "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>"
                 },
                 {
                   "name": "IF",
@@ -495,7 +495,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Aventurine_Ability02_ShieldEffect",
+                    "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -556,7 +556,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Aventurine_Ability02_ShieldEffect",
+                  "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
                   "valuePerStack": {
                     "MDF_CanTriggerShieldEffect": 0,
                     "MDF_ResistanceRatio": {
@@ -601,7 +601,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_StackableShield",
+      "for": "<a class=\"gModGreen\" id=\"mod__1211629419\">Aventurine_StackableShield</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "Shield"
@@ -623,7 +623,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Aventurine_Ability02_ShieldEffect"
+              "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -631,7 +631,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Aventurine_Eidolon1_Status[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -639,7 +639,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Aventurine_Ability02_ShieldEffect2[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -647,7 +647,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Aventurine_Ability02_ShieldEffect3[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -655,7 +655,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Aventurine_Ability02_ShieldEffect4[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -663,7 +663,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Aventurine_Ability02_BlackJack[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -671,7 +671,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Aventurine_ResistCtrl"
+              "modifier": "<a class=\"gModGreen\" id=\"-2133893396\">Aventurine_ResistCtrl</a>"
             },
             {
               "name": "Set Hit-Class",
@@ -744,7 +744,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Aventurine_ResistCtrlCD[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"462082235\">Aventurine_ResistCtrlCD</a>[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
                     "invertCondition": true
                   }
                 ]
@@ -756,7 +756,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Aventurine_ResistCtrl"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2133893396\">Aventurine_ResistCtrl</a>"
                 }
               ]
             },
@@ -797,7 +797,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Aventurine_Trace03_Status[<span class=\"descriptionNumberColor\">Bingo!</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
@@ -833,8 +833,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifierName": "Aventurine_StackableShield",
-                  "modifierNameUpdate": "Aventurine_Ability02_BlackJack[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
                 }
               ],
               "failed": [
@@ -844,8 +844,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifierName": "Aventurine_StackableShield",
-                  "modifierNameUpdate": "Aventurine_Ability02_ShieldEffect2[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
                 }
               ]
             }
@@ -863,7 +863,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_RemoveAttackValue",
+      "for": "<a class=\"gModGreen\" id=\"mod__1240934840\">Aventurine_RemoveAttackValue</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_Fatigue"
@@ -876,7 +876,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Eidolon6_Sub[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -907,7 +907,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Eidolon6",
+      "for": "<a class=\"gModGreen\" id=\"mod__1670112654\">Aventurine_Eidolon6</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier is Added [Anyone]",
@@ -1027,7 +1027,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Aventurine_Eidolon6_Sub[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
                           "valuePerStack": {
                             "MDF_AttackAddRatio": {
                               "operator": "Variables[0] (1.5) || RETURN",
@@ -1047,7 +1047,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Aventurine_Eidolon6_Sub[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
                           "valuePerStack": {
                             "MDF_AttackAddRatio": {
                               "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
@@ -1186,7 +1186,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Aventurine_Eidolon6_Sub[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
                           "valuePerStack": {
                             "MDF_AttackAddRatio": {
                               "operator": "Variables[0] (1.5) || RETURN",
@@ -1206,7 +1206,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Aventurine_Eidolon6_Sub[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
                           "valuePerStack": {
                             "MDF_AttackAddRatio": {
                               "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
@@ -1229,7 +1229,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Aventurine_Eidolon6_Sub[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]"
                     }
                   ]
                 }
@@ -1241,7 +1241,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Eidolon4_CountDown",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1728845008\">Aventurine_Eidolon4_CountDown</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1252,7 +1252,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Aventurine_Eidolon4"
+              "modifier": "<a class=\"gModGreen\" id=\"1636557416\">Aventurine_Eidolon4</a>"
             }
           ]
         }
@@ -1260,17 +1260,17 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Eidolon4",
+      "for": "<a class=\"gModGreen\" id=\"mod__1636557416\">Aventurine_Eidolon4</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Eidolon2_Mark"
+      "for": "<a class=\"gModGreen\" id=\"mod__1245057354\">Aventurine_Eidolon2_Mark</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Eidolon2_ResistanceDown[<span class=\"descriptionNumberColor\">Bounded Rationality</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1438365222\">Aventurine_Eidolon2_ResistanceDown</a>[<span class=\"descriptionNumberColor\">Bounded Rationality</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1308,7 +1308,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Trace01_Sub[<span class=\"descriptionNumberColor\">Leverage</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1397,7 +1397,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Trace01",
+      "for": "<a class=\"gModGreen\" id=\"mod__1167695204\">Aventurine_Trace01</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1405,7 +1405,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Aventurine_Trace01_Sub"
+              "functionName": "<a class=\"gTempYellow\" id=\"-741151706\">Aventurine_Trace01_Sub</a>"
             }
           ]
         }
@@ -1420,7 +1420,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Aventurine_Trace01_Sub"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-741151706\">Aventurine_Trace01_Sub</a>"
                 }
               ]
             }
@@ -1430,7 +1430,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Aventurine_Trace01_Sub",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-741151706\">Aventurine_Trace01_Sub</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
@@ -1489,7 +1489,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Aventurine_Trace01_Sub[<span class=\"descriptionNumberColor\">Leverage</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]"
                   },
                   "passed": [
                     {
@@ -1498,7 +1498,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Aventurine_Trace01_Sub[<span class=\"descriptionNumberColor\">Leverage</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (1600) || SUB || RETURN",
@@ -1519,7 +1519,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Aventurine_Trace01_Sub[<span class=\"descriptionNumberColor\">Leverage</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (1600) || SUB || RETURN",
@@ -1542,7 +1542,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Aventurine_Trace01_Sub[<span class=\"descriptionNumberColor\">Leverage</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]"
                 }
               ]
             }
@@ -1554,7 +1554,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Passive_AddDefence[<span class=\"descriptionNumberColor\">Unexpected Hanging Paradox</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__674084232\">Aventurine_Passive_AddDefence</a>[<span class=\"descriptionNumberColor\">Unexpected Hanging Paradox</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1609,7 +1609,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Ability03_CritDmgIncrease[<span class=\"descriptionNumberColor\">Unnerved</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-839248266\">Aventurine_Ability03_CritDmgIncrease</a>[<span class=\"descriptionNumberColor\">Unnerved</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1652,7 +1652,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Ability03_CoinAdd",
+      "for": "<a class=\"gModGreen\" id=\"mod__-989533278\">Aventurine_Ability03_CoinAdd</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1680,7 +1680,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Aventurine_Passive_ShieldEnergy",
+              "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
               "addStacksPerTrigger": {
                 "operator": "Variables[0] (MDF_Coin) || RETURN",
                 "displayLines": "MDF_Coin",
@@ -1701,7 +1701,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Ability02_ShieldEffect4[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1715,7 +1715,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Ability02_ShieldEffect3[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1729,7 +1729,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Ability02_ShieldEffect2[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1743,7 +1743,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Ability02_BlackJack[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1757,7 +1757,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Ability02_ShieldEffect",
+      "for": "<a class=\"gModGreen\" id=\"mod__1566932811\">Aventurine_Ability02_ShieldEffect</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1792,7 +1792,7 @@ const configAbility = {
                 },
                 {
                   "name": "Define Modifier-Specific Variable",
-                  "modifierName": "Aventurine_StackableShield",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                   "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
@@ -1809,8 +1809,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifierName": "Aventurine_StackableShield",
-                  "modifierNameUpdate": "Aventurine_Ability02_BlackJack[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1818,7 +1818,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Aventurine_Ability02_ShieldEffect2[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1826,7 +1826,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Aventurine_Ability02_ShieldEffect3[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1834,7 +1834,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Aventurine_Ability02_ShieldEffect4[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
                 },
                 {
                   "name": "IF",
@@ -1865,7 +1865,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Aventurine_Eidolon1_Status[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
@@ -1910,7 +1910,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Aventurine_Eidolon1_Status[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
@@ -1953,7 +1953,7 @@ const configAbility = {
                     },
                     {
                       "name": "Define Modifier-Specific Variable",
-                      "modifierName": "Aventurine_StackableShield",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                       "variableName": "MDF_PropertyValue",
                       "value": {
                         "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
@@ -1970,8 +1970,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifierName": "Aventurine_StackableShield",
-                      "modifierNameUpdate": "Aventurine_Ability02_ShieldEffect2[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
+                      "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1979,7 +1979,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Aventurine_Ability02_ShieldEffect3[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1987,7 +1987,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Aventurine_Ability02_ShieldEffect4[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1995,7 +1995,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Aventurine_Ability02_BlackJack[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
                     }
                   ],
                   "failed": [
@@ -2028,7 +2028,7 @@ const configAbility = {
                         },
                         {
                           "name": "Define Modifier-Specific Variable",
-                          "modifierName": "Aventurine_StackableShield",
+                          "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                           "variableName": "MDF_PropertyValue",
                           "value": {
                             "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
@@ -2045,8 +2045,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifierName": "Aventurine_StackableShield",
-                          "modifierNameUpdate": "Aventurine_Ability02_ShieldEffect3[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
+                          "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                          "modifierNameUpdate": "<a class=\"gModGreen\" id=\"2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -2054,7 +2054,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Aventurine_Ability02_ShieldEffect2[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -2062,7 +2062,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Aventurine_Ability02_ShieldEffect4[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -2070,7 +2070,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Aventurine_Ability02_BlackJack[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
                         }
                       ],
                       "failed": [
@@ -2089,7 +2089,7 @@ const configAbility = {
                         },
                         {
                           "name": "Define Modifier-Specific Variable",
-                          "modifierName": "Aventurine_StackableShield",
+                          "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                           "variableName": "MDF_PropertyValue",
                           "value": {
                             "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
@@ -2106,8 +2106,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifierName": "Aventurine_StackableShield",
-                          "modifierNameUpdate": "Aventurine_Ability02_ShieldEffect4[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
+                          "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                          "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
                         }
                       ]
                     }
@@ -2128,11 +2128,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Ability02_ForceContrlShield"
+      "for": "<a class=\"gModGreen\" id=\"mod__-1192823436\">Aventurine_Ability02_ForceContrlShield</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Passive_ShieldEnergy",
+      "for": "<a class=\"gModGreen\" id=\"mod__-346814527\">Aventurine_Passive_ShieldEnergy</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
@@ -2447,11 +2447,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Passive_AddEnergyMark"
+      "for": "<a class=\"gModGreen\" id=\"mod__1431725730\">Aventurine_Passive_AddEnergyMark</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Passive_OnAfterBeingAttacked",
+      "for": "<a class=\"gModGreen\" id=\"mod__890966085\">Aventurine_Passive_OnAfterBeingAttacked</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -2474,7 +2474,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Aventurine_StackableShield"
+                    "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>"
                   }
                 ]
               },
@@ -2524,7 +2524,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Aventurine_Trace03_Status[<span class=\"descriptionNumberColor\">Bingo!</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]"
                     }
                   ]
                 }
@@ -2543,7 +2543,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Aventurine_StackableShield"
+                "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>"
               },
               "passed": [
                 {
@@ -2567,7 +2567,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Aventurine_Passive_AddEnergyMark",
+                      "modifier": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>",
                       "addStacksPerTrigger": {
                         "operator": "Variables[0] (MDF_BlackJackEnergy) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_BlackJackEnergy + 1)",
@@ -2587,7 +2587,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Aventurine_Passive_AddEnergyMark",
+                      "modifier": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>",
                       "addStacksPerTrigger": 1
                     }
                   ]
@@ -2660,7 +2660,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Aventurine_Trace03_Status[<span class=\"descriptionNumberColor\">Bingo!</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
@@ -2679,7 +2679,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Aventurine_Passive_ShieldEnergy",
+                  "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
                   "addStacksPerTrigger": 1
                 }
               ]
@@ -2711,7 +2711,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Aventurine_Trace03_Status[<span class=\"descriptionNumberColor\">Bingo!</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]"
                 }
               ]
             }
@@ -2729,7 +2729,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Aventurine_Passive_AddEnergyMark"
+                "modifier": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>"
               },
               "passed": [
                 {
@@ -2740,7 +2740,7 @@ const configAbility = {
                   },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer2",
-                  "modifierName": "Aventurine_Passive_AddEnergyMark",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>",
                   "multiplier": 1
                 },
                 {
@@ -2749,7 +2749,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Aventurine_Passive_ShieldEnergy",
+                  "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
                   "addStacksPerTrigger": {
                     "operator": "Variables[0] (MDF_Layer2) || RETURN",
                     "displayLines": "MDF_Layer2",
@@ -2765,7 +2765,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Aventurine_Passive_AddEnergyMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>"
                 }
               ]
             }
@@ -2775,7 +2775,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Aventurine_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-106868585\">Aventurine_Passive</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -2798,7 +2798,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Aventurine_Trace03_Status[<span class=\"descriptionNumberColor\">Bingo!</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
@@ -2831,7 +2831,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Aventurine_Eidolon2_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"1245057354\">Aventurine_Eidolon2_Mark</a>"
                 }
               ]
             },
@@ -2853,7 +2853,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Aventurine_Passive_OnAfterBeingAttacked",
+              "modifier": "<a class=\"gModGreen\" id=\"890966085\">Aventurine_Passive_OnAfterBeingAttacked</a>",
               "valuePerStack": {
                 "MDF_BlackJackEnergy": {
                   "operator": "Variables[0] (1) || RETURN",
@@ -2878,7 +2878,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Aventurine_Eidolon6"
+                  "modifier": "<a class=\"gModGreen\" id=\"1670112654\">Aventurine_Eidolon6</a>"
                 }
               ]
             }
@@ -2904,7 +2904,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "Aventurine_Passive_OnAfterBeingAttacked",
+                  "modifier": "<a class=\"gModGreen\" id=\"890966085\">Aventurine_Passive_OnAfterBeingAttacked</a>",
                   "valuePerStack": {
                     "MDF_BlackJackEnergy": {
                       "operator": "Variables[0] (1) || RETURN",
@@ -2952,7 +2952,7 @@ const configAbility = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Aventurine_RecordCurrentShield"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-969049614\">Aventurine_RecordCurrentShield</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2960,7 +2960,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Aventurine_StackableShield",
+                  "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -3017,7 +3017,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Aventurine_Ability02_ShieldEffect",
+                        "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
                         "invertCondition": true
                       },
                       "passed": [
@@ -3076,7 +3076,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Aventurine_Ability02_ShieldEffect",
+                          "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
                           "valuePerStack": {
                             "MDF_ResistanceRatio": {
                               "operator": "Variables[0] (0.5) || RETURN",

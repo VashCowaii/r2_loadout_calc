@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23043_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1095447041\">LC_23043_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23043_Sub2[<span class=\"descriptionNumberColor\">Theft</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__409362716\">LC_23043_Sub2</a>[<span class=\"descriptionNumberColor\">Theft</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "STAT_DefenceDown"
@@ -51,7 +51,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23043_Sub[<span class=\"descriptionNumberColor\">Bamboozle</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-254264378\">LC_23043_Sub</a>[<span class=\"descriptionNumberColor\">Bamboozle</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "STAT_DefenceDown"
@@ -86,7 +86,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23043_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1095447041\">LC_23043_Main</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -97,7 +97,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "modifier": "LC_23043_Sub[<span class=\"descriptionNumberColor\">Bamboozle</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-254264378\">LC_23043_Sub</a>[<span class=\"descriptionNumberColor\">Bamboozle</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -146,7 +146,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "LC_23043_Sub2[<span class=\"descriptionNumberColor\">Theft</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"409362716\">LC_23043_Sub2</a>[<span class=\"descriptionNumberColor\">Theft</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

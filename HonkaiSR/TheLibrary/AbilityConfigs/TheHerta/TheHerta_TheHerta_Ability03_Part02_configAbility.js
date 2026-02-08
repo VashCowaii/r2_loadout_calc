@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "TheHerta_Passive_MagicMark_42_Block"
+      "modifier": "<a class=\"gModGreen\" id=\"426098232\">TheHerta_Passive_MagicMark_42_Block</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "TheHerta_SKL03_Sort_Storge"
+      "modifier": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -42,12 +42,12 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
             }
           },
           {
             "name": "Sort by Modifier Value",
-            "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
             "value": "Layer",
             "sortByHighest": true
           }
@@ -81,7 +81,7 @@ const configAbility = {
           },
           "valueType": "Layer",
           "variableName": "_Temp_Sort_Layer",
-          "modifierName": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
           "multiplier": 1
         },
         {
@@ -101,7 +101,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                 }
               },
               {
@@ -152,7 +152,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TheHerta_SKL03_Sort_Storge",
+                  "modifier": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>",
                   "addStacksPerTrigger": {
                     "operator": "Variables[0] (_Temp_Sort_Layer) || RETURN",
                     "displayLines": "_Temp_Sort_Layer",
@@ -185,7 +185,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "TheHerta_SKL03_Sort_Storge"
+              "modifier": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>"
             }
           }
         ]
@@ -199,7 +199,7 @@ const configAbility = {
           },
           "valueType": "Layer",
           "variableName": "_Temp_Sort_Layer",
-          "modifierName": "TheHerta_SKL03_Sort_Storge",
+          "modifierName": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>",
           "multiplier": 1
         },
         {
@@ -208,7 +208,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -216,7 +216,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
           "stackLimit": {
             "operator": "Variables[0] (42) || RETURN",
             "displayLines": "42",
@@ -287,7 +287,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "TheHerta_Trace03_ExtraDamage[<span class=\"descriptionNumberColor\">Answer</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]"
           }
         ]
       },
@@ -296,7 +296,7 @@ const configAbility = {
           "name": "Define Custom Variable with Modifier Values",
           "valueType": "Layer",
           "variableName": "_SKL03_EXTRADAMAGE",
-          "modifierName": "TheHerta_Trace03_ExtraDamage[<span class=\"descriptionNumberColor\">Answer</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
           "multiplier": 1
         },
         {
@@ -402,7 +402,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "TheHerta_Ability03_Bonus[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"555212333\">TheHerta_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -428,7 +428,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "TheHerta_Passive_MagicMark_42_Block"
+      "modifier": "<a class=\"gModGreen\" id=\"426098232\">TheHerta_Passive_MagicMark_42_Block</a>"
     },
     {
       "name": "ATK Scaling DMG",

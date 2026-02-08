@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Advanced_Silwolf_Ability02_OverrideNameForStatus",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-509776970\">Advanced_Silwolf_Ability02_OverrideNameForStatus</a>",
       "parse": [
         {
           "name": "SWITCH",
@@ -34,8 +34,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                  "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1062446229\">Advanced_Silwolf_BPAbility_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]"
                 }
               ]
             },
@@ -49,8 +49,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                  "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"860600554\">Advanced_Silwolf_BPAbility_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]"
                 }
               ]
             },
@@ -64,8 +64,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                  "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1570756707\">Advanced_Silwolf_BPAbility_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]"
                 }
               ]
             },
@@ -79,8 +79,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                  "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"1824019324\">Advanced_Silwolf_BPAbility_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]"
                 }
               ]
             },
@@ -94,8 +94,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                  "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1784823028\">Advanced_Silwolf_BPAbility_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]"
                 }
               ]
             },
@@ -109,8 +109,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                  "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1901191893\">Advanced_Silwolf_BPAbility_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]"
                 }
               ]
             },
@@ -124,8 +124,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                  "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1384846161\">Advanced_Silwolf_BPAbility_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]"
                 }
               ]
             }
@@ -136,7 +136,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1273458995\">Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -183,7 +183,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                       "invertCondition": true
                     }
                   ]
@@ -207,7 +207,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",

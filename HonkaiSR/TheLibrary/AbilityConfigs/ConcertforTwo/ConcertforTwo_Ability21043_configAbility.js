@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21043_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"363283471\">LC_21043_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21043_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1373377156\">LC_21043_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -61,7 +61,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21043_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__363283471\">LC_21043_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier is Added [Anyone]",
@@ -160,7 +160,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "LC_21043_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1373377156\">LC_21043_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     }
                   ],
                   "failed": [
@@ -186,7 +186,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "LC_21043_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1373377156\">LC_21043_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DmgAddNum": {
                               "operator": "Variables[0] (MDF_DmgAddNum) || RETURN",
@@ -311,7 +311,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "LC_21043_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1373377156\">LC_21043_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     }
                   ],
                   "failed": [
@@ -337,7 +337,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "LC_21043_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1373377156\">LC_21043_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DmgAddNum": {
                               "operator": "Variables[0] (MDF_DmgAddNum) || RETURN",

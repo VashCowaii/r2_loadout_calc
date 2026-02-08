@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Acheron_UltraAbilitySpareCount_PointB1[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__62451815\">Acheron_UltraAbilitySpareCount_PointB1</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -47,7 +47,7 @@ const configAbility = {
               },
               "valueType": "Layer",
               "variableName": "MDF_UltraSkillSpareCount",
-              "modifierName": "Acheron_UltraAbilitySpareCount_PointB1[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"62451815\">Acheron_UltraAbilitySpareCount_PointB1</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
               "multiplier": 1
             }
           ]
@@ -120,7 +120,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_UltraAbilitySpareCount[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1886427249\">Acheron_UltraAbilitySpareCount</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -209,7 +209,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_Ability03_StancePreview",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1845649491\">Acheron_Ability03_StancePreview</a>",
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -227,7 +227,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_Ability02_StancePreview",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1291342250\">Acheron_Ability02_StancePreview</a>",
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -245,7 +245,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_Ability01_StancePreview",
+      "for": "<a class=\"gModGreen\" id=\"mod__600417107\">Acheron_Ability01_StancePreview</a>",
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -263,7 +263,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_Eidolon6_ForceStanceDamage",
+      "for": "<a class=\"gModGreen\" id=\"mod__946113051\">Acheron_Eidolon6_ForceStanceDamage</a>",
       "modifierFlags": [
         "ForceStanceDamage"
       ],
@@ -295,7 +295,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_Eidolon6_AddRegardAsAbilityType",
+      "for": "<a class=\"gModGreen\" id=\"mod__-84702346\">Acheron_Eidolon6_AddRegardAsAbilityType</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -354,7 +354,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Acheron_Ability01_StancePreview"
+              "modifier": "<a class=\"gModGreen\" id=\"600417107\">Acheron_Ability01_StancePreview</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -362,7 +362,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Acheron_Ability02_StancePreview"
+              "modifier": "<a class=\"gModGreen\" id=\"-1291342250\">Acheron_Ability02_StancePreview</a>"
             }
           ]
         }
@@ -377,7 +377,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_Eidolon4_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Ultimate DMG Vulnerability</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1111481031\">Acheron_Eidolon4_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Vulnerability</span>]",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -424,7 +424,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__447524573\">Acheron_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -462,7 +462,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_DebuffSpecialMark01_Empty",
+      "for": "<a class=\"gModGreen\" id=\"mod__-318443993\">Acheron_DebuffSpecialMark01_Empty</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -491,7 +491,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
               },
               "passed": [
                 {
@@ -501,7 +501,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "variableName": "MDF_SpecialMarkFlowerCount",
-                  "modifierName": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                   "multiplier": 1
                 }
               ]
@@ -519,7 +519,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Acheron_Ability03_Special",
+                "modifier": "<a class=\"gModGreen\" id=\"-2096189522\">Acheron_Ability03_Special</a>",
                 "invertCondition": true
               },
               "passed": [
@@ -531,7 +531,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
                   },
                   "passed": [
                     {
@@ -579,7 +579,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
                   },
                   "passed": [
                     {
@@ -675,7 +675,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
                   },
                   "passed": [
                     {
@@ -685,7 +685,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "variableName": "MDF_SpecialMarkFlowerCount",
-                      "modifierName": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                       "multiplier": 1
                     }
                   ]
@@ -707,7 +707,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -743,7 +743,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Acheron_Ability03_Special",
+                    "modifier": "<a class=\"gModGreen\" id=\"-2096189522\">Acheron_Ability03_Special</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -773,7 +773,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Acheron_Ability03_Special",
+                "modifier": "<a class=\"gModGreen\" id=\"-2096189522\">Acheron_Ability03_Special</a>",
                 "invertCondition": true
               },
               "passed": [
@@ -783,7 +783,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
                 }
               ]
             }
@@ -799,7 +799,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "variableName": "MDF_Count",
-              "modifierName": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
               "multiplier": 1
             }
           ]
@@ -840,7 +840,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Acheron_Ability03_Special",
+                        "modifier": "<a class=\"gModGreen\" id=\"-2096189522\">Acheron_Ability03_Special</a>",
                         "invertCondition": true
                       },
                       "passed": [
@@ -870,7 +870,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Acheron_Ability03_Special",
+                    "modifier": "<a class=\"gModGreen\" id=\"-2096189522\">Acheron_Ability03_Special</a>",
                     "invertCondition": true
                   },
                   "passed": [
@@ -880,7 +880,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
                     }
                   ]
                 }
@@ -896,7 +896,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_AbilityChange04",
+      "for": "<a class=\"gModGreen\" id=\"mod__-317287633\">Acheron_AbilityChange04</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -935,7 +935,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_AbilityChange03",
+      "for": "<a class=\"gModGreen\" id=\"mod__-367620490\">Acheron_AbilityChange03</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -968,7 +968,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_AbilityChange02",
+      "for": "<a class=\"gModGreen\" id=\"mod__-350842871\">Acheron_AbilityChange02</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -1001,7 +1001,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_AbilityChange01",
+      "for": "<a class=\"gModGreen\" id=\"mod__-401175728\">Acheron_AbilityChange01</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -1034,7 +1034,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_Ability03_Special",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2096189522\">Acheron_Ability03_Special</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "ForceStanceDamage"
@@ -1049,7 +1049,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Acheron_Ability03_StancePreview"
+              "modifier": "<a class=\"gModGreen\" id=\"-1845649491\">Acheron_Ability03_StancePreview</a>"
             },
             {
               "name": "Change Character Transformation",
@@ -1086,7 +1086,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Acheron_Ability03_StancePreview"
+              "modifier": "<a class=\"gModGreen\" id=\"-1845649491\">Acheron_Ability03_StancePreview</a>"
             },
             {
               "name": "Change Character Transformation",
@@ -1114,7 +1114,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_PointB3_DamageUp[<span class=\"descriptionNumberColor\">Thunder Core</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-535608708\">Acheron_PointB3_DamageUp</a>[<span class=\"descriptionNumberColor\">Thunder Core</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1157,7 +1157,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_Passive01Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-98170223\">Acheron_Passive01Modifier</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -1202,7 +1202,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "variableName": "MDF_PassiveLayer",
-              "modifierName": "Acheron_Passive01Modifier",
+              "modifierName": "<a class=\"gModGreen\" id=\"-98170223\">Acheron_Passive01Modifier</a>",
               "multiplier": 1
             },
             {
@@ -1233,7 +1233,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_OnListenDeBonusAdd",
+      "for": "<a class=\"gModGreen\" id=\"mod__-533288835\">Acheron_OnListenDeBonusAdd</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -1258,7 +1258,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Acheron_Ability03_Special",
+                    "modifier": "<a class=\"gModGreen\" id=\"-2096189522\">Acheron_Ability03_Special</a>",
                     "invertCondition": true
                   },
                   {
@@ -1273,7 +1273,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Acheron_RuondDeBonusCD",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1065497457\">Acheron_RuondDeBonusCD</a>",
                     "invertCondition": true,
                     "justAddedOrActive": true
                   }
@@ -1318,11 +1318,11 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Acheron_RuondDeBonusCD"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1065497457\">Acheron_RuondDeBonusCD</a>"
                     },
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Acheron_SetEnergyBarState"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1427559472\">Acheron_SetEnergyBarState</a>"
                     },
                     {
                       "name": "Define Custom Variable with Status Counter",
@@ -1358,7 +1358,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Acheron_RuondDeBonusCD"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1065497457\">Acheron_RuondDeBonusCD</a>"
                         }
                       ]
                     }
@@ -1381,7 +1381,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_BlockModifySp",
+      "for": "<a class=\"gModGreen\" id=\"mod__-317541958\">Acheron_BlockModifySp</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -1443,7 +1443,7 @@ const configAbility = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Acheron_SetEnergyBarState"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1427559472\">Acheron_SetEnergyBarState</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1471,7 +1471,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Acheron_RuondDeBonusCD",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1065497457\">Acheron_RuondDeBonusCD</a>",
       "stackType": "Replace",
       "stackData": [],
       "latentQueue": [

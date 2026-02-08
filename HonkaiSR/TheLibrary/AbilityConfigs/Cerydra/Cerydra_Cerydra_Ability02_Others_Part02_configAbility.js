@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}} | {{Ability Target(ST)}}"
           },
-          "modifier": "Cerydra_PointB3[<span class=\"descriptionNumberColor\">Vici</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1079912443\">Cerydra_PointB3</a>[<span class=\"descriptionNumberColor\">Vici</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -83,7 +83,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "modifier": "Cerydra_Ability02_Target",
+        "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>",
         "invertCondition": true,
         "justAddedOrActive": true
       },
@@ -94,7 +94,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Cerydra_Ability02_Target",
+          "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>",
           "valuePerStack": {
             "DV_PointAdded_Get": {
               "operator": "Variables[0] (1) || RETURN",
@@ -108,7 +108,7 @@ const configAbility = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Cerydra_Template_MaxPointHandle",
+          "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
           "variables": {
             "DV_AddPoint": {
               "operator": "Variables[0] (1) || RETURN",
@@ -133,7 +133,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
               },
               {
                 "name": "Compare: Variable",
@@ -159,7 +159,7 @@ const configAbility = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Cerydra_Template_MaxPointHandle",
+              "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
               "variables": {
                 "DV_AddPoint": {
                   "operator": "Variables[0] (1) || RETURN",
@@ -173,13 +173,13 @@ const configAbility = {
             },
             {
               "name": "Use Custom Character Function",
-              "functionName": "Cerydra_Template_ReachPromotionEidolon1"
+              "functionName": "<a class=\"gTempYellow\" id=\"1336664335\">Cerydra_Template_ReachPromotionEidolon1</a>"
             }
           ],
           "failed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Cerydra_Template_MaxPointHandle",
+              "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
               "variables": {
                 "DV_AddPoint": {
                   "operator": "Variables[0] (1) || RETURN",
@@ -203,7 +203,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Cerydra_Maze_Modifier"
+        "modifier": "<a class=\"gModGreen\" id=\"1690765176\">Cerydra_Maze_Modifier</a>"
       },
       "passed": [
         {
@@ -222,7 +222,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cerydra_Maze_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1690765176\">Cerydra_Maze_Modifier</a>"
         }
       ]
     },

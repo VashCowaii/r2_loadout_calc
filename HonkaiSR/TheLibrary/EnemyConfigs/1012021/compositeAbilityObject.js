@@ -153,7 +153,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_GSMecha_01_Initiate"
+          "modifier": "<a class=\"gModGreen\" id=\"1061722899\">Monster_W1_GSMecha_01_Initiate</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -251,7 +251,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_GSMecha_01_ExplodeCharge_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-693920097\">Monster_W1_GSMecha_01_ExplodeCharge_Effect</a>"
         },
         {
           "name": "UI Display Event (On Entity)",
@@ -295,7 +295,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_GSMecha_01_ExplodeCharge_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-693920097\">Monster_W1_GSMecha_01_ExplodeCharge_Effect</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -401,20 +401,20 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_GSMecha_01_KlaraSpecialVictory_LockHP"
+          "modifier": "<a class=\"gModGreen\" id=\"469780750\">Monster_W1_GSMecha_01_KlaraSpecialVictory_LockHP</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_GSMecha_01_Instance_DisableAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1995523642\">Monster_W1_GSMecha_01_Instance_DisableAction</a>",
           "modifierFlags": [
             "DisableAction"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_GSMecha_01_KlaraSpecialVictory_LockHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__469780750\">Monster_W1_GSMecha_01_KlaraSpecialVictory_LockHP</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -434,7 +434,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Monster_W1_GSMecha_01_Instance_DisableAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"1995523642\">Monster_W1_GSMecha_01_Instance_DisableAction</a>"
                 }
               ]
             }
@@ -464,13 +464,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_GSMecha_01_PassiveAbility_KlaraEnterBattle"
+          "modifier": "<a class=\"gModGreen\" id=\"-498979834\">Monster_W1_GSMecha_01_PassiveAbility_KlaraEnterBattle</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_GSMecha_01_PassiveAbility_KlaraEnterBattle",
+          "for": "<a class=\"gModGreen\" id=\"mod__-498979834\">Monster_W1_GSMecha_01_PassiveAbility_KlaraEnterBattle</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -499,7 +499,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_GSMecha_01_Initiate"
+          "modifier": "<a class=\"gModGreen\" id=\"1061722899\">Monster_W1_GSMecha_01_Initiate</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -523,7 +523,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_GSMecha_01_Initiate",
+          "for": "<a class=\"gModGreen\" id=\"mod__1061722899\">Monster_W1_GSMecha_01_Initiate</a>",
           "modifierFlags": [
             "Deathrattle",
             "KeepOnDeathrattle"

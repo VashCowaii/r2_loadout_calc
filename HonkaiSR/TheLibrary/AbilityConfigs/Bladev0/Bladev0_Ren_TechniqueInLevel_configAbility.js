@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Ren_TechniqueUsage_AOE"
+      "modifier": "<a class=\"gModGreen\" id=\"1996360275\">Ren_TechniqueUsage_AOE</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Ren_TechniqueUsage_AOE",
+      "for": "<a class=\"gModGreen\" id=\"mod__1996360275\">Ren_TechniqueUsage_AOE</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

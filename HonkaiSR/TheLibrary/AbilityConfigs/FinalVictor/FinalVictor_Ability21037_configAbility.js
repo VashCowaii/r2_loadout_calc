@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21037_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-743341522\">LC_21037_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21037_Sub[<span class=\"descriptionNumberColor\">Good Fortune</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1915494643\">LC_21037_Sub</a>[<span class=\"descriptionNumberColor\">Good Fortune</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -61,7 +61,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21037_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-743341522\">LC_21037_Main</a>",
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -82,7 +82,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_21037_Sub[<span class=\"descriptionNumberColor\">Good Fortune</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1915494643\">LC_21037_Sub</a>[<span class=\"descriptionNumberColor\">Good Fortune</span>]"
                 }
               ]
             }
@@ -103,7 +103,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_21037_Sub[<span class=\"descriptionNumberColor\">Good Fortune</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1915494643\">LC_21037_Sub</a>[<span class=\"descriptionNumberColor\">Good Fortune</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (4) || RETURN",
                     "displayLines": "4",

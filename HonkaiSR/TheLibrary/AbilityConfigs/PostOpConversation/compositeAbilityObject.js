@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_21000_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1832007072\">LC_21000_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_21000_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1832007072\">LC_21000_Main</a>",
           "execute": [
             {
               "eventTrigger": "Heal Target Start [Owner]",

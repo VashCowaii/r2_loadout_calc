@@ -62,7 +62,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Self-Made Battle-Events}}"
           },
-          "modifier": "Lingsha_BPAbility_BattleEvent_LifeTime",
+          "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
           "counter": {
             "operator": "Variables[0] (Lingsha_AttackTime) || RETURN",
             "displayLines": "Lingsha_AttackTime",
@@ -165,7 +165,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Lingsha_Eidolon6_Listen"
+              "modifier": "<a class=\"gModGreen\" id=\"-1458980452\">Lingsha_Eidolon6_Listen</a>"
             }
           ]
         },
@@ -182,7 +182,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Self-Made Battle-Events}}"
               },
-              "modifier": "Lingsha_PointB3_OnListen",
+              "modifier": "<a class=\"gModGreen\" id=\"210278197\">Lingsha_PointB3_OnListen</a>",
               "valuePerStack": {
                 "MDF_HPRatio": {
                   "operator": "Variables[0] (0.6) || RETURN",

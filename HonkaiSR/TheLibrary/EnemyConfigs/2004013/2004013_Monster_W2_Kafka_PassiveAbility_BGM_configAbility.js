@@ -14,7 +14,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "modifier": "Enemy_W2_Kafka_ResetStageBGM"
+      "modifier": "<a class=\"gModGreen\" id=\"932283080\">Enemy_W2_Kafka_ResetStageBGM</a>"
     }
   ],
   "whenAdded": [
@@ -50,7 +50,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Kafka_ResetStageBGM",
+      "for": "<a class=\"gModGreen\" id=\"mod__932283080\">Enemy_W2_Kafka_ResetStageBGM</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21057_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1819139928\">LC_21057_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21057_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__2105850117\">LC_21057_Sub</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -43,7 +43,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21057_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1819139928\">LC_21057_Main</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -82,7 +82,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "LC_21057_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"2105850117\">LC_21057_Sub</a>"
                 }
               ]
             }
@@ -110,7 +110,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "modifier": "LC_21057_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"2105850117\">LC_21057_Sub</a>"
                 }
               ]
             }

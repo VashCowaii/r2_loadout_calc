@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "PlayerWarrior_Ultimate_Transform",
+      "for": "<a class=\"gModGreen\" id=\"mod__784141078\">PlayerWarrior_Ultimate_Transform</a>",
       "lifeCyclePhaseAllowed": "ActionPhaseEnd",
       "modifierFlags": [
         "STAT_Burst"
@@ -51,7 +51,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "PlayerBoy_Trace03_DamageAddedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__470799784\">PlayerBoy_Trace03_DamageAddedRatio</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -74,7 +74,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "PlayerBoy_Eidolon1_Check_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__451418523\">PlayerBoy_Eidolon1_Check_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Got a Kill [Owner]",

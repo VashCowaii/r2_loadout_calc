@@ -57,7 +57,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifierName": "Monster_W2_Beast02_RLElite_Bullet",
+      "modifierName": "<a class=\"gModGreen\" id=\"296260861\">Monster_W2_Beast02_RLElite_Bullet</a>",
       "value": 0
     },
     {
@@ -75,7 +75,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Beast02_RLElite_GennkiMark[<span class=\"descriptionNumberColor\">Gather Courage</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>[<span class=\"descriptionNumberColor\">Gather Courage</span>]"
     },
     {
       "name": "Update Displayed Energy Bar",

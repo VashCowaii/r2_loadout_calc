@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "W1_Mecha03_02_BattleScore1"
+      "modifier": "<a class=\"gModGreen\" id=\"908704672\">W1_Mecha03_02_BattleScore1</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "OneMorePerTurn"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha03_02_ResetAI"
+      "modifier": "<a class=\"gModGreen\" id=\"-2065276551\">Monster_W1_Mecha03_02_ResetAI</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -35,7 +35,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha03_02_MuteHitFly"
+      "modifier": "<a class=\"gModGreen\" id=\"1791558255\">Monster_W1_Mecha03_02_MuteHitFly</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -43,7 +43,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha03_02_CoinPassive"
+      "modifier": "<a class=\"gModGreen\" id=\"1161336022\">Monster_W1_Mecha03_02_CoinPassive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -51,7 +51,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha03_02_EffectController"
+      "modifier": "<a class=\"gModGreen\" id=\"1215936421\">Monster_W1_Mecha03_02_EffectController</a>"
     }
   ],
   "whenAdded": [
@@ -61,13 +61,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "modifier": "Monster_W1_Mecha03_02_Effect"
+      "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha03_02_MuteHitFly",
+      "for": "<a class=\"gModGreen\" id=\"mod__1791558255\">Monster_W1_Mecha03_02_MuteHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
       ],
@@ -76,7 +76,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha03_02_ResetAI",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2065276551\">Monster_W1_Mecha03_02_ResetAI</a>",
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",

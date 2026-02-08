@@ -25,7 +25,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Castorice_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-197237378\">Castorice_Passive</a>"
     },
     {
       "name": "IF",
@@ -40,7 +40,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Castorice_PointB1_HealTaxes"
+          "modifier": "<a class=\"gModGreen\" id=\"950021136\">Castorice_PointB1_HealTaxes</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -71,7 +71,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_Castorice_PointB2_OnListen",
+          "modifier": "<a class=\"gModGreen\" id=\"115720497\">Memosprite_Castorice_PointB2_OnListen</a>",
           "valuePerStack": {
             "Castorice_PointB2_HPRatio": {
               "operator": "Variables[0] (0.5) || RETURN",
@@ -106,7 +106,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Castorice_Eidolon2_OnListenValueChange"
+          "modifier": "<a class=\"gModGreen\" id=\"2083586529\">Castorice_Eidolon2_OnListenValueChange</a>"
         }
       ]
     },
@@ -123,7 +123,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Castorice_Eidolon4_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"1698152191\">Castorice_Eidolon4_Listen</a>"
         }
       ]
     },
@@ -140,7 +140,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Castorice_Eidolon6_OnListen",
+          "modifier": "<a class=\"gModGreen\" id=\"332176292\">Castorice_Eidolon6_OnListen</a>",
           "valuePerStack": {
             "MDF_QuantumPenetrate": {
               "operator": "Variables[0] (0.2) || RETURN",
@@ -160,7 +160,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Castorice_RefreshMaxSpecialSPFlag"
+      "modifier": "<a class=\"gModGreen\" id=\"-1345662684\">Castorice_RefreshMaxSpecialSPFlag</a>"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -189,7 +189,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Castorice_Eidolon6_OnListen",
+      "for": "<a class=\"gModGreen\" id=\"mod__332176292\">Castorice_Eidolon6_OnListen</a>",
       "stackData": [
         "MDF_QuantumPenetrate"
       ],
@@ -203,7 +203,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Castorice_Eidolon6_QuantumPenetrate[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-459849199\">Castorice_Eidolon6_QuantumPenetrate</a>[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
           "aliveOnly": "False",
           "haloStatus": true,
           "valuePerStack": {
@@ -223,7 +223,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Memosprite}}"
           },
-          "modifier": "Castorice_Eidolon6_QuantumPenetrate[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-459849199\">Castorice_Eidolon6_QuantumPenetrate</a>[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
           "aliveOnly": "False",
           "haloStatus": true,
           "valuePerStack": {
@@ -241,7 +241,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Castorice_Eidolon4_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__1698152191\">Castorice_Eidolon4_Listen</a>",
       "stackData": [],
       "latentQueue": [
         "OverHeal"
@@ -253,7 +253,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Castorice_Eidolon4_HealTakenRatio[<span class=\"descriptionNumberColor\">Rest in Songs of Gloom</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1861384440\">Castorice_Eidolon4_HealTakenRatio</a>[<span class=\"descriptionNumberColor\">Rest in Songs of Gloom</span>]",
           "aliveOnly": "False",
           "haloStatus": true,
           "valuePerStack": {
@@ -271,7 +271,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Castorice_Passive02_OnListenHPChange",
+      "for": "<a class=\"gModGreen\" id=\"mod__958490815\">Castorice_Passive02_OnListenHPChange</a>",
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -298,7 +298,7 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "value1": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                        "value1": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                         "compareType": ">=",
                         "value2": {
                           "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
@@ -317,7 +317,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                             "displayLines": "MDF_LifeTime",
@@ -360,7 +360,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster's Memosprite}}"
                           },
-                          "modifier": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                             "displayLines": "MDF_LifeTime",
@@ -405,7 +405,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                             "displayLines": "MDF_LifeTime",
@@ -448,7 +448,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster's Memosprite}}"
                           },
-                          "modifier": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                             "displayLines": "MDF_LifeTime",
@@ -497,7 +497,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Castorice_RefreshMaxSpecialSPFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1345662684\">Castorice_RefreshMaxSpecialSPFlag</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -519,7 +519,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Castorice_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-197237378\">Castorice_Passive</a>",
       "modifierFlags": [
         "ListenBattleEventSkill",
         "RemoveWhenCasterDead"
@@ -560,7 +560,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Castorice_RefreshMaxSpecialSP"
+                  "functionName": "<a class=\"gTempYellow\" id=\"2134704616\">Castorice_RefreshMaxSpecialSP</a>"
                 }
               ]
             }
@@ -618,14 +618,14 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Castorice_Ability03_Field",
+                        "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>",
                         "invertCondition": true,
                         "justAddedOrActive": true
                       },
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Castorice_AddSpecialSP",
+                          "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
                           "variables": {
                             "_FixedAddValue": {
                               "operator": "Variables[0] (Current_LostHP) || INVERT || RETURN",
@@ -718,7 +718,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Castorice_AddSpecialSP",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
                   "variables": {
                     "_FixedAddValue": {
                       "operator": "Variables[0] (Castorice_Passive_MaxCount) || Variables[1] (0.3) || MUL || RETURN",
@@ -763,7 +763,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Castorice_Ability03_Field",
+                    "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>",
                     "invertCondition": true,
                     "justAddedOrActive": true
                   },
@@ -815,7 +815,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Castorice_CheckCurrentSpecialSPChange"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"
                 }
               ]
             }
@@ -832,7 +832,7 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Castorice_CheckCurrentSpecialSPChange"
+                  "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"
                 }
               ]
             }
@@ -842,7 +842,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Castorice_RefreshMaxSpecialSP",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__2134704616\">Castorice_RefreshMaxSpecialSP</a>",
           "parse": [
             {
               "name": "Define Custom Variable",
@@ -1058,7 +1058,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Castorice_Ability03_Field",
+                "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>",
                 "invertCondition": true,
                 "justAddedOrActive": true
               },
@@ -1080,7 +1080,7 @@ const configAbility = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Castorice_CheckCurrentSpecialSPChange",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-272315266\">Castorice_CheckCurrentSpecialSPChange</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Changes to Stats",
@@ -1118,7 +1118,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Castorice_Passive02_OnListenHPChange",
+          "modifier": "<a class=\"gModGreen\" id=\"958490815\">Castorice_Passive02_OnListenHPChange</a>",
           "aliveOnly": "False",
           "haloStatus": true,
           "valuePerStack": {
@@ -1154,7 +1154,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Caster's Memosprite}}"
           },
-          "modifier": "Castorice_LoseHPPreShow",
+          "modifier": "<a class=\"gModGreen\" id=\"445281600\">Castorice_LoseHPPreShow</a>",
           "aliveOnly": "False",
           "haloStatus": true,
           "valuePerStack": {

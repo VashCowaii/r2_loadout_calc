@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sushang_P01_Eidolon6[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-995993731\">Sushang_P01_Eidolon6</a>[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -64,7 +64,7 @@ const configAbility = {
               },
               "valueType": "Layer",
               "variableName": "Rank06_SpeedUp_Count",
-              "modifierName": "Sushang_P01_Eidolon6[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-995993731\">Sushang_P01_Eidolon6</a>[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
               "multiplier": 1
             },
             {
@@ -100,7 +100,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sushang_P01[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__326660748\">Sushang_P01</a>[<span class=\"descriptionNumberColor\">Dancing Blade</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -139,7 +139,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
       "stackType": "ReplaceByCaster",
       "stackData": [
         "MDF_PropertyValue",
@@ -154,7 +154,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sushang_UltraBonus[<span class=\"descriptionNumberColor\">Dawn Herald</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1472874588\">Sushang_UltraBonus</a>[<span class=\"descriptionNumberColor\">Dawn Herald</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -271,7 +271,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sushang_Trace_AggroDown[<span class=\"descriptionNumberColor\">Guileless</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__420113807\">Sushang_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Guileless</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -306,7 +306,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sushang_LowHP_AggroDown",
+      "for": "<a class=\"gModGreen\" id=\"mod__136105164\">Sushang_LowHP_AggroDown</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -338,7 +338,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sushang_Trace_AggroDown[<span class=\"descriptionNumberColor\">Guileless</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"420113807\">Sushang_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Guileless</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_AggroDown) || RETURN",
@@ -383,7 +383,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sushang_Trace_AggroDown[<span class=\"descriptionNumberColor\">Guileless</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"420113807\">Sushang_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Guileless</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_AggroDown) || RETURN",
@@ -403,7 +403,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sushang_Trace_AggroDown[<span class=\"descriptionNumberColor\">Guileless</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"420113807\">Sushang_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Guileless</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]

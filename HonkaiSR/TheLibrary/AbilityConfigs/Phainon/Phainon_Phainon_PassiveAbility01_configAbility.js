@@ -80,20 +80,20 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Phainon_PassiveAbility01"
+      "modifier": "<a class=\"gModGreen\" id=\"-1513483576\">Phainon_PassiveAbility01</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_AbilityTargetSubListener",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1686592838\">M_Phainon_AbilityTargetSubListener</a>",
       "execute": [
         {
           "eventTrigger": "Being Attacked Start [Owner]",
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Phainon_Passive_AsAbilityTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"722514042\">Phainon_Passive_AsAbilityTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
@@ -126,22 +126,22 @@ const configAbility = {
                   },
                   {
                     "name": "Modifier Was",
-                    "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                   },
                   {
                     "name": "Modifier Was",
-                    "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                   },
                   {
                     "name": "Modifier Was",
-                    "modifier": "Standard_AbilityTarget"
+                    "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
                   }
                 ]
               },
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Phainon_Passive_AsAbilityTarget",
+                  "functionName": "<a class=\"gTempYellow\" id=\"722514042\">Phainon_Passive_AsAbilityTarget</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target 2}}"
@@ -156,7 +156,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Phainon_PassiveAbility01",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1513483576\">Phainon_PassiveAbility01</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -193,7 +193,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
                     "invertCondition": true
                   },
                   {
@@ -224,7 +224,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_Phainon_AbilityTargetSubListener",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1686592838\">M_Phainon_AbilityTargetSubListener</a>",
                       "silentAdd": true
                     }
                   ],
@@ -263,7 +263,7 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "Phainon_Passive_AsAbilityTarget",
+                          "functionName": "<a class=\"gTempYellow\" id=\"722514042\">Phainon_Passive_AsAbilityTarget</a>",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
@@ -295,7 +295,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -351,7 +351,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Phainon_SPOverflow[<span class=\"descriptionNumberColor\">Coreflame</span>]",
+                            "modifier": "<a class=\"gModGreen\" id=\"151398776\">Phainon_SPOverflow</a>[<span class=\"descriptionNumberColor\">Coreflame</span>]",
                             "invertCondition": true
                           },
                           "passed": [
@@ -361,7 +361,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "Phainon_SPOverflow[<span class=\"descriptionNumberColor\">Coreflame</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"151398776\">Phainon_SPOverflow</a>[<span class=\"descriptionNumberColor\">Coreflame</span>]",
                               "valuePerStack": {
                                 "MDF_Count": {
                                   "operator": "Variables[0] (CurOverflowSpecialSP) || RETURN",
@@ -381,7 +381,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifierName": "Phainon_SPOverflow[<span class=\"descriptionNumberColor\">Coreflame</span>]",
+                              "modifierName": "<a class=\"gModGreen\" id=\"151398776\">Phainon_SPOverflow</a>[<span class=\"descriptionNumberColor\">Coreflame</span>]",
                               "variableName": "MDF_Count",
                               "value": {
                                 "operator": "Variables[0] (CurOverflowSpecialSP) || RETURN",
@@ -428,7 +428,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Phainon_Ultra[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -502,7 +502,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifierName": "Phainon_Ability03_BattleEvent_BaseSpeed",
+                      "modifierName": "<a class=\"gModGreen\" id=\"320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
                       "variableName": "MDF_PropertyValue",
                       "value": {
                         "operator": "Variables[0] (CDF_SpeedConvertRatio) || Variables[1] (Phainon_BaseSpeed) || MUL || RETURN",

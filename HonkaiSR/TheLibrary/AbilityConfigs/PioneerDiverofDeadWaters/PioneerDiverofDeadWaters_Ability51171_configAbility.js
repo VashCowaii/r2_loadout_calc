@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_117_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-159750627\">Relic_117_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_117_Sub[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-950302126\">Relic_117_Sub</a>[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -47,7 +47,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_117_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-159750627\">Relic_117_Main</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -80,7 +80,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Relic_117_Sub[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-950302126\">Relic_117_Sub</a>[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]"
                   },
                   "passed": [
                     {
@@ -137,7 +137,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Relic_117_Sub[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-950302126\">Relic_117_Sub</a>[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]"
                       },
                       "passed": [
                         {
@@ -199,7 +199,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_117_Sub[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-950302126\">Relic_117_Sub</a>[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",

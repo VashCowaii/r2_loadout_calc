@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "RuanMei_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-1969840009\">RuanMei_Passive</a>"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -49,7 +49,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "RuanMei_Tree02_RecoverSP",
+          "modifier": "<a class=\"gModGreen\" id=\"-780236472\">RuanMei_Tree02_RecoverSP</a>",
           "valuePerStack": {
             "Trace_PointB2_P1_SP": {
               "operator": "Variables[0] (5) || RETURN",
@@ -67,7 +67,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Passive_SpeedUp[<span class=\"descriptionNumberColor\">Somatotypical Helix</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1531846618\">RuanMei_Passive_SpeedUp</a>[<span class=\"descriptionNumberColor\">Somatotypical Helix</span>]",
       "stackType": "Refresh",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -101,7 +101,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Passive_TriggerBreakDamage",
+      "for": "<a class=\"gModGreen\" id=\"mod__894337794\">RuanMei_Passive_TriggerBreakDamage</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -165,7 +165,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Passive_ListenBeingBreakOrHit",
+      "for": "<a class=\"gModGreen\" id=\"mod__402849385\">RuanMei_Passive_ListenBeingBreakOrHit</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -248,7 +248,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "RuanMei_Passive_TriggerBreakDamage",
+                  "modifier": "<a class=\"gModGreen\" id=\"894337794\">RuanMei_Passive_TriggerBreakDamage</a>",
                   "valuePerStack": {
                     "MDF_BreakBaseDamage_set": {
                       "operator": "Variables[0] (_BreakBaseDamage) || RETURN",
@@ -284,7 +284,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "RuanMei_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1969840009\">RuanMei_Passive</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -295,7 +295,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "RuanMei_PassiveArea_PenetrateUP"
+              "modifier": "<a class=\"gModGreen\" id=\"806368907\">RuanMei_PassiveArea_PenetrateUP</a>"
             }
           ]
         },
@@ -310,14 +310,14 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "RuanMei_Ability02_Area"
+                "modifier": "<a class=\"gModGreen\" id=\"461506636\">RuanMei_Ability02_Area</a>"
               },
               "passed": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "LifeTime",
                   "variableName": "Skill02_EnergyBarCount",
-                  "modifierName": "RuanMei_Ability02_Area",
+                  "modifierName": "<a class=\"gModGreen\" id=\"461506636\">RuanMei_Ability02_Area</a>",
                   "multiplier": 1
                 }
               ],
@@ -376,7 +376,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"
               },
-              "modifier": "RuanMei_Passive_SpeedUp[<span class=\"descriptionNumberColor\">Somatotypical Helix</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1531846618\">RuanMei_Passive_SpeedUp</a>[<span class=\"descriptionNumberColor\">Somatotypical Helix</span>]"
             },
             {
               "name": "IF",
@@ -391,7 +391,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "RuanMei_BreakDamageAdded[<span class=\"descriptionNumberColor\">Inert Respiration</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-23155683\">RuanMei_BreakDamageAdded</a>[<span class=\"descriptionNumberColor\">Inert Respiration</span>]",
                   "valuePerStack": {
                     "Trace_PointB1_P1_BreakDamageAdded": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -427,7 +427,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "RuanMei_Passive_SpeedUp[<span class=\"descriptionNumberColor\">Somatotypical Helix</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1531846618\">RuanMei_Passive_SpeedUp</a>[<span class=\"descriptionNumberColor\">Somatotypical Helix</span>]"
                 },
                 {
                   "name": "IF",
@@ -442,7 +442,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "RuanMei_BreakDamageAdded[<span class=\"descriptionNumberColor\">Inert Respiration</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-23155683\">RuanMei_BreakDamageAdded</a>[<span class=\"descriptionNumberColor\">Inert Respiration</span>]",
                       "valuePerStack": {
                         "Trace_PointB1_P1_BreakDamageAdded": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -469,7 +469,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "RuanMei_AttackBreakEnemyAttackUp[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1641844295\">RuanMei_AttackBreakEnemyAttackUp</a>[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]",
                       "valuePerStack": {
                         "AbilityRank_Eidolon2_P1_AttackUpRatio": {
                           "operator": "Variables[0] (0.4) || RETURN",
@@ -509,7 +509,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "RuanMei_Eidolon4_PassiveListenBreak"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1703049476\">RuanMei_Eidolon4_PassiveListenBreak</a>"
                     }
                   ]
                 },
@@ -519,7 +519,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "RuanMei_Passive_ListenBeingBreakOrHit"
+                  "modifier": "<a class=\"gModGreen\" id=\"402849385\">RuanMei_Passive_ListenBeingBreakOrHit</a>"
                 }
               ]
             }
@@ -534,7 +534,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "RuanMei_Passive_SpeedUp[<span class=\"descriptionNumberColor\">Somatotypical Helix</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1531846618\">RuanMei_Passive_SpeedUp</a>[<span class=\"descriptionNumberColor\">Somatotypical Helix</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
@@ -543,7 +543,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "RuanMei_Passive_TriggerBreakDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"894337794\">RuanMei_Passive_TriggerBreakDamage</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -551,7 +551,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "RuanMei_BreakDamageAdded[<span class=\"descriptionNumberColor\">Inert Respiration</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-23155683\">RuanMei_BreakDamageAdded</a>[<span class=\"descriptionNumberColor\">Inert Respiration</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -559,7 +559,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "RuanMei_AttackBreakEnemyAttackUp[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1641844295\">RuanMei_AttackBreakEnemyAttackUp</a>[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]"
             }
           ]
         },
@@ -579,7 +579,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "RuanMei_AttackBreakEnemyAttackUp[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1641844295\">RuanMei_AttackBreakEnemyAttackUp</a>[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]",
                   "valuePerStack": {
                     "AbilityRank_Eidolon2_P1_AttackUpRatio": {
                       "operator": "Variables[0] (0.4) || RETURN",
@@ -606,7 +606,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "RuanMei_Eidolon4_PassiveStackProperty"
+                  "modifier": "<a class=\"gModGreen\" id=\"614915339\">RuanMei_Eidolon4_PassiveStackProperty</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -614,7 +614,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "RuanMei_Eidolon4_PassiveListenBreak"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1703049476\">RuanMei_Eidolon4_PassiveListenBreak</a>"
                 }
               ]
             },
@@ -631,7 +631,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "RuanMei_Tree03_BreakDamageAddedValueShow"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1212418869\">RuanMei_Tree03_BreakDamageAddedValueShow</a>"
                 }
               ],
               "failed": [
@@ -655,7 +655,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "RuanMei_Passive_ListenBeingBreakOrHit"
+              "modifier": "<a class=\"gModGreen\" id=\"402849385\">RuanMei_Passive_ListenBeingBreakOrHit</a>"
             }
           ],
           "priorityLevel": -80

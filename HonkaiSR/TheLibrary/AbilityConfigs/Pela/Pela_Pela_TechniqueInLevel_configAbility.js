@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Pela_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"106839122\">StageAbility_Maze_Pela_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Pela_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__106839122\">StageAbility_Maze_Pela_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -87,7 +87,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Pela_TechniqueUsage_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"607065154\">Pela_TechniqueUsage_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

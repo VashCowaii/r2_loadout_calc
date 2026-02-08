@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_BlackSwan_Trace02"
+      "modifier": "<a class=\"gModGreen\" id=\"1745857162\">M_BlackSwan_Trace02</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_Tree02_AddDOTFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -25,7 +25,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy",
+      "for": "<a class=\"gModGreen\" id=\"mod__-993235017\">M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "ListenBattleEventSkill"
@@ -82,7 +82,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_Tree02_AddDOTFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>"
                 }
               ]
             }
@@ -193,7 +193,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_Trace02_AddDotOnCreate",
+      "for": "<a class=\"gModGreen\" id=\"mod__-739683640\">M_BlackSwan_Trace02_AddDotOnCreate</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -259,7 +259,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                   "baseChance": {
                     "operator": "Variables[0] (0.65) || RETURN",
                     "displayLines": "0.65",
@@ -344,7 +344,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_Trace02",
+      "for": "<a class=\"gModGreen\" id=\"mod__1745857162\">M_BlackSwan_Trace02</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -366,7 +366,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy",
+                  "modifier": "<a class=\"gModGreen\" id=\"-993235017\">M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy</a>",
                   "valuePerStack": {
                     "_maxLimit": {
                       "operator": "Variables[0] (3) || RETURN",
@@ -453,7 +453,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "baseChance": {
                         "operator": "Variables[0] (0.65) || RETURN",
                         "displayLines": "0.65",
@@ -538,7 +538,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_BlackSwan_Trace02_AddDotOnCreate"
+                  "modifier": "<a class=\"gModGreen\" id=\"-739683640\">M_BlackSwan_Trace02_AddDotOnCreate</a>"
                 }
               ]
             }
@@ -552,7 +552,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "M_BlackSwan_Tree02_AddDOTFlag"
+                "modifier": "<a class=\"gModGreen\" id=\"375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>"
               },
               "passed": [
                 {
@@ -605,7 +605,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                   "baseChance": {
                     "operator": "Variables[0] (0.65) || RETURN",
                     "displayLines": "0.65",
@@ -688,7 +688,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifierName": "M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-993235017\">M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy</a>",
                       "adjustmentType": "+",
                       "variableName": "_count",
                       "value": 1
@@ -701,7 +701,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_Tree02_AddDOTFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>"
                 }
               ]
             }

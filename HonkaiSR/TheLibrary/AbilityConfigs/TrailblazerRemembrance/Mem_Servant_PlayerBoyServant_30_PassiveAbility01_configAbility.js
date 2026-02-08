@@ -20,7 +20,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_PlayerBoyServant_30_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-4188752\">Memosprite_PlayerBoyServant_30_Passive</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -28,7 +28,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Memosprite_PlayerBoyServant_30_Passive_Performance"
+      "modifier": "<a class=\"gModGreen\" id=\"1883418109\">Memosprite_PlayerBoyServant_30_Passive_Performance</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -36,7 +36,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "PlayerBoy_30_TeamSP[<span class=\"descriptionNumberColor\">Charge</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1274980234\">PlayerBoy_30_TeamSP</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "counter": {
         "operator": "Variables[0] (CurEnergy) || RETURN",
         "displayLines": "CurEnergy",
@@ -95,8 +95,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Memosprite_PlayerBoyServant_30_Eidolon1",
-          "referenceModifier": "MReference_Empty"
+          "modifier": "<a class=\"gModGreen\" id=\"585085986\">Memosprite_PlayerBoyServant_30_Eidolon1</a>",
+          "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
         }
       ]
     }
@@ -104,7 +104,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_PlayerBoyServant_30_BreakFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__145969573\">M_PlayerBoyServant_30_BreakFlag</a>",
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -136,7 +136,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_PlayerBoyServant_30_Passive_Performance",
+      "for": "<a class=\"gModGreen\" id=\"mod__1883418109\">Memosprite_PlayerBoyServant_30_Passive_Performance</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -172,7 +172,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_PlayerBoyServant_30_BreakFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"145969573\">M_PlayerBoyServant_30_BreakFlag</a>"
                     }
                   }
                 }
@@ -195,7 +195,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "M_PlayerBoyServant_30_BreakFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"145969573\">M_PlayerBoyServant_30_BreakFlag</a>"
             }
           ]
         },
@@ -264,7 +264,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_PlayerBoyServant_30_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-4188752\">Memosprite_PlayerBoyServant_30_Passive</a>",
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -363,7 +363,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "M_PlayerBoyServant_30_EnableAbility",
+                            "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>",
                             "invertCondition": true
                           }
                         ]
@@ -391,7 +391,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_PlayerBoyServant_30_EnableAbility"
+                      "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>"
                     }
                   ]
                 },
@@ -401,7 +401,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "PlayerBoy_30_TeamSP[<span class=\"descriptionNumberColor\">Charge</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1274980234\">PlayerBoy_30_TeamSP</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                   "value": {
                     "operator": "Variables[0] (CurEnergy) || RETURN",
                     "displayLines": "CurEnergy",
@@ -445,7 +445,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Memosprite_PlayerBoyServant_30_CritDmgUp[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1895406948\">Memosprite_PlayerBoyServant_30_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
                   "valuePerStack": {
                     "MDF_PropertyConvert": {
                       "operator": "Variables[0] (0.12) || RETURN",
@@ -479,7 +479,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
           },
-          "modifier": "Memosprite_PlayerBoyServant_30_CritDmgUp[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1895406948\">Memosprite_PlayerBoyServant_30_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyConvert": {

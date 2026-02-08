@@ -23,7 +23,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Minion04_Overheat[<span class=\"descriptionNumberColor\">Overloaded</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1434034112\">Enemy_AML_Minion04_Overheat</a>[<span class=\"descriptionNumberColor\">Overloaded</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -67,7 +67,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Minion04_Overheat_Effect"
+          "modifier": "<a class=\"gModGreen\" id=\"-1138460548\">Enemy_AML_Minion04_Overheat_Effect</a>"
         },
         {
           "name": "Shot Fired",
@@ -160,7 +160,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Enemy_AML_Minion04_Mark[<span class=\"descriptionNumberColor\">Detonated</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1102385587\">Enemy_AML_Minion04_Mark</a>[<span class=\"descriptionNumberColor\">Detonated</span>]",
               "valuePerStack": {
                 "Ability01_P2_MarkDamagePercentage": {
                   "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
@@ -180,7 +180,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_AML_Minion04_Overheat[<span class=\"descriptionNumberColor\">Overloaded</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1434034112\">Enemy_AML_Minion04_Overheat</a>[<span class=\"descriptionNumberColor\">Overloaded</span>]"
         },
         "Trigger: Attack End",
         "Trigger: Ability End"
@@ -227,13 +227,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_AML_Minion04_EffectController"
+          "modifier": "<a class=\"gModGreen\" id=\"-429048412\">Monster_AML_Minion04_EffectController</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_AML_Minion04_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-364867196\">Monster_AML_Minion04_Effect</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -242,7 +242,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_AML_Minion04_EffectController",
+          "for": "<a class=\"gModGreen\" id=\"mod__-429048412\">Monster_AML_Minion04_EffectController</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -255,7 +255,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "StanceBreakState"
+                    "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
                   },
                   "failed": [
                     {
@@ -264,7 +264,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_AML_Minion04_Effect"
+                      "modifier": "<a class=\"gModGreen\" id=\"-364867196\">Monster_AML_Minion04_Effect</a>"
                     }
                   ]
                 }
@@ -279,7 +279,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_AML_Minion04_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-364867196\">Monster_AML_Minion04_Effect</a>"
                 }
               ]
             },
@@ -292,7 +292,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_AML_Minion04_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-364867196\">Monster_AML_Minion04_Effect</a>"
                 }
               ]
             }
@@ -314,7 +314,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Minion04_Mark[<span class=\"descriptionNumberColor\">Detonated</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1102385587\">Enemy_AML_Minion04_Mark</a>[<span class=\"descriptionNumberColor\">Detonated</span>]",
           "counter": 4,
           "stackType": "Replace",
           "execute": [
@@ -371,7 +371,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Minion04_Overheat_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1138460548\">Enemy_AML_Minion04_Overheat_Effect</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -382,7 +382,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_AML_Minion04_Overheat[<span class=\"descriptionNumberColor\">Overloaded</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1434034112\">Enemy_AML_Minion04_Overheat</a>[<span class=\"descriptionNumberColor\">Overloaded</span>]",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -393,7 +393,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_AML_Minion04_Overheat_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1138460548\">Enemy_AML_Minion04_Overheat_Effect</a>"
                 }
               ]
             }

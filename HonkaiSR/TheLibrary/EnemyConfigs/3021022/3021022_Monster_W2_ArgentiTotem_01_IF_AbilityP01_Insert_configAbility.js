@@ -40,7 +40,7 @@ const configAbility = {
       "failed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "DeathCamera_First"
+          "functionName": "<a class=\"gTempYellow\" id=\"1173935247\">DeathCamera_First</a>"
         }
       ]
     },

@@ -73,7 +73,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
             "displayLines": "{[Skill03[2]]}",
@@ -109,13 +109,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_W2_Mecha03_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"1235993006\">Monster_W2_Mecha03_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
         },
         {
           "name": "IF",
           "conditions": {
             "name": "Compare: Variable",
-            "value1": "Enemy_W2_Mecha03_Overdrive_On[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
+            "value1": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
             "compareType": "=",
             "value2": 1,
             "valueType": "LifeTime"
@@ -127,7 +127,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W2_Mecha03_Overdrive_On[<span class=\"descriptionNumberColor\">Sanction Mode</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]"
             }
           ]
         },
@@ -234,7 +234,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate",
+          "modifier": "<a class=\"gModGreen\" id=\"618418511\">Enemy_W2_Mecha03_Overdrive_Accumulate</a>",
           "stackLimit": 3,
           "addStacksPerTrigger": 1
         },
@@ -244,7 +244,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate_Toast",
+          "modifier": "<a class=\"gModGreen\" id=\"1941111631\">Enemy_W2_Mecha03_Overdrive_Accumulate_Toast</a>",
           "stackLimit": 3,
           "addStacksPerTrigger": 1
         },
@@ -276,7 +276,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Standard_FatigueRatio[<span class=\"descriptionNumberColor\">Weaken</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
             "displayLines": "{[Skill01[3]]}",
@@ -346,7 +346,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Mecha03_Overdrive_DelayActive_Controller"
+          "modifier": "<a class=\"gModGreen\" id=\"-286697001\">Enemy_W2_Mecha03_Overdrive_DelayActive_Controller</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -354,7 +354,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate_Display3[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"255287671\">Enemy_W2_Mecha03_Overdrive_Accumulate_Display3</a>[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
         },
         {
           "name": "Define Custom Variable with Added Value",
@@ -461,7 +461,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate"
+          "modifier": "<a class=\"gModGreen\" id=\"618418511\">Enemy_W2_Mecha03_Overdrive_Accumulate</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -469,7 +469,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate_Toast"
+          "modifier": "<a class=\"gModGreen\" id=\"1941111631\">Enemy_W2_Mecha03_Overdrive_Accumulate_Toast</a>"
         },
         {
           "name": "IF",
@@ -503,7 +503,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W2_Mecha03_Overdrive_On_RLElite[<span class=\"descriptionNumberColor\">Sanction Mode: Punisher</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1974297403\">Monster_W2_Mecha03_Overdrive_On_RLElite</a>[<span class=\"descriptionNumberColor\">Sanction Mode: Punisher</span>]",
               "duration": 3,
               "valuePerStack": {
                 "MDF_SpeedUpRatio": {
@@ -524,7 +524,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W2_Mecha03_Overdrive_On[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
               "valuePerStack": {
                 "MDF_SpeedAddedValue": {
                   "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
@@ -668,7 +668,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
         },
         {
           "name": "IF",
@@ -711,7 +711,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Monster_W2_Mecha03_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1235993006\">Monster_W2_Mecha03_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
                 }
               ]
             }
@@ -740,7 +740,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Mecha03_Overdrive_Controller"
+          "modifier": "<a class=\"gModGreen\" id=\"1970609621\">Enemy_W2_Mecha03_Overdrive_Controller</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -748,7 +748,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Enemy_W2_Mecha03_Overdrive_Hint"
+          "modifier": "<a class=\"gModGreen\" id=\"516569012\">Enemy_W2_Mecha03_Overdrive_Hint</a>"
         }
       ],
       "references": []
@@ -766,7 +766,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "W2_Mecha03_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"1528696767\">W2_Mecha03_BattleScore1</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -802,7 +802,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_HideMonsterHUD"
+          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -810,7 +810,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_Standard_MuteHitFly"
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         }
       ],
       "references": []
@@ -827,7 +827,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "W2_Mecha03_BattleScore1",
+          "for": "<a class=\"gModGreen\" id=\"mod__1528696767\">W2_Mecha03_BattleScore1</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -878,7 +878,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Mecha03_Sign[<span class=\"descriptionNumberColor\">Lock On</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1235993006\">Monster_W2_Mecha03_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead",
@@ -896,7 +896,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W2_Mecha03_Overdrive_On_RLElite[<span class=\"descriptionNumberColor\">Sanction Mode: Punisher</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1974297403\">Monster_W2_Mecha03_Overdrive_On_RLElite</a>[<span class=\"descriptionNumberColor\">Sanction Mode: Punisher</span>]",
           "modifierFlags": [
             "MuteBreak"
           ],
@@ -944,7 +944,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMorePerTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -1011,7 +1011,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_On[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
           "modifierFlags": [
             "MuteBreak"
           ],
@@ -1059,7 +1059,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMorePerTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -1172,7 +1172,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_DelayActive",
+          "for": "<a class=\"gModGreen\" id=\"mod__1516939046\">Enemy_W2_Mecha03_Overdrive_DelayActive</a>",
           "execute": [
             {
               "eventTrigger": "When Losing Modifier [Owner]",
@@ -1248,7 +1248,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_DelayActive_Controller",
+          "for": "<a class=\"gModGreen\" id=\"mod__-286697001\">Enemy_W2_Mecha03_Overdrive_DelayActive_Controller</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier is Added [Owner]",
@@ -1283,7 +1283,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Mecha03_Overdrive_DelayActive"
+                      "modifier": "<a class=\"gModGreen\" id=\"1516939046\">Enemy_W2_Mecha03_Overdrive_DelayActive</a>"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -1302,7 +1302,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_Effect_Charge_3_3",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1803955171\">Enemy_W2_Mecha03_Overdrive_Effect_Charge_3_3</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1311,7 +1311,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_Effect_Charge_2_3",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1776964382\">Enemy_W2_Mecha03_Overdrive_Effect_Charge_2_3</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1320,7 +1320,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_Effect_Charge_1_3",
+          "for": "<a class=\"gModGreen\" id=\"mod__1714006491\">Enemy_W2_Mecha03_Overdrive_Effect_Charge_1_3</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1329,7 +1329,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_Alert",
+          "for": "<a class=\"gModGreen\" id=\"mod__1783236053\">Enemy_W2_Mecha03_Overdrive_Alert</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1341,7 +1341,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_Effect_Accumulated",
+          "for": "<a class=\"gModGreen\" id=\"mod__1959301541\">Enemy_W2_Mecha03_Overdrive_Effect_Accumulated</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1350,7 +1350,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_Effect_Accumulating",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1028841820\">Enemy_W2_Mecha03_Overdrive_Effect_Accumulating</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1359,7 +1359,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_Accumulate_Toast",
+          "for": "<a class=\"gModGreen\" id=\"mod__1941111631\">Enemy_W2_Mecha03_Overdrive_Accumulate_Toast</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1444,28 +1444,28 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_Accumulate_Display3[<span class=\"descriptionNumberColor\">Sanction Rate</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__255287671\">Enemy_W2_Mecha03_Overdrive_Accumulate_Display3</a>[<span class=\"descriptionNumberColor\">Sanction Rate</span>]",
           "description": "The current Sanction Rate has reached 100%.",
           "type": "Other",
           "statusName": "Sanction Rate"
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_Accumulate_Display2[<span class=\"descriptionNumberColor\">Sanction Rate</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__238510052\">Enemy_W2_Mecha03_Overdrive_Accumulate_Display2</a>[<span class=\"descriptionNumberColor\">Sanction Rate</span>]",
           "description": "The current Sanction Rate has reached 66%.",
           "type": "Other",
           "statusName": "Sanction Rate"
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_Accumulate_Display1[<span class=\"descriptionNumberColor\">Sanction Rate</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__288842909\">Enemy_W2_Mecha03_Overdrive_Accumulate_Display1</a>[<span class=\"descriptionNumberColor\">Sanction Rate</span>]",
           "description": "The current Sanction Rate has reached 33%.",
           "type": "Other",
           "statusName": "Sanction Rate"
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_Accumulate",
+          "for": "<a class=\"gModGreen\" id=\"mod__618418511\">Enemy_W2_Mecha03_Overdrive_Accumulate</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1555,7 +1555,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "OneMorePerTurn"
+                          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                         }
                       ]
                     },
@@ -1589,7 +1589,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Enemy_W2_Mecha03_Overdrive_DelayActive_Controller"
+                          "modifier": "<a class=\"gModGreen\" id=\"-286697001\">Enemy_W2_Mecha03_Overdrive_DelayActive_Controller</a>"
                         },
                         {
                           "name": "IF",
@@ -1658,7 +1658,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate_Display1[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"288842909\">Enemy_W2_Mecha03_Overdrive_Accumulate_Display1</a>[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
                     }
                   ]
                 },
@@ -1682,7 +1682,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate_Display1[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"288842909\">Enemy_W2_Mecha03_Overdrive_Accumulate_Display1</a>[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1690,7 +1690,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate_Display2[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"238510052\">Enemy_W2_Mecha03_Overdrive_Accumulate_Display2</a>[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
                     }
                   ]
                 },
@@ -1714,7 +1714,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate_Display2[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"238510052\">Enemy_W2_Mecha03_Overdrive_Accumulate_Display2</a>[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1722,7 +1722,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate_Display3[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"255287671\">Enemy_W2_Mecha03_Overdrive_Accumulate_Display3</a>[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -1766,7 +1766,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "OneMorePerTurn"
+                          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                         }
                       ]
                     },
@@ -1800,7 +1800,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Enemy_W2_Mecha03_Overdrive_DelayActive_Controller"
+                          "modifier": "<a class=\"gModGreen\" id=\"-286697001\">Enemy_W2_Mecha03_Overdrive_DelayActive_Controller</a>"
                         },
                         {
                           "name": "IF",
@@ -1853,7 +1853,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_Hint",
+          "for": "<a class=\"gModGreen\" id=\"mod__516569012\">Enemy_W2_Mecha03_Overdrive_Hint</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -1939,7 +1939,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W2_Mecha03_Overdrive_Controller",
+          "for": "<a class=\"gModGreen\" id=\"mod__1970609621\">Enemy_W2_Mecha03_Overdrive_Controller</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -2161,7 +2161,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate",
+                      "modifier": "<a class=\"gModGreen\" id=\"618418511\">Enemy_W2_Mecha03_Overdrive_Accumulate</a>",
                       "stackLimit": 3,
                       "addStacksPerTrigger": 1
                     },
@@ -2171,7 +2171,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Mecha03_Overdrive_Accumulate_Toast",
+                      "modifier": "<a class=\"gModGreen\" id=\"1941111631\">Enemy_W2_Mecha03_Overdrive_Accumulate_Toast</a>",
                       "stackLimit": 3,
                       "addStacksPerTrigger": 1
                     }

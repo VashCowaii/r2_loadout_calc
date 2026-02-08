@@ -30,13 +30,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sampo_Eidolon2"
+          "modifier": "<a class=\"gModGreen\" id=\"704207985\">Sampo_Eidolon2</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Sampo_Eidolon2",
+          "for": "<a class=\"gModGreen\" id=\"mod__704207985\">Sampo_Eidolon2</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -148,7 +148,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Hostile Entities(AOE)}}"
                           },
-                          "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || Variables[1] (_Tree01_LifeTimeAdd) || ADD || RETURN",
                             "displayLines": "(3 + _Tree01_LifeTimeAdd)",
@@ -219,13 +219,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Sampo_Tree03"
+          "modifier": "<a class=\"gModGreen\" id=\"759323043\">M_Sampo_Tree03</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Sampo_Tree03",
+          "for": "<a class=\"gModGreen\" id=\"mod__759323043\">M_Sampo_Tree03</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -286,7 +286,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Ultimate_ExtraSP",
+          "modifier": "<a class=\"gModGreen\" id=\"63874351\">M_Ultimate_ExtraSP</a>",
           "valuePerStack": {
             "MDF_AddValue": {
               "operator": "Variables[0] (10) || RETURN",
@@ -321,13 +321,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Sampo_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-591459784\">StageAbility_Maze_Sampo_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Sampo_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-591459784\">StageAbility_Maze_Sampo_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -409,13 +409,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sampo_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"670903354\">Sampo_Passive</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Sampo_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__670903354\">Sampo_Passive</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -482,7 +482,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target TAKING DMG}}"
                   },
-                  "modifier": "Standard_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || Variables[1] (_Tree01_LifeTimeAdd) || ADD || RETURN",
                     "displayLines": "(3 + _Tree01_LifeTimeAdd)",
@@ -600,7 +600,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Sampo_Ultimate_DOTTakenUp[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-2131103330\">Sampo_Ultimate_DOTTakenUp</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -720,7 +720,7 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Bounce_SelectTarget",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -1169,7 +1169,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Sampo_Ultimate_DOTTakenUp[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2131103330\">Sampo_Ultimate_DOTTakenUp</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {

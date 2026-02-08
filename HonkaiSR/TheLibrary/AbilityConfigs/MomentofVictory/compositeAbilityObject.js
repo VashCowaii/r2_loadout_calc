@@ -39,13 +39,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23005_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1011066549\">LC_23005_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23005_DefenceAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1595594633\">LC_23005_DefenceAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -74,7 +74,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23005_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1011066549\">LC_23005_Main</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -85,7 +85,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23005_DefenceAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1595594633\">LC_23005_DefenceAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": 0
                   }
@@ -117,7 +117,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23005_DefenceAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1595594633\">LC_23005_DefenceAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": 0
                   }
@@ -133,7 +133,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23005_DefenceAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1595594633\">LC_23005_DefenceAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.24) || RETURN",

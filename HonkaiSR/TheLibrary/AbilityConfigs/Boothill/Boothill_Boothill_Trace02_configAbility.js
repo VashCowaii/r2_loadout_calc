@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Boothill_Trace02"
+      "modifier": "<a class=\"gModGreen\" id=\"-1030918601\">M_Boothill_Trace02</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Boothill_Trace02",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1030918601\">M_Boothill_Trace02</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -32,7 +32,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Boothill_DuelState[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1542670262\">Boothill_DuelState</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                   },
                   {
                     "name": "OR",
@@ -43,7 +43,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -51,7 +51,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target's Source Owner}}"
                         },
-                        "modifier": "Boothill_DuelTarget[<span class=\"descriptionNumberColor\">Standoff</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-476363000\">Boothill_DuelTarget</a>[<span class=\"descriptionNumberColor\">Standoff</span>]"
                       }
                     ],
                     "invertCondition": true

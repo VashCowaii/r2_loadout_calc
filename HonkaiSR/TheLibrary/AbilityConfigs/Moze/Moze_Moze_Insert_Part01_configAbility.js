@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Moze_InInsert_Tag"
+      "modifier": "<a class=\"gModGreen\" id=\"-59329108\">Moze_InInsert_Tag</a>"
     },
     {
       "name": "UI Display Event",
@@ -22,11 +22,11 @@ const configAbility = {
       "functionList": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Moze_Insert_Part01_Effect"
+          "functionName": "<a class=\"gTempYellow\" id=\"1956058044\">Moze_Insert_Part01_Effect</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Moze_Insert_Part01_LoopDamage",
+          "functionName": "<a class=\"gTempYellow\" id=\"854740786\">Moze_Insert_Part01_LoopDamage</a>",
           "baseDelay": {
             "operator": "Variables[0] (MOZE_OBJECT_UNUSED_2) || RETURN",
             "displayLines": "MOZE_OBJECT_UNUSED_2",
@@ -145,7 +145,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Moze_Ability02_InShadowModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -153,7 +153,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
         }
       ]
     },
@@ -173,7 +173,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Moze_Point01_CD[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"707542368\">Moze_Point01_CD</a>[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
             "invertCondition": true
           },
           "passed": [
@@ -183,7 +183,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Moze_Point01_CD[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"707542368\">Moze_Point01_CD</a>[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -253,7 +253,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Moze_Ability02_InShadowModifier"
+        "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
       }
     },
     {
@@ -262,7 +262,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Moze_InInsert_Tag"
+      "modifier": "<a class=\"gModGreen\" id=\"-59329108\">Moze_InInsert_Tag</a>"
     },
     {
       "name": "IF",
@@ -342,7 +342,7 @@ const configAbility = {
   "functions": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Moze_Insert_Part01_LoopDamage",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__854740786\">Moze_Insert_Part01_LoopDamage</a>",
       "parse": [
         {
           "name": "ATK Scaling DMG",
@@ -378,7 +378,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Moze_Insert_Part01_Effect",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1956058044\">Moze_Insert_Part01_Effect</a>",
       "parse": []
     }
   ],

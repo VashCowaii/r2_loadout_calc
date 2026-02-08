@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Acheron_AbilityChange01"
+      "modifier": "<a class=\"gModGreen\" id=\"-401175728\">Acheron_AbilityChange01</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Acheron_AbilityChange02"
+      "modifier": "<a class=\"gModGreen\" id=\"-350842871\">Acheron_AbilityChange02</a>"
     },
     {
       "name": "IF",
@@ -29,7 +29,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Acheron_HitFlower"
+          "functionName": "<a class=\"gTempYellow\" id=\"77299136\">Acheron_HitFlower</a>"
         }
       ]
     },
@@ -189,12 +189,12 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
       },
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Acheron_TiggerFlower"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1252175641\">Acheron_TiggerFlower</a>"
         }
       ]
     },
@@ -241,7 +241,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
           },
           "ifTargetFound": [
             {
@@ -253,7 +253,7 @@ const configAbility = {
               "max": 1,
               "sortOperator": {
                 "name": "Sort by Modifier Variable",
-                "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
                 "value": "MDF_Count"
               },
               "includeDying": true,

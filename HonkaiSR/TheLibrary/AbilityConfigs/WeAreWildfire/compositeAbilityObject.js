@@ -18,13 +18,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_21023_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"1530442925\">LC_21023_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_21023_Sub[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-531007870\">LC_21023_Sub</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -57,7 +57,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_21023_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__1530442925\">LC_21023_Main</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -113,7 +113,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
                       },
-                      "modifier": "LC_21023_Sub[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-531007870\">LC_21023_Sub</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
                       "duration": {
                         "operator": "Variables[0] (5) || RETURN",
                         "displayLines": "5",

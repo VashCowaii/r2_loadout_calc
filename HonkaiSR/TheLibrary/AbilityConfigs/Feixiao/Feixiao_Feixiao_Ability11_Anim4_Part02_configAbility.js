@@ -6,19 +6,19 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "Feixiao_Combo1_CostSPBeforeDamage"
+      "functionName": "<a class=\"gTempYellow\" id=\"69209893\">Feixiao_Combo1_CostSPBeforeDamage</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Feixiao_Combo1_DealSubDamage"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1161841910\">Feixiao_Combo1_DealSubDamage</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Feixiao_Combo1_DealDamage"
+      "functionName": "<a class=\"gTempYellow\" id=\"-14625690\">Feixiao_Combo1_DealDamage</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Feixiao_Combo1_AfterDamageCheck"
+      "functionName": "<a class=\"gTempYellow\" id=\"1394849956\">Feixiao_Combo1_AfterDamageCheck</a>"
     },
     {
       "name": "IF",
@@ -28,7 +28,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Feixiao_ComboPerformFinish"
+      "functionName": "<a class=\"gTempYellow\" id=\"342687242\">Feixiao_ComboPerformFinish</a>"
     }
   ],
   "references": []

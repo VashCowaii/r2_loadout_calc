@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Yunli_InsertAbility1",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-450811699\">Yunli_InsertAbility1</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -53,7 +53,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Yunli_InsertAbility2",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-501144556\">Yunli_InsertAbility2</a>",
       "parse": [
         {
           "name": "Find New Target",

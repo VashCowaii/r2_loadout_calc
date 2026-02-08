@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Mar_7th_10_Trace02"
+      "modifier": "<a class=\"gModGreen\" id=\"529644567\">M_Mar_7th_10_Trace02</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Mar_7th_10_Trace02",
+      "for": "<a class=\"gModGreen\" id=\"mod__529644567\">M_Mar_7th_10_Trace02</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -39,7 +39,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
                     }
                   },
                   {
@@ -77,7 +77,7 @@ const configAbility = {
                   "flagName": [
                     "ForceStanceDamage"
                   ],
-                  "modifierName": "M_Mar_7th_10_Trace02"
+                  "modifierName": "<a class=\"gModGreen\" id=\"529644567\">M_Mar_7th_10_Trace02</a>"
                 },
                 {
                   "name": "Adjust Target Stats",
@@ -105,7 +105,7 @@ const configAbility = {
               "flagName": [
                 "ForceStanceDamage"
               ],
-              "modifierName": "M_Mar_7th_10_Trace02"
+              "modifierName": "<a class=\"gModGreen\" id=\"529644567\">M_Mar_7th_10_Trace02</a>"
             }
           ]
         },
@@ -116,7 +116,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
               }
             }
           ]
@@ -138,7 +138,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
                 },
                 "invertCondition": true
               }

@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHeng_Eidolon4_Trigger"
+          "modifier": "<a class=\"gModGreen\" id=\"1201134558\">DanHeng_Eidolon4_Trigger</a>"
         }
       ]
     },
@@ -109,7 +109,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHeng_Eidolon4_Trigger"
+          "modifier": "<a class=\"gModGreen\" id=\"1201134558\">DanHeng_Eidolon4_Trigger</a>"
         }
       ]
     },
@@ -119,7 +119,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "DanHeng_Eidolon4_Trigger",
+      "for": "<a class=\"gModGreen\" id=\"mod__1201134558\">DanHeng_Eidolon4_Trigger</a>",
       "execute": [
         {
           "eventTrigger": "Got a Kill [Owner]",

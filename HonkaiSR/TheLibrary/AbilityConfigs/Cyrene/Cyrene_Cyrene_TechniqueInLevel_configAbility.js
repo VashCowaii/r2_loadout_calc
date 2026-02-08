@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "StageAbility_Maze_Cyrene_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"2066083865\">StageAbility_Maze_Cyrene_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "StageAbility_Maze_Cyrene_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__2066083865\">StageAbility_Maze_Cyrene_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -44,7 +44,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Cyrene_Ability02_Bonus_Main[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1356425425\">Cyrene_Ability02_Bonus_Main</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
                   "duration": {
                     "operator": "Variables[0] (FieldLifeTime) || RETURN",
                     "displayLines": "FieldLifeTime",

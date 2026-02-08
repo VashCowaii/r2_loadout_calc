@@ -21,7 +21,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yanqing_PassiveAbility_Modifier",
+      "modifier": "<a class=\"gModGreen\" id=\"1507574257\">Yanqing_PassiveAbility_Modifier</a>",
       "valuePerStack": {
         "MDF_CriticalBoost": {
           "operator": "Variables[0] (0.2) || RETURN",

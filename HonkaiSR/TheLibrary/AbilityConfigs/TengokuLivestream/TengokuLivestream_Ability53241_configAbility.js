@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_324_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1577177113\">Relic_324_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_324_Sub[<span class=\"descriptionNumberColor\">Tengoku@Livestream</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__25554174\">Relic_324_Sub</a>[<span class=\"descriptionNumberColor\">Tengoku@Livestream</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -48,7 +48,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_324_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1577177113\">Relic_324_Main</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -150,7 +150,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Relic_324_Sub[<span class=\"descriptionNumberColor\">Tengoku@Livestream</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"25554174\">Relic_324_Sub</a>[<span class=\"descriptionNumberColor\">Tengoku@Livestream</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",

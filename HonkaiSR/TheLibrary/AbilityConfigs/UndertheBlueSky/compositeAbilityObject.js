@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_21019_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-1177230606\">LC_21019_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_21019_Sub[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1639337319\">LC_21019_Sub</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -72,7 +72,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_21019_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1177230606\">LC_21019_Main</a>",
           "execute": [
             {
               "eventTrigger": "Got a Kill [Owner]",
@@ -83,7 +83,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_21019_Sub[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1639337319\">LC_21019_Sub</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

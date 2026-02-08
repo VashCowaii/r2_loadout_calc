@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Technique_Yanqing_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"995164865\">Technique_Yanqing_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Yanqing_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">The One True Sword</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__704251526\">Yanqing_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">The One True Sword</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -71,7 +71,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Technique_Yanqing_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__995164865\">Technique_Yanqing_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -91,7 +91,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Yanqing_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">The One True Sword</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"704251526\">Yanqing_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">The One True Sword</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

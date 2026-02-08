@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Monster_W2_Abomi02_Mark[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]"
     },
     {
       "name": "Define Custom Variable with Added Value",
@@ -41,7 +41,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Abomi02_TargetList[<span class=\"descriptionNumberColor\">Core Formation</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"1723051927\">Monster_W2_Abomi02_TargetList</a>[<span class=\"descriptionNumberColor\">Core Formation</span>]"
     },
     "Trigger: Ability End"
   ],

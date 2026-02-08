@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Anaxa_Trace03"
+      "modifier": "<a class=\"gModGreen\" id=\"-1452029121\">Anaxa_Trace03</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Anaxa_Trace03",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1452029121\">Anaxa_Trace03</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",

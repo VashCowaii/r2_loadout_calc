@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_Part3_HitEffect"
+      "modifier": "<a class=\"gModGreen\" id=\"-18489352\">Enemy_AML_Boss_Part3_HitEffect</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,13 +19,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_Part3_OnBreakRecoverSoundEffect"
+      "modifier": "<a class=\"gModGreen\" id=\"37141670\">Enemy_AML_Boss_Part3_OnBreakRecoverSoundEffect</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part3_OnBreakRecoverSoundEffect",
+      "for": "<a class=\"gModGreen\" id=\"mod__37141670\">Enemy_AML_Boss_Part3_OnBreakRecoverSoundEffect</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -61,7 +61,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part3_HitEffect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-18489352\">Enemy_AML_Boss_Part3_HitEffect</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage End [Owner]: Hit",

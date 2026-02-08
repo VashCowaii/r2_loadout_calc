@@ -20,7 +20,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Argenti_IF_EX02_StateController"
+          "modifier": "<a class=\"gModGreen\" id=\"1214357507\">Enemy_W2_Argenti_IF_EX02_StateController</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -28,7 +28,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W2_Argenti_IF_EX_PowerController"
+          "modifier": "<a class=\"gModGreen\" id=\"1877378713\">Enemy_W2_Argenti_IF_EX_PowerController</a>"
         }
       ]
     },
@@ -38,7 +38,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W2_Argenti_IF_AccumulatePower"
+      "modifier": "<a class=\"gModGreen\" id=\"-274903726\">Monster_W2_Argenti_IF_AccumulatePower</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -46,13 +46,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MModifier_W2_Argenti_IF_BattleAlert"
+      "modifier": "<a class=\"gModGreen\" id=\"-28298755\">MModifier_W2_Argenti_IF_BattleAlert</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Argenti_IF_EX02_UltraState[<span class=\"descriptionNumberColor\">Medal of Elegance</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1777994335\">Enemy_W2_Argenti_IF_EX02_UltraState</a>[<span class=\"descriptionNumberColor\">Medal of Elegance</span>]",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -109,7 +109,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Monster_W2_Argenti_IF_FlowerPower[<span class=\"descriptionNumberColor\">Wreath</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1546767870\">Monster_W2_Argenti_IF_FlowerPower</a>[<span class=\"descriptionNumberColor\">Wreath</span>]"
               },
               "passed": [
                 {
@@ -157,7 +157,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Argenti_IF_EX02_AttackState[<span class=\"descriptionNumberColor\">Golden Harvest</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__12795323\">Enemy_W2_Argenti_IF_EX02_AttackState</a>[<span class=\"descriptionNumberColor\">Golden Harvest</span>]",
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
@@ -324,7 +324,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Argenti_IF_EX02_DefendState[<span class=\"descriptionNumberColor\">Chivalric Wrath</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__529665307\">Enemy_W2_Argenti_IF_EX02_DefendState</a>[<span class=\"descriptionNumberColor\">Chivalric Wrath</span>]",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -460,7 +460,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W2_Argenti_IF_EX02_StateController",
+      "for": "<a class=\"gModGreen\" id=\"mod__1214357507\">Enemy_W2_Argenti_IF_EX02_StateController</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -480,7 +480,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W2_Argenti_IF_EX02_DefendState[<span class=\"descriptionNumberColor\">Chivalric Wrath</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"529665307\">Enemy_W2_Argenti_IF_EX02_DefendState</a>[<span class=\"descriptionNumberColor\">Chivalric Wrath</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -490,7 +490,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Argenti_IF_EX02_AttackState[<span class=\"descriptionNumberColor\">Golden Harvest</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"12795323\">Enemy_W2_Argenti_IF_EX02_AttackState</a>[<span class=\"descriptionNumberColor\">Golden Harvest</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -498,7 +498,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Argenti_IF_EX02_UltraState[<span class=\"descriptionNumberColor\">Medal of Elegance</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1777994335\">Enemy_W2_Argenti_IF_EX02_UltraState</a>[<span class=\"descriptionNumberColor\">Medal of Elegance</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -506,7 +506,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Argenti_IF_EX02_DefendState[<span class=\"descriptionNumberColor\">Chivalric Wrath</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"529665307\">Enemy_W2_Argenti_IF_EX02_DefendState</a>[<span class=\"descriptionNumberColor\">Chivalric Wrath</span>]"
                     }
                   ]
                 }
@@ -527,7 +527,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W2_Argenti_IF_EX02_AttackState[<span class=\"descriptionNumberColor\">Golden Harvest</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"12795323\">Enemy_W2_Argenti_IF_EX02_AttackState</a>[<span class=\"descriptionNumberColor\">Golden Harvest</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -537,7 +537,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Argenti_IF_EX02_DefendState[<span class=\"descriptionNumberColor\">Chivalric Wrath</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"529665307\">Enemy_W2_Argenti_IF_EX02_DefendState</a>[<span class=\"descriptionNumberColor\">Chivalric Wrath</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -545,7 +545,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Argenti_IF_EX02_UltraState[<span class=\"descriptionNumberColor\">Medal of Elegance</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1777994335\">Enemy_W2_Argenti_IF_EX02_UltraState</a>[<span class=\"descriptionNumberColor\">Medal of Elegance</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -553,7 +553,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Argenti_IF_EX02_AttackState[<span class=\"descriptionNumberColor\">Golden Harvest</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"12795323\">Enemy_W2_Argenti_IF_EX02_AttackState</a>[<span class=\"descriptionNumberColor\">Golden Harvest</span>]"
                     }
                   ]
                 }
@@ -574,7 +574,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Enemy_W2_Argenti_IF_EX02_UltraState[<span class=\"descriptionNumberColor\">Medal of Elegance</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1777994335\">Enemy_W2_Argenti_IF_EX02_UltraState</a>[<span class=\"descriptionNumberColor\">Medal of Elegance</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -584,7 +584,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Argenti_IF_EX02_DefendState[<span class=\"descriptionNumberColor\">Chivalric Wrath</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"529665307\">Enemy_W2_Argenti_IF_EX02_DefendState</a>[<span class=\"descriptionNumberColor\">Chivalric Wrath</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -592,7 +592,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Argenti_IF_EX02_AttackState[<span class=\"descriptionNumberColor\">Golden Harvest</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"12795323\">Enemy_W2_Argenti_IF_EX02_AttackState</a>[<span class=\"descriptionNumberColor\">Golden Harvest</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -600,7 +600,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_Argenti_IF_EX02_UltraState[<span class=\"descriptionNumberColor\">Medal of Elegance</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1777994335\">Enemy_W2_Argenti_IF_EX02_UltraState</a>[<span class=\"descriptionNumberColor\">Medal of Elegance</span>]"
                     }
                   ]
                 }
@@ -619,7 +619,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W2_Argenti_IF_EX02_DefendState[<span class=\"descriptionNumberColor\">Chivalric Wrath</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"529665307\">Enemy_W2_Argenti_IF_EX02_DefendState</a>[<span class=\"descriptionNumberColor\">Chivalric Wrath</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -627,7 +627,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W2_Argenti_IF_EX02_AttackState[<span class=\"descriptionNumberColor\">Golden Harvest</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"12795323\">Enemy_W2_Argenti_IF_EX02_AttackState</a>[<span class=\"descriptionNumberColor\">Golden Harvest</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -635,7 +635,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_W2_Argenti_IF_EX02_UltraState[<span class=\"descriptionNumberColor\">Medal of Elegance</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1777994335\">Enemy_W2_Argenti_IF_EX02_UltraState</a>[<span class=\"descriptionNumberColor\">Medal of Elegance</span>]"
                 }
               ]
             }

@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Asta_Passive",
+      "modifier": "<a class=\"gModGreen\" id=\"-89645956\">M_Asta_Passive</a>",
       "valuePerStack": {
         "MDF_CostLayer": {
           "operator": "Variables[0] (3) || RETURN",
@@ -60,7 +60,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Asta_Eidolon2Flag"
+      "modifier": "<a class=\"gModGreen\" id=\"1558109509\">Asta_Eidolon2Flag</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -68,7 +68,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Asta_AbilityPreShowModifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1587956839\">Asta_AbilityPreShowModifier</a>"
     },
     {
       "name": "IF",
@@ -88,7 +88,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Asta_AbilityPreShowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1587956839\">Asta_AbilityPreShowModifier</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [],
@@ -108,7 +108,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "Asta_Ultimate_SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1589111502\">Asta_Ultimate_SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "invertCondition": true
         },
         "delayAdvancePreview": {
@@ -119,7 +119,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Asta_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-89645956\">M_Asta_Passive</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -132,7 +132,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Asta_Eidolon2Flag"
+                "modifier": "<a class=\"gModGreen\" id=\"1558109509\">Asta_Eidolon2Flag</a>"
               },
               "failed": [
                 {
@@ -204,7 +204,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Asta_Passive_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-2135184996\">Asta_Passive_SPRatioUp</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
                         }
                       ]
                     },
@@ -214,7 +214,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
                           "operator": "Variables[0] (0.14) || RETURN",
@@ -266,7 +266,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                       "value": 0
                     },
                     {
@@ -291,7 +291,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
                     }
                   ]
                 }
@@ -372,7 +372,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
                           "operator": "Variables[0] (0.14) || RETURN",
@@ -468,7 +468,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
                           "operator": "Variables[0] (0.14) || RETURN",

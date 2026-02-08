@@ -11,20 +11,20 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_034"
+      "modifier": "<a class=\"gModGreen\" id=\"-385346531\">MStrongChallengeEX_Talent_StageAbility_LE_034</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_034",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1074851259\">MStrongChallengeEX_Talent_StageAbility_PLY_034</a>",
       "execute": [
         {
           "eventTrigger": "Caused a Limbo/DeathState [Owner]",
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "ReduceActionDelay",
+              "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -67,7 +67,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_034",
+      "for": "<a class=\"gModGreen\" id=\"mod__-385346531\">MStrongChallengeEX_Talent_StageAbility_LE_034</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -94,7 +94,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_034",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1074851259\">MStrongChallengeEX_Talent_StageAbility_PLY_034</a>",
                   "valuePerStack": {
                     "MDF_QuantumDamageAddedRatio": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

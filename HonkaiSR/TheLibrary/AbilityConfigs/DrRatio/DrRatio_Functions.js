@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Dr_Ratio_InsertAbility",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1506583423\">Dr_Ratio_InsertAbility</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -27,7 +27,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "Dr_Ratio_Insert_Flag"
+            "modifier": "<a class=\"gModGreen\" id=\"-253275642\">Dr_Ratio_Insert_Flag</a>"
           },
           "ifTargetFound": [
             {

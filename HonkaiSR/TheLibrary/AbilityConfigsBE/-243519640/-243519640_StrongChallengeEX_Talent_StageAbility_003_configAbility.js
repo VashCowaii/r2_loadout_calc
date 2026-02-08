@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_003"
+      "modifier": "<a class=\"gModGreen\" id=\"1779113415\">MStrongChallengeEX_Talent_StageAbility_LE_003</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_BOSS_003",
+      "for": "<a class=\"gModGreen\" id=\"mod__1800103157\">MStrongChallengeEX_Talent_StageAbility_BOSS_003</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -51,7 +51,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_003",
+      "for": "<a class=\"gModGreen\" id=\"mod__1779113415\">MStrongChallengeEX_Talent_StageAbility_LE_003</a>",
       "execute": [
         {
           "eventTrigger": "Weakness Break [Anyone]",
@@ -96,7 +96,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_BOSS_003",
+                  "modifier": "<a class=\"gModGreen\" id=\"1800103157\">MStrongChallengeEX_Talent_StageAbility_BOSS_003</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_2) || RETURN",

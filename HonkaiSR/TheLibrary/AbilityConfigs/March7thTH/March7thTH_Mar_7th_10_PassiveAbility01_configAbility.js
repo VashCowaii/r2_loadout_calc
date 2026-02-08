@@ -21,7 +21,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Mar_7th_10_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"1250541414\">Mar_7th_10_Passive</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -97,7 +97,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Mar_7th_10_Energy[<span class=\"descriptionNumberColor\">Charge</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-388995203\">Mar_7th_10_Energy</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "counter": {
         "operator": "Variables[0] (EnergyBar_CurEnergy) || RETURN",
         "displayLines": "EnergyBar_CurEnergy",
@@ -152,7 +152,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_10_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__1250541414\">Mar_7th_10_Passive</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
@@ -171,7 +171,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Mar_7th_10_Enhance"
+                    "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>"
                   },
                   {
                     "name": "Compare: Variable",
@@ -262,7 +262,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Mar_7th_10_Enhance"
+                    "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>"
                   },
                   "passed": [
                     {
@@ -304,7 +304,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Mar_7th_10_GetEnhance"
+              "functionName": "<a class=\"gTempYellow\" id=\"1630889366\">Mar_7th_10_GetEnhance</a>"
             }
           ],
           "priorityLevel": 999999
@@ -314,7 +314,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Mar_7th_10_GetEnhance"
+              "functionName": "<a class=\"gTempYellow\" id=\"1630889366\">Mar_7th_10_GetEnhance</a>"
             }
           ]
         },
@@ -323,7 +323,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Mar_7th_10_GetEnhance"
+              "functionName": "<a class=\"gTempYellow\" id=\"1630889366\">Mar_7th_10_GetEnhance</a>"
             }
           ]
         },
@@ -332,7 +332,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Mar_7th_10_GetEnhance"
+              "functionName": "<a class=\"gTempYellow\" id=\"1630889366\">Mar_7th_10_GetEnhance</a>"
             }
           ]
         },
@@ -382,7 +382,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Mar_7th_10_Enhance"
+                    "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>"
                   },
                   "passed": [
                     {
@@ -438,7 +438,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "Mar_7th_10_Energy[<span class=\"descriptionNumberColor\">Charge</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-388995203\">Mar_7th_10_Energy</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
                   "value": {
                     "operator": "Variables[0] (EnergyBar_CurEnergy) || RETURN",
                     "displayLines": "EnergyBar_CurEnergy",
@@ -467,7 +467,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Mar_7th_10_Enhance"
+                    "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>"
                   },
                   "passed": [
                     {
@@ -490,7 +490,7 @@ const configAbility = {
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Mar_7th_10_GetEnhance",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1630889366\">Mar_7th_10_GetEnhance</a>",
           "parse": [
             {
               "name": "IF",
@@ -514,7 +514,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Mar_7th_10_Enhance",
+                  "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (0.8) || RETURN",

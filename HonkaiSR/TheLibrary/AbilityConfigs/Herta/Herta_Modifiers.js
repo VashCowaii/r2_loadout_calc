@@ -10,13 +10,13 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Herta_Passive_Flag",
+      "for": "<a class=\"gModGreen\" id=\"mod__1076207439\">Herta_Passive_Flag</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Herta_Passive_ATK",
+      "for": "<a class=\"gModGreen\" id=\"mod__-256958111\">Herta_Passive_ATK</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Anyone]",
@@ -52,7 +52,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Herta_Passive_Flag",
+                    "modifier": "<a class=\"gModGreen\" id=\"1076207439\">Herta_Passive_Flag</a>",
                     "invertCondition": true
                   }
                 ]
@@ -124,7 +124,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Herta_Passive_Charge",
+      "for": "<a class=\"gModGreen\" id=\"mod__-677386583\">Herta_Passive_Charge</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

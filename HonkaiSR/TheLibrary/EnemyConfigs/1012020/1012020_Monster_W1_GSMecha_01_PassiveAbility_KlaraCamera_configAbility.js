@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_GSMecha_01_PassiveAbility_KlaraEnterBattle"
+      "modifier": "<a class=\"gModGreen\" id=\"-498979834\">Monster_W1_GSMecha_01_PassiveAbility_KlaraEnterBattle</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_GSMecha_01_PassiveAbility_KlaraEnterBattle",
+      "for": "<a class=\"gModGreen\" id=\"mod__-498979834\">Monster_W1_GSMecha_01_PassiveAbility_KlaraEnterBattle</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

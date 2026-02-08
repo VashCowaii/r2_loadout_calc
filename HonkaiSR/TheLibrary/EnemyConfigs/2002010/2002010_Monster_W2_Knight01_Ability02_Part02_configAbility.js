@@ -41,7 +41,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Monster_W2_Knight01_Formation[<span class=\"descriptionNumberColor\">undefined</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1416805079\">Monster_W2_Knight01_Formation</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
               "valuePerStack": {
                 "Modifier_DefenceAddedRatio": {
                   "operator": "Variables[0] (UnusedUnderThisBase_65) || RETURN",

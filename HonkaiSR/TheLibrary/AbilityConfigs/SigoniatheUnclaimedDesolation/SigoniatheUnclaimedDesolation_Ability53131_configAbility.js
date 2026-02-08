@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Relic_313_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1966479815\">Relic_313_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Relic_313_CriticalDamage[<span class=\"descriptionNumberColor\">Sigonia, the Unclaimed Desolation</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1445057094\">Relic_313_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Sigonia, the Unclaimed Desolation</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -61,7 +61,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_313_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__1869246844\">Relic_313_Sub</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -78,14 +78,14 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Relic_313_CriticalDamage[<span class=\"descriptionNumberColor\">Sigonia, the Unclaimed Desolation</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1445057094\">Relic_313_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Sigonia, the Unclaimed Desolation</span>]"
               },
               "passed": [
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "value1": "Relic_313_CriticalDamage[<span class=\"descriptionNumberColor\">Sigonia, the Unclaimed Desolation</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"-1445057094\">Relic_313_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Sigonia, the Unclaimed Desolation</span>]",
                     "compareType": "<",
                     "value2": {
                       "operator": "Variables[0] (10) || RETURN",
@@ -104,7 +104,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Relic_313_CriticalDamage[<span class=\"descriptionNumberColor\">Sigonia, the Unclaimed Desolation</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1445057094\">Relic_313_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Sigonia, the Unclaimed Desolation</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (10) || RETURN",
                         "displayLines": "10",
@@ -124,7 +124,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Relic_313_CriticalDamage[<span class=\"descriptionNumberColor\">Sigonia, the Unclaimed Desolation</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1445057094\">Relic_313_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Sigonia, the Unclaimed Desolation</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (10) || RETURN",
                     "displayLines": "10",
@@ -142,7 +142,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Relic_313_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1966479815\">Relic_313_Main</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -167,7 +167,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Relic_313_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"1869246844\">Relic_313_Sub</a>"
                 }
               ]
             }
@@ -182,7 +182,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
               },
-              "modifier": "Relic_313_Sub"
+              "modifier": "<a class=\"gModGreen\" id=\"1869246844\">Relic_313_Sub</a>"
             }
           ],
           "priorityLevel": -80

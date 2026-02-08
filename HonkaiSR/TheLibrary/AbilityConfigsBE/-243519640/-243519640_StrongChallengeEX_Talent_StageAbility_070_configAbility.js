@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_070"
+      "modifier": "<a class=\"gModGreen\" id=\"-585986411\">MStrongChallengeEX_Talent_StageAbility_LE_070</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_TGT_070",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2077814055\">MStrongChallengeEX_Talent_StageAbility_TGT_070</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -45,7 +45,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_070",
+      "for": "<a class=\"gModGreen\" id=\"mod__1408824733\">MStrongChallengeEX_Talent_StageAbility_PLY_070</a>",
       "execute": [
         {
           "eventTrigger": "Caused Weakness Break [Owner]",
@@ -56,7 +56,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_070",
+              "modifier": "<a class=\"gModGreen\" id=\"-2077814055\">MStrongChallengeEX_Talent_StageAbility_TGT_070</a>",
               "duration": {
                 "operator": "Variables[0] (MDF_TGT_LifeTime) || RETURN",
                 "displayLines": "MDF_TGT_LifeTime",
@@ -82,7 +82,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_EMY_070",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1167978341\">MStrongChallengeEX_Talent_StageAbility_EMY_070</a>",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -118,7 +118,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_070",
+      "for": "<a class=\"gModGreen\" id=\"mod__-585986411\">MStrongChallengeEX_Talent_StageAbility_LE_070</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -145,7 +145,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}} + {{Enemy Team Unselectables}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_070",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1167978341\">MStrongChallengeEX_Talent_StageAbility_EMY_070</a>",
                   "valuePerStack": {
                     "MDF_Element_DamageTakenRatio": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -181,7 +181,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_070",
+                  "modifier": "<a class=\"gModGreen\" id=\"1408824733\">MStrongChallengeEX_Talent_StageAbility_PLY_070</a>",
                   "valuePerStack": {
                     "MDF_TGT_SpeedAddedRatio": {
                       "operator": "Variables[0] (#ADF_2) || RETURN",

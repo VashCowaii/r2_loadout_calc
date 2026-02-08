@@ -32,17 +32,17 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "BlackSwan_Eidolon6"
+          "modifier": "<a class=\"gModGreen\" id=\"1422965526\">BlackSwan_Eidolon6</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_Eidolon6_AddDOTFlag"
+          "for": "<a class=\"gModGreen\" id=\"mod__-1234224732\">M_BlackSwan_Eidolon6_AddDOTFlag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "BlackSwan_Eidolon6_SubOnEnemy",
+          "for": "<a class=\"gModGreen\" id=\"mod__2050002598\">BlackSwan_Eidolon6_SubOnEnemy</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -98,7 +98,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_BlackSwan_Eidolon6_AddDOTFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1234224732\">M_BlackSwan_Eidolon6_AddDOTFlag</a>"
                     }
                   ]
                 }
@@ -118,7 +118,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "BlackSwan_Eidolon6",
+          "for": "<a class=\"gModGreen\" id=\"mod__1422965526\">BlackSwan_Eidolon6</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -140,7 +140,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "BlackSwan_Eidolon6_SubOnEnemy"
+                      "modifier": "<a class=\"gModGreen\" id=\"2050002598\">BlackSwan_Eidolon6_SubOnEnemy</a>"
                     }
                   ]
                 }
@@ -153,7 +153,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "M_BlackSwan_Eidolon6_AddDOTFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1234224732\">M_BlackSwan_Eidolon6_AddDOTFlag</a>"
                   },
                   "passed": [
                     {
@@ -162,7 +162,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_BlackSwan_Eidolon6_AddDOTFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1234224732\">M_BlackSwan_Eidolon6_AddDOTFlag</a>"
                     },
                     {
                       "name": "IF",
@@ -214,7 +214,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "baseChance": {
                         "operator": "Variables[0] (0.65) || RETURN",
                         "displayLines": "0.65",
@@ -313,13 +313,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "BlackSwan_Eidolon2"
+          "modifier": "<a class=\"gModGreen\" id=\"1490076002\">BlackSwan_Eidolon2</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "BlackSwan_Eidolon2",
+          "for": "<a class=\"gModGreen\" id=\"mod__1490076002\">BlackSwan_Eidolon2</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -367,7 +367,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "M_BlackSwan_DOTFlag",
+                                "modifier": "<a class=\"gModGreen\" id=\"616609195\">M_BlackSwan_DOTFlag</a>",
                                 "justAddedOrActive": true
                               },
                               {
@@ -376,7 +376,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "M_BlackSwan_P01_AddDOTFlag",
+                                "modifier": "<a class=\"gModGreen\" id=\"-658722874\">M_BlackSwan_P01_AddDOTFlag</a>",
                                 "justAddedOrActive": true
                               },
                               {
@@ -385,7 +385,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "modifier": "M_BlackSwan_Tree02_AddDOTFlag",
+                                "modifier": "<a class=\"gModGreen\" id=\"375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>",
                                 "justAddedOrActive": true
                               }
                             ]
@@ -451,7 +451,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                               "baseChance": {
                                 "operator": "Variables[0] (1) || RETURN",
                                 "displayLines": "1",
@@ -554,13 +554,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "BlackSwan_Eidolon1"
+          "modifier": "<a class=\"gModGreen\" id=\"1473298383\">BlackSwan_Eidolon1</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
           "stackType": "EntityUnique",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -596,7 +596,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
           "stackType": "EntityUnique",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -632,7 +632,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
           "stackType": "EntityUnique",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -668,7 +668,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
           "stackType": "EntityUnique",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -704,7 +704,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "BlackSwan_Eidolon1_SubOnEnemy",
+          "for": "<a class=\"gModGreen\" id=\"mod__1077373681\">BlackSwan_Eidolon1_SubOnEnemy</a>",
           "stackType": "EntityUnique",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -724,7 +724,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -732,7 +732,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       }
                     ]
                   },
@@ -743,7 +743,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -761,7 +761,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -779,7 +779,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -797,7 +797,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -828,7 +828,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -859,7 +859,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -890,7 +890,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -921,7 +921,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -946,7 +946,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -954,7 +954,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -962,7 +962,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -970,7 +970,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
             },
@@ -996,7 +996,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                         "invertCondition": true
                       },
                       "passed": [
@@ -1018,7 +1018,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1038,7 +1038,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
                 },
@@ -1061,7 +1061,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                         "invertCondition": true
                       },
                       "passed": [
@@ -1083,7 +1083,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1103,7 +1103,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
                 },
@@ -1126,7 +1126,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                         "invertCondition": true
                       },
                       "passed": [
@@ -1148,7 +1148,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1168,7 +1168,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
                 },
@@ -1191,7 +1191,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                         "invertCondition": true
                       },
                       "passed": [
@@ -1213,7 +1213,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1233,7 +1233,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
                 }
@@ -1249,7 +1249,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -1257,7 +1257,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
                       }
                     ]
                   },
@@ -1268,7 +1268,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1286,7 +1286,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1304,7 +1304,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1322,7 +1322,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1361,7 +1361,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
                 },
@@ -1385,7 +1385,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
                 },
@@ -1409,7 +1409,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
                 },
@@ -1433,7 +1433,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
                 }
@@ -1449,7 +1449,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
-                        "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
                       },
                       {
                         "name": "Has Modifier",
@@ -1457,7 +1457,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       }
                     ]
                   },
@@ -1468,7 +1468,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1486,7 +1486,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1504,7 +1504,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1522,7 +1522,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1549,7 +1549,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1576,7 +1576,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1603,7 +1603,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1630,7 +1630,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1650,7 +1650,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "BlackSwan_Eidolon1",
+          "for": "<a class=\"gModGreen\" id=\"mod__1473298383\">BlackSwan_Eidolon1</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1672,7 +1672,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "BlackSwan_Eidolon1_SubOnEnemy",
+                      "modifier": "<a class=\"gModGreen\" id=\"1077373681\">BlackSwan_Eidolon1_SubOnEnemy</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.25) || RETURN",
@@ -1697,7 +1697,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "BlackSwan_Eidolon1_SubOnEnemy",
+                  "modifier": "<a class=\"gModGreen\" id=\"1077373681\">BlackSwan_Eidolon1_SubOnEnemy</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.25) || RETURN",
@@ -1730,13 +1730,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_BlackSwan_Trace03"
+          "modifier": "<a class=\"gModGreen\" id=\"1762634781\">M_BlackSwan_Trace03</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_Trace03_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__97197540\">M_BlackSwan_Trace03_Sub</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1794,7 +1794,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_Trace03",
+          "for": "<a class=\"gModGreen\" id=\"mod__1762634781\">M_BlackSwan_Trace03</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -1817,7 +1817,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_BlackSwan_Trace03_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"97197540\">M_BlackSwan_Trace03_Sub</a>",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (CasterStatusProbability) || Variables[1] (0.6) || MUL || RETURN",
@@ -1859,7 +1859,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_BlackSwan_Trace03_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"97197540\">M_BlackSwan_Trace03_Sub</a>",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
                           "operator": "Variables[0] (CasterStatusProbability) || Variables[1] (0.6) || MUL || RETURN",
@@ -1894,13 +1894,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_BlackSwan_Trace02"
+          "modifier": "<a class=\"gModGreen\" id=\"1745857162\">M_BlackSwan_Trace02</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_Tree02_AddDOTFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>",
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead",
@@ -1909,7 +1909,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy",
+          "for": "<a class=\"gModGreen\" id=\"mod__-993235017\">M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "ListenBattleEventSkill"
@@ -1966,7 +1966,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_BlackSwan_Tree02_AddDOTFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>"
                     }
                   ]
                 }
@@ -2077,7 +2077,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_Trace02_AddDotOnCreate",
+          "for": "<a class=\"gModGreen\" id=\"mod__-739683640\">M_BlackSwan_Trace02_AddDotOnCreate</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -2143,7 +2143,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "baseChance": {
                         "operator": "Variables[0] (0.65) || RETURN",
                         "displayLines": "0.65",
@@ -2228,7 +2228,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_Trace02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1745857162\">M_BlackSwan_Trace02</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -2250,7 +2250,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy",
+                      "modifier": "<a class=\"gModGreen\" id=\"-993235017\">M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy</a>",
                       "valuePerStack": {
                         "_maxLimit": {
                           "operator": "Variables[0] (3) || RETURN",
@@ -2337,7 +2337,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                           "baseChance": {
                             "operator": "Variables[0] (0.65) || RETURN",
                             "displayLines": "0.65",
@@ -2422,7 +2422,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "M_BlackSwan_Trace02_AddDotOnCreate"
+                      "modifier": "<a class=\"gModGreen\" id=\"-739683640\">M_BlackSwan_Trace02_AddDotOnCreate</a>"
                     }
                   ]
                 }
@@ -2436,7 +2436,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "M_BlackSwan_Tree02_AddDOTFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>"
                   },
                   "passed": [
                     {
@@ -2489,7 +2489,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "baseChance": {
                         "operator": "Variables[0] (0.65) || RETURN",
                         "displayLines": "0.65",
@@ -2572,7 +2572,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifierName": "M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-993235017\">M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy</a>",
                           "adjustmentType": "+",
                           "variableName": "_count",
                           "value": 1
@@ -2585,7 +2585,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_BlackSwan_Tree02_AddDOTFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>"
                     }
                   ]
                 }
@@ -2644,7 +2644,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_BlackSwan_Maze_Flag"
+          "modifier": "<a class=\"gModGreen\" id=\"-1849837561\">M_BlackSwan_Maze_Flag</a>"
         },
         {
           "name": "Looped Event",
@@ -2706,7 +2706,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "M_BlackSwan_Maze_StopAddDot",
+                "modifier": "<a class=\"gModGreen\" id=\"465925451\">M_BlackSwan_Maze_StopAddDot</a>",
                 "invertCondition": true
               },
               "ifTargetFound": [
@@ -2760,7 +2760,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                   "baseChance": {
                     "operator": "Variables[0] (_current_chance) || RETURN",
                     "displayLines": "_current_chance",
@@ -2858,7 +2858,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_BlackSwan_Maze_StopAddDot"
+                      "modifier": "<a class=\"gModGreen\" id=\"465925451\">M_BlackSwan_Maze_StopAddDot</a>"
                     }
                   ]
                 }
@@ -2895,7 +2895,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "M_BlackSwan_Maze_StopAddDot"
+          "modifier": "<a class=\"gModGreen\" id=\"465925451\">M_BlackSwan_Maze_StopAddDot</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2903,13 +2903,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_BlackSwan_Maze_Flag"
+          "modifier": "<a class=\"gModGreen\" id=\"-1849837561\">M_BlackSwan_Maze_Flag</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_Maze_Flag",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1849837561\">M_BlackSwan_Maze_Flag</a>",
           "stackData": [],
           "latentQueue": [
             "MazeSkill_Triggered",
@@ -2939,17 +2939,17 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_BlackSwan_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1317961344\">StageAbility_Maze_BlackSwan_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_Maze_StopAddDot"
+          "for": "<a class=\"gModGreen\" id=\"mod__465925451\">M_BlackSwan_Maze_StopAddDot</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_BlackSwan_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1317961344\">StageAbility_Maze_BlackSwan_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -3031,7 +3031,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_BlackSwan_P01_ListenAddPoison"
+          "modifier": "<a class=\"gModGreen\" id=\"-1065923980\">M_BlackSwan_P01_ListenAddPoison</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -3059,7 +3059,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "M_BlackSwan_Eidolon4_Listener"
+              "modifier": "<a class=\"gModGreen\" id=\"600807065\">M_BlackSwan_Eidolon4_Listener</a>"
             }
           ]
         },
@@ -3112,7 +3112,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_Eidolon4_Listener",
+          "for": "<a class=\"gModGreen\" id=\"mod__600807065\">M_BlackSwan_Eidolon4_Listener</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -3157,7 +3157,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+                            "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                             "justAddedOrActive": true,
                             "includePreDeath": true
                           },
@@ -3167,7 +3167,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "M_BlackSwan_DOT_Eidolon4_HaveAddedSP",
+                            "modifier": "<a class=\"gModGreen\" id=\"-1409864339\">M_BlackSwan_DOT_Eidolon4_HaveAddedSP</a>",
                             "invertCondition": true,
                             "justAddedOrActive": true,
                             "casterFilter": {
@@ -3206,11 +3206,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark"
+          "for": "<a class=\"gModGreen\" id=\"mod__2022067398\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_ListenPhase1Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__1387323269\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_ListenPhase1Mark</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -3221,7 +3221,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"2022067398\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark</a>"
                 }
               ],
               "priorityLevel": 200
@@ -3230,7 +3230,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy",
+          "for": "<a class=\"gModGreen\" id=\"mod__1560122736\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "ListenBattleEventSkill"
@@ -3245,7 +3245,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_ListenPhase1Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"1387323269\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_ListenPhase1Mark</a>"
                 }
               ]
             },
@@ -3258,7 +3258,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"2022067398\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark</a>"
                 }
               ],
               "priorityLevel": -11
@@ -3291,7 +3291,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark",
+                            "modifier": "<a class=\"gModGreen\" id=\"2022067398\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark</a>",
                             "justAddedOrActive": true
                           }
                         ]
@@ -3315,7 +3315,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_BlackSwan_P01_AddDOTFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-658722874\">M_BlackSwan_P01_AddDOTFlag</a>"
                     }
                   ]
                 }
@@ -3325,7 +3325,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_P01_ListenAddPoison",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1065923980\">M_BlackSwan_P01_ListenAddPoison</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -3347,7 +3347,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy"
+                      "modifier": "<a class=\"gModGreen\" id=\"1560122736\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy</a>"
                     }
                   ]
                 }
@@ -3360,7 +3360,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "M_BlackSwan_P01_AddDOTFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"-658722874\">M_BlackSwan_P01_AddDOTFlag</a>"
                   },
                   "passed": [
                     {
@@ -3415,7 +3415,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "M_BlackSwan_ForbidEffectFlag",
+                        "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>",
                         "justAddedOrActive": true
                       },
                       "passed": [
@@ -3425,7 +3425,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                           "baseChance": {
                             "operator": "Variables[0] (0.65) || RETURN",
                             "displayLines": "0.65",
@@ -3510,7 +3510,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                           "baseChance": {
                             "operator": "Variables[0] (0.65) || RETURN",
                             "displayLines": "0.65",
@@ -3616,7 +3616,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
           "counter": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -3815,7 +3815,7 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Use Custom Character Function",
-          "functionName": "AddDot",
+          "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
           "variables": {
             "Arg01": {
               "operator": "Variables[0] (1) || RETURN",
@@ -3847,7 +3847,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "AddDot",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
                       "operator": "Variables[0] (0.65) || RETURN",
@@ -3874,7 +3874,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "AddDot",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
                       "operator": "Variables[0] (0.65) || RETURN",
@@ -3901,7 +3901,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "AddDot",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
                       "operator": "Variables[0] (0.65) || RETURN",
@@ -3928,7 +3928,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "AddDot",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
                       "operator": "Variables[0] (0.65) || RETURN",
@@ -4003,7 +4003,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
               "baseChance": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -4088,7 +4088,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "BlackSwan_DefenceDown[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2093125302\">BlackSwan_DefenceDown</a>[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -4131,7 +4131,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "BlackSwan_DefenceDown[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"2093125302\">BlackSwan_DefenceDown</a>[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -4166,7 +4166,7 @@ const compositeAbilityObject = {
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "AddDot",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1367341755\">AddDot</a>",
           "parse": [
             {
               "name": "IF",
@@ -4218,7 +4218,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
               "baseChance": {
                 "operator": "Variables[0] (Arg01) || RETURN",
                 "displayLines": "Arg01",
@@ -4301,7 +4301,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "BlackSwan_DefenceDown[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2093125302\">BlackSwan_DefenceDown</a>[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_DefenceDown"
@@ -4423,7 +4423,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "AddDot",
+              "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
               "variables": {
                 "Arg01": {
                   "operator": "Variables[0] (0.65) || RETURN",
@@ -4448,7 +4448,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "AddDot",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
                       "operator": "Variables[0] (0.65) || RETURN",
@@ -4475,7 +4475,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "AddDot",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
                       "operator": "Variables[0] (0.65) || RETURN",
@@ -4502,7 +4502,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "AddDot",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
                       "operator": "Variables[0] (0.65) || RETURN",
@@ -4529,7 +4529,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "AddDot",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1367341755\">AddDot</a>",
                   "variables": {
                     "Arg01": {
                       "operator": "Variables[0] (0.65) || RETURN",
@@ -4550,7 +4550,7 @@ const compositeAbilityObject = {
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "AddDot",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1367341755\">AddDot</a>",
           "parse": [
             {
               "name": "IF",
@@ -4602,7 +4602,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
               "baseChance": {
                 "operator": "Variables[0] (Arg01) || RETURN",
                 "displayLines": "Arg01",
@@ -4725,7 +4725,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_DOT_Eidolon4_HaveAddedSP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1409864339\">M_BlackSwan_DOT_Eidolon4_HaveAddedSP</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead",
@@ -4734,7 +4734,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_P01_AddDOTFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__-658722874\">M_BlackSwan_P01_AddDOTFlag</a>",
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead",
@@ -4745,7 +4745,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_Maze_StopAddDot",
+          "for": "<a class=\"gModGreen\" id=\"mod__465925451\">M_BlackSwan_Maze_StopAddDot</a>",
           "counter": 1,
           "modifierFlags": [
             "RemoveWhenCasterDead",
@@ -4759,7 +4759,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_ForbidEffectFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__-288826770\">M_BlackSwan_ForbidEffectFlag</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead",
@@ -4777,7 +4777,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                   }
                 }
               ]
@@ -4786,7 +4786,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_DOT_Eidolon4_AddSP",
+          "for": "<a class=\"gModGreen\" id=\"mod__1557426074\">M_BlackSwan_DOT_Eidolon4_AddSP</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -4819,7 +4819,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_DOT_Eidolon4_HaveAddedSP"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1409864339\">M_BlackSwan_DOT_Eidolon4_HaveAddedSP</a>"
                 },
                 "Modifier Deletes Itself"
               ],
@@ -4829,7 +4829,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
           "counter": 1,
           "stackType": "Replace",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
@@ -4853,7 +4853,7 @@ const compositeAbilityObject = {
                     "STAT_DOT_Bleed",
                     "STAT_DOT_Electric"
                   ],
-                  "modifierName": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
                 }
               ]
             },
@@ -4922,7 +4922,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_BlackSwan_DOT_Eidolon4_HaveAddedSP"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1409864339\">M_BlackSwan_DOT_Eidolon4_HaveAddedSP</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -4930,7 +4930,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_BlackSwan_DOT_Eidolon4_AddSP",
+                      "modifier": "<a class=\"gModGreen\" id=\"1557426074\">M_BlackSwan_DOT_Eidolon4_AddSP</a>",
                       "valuePerStack": {
                         "Eidolon4_SPAdded": {
                           "operator": "Variables[0] (8) || RETURN",
@@ -4964,7 +4964,7 @@ const compositeAbilityObject = {
                     "STAT_DOT_Bleed",
                     "STAT_DOT_Electric"
                   ],
-                  "modifierName": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+                  "modifierName": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
                 }
               ]
             }
@@ -4985,7 +4985,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_DOTFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__616609195\">M_BlackSwan_DOTFlag</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "KeepOnDeathrattle"
@@ -5002,7 +5002,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -5025,7 +5025,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                         "invertCondition": true
                       },
                       {
@@ -5048,7 +5048,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_BlackSwan_DOT_DefenceIgnore",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -5086,7 +5086,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -5103,7 +5103,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_P01_AddDOTFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-658722874\">M_BlackSwan_P01_AddDOTFlag</a>"
                 }
               ]
             },
@@ -5154,7 +5154,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_BlackSwan_ForbidEffectFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>"
                     },
                     {
                       "name": "IF",
@@ -5185,7 +5185,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           }
                         }
                       ],
@@ -5248,7 +5248,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               }
                             }
                           ],
@@ -5261,7 +5261,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               }
                             }
                           ]
@@ -5295,7 +5295,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "M_BlackSwan_DOT_DefenceIgnore",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (DefenceIgnore) || RETURN",
@@ -5313,7 +5313,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
                           },
-                          "modifier": "M_BlackSwan_DOT_DefenceIgnore",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (DefenceIgnore) || RETURN",
@@ -5356,7 +5356,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           },
                           "passed": [
                             {
@@ -5417,7 +5417,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           }
                         }
                       ],
@@ -5451,7 +5451,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               },
                               "passed": [
                                 {
@@ -5512,7 +5512,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               }
                             }
                           ],
@@ -5525,7 +5525,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               },
                               "passed": [
                                 {
@@ -5586,7 +5586,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                                "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               }
                             }
                           ]
@@ -5622,7 +5622,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           },
                           "passed": [
                             {
@@ -5637,7 +5637,7 @@ const compositeAbilityObject = {
                                 "STAT_DOT_Bleed",
                                 "STAT_DOT_Electric"
                               ],
-                              "modifierName": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+                              "modifierName": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
                             },
                             {
                               "name": "ATK Scaling DMG",
@@ -5672,7 +5672,7 @@ const compositeAbilityObject = {
                                 "STAT_DOT_Bleed",
                                 "STAT_DOT_Electric"
                               ],
-                              "modifierName": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+                              "modifierName": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
                             }
                           ],
                           "failed": [
@@ -5713,7 +5713,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "M_BlackSwan_P01_AddDOTFlag"
+                              "modifier": "<a class=\"gModGreen\" id=\"-658722874\">M_BlackSwan_P01_AddDOTFlag</a>"
                             },
                             {
                               "name": "IF",
@@ -5744,7 +5744,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Modifier Holder}}"
                                     },
-                                    "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                                    "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                                   }
                                 }
                               ],
@@ -5757,7 +5757,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Modifier Holder}}"
                                     },
-                                    "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                                    "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                                   }
                                 }
                               ]
@@ -5772,7 +5772,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_BlackSwan_DOT_DefenceIgnore"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -5780,7 +5780,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
                       },
-                      "modifier": "M_BlackSwan_DOT_DefenceIgnore"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -5788,7 +5788,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_BlackSwan_ForbidEffectFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>"
                     }
                   ],
                   "failed": [
@@ -5798,7 +5798,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_BlackSwan_ForbidEffectFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -5831,7 +5831,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       }
                     },
                     {
@@ -5840,7 +5840,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_BlackSwan_ForbidEffectFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>"
                     }
                   ]
                 },
@@ -5855,7 +5855,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       },
                       {
                         "name": "Compare: Variable",
@@ -5863,7 +5863,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value1": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+                        "value1": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                         "compareType": ">=",
                         "value2": 1
                       }
@@ -5877,12 +5877,12 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "variableName": "_enhance_count",
-                      "modifierName": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                       "multiplier": 1
                     },
                     {
                       "name": "Define Modifier Variable",
-                      "modifierName": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                       "value": {
                         "operator": "Variables[0] (_enhance_count) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(_enhance_count - 1)",
@@ -5896,7 +5896,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Modifier-Specific Variable",
-                      "modifierName": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                       "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (_enhance_count) || Constants[0] (1) || SUB || RETURN",
@@ -5917,7 +5917,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_BlackSwan_ForbidEffectFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>"
                     },
                     {
                       "name": "Define Custom Variable with Modifier Values",
@@ -5936,7 +5936,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "addStacksPerTrigger": {
                         "operator": "Constants[0] (1) || Variables[0] (ExtraLayer_DamagePercentage) || SUB || RETURN",
                         "displayLines": "(1 - ExtraLayer_DamagePercentage)",
@@ -5963,7 +5963,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "M_BlackSwan_ForbidEffectFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>"
                     }
                   ]
                 }
@@ -5993,7 +5993,7 @@ const compositeAbilityObject = {
                   "flagName": [
                     "STAT_DOT_Poison"
                   ],
-                  "modifierName": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
                   "casterFilter": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -6007,7 +6007,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                     "justAddedOrActive": true
                   },
                   "passed": [
@@ -6022,7 +6022,7 @@ const compositeAbilityObject = {
                         "STAT_DOT_Bleed",
                         "STAT_DOT_Electric"
                       ],
-                      "modifierName": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
+                      "modifierName": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]"
                     }
                   ]
                 },
@@ -6032,7 +6032,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_BlackSwan_DOTFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"616609195\">M_BlackSwan_DOTFlag</a>"
                 },
                 {
                   "name": "IF",
@@ -6045,7 +6045,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "M_BlackSwan_ForbidEffectFlag",
+                        "modifier": "<a class=\"gModGreen\" id=\"-288826770\">M_BlackSwan_ForbidEffectFlag</a>",
                         "invertCondition": true,
                         "justAddedOrActive": true
                       },
@@ -6071,7 +6071,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       },
                       "passed": [
                         {
@@ -6192,7 +6192,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                   },
                   "passed": [
                     {

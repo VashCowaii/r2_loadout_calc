@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Boothill_Trace01"
+      "modifier": "<a class=\"gModGreen\" id=\"-1014140982\">M_Boothill_Trace01</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Boothill_Trace01_Sub2",
+      "for": "<a class=\"gModGreen\" id=\"mod__-314049053\">M_Boothill_Trace01_Sub2</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -44,7 +44,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Boothill_Trace01_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__2136671299\">M_Boothill_Trace01_Sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -72,7 +72,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Boothill_Trace01",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1014140982\">M_Boothill_Trace01</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -95,7 +95,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "M_Boothill_Trace01_Sub",
+              "modifier": "<a class=\"gModGreen\" id=\"2136671299\">M_Boothill_Trace01_Sub</a>",
               "valuePerStack": {
                 "MDF_ConvertPropertyRatio": {
                   "operator": "Variables[0] (MIN) || Variables[1] (CasterBreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.3) || PARAM_2 || FUNCTION || RETURN",
@@ -116,7 +116,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "M_Boothill_Trace01_Sub2",
+              "modifier": "<a class=\"gModGreen\" id=\"-314049053\">M_Boothill_Trace01_Sub2</a>",
               "valuePerStack": {
                 "MDF_ConvertPropertyRatio": {
                   "operator": "Variables[0] (MIN) || Variables[1] (CasterBreakDamageAdded) || Variables[2] (0.5) || MUL || Variables[3] (1.5) || PARAM_2 || FUNCTION || RETURN",
@@ -160,7 +160,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Boothill_Trace01_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"2136671299\">M_Boothill_Trace01_Sub</a>",
                   "valuePerStack": {
                     "MDF_ConvertPropertyRatio": {
                       "operator": "Variables[0] (MIN) || Variables[1] (CasterBreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.3) || PARAM_2 || FUNCTION || RETURN",
@@ -181,7 +181,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Boothill_Trace01_Sub2",
+                  "modifier": "<a class=\"gModGreen\" id=\"-314049053\">M_Boothill_Trace01_Sub2</a>",
                   "valuePerStack": {
                     "MDF_ConvertPropertyRatio": {
                       "operator": "Variables[0] (MIN) || Variables[1] (CasterBreakDamageAdded) || Variables[2] (0.5) || MUL || Variables[3] (1.5) || PARAM_2 || FUNCTION || RETURN",

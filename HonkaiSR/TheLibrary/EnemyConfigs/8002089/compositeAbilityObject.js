@@ -69,7 +69,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
                   "duration": 1,
                   "baseChance": {
                     "operator": "Variables[0] (DispelSuccess) || RETURN",
@@ -133,7 +133,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_AttackRatioDown[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1592948509\">Standard_AttackRatioDown</a>[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
                   "duration": {
                     "operator": "Constants[0] (1) || RETURN",
                     "displayLines": "1",
@@ -204,7 +204,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": 1,
                   "baseChance": {
                     "operator": "Variables[0] (DispelSuccess) || RETURN",
@@ -246,17 +246,17 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_P01_Xuwu"
+          "modifier": "<a class=\"gModGreen\" id=\"-456326727\">Enemy_XP_Minion04_02_P01_Xuwu</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_P01_Xuwu_00"
+          "for": "<a class=\"gModGreen\" id=\"mod__1496273538\">Enemy_XP_Minion04_02_P01_Xuwu_00</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_P01_Xuwu",
+          "for": "<a class=\"gModGreen\" id=\"mod__-456326727\">Enemy_XP_Minion04_02_P01_Xuwu</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -272,7 +272,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Enemy_XP_Minion04_02_P01_Xuwu_00"
+                    "modifier": "<a class=\"gModGreen\" id=\"1496273538\">Enemy_XP_Minion04_02_P01_Xuwu_00</a>"
                   },
                   "passed": [
                     {
@@ -304,7 +304,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_P01_Xuwu_00"
+                      "modifier": "<a class=\"gModGreen\" id=\"1496273538\">Enemy_XP_Minion04_02_P01_Xuwu_00</a>"
                     }
                   ]
                 }
@@ -370,7 +370,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Cunhu_Caster"
+              "modifier": "<a class=\"gModGreen\" id=\"-1092716228\">Enemy_XP_Minion04_02_Cunhu_Caster</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -378,7 +378,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
               "counter": {
                 "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
                 "displayLines": "{[SkillP01[0]]}",
@@ -410,7 +410,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Cunhu_Caster"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1092716228\">Enemy_XP_Minion04_02_Cunhu_Caster</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -418,7 +418,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                       "counter": {
                         "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
                         "displayLines": "{[SkillP01[0]]}",
@@ -454,13 +454,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_P01_EnterBattle"
+          "modifier": "<a class=\"gModGreen\" id=\"1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_P01_EnterBattle",
+          "for": "<a class=\"gModGreen\" id=\"mod__1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -476,7 +476,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Enemy_XP_Minion04_02_Cunhu_Caster"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1092716228\">Enemy_XP_Minion04_02_Cunhu_Caster</a>"
                       },
                       {
                         "name": "Is Part Of Team",
@@ -506,13 +506,13 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]"
                       },
                       "passed": [
                         {
                           "name": "Define Custom Variable with Modifier Values",
                           "variableName": "Cunhu_CurrentCount",
-                          "modifierName": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                           "multiplier": 1
                         },
                         {
@@ -521,7 +521,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                           "counter": {
                             "operator": "Variables[0] (Cunhu_CurrentCount) || RETURN",
                             "displayLines": "Cunhu_CurrentCount",
@@ -626,7 +626,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
+              "modifier": "<a class=\"gModGreen\" id=\"2041908574\">Enemy_XP_Minion04_02_Fengrao_02_Caster</a>",
               "counter": {
                 "operator": "Variables[0] (Enemy_XP_Minion04_02_Fengrao_02_Caster) || RETURN",
                 "displayLines": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
@@ -642,7 +642,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion"
+              "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -650,7 +650,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion"
+              "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
             }
           ],
           "failed": [
@@ -674,7 +674,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
+                      "modifier": "<a class=\"gModGreen\" id=\"2041908574\">Enemy_XP_Minion04_02_Fengrao_02_Caster</a>",
                       "counter": {
                         "operator": "Variables[0] (Enemy_XP_Minion04_02_Fengrao_02_Caster) || RETURN",
                         "displayLines": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
@@ -690,7 +690,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion"
+                      "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -698,7 +698,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion"
+                      "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
                     }
                   ]
                 }
@@ -710,7 +710,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
+          "for": "<a class=\"gModGreen\" id=\"mod__2041908574\">Enemy_XP_Minion04_02_Fengrao_02_Caster</a>",
           "counter": 100,
           "modifierFlags": [
             "ListenBattleEventSkill"
@@ -728,7 +728,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion"
+                  "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -736,7 +736,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion"
+                  "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
                 }
               ]
             },
@@ -764,7 +764,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
                       },
                       {
                         "name": "Compare: Variable",
@@ -860,7 +860,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
                       },
                       {
                         "name": "Compare: Variable",
@@ -945,7 +945,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -953,12 +953,12 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
                 },
                 {
                   "name": "Define Custom Variable with Modifier Values",
                   "variableName": "CostCount",
-                  "modifierName": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
+                  "modifierName": "<a class=\"gModGreen\" id=\"2041908574\">Enemy_XP_Minion04_02_Fengrao_02_Caster</a>",
                   "multiplier": 1
                 },
                 {
@@ -997,7 +997,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifierName": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
+                  "modifierName": "<a class=\"gModGreen\" id=\"2041908574\">Enemy_XP_Minion04_02_Fengrao_02_Caster</a>",
                   "function": "Add",
                   "value": {
                     "operator": "Variables[0] (CurrentCount) || INVERT || RETURN",
@@ -1016,11 +1016,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit"
+          "for": "<a class=\"gModGreen\" id=\"mod__-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Fengrao_02_Minion",
+          "for": "<a class=\"gModGreen\" id=\"mod__1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage End [Owner]: Hit",
@@ -1031,7 +1031,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
                 }
               ]
             }
@@ -1053,13 +1053,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_P01_EnterBattle"
+          "modifier": "<a class=\"gModGreen\" id=\"1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_P01_EnterBattle",
+          "for": "<a class=\"gModGreen\" id=\"mod__1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -1108,7 +1108,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EffectTrigger"
+          "modifier": "<a class=\"gModGreen\" id=\"-1094709195\">Enemy_XP_Minion04_02_EffectTrigger</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1116,7 +1116,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EffectRound"
+          "modifier": "<a class=\"gModGreen\" id=\"-801636319\">Enemy_XP_Minion04_02_EffectRound</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1124,7 +1124,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Fengrao_SelfDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"956566396\">Enemy_XP_Minion04_02_Fengrao_SelfDamage</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1132,7 +1132,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Fengrao_Trigger1"
+          "modifier": "<a class=\"gModGreen\" id=\"1933857712\">Enemy_XP_Minion04_02_Fengrao_Trigger1</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1140,7 +1140,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Fengrao_Trigger"
+          "modifier": "<a class=\"gModGreen\" id=\"1608084385\">Enemy_XP_Minion04_02_Fengrao_Trigger</a>"
         },
         "Trigger: Attack End",
         {
@@ -1149,7 +1149,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EffectRound"
+          "modifier": "<a class=\"gModGreen\" id=\"-801636319\">Enemy_XP_Minion04_02_EffectRound</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1157,7 +1157,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Fengrao_Trigger"
+          "modifier": "<a class=\"gModGreen\" id=\"1608084385\">Enemy_XP_Minion04_02_Fengrao_Trigger</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1165,7 +1165,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Fengrao_Trigger1"
+          "modifier": "<a class=\"gModGreen\" id=\"1933857712\">Enemy_XP_Minion04_02_Fengrao_Trigger1</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1173,7 +1173,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EffectTrigger"
+          "modifier": "<a class=\"gModGreen\" id=\"-1094709195\">Enemy_XP_Minion04_02_EffectTrigger</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1181,7 +1181,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Fengrao_SelfDamage"
+          "modifier": "<a class=\"gModGreen\" id=\"956566396\">Enemy_XP_Minion04_02_Fengrao_SelfDamage</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1189,25 +1189,25 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Fengrao_BeHit"
+          "modifier": "<a class=\"gModGreen\" id=\"-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Fengrao_SelfDamage",
+          "for": "<a class=\"gModGreen\" id=\"mod__956566396\">Enemy_XP_Minion04_02_Fengrao_SelfDamage</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Fengrao_Trigger1",
+          "for": "<a class=\"gModGreen\" id=\"mod__1933857712\">Enemy_XP_Minion04_02_Fengrao_Trigger1</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Fengrao_Trigger",
+          "for": "<a class=\"gModGreen\" id=\"mod__1608084385\">Enemy_XP_Minion04_02_Fengrao_Trigger</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -1267,7 +1267,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_EffectPaths"
+              "modifier": "<a class=\"gModGreen\" id=\"1306349309\">Enemy_XP_Minion04_02_EffectPaths</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1275,7 +1275,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Fengrao_Caster"
+              "modifier": "<a class=\"gModGreen\" id=\"93806967\">Enemy_XP_Minion04_02_Fengrao_Caster</a>"
             },
             {
               "name": "Find New Target",
@@ -1290,7 +1290,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_XP_Minion04_02_P01_EnterBattle",
+                "modifier": "<a class=\"gModGreen\" id=\"1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>",
                 "invertCondition": true
               },
               "ifTargetFound": [
@@ -1300,7 +1300,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Fengrao_Minion",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1146816007\">Enemy_XP_Minion04_02_Fengrao_Minion</a>",
                   "valuePerStack": {
                     "_HealRatio": {
                       "operator": "Variables[0] (UnusedUnderThisBase_137) || RETURN",
@@ -1328,7 +1328,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_EffectGround"
+              "modifier": "<a class=\"gModGreen\" id=\"196303828\">Enemy_XP_Minion04_02_EffectGround</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1336,7 +1336,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_EffectRound"
+              "modifier": "<a class=\"gModGreen\" id=\"-801636319\">Enemy_XP_Minion04_02_EffectRound</a>"
             }
           ],
           "failed": [
@@ -1360,7 +1360,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_EffectPaths"
+                      "modifier": "<a class=\"gModGreen\" id=\"1306349309\">Enemy_XP_Minion04_02_EffectPaths</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1368,7 +1368,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Fengrao_Caster"
+                      "modifier": "<a class=\"gModGreen\" id=\"93806967\">Enemy_XP_Minion04_02_Fengrao_Caster</a>"
                     },
                     {
                       "name": "Find New Target",
@@ -1383,7 +1383,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "Enemy_XP_Minion04_02_P01_EnterBattle",
+                        "modifier": "<a class=\"gModGreen\" id=\"1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>",
                         "invertCondition": true
                       },
                       "ifTargetFound": [
@@ -1393,7 +1393,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Enemy_XP_Minion04_02_Fengrao_Minion",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1146816007\">Enemy_XP_Minion04_02_Fengrao_Minion</a>",
                           "valuePerStack": {
                             "_HealRatio": {
                               "operator": "Variables[0] (UnusedUnderThisBase_137) || RETURN",
@@ -1436,7 +1436,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_03_Introduce[<span class=\"descriptionNumberColor\">C—Cure You</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"606850892\">Enemy_XP_Minion04_03_Introduce</a>[<span class=\"descriptionNumberColor\">C—Cure You</span>]"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -1451,13 +1451,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_P01_EnterBattle"
+          "modifier": "<a class=\"gModGreen\" id=\"1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_03_Introduce[<span class=\"descriptionNumberColor\">C—Cure You</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__606850892\">Enemy_XP_Minion04_03_Introduce</a>[<span class=\"descriptionNumberColor\">C—Cure You</span>]",
           "stackData": [],
           "latentQueue": [],
           "description": "When a friendly unit is attacked by a target, Trotter of Abundance consumes its own HP to heal the attacked friendly unit.",
@@ -1467,7 +1467,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_P01_EnterBattle",
+          "for": "<a class=\"gModGreen\" id=\"mod__1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1483,7 +1483,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Enemy_XP_Minion04_02_Fengrao_Caster"
+                        "modifier": "<a class=\"gModGreen\" id=\"93806967\">Enemy_XP_Minion04_02_Fengrao_Caster</a>"
                       },
                       {
                         "name": "Is Part Of Team",
@@ -1502,7 +1502,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Fengrao_Minion",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1146816007\">Enemy_XP_Minion04_02_Fengrao_Minion</a>",
                       "valuePerStack": {
                         "_HealRatio": {
                           "operator": "Variables[0] (UnusedUnderThisBase_137) || RETURN",
@@ -1573,7 +1573,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Huimie_EffectRound"
+          "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
         },
         {
           "name": "Looped Event",
@@ -1615,7 +1615,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Huimie_EffectRound"
+          "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -1641,7 +1641,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On"
+          "modifier": "<a class=\"gModGreen\" id=\"224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>"
         }
       ],
       "references": []
@@ -1700,7 +1700,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Huimie_EffectPaths"
+              "modifier": "<a class=\"gModGreen\" id=\"1715207705\">Enemy_XP_Minion04_02_Huimie_EffectPaths</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1708,7 +1708,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Huimie_EffectRound"
+              "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1716,7 +1716,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Huimie_EffectGround"
+              "modifier": "<a class=\"gModGreen\" id=\"1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1724,7 +1724,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Caster"
+              "modifier": "<a class=\"gModGreen\" id=\"-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1732,7 +1732,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion"
+              "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
             }
           ],
           "failed": [
@@ -1753,7 +1753,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Huimie_EffectPaths"
+                      "modifier": "<a class=\"gModGreen\" id=\"1715207705\">Enemy_XP_Minion04_02_Huimie_EffectPaths</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1761,7 +1761,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Huimie_EffectRound"
+                      "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1769,7 +1769,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Huimie_EffectGround"
+                      "modifier": "<a class=\"gModGreen\" id=\"1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>"
                     }
                   ]
                 },
@@ -1785,7 +1785,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Caster"
+                      "modifier": "<a class=\"gModGreen\" id=\"-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1793,7 +1793,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion"
+                      "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
                     }
                   ]
                 }
@@ -1816,7 +1816,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Introduce[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"2118515591\">Enemy_XP_Minion04_02_Introduce</a>[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -1831,13 +1831,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_P01_EnterBattle"
+          "modifier": "<a class=\"gModGreen\" id=\"1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Introduce[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2118515591\">Enemy_XP_Minion04_02_Introduce</a>[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]",
           "stackData": [],
           "latentQueue": [],
           "description": "When a friendly unit is attacked, Trotter of Destruction will attack all targets. The attack count is equal to the number of the targets attacked.",
@@ -1847,7 +1847,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_P01_EnterBattle",
+          "for": "<a class=\"gModGreen\" id=\"mod__1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1863,7 +1863,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Caster"
+                        "modifier": "<a class=\"gModGreen\" id=\"-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>"
                       },
                       {
                         "name": "Is Part Of Team",
@@ -1882,7 +1882,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion"
+                      "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
                     }
                   ]
                 }
@@ -1944,7 +1944,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EscapingCharge02"
+          "modifier": "<a class=\"gModGreen\" id=\"1449818532\">Enemy_XP_Minion04_02_EscapingCharge02</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1952,7 +1952,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EffectGround"
+          "modifier": "<a class=\"gModGreen\" id=\"196303828\">Enemy_XP_Minion04_02_EffectGround</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1960,7 +1960,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EffectRound"
+          "modifier": "<a class=\"gModGreen\" id=\"-801636319\">Enemy_XP_Minion04_02_EffectRound</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1968,7 +1968,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Huimie_EffectGround"
+          "modifier": "<a class=\"gModGreen\" id=\"1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1976,7 +1976,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_Huimie_EffectRound"
+          "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
         },
         {
           "name": "IF",
@@ -2038,7 +2038,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EscapingCharge01"
+          "modifier": "<a class=\"gModGreen\" id=\"1500151389\">Enemy_XP_Minion04_02_EscapingCharge01</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2046,7 +2046,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EscapingCharge02"
+          "modifier": "<a class=\"gModGreen\" id=\"1449818532\">Enemy_XP_Minion04_02_EscapingCharge02</a>"
         },
         "Trigger: Ability End"
       ],
@@ -2090,7 +2090,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_XP_Minion04_02_EscapingCharge01"
+          "modifier": "<a class=\"gModGreen\" id=\"1500151389\">Enemy_XP_Minion04_02_EscapingCharge01</a>"
         },
         "Trigger: Ability End"
       ],
@@ -2133,7 +2133,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_EscapingCharge02",
+          "for": "<a class=\"gModGreen\" id=\"mod__1449818532\">Enemy_XP_Minion04_02_EscapingCharge02</a>",
           "modifierFlags": [
             "MuteHitFly",
             "Endurance",
@@ -2184,7 +2184,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_EscapingCharge01",
+          "for": "<a class=\"gModGreen\" id=\"mod__1500151389\">Enemy_XP_Minion04_02_EscapingCharge01</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2218,7 +2218,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Bonus_Pre",
+          "for": "<a class=\"gModGreen\" id=\"mod__1457189805\">Enemy_XP_Minion04_02_Bonus_Pre</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -2227,7 +2227,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion",
+          "for": "<a class=\"gModGreen\" id=\"mod__-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2239,7 +2239,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On"
+                  "modifier": "<a class=\"gModGreen\" id=\"224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>"
                 }
               ]
             },
@@ -2270,7 +2270,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On"
+                        "modifier": "<a class=\"gModGreen\" id=\"224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>"
                       },
                       {
                         "name": "Compare: Variable",
@@ -2287,7 +2287,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On"
+                      "modifier": "<a class=\"gModGreen\" id=\"224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>"
                     },
                     {
                       "name": "Define Custom Variable with Added Value",
@@ -2356,7 +2356,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On",
+          "for": "<a class=\"gModGreen\" id=\"mod__224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -2367,7 +2367,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Huimie_EffectRound",
+          "for": "<a class=\"gModGreen\" id=\"mod__24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>",
           "stackType": "Replace",
           "modifierFlags": [
             "KeepOnDeathrattle"
@@ -2385,7 +2385,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Huimie_EffectPaths",
+          "for": "<a class=\"gModGreen\" id=\"mod__1715207705\">Enemy_XP_Minion04_02_Huimie_EffectPaths</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -2397,7 +2397,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Huimie_EffectGround",
+          "for": "<a class=\"gModGreen\" id=\"mod__1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -2409,7 +2409,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Bonus_Huimie_Caster",
+          "for": "<a class=\"gModGreen\" id=\"mod__-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2443,7 +2443,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion"
+                  "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2451,7 +2451,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On"
+                  "modifier": "<a class=\"gModGreen\" id=\"224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>"
                 }
               ]
             },
@@ -2588,7 +2588,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On"
+                  "modifier": "<a class=\"gModGreen\" id=\"224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>"
                 }
               ]
             }
@@ -2598,7 +2598,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Fengrao_Caster",
+          "for": "<a class=\"gModGreen\" id=\"mod__93806967\">Enemy_XP_Minion04_02_Fengrao_Caster</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2609,7 +2609,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Fengrao_Minion"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1146816007\">Enemy_XP_Minion04_02_Fengrao_Minion</a>"
                 }
               ]
             },
@@ -2647,7 +2647,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Enemy_XP_Minion04_02_Fengrao_BeHit"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>"
                         }
                       }
                     ]
@@ -2670,7 +2670,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Enemy_XP_Minion04_02_Fengrao_BeHit"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>"
                         }
                       },
                       "abilityName": "Monster_XP_Minion04_02_AbilityP01_InsertAbility_Fengrao",
@@ -2695,7 +2695,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Enemy_XP_Minion04_02_Fengrao_BeHit"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>"
                     }
                   ]
                 }
@@ -2707,7 +2707,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Fengrao_Minion",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1146816007\">Enemy_XP_Minion04_02_Fengrao_Minion</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2770,7 +2770,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Enemy_XP_Minion04_02_Fengrao_BeHit"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>"
                         }
                       ]
                     }
@@ -2808,7 +2808,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Enemy_XP_Minion04_02_Fengrao_Trigger1"
+                    "modifier": "<a class=\"gModGreen\" id=\"1933857712\">Enemy_XP_Minion04_02_Fengrao_Trigger1</a>"
                   },
                   "passed": [
                     {
@@ -2826,7 +2826,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Enemy_XP_Minion04_02_Fengrao_SelfDamage"
+                    "modifier": "<a class=\"gModGreen\" id=\"956566396\">Enemy_XP_Minion04_02_Fengrao_SelfDamage</a>"
                   },
                   "passed": [
                     {
@@ -2886,7 +2886,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Enemy_XP_Minion04_02_Fengrao_Trigger"
+                    "modifier": "<a class=\"gModGreen\" id=\"1608084385\">Enemy_XP_Minion04_02_Fengrao_Trigger</a>"
                   },
                   "passed": [
                     {
@@ -2959,17 +2959,17 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Fengrao_BeHit",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Fengrao_Mark"
+          "for": "<a class=\"gModGreen\" id=\"mod__-763398934\">Enemy_XP_Minion04_02_Fengrao_Mark</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_EffectTrigger2",
+          "for": "<a class=\"gModGreen\" id=\"mod__1331247877\">Enemy_XP_Minion04_02_EffectTrigger2</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -2979,7 +2979,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_EffectTrigger",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1094709195\">Enemy_XP_Minion04_02_EffectTrigger</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -2991,7 +2991,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_EffectRound",
+          "for": "<a class=\"gModGreen\" id=\"mod__-801636319\">Enemy_XP_Minion04_02_EffectRound</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -3003,7 +3003,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_EffectPaths",
+          "for": "<a class=\"gModGreen\" id=\"mod__1306349309\">Enemy_XP_Minion04_02_EffectPaths</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -3015,7 +3015,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_EffectGround",
+          "for": "<a class=\"gModGreen\" id=\"mod__196303828\">Enemy_XP_Minion04_02_EffectGround</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -3027,7 +3027,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Fengrao_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__1613326370\">Enemy_XP_Minion04_02_Fengrao_Bonus</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -3037,7 +3037,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
           "counter": 20,
           "modifierFlags": [
             "BlockDamageExcludeDot",
@@ -3077,7 +3077,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable with Modifier Values",
                       "variableName": "MDF_Count",
-                      "modifierName": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                       "multiplier": 1
                     },
                     {
@@ -3102,7 +3102,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "modifier": "Enemy_XP_Minion04_02_Cunhu_EffectBreak"
+                          "modifier": "<a class=\"gModGreen\" id=\"803541260\">Enemy_XP_Minion04_02_Cunhu_EffectBreak</a>"
                         },
                         {
                           "name": "Define Modifier Variable",
@@ -3110,7 +3110,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "modifierName": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                           "function": "Add"
                         }
                       ],
@@ -3121,13 +3121,13 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "modifierName": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                           "function": "Add"
                         },
                         {
                           "name": "Define Custom Variable with Modifier Values",
                           "variableName": "MDF_Count",
-                          "modifierName": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                           "multiplier": 1
                         },
                         {
@@ -3165,7 +3165,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Enemy_XP_Minion04_02_Cunhu_Caster"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1092716228\">Enemy_XP_Minion04_02_Cunhu_Caster</a>"
                         }
                       ]
                     }
@@ -3183,7 +3183,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Cunhu_EffectBreak",
+          "for": "<a class=\"gModGreen\" id=\"mod__803541260\">Enemy_XP_Minion04_02_Cunhu_EffectBreak</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -3194,7 +3194,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Cunhu_Effect",
+          "for": "<a class=\"gModGreen\" id=\"mod__-841398551\">Enemy_XP_Minion04_02_Cunhu_Effect</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3205,7 +3205,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Cunhu_EffectBreak"
+                  "modifier": "<a class=\"gModGreen\" id=\"803541260\">Enemy_XP_Minion04_02_Cunhu_EffectBreak</a>"
                 }
               ]
             },
@@ -3216,7 +3216,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Enemy_XP_Minion04_02_Cunhu_Caster",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1092716228\">Enemy_XP_Minion04_02_Cunhu_Caster</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3227,7 +3227,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Cunhu_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-841398551\">Enemy_XP_Minion04_02_Cunhu_Effect</a>"
                 }
               ]
             },
@@ -3240,7 +3240,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Cunhu_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"-841398551\">Enemy_XP_Minion04_02_Cunhu_Effect</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3248,7 +3248,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Cunhu_Bonus[<span class=\"descriptionNumberColor\">P—Protect You</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3256,7 +3256,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Enemy_XP_Minion04_02_Cunhu_EffectBreak"
+                  "modifier": "<a class=\"gModGreen\" id=\"803541260\">Enemy_XP_Minion04_02_Cunhu_EffectBreak</a>"
                 }
               ]
             },

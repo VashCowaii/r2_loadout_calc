@@ -173,7 +173,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_0030",
+      "modifier": "<a class=\"gModGreen\" id=\"1973742977\">Modifier_FantasticStory_BaseAbility_0030</a>",
       "valuePerStack": {
         "ADF_1": {
           "operator": "Variables[0] (#ADF_1) || RETURN",
@@ -205,7 +205,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0030_sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__357438024\">Modifier_FantasticStory_BaseAbility_0030_sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -412,7 +412,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_0030",
+      "for": "<a class=\"gModGreen\" id=\"mod__1973742977\">Modifier_FantasticStory_BaseAbility_0030</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -452,7 +452,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0030_sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"357438024\">Modifier_FantasticStory_BaseAbility_0030_sub</a>"
                 }
               ]
             },
@@ -632,7 +632,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0030_plus6_sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1083847243\">Modifier_FantasticStory_BaseAbility_0030_plus6_sub</a>",
                   "valuePerStack": {
                     "_DamageSumRatio": {
                       "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0036_ADF_1) || RETURN",
@@ -835,7 +835,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0030_sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"357438024\">Modifier_FantasticStory_BaseAbility_0030_sub</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -843,7 +843,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[getBattleEvents]]"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_0030_sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"357438024\">Modifier_FantasticStory_BaseAbility_0030_sub</a>"
                 },
                 {
                   "name": "IF",
@@ -920,7 +920,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_0030_plus6_sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1083847243\">Modifier_FantasticStory_BaseAbility_0030_plus6_sub</a>",
                       "valuePerStack": {
                         "_DamageSumRatio": {
                           "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0036_ADF_1) || RETURN",

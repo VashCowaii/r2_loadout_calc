@@ -20,7 +20,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Dr_Ratio_Insert_Flag_Caster"
+      "modifier": "<a class=\"gModGreen\" id=\"1963870595\">Dr_Ratio_Insert_Flag_Caster</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -28,7 +28,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All(with Unselectable)}}"
       },
-      "modifier": "Dr_Ratio_Insert_Flag"
+      "modifier": "<a class=\"gModGreen\" id=\"-253275642\">Dr_Ratio_Insert_Flag</a>"
     },
     {
       "name": "Define Custom Variable with Status Counter",
@@ -118,7 +118,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Dr_Ratio_Insert_Flag"
+              "modifier": "<a class=\"gModGreen\" id=\"-253275642\">Dr_Ratio_Insert_Flag</a>"
             }
           ]
         }
@@ -247,7 +247,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1828934114\">Dr_Ratio_Ability03_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Summation</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (6) || Variables[1] (4) || ADD || RETURN",
                     "displayLines": "(6 + 4)",
@@ -285,7 +285,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1828934114\">Dr_Ratio_Ability03_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Summation</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (6) || RETURN",
                     "displayLines": "6",
@@ -353,7 +353,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Dr_Ratio_Insert_Flag_Caster"
+        "modifier": "<a class=\"gModGreen\" id=\"1963870595\">Dr_Ratio_Insert_Flag_Caster</a>"
       }
     },
     {
@@ -399,7 +399,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Dr_Ratio_Slow[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1051491293\">Dr_Ratio_Slow</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -437,12 +437,12 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Dr_Ratio_Insert_Flag_Caster"
+        "modifier": "<a class=\"gModGreen\" id=\"1963870595\">Dr_Ratio_Insert_Flag_Caster</a>"
       },
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Dr_Ratio_InsertAbility"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1506583423\">Dr_Ratio_InsertAbility</a>"
         }
       ]
     },
@@ -456,7 +456,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Dr_Ratio_Slow[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1051491293\">Dr_Ratio_Slow</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

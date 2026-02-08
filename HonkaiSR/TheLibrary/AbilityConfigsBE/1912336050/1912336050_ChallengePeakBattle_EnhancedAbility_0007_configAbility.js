@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0007"
+      "modifier": "<a class=\"gModGreen\" id=\"1632303648\">Modifier_ChallengePeakBattle_EnhancedAbility_0007</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder+</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1259367356\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder+</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -72,7 +72,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_02",
+      "for": "<a class=\"gModGreen\" id=\"mod__1276144975\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_02</a>",
       "execute": [
         {
           "eventTrigger": "Receiving Heal End [Owner]",
@@ -111,7 +111,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder+</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1259367356\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder+</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -119,7 +119,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target's Source Owner}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder+</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1259367356\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder+</span>]"
                 }
               ]
             }
@@ -145,7 +145,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder+</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1259367356\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder+</span>]",
                   "stackLimit": 999,
                   "valuePerStack": {
                     "ChallengePeakBattle_0007_ADF_1": {
@@ -203,7 +203,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder+</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1259367356\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder+</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -211,7 +211,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target 2}}.[[getSourceCreator]]"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_03[<span class=\"descriptionNumberColor\">Sunder+</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1259367356\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder+</span>]"
                 }
               ]
             }
@@ -221,7 +221,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_EnhancedAbility_0007",
+      "for": "<a class=\"gModGreen\" id=\"mod__1632303648\">Modifier_ChallengePeakBattle_EnhancedAbility_0007</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -248,7 +248,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_02",
+                  "modifier": "<a class=\"gModGreen\" id=\"1276144975\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0007_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

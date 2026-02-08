@@ -17,7 +17,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MWRen_Trace02"
+          "modifier": "<a class=\"gModGreen\" id=\"-493601226\">MWRen_Trace02</a>"
         }
       ]
     },

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Feixiao_InsertCheck"
+      "modifier": "<a class=\"gModGreen\" id=\"248447225\">M_Feixiao_InsertCheck</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Feixiao_InsertCheckSelf"
+      "modifier": "<a class=\"gModGreen\" id=\"-1503840637\">M_Feixiao_InsertCheckSelf</a>"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE, with Unselectables)}}"
       },
-      "modifier": "M_Feixiao_Friend_Mark_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
     },
     {
       "name": "IF",
@@ -43,7 +43,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Feixiao_InsertIsReady[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
         }
       ],
       "failed": [
@@ -60,7 +60,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Feixiao_DamageProperty[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1116070545\">Feixiao_DamageProperty</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",
@@ -93,7 +93,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Feixiao_Eidolon4_Property[<span class=\"descriptionNumberColor\">Stormward I Hear</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1006222027\">Feixiao_Eidolon4_Property</a>[<span class=\"descriptionNumberColor\">Stormward I Hear</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -189,7 +189,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Feixiao_DamageProperty[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1116070545\">Feixiao_DamageProperty</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

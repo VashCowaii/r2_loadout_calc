@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_22003_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"1670734298\">LC_22003_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_22003_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-927960305\">LC_22003_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -72,7 +72,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_22003_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__1670734298\">LC_22003_Main</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -118,7 +118,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_22003_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-927960305\">LC_22003_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -166,7 +166,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_22003_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-927960305\">LC_22003_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",

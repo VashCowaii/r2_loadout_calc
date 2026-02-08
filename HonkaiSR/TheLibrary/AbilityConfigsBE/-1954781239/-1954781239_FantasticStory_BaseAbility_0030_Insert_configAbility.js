@@ -87,7 +87,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_0030_plus5_AddSP",
+          "modifier": "<a class=\"gModGreen\" id=\"-1329142430\">Modifier_FantasticStory_BaseAbility_0030_plus5_AddSP</a>",
           "valuePerStack": {
             "_AddSP": {
               "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0035_ADF_1) || RETURN",
@@ -106,7 +106,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_0030_plus5_AddStockedSP",
+          "modifier": "<a class=\"gModGreen\" id=\"1117415883\">Modifier_FantasticStory_BaseAbility_0030_plus5_AddStockedSP</a>",
           "casterAssign": "TargetSelf"
         }
       ]

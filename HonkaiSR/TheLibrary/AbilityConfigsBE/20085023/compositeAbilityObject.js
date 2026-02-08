@@ -32,13 +32,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MFarmRelic_104314"
+          "modifier": "<a class=\"gModGreen\" id=\"1940525233\">MFarmRelic_104314</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104314_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-772982810\">MFarmRelic_104314_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -71,7 +71,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104314",
+          "for": "<a class=\"gModGreen\" id=\"mod__1940525233\">MFarmRelic_104314</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -89,7 +89,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "FarmRelicAbility_104314_Template"
+                      "functionName": "<a class=\"gTempYellow\" id=\"739278249\">FarmRelicAbility_104314_Template</a>"
                     }
                   ]
                 }
@@ -111,7 +111,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "FarmRelicAbility_104314_Template"
+                      "functionName": "<a class=\"gTempYellow\" id=\"739278249\">FarmRelicAbility_104314_Template</a>"
                     }
                   ]
                 }
@@ -122,7 +122,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "FarmRelicAbility_104314_Template"
+                  "functionName": "<a class=\"gTempYellow\" id=\"739278249\">FarmRelicAbility_104314_Template</a>"
                 }
               ],
               "priorityLevel": -90
@@ -143,7 +143,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "FarmRelicAbility_104314_Template"
+                      "functionName": "<a class=\"gTempYellow\" id=\"739278249\">FarmRelicAbility_104314_Template</a>"
                     }
                   ]
                 }
@@ -165,7 +165,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "FarmRelicAbility_104314_Template"
+                      "functionName": "<a class=\"gTempYellow\" id=\"739278249\">FarmRelicAbility_104314_Template</a>"
                     }
                   ]
                 }
@@ -187,7 +187,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "FarmRelicAbility_104314_Template"
+                      "functionName": "<a class=\"gTempYellow\" id=\"739278249\">FarmRelicAbility_104314_Template</a>"
                     }
                   ]
                 }
@@ -197,7 +197,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "FarmRelicAbility_104314_Template",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__739278249\">FarmRelicAbility_104314_Template</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable",
@@ -259,7 +259,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "MFarmRelic_104314_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-772982810\">MFarmRelic_104314_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_SummonCount": {
                       "operator": "Variables[0] (MDF_SummonCount) || RETURN",
@@ -292,13 +292,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MFarmRelic_104313"
+          "modifier": "<a class=\"gModGreen\" id=\"1957302852\">MFarmRelic_104313</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104313_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__741582093\">MFarmRelic_104313_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -343,7 +343,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104313_HealTakenRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__55814789\">MFarmRelic_104313_HealTakenRatio</a>",
           "execute": [
             {
               "eventTrigger": "Receiving Heal End [Owner]",
@@ -354,7 +354,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MFarmRelic_104313_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"741582093\">MFarmRelic_104313_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "DamageAddedRatio": 0.06,
                     "MaxLayer": 10
@@ -380,7 +380,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104313",
+          "for": "<a class=\"gModGreen\" id=\"mod__1957302852\">MFarmRelic_104313</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -402,7 +402,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MFarmRelic_104313_HealTakenRatio"
+                      "modifier": "<a class=\"gModGreen\" id=\"55814789\">MFarmRelic_104313_HealTakenRatio</a>"
                     }
                   ]
                 }
@@ -427,13 +427,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MFarmRelic_104312"
+          "modifier": "<a class=\"gModGreen\" id=\"1974080471\">MFarmRelic_104312</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "FarmRelicAbility_104312_Sub2",
+          "for": "<a class=\"gModGreen\" id=\"mod__1290780977\">FarmRelicAbility_104312_Sub2</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -462,7 +462,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "FarmRelicAbility_104312_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__592903321\">FarmRelicAbility_104312_Sub</a>",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -494,7 +494,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104312",
+          "for": "<a class=\"gModGreen\" id=\"mod__1974080471\">MFarmRelic_104312</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -516,7 +516,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "FarmRelicAbility_104312_Sub",
+                      "modifier": "<a class=\"gModGreen\" id=\"592903321\">FarmRelicAbility_104312_Sub</a>",
                       "valuePerStack": {
                         "MDF_DamageTakenRatio": 0.3
                       }
@@ -540,7 +540,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "FarmRelicAbility_104312_Sub2"
+                      "modifier": "<a class=\"gModGreen\" id=\"1290780977\">FarmRelicAbility_104312_Sub2</a>"
                     }
                   ]
                 }
@@ -565,13 +565,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MFarmRelic_104311"
+          "modifier": "<a class=\"gModGreen\" id=\"1990858090\">MFarmRelic_104311</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104311",
+          "for": "<a class=\"gModGreen\" id=\"mod__1990858090\">MFarmRelic_104311</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -607,7 +607,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_EliteField_Elite[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-858410577\">Standard_EliteField_Elite</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageReduce": 0.6,
                         "MDF_DamageByRatio": 0.15
@@ -637,13 +637,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MFarmRelic_104310"
+          "modifier": "<a class=\"gModGreen\" id=\"2007635709\">MFarmRelic_104310</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104310_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__2058515140\">MFarmRelic_104310_Sub</a>",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -654,7 +654,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-43160834\">Standard_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": 0.5
                   }
@@ -670,7 +670,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-43160834\">Standard_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -679,7 +679,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104310",
+          "for": "<a class=\"gModGreen\" id=\"mod__2007635709\">MFarmRelic_104310</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -701,7 +701,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_StanceBreakAddedRatio[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1910965732\">Standard_StanceBreakAddedRatio</a>[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": 0.5
                       }
@@ -725,7 +725,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MFarmRelic_104310_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"2058515140\">MFarmRelic_104310_Sub</a>"
                     }
                   ]
                 }
@@ -750,13 +750,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MFarmRelic_104309"
+          "modifier": "<a class=\"gModGreen\" id=\"1789379567\">MFarmRelic_104309</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104309_Sub2[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -812,7 +812,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104309_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-76327950\">MFarmRelic_104309_Sub</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier is Added [Owner]",
@@ -862,7 +862,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "MFarmRelic_104309_Sub2[<span class=\"descriptionNumberColor\">Vulnerability</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]"
                       },
                       "passed": [
                         {
@@ -873,7 +873,7 @@ const compositeAbilityObject = {
                           },
                           "valueType": "Layer",
                           "variableName": "Modifier_Layer",
-                          "modifierName": "MFarmRelic_104309_Sub2[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                           "multiplier": 1
                         }
                       ],
@@ -891,7 +891,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MFarmRelic_104309_Sub2[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "addStacksPerTrigger": {
                         "operator": "Variables[0] (DOT_Layer) || Variables[1] (Modifier_Layer) || SUB || RETURN",
                         "displayLines": "(DOT_Layer - Modifier_Layer)",
@@ -954,7 +954,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "MFarmRelic_104309_Sub2[<span class=\"descriptionNumberColor\">Vulnerability</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]"
                       },
                       "passed": [
                         {
@@ -965,7 +965,7 @@ const compositeAbilityObject = {
                           },
                           "valueType": "Layer",
                           "variableName": "Modifier_Layer",
-                          "modifierName": "MFarmRelic_104309_Sub2[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                           "multiplier": 1
                         }
                       ],
@@ -983,7 +983,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "MFarmRelic_104309_Sub2[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "addStacksPerTrigger": {
                         "operator": "Variables[0] (DOT_Layer) || Variables[1] (Modifier_Layer) || SUB || RETURN",
                         "displayLines": "(DOT_Layer - Modifier_Layer)",
@@ -1002,7 +1002,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104309",
+          "for": "<a class=\"gModGreen\" id=\"mod__1789379567\">MFarmRelic_104309</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1024,7 +1024,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MFarmRelic_104309_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"-76327950\">MFarmRelic_104309_Sub</a>"
                     }
                   ]
                 }
@@ -1049,13 +1049,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MFarmRelic_104308"
+          "modifier": "<a class=\"gModGreen\" id=\"1772601948\">MFarmRelic_104308</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104308_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__789627689\">MFarmRelic_104308_Sub</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1125,7 +1125,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104308",
+          "for": "<a class=\"gModGreen\" id=\"mod__1772601948\">MFarmRelic_104308</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1147,7 +1147,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MFarmRelic_104308_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"789627689\">MFarmRelic_104308_Sub</a>"
                     }
                   ]
                 }
@@ -1172,13 +1172,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MFarmRelic_104307"
+          "modifier": "<a class=\"gModGreen\" id=\"1890045281\">MFarmRelic_104307</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104307_DOT",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1343540511\">MFarmRelic_104307_DOT</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking Modifier Instance [Owner]",
@@ -1213,7 +1213,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": 3,
                       "valuePerStack": {
                         "Modifier_Electric_DamagePercentage": 1.5
@@ -1228,7 +1228,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104307",
+          "for": "<a class=\"gModGreen\" id=\"mod__1890045281\">MFarmRelic_104307</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1292,7 +1292,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MFarmRelic_104307_DOT"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1343540511\">MFarmRelic_104307_DOT</a>"
                     }
                   ]
                 }
@@ -1317,13 +1317,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MFarmRelic_104306"
+          "modifier": "<a class=\"gModGreen\" id=\"1873267662\">MFarmRelic_104306</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104306_DamageAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1205325421\">MFarmRelic_104306_DamageAddedRatio</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1356,7 +1356,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104306",
+          "for": "<a class=\"gModGreen\" id=\"mod__1873267662\">MFarmRelic_104306</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1378,7 +1378,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MFarmRelic_104306_DamageAddedRatio"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1205325421\">MFarmRelic_104306_DamageAddedRatio</a>"
                     }
                   ]
                 }
@@ -1403,13 +1403,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MFarmRelic_104305"
+          "modifier": "<a class=\"gModGreen\" id=\"1856490043\">MFarmRelic_104305</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104305_DamageAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1133771252\">MFarmRelic_104305_DamageAddedRatio</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1429,7 +1429,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104305",
+          "for": "<a class=\"gModGreen\" id=\"mod__1856490043\">MFarmRelic_104305</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1451,7 +1451,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MFarmRelic_104305_DamageAddedRatio"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1133771252\">MFarmRelic_104305_DamageAddedRatio</a>"
                     }
                   ]
                 }
@@ -1476,13 +1476,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MFarmRelic_104304"
+          "modifier": "<a class=\"gModGreen\" id=\"1839712424\">MFarmRelic_104304</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104304_DamageAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__1027100945\">MFarmRelic_104304_DamageAddedRatio</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1537,7 +1537,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104304",
+          "for": "<a class=\"gModGreen\" id=\"mod__1839712424\">MFarmRelic_104304</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1559,7 +1559,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MFarmRelic_104304_DamageAddedRatio"
+                      "modifier": "<a class=\"gModGreen\" id=\"1027100945\">MFarmRelic_104304_DamageAddedRatio</a>"
                     }
                   ]
                 }
@@ -1584,13 +1584,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MFarmRelic_104303"
+          "modifier": "<a class=\"gModGreen\" id=\"1957155757\">MFarmRelic_104303</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104303_DamageAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__463229890\">MFarmRelic_104303_DamageAddedRatio</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1638,7 +1638,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104303",
+          "for": "<a class=\"gModGreen\" id=\"mod__1957155757\">MFarmRelic_104303</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1660,7 +1660,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MFarmRelic_104303_DamageAddedRatio"
+                      "modifier": "<a class=\"gModGreen\" id=\"463229890\">MFarmRelic_104303_DamageAddedRatio</a>"
                     }
                   ]
                 }
@@ -1685,13 +1685,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MFarmRelic_104302"
+          "modifier": "<a class=\"gModGreen\" id=\"1940378138\">MFarmRelic_104302</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104302_DamageAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1342550721\">MFarmRelic_104302_DamageAddedRatio</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1711,7 +1711,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104302",
+          "for": "<a class=\"gModGreen\" id=\"mod__1940378138\">MFarmRelic_104302</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1733,7 +1733,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MFarmRelic_104302_DamageAddedRatio"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1342550721\">MFarmRelic_104302_DamageAddedRatio</a>"
                     }
                   ]
                 }
@@ -1758,13 +1758,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MFarmRelic_104301"
+          "modifier": "<a class=\"gModGreen\" id=\"1923600519\">MFarmRelic_104301</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104301_DamageAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__1992918968\">MFarmRelic_104301_DamageAddedRatio</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1784,7 +1784,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MFarmRelic_104301",
+          "for": "<a class=\"gModGreen\" id=\"mod__1923600519\">MFarmRelic_104301</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1806,7 +1806,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "MFarmRelic_104301_DamageAddedRatio"
+                      "modifier": "<a class=\"gModGreen\" id=\"1992918968\">MFarmRelic_104301_DamageAddedRatio</a>"
                     }
                   ]
                 }
@@ -1830,7 +1830,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Standard_EliteField_Servant[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -1886,7 +1886,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_EliteField_Elite[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-858410577\">Standard_EliteField_Elite</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1913,7 +1913,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members(Exclude Self)}}"
                   },
-                  "modifier": "Standard_EliteField_Servant[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
                       "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
@@ -1955,7 +1955,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_EliteField_Servant[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
                       "valuePerStack": {
                         "MDF_AllDamageReduce": {
                           "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",

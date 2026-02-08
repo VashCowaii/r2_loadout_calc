@@ -61,7 +61,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Bailu_DieEvent"
+      "modifier": "<a class=\"gModGreen\" id=\"1633727189\">Bailu_DieEvent</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -69,7 +69,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Bailu_ReviveEvent",
+      "modifier": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
       "counter": {
         "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
         "displayLines": "MDF_ReviveTime",
@@ -83,13 +83,13 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Bailu_ReviveEvent",
+      "for": "<a class=\"gModGreen\" id=\"mod__339980930\">Bailu_ReviveEvent</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Bailu_DieEvent",
+      "for": "<a class=\"gModGreen\" id=\"mod__1633727189\">Bailu_DieEvent</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -100,7 +100,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}.[[removeMemosprite]]"
               },
-              "modifier": "Bailu_Revive_Ready"
+              "modifier": "<a class=\"gModGreen\" id=\"835934303\">Bailu_Revive_Ready</a>"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -146,7 +146,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members(Exclude Self)}}.[[removeMemosprite]]"
                   },
-                  "modifier": "Bailu_Revive_Ready"
+                  "modifier": "<a class=\"gModGreen\" id=\"835934303\">Bailu_Revive_Ready</a>"
                 }
               ]
             }
@@ -161,7 +161,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Bailu_Revive_Ready"
+              "modifier": "<a class=\"gModGreen\" id=\"835934303\">Bailu_Revive_Ready</a>"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -169,7 +169,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Bailu_Revive_Mark"
+              "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
             }
           ]
         },
@@ -183,7 +183,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "Bailu_Revive_Mark"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
                   },
                   {
                     "name": "Has Modifier",
@@ -191,7 +191,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Bailu_ReviveEvent",
+                    "modifier": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
                     "invertCondition": true
                   }
                 ]
@@ -203,7 +203,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Bailu_Revive_Ready",
+                  "modifier": "<a class=\"gModGreen\" id=\"835934303\">Bailu_Revive_Ready</a>",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
@@ -221,7 +221,7 @@ const configAbility = {
                       }
                     ]
                   },
-                  "modifier": "Bailu_Revive_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
                 }
               ]
             }

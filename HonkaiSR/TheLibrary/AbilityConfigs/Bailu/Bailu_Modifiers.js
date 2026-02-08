@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Bailu_Revive_Mark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1496935031\">Bailu_Revive_Mark</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -103,7 +103,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Bailu_Eidolon4_AttackUp[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2145916157\">Bailu_Eidolon4_AttackUp</a>[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -158,7 +158,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Bailu_Eidolon4",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1229024343\">Bailu_Eidolon4</a>",
       "execute": [
         {
           "eventTrigger": "Heal Target End [Owner]",
@@ -169,7 +169,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Bailu_Eidolon4_AttackUp[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2145916157\">Bailu_Eidolon4_AttackUp</a>[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -206,7 +206,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Bailu_Eidolon2[<span class=\"descriptionNumberColor\">Sylphic Slumber</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1195469105\">Bailu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Sylphic Slumber</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -242,7 +242,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Bailu_PointB3[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__249464740\">Bailu_PointB3</a>[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -277,7 +277,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Bailu_PointB1_HPIncrease[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -309,7 +309,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Bailu_PointB1_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__996331331\">Bailu_PointB1_Sub</a>",
       "execute": [
         {
           "eventTrigger": "Heal Target End [Owner]",
@@ -338,7 +338,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Bailu_PointB1_HPIncrease[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                     "displayLines": "MDF_LifeTime",
@@ -366,7 +366,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Bailu_PointB1",
+      "for": "<a class=\"gModGreen\" id=\"mod__283019978\">Bailu_PointB1</a>",
       "modifierFlags": [
         "MuteDotCasterCallBack"
       ],
@@ -398,7 +398,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Bailu_PointB1_HPIncrease[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -431,7 +431,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "Bailu_PointB1_Sub",
+              "modifier": "<a class=\"gModGreen\" id=\"996331331\">Bailu_PointB1_Sub</a>",
               "valuePerStack": {
                 "MDF_LifeTime": {
                   "operator": "Variables[0] (2) || RETURN",
@@ -460,7 +460,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
       "counter": 1,
       "stackType": "ReplaceByCaster",
       "execute": [
@@ -520,7 +520,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Bailu_PointB3[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"249464740\">Bailu_PointB3</a>[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]"
             }
           ]
         },
@@ -529,7 +529,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Modifier Variable",
-              "modifierName": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
               "value": {
                 "operator": "Variables[0] (MDF_HealCount) || Variables[1] (MDF_HealCountExtra) || ADD || RETURN",
                 "displayLines": "(MDF_HealCount + MDF_HealCountExtra)",
@@ -584,7 +584,7 @@ const configAbility = {
                 },
                 {
                   "name": "Define Modifier Variable",
-                  "modifierName": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
                   "function": "Add"
                 }
               ]
@@ -608,7 +608,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Bailu_Revive_Ready",
+      "for": "<a class=\"gModGreen\" id=\"mod__835934303\">Bailu_Revive_Ready</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -624,7 +624,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Variable",
-                    "value1": "Bailu_ReviveEvent",
+                    "value1": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
                     "compareType": ">",
                     "value2": 0
                   }
@@ -707,7 +707,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "modifier": "Bailu_Revive_Mark"
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
                                 }
                               ]
                             }

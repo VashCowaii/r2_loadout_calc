@@ -26,7 +26,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Ability01PreShowModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1540905078\">Ability01PreShowModifier</a>"
         }
       ]
     },
@@ -41,7 +41,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Ability01PreShowModifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__1540905078\">Ability01PreShowModifier</a>",
       "stackData": [],
       "latentQueue": [],
       "previewValue": {

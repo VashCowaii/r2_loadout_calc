@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0001"
+      "modifier": "<a class=\"gModGreen\" id=\"1108086776\">Modifier_ChallengePeakBattle_ExtremeAbility_0001</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__391969588\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -43,7 +43,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"391969588\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]"
                 }
               ]
             }
@@ -95,7 +95,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"391969588\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]"
                 }
               ]
             }
@@ -109,7 +109,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_02",
+      "for": "<a class=\"gModGreen\" id=\"mod__408747207\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_02</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -120,7 +120,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"391969588\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (ChallengePeakBattle_0001_ADF_1) || RETURN",
                 "displayLines": "ChallengePeakBattle_0001_ADF_1",
@@ -167,7 +167,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"391969588\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]"
             },
             {
               "name": "Add Events/Bonuses",
@@ -175,7 +175,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_03[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"391969588\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (ChallengePeakBattle_0001_ADF_1) || RETURN",
                 "displayLines": "ChallengePeakBattle_0001_ADF_1",
@@ -217,7 +217,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_ExtremeAbility_0001",
+      "for": "<a class=\"gModGreen\" id=\"mod__1108086776\">Modifier_ChallengePeakBattle_ExtremeAbility_0001</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -239,7 +239,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_02",
+                  "modifier": "<a class=\"gModGreen\" id=\"408747207\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_02</a>",
                   "valuePerStack": {
                     "ChallengePeakBattle_0001_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

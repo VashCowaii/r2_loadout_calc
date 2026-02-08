@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_017"
+      "modifier": "<a class=\"gModGreen\" id=\"1443708130\">MStrongChallengeEX_Talent_StageAbility_LE_017</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_017",
+      "for": "<a class=\"gModGreen\" id=\"mod__1291087210\">MStrongChallengeEX_Talent_StageAbility_PLY_017</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -75,7 +75,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_017",
+      "for": "<a class=\"gModGreen\" id=\"mod__1443708130\">MStrongChallengeEX_Talent_StageAbility_LE_017</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -102,7 +102,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_017",
+                  "modifier": "<a class=\"gModGreen\" id=\"1291087210\">MStrongChallengeEX_Talent_StageAbility_PLY_017</a>",
                   "valuePerStack": {
                     "MDF_BPCrit_DamageAddedRatio": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

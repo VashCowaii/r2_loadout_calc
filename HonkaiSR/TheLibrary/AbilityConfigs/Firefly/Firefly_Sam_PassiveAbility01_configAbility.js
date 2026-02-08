@@ -20,7 +20,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_PassiveAbility"
+      "modifier": "<a class=\"gModGreen\" id=\"618387317\">Sam_PassiveAbility</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -28,7 +28,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_UltraPreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"1214391345\">Sam_UltraPreShow</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -36,7 +36,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_LoseHPPreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"1839227070\">Sam_LoseHPPreShow</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -44,7 +44,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_Ability11_StanceDamagePreShow_Fire"
+      "modifier": "<a class=\"gModGreen\" id=\"-342359297\">Sam_Ability11_StanceDamagePreShow_Fire</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -52,7 +52,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_Ability11_StanceDamagePreShow_NoFire"
+      "modifier": "<a class=\"gModGreen\" id=\"1576215372\">Sam_Ability11_StanceDamagePreShow_NoFire</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -60,7 +60,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_Ability21_AddWeaknessPreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"1454050150\">Sam_Ability21_AddWeaknessPreShow</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -68,7 +68,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_Ability21_StanceDamagePreShow_Fire"
+      "modifier": "<a class=\"gModGreen\" id=\"1595550658\">Sam_Ability21_StanceDamagePreShow_Fire</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -76,7 +76,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Sam_Ability21_StanceDamagePreShow_NoFire"
+      "modifier": "<a class=\"gModGreen\" id=\"-1713306799\">Sam_Ability21_StanceDamagePreShow_NoFire</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -84,7 +84,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "modifier": "Sam_Ability02_DelayReduce"
+      "modifier": "<a class=\"gModGreen\" id=\"390294012\">Sam_Ability02_DelayReduce</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -92,7 +92,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "modifier": "Sam_BreakPreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"1701719398\">Sam_BreakPreShow</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -100,7 +100,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "modifier": "Sam_BreakedPreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"765639261\">Sam_BreakedPreShow</a>"
     },
     {
       "name": "Change Character UI",
@@ -110,7 +110,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Sam_BreakedPreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__765639261\">Sam_BreakedPreShow</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -159,7 +159,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
                           }
                         ]
                       }
@@ -176,7 +176,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_BreakPreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__1701719398\">Sam_BreakPreShow</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -232,7 +232,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_Ability02_DelayReduce",
+      "for": "<a class=\"gModGreen\" id=\"mod__390294012\">Sam_Ability02_DelayReduce</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -247,7 +247,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceNextActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1527090005\">ReduceNextActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -286,7 +286,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
           "invertCondition": true
         },
         "delayAdvancePreview": {
@@ -304,7 +304,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_Ability21_AddWeaknessPreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__1454050150\">Sam_Ability21_AddWeaknessPreShow</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [],
@@ -332,7 +332,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
             }
           ]
         },
@@ -352,7 +352,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_Ability21_StanceDamagePreShow_NoFire",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1713306799\">Sam_Ability21_StanceDamagePreShow_NoFire</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [],
@@ -369,7 +369,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
             },
             {
               "name": "Is Weak to Attacker",
@@ -419,7 +419,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_Ability21_StanceDamagePreShow_Fire",
+      "for": "<a class=\"gModGreen\" id=\"mod__1595550658\">Sam_Ability21_StanceDamagePreShow_Fire</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [],
@@ -436,7 +436,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
             },
             {
               "name": "Is Weak to Attacker",
@@ -476,7 +476,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_Ability11_StanceDamagePreShow_NoFire",
+      "for": "<a class=\"gModGreen\" id=\"mod__1576215372\">Sam_Ability11_StanceDamagePreShow_NoFire</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [],
@@ -493,7 +493,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
             },
             {
               "name": "Is Weak to Attacker",
@@ -531,7 +531,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_Ability11_StanceDamagePreShow_Fire",
+      "for": "<a class=\"gModGreen\" id=\"mod__-342359297\">Sam_Ability11_StanceDamagePreShow_Fire</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [],
@@ -548,7 +548,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
             },
             {
               "name": "Is Weak to Attacker",
@@ -576,7 +576,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_LoseHPPreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__1839227070\">Sam_LoseHPPreShow</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -604,7 +604,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
                     "invertCondition": true
                   }
                 ]
@@ -650,7 +650,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_UltraPreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__1214391345\">Sam_UltraPreShow</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [],
@@ -679,7 +679,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sam_PassiveAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__618387317\">Sam_PassiveAbility</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -702,7 +702,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Sam_PassiveAbility01_BattleEvent"
+                      "modifier": "<a class=\"gModGreen\" id=\"92987575\">Sam_PassiveAbility01_BattleEvent</a>"
                     }
                   }
                 ]
@@ -754,7 +754,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.4) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
@@ -862,7 +862,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Sam_PassiveAbility_RedMode[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -872,7 +872,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]"
                     }
                   ]
                 }
@@ -917,7 +917,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.4) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
@@ -938,7 +938,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Sam_PassiveAbility_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]"
                     }
                   ]
                 }

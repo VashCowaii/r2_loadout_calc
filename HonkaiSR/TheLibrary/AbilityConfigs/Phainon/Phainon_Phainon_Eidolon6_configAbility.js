@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Phainon_Eidolon6"
+      "modifier": "<a class=\"gModGreen\" id=\"1860923952\">M_Phainon_Eidolon6</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Ability22_Eidolon6Listener",
+      "for": "<a class=\"gModGreen\" id=\"mod__-770714134\">M_Phainon_Ability22_Eidolon6Listener</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Anyone]: Any",
@@ -134,7 +134,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Eidolon6",
+      "for": "<a class=\"gModGreen\" id=\"mod__1860923952\">M_Phainon_Eidolon6</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -152,7 +152,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Phainon_Ability22_Eidolon6Listener"
+                  "modifier": "<a class=\"gModGreen\" id=\"-770714134\">M_Phainon_Ability22_Eidolon6Listener</a>"
                 }
               ]
             }
@@ -172,7 +172,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+                  "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
                       "operator": "Variables[0] (6) || RETURN",

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Bronya_Eidolon4_ATK_Flag"
+      "modifier": "<a class=\"gModGreen\" id=\"-109336730\">Bronya_Eidolon4_ATK_Flag</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,19 +18,19 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Bronya_Eidolon4_Listen"
+      "modifier": "<a class=\"gModGreen\" id=\"49161632\">Bronya_Eidolon4_Listen</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Bronya_Eidolon4_ATK_Flag",
+      "for": "<a class=\"gModGreen\" id=\"mod__-109336730\">Bronya_Eidolon4_ATK_Flag</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Bronya_Eidolon4_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__49161632\">Bronya_Eidolon4_Listen</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -64,7 +64,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Bronya_Eidolon4_ATK_Flag"
+              "modifier": "<a class=\"gModGreen\" id=\"-109336730\">Bronya_Eidolon4_ATK_Flag</a>"
             }
           ]
         },
@@ -100,7 +100,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Bronya_Eidolon4_ATK_Flag"
+                    "modifier": "<a class=\"gModGreen\" id=\"-109336730\">Bronya_Eidolon4_ATK_Flag</a>"
                   }
                 ]
               },

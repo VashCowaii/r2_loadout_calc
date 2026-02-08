@@ -461,7 +461,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MBattleEvent_FantasticStory_BaseAbility_2060_sub"
+          "modifier": "<a class=\"gModGreen\" id=\"-2003756275\">MBattleEvent_FantasticStory_BaseAbility_2060_sub</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -469,7 +469,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "MBattleEvent_FantasticStory_BaseAbility_2060_BaseSpeed"
+          "modifier": "<a class=\"gModGreen\" id=\"571479179\">MBattleEvent_FantasticStory_BaseAbility_2060_BaseSpeed</a>"
         },
         {
           "name": "Block Advance/Delay Effects",
@@ -487,7 +487,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "MBattleEvent_FantasticStory_BaseAbility_2060_sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2003756275\">MBattleEvent_FantasticStory_BaseAbility_2060_sub</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -499,7 +499,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Battle Event's Caster}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
                 },
                 {
                   "name": "Force Entity Death",
@@ -516,7 +516,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MBattleEvent_FantasticStory_BaseAbility_2060_BaseSpeed",
+          "for": "<a class=\"gModGreen\" id=\"mod__571479179\">MBattleEvent_FantasticStory_BaseAbility_2060_BaseSpeed</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -596,7 +596,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2060_ListenBEDelay"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1327218064\">Modifier_FantasticStory_BaseAbility_2060_ListenBEDelay</a>"
                 }
               ]
             }
@@ -674,7 +674,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura",
+                "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
                 "invertCondition": true
               }
             ]
@@ -777,7 +777,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+          "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -809,7 +809,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount[<span class=\"descriptionNumberColor\">\"Resound\"</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]"
         },
         {
           "name": "IF",
@@ -828,7 +828,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+                "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
               }
             ]
           },
@@ -860,7 +860,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_plus4_sub[<span class=\"descriptionNumberColor\">Divine Score</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"906922784\">Modifier_FantasticStory_BaseAbility_2060_plus4_sub</a>[<span class=\"descriptionNumberColor\">Divine Score</span>]",
               "duration": {
                 "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2064_ADF_2) || RETURN",
                 "displayLines": "DV_FantasticStory_PlusAbility_2064_ADF_2",
@@ -939,13 +939,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_EnterFever"
+          "modifier": "<a class=\"gModGreen\" id=\"1747401547\">Modifier_FantasticStory_BaseAbility_2060_EnterFever</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_EnterFever",
+          "for": "<a class=\"gModGreen\" id=\"mod__1747401547\">Modifier_FantasticStory_BaseAbility_2060_EnterFever</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -970,7 +970,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
                       }
                     ]
                   },
@@ -995,7 +995,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
                       "addStacksPerTrigger": 1
                     }
                   ]
@@ -1024,7 +1024,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
                       }
                     ]
                   },
@@ -1035,7 +1035,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1981060014\">Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
                       "valuePerStack": {
                         "DV_Ratio_Get": {
                           "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2060_EnterFever_P3_Ratio) || RETURN",
@@ -1058,7 +1058,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
                   },
                   "passed": [
                     {
@@ -1067,7 +1067,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1981060014\">Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
                       "valuePerStack": {
                         "DV_Ratio_Get": {
                           "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2060_EnterFever_P3_Ratio) || RETURN",
@@ -1090,7 +1090,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
                   },
                   "passed": [
                     {
@@ -1099,7 +1099,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All(with Unselectable)}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub[<span class=\"descriptionNumberColor\">Surging Grit</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1981060014\">Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]"
                     }
                   ]
                 }
@@ -1133,7 +1133,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
                       },
                       "passed": [
                         {
@@ -1200,13 +1200,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever"
+          "modifier": "<a class=\"gModGreen\" id=\"931941990\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever",
+          "for": "<a class=\"gModGreen\" id=\"mod__931941990\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1243,7 +1243,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
                       "addStacksPerTrigger": 1
                     }
                   ]
@@ -1285,7 +1285,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
                       "addStacksPerTrigger": {
                         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_BirdAttackCount) || RETURN",
                         "displayLines": "DV_FantasticStory_BaseAbility_BirdAttackCount",
@@ -1309,7 +1309,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_ForShow[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1271014269\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
               "haloStatus": true
             }
           ]
@@ -1348,13 +1348,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060_BaseAddOn"
+          "modifier": "<a class=\"gModGreen\" id=\"923393288\">Modifier_FantasticStory_BaseAbility_2060_BaseAddOn</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_BaseAddOn",
+          "for": "<a class=\"gModGreen\" id=\"mod__923393288\">Modifier_FantasticStory_BaseAbility_2060_BaseAddOn</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1387,7 +1387,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
                         "invertCondition": true
                       }
                     ]
@@ -1502,7 +1502,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_BaseAddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-398018983\">Modifier_FantasticStory_BaseAbility_2060_BaseAddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
               "haloStatus": true,
               "valuePerStack": {
                 "DV_Ratio": {
@@ -1805,13 +1805,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2060"
+          "modifier": "<a class=\"gModGreen\" id=\"962180542\">Modifier_FantasticStory_BaseAbility_2060</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1560366857\">Modifier_FantasticStory_BaseAbility_2060_sub</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1840,7 +1840,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1964611804\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn</a>"
                     }
                   ]
                 },
@@ -1859,7 +1859,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1465286557\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn</a>"
                     }
                   ]
                 },
@@ -1878,7 +1878,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus2065"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1835466532\">Modifier_FantasticStory_BaseAbility_2060_Plus2065</a>"
                     }
                   ]
                 },
@@ -1897,7 +1897,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn"
+                      "modifier": "<a class=\"gModGreen\" id=\"1529724462\">Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn</a>"
                     }
                   ]
                 },
@@ -1916,7 +1916,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn"
+                      "modifier": "<a class=\"gModGreen\" id=\"1135541973\">Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn</a>"
                     }
                   ]
                 }
@@ -2182,7 +2182,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub_PLY[<span class=\"descriptionNumberColor\">Paradox</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1645086487\">Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub_PLY</a>[<span class=\"descriptionNumberColor\">Paradox</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Compare: Variable",
@@ -2205,7 +2205,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060",
+          "for": "<a class=\"gModGreen\" id=\"mod__962180542\">Modifier_FantasticStory_BaseAbility_2060</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2263,7 +2263,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
                           },
-                          "modifier": "MDF_NoScore"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1135719358\">MDF_NoScore</a>"
                         },
                         {
                           "name": "Force Entity Death",
@@ -2282,7 +2282,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "MDF_NoScore"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1135719358\">MDF_NoScore</a>"
                           },
                           "failed": [
                             {
@@ -2293,7 +2293,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+                                "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
                               },
                               "passed": [
                                 {
@@ -2313,7 +2313,7 @@ const compositeAbilityObject = {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
                                           },
-                                          "modifier": "Modifier_FantasticStory_BaseAbility_2060_ListenBEDelay"
+                                          "modifier": "<a class=\"gModGreen\" id=\"-1327218064\">Modifier_FantasticStory_BaseAbility_2060_ListenBEDelay</a>"
                                         }
                                       }
                                     ]
@@ -2668,7 +2668,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Modifier_FantasticStory_HPParentChild[<span class=\"descriptionNumberColor\">Binding Obligation</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-149468610\">Modifier_FantasticStory_HPParentChild</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]"
                         }
                       ]
                     }
@@ -2685,7 +2685,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2060_sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1560366857\">Modifier_FantasticStory_BaseAbility_2060_sub</a>"
                 },
                 {
                   "name": "Find New Target",
@@ -2724,7 +2724,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Modifier_FantasticStory_HPParentChild[<span class=\"descriptionNumberColor\">Binding Obligation</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-149468610\">Modifier_FantasticStory_HPParentChild</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]"
                     },
                     {
                       "name": "Boss Bar Display",
@@ -2754,7 +2754,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_HPParentChildForShow[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1532586988\">Modifier_FantasticStory_HPParentChildForShow</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
           "stackType": "ReplaceByCaster",
           "description": "After being defeated, deal DMG based on a certain percentage of their Max HP to the Elite enemy target.",
           "type": "Buff",
@@ -2763,7 +2763,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_HPParentChild[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-149468610\">Modifier_FantasticStory_HPParentChild</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2783,7 +2783,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}"
                   },
-                  "modifier": "Modifier_FantasticStory_HPParentChildForShow[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1532586988\">Modifier_FantasticStory_HPParentChildForShow</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]"
                 }
               ]
             },
@@ -2808,7 +2808,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}} - {{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_FantasticStory_HPParentChildForShow[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1532586988\">Modifier_FantasticStory_HPParentChildForShow</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]"
                 }
               ]
             }
@@ -3000,7 +3000,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics: Epiphany</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1198694676\">Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Epiphany</span>]",
           "stackType": "ReplaceByCaster",
           "description": "After using a Skill to attack, every enemy target hit additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2068_ADF_3</span> Grit Value for allies.",
           "type": "Buff",
@@ -3008,7 +3008,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn",
+          "for": "<a class=\"gModGreen\" id=\"mod__1135541973\">Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3041,7 +3041,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
                         "invertCondition": true
                       }
                     ]
@@ -3159,14 +3159,14 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics: Epiphany</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1198694676\">Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Epiphany</span>]",
               "haloStatus": true
             }
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics: Memory</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1785697589\">Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Memory</span>]",
           "stackType": "ReplaceByCaster",
           "description": "After receiving DoT, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2067_ADF_3</span> Grit Value for allies.",
           "type": "Debuff",
@@ -3174,7 +3174,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn",
+          "for": "<a class=\"gModGreen\" id=\"mod__1529724462\">Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3214,7 +3214,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
                         "invertCondition": true
                       }
                     ]
@@ -3315,19 +3315,19 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics: Memory</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1785697589\">Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Memory</span>]",
               "haloStatus": true
             }
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2065_Plus5_ForShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__178355252\">Modifier_FantasticStory_BaseAbility_2065_Plus5_ForShow</a>",
           "stackType": "ReplaceByCaster"
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus2065",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1835466532\">Modifier_FantasticStory_BaseAbility_2060_Plus2065</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3405,7 +3405,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
                         "invertCondition": true
                       }
                     ]
@@ -3576,19 +3576,19 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2065_Plus5_ForShow",
+              "modifier": "<a class=\"gModGreen\" id=\"178355252\">Modifier_FantasticStory_BaseAbility_2065_Plus5_ForShow</a>",
               "haloStatus": true
             }
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus3AddOn_ForShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-704281529\">Modifier_FantasticStory_BaseAbility_2060_Plus3AddOn_ForShow</a>",
           "stackType": "ReplaceByCaster"
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus3AddOn",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1535721214\">Modifier_FantasticStory_BaseAbility_2060_Plus3AddOn</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3666,7 +3666,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
                         "invertCondition": true
                       }
                     ]
@@ -3831,14 +3831,14 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus3AddOn_ForShow",
+              "modifier": "<a class=\"gModGreen\" id=\"-704281529\">Modifier_FantasticStory_BaseAbility_2060_Plus3AddOn_ForShow</a>",
               "haloStatus": true
             }
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics_Universality</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__155042142\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Universality</span>]",
           "stackType": "ReplaceByCaster",
           "description": "After using Skill to attack enemy targets, every enemy target attacked additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2062_ADF_2</span> Grit Value.",
           "type": "Buff",
@@ -3846,7 +3846,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1465286557\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3879,7 +3879,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
                         "invertCondition": true
                       }
                     ]
@@ -3995,14 +3995,14 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics_Universality</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"155042142\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Universality</span>]",
               "haloStatus": true
             }
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics_Radiance</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__278893341\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Radiance</span>]",
           "stackType": "ReplaceByCaster",
           "description": "After launching a Follow-Up ATK, every enemy target attacked additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2061_ADF_2</span> Grit Value.",
           "type": "Buff",
@@ -4010,7 +4010,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1964611804\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4097,7 +4097,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
                         "invertCondition": true
                       }
                     ]
@@ -4212,14 +4212,14 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics_Radiance</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"278893341\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Radiance</span>]",
               "haloStatus": true
             }
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus8_Sub[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1428129204\">Modifier_FantasticStory_BaseAbility_2060_Plus8_Sub</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -4273,7 +4273,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
                       "addStacksPerTrigger": 1
                     }
                   ]
@@ -4287,7 +4287,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus7_Sub[<span class=\"descriptionNumberColor\">Memory</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__412492093\">Modifier_FantasticStory_BaseAbility_2060_Plus7_Sub</a>[<span class=\"descriptionNumberColor\">Memory</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4327,7 +4327,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY[<span class=\"descriptionNumberColor\">Reminiscence</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1211620586\">Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY</a>[<span class=\"descriptionNumberColor\">Reminiscence</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -4367,7 +4367,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-290304906\">Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4403,7 +4403,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY[<span class=\"descriptionNumberColor\">Reminiscence</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1211620586\">Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY</a>[<span class=\"descriptionNumberColor\">Reminiscence</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2066_ADF_2) || RETURN",
                         "displayLines": "DV_FantasticStory_PlusAbility_2066_ADF_2",
@@ -4421,7 +4421,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub[<span class=\"descriptionNumberColor\">Paradox</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1773154335\">Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub</a>[<span class=\"descriptionNumberColor\">Paradox</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4461,7 +4461,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub_PLY[<span class=\"descriptionNumberColor\">Paradox</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1645086487\">Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub_PLY</a>[<span class=\"descriptionNumberColor\">Paradox</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ForceStanceDamage"
@@ -4958,7 +4958,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_plus4_sub[<span class=\"descriptionNumberColor\">Divine Score</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__906922784\">Modifier_FantasticStory_BaseAbility_2060_plus4_sub</a>[<span class=\"descriptionNumberColor\">Divine Score</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4996,7 +4996,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_plus3_sub[<span class=\"descriptionNumberColor\">Potential</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__391899273\">Modifier_FantasticStory_BaseAbility_2060_plus3_sub</a>[<span class=\"descriptionNumberColor\">Potential</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -5030,7 +5030,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_plus2_sub[<span class=\"descriptionNumberColor\">Universality</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__514411026\">Modifier_FantasticStory_BaseAbility_2060_plus2_sub</a>[<span class=\"descriptionNumberColor\">Universality</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -5061,7 +5061,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_plus1_sub2[<span class=\"descriptionNumberColor\">Radiance</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-54375589\">Modifier_FantasticStory_BaseAbility_2060_plus1_sub2</a>[<span class=\"descriptionNumberColor\">Radiance</span>]",
           "stackType": "ReplaceByCaster",
           "description": "When defeated, there is a <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2061_ADF_1</span> chance to additionally accumulate 1 \"Resound\" stack.",
           "type": "Debuff",
@@ -5069,7 +5069,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_plus1_sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__1746652203\">Modifier_FantasticStory_BaseAbility_2060_plus1_sub</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -5122,7 +5122,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                       },
-                      "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
                       "addStacksPerTrigger": 1
                     }
                   ]
@@ -5133,7 +5133,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -5156,7 +5156,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_BaseAddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-398018983\">Modifier_FantasticStory_BaseAbility_2060_BaseAddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
           "stackType": "ReplaceByCaster",
           "stackData": [
             "DV_Ratio"
@@ -5168,7 +5168,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_ForShow[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1271014269\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
           "stackType": "ReplaceByCaster",
           "stackData": [],
           "latentQueue": [],
@@ -5179,7 +5179,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1981060014\">Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -5217,7 +5217,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_aura",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5240,7 +5240,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY[<span class=\"descriptionNumberColor\">Reminiscence</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1211620586\">Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY</a>[<span class=\"descriptionNumberColor\">Reminiscence</span>]"
                 },
                 {
                   "name": "Update Surging Grit[PF]",
@@ -5317,7 +5317,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_plus1_sub",
+              "modifier": "<a class=\"gModGreen\" id=\"1746652203\">Modifier_FantasticStory_BaseAbility_2060_plus1_sub</a>",
               "haloStatus": true,
               "conditions": {
                 "name": "Compare: Variable",
@@ -5332,7 +5332,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_plus1_sub2[<span class=\"descriptionNumberColor\">Radiance</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-54375589\">Modifier_FantasticStory_BaseAbility_2060_plus1_sub2</a>[<span class=\"descriptionNumberColor\">Radiance</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Compare: Variable",
@@ -5347,7 +5347,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_plus2_sub[<span class=\"descriptionNumberColor\">Universality</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"514411026\">Modifier_FantasticStory_BaseAbility_2060_plus2_sub</a>[<span class=\"descriptionNumberColor\">Universality</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Compare: Variable",
@@ -5362,7 +5362,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Far Left Player Entity(no Memosprite)}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_plus3_sub[<span class=\"descriptionNumberColor\">Potential</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"391899273\">Modifier_FantasticStory_BaseAbility_2060_plus3_sub</a>[<span class=\"descriptionNumberColor\">Potential</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Compare: Variable",
@@ -5377,7 +5377,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub[<span class=\"descriptionNumberColor\">Paradox</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1773154335\">Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub</a>[<span class=\"descriptionNumberColor\">Paradox</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Compare: Variable",
@@ -5392,7 +5392,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub",
+              "modifier": "<a class=\"gModGreen\" id=\"-290304906\">Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub</a>",
               "haloStatus": true,
               "conditions": {
                 "name": "Compare: Variable",
@@ -5407,7 +5407,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus7_Sub[<span class=\"descriptionNumberColor\">Memory</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"412492093\">Modifier_FantasticStory_BaseAbility_2060_Plus7_Sub</a>[<span class=\"descriptionNumberColor\">Memory</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Compare: Variable",
@@ -5422,7 +5422,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Modifier_FantasticStory_BaseAbility_2060_Plus8_Sub[<span class=\"descriptionNumberColor\">Epiphany</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1428129204\">Modifier_FantasticStory_BaseAbility_2060_Plus8_Sub</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Compare: Variable",
@@ -5435,7 +5435,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Modifier_FantasticStory_BaseAbility_2060_ListenBEDelay",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1327218064\">Modifier_FantasticStory_BaseAbility_2060_ListenBEDelay</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {

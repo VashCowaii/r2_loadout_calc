@@ -36,7 +36,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Standard_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
         "displayLines": "{[Skill02[3]]}",

@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_067"
+      "modifier": "<a class=\"gModGreen\" id=\"1443855225\">MStrongChallengeEX_Talent_StageAbility_LE_067</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_TGT_067[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2061183531\">MStrongChallengeEX_Talent_StageAbility_TGT_067</a>[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -64,7 +64,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_067",
+      "for": "<a class=\"gModGreen\" id=\"mod__1291234305\">MStrongChallengeEX_Talent_StageAbility_PLY_067</a>",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -82,7 +82,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_067[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2061183531\">MStrongChallengeEX_Talent_StageAbility_TGT_067</a>[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
                     "displayLines": "MDF_PropertyValue3",
@@ -140,7 +140,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "MStrongChallengeEX_Talent_StageAbility_TGT_067[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2061183531\">MStrongChallengeEX_Talent_StageAbility_TGT_067</a>[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
               "invertCondition": true
             }
           ]
@@ -157,7 +157,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_067",
+      "for": "<a class=\"gModGreen\" id=\"mod__1443855225\">MStrongChallengeEX_Talent_StageAbility_LE_067</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -184,7 +184,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_067",
+                  "modifier": "<a class=\"gModGreen\" id=\"1291234305\">MStrongChallengeEX_Talent_StageAbility_PLY_067</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

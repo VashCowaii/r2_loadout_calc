@@ -26,13 +26,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Tingyun_Tree03"
+          "modifier": "<a class=\"gModGreen\" id=\"499252230\">Tingyun_Tree03</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Tingyun_Tree03",
+          "for": "<a class=\"gModGreen\" id=\"mod__499252230\">Tingyun_Tree03</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -81,7 +81,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TingYun_ByIsTingYun"
+          "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
         },
         {
           "name": "IF",
@@ -96,7 +96,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Ability02PreShowModifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-894890999\">Ability02PreShowModifier</a>"
             }
           ]
         },
@@ -112,7 +112,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Ability02PreShowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-894890999\">Ability02PreShowModifier</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -133,7 +133,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Tingyun_Trace_B1_SpeedUp[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1819337398\">Tingyun_Trace_B1_SpeedUp</a>[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]"
               }
             },
             "delayAdvancePreview": {
@@ -210,7 +210,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "TingYun_Ability03DamageUp[<span class=\"descriptionNumberColor\">Amidst the Rejoicing Clouds</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"132060184\">TingYun_Ability03DamageUp</a>[<span class=\"descriptionNumberColor\">Amidst the Rejoicing Clouds</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -246,7 +246,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "TingYun_Ability03DamageUp[<span class=\"descriptionNumberColor\">Amidst the Rejoicing Clouds</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__132060184\">TingYun_Ability03DamageUp</a>[<span class=\"descriptionNumberColor\">Amidst the Rejoicing Clouds</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -342,7 +342,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Tingyun_Trace_B1_SpeedUp[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1819337398\">Tingyun_Trace_B1_SpeedUp</a>[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]",
               "duration": 1,
               "valuePerStack": {
                 "Tingyun_SpeedUP_Ratio": {
@@ -460,7 +460,7 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
         },
         {
           "name": "Define Custom Variable",
@@ -480,7 +480,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -517,7 +517,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -563,7 +563,7 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "modifier": "TingYun_Passive_LeiLing"
+          "modifier": "<a class=\"gModGreen\" id=\"-1351488572\">TingYun_Passive_LeiLing</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -580,7 +580,7 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "modifier": "TingYun_Passive_LeiLing_Eidolon1"
+          "modifier": "<a class=\"gModGreen\" id=\"-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -597,7 +597,7 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "modifier": "TingYun_Passive_LeiLing_Eidolon2"
+          "modifier": "<a class=\"gModGreen\" id=\"-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -614,7 +614,7 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "modifier": "TingYun_Passive_LeiLing_Eidolon4"
+          "modifier": "<a class=\"gModGreen\" id=\"-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>"
         },
         {
           "name": "IF",
@@ -629,7 +629,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "TingYun_Passive_LeiLing_Eidolon4",
+              "modifier": "<a class=\"gModGreen\" id=\"-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>",
               "valuePerStack": {
                 "MDF_Passive_DamagePercentage": {
                   "operator": "Variables[0] (0.4) || RETURN",
@@ -697,7 +697,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "TingYun_Passive_LeiLing_Eidolon2",
+                  "modifier": "<a class=\"gModGreen\" id=\"-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>",
                   "valuePerStack": {
                     "MDF_Passive_DamagePercentage": {
                       "operator": "Variables[0] (0.4) || RETURN",
@@ -757,7 +757,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "TingYun_Passive_LeiLing_Eidolon1",
+                      "modifier": "<a class=\"gModGreen\" id=\"-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>",
                       "valuePerStack": {
                         "MDF_Passive_DamagePercentage": {
                           "operator": "Variables[0] (0.4) || RETURN",
@@ -802,7 +802,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "TingYun_Passive_LeiLing",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1351488572\">TingYun_Passive_LeiLing</a>",
                       "valuePerStack": {
                         "MDF_Passive_DamagePercentage": {
                           "operator": "Variables[0] (0.4) || RETURN",
@@ -923,7 +923,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Tingyun_Ability01_Trace_B2"
+          "modifier": "<a class=\"gModGreen\" id=\"1522370778\">Tingyun_Ability01_Trace_B2</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -992,14 +992,14 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Tingyun_Ability01_Trace_B2"
+          "modifier": "<a class=\"gModGreen\" id=\"1522370778\">Tingyun_Ability01_Trace_B2</a>"
         },
         "Trigger: Ability End"
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Tingyun_Ability01_Trace_B2",
+          "for": "<a class=\"gModGreen\" id=\"mod__1522370778\">Tingyun_Ability01_Trace_B2</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1073,11 +1073,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Tingyun_Eidolon2_CD"
+          "for": "<a class=\"gModGreen\" id=\"mod__-2044109918\">Tingyun_Eidolon2_CD</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "Tingyun_Trace_B1_SpeedUp[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1819337398\">Tingyun_Trace_B1_SpeedUp</a>[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -1117,7 +1117,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tingyun_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -1153,15 +1153,15 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TingYun_PassiveFlag"
+          "for": "<a class=\"gModGreen\" id=\"mod__328360410\">TingYun_PassiveFlag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "TingYun_PassiveATK_Flag"
+          "for": "<a class=\"gModGreen\" id=\"mod__1593929305\">TingYun_PassiveATK_Flag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "TingYun_ByIsTingYun",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1429716226\">TingYun_ByIsTingYun</a>",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -1180,7 +1180,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
                   },
                   "ifTargetFound": [
                     {
@@ -1191,7 +1191,7 @@ const compositeAbilityObject = {
                       },
                       "valueType": "LifeTime",
                       "variableName": "TingYun_EnergyBarLayer",
-                      "modifierName": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
                       "multiplier": 1
                     },
                     {
@@ -1248,7 +1248,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1875583300\">MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark</a>"
                   },
                   "passed": [
                     {
@@ -1257,7 +1257,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1875583300\">MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark</a>"
                     },
                     {
                       "name": "Find New Target",
@@ -1273,7 +1273,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
                       },
                       "ifTargetFound": [
                         {
@@ -1284,7 +1284,7 @@ const compositeAbilityObject = {
                           },
                           "valueType": "LifeTime",
                           "variableName": "TingYun_EnergyBarLayer",
-                          "modifierName": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
                           "multiplier": 1
                         },
                         {
@@ -1353,7 +1353,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
                   },
                   "ifTargetFound": [
                     {
@@ -1364,7 +1364,7 @@ const compositeAbilityObject = {
                       },
                       "valueType": "LifeTime",
                       "variableName": "TingYun_EnergyBarLayer",
-                      "modifierName": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
                       "multiplier": 1
                     },
                     {
@@ -1431,7 +1431,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
                   },
                   "ifTargetFound": [
                     {
@@ -1442,7 +1442,7 @@ const compositeAbilityObject = {
                       },
                       "valueType": "LifeTime",
                       "variableName": "TingYun_EnergyBarLayer",
-                      "modifierName": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
                       "multiplier": 1
                     },
                     {
@@ -1498,7 +1498,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TingYun_Passive_LeiLing_Eidolon4",
+          "for": "<a class=\"gModGreen\" id=\"mod__-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -1512,7 +1512,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
                 }
               ]
             },
@@ -1525,7 +1525,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Tingyun_Eidolon2_CD"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
                 }
               ]
             },
@@ -1561,7 +1561,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Tingyun_Eidolon2_CD"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
                   },
                   "failed": [
                     {
@@ -1586,7 +1586,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Tingyun_Eidolon2_CD"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
                     }
                   ]
                 }
@@ -1640,7 +1640,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "TingYun_PassiveFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
                 },
                 {
                   "name": "IF",
@@ -1650,7 +1650,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "TingYun_PassiveATK_Flag"
+                    "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                   },
                   "passed": [
                     {
@@ -1681,7 +1681,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "TingYun_PassiveATK_Flag"
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                     }
                   ]
                 }
@@ -1705,7 +1705,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Current Action Owner}}"
                         },
-                        "modifier": "TingYun_ByIsTingYun"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
                       }
                     ]
                   },
@@ -1716,7 +1716,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TingYun_PassiveATK_Flag"
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                     }
                   ]
                 }
@@ -1738,7 +1738,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Tingyun_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_Eidolon1_SpeedUp_01": {
@@ -1768,7 +1768,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TingYun_Passive_LeiLing_Eidolon2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -1782,7 +1782,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
                 }
               ]
             },
@@ -1795,7 +1795,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Tingyun_Eidolon2_CD"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
                 }
               ]
             },
@@ -1831,7 +1831,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Tingyun_Eidolon2_CD"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
                   },
                   "failed": [
                     {
@@ -1856,7 +1856,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Tingyun_Eidolon2_CD"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
                     }
                   ]
                 }
@@ -1909,7 +1909,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "TingYun_PassiveFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
                 },
                 {
                   "name": "IF",
@@ -1919,7 +1919,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "TingYun_PassiveATK_Flag"
+                    "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                   },
                   "passed": [
                     {
@@ -1950,7 +1950,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "TingYun_PassiveATK_Flag"
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                     }
                   ]
                 }
@@ -1974,7 +1974,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Current Action Owner}}"
                         },
-                        "modifier": "TingYun_ByIsTingYun"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
                       }
                     ]
                   },
@@ -1985,7 +1985,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TingYun_PassiveATK_Flag"
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                     }
                   ]
                 }
@@ -2007,7 +2007,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Tingyun_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_Eidolon1_SpeedUp_01": {
@@ -2036,7 +2036,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TingYun_Passive_LeiLing_Eidolon1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -2050,7 +2050,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
                 }
               ]
             },
@@ -2122,7 +2122,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "TingYun_PassiveFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
                 },
                 {
                   "name": "IF",
@@ -2132,7 +2132,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "TingYun_PassiveATK_Flag"
+                    "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                   },
                   "passed": [
                     {
@@ -2163,7 +2163,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "TingYun_PassiveATK_Flag"
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                     }
                   ]
                 }
@@ -2187,7 +2187,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Current Action Owner}}"
                         },
-                        "modifier": "TingYun_ByIsTingYun"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
                       }
                     ]
                   },
@@ -2198,7 +2198,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TingYun_PassiveATK_Flag"
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                     }
                   ]
                 }
@@ -2220,7 +2220,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Tingyun_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "duration": 1,
                       "valuePerStack": {
                         "MDF_Eidolon1_SpeedUp_01": {
@@ -2248,7 +2248,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TingYun_Passive_LeiLing",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1351488572\">TingYun_Passive_LeiLing</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -2262,7 +2262,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
                 }
               ]
             },
@@ -2334,7 +2334,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "TingYun_PassiveFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
                 },
                 {
                   "name": "IF",
@@ -2344,7 +2344,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "TingYun_PassiveATK_Flag"
+                    "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                   },
                   "passed": [
                     {
@@ -2375,7 +2375,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "TingYun_PassiveATK_Flag"
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                     }
                   ]
                 }
@@ -2399,7 +2399,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Current Action Owner}}"
                         },
-                        "modifier": "TingYun_ByIsTingYun"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
                       }
                     ]
                   },
@@ -2410,7 +2410,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TingYun_PassiveATK_Flag"
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
                     }
                   ]
                 }
@@ -2426,7 +2426,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Tingyun_Eidolon1_Ability03PreShowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__979112594\">Tingyun_Eidolon1_Ability03PreShowModifier</a>",
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -2445,7 +2445,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Tingyun_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
               }
             },
             "delayAdvancePreview": {
@@ -2456,7 +2456,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2467,7 +2467,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "TingYun_Passive_LeiLing"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1351488572\">TingYun_Passive_LeiLing</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2475,7 +2475,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "TingYun_Passive_LeiLing_Eidolon1"
+                  "modifier": "<a class=\"gModGreen\" id=\"-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2483,7 +2483,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "TingYun_Passive_LeiLing_Eidolon2"
+                  "modifier": "<a class=\"gModGreen\" id=\"-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2491,7 +2491,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "TingYun_Passive_LeiLing_Eidolon4"
+                  "modifier": "<a class=\"gModGreen\" id=\"-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2519,7 +2519,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Tingyun_Eidolon1_Ability03PreShowModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"979112594\">Tingyun_Eidolon1_Ability03PreShowModifier</a>"
                 }
               ]
             },
@@ -2545,7 +2545,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Tingyun_Eidolon1_Ability03PreShowModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"979112594\">Tingyun_Eidolon1_Ability03PreShowModifier</a>"
                     }
                   ]
                 }
@@ -2573,8 +2573,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark",
-                          "referenceModifier": "MReference_Empty"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1875583300\">MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark</a>",
+                          "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
                         }
                       ]
                     }

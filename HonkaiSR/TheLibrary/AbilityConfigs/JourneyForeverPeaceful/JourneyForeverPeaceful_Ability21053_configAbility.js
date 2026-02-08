@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_21053_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1363202092\">LC_21053_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_21053_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1300199833\">LC_21053_Sub2</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -51,7 +51,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21053_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1900592239\">LC_21053_Sub</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -79,7 +79,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_21053_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1300199833\">LC_21053_Sub2</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 }
               ]
             }
@@ -102,7 +102,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_21053_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1300199833\">LC_21053_Sub2</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ],
@@ -113,7 +113,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_21053_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1300199833\">LC_21053_Sub2</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 }
               ]
             }
@@ -123,7 +123,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_21053_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1363202092\">LC_21053_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -166,7 +166,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_21053_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1900592239\">LC_21053_Sub</a>"
                 }
               ]
             }
@@ -190,7 +190,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{All Team Members}}"
                   },
-                  "modifier": "LC_21053_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1900592239\">LC_21053_Sub</a>"
                 }
               ]
             }

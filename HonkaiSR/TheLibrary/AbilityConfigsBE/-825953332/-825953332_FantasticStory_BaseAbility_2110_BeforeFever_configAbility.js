@@ -45,13 +45,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2110_BeforeFever"
+      "modifier": "<a class=\"gModGreen\" id=\"-1473014214\">Modifier_FantasticStory_BaseAbility_2110_BeforeFever</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2110_BeforeFever_sub2[<span class=\"descriptionNumberColor\">Shatter</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2132571309\">Modifier_FantasticStory_BaseAbility_2110_BeforeFever_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "Deathrattle"
@@ -76,7 +76,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Modifier_FantasticStory_BaseAbility_2110_aura"
+                "modifier": "<a class=\"gModGreen\" id=\"1923363748\">Modifier_FantasticStory_BaseAbility_2110_aura</a>"
               },
               "passed": [
                 {
@@ -218,7 +218,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Modifier_FantasticStory_BaseAbility_2110_aura"
+                "modifier": "<a class=\"gModGreen\" id=\"1923363748\">Modifier_FantasticStory_BaseAbility_2110_aura</a>"
               },
               "passed": [
                 {
@@ -250,7 +250,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Modifier_FantasticStory_BaseAbility_2110_aura"
+                "modifier": "<a class=\"gModGreen\" id=\"1923363748\">Modifier_FantasticStory_BaseAbility_2110_aura</a>"
               },
               "passed": [
                 {
@@ -275,7 +275,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2110_plus2_sub"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1595223290\">Modifier_FantasticStory_BaseAbility_2110_plus2_sub</a>"
                   },
                   "passed": [
                     {
@@ -413,7 +413,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Modifier_FantasticStory_BaseAbility_2110_aura"
+                "modifier": "<a class=\"gModGreen\" id=\"1923363748\">Modifier_FantasticStory_BaseAbility_2110_aura</a>"
               },
               "passed": [
                 {
@@ -430,7 +430,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Modifier_FantasticStory_BaseAbility_2110_aura"
+                "modifier": "<a class=\"gModGreen\" id=\"1923363748\">Modifier_FantasticStory_BaseAbility_2110_aura</a>"
               },
               "passed": [
                 {
@@ -479,7 +479,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2110_BeforeFever_sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1873057933\">Modifier_FantasticStory_BaseAbility_2110_BeforeFever_sub</a>",
       "stackType": "Replace",
       "execute": [
         {
@@ -516,7 +516,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2110_BeforeFever_sub2[<span class=\"descriptionNumberColor\">Shatter</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2132571309\">Modifier_FantasticStory_BaseAbility_2110_BeforeFever_sub2</a>[<span class=\"descriptionNumberColor\">Shatter</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2110_BeforeFever_P1_MaxLayer) || RETURN",
                     "displayLines": "DV_FantasticStory_BaseAbility_2110_BeforeFever_P1_MaxLayer",
@@ -540,7 +540,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2110_BeforeFever",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1473014214\">Modifier_FantasticStory_BaseAbility_2110_BeforeFever</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -585,7 +585,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2110_BeforeFever_sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1873057933\">Modifier_FantasticStory_BaseAbility_2110_BeforeFever_sub</a>"
                 }
               ]
             }
@@ -602,7 +602,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
                 },
-                "modifier": "Modifier_FantasticStory_BaseAbility_2110_BeforeFever_sub"
+                "modifier": "<a class=\"gModGreen\" id=\"-1873057933\">Modifier_FantasticStory_BaseAbility_2110_BeforeFever_sub</a>"
               },
               "passed": [
                 {
@@ -611,7 +611,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2110_BeforeFever_sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1873057933\">Modifier_FantasticStory_BaseAbility_2110_BeforeFever_sub</a>"
                 }
               ]
             }
@@ -627,7 +627,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2110_BeforeFever_ForShow[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1102093119\">Modifier_FantasticStory_BaseAbility_2110_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
           "haloStatus": true
         }
       ]

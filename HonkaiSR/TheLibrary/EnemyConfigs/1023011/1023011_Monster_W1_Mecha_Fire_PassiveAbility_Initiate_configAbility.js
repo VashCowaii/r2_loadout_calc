@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha_Fire_Initiate"
+      "modifier": "<a class=\"gModGreen\" id=\"1782341316\">Monster_W1_Mecha_Fire_Initiate</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -19,7 +19,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Monster_W1_Mecha04_01_MuteHitFly"
+      "modifier": "<a class=\"gModGreen\" id=\"-1525735107\">Monster_W1_Mecha04_01_MuteHitFly</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "HideMonsterHUD"
+      "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
     }
   ],
   "whenAdded": [
@@ -37,13 +37,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "HideMonsterHUD"
+      "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_01_MuteHitFly",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1525735107\">Monster_W1_Mecha04_01_MuteHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
       ],
@@ -52,7 +52,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha_Fire_Initiate",
+      "for": "<a class=\"gModGreen\" id=\"mod__1782341316\">Monster_W1_Mecha_Fire_Initiate</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -65,7 +65,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ability Target TAKING DMG}}"
                 },
-                "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
               },
               "passed": [
                 {
@@ -95,7 +95,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_W1_Mecha_Fire_Passive[<span class=\"descriptionNumberColor\">Out of Control</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1848655652\">Monster_W1_Mecha_Fire_Passive</a>[<span class=\"descriptionNumberColor\">Out of Control</span>]",
                   "duration": {
                     "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
                     "displayLines": "{[PassiveSkillInitiate[1]]}",
@@ -159,7 +159,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "HideMonsterHUD",
+      "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]"

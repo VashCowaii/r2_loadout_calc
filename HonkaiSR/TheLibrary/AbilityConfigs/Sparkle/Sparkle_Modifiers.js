@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -124,7 +124,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sparkle_Eidolon6_Mark",
+      "for": "<a class=\"gModGreen\" id=\"mod__690939863\">Sparkle_Eidolon6_Mark</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -157,7 +157,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Sparkle_Eidolon6_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"690939863\">Sparkle_Eidolon6_Mark</a>"
                 }
               ]
             }
@@ -167,7 +167,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sparkle_PassiveAbility_Real_AllDamageAddedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -219,13 +219,13 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sparkle_PointB3_Mark",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1668382571\">Sparkle_PointB3_Mark</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Sparkle_PassiveAbility_AllDamageAddedRatio02[<span class=\"descriptionNumberColor\">Red Herring</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1017813291\">Sparkle_PassiveAbility_AllDamageAddedRatio02</a>[<span class=\"descriptionNumberColor\">Red Herring</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -237,7 +237,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Sparkle_PassiveAbility_Real_AllDamageAddedRatio"
+              "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>"
             }
           ]
         },
@@ -296,7 +296,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
               },
               "passed": [
                 {
@@ -362,7 +362,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Sparkle_PassiveAbility_Real_AllDamageAddedRatio",
+              "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
               "valuePerStack": {
                 "MDF_AllDamageAddedRatio": {
                   "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -397,7 +397,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
                   },
                   {
                     "name": "Is Part Of",
@@ -433,7 +433,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sparkle_PassiveAbility_Real_AllDamageAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_AllDamageAddedRatio": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -467,7 +467,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
                   },
                   {
                     "name": "Is Part Of",
@@ -504,7 +504,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sparkle_PassiveAbility_Real_AllDamageAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_AllDamageAddedRatio": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -542,7 +542,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sparkle_Eidolon6_CritDmgAddedRatio01",
+      "for": "<a class=\"gModGreen\" id=\"mod__1304623516\">Sparkle_Eidolon6_CritDmgAddedRatio01</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -582,7 +582,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sparkle_Ability02_CritDmgAddedRatio02[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -635,7 +635,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -654,7 +654,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Sparkle_Ability02_CritDmgAddedRatio02[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
                   "duration": 1,
                   "valuePerStack": {
                     "MDF_PropertyValueConvert2": {
@@ -689,7 +689,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Sparkle_Ability02_CritDmgAddedRatio02[<span class=\"descriptionNumberColor\">Dreamdiver</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]"
             },
             {
               "name": "Define Custom Variable",
@@ -736,7 +736,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sparkle_Eidolon4_CD",
+      "for": "<a class=\"gModGreen\" id=\"mod__-167826022\">Sparkle_Eidolon4_CD</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -748,7 +748,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ListenBattleEventSkill"

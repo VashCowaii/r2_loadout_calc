@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_23035_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"1492393142\">LC_23035_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_23035_ListenBreak",
+      "for": "<a class=\"gModGreen\" id=\"mod__-662975105\">LC_23035_ListenBreak</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -31,7 +31,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "LC_23035_BreakDebuff",
+              "modifier": "<a class=\"gModGreen\" id=\"833308356\">LC_23035_BreakDebuff</a>",
               "baseChance": {
                 "operator": "Variables[0] (LC_23035_Chance) || RETURN",
                 "displayLines": "LC_23035_Chance",
@@ -68,7 +68,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23035_Sub[<span class=\"descriptionNumberColor\">Charring</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2009182373\">LC_23035_Sub</a>[<span class=\"descriptionNumberColor\">Charring</span>]",
                   "duration": {
                     "operator": "Variables[0] (LC_23035_LifeTime) || RETURN",
                     "displayLines": "LC_23035_LifeTime",
@@ -113,7 +113,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23035_Sub[<span class=\"descriptionNumberColor\">Charring</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2009182373\">LC_23035_Sub</a>[<span class=\"descriptionNumberColor\">Charring</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -132,7 +132,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23035_BreakDebuff",
+      "for": "<a class=\"gModGreen\" id=\"mod__833308356\">LC_23035_BreakDebuff</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -176,7 +176,7 @@ const configAbility = {
               },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
-              "modifierName": "LC_23035_BreakDebuff",
+              "modifierName": "<a class=\"gModGreen\" id=\"833308356\">LC_23035_BreakDebuff</a>",
               "multiplier": 1
             },
             {
@@ -203,7 +203,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "LC_23035_Sub[<span class=\"descriptionNumberColor\">Charring</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-2009182373\">LC_23035_Sub</a>[<span class=\"descriptionNumberColor\">Charring</span>]"
               },
               "passed": [
                 {
@@ -243,7 +243,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23035_BreakDebuff",
+                      "modifier": "<a class=\"gModGreen\" id=\"833308356\">LC_23035_BreakDebuff</a>",
                       "addStacksPerTrigger": {
                         "operator": "Constants[0] (1) || Variables[0] (Layer_Count) || SUB || RETURN",
                         "displayLines": "(1 - Layer_Count)",
@@ -269,7 +269,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_23035_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__1492393142\">LC_23035_Main</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -293,7 +293,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "LC_23035_BreakDebuff",
+                    "modifier": "<a class=\"gModGreen\" id=\"833308356\">LC_23035_BreakDebuff</a>",
                     "invertCondition": true,
                     "casterFilter": {
                       "name": "Target Name",
@@ -309,7 +309,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_23035_BreakDebuff",
+                  "modifier": "<a class=\"gModGreen\" id=\"833308356\">LC_23035_BreakDebuff</a>",
                   "stackLimit": {
                     "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(2 + 1)",
@@ -346,7 +346,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}"
                   },
-                  "modifier": "LC_23035_ListenBreak",
+                  "modifier": "<a class=\"gModGreen\" id=\"-662975105\">LC_23035_ListenBreak</a>",
                   "valuePerStack": {
                     "LC_23035_MaxLayer": {
                       "operator": "Variables[0] (2) || RETURN",
@@ -401,7 +401,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "LC_23035_BreakDebuff",
+                "modifier": "<a class=\"gModGreen\" id=\"833308356\">LC_23035_BreakDebuff</a>",
                 "invertCondition": true,
                 "casterFilter": {
                   "name": "Target Name",
@@ -415,7 +415,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "LC_23035_BreakDebuff",
+                  "modifier": "<a class=\"gModGreen\" id=\"833308356\">LC_23035_BreakDebuff</a>",
                   "stackLimit": {
                     "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(2 + 1)",
@@ -440,7 +440,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "LC_23035_ListenBreak",
+              "modifier": "<a class=\"gModGreen\" id=\"-662975105\">LC_23035_ListenBreak</a>",
               "valuePerStack": {
                 "LC_23035_MaxLayer": {
                   "operator": "Variables[0] (2) || RETURN",

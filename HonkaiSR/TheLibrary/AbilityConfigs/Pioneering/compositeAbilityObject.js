@@ -18,13 +18,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_20017_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"274850655\">LC_20017_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_20017_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__274850655\">LC_20017_Main</a>",
           "execute": [
             {
               "eventTrigger": "Caused Weakness Break [Owner]",

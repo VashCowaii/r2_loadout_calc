@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_Aglaea_Eidolon4_Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__1355909707\">Memosprite_Aglaea_Eidolon4_Listen</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -26,7 +26,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}.[[getMemosprite]]"
                 },
-                "modifier": "Memosprite_AglaeaServant_Passive"
+                "modifier": "<a class=\"gModGreen\" id=\"68059554\">Memosprite_AglaeaServant_Passive</a>"
               },
               "passed": [
                 {
@@ -35,7 +35,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getMemosprite]]"
                   },
-                  "modifier": "Memosprite_AglaeaServant_Passive",
+                  "modifier": "<a class=\"gModGreen\" id=\"68059554\">Memosprite_AglaeaServant_Passive</a>",
                   "variable": "_MaxLayer",
                   "target2": {
                     "name": "Target Name",
@@ -56,7 +56,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}.[[getMemosprite]]"
               },
-              "modifier": "Memosprite_AglaeaServant_AddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (_MaxLayer2) || RETURN",
                 "displayLines": "_MaxLayer2",
@@ -75,7 +75,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "Aglaea_Ability03[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"518821924\">Aglaea_Ability03</a>[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
               },
               "passed": [
                 {
@@ -84,7 +84,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_AglaeaServant_SummonerAddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (_MaxLayer2) || RETURN",
                     "displayLines": "_MaxLayer2",
@@ -106,13 +106,13 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_AglaeaServant_Interwine_AdjoinMark",
+      "for": "<a class=\"gModGreen\" id=\"mod__1495039477\">Memosprite_AglaeaServant_Interwine_AdjoinMark</a>",
       "stackData": [],
       "latentQueue": []
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_AglaeaServant_Ability01_PurseDamage",
+      "for": "<a class=\"gModGreen\" id=\"mod__1542962961\">Memosprite_AglaeaServant_Ability01_PurseDamage</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "KeepOnDeathrattle",
@@ -231,7 +231,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "PursuedDamage_PerformanceDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -276,7 +276,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster's Summoner}}"
                         },
-                        "modifier": "Aglaea_Ability03[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"518821924\">Aglaea_Ability03</a>[<span class=\"descriptionNumberColor\">Supreme Stance</span>]"
                       },
                       {
                         "name": "Eidolon Activated",
@@ -332,7 +332,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_AglaeaServant_AddSpeed[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-394991116\">Memosprite_AglaeaServant_AddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -377,7 +377,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Memosprite_AglaeaServant_Passive",
+              "modifier": "<a class=\"gModGreen\" id=\"68059554\">Memosprite_AglaeaServant_Passive</a>",
               "variable": "_MaxLayer",
               "target2": {
                 "name": "Target Name",
@@ -452,7 +452,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_Aglaea_HitDamageSplit",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1873179927\">Memosprite_Aglaea_HitDamageSplit</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -508,7 +508,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_AglaeaServant_SummonerKeepSpeed",
+      "for": "<a class=\"gModGreen\" id=\"mod__783183170\">Memosprite_AglaeaServant_SummonerKeepSpeed</a>",
       "stackData": [],
       "latentQueue": []
     }

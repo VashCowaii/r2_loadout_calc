@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "LC_20003_Main"
+      "modifier": "<a class=\"gModGreen\" id=\"-1746152920\">LC_20003_Main</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "LC_20003_DefenceAddedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1896336110\">LC_20003_DefenceAddedRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -44,7 +44,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "LC_20003_Main",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1746152920\">LC_20003_Main</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -75,7 +75,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_20003_DefenceAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1896336110\">LC_20003_DefenceAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.16) || RETURN",
@@ -120,7 +120,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_20003_DefenceAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1896336110\">LC_20003_DefenceAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.16) || RETURN",
@@ -140,7 +140,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_20003_DefenceAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1896336110\">LC_20003_DefenceAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": 0
                   }

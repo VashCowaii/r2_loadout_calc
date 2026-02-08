@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Herta_Passive_Flag"
+      "modifier": "<a class=\"gModGreen\" id=\"1076207439\">Herta_Passive_Flag</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -85,7 +85,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Herta_AbilityEidolon2_CriticalChance[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1736222640\">Herta_AbilityEidolon2_CriticalChance</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (5) || RETURN",
                 "displayLines": "5",
@@ -120,7 +120,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Herta_AbilityEidolon4_DamageUp",
+              "modifier": "<a class=\"gModGreen\" id=\"1482818607\">Herta_AbilityEidolon4_DamageUp</a>",
               "valuePerStack": {
                 "AbilityRank_Eidolon4_P1_DamagePercentage": {
                   "operator": "Variables[0] (0.1) || RETURN",
@@ -184,7 +184,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Herta_AbilityEidolon4_DamageUp"
+              "modifier": "<a class=\"gModGreen\" id=\"1482818607\">Herta_AbilityEidolon4_DamageUp</a>"
             },
             "Deleted bullshit",
             {
@@ -216,7 +216,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Herta_Passive_ATK"
+              "modifier": "<a class=\"gModGreen\" id=\"-256958111\">Herta_Passive_ATK</a>"
             }
           ],
           "failed": [
@@ -241,7 +241,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Herta_AbilityEidolon4_DamageUp"
+                  "modifier": "<a class=\"gModGreen\" id=\"1482818607\">Herta_AbilityEidolon4_DamageUp</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -249,7 +249,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Herta_Passive_ATK"
+                  "modifier": "<a class=\"gModGreen\" id=\"-256958111\">Herta_Passive_ATK</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -292,7 +292,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Herta_AbilityEidolon4_DamageUp"
+                  "modifier": "<a class=\"gModGreen\" id=\"1482818607\">Herta_AbilityEidolon4_DamageUp</a>"
                 }
               ]
             }
@@ -306,13 +306,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Herta_Passive_Flag"
+      "modifier": "<a class=\"gModGreen\" id=\"1076207439\">Herta_Passive_Flag</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Herta_AbilityEidolon4_DamageUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__1482818607\">Herta_AbilityEidolon4_DamageUp</a>",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -339,7 +339,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Herta_AbilityEidolon2_CriticalChance[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1736222640\">Herta_AbilityEidolon2_CriticalChance</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

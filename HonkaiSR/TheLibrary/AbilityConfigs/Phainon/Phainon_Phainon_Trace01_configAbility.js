@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Phainon_Trace01"
+      "modifier": "<a class=\"gModGreen\" id=\"-1046817282\">M_Phainon_Trace01</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Phainon_Trace01",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1046817282\">M_Phainon_Trace01</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -32,7 +32,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Phainon_Passive_ChargeEnergyToGainSP",
+                  "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
                       "operator": "Variables[0] (1) || RETURN",

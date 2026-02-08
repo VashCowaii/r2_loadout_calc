@@ -22,7 +22,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Advanced_Ren_Trace03"
+          "modifier": "<a class=\"gModGreen\" id=\"597595429\">Advanced_Ren_Trace03</a>"
         }
       ]
     },
@@ -178,7 +178,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Advanced_Ren_Qi[<span class=\"descriptionNumberColor\">Charge</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -209,7 +209,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Advanced_Ren_Trace03"
+          "modifier": "<a class=\"gModGreen\" id=\"597595429\">Advanced_Ren_Trace03</a>"
         }
       ]
     }

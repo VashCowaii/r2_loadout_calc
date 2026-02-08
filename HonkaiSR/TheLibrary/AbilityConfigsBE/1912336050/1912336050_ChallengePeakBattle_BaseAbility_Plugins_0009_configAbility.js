@@ -11,41 +11,41 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009"
+      "modifier": "<a class=\"gModGreen\" id=\"-1915662060\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "ChallengePeakBattle_Plugins_0009_WindTag"
+      "for": "<a class=\"gModGreen\" id=\"mod__1054595271\">ChallengePeakBattle_Plugins_0009_WindTag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "ChallengePeakBattle_Plugins_0009_ThunderTag"
+      "for": "<a class=\"gModGreen\" id=\"mod__662747565\">ChallengePeakBattle_Plugins_0009_ThunderTag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "ChallengePeakBattle_Plugins_0009_QuantumTag"
+      "for": "<a class=\"gModGreen\" id=\"mod__-1584675292\">ChallengePeakBattle_Plugins_0009_QuantumTag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "ChallengePeakBattle_Plugins_0009_PhysicalTag"
+      "for": "<a class=\"gModGreen\" id=\"mod__1304856250\">ChallengePeakBattle_Plugins_0009_PhysicalTag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "ChallengePeakBattle_Plugins_0009_ImaginaryTag"
+      "for": "<a class=\"gModGreen\" id=\"mod__1959783064\">ChallengePeakBattle_Plugins_0009_ImaginaryTag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "ChallengePeakBattle_Plugins_0009_IceTag"
+      "for": "<a class=\"gModGreen\" id=\"mod__1098913394\">ChallengePeakBattle_Plugins_0009_IceTag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "ChallengePeakBattle_Plugins_0009_FireTag"
+      "for": "<a class=\"gModGreen\" id=\"mod__962586433\">ChallengePeakBattle_Plugins_0009_FireTag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009_02[<span class=\"descriptionNumberColor\">Seize the Moment</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1236507091\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009_02</a>[<span class=\"descriptionNumberColor\">Seize the Moment</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -112,7 +112,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2009288629\">Standard_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -120,7 +120,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "ChallengePeakBattle_Plugins_0009_FireTag"
+                      "modifier": "<a class=\"gModGreen\" id=\"962586433\">ChallengePeakBattle_Plugins_0009_FireTag</a>"
                     }
                   ]
                 },
@@ -158,7 +158,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1497676034\">Standard_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -166,7 +166,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "ChallengePeakBattle_Plugins_0009_IceTag"
+                      "modifier": "<a class=\"gModGreen\" id=\"1098913394\">ChallengePeakBattle_Plugins_0009_IceTag</a>"
                     }
                   ]
                 },
@@ -204,7 +204,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1118024096\">Standard_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -212,7 +212,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "ChallengePeakBattle_Plugins_0009_ImaginaryTag"
+                      "modifier": "<a class=\"gModGreen\" id=\"1959783064\">ChallengePeakBattle_Plugins_0009_ImaginaryTag</a>"
                     }
                   ]
                 },
@@ -250,7 +250,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1724958950\">Standard_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -258,7 +258,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "ChallengePeakBattle_Plugins_0009_PhysicalTag"
+                      "modifier": "<a class=\"gModGreen\" id=\"1304856250\">ChallengePeakBattle_Plugins_0009_PhysicalTag</a>"
                     }
                   ]
                 },
@@ -296,7 +296,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1012677236\">Standard_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -304,7 +304,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "ChallengePeakBattle_Plugins_0009_QuantumTag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1584675292\">ChallengePeakBattle_Plugins_0009_QuantumTag</a>"
                     }
                   ]
                 },
@@ -342,7 +342,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1930557999\">Standard_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -350,7 +350,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "ChallengePeakBattle_Plugins_0009_ThunderTag"
+                      "modifier": "<a class=\"gModGreen\" id=\"662747565\">ChallengePeakBattle_Plugins_0009_ThunderTag</a>"
                     }
                   ]
                 },
@@ -388,7 +388,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Standard_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1938125975\">Standard_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -396,7 +396,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "ChallengePeakBattle_Plugins_0009_WindTag"
+                      "modifier": "<a class=\"gModGreen\" id=\"1054595271\">ChallengePeakBattle_Plugins_0009_WindTag</a>"
                     }
                   ]
                 }
@@ -415,7 +415,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "ChallengePeakBattle_Plugins_0009_FireTag",
+                "modifier": "<a class=\"gModGreen\" id=\"962586433\">ChallengePeakBattle_Plugins_0009_FireTag</a>",
                 "casterFilter": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -428,7 +428,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2009288629\">Standard_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -441,7 +441,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "ChallengePeakBattle_Plugins_0009_IceTag",
+                "modifier": "<a class=\"gModGreen\" id=\"1098913394\">ChallengePeakBattle_Plugins_0009_IceTag</a>",
                 "casterFilter": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -454,7 +454,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1497676034\">Standard_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -467,7 +467,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "ChallengePeakBattle_Plugins_0009_ImaginaryTag",
+                "modifier": "<a class=\"gModGreen\" id=\"1959783064\">ChallengePeakBattle_Plugins_0009_ImaginaryTag</a>",
                 "casterFilter": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -480,7 +480,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1118024096\">Standard_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -493,7 +493,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "ChallengePeakBattle_Plugins_0009_PhysicalTag",
+                "modifier": "<a class=\"gModGreen\" id=\"1304856250\">ChallengePeakBattle_Plugins_0009_PhysicalTag</a>",
                 "casterFilter": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -506,7 +506,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1724958950\">Standard_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -519,7 +519,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "ChallengePeakBattle_Plugins_0009_QuantumTag",
+                "modifier": "<a class=\"gModGreen\" id=\"-1584675292\">ChallengePeakBattle_Plugins_0009_QuantumTag</a>",
                 "casterFilter": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -532,7 +532,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1012677236\">Standard_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -545,7 +545,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "ChallengePeakBattle_Plugins_0009_ThunderTag",
+                "modifier": "<a class=\"gModGreen\" id=\"662747565\">ChallengePeakBattle_Plugins_0009_ThunderTag</a>",
                 "casterFilter": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -558,7 +558,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1930557999\">Standard_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -571,7 +571,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "ChallengePeakBattle_Plugins_0009_WindTag",
+                "modifier": "<a class=\"gModGreen\" id=\"1054595271\">ChallengePeakBattle_Plugins_0009_WindTag</a>",
                 "casterFilter": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -584,7 +584,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Standard_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1938125975\">Standard_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -598,7 +598,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1915662060\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -625,7 +625,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009_02[<span class=\"descriptionNumberColor\">Seize the Moment</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1236507091\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009_02</a>[<span class=\"descriptionNumberColor\">Seize the Moment</span>]",
                   "valuePerStack": {
                     "ChallengePeakBattle_Plugins_0009_ADF_1": {
                       "operator": "Variables[0] (#ADF_1) || RETURN",

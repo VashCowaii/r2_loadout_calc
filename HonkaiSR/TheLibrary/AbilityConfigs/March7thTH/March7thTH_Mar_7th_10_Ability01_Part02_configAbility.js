@@ -76,7 +76,8 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Mar_7th_10_Jianshi",
+      "functionName": "<a class=\"gTempYellow\" id=\"1835349740\">Mar_7th_10_Jianshi</a>",
+      "isGlobal": true,
       "variables": {
         "parameter[00]_IsAbility11": 0
       }
@@ -84,7 +85,7 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Use Custom Character Function",
-      "functionName": "Mar_7th_10_GainEnergyWithCheck",
+      "functionName": "<a class=\"gTempYellow\" id=\"-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
       "variables": {
         "parameter[0]_AddValue": {
           "operator": "Variables[0] (1) || RETURN",
@@ -105,13 +106,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_Mar_7th_10_Ability01_Preshow"
+      "modifier": "<a class=\"gModGreen\" id=\"-1857978623\">M_Mar_7th_10_Ability01_Preshow</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_Mar_7th_10_Ability01_Preshow",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1857978623\">M_Mar_7th_10_Ability01_Preshow</a>",
       "stackData": [],
       "latentQueue": [
         "_target_stance_before_attack"
@@ -126,7 +127,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "Mar_7th_10_Enhance",
+          "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
           "invertCondition": true
         },
         "multiplier": {

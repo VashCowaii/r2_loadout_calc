@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_305_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"1112573994\">Relic_305_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_305_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-493905921\">Relic_305_Sub</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -50,7 +50,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_305_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__1112573994\">Relic_305_Main</a>",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -61,7 +61,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Relic_305_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"-493905921\">Relic_305_Sub</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -104,7 +104,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Relic_305_Sub"
+                          "modifier": "<a class=\"gModGreen\" id=\"-493905921\">Relic_305_Sub</a>"
                         }
                       ]
                     }

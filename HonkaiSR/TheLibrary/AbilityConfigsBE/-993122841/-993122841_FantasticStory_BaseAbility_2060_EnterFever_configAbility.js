@@ -62,13 +62,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2060_EnterFever"
+      "modifier": "<a class=\"gModGreen\" id=\"1747401547\">Modifier_FantasticStory_BaseAbility_2060_EnterFever</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2060_EnterFever",
+      "for": "<a class=\"gModGreen\" id=\"mod__1747401547\">Modifier_FantasticStory_BaseAbility_2060_EnterFever</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -93,7 +93,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
                   }
                 ]
               },
@@ -118,7 +118,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
                   "addStacksPerTrigger": 1
                 }
               ]
@@ -147,7 +147,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
                   }
                 ]
               },
@@ -158,7 +158,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1981060014\">Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
                   "valuePerStack": {
                     "DV_Ratio_Get": {
                       "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2060_EnterFever_P3_Ratio) || RETURN",
@@ -181,7 +181,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+                "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
               },
               "passed": [
                 {
@@ -190,7 +190,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1981060014\">Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
                   "valuePerStack": {
                     "DV_Ratio_Get": {
                       "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2060_EnterFever_P3_Ratio) || RETURN",
@@ -213,7 +213,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+                "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
               },
               "passed": [
                 {
@@ -222,7 +222,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}"
                   },
-                  "modifier": "Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub[<span class=\"descriptionNumberColor\">Surging Grit</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"1981060014\">Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]"
                 }
               ]
             }
@@ -256,7 +256,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2060_aura"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>"
                   },
                   "passed": [
                     {

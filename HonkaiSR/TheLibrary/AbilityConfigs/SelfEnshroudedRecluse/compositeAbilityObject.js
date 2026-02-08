@@ -18,13 +18,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_128_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"2076563991\">Relic_128_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_128_Sub1[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1965254951\">Relic_128_Sub1</a>[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -55,7 +55,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_128_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__2065893036\">Relic_128_Sub</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -84,7 +84,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Relic_128_Sub1[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"1965254951\">Relic_128_Sub1</a>[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]",
                         "invertCondition": true,
                         "casterFilter": {
                           "name": "Target Name",
@@ -98,7 +98,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Relic_128_Sub1[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1965254951\">Relic_128_Sub1</a>[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]"
                         }
                       ]
                     }
@@ -132,7 +132,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Relic_128_Sub1[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"1965254951\">Relic_128_Sub1</a>[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]",
                         "casterFilter": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
@@ -145,7 +145,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Relic_128_Sub1[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1965254951\">Relic_128_Sub1</a>[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]",
                           "onlyRemoveOwnersInstance": true
                         }
                       ]
@@ -180,7 +180,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Relic_128_Sub1[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"1965254951\">Relic_128_Sub1</a>[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]",
                         "invertCondition": true,
                         "casterFilter": {
                           "name": "Target Name",
@@ -194,7 +194,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Relic_128_Sub1[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1965254951\">Relic_128_Sub1</a>[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]"
                         }
                       ]
                     }
@@ -206,7 +206,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Relic_128_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__2076563991\">Relic_128_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -239,7 +239,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "Relic_128_Sub",
+              "modifier": "<a class=\"gModGreen\" id=\"2065893036\">Relic_128_Sub</a>",
               "haloStatus": true
             }
           ]
@@ -273,13 +273,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_128_Main2"
+          "modifier": "<a class=\"gModGreen\" id=\"-42571713\">Relic_128_Main2</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_128_Main2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-42571713\">Relic_128_Main2</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",

@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Lingsha_Passive_Target",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1849801979\">Lingsha_Passive_Target</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -257,7 +257,7 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "Lingsha_Passive_Target_Eidolon6",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__988152442\">Lingsha_Passive_Target_Eidolon6</a>",
       "parse": [
         {
           "name": "Looped Event",

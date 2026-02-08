@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Castorice_Eidolon6_QuantumPenetrate[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-459849199\">Castorice_Eidolon6_QuantumPenetrate</a>[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -40,7 +40,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Castorice_Eidolon4_HealTakenRatio[<span class=\"descriptionNumberColor\">Rest in Songs of Gloom</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1861384440\">Castorice_Eidolon4_HealTakenRatio</a>[<span class=\"descriptionNumberColor\">Rest in Songs of Gloom</span>]",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -77,7 +77,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Castorice_Eidolon2_Count[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -102,7 +102,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Castorice_Eidolon2_OnListenValueChange",
+      "for": "<a class=\"gModGreen\" id=\"mod__2083586529\">Castorice_Eidolon2_OnListenValueChange</a>",
       "stackType": "ReplaceByCaster",
       "variableValueChange": [
         {
@@ -123,7 +123,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Castorice_Eidolon2_Count[<span class=\"descriptionNumberColor\">Ardent Will</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]"
                   },
                   "passed": [
                     {
@@ -132,7 +132,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Castorice_Eidolon2_Count[<span class=\"descriptionNumberColor\">Ardent Will</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]"
                     }
                   ]
                 },
@@ -151,7 +151,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Castorice_Eidolon2_Count[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
                       "counter": {
                         "operator": "Variables[0] (Castorice_Rank02_Count) || RETURN",
                         "displayLines": "Castorice_Rank02_Count",
@@ -185,7 +185,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Castorice_Eidolon2_Check",
+      "for": "<a class=\"gModGreen\" id=\"mod__176252830\">Castorice_Eidolon2_Check</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -197,7 +197,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Castorice_PointB3_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -246,7 +246,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Castorice_PointB1_HealTaxesListen",
+      "for": "<a class=\"gModGreen\" id=\"mod__2144053419\">Castorice_PointB1_HealTaxesListen</a>",
       "execute": [
         {
           "eventTrigger": "Receiving Heal End [Owner]",
@@ -330,7 +330,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster's Memosprite}}"
                     },
-                    "modifier": "Memosprite_CastoriceServant_Passive"
+                    "modifier": "<a class=\"gModGreen\" id=\"1159652346\">Memosprite_CastoriceServant_Passive</a>"
                   },
                   "passed": [
                     {
@@ -363,7 +363,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster's Memosprite}}"
                         },
-                        "modifier": "Memosprite_CastoriceServant_GoDie"
+                        "modifier": "<a class=\"gModGreen\" id=\"1793501095\">Memosprite_CastoriceServant_GoDie</a>"
                       },
                       "failed": [
                         {
@@ -401,7 +401,7 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Castorice_AddSpecialSP",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
                       "variables": {
                         "_FixedAddValue": {
                           "operator": "Variables[0] (HealAmount_CasterAdd) || RETURN",
@@ -457,7 +457,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Castorice_PointB1_HealTaxes",
+      "for": "<a class=\"gModGreen\" id=\"mod__950021136\">Castorice_PointB1_HealTaxes</a>",
       "stackData": [],
       "latentQueue": [
         "OverHeal"
@@ -469,7 +469,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}} - {{Caster}}.[[getMemosprite]]"
           },
-          "modifier": "Castorice_PointB1_HealTaxesListen",
+          "modifier": "<a class=\"gModGreen\" id=\"2144053419\">Castorice_PointB1_HealTaxesListen</a>",
           "haloStatus": true,
           "valuePerStack": {
             "Castorice_PointB1_HPPercent": {
@@ -494,7 +494,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_Castorice_SpeedRatio[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -529,7 +529,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Memosprite_Castorice_PointB2_OnListen",
+      "for": "<a class=\"gModGreen\" id=\"mod__115720497\">Memosprite_Castorice_PointB2_OnListen</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -561,7 +561,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Memosprite_Castorice_SpeedRatio[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (Castorice_PointB2_SpeedRatio) || RETURN",
@@ -615,7 +615,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Memosprite_Castorice_SpeedRatio[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
                         "invertCondition": true
                       },
                       "passed": [
@@ -625,7 +625,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Memosprite_Castorice_SpeedRatio[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (Castorice_PointB2_SpeedRatio) || RETURN",
@@ -649,7 +649,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Memosprite_Castorice_SpeedRatio[<span class=\"descriptionNumberColor\">Inverted Torch</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]"
                       },
                       "passed": [
                         {
@@ -658,7 +658,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Memosprite_Castorice_SpeedRatio[<span class=\"descriptionNumberColor\">Inverted Torch</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]"
                         }
                       ]
                     }
@@ -679,7 +679,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Castorice_Passive_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -729,7 +729,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Castorice_Ability03_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-658097441\">Castorice_Ability03_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -763,7 +763,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Castorice_Ability03_Field",
+      "for": "<a class=\"gModGreen\" id=\"mod__-604294216\">Castorice_Ability03_Field</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "SpecialBattleArea"
@@ -872,7 +872,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Castorice_Ability03_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-658097441\">Castorice_Ability03_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
           "aliveOnly": "False",
           "haloStatus": true,
           "valuePerStack": {
@@ -890,7 +890,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Castorice_LoseHPPreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__445281600\">Castorice_LoseHPPreShow</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -942,7 +942,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Castorice_Ability03_Field"
+                        "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>"
                       },
                       "passed": [
                         {

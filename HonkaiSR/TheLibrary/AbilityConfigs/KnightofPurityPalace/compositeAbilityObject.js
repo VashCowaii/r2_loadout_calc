@@ -17,13 +17,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Relic_103_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"-458199754\">Relic_103_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Relic_103_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__-458199754\">Relic_103_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",

@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "March7th_BPAbility_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1541241593\">March7th_BPAbility_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "Shield"
@@ -157,7 +157,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "March7th_BPAbility_Shield_Counter",
+      "for": "<a class=\"gModGreen\" id=\"mod__944962578\">March7th_BPAbility_Shield_Counter</a>",
       "execute": [
         {
           "eventTrigger": "Being Attacked Start [Owner]",
@@ -185,7 +185,7 @@ const configAbility = {
                   },
                   {
                     "name": "Compare: Variable",
-                    "value1": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
                     "compareType": ">",
                     "value2": 0
                   }
@@ -198,7 +198,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "March7th_BPAbility_Shield_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"189970891\">March7th_BPAbility_Shield_Mark</a>"
                 }
               ]
             }
@@ -210,7 +210,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "March7th_BPAbility_Shield_Mark",
+      "for": "<a class=\"gModGreen\" id=\"mod__189970891\">March7th_BPAbility_Shield_Mark</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -240,7 +240,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "March7th_BPAbility_Shield_Mark",
+              "modifier": "<a class=\"gModGreen\" id=\"189970891\">March7th_BPAbility_Shield_Mark</a>",
               "onlyRemoveOwnersInstance": true
             }
           ]
@@ -251,7 +251,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Mar_7th_FrozenFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__329183507\">Mar_7th_FrozenFlag</a>",
       "execute": [
         {
           "eventTrigger": "When Modifier is Added [Anyone]",

@@ -32,7 +32,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Yunli_Passive"
+      "modifier": "<a class=\"gModGreen\" id=\"-1181889244\">Yunli_Passive</a>"
     },
     {
       "name": "Define Custom Variable",
@@ -68,7 +68,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Trace03",
+          "modifier": "<a class=\"gModGreen\" id=\"-762526263\">Yunli_Trace03</a>",
           "valuePerStack": {
             "MDF_ProbabilityValue2": {
               "operator": "Variables[0] (0.3) || RETURN",
@@ -95,7 +95,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Eidolon2",
+          "modifier": "<a class=\"gModGreen\" id=\"258425587\">Yunli_Eidolon2</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (0.2) || RETURN",
@@ -122,7 +122,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Yunli_Eidolon6",
+          "modifier": "<a class=\"gModGreen\" id=\"325536063\">Yunli_Eidolon6</a>",
           "valuePerStack": {
             "MDF_CritChance": {
               "operator": "Variables[0] (0.15) || RETURN",
@@ -148,7 +148,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Yunli_Passive",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1181889244\">Yunli_Passive</a>",
       "execute": [
         {
           "eventTrigger": "Turn Start [Anyone]",
@@ -199,7 +199,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Yunli_Blocking_Effect"
+              "modifier": "<a class=\"gModGreen\" id=\"-1693627544\">Yunli_Blocking_Effect</a>"
             }
           ]
         },
@@ -233,7 +233,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Yunli_Blocking[<span class=\"descriptionNumberColor\">Parry</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]",
                 "invertCondition": true
               },
               "passed": [
@@ -419,7 +419,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Yunli_Blocking_Effect"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1693627544\">Yunli_Blocking_Effect</a>"
                     },
                     {
                       "name": "Change Character Transformation",

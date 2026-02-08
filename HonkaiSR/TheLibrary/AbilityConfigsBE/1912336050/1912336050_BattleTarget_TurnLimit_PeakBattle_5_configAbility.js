@@ -11,13 +11,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_BattleTarget_TurnLimit_PeakBattle_5"
+      "modifier": "<a class=\"gModGreen\" id=\"-1344407115\">Modifier_BattleTarget_TurnLimit_PeakBattle_5</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_BattleTarget_TurnLimit_PeakBattle_5",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1344407115\">Modifier_BattleTarget_TurnLimit_PeakBattle_5</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

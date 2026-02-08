@@ -40,7 +40,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Cerydra_PassiveAbility"
+      "modifier": "<a class=\"gModGreen\" id=\"2061740004\">Cerydra_PassiveAbility</a>"
     },
     {
       "name": "IF",
@@ -55,7 +55,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cerydra_PointB1"
+          "modifier": "<a class=\"gModGreen\" id=\"1113467681\">Cerydra_PointB1</a>"
         }
       ]
     },
@@ -72,7 +72,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Cerydra_PointB2_Self",
+          "modifier": "<a class=\"gModGreen\" id=\"35466247\">Cerydra_PointB2_Self</a>",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] (1) || RETURN",
@@ -92,13 +92,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Cerydra_BP_PreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"1118409627\">Cerydra_BP_PreShow</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Cerydra_BP_PreShow_End",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2108963231\">Cerydra_BP_PreShow_End</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -117,7 +117,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                   },
                   {
                     "name": "Compare: Target",
@@ -194,7 +194,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                   },
                   {
                     "name": "Compare: Target",
@@ -338,7 +338,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                   },
                   {
                     "name": "Compare: Target",
@@ -471,7 +471,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cerydra_BP_PreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__1118409627\">Cerydra_BP_PreShow</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -482,7 +482,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "Cerydra_BP_PreShow_End"
+              "modifier": "<a class=\"gModGreen\" id=\"-2108963231\">Cerydra_BP_PreShow_End</a>"
             }
           ]
         },
@@ -506,7 +506,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Cerydra_BP_PreShow_End"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2108963231\">Cerydra_BP_PreShow_End</a>"
                 }
               ]
             }
@@ -547,7 +547,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Player's Aim Primary-Target}}"
                     },
-                    "modifier": "Cerydra_Ability02_Target"
+                    "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>"
                   }
                 },
                 {
@@ -558,7 +558,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Player's Aim Primary-Target}}"
                     },
-                    "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                   },
                   "passed": [
                     {
@@ -625,7 +625,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Player's Aim Primary-Target}}"
                     },
-                    "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]"
                   },
                   "passed": [
                     {
@@ -836,7 +836,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cerydra_BonusTargetHandler",
+      "for": "<a class=\"gModGreen\" id=\"mod__1635182298\">Cerydra_BonusTargetHandler</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -856,7 +856,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Cerydra_PassiveAbility",
+      "for": "<a class=\"gModGreen\" id=\"mod__2061740004\">Cerydra_PassiveAbility</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -897,7 +897,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Cerydra_Ability02_Target"
+                "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>"
               },
               "passed": [
                 {
@@ -959,7 +959,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Cerydra_Ability02_Target"
+                          "modifier": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>"
                         }
                       }
                     ]
@@ -1021,7 +1021,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Cerydra's Promotion Target}}"
                                 },
-                                "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
+                                "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]",
                                 "invertCondition": true
                               }
                             ]
@@ -1056,7 +1056,7 @@ const configAbility = {
                                       "name": "Target Name",
                                       "target": "{{Cerydra's Promotion Target}}"
                                     },
-                                    "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
+                                    "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]",
                                     "invertCondition": true
                                   }
                                 ]
@@ -1142,7 +1142,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members}}"
           },
-          "modifier": "Cerydra_BonusTargetHandler",
+          "modifier": "<a class=\"gModGreen\" id=\"1635182298\">Cerydra_BonusTargetHandler</a>",
           "haloStatus": true
         }
       ]

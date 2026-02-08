@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Standard_SpeedRatioUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__2003084081\">Standard_SpeedRatioUp</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
@@ -45,7 +45,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part3_IF_AbilityP01_OneMoreController",
+      "for": "<a class=\"gModGreen\" id=\"mod__1344394786\">Enemy_AML_Boss_Part3_IF_AbilityP01_OneMoreController</a>",
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
@@ -63,7 +63,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMorePerTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                 }
               ],
               "whenLeavingRange": [
@@ -73,7 +73,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "OneMorePerTurn"
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                 }
               ]
             }

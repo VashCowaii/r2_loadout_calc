@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Technique_Acheron_Modifier"
+      "modifier": "<a class=\"gModGreen\" id=\"-1353413392\">Technique_Acheron_Modifier</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Acheron_TechniqueWeakType_BUFF",
+      "for": "<a class=\"gModGreen\" id=\"mod__-115192964\">Acheron_TechniqueWeakType_BUFF</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ForceStanceDamage"
@@ -55,7 +55,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Technique_Acheron_Modifier",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1353413392\">Technique_Acheron_Modifier</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -78,7 +78,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Acheron_TechniqueWeakType_BUFF"
+                  "modifier": "<a class=\"gModGreen\" id=\"-115192964\">Acheron_TechniqueWeakType_BUFF</a>"
                 }
               ]
             },
@@ -96,7 +96,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Acheron_UltraAbilitySpareCount[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1886427249\">Acheron_UltraAbilitySpareCount</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (1) || RETURN",
@@ -116,7 +116,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Acheron_UltraAbilitySpareCount_PointB1[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"62451815\">Acheron_UltraAbilitySpareCount_PointB1</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -212,7 +212,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Acheron_TechniqueWeakType_BUFF"
+              "modifier": "<a class=\"gModGreen\" id=\"-115192964\">Acheron_TechniqueWeakType_BUFF</a>"
             }
           ],
           "priorityLevel": -60

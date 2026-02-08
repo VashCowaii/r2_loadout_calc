@@ -27,7 +27,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Yukong's Flower Target}}"
       },
-      "modifier": "Yukong_Flower_ATK_Crit[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1097783562\">Yukong_Flower_ATK_Crit</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
       "valuePerStack": {
         "MDF_RealAttack": {
           "operator": "Variables[0] (0.8) || RETURN",
@@ -93,7 +93,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{All Team Members with Unselectables}}"
       },
-      "modifier": "Yukong_Eidolon2_BonusCD"
+      "modifier": "<a class=\"gModGreen\" id=\"-476851750\">Yukong_Eidolon2_BonusCD</a>"
     },
     "Trigger: Ability End"
   ],

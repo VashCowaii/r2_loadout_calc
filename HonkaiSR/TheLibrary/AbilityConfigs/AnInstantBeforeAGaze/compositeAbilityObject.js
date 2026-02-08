@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23018_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"1179329473\">LC_23018_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23018_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__84318854\">LC_23018_Sub</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -78,7 +78,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23018_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__1179329473\">LC_23018_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -145,7 +145,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "LC_23018_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"84318854\">LC_23018_Sub</a>"
                     }
                   ]
                 }

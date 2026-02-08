@@ -46,7 +46,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "GlobalAbility_Castorice_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"1166883348\">GlobalAbility_Castorice_Main</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -54,7 +54,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "GlobalAbility_Castorice_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"-1718302990\">GlobalAbility_Castorice_Listen</a>"
         },
         {
           "name": "Assign Global Buff State",
@@ -80,7 +80,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "GlobalAbility_Castorice_LimboWakeUpMark"
+            "modifier": "<a class=\"gModGreen\" id=\"-224007130\">GlobalAbility_Castorice_LimboWakeUpMark</a>"
           }
         },
         {
@@ -89,7 +89,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}"
           },
-          "modifier": "GlobalAbility_Castorice_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"-1718302990\">GlobalAbility_Castorice_Listen</a>"
         },
         {
           "name": "Find New Target",
@@ -105,7 +105,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "GlobalAbility_Castorice_LimboWakeUpMark"
+            "modifier": "<a class=\"gModGreen\" id=\"-224007130\">GlobalAbility_Castorice_LimboWakeUpMark</a>"
           },
           "ifTargetFound": [
             {
@@ -122,7 +122,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "GlobalAbility_Castorice_DeathTime[<span class=\"descriptionNumberColor\">Mooncocoon</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-678658688\">GlobalAbility_Castorice_DeathTime</a>[<span class=\"descriptionNumberColor\">Mooncocoon</span>]",
               "duration": 2
             }
           ]
@@ -133,7 +133,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
           },
-          "modifier": "GlobalAbility_Castorice_LimboWakeUpMark"
+          "modifier": "<a class=\"gModGreen\" id=\"-224007130\">GlobalAbility_Castorice_LimboWakeUpMark</a>"
         }
       ],
       "references": []
@@ -151,7 +151,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "GlobalAbility_Castorice_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"1166883348\">GlobalAbility_Castorice_Main</a>"
         }
       ],
       "references": []
@@ -169,7 +169,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "modifier": "GlobalAbility_Castorice_CreateBattleEvent"
+          "modifier": "<a class=\"gModGreen\" id=\"708690209\">GlobalAbility_Castorice_CreateBattleEvent</a>"
         }
       ],
       "references": []
@@ -186,13 +186,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengIL_SpecialPassiveModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-138851216\">DanHengIL_SpecialPassiveModifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_SpecialModifier_DisableAbility",
+          "for": "<a class=\"gModGreen\" id=\"mod__954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -215,7 +215,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengIL_SpecialPassiveModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-138851216\">DanHengIL_SpecialPassiveModifier</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -284,7 +284,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "DanHengIL_SpecialModifier_DisableAbility",
+                          "modifier": "<a class=\"gModGreen\" id=\"954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
                           "immediateEffect": true
                         }
                       ]
@@ -311,7 +311,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "DanHengIL_SpecialModifier_DisableAbility",
+                          "modifier": "<a class=\"gModGreen\" id=\"954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
                           "immediateEffect": true
                         }
                       ]
@@ -338,7 +338,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "DanHengIL_SpecialModifier_DisableAbility",
+                          "modifier": "<a class=\"gModGreen\" id=\"954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
                           "immediateEffect": true
                         }
                       ]
@@ -373,13 +373,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Servant_Standard_PassiveModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1385373133\">Servant_Standard_PassiveModifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Servant_Standard_PassiveModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1385373133\">Servant_Standard_PassiveModifier</a>",
           "modifierFlags": [
             "KeepAllModifierOnDeathRattle"
           ],
@@ -433,13 +433,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Summoner_Standard_PassiveModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1237494040\">Summoner_Standard_PassiveModifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Summoner_Standard_PassiveModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1237494040\">Summoner_Standard_PassiveModifier</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -526,7 +526,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Local_SPAdd",
+          "modifier": "<a class=\"gModGreen\" id=\"-205377483\">Local_SPAdd</a>",
           "valuePerStack": {
             "MDF_AddValue": 10
           }
@@ -537,7 +537,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "TriggerStanceCountDown_Test"
+          "modifier": "<a class=\"gModGreen\" id=\"2041921887\">TriggerStanceCountDown_Test</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -545,7 +545,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Standard_TriggerDeparted"
+          "modifier": "<a class=\"gModGreen\" id=\"1176583887\">Standard_TriggerDeparted</a>"
         }
       ],
       "references": []
@@ -562,12 +562,12 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "ClearAvatarArea_ByAbility",
+          "for": "<a class=\"gModGreen\" id=\"mod__253720974\">ClearAvatarArea_ByAbility</a>",
           "stackType": "Replace"
         },
         {
           "name": "Modifier Construction",
-          "for": "GlobalAbility_Castorice_DeathTime[<span class=\"descriptionNumberColor\">Mooncocoon</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-678658688\">GlobalAbility_Castorice_DeathTime</a>[<span class=\"descriptionNumberColor\">Mooncocoon</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
             {
@@ -673,11 +673,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "GlobalAbility_Castorice_LimboWakeUpMark"
+          "for": "<a class=\"gModGreen\" id=\"mod__-224007130\">GlobalAbility_Castorice_LimboWakeUpMark</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "GlobalAbility_Castorice_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1718302990\">GlobalAbility_Castorice_Listen</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -739,7 +739,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "GlobalAbility_Castorice_CD"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1108004202\">GlobalAbility_Castorice_CD</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -747,7 +747,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "GlobalAbility_Castorice_LimboWakeUpMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-224007130\">GlobalAbility_Castorice_LimboWakeUpMark</a>"
                     }
                   ]
                 }
@@ -758,13 +758,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "GlobalAbility_Castorice_CD",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1108004202\">GlobalAbility_Castorice_CD</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "GlobalAbility_Castorice_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__1166883348\">GlobalAbility_Castorice_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -781,7 +781,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
                   },
-                  "modifier": "GlobalAbility_Castorice_Listen",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1718302990\">GlobalAbility_Castorice_Listen</a>",
                   "valuePerStack": {
                     "MDF_HealPercentage": {
                       "operator": "Variables[0] (UNUSED_OBJECT_CAS_REVIVE_HEAL_AMOUNT) || RETURN",
@@ -826,7 +826,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "GlobalAbility_Castorice_Listen"
+                        "modifier": "<a class=\"gModGreen\" id=\"-1718302990\">GlobalAbility_Castorice_Listen</a>"
                       },
                       {
                         "name": "Has Modifier",
@@ -834,7 +834,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "GlobalAbility_Castorice_CD",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1108004202\">GlobalAbility_Castorice_CD</a>",
                         "invertCondition": true
                       }
                     ]
@@ -846,7 +846,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]]"
                       },
-                      "modifier": "GlobalAbility_Castorice_Listen",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1718302990\">GlobalAbility_Castorice_Listen</a>",
                       "valuePerStack": {
                         "MDF_HealPercentage": {
                           "operator": "Variables[0] (UNUSED_OBJECT_CAS_REVIVE_HEAL_AMOUNT) || RETURN",
@@ -871,7 +871,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "GlobalAbility_Castorice_CreateBattleEvent",
+          "for": "<a class=\"gModGreen\" id=\"mod__708690209\">GlobalAbility_Castorice_CreateBattleEvent</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -899,7 +899,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Departed_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__1136407126\">Standard_Departed_Sub</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -931,7 +931,7 @@ const compositeAbilityObject = {
           ],
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "Standard_Departed",
+            "dependancyName": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
             "casterFilter": {
               "name": "Target Name",
               "target": "{{Caster}}"
@@ -940,7 +940,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_Departed",
+          "for": "<a class=\"gModGreen\" id=\"mod__123456163\">Standard_Departed</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "Stealth"
@@ -989,7 +989,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_Departed_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>",
                   "onlyRemoveOwnersInstance": true
                 }
               ]
@@ -1003,7 +1003,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_Departed_Sub"
+                  "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>"
                 }
               ]
             },
@@ -1048,7 +1048,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1056,7 +1056,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1064,7 +1064,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "ParamModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-228290033\">ParamModifier</a>"
                     }
                   ]
                 }
@@ -1078,7 +1078,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}.[[addBattleEvents]]"
               },
-              "modifier": "Standard_Departed_Sub",
+              "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>",
               "aliveOnly": "False",
               "haloStatus": true,
               "includeBattleEvent": true
@@ -1087,7 +1087,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Standard_TriggerDeparted",
+          "for": "<a class=\"gModGreen\" id=\"mod__1176583887\">Standard_TriggerDeparted</a>",
           "execute": [
             {
               "eventTrigger": "Departed State: Start [Owner]",
@@ -1098,7 +1098,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_Departed"
+                  "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>"
                 }
               ]
             },
@@ -1111,7 +1111,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Standard_Departed"
+                  "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>"
                 }
               ]
             }
@@ -1121,7 +1121,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TriggerStanceCountDown_Monster",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1581220157\">TriggerStanceCountDown_Monster</a>",
           "modifierFlags": [
             "KeepOnDeathrattle",
             "CanBeAddedToServant"
@@ -1164,7 +1164,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "StanceCountDown_Physical",
+                          "functionName": "<a class=\"gTempYellow\" id=\"-1088674520\">StanceCountDown_Physical</a>",
                           "variables": {}
                         }
                       ]
@@ -1185,7 +1185,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "StanceCountDown_Ice",
+                          "functionName": "<a class=\"gTempYellow\" id=\"-184331160\">StanceCountDown_Ice</a>",
                           "variables": {}
                         }
                       ]
@@ -1206,7 +1206,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "StanceCountDown_Fire",
+                          "functionName": "<a class=\"gTempYellow\" id=\"-1895171535\">StanceCountDown_Fire</a>",
                           "variables": {}
                         }
                       ]
@@ -1227,7 +1227,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "StanceCountDown_Wind",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1032587311\">StanceCountDown_Wind</a>",
                           "variables": {}
                         }
                       ]
@@ -1248,7 +1248,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "StanceCountDown_Thunder",
+                          "functionName": "<a class=\"gTempYellow\" id=\"983067753\">StanceCountDown_Thunder</a>",
                           "variables": {}
                         }
                       ]
@@ -1269,7 +1269,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "StanceCountDown_Imaginary",
+                          "functionName": "<a class=\"gTempYellow\" id=\"-1968828018\">StanceCountDown_Imaginary</a>",
                           "variables": {}
                         }
                       ]
@@ -1290,7 +1290,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "StanceCountDown_Quantum",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1123715482\">StanceCountDown_Quantum</a>",
                           "variables": {}
                         }
                       ]
@@ -1304,7 +1304,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "TT_TriggerBreak"
+                  "functionName": "<a class=\"gTempYellow\" id=\"801909437\">TT_TriggerBreak</a>"
                 }
               ]
             },
@@ -1313,7 +1313,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "TT_TriggerBreak"
+                  "functionName": "<a class=\"gTempYellow\" id=\"801909437\">TT_TriggerBreak</a>"
                 }
               ]
             }
@@ -1321,7 +1321,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "TT_TriggerBreak",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__801909437\">TT_TriggerBreak</a>",
               "parse": [
                 {
                   "name": "IF",
@@ -1339,7 +1339,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "StanceBreak_Physical",
+                      "functionName": "<a class=\"gTempYellow\" id=\"485608192\">StanceBreak_Physical</a>",
                       "variables": {}
                     }
                   ]
@@ -1360,7 +1360,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "StanceBreak_Ice",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-687043424\">StanceBreak_Ice</a>",
                       "variables": {}
                     }
                   ]
@@ -1381,7 +1381,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "StanceBreak_Fire",
+                      "functionName": "<a class=\"gTempYellow\" id=\"483030905\">StanceBreak_Fire</a>",
                       "variables": {}
                     }
                   ]
@@ -1402,7 +1402,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "StanceBreak_Wind",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1573629529\">StanceBreak_Wind</a>",
                       "variables": {}
                     }
                   ]
@@ -1423,7 +1423,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "StanceBreak_Thunder",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1796036529\">StanceBreak_Thunder</a>",
                       "variables": {}
                     }
                   ]
@@ -1444,7 +1444,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "StanceBreak_Imaginary",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-433289498\">StanceBreak_Imaginary</a>",
                       "variables": {}
                     }
                   ]
@@ -1465,7 +1465,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "StanceBreak_Quantum",
+                      "functionName": "<a class=\"gTempYellow\" id=\"789833122\">StanceBreak_Quantum</a>",
                       "variables": {}
                     }
                   ]
@@ -1476,7 +1476,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TriggerStanceCountDown_Test",
+          "for": "<a class=\"gModGreen\" id=\"mod__2041921887\">TriggerStanceCountDown_Test</a>",
           "modifierFlags": [
             "KeepOnDeathrattle",
             "CanBeAddedToServant"
@@ -1519,7 +1519,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "StanceCountDown_Physical",
+                          "functionName": "<a class=\"gTempYellow\" id=\"-1088674520\">StanceCountDown_Physical</a>",
                           "variables": {}
                         }
                       ]
@@ -1540,7 +1540,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "StanceCountDown_Ice",
+                          "functionName": "<a class=\"gTempYellow\" id=\"-184331160\">StanceCountDown_Ice</a>",
                           "variables": {}
                         }
                       ]
@@ -1561,7 +1561,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "StanceCountDown_Fire",
+                          "functionName": "<a class=\"gTempYellow\" id=\"-1895171535\">StanceCountDown_Fire</a>",
                           "variables": {}
                         }
                       ]
@@ -1582,7 +1582,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "StanceCountDown_Wind",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1032587311\">StanceCountDown_Wind</a>",
                           "variables": {}
                         }
                       ]
@@ -1603,7 +1603,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "StanceCountDown_Thunder",
+                          "functionName": "<a class=\"gTempYellow\" id=\"983067753\">StanceCountDown_Thunder</a>",
                           "variables": {}
                         }
                       ]
@@ -1624,7 +1624,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "StanceCountDown_Imaginary",
+                          "functionName": "<a class=\"gTempYellow\" id=\"-1968828018\">StanceCountDown_Imaginary</a>",
                           "variables": {}
                         }
                       ]
@@ -1645,7 +1645,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Use Custom Character Function",
-                          "functionName": "StanceCountDown_Quantum",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1123715482\">StanceCountDown_Quantum</a>",
                           "variables": {}
                         }
                       ]
@@ -1673,7 +1673,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "StanceBreak_Physical",
+                      "functionName": "<a class=\"gTempYellow\" id=\"485608192\">StanceBreak_Physical</a>",
                       "variables": {}
                     }
                   ]
@@ -1694,7 +1694,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "StanceBreak_Ice",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-687043424\">StanceBreak_Ice</a>",
                       "variables": {}
                     }
                   ]
@@ -1715,7 +1715,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "StanceBreak_Fire",
+                      "functionName": "<a class=\"gTempYellow\" id=\"483030905\">StanceBreak_Fire</a>",
                       "variables": {}
                     }
                   ]
@@ -1736,7 +1736,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "StanceBreak_Wind",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1573629529\">StanceBreak_Wind</a>",
                       "variables": {}
                     }
                   ]
@@ -1757,7 +1757,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "StanceBreak_Thunder",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1796036529\">StanceBreak_Thunder</a>",
                       "variables": {}
                     }
                   ]
@@ -1778,7 +1778,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "StanceBreak_Imaginary",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-433289498\">StanceBreak_Imaginary</a>",
                       "variables": {}
                     }
                   ]
@@ -1799,7 +1799,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "StanceBreak_Quantum",
+                      "functionName": "<a class=\"gTempYellow\" id=\"789833122\">StanceBreak_Quantum</a>",
                       "variables": {}
                     }
                   ]
@@ -1812,7 +1812,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Local_SPAdd",
+          "for": "<a class=\"gModGreen\" id=\"mod__-205377483\">Local_SPAdd</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -1858,7 +1858,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "GlobalFunction_ClearAvatarArea_ByAbility",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-777670637\">GlobalFunction_ClearAvatarArea_ByAbility</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -1896,7 +1896,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "ClearAvatarArea_ByAbility"
+                  "modifier": "<a class=\"gModGreen\" id=\"253720974\">ClearAvatarArea_ByAbility</a>"
                 }
               ]
             }

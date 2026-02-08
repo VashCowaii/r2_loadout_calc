@@ -34,13 +34,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23016_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"847225167\">LC_23016_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23016_Enhance[<span class=\"descriptionNumberColor\">Tame</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2096438896\">LC_23016_Enhance</a>[<span class=\"descriptionNumberColor\">Tame</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -96,7 +96,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23016_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__847225167\">LC_23016_Main</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -147,7 +147,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Attack Targets of Modifier Holder}}"
                       },
-                      "modifier": "LC_23016_Enhance[<span class=\"descriptionNumberColor\">Tame</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2096438896\">LC_23016_Enhance</a>[<span class=\"descriptionNumberColor\">Tame</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",

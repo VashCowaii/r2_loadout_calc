@@ -77,7 +77,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "WHanya_Ability03Bonus[<span class=\"descriptionNumberColor\">Edict</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"1743228292\">WHanya_Ability03Bonus</a>[<span class=\"descriptionNumberColor\">Edict</span>]",
       "duration": {
         "operator": "Variables[0] (MDF_Skill03_LifeTime) || RETURN",
         "displayLines": "MDF_Skill03_LifeTime",
@@ -126,7 +126,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Hanya_Eidolon1_Other",
+          "modifier": "<a class=\"gModGreen\" id=\"-1742049492\">Hanya_Eidolon1_Other</a>",
           "duration": {
             "operator": "Variables[0] (MDF_Skill03_LifeTime) || RETURN",
             "displayLines": "MDF_Skill03_LifeTime",
@@ -151,7 +151,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Hanya_Eidolon1"
+          "modifier": "<a class=\"gModGreen\" id=\"-154421851\">Hanya_Eidolon1</a>"
         }
       ]
     },

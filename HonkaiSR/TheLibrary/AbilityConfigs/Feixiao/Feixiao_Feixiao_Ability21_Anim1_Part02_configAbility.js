@@ -6,15 +6,15 @@ const configAbility = {
   "parse": [
     {
       "name": "Use Custom Character Function",
-      "functionName": "Feixiao_Combo1_CostSPBeforeDamage"
+      "functionName": "<a class=\"gTempYellow\" id=\"69209893\">Feixiao_Combo1_CostSPBeforeDamage</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Feixiao_Combo2_DealDamage"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1999111375\">Feixiao_Combo2_DealDamage</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Feixiao_Combo2_AfterDamageCheck"
+      "functionName": "<a class=\"gTempYellow\" id=\"1389767451\">Feixiao_Combo2_AfterDamageCheck</a>"
     },
     {
       "name": "IF",
@@ -40,7 +40,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Feixiao_TriggerBreak"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1982785786\">Feixiao_TriggerBreak</a>"
         }
       ],
       "failed": [
@@ -52,7 +52,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_FrameHaltRealTime",
+              "functionName": "<a class=\"gTempYellow\" id=\"293207912\">Feixiao_FrameHaltRealTime</a>",
               "variables": {
                 "parameter[0]_Realtime": 0.1,
                 "parameter[1]_TimeScale": 0.025
@@ -62,7 +62,7 @@ const configAbility = {
           "failed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Feixiao_FrameHaltRealTime",
+              "functionName": "<a class=\"gTempYellow\" id=\"293207912\">Feixiao_FrameHaltRealTime</a>",
               "variables": {
                 "parameter[0]_Realtime": 0.1,
                 "parameter[1]_TimeScale": 0.05
@@ -74,7 +74,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Feixiao_ComboPerformFinish"
+      "functionName": "<a class=\"gTempYellow\" id=\"342687242\">Feixiao_ComboPerformFinish</a>"
     }
   ],
   "references": []

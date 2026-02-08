@@ -50,7 +50,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Rappa_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
             },
             {
               "name": "ATK Scaling DMG",
@@ -88,7 +88,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Rappa_ForceStanceDamage"
+              "modifier": "<a class=\"gModGreen\" id=\"2114229234\">Rappa_ForceStanceDamage</a>"
             }
           ],
           "failed": [
@@ -172,7 +172,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Rappa_ForceStanceDamage_ForPassive"
+          "modifier": "<a class=\"gModGreen\" id=\"185730135\">Rappa_ForceStanceDamage_ForPassive</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -217,7 +217,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Rappa_ForceStanceDamage_ForPassive"
+          "modifier": "<a class=\"gModGreen\" id=\"185730135\">Rappa_ForceStanceDamage_ForPassive</a>"
         }
       ]
     },
@@ -228,7 +228,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Rappa_Break_Modifier_ForShow[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]"
     },
     {
       "name": "IF",
@@ -256,7 +256,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Rappa_Break_Modifier_ForShow[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
           "stackLimit": {
             "operator": "Variables[0] (_PassiveBreakCountMax) || RETURN",
             "displayLines": "_PassiveBreakCountMax",
@@ -283,7 +283,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Rappa_UltraMode_BanSKL02_ForCaster"
+      "modifier": "<a class=\"gModGreen\" id=\"685299865\">Rappa_UltraMode_BanSKL02_ForCaster</a>"
     },
     {
       "name": "Update Energy",
@@ -301,7 +301,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Rappa_Ability13_StanceDamagePreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"-1369082619\">Rappa_Ability13_StanceDamagePreShow</a>"
     },
     {
       "name": "Update Ability Binding",

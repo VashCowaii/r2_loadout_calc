@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Herta_Trace02_Resistance",
+      "modifier": "<a class=\"gModGreen\" id=\"499178350\">Herta_Trace02_Resistance</a>",
       "valuePerStack": {
         "MDF_Resistance": {
           "operator": "Variables[0] (0.35) || RETURN",
@@ -26,7 +26,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Herta_Trace02_Resistance",
+      "for": "<a class=\"gModGreen\" id=\"mod__499178350\">Herta_Trace02_Resistance</a>",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

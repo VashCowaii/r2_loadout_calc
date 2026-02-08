@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Asta_Passive_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2135184996\">Asta_Passive_SPRatioUp</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -42,7 +42,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Asta_Eidolon2Flag",
+      "for": "<a class=\"gModGreen\" id=\"mod__1558109509\">Asta_Eidolon2Flag</a>",
       "stackType": "ReplaceByCaster",
       "stackData": [],
       "latentQueue": [],
@@ -50,7 +50,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__216386907\">Asta_TeamAttackUP</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -58,7 +58,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Modifier Variable",
-              "modifierName": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"216386907\">Asta_TeamAttackUP</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
               "value": {
                 "operator": "Variables[0] (MDF_Charge_Count) || RETURN",
                 "displayLines": "MDF_Charge_Count",
@@ -95,7 +95,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
       "counter": 5,
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
@@ -139,7 +139,7 @@ const configAbility = {
                   }
                 ]
               },
-              "modifier": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"216386907\">Asta_TeamAttackUP</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
             },
             {
               "name": "IF",
@@ -154,7 +154,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Asta_Passive_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-2135184996\">Asta_Passive_SPRatioUp</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
                 }
               ]
             }
@@ -165,7 +165,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Modifier Variable",
-              "modifierName": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
               "value": {
                 "operator": "Variables[0] (MDF_Count) || RETURN",
                 "displayLines": "MDF_Count",
@@ -270,7 +270,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
               },
-              "modifier": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"216386907\">Asta_TeamAttackUP</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
               "valuePerStack": {
                 "MDF_AttackAddedRatio": {
                   "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
@@ -305,7 +305,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                    "value1": "<a class=\"gModGreen\" id=\"-1734289579\">Asta_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                     "compareType": ">=",
                     "value2": {
                       "operator": "Variables[0] (MDF_BuffLayer) || RETURN",
@@ -323,7 +323,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Asta_Passive_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-2135184996\">Asta_Passive_SPRatioUp</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_SPRatio) || RETURN",
@@ -369,7 +369,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"216386907\">Asta_TeamAttackUP</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
                       "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
@@ -409,7 +409,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Asta_FireAddedRatio",
+      "for": "<a class=\"gModGreen\" id=\"mod__-653161821\">Asta_FireAddedRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

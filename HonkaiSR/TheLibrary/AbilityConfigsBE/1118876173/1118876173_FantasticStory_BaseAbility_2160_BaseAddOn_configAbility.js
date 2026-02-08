@@ -28,13 +28,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Modifier_FantasticStory_BaseAbility_2160_BaseAddOn"
+      "modifier": "<a class=\"gModGreen\" id=\"1465238703\">Modifier_FantasticStory_BaseAbility_2160_BaseAddOn</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Modifier_FantasticStory_BaseAbility_2160_BaseAddOn",
+      "for": "<a class=\"gModGreen\" id=\"mod__1465238703\">Modifier_FantasticStory_BaseAbility_2160_BaseAddOn</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -74,7 +74,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Modifier_FantasticStory_BaseAbility_2160_Aura",
+                    "modifier": "<a class=\"gModGreen\" id=\"-898765267\">Modifier_FantasticStory_BaseAbility_2160_Aura</a>",
                     "invertCondition": true
                   }
                 ]
@@ -178,7 +178,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Modifier_FantasticStory_BaseAbility_2160_BaseAddOn_ForShow[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1418148626\">Modifier_FantasticStory_BaseAbility_2160_BaseAddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value": {

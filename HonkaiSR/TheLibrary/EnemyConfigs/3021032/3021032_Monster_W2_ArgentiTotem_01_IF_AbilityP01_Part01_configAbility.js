@@ -19,7 +19,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "DeathCamera_First"
+          "functionName": "<a class=\"gTempYellow\" id=\"1173935247\">DeathCamera_First</a>"
         }
       ]
     },
@@ -46,7 +46,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "W2_ArgentiTotem_01_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"-444895536\">W2_ArgentiTotem_01_BattleScore1</a>"
         }
       ]
     },
@@ -56,7 +56,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W2_Argenti_IF_Power_Trigger"
+      "modifier": "<a class=\"gModGreen\" id=\"-1869945151\">Enemy_W2_Argenti_IF_Power_Trigger</a>"
     },
     {
       "name": "IF",

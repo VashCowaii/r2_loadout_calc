@@ -28,7 +28,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Advanced_Jingliu_Eidolon1_CriticalDamage[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1838091998\">Advanced_Jingliu_Eidolon1_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -560,7 +560,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Jingliu_Frozen_Perform"
+      "modifier": "<a class=\"gModGreen\" id=\"-724768260\">Jingliu_Frozen_Perform</a>"
     },
     {
       "name": "IF",
@@ -588,7 +588,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Targets Adjacent(Blast)}}"
               },
-              "modifier": "Jingliu_Frozen_Perform"
+              "modifier": "<a class=\"gModGreen\" id=\"-724768260\">Jingliu_Frozen_Perform</a>"
             }
           ]
         }
@@ -600,7 +600,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Targets Adjacent(Blast)}}"
           },
-          "modifier": "Jingliu_Frozen_Perform"
+          "modifier": "<a class=\"gModGreen\" id=\"-724768260\">Jingliu_Frozen_Perform</a>"
         }
       ]
     },
@@ -610,7 +610,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "Jingliu_Frozen_Perform"
+      "modifier": "<a class=\"gModGreen\" id=\"-724768260\">Jingliu_Frozen_Perform</a>"
     },
     {
       "name": "ATK Scaling DMG",
@@ -780,7 +780,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Advanced_Jingliu_Eidolon2[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"57193716\">Advanced_Jingliu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]"
     },
     {
       "name": "IF",
@@ -821,7 +821,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Jingliu_Frozen_Perform",
+      "for": "<a class=\"gModGreen\" id=\"mod__-724768260\">Jingliu_Frozen_Perform</a>",
       "modifierFlags": [
         "STAT_AnimStop"
       ],

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Evernight_UltraMode_Effect"
+      "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,11 +18,11 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Evernight_S03"
+      "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "function_Evernight_TryCreateServant",
+      "functionName": "<a class=\"gTempYellow\" id=\"1497424763\">function_Evernight_TryCreateServant</a>",
       "variables": {
         "DV_Partner_Count": {
           "operator": "Variables[0] (_Partner_Count) || RETURN",
@@ -51,7 +51,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Evernight_UltraMode[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
           "operator": "Variables[0] (0.6) || RETURN",
@@ -79,7 +79,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Evernight_UltraMode_Energy[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
       },
       "passed": [
         {
@@ -88,7 +88,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "Evernight_UltraMode_Energy[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+          "modifierName": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
           "function": "Add",
           "value": {
             "operator": "Variables[0] (S03_Duration) || RETURN",
@@ -107,7 +107,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Evernight_UltraMode_Energy[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
           "counter": {
             "operator": "Variables[0] (S03_Duration) || RETURN",
             "displayLines": "S03_Duration",
@@ -168,7 +168,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Evernight_UltraMode_Effect",
+      "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>",
       "casterAssign": "TargetSelf"
     },
     "Trigger: Ability End"
@@ -176,7 +176,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Evernight_S03",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1950285194\">Evernight_S03</a>",
       "stackData": [],
       "latentQueue": []
     }

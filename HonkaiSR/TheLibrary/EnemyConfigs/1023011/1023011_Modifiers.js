@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha_Fire_Burning_CD",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1129963596\">Monster_W1_Mecha_Fire_Burning_CD</a>",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -22,7 +22,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha_Fire_Burning[<span class=\"descriptionNumberColor\">Mania</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__188036182\">Monster_W1_Mecha_Fire_Burning</a>[<span class=\"descriptionNumberColor\">Mania</span>]",
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
@@ -39,7 +39,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Monster_W1_Mecha_Fire_Burning_CD"
+              "modifier": "<a class=\"gModGreen\" id=\"-1129963596\">Monster_W1_Mecha_Fire_Burning_CD</a>"
             }
           ]
         },
@@ -99,7 +99,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha_Fire_Passive[<span class=\"descriptionNumberColor\">Out of Control</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1848655652\">Monster_W1_Mecha_Fire_Passive</a>[<span class=\"descriptionNumberColor\">Out of Control</span>]",
       "stackType": "Replace",
       "execute": [
         {
@@ -171,7 +171,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Monster_W1_Mecha04_01_HeadEffect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1466752435\">Monster_W1_Mecha04_01_HeadEffect</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"

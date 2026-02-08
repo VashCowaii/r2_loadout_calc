@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_Eidolon1_DamageUp",
+      "for": "<a class=\"gModGreen\" id=\"mod__762236364\">Harscyline_Eidolon1_DamageUp</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -50,7 +50,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ModifyDamageData_IndependentDamageAddedRatio",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-446302809\">ModifyDamageData_IndependentDamageAddedRatio</a>",
                   "variables": {
                     "parameter[0]_IndependentDamageAddedRatio": {
                       "operator": "Variables[0] (MDF_PropertyRatio) || Constants[0] (1) || SUB || RETURN",
@@ -72,7 +72,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_DOTDamageUpPre",
+      "for": "<a class=\"gModGreen\" id=\"mod__1305457610\">Harscyline_DOTDamageUpPre</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -83,7 +83,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Harscyline_Eidolon1_DamageUp",
+              "modifier": "<a class=\"gModGreen\" id=\"762236364\">Harscyline_Eidolon1_DamageUp</a>",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
                   "operator": "Variables[0] (1.16) || RETURN",
@@ -106,7 +106,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_DOT_Poison2[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1978589432\">Harscyline_DOT_Poison2</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -205,7 +205,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_DOT_Burn2[<span class=\"descriptionNumberColor\">Burn</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1515140485\">Harscyline_DOT_Burn2</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -351,7 +351,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_DOT_Electric2[<span class=\"descriptionNumberColor\">Shock</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1970678013\">Harscyline_DOT_Electric2</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -472,7 +472,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_DOT_Tear2[<span class=\"descriptionNumberColor\">Bleed</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__2146839416\">Harscyline_DOT_Tear2</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -749,7 +749,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1250170394\">Harscyline_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -848,7 +848,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__566707275\">Harscyline_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -994,7 +994,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-593885923\">Harscyline_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -1115,7 +1115,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__850932122\">Harscyline_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -1409,7 +1409,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_TriggerDotFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1604046093\">Harscyline_TriggerDotFlag</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -1418,7 +1418,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_PassiveDot_Part1Listen",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1653901942\">Harscyline_PassiveDot_Part1Listen</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -1526,7 +1526,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Harscyline_TriggerDotFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1604046093\">Harscyline_TriggerDotFlag</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1552,7 +1552,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "modifier": "Harscyline_TriggerDotFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1604046093\">Harscyline_TriggerDotFlag</a>"
                   },
                   {
                     "name": "Compare: Target",
@@ -1608,7 +1608,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_PassiveDot_Trigger",
+      "for": "<a class=\"gModGreen\" id=\"mod__-716136231\">Harscyline_PassiveDot_Trigger</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "ListenBattleEventSkill"
@@ -1623,7 +1623,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Harscyline_TriggerDotFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"-1604046093\">Harscyline_TriggerDotFlag</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -1651,7 +1651,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Harscyline_TriggerDotFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"-1604046093\">Harscyline_TriggerDotFlag</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -1722,7 +1722,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "Memosprite_CyreneServant_AmazingBonus_Harscyline[<span class=\"descriptionNumberColor\">Ode to Ocean</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-716696180\">Memosprite_CyreneServant_AmazingBonus_Harscyline</a>[<span class=\"descriptionNumberColor\">Ode to Ocean</span>]"
                           },
                           {
                             "name": "Character ID",
@@ -1751,7 +1751,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Harscyline_Ability03_Flag",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1908768915\">Harscyline_Ability03_Flag</a>",
                         "invertCondition": true
                       },
                       {
@@ -1760,7 +1760,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Harscyline_TriggerDotFlag",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1604046093\">Harscyline_TriggerDotFlag</a>",
                         "invertCondition": true
                       },
                       {
@@ -1794,7 +1794,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Harscyline_TriggerDotFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1604046093\">Harscyline_TriggerDotFlag</a>"
                     }
                   ],
                   "failed": [
@@ -1883,7 +1883,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "Harscyline_Ability03_Flag",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1908768915\">Harscyline_Ability03_Flag</a>",
                     "invertCondition": true
                   }
                 },
@@ -1953,7 +1953,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Harscyline_TriggerDotFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"-1604046093\">Harscyline_TriggerDotFlag</a>"
             },
             {
               "name": "IF",
@@ -1992,7 +1992,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Harscyline_TriggerDotFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"-1604046093\">Harscyline_TriggerDotFlag</a>"
             },
             {
               "name": "IF",
@@ -2054,7 +2054,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Harscyline_TriggerDotFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"-1604046093\">Harscyline_TriggerDotFlag</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -2109,7 +2109,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Harscyline_TriggerDotFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1604046093\">Harscyline_TriggerDotFlag</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2139,7 +2139,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Harscyline_TriggerDotFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"-1604046093\">Harscyline_TriggerDotFlag</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -2167,7 +2167,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Harscyline_TriggerDotFlag"
+              "modifier": "<a class=\"gModGreen\" id=\"-1604046093\">Harscyline_TriggerDotFlag</a>"
             },
             {
               "name": "Define Custom Variable",
@@ -2185,7 +2185,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1957610629\">Harscyline_PointB3_DamageAdded</a>[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -2223,7 +2223,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_HaloDebuff[<span class=\"descriptionNumberColor\">Maelstrom Rhapsody</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__389221010\">Harscyline_HaloDebuff</a>[<span class=\"descriptionNumberColor\">Maelstrom Rhapsody</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -2313,7 +2313,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Overtone Hum: Chorus After Dark Tides</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__511580758\">Harscyline_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Overtone Hum: Chorus After Dark Tides</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -2349,11 +2349,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_Maze_Flag"
+      "for": "<a class=\"gModGreen\" id=\"mod__-1815201624\">Harscyline_Maze_Flag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_Ability03_Flag",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1908768915\">Harscyline_Ability03_Flag</a>",
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead",
@@ -2364,7 +2364,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Harscyline_Ability03_HaloStatus",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1383903101\">Harscyline_Ability03_HaloStatus</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -2381,7 +2381,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Caster}}"
               },
-              "modifier": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1957610629\">Harscyline_PointB3_DamageAdded</a>[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -2405,7 +2405,7 @@ const configAbility = {
               "name": "Define Custom Variable with Modifier Values",
               "valueType": "LifeTime",
               "variableName": "MDF_Layer",
-              "modifierName": "Harscyline_Ability03_HaloStatus",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1383903101\">Harscyline_Ability03_HaloStatus</a>",
               "multiplier": 1
             },
             {
@@ -2457,7 +2457,7 @@ const configAbility = {
               "name": "Define Custom Variable with Modifier Values",
               "valueType": "LifeTime",
               "variableName": "MDF_Layer",
-              "modifierName": "Harscyline_Ability03_HaloStatus",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1383903101\">Harscyline_Ability03_HaloStatus</a>",
               "multiplier": 1
             },
             {
@@ -2489,7 +2489,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Harscyline_Maze_Flag"
+                "modifier": "<a class=\"gModGreen\" id=\"-1815201624\">Harscyline_Maze_Flag</a>"
               },
               "failed": [
                 {
@@ -2505,7 +2505,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Harscyline_Maze_Flag"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1815201624\">Harscyline_Maze_Flag</a>"
                 }
               ]
             }
@@ -2527,7 +2527,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Harscyline_PassiveDot_Trigger",
+          "modifier": "<a class=\"gModGreen\" id=\"-716136231\">Harscyline_PassiveDot_Trigger</a>",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_MaxLimit": {
@@ -2554,7 +2554,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Harscyline_PassiveDot_Part1Listen",
+          "modifier": "<a class=\"gModGreen\" id=\"-1653901942\">Harscyline_PassiveDot_Part1Listen</a>",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_MaxLimit": {
@@ -2581,7 +2581,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE, with Unselectables)}}"
           },
-          "modifier": "Harscyline_HaloDebuff[<span class=\"descriptionNumberColor\">Maelstrom Rhapsody</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"389221010\">Harscyline_HaloDebuff</a>[<span class=\"descriptionNumberColor\">Maelstrom Rhapsody</span>]",
           "haloStatus": true,
           "valuePerStack": {
             "MDF_DOTDamagePercentage": {
@@ -2632,7 +2632,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Caster}}"
           },
-          "modifier": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"1957610629\">Harscyline_PointB3_DamageAdded</a>[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
           "haloStatus": true,
           "conditions": {
             "name": "AND",

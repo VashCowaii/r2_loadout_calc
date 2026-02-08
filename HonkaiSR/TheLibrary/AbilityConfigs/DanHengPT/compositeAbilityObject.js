@@ -42,13 +42,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengPT_Maze"
+          "modifier": "<a class=\"gModGreen\" id=\"-1357770440\">DanHengPT_Maze</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_Maze",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1357770440\">DanHengPT_Maze</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -83,7 +83,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "StageAbility_MazeStandard_EnterBattle_MarkTeamLeader"
+                          "modifier": "<a class=\"gModGreen\" id=\"-636149171\">StageAbility_MazeStandard_EnterBattle_MarkTeamLeader</a>"
                         }
                       }
                     ]
@@ -139,7 +139,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengPT_Olisten_BE_Create"
+          "modifier": "<a class=\"gModGreen\" id=\"3985826\">DanHengPT_Olisten_BE_Create</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -147,7 +147,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengPT_PassiveModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"292748857\">DanHengPT_PassiveModifier</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -165,7 +165,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengPT_ExtraListen"
+          "modifier": "<a class=\"gModGreen\" id=\"1781840956\">DanHengPT_ExtraListen</a>"
         },
         {
           "name": "IF",
@@ -180,7 +180,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengPT_Eidolon1_Onlisten"
+              "modifier": "<a class=\"gModGreen\" id=\"933382237\">DanHengPT_Eidolon1_Onlisten</a>"
             }
           ]
         },
@@ -197,7 +197,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengPT_Eidolon2_Onlisten"
+              "modifier": "<a class=\"gModGreen\" id=\"-853961878\">DanHengPT_Eidolon2_Onlisten</a>"
             }
           ]
         },
@@ -320,7 +320,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_ShieldUPFlag",
+          "for": "<a class=\"gModGreen\" id=\"mod__85270413\">DanHengPT_ShieldUPFlag</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -334,7 +334,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{DHPT}}"
                     },
-                    "modifier": "DanHengPT_ShieldUPFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"85270413\">DanHengPT_ShieldUPFlag</a>"
                   },
                   "passed": [
                     {
@@ -343,7 +343,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{DHPT}}"
                       },
-                      "modifier": "DanHengPT_LongLingExtraShield",
+                      "modifier": "<a class=\"gModGreen\" id=\"297054432\">DanHengPT_LongLingExtraShield</a>",
                       "variable": "MDF_ShieldRatio",
                       "target2": null,
                       "variable2": "MDF_ShieldUPRatioTemp",
@@ -369,7 +369,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_ImmediateAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1169230\">DanHengPT_ImmediateAction</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -377,7 +377,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "ReduceActionDelay",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Souldragon}}"
@@ -392,7 +392,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_ExtraDamageCount",
+          "for": "<a class=\"gModGreen\" id=\"mod__98427049\">DanHengPT_ExtraDamageCount</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -414,7 +414,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{DHPT}}"
                   },
-                  "modifier": "DanHengPT_LongLingAttackExtraDamage",
+                  "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
                   "variable": "MDF_DamageRatio",
                   "target2": {
                     "name": "Target Name",
@@ -441,7 +441,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{DHPT}}"
                   },
-                  "modifier": "DanHengPT_LongLingAttackExtraDamage",
+                  "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
                   "variable": "MDF_Count",
                   "target2": {
                     "name": "Target Name",
@@ -467,12 +467,12 @@ const compositeAbilityObject = {
           ],
           "removalDependencies": {
             "name": "Removal Dependency",
-            "dependancyName": "Memosprite_CyreneServant_AmazingBonus_DanHengPT[<span class=\"descriptionNumberColor\">Ode to Earth</span>]"
+            "dependancyName": "<a class=\"gModGreen\" id=\"-1655562855\">Memosprite_CyreneServant_AmazingBonus_DanHengPT</a>[<span class=\"descriptionNumberColor\">Ode to Earth</span>]"
           }
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_ExtraListen",
+          "for": "<a class=\"gModGreen\" id=\"mod__1781840956\">DanHengPT_ExtraListen</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking Modifier Instance [Owner]",
@@ -481,7 +481,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "DanHengPT_LongLingAttackExtraDamage"
+                    "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>"
                   },
                   "passed": [
                     {
@@ -490,7 +490,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{DHPT}}"
                       },
-                      "modifier": "DanHengPT_ExtraDamageCount"
+                      "modifier": "<a class=\"gModGreen\" id=\"98427049\">DanHengPT_ExtraDamageCount</a>"
                     }
                   ]
                 },
@@ -498,7 +498,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "DanHengPT_LongLingExtraShield"
+                    "modifier": "<a class=\"gModGreen\" id=\"297054432\">DanHengPT_LongLingExtraShield</a>"
                   },
                   "passed": [
                     {
@@ -507,7 +507,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "DanHengPT_LongLingFreeImmediateAction"
+                      "modifier": "<a class=\"gModGreen\" id=\"1866376122\">DanHengPT_LongLingFreeImmediateAction</a>"
                     }
                   ]
                 },
@@ -515,7 +515,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "DanHengPT_LongLingExtraShield"
+                    "modifier": "<a class=\"gModGreen\" id=\"297054432\">DanHengPT_LongLingExtraShield</a>"
                   },
                   "passed": [
                     {
@@ -524,7 +524,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{DHPT}}"
                       },
-                      "modifier": "DanHengPT_ShieldUPFlag"
+                      "modifier": "<a class=\"gModGreen\" id=\"85270413\">DanHengPT_ShieldUPFlag</a>"
                     }
                   ]
                 }
@@ -538,7 +538,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_Olisten_BE_Create",
+          "for": "<a class=\"gModGreen\" id=\"mod__3985826\">DanHengPT_Olisten_BE_Create</a>",
           "stackData": [],
           "latentQueue": [],
           "previewValue": {
@@ -559,7 +559,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_Eidolon2_Onlisten",
+          "for": "<a class=\"gModGreen\" id=\"mod__-853961878\">DanHengPT_Eidolon2_Onlisten</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -573,7 +573,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "ReduceActionDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Souldragon}}"
@@ -609,7 +609,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_Eidolon1_Onlisten",
+          "for": "<a class=\"gModGreen\" id=\"mod__933382237\">DanHengPT_Eidolon1_Onlisten</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -639,7 +639,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Bondmate}}"
                       },
-                      "modifier": "DanHengPT_Eidolon1[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"2035403394\">DanHengPT_Eidolon1</a>[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -671,7 +671,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_PassiveModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__292748857\">DanHengPT_PassiveModifier</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -682,7 +682,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}"
                   },
-                  "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
                 },
                 {
                   "name": "Force Entity Death",
@@ -835,7 +835,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Bondmate}}"
                           },
-                          "modifier": "DanHengPT_PointB1_AddAttackRatio[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
                           "valuePerStack": {
                             "MDF_AttackDelta": {
                               "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",
@@ -894,7 +894,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Bondmate}}"
                           },
-                          "modifier": "DanHengPT_PointB1_AddAttackRatio[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
                           "valuePerStack": {
                             "MDF_AttackDelta": {
                               "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",
@@ -942,13 +942,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengPT_BEModifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-516529797\">DanHengPT_BEModifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_BEModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-516529797\">DanHengPT_BEModifier</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -962,7 +962,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{DHPT}}"
                     },
-                    "modifier": "DanHengPT_BoostEnergy"
+                    "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>"
                   },
                   "passed": [
                     {
@@ -1025,7 +1025,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}.[[getSummoner]]"
                         },
-                        "modifier": "Standard_Departed",
+                        "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
                         "invertCondition": true
                       },
                       {
@@ -1034,7 +1034,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Standard_Departed_Sub"
+                        "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>"
                       }
                     ]
                   },
@@ -1045,7 +1045,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Standard_Departed_Sub"
+                      "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>"
                     },
                     {
                       "name": "Set Action-State",
@@ -1068,7 +1068,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_LycanKing_IF_DisableAction[<span class=\"descriptionNumberColor\">Departed</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-480380135\">Enemy_W2_LycanKing_IF_DisableAction</a>[<span class=\"descriptionNumberColor\">Departed</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1076,7 +1076,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Enemy_W2_LycanKing_IF_DisableActionEndMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"40667951\">Enemy_W2_LycanKing_IF_DisableActionEndMark</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1084,7 +1084,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Phainon_Ultimate_TeamStealth[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
                     }
                   ]
                 }
@@ -1130,7 +1130,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{DHPT}}"
                   },
-                  "modifier": "DanHengPT_BoostEnergy"
+                  "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>"
                 }
               ]
             }
@@ -1142,7 +1142,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{DHPT}}"
               },
-              "modifier": "DanHengPT_BoostEnergy",
+              "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>",
               "valuePerStack": {
                 "MDF_IsStack": 0
               },
@@ -1740,7 +1740,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
           },
           "ifTargetFound": [
             {
@@ -1764,7 +1764,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "DanHengPT_BoostEnergy",
+          "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>",
           "valuePerStack": {
             "MDF_IsStack": 1
           }
@@ -1780,7 +1780,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "DanHengPT_Ability03_AddShield"
+          "functionName": "<a class=\"gTempYellow\" id=\"-1942576362\">DanHengPT_Ability03_AddShield</a>"
         },
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
@@ -1842,7 +1842,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "DanHengPT_BE_AddShield"
+          "functionName": "<a class=\"gTempYellow\" id=\"124728741\">DanHengPT_BE_AddShield</a>"
         }
       ],
       "references": []
@@ -1861,7 +1861,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+            "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
             "invertCondition": true
           },
           "failed": [
@@ -1878,7 +1878,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}"
           },
-          "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
         },
         {
           "name": "IF",
@@ -1893,7 +1893,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}"
               },
-              "modifier": "DanHengPT_PointB1_AddAttackRatio[<span class=\"descriptionNumberColor\">Empyreanity</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]"
             }
           ]
         },
@@ -1931,7 +1931,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                           "valuePerStack": {
                             "MDF_PointB2_P3_DelayUp": {
                               "operator": "Variables[0] (0.15) || RETURN",
@@ -1983,7 +1983,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                           "valuePerStack": {
                             "MDF_PointB2_P3_DelayUp": {
                               "operator": "Variables[0] (0.15) || RETURN",
@@ -2023,7 +2023,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                       "valuePerStack": {
                         "MDF_PointB2_P3_DelayUp": {
                           "operator": "Variables[0] (0.15) || RETURN",
@@ -2070,7 +2070,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                           "valuePerStack": {
                             "MDF_PointB2_P3_DelayUp": 0,
                             "MDF_PointB2_P2_AddSP": 0,
@@ -2108,7 +2108,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                           "valuePerStack": {
                             "MDF_PointB2_P3_DelayUp": 0,
                             "MDF_PointB2_P2_AddSP": 0,
@@ -2134,7 +2134,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                       "valuePerStack": {
                         "MDF_PointB2_P3_DelayUp": 0,
                         "MDF_PointB2_P2_AddSP": 0,
@@ -2162,7 +2162,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                   "valuePerStack": {
                     "MDF_PointB2_P3_DelayUp": {
                       "operator": "Variables[0] (0.15) || RETURN",
@@ -2193,7 +2193,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
                   "valuePerStack": {
                     "MDF_PointB2_P3_DelayUp": 0,
                     "MDF_PointB2_P2_AddSP": 0,
@@ -2237,7 +2237,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "DanHengPT_PointB1_AddAttackRatio[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
               "valuePerStack": {
                 "MDF_AttackDelta": {
                   "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",
@@ -2750,7 +2750,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "DanHengPT_BoostEnergy"
+                "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>"
               }
             }
           ],
@@ -2764,7 +2764,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "DanHengPT_AddShield"
+          "functionName": "<a class=\"gTempYellow\" id=\"1290948349\">DanHengPT_AddShield</a>"
         },
         {
           "name": "Update Energy",
@@ -2784,7 +2784,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "DanHengPT_Maze"
+            "modifier": "<a class=\"gModGreen\" id=\"-1357770440\">DanHengPT_Maze</a>"
           },
           "passed": [
             {
@@ -2803,7 +2803,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "DanHengPT_Maze"
+              "modifier": "<a class=\"gModGreen\" id=\"-1357770440\">DanHengPT_Maze</a>"
             }
           ]
         },
@@ -2956,7 +2956,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_LongLingExtraShield",
+          "for": "<a class=\"gModGreen\" id=\"mod__297054432\">DanHengPT_LongLingExtraShield</a>",
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -2964,7 +2964,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_LongLingAttackExtraDamage",
+          "for": "<a class=\"gModGreen\" id=\"mod__-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -3025,7 +3025,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_LongLingFreeImmediateAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1866376122\">DanHengPT_LongLingFreeImmediateAction</a>",
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -3040,7 +3040,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{DHPT}}"
                   },
-                  "modifier": "DanHengPT_BoostEnergy",
+                  "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>",
                   "valuePerStack": {
                     "MDF_IsStack": 1
                   },
@@ -3057,7 +3057,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{DHPT}}"
                   },
-                  "modifier": "DanHengPT_ImmediateAction"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1169230\">DanHengPT_ImmediateAction</a>"
                 }
               ]
             }
@@ -3069,7 +3069,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_Eidolon6_Bonus[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1272476867\">DanHengPT_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -3093,7 +3093,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_Eidolon6_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1040309000\">DanHengPT_Eidolon6_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3123,7 +3123,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_Eidolon4",
+          "for": "<a class=\"gModGreen\" id=\"mod__1985070537\">DanHengPT_Eidolon4</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3167,7 +3167,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">By Oath, This Vessel Is I</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-452137321\">DanHengPT_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">By Oath, This Vessel Is I</span>]",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3197,7 +3197,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_Eidolon1[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__2035403394\">DanHengPT_Eidolon1</a>[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -3235,7 +3235,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "Shield"
@@ -3314,7 +3314,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_PointB1_AddAttackRatio[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -3355,7 +3355,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -3419,7 +3419,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}"
                   },
-                  "modifier": "DanHengPT_PointB1_AddAttackRatio[<span class=\"descriptionNumberColor\">Empyreanity</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]"
                 },
                 {
                   "name": "IF",
@@ -3514,7 +3514,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "ReduceActionDelay",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Souldragon}}"
@@ -3594,7 +3594,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "DanHengPT_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">By Oath, This Vessel Is I</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-452137321\">DanHengPT_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">By Oath, This Vessel Is I</span>]",
               "aliveOnly": "False",
               "haloStatus": true,
               "conditions": {
@@ -3620,7 +3620,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "DanHengPT_Eidolon6_Bonus[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1272476867\">DanHengPT_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
               "aliveOnly": "False",
               "haloStatus": true,
               "conditions": {
@@ -3646,7 +3646,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "DanHengPT_Eidolon6_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1040309000\">DanHengPT_Eidolon6_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
               "aliveOnly": "False",
               "haloStatus": true,
               "conditions": {
@@ -3670,11 +3670,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_Eidolon2_LastBoostEnergyFlag"
+          "for": "<a class=\"gModGreen\" id=\"mod__1941107033\">DanHengPT_Eidolon2_LastBoostEnergyFlag</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "DanHengPT_BoostEnergy",
+          "for": "<a class=\"gModGreen\" id=\"mod__1300423082\">DanHengPT_BoostEnergy</a>",
           "stackType": "Replace",
           "execute": [
             {
@@ -3747,7 +3747,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "DanHengPT_Eidolon2_LastBoostEnergyFlag"
+                              "modifier": "<a class=\"gModGreen\" id=\"1941107033\">DanHengPT_Eidolon2_LastBoostEnergyFlag</a>"
                             }
                           ]
                         },
@@ -3788,7 +3788,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "DanHengPT_AddShield",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1290948349\">DanHengPT_AddShield</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
@@ -3805,7 +3805,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "DanHengPT_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -3840,7 +3840,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "DanHengPT_Ability03_AddShield",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1942576362\">DanHengPT_Ability03_AddShield</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
@@ -3857,7 +3857,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "DanHengPT_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -3892,7 +3892,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "DanHengPT_BE_AddShield",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__124728741\">DanHengPT_BE_AddShield</a>",
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
@@ -3951,7 +3951,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "DanHengPT_Eidolon2_LastBoostEnergyFlag"
+                    "modifier": "<a class=\"gModGreen\" id=\"1941107033\">DanHengPT_Eidolon2_LastBoostEnergyFlag</a>"
                   }
                 ]
               },
@@ -3962,7 +3962,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "DanHengPT_Eidolon2_LastBoostEnergyFlag"
+                  "modifier": "<a class=\"gModGreen\" id=\"1941107033\">DanHengPT_Eidolon2_LastBoostEnergyFlag</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3970,7 +3970,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "DanHengPT_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -4038,7 +4038,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "DanHengPT_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -4083,7 +4083,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "DanHengPT_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -4150,7 +4150,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "DanHengPT_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",

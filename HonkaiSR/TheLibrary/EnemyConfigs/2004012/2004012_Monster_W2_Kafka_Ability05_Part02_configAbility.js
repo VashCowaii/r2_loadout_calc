@@ -15,7 +15,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "Standard_MindControl[<span class=\"descriptionNumberColor\">Dominated</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill05[0]]}) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "({[Skill05[0]]} + 1)",

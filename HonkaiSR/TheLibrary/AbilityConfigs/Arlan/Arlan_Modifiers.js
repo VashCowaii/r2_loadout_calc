@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "Arlan_Passive_DamageUp[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__1498391924\">Arlan_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {

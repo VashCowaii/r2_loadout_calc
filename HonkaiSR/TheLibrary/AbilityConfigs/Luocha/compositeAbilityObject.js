@@ -29,7 +29,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Luocha_Trace03",
+          "modifier": "<a class=\"gModGreen\" id=\"-579247332\">M_Luocha_Trace03</a>",
           "valuePerStack": {
             "MDF_Resistance": {
               "operator": "Variables[0] (0.7) || RETURN",
@@ -45,7 +45,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Luocha_Trace03",
+          "for": "<a class=\"gModGreen\" id=\"mod__-579247332\">M_Luocha_Trace03</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -96,13 +96,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Technique_Luocha_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-669115084\">Technique_Luocha_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Technique_Luocha_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-669115084\">Technique_Luocha_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -122,7 +122,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Luocha_Passive01Modifier[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-390780291\">Luocha_Passive01Modifier</a>[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
                       "valuePerStack": {
                         "MDF_PassiveLayer": {
                           "operator": "Variables[0] (2) || RETURN",
@@ -173,7 +173,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Luocha_Passive01_HealHPArea",
+          "modifier": "<a class=\"gModGreen\" id=\"-1807885982\">Luocha_Passive01_HealHPArea</a>",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -247,7 +247,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Luocha_Passive01Modifier[<span class=\"descriptionNumberColor\">Abyss Flower</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-390780291\">Luocha_Passive01Modifier</a>[<span class=\"descriptionNumberColor\">Abyss Flower</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -255,13 +255,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Luocha_Passive01_InsertMark"
+          "modifier": "<a class=\"gModGreen\" id=\"905229597\">Luocha_Passive01_InsertMark</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Luocha_Eidolon4_Fatigue[<span class=\"descriptionNumberColor\">Weaken</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__572527518\">Luocha_Eidolon4_Fatigue</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_Fatigue"
@@ -296,7 +296,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Luocha_Passive01_HealHPSelf[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1838655775\">Luocha_Passive01_HealHPSelf</a>[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -366,7 +366,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Luocha_Passive01_HealHP[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1378311281\">Luocha_Passive01_HealHP</a>[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -436,7 +436,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Luocha_Passive01_HealHPArea",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1807885982\">Luocha_Passive01_HealHPArea</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -483,7 +483,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Luocha_Passive01_HealHPSelf[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1838655775\">Luocha_Passive01_HealHPSelf</a>[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
               "duration": {
                 "operator": "Variables[0] (MDF_LifeTime) || RETURN",
                 "displayLines": "MDF_LifeTime",
@@ -533,7 +533,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
               },
-              "modifier": "Luocha_Passive01_HealHP[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1378311281\">Luocha_Passive01_HealHP</a>[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -576,7 +576,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Luocha_Eidolon1_ATKUp[<span class=\"descriptionNumberColor\">Ablution of the Quick</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1394916865\">Luocha_Eidolon1_ATKUp</a>[<span class=\"descriptionNumberColor\">Ablution of the Quick</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Eidolon Activated",
@@ -599,7 +599,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Luocha_Eidolon4_Fatigue[<span class=\"descriptionNumberColor\">Weaken</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"572527518\">Luocha_Eidolon4_Fatigue</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
               "haloStatus": true,
               "conditions": {
                 "name": "Eidolon Activated",
@@ -744,7 +744,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Luocha_Passive01_HealHPCD[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1468187936\">Luocha_Passive01_HealHPCD</a>[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -760,7 +760,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Luocha_InsertAbility02_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1001666346\">Luocha_InsertAbility02_Mark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -768,7 +768,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Luocha_InsertAbility02_Retarget"
+                  "modifier": "<a class=\"gModGreen\" id=\"-704950893\">Luocha_InsertAbility02_Retarget</a>"
                 },
                 "Deleted bullshit",
                 {
@@ -792,7 +792,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{All Team Members with Unselectables}}"
                   },
-                  "modifier": "Luocha_InsertAbility02_Mark"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1001666346\">Luocha_InsertAbility02_Mark</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -800,7 +800,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Luocha_InsertAbility02_Retarget"
+                  "modifier": "<a class=\"gModGreen\" id=\"-704950893\">Luocha_InsertAbility02_Retarget</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -819,7 +819,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
           },
-          "modifier": "Luocha_InsertAbility02_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"-1001666346\">Luocha_InsertAbility02_Mark</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -827,7 +827,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Luocha_InsertAbility02_Retarget"
+          "modifier": "<a class=\"gModGreen\" id=\"-704950893\">Luocha_InsertAbility02_Retarget</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -866,7 +866,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Luocha_Passive01_InsertMark"
+                "modifier": "<a class=\"gModGreen\" id=\"905229597\">Luocha_Passive01_InsertMark</a>"
               },
               "passed": [
                 {
@@ -875,7 +875,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Luocha_Passive01_InsertMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"905229597\">Luocha_Passive01_InsertMark</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -883,7 +883,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Luocha_Passive01_DisableActionInsertMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"1784149745\">Luocha_Passive01_DisableActionInsertMark</a>"
                 }
               ]
             }
@@ -915,7 +915,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Luocha_Passive01_QuickHealthHP",
+          "modifier": "<a class=\"gModGreen\" id=\"-613660626\">Luocha_Passive01_QuickHealthHP</a>",
           "valuePerStack": {
             "MDF_HPRatio": {
               "operator": "Variables[0] (0.5) || RETURN",
@@ -939,7 +939,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Luocha_InsertAbility02_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1001666346\">Luocha_InsertAbility02_Mark</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -975,7 +975,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Luocha_InsertAbility02_Retarget"
+                  "modifier": "<a class=\"gModGreen\" id=\"-704950893\">Luocha_InsertAbility02_Retarget</a>"
                 }
               ]
             }
@@ -983,7 +983,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Luocha_InsertAbility02_Retarget",
+          "for": "<a class=\"gModGreen\" id=\"mod__-704950893\">Luocha_InsertAbility02_Retarget</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1080,7 +1080,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Luocha_InsertAbility02_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1001666346\">Luocha_InsertAbility02_Mark</a>"
                     }
                   ]
                 }
@@ -1090,7 +1090,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Luocha_Passive01_QuickHealthHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-613660626\">Luocha_Passive01_QuickHealthHP</a>",
           "execute": [
             {
               "eventTrigger": "HP Change [Anyone]",
@@ -1127,7 +1127,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Luocha_Passive01_HealHPCD[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"1468187936\">Luocha_Passive01_HealHPCD</a>[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]"
                         }
                       },
                       "passed": [
@@ -1276,7 +1276,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
                                       },
-                                      "modifier": "Luocha_InsertAbility02_Retarget"
+                                      "modifier": "<a class=\"gModGreen\" id=\"-704950893\">Luocha_InsertAbility02_Retarget</a>"
                                     }
                                   ]
                                 }
@@ -1323,7 +1323,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}"
                       },
-                      "modifier": "Luocha_InsertAbility02_Mark"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1001666346\">Luocha_InsertAbility02_Mark</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1331,7 +1331,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}}"
                       },
-                      "modifier": "Luocha_InsertAbility02_Retarget"
+                      "modifier": "<a class=\"gModGreen\" id=\"-704950893\">Luocha_InsertAbility02_Retarget</a>"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1346,7 +1346,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "Luocha_Passive01_InsertMark"
+                        "modifier": "<a class=\"gModGreen\" id=\"905229597\">Luocha_Passive01_InsertMark</a>"
                       },
                       "passed": [
                         {
@@ -1355,7 +1355,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Luocha_Passive01_InsertMark"
+                          "modifier": "<a class=\"gModGreen\" id=\"905229597\">Luocha_Passive01_InsertMark</a>"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1363,7 +1363,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Luocha_Passive01_DisableActionInsertMark"
+                          "modifier": "<a class=\"gModGreen\" id=\"1784149745\">Luocha_Passive01_DisableActionInsertMark</a>"
                         }
                       ]
                     }
@@ -1412,7 +1412,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "modifier": "Luocha_Eidolon6_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Reunion With the Dust</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-470154310\">Luocha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Reunion With the Dust</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1462,7 +1462,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Luocha_Passive01_HealHPArea"
+            "modifier": "<a class=\"gModGreen\" id=\"-1807885982\">Luocha_Passive01_HealHPArea</a>"
           },
           "failed": [
             {
@@ -1471,7 +1471,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Luocha_Passive01Modifier[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-390780291\">Luocha_Passive01Modifier</a>[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
               "valuePerStack": {
                 "MDF_PassiveLayer": {
                   "operator": "Variables[0] (2) || RETURN",
@@ -1620,7 +1620,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Luocha_Ability02_AddHealRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"774057346\">Luocha_Ability02_AddHealRatio</a>",
                   "valuePerStack": {
                     "MDF_AddHealRatio": {
                       "operator": "Variables[0] (0.3) || RETURN",
@@ -1640,7 +1640,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "Luocha_Ability02_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1298017769\">Luocha_Ability02_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1723,7 +1723,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Luocha_Passive01_HealHPArea"
+            "modifier": "<a class=\"gModGreen\" id=\"-1807885982\">Luocha_Passive01_HealHPArea</a>"
           },
           "failed": [
             {
@@ -1732,7 +1732,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Luocha_Passive01Modifier[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-390780291\">Luocha_Passive01Modifier</a>[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
               "valuePerStack": {
                 "MDF_PassiveLayer": {
                   "operator": "Variables[0] (2) || RETURN",
@@ -1944,7 +1944,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Luocha_Eidolon6_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Reunion With the Dust</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-470154310\">Luocha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Reunion With the Dust</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1982,7 +1982,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Luocha_Eidolon1_ATKUp[<span class=\"descriptionNumberColor\">Ablution of the Quick</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1394916865\">Luocha_Eidolon1_ATKUp</a>[<span class=\"descriptionNumberColor\">Ablution of the Quick</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2020,7 +2020,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Luocha_Passive01_InsertMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__905229597\">Luocha_Passive01_InsertMark</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2031,7 +2031,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Luocha_Passive01_DisableActionInsertMark"
+                  "modifier": "<a class=\"gModGreen\" id=\"1784149745\">Luocha_Passive01_DisableActionInsertMark</a>"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2119,7 +2119,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Luocha_Passive01Modifier[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-390780291\">Luocha_Passive01Modifier</a>[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2153,7 +2153,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Luocha_Passive01_InsertMark"
+                      "modifier": "<a class=\"gModGreen\" id=\"905229597\">Luocha_Passive01_InsertMark</a>"
                     }
                   ],
                   "failed": [
@@ -2186,7 +2186,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Luocha_Passive01_HealHPCD[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1468187936\">Luocha_Passive01_HealHPCD</a>[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "stackData": [],
           "latentQueue": [
@@ -2199,7 +2199,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Luocha_Ability02_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1298017769\">Luocha_Ability02_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"
@@ -2271,7 +2271,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Luocha_Ability02_AddHealRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__774057346\">Luocha_Ability02_AddHealRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2301,7 +2301,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Luocha_Passive01_DisableActionInsertMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__1784149745\">Luocha_Passive01_DisableActionInsertMark</a>",
           "execute": [
             {
               "eventTrigger": "When Losing Modifier [Anyone]",
@@ -2350,7 +2350,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Luocha_Passive01_InsertMark"
+                          "modifier": "<a class=\"gModGreen\" id=\"905229597\">Luocha_Passive01_InsertMark</a>"
                         }
                       ]
                     }

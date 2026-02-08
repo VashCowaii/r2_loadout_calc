@@ -31,13 +31,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TheHerta_TechniqueInRougeLevel"
+          "modifier": "<a class=\"gModGreen\" id=\"-2036504722\">TheHerta_TechniqueInRougeLevel</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_TechniqueInRougeLevel",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2036504722\">TheHerta_TechniqueInRougeLevel</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -159,13 +159,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Technique_TheHerta_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"1753550945\">Technique_TheHerta_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">Vibe Checker</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__127317606\">TheHerta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Vibe Checker</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -197,7 +197,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Technique_TheHerta_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1753550945\">Technique_TheHerta_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -217,7 +217,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "TheHerta_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">Vibe Checker</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"127317606\">TheHerta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Vibe Checker</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -328,7 +328,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "TheHerta_Eidolon2_PreShow",
+              "modifier": "<a class=\"gModGreen\" id=\"489116474\">TheHerta_Eidolon2_PreShow</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.35) || RETURN",
@@ -386,7 +386,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "TheHerta_Passive_MagicMark_Caster"
+          "modifier": "<a class=\"gModGreen\" id=\"-910560068\">TheHerta_Passive_MagicMark_Caster</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -394,7 +394,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TheHerta_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-928577282\">TheHerta_Passive</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -402,7 +402,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TheHerta_Passive_PreShow"
+          "modifier": "<a class=\"gModGreen\" id=\"-57316235\">TheHerta_Passive_PreShow</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -410,7 +410,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TheHerta_Passive_PreShow_Ability21"
+          "modifier": "<a class=\"gModGreen\" id=\"734755482\">TheHerta_Passive_PreShow_Ability21</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -418,7 +418,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TheHerta_Passive_PreShow_Ability21_All"
+          "modifier": "<a class=\"gModGreen\" id=\"1935947210\">TheHerta_Passive_PreShow_Ability21_All</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -426,7 +426,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TheHerta_MageNum"
+          "modifier": "<a class=\"gModGreen\" id=\"2664689\">TheHerta_MageNum</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -434,7 +434,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TheHerta_SKL21_Listen"
+          "modifier": "<a class=\"gModGreen\" id=\"611803002\">TheHerta_SKL21_Listen</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -442,7 +442,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TheHerta_ExtraMark"
+          "modifier": "<a class=\"gModGreen\" id=\"-614684164\">TheHerta_ExtraMark</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -450,7 +450,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TheHerta_UltraBoost"
+          "modifier": "<a class=\"gModGreen\" id=\"2011497788\">TheHerta_UltraBoost</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -503,7 +503,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "TheHerta_Trace02",
+              "modifier": "<a class=\"gModGreen\" id=\"-450886652\">TheHerta_Trace02</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.8) || RETURN",
@@ -530,7 +530,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "TheHerta_Eidolon4_Listen",
+              "modifier": "<a class=\"gModGreen\" id=\"1044334207\">TheHerta_Eidolon4_Listen</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.12) || RETURN",
@@ -557,7 +557,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "TheHerta_Eidolon6_Bonus",
+              "modifier": "<a class=\"gModGreen\" id=\"-73718393\">TheHerta_Eidolon6_Bonus</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (0.2) || RETURN",
@@ -584,7 +584,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "TheHerta_Trace01",
+              "modifier": "<a class=\"gModGreen\" id=\"-400553795\">TheHerta_Trace01</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
                   "operator": "Variables[0] (3) || RETURN",
@@ -666,7 +666,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Trace02_Bonus[<span class=\"descriptionNumberColor\">Message From Beyond the Veil</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1890012800\">TheHerta_Trace02_Bonus</a>[<span class=\"descriptionNumberColor\">Message From Beyond the Veil</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -697,7 +697,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Trace02_Mage",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1949332681\">TheHerta_Trace02_Mage</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -725,7 +725,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Trace02_CheckMage",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1909734267\">TheHerta_Trace02_CheckMage</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -736,7 +736,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "TheHerta_Trace02_Bonus[<span class=\"descriptionNumberColor\">Message From Beyond the Veil</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1890012800\">TheHerta_Trace02_Bonus</a>[<span class=\"descriptionNumberColor\">Message From Beyond the Veil</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -770,7 +770,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TheHerta_Trace02_Bonus[<span class=\"descriptionNumberColor\">Message From Beyond the Veil</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1890012800\">TheHerta_Trace02_Bonus</a>[<span class=\"descriptionNumberColor\">Message From Beyond the Veil</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -790,7 +790,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Trace02",
+          "for": "<a class=\"gModGreen\" id=\"mod__-450886652\">TheHerta_Trace02</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -848,7 +848,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "TheHerta_Trace02_CheckMage",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1909734267\">TheHerta_Trace02_CheckMage</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -866,7 +866,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "TheHerta_PointB2_Listen"
+                      "modifier": "<a class=\"gModGreen\" id=\"1280907269\">TheHerta_PointB2_Listen</a>"
                     }
                   ]
                 }
@@ -883,7 +883,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_UltraBoost",
+          "for": "<a class=\"gModGreen\" id=\"mod__2011497788\">TheHerta_UltraBoost</a>",
           "stackData": [],
           "latentQueue": [
             "Skill21_Layer_Max"
@@ -906,7 +906,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_MagicMark_Caster",
+          "for": "<a class=\"gModGreen\" id=\"mod__-910560068\">TheHerta_Passive_MagicMark_Caster</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -923,7 +923,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                     "invertCondition": true
                   },
                   "ifTargetFound": [
@@ -933,7 +933,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (42) || RETURN",
                         "displayLines": "42",
@@ -983,7 +983,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "TheHerta_Trace03_ExtraDamage[<span class=\"descriptionNumberColor\">Answer</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (99) || RETURN",
                             "displayLines": "99",
@@ -1014,7 +1014,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team Unselectables}}"
                   },
-                  "modifier": "TheHerta_Passive_MagicMark_Unselectable"
+                  "modifier": "<a class=\"gModGreen\" id=\"887606439\">TheHerta_Passive_MagicMark_Unselectable</a>"
                 }
               ]
             },
@@ -1055,7 +1055,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                           },
                           "failed": [
                             {
@@ -1064,7 +1064,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
                                 "operator": "Variables[0] (42) || RETURN",
                                 "displayLines": "42",
@@ -1114,7 +1114,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "TheHerta_Trace03_ExtraDamage[<span class=\"descriptionNumberColor\">Answer</span>]",
+                                  "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                                   "stackLimit": {
                                     "operator": "Variables[0] (99) || RETURN",
                                     "displayLines": "99",
@@ -1147,7 +1147,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TheHerta_Passive_MagicMark_Unselectable"
+                          "modifier": "<a class=\"gModGreen\" id=\"887606439\">TheHerta_Passive_MagicMark_Unselectable</a>"
                         }
                       ]
                     }
@@ -1163,7 +1163,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_MagicMark_Unselectable",
+          "for": "<a class=\"gModGreen\" id=\"mod__887606439\">TheHerta_Passive_MagicMark_Unselectable</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -1177,7 +1177,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (42) || RETURN",
                     "displayLines": "42",
@@ -1227,7 +1227,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "TheHerta_Trace03_ExtraDamage[<span class=\"descriptionNumberColor\">Answer</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (99) || RETURN",
                         "displayLines": "99",
@@ -1256,7 +1256,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "TheHerta_Passive_MagicMark_Unselectable"
+                  "modifier": "<a class=\"gModGreen\" id=\"887606439\">TheHerta_Passive_MagicMark_Unselectable</a>"
                 }
               ]
             }
@@ -1268,7 +1268,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-928577282\">TheHerta_Passive</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
@@ -1288,14 +1288,14 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "TheHerta_BPdamageNumber_UIconfig",
+              "modifier": "<a class=\"gModGreen\" id=\"-682623552\">TheHerta_BPdamageNumber_UIconfig</a>",
               "haloStatus": true
             }
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Trace01_Regen",
+          "for": "<a class=\"gModGreen\" id=\"mod__-434693417\">TheHerta_Trace01_Regen</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "ListenBattleEventSkill"
@@ -1323,7 +1323,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "TheHerta_Trace01_Regen_CD",
+                        "modifier": "<a class=\"gModGreen\" id=\"220694751\">TheHerta_Trace01_Regen_CD</a>",
                         "invertCondition": true
                       }
                     ]
@@ -1335,7 +1335,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TheHerta_Trace01_Regen_CD"
+                      "modifier": "<a class=\"gModGreen\" id=\"220694751\">TheHerta_Trace01_Regen_CD</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1343,7 +1343,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
                         "displayLines": "MDF_MaxLayer",
@@ -1362,7 +1362,7 @@ const compositeAbilityObject = {
                       },
                       "valueType": "Layer",
                       "variableName": "_Effect_Layer",
-                      "modifierName": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                       "multiplier": 1
                     },
                     {
@@ -1378,7 +1378,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "TheHerta_Trace03_ExtraDamage[<span class=\"descriptionNumberColor\">Answer</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
                             "displayLines": "MDF_MaxLayer_PointB3",
@@ -1433,7 +1433,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}"
                   },
-                  "modifier": "TheHerta_Trace01_Regen_CD"
+                  "modifier": "<a class=\"gModGreen\" id=\"220694751\">TheHerta_Trace01_Regen_CD</a>"
                 }
               ]
             },
@@ -1494,7 +1494,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "TheHerta_MageNum_2"
+                        "modifier": "<a class=\"gModGreen\" id=\"-2073297144\">TheHerta_MageNum_2</a>"
                       }
                     ]
                   },
@@ -1541,7 +1541,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}"
                   },
-                  "modifier": "TheHerta_Trace01_Regen_CD"
+                  "modifier": "<a class=\"gModGreen\" id=\"220694751\">TheHerta_Trace01_Regen_CD</a>"
                 }
               ]
             }
@@ -1549,13 +1549,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Trace01_Regen_CD",
+          "for": "<a class=\"gModGreen\" id=\"mod__220694751\">TheHerta_Trace01_Regen_CD</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Trace01",
+          "for": "<a class=\"gModGreen\" id=\"mod__-400553795\">TheHerta_Trace01</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1573,7 +1573,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "TheHerta_Trace01_Regen",
+                      "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1658,7 +1658,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "modifier": "TheHerta_Trace01_Regen",
+                      "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1765,7 +1765,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TheHerta_Trace01_Regen",
+                          "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1850,7 +1850,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TheHerta_Trace01_Regen",
+                          "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1959,7 +1959,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TheHerta_Trace01_Regen",
+                          "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2044,7 +2044,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TheHerta_Trace01_Regen",
+                          "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2143,11 +2143,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_MageNum_2"
+          "for": "<a class=\"gModGreen\" id=\"mod__-2073297144\">TheHerta_MageNum_2</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_MageNum",
+          "for": "<a class=\"gModGreen\" id=\"mod__2664689\">TheHerta_MageNum</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -2205,7 +2205,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "TheHerta_MageNum_2"
+                      "modifier": "<a class=\"gModGreen\" id=\"-2073297144\">TheHerta_MageNum_2</a>"
                     }
                   ]
                 }
@@ -2220,7 +2220,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_PreShow_Ability21_All",
+          "for": "<a class=\"gModGreen\" id=\"mod__1935947210\">TheHerta_Passive_PreShow_Ability21_All</a>",
           "stackData": [],
           "latentQueue": [
             "Skill21_Layer_Max"
@@ -2228,7 +2228,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_PreShow_Ability21",
+          "for": "<a class=\"gModGreen\" id=\"mod__734755482\">TheHerta_Passive_PreShow_Ability21</a>",
           "execute": [
             {
               "eventTrigger": "Update Target Selected(UI) [Owner]",
@@ -2408,7 +2408,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_PreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-57316235\">TheHerta_Passive_PreShow</a>",
           "stackData": [],
           "latentQueue": [
             "Skill21_Layer_Max"
@@ -2459,7 +2459,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_SKL21_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__611803002\">TheHerta_SKL21_Listen</a>",
           "variableValueChange": [
             {
               "name": "Variable Value Changes",
@@ -2477,7 +2477,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "TheHerta_SKL21[<span class=\"descriptionNumberColor\">Inspiration</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]"
                     }
                   ],
                   "whenValueChanges": [
@@ -2487,7 +2487,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "TheHerta_SKL21[<span class=\"descriptionNumberColor\">Inspiration</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]"
                     }
                   ]
                 },
@@ -2502,7 +2502,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "TheHerta_SKL21[<span class=\"descriptionNumberColor\">Inspiration</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]"
                     },
                     {
                       "name": "Define Modifier Variable",
@@ -2510,7 +2510,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "TheHerta_SKL21[<span class=\"descriptionNumberColor\">Inspiration</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]",
                       "value": {
                         "operator": "Variables[0] (Skill21_Layer) || RETURN",
                         "displayLines": "Skill21_Layer",
@@ -2528,7 +2528,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "TheHerta_SKL21[<span class=\"descriptionNumberColor\">Inspiration</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]"
                     },
                     {
                       "name": "Define Modifier Variable",
@@ -2536,7 +2536,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "TheHerta_SKL21[<span class=\"descriptionNumberColor\">Inspiration</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]",
                       "value": {
                         "operator": "Variables[0] (Skill21_Layer) || RETURN",
                         "displayLines": "Skill21_Layer",
@@ -2558,7 +2558,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_PointB2_Ally",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1573828152\">TheHerta_PointB2_Ally</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -2639,14 +2639,14 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                                 }
                               ]
                             }
                           },
                           {
                             "name": "Sort by Modifier Value",
-                            "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                            "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "value": "Layer",
                             "sortByHighest": true
                           }
@@ -2659,7 +2659,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value1": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                        "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                         "compareType": "<",
                         "value2": {
                           "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
@@ -2678,7 +2678,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
                             "displayLines": "MDF_MaxLayer",
@@ -2702,7 +2702,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "TheHerta_Trace03_ExtraDamage[<span class=\"descriptionNumberColor\">Answer</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                               "stackLimit": {
                                 "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
                                 "displayLines": "MDF_MaxLayer_PointB3",
@@ -2748,7 +2748,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "modifier": "TheHerta_Trace03_ExtraDamage[<span class=\"descriptionNumberColor\">Answer</span>]",
+                                  "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                                   "stackLimit": {
                                     "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
                                     "displayLines": "MDF_MaxLayer_PointB3",
@@ -2783,7 +2783,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_PointB2_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__1280907269\">TheHerta_PointB2_Listen</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2794,7 +2794,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "modifier": "TheHerta_PointB2_Ally",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
                   "valuePerStack": {
                     "MDF_MaxLayer_PointB3": {
                       "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
@@ -2874,7 +2874,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "TheHerta_PointB2_Ally",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
                   "valuePerStack": {
                     "MDF_MaxLayer_PointB3": {
                       "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
@@ -2940,7 +2940,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TheHerta_PointB2_Ally",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
                       "valuePerStack": {
                         "MDF_MaxLayer_PointB3": {
                           "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
@@ -3022,7 +3022,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TheHerta_PointB2_Ally",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
                       "valuePerStack": {
                         "MDF_MaxLayer_PointB3": {
                           "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
@@ -3078,7 +3078,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Herta_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__780596583\">TheHerta_Herta_Listen</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3106,7 +3106,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "TheHerta_Herta",
+                  "modifier": "<a class=\"gModGreen\" id=\"1544367051\">TheHerta_Herta</a>",
                   "valuePerStack": {
                     "Cur_Count": 0
                   }
@@ -3134,7 +3134,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TheHerta_Herta",
+                      "modifier": "<a class=\"gModGreen\" id=\"1544367051\">TheHerta_Herta</a>",
                       "valuePerStack": {
                         "Cur_Count": 0
                       }
@@ -3147,7 +3147,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Herta",
+          "for": "<a class=\"gModGreen\" id=\"mod__1544367051\">TheHerta_Herta</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -3161,7 +3161,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "TheHerta_Herta_CD"
+                  "modifier": "<a class=\"gModGreen\" id=\"1505063883\">TheHerta_Herta_CD</a>"
                 }
               ]
             },
@@ -3192,7 +3192,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "TheHerta_Herta_Listen"
+                        "modifier": "<a class=\"gModGreen\" id=\"780596583\">TheHerta_Herta_Listen</a>"
                       }
                     ]
                   },
@@ -3205,7 +3205,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "TheHerta_Herta_CD"
+                        "modifier": "<a class=\"gModGreen\" id=\"1505063883\">TheHerta_Herta_CD</a>"
                       },
                       "failed": [
                         {
@@ -3276,7 +3276,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_ExtraMark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-614684164\">TheHerta_ExtraMark</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -3315,7 +3315,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (42) || RETURN",
                             "displayLines": "42",
@@ -3372,7 +3372,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "modifier": "TheHerta_Trace03_ExtraDamage[<span class=\"descriptionNumberColor\">Answer</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                               "stackLimit": {
                                 "operator": "Variables[0] (99) || RETURN",
                                 "displayLines": "99",
@@ -3429,7 +3429,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TheHerta_Passive_MagicMark_42_Block"
+          "modifier": "<a class=\"gModGreen\" id=\"426098232\">TheHerta_Passive_MagicMark_42_Block</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3437,7 +3437,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "TheHerta_SKL03_Sort_Storge"
+          "modifier": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -3461,12 +3461,12 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                 }
               },
               {
                 "name": "Sort by Modifier Value",
-                "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                 "value": "Layer",
                 "sortByHighest": true
               }
@@ -3500,7 +3500,7 @@ const compositeAbilityObject = {
               },
               "valueType": "Layer",
               "variableName": "_Temp_Sort_Layer",
-              "modifierName": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
               "multiplier": 1
             },
             {
@@ -3520,7 +3520,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                     }
                   },
                   {
@@ -3571,7 +3571,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TheHerta_SKL03_Sort_Storge",
+                      "modifier": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>",
                       "addStacksPerTrigger": {
                         "operator": "Variables[0] (_Temp_Sort_Layer) || RETURN",
                         "displayLines": "_Temp_Sort_Layer",
@@ -3604,7 +3604,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "TheHerta_SKL03_Sort_Storge"
+                  "modifier": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>"
                 }
               }
             ]
@@ -3618,7 +3618,7 @@ const compositeAbilityObject = {
               },
               "valueType": "Layer",
               "variableName": "_Temp_Sort_Layer",
-              "modifierName": "TheHerta_SKL03_Sort_Storge",
+              "modifierName": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>",
               "multiplier": 1
             },
             {
@@ -3627,7 +3627,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
             },
             {
               "name": "Add Events/Bonuses",
@@ -3635,7 +3635,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (42) || RETURN",
                 "displayLines": "42",
@@ -3706,7 +3706,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "TheHerta_Trace03_ExtraDamage[<span class=\"descriptionNumberColor\">Answer</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]"
               }
             ]
           },
@@ -3715,7 +3715,7 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable with Modifier Values",
               "valueType": "Layer",
               "variableName": "_SKL03_EXTRADAMAGE",
-              "modifierName": "TheHerta_Trace03_ExtraDamage[<span class=\"descriptionNumberColor\">Answer</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
               "multiplier": 1
             },
             {
@@ -3821,7 +3821,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TheHerta_Ability03_Bonus[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"555212333\">TheHerta_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -3847,7 +3847,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TheHerta_Passive_MagicMark_42_Block"
+          "modifier": "<a class=\"gModGreen\" id=\"426098232\">TheHerta_Passive_MagicMark_42_Block</a>"
         },
         {
           "name": "ATK Scaling DMG",
@@ -4011,7 +4011,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TheHerta_Ability21"
+          "modifier": "<a class=\"gModGreen\" id=\"1324497127\">TheHerta_Ability21</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4019,7 +4019,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "TheHerta_SKL02_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4027,7 +4027,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "TheHerta_SKL02_Mark_Pre"
+          "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4035,7 +4035,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "TheHerta_SKL02_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -4050,7 +4050,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
           },
           "passed": [
             {
@@ -4061,7 +4061,7 @@ const compositeAbilityObject = {
               },
               "valueType": "Layer",
               "variableName": "S03_Mark_Count",
-              "modifierName": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
               "multiplier": 1
             },
             {
@@ -4072,7 +4072,7 @@ const compositeAbilityObject = {
               },
               "valueType": "Layer",
               "variableName": "Orig_Layer",
-              "modifierName": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
               "multiplier": 1
             },
             {
@@ -4099,12 +4099,12 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                         }
                       },
                       {
                         "name": "Sort by Modifier Value",
-                        "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                         "value": "Layer",
                         "sortByHighest": true
                       }
@@ -4121,7 +4121,7 @@ const compositeAbilityObject = {
                       },
                       "valueType": "Layer",
                       "variableName": "_ADJ_TMP_COUNT",
-                      "modifierName": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                       "multiplier": 1
                     },
                     {
@@ -4164,7 +4164,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "TheHerta_PointB1_42",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1341843949\">TheHerta_PointB1_42</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.5) || RETURN",
@@ -4188,7 +4188,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "TheHerta_MageNum_2"
+                "modifier": "<a class=\"gModGreen\" id=\"-2073297144\">TheHerta_MageNum_2</a>"
               },
               "passed": [
                 {
@@ -4213,7 +4213,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
             },
             {
               "name": "IF",
@@ -4233,7 +4233,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (42) || RETURN",
                     "displayLines": "42",
@@ -4285,7 +4285,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Target(ST)}}"
                   },
-                  "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (42) || RETURN",
                     "displayLines": "42",
@@ -4328,7 +4328,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "TheHerta_SKL02",
+          "functionName": "<a class=\"gTempYellow\" id=\"1142002606\">TheHerta_SKL02</a>",
           "variables": {
             "DV_DamageRatio1": {
               "operator": "Variables[0] (0.8) || RETURN",
@@ -4371,7 +4371,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "TheHerta_Passive_MagicMark_Burst_Show"
+              "modifier": "<a class=\"gModGreen\" id=\"27955030\">TheHerta_Passive_MagicMark_Burst_Show</a>"
             }
           ]
         },
@@ -4515,7 +4515,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "ReduceNextActionDelay",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1527090005\">ReduceNextActionDelay</a>",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -4541,7 +4541,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "TheHerta_Ability21"
+            "modifier": "<a class=\"gModGreen\" id=\"1324497127\">TheHerta_Ability21</a>"
           },
           "passed": [
             {
@@ -4550,7 +4550,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "TheHerta_Passive_MagicMark_Burst"
+              "modifier": "<a class=\"gModGreen\" id=\"-333672562\">TheHerta_Passive_MagicMark_Burst</a>"
             }
           ]
         },
@@ -4560,7 +4560,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TheHerta_Ability21"
+          "modifier": "<a class=\"gModGreen\" id=\"1324497127\">TheHerta_Ability21</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4568,7 +4568,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "TheHerta_PointB1_42"
+          "modifier": "<a class=\"gModGreen\" id=\"-1341843949\">TheHerta_PointB1_42</a>"
         },
         {
           "name": "Adjust Variable Value",
@@ -4682,7 +4682,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "TheHerta_Trace02_MainTarget"
+          "modifier": "<a class=\"gModGreen\" id=\"-424945107\">TheHerta_Trace02_MainTarget</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4690,7 +4690,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "TheHerta_SKL02_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4698,7 +4698,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "TheHerta_SKL02_Mark_Pre"
+          "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4706,11 +4706,11 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "TheHerta_SKL02_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "TheHerta_SKL02",
+          "functionName": "<a class=\"gTempYellow\" id=\"1142002606\">TheHerta_SKL02</a>",
           "variables": {
             "DV_DamageRatio1": {
               "operator": "Variables[0] (0.7) || RETURN",
@@ -4745,7 +4745,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "TheHerta_SKL02_Mark_Pre"
+          "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4753,7 +4753,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "TheHerta_SKL02_Mark"
+          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4761,7 +4761,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "TheHerta_Trace02_MainTarget"
+          "modifier": "<a class=\"gModGreen\" id=\"-424945107\">TheHerta_Trace02_MainTarget</a>"
         },
         "Trigger: Ability End"
       ],
@@ -4877,32 +4877,32 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Ability21",
+          "for": "<a class=\"gModGreen\" id=\"mod__1324497127\">TheHerta_Ability21</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Trace02_MainTarget",
+          "for": "<a class=\"gModGreen\" id=\"mod__-424945107\">TheHerta_Trace02_MainTarget</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Eidolon6_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1073653973\">TheHerta_Eidolon6_Mark</a>",
           "stackType": "ReplaceByCaster"
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Eidolon2_Debuff"
+          "for": "<a class=\"gModGreen\" id=\"mod__-269827168\">TheHerta_Eidolon2_Debuff</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Eidolon2_Bonus"
+          "for": "<a class=\"gModGreen\" id=\"mod__-155397413\">TheHerta_Eidolon2_Bonus</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Eidolon1_Ice",
+          "for": "<a class=\"gModGreen\" id=\"mod__1847951860\">TheHerta_Eidolon1_Ice</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4930,7 +4930,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_ExceedSpStatus",
+          "for": "<a class=\"gModGreen\" id=\"mod__1787645214\">TheHerta_Passive_ExceedSpStatus</a>",
           "counter": 1,
           "stackType": "ReplaceByCaster",
           "execute": [
@@ -4952,7 +4952,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "TheHerta_Passive_ExceedSpStatus",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>",
                       "value": {
                         "operator": "Variables[0] (WHOLE) || Variables[1] (EntityStockSPForShow) || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(EntityStockSPForShow)",
@@ -4971,7 +4971,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifierName": "TheHerta_Passive_ExceedSpStatus",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>",
                       "value": 1
                     }
                   ]
@@ -4982,7 +4982,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_StockSpValue",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1558664027\">TheHerta_Passive_StockSpValue</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -5140,7 +5140,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "modifier": "TheHerta_Passive_ExceedSpStatus"
+                                "modifier": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>"
                               },
                               "passed": [
                                 {
@@ -5149,7 +5149,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "modifier": "TheHerta_Passive_ExceedSpStatus",
+                                  "modifier": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>",
                                   "variable": "EntityStockSPForShow",
                                   "target2": {
                                     "name": "Target Name",
@@ -5183,7 +5183,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "modifier": "TheHerta_Passive_ExceedSpStatus",
+                                      "modifier": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>",
                                       "valuePerStack": {
                                         "EntityStockSPForShow": {
                                           "operator": "Variables[0] (EntityStockSP) || RETURN",
@@ -5205,7 +5205,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "modifier": "TheHerta_Passive_ExceedSpStatus",
+                                  "modifier": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>",
                                   "valuePerStack": {
                                     "EntityStockSPForShow": {
                                       "operator": "Variables[0] (EntityStockSP) || RETURN",
@@ -5231,7 +5231,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_ReturnSpValue",
+          "for": "<a class=\"gModGreen\" id=\"mod__-125980821\">TheHerta_Passive_ReturnSpValue</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -5312,7 +5312,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "TheHerta_Passive_ExceedSpStatus"
+                          "modifier": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>"
                         }
                       ],
                       "failed": [
@@ -5353,7 +5353,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "TheHerta_Passive_ExceedSpStatus",
+                          "modifier": "<a class=\"gModGreen\" id=\"1787645214\">TheHerta_Passive_ExceedSpStatus</a>",
                           "valuePerStack": {
                             "EntityStockSPForShow": {
                               "operator": "Variables[0] (EntityStockSP) || RETURN",
@@ -5375,11 +5375,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_ReturnSpValue_Eidolon1"
+          "for": "<a class=\"gModGreen\" id=\"mod__-1149465899\">TheHerta_Passive_ReturnSpValue_Eidolon1</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Ability03_Bonus[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__555212333\">TheHerta_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -5417,26 +5417,26 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_SKL03_Sort_Storge",
+          "for": "<a class=\"gModGreen\" id=\"mod__184474088\">TheHerta_SKL03_Sort_Storge</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_SKL02_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__1940766665\">TheHerta_SKL02_Mark</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Eidolon2_CD[<span class=\"descriptionNumberColor\">Wind Through Keyhole</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__985102857\">TheHerta_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Wind Through Keyhole</span>]",
           "description": "The \"Wind Through Keyhole\" action advance effect cannot be triggered yet.",
           "type": "Other",
           "statusName": "Wind Through Keyhole"
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Eidolon2_PreShow_42",
+          "for": "<a class=\"gModGreen\" id=\"mod__-971879271\">TheHerta_Eidolon2_PreShow_42</a>",
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -5462,7 +5462,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player's Aim Primary-Target}}"
                   },
-                  "value1": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                  "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                   "compareType": ">=",
                   "value2": 42,
                   "valueType": "Layer"
@@ -5486,7 +5486,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Eidolon2_PreShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__489116474\">TheHerta_Eidolon2_PreShow</a>",
           "stackData": [
             "MDF_PropertyValue"
           ],
@@ -5531,11 +5531,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_SKL02_Mark_Pre"
+          "for": "<a class=\"gModGreen\" id=\"mod__-696979317\">TheHerta_SKL02_Mark_Pre</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_BPdamageNumber_UIconfig",
+          "for": "<a class=\"gModGreen\" id=\"mod__-682623552\">TheHerta_BPdamageNumber_UIconfig</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -5606,7 +5606,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_MagicMark_Burst_Show",
+          "for": "<a class=\"gModGreen\" id=\"mod__27955030\">TheHerta_Passive_MagicMark_Burst_Show</a>",
           "stackData": [],
           "latentQueue": [
             "Orig_Layer"
@@ -5614,7 +5614,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_MagicMark_Burst",
+          "for": "<a class=\"gModGreen\" id=\"mod__-333672562\">TheHerta_Passive_MagicMark_Burst</a>",
           "stackData": [],
           "latentQueue": [
             "Orig_Layer",
@@ -5623,7 +5623,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead",
@@ -5640,7 +5640,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "TheHerta_Passive_MagicMark_42_Block_42"
+                  "modifier": "<a class=\"gModGreen\" id=\"-850819741\">TheHerta_Passive_MagicMark_42_Block_42</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -5648,7 +5648,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "TheHerta_Passive_MagicMark_Effect_Block_42"
+                  "modifier": "<a class=\"gModGreen\" id=\"410301042\">TheHerta_Passive_MagicMark_Effect_Block_42</a>"
                 }
               ]
             },
@@ -5666,7 +5666,7 @@ const compositeAbilityObject = {
                   },
                   "valueType": "Layer",
                   "variableName": "MDF_Count",
-                  "modifierName": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                   "multiplier": 1
                 },
                 {
@@ -5677,7 +5677,7 @@ const compositeAbilityObject = {
                   },
                   "valueType": "MaxLayer",
                   "variableName": "MagicMark_MaxCount",
-                  "modifierName": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                   "multiplier": 1
                 },
                 {
@@ -5688,7 +5688,7 @@ const compositeAbilityObject = {
                   },
                   "valueType": "MaxLayer",
                   "variableName": "MagicMark_MaxCount_Max",
-                  "modifierName": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                   "multiplier": 1
                 },
                 {
@@ -5711,7 +5711,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "modifier": "TheHerta_Passive_MagicMark_Effect_Block_42",
+                            "modifier": "<a class=\"gModGreen\" id=\"410301042\">TheHerta_Passive_MagicMark_Effect_Block_42</a>",
                             "invertCondition": true
                           }
                         ]
@@ -5729,7 +5729,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "TheHerta_Passive_MagicMark_Effect_Block_42"
+                          "modifier": "<a class=\"gModGreen\" id=\"410301042\">TheHerta_Passive_MagicMark_Effect_Block_42</a>"
                         }
                       ]
                     }
@@ -5759,7 +5759,7 @@ const compositeAbilityObject = {
                   },
                   "valueType": "Layer",
                   "variableName": "MDF_Count",
-                  "modifierName": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                   "multiplier": 1
                 },
                 {
@@ -5833,7 +5833,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                                    "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                                   },
                                   {
                                     "name": "Is Part Of",
@@ -5859,7 +5859,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value1": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                          "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "compareType": "<",
                           "value2": {
                             "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
@@ -5893,7 +5893,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                                     },
                                     {
                                       "name": "Is Part Of",
@@ -5929,7 +5929,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value1": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                            "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": "<",
                             "value2": {
                               "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
@@ -5948,7 +5948,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
                                 "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
                                 "displayLines": "MagicMark_MaxCount_Max",
@@ -5981,7 +5981,7 @@ const compositeAbilityObject = {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
                                           },
-                                          "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                                          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                                         },
                                         {
                                           "name": "Is Part Of",
@@ -6017,7 +6017,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value1": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                                "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                                 "compareType": "<",
                                 "value2": {
                                   "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
@@ -6036,7 +6036,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                                   "stackLimit": {
                                     "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
                                     "displayLines": "MagicMark_MaxCount_Max",
@@ -6073,7 +6073,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                                     },
                                     {
                                       "name": "Is Part Of",
@@ -6109,7 +6109,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value1": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                            "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": "<",
                             "value2": {
                               "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
@@ -6128,7 +6128,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
                                 "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
                                 "displayLines": "MagicMark_MaxCount_Max",
@@ -6158,7 +6158,7 @@ const compositeAbilityObject = {
                   },
                   "valueType": "Layer",
                   "variableName": "MDF_Count",
-                  "modifierName": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                   "multiplier": 1
                 },
                 {
@@ -6232,7 +6232,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                                    "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                                   },
                                   {
                                     "name": "Is Part Of",
@@ -6258,7 +6258,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value1": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                          "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "compareType": "<",
                           "value2": {
                             "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
@@ -6292,7 +6292,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                                     },
                                     {
                                       "name": "Is Part Of",
@@ -6328,7 +6328,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value1": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                            "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": "<",
                             "value2": {
                               "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
@@ -6347,7 +6347,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
                                 "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
                                 "displayLines": "MagicMark_MaxCount_Max",
@@ -6380,7 +6380,7 @@ const compositeAbilityObject = {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
                                           },
-                                          "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                                          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                                         },
                                         {
                                           "name": "Is Part Of",
@@ -6416,7 +6416,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value1": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                                "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                                 "compareType": "<",
                                 "value2": {
                                   "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
@@ -6435,7 +6435,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                                   "stackLimit": {
                                     "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
                                     "displayLines": "MagicMark_MaxCount_Max",
@@ -6472,7 +6472,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                                     },
                                     {
                                       "name": "Is Part Of",
@@ -6508,7 +6508,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value1": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                            "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": "<",
                             "value2": {
                               "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
@@ -6527,7 +6527,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
                                 "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
                                 "displayLines": "MagicMark_MaxCount_Max",
@@ -6574,7 +6574,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "TheHerta_Passive_MagicMark_Burst_Show"
+                    "modifier": "<a class=\"gModGreen\" id=\"27955030\">TheHerta_Passive_MagicMark_Burst_Show</a>"
                   },
                   "passed": [
                     {
@@ -6649,7 +6649,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "TheHerta_Passive_MagicMark_Burst_Show"
+                      "modifier": "<a class=\"gModGreen\" id=\"27955030\">TheHerta_Passive_MagicMark_Burst_Show</a>"
                     }
                   ]
                 },
@@ -6657,7 +6657,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "TheHerta_Passive_MagicMark_Burst"
+                    "modifier": "<a class=\"gModGreen\" id=\"-333672562\">TheHerta_Passive_MagicMark_Burst</a>"
                   },
                   "passed": [
                     {
@@ -6672,7 +6672,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "TheHerta_Passive_MagicMark_Burst"
+                      "modifier": "<a class=\"gModGreen\" id=\"-333672562\">TheHerta_Passive_MagicMark_Burst</a>"
                     }
                   ]
                 }
@@ -6712,7 +6712,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                   },
                   "ifTargetFound": [
                     {
@@ -6726,7 +6726,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value1": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                            "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": ">",
                             "value2": {
                               "operator": "Variables[0] (MDF_Count) || RETURN",
@@ -6995,7 +6995,7 @@ const compositeAbilityObject = {
                   },
                   "valueType": "Layer",
                   "variableName": "MDF_Count",
-                  "modifierName": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                   "multiplier": 1
                 },
                 {
@@ -7069,7 +7069,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                                    "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                                   },
                                   {
                                     "name": "Is Part Of",
@@ -7095,7 +7095,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value1": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                          "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                           "compareType": "<",
                           "value2": {
                             "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
@@ -7129,7 +7129,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                                     },
                                     {
                                       "name": "Is Part Of",
@@ -7165,7 +7165,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value1": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                            "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": "<",
                             "value2": {
                               "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
@@ -7184,7 +7184,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
                                 "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
                                 "displayLines": "MagicMark_MaxCount_Max",
@@ -7217,7 +7217,7 @@ const compositeAbilityObject = {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
                                           },
-                                          "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                                          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                                         },
                                         {
                                           "name": "Is Part Of",
@@ -7253,7 +7253,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value1": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                                "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                                 "compareType": "<",
                                 "value2": {
                                   "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
@@ -7272,7 +7272,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                                   "stackLimit": {
                                     "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
                                     "displayLines": "MagicMark_MaxCount_Max",
@@ -7309,7 +7309,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
                                     },
                                     {
                                       "name": "Is Part Of",
@@ -7345,7 +7345,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value1": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                            "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                             "compareType": "<",
                             "value2": {
                               "operator": "Variables[0] (MagicMark_MaxCount) || RETURN",
@@ -7364,7 +7364,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
                               "stackLimit": {
                                 "operator": "Variables[0] (MagicMark_MaxCount_Max) || RETURN",
                                 "displayLines": "MagicMark_MaxCount_Max",
@@ -7399,7 +7399,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_MagicMark_42",
+          "for": "<a class=\"gModGreen\" id=\"mod__338292354\">TheHerta_Passive_MagicMark_42</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7410,7 +7410,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "TheHerta_Passive_MagicMark_42_Delay"
+                  "modifier": "<a class=\"gModGreen\" id=\"1353733302\">TheHerta_Passive_MagicMark_42_Delay</a>"
                 },
                 {
                   "name": "Define Custom Variable with Copy",
@@ -7515,7 +7515,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Trace03_ExtraDamage[<span class=\"descriptionNumberColor\">Answer</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
           "stackType": "ReplaceByCaster",
           "stackData": [
             "MDF_PropertyValue"
@@ -7529,7 +7529,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_SKL21[<span class=\"descriptionNumberColor\">Inspiration</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]",
           "counter": 1,
           "stackData": [],
           "latentQueue": [
@@ -7541,7 +7541,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_MagicMark_Effect_Block_42",
+          "for": "<a class=\"gModGreen\" id=\"mod__410301042\">TheHerta_Passive_MagicMark_Effect_Block_42</a>",
           "stackData": [],
           "latentQueue": [
             "Orig_Layer"
@@ -7549,17 +7549,17 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_MagicMark_42_Block_42"
+          "for": "<a class=\"gModGreen\" id=\"mod__-850819741\">TheHerta_Passive_MagicMark_42_Block_42</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_MagicMark_42_Block",
+          "for": "<a class=\"gModGreen\" id=\"mod__426098232\">TheHerta_Passive_MagicMark_42_Block</a>",
           "stackData": [],
           "latentQueue": []
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Passive_MagicMark_42_Delay",
+          "for": "<a class=\"gModGreen\" id=\"mod__1353733302\">TheHerta_Passive_MagicMark_42_Delay</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -7570,7 +7570,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-533235219\">TheHerta_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]",
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
@@ -7603,7 +7603,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Eidolon4_Listen",
+          "for": "<a class=\"gModGreen\" id=\"mod__1044334207\">TheHerta_Eidolon4_Listen</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7632,7 +7632,7 @@ const compositeAbilityObject = {
                       }
                     ]
                   },
-                  "modifier": "TheHerta_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-533235219\">TheHerta_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -7679,7 +7679,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TheHerta_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-533235219\">TheHerta_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -7730,7 +7730,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TheHerta_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-533235219\">TheHerta_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
                               "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -7750,7 +7750,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "TheHerta_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-533235219\">TheHerta_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Sixteenth Key</span>]"
                         }
                       ]
                     }
@@ -7768,7 +7768,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_PointB1_42",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1341843949\">TheHerta_PointB1_42</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7801,7 +7801,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Eidolon6_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__-73718393\">TheHerta_Eidolon6_Bonus</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7834,7 +7834,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "TheHerta_Herta_CD",
+          "for": "<a class=\"gModGreen\" id=\"mod__1505063883\">TheHerta_Herta_CD</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ]
@@ -7855,7 +7855,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "TheHerta_SKL02",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1142002606\">TheHerta_SKL02</a>",
           "parse": [
             {
               "name": "Add Events/Bonuses",
@@ -7863,7 +7863,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "TheHerta_Passive_MagicMark[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (DV_MarkMaxLayer) || RETURN",
                 "displayLines": "DV_MarkMaxLayer",
@@ -7894,7 +7894,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "TheHerta_Trace03_ExtraDamage[<span class=\"descriptionNumberColor\">Answer</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
                     "displayLines": "_SkillTree03_MaxCount",
@@ -7920,7 +7920,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{ST and Blast}}"
               },
-              "modifier": "TheHerta_SKL02_Mark_Pre"
+              "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
             },
             {
               "name": "ATK Scaling DMG",
@@ -7966,13 +7966,13 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TheHerta_SKL02_Mark_Pre",
+                      "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>",
                       "includePreDeath": true
                     }
                   }
                 ]
               },
-              "modifier": "TheHerta_SKL02_Mark"
+              "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
             },
             {
               "name": "Find New Target",
@@ -7988,7 +7988,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "TheHerta_SKL02_Mark",
+                "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>",
                 "includePreDeath": true
               },
               "ifTargetFound": [
@@ -7998,7 +7998,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Targets Adjacent to Parameter Target}}"
                   },
-                  "modifier": "TheHerta_SKL02_Mark_Pre"
+                  "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
                 }
               ]
             },
@@ -8016,7 +8016,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "TheHerta_SKL02_Mark",
+                "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>",
                 "includePreDeath": true
               },
               "ifTargetFound": [
@@ -8120,13 +8120,13 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "TheHerta_SKL02_Mark_Pre",
+                      "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>",
                       "includePreDeath": true
                     }
                   }
                 ]
               },
-              "modifier": "TheHerta_SKL02_Mark"
+              "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
             },
             {
               "name": "Find New Target",
@@ -8142,7 +8142,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "TheHerta_SKL02_Mark",
+                "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>",
                 "includePreDeath": true
               },
               "ifTargetFound": [
@@ -8152,7 +8152,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Targets Adjacent to Parameter Target}}"
                   },
-                  "modifier": "TheHerta_SKL02_Mark_Pre"
+                  "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
                 }
               ]
             },
@@ -8190,7 +8190,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "TheHerta_SKL02_Mark",
+                "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>",
                 "includePreDeath": true
               },
               "ifTargetFound": [

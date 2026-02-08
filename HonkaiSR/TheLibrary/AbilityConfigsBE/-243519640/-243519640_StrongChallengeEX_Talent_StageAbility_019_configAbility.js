@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "MStrongChallengeEX_Talent_StageAbility_LE_019"
+      "modifier": "<a class=\"gModGreen\" id=\"1477263368\">MStrongChallengeEX_Talent_StageAbility_LE_019</a>"
     },
     {
       "name": "Declare Custom Variable",
@@ -26,7 +26,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_EMY_019",
+      "for": "<a class=\"gModGreen\" id=\"mod__1030183938\">MStrongChallengeEX_Talent_StageAbility_EMY_019</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -63,7 +63,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_PLY_019",
+      "for": "<a class=\"gModGreen\" id=\"mod__1056200544\">MStrongChallengeEX_Talent_StageAbility_PLY_019</a>",
       "execute": [
         {
           "eventTrigger": "Got a Kill [Owner]",
@@ -91,7 +91,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MStrongChallengeEX_Talent_StageAbility_LE_019",
+      "for": "<a class=\"gModGreen\" id=\"mod__1477263368\">MStrongChallengeEX_Talent_StageAbility_LE_019</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -118,7 +118,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_PLY_019",
+                  "modifier": "<a class=\"gModGreen\" id=\"1056200544\">MStrongChallengeEX_Talent_StageAbility_PLY_019</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue2": {
                       "operator": "Variables[0] (#ADF_2) || RETURN",
@@ -154,7 +154,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_019",
+                  "modifier": "<a class=\"gModGreen\" id=\"1030183938\">MStrongChallengeEX_Talent_StageAbility_EMY_019</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
@@ -173,7 +173,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team Unselectables}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_019",
+                  "modifier": "<a class=\"gModGreen\" id=\"1030183938\">MStrongChallengeEX_Talent_StageAbility_EMY_019</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",
@@ -216,7 +216,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "MStrongChallengeEX_Talent_StageAbility_EMY_019",
+                  "modifier": "<a class=\"gModGreen\" id=\"1030183938\">MStrongChallengeEX_Talent_StageAbility_EMY_019</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (#ADF_1) || Variables[1] (_Layer) || MUL || RETURN",

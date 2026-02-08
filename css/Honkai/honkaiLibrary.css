@@ -1690,6 +1690,22 @@ div {
     /* border: 1px solid green; */
 }
 
+.gModGreen {
+    color: rgb(0, 184, 138);
+    border-bottom: 1px solid rgba(0, 184, 138, 0.438);
+    cursor: pointer;
+    text-decoration: none;
+}
+.gTempYellow {
+    color: #DCDC9D;
+    border-bottom: 1px solid #dcdc9d4b;
+    cursor: pointer;
+    text-decoration: none;
+}
+.gModGreen:hover,.gTempYellow:hover {
+    opacity: 0.5;
+}
+
 
 
 .menuSwitcherBarTopBox {

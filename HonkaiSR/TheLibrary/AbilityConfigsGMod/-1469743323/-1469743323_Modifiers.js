@@ -10,7 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001343",
+      "for": "<a class=\"gModGreen\" id=\"mod__873862857\">MLevel_WB_3001343</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -40,7 +40,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001342",
+      "for": "<a class=\"gModGreen\" id=\"mod__857085238\">MLevel_WB_3001342</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -75,7 +75,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001341",
+      "for": "<a class=\"gModGreen\" id=\"mod__840307619\">MLevel_WB_3001341</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -105,7 +105,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001333",
+      "for": "<a class=\"gModGreen\" id=\"mod__1009216642\">MLevel_WB_3001333</a>",
       "stackType": "Multiple",
       "modifierFlags": [
         "ListenBattleEventSkill"
@@ -150,7 +150,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001332",
+      "for": "<a class=\"gModGreen\" id=\"mod__1025994261\">MLevel_WB_3001332</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -188,7 +188,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001331",
+      "for": "<a class=\"gModGreen\" id=\"mod__975661404\">MLevel_WB_3001331</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -226,7 +226,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001323",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1272686637\">MLevel_WB_3001323</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -273,7 +273,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001322",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1289464256\">MLevel_WB_3001322</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -333,7 +333,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001321",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1239131399\">MLevel_WB_3001321</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -380,7 +380,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001313",
+      "for": "<a class=\"gModGreen\" id=\"mod__-870170876\">MLevel_WB_3001313</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -401,7 +401,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001312",
+      "for": "<a class=\"gModGreen\" id=\"mod__-853393257\">MLevel_WB_3001312</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -424,7 +424,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Ability Target TAKING DMG}}"
                     },
-                    "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
                   },
                   "passed": [
                     {
@@ -461,7 +461,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001311",
+      "for": "<a class=\"gModGreen\" id=\"mod__-836615638\">MLevel_WB_3001311</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -491,7 +491,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001223",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1175504876\">MLevel_WB_3001223</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -538,7 +538,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001222",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1158727257\">MLevel_WB_3001222</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -559,7 +559,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001221",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1141949638\">MLevel_WB_3001221</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -580,7 +580,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001212",
+      "for": "<a class=\"gModGreen\" id=\"mod__552736976\">MLevel_WB_3001212</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -603,7 +603,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Ability Target TAKING DMG}}"
                     },
-                    "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
                   },
                   "passed": [
                     {
@@ -657,7 +657,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Attack Targets of Modifier Holder}}"
                   },
-                  "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -672,7 +672,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001211",
+      "for": "<a class=\"gModGreen\" id=\"mod__603069833\">MLevel_WB_3001211</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -686,7 +686,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ability Target TAKING DMG}}"
                 },
-                "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
               },
               "passed": [
                 {
@@ -707,7 +707,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001002",
+      "for": "<a class=\"gModGreen\" id=\"mod__69401295\">MLevel_WB_3001002</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -740,7 +740,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_3001001",
+      "for": "<a class=\"gModGreen\" id=\"mod__86178914\">MLevel_WB_3001001</a>",
       "stackType": "Multiple",
       "execute": [
         {
@@ -779,7 +779,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Ability Target TAKING DMG}}"
                       },
-                      "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": 2,
                       "valuePerStack": {
                         "Modifier_Burn_DamagePercentage": 1,
@@ -812,7 +812,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_AddDamagePerTurn",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1257288835\">MLevel_WB_AddDamagePerTurn</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -823,7 +823,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "MonsterPower_Sub[<span class=\"descriptionNumberColor\">undefined</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1763161893\">MonsterPower_Sub</a>[<span class=\"descriptionNumberColor\">undefined</span>]"
             }
           ]
         }
@@ -831,7 +831,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MLevel_WB_BlockDamagePerTurn",
+      "for": "<a class=\"gModGreen\" id=\"mod__-130963537\">MLevel_WB_BlockDamagePerTurn</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -842,7 +842,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "Enemy_Mecha_BlockDamage[<span class=\"descriptionNumberColor\">Barrier</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-696028198\">Enemy_Mecha_BlockDamage</a>[<span class=\"descriptionNumberColor\">Barrier</span>]"
             }
           ]
         }

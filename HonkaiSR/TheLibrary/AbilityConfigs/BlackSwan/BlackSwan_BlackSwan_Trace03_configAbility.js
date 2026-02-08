@@ -10,13 +10,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_BlackSwan_Trace03"
+      "modifier": "<a class=\"gModGreen\" id=\"1762634781\">M_BlackSwan_Trace03</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_Trace03_Sub",
+      "for": "<a class=\"gModGreen\" id=\"mod__97197540\">M_BlackSwan_Trace03_Sub</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -74,7 +74,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_BlackSwan_Trace03",
+      "for": "<a class=\"gModGreen\" id=\"mod__1762634781\">M_BlackSwan_Trace03</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
@@ -97,7 +97,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "M_BlackSwan_Trace03_Sub",
+              "modifier": "<a class=\"gModGreen\" id=\"97197540\">M_BlackSwan_Trace03_Sub</a>",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
                   "operator": "Variables[0] (CasterStatusProbability) || Variables[1] (0.6) || MUL || RETURN",
@@ -139,7 +139,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_BlackSwan_Trace03_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"97197540\">M_BlackSwan_Trace03_Sub</a>",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
                       "operator": "Variables[0] (CasterStatusProbability) || Variables[1] (0.6) || MUL || RETURN",

@@ -65,7 +65,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "SlowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1203290559\">SlowModifier</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -92,7 +92,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "OnBreakSlowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__512006331\">OnBreakSlowModifier</a>",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -103,7 +103,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "SlowModifier",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1203290559\">SlowModifier</a>",
                   "duration": 1,
                   "valuePerStack": {
                     "PassiveAbility04_SpeedDelta": {
@@ -154,7 +154,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_Part_ListenHP_Modifier",
+          "modifier": "<a class=\"gModGreen\" id=\"-1666707889\">Monster_W1_Svarog_RL_Part_ListenHP_Modifier</a>",
           "valuePerStack": {
             "PassiveAbility02_P2_HPRatio": {
               "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
@@ -214,7 +214,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_ChangePhase"
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
         },
         {
           "name": "Action Advance/Delay",
@@ -231,7 +231,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_Endurance"
+          "modifier": "<a class=\"gModGreen\" id=\"-870237047\">Monster_W1_Svarog_RL_Endurance</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -249,7 +249,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_PartController_LockHP"
+          "modifier": "<a class=\"gModGreen\" id=\"916805475\">Monster_W1_Svarog_RL_PartController_LockHP</a>"
         }
       ],
       "references": []
@@ -329,7 +329,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Use Custom Character Function",
-          "functionName": "Monster_ChangePhase"
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -337,7 +337,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_Endurance"
+          "modifier": "<a class=\"gModGreen\" id=\"-870237047\">Monster_W1_Svarog_RL_Endurance</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -399,7 +399,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "modifier": "Monster_W1_Svarog_RL_Mark"
+              "modifier": "<a class=\"gModGreen\" id=\"1760667361\">Monster_W1_Svarog_RL_Mark</a>"
             },
             {
               "name": "Create Enemies",
@@ -419,7 +419,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
             },
             {
               "name": "IF",
@@ -429,14 +429,14 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
               },
               "passed": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "Layer",
                   "variableName": "AttackUpLayer",
-                  "modifierName": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "multiplier": 1
                 },
                 {
@@ -445,7 +445,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Minions}}"
                   },
-                  "modifier": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
                       "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
@@ -480,7 +480,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Monster_W1_Svarog_RL_Mark"
+                "modifier": "<a class=\"gModGreen\" id=\"1760667361\">Monster_W1_Svarog_RL_Mark</a>"
               }
             }
           ]
@@ -490,7 +490,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Svarog_RL_Mark",
+          "for": "<a class=\"gModGreen\" id=\"mod__1760667361\">Monster_W1_Svarog_RL_Mark</a>",
           "stackData": [],
           "latentQueue": []
         }
@@ -707,7 +707,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
             },
             {
               "name": "IF",
@@ -717,14 +717,14 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
               },
               "passed": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
                   "valueType": "Layer",
                   "variableName": "AttackUpLayer",
-                  "modifierName": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "multiplier": 1
                 },
                 {
@@ -742,7 +742,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     }
                   },
                   "ifTargetFound": [
@@ -752,7 +752,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
                           "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
@@ -848,7 +848,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
               "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
@@ -911,7 +911,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMore"
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
         },
         {
           "name": "Trigger Ability",
@@ -938,13 +938,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Straight_AIControl"
+          "modifier": "<a class=\"gModGreen\" id=\"-954371893\">Straight_AIControl</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Straight_AIControl",
+          "for": "<a class=\"gModGreen\" id=\"mod__-954371893\">Straight_AIControl</a>",
           "execute": [
             {
               "eventTrigger": "Action End [Owner]",
@@ -1060,7 +1060,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
             },
             {
               "name": "Find New Target",
@@ -1139,7 +1139,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Minions}}"
                   },
-                  "modifier": "Monster_W1_Svarog_RL_Part_ListenHP_Modifier",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1666707889\">Monster_W1_Svarog_RL_Part_ListenHP_Modifier</a>",
                   "valuePerStack": {
                     "PassiveAbility02_P2_HPRatio": {
                       "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
@@ -1159,7 +1159,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "modifier": "Monster_W1_SvarogPart_RL_ListenBreak_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"670022041\">Monster_W1_SvarogPart_RL_ListenBreak_Modifier</a>"
             },
             {
               "name": "Declare Custom Variable",
@@ -1209,7 +1209,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
               "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
@@ -1249,7 +1249,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Minions}}"
             },
-            "modifier": "StanceBreakState"
+            "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
           },
           "passed": [
             {
@@ -1258,7 +1258,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "modifier": "StanceBreakState"
+              "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
             }
           ]
         },
@@ -1383,7 +1383,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"864989347\">Monster_W1_Svarog_RL_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
             "displayLines": "{[Skill04[2]]}",
@@ -1459,7 +1459,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Boss_Cocolia_Endurance"
+          "modifier": "<a class=\"gModGreen\" id=\"-1440219637\">Boss_Cocolia_Endurance</a>"
         },
         {
           "name": "IF",
@@ -1479,7 +1479,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_ListenPlayerDie_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-205256396\">Monster_W1_Svarog_RL_ListenPlayerDie_Modifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1487,7 +1487,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Svarog_ListenBreak_RemoveControl_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1495,7 +1495,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_Part_ListenHP_Modifier",
+          "modifier": "<a class=\"gModGreen\" id=\"-1666707889\">Monster_W1_Svarog_RL_Part_ListenHP_Modifier</a>",
           "valuePerStack": {
             "PassiveAbility02_P2_HPRatio": {
               "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
@@ -1513,7 +1513,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1293195213\">Monster_W1_Svarog_RL_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1521,7 +1521,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_Control_OnPart_Modifier",
+          "modifier": "<a class=\"gModGreen\" id=\"1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>",
           "valuePerStack": {
             "Modifier_DamagePercentage": {
               "operator": "Variables[0] (UnusedUnderThisBase_64) || RETURN",
@@ -1539,7 +1539,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Svarog_ListenPlayerAllDie_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-545618319\">Svarog_ListenPlayerAllDie_Modifier</a>"
         },
         "Trigger: Attack End",
         "Trigger: Ability End"
@@ -1547,7 +1547,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Svarog_ListenPlayerAllDie_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-545618319\">Svarog_ListenPlayerAllDie_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -1571,7 +1571,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_W1_Svarog_RL_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1293195213\">Monster_W1_Svarog_RL_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1579,7 +1579,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Minions}}"
                       },
-                      "modifier": "Monster_W1_Svarog_RL_Control_OnPart_Modifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1587,7 +1587,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Minions}}"
                       },
-                      "modifier": "Monster_W1_SvarogPart_RL_OnTurnEndChangePhaseModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"226501164\">Monster_W1_SvarogPart_RL_OnTurnEndChangePhaseModifier</a>"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -1600,7 +1600,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Svarog_ListenBreak_RemoveControl_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -1620,7 +1620,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W1_Svarog_RL_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1293195213\">Monster_W1_Svarog_RL_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
                     }
                   ]
                 },
@@ -1630,7 +1630,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W1_Svarog_RL_Control_OnPart_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>"
                 },
                 {
                   "name": "Change Character Transformation",
@@ -1854,7 +1854,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_GS_Svarog_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"340882576\">Monster_W1_GS_Svarog_BattleScore1</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1862,7 +1862,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1870,7 +1870,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_PartController_LockHP"
+          "modifier": "<a class=\"gModGreen\" id=\"916805475\">Monster_W1_Svarog_RL_PartController_LockHP</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1878,7 +1878,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_LowHP",
+          "modifier": "<a class=\"gModGreen\" id=\"-1864956422\">Monster_W1_Svarog_RL_LowHP</a>",
           "valuePerStack": {
             "MDF_LowHPRatio": {
               "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
@@ -1896,13 +1896,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Svarog_RL_ReviveEffect"
+          "modifier": "<a class=\"gModGreen\" id=\"1614912264\">Monster_W1_Svarog_RL_ReviveEffect</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Svarog_RL_ReviveEffect",
+          "for": "<a class=\"gModGreen\" id=\"mod__1614912264\">Monster_W1_Svarog_RL_ReviveEffect</a>",
           "execute": [
             {
               "eventTrigger": "When Put in Deathstate Limbo"
@@ -1913,7 +1913,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Svarog_RL_LowHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1864956422\">Monster_W1_Svarog_RL_LowHP</a>",
           "execute": [
             {
               "eventTrigger": "HP Change [Owner]",
@@ -2059,7 +2059,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "SlowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1203290559\">SlowModifier</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2086,7 +2086,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "OnBreakSlowModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__512006331\">OnBreakSlowModifier</a>",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -2097,7 +2097,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "SlowModifier",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1203290559\">SlowModifier</a>",
                   "duration": 1,
                   "valuePerStack": {
                     "PassiveAbility04_SpeedDelta": {
@@ -2152,7 +2152,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Svarog_Part_ListenHP_Modifier",
+          "modifier": "<a class=\"gModGreen\" id=\"17783365\">Svarog_Part_ListenHP_Modifier</a>",
           "valuePerStack": {
             "PassiveAbility02_P2_HPRatio": {
               "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__35) || RETURN",
@@ -2214,13 +2214,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Straight_AIControl"
+          "modifier": "<a class=\"gModGreen\" id=\"-954371893\">Straight_AIControl</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Straight_AIControl",
+          "for": "<a class=\"gModGreen\" id=\"mod__-954371893\">Straight_AIControl</a>",
           "execute": [
             {
               "eventTrigger": "Action End [Owner]",
@@ -2307,7 +2307,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "modifier": "Standard_Servant[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
             },
             {
               "name": "IF",
@@ -2340,7 +2340,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "modifier": "Svarog_Part_ListenHP_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"17783365\">Svarog_Part_ListenHP_Modifier</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2348,7 +2348,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "modifier": "Svarog_Part_ListenBreak_Modifier"
+              "modifier": "<a class=\"gModGreen\" id=\"-818415302\">Svarog_Part_ListenBreak_Modifier</a>"
             },
             {
               "name": "Declare Custom Variable",
@@ -2404,7 +2404,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Svarog_Ability06_Bonus",
+          "modifier": "<a class=\"gModGreen\" id=\"-41812969\">Svarog_Ability06_Bonus</a>",
           "duration": 1
         },
         "Trigger: Ability End"
@@ -2441,7 +2441,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Minions}}"
             },
-            "modifier": "StanceBreakState"
+            "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
           },
           "passed": [
             {
@@ -2450,7 +2450,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "modifier": "StanceBreakState"
+              "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
             }
           ]
         },
@@ -2558,7 +2558,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "OneMore"
+              "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2566,7 +2566,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W1_GS_Svarog_Level_SpecialWin"
+              "modifier": "<a class=\"gModGreen\" id=\"-1443371257\">Monster_W1_GS_Svarog_Level_SpecialWin</a>"
             }
           ]
         },
@@ -2606,7 +2606,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Standard_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
             "displayLines": "{[Skill04[2]]}",
@@ -2689,7 +2689,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Boss_Cocolia_Endurance"
+          "modifier": "<a class=\"gModGreen\" id=\"-1440219637\">Boss_Cocolia_Endurance</a>"
         },
         {
           "name": "IF",
@@ -2709,7 +2709,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Svarog_ListenPlayerDie_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-920895050\">Svarog_ListenPlayerDie_Modifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2717,7 +2717,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Svarog_ListenBreak_RemoveControl_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2725,7 +2725,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Svarog_Part_ListenHP_Modifier",
+          "modifier": "<a class=\"gModGreen\" id=\"17783365\">Svarog_Part_ListenHP_Modifier</a>",
           "valuePerStack": {
             "PassiveAbility02_P2_HPRatio": {
               "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__35) || RETURN",
@@ -2767,7 +2767,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2775,7 +2775,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "modifier": "Svarog_Control_OnPart_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2783,7 +2783,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Svarog_ListenPlayerAllDie_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"-545618319\">Svarog_ListenPlayerAllDie_Modifier</a>"
         },
         "Trigger: Attack End",
         "Trigger: Ability End"
@@ -2791,7 +2791,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Svarog_ListenPlayerAllDie_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-545618319\">Svarog_ListenPlayerAllDie_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -2815,7 +2815,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -2823,7 +2823,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Minions}}"
                       },
-                      "modifier": "Svarog_Control_OnPart_Modifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2831,7 +2831,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Minions}}"
                       },
-                      "modifier": "Svarog_Part_OnTurnEndChangePhaseModifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-463045993\">Svarog_Part_OnTurnEndChangePhaseModifier</a>"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -2844,7 +2844,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Svarog_ListenBreak_RemoveControl_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -2864,7 +2864,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
                     }
                   ]
                 },
@@ -2874,7 +2874,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Svarog_Control_OnPart_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -3115,7 +3115,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_GS_Svarog_BattleScore1"
+          "modifier": "<a class=\"gModGreen\" id=\"340882576\">Monster_W1_GS_Svarog_BattleScore1</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3123,7 +3123,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "OneMorePerTurn"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3131,7 +3131,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_GS_Svarog_Break"
+          "modifier": "<a class=\"gModGreen\" id=\"686372206\">Monster_W1_GS_Svarog_Break</a>"
         },
         {
           "name": "IF",
@@ -3151,7 +3151,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Monster_W1_GS_Svarog_SpecialVictory_LockHP"
+              "modifier": "<a class=\"gModGreen\" id=\"193352830\">Monster_W1_GS_Svarog_SpecialVictory_LockHP</a>"
             }
           ]
         }
@@ -3159,7 +3159,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_GS_Svarog_SpecialVictory_LockHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__193352830\">Monster_W1_GS_Svarog_SpecialVictory_LockHP</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3219,7 +3219,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "modifier": "Monster_W1_GS_Svarog_DisableAction"
+                      "modifier": "<a class=\"gModGreen\" id=\"-353224873\">Monster_W1_GS_Svarog_DisableAction</a>"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -3241,7 +3241,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_GS_Svarog_Break",
+          "for": "<a class=\"gModGreen\" id=\"mod__686372206\">Monster_W1_GS_Svarog_Break</a>",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]"
@@ -3297,13 +3297,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "modifier": "Enemy_W1_Svarog_ResetStageBGM"
+          "modifier": "<a class=\"gModGreen\" id=\"908163509\">Enemy_W1_Svarog_ResetStageBGM</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Enemy_W1_Svarog_ResetStageBGM",
+          "for": "<a class=\"gModGreen\" id=\"mod__908163509\">Enemy_W1_Svarog_ResetStageBGM</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3365,7 +3365,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_SvarogPart_RL_CountDown[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__764270214\">Monster_W1_SvarogPart_RL_CountDown</a>[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
             {
@@ -3407,7 +3407,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_SvarogPart_RL_ListenBreak_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__670022041\">Monster_W1_SvarogPart_RL_ListenBreak_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -3468,7 +3468,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_SvarogPart_RL_OnTurnEndChangePhaseModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__226501164\">Monster_W1_SvarogPart_RL_OnTurnEndChangePhaseModifier</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3490,7 +3490,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Svarog_RL_Control_OnPart_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3530,7 +3530,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Svarog_RL_ListenPlayerDie_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-205256396\">Monster_W1_Svarog_RL_ListenPlayerDie_Modifier</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -3554,7 +3554,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Monster_W1_Svarog_RL_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1293195213\">Monster_W1_Svarog_RL_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
                     }
                   ]
                 },
@@ -3564,7 +3564,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_W1_Svarog_RL_Control_OnPart_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3572,7 +3572,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Svarog_ListenBreak_RemoveControl_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3580,7 +3580,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_W1_SvarogPart_RL_OnTurnEndChangePhaseModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"226501164\">Monster_W1_SvarogPart_RL_OnTurnEndChangePhaseModifier</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -3615,7 +3615,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_W1_SvarogPart_RL_OnTurnEndChangePhaseModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"226501164\">Monster_W1_SvarogPart_RL_OnTurnEndChangePhaseModifier</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3623,7 +3623,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Monster_W1_Svarog_RL_Control_OnPart_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3631,7 +3631,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Svarog_ListenBreak_RemoveControl_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -3662,7 +3662,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Svarog_RL_Endurance",
+          "for": "<a class=\"gModGreen\" id=\"mod__-870237047\">Monster_W1_Svarog_RL_Endurance</a>",
           "modifierFlags": [
             "Endurance"
           ],
@@ -3711,7 +3711,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Svarog_RL_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1293195213\">Monster_W1_Svarog_RL_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]",
           "modifierFlags": [
             "Stealth",
             "DisableHealHP",
@@ -3754,7 +3754,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Svarog_CTRL"
+                  "modifier": "<a class=\"gModGreen\" id=\"1035250951\">M_Svarog_CTRL</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3762,7 +3762,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W1_Svarog_RL_ListenPlayerDie_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-205256396\">Monster_W1_Svarog_RL_ListenPlayerDie_Modifier</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3770,7 +3770,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Svarog_ListenPlayerAllDie_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-545618319\">Svarog_ListenPlayerAllDie_Modifier</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -3806,7 +3806,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Svarog_CTRL",
+                  "modifier": "<a class=\"gModGreen\" id=\"1035250951\">M_Svarog_CTRL</a>",
                   "valuePerStack": {
                     "Modifier_Frozen_DamagePercentage": 0
                   }
@@ -3825,7 +3825,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Svarog_RL_PartController_LockHP",
+          "for": "<a class=\"gModGreen\" id=\"mod__916805475\">Monster_W1_Svarog_RL_PartController_LockHP</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -3874,7 +3874,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W1_Svarog_RL_Endurance"
+                          "modifier": "<a class=\"gModGreen\" id=\"-870237047\">Monster_W1_Svarog_RL_Endurance</a>"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -3931,7 +3931,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "Monster_W1_Svarog_RL_Endurance"
+                          "modifier": "<a class=\"gModGreen\" id=\"-870237047\">Monster_W1_Svarog_RL_Endurance</a>"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -3969,7 +3969,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Svarog_RL_Part_ListenHP_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1666707889\">Monster_W1_Svarog_RL_Part_ListenHP_Modifier</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -3985,7 +3985,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Monster_W1_Svarog_RL_Control_OnPart_Modifier"
+                    "modifier": "<a class=\"gModGreen\" id=\"1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>"
                   },
                   "passed": [
                     {
@@ -4003,7 +4003,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Monster_W1_Svarog_RL_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1293195213\">Monster_W1_Svarog_RL_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
                         }
                       ]
                     },
@@ -4013,7 +4013,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_W1_Svarog_RL_Control_OnPart_Modifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -4021,7 +4021,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Svarog_ListenBreak_RemoveControl_Modifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
                     }
                   ]
                 }
@@ -4038,7 +4038,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Monster_W1_Svarog_RL_Control_OnPart_Modifier"
+                    "modifier": "<a class=\"gModGreen\" id=\"1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>"
                   },
                   "passed": [
                     {
@@ -4056,7 +4056,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Monster_W1_Svarog_RL_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1293195213\">Monster_W1_Svarog_RL_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
                         }
                       ]
                     },
@@ -4066,7 +4066,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Monster_W1_Svarog_RL_Control_OnPart_Modifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -4074,7 +4074,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "Svarog_ListenBreak_RemoveControl_Modifier"
+                      "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
                     }
                   ]
                 }
@@ -4127,7 +4127,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Monster_W1_Svarog_RL_Control_OnPart_Modifier"
+                        "modifier": "<a class=\"gModGreen\" id=\"1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>"
                       },
                       "passed": [
                         {
@@ -4145,7 +4145,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "Monster_W1_Svarog_RL_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                              "modifier": "<a class=\"gModGreen\" id=\"-1293195213\">Monster_W1_Svarog_RL_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
                             }
                           ]
                         },
@@ -4155,7 +4155,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Monster_W1_Svarog_RL_Control_OnPart_Modifier"
+                          "modifier": "<a class=\"gModGreen\" id=\"1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -4163,7 +4163,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "modifier": "Svarog_ListenBreak_RemoveControl_Modifier"
+                          "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -4252,7 +4252,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Svarog_RL_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__864989347\">Monster_W1_Svarog_RL_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "stackType": "Replace",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -4311,7 +4311,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_Svarog_RL_AttackUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
           "execute": [
             {
@@ -4362,7 +4362,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Svarog_Control_OnPart_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-733983508\">Svarog_Control_OnPart_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -4400,7 +4400,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Svarog_Ability07_AllDamageUp_Modifier[<span class=\"descriptionNumberColor\">Amplification</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1854522558\">Svarog_Ability07_AllDamageUp_Modifier</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -4415,7 +4415,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Svarog_Part_ListenBreak_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-818415302\">Svarog_Part_ListenBreak_Modifier</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -4501,7 +4501,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Svarog_Part_OnTurnEndChangePhaseModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-463045993\">Svarog_Part_OnTurnEndChangePhaseModifier</a>",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4523,7 +4523,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Svarog_ListenPlayerDie_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__-920895050\">Svarog_ListenPlayerDie_Modifier</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
@@ -4547,7 +4547,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
                     }
                   ]
                 },
@@ -4557,7 +4557,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Svarog_Control_OnPart_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -4565,7 +4565,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Svarog_ListenBreak_RemoveControl_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -4573,7 +4573,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Svarog_Part_OnTurnEndChangePhaseModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-463045993\">Svarog_Part_OnTurnEndChangePhaseModifier</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -4608,7 +4608,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Svarog_Part_OnTurnEndChangePhaseModifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-463045993\">Svarog_Part_OnTurnEndChangePhaseModifier</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -4616,7 +4616,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Svarog_Control_OnPart_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -4624,7 +4624,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "Svarog_ListenBreak_RemoveControl_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -4655,7 +4655,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Svarog_Ability06_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__-41812969\">Svarog_Ability06_Bonus</a>",
           "modifierFlags": [
             "Endurance"
           ],
@@ -4672,7 +4672,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "W1_Mecha02_AttackBonus_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"1364752860\">W1_Mecha02_AttackBonus_Effect</a>"
                 }
               ]
             },
@@ -4703,7 +4703,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Svarog_Part0_DamageReduceModifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__73747832\">Svarog_Part0_DamageReduceModifier</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4757,7 +4757,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Svarog_Kaboom_Modifier[<span class=\"descriptionNumberColor\">Overheat</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1496711585\">Svarog_Kaboom_Modifier</a>[<span class=\"descriptionNumberColor\">Overheat</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
             {
@@ -4805,7 +4805,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Svarog_Part_ListenHP_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__17783365\">Svarog_Part_ListenHP_Modifier</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -4828,7 +4828,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
                     }
                   ]
                 },
@@ -4838,7 +4838,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Svarog_Control_OnPart_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
                 }
               ]
             }
@@ -4853,7 +4853,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Svarog_Ability06_Insert_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__1501253853\">Svarog_Ability06_Insert_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4872,7 +4872,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Svarog_CTRL",
+          "for": "<a class=\"gModGreen\" id=\"mod__1035250951\">M_Svarog_CTRL</a>",
           "stackType": "Merge",
           "modifierFlags": [
             "DisableAction",
@@ -4891,7 +4891,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Stun_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"234868487\">Stun_Effect</a>"
                 }
               ]
             },
@@ -4904,7 +4904,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Stun_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"234868487\">Stun_Effect</a>"
                 },
                 {
                   "name": "IF",
@@ -4988,7 +4988,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Svarog_Electric_Modifier[<span class=\"descriptionNumberColor\">Grievous</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__700810271\">Svarog_Electric_Modifier</a>[<span class=\"descriptionNumberColor\">Grievous</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
             "STAT_DefenceDown"
@@ -5051,7 +5051,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]",
           "modifierFlags": [
             "Stealth",
             "DisableHealHP",
@@ -5094,7 +5094,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Svarog_CTRL"
+                  "modifier": "<a class=\"gModGreen\" id=\"1035250951\">M_Svarog_CTRL</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -5102,7 +5102,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Svarog_ListenPlayerDie_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-920895050\">Svarog_ListenPlayerDie_Modifier</a>"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -5110,7 +5110,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Svarog_ListenPlayerAllDie_Modifier"
+                  "modifier": "<a class=\"gModGreen\" id=\"-545618319\">Svarog_ListenPlayerAllDie_Modifier</a>"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -5146,7 +5146,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "M_Svarog_CTRL",
+                  "modifier": "<a class=\"gModGreen\" id=\"1035250951\">M_Svarog_CTRL</a>",
                   "valuePerStack": {
                     "Modifier_Frozen_DamagePercentage": 0
                   }
@@ -5165,7 +5165,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_GS_Svarog_Level_SpecialWin",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1443371257\">Monster_W1_GS_Svarog_Level_SpecialWin</a>",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End"
@@ -5176,7 +5176,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_GS_Svarog_DisableAction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-353224873\">Monster_W1_GS_Svarog_DisableAction</a>",
           "modifierFlags": [
             "DisableAction"
           ],
@@ -5188,7 +5188,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_SvarogPart_CD",
+          "for": "<a class=\"gModGreen\" id=\"mod__2115356635\">Monster_W1_SvarogPart_CD</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
@@ -5196,7 +5196,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_SvarogPart_Overload[<span class=\"descriptionNumberColor\">Overload</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__419784878\">Monster_W1_SvarogPart_Overload</a>[<span class=\"descriptionNumberColor\">Overload</span>]",
           "description": "Casts Controlled Blasting in the next action.",
           "type": "Other",
           "effectName": "Overload",
@@ -5204,7 +5204,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Monster_W1_SvarogPart_CountDown[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-770745937\">Monster_W1_SvarogPart_CountDown</a>[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
             {

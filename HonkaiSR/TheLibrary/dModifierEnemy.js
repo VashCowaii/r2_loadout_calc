@@ -1,6 +1,6 @@
 let modifiersEnemy = [
   {
-    "name": "Monster_W1_Soldier01_DefenceRatioDown",
+    "name": "<a class=\"gModGreen\" id=\"-1864245059\">Monster_W1_Soldier01_DefenceRatioDown</a>",
     "realName": "DEF Reduction",
     "aim": "Debuff",
     "desc": "DEF -#1[i]%.",
@@ -11,7 +11,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Soldier01_03_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-1281886828\">Monster_W1_Soldier01_03_Bonus</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "ATK +#1[i]%.",
@@ -22,7 +22,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W1_Soldier04_AbilityP01_Supporting",
+    "name": "<a class=\"gModGreen\" id=\"1385757632\">Enemy_W1_Soldier04_AbilityP01_Supporting</a>",
     "realName": "Support",
     "aim": "Buff",
     "desc": "When a Supported friendly unit attacks any target, this unit will immediately launch a Follow-Up ATK on the target.",
@@ -30,7 +30,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_Soldier04_AbilityP01_Supported",
+    "name": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>",
     "realName": "Reinforced",
     "aim": "Other",
     "desc": "Receives Support from %CasterName.",
@@ -38,7 +38,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_Soldier03_ListenBeingAttacked",
+    "name": "<a class=\"gModGreen\" id=\"-387357924\">Enemy_W1_Soldier03_ListenBeingAttacked</a>",
     "realName": "Counter",
     "aim": "Buff",
     "desc": "Uses a Powerful Counter on the attacker after being attacked.",
@@ -73,7 +73,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Svarog_RL_Control_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-1293195213\">Monster_W1_Svarog_RL_Control_Modifier</a>",
     "realName": "Restrain",
     "aim": "Debuff",
     "desc": "Restrained. Cannot take action.",
@@ -96,7 +96,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Svarog_Electric_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"700810271\">Svarog_Electric_Modifier</a>",
     "realName": "Grievous",
     "aim": "Debuff",
     "desc": "For a certain number of turns, DEF is reduced by #2[i]%, and takes Physical DMG at the beginning of each turn.",
@@ -108,7 +108,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Svarog_Kaboom_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-1496711585\">Svarog_Kaboom_Modifier</a>",
     "realName": "Overheat",
     "aim": "Debuff",
     "desc": "Received Toughness DMG increases by #1[i]%, and received damage increases by #2[i]%.",
@@ -120,7 +120,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Svarog_Ability07_AllDamageUp_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-1854522558\">Svarog_Ability07_AllDamageUp_Modifier</a>",
     "realName": "Amplification",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect can stack.",
@@ -131,7 +131,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Svarog_Control_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>",
     "realName": "Restrain",
     "aim": "Debuff",
     "desc": "Restrained. Cannot take action.",
@@ -209,7 +209,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W1_Bronya_WeakPointProtected",
+    "name": "<a class=\"gModGreen\" id=\"1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>",
     "realName": "Weakness Protected",
     "aim": "Buff",
     "desc": "Bronya's Toughness cannot be reduced while there are enemies on the field.",
@@ -217,7 +217,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_Bronya_Ability02",
+    "name": "<a class=\"gModGreen\" id=\"1747978880\">Enemy_W1_Bronya_Ability02</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -228,7 +228,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W1_Bronya_RL_Ability02_PowerUp",
+    "name": "<a class=\"gModGreen\" id=\"-409658375\">Enemy_W1_Bronya_RL_Ability02_PowerUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -239,7 +239,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W1_Bronya_IF_02_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"1364188900\">Enemy_W1_Bronya_IF_02_Enhance</a>",
     "realName": "Shared Hatred",
     "aim": "Buff",
     "desc": "Greatly enhances this unit, increasing SPD by #1[i]%. When in this state, Bronya can summon even more Silvermane Cannoneers.",
@@ -250,7 +250,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W1_Bronya_IF_02_EnhancePerTurn",
+    "name": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>",
     "realName": "Carried By Inertia",
     "aim": "Buff",
     "desc": "Each stack increases SPD by #1[i]% and ATK by #2[i]%. All stacks are lost when Weakness is broken.",
@@ -262,7 +262,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W1_Bronya_IF_02_MainHaloEffect",
+    "name": "<a class=\"gModGreen\" id=\"946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>",
     "realName": "Charge",
     "aim": "Other",
     "desc": "The character is currently in the Main attack state.",
@@ -270,7 +270,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_Bronya_IF_02_AssistantSpeed",
+    "name": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>",
     "realName": "Defense",
     "aim": "Other",
     "desc": "Decreases SPD by #1[i]% when the character is in Support mode.",
@@ -305,7 +305,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_Mecha_BlockDamage",
+    "name": "<a class=\"gModGreen\" id=\"-696028198\">Enemy_Mecha_BlockDamage</a>",
     "realName": "Barrier",
     "aim": "Buff",
     "desc": "Nullifies all DMG received except for DoT until after being attacked.",
@@ -313,7 +313,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_W1_SvarogPart_CountDown",
+    "name": "<a class=\"gModGreen\" id=\"-770745937\">Monster_W1_SvarogPart_CountDown</a>",
     "realName": "Overload Countdown",
     "aim": "Other",
     "desc": "Auxiliary Robot Arm Unit initiates Overload countdown. After the countdown ends, cast Overload Warning.",
@@ -321,7 +321,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W1_SvarogPart_Overload",
+    "name": "<a class=\"gModGreen\" id=\"419784878\">Monster_W1_SvarogPart_Overload</a>",
     "realName": "Overload",
     "aim": "Other",
     "desc": "Casts Controlled Blasting in the next action.",
@@ -329,7 +329,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W1_SvarogPart_RL_CountDown",
+    "name": "<a class=\"gModGreen\" id=\"764270214\">Monster_W1_SvarogPart_RL_CountDown</a>",
     "realName": "Overload Countdown",
     "aim": "Other",
     "desc": "Auxiliary Robot Arm Unit initiates Overload countdown. After the countdown ends, cast Overload Warning.",
@@ -337,7 +337,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "W1_Mecha02_AttackBonus",
+    "name": "<a class=\"gModGreen\" id=\"1670817312\">W1_Mecha02_AttackBonus</a>",
     "realName": "Charging",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -348,7 +348,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Mecha03_RL_Revenge",
+    "name": "<a class=\"gModGreen\" id=\"-735432971\">Monster_W1_Mecha03_RL_Revenge</a>",
     "realName": "Obliteration Order",
     "aim": "Buff",
     "desc": "Increases DMG by #1[i]%. Every time this unit enters the Charging state, DMG is increased further.",
@@ -359,7 +359,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Mecha03_RL_Ability03_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"118150896\">Monster_W1_Mecha03_RL_Ability03_DamageUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect can stack.",
@@ -370,7 +370,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Mecha03_RL_Enhance_Dormancy",
+    "name": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>",
     "realName": "Firepower Recovery",
     "aim": "Other",
     "desc": "Currently cannot take action.",
@@ -378,7 +378,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Sign_W1_Mecha02",
+    "name": "<a class=\"gModGreen\" id=\"-1909388904\">Sign_W1_Mecha02</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -386,7 +386,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "W1_Mecha02_ThunderDOT",
+    "name": "<a class=\"gModGreen\" id=\"-95545360\">W1_Mecha02_ThunderDOT</a>",
     "realName": "Bleed",
     "aim": "Debuff",
     "desc": "For a certain number of turns, receive Physical DMG based on Max HP at the beginning of each turn, stacking up to #1[i] time(s).",
@@ -397,7 +397,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Mecha04_PassiveMDF",
+    "name": "<a class=\"gModGreen\" id=\"-1945457431\">Monster_W1_Mecha04_PassiveMDF</a>",
     "realName": "Hounding Pursuit",
     "aim": "Other",
     "desc": "If \"Felling Order\" hits one target that does not currently have a Shield, immediately use \"Dismantle\" on a random target.",
@@ -405,7 +405,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W1_Mecha04_Sign01",
+    "name": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -413,7 +413,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W1_Mecha04_Sign02",
+    "name": "<a class=\"gModGreen\" id=\"-1052882616\">Monster_W1_Mecha04_Sign02</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -421,7 +421,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W1_Mecha04_RL_Part3Passive",
+    "name": "<a class=\"gModGreen\" id=\"-1362109025\">Monster_W1_Mecha04_RL_Part3Passive</a>",
     "realName": "Combat Speed-Up",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%. SPD increases further every time Teamwork Order is used.",
@@ -432,7 +432,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Mecha04_RL_Ability12_SpeedUp",
+    "name": "<a class=\"gModGreen\" id=\"-136691859\">Monster_W1_Mecha04_RL_Ability12_SpeedUp</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%. This effect can stack.",
@@ -443,7 +443,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Mecha04_RL_Enhance_Dormancy",
+    "name": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>",
     "realName": "Speedy Recovery",
     "aim": "Other",
     "desc": "Currently cannot take action.",
@@ -451,7 +451,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W1_Svarog_RL_AttackUp",
+    "name": "<a class=\"gModGreen\" id=\"-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect can stack.",
@@ -462,7 +462,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Svarog_RL_DefenceRatioDown",
+    "name": "<a class=\"gModGreen\" id=\"864989347\">Monster_W1_Svarog_RL_DefenceRatioDown</a>",
     "realName": "DEF Reduction",
     "aim": "Debuff",
     "desc": "Reduces DEF by #1[i]%. This effect can stack.",
@@ -473,7 +473,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_WRSoldier_01_UnFeverResistance",
+    "name": "<a class=\"gModGreen\" id=\"-980276025\">Enemy_WRSoldier_01_UnFeverResistance</a>",
     "realName": "Helmet and Armor",
     "aim": "Buff",
     "desc": "Receives #1[i]% less DMG. This effect is removed when Weakness is broken.",
@@ -484,7 +484,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Mecha_Fire_Passive",
+    "name": "<a class=\"gModGreen\" id=\"-1848655652\">Monster_W1_Mecha_Fire_Passive</a>",
     "realName": "Out of Control",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. Stack up to 5 times.",
@@ -495,7 +495,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Mecha_Fire_Burning",
+    "name": "<a class=\"gModGreen\" id=\"188036182\">Monster_W1_Mecha_Fire_Burning</a>",
     "realName": "Mania",
     "aim": "Buff",
     "desc": "Increases ATK by #1[i]% and SPD by #2[i] pts.",
@@ -507,7 +507,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Mecha03_01_Frozen",
+    "name": "<a class=\"gModGreen\" id=\"1137901449\">Monster_W1_Mecha03_01_Frozen</a>",
     "realName": "Deep Freeze",
     "aim": "Debuff",
     "desc": "Reduces Ice RES by #1[i]% and SPD by #2[i]%. Can stack up to #3[i] time(s).",
@@ -520,7 +520,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Mecha03_01_Overheat",
+    "name": "<a class=\"gModGreen\" id=\"2015116315\">Monster_W1_Mecha03_01_Overheat</a>",
     "realName": "DEF Reduction",
     "aim": "Debuff",
     "desc": "DEF -#1[i]%.",
@@ -531,7 +531,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Mecha03_01_Rage",
+    "name": "<a class=\"gModGreen\" id=\"-1705391722\">Monster_W1_Mecha03_01_Rage</a>",
     "realName": "Surpass",
     "aim": "Buff",
     "desc": "ATK +#1[i]%.",
@@ -542,7 +542,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Mecha03_01_Sign",
+    "name": "<a class=\"gModGreen\" id=\"-1421560478\">Monster_W1_Mecha03_01_Sign</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -550,7 +550,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W1_Mecha03_01_AOECount",
+    "name": "<a class=\"gModGreen\" id=\"-800128779\">Monster_W1_Mecha03_01_AOECount</a>",
     "realName": "Bitterly Cold",
     "aim": "Other",
     "desc": "Unleashes #1[i] wave(s) of Blazing Freeze in the next action.",
@@ -573,7 +573,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Standard_Unstable",
+    "name": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>",
     "realName": "Reverberation",
     "aim": "Debuff",
     "desc": "After receiving an attack, enters Strong Reverberation, then dispels Reverberation.",
@@ -581,7 +581,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Standard_Shake_IgnoreImmune",
+    "name": "<a class=\"gModGreen\" id=\"1724913010\">Standard_Shake_IgnoreImmune</a>",
     "realName": "Strong Reverberation",
     "aim": "Debuff",
     "desc": "Action delayed. Cannot take actions for a certain number of turns.",
@@ -589,7 +589,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_W2_Kafka_Charm",
+    "name": "<a class=\"gModGreen\" id=\"-1239633217\">Monster_W2_Kafka_Charm</a>",
     "realName": "Dominated",
     "aim": "Debuff",
     "desc": "Makes a single target unable to take action. Target will use Basic ATK to attack a random ally of theirs. If an ability is cast on the target to remove a debuff, the Dominated status will be removed first.",
@@ -597,7 +597,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_W2_Kafka_RL_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[f1]%. This effect can stack.",
@@ -608,7 +608,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Kafka_RL_MindControl_True",
+    "name": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>",
     "realName": "Psychological Suggestion",
     "aim": "Debuff",
     "desc": "Triggered at the next Revelation. Can be removed before that action.",
@@ -616,7 +616,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_W2_Kafka_RL_MindControl_False",
+    "name": "<a class=\"gModGreen\" id=\"2054484016\">Monster_W2_Kafka_RL_MindControl_False</a>",
     "realName": "Psychological Suggestion",
     "aim": "Debuff",
     "desc": "Triggered at the next Revelation. Can be removed before that action.",
@@ -624,7 +624,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_W2_Kafka_RL_MindControl_TrueEffect",
+    "name": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>",
     "realName": "Psychological Suggestion Revelation",
     "aim": "Debuff",
     "desc": "Cannot deal DMG to Kafka. Will become Dominated when the next \"Revelation\" occurs. Can be dispelled.",
@@ -737,7 +737,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Mecha03_Overdrive_On",
+    "name": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>",
     "realName": "Sanction Mode",
     "aim": "Buff",
     "desc": "The Aurumaton Gatekeeper's Toughness cannot be reduced. Its SPD increases by #1[i] and it activates the abilities Restraint and Enchainment.",
@@ -748,7 +748,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Mecha03_Overdrive_Accumulate_Display1",
+    "name": "<a class=\"gModGreen\" id=\"288842909\">Enemy_W2_Mecha03_Overdrive_Accumulate_Display1</a>",
     "realName": "Sanction Rate",
     "aim": "Other",
     "desc": "The current Sanction Rate has reached 33%.",
@@ -756,7 +756,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Mecha03_Overdrive_Accumulate_Display2",
+    "name": "<a class=\"gModGreen\" id=\"238510052\">Enemy_W2_Mecha03_Overdrive_Accumulate_Display2</a>",
     "realName": "Sanction Rate",
     "aim": "Other",
     "desc": "The current Sanction Rate has reached 66%.",
@@ -764,7 +764,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Mecha03_Overdrive_Accumulate_Display3",
+    "name": "<a class=\"gModGreen\" id=\"255287671\">Enemy_W2_Mecha03_Overdrive_Accumulate_Display3</a>",
     "realName": "Sanction Rate",
     "aim": "Other",
     "desc": "The current Sanction Rate has reached 100%.",
@@ -772,7 +772,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Mecha03_Sign",
+    "name": "<a class=\"gModGreen\" id=\"1235993006\">Monster_W2_Mecha03_Sign</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -780,7 +780,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Mecha03_Overdrive_On_RLElite",
+    "name": "<a class=\"gModGreen\" id=\"1974297403\">Monster_W2_Mecha03_Overdrive_On_RLElite</a>",
     "realName": "Sanction Mode: Punisher",
     "aim": "Buff",
     "desc": "The Aurumaton Gatekeeper's Toughness cannot be reduced. Its SPD increases by #1[i]%, and it activates the ability Track Down.",
@@ -791,7 +791,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect",
+    "name": "<a class=\"gModGreen\" id=\"-1870683085\">Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect</a>",
     "realName": "Preparing Heaven's Fall",
     "aim": "Other",
     "desc": "About to use Heaven's Fall.",
@@ -799,7 +799,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Valkyrie02_Ability04_Target",
+    "name": "<a class=\"gModGreen\" id=\"-1513487927\">Enemy_W2_Valkyrie02_Ability04_Target</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as the attack target.",
@@ -807,7 +807,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Abomi01_Revive",
+    "name": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>",
     "realName": "Rebirth",
     "aim": "Buff",
     "desc": "Upon receiving a killing blow, restores a certain amount of HP.",
@@ -815,7 +815,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_W2_Abomi01_Accelerate",
+    "name": "<a class=\"gModGreen\" id=\"345912758\">Monster_W2_Abomi01_Accelerate</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "SPD Increased.",
@@ -826,7 +826,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Abomi02_Mark",
+    "name": "<a class=\"gModGreen\" id=\"-1875575825\">Monster_W2_Abomi02_Mark</a>",
     "realName": "Spur of Thunderwoe",
     "aim": "Debuff",
     "desc": "Upon receiving a killing blow, the Disciples of Sanctus Medicus: Internal Alchemist deals DMG 1 time to targets that are inflicted with Spur of Thunderwoe by them.",
@@ -834,7 +834,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_W2_Abomi02_TargetList",
+    "name": "<a class=\"gModGreen\" id=\"1723051927\">Monster_W2_Abomi02_TargetList</a>",
     "realName": "Core Formation",
     "aim": "Buff",
     "desc": "Upon receiving a killing blow, the unit deals DMG 1 time to targets that are afflicted with Spur of Thunderwoe by them.\\nThe current targets who have Spur of Thunderwoe on them are: %DynamicTargetName.",
@@ -896,7 +896,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Valkyrie01_01_AbilityP01_ComboAttack",
+    "name": "<a class=\"gModGreen\" id=\"1604945835\">Enemy_W2_Valkyrie01_01_AbilityP01_ComboAttack</a>",
     "realName": "Maddened",
     "aim": "Buff",
     "desc": "Attack changes to Sawing Evil: Sever.",
@@ -904,7 +904,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W2_Abomi04_HitToHeal",
+    "name": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>",
     "realName": "Draining Hit",
     "aim": "Buff",
     "desc": "When there are other enemy targets with \"Rebirth\" remaining on the field, Disciples of Sanctus Medicus: Shape Shifter will have the following effect — restores its HP when its attack hits.",
@@ -912,7 +912,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_W2_Abomi04_Attack_Sign",
+    "name": "<a class=\"gModGreen\" id=\"-488885736\">Monster_W2_Abomi04_Attack_Sign</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "All enemies will focus attacks on this target.",
@@ -920,7 +920,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Beast02_Bullet",
+    "name": "<a class=\"gModGreen\" id=\"908537899\">Monster_W2_Beast02_Bullet</a>",
     "realName": "Gusto",
     "aim": "Other",
     "desc": "Malefic Ape's current Gusto amount.",
@@ -928,7 +928,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Beast02_Weak",
+    "name": "<a class=\"gModGreen\" id=\"-1532177993\">Monster_W2_Beast02_Weak</a>",
     "realName": "Exhaustion",
     "aim": "Other",
     "desc": "Malefic Ape's Gusto has been exhausted.",
@@ -936,7 +936,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Beast02_BlockDamage",
+    "name": "<a class=\"gModGreen\" id=\"162724046\">Enemy_W2_Beast02_BlockDamage</a>",
     "realName": "Barrier",
     "aim": "Buff",
     "desc": "Nullifies all DMG received except DoTs. This status is dispelled after being attacked.",
@@ -944,7 +944,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_Beast02_Attack_Sign",
+    "name": "<a class=\"gModGreen\" id=\"-432331168\">Monster_Beast02_Attack_Sign</a>",
     "realName": "Monitor",
     "aim": "Other",
     "desc": "Marked by %CasterName for Monitoring.",
@@ -952,7 +952,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_Standard_Layer_DamageUP",
+    "name": "<a class=\"gModGreen\" id=\"1692594642\">Monster_Standard_Layer_DamageUP</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]% for up to #2[i] stacks.",
@@ -977,7 +977,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Beast02_RLElite_GennkiMark",
+    "name": "<a class=\"gModGreen\" id=\"329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>",
     "realName": "Gather Courage",
     "aim": "Other",
     "desc": "#1[i] stacks of Gusto accumulated.",
@@ -988,7 +988,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Beast02_RLElite_Attack_Sign",
+    "name": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>",
     "realName": "Monitor",
     "aim": "Other",
     "desc": "Marked by %CasterName for Monitoring.",
@@ -996,7 +996,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_XP_Elite02_02_RLElite_ChargeEffect",
+    "name": "<a class=\"gModGreen\" id=\"-773012193\">Monster_XP_Elite02_02_RLElite_ChargeEffect</a>",
     "realName": "Japa",
     "aim": "Buff",
     "desc": "Uses Black Prana's Snare on all targets during the next action.",
@@ -1097,7 +1097,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_Standard_SpeedRatioDown",
+    "name": "<a class=\"gModGreen\" id=\"-958879550\">Monster_Standard_SpeedRatioDown</a>",
     "realName": "Slow",
     "aim": "Debuff",
     "desc": "Decreases SPD by #1[i]%.",
@@ -1185,7 +1185,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Standard_SuperArmor",
+    "name": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>",
     "realName": "Safeguard",
     "aim": "Other",
     "desc": "DMG taken decreases. This effect is removed when Weakness is Broken. This unit's action will be delayed further when it is Weakness Broken and also takes increased DMG.",
@@ -1193,7 +1193,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Standard_SuperArmorBreak",
+    "name": "<a class=\"gModGreen\" id=\"-1917647041\">Standard_SuperArmorBreak</a>",
     "realName": "Safeguard Broken",
     "aim": "Other",
     "desc": "DMG taken increases. This effect is removed and DMG taken decreases when this unit recovers from being Weakness Broken.",
@@ -1287,7 +1287,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Argenti_Power",
+    "name": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>",
     "realName": "Soulfreed",
     "aim": "Buff",
     "desc": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
@@ -1301,7 +1301,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_Argenti_DamageUP",
+    "name": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -1313,7 +1313,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Argenti_Power_RL",
+    "name": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>",
     "realName": "Soul Ascension",
     "aim": "Buff",
     "desc": "The knight's prayers completely ascended the soul. This is regarded as equal to \"Soulfreed.\"",
@@ -1369,7 +1369,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Minion03_Attack",
+    "name": "<a class=\"gModGreen\" id=\"1727496698\">Monster_XP_Minion03_Attack</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "ATK +#1[i]%.",
@@ -1402,7 +1402,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_XP_Minion04_02_Introduce",
+    "name": "<a class=\"gModGreen\" id=\"2118515591\">Enemy_XP_Minion04_02_Introduce</a>",
     "realName": "T—Taking Revenge",
     "aim": "Other",
     "desc": "When a friendly unit is attacked, Trotter of Destruction will attack all targets. The attack count is equal to the number of the targets attacked.",
@@ -1410,7 +1410,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_XP_Minion04_03_Introduce",
+    "name": "<a class=\"gModGreen\" id=\"606850892\">Enemy_XP_Minion04_03_Introduce</a>",
     "realName": "C—Cure You",
     "aim": "Other",
     "desc": "When a friendly unit is attacked by a target, Trotter of Abundance consumes its own HP to heal the attacked friendly unit.",
@@ -1418,7 +1418,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_XP_Minion04_02_Cunhu_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>",
     "realName": "P—Protect You",
     "aim": "Buff",
     "desc": "Each stack of P—Protect You can absorb DMG from 1 incoming hit. P—Protect You stacks are shared across the team.",
@@ -1582,7 +1582,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Elite02_02_DirtyHP",
+    "name": "<a class=\"gModGreen\" id=\"-14434436\">Monster_XP_Elite02_02_DirtyHP</a>",
     "realName": "Prana-Siphoned",
     "aim": "Debuff",
     "desc": "Decreases Maximum Restorable HP by #1[i]%.",
@@ -1593,7 +1593,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Elite02_02_DirtyHPSpecial",
+    "name": "<a class=\"gModGreen\" id=\"545314015\">Monster_XP_Elite02_02_DirtyHPSpecial</a>",
     "realName": "undefined",
     "aim": "Debuff",
     "desc": "undefined",
@@ -1601,7 +1601,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_XP_Elite02_02_ChargeEffect",
+    "name": "<a class=\"gModGreen\" id=\"-1633463751\">Monster_XP_Elite02_02_ChargeEffect</a>",
     "realName": "Japa",
     "aim": "Buff",
     "desc": "Uses Black Prana's Snare on all targets during the next action.",
@@ -1609,7 +1609,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_AML_Minion02_SpeedUp",
+    "name": "<a class=\"gModGreen\" id=\"-1771820857\">Monster_AML_Minion02_SpeedUp</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%. Can stack up to #2[i] time(s).",
@@ -1621,7 +1621,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_AML_Minion03_Target",
+    "name": "<a class=\"gModGreen\" id=\"1906134144\">Enemy_AML_Minion03_Target</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -1632,7 +1632,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_AML_Minion04_Mark",
+    "name": "<a class=\"gModGreen\" id=\"-1102385587\">Enemy_AML_Minion04_Mark</a>",
     "realName": "Detonated",
     "aim": "Debuff",
     "desc": "Has been attached a detonator by Voidranger: Eliminator. Takes Additional DMG after being attacked.",
@@ -1640,7 +1640,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_AML_Minion04_Overheat",
+    "name": "<a class=\"gModGreen\" id=\"1434034112\">Enemy_AML_Minion04_Overheat</a>",
     "realName": "Overloaded",
     "aim": "Debuff",
     "desc": "Temporarily unable to attack due to Energy overload.",
@@ -1676,7 +1676,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_WMonster_W0_Boss_Unselectable",
+    "name": "<a class=\"gModGreen\" id=\"1691894969\">Enemy_WMonster_W0_Boss_Unselectable</a>",
     "realName": "Vestige Valor",
     "aim": "Buff",
     "desc": "Cannot be targeted until Disaster's Right Hand, Dawn's Left Hand, and Antimatter Engine have all been destroyed.",
@@ -1684,7 +1684,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W0_Boss_Part2_AttackUp",
+    "name": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>",
     "realName": "Amplification",
     "aim": "Buff",
     "desc": "ATK +#1[i]%. Abilities are enhanced.",
@@ -1703,7 +1703,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W0_Boss_Part2_OnPhase3SpeedUp",
+    "name": "<a class=\"gModGreen\" id=\"-1383210331\">Enemy_W0_Boss_Part2_OnPhase3SpeedUp</a>",
     "realName": "Burst",
     "aim": "Buff",
     "desc": "Speed increased.",
@@ -1858,7 +1858,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_Company_Coin",
+    "name": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>",
     "realName": "Performance Points",
     "aim": "Buff",
     "desc": "Interastral Peace Corporation's employee Performance Points. Each stack increases DMG dealt by #1[i]%, stacking up to #2[i] time(s). All Performance Points are consumed when this unit uses an attack. Performance Points can be seized by the attacker when this unit's Weakness is Broken or this unit receives a killing blow.",
@@ -1870,7 +1870,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_Company_Coin_Elite",
+    "name": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>",
     "realName": "Performance Points",
     "aim": "Buff",
     "desc": "Interastral Peace Corporation's employee Performance Points. Each stack increases DMG dealt by #1[i]%, stacking up to #2[i] time(s). All Performance Points are consumed when this unit uses an attack. Performance Points can be seized by the attacker when this unit's Weakness is Broken or this unit receives a killing blow.",
@@ -1882,7 +1882,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_Company_Coin_Avater",
+    "name": "<a class=\"gModGreen\" id=\"141077401\">Monster_Company_Coin_Avater</a>",
     "realName": "Performance Points",
     "aim": "Buff",
     "desc": "Interastral Peace Corporation's employee Performance Points. Each stack increases DMG dealt by #1[i]%, stacking up to #2[i] time(s). All Performance Points are consumed when this unit uses Basic ATK, Skill, or Ultimate. Performance Points can be seized by the attacker when this unit receives a killing blow from an Interastral Peace Corporation Employee.",
@@ -1894,7 +1894,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Mecha03_02_ChargeEffect",
+    "name": "<a class=\"gModGreen\" id=\"-1515004059\">Monster_W1_Mecha03_02_ChargeEffect</a>",
     "realName": "In Training",
     "aim": "Other",
     "desc": "Uses Work Culture Shock in the next action.",
@@ -2069,7 +2069,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Standard_Shake",
+    "name": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>",
     "realName": "Strong Reverberation",
     "aim": "Debuff",
     "desc": "Action delayed. Cannot take actions for a certain number of turns.",
@@ -2307,7 +2307,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W2_Argenti_IF_Power",
+    "name": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>",
     "realName": "Soulfreed",
     "aim": "Buff",
     "desc": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
@@ -2315,7 +2315,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Argenti_IF_EX_PowerUpDark",
+    "name": "<a class=\"gModGreen\" id=\"-1768656268\">Enemy_W2_Argenti_IF_EX_PowerUpDark</a>",
     "realName": "Regain Enhancement",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%.",
@@ -2326,7 +2326,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Argenti_IF_EX_PowerUpLight",
+    "name": "<a class=\"gModGreen\" id=\"-1999138756\">Enemy_W2_Argenti_IF_EX_PowerUpLight</a>",
     "realName": "Soul Enhancement",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%.",
@@ -2450,7 +2450,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Boss_IF_Unselectable",
+    "name": "<a class=\"gModGreen\" id=\"1744952962\">Enemy_AML_Boss_IF_Unselectable</a>",
     "realName": "Vestige Valor",
     "aim": "Buff",
     "desc": "Cannot be targeted until Disaster's Right Hand, Dawn's Left Hand, and Antimatter Engine have all been destroyed.",
@@ -2458,7 +2458,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1",
+    "name": "<a class=\"gModGreen\" id=\"133864991\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV1</a>",
     "realName": "Amplification",
     "aim": "Other",
     "desc": "Skill is enhanced. Current Enhancement Level: 1",
@@ -2466,7 +2466,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Boss_IF_Enhance_Quantum",
+    "name": "<a class=\"gModGreen\" id=\"-291765317\">Enemy_AML_Boss_IF_Enhance_Quantum</a>",
     "realName": "Quantum Infusion",
     "aim": "Other",
     "desc": "This unit can deal Toughness Reduction to targets with Quantum Mark with increased Weakness Break Efficiency. After attacking a target with Quantum Mark, Quantum Infusion is dispelled. Having both Quantum Infusion and Imaginary Infusion states at the same time triggers Ruinous Collision with a high chance of being inflicted with the Snarelock state.",
@@ -2474,7 +2474,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Boss_IF_Enhance_Imaginary",
+    "name": "<a class=\"gModGreen\" id=\"-1433767937\">Enemy_AML_Boss_IF_Enhance_Imaginary</a>",
     "realName": "Imaginary Infusion",
     "aim": "Other",
     "desc": "This unit can deal Toughness Reduction to targets with Imaginary Mark with increased Weakness Break Efficiency. After attacking a target with Imaginary Mark, Imaginary Infusion is dispelled. Having both Quantum Infusion and Imaginary Infusion states at the same time triggers Ruinous Collision with a high chance of being inflicted with the Snarelock state.",
@@ -2482,7 +2482,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Argenti_IF_EX02_DefendState",
+    "name": "<a class=\"gModGreen\" id=\"529665307\">Enemy_W2_Argenti_IF_EX02_DefendState</a>",
     "realName": "Chivalric Wrath",
     "aim": "Buff",
     "desc": "DMG taken decreases by #1[i]%.",
@@ -2493,7 +2493,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Argenti_IF_EX02_AttackState",
+    "name": "<a class=\"gModGreen\" id=\"12795323\">Enemy_W2_Argenti_IF_EX02_AttackState</a>",
     "realName": "Golden Harvest",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]% and increases SPD by #2[i]%.",
@@ -2505,7 +2505,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Argenti_IF_EX02_UltraState",
+    "name": "<a class=\"gModGreen\" id=\"-1777994335\">Enemy_W2_Argenti_IF_EX02_UltraState</a>",
     "realName": "Medal of Elegance",
     "aim": "Buff",
     "desc": "Cannot be selected before the next action or before all summons have been defeated. Use Undeniable Fate the next time this unit takes action.",
@@ -2513,7 +2513,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Argenti_IF_FlowerPower",
+    "name": "<a class=\"gModGreen\" id=\"-1546767870\">Monster_W2_Argenti_IF_FlowerPower</a>",
     "realName": "Wreath",
     "aim": "Buff",
     "desc": "Every stack additionally adds one instance of DMG dealt for Undeniable Fate.",
@@ -2521,7 +2521,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Argenti_IF_EX_EnemyCount_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1784319990\">Enemy_W2_Argenti_IF_EX_EnemyCount_Sub</a>",
     "realName": "Stellar Aegis",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]% and reduces DMG received by #2[i]%.",
@@ -2595,7 +2595,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Standard_SuperArmor_IF",
+    "name": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>",
     "realName": "Steadfast Safeguard",
     "aim": "Other",
     "desc": "DMG taken decreases by #1[i]%. This effect is removed when Weakness is Broken. When Weakness Broken, this unit has its action additionally delayed and takes increased DMG.",
@@ -2606,7 +2606,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Standard_SuperArmorBreak_IF",
+    "name": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>",
     "realName": "Safeguard Breach",
     "aim": "Other",
     "desc": "Takes #1[i]% more DMG. Dispels this effect when recovering from Weakness Break state.",
@@ -2617,7 +2617,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Cocolia_IF_Frenzy",
+    "name": "<a class=\"gModGreen\" id=\"-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>",
     "realName": "Nightmare of Battlegrounds",
     "aim": "Other",
     "desc": "Each stack increases DMG received by #1[i]%.",
@@ -2728,7 +2728,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Boss_IF_CTRL_ConfineAndEntangle",
+    "name": "<a class=\"gModGreen\" id=\"975559492\">Enemy_AML_Boss_IF_CTRL_ConfineAndEntangle</a>",
     "realName": "Snarelock",
     "aim": "Debuff",
     "desc": "Action delayed and SPD reduced. Takes Quantum Additional DMG at the start of the next turn.\\nThis Additional DMG is increased whenever the target under the Snarelock status is attacked, up to 5 stacks. This status is considered to be both Quantum Entanglement and Imprisonment.",
@@ -2768,7 +2768,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Standard_CTRL_Taunt_ArgentiTotem_02_IF",
+    "name": "<a class=\"gModGreen\" id=\"1008150215\">Standard_CTRL_Taunt_ArgentiTotem_02_IF</a>",
     "realName": "Taunt",
     "aim": "Debuff",
     "desc": "Can only select %CasterName as the target to attack.",
@@ -2809,7 +2809,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Dinosaur_01_MonsterAssistBonus",
+    "name": "<a class=\"gModGreen\" id=\"-130810153\">Monster_W3_Dinosaur_01_MonsterAssistBonus</a>",
     "realName": "Terrathorn",
     "aim": "Buff",
     "desc": "Each hit of Bonepiercing Odium deals an additional instance of DMG. Each stack increases this instance of additional DMG.",
@@ -2817,7 +2817,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_XP_Elite01_01_MonsterAssistBonus",
+    "name": "<a class=\"gModGreen\" id=\"-831587978\">Monster_XP_Elite01_01_MonsterAssistBonus</a>",
     "realName": "Crystallite",
     "aim": "Buff",
     "desc": "Increases the action delay effect for Everwinter Rain. This effect is stackable.",
@@ -2825,7 +2825,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Kafka_IF03_SummonWeak",
+    "name": "<a class=\"gModGreen\" id=\"-1935976804\">Monster_W2_Kafka_IF03_SummonWeak</a>",
     "realName": "Rigidity",
     "aim": "Debuff",
     "desc": "Reduces DMG dealt by #1[i]% and decreases Effect Hit Rate by #2[i]%.",
@@ -2838,7 +2838,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Kafka_IF03_SummonFenzy",
+    "name": "<a class=\"gModGreen\" id=\"314670060\">Monster_W2_Kafka_IF03_SummonFenzy</a>",
     "realName": "Sanguine Gaze",
     "aim": "Other",
     "desc": "Increases DMG received by #1[i]% and increases SPD by #2[i]%.",
@@ -2859,7 +2859,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Kafka_IF03_SummonKillBonus",
+    "name": "<a class=\"gModGreen\" id=\"214079291\">Monster_W2_Kafka_IF03_SummonKillBonus</a>",
     "realName": "Madden",
     "aim": "Other",
     "desc": "Enhanced by Boss Mirage, enters Special Attack mode, and is dispelled upon being Weakness Broken.",
@@ -2867,7 +2867,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Kafka_IF03_SummonKillBonus_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1220849826\">Monster_W2_Kafka_IF03_SummonKillBonus_Sub</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG increases by #1[i]%. This effect can stack.",
@@ -2878,7 +2878,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Kafka_IF_EnemyCount_Sub",
+    "name": "<a class=\"gModGreen\" id=\"622236050\">Enemy_W2_Kafka_IF_EnemyCount_Sub</a>",
     "realName": "Stellar Aegis",
     "aim": "Buff",
     "desc": "Decreases DMG received by #1[i]%. This effect is stackable.",
@@ -2889,7 +2889,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_Standard_IF_AllDamageTransfer_AlldamageReduce_Sub",
+    "name": "<a class=\"gModGreen\" id=\"2069306256\">Enemy_Standard_IF_AllDamageTransfer_AlldamageReduce_Sub</a>",
     "realName": "DMG Reduction Distribution",
     "aim": "Buff",
     "desc": "When not yet Weakness Broken, reduces DMG received by #1[i]%. Upon taking action, this effect is equally distributed to other enemy units.",
@@ -2900,7 +2900,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Kafka_IF03_SummonBreakShow",
+    "name": "<a class=\"gModGreen\" id=\"-1479261802\">Monster_W2_Kafka_IF03_SummonBreakShow</a>",
     "realName": "Action delayed after Break",
     "aim": "Other",
     "desc": "Action is additionally delayed after being Weakness Broken.",
@@ -2908,7 +2908,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Kafka_IF_AssistController_Save",
+    "name": "<a class=\"gModGreen\" id=\"1540227508\">Enemy_W2_Kafka_IF_AssistController_Save</a>",
     "realName": "Threads of the Puppet",
     "aim": "Other",
     "desc": "Consumes Threads of the Puppet to apply Madden to summons.",
@@ -2916,7 +2916,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2",
+    "name": "<a class=\"gModGreen\" id=\"150642610\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2</a>",
     "realName": "Amplification",
     "aim": "Other",
     "desc": "Skill is enhanced. Current Enhancement Level: 2",
@@ -2924,7 +2924,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Kafka_IF03_SummonKillBonus01",
+    "name": "<a class=\"gModGreen\" id=\"-689878752\">Monster_W2_Kafka_IF03_SummonKillBonus01</a>",
     "realName": "Madden",
     "aim": "Other",
     "desc": "Enhanced by Boss Mirage, enters Spontaneous Combustion state, and is dispelled upon being Weakness Broken.",
@@ -2932,7 +2932,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Kafka_IF03_SummonKillBonus02",
+    "name": "<a class=\"gModGreen\" id=\"-639545895\">Monster_W2_Kafka_IF03_SummonKillBonus02</a>",
     "realName": "Madden",
     "aim": "Other",
     "desc": "Enhanced by Boss Mirage, enters Freezing Point state, and is dispelled upon being Weakness Broken.",
@@ -3026,7 +3026,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3",
+    "name": "<a class=\"gModGreen\" id=\"216530002\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3</a>",
     "realName": "Imaginary Mark",
     "aim": "Other",
     "desc": "Toughness can be reduced by attacks from Imaginary Infused allied targets.",
@@ -3034,7 +3034,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1",
+    "name": "<a class=\"gModGreen\" id=\"182974764\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1</a>",
     "realName": "Quantum Mark",
     "aim": "Other",
     "desc": "Toughness can be reduced by attacks from Quantum Infused allied targets.",
@@ -3042,7 +3042,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Kafka_IF03_SummonKillBonus03",
+    "name": "<a class=\"gModGreen\" id=\"-656323514\">Monster_W2_Kafka_IF03_SummonKillBonus03</a>",
     "realName": "Madden",
     "aim": "Other",
     "desc": "Enhanced by Boss Mirage, enters Charging state, and is dispelled upon being Weakness Broken.",
@@ -3050,7 +3050,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Kafka_IF03_SummonKillBonus04",
+    "name": "<a class=\"gModGreen\" id=\"-605990657\">Monster_W2_Kafka_IF03_SummonKillBonus04</a>",
     "realName": "Madden",
     "aim": "Other",
     "desc": "Enhanced by Boss Mirage, enters Charging state, and is dispelled upon being Weakness Broken.",
@@ -3276,7 +3276,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core_FightFest",
+    "name": "<a class=\"gModGreen\" id=\"2104764943\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core_FightFest</a>",
     "realName": "Sword Formation",
     "aim": "Other",
     "desc": "Yanqing's Toughness cannot be reduced. Destroying any of Yanqing's Flying Swords to dispel that effect and deal Toughness DMG to Yanqing.",
@@ -3773,7 +3773,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Standard_FastAction",
+    "name": "<a class=\"gModGreen\" id=\"35393434\">Standard_FastAction</a>",
     "realName": "Stormride",
     "aim": "Buff",
     "desc": "Consuming 1 stack of \"Stormride\" can cause the target to immediately take action at the end of the turn. This effect cannot be triggered in the turn triggered by the effect of \"Stormride.\" This state is dispelled after becoming Weakness Broken.",
@@ -3971,7 +3971,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_FireProwler_01_Activated01",
+    "name": "<a class=\"gModGreen\" id=\"-585162959\">Enemy_W4_FireProwler_01_Activated01</a>",
     "realName": "Mutual Sacrifice",
     "aim": "Other",
     "desc": "When \"%CasterName\" uses \"Demise's Storm\", also use \"Demise's Storm\" at the same time.",
@@ -3979,7 +3979,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_FireProwler_01_Activated02",
+    "name": "<a class=\"gModGreen\" id=\"-635495816\">Enemy_W4_FireProwler_01_Activated02</a>",
     "realName": "Mutual Sacrifice",
     "aim": "Other",
     "desc": "When \"%CasterName\" uses \"Fading Fate,\" also use \"Fading Fate\" at the same time.",
@@ -4042,7 +4042,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Standard_FastAction_Permanent",
+    "name": "<a class=\"gModGreen\" id=\"-213110193\">Standard_FastAction_Permanent</a>",
     "realName": "Stormride",
     "aim": "Buff",
     "desc": "Targets affected by \"Stormride\" will immediately take action after the turn ends. Turns triggered by \"Stormride\" cannot be triggered again. This effect is dispelled after being inflicted with Weakness Break.",
@@ -4050,7 +4050,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W4_Pollux_ThirstBlood",
+    "name": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>",
     "realName": "Hastened Death",
     "aim": "Debuff",
     "desc": "Receives DMG at the start of the turn. The higher the target's current HP percentage, the more DMG they receive. This DMG is \"Non-fatal.\"",
@@ -4058,7 +4058,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W4_PolluxPart_Shield",
+    "name": "<a class=\"gModGreen\" id=\"2034261592\">Monster_W4_PolluxPart_Shield</a>",
     "realName": "Overdue Obituary",
     "aim": "Other",
     "desc": "\"The Living Shan't Flee\" enhances to \"The Dead Shan't Avoid.\"",
@@ -4066,7 +4066,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W4_Pollux_BloodPool",
+    "name": "<a class=\"gModGreen\" id=\"-977406110\">Monster_W4_Pollux_BloodPool</a>",
     "realName": "Dream of Demise",
     "aim": "Other",
     "desc": "When ally targets' HP reduces, accumulates \"Desperate Bubble.\" When \"Desperate Bubble\" reaches the limit, this unit action advances and enters \"Fragrance of Death\" state in the next turn.",
@@ -4074,7 +4074,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W4_Pollux_BloodRange",
+    "name": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>",
     "realName": "Indulging Slumber",
     "aim": "Other",
     "desc": "When this target deals DMG to enemy targets, decreases DMG received by enemy targets by #1[i]%. Restore HP to an ally target until it reaches #2[i] to dispel this effect.",
@@ -4109,7 +4109,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Pollux_Strengthen_Property",
+    "name": "<a class=\"gModGreen\" id=\"-501677850\">Monster_W4_Pollux_Strengthen_Property</a>",
     "realName": "Weakness Protected",
     "aim": "Other",
     "desc": "Before \"Pollux\" takes their next action, their Toughness cannot be reduced and is immune to action delay effects inflicted by targets.",
@@ -4117,7 +4117,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Standard_Monster_AllDamageReduce",
+    "name": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>",
     "realName": "DMG Mitigation",
     "aim": "Buff",
     "desc": "DMG taken decreases by #1[i]%.",
@@ -4271,7 +4271,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Standard_MinionsSuperArmor_IF",
+    "name": "<a class=\"gModGreen\" id=\"1963095263\">Standard_MinionsSuperArmor_IF</a>",
     "realName": "Steadfast Safeguard",
     "aim": "Buff",
     "desc": "Currently, %CasterName is in the \"Steadfast Safeguard\" state, this unit's DMG received decreases by #1[i]%.",
@@ -4282,7 +4282,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Standard_MinionsSuperArmorBreak_IF",
+    "name": "<a class=\"gModGreen\" id=\"-178829988\">Standard_MinionsSuperArmorBreak_IF</a>",
     "realName": "Safeguard Breach",
     "aim": "Debuff",
     "desc": "Currently, %CasterName is in the \"Safeguard Breach\" state, this unit's DMG received increases by #1[i]%.",
@@ -4517,7 +4517,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W4_Pollux_Strengthen",
+    "name": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>",
     "realName": "Fragrance of Death",
     "aim": "Other",
     "desc": "Increases SPD by #1[i]%. Attacks against \"Pollux\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
@@ -4778,7 +4778,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Pollux_IF_ThirstBlood",
+    "name": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>",
     "realName": "Hastened Death",
     "aim": "Debuff",
     "desc": "Receives DMG at the start of the turn. The higher the target's current HP percentage, the more DMG they receive.",
@@ -4786,7 +4786,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_PolluxPart_IF_Shield",
+    "name": "<a class=\"gModGreen\" id=\"-2030876773\">Enemy_W4_PolluxPart_IF_Shield</a>",
     "realName": "Overdue Obituary",
     "aim": "Other",
     "desc": "\"The Living Shan't Flee\" enhances to \"The Dead Shan't Avoid.\"",
@@ -4794,7 +4794,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Pollux_IF_Strengthen",
+    "name": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>",
     "realName": "Fragrance of Death",
     "aim": "Other",
     "desc": "Increases SPD by #1[i]%. Attacks against \"Guide of Withering and Decay\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
@@ -4805,7 +4805,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target",
+    "name": "<a class=\"gModGreen\" id=\"267358493\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target</a>",
     "realName": "Overloadable",
     "aim": "Other",
     "desc": "Target's HP cannot be reduced below 1, and any excess damage beyond an amount of their current HP will be converted to \"HP Overload.\" When receiving healing, prioritizes restoring their \"HP Overload.\"",
@@ -4813,7 +4813,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display",
+    "name": "<a class=\"gModGreen\" id=\"235074644\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display</a>",
     "realName": "Death Rattle",
     "aim": "Other",
     "desc": "Target has accumulated \"HP Overload.\" Heal #1[i] HP to remove this state. DMG dealt is reduced by #2[i]%, and Weakness Break Efficiency is reduced by #3[i]%. When its duration ends, the target will receive fatal damage. Remaining duration: #4[i] turn(s).",
@@ -4827,7 +4827,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_PolluxPart_IF_MinionsSuperArmor",
+    "name": "<a class=\"gModGreen\" id=\"-2031085573\">Enemy_W4_PolluxPart_IF_MinionsSuperArmor</a>",
     "realName": "Physical Enhancement",
     "aim": "Buff",
     "desc": "\"Guide of Withering and Decay\" is currently in \"Steadfast Safeguard\" state, this unit's DMG received decreases by #1[i]%.",
@@ -4838,7 +4838,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_PolluxPart_IF_MinionsSuperArmorBreak",
+    "name": "<a class=\"gModGreen\" id=\"129075822\">Enemy_W4_PolluxPart_IF_MinionsSuperArmorBreak</a>",
     "realName": "Physical Falter",
     "aim": "Debuff",
     "desc": "\"Guide of Withering and Decay\" is currently in \"Safeguard Breach\" state, this unit's DMG received increases by #1[i]%.",
@@ -4849,7 +4849,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_PolluxPart_IF_Reflex",
+    "name": "<a class=\"gModGreen\" id=\"1112261788\">Enemy_W4_PolluxPart_IF_Reflex</a>",
     "realName": "Corrosive Retaliation",
     "aim": "Other",
     "desc": "After attacking this target, the attacker will receive minor Quantum \"Atrophy DMG.\"",
@@ -4988,7 +4988,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Pollux_IF_BloodPool",
+    "name": "<a class=\"gModGreen\" id=\"-740454395\">Enemy_W4_Pollux_IF_BloodPool</a>",
     "realName": "Dream of Demise",
     "aim": "Other",
     "desc": "When ally targets' HP reduces, accumulates \"Desperate Bubble.\" When \"Desperate Bubble\" reaches the limit, this unit enters the \"Fragrance of Death\" state.",
@@ -5044,7 +5044,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_Monster_W4_DawnsEye_01_MaxHPAdd_PeakBattle",
+    "name": "<a class=\"gModGreen\" id=\"245518476\">Modifier_Monster_W4_DawnsEye_01_MaxHPAdd_PeakBattle</a>",
     "realName": "Flame-Chase",
     "aim": "Buff",
     "desc": "Max HP increases by #1[i].",
@@ -5296,7 +5296,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>",
     "realName": "Shield",
     "aim": "Buff",
     "desc": "Gains a Shield that can offset DMG.",

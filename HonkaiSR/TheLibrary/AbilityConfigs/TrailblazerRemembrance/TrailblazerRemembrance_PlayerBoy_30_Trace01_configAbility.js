@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_PlayerBoy_30_Trace01"
+      "modifier": "<a class=\"gModGreen\" id=\"-1430938835\">M_PlayerBoy_30_Trace01</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "M_PlayerBoy_30_Trace01_ListenFirstSummon"
+      "modifier": "<a class=\"gModGreen\" id=\"894703898\">M_PlayerBoy_30_Trace01_ListenFirstSummon</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "M_PlayerBoy_30_Trace01_ListenFirstSummon",
+      "for": "<a class=\"gModGreen\" id=\"mod__894703898\">M_PlayerBoy_30_Trace01_ListenFirstSummon</a>",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -87,7 +87,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "M_PlayerBoy_30_Trace01",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1430938835\">M_PlayerBoy_30_Trace01</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",

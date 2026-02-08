@@ -11,7 +11,7 @@ const configAbility = {
   "parse": [
     {
       "name": "CharacterFunctions",
-      "functionName": "Aventurine_RecordCurrentShield",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__-969049614\">Aventurine_RecordCurrentShield</a>",
       "parse": [
         {
           "name": "Find New Target",
@@ -29,7 +29,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Aventurine_StackableShield"
+                "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>"
               },
               "passed": [
                 {
@@ -50,7 +50,7 @@ const configAbility = {
                   "scope": "ContextTaskTemplate",
                   "valueType": "CurrentShield",
                   "variableName": "tmp_currentshield",
-                  "modifierName": "Aventurine_StackableShield",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
                   "multiplier": 1
                 },
                 {

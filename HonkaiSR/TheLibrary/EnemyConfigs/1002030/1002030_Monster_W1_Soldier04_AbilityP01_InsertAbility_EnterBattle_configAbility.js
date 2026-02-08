@@ -37,7 +37,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_W1_Soldier04_AbilityP01_Supported[<span class=\"descriptionNumberColor\">Reinforced</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]"
                     }
                   },
                   {
@@ -61,7 +61,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_W1_Soldier04_AbilityP01_Supported_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"1954777775\">Enemy_W1_Soldier04_AbilityP01_Supported_Effect</a>"
                 }
               ],
               "noTargetFound": [
@@ -81,7 +81,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_W1_Soldier04_AbilityP01_Supported[<span class=\"descriptionNumberColor\">Reinforced</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]"
                     }
                   },
                   "ifTargetFound": [
@@ -91,7 +91,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Enemy_W1_Soldier04_AbilityP01_Supported_Effect"
+                      "modifier": "<a class=\"gModGreen\" id=\"1954777775\">Enemy_W1_Soldier04_AbilityP01_Supported_Effect</a>"
                     }
                   ]
                 }
@@ -108,7 +108,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_W1_Soldier04_AbilityP01_Supporting[<span class=\"descriptionNumberColor\">Support</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"1385757632\">Enemy_W1_Soldier04_AbilityP01_Supporting</a>[<span class=\"descriptionNumberColor\">Support</span>]"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -140,7 +140,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "Enemy_W1_Soldier04_AbilityP01_Supported_Effect"
+                "modifier": "<a class=\"gModGreen\" id=\"1954777775\">Enemy_W1_Soldier04_AbilityP01_Supported_Effect</a>"
               },
               "ifTargetFound": [
                 {
@@ -149,7 +149,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_W1_Soldier04_AbilityP01_Supported_Effect"
+                  "modifier": "<a class=\"gModGreen\" id=\"1954777775\">Enemy_W1_Soldier04_AbilityP01_Supported_Effect</a>"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -157,7 +157,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Enemy_W1_Soldier04_AbilityP01_Supported[<span class=\"descriptionNumberColor\">Reinforced</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]"
                 }
               ]
             }

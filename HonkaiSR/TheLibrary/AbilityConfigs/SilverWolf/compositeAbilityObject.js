@@ -31,13 +31,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Silwolf_Eidolon6_Bonus"
+          "modifier": "<a class=\"gModGreen\" id=\"1991368416\">M_Silwolf_Eidolon6_Bonus</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "M_Silwolf_Eidolon6_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__1991368416\">M_Silwolf_Eidolon6_Bonus</a>",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -123,13 +123,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "M_Silwolf_Eidolon2_Bonus"
+          "modifier": "<a class=\"gModGreen\" id=\"1800596972\">M_Silwolf_Eidolon2_Bonus</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_Eidolon2",
+          "for": "<a class=\"gModGreen\" id=\"mod__-153761563\">Advanced_Silwolf_Eidolon2</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
@@ -185,7 +185,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Silwolf_Eidolon2_Bonus_OnCharacterCreate",
+          "for": "<a class=\"gModGreen\" id=\"mod__1871788715\">M_Silwolf_Eidolon2_Bonus_OnCharacterCreate</a>",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -207,7 +207,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-860979758\">Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -227,7 +227,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "M_Silwolf_Eidolon2_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__1800596972\">M_Silwolf_Eidolon2_Bonus</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -238,7 +238,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                   },
-                  "modifier": "Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-860979758\">Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -256,7 +256,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "M_Silwolf_Eidolon2_Bonus_OnCharacterCreate"
+                  "modifier": "<a class=\"gModGreen\" id=\"1871788715\">M_Silwolf_Eidolon2_Bonus_OnCharacterCreate</a>"
                 }
               ],
               "priorityLevel": -80
@@ -271,7 +271,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE, with Unselectables)}}"
               },
-              "modifier": "Advanced_Silwolf_Eidolon2",
+              "modifier": "<a class=\"gModGreen\" id=\"-153761563\">Advanced_Silwolf_Eidolon2</a>",
               "haloStatus": true
             }
           ]
@@ -290,13 +290,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Advanced_Silwolf_Trace01_Bonus"
+          "modifier": "<a class=\"gModGreen\" id=\"1378139475\">Advanced_Silwolf_Trace01_Bonus</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_Trace01_Bonus",
+          "for": "<a class=\"gModGreen\" id=\"mod__1378139475\">Advanced_Silwolf_Trace01_Bonus</a>",
           "execute": [
             {
               "eventTrigger": "Weakness Break [Anyone]",
@@ -353,13 +353,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "StageAbility_Maze_Silwolf_Modifier"
+          "modifier": "<a class=\"gModGreen\" id=\"435463122\">StageAbility_Maze_Silwolf_Modifier</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "StageAbility_Maze_Silwolf_Modifier",
+          "for": "<a class=\"gModGreen\" id=\"mod__435463122\">StageAbility_Maze_Silwolf_Modifier</a>",
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -430,7 +430,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]"
+            "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]"
           },
           "passed": [
             {
@@ -441,7 +441,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]"
               },
               "passed": [
                 {
@@ -452,7 +452,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
                     },
-                    "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
                   },
                   "passed": [
                     {
@@ -469,7 +469,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
                             "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
@@ -503,7 +503,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
                             "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
@@ -537,7 +537,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
                             "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
@@ -575,7 +575,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
                         "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
@@ -615,7 +615,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
                     },
-                    "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
                   },
                   "passed": [
                     {
@@ -624,7 +624,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
                         "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
@@ -667,7 +667,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
                             "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
@@ -701,7 +701,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
                             "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
@@ -745,7 +745,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]"
+                "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]"
               },
               "passed": [
                 {
@@ -756,7 +756,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
                     },
-                    "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
                   },
                   "passed": [
                     {
@@ -765,7 +765,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
                         "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
@@ -808,7 +808,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
                             "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
@@ -842,7 +842,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
                             "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
@@ -884,7 +884,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
                     },
-                    "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
                   },
                   "passed": [
                     {
@@ -900,7 +900,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
                             "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
@@ -934,7 +934,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
                             "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
@@ -980,7 +980,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
                             "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
@@ -1014,7 +1014,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
                             "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
@@ -1048,7 +1048,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
                             "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
@@ -1107,7 +1107,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Advanced_Silwolf_Passive"
+          "modifier": "<a class=\"gModGreen\" id=\"-1496157762\">Advanced_Silwolf_Passive</a>"
         },
         {
           "name": "IF",
@@ -1158,7 +1158,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Advanced_Silwolf_Tree03_StatusProbabilityShow"
+              "modifier": "<a class=\"gModGreen\" id=\"-1562790381\">Advanced_Silwolf_Tree03_StatusProbabilityShow</a>"
             }
           ]
         },
@@ -1175,7 +1175,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Advanced_Silwolf_Eidolon1"
+              "modifier": "<a class=\"gModGreen\" id=\"-204094420\">Advanced_Silwolf_Eidolon1</a>"
             }
           ]
         },
@@ -1192,7 +1192,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Advanced_Silwolf_Eidolon4"
+              "modifier": "<a class=\"gModGreen\" id=\"-254427277\">Advanced_Silwolf_Eidolon4</a>"
             }
           ]
         },
@@ -1215,7 +1215,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_Eidolon4",
+          "for": "<a class=\"gModGreen\" id=\"mod__-254427277\">Advanced_Silwolf_Eidolon4</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1331,7 +1331,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_Eidolon1",
+          "for": "<a class=\"gModGreen\" id=\"mod__-204094420\">Advanced_Silwolf_Eidolon1</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1437,7 +1437,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_Passive",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1496157762\">Advanced_Silwolf_Passive</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -1681,7 +1681,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "Advanced_Silwolf_Ultimate_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-46466503\">Advanced_Silwolf_Ultimate_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -1795,7 +1795,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Advanced_Silwolf_BPAbility_AllDamageTypeResistanceDown[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1155855512\">Advanced_Silwolf_BPAbility_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -1829,7 +1829,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -1891,13 +1891,13 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Advanced_Silwolf_Ability02_Success"
+              "functionName": "<a class=\"gTempYellow\" id=\"1377567581\">Advanced_Silwolf_Ability02_Success</a>"
             }
           ],
           "failed": [
             {
               "name": "Use Custom Character Function",
-              "functionName": "Advanced_Silwolf_Ability02_Failed"
+              "functionName": "<a class=\"gTempYellow\" id=\"906144091\">Advanced_Silwolf_Ability02_Failed</a>"
             }
           ]
         }
@@ -1905,7 +1905,7 @@ const compositeAbilityObject = {
       "functions": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Advanced_Silwolf_Ability02_Success",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1377567581\">Advanced_Silwolf_Ability02_Success</a>",
           "parse": [
             "Deleted bullshit",
             {
@@ -2019,7 +2019,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
                     },
-                    "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
                   },
                   "passed": [
                     {
@@ -2062,7 +2062,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
                     },
-                    "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
                   },
                   "passed": [
                     {
@@ -2105,7 +2105,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
                     },
-                    "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
                   },
                   "passed": [
                     {
@@ -2148,7 +2148,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
                     },
-                    "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
                   },
                   "passed": [
                     {
@@ -2191,7 +2191,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
                     },
-                    "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
                   },
                   "passed": [
                     {
@@ -2234,7 +2234,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
                     },
-                    "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
                   },
                   "passed": [
                     {
@@ -2277,7 +2277,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
                     },
-                    "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
                   },
                   "passed": [
                     {
@@ -2308,7 +2308,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Advanced_Silwolf_Ability02_Failed",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__906144091\">Advanced_Silwolf_Ability02_Failed</a>",
           "parse": [
             "Deleted bullshit",
             {
@@ -2524,7 +2524,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_Tree03_AttackUp[<span class=\"descriptionNumberColor\">Side Note</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1388519324\">Advanced_Silwolf_Tree03_AttackUp</a>[<span class=\"descriptionNumberColor\">Side Note</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -2556,7 +2556,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_Tree03_StatusProbabilityShow",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1562790381\">Advanced_Silwolf_Tree03_StatusProbabilityShow</a>",
           "stackType": "ReplaceByCaster",
           "abilityValueChange": [
             {
@@ -2570,13 +2570,13 @@ const compositeAbilityObject = {
                   "whenEnteringRange": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Silwolf_Tree03_Sub"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1211488535\">Silwolf_Tree03_Sub</a>"
                     }
                   ],
                   "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Silwolf_Tree03_Sub"
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1211488535\">Silwolf_Tree03_Sub</a>"
                     }
                   ]
                 }
@@ -2586,7 +2586,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "Silwolf_Tree03_Sub",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-1211488535\">Silwolf_Tree03_Sub</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
@@ -2655,7 +2655,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Silwolf_Tree03_AttackUp[<span class=\"descriptionNumberColor\">Side Note</span>]"
+                      "modifier": "<a class=\"gModGreen\" id=\"1388519324\">Advanced_Silwolf_Tree03_AttackUp</a>[<span class=\"descriptionNumberColor\">Side Note</span>]"
                     }
                   ],
                   "failed": [
@@ -2696,7 +2696,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "Advanced_Silwolf_Tree03_AttackUp[<span class=\"descriptionNumberColor\">Side Note</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1388519324\">Advanced_Silwolf_Tree03_AttackUp</a>[<span class=\"descriptionNumberColor\">Side Note</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
                           "operator": "Variables[0] (SkillTree_PointB3_StatusProbabilityValue) || RETURN",
@@ -2718,7 +2718,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_Ultimate_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-46466503\">Advanced_Silwolf_Ultimate_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
@@ -2760,7 +2760,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-860979758\">Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
             {
@@ -2796,7 +2796,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_BPAbility_AllDamageTypeResistanceDown[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1155855512\">Advanced_Silwolf_BPAbility_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "execute": [
@@ -2835,7 +2835,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedDown"
@@ -2876,7 +2876,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_DefenceDown"
@@ -2917,7 +2917,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttackDown"
@@ -2958,7 +2958,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_BPAbility_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1384846161\">Advanced_Silwolf_BPAbility_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
           "stackType": "Replace",
           "description": "Additionally implanted Imaginary Weakness. Imaginary RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",
@@ -2967,7 +2967,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_BPAbility_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1901191893\">Advanced_Silwolf_BPAbility_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
           "stackType": "Replace",
           "description": "Additionally implanted Quantum Weakness. Quantum RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",
@@ -2976,7 +2976,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_BPAbility_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1824019324\">Advanced_Silwolf_BPAbility_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
           "stackType": "Replace",
           "description": "Additionally implanted Lightning Weakness. Lightning RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",
@@ -2985,7 +2985,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_BPAbility_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1062446229\">Advanced_Silwolf_BPAbility_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
           "stackType": "Replace",
           "description": "Additionally implanted Physical Weakness. Physical RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",
@@ -2994,7 +2994,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_BPAbility_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1784823028\">Advanced_Silwolf_BPAbility_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
           "stackType": "Replace",
           "description": "Additionally implanted Wind Weakness. Wind RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",
@@ -3003,7 +3003,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_BPAbility_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1570756707\">Advanced_Silwolf_BPAbility_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
           "stackType": "Replace",
           "description": "Additionally implanted Ice Weakness. Ice RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",
@@ -3012,7 +3012,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_BPAbility_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__860600554\">Advanced_Silwolf_BPAbility_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
           "stackType": "Replace",
           "description": "Additionally implanted Fire Weakness. Fire RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",
@@ -3021,7 +3021,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_BPAbility_WeakType_Extra[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1797889012\">Advanced_Silwolf_BPAbility_WeakType_Extra</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "STAT_AttachWeakness"
@@ -3063,7 +3063,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_Passive_Deathrattle_Sub",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1084383828\">Advanced_Silwolf_Passive_Deathrattle_Sub</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "KeepOnDeathrattle"
@@ -3086,7 +3086,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1273458995\">Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer</a>",
                       "variables": {
                         "_WeakType": {
                           "operator": "Variables[0] (_WeakType) || RETURN",
@@ -3106,7 +3106,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttachWeakness",
@@ -3789,7 +3789,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "Advanced_Silwolf_Ability02_OverrideNameForStatus",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-509776970\">Advanced_Silwolf_Ability02_OverrideNameForStatus</a>",
                   "variables": {
                     "DF_WeakType": {
                       "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
@@ -3820,7 +3820,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
-                      "functionName": "Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1273458995\">Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer</a>",
                       "variables": {
                         "_WeakType": {
                           "operator": "Variables[0] (_WeakType) || RETURN",
@@ -3845,7 +3845,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Advanced_Silwolf_Passive_Deathrattle_Sub",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1084383828\">Advanced_Silwolf_Passive_Deathrattle_Sub</a>",
                   "valuePerStack": {
                     "_WeakType": {
                       "operator": "Variables[0] (_WeakType) || RETURN",
@@ -3887,7 +3887,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "CharacterFunctions",
-          "functionName": "Advanced_Silwolf_Ability02_OverrideNameForStatus",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-509776970\">Advanced_Silwolf_Ability02_OverrideNameForStatus</a>",
           "parse": [
             {
               "name": "SWITCH",
@@ -3910,8 +3910,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                      "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]"
+                      "modifierName": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1062446229\">Advanced_Silwolf_BPAbility_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]"
                     }
                   ]
                 },
@@ -3925,8 +3925,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                      "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]"
+                      "modifierName": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"860600554\">Advanced_Silwolf_BPAbility_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]"
                     }
                   ]
                 },
@@ -3940,8 +3940,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                      "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]"
+                      "modifierName": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1570756707\">Advanced_Silwolf_BPAbility_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]"
                     }
                   ]
                 },
@@ -3955,8 +3955,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                      "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]"
+                      "modifierName": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"1824019324\">Advanced_Silwolf_BPAbility_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]"
                     }
                   ]
                 },
@@ -3970,8 +3970,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                      "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]"
+                      "modifierName": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1784823028\">Advanced_Silwolf_BPAbility_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]"
                     }
                   ]
                 },
@@ -3985,8 +3985,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                      "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]"
+                      "modifierName": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1901191893\">Advanced_Silwolf_BPAbility_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]"
                     }
                   ]
                 },
@@ -4000,8 +4000,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                      "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]"
+                      "modifierName": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1384846161\">Advanced_Silwolf_BPAbility_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]"
                     }
                   ]
                 }
@@ -4012,7 +4012,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "CharacterFunctions",
-          "functionName": "Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1273458995\">Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer</a>",
           "parse": [
             {
               "name": "Find New Target",
@@ -4059,7 +4059,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                           "invertCondition": true
                         }
                       ]
@@ -4083,7 +4083,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",

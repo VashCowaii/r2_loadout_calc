@@ -14,7 +14,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "AML_Boss_BattleScore1"
+      "modifier": "<a class=\"gModGreen\" id=\"2028329566\">AML_Boss_BattleScore1</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -22,7 +22,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect"
+      "modifier": "<a class=\"gModGreen\" id=\"-323890115\">Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -30,7 +30,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W0_Boss_Part2_OnBreakRecoverChangeWeak"
+      "modifier": "<a class=\"gModGreen\" id=\"-1822762552\">Enemy_W0_Boss_Part2_OnBreakRecoverChangeWeak</a>"
     },
     {
       "name": "IF",
@@ -51,7 +51,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Enemy_W0_Boss_Part2_OnPhase3SpeedUp[<span class=\"descriptionNumberColor\">Burst</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-1383210331\">Enemy_W0_Boss_Part2_OnPhase3SpeedUp</a>[<span class=\"descriptionNumberColor\">Burst</span>]",
           "valuePerStack": {
             "MDF_SpeedAddedRatio": {
               "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
@@ -69,7 +69,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect",
+      "for": "<a class=\"gModGreen\" id=\"mod__-323890115\">Enemy_AML_Boss_Part2_OnBreakRecoverSoundEffect</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -105,7 +105,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Enemy_W0_Boss_Part2_OnBreakRecoverChangeWeak",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1822762552\">Enemy_W0_Boss_Part2_OnBreakRecoverChangeWeak</a>",
       "execute": [
         {
           "eventTrigger": "End Broken State [Owner]",
@@ -116,7 +116,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Enemy_Monster_AML_Boss_Part2_Ability07"
+              "modifier": "<a class=\"gModGreen\" id=\"-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>"
             }
           ]
         }

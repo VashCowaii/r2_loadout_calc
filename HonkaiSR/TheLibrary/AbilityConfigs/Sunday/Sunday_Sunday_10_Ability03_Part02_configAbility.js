@@ -143,7 +143,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Sunday_Eidolon2_UltraTag"
+        "modifier": "<a class=\"gModGreen\" id=\"761788663\">Sunday_Eidolon2_UltraTag</a>"
       },
       "passed": [
         {
@@ -164,7 +164,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sunday_Eidolon2_UltraTag"
+          "modifier": "<a class=\"gModGreen\" id=\"761788663\">Sunday_Eidolon2_UltraTag</a>"
         }
       ]
     },
@@ -206,7 +206,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sunday_10_Ability03_Link_ForCaster",
+          "modifier": "<a class=\"gModGreen\" id=\"762667758\">Sunday_10_Ability03_Link_ForCaster</a>",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -222,7 +222,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
           },
-          "modifier": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]"
         },
         {
           "name": "IF",
@@ -241,7 +241,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}} + {{Ability Target(ST)}}.[[getMemosprite]]"
               },
-              "modifier": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
                   "operator": "Variables[0] (0.3) || RETURN",
@@ -269,7 +269,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
                   "operator": "Variables[0] (0.3) || RETURN",
@@ -301,7 +301,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "modifier": "Sunday_10_MazeBonus_ForCaster[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
+        "modifier": "<a class=\"gModGreen\" id=\"-1449149515\">Sunday_10_MazeBonus_ForCaster</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
       },
       "passed": [
         {
@@ -310,7 +310,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Sunday_10_MazeBonus_ForCaster[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-1449149515\">Sunday_10_MazeBonus_ForCaster</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -318,7 +318,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}} + {{Ability Target(ST)}}.[[getMemosprite]]"
           },
-          "modifier": "Sunday_10_MazeBonus[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"2041266105\">Sunday_10_MazeBonus</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -364,7 +364,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}} + {{Ability Target(ST)}}.[[getMemosprite]]"
               },
-              "modifier": "Sunday_10_CritUp[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
               "duration": {
                 "operator": "Variables[0] (_P01_LifeTime) || RETURN",
                 "displayLines": "_P01_LifeTime",
@@ -401,7 +401,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "Sunday_10_CritUp[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
               "duration": {
                 "operator": "Variables[0] (_P01_LifeTime) || RETURN",
                 "displayLines": "_P01_LifeTime",
@@ -463,7 +463,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_Ability03_Link_Damage",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1076921726\">Sunday_10_Ability03_Link_Damage</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -477,7 +477,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "modifier": "MW_Sunday_Passive"
+                "modifier": "<a class=\"gModGreen\" id=\"-1034196387\">MW_Sunday_Passive</a>"
               },
               "passed": [
                 {
@@ -518,7 +518,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "Sunday_10_Ability03_Link_ForCaster",
+      "for": "<a class=\"gModGreen\" id=\"mod__762667758\">Sunday_10_Ability03_Link_ForCaster</a>",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
@@ -531,7 +531,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}}"
               },
-              "modifier": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]"
             }
           ]
         },
@@ -626,7 +626,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]"
+                    "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]"
                   },
                   "ifTargetFound": [
                     {
@@ -658,7 +658,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifierName": "Sunday_10_Ability03_Link[<span class=\"descriptionNumberColor\">The Beatified</span>]",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]",
                       "variableName": "MDF_PropertyFinal",
                       "value": {
                         "operator": "Variables[0] (_PropertyFinal) || RETURN",

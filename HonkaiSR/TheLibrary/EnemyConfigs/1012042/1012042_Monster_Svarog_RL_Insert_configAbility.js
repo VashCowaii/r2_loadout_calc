@@ -12,7 +12,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Modifier Holder}}"
         },
-        "modifier": "Monster_W1_Svarog_RL_Control_OnPart_Modifier"
+        "modifier": "<a class=\"gModGreen\" id=\"1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>"
       },
       "passed": [
         {

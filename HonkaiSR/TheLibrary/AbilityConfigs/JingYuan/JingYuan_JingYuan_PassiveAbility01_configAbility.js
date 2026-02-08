@@ -21,7 +21,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "JingYuan_ListenFlag"
+      "modifier": "<a class=\"gModGreen\" id=\"-2008282890\">JingYuan_ListenFlag</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -29,7 +29,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "JingYuan_Trace02"
+      "modifier": "<a class=\"gModGreen\" id=\"-1065142274\">JingYuan_Trace02</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -37,7 +37,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+      "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
       "stackLimit": {
         "operator": "Variables[0] (10) || RETURN",
         "displayLines": "10",
@@ -124,7 +124,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Self-Made Battle-Events}}"
       },
-      "modifier": "JingYuan_BattleEvent_ATKCountShowText",
+      "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
       "valuePerStack": {
         "ATKCount": {
           "operator": "Variables[0] (3) || RETURN",
@@ -142,7 +142,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "JingYuan_Ability02_PreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"1804998877\">JingYuan_Ability02_PreShow</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -150,13 +150,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "JingYuan_Ability03_PreShow"
+      "modifier": "<a class=\"gModGreen\" id=\"664482430\">JingYuan_Ability03_PreShow</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "JingYuan_Ability03_PreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__664482430\">JingYuan_Ability03_PreShow</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -297,7 +297,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "JingYuan_Ability02_PreShow",
+      "for": "<a class=\"gModGreen\" id=\"mod__1804998877\">JingYuan_Ability02_PreShow</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -438,7 +438,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "JingYuan_Trace02",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1065142274\">JingYuan_Trace02</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -488,7 +488,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "JingYuan_ListenFlag",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2008282890\">JingYuan_ListenFlag</a>",
       "stackData": [],
       "latentQueue": []
     }

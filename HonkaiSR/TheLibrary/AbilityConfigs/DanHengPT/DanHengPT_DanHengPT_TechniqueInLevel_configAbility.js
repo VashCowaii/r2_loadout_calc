@@ -18,13 +18,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "DanHengPT_Maze"
+      "modifier": "<a class=\"gModGreen\" id=\"-1357770440\">DanHengPT_Maze</a>"
     }
   ],
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "DanHengPT_Maze",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1357770440\">DanHengPT_Maze</a>",
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -59,7 +59,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "StageAbility_MazeStandard_EnterBattle_MarkTeamLeader"
+                      "modifier": "<a class=\"gModGreen\" id=\"-636149171\">StageAbility_MazeStandard_EnterBattle_MarkTeamLeader</a>"
                     }
                   }
                 ]

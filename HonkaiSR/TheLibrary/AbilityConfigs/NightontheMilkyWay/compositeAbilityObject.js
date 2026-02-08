@@ -18,13 +18,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "LC_23000_Main"
+          "modifier": "<a class=\"gModGreen\" id=\"811349894\">LC_23000_Main</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "LC_23000_AttackAddedRatio",
+          "for": "<a class=\"gModGreen\" id=\"mod__-434068914\">LC_23000_AttackAddedRatio</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -52,7 +52,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23000_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-651116041\">LC_23000_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
           "execute": [
             {
@@ -85,7 +85,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "LC_23000_Main",
+          "for": "<a class=\"gModGreen\" id=\"mod__811349894\">LC_23000_Main</a>",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -121,7 +121,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23000_AttackAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"-434068914\">LC_23000_AttackAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.09) || Variables[1] (EnemyCount) || MUL || RETURN",
@@ -141,7 +141,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "TaskList_LC_23000_OnDieOrEscape"
+                  "functionName": "<a class=\"gTempYellow\" id=\"690610209\">TaskList_LC_23000_OnDieOrEscape</a>"
                 }
               ]
             },
@@ -150,7 +150,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Use Custom Character Function",
-                  "functionName": "TaskList_LC_23000_OnDieOrEscape"
+                  "functionName": "<a class=\"gTempYellow\" id=\"690610209\">TaskList_LC_23000_OnDieOrEscape</a>"
                 }
               ]
             },
@@ -188,7 +188,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23000_AttackAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"-434068914\">LC_23000_AttackAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.09) || Variables[1] (EnemyCount) || MUL || RETURN",
@@ -212,7 +212,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "modifier": "LC_23000_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "modifier": "<a class=\"gModGreen\" id=\"-651116041\">LC_23000_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.3) || RETURN",
@@ -230,7 +230,7 @@ const compositeAbilityObject = {
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
-              "functionName": "TaskList_LC_23000_OnDieOrEscape",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__690610209\">TaskList_LC_23000_OnDieOrEscape</a>",
               "parse": [
                 {
                   "name": "Define Custom Variable with Team Count",
@@ -263,7 +263,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "LC_23000_AttackAddedRatio",
+                  "modifier": "<a class=\"gModGreen\" id=\"-434068914\">LC_23000_AttackAddedRatio</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
                       "operator": "Variables[0] (0.09) || Variables[1] (EnemyCount) || MUL || RETURN",

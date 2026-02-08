@@ -32,7 +32,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Lingsha_PointB3_CD[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -76,7 +76,7 @@ const configAbility = {
     },
     {
       "name": "Use Custom Character Function",
-      "functionName": "Lingsha_Passive_Target"
+      "functionName": "<a class=\"gTempYellow\" id=\"-1849801979\">Lingsha_Passive_Target</a>"
     },
     {
       "name": "IF",
@@ -87,7 +87,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Use Custom Character Function",
-          "functionName": "Lingsha_Passive_Target_Eidolon6"
+          "functionName": "<a class=\"gTempYellow\" id=\"988152442\">Lingsha_Passive_Target_Eidolon6</a>"
         }
       ]
     },
@@ -176,7 +176,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster's Self-Made Battle-Events}}"
         },
-        "modifier": "Lingsha_BPAbility_BattleEvent_LifeTime",
+        "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
         "invertCondition": true
       },
       "passed": [
@@ -216,7 +216,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "Lingsha_Eidolon6_Listen"
+              "modifier": "<a class=\"gModGreen\" id=\"-1458980452\">Lingsha_Eidolon6_Listen</a>"
             }
           ]
         }

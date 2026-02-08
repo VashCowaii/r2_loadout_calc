@@ -39,7 +39,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "OneMore"
+            "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
           },
           {
             "name": "Has Modifier",
@@ -47,7 +47,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "Monster_W1_Soldier03_LoseShieldInCtrl"
+            "modifier": "<a class=\"gModGreen\" id=\"291277050\">Monster_W1_Soldier03_LoseShieldInCtrl</a>"
           }
         ]
       }
@@ -58,7 +58,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "Enemy_W1_Soldier03_ListenBeingAttacked[<span class=\"descriptionNumberColor\">Counter</span>]"
+      "modifier": "<a class=\"gModGreen\" id=\"-387357924\">Enemy_W1_Soldier03_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]"
     },
     {
       "name": "IF",
@@ -95,7 +95,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "OneMore"
+            "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
           }
         ]
       }
@@ -143,7 +143,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "OneMore"
+            "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
           }
         ]
       },
@@ -154,7 +154,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Soldier03_LoseShieldInCtrl"
+          "modifier": "<a class=\"gModGreen\" id=\"291277050\">Monster_W1_Soldier03_LoseShieldInCtrl</a>"
         }
       ],
       "failed": [
@@ -164,7 +164,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "Monster_W1_Soldier03_LoseShieldInCtrl"
+          "modifier": "<a class=\"gModGreen\" id=\"291277050\">Monster_W1_Soldier03_LoseShieldInCtrl</a>"
         }
       ]
     },
