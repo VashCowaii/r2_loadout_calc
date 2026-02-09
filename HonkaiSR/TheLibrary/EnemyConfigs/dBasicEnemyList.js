@@ -12628,7 +12628,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8003011": {
       "8003011": {
@@ -12645,7 +12645,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Ice Out of Space (Bug)"
     },
     "8003012": {
@@ -12654,7 +12654,7 @@ let basicEnemyList = {
       "800301202": {},
       "800301203": {},
       "800301204": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Ice Out of Space"
     },
     "groupName": "Ice Out of Space"
@@ -12836,7 +12836,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8003021": {
       "8003021": {
@@ -12853,7 +12853,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Blaze Out of Space (Bug)"
     },
     "8003022": {
@@ -12862,7 +12862,7 @@ let basicEnemyList = {
       "800302202": {},
       "800302203": {},
       "800302204": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Blaze Out of Space"
     },
     "groupName": "Blaze Out of Space"
@@ -13018,7 +13018,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8003031": {
       "8003031": {
@@ -13049,7 +13049,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Guardian Shadow (Bug)"
     },
     "groupName": "Guardian Shadow"
@@ -13183,7 +13183,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8003041": {
       "8003041": {
@@ -13200,7 +13200,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Decaying Shadow (Bug)"
     },
     "8003042": {
@@ -13211,7 +13211,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Decaying Shadow"
     },
     "groupName": "Decaying Shadow"
@@ -13356,7 +13356,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8003051": {
       "8003051": {
@@ -14175,7 +14175,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8013011": {
       "8013011": {
@@ -14192,7 +14192,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Voidranger: Trampler (Bug)"
     },
     "8013012": {
@@ -14203,7 +14203,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Voidranger: Trampler"
     },
     "8013013": {
@@ -14214,7 +14214,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Voidranger: Trampler"
     },
     "groupName": "Voidranger: Trampler"

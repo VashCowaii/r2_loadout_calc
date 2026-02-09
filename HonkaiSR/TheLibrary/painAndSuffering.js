@@ -8533,7 +8533,9 @@ const megaParsingFuckeryPain = {
             "conditions",
             "ifTargetFound",
             "noTargetFound",
+            "sequenceList",
             "ignoreParallelWarning",
+            "isParallel",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Find New Target");
 
@@ -8543,10 +8545,13 @@ const megaParsingFuckeryPain = {
 
         let parseString = "";
         let refString = "";
+        let refString2 = "";
         const hasParse = parseRef.ifTargetFound?.length;
         const hasRef = parseRef.noTargetFound?.length;
+        const hasRef2 = parseRef.sequenceList?.length;
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.ifTargetFound,initialCounter);}
         if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.noTargetFound,initialCounter);}
+        if (hasRef2) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.noTargetsequenceListFound,initialCounter);}
 
         const conditionObject = parseRef.conditions;
         const conditionName = conditionObject?.name;
@@ -8579,6 +8584,7 @@ const megaParsingFuckeryPain = {
                 ${getStandardNameDisplay(initialCounter,parseRef.includeDyingTargets,"Dying Targets")}
                 ${getStandardNameDisplay(initialCounter,parseRef.maxTargets,"Max Targets Returned")}
                 ${getStandardNameDisplay(initialCounter,parseRef.ignoreParallelWarning,"Ignore Parallel Warning")}
+                ${getStandardNameDisplay(initialCounter,parseRef.isParallel,"Is Parallel")}
             </div>
 
             <div class="rotationConditionOperatorBoxMain">
@@ -8589,6 +8595,10 @@ const megaParsingFuckeryPain = {
                 ${hasRef ? `<div class="rotationConditionOperatorHeaderConditionELSE">ELSE</div>
                 <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
                     ${refString}
+                </div>` : ""}
+                ${hasRef2 ? `<div class="rotationConditionOperatorHeaderConditionELSE">SEQUENCE</div>
+                <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                    ${refString2}
                 </div>` : ""}
             </div>
         </details>

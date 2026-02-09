@@ -1426,7 +1426,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "XP_Ice_Elite_Powerful_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-557071994\">XP_Ice_Elite_Powerful_Modifier</a>",
     "realName": "Freezing Point",
     "aim": "Other",
     "desc": "Ice Out of Space's attack mode is enhanced.",
@@ -1434,7 +1434,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "XP_Elite_Fire_Ability07_AttackUp_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>",
     "realName": "Molten",
     "aim": "Buff",
     "desc": "Increases ATK by #1[i]%. This effect can stack.",
@@ -1445,7 +1445,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "XP_Fire_Elite_Burning_Modifier_2",
+    "name": "<a class=\"gModGreen\" id=\"1090456915\">XP_Fire_Elite_Burning_Modifier_2</a>",
     "realName": "Spontaneous Combustion",
     "aim": "Other",
     "desc": "Blaze Out of Space's attack mode is enhanced.",
@@ -1453,7 +1453,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_XP_Elite01_Burn",
+    "name": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>",
     "realName": "Enkindle",
     "aim": "Debuff",
     "desc": "Takes Fire DMG at the beginning of each turn for a certain number of turns.",
@@ -1461,7 +1461,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_XP_Elite02_Edict01",
+    "name": "<a class=\"gModGreen\" id=\"-634944090\">Monster_XP_Elite02_Edict01</a>",
     "realName": "Ban",
     "aim": "Debuff",
     "desc": "Whoever attacks %CasterName will be attacked 1 time.",
@@ -1469,7 +1469,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_XP_Elite02_Edict02",
+    "name": "<a class=\"gModGreen\" id=\"-651721709\">Monster_XP_Elite02_Edict02</a>",
     "realName": "Ban",
     "aim": "Debuff",
     "desc": "Whoever uses Basic ATK will be attacked 1 time.",
@@ -1477,7 +1477,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_XP_Elite02_Edict03",
+    "name": "<a class=\"gModGreen\" id=\"-668499328\">Monster_XP_Elite02_Edict03</a>",
     "realName": "Ban",
     "aim": "Debuff",
     "desc": "Whoever uses Skills will be attacked 1 time.",
@@ -1485,7 +1485,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_XP_Elite02_Edict_Success",
+    "name": "<a class=\"gModGreen\" id=\"762896637\">Monster_XP_Elite02_Edict_Success</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -1496,7 +1496,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Elite02_Edict_Failure",
+    "name": "<a class=\"gModGreen\" id=\"906589272\">Monster_XP_Elite02_Edict_Failure</a>",
     "realName": "undefined",
     "aim": "Debuff",
     "desc": "undefined",
@@ -1509,7 +1509,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Elite02_DebuffEnhanceEffect",
+    "name": "<a class=\"gModGreen\" id=\"783092667\">Monster_XP_Elite02_DebuffEnhanceEffect</a>",
     "realName": "undefined",
     "aim": "Debuff",
     "desc": "undefined",
@@ -1521,7 +1521,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Elite02_EdictInsert",
+    "name": "<a class=\"gModGreen\" id=\"1954502860\">Monster_XP_Elite02_EdictInsert</a>",
     "realName": "Retribution Warning",
     "aim": "Other",
     "desc": "Character(s) will be punished accordingly at the end of the turn.",
@@ -1529,7 +1529,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_XP_Elite02_01_Battle",
+    "name": "<a class=\"gModGreen\" id=\"-749414927\">Monster_XP_Elite02_01_Battle</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -1537,7 +1537,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_XP_Elite02_01_Accelerate",
+    "name": "<a class=\"gModGreen\" id=\"-799757302\">Monster_XP_Elite02_01_Accelerate</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -1549,7 +1549,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Elite02_01_Exhausted",
+    "name": "<a class=\"gModGreen\" id=\"267392722\">Monster_XP_Elite02_01_Exhausted</a>",
     "realName": "undefined",
     "aim": "Debuff",
     "desc": "undefined",
@@ -1560,7 +1560,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Elite02_01_Fragile",
+    "name": "<a class=\"gModGreen\" id=\"-440963203\">Monster_XP_Elite02_01_Fragile</a>",
     "realName": "undefined",
     "aim": "Debuff",
     "desc": "undefined",
@@ -1571,7 +1571,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Elite02_01_EnergyLayer",
+    "name": "<a class=\"gModGreen\" id=\"1432699776\">Monster_XP_Elite02_01_EnergyLayer</a>",
     "realName": "Gauge Recollection",
     "aim": "Other",
     "desc": "Current stacks of Gauge Recollection: #1[i]. Loses 1 stack of Gauge Recollection after being hit.",
@@ -1648,7 +1648,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Elite01_Aim",
+    "name": "<a class=\"gModGreen\" id=\"1071596347\">Enemy_AML_Elite01_Aim</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -1656,7 +1656,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Elite01_01_DOTAim",
+    "name": "<a class=\"gModGreen\" id=\"-940158065\">Enemy_AML_Elite01_01_DOTAim</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -1664,7 +1664,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Elite01_01_AttackAdd",
+    "name": "<a class=\"gModGreen\" id=\"1859460834\">Enemy_AML_Elite01_01_AttackAdd</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "Increases ATK by #1[i]%, stacking up to #2[i] time(s).",
