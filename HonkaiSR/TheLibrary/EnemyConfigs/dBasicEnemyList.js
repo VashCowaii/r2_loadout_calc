@@ -1190,7 +1190,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "1004011": {
       "1004011": {
@@ -1201,7 +1201,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia (Complete)"
     },
     "1004012": {
@@ -1221,7 +1221,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia (Complete)"
     },
     "1004013": {
@@ -1233,7 +1233,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia (Illusion)"
     },
     "1004014": {
@@ -1278,7 +1278,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Annihilator of Desolation Mistral"
     },
     "1004015": {
@@ -1297,7 +1297,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Topaz Illusion"
     },
     "1004016": {
@@ -1309,7 +1309,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia"
     },
     "1004017": {
@@ -1321,7 +1321,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia (Corrupted)"
     },
     "groupName": "Cocolia"
@@ -1451,7 +1451,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "1004021": {
       "1004021": {
@@ -1461,7 +1461,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard"
     },
     "1004022": {
@@ -1487,7 +1487,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard (Complete)"
     },
     "1004023": {
@@ -1507,7 +1507,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard (Complete)"
     },
     "1004024": {
@@ -1518,7 +1518,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard (Illusion)"
     },
     "1004025": {
@@ -1530,7 +1530,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard (Illusion)"
     },
     "1004026": {
@@ -1576,7 +1576,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard"
     },
     "1004027": {
@@ -1610,7 +1610,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard"
     },
     "1004028": {
@@ -1622,7 +1622,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard"
     },
     "groupName": "Gepard"
@@ -1779,7 +1779,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "1005011": {
       "1005011": {
@@ -1790,7 +1790,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia, Mother of Deception"
     },
     "1005012": {
@@ -1802,7 +1802,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia, Mother of Deception"
     },
     "1005013": {
@@ -1813,7 +1813,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia, Mother of Deception (Illusion)"
     },
     "1005014": {
@@ -1858,7 +1858,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Annihilator of Desolation Mistral: Mother of Deception"
     },
     "groupName": "Cocolia, Mother of Deception"

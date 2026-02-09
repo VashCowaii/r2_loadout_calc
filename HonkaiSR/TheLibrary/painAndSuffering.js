@@ -5745,6 +5745,32 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
+    "Trigger 0-Toughness"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            // "preventWhen0",
+            // "skipTeamLock",
+
+            // "addFlat",
+            // "constantValue",
+            
+            // "healPercent",
+            // "formula",
+            // "value1",
+            // "compareType",
+            // "value2"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Trigger 0-Toughness");
+
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Trigger 0-Toughness:</div>&nbsp;
+            ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+        </div>
+        <div class="modifierDetailsBox">
+        </div>
+        `;
+    },
     "Reset Toughness"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -7509,6 +7535,7 @@ const megaParsingFuckeryPain = {
         const knownKeySet = new Set ([
             "name",
             "target",
+            "targetDisplay",
             "value",
             "formula",
             "valuePercent",
@@ -7542,11 +7569,13 @@ const megaParsingFuckeryPain = {
 
 
         return `<div class="actionDetailBody2">
-            <div class="rotationConditionOperatorHeaderInline">Create Shield:</div>&nbsp;
-            on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+            <div class="rotationConditionOperatorHeaderInline">Create Shield:</div>
         </div>
         
         <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.targetDisplay,"Display Target",true)}
+
             ${getStandardNameDisplay(initialCounter,parseRef.formula,"Formula")}
             ${getStandardNameDisplay(initialCounter,parseRef.value,"Shield Value")}
             ${getStandardNameDisplay(initialCounter,parseRef.valuePercent,"Shield Value Percent")}

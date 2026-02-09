@@ -21,6 +21,18 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 1004014,
+    "lineCount": 12042,
+    "sizeCount": 439352
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1005014,
+    "lineCount": 11908,
+    "sizeCount": 419449
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 3024013,
     "lineCount": 10498,
     "sizeCount": 368261
@@ -88,6 +100,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 265297
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1004013,
+    "lineCount": 7055,
+    "sizeCount": 259669
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1004025,
+    "lineCount": 7161,
+    "sizeCount": 251179
+  },
+  {
     "entryType": "char",
     "entryName": "Black Swan",
     "trimCharacterName": "BlackSwan",
@@ -134,6 +158,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1201.png",
     "lineCount": 5394,
     "sizeCount": 241489
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1005013,
+    "lineCount": 6932,
+    "sizeCount": 240376
   },
   {
     "entryType": "enemy",
@@ -194,6 +224,24 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1410.png",
     "lineCount": 4995,
     "sizeCount": 196408
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1004011,
+    "lineCount": 5713,
+    "sizeCount": 193471
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1004012,
+    "lineCount": 5713,
+    "sizeCount": 193471
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1004016,
+    "lineCount": 5712,
+    "sizeCount": 193427
   },
   {
     "entryType": "char",
@@ -366,6 +414,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 142125
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1004015,
+    "lineCount": 4119,
+    "sizeCount": 142000
+  },
+  {
     "entryType": "char",
     "entryName": "Dan Heng • Imbibitor Lunae",
     "trimCharacterName": "DanHengIL",
@@ -420,6 +474,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1314.png",
     "lineCount": 3710,
     "sizeCount": 134241
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1004024,
+    "lineCount": 3847,
+    "sizeCount": 133877
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1004026,
+    "lineCount": 3835,
+    "sizeCount": 133464
   },
   {
     "entryType": "char",
@@ -534,6 +600,24 @@ let sizeLeaderboardArray = [
     "sizeCount": 120300
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1005011,
+    "lineCount": 3378,
+    "sizeCount": 116182
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1005010,
+    "lineCount": 3372,
+    "sizeCount": 115918
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1005012,
+    "lineCount": 3370,
+    "sizeCount": 115733
+  },
+  {
     "entryType": "char",
     "entryName": "Archer",
     "trimCharacterName": "Archer",
@@ -640,6 +724,30 @@ let sizeLeaderboardArray = [
     "sizeCount": 103485
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1004023,
+    "lineCount": 2956,
+    "sizeCount": 102741
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1004022,
+    "lineCount": 2952,
+    "sizeCount": 102629
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1004027,
+    "lineCount": 2952,
+    "sizeCount": 102629
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1004028,
+    "lineCount": 2945,
+    "sizeCount": 102315
+  },
+  {
     "entryType": "char",
     "entryName": "Trailblazer - Preservation",
     "trimCharacterName": "TrailblazerPreservation",
@@ -710,6 +818,18 @@ let sizeLeaderboardArray = [
     "enemyID": 3024012,
     "lineCount": 2726,
     "sizeCount": 91004
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1004017,
+    "lineCount": 2759,
+    "sizeCount": 90298
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1004010,
+    "lineCount": 2754,
+    "sizeCount": 89969
   },
   {
     "entryType": "char",
@@ -1096,6 +1216,18 @@ let sizeLeaderboardArray = [
     "enemyID": 8012147,
     "lineCount": 1275,
     "sizeCount": 45252
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1004020,
+    "lineCount": 1307,
+    "sizeCount": 42589
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1004021,
+    "lineCount": 1307,
+    "sizeCount": 42589
   },
   {
     "entryType": "char",

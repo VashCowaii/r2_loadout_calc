@@ -69,6 +69,7 @@
     "Monster_DamageTakenRatio": "EnemyVulnerability",
 
     "DamageValue": "DMGValueTotal",
+    "FinalDamageMax": "DMGValueMax",
 
     "FatigueRatio": "Weaken%",
 

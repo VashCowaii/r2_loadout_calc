@@ -46,7 +46,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_Gepard_Attack_Sign",
+    "name": "<a class=\"gModGreen\" id=\"-2038076408\">Monster_Gepard_Attack_Sign</a>",
     "realName": "Aggravate",
     "aim": "Debuff",
     "desc": "Silvermane Guards will focus their attacks on this target.",
@@ -54,7 +54,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W1_Gepard_BlockDamage",
+    "name": "<a class=\"gModGreen\" id=\"-1321981323\">Enemy_W1_Gepard_BlockDamage</a>",
     "realName": "Barrier",
     "aim": "Buff",
     "desc": "Nullifies all DMG received except for DoT until after being attacked.",
@@ -62,7 +62,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_W1_CocoliaP1_RL_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect can stack.",
@@ -85,7 +85,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_CocoliaP1_RL_Ability05_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-883410937\">Monster_W1_CocoliaP1_RL_Ability05_Bonus</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -143,7 +143,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Gepard_RL_DamageUP",
+    "name": "<a class=\"gModGreen\" id=\"352751855\">Monster_W1_Gepard_RL_DamageUP</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -154,7 +154,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W1_Gepard_RL_ListenBeingAttacked",
+    "name": "<a class=\"gModGreen\" id=\"-1955091143\">Enemy_W1_Gepard_RL_ListenBeingAttacked</a>",
     "realName": "Counter",
     "aim": "Buff",
     "desc": "Uses a Powerful Counter on the attacker after being attacked.",
@@ -162,7 +162,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Gepard_RL_ShieldIcon",
+    "name": "<a class=\"gModGreen\" id=\"-1788931056\">Gepard_RL_ShieldIcon</a>",
     "realName": "Collective Shield",
     "aim": "Buff",
     "desc": "A Shield that absorbs DMG taken by all enemies. While the Shield persists, allies' attacks will not reduce the Shielded enemies' HP.",
@@ -170,7 +170,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Gepard_RL_ShieldIcon2",
+    "name": "<a class=\"gModGreen\" id=\"1185722758\">Gepard_RL_ShieldIcon2</a>",
     "realName": "Weakness Protected",
     "aim": "Buff",
     "desc": "Before the Collective Shield ends, enemy targets' Toughness cannot be reduced.",
@@ -178,7 +178,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_Gepard_IF_03_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"-1430608043\">Enemy_W1_Gepard_IF_03_Enhance</a>",
     "realName": "Thick and Thin",
     "aim": "Buff",
     "desc": "Greatly enhances this unit, increasing SPD by #1[i]%. When in this state, Frigid Waterfall has a slight chance to Freeze the attacked target.",
@@ -189,7 +189,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_IF_LimboMark",
+    "name": "<a class=\"gModGreen\" id=\"1981216123\">Enemy_IF_LimboMark</a>",
     "realName": "Valor Via Setbacks",
     "aim": "Other",
     "desc": "Enters Downed state, waiting for recovery.",
@@ -197,7 +197,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_Gepard_IF_03_EnhancePerTurn",
+    "name": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>",
     "realName": "Will of Steel",
     "aim": "Buff",
     "desc": "Each stack increases SPD by #1[i]% and ATK by #2[i]%. All stacks are lost when Weakness is broken.",
@@ -281,7 +281,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W1_CocoliaP2_Ability10_TargetLock",
+    "name": "<a class=\"gModGreen\" id=\"1281838321\">Enemy_W1_CocoliaP2_Ability10_TargetLock</a>",
     "realName": "Harbinger of Annihilation",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -289,7 +289,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP2_Ability08_Charge",
+    "name": "<a class=\"gModGreen\" id=\"1681589484\">Enemy_W1_CocoliaP2_Ability08_Charge</a>",
     "realName": "The Creation's Prelude",
     "aim": "Other",
     "desc": "The next attack will cause Last Choir of Genesis to all targets.",
@@ -297,7 +297,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP2_WeakPointProtected",
+    "name": "<a class=\"gModGreen\" id=\"-1081875098\">Enemy_W1_CocoliaP2_WeakPointProtected</a>",
     "realName": "Weakness Protected",
     "aim": "Buff",
     "desc": "Cocolia, Mother of Deception's Toughness cannot be reduced while there are enemies on the field.",
@@ -1177,7 +1177,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_Standard_WeakControl",
+    "name": "<a class=\"gModGreen\" id=\"-1754480095\">Monster_Standard_WeakControl</a>",
     "realName": "Toughness Protection",
     "aim": "Other",
     "desc": "Toughness cannot be reduced.",
@@ -2541,7 +2541,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Cocolia_IF_WeaknessCount_Sub01",
+    "name": "<a class=\"gModGreen\" id=\"-641521707\">Enemy_W2_Cocolia_IF_WeaknessCount_Sub01</a>",
     "realName": "Tenacious Resolve",
     "aim": "Buff",
     "desc": "DMG taken decreases by #1[i]%.",
@@ -2552,7 +2552,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Cocolia_IF_WeaknessCount_Sub02",
+    "name": "<a class=\"gModGreen\" id=\"-691854564\">Enemy_W2_Cocolia_IF_WeaknessCount_Sub02</a>",
     "realName": "Tenacious Resolve",
     "aim": "Debuff",
     "desc": "Increases DMG taken by #1[i]%.",
@@ -2563,7 +2563,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W1_CocoliaP1_IF_TargetLock01",
+    "name": "<a class=\"gModGreen\" id=\"-302789304\">Enemy_W1_CocoliaP1_IF_TargetLock01</a>",
     "realName": "Nowhere to Escape",
     "aim": "Other",
     "desc": "Locked on by the Ice Edge, and will be considered as an additional target for the Annihilator of Desolation Mistral's single-target ability.",
@@ -2571,7 +2571,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP1_IF_TargetLock02",
+    "name": "<a class=\"gModGreen\" id=\"-252456447\">Enemy_W1_CocoliaP1_IF_TargetLock02</a>",
     "realName": "Nowhere to Escape",
     "aim": "Other",
     "desc": "Locked on by the Ice Edge, and will be considered as an additional target for the Annihilator of Desolation Mistral's single-target ability.",
@@ -2579,7 +2579,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP2_IF_TargetLock01",
+    "name": "<a class=\"gModGreen\" id=\"-1288586649\">Enemy_W1_CocoliaP2_IF_TargetLock01</a>",
     "realName": "Nowhere to Escape",
     "aim": "Other",
     "desc": "Locked on by Lance of the Eternal Freeze, and will be considered as an additional target for the Annihilator of Desolation Mistral: Mother of Deception's single-target ability.",
@@ -2587,7 +2587,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP2_IF_TargetLock02",
+    "name": "<a class=\"gModGreen\" id=\"-1271809030\">Enemy_W1_CocoliaP2_IF_TargetLock02</a>",
     "realName": "Nowhere to Escape",
     "aim": "Other",
     "desc": "Locked on by Lance of the Eternal Freeze, and will be considered as an additional target for the Annihilator of Desolation Mistral: Mother of Deception's single-target ability.",
@@ -2736,7 +2736,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W1_CocoliaP1_IF_SplitWeakness_Show",
+    "name": "<a class=\"gModGreen\" id=\"-1094163808\">Enemy_W1_CocoliaP1_IF_SplitWeakness_Show</a>",
     "realName": "Devious Metamorphosis",
     "aim": "Other",
     "desc": "The Weakness Type has been transferred to Ice Edge.",
@@ -2744,7 +2744,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP2_IF_SplitWeakness_Show",
+    "name": "<a class=\"gModGreen\" id=\"-426543761\">Enemy_W1_CocoliaP2_IF_SplitWeakness_Show</a>",
     "realName": "Devious Metamorphosis",
     "aim": "Other",
     "desc": "The Weakness Type has been transferred to Lance of the Eternal Freeze.",
@@ -2752,7 +2752,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP1_IF_SplitWeakness_ShowSub",
+    "name": "<a class=\"gModGreen\" id=\"-145483550\">Enemy_W1_CocoliaP1_IF_SplitWeakness_ShowSub</a>",
     "realName": "Scapegoat of Sins",
     "aim": "Other",
     "desc": "A Weakness Type has been transferred from Annihilator of Desolation Mistral to this unit. The Weakness Type will be returned when this unit is defeated.",
@@ -2760,7 +2760,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP2_IF_SplitWeakness_ShowSub",
+    "name": "<a class=\"gModGreen\" id=\"-822615197\">Enemy_W1_CocoliaP2_IF_SplitWeakness_ShowSub</a>",
     "realName": "Scapegoat of Sins",
     "aim": "Other",
     "desc": "A Weakness Type has been transferred from Annihilator of Desolation Mistral: Mother of Deception to this unit. The Weakness Type will be returned when this unit is defeated.",

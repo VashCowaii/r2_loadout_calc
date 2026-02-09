@@ -1812,6 +1812,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Stage Boss: 115",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Add Target by Enemy ID",
+              "ID": 1005011,
+              "characterName": "Cocolia, Mother of Deception"
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Monthly Challenge Battle Event",
           "isTargetOperator": false,
           "execute": [
