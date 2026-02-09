@@ -1756,7 +1756,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "BoxingGym_DefDown",
+    "name": "<a class=\"gModGreen\" id=\"-61828831\">BoxingGym_DefDown</a>",
     "realName": "DEF Reduction",
     "aim": "Debuff",
     "desc": "DEF -#1[i]%.",
@@ -1767,7 +1767,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "BoxingGym_UltraAbilityDamageBonus",
+    "name": "<a class=\"gModGreen\" id=\"1975744821\">BoxingGym_UltraAbilityDamageBonus</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Each stack increases DMG by #1[i]%, up to 2 stacks.",
@@ -1778,7 +1778,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "BoxingGym_Shield_AddShieldGetBonus_DamageBuff",
+    "name": "<a class=\"gModGreen\" id=\"414187300\">BoxingGym_Shield_AddShieldGetBonus_DamageBuff</a>",
     "realName": "Overbreathing",
     "aim": "Buff",
     "desc": "Each stack increases CRIT Rate by #1[i]%, up to 6 stacks.",
@@ -1789,7 +1789,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "BoxingGym_Shield_AddShieldGetBonus_DamageBuff_FinalBuff",
+    "name": "<a class=\"gModGreen\" id=\"-317914338\">BoxingGym_Shield_AddShieldGetBonus_DamageBuff_FinalBuff</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -2978,7 +2978,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_06",
+    "name": "<a class=\"gModGreen\" id=\"-252647528\">MLevel_BattleEventAbility_Challenge_06</a>",
     "realName": "Ice Vulnerability",
     "aim": "Debuff",
     "desc": "Ice DMG taken +#1[i]%.",
@@ -2989,7 +2989,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_07",
+    "name": "<a class=\"gModGreen\" id=\"-235869909\">MLevel_BattleEventAbility_Challenge_07</a>",
     "realName": "Quantum Vulnerability",
     "aim": "Debuff",
     "desc": "Quantum DMG taken +#1[i]%.",
@@ -3000,7 +3000,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_08",
+    "name": "<a class=\"gModGreen\" id=\"-286202766\">MLevel_BattleEventAbility_Challenge_08</a>",
     "realName": "Lightning Vulnerability",
     "aim": "Debuff",
     "desc": "Lightning DMG taken +#1[i]%.",
@@ -3011,7 +3011,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_09",
+    "name": "<a class=\"gModGreen\" id=\"-269425147\">MLevel_BattleEventAbility_Challenge_09</a>",
     "realName": "Wind Vulnerability",
     "aim": "Debuff",
     "desc": "Wind DMG taken +#1[i]%.",
@@ -3022,7 +3022,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_10",
+    "name": "<a class=\"gModGreen\" id=\"1559482419\">MLevel_BattleEventAbility_Challenge_10</a>",
     "realName": "Physical Vulnerability",
     "aim": "Debuff",
     "desc": "Physical DMG taken +#1[i]%.",
@@ -3033,7 +3033,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_11",
+    "name": "<a class=\"gModGreen\" id=\"1542704800\">MLevel_BattleEventAbility_Challenge_11</a>",
     "realName": "CRIT Rate Boost",
     "aim": "Buff",
     "desc": "Each stack increases CRIT Rate by #1[i]%, up to 5 stacks.",
@@ -3044,7 +3044,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_12",
+    "name": "<a class=\"gModGreen\" id=\"1593037657\">MLevel_BattleEventAbility_Challenge_12</a>",
     "realName": "DEF Boost",
     "aim": "Buff",
     "desc": "Increases DEF by #1[i]% up to 5 times.",
@@ -3055,7 +3055,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_13",
+    "name": "<a class=\"gModGreen\" id=\"1576260038\">MLevel_BattleEventAbility_Challenge_13</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i] pts up to 5 times.",
@@ -3066,7 +3066,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_14",
+    "name": "<a class=\"gModGreen\" id=\"1626592895\">MLevel_BattleEventAbility_Challenge_14</a>",
     "realName": "Effect Hit Rate Boost",
     "aim": "Buff",
     "desc": "Increases Effect Hit Rate by #1[i]% up to 5 times.",
@@ -3077,7 +3077,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_15",
+    "name": "<a class=\"gModGreen\" id=\"1609815276\">MLevel_BattleEventAbility_Challenge_15</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "Increases ATK by #1[i]% up to 5 times.",
@@ -3088,7 +3088,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_Month_02",
+    "name": "<a class=\"gModGreen\" id=\"1670469819\">MLevel_BattleEventAbility_Challenge_Month_02</a>",
     "realName": "CRIT Rate, CRIT DMG Boost",
     "aim": "Buff",
     "desc": "Increases CRIT Rate by #2[i]% and CRIT DMG by #1[i]%. Can stack up to 3 times.",
@@ -3100,7 +3100,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_Group_01",
+    "name": "<a class=\"gModGreen\" id=\"-322246439\">MLevel_BattleEventAbility_Challenge_Group_01</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases the next attack's DMG by #1[i]%.",
@@ -3111,7 +3111,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_Group_02",
+    "name": "<a class=\"gModGreen\" id=\"-372579296\">MLevel_BattleEventAbility_Challenge_Group_02</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG taken by #1[i]%.",
@@ -3122,7 +3122,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_Month_01",
+    "name": "<a class=\"gModGreen\" id=\"1687247438\">MLevel_BattleEventAbility_Challenge_Month_01</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "For the current Cycle, ATK increases by #1[i]%.",
@@ -3133,7 +3133,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_Month_03",
+    "name": "<a class=\"gModGreen\" id=\"1653692200\">MLevel_BattleEventAbility_Challenge_Month_03</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "In the current Cycle, receives #1[i]% more DMG from Follow-Up ATKs and Ultimates.",
@@ -3144,7 +3144,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_Month_05",
+    "name": "<a class=\"gModGreen\" id=\"1754357914\">MLevel_BattleEventAbility_Challenge_Month_05</a>",
     "realName": "Memory Imprint",
     "aim": "Buff",
     "desc": "After launching attacks, consumes 1 stack of \"Memory Imprint\" and deals #1[i]% of the character's ATK as Additional DMG to a random enemy target that was attacked.",
@@ -3155,7 +3155,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_Month_06",
+    "name": "<a class=\"gModGreen\" id=\"1737580295\">MLevel_BattleEventAbility_Challenge_Month_06</a>",
     "realName": "Lightning Vulnerability",
     "aim": "Debuff",
     "desc": "At the beginning of each Cycle, increases the Lightning DMG taken by all enemies by #1[i]%, lasting until the enemies' next action begins.",
@@ -3166,7 +3166,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_Month_07",
+    "name": "<a class=\"gModGreen\" id=\"1720802676\">MLevel_BattleEventAbility_Challenge_Month_07</a>",
     "realName": "Memory Imprint",
     "aim": "Debuff",
     "desc": "Each stack decreases DMG dealt by #1[i]%, up to #2[i] stack(s).",
@@ -3178,7 +3178,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_Month_08",
+    "name": "<a class=\"gModGreen\" id=\"1569804105\">MLevel_BattleEventAbility_Challenge_Month_08</a>",
     "realName": "Memory Imprint",
     "aim": "Debuff",
     "desc": "Each stack decreases DEF by #1[i]%, up to #2[i] stack(s).",
@@ -3190,7 +3190,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_Month_09",
+    "name": "<a class=\"gModGreen\" id=\"1553026486\">MLevel_BattleEventAbility_Challenge_Month_09</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "ATK +#1[i]%.",
@@ -3201,7 +3201,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_Month_10_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1406945547\">MLevel_BattleEventAbility_Challenge_Month_10_Sub</a>",
     "realName": "Memory Imprint",
     "aim": "Buff",
     "desc": "Each stack decreases DMG received by #1[i]%, up to #2[i] stack(s).",
@@ -3225,7 +3225,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_New_03",
+    "name": "<a class=\"gModGreen\" id=\"-1686422512\">MLevel_BattleEventAbility_Challenge_New_03</a>",
     "realName": "Weakness Break Efficiency Boost",
     "aim": "Buff",
     "desc": "Increases Weakness Break Efficiency by #1[i]%, dispelled after attacking.",
@@ -3236,7 +3236,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MLevel_BattleEventAbility_Challenge_New_06",
+    "name": "<a class=\"gModGreen\" id=\"-1602534417\">MLevel_BattleEventAbility_Challenge_New_06</a>",
     "realName": "CRIT Rate and CRIT DMG Boost",
     "aim": "Buff",
     "desc": "Increases CRIT Rate by #1[i]% and CRIT DMG by #2[i]%.",
@@ -3762,7 +3762,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "BattleEventAbilityNewBoxingClub_HPExchangeDamage_DamageUpModifier",
+    "name": "<a class=\"gModGreen\" id=\"1400833329\">BattleEventAbilityNewBoxingClub_HPExchangeDamage_DamageUpModifier</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[i]%, up to 8 stacks.",
@@ -4272,7 +4272,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "BattleEventAbilityNewBoxingClub_AllStanceBreakState_DamageTakenUP",
+    "name": "<a class=\"gModGreen\" id=\"1113757560\">BattleEventAbilityNewBoxingClub_AllStanceBreakState_DamageTakenUP</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Each stack increases DMG received by #1[i]%, up to 12 stacks.",
@@ -4283,7 +4283,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "BattleEventAbilityNewBoxingClub_StanceBreakStateSP_DamageTakenUp",
+    "name": "<a class=\"gModGreen\" id=\"1115036386\">BattleEventAbilityNewBoxingClub_StanceBreakStateSP_DamageTakenUp</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Each stack increases DMG received by #1[i]%, up to 5 stacks.",
@@ -4294,7 +4294,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "BattleEventAbilityNewBoxingClub_ModifyBPCost_AddCritModifier",
+    "name": "<a class=\"gModGreen\" id=\"-2035389673\">BattleEventAbilityNewBoxingClub_ModifyBPCost_AddCritModifier</a>",
     "realName": "CRIT Rate Boost",
     "aim": "Buff",
     "desc": "Each stack increases CRIT Rate by #1[i]%, up to 2 stacks.",
@@ -4305,7 +4305,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "BattleEventAbilityNewBoxingClub_BPSpeedUp_UltraDamageUp",
+    "name": "<a class=\"gModGreen\" id=\"1894271172\">BattleEventAbilityNewBoxingClub_BPSpeedUp_UltraDamageUp</a>",
     "realName": "Ultimate DMG Boost",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by the next Ultimate by #1[i]%, up to 3 stacks.",
@@ -4316,7 +4316,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "BattleEventAbilityNewBoxingClub_ModifyBPCost_AddCritDamageModifier",
+    "name": "<a class=\"gModGreen\" id=\"1096271358\">BattleEventAbilityNewBoxingClub_ModifyBPCost_AddCritDamageModifier</a>",
     "realName": "CRIT DMG Boost",
     "aim": "Buff",
     "desc": "Each stack increases CRIT DMG by #1[i]%, up to 2 stacks.",
@@ -4327,7 +4327,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "BattleEventAbilityNewBoxingClub_Sp_CritUpModifier",
+    "name": "<a class=\"gModGreen\" id=\"-1214810651\">BattleEventAbilityNewBoxingClub_Sp_CritUpModifier</a>",
     "realName": "CRIT Rate Boost",
     "aim": "Buff",
     "desc": "Each stack increases CRIT Rate by #1[i]%, up to 10 stacks.",
@@ -4338,7 +4338,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "BattleEventAbilityNewBoxingClub_Sp_CritDamageUpModifier",
+    "name": "<a class=\"gModGreen\" id=\"-6604732\">BattleEventAbilityNewBoxingClub_Sp_CritDamageUpModifier</a>",
     "realName": "CRIT DMG Boost",
     "aim": "Buff",
     "desc": "Each stack increases CRIT DMG by #1[i]%, up to 10 stacks.",
@@ -4722,7 +4722,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Xianzhou_05_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"947859829\">Modifier_BattleEventAbility_Challenge_Xianzhou_05_Sub2</a>",
     "realName": "Memory Imprint",
     "aim": "Other",
     "desc": "When destroyed, re-summon 1 Entranced Ingenium: Illumination Dragonfish",
@@ -4730,7 +4730,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Xianzhou_05_Sub1",
+    "name": "<a class=\"gModGreen\" id=\"897526972\">Modifier_BattleEventAbility_Challenge_Xianzhou_05_Sub1</a>",
     "realName": "Memory Imprint",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%, up to #2[i] stack(s).",
@@ -4742,7 +4742,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Xianzhou_03_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-668032397\">Modifier_BattleEventAbility_Challenge_Xianzhou_03_Sub</a>",
     "realName": "Memory Imprint",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]% and reduces DMG received by #2[i]%.",
@@ -4754,7 +4754,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_13_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1172109614\">Modifier_BattleEventAbility_Challenge_Month_13_Sub</a>",
     "realName": "Memory Imprint",
     "aim": "Debuff",
     "desc": "Increases received Basic ATK DMG and DoT by #1[i]%. Allies will recover Skill Points after this unit is defeated.",
@@ -4765,7 +4765,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_14_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-452417085\">Modifier_BattleEventAbility_Challenge_Month_14_Sub</a>",
     "realName": "Memory Imprint",
     "aim": "Debuff",
     "desc": "Increases the received Basic ATK and Ultimate DMG by #1[i]%. After this unit gets defeated, deals a set amount of DMG to all enemies.",
@@ -4776,7 +4776,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_15_Sub",
+    "name": "<a class=\"gModGreen\" id=\"936753060\">Modifier_BattleEventAbility_Challenge_Month_15_Sub</a>",
     "realName": "Memory Imprint",
     "aim": "Debuff",
     "desc": "Increases the received Skill and Ultimate DMG by #1[i]%. After this unit gets defeated, inflicts all enemies with Vulnerability.",
@@ -4787,7 +4787,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_15_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"2070937890\">Modifier_BattleEventAbility_Challenge_Month_15_Sub2</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Each stack increases the received DMG by #1[i]%, up to 2 stacks.",
@@ -4975,7 +4975,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Xianzhou_03_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-1838584749\">Modifier_BattleEventAbility_Challenge_Xianzhou_03_Sub2</a>",
     "realName": "Memory Imprint",
     "aim": "Other",
     "desc": "When entering \"Sanction Mode,\" summon \"Disciples of Sanctus Medicus: Internal Alchemist\" instead.",
@@ -5428,7 +5428,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_16_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"1287529225\">Modifier_BattleEventAbility_Challenge_Month_16_Sub2</a>",
     "realName": "Memory Imprint",
     "aim": "Buff",
     "desc": "DMG dealt increases by #2[i]%. After using an attack, every stack of Memory Imprint has a #1[i]% fixed chance of applying Dissociation to the target.",
@@ -5440,7 +5440,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_16_SuperIce",
+    "name": "<a class=\"gModGreen\" id=\"-161396657\">Modifier_BattleEventAbility_Challenge_Month_16_SuperIce</a>",
     "realName": "Dissociation",
     "aim": "Debuff",
     "desc": "Targets are considered as Frozen and cannot take action for a certain number of turns. When this effect is dispelled, the targets will receive Ice Additional DMG based on their respective Max HP.",
@@ -5448,7 +5448,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_17_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-737870742\">Modifier_BattleEventAbility_Challenge_Month_17_Sub</a>",
     "realName": "Memory Imprint",
     "aim": "Debuff",
     "desc": "When receiving DMG, all other enemy targets receive DMG equal to #1[i]% of the original DMG.",
@@ -5459,7 +5459,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_18_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1785729743\">Modifier_BattleEventAbility_Challenge_Month_18_Sub</a>",
     "realName": "Memory Imprint",
     "aim": "Buff",
     "desc": "At the start of each Cycle, regenerate Energy equal to 100% of their respective Max Energy to allies who have #1[i] or more stacks of Memory Imprint.",
@@ -5971,7 +5971,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_RogueDLCRuin_Upgrade1_DefenceDown",
+    "name": "<a class=\"gModGreen\" id=\"-1071238655\">Modifier_RogueDLCRuin_Upgrade1_DefenceDown</a>",
     "realName": "Formation Extrapolation: Extreme Helium Flash",
     "aim": "Debuff",
     "desc": "Reduces DEF by #1[i]%.",
@@ -5982,7 +5982,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_RogueDLCAbundance_Upgrade2_AttackUp",
+    "name": "<a class=\"gModGreen\" id=\"-1581262672\">Modifier_RogueDLCAbundance_Upgrade2_AttackUp</a>",
     "realName": "Formation Extrapolation: Mountain High",
     "aim": "Buff",
     "desc": "Increases ATK by #1[i]%.",
@@ -6469,7 +6469,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff1",
+    "name": "<a class=\"gModGreen\" id=\"1504166155\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff1</a>",
     "realName": "ATK Reduction",
     "aim": "Debuff",
     "desc": "ATK decreases by #1[i]%.",
@@ -6480,7 +6480,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff2",
+    "name": "<a class=\"gModGreen\" id=\"1520943774\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff2</a>",
     "realName": "DEF Reduction",
     "aim": "Debuff",
     "desc": "Reduces DEF by #1[i]%.",
@@ -6491,7 +6491,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff3",
+    "name": "<a class=\"gModGreen\" id=\"1537721393\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff3</a>",
     "realName": "SPD Reduction",
     "aim": "Debuff",
     "desc": "Decreases SPD by #1[i]%.",
@@ -6502,7 +6502,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff4",
+    "name": "<a class=\"gModGreen\" id=\"1554499012\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff4</a>",
     "realName": "Effect RES Reduction",
     "aim": "Debuff",
     "desc": "Effect RES decreases by #1[i]%.",
@@ -6513,7 +6513,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff5",
+    "name": "<a class=\"gModGreen\" id=\"1571276631\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff5</a>",
     "realName": "Follow-Up ATK Vulnerability",
     "aim": "Debuff",
     "desc": "Follow-Up ATK DMG taken increases by #1[i]%.",
@@ -6524,7 +6524,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "BossInfiniteWave_Boss_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"537567377\">BossInfiniteWave_Boss_Modifier</a>",
     "realName": "Eloquence",
     "aim": "Other",
     "desc": "The target can only be defeated after a certain number of enemies have been eliminated. At the same time, the target will take significantly more DMG.",
@@ -6532,7 +6532,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "BossInfiniteWave_DamageTaken_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-842805226\">BossInfiniteWave_DamageTaken_Modifier</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG received by #1[i]%.",
@@ -6825,7 +6825,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "BossInfiniteWave_BlockDamage",
+    "name": "<a class=\"gModGreen\" id=\"-10562366\">BossInfiniteWave_BlockDamage</a>",
     "realName": "DMG Immunity",
     "aim": "Buff",
     "desc": "Immune to taking any form of DMG. Dispelled after all other friendly units are defeated.",
@@ -7212,7 +7212,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_25_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-782509985\">Modifier_BattleEventAbility_Challenge_Month_25_Sub</a>",
     "realName": "Memory Imprint",
     "aim": "Debuff",
     "desc": "Takes #1[i]% increased DMG from Basic ATKs and DoT effects. When this unit is defeated, if any enemies are in Bleed, Shock, Burn, or Wind Shear state, immediately deals DMG equal to #2[i]% of the original DoT to all other enemies with a high chance to inflict Bleed, Shock, Burn, or Wind Shear on them for #3[i] turn(s).",
@@ -7319,7 +7319,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_26_sub",
+    "name": "<a class=\"gModGreen\" id=\"-245828586\">Modifier_BattleEventAbility_Challenge_Month_26_sub</a>",
     "realName": "Memory Imprint",
     "aim": "Debuff",
     "desc": "Receive #1[i]% more DMG. Increase 1 stack every time this unit receives an attack. Receive additional DMG when stacks reach #2[i].",
@@ -7494,7 +7494,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_28_Insert",
+    "name": "<a class=\"gModGreen\" id=\"701462759\">Modifier_BattleEventAbility_Challenge_Month_28_Insert</a>",
     "realName": "Memory Imprint",
     "aim": "Buff",
     "desc": "Increases ATK by #1[i]% and Break Effect by #2[i]%.",
@@ -7552,7 +7552,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_27_sub",
+    "name": "<a class=\"gModGreen\" id=\"-1232252899\">Modifier_BattleEventAbility_Challenge_Month_27_sub</a>",
     "realName": "Memory Imprint",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. After attacking, increases stacks by 1. When #2[i] stacks are reached, all allies regenerate Energy.",
@@ -7779,7 +7779,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_27_Sub5",
+    "name": "<a class=\"gModGreen\" id=\"-1584083368\">Modifier_BattleEventAbility_Challenge_Month_27_Sub5</a>",
     "realName": "Energy Overflow",
     "aim": "Other",
     "desc": "#1[i] extra Energy. This will be consumed first when unleashing Ultimate.",
@@ -9378,7 +9378,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_28_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1551992588\">Modifier_BattleEventAbility_Challenge_Month_28_Sub</a>",
     "realName": "Fatal Weakness",
     "aim": "Debuff",
     "desc": "This unit will immediately be defeated when its Weakness is Broken. After being defeated, the attacker's action will be Advanced Forward by #1[i]%.",
@@ -9719,7 +9719,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_30_sub",
+    "name": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>",
     "realName": "Memory Imprint",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. After attacking, increases stacks by 1. When #2[i] stack(s) are reached, deals 1 instance of DMG to all enemies based on a certain percentage of their respective Max HP.",
@@ -11379,7 +11379,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_31_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1231239842\">Modifier_BattleEventAbility_Challenge_Month_31_Sub</a>",
     "realName": "Exo-Toughness",
     "aim": "Other",
     "desc": "Triggers Weakness Break when the enemy's initial Weakness is reduced to 0. Then, their temporary Weakness can continue to be reduced. When temporary Weakness is reduced to 0, Weakness Break will be triggered again. The effect will be removed after this occurs.",
@@ -12312,7 +12312,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_34_ExceedSP",
+    "name": "<a class=\"gModGreen\" id=\"-14605930\">Modifier_BattleEventAbility_Challenge_Month_34_ExceedSP</a>",
     "realName": "Energy Overflow",
     "aim": "Other",
     "desc": "#1[i] extra Energy. This will be consumed first when unleashing Ultimate.",
@@ -12323,7 +12323,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_34_InsertAction",
+    "name": "<a class=\"gModGreen\" id=\"1616150794\">Modifier_BattleEventAbility_Challenge_Month_34_InsertAction</a>",
     "realName": "Extra Action",
     "aim": "Buff",
     "desc": "You will have an extra action after taking an action.",
@@ -13649,7 +13649,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_35_sub",
+    "name": "<a class=\"gModGreen\" id=\"685276198\">Modifier_BattleEventAbility_Challenge_Month_35_sub</a>",
     "realName": "Memory Imprint",
     "aim": "Buff",
     "desc": "Max HP increases by #1[i]%.",
@@ -14302,7 +14302,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_37_sub",
+    "name": "<a class=\"gModGreen\" id=\"-976285872\">Modifier_BattleEventAbility_Challenge_Month_37_sub</a>",
     "realName": "Memory Imprint",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. After attacking, increases #2[i] Hits Per Action to \"Memory Turbulence,\" up to a max of #3[i] hit(s).",
@@ -16120,7 +16120,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_38_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-717184223\">Modifier_BattleEventAbility_Challenge_Month_38_Sub</a>",
     "realName": "Memory Imprint",
     "aim": "Debuff",
     "desc": "Takes Fire DMG at the beginning of each turn for a certain number of turns. After being attacked by a Skill, this unit and adjacent targets additionally take DMG.",
@@ -16690,7 +16690,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_0001_02",
+    "name": "<a class=\"gModGreen\" id=\"1656944184\">Modifier_ChallengePeakBattle_BaseAbility_0001_02</a>",
     "realName": "Resilient Armor",
     "aim": "Other",
     "desc": "Each stack reduces DMG taken by #2[i]%. Loses 1 stack of \"Resilient Armor\" each time Toughness is reduced to 0.",
@@ -16702,7 +16702,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_0002_02",
+    "name": "<a class=\"gModGreen\" id=\"888777643\">Modifier_ChallengePeakBattle_BaseAbility_0002_02</a>",
     "realName": "Tempering",
     "aim": "Other",
     "desc": "For every 1% HP lost, reduces CRIT DMG dealt by allies by #1[i]%.",
@@ -16713,7 +16713,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_0003_02",
+    "name": "<a class=\"gModGreen\" id=\"-1303856730\">Modifier_ChallengePeakBattle_BaseAbility_0003_02</a>",
     "realName": "Inversion",
     "aim": "Other",
     "desc": "Each time after being attacked, the attacker will lose HP equal to #1[i]% of their own Max HP. This effect is Non-fatal.",
@@ -16724,7 +16724,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_0004_02",
+    "name": "<a class=\"gModGreen\" id=\"-886944199\">Modifier_ChallengePeakBattle_BaseAbility_0004_02</a>",
     "realName": "Under Protection",
     "aim": "Other",
     "desc": "Will not have HP and Toughness reduced, and increases Effect RES by #1[i]%. When all elite enemy targets are eliminated, this unit will also be eliminated.",
@@ -16735,7 +16735,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_0005_02",
+    "name": "<a class=\"gModGreen\" id=\"1618051580\">Modifier_ChallengePeakBattle_BaseAbility_0005_02</a>",
     "realName": "Energy Absorption",
     "aim": "Other",
     "desc": "After each time an attack is received, reduces the attacker's Energy by #1[i] points. The attacker's Energy will not be reduced if it is maxed. When defeated, regenerates #2[i] Energy for the attacker.",
@@ -16747,7 +16747,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02",
+    "name": "<a class=\"gModGreen\" id=\"-963813829\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02</a>",
     "realName": "Think Outside the Box",
     "aim": "Other",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -16758,7 +16758,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_02",
+    "name": "<a class=\"gModGreen\" id=\"1527327304\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_02</a>",
     "realName": "Infantry and Cavalry",
     "aim": "Other",
     "desc": "Ignores #1[i]% of the target's DEF when using Ultimate. After Ultimate deals DMG, the next Skill ignores #2[i]% of the target's DEF.",
@@ -16770,7 +16770,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_03",
+    "name": "<a class=\"gModGreen\" id=\"1147866258\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_03</a>",
     "realName": "Hammer and Anvil",
     "aim": "Other",
     "desc": "DMG taken decreases by #1[i]% and All-Type RES PEN increases by #2[i]%.",
@@ -16827,7 +16827,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_ChallengePeakBattle_Rage",
+    "name": "<a class=\"gModGreen\" id=\"-936105590\">Modifier_BattleEventAbility_ChallengePeakBattle_Rage</a>",
     "realName": "Middlegame Mayhem",
     "aim": "Other",
     "desc": "Increases the final DMG dealt by each stack by #1[i]%.",
@@ -17110,7 +17110,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_EnhancedAbility_0003_02",
+    "name": "<a class=\"gModGreen\" id=\"-1805296405\">Modifier_ChallengePeakBattle_EnhancedAbility_0003_02</a>",
     "realName": "Inversion+",
     "aim": "Other",
     "desc": "Each time after being attacked, the attacker will lose HP equal to #1[i]% of their own Max HP. This effect is Non-fatal.",
@@ -17282,7 +17282,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_BattleEventAbility_Challenge_Month_40_Sub_PLY",
+    "name": "<a class=\"gModGreen\" id=\"407459594\">Modifier_BattleEventAbility_Challenge_Month_40_Sub_PLY</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -17317,7 +17317,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_0006_03",
+    "name": "<a class=\"gModGreen\" id=\"82931580\">Modifier_ChallengePeakBattle_BaseAbility_0006_03</a>",
     "realName": "Anguish",
     "aim": "Debuff",
     "desc": "Each stack increases DMG taken by #2[i]%.",
@@ -17620,7 +17620,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_EnhancedAbility_0005_02",
+    "name": "<a class=\"gModGreen\" id=\"713949049\">Modifier_ChallengePeakBattle_EnhancedAbility_0005_02</a>",
     "realName": "Energy Absorption+",
     "aim": "Other",
     "desc": "After each time an attack is received, reduces the attacker's Energy by #1[i] points. The attacker's Energy will not be reduced if it is maxed. When defeated, regenerates #2[i] Energy for the attacker.",
@@ -17632,7 +17632,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_ExtremeAbility_0005_02",
+    "name": "<a class=\"gModGreen\" id=\"1840788035\">Modifier_ChallengePeakBattle_ExtremeAbility_0005_02</a>",
     "realName": "Energy Absorption++",
     "aim": "Other",
     "desc": "After each time an attack is received, reduces the attacker's Energy by #1[i] points. The attacker's Energy will not be reduced if it is maxed. When defeated, regenerates #2[i] Energy for the attacker.",
@@ -17644,7 +17644,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_ExtremeAbility_0003_02",
+    "name": "<a class=\"gModGreen\" id=\"-577906191\">Modifier_ChallengePeakBattle_ExtremeAbility_0003_02</a>",
     "realName": "Inversion++",
     "aim": "Other",
     "desc": "Each time after being attacked, the attacker will lose HP equal to #1[i]% of their own Max HP. This effect is Non-fatal.",
@@ -17655,7 +17655,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_EnhancedAbility_0006_03",
+    "name": "<a class=\"gModGreen\" id=\"-342039619\">Modifier_ChallengePeakBattle_EnhancedAbility_0006_03</a>",
     "realName": "Anguish+",
     "aim": "Debuff",
     "desc": "Each stack increases DMG taken by #2[i]%.",
@@ -17668,7 +17668,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_ExtremeAbility_0006_03",
+    "name": "<a class=\"gModGreen\" id=\"1445876003\">Modifier_ChallengePeakBattle_ExtremeAbility_0006_03</a>",
     "realName": "Anguish++",
     "aim": "Debuff",
     "desc": "Each stack increases DMG taken by #2[i]%.",
@@ -17893,7 +17893,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_0007_03",
+    "name": "<a class=\"gModGreen\" id=\"-1518475395\">Modifier_ChallengePeakBattle_BaseAbility_0007_03</a>",
     "realName": "Sunder",
     "aim": "Other",
     "desc": "Each stack causes this unit to additionally lose HP equal to #1[f1]% of their own Max HP after being attacked. After gaining a Shield or healing from an ally target (except this unit), both units will dispel all \"Sunder\" effect.",
@@ -17904,7 +17904,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_EnhancedAbility_0007_03",
+    "name": "<a class=\"gModGreen\" id=\"1259367356\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_03</a>",
     "realName": "Sunder+",
     "aim": "Other",
     "desc": "Each stack causes this unit to additionally lose HP equal to #1[f1]% of their own Max HP after being attacked. After gaining a Shield or healing from an ally target (except this unit), both units will dispel all \"Sunder+\" effect.",
@@ -17915,7 +17915,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_ExtremeAbility_0007_03",
+    "name": "<a class=\"gModGreen\" id=\"-576579558\">Modifier_ChallengePeakBattle_ExtremeAbility_0007_03</a>",
     "realName": "Sunder++",
     "aim": "Other",
     "desc": "Each stack causes this unit to additionally lose HP equal to #1[f1]% of their own Max HP after being attacked. After gaining a Shield or healing from an ally target (except this unit), both units will dispel all \"Sunder++\" effect.",
@@ -18866,7 +18866,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_02",
+    "name": "<a class=\"gModGreen\" id=\"-485013702\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_02</a>",
     "realName": "Sanguine Vitality",
     "aim": "Other",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -18877,7 +18877,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_02",
+    "name": "<a class=\"gModGreen\" id=\"-29907681\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_02</a>",
     "realName": "Power Surge",
     "aim": "Other",
     "desc": "Basic ATK, Skill, and Ultimate DMG dealt increase by #1[i]%.",
@@ -18888,7 +18888,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_03",
+    "name": "<a class=\"gModGreen\" id=\"-46685300\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_03</a>",
     "realName": "Power Surge",
     "aim": "Other",
     "desc": "Each stack increases ATK by #1[i].",
@@ -18899,7 +18899,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_02",
+    "name": "<a class=\"gModGreen\" id=\"753824332\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_02</a>",
     "realName": "Fluid Dash",
     "aim": "Other",
     "desc": "All-Type RES PEN for DoT dealt increases by #1[i]%.",
@@ -18910,7 +18910,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03",
+    "name": "<a class=\"gModGreen\" id=\"770601951\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03</a>",
     "realName": "Fluid Dash",
     "aim": "Other",
     "desc": "Each stack increases SPD by #1[i]%.",
@@ -18933,7 +18933,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_0008_03",
+    "name": "<a class=\"gModGreen\" id=\"-1051243622\">Modifier_ChallengePeakBattle_BaseAbility_0008_03</a>",
     "realName": "Taunting",
     "aim": "Other",
     "desc": "Gain 1 stack when attacked. When stacks reach #1[i], take action immediately. Stack count resets at the start of turn.",
@@ -18944,7 +18944,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_EnhancedAbility_0008_03",
+    "name": "<a class=\"gModGreen\" id=\"-2147319581\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_03</a>",
     "realName": "Taunting+",
     "aim": "Other",
     "desc": "Gain 1 stack when attacked. When stacks reach #1[i], take action immediately. Stack count resets at the start of turn.",
@@ -18955,7 +18955,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_0009_02",
+    "name": "<a class=\"gModGreen\" id=\"954434320\">Modifier_ChallengePeakBattle_BaseAbility_0009_02</a>",
     "realName": "Interference",
     "aim": "Other",
     "desc": "After using an attack, randomly inflicts #1[i]% or #2[i]% action delay on the target.",
@@ -18967,7 +18967,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_EnhancedAbility_0009_02",
+    "name": "<a class=\"gModGreen\" id=\"141969773\">Modifier_ChallengePeakBattle_EnhancedAbility_0009_02</a>",
     "realName": "Interference+",
     "aim": "Other",
     "desc": "After using an attack, randomly inflicts #1[i]% or #2[i]% action delay on the target.",
@@ -18979,7 +18979,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_ExtremeAbility_0009_02",
+    "name": "<a class=\"gModGreen\" id=\"574373263\">Modifier_ChallengePeakBattle_ExtremeAbility_0009_02</a>",
     "realName": "Interference++",
     "aim": "Other",
     "desc": "After using an attack, randomly inflicts #1[i]% or #2[i]% action delay on the target.",
@@ -19581,7 +19581,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_EnhancedAbility_0001_03",
+    "name": "<a class=\"gModGreen\" id=\"-681980542\">Modifier_ChallengePeakBattle_EnhancedAbility_0001_03</a>",
     "realName": "Resilient Armor+",
     "aim": "Other",
     "desc": "Each stack reduces DMG taken by #2[i]%. Loses 1 stack of \"Resilient Armor+\" each time Toughness is reduced to 0.",
@@ -19593,7 +19593,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_ExtremeAbility_0001_03",
+    "name": "<a class=\"gModGreen\" id=\"391969588\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_03</a>",
     "realName": "Resilient Armor++",
     "aim": "Other",
     "desc": "Each stack reduces DMG taken by #2[i]%. Loses 1 stack of \"Resilient Armor++\" each time Toughness is reduced to 0.",
@@ -19605,7 +19605,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_03",
+    "name": "<a class=\"gModGreen\" id=\"1538654006\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_03</a>",
     "realName": "No Break No Rise",
     "aim": "Other",
     "desc": "Each stack increases the Break DMG taken by #1[i]%. This effect can stack up to #2[i] time(s).",
@@ -19617,7 +19617,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_04",
+    "name": "<a class=\"gModGreen\" id=\"1588986863\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_04</a>",
     "realName": "No Break No Rise",
     "aim": "Other",
     "desc": "Break Effect increases by #1[i]%.",
@@ -19628,7 +19628,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_02",
+    "name": "<a class=\"gModGreen\" id=\"-1593876786\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_02</a>",
     "realName": "Impassioned Spirits",
     "aim": "Other",
     "desc": "Increases ATK by #1[i]%.",
@@ -19639,7 +19639,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03",
+    "name": "<a class=\"gModGreen\" id=\"-1577099167\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03</a>",
     "realName": "Impassioned Spirits",
     "aim": "Other",
     "desc": "Each stack increases ATK by #1[i]%.",
@@ -19650,7 +19650,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009_02",
+    "name": "<a class=\"gModGreen\" id=\"1236507091\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009_02</a>",
     "realName": "Seize the Moment",
     "aim": "Other",
     "desc": "DMG dealt increases by #1[i]%. After using an attack, applies a Weakness of this unit's Type to the enemy target. This effect is removed when the enemy target recovers from the Weakness Break state.",
@@ -19778,7 +19778,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_0012_03",
+    "name": "<a class=\"gModGreen\" id=\"-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>",
     "realName": "Unending Refinement",
     "aim": "Other",
     "desc": "Each stack reduces DMG received by #1[i]% and CRIT DMG taken by #3[i]%, stackable up to #2[i] time(s). Stacks are cleared at the start of turn or when entering the Weakness Break state.",
@@ -19791,7 +19791,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_EnhancedAbility_0012_03",
+    "name": "<a class=\"gModGreen\" id=\"1351261938\">Modifier_ChallengePeakBattle_EnhancedAbility_0012_03</a>",
     "realName": "Unending Refinement+",
     "aim": "Other",
     "desc": "Each stack reduces DMG received by #1[i]% and CRIT DMG taken by #3[i]%, stackable up to #2[i] time(s). Stacks are cleared at the start of turn or when entering the Weakness Break state.",
@@ -19815,7 +19815,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_0013_02",
+    "name": "<a class=\"gModGreen\" id=\"-1693779391\">Modifier_ChallengePeakBattle_BaseAbility_0013_02</a>",
     "realName": "Depowered",
     "aim": "Other",
     "desc": "Decreases Energy Regeneration Rate by #1[i]% outside this unit's turn.",
@@ -19826,7 +19826,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_EnhancedAbility_0013_02",
+    "name": "<a class=\"gModGreen\" id=\"-416709080\">Modifier_ChallengePeakBattle_EnhancedAbility_0013_02</a>",
     "realName": "Depowered+",
     "aim": "Other",
     "desc": "Decreases Energy Regeneration Rate by #1[i]% outside this unit's turn.",
@@ -19837,7 +19837,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_ExtremeAbility_0013_02",
+    "name": "<a class=\"gModGreen\" id=\"-943382250\">Modifier_ChallengePeakBattle_ExtremeAbility_0013_02</a>",
     "realName": "Depowered++",
     "aim": "Other",
     "desc": "Decreases Energy Regeneration Rate by #1[i]% outside this unit's turn.",

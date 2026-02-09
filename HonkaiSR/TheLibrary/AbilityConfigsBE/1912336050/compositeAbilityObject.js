@@ -702,11 +702,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-936105590\">Modifier_BattleEventAbility_ChallengePeakBattle_Rage</a>[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
                       "valuePerStack": {
                         "BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (RageTime) || RETURN",
-                          "displayLines": "RageTime",
+                          "operator": "Variables[0] (BattleEventTurnLeftParam3) || RETURN",
+                          "displayLines": "BattleEventTurnLeftParam3",
                           "constants": [],
                           "variables": [
-                            "RageTime"
+                            "BattleEventTurnLeftParam3"
                           ]
                         }
                       },
@@ -804,20 +804,20 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-936105590\">Modifier_BattleEventAbility_ChallengePeakBattle_Rage</a>[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
                       "valuePerStack": {
                         "BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (RageTime) || RETURN",
-                          "displayLines": "RageTime",
+                          "operator": "Variables[0] (BattleEventTurnLeftParam3) || RETURN",
+                          "displayLines": "BattleEventTurnLeftParam3",
                           "constants": [],
                           "variables": [
-                            "RageTime"
+                            "BattleEventTurnLeftParam3"
                           ]
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (BattleEventTurnLeftParam3) || RETURN",
-                        "displayLines": "BattleEventTurnLeftParam3",
+                        "operator": "Variables[0] (RageTime) || RETURN",
+                        "displayLines": "RageTime",
                         "constants": [],
                         "variables": [
-                          "BattleEventTurnLeftParam3"
+                          "RageTime"
                         ]
                       }
                     }
