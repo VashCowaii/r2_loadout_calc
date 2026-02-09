@@ -180,6 +180,7 @@ const endgameModeDisplay = {
         </div>` : "";
     },
     setEndgameDisplay(adjustment,directEntry,floorNameNew,directIndex) {
+        readSelection("PFDescriptionBox").innerHTML = "";
         if (adjustment != undefined) {firstBoxGenDCompleted = false;}
 
         if (directIndex != undefined) {
@@ -469,6 +470,7 @@ const endgameModeDisplay = {
             
 
             let overrideMainBuffDescUsed = false;
+            let battleEventAbilities = [];
             function getSideString(arraytoParse,sideNumber) {
                 let waveCounter = 0;
                 let returnString = "";
@@ -484,6 +486,7 @@ const endgameModeDisplay = {
 
 
                     let buffOverride = sideEntry.buffOverride;
+                    let checkBattleEventAbilities = sideEntry.battleEventAbilities;
                     if (buffOverride && !overrideMainBuffDescUsed) {
                         // ${pagePopulation.cleanDescription(buffEntry.params,buffEntry.desc)}
                         // readSelection("mocDescriptionBox").innerHTML = pagePopulation.cleanDescription(buffOverride.params,buffOverride.desc)
@@ -498,6 +501,42 @@ const endgameModeDisplay = {
                         overrideMainBuffDescUsed = true;
                         console.log(`Override main desc: used`)
                     }
+                    if (checkBattleEventAbilities && checkBattleEventAbilities.length) {
+                        // ${pagePopulation.cleanDescription(buffEntry.params,buffEntry.desc)}
+                        // readSelection("mocDescriptionBox").innerHTML = pagePopulation.cleanDescription(buffOverride.params,buffOverride.desc)
+
+
+                        // readSelection("mocDescriptionBox").innerHTML = endgameModeDisplay.getBuffDisplayBox(buffOverride);
+
+                        
+                        for (let beAbilityEntry of checkBattleEventAbilities) {
+                            let existingKey = beAbilityEntry.BEKey;
+                            let hasMatch = false;
+
+                            for (let beAbilityEntryOuter of battleEventAbilities) {
+                                let existingKey2 = beAbilityEntryOuter.BEKey;
+
+                                if (existingKey === existingKey2) {
+                                    hasMatch = true;
+                                    break
+                                }
+                                if (hasMatch) {break;}
+                            }
+                            if (!hasMatch) {
+                                battleEventAbilities.push(beAbilityEntry);
+                            }
+                        }
+
+
+
+
+                        // readSelection("mocDescriptionBox").style.display = "block";
+                        // overrideMainBuffDescUsed = true;
+                        // console.log(`Override main desc: used`)
+                    }
+
+
+                    
 
                     let modifierList = sideEntry.modifiersToAdd;
     
@@ -1982,6 +2021,76 @@ const endgameModeDisplay = {
             }
 
 
+
+            if (battleEventAbilities.length) {
+                
+                let buttonString = "";
+
+
+                `<div class="rotationsSectionRowHolder2Overview" style="display: flex">
+                    <div class="eidolonRowBoxHolder">
+                        <div class="rightDescriptionBoxEidolons smallFont">
+                            <div class="eidolonRowNameTrigger">Memory Turbulence</div>
+                        </div>
+                    </div>
+                    
+                    <div class="actionDetailBody">
+                        <div class="actionDetailBody2Description">
+                            At the beginning of each Cycle, randomly causes an ally following the Path of The Hunt or the Path of Erudition to take action immediately, and increases their DMG dealt by <span class="descriptionNumberColor">50.00%</span> for <span class="descriptionNumberColor">1</span> turn(s).
+                        </div>
+                    </div>
+
+                    <div class="actionDetailBody">
+                        <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [0.5,1]</div>
+                    </div>
+
+                    
+                    <div class="actionDetailBody">
+                    </div>
+                
+                </div>`
+
+                for (let beEntry of battleEventAbilities) {
+                    // buttonString += `${beEntry.BEKey ? `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${beEntry.BEKey}/#${encodeURIComponent(beEntry.realModifierNamne)}" target="_blank">
+                    //     ${beEntry.realModifierNamne}&nbsp;
+                    //     <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                    // </a>` : ""}`
+
+                    const displayName = beEntry.realModifierNamne.replace("BattleEventAbility_","").replace("ChallengePeakBattle_","")
+
+                    buttonString += `${beEntry.BEKey ? `<div class="eidolonRowBoxHolderBEAbility">
+                        <div class="rightDescriptionBoxEidolons smallFont">
+                            <div class="eidolonRowNameTriggerBEAbility">${displayName}
+                            
+                                <div class="actionDetailBody" style="width: auto;">
+                                    <a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${beEntry.BEKey}/#${encodeURIComponent(beEntry.realModifierNamne)}" target="_blank">
+                                        Go to BE Ability&nbsp;
+                                        <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                                    </a>
+                                </div>
+
+                                <div class="actionDetailBody" style="width: auto;">
+                                    <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${beEntry.actualParams ?? "N/A"}]</div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    ` : ""}`
+                }
+
+                if (buttonString) {
+                    readSelection("PFDescriptionBox").style.display = "block";
+                    buttonString = `<div class="rotationsSectionRowHolder2Overview" style="display: flex">
+                        ${buttonString}
+                    </div>`;
+
+                    readSelection("PFDescriptionBox").innerHTML += buttonString;
+                }
+                // ${arrayAbilityStringer}
+            }
         }
         else {
             for (let i=0;i<mocSchedule.length;i++) {

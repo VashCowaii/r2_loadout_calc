@@ -1,0 +1,111 @@
+const configAbility = {
+  "fileName": "-1097634517_BattleEventAbility_RogueDLCSummonMonsterEvent02",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [],
+  "whenAdded": [
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"679388470\">BattleEventAbility_RogueDLCSummonMonsterEvent02_Modifier</a>"
+    }
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__679388470\">BattleEventAbility_RogueDLCSummonMonsterEvent02_Modifier</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "SummonCount"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Entity Death [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "SummonCount",
+                  "value": {
+                    "operator": "Variables[0] (Monster_W1_CocoliaP2_00_SummonCount) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(Monster_W1_CocoliaP2_00_SummonCount + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "Monster_W1_CocoliaP2_00_SummonCount"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Insert_Flag",
+                    "compareType": "=",
+                    "value2": 0,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Insert_Flag",
+                      "value": 1
+                    },
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "BattleEventAbility_RogueDLCSummonMonsterEvent02_Insert",
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "priorityTag": "PROG_MonsterLowest",
+                      "canHitNonTargets": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    }
+  ]
+}

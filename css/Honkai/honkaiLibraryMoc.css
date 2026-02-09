@@ -1,4 +1,4 @@
-.enemyLinkerText, .actionDetailBody2DescriptionStratDesc {
+.enemyLinkerText, .actionDetailBody2DescriptionStratDesc,.eidolonRowNameTriggerBEAbility {
     font-family: "Montserrat-Light";
 }
 
@@ -404,6 +404,33 @@
 .exportButtonIcon {
     width: 20px;
     height: 20px;
+}
+
+.eidolonRowBoxHolderBEAbility { 
+    width: 100%;
+
+    /* height: 50%;
+    max-height: 50%;
+    min-height: 50%; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: flex-start;
+    /* margin: 2px; */
+    /* max-width: 400px; */
+    box-sizing: border-box;
+}
+.eidolonRowNameTriggerBEAbility {
+    font-size: 20px;
+    width: 100%;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-top: 2px;
+    /* padding-left: 5px; */
+    box-sizing: border-box;
 }
 
 
@@ -1145,6 +1172,11 @@
 
 
 @media (max-width: 768px) {
+    .eidolonRowBoxHolderBEAbility,.eidolonRowNameTriggerBEAbility {
+        flex-direction: column;
+        white-space: normal;
+        flex-wrap: wrap;
+    }
     .superimpositionButtonActivityButton  {
         height: auto;
         min-height: 40px;

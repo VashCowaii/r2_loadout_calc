@@ -620,6 +620,11 @@ let mocSchedule = [
                 "enemyLevel": 82,
                 "modifiersToAdd": [],
                 "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "Colossus_PassiveAbility02_Weekly"
+                  }
+                ],
                 "stageType": "Cocoon",
                 "enemyList": [
                   [

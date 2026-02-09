@@ -3913,11 +3913,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "TDF_TotalStanceDamageOnTarget",
                       "value": {
-                        "operator": "Variables[0] (DamagePercentage) || RETURN",
-                        "displayLines": "DamagePercentage",
+                        "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || RETURN",
+                        "displayLines": "TDF_TotalStanceDamageOnTarget",
                         "constants": [],
                         "variables": [
-                          "DamagePercentage"
+                          "TDF_TotalStanceDamageOnTarget"
                         ]
                       }
                     }
@@ -3953,13 +3953,13 @@ const compositeAbilityObject = {
                           }
                         },
                         "DamageBreak": {
-                          "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || Variables[1] (StanceValue) || Constants[0] (30) || DIV || MUL || RETURN",
-                          "displayLines": "(TDF_TotalStanceDamageOnTarget * (StanceValue / 30))",
+                          "operator": "Variables[0] (DamagePercentage) || Variables[1] (StanceValue) || Constants[0] (30) || DIV || MUL || RETURN",
+                          "displayLines": "(DamagePercentage * (StanceValue / 30))",
                           "constants": [
                             30
                           ],
                           "variables": [
-                            "TDF_TotalStanceDamageOnTarget",
+                            "DamagePercentage",
                             "StanceValue"
                           ]
                         },
@@ -4034,11 +4034,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "TDF_TotalStanceDamageOnTarget",
                       "value": {
-                        "operator": "Variables[0] (DamagePercentage) || RETURN",
-                        "displayLines": "DamagePercentage",
+                        "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || RETURN",
+                        "displayLines": "TDF_TotalStanceDamageOnTarget",
                         "constants": [],
                         "variables": [
-                          "DamagePercentage"
+                          "TDF_TotalStanceDamageOnTarget"
                         ]
                       }
                     }
@@ -4074,13 +4074,13 @@ const compositeAbilityObject = {
                           }
                         },
                         "DamageBreak": {
-                          "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || Variables[1] (StanceValue) || Constants[0] (30) || DIV || MUL || RETURN",
-                          "displayLines": "(TDF_TotalStanceDamageOnTarget * (StanceValue / 30))",
+                          "operator": "Variables[0] (DamagePercentage) || Variables[1] (StanceValue) || Constants[0] (30) || DIV || MUL || RETURN",
+                          "displayLines": "(DamagePercentage * (StanceValue / 30))",
                           "constants": [
                             30
                           ],
                           "variables": [
-                            "TDF_TotalStanceDamageOnTarget",
+                            "DamagePercentage",
                             "StanceValue"
                           ]
                         },
@@ -4161,11 +4161,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "TDF_TotalStanceDamageOnTarget",
                       "value": {
-                        "operator": "Variables[0] (DamagePercentage) || RETURN",
-                        "displayLines": "DamagePercentage",
+                        "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || RETURN",
+                        "displayLines": "TDF_TotalStanceDamageOnTarget",
                         "constants": [],
                         "variables": [
-                          "DamagePercentage"
+                          "TDF_TotalStanceDamageOnTarget"
                         ]
                       }
                     }
@@ -4175,13 +4175,13 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "BreakDamagePercentage",
                   "value": {
-                    "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || Variables[1] (StanceValue) || Constants[0] (30) || DIV || MUL || RETURN",
-                    "displayLines": "(TDF_TotalStanceDamageOnTarget * (StanceValue / 30))",
+                    "operator": "Variables[0] (DamagePercentage) || Variables[1] (StanceValue) || Constants[0] (30) || DIV || MUL || RETURN",
+                    "displayLines": "(DamagePercentage * (StanceValue / 30))",
                     "constants": [
                       30
                     ],
                     "variables": [
-                      "TDF_TotalStanceDamageOnTarget",
+                      "DamagePercentage",
                       "StanceValue"
                     ]
                   }
@@ -4274,11 +4274,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "TDF_TotalStanceDamageOnTarget",
                       "value": {
-                        "operator": "Variables[0] (DamagePercentage) || RETURN",
-                        "displayLines": "DamagePercentage",
+                        "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || RETURN",
+                        "displayLines": "TDF_TotalStanceDamageOnTarget",
                         "constants": [],
                         "variables": [
-                          "DamagePercentage"
+                          "TDF_TotalStanceDamageOnTarget"
                         ]
                       }
                     }
@@ -4288,13 +4288,13 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "BreakDamagePercentage",
                   "value": {
-                    "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || Variables[1] (StanceValue) || Constants[0] (30) || DIV || MUL || RETURN",
-                    "displayLines": "(TDF_TotalStanceDamageOnTarget * (StanceValue / 30))",
+                    "operator": "Variables[0] (DamagePercentage) || Variables[1] (StanceValue) || Constants[0] (30) || DIV || MUL || RETURN",
+                    "displayLines": "(DamagePercentage * (StanceValue / 30))",
                     "constants": [
                       30
                     ],
                     "variables": [
-                      "TDF_TotalStanceDamageOnTarget",
+                      "DamagePercentage",
                       "StanceValue"
                     ]
                   }

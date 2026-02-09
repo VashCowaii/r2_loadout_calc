@@ -26,7 +26,8 @@
         </li>
         <li>Added an expanded and closed arrow for expansive entries, to help identify when something is closed or not.</li>
         <li>Fixes for css on Firefox browsers(I hate everyone who uses this browser)</li>
-        <li>Removed a duplicate removal dependency display on modifier creation.</li>
+        <li>Removed a duplicate Removal Dependency display on modifier creation.</li>
+        <li>Removed a duplicate Compute Targets display on computation.</li>
 
         <h3>Effect Lookup</h3>
         <li>Similar to the above, effects that have seen a source definition within an event reader entry, ANYWHERE, will now link to the associated definition.
@@ -34,8 +35,13 @@
             <li>A slight catch with this though is that there are thousands of modifiers that never have a real name, and they don't show up in the effect lookup because of it. There are plenty of modifiers that have undefined names, but that's different since they still have a name parameters. So while this is super handy to have, just note that it is NOT the source of truth for modifiers as modifiers can have unnamed parent modifiers that control several instead of just one named modifier handling it all.</li>
         </li>
 
-        <!-- <h3>Endgame Mode Pages</h3>
-        <li>Fixed an issue that prevent activities without fixed start dates from displaying at all.</li> -->
+        <h3>Endgame Mode Pages</h3>
+        <li>Added linking to activity battle event abilities. In particular, this is how MoC does its activity bonuses/events.
+            <ul>
+                <li>This also allows you to see battle events that modify things like PF's kill energy bring it to 5 instead of 10, and AA's countdown delay for the first cycle, etc.</li>
+            </ul>
+        </li>
+        <li>Condensed the files that get used on pageload for moc/pf etc. as they were getting kinda large.</li>
 
         <!-- <h3>Weakness Count Leaderboard</h3>
         <li>As a "for fun" page, a leaderboard for weakness counts on enemies and their variants.</li> -->

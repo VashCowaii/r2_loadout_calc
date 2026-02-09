@@ -65,12 +65,12 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "BattleEventAbility_Challenge_Month_21_Count",
                       "value": {
-                        "operator": "Variables[0] (BattleEventAbility_Challenge_Month_21_Count) || Variables[1] (STANDARDSPECIFIC_OBJECT_UNUSED_9) || ADD || RETURN",
-                        "displayLines": "(BattleEventAbility_Challenge_Month_21_Count + STANDARDSPECIFIC_OBJECT_UNUSED_9)",
+                        "operator": "Variables[0] (BattleEventAbility_Challenge_Month_21_Count) || Variables[1] (BattleEvent_P4_ADF) || ADD || RETURN",
+                        "displayLines": "(BattleEventAbility_Challenge_Month_21_Count + BattleEvent_P4_ADF)",
                         "constants": [],
                         "variables": [
                           "BattleEventAbility_Challenge_Month_21_Count",
-                          "STANDARDSPECIFIC_OBJECT_UNUSED_9"
+                          "BattleEvent_P4_ADF"
                         ]
                       }
                     }
@@ -83,11 +83,11 @@ const compositeAbilityObject = {
                     "value1": "BattleEventAbility_Challenge_Month_21_Count",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (STANDARDSPECIFIC_OBJECT_UNUSED_10) || RETURN",
-                      "displayLines": "STANDARDSPECIFIC_OBJECT_UNUSED_10",
+                      "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                      "displayLines": "BattleEvent_P1_ADF",
                       "constants": [],
                       "variables": [
-                        "STANDARDSPECIFIC_OBJECT_UNUSED_10"
+                        "BattleEvent_P1_ADF"
                       ]
                     },
                     "contextScope": "TargetEntity"
@@ -111,11 +111,11 @@ const compositeAbilityObject = {
                     {
                       "name": "Show Attack Time",
                       "time": {
-                        "operator": "Variables[0] (STANDARDSPECIFIC_OBJECT_UNUSED_10) || RETURN",
-                        "displayLines": "STANDARDSPECIFIC_OBJECT_UNUSED_10",
+                        "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                        "displayLines": "BattleEvent_P1_ADF",
                         "constants": [],
                         "variables": [
-                          "STANDARDSPECIFIC_OBJECT_UNUSED_10"
+                          "BattleEvent_P1_ADF"
                         ]
                       },
                       "on": null,
@@ -126,11 +126,11 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "BattleEventAbility_Challenge_Month_21_Count",
                       "value": {
-                        "operator": "Variables[0] (STANDARDSPECIFIC_OBJECT_UNUSED_10) || RETURN",
-                        "displayLines": "STANDARDSPECIFIC_OBJECT_UNUSED_10",
+                        "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                        "displayLines": "BattleEvent_P1_ADF",
                         "constants": [],
                         "variables": [
-                          "STANDARDSPECIFIC_OBJECT_UNUSED_10"
+                          "BattleEvent_P1_ADF"
                         ]
                       }
                     }
@@ -158,12 +158,12 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "BattleEventAbility_Challenge_Month_21_Count",
                       "value": {
-                        "operator": "Variables[0] (BattleEventAbility_Challenge_Month_21_Count) || Variables[1] (STANDARDSPECIFIC_OBJECT_UNUSED_11) || ADD || RETURN",
-                        "displayLines": "(BattleEventAbility_Challenge_Month_21_Count + STANDARDSPECIFIC_OBJECT_UNUSED_11)",
+                        "operator": "Variables[0] (BattleEventAbility_Challenge_Month_21_Count) || Variables[1] (BattleEvent_P3_ADF) || ADD || RETURN",
+                        "displayLines": "(BattleEventAbility_Challenge_Month_21_Count + BattleEvent_P3_ADF)",
                         "constants": [],
                         "variables": [
                           "BattleEventAbility_Challenge_Month_21_Count",
-                          "STANDARDSPECIFIC_OBJECT_UNUSED_11"
+                          "BattleEvent_P3_ADF"
                         ]
                       }
                     },
@@ -184,11 +184,11 @@ const compositeAbilityObject = {
                     "value1": "BattleEventAbility_Challenge_Month_21_Count",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (STANDARDSPECIFIC_OBJECT_UNUSED_10) || RETURN",
-                      "displayLines": "STANDARDSPECIFIC_OBJECT_UNUSED_10",
+                      "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                      "displayLines": "BattleEvent_P1_ADF",
                       "constants": [],
                       "variables": [
-                        "STANDARDSPECIFIC_OBJECT_UNUSED_10"
+                        "BattleEvent_P1_ADF"
                       ]
                     },
                     "contextScope": "TargetEntity"
@@ -212,11 +212,11 @@ const compositeAbilityObject = {
                     {
                       "name": "Show Attack Time",
                       "time": {
-                        "operator": "Variables[0] (STANDARDSPECIFIC_OBJECT_UNUSED_10) || RETURN",
-                        "displayLines": "STANDARDSPECIFIC_OBJECT_UNUSED_10",
+                        "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                        "displayLines": "BattleEvent_P1_ADF",
                         "constants": [],
                         "variables": [
-                          "STANDARDSPECIFIC_OBJECT_UNUSED_10"
+                          "BattleEvent_P1_ADF"
                         ]
                       },
                       "on": null,
@@ -227,11 +227,11 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "BattleEventAbility_Challenge_Month_21_Count",
                       "value": {
-                        "operator": "Variables[0] (STANDARDSPECIFIC_OBJECT_UNUSED_10) || RETURN",
-                        "displayLines": "STANDARDSPECIFIC_OBJECT_UNUSED_10",
+                        "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                        "displayLines": "BattleEvent_P1_ADF",
                         "constants": [],
                         "variables": [
-                          "STANDARDSPECIFIC_OBJECT_UNUSED_10"
+                          "BattleEvent_P1_ADF"
                         ]
                       }
                     }
