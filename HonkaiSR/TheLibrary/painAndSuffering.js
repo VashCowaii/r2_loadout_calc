@@ -6707,6 +6707,8 @@ const megaParsingFuckeryPain = {
             "from",
             "to",
             "team",
+            "abilityOwnerType",
+            "abilityName",
 
             "valueType",
             "contextScope",
@@ -6742,6 +6744,9 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.from,"From",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.to,"To",true)}
 
+            ${getStandardNameDisplay(initialCounter,parseRef.abilityOwnerType,"Ability Owner Type",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.abilityName,"Ability Name")}
+            
             ${getStandardNameDisplay(initialCounter,parseRef.contextScope,"Context")}
             ${getStandardNameDisplay(initialCounter,parseRef.team,"Team")}
             ${getStandardNameDisplay(initialCounter,parseRef.includeInjectedActions,"Include Injected Actions")}

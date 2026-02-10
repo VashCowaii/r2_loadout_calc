@@ -1787,7 +1787,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_SW_Boss_DOT_Poison",
+    "name": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>",
     "realName": "Wind Shear",
     "aim": "Debuff",
     "desc": "Takes Wind DMG at the start of each turn for a certain number of turns.",
@@ -1795,7 +1795,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_SW_Boss_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect is stackable.",
@@ -1806,7 +1806,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_SW_Boss_DamageTakenUp",
+    "name": "<a class=\"gModGreen\" id=\"-658511969\">Monster_SW_Boss_DamageTakenUp</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG received by #1[i]%. This effect is stackable.",
@@ -1817,7 +1817,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_SW_Minion01_Split",
+    "name": "<a class=\"gModGreen\" id=\"1780753426\">Monster_SW_Minion01_Split</a>",
     "realName": "Mitosis: Warning",
     "aim": "Other",
     "desc": "Propagate after #1[i] turn(s). Cannot propagate during the turn in which this unit recovers from Weakness Break.",
@@ -1828,7 +1828,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_SW_Minion01_SplitEffect",
+    "name": "<a class=\"gModGreen\" id=\"-157441217\">Monster_SW_Minion01_SplitEffect</a>",
     "realName": "Propagation",
     "aim": "Other",
     "desc": "Propagate in the next turn.",
@@ -1836,7 +1836,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_SW_Boss_01_DamageTakenUp",
+    "name": "<a class=\"gModGreen\" id=\"-257262548\">Monster_SW_Boss_01_DamageTakenUp</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG received by #1[i]%. This effect is stackable.",
@@ -1847,7 +1847,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_SW_Boss_01_DamageReduce",
+    "name": "<a class=\"gModGreen\" id=\"-850302516\">Monster_SW_Boss_01_DamageReduce</a>",
     "realName": "Multiply",
     "aim": "Buff",
     "desc": "Reduces DMG taken by #1[i]%. Summons a regular Swarm every time this unit is attacked. When this unit's Weakness is Broken, deals Toughness Reduction equal to its own max Toughness to all friendly units and increases the DMG taken by all other friendly units besides the target themselves.",
@@ -3434,7 +3434,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_SW_Boss_01_IF_SwarmArmor",
+    "name": "<a class=\"gModGreen\" id=\"-2022523841\">Enemy_SW_Boss_01_IF_SwarmArmor</a>",
     "realName": "Insect Egg",
     "aim": "Other",
     "desc": "Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\"",
@@ -3442,7 +3442,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_SW_Boss_01_IF_MinionsEnhancement",
+    "name": "<a class=\"gModGreen\" id=\"-103304753\">Enemy_SW_Boss_01_IF_MinionsEnhancement</a>",
     "realName": "Growth Hormones",
     "aim": "Other",
     "desc": "Each stack increases ATK by #1[i]%.",

@@ -14383,7 +14383,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8022011": {
       "8022011": {
@@ -14416,7 +14416,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Juvenile Sting"
     },
     "groupName": "Juvenile Sting"
@@ -14458,7 +14458,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8022021": {
       "8022021": {
@@ -14496,7 +14496,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Lesser Sting"
     },
     "groupName": "Lesser Sting"
@@ -14515,7 +14515,7 @@ let basicEnemyList = {
           "Ice"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8022031": {
       "8022031": {
@@ -14553,7 +14553,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gnaw Sting"
     },
     "groupName": "Gnaw Sting"
@@ -14567,7 +14567,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false
+      "hasReader": true
     },
     "8024011": {
       "8024011": {
@@ -14628,7 +14628,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Swarm: True Sting"
     },
     "8024012": {
@@ -14647,7 +14647,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Swarm: True Sting (Complete)"
     },
     "8024013": {
@@ -14665,7 +14665,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Swarm: True Sting"
     },
     "groupName": "Swarm: True Sting (Complete)"
@@ -14696,7 +14696,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "8025011": {
       "8025011": {
@@ -14740,7 +14740,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Sky-Shrouding Stardevourer Swarm"
     },
     "groupName": "Starcrusher Swarm King: Skaracabaz (Synthetic)"

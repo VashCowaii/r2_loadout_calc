@@ -1195,11 +1195,11 @@ const compositeAbilityObject = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (Monster_W1_CocoliaP2_00_SummonCount) || RETURN",
-            "displayLines": "Monster_W1_CocoliaP2_00_SummonCount",
+            "operator": "Variables[0] (SummonCount) || RETURN",
+            "displayLines": "SummonCount",
             "constants": [],
             "variables": [
-              "Monster_W1_CocoliaP2_00_SummonCount"
+              "SummonCount"
             ]
           },
           "caseEvents": [
@@ -4784,11 +4784,11 @@ const compositeAbilityObject = {
         {
           "name": "SWITCH",
           "switchValue": {
-            "operator": "Variables[0] (Monster_W1_CocoliaP2_00_SummonCount) || RETURN",
-            "displayLines": "Monster_W1_CocoliaP2_00_SummonCount",
+            "operator": "Variables[0] (SummonCount) || RETURN",
+            "displayLines": "SummonCount",
             "constants": [],
             "variables": [
-              "Monster_W1_CocoliaP2_00_SummonCount"
+              "SummonCount"
             ]
           },
           "caseEvents": [

@@ -1413,6 +1413,163 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Swarm: Skill06 Camera Target",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Join Targets",
+              "TargetList": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Swarm: Skill06 Target}}"
+                },
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Swarm: Skill06 Target",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Enemy Team All}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "ENEMIES_OBJECT_UNUSED__63"
+                      },
+                      {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "ENEMIES_OBJECT_UNUSED__64"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Sting Bug: Lowest Enhancement Level",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All}}"
+                    },
+                    {
+                      "name": "Filter by Life-State",
+                      "state": "Mask_AliveOrLimbo"
+                    },
+                    "Shuffle Targets"
+                  ]
+                },
+                {
+                  "name": "Sort by Modifier Value",
+                  "modifier": "<a class=\"gModGreen\" id=\"-103304753\">Enemy_SW_Boss_01_IF_MinionsEnhancement</a>[<span class=\"descriptionNumberColor\">Growth Hormones</span>]",
+                  "value": "Layer"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Target is Unselectable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Living State",
+                        "state": "Bit_OnStage",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      },
+                      {
+                        "name": "Enemy ID",
+                        "ID": 8025011,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": "Sky-Shrouding Stardevourer Swarm",
+                        "isBaseCompare": true
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-103304753\">Enemy_SW_Boss_01_IF_MinionsEnhancement</a>[<span class=\"descriptionNumberColor\">Growth Hormones</span>]",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value1": "<a class=\"gModGreen\" id=\"-103304753\">Enemy_SW_Boss_01_IF_MinionsEnhancement</a>[<span class=\"descriptionNumberColor\">Growth Hormones</span>]",
+                        "compareType": "<",
+                        "value2": 3,
+                        "valueType": "Layer"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "Return Target",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Pollux",
           "isTargetOperator": false,
           "execute": [

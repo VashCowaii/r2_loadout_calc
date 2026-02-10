@@ -56,13 +56,13 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "SummonCount",
                   "value": {
-                    "operator": "Variables[0] (Monster_W1_CocoliaP2_00_SummonCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Monster_W1_CocoliaP2_00_SummonCount + 1)",
+                    "operator": "Variables[0] (SummonCount) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(SummonCount + 1)",
                     "constants": [
                       1
                     ],
                     "variables": [
-                      "Monster_W1_CocoliaP2_00_SummonCount"
+                      "SummonCount"
                     ]
                   }
                 },
