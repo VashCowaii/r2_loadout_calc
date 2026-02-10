@@ -1943,7 +1943,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_AventurinePart_SpeedZero",
+    "name": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>",
     "realName": "Fickle Fortune",
     "aim": "Other",
     "desc": "Immune to DMG. When this unit is attacked by a target that has entered the Gamble, apply 1 random number (between 1 and 6) to the target.",
@@ -2131,7 +2131,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_AventurinePart_SpeedZero_RL",
+    "name": "<a class=\"gModGreen\" id=\"-1321309283\">Monster_W3_AventurinePart_SpeedZero_RL</a>",
     "realName": "Forever Concealed",
     "aim": "Other",
     "desc": "When this unit is attacked by a target that has entered the Gamble, the Gamble's odds are doubled.",
@@ -2139,7 +2139,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_AventurinePart_Odds_EnergyBar_RL",
+    "name": "<a class=\"gModGreen\" id=\"-96862504\">Monster_W3_AventurinePart_Odds_EnergyBar_RL</a>",
     "realName": "Odds",
     "aim": "Other",
     "desc": "Current Odds — 1:#1[i]. Highest Odds — 1:#2[i].",
@@ -2151,7 +2151,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_AventurinePart_DeathRattle_RL",
+    "name": "<a class=\"gModGreen\" id=\"288143778\">Monster_W3_AventurinePart_DeathRattle_RL</a>",
     "realName": "Influx of Fortuity",
     "aim": "Other",
     "desc": "When this unit is attacked by a target that has entered the Gamble, this unit always generates a roll of 6, and uses Punishment of Defeat when the Gamble ends.",
@@ -2533,7 +2533,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_AventurinePart_01_BlockDamage_RL",
+    "name": "<a class=\"gModGreen\" id=\"-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>",
     "realName": "Fickle Fortune",
     "aim": "Other",
     "desc": "The minimum HP is 1. When attacked by a target that has entered the gamble, this unit gains a random number from 1 to 6. when its health drops to 1, this unit gains the Influx of Fortuity effect.",

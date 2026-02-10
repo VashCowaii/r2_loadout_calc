@@ -4528,6 +4528,23 @@ const megaParsingFuckeryPain = {
         <div class="modifierDetailsBox">
         </div>`;
     },
+    "In Action State"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "invertCondition",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"In Action State");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.invertCondition ? "NOT " : ""}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+        </div>`;
+    },
     "Has Modifier"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -6746,7 +6763,7 @@ const megaParsingFuckeryPain = {
 
             ${getStandardNameDisplay(initialCounter,parseRef.abilityOwnerType,"Ability Owner Type",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.abilityName,"Ability Name")}
-            
+
             ${getStandardNameDisplay(initialCounter,parseRef.contextScope,"Context")}
             ${getStandardNameDisplay(initialCounter,parseRef.team,"Team")}
             ${getStandardNameDisplay(initialCounter,parseRef.includeInjectedActions,"Include Injected Actions")}

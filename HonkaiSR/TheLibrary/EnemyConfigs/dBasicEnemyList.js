@@ -17927,17 +17927,17 @@ let basicEnemyList = {
     },
     "8032030": {
       "8032030": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"All or Nothing\""
     },
     "8032031": {
       "8032031": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"All or Nothing\""
     },
     "8032032": {
       "8032032": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"All or Nothing\""
     },
     "8032033": {
@@ -17981,7 +17981,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"All or Nothing\""
     },
     "8032034": {
@@ -18025,7 +18025,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"All or Nothing: Double Fortune\""
     }
   }
