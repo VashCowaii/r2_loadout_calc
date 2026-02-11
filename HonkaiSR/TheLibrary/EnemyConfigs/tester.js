@@ -4413,22 +4413,24 @@ const userTriggers = {
 
         let resistanceStringer = "";
         let resistanceAlternator = 2;
-        for (let resEntry in newCharRef.resMod) {
-            if (resistanceAlternator === 2) {resistanceAlternator = 0;}
-            resistanceAlternator++;
+        if (newCharRef.resMod) {
+            for (let resEntry in newCharRef.resMod) {
+                if (resistanceAlternator === 2) {resistanceAlternator = 0;}
+                resistanceAlternator++;
 
-            
-
-            // resNameImageConversions
-            const resValue = +(newCharRef.resMod[resEntry] * 100).toFixed(7)
-            resistanceStringer += `<div class="imageRowStatisticBox${resistanceAlternator} imageRowStatisticBoxEnemyAdjustmentRow">
-                <div class="imageRowStatisticImageBoxEnemyAdjustment">
-                <img src="/HonkaiSR/misc/${resNameImageConversions[resEntry]}" class="imageRowStatisticImage">
-                <div class="imageRowStatisticNameBox">${resNameConversions[resEntry] ?? resEntry}</div>
-                </div>
                 
-                <div class="imageRowStatisticStatBox">${resValue.toLocaleString()}%</div>
-            </div>`
+
+                // resNameImageConversions
+                const resValue = +(newCharRef.resMod[resEntry] * 100).toFixed(7)
+                resistanceStringer += `<div class="imageRowStatisticBox${resistanceAlternator} imageRowStatisticBoxEnemyAdjustmentRow">
+                    <div class="imageRowStatisticImageBoxEnemyAdjustment">
+                    <img src="/HonkaiSR/misc/${resNameImageConversions[resEntry]}" class="imageRowStatisticImage">
+                    <div class="imageRowStatisticNameBox">${resNameConversions[resEntry] ?? resEntry}</div>
+                    </div>
+                    
+                    <div class="imageRowStatisticStatBox">${resValue.toLocaleString()}%</div>
+                </div>`
+            }
         }
 
 
@@ -4441,7 +4443,7 @@ const userTriggers = {
 
         let resIconString = "";
 
-        if (Object.keys(newCharRef.res)?.length) {
+        if (newCharRef.res && Object.keys(newCharRef.res)?.length) {
             resIconString += `<div class="enemyResBoxHolderRow">`
 
             // console.log(newCharRef.res)
