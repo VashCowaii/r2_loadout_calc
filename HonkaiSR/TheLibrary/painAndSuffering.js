@@ -3000,6 +3000,7 @@ const megaParsingFuckeryPain = {
             "mode",
             "target",
             "phase",
+            "applyOverride",
             // "sortByHighest",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Set Enemy Phase");
@@ -3011,6 +3012,7 @@ const megaParsingFuckeryPain = {
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.mode,"Mode")}
             ${getStandardNameDisplay(initialCounter,parseRef.phase,"Phase")}
+            ${getStandardNameDisplay(initialCounter,parseRef.applyOverride,"Apply Override")}
 
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
             
@@ -3960,6 +3962,48 @@ const megaParsingFuckeryPain = {
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.time,"Time")}
+        </div>`;
+    },
+    "Apply Boss Phase Change Data"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "on",
+            "icon",
+            // "whitelistTag",
+            // "whitelistType",
+            // "isLock",
+            // "state",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Apply Boss Phase Change Data");
+        // initialCounter++;
+
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Apply Boss Phase Change Data:</div>
+                
+        </div>
+        <div class="modifierDetailsBox">
+        </div>`;
+    },
+    "Update Enemy Display"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "on",
+            "icon",
+            // "whitelistTag",
+            // "whitelistType",
+            // "isLock",
+            // "state",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Update Enemy Display");
+        // initialCounter++;
+
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Update Enemy Display:</div>
+                ${parseRef.icon ? `<img src="/HonkaiSR/enemiesSmol/${parseRef.icon}" class="characterDisplayLogStatIconEnemyIcon">` : ""}
+                
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.on,"Target",true)}
         </div>`;
     },
     "Lock Target AV"(parseRef,initialCounter) {

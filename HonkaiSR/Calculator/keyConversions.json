@@ -38,6 +38,7 @@
 
     "Level_FinalDamageAddedRatio": "StageFinalDMG",
 
+    "SPHitRatio": "EnergyRegenHitRate",
     "SPRatioBase": "EnergyRegenRate",
     "SPRatio": "EnergyRegenRateSUM",
     "CurrentSP": "EnergyCurrent",

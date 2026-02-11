@@ -14302,7 +14302,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false
+      "hasReader": true
     },
     "8015021": {
       "8015021": {
@@ -14313,7 +14313,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Phantylia the Undying"
     },
     "8015022": {
@@ -14358,7 +14358,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Opportunistic Provocateur"
     },
     "groupName": "Phantylia the Undying"
@@ -17734,7 +17734,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundance Lotus"
     },
     "8012201": {
@@ -17744,7 +17744,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundance Lotus"
     },
     "8012202": {
@@ -17754,7 +17754,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundance Lotus"
     },
     "8012203": {
@@ -17764,7 +17764,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundance Lotus"
     },
     "8012204": {
@@ -17776,7 +17776,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundance Lotus"
     },
     "8012205": {
@@ -17788,7 +17788,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundance Lotus"
     },
     "8012210": {
@@ -17799,7 +17799,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Destruction Lotus"
     },
     "8012211": {
@@ -17810,7 +17810,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Destruction Lotus"
     },
     "8012212": {
@@ -17821,7 +17821,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Destruction Lotus"
     },
     "8012213": {
@@ -17832,7 +17832,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Destruction Lotus"
     },
     "8012214": {
@@ -17844,7 +17844,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Destruction Lotus"
     },
     "8012215": {
@@ -17856,7 +17856,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Destruction Lotus"
     },
     "8013141": {

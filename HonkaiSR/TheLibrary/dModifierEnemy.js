@@ -1714,7 +1714,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Huanlong_BlackBlood",
+    "name": "<a class=\"gModGreen\" id=\"-1573763827\">Monster_W2_Huanlong_BlackBlood</a>",
     "realName": "Prana-Siphoned",
     "aim": "Debuff",
     "desc": "Decreases Maximum Restorable HP by #1[i]%.",
@@ -1725,7 +1725,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Huanlong_Sign",
+    "name": "<a class=\"gModGreen\" id=\"911555281\">Monster_W2_Huanlong_Sign</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -1733,7 +1733,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_HuanlongPart_Heal",
+    "name": "<a class=\"gModGreen\" id=\"-1471440713\">Monster_W2_HuanlongPart_Heal</a>",
     "realName": "Vigor",
     "aim": "Buff",
     "desc": "Every action taken restores #1[i]% HP.",
@@ -1744,7 +1744,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_HuanlongPart_01_Activity",
+    "name": "<a class=\"gModGreen\" id=\"1845976277\">Monster_W2_HuanlongPart_01_Activity</a>",
     "realName": "Bloom",
     "aim": "Buff",
     "desc": "Will use Havoc during the next action. This status can be dispelled by abilities.",
@@ -1752,7 +1752,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_W2_HuanlongPart_01_Success",
+    "name": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG received by #1[i]%. This effect is stackable.",
@@ -1763,7 +1763,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_HuanlongPart_01_Dormancy",
+    "name": "<a class=\"gModGreen\" id=\"-1043458445\">Monster_W2_HuanlongPart_01_Dormancy</a>",
     "realName": "Repose",
     "aim": "Other",
     "desc": "In Repose.",
@@ -1771,7 +1771,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_Sign02",
+    "name": "<a class=\"gModGreen\" id=\"-1866067565\">Monster_W2_Huanlong_Sign02</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -1779,7 +1779,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_HuanlongPart_01_WeakControl",
+    "name": "<a class=\"gModGreen\" id=\"569926357\">Monster_W2_HuanlongPart_01_WeakControl</a>",
     "realName": "Weakness Protected",
     "aim": "Other",
     "desc": "When Destruction Lotus is not in Bloom, its Toughness cannot be reduced.",
@@ -3058,7 +3058,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_BlackBonus",
+    "name": "<a class=\"gModGreen\" id=\"-357357562\">Monster_W2_Huanlong_IF_BlackBonus</a>",
     "realName": "Destruction Buff",
     "aim": "Other",
     "desc": "Increases Break Effect by #1[i]%. Unable to obtain buffs from Abundance Lotus again.",
@@ -3069,7 +3069,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Huanlong_IF_WhiteBonus",
+    "name": "<a class=\"gModGreen\" id=\"1948779644\">Monster_W2_Huanlong_IF_WhiteBonus</a>",
     "realName": "Abundance Buff",
     "aim": "Other",
     "desc": "DMG dealt increases by #1[i]%. Unable to obtain any from Destruction Lotus again.",
@@ -3163,7 +3163,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_Black_DeathRattle",
+    "name": "<a class=\"gModGreen\" id=\"947500340\">Monster_W2_Huanlong_IF_Black_DeathRattle</a>",
     "realName": "Destruction Buff",
     "aim": "Other",
     "desc": "Defeating Destruction Lotus can increase Break Effect.",
@@ -3171,7 +3171,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_White_DeathRattle",
+    "name": "<a class=\"gModGreen\" id=\"1149800438\">Monster_W2_Huanlong_IF_White_DeathRattle</a>",
     "realName": "Abundance Buff",
     "aim": "Other",
     "desc": "Defeating Abundance Lotus can increase damage dealt.",
@@ -3179,7 +3179,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_Black_DeathRattle_Invalid",
+    "name": "<a class=\"gModGreen\" id=\"-1834686604\">Monster_W2_Huanlong_IF_Black_DeathRattle_Invalid</a>",
     "realName": "Destruction Buff",
     "aim": "Other",
     "desc": "Abundance buff gained. Defeating Destruction Lotus will not grant the Destruction buff.",
@@ -3187,7 +3187,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_White_DeathRattle_Invalid",
+    "name": "<a class=\"gModGreen\" id=\"1991541642\">Monster_W2_Huanlong_IF_White_DeathRattle_Invalid</a>",
     "realName": "Abundance Buff",
     "aim": "Other",
     "desc": "Destruction buff gained. Defeating Abundance Lotus will not grant the Abundance buff.",
@@ -3195,7 +3195,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_WeaknessProtect",
+    "name": "<a class=\"gModGreen\" id=\"-1788965070\">Monster_W2_Huanlong_IF_WeaknessProtect</a>",
     "realName": "Flower By Another Name",
     "aim": "Buff",
     "desc": "Defeat any Lotus to dispel the Toughness Protection state.",
@@ -3244,7 +3244,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Huanlong_IF_Sign01",
+    "name": "<a class=\"gModGreen\" id=\"-861835202\">Monster_W2_Huanlong_IF_Sign01</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -3252,7 +3252,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_Sign02",
+    "name": "<a class=\"gModGreen\" id=\"-878612821\">Monster_W2_Huanlong_IF_Sign02</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -3260,7 +3260,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_Sign03",
+    "name": "<a class=\"gModGreen\" id=\"-895390440\">Monster_W2_Huanlong_IF_Sign03</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -3268,7 +3268,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_Sign04",
+    "name": "<a class=\"gModGreen\" id=\"-777947107\">Monster_W2_Huanlong_IF_Sign04</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
