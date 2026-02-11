@@ -90,7 +90,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 228005.578026,
+                "aoeSUM": 228005.578026
               }
             ]
           },
@@ -160,7 +162,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Combat_Boss_Pollux_P1",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 980669.1528,
+                "aoeSUM": 980669.1528
               }
             ]
           }
@@ -447,7 +451,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 821544.03333,
+                "aoeSUM": 821544.03333
               }
             ]
           },
@@ -517,7 +523,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Combat_Boss_Pollux_P1",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 3533522.724,
+                "aoeSUM": 3533522.724
               }
             ]
           }
@@ -804,7 +812,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 2304265.161564,
+                "aoeSUM": 2304265.161564
               }
             ]
           },
@@ -874,7 +884,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Combat_Boss_Pollux_P1",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 8947266.159,
+                "aoeSUM": 8947266.159
               }
             ]
           }
@@ -1161,7 +1173,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 8524119.611625,
+                "aoeSUM": 8524119.611625
               }
             ]
           },
@@ -1231,7 +1245,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Combat_Boss_Pollux_P1",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 26397273.636,
+                "aoeSUM": 26397273.636
               }
             ]
           }
@@ -1624,7 +1640,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Spacetrain_Combat_Argenti",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 245167.2882,
+                "aoeSUM": 245167.2882
               }
             ]
           },
@@ -1687,7 +1705,9 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 823762.088352,
+                "aoeSUM": 823762.088352
               }
             ]
           }
@@ -1951,7 +1971,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Spacetrain_Combat_Argenti",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 883380.681,
+                "aoeSUM": 883380.681
               }
             ]
           },
@@ -2014,7 +2036,9 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 3339178.97418,
+                "aoeSUM": 3339178.97418
               }
             ]
           }
@@ -2278,7 +2302,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Spacetrain_Combat_Argenti",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 2408879.3505,
+                "aoeSUM": 2408879.3505
               }
             ]
           },
@@ -2341,7 +2367,9 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 11562620.8824,
+                "aoeSUM": 11562620.8824
               }
             ]
           }
@@ -2608,7 +2636,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Spacetrain_Combat_Argenti",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 12098750.4165,
+                "aoeSUM": 12098750.4165
               }
             ]
           },
@@ -2671,7 +2701,9 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BindingMazeBuff": "3110014"
-                }
+                },
+                "highSTSUM": 29564946.47232,
+                "aoeSUM": 29564946.47232
               }
             ]
           }
@@ -3045,7 +3077,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110013"
-                }
+                },
+                "highSTSUM": 706081.790016,
+                "aoeSUM": 706081.790016
               }
             ]
           },
@@ -3115,7 +3149,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Phantylia_01",
                   "_BindingMazeBuff": "3110013"
-                }
+                },
+                "highSTSUM": 313814.128896,
+                "aoeSUM": 313814.128896
               }
             ]
           }
@@ -3413,7 +3449,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110013"
-                }
+                },
+                "highSTSUM": 3392181.81504,
+                "aoeSUM": 3392181.81504
               }
             ]
           },
@@ -3483,7 +3521,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Phantylia_01",
                   "_BindingMazeBuff": "3110013"
-                }
+                },
+                "highSTSUM": 1272068.18064,
+                "aoeSUM": 1272068.18064
               }
             ]
           }
@@ -3781,7 +3821,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110013"
-                }
+                },
+                "highSTSUM": 10571539.09248,
+                "aoeSUM": 10571539.09248
               }
             ]
           },
@@ -3851,7 +3893,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Phantylia_01",
                   "_BindingMazeBuff": "3110013"
-                }
+                },
+                "highSTSUM": 4404807.9552,
+                "aoeSUM": 4404807.9552
               }
             ]
           }
@@ -4149,7 +4193,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110013"
-                }
+                },
+                "highSTSUM": 25341382.69056,
+                "aoeSUM": 25341382.69056
               }
             ]
           },
@@ -4219,7 +4265,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Phantylia_01",
                   "_BindingMazeBuff": "3110013"
-                }
+                },
+                "highSTSUM": 9503018.50896,
+                "aoeSUM": 9503018.50896
               }
             ]
           }
@@ -4651,7 +4699,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110012"
-                }
+                },
+                "highSTSUM": 245167.2882,
+                "aoeSUM": 304007.43736800004
               }
             ]
           },
@@ -4721,7 +4771,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Combat_Boss_Pollux_P1",
                   "_BindingMazeBuff": "3110012"
-                }
+                },
+                "highSTSUM": 980669.1528,
+                "aoeSUM": 980669.1528
               }
             ]
           }
@@ -5026,7 +5078,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110012"
-                }
+                },
+                "highSTSUM": 883380.681,
+                "aoeSUM": 1095392.0444399999
               }
             ]
           },
@@ -5096,7 +5150,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Combat_Boss_Pollux_P1",
                   "_BindingMazeBuff": "3110012"
-                }
+                },
+                "highSTSUM": 3533522.724,
+                "aoeSUM": 3533522.724
               }
             ]
           }
@@ -5401,7 +5457,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110012"
-                }
+                },
+                "highSTSUM": 2408879.3505,
+                "aoeSUM": 2987010.3946200004
               }
             ]
           },
@@ -5471,7 +5529,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Combat_Boss_Pollux_P1",
                   "_BindingMazeBuff": "3110012"
-                }
+                },
+                "highSTSUM": 8947266.159,
+                "aoeSUM": 8947266.159
               }
             ]
           }
@@ -5779,7 +5839,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110012"
-                }
+                },
+                "highSTSUM": 7424233.210125,
+                "aoeSUM": 9206049.180555
               }
             ]
           },
@@ -5849,7 +5911,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Combat_Boss_Pollux_P1",
                   "_BindingMazeBuff": "3110012"
-                }
+                },
+                "highSTSUM": 23097614.4315,
+                "aoeSUM": 23097614.4315
               }
             ]
           }
@@ -6232,7 +6296,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_LycanKing",
                   "_BindingMazeBuff": "3110011"
-                }
+                },
+                "highSTSUM": 269684.01702,
+                "aoeSUM": 269684.01702
               }
             ]
           },
@@ -6305,7 +6371,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
                   "_BindingMazeBuff": "3110011"
-                }
+                },
+                "highSTSUM": 943894.05957,
+                "aoeSUM": 943894.05957
               }
             ]
           }
@@ -6576,7 +6644,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_LycanKing",
                   "_BindingMazeBuff": "3110011"
-                }
+                },
+                "highSTSUM": 971718.7491,
+                "aoeSUM": 971718.7491
               }
             ]
           },
@@ -6649,7 +6719,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
                   "_BindingMazeBuff": "3110011"
-                }
+                },
+                "highSTSUM": 3401015.62185,
+                "aoeSUM": 3401015.62185
               }
             ]
           }
@@ -6920,7 +6992,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_LycanKing",
                   "_BindingMazeBuff": "3110011"
-                }
+                },
+                "highSTSUM": 2725474.92228,
+                "aoeSUM": 2725474.92228
               }
             ]
           },
@@ -6993,7 +7067,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
                   "_BindingMazeBuff": "3110011"
-                }
+                },
+                "highSTSUM": 9539162.22798,
+                "aoeSUM": 9539162.22798
               }
             ]
           }
@@ -7264,7 +7340,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_LycanKing",
                   "_BindingMazeBuff": "3110011"
-                }
+                },
+                "highSTSUM": 6775300.23324,
+                "aoeSUM": 6775300.23324
               }
             ]
           },
@@ -7337,7 +7415,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
                   "_BindingMazeBuff": "3110011"
-                }
+                },
+                "highSTSUM": 16938250.5831,
+                "aoeSUM": 16938250.5831
               }
             ]
           }
@@ -7711,7 +7791,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Cmobat_Boss_FireProwler_P2",
                   "_BindingMazeBuff": "3110010"
-                }
+                },
+                "highSTSUM": 269684.01702,
+                "aoeSUM": 269684.01702
               }
             ]
           },
@@ -7780,7 +7862,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Suppy_Zone_Combat_Beast",
                   "_BindingMazeBuff": "3110010"
-                }
+                },
+                "highSTSUM": 242715.615318,
+                "aoeSUM": 242715.615318
               }
             ]
           }
@@ -8025,7 +8109,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Cmobat_Boss_FireProwler_P2",
                   "_BindingMazeBuff": "3110010"
-                }
+                },
+                "highSTSUM": 971718.7491,
+                "aoeSUM": 971718.7491
               }
             ]
           },
@@ -8094,7 +8180,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Suppy_Zone_Combat_Beast",
                   "_BindingMazeBuff": "3110010"
-                }
+                },
+                "highSTSUM": 874546.87419,
+                "aoeSUM": 874546.87419
               }
             ]
           }
@@ -8339,7 +8427,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Cmobat_Boss_FireProwler_P2",
                   "_BindingMazeBuff": "3110010"
-                }
+                },
+                "highSTSUM": 2725474.92228,
+                "aoeSUM": 2725474.92228
               }
             ]
           },
@@ -8408,7 +8498,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Suppy_Zone_Combat_Beast",
                   "_BindingMazeBuff": "3110010"
-                }
+                },
+                "highSTSUM": 2452927.430052,
+                "aoeSUM": 2452927.430052
               }
             ]
           }
@@ -8653,7 +8745,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Cmobat_Boss_FireProwler_P2",
                   "_BindingMazeBuff": "3110010"
-                }
+                },
+                "highSTSUM": 4839500.1666,
+                "aoeSUM": 4839500.1666
               }
             ]
           },
@@ -8722,7 +8816,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Suppy_Zone_Combat_Beast",
                   "_BindingMazeBuff": "3110010"
-                }
+                },
+                "highSTSUM": 7622212.762395,
+                "aoeSUM": 7622212.762395
               }
             ]
           }
@@ -9099,7 +9195,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110009"
-                }
+                },
+                "highSTSUM": 199198.4216626,
+                "aoeSUM": 247006.0428616
               }
             ]
           },
@@ -9168,7 +9266,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110009"
-                }
+                },
+                "highSTSUM": 190004.648355,
+                "aoeSUM": 190004.648355
               }
             ]
           }
@@ -9505,7 +9605,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110009"
-                }
+                },
+                "highSTSUM": 717746.8033126,
+                "aoeSUM": 890006.0361076
               }
             ]
           },
@@ -9574,7 +9676,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110009"
-                }
+                },
+                "highSTSUM": 684620.027775,
+                "aoeSUM": 684620.027775
               }
             ]
           }
@@ -9911,7 +10015,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110009"
-                }
+                },
+                "highSTSUM": 2013134.885775,
+                "aoeSUM": 2496287.258361
               }
             ]
           },
@@ -9980,7 +10086,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110009"
-                }
+                },
+                "highSTSUM": 1920220.96797,
+                "aoeSUM": 1920220.96797
               }
             ]
           }
@@ -10320,7 +10428,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110009"
-                }
+                },
+                "highSTSUM": 5774403.607875,
+                "aoeSUM": 7160260.473765
               }
             ]
           },
@@ -10389,7 +10499,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110009"
-                }
+                },
+                "highSTSUM": 6137366.12037,
+                "aoeSUM": 6137366.12037
               }
             ]
           }
@@ -10807,7 +10919,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110008"
-                }
+                },
+                "highSTSUM": 588401.49168,
+                "aoeSUM": 588401.49168
               }
             ]
           },
@@ -10879,7 +10993,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_LycanKing",
                   "_BindingMazeBuff": "3110008"
-                }
+                },
+                "highSTSUM": 269684.01702,
+                "aoeSUM": 269684.01702
               }
             ]
           }
@@ -11161,7 +11277,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110008"
-                }
+                },
+                "highSTSUM": 2120113.6344,
+                "aoeSUM": 2120113.6344
               }
             ]
           },
@@ -11233,7 +11351,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_LycanKing",
                   "_BindingMazeBuff": "3110008"
-                }
+                },
+                "highSTSUM": 971718.7491,
+                "aoeSUM": 971718.7491
               }
             ]
           }
@@ -11515,7 +11635,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110008"
-                }
+                },
+                "highSTSUM": 5946490.73952,
+                "aoeSUM": 5946490.73952
               }
             ]
           },
@@ -11587,7 +11709,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_LycanKing",
                   "_BindingMazeBuff": "3110008"
-                }
+                },
+                "highSTSUM": 2725474.92228,
+                "aoeSUM": 2725474.92228
               }
             ]
           }
@@ -11869,7 +11993,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110008"
-                }
+                },
+                "highSTSUM": 12670691.34528,
+                "aoeSUM": 12670691.34528
               }
             ]
           },
@@ -11941,7 +12067,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_LycanKing",
                   "_BindingMazeBuff": "3110008"
-                }
+                },
+                "highSTSUM": 4839500.1666,
+                "aoeSUM": 4839500.1666
               }
             ]
           }
@@ -12322,7 +12450,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Penocony_Combat_Aventurine_Common",
                   "_BindingMazeBuff": "3110007"
-                }
+                },
+                "highSTSUM": 257425.65261,
+                "aoeSUM": 257425.65261
               }
             ]
           },
@@ -12385,7 +12515,9 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BindingMazeBuff": "3110007"
-                }
+                },
+                "highSTSUM": 514851.30522,
+                "aoeSUM": 514851.30522
               }
             ]
           }
@@ -12635,7 +12767,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Penocony_Combat_Aventurine_Common",
                   "_BindingMazeBuff": "3110007"
-                }
+                },
+                "highSTSUM": 927549.71505,
+                "aoeSUM": 927549.71505
               }
             ]
           },
@@ -12698,7 +12832,9 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BindingMazeBuff": "3110007"
-                }
+                },
+                "highSTSUM": 1855099.4301,
+                "aoeSUM": 1855099.4301
               }
             ]
           }
@@ -12948,7 +13084,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Penocony_Combat_Aventurine_Common",
                   "_BindingMazeBuff": "3110007"
-                }
+                },
+                "highSTSUM": 2601589.69854,
+                "aoeSUM": 2601589.69854
               }
             ]
           },
@@ -13011,7 +13149,9 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BindingMazeBuff": "3110007"
-                }
+                },
+                "highSTSUM": 5203179.39708,
+                "aoeSUM": 5203179.39708
               }
             ]
           }
@@ -13261,7 +13401,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Penocony_Combat_Aventurine_Common",
                   "_BindingMazeBuff": "3110007"
-                }
+                },
+                "highSTSUM": 5004483.126825,
+                "aoeSUM": 5004483.126825
               }
             ]
           },
@@ -13324,7 +13466,9 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BindingMazeBuff": "3110007"
-                }
+                },
+                "highSTSUM": 11086854.92712,
+                "aoeSUM": 11086854.92712
               }
             ]
           }
@@ -13683,7 +13827,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110006"
-                }
+                },
+                "highSTSUM": 588401.49168,
+                "aoeSUM": 588401.49168
               }
             ]
           },
@@ -13753,7 +13899,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Phantylia_01",
                   "_BindingMazeBuff": "3110006"
-                }
+                },
+                "highSTSUM": 254973.979728,
+                "aoeSUM": 254973.979728
               }
             ]
           }
@@ -14051,7 +14199,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110006"
-                }
+                },
+                "highSTSUM": 2120113.6344,
+                "aoeSUM": 2120113.6344
               }
             ]
           },
@@ -14121,7 +14271,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Phantylia_01",
                   "_BindingMazeBuff": "3110006"
-                }
+                },
+                "highSTSUM": 918715.90824,
+                "aoeSUM": 918715.90824
               }
             ]
           }
@@ -14419,7 +14571,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110006"
-                }
+                },
+                "highSTSUM": 5946490.73952,
+                "aoeSUM": 5946490.73952
               }
             ]
           },
@@ -14489,7 +14643,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Phantylia_01",
                   "_BindingMazeBuff": "3110006"
-                }
+                },
+                "highSTSUM": 2576812.653792,
+                "aoeSUM": 2576812.653792
               }
             ]
           }
@@ -14787,7 +14943,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110006"
-                }
+                },
+                "highSTSUM": 10558909.454400001,
+                "aoeSUM": 10558909.454400001
               }
             ]
           },
@@ -14857,7 +15015,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Phantylia_01",
                   "_BindingMazeBuff": "3110006"
-                }
+                },
+                "highSTSUM": 5349847.456896,
+                "aoeSUM": 5349847.456896
               }
             ]
           }
@@ -15285,7 +15445,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110005"
-                }
+                },
+                "highSTSUM": 199198.4216626,
+                "aoeSUM": 247006.0428616
               }
             ]
           },
@@ -15348,7 +15510,9 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BindingMazeBuff": "3110005"
-                }
+                },
+                "highSTSUM": 514851.30522,
+                "aoeSUM": 514851.30522
               }
             ]
           }
@@ -15651,7 +15815,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110005"
-                }
+                },
+                "highSTSUM": 717746.8033126,
+                "aoeSUM": 890006.0361076
               }
             ]
           },
@@ -15714,7 +15880,9 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BindingMazeBuff": "3110005"
-                }
+                },
+                "highSTSUM": 1855099.4301,
+                "aoeSUM": 1855099.4301
               }
             ]
           }
@@ -16017,7 +16185,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110005"
-                }
+                },
+                "highSTSUM": 2013134.885775,
+                "aoeSUM": 2496287.258361
               }
             ]
           },
@@ -16080,7 +16250,9 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BindingMazeBuff": "3110005"
-                }
+                },
+                "highSTSUM": 5203179.39708,
+                "aoeSUM": 5203179.39708
               }
             ]
           }
@@ -16386,7 +16558,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110005"
-                }
+                },
+                "highSTSUM": 3574630.804875,
+                "aoeSUM": 4432542.198045
               }
             ]
           },
@@ -16449,7 +16623,9 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BindingMazeBuff": "3110005"
-                }
+                },
+                "highSTSUM": 9239045.7726,
+                "aoeSUM": 9239045.7726
               }
             ]
           }
@@ -16826,7 +17002,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110004"
-                }
+                },
+                "highSTSUM": 190004.648355,
+                "aoeSUM": 190004.648355
               }
             ]
           },
@@ -16908,7 +17086,9 @@ let mocSchedule = [
                   "_BGM": "State_Penocony_Combat_Clock_P1",
                   "_BindingMazeBuff": "3110004",
                   "_CreateBattleEvent": "60019"
-                }
+                },
+                "highSTSUM": 429042.75435,
+                "aoeSUM": 429042.75435
               }
             ]
           }
@@ -17214,7 +17394,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110004"
-                }
+                },
+                "highSTSUM": 684620.027775,
+                "aoeSUM": 684620.027775
               }
             ]
           },
@@ -17296,7 +17478,9 @@ let mocSchedule = [
                   "_BGM": "State_Penocony_Combat_Clock_P1",
                   "_BindingMazeBuff": "3110004",
                   "_CreateBattleEvent": "60019"
-                }
+                },
+                "highSTSUM": 1545916.19175,
+                "aoeSUM": 1545916.19175
               }
             ]
           }
@@ -17602,7 +17786,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110004"
-                }
+                },
+                "highSTSUM": 1920220.96797,
+                "aoeSUM": 1920220.96797
               }
             ]
           },
@@ -17684,7 +17870,9 @@ let mocSchedule = [
                   "_BGM": "State_Penocony_Combat_Clock_P1",
                   "_BindingMazeBuff": "3110004",
                   "_CreateBattleEvent": "60019"
-                }
+                },
+                "highSTSUM": 4335982.8309,
+                "aoeSUM": 4335982.8309
               }
             ]
           }
@@ -17996,7 +18184,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110004"
-                }
+                },
+                "highSTSUM": 4432542.198045,
+                "aoeSUM": 4432542.198045
               }
             ]
           },
@@ -18078,7 +18268,9 @@ let mocSchedule = [
                   "_BGM": "State_Penocony_Combat_Clock_P1",
                   "_BindingMazeBuff": "3110004",
                   "_CreateBattleEvent": "60019"
-                }
+                },
+                "highSTSUM": 7699204.8105,
+                "aoeSUM": 7699204.8105
               }
             ]
           }
@@ -18491,7 +18683,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Penocony_Combat_Aventurine_Common",
                   "_BindingMazeBuff": "3110003"
-                }
+                },
+                "highSTSUM": 214521.377175,
+                "aoeSUM": 214521.377175
               }
             ]
           },
@@ -18561,7 +18755,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Phantylia_01",
                   "_BindingMazeBuff": "3110003"
-                }
+                },
+                "highSTSUM": 196133.83056,
+                "aoeSUM": 196133.83056
               }
             ]
           }
@@ -18835,7 +19031,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Penocony_Combat_Aventurine_Common",
                   "_BindingMazeBuff": "3110003"
-                }
+                },
+                "highSTSUM": 772958.095875,
+                "aoeSUM": 772958.095875
               }
             ]
           },
@@ -18905,7 +19103,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Phantylia_01",
                   "_BindingMazeBuff": "3110003"
-                }
+                },
+                "highSTSUM": 706704.5448,
+                "aoeSUM": 706704.5448
               }
             ]
           }
@@ -19179,7 +19379,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Penocony_Combat_Aventurine_Common",
                   "_BindingMazeBuff": "3110003"
-                }
+                },
+                "highSTSUM": 2167991.41545,
+                "aoeSUM": 2167991.41545
               }
             ]
           },
@@ -19249,7 +19451,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Phantylia_01",
                   "_BindingMazeBuff": "3110003"
-                }
+                },
+                "highSTSUM": 1982163.57984,
+                "aoeSUM": 1982163.57984
               }
             ]
           }
@@ -19523,7 +19727,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Penocony_Combat_Aventurine_Common",
                   "_BindingMazeBuff": "3110003"
-                }
+                },
+                "highSTSUM": 3849602.40525,
+                "aoeSUM": 3849602.40525
               }
             ]
           },
@@ -19593,7 +19799,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Phantylia_01",
                   "_BindingMazeBuff": "3110003"
-                }
+                },
+                "highSTSUM": 3519636.4848,
+                "aoeSUM": 3519636.4848
               }
             ]
           }
@@ -19971,7 +20179,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110002"
-                }
+                },
+                "highSTSUM": 190004.648355,
+                "aoeSUM": 190004.648355
               }
             ]
           },
@@ -20042,7 +20252,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Suppy_Zone_Combat_Beast",
                   "_BindingMazeBuff": "3110002"
-                }
+                },
+                "highSTSUM": 202263.012765,
+                "aoeSUM": 202263.012765
               }
             ]
           }
@@ -20332,7 +20544,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110002"
-                }
+                },
+                "highSTSUM": 684620.027775,
+                "aoeSUM": 684620.027775
               }
             ]
           },
@@ -20403,7 +20617,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Suppy_Zone_Combat_Beast",
                   "_BindingMazeBuff": "3110002"
-                }
+                },
+                "highSTSUM": 728789.061825,
+                "aoeSUM": 728789.061825
               }
             ]
           }
@@ -20693,7 +20909,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110002"
-                }
+                },
+                "highSTSUM": 1920220.96797,
+                "aoeSUM": 1920220.96797
               }
             ]
           },
@@ -20764,7 +20982,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Suppy_Zone_Combat_Beast",
                   "_BindingMazeBuff": "3110002"
-                }
+                },
+                "highSTSUM": 2044106.19171,
+                "aoeSUM": 2044106.19171
               }
             ]
           }
@@ -21054,7 +21274,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Kafuka",
                   "_BindingMazeBuff": "3110002"
-                }
+                },
+                "highSTSUM": 3409647.84465,
+                "aoeSUM": 3409647.84465
               }
             ]
           },
@@ -21125,7 +21347,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Suppy_Zone_Combat_Beast",
                   "_BindingMazeBuff": "3110002"
-                }
+                },
+                "highSTSUM": 3629625.12495,
+                "aoeSUM": 3629625.12495
               }
             ]
           }
@@ -21548,7 +21772,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110001"
-                }
+                },
+                "highSTSUM": 153229.555125,
+                "aoeSUM": 190004.648355
               }
             ]
           },
@@ -21618,7 +21844,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Spacetrain_Combat_Argenti",
                   "_BindingMazeBuff": "3110001"
-                }
+                },
+                "highSTSUM": 153229.555125,
+                "aoeSUM": 153229.555125
               }
             ]
           }
@@ -21935,7 +22163,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110001"
-                }
+                },
+                "highSTSUM": 552112.925625,
+                "aoeSUM": 684620.0277750001
               }
             ]
           },
@@ -22005,7 +22235,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Spacetrain_Combat_Argenti",
                   "_BindingMazeBuff": "3110001"
-                }
+                },
+                "highSTSUM": 552112.925625,
+                "aoeSUM": 552112.925625
               }
             ]
           }
@@ -22322,7 +22554,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110001"
-                }
+                },
+                "highSTSUM": 1978722.323625,
+                "aoeSUM": 2453615.681295
               }
             ]
           },
@@ -22392,7 +22626,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Spacetrain_Combat_Argenti",
                   "_BindingMazeBuff": "3110001"
-                }
+                },
+                "highSTSUM": 1978722.323625,
+                "aoeSUM": 1978722.323625
               }
             ]
           }
@@ -22715,7 +22951,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Belobog_Combat_Cocolia_Low",
                   "_BindingMazeBuff": "3110001"
-                }
+                },
+                "highSTSUM": 2749716.00375,
+                "aoeSUM": 3409647.8446500003
               }
             ]
           },
@@ -22785,7 +23023,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Spacetrain_Combat_Argenti",
                   "_BindingMazeBuff": "3110001"
-                }
+                },
+                "highSTSUM": 2749716.00375,
+                "aoeSUM": 2749716.00375
               }
             ]
           }

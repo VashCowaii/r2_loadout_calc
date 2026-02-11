@@ -174,7 +174,9 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1"
-                }
+                },
+                "highSTSUM": 374979.66066600004,
+                "aoeSUM": 631544.691648
               }
             ]
           },
@@ -425,7 +427,9 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1"
-                }
+                },
+                "highSTSUM": 374979.660666,
+                "aoeSUM": 706540.6237811999
               }
             ]
           },
@@ -706,7 +710,9 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1"
-                }
+                },
+                "highSTSUM": 406556.8952484,
+                "aoeSUM": 765747.9386232
               }
             ]
           },
@@ -928,7 +934,9 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1"
-                }
+                },
+                "highSTSUM": 276300.802596,
+                "aoeSUM": 552601.605192
               }
             ]
           },
@@ -1149,7 +1157,9 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1"
-                }
+                },
+                "highSTSUM": 281234.7454995,
+                "aoeSUM": 457869.90144479997
               }
             ]
           },
@@ -1401,7 +1411,9 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1"
-                }
+                },
+                "highSTSUM": 409517.2609905,
+                "aoeSUM": 621676.805841
               }
             ]
           },
@@ -1654,7 +1666,9 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1"
-                }
+                },
+                "highSTSUM": 266432.916789,
+                "aoeSUM": 455896.3242834001
               }
             ]
           },
@@ -1903,7 +1917,9 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1"
-                }
+                },
+                "highSTSUM": 280247.9569188,
+                "aoeSUM": 465764.2100904
               }
             ]
           },
@@ -2123,7 +2139,9 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1"
-                }
+                },
+                "highSTSUM": 226961.37356100001,
+                "aoeSUM": 339455.27176080004
               }
             ]
           },
@@ -2348,7 +2366,9 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1"
-                }
+                },
+                "highSTSUM": 234855.6822066,
+                "aoeSUM": 390768.27795719996
               }
             ]
           },
@@ -2573,7 +2593,9 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1"
-                }
+                },
+                "highSTSUM": 234855.6822066,
+                "aoeSUM": 388794.7007958
               }
             ]
           },
@@ -2802,7 +2824,9 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1"
-                }
+                },
+                "highSTSUM": 254591.4538206,
+                "aoeSUM": 392741.8551186
               }
             ]
           },
@@ -3022,7 +3046,9 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1"
-                }
+                },
+                "highSTSUM": 284195.1112416,
+                "aoeSUM": 409517.26099050004
               }
             ]
           },
@@ -3272,7 +3298,9 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1"
-                }
+                },
+                "highSTSUM": 258538.6081434,
+                "aoeSUM": 453922.74712200003
               }
             ]
           },

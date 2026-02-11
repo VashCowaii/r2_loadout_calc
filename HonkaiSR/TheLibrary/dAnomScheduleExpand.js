@@ -122,7 +122,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_StageInfiniteGroup": "30503011",
                   "_CreateBattleEvent": "30502"
-                }
+                },
+                "highSTSUM": 4189893.66,
+                "aoeSUM": 14524964.688000001
               }
             ]
           },
@@ -297,7 +299,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_StageInfiniteGroup": "30503012",
                   "_CreateBattleEvent": "30502"
-                }
+                },
+                "highSTSUM": 7960796.8366950005,
+                "aoeSUM": 9497091.178695
               }
             ]
           },
@@ -474,7 +478,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_StageInfiniteGroup": "30503013",
                   "_CreateBattleEvent": "30502"
-                }
+                },
+                "highSTSUM": 7541808.5879999995,
+                "aoeSUM": 8694029.3445
               }
             ]
           },
@@ -603,7 +609,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_StageInfiniteGroup": "30503021",
                   "_CreateBattleEvent": "30503"
-                }
+                },
+                "highSTSUM": 30291239.986560002,
+                "aoeSUM": 30291239.986560002
               }
             ]
           },
@@ -755,7 +763,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_StageInfiniteGroup": "30503022",
                   "_CreateBattleEvent": "30504"
-                }
+                },
+                "highSTSUM": 142368824.99952,
+                "aoeSUM": 142368824.99952
               }
             ]
           },
@@ -1000,7 +1010,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_StageInfiniteGroup": "30502011",
                   "_CreateBattleEvent": "30502"
-                }
+                },
+                "highSTSUM": 2094946.83,
+                "aoeSUM": 10736602.50375
               }
             ]
           },
@@ -1179,7 +1191,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_StageInfiniteGroup": "30502012",
                   "_CreateBattleEvent": "30502"
-                }
+                },
+                "highSTSUM": 8676571.45425,
+                "aoeSUM": 10143034.23525
               }
             ]
           },
@@ -1360,7 +1374,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_StageInfiniteGroup": "30502013",
                   "_CreateBattleEvent": "30502"
-                }
+                },
+                "highSTSUM": 8379787.319999999,
+                "aoeSUM": 9427260.735
               }
             ]
           },
@@ -1476,7 +1492,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_StageInfiniteGroup": "30502021",
                   "_CreateBattleEvent": "30503"
-                }
+                },
+                "highSTSUM": 58317398.411625,
+                "aoeSUM": 58317398.411625
               }
             ]
           },
@@ -1611,7 +1629,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_StageInfiniteGroup": "30502022",
                   "_CreateBattleEvent": "30504"
-                }
+                },
+                "highSTSUM": 259188432.03750002,
+                "aoeSUM": 259188432.03750002
               }
             ]
           },
@@ -1838,7 +1858,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_StageInfiniteGroup": "30501011",
                   "_CreateBattleEvent": "30502"
-                }
+                },
+                "highSTSUM": 9552957.5448,
+                "aoeSUM": 10960761.81456
               }
             ]
           },
@@ -2020,7 +2042,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_StageInfiniteGroup": "30501012",
                   "_CreateBattleEvent": "30502"
-                }
+                },
+                "highSTSUM": 4944074.5188,
+                "aoeSUM": 7018071.8805
               }
             ]
           },
@@ -2257,7 +2281,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_StageInfiniteGroup": "30501013",
                   "_CreateBattleEvent": "30502"
-                }
+                },
+                "highSTSUM": 5062788.172499999,
+                "aoeSUM": 11522207.565
               }
             ]
           },
@@ -2443,7 +2469,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_StageInfiniteGroup": "30501021",
                   "_CreateBattleEvent": "30503"
-                }
+                },
+                "highSTSUM": 47961129.97872,
+                "aoeSUM": 51927839.97696
               }
             ]
           },
@@ -2649,7 +2677,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_StageInfiniteGroup": "30501022",
                   "_CreateBattleEvent": "30504"
-                }
+                },
+                "highSTSUM": 191844515.95679998,
+                "aoeSUM": 207711355.6224
               }
             ]
           },
