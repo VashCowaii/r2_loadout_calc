@@ -38,6 +38,7 @@
 
     "Level_FinalDamageAddedRatio": "StageFinalDMG",
 
+    "SPHitRatio": "EnergyRegenHitRate",
     "SPRatioBase": "EnergyRegenRate",
     "SPRatio": "EnergyRegenRateSUM",
     "CurrentSP": "EnergyCurrent",
@@ -69,6 +70,7 @@
     "Monster_DamageTakenRatio": "EnemyVulnerability",
 
     "DamageValue": "DMGValueTotal",
+    "FinalDamageMax": "DMGValueMax",
 
     "FatigueRatio": "Weaken%",
 

@@ -1,0 +1,25 @@
+const configAbility = {
+  "fileName": "1004026_Monster_W1_Gepard_IF_Ability08_Part01",
+  "childAbilityList": [
+    "1004026_Monster_W1_Gepard_IF_Ability08_Part01",
+    "1004026_Monster_W1_Gepard_IF_Ability08_Part02",
+    "1004026_Monster_W1_Gepard_RL_Ability08_Camera"
+  ],
+  "skillTrigger": "Skill08",
+  "abilityType": "Basic ATK",
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "Trigger Ability",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "ability": "Monster_W1_Gepard_IF_Ability08_Part02",
+      "isTrigger": true
+    },
+    "Deleted bullshit"
+  ],
+  "references": []
+}

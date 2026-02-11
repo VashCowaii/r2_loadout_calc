@@ -1190,7 +1190,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "1004011": {
       "1004011": {
@@ -1201,7 +1201,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia (Complete)"
     },
     "1004012": {
@@ -1221,7 +1221,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia (Complete)"
     },
     "1004013": {
@@ -1233,7 +1233,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia (Illusion)"
     },
     "1004014": {
@@ -1278,7 +1278,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Annihilator of Desolation Mistral"
     },
     "1004015": {
@@ -1297,7 +1297,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Topaz Illusion"
     },
     "1004016": {
@@ -1309,7 +1309,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia"
     },
     "1004017": {
@@ -1321,7 +1321,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia (Corrupted)"
     },
     "groupName": "Cocolia"
@@ -1451,7 +1451,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "1004021": {
       "1004021": {
@@ -1461,7 +1461,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard"
     },
     "1004022": {
@@ -1487,7 +1487,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard (Complete)"
     },
     "1004023": {
@@ -1507,7 +1507,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard (Complete)"
     },
     "1004024": {
@@ -1518,7 +1518,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard (Illusion)"
     },
     "1004025": {
@@ -1530,7 +1530,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard (Illusion)"
     },
     "1004026": {
@@ -1576,7 +1576,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard"
     },
     "1004027": {
@@ -1610,7 +1610,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard"
     },
     "1004028": {
@@ -1622,7 +1622,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gepard"
     },
     "groupName": "Gepard"
@@ -1779,7 +1779,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "1005011": {
       "1005011": {
@@ -1790,7 +1790,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia, Mother of Deception"
     },
     "1005012": {
@@ -1802,7 +1802,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia, Mother of Deception"
     },
     "1005013": {
@@ -1813,7 +1813,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cocolia, Mother of Deception (Illusion)"
     },
     "1005014": {
@@ -1858,7 +1858,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Annihilator of Desolation Mistral: Mother of Deception"
     },
     "groupName": "Cocolia, Mother of Deception"
@@ -11009,7 +11009,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4052012": {
       "4052012": {
@@ -11019,7 +11019,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Servant of Tides"
     },
     "groupName": "Servant of Tides"
@@ -11032,7 +11032,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Mirage Fizzle Kid"
   },
@@ -11119,7 +11119,7 @@ let basicEnemyList = {
           "Fire"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Ichor Memosprite: Pheasant"
   },
@@ -11131,7 +11131,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Ichor Memosprite: Canine"
   },
@@ -11151,7 +11151,7 @@ let basicEnemyList = {
           "Ice"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Ichor Memosprite: Winged Serpent"
   },
@@ -11165,7 +11165,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "4064011": {
       "4064011": {
@@ -11176,7 +11176,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Ichor Memosprite: Judge of Oblivion (Complete)"
     },
     "groupName": "Ichor Memosprite: Judge of Oblivion"
@@ -12628,7 +12628,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8003011": {
       "8003011": {
@@ -12645,7 +12645,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Ice Out of Space (Bug)"
     },
     "8003012": {
@@ -12654,7 +12654,7 @@ let basicEnemyList = {
       "800301202": {},
       "800301203": {},
       "800301204": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Ice Out of Space"
     },
     "groupName": "Ice Out of Space"
@@ -12836,7 +12836,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8003021": {
       "8003021": {
@@ -12853,7 +12853,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Blaze Out of Space (Bug)"
     },
     "8003022": {
@@ -12862,7 +12862,7 @@ let basicEnemyList = {
       "800302202": {},
       "800302203": {},
       "800302204": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Blaze Out of Space"
     },
     "groupName": "Blaze Out of Space"
@@ -13018,7 +13018,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8003031": {
       "8003031": {
@@ -13049,7 +13049,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Guardian Shadow (Bug)"
     },
     "groupName": "Guardian Shadow"
@@ -13183,7 +13183,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8003041": {
       "8003041": {
@@ -13200,7 +13200,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Decaying Shadow (Bug)"
     },
     "8003042": {
@@ -13211,7 +13211,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Decaying Shadow"
     },
     "groupName": "Decaying Shadow"
@@ -13356,7 +13356,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8003051": {
       "8003051": {
@@ -14175,7 +14175,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8013011": {
       "8013011": {
@@ -14192,7 +14192,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Voidranger: Trampler (Bug)"
     },
     "8013012": {
@@ -14203,7 +14203,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Voidranger: Trampler"
     },
     "8013013": {
@@ -14214,7 +14214,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Voidranger: Trampler"
     },
     "groupName": "Voidranger: Trampler"
@@ -14302,7 +14302,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false
+      "hasReader": true
     },
     "8015021": {
       "8015021": {
@@ -14313,7 +14313,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Phantylia the Undying"
     },
     "8015022": {
@@ -14358,7 +14358,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Opportunistic Provocateur"
     },
     "groupName": "Phantylia the Undying"
@@ -14383,7 +14383,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8022011": {
       "8022011": {
@@ -14416,7 +14416,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Juvenile Sting"
     },
     "groupName": "Juvenile Sting"
@@ -14458,7 +14458,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8022021": {
       "8022021": {
@@ -14496,7 +14496,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Lesser Sting"
     },
     "groupName": "Lesser Sting"
@@ -14515,7 +14515,7 @@ let basicEnemyList = {
           "Ice"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "8022031": {
       "8022031": {
@@ -14553,7 +14553,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Gnaw Sting"
     },
     "groupName": "Gnaw Sting"
@@ -14567,7 +14567,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false
+      "hasReader": true
     },
     "8024011": {
       "8024011": {
@@ -14628,7 +14628,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Swarm: True Sting"
     },
     "8024012": {
@@ -14647,7 +14647,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Swarm: True Sting (Complete)"
     },
     "8024013": {
@@ -14665,7 +14665,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Swarm: True Sting"
     },
     "groupName": "Swarm: True Sting (Complete)"
@@ -14696,7 +14696,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "8025011": {
       "8025011": {
@@ -14740,7 +14740,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Sky-Shrouding Stardevourer Swarm"
     },
     "groupName": "Starcrusher Swarm King: Skaracabaz (Synthetic)"
@@ -17399,7 +17399,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Hallucinogenic Mermaid"
     },
     "4053011": {
@@ -17602,7 +17602,7 @@ let basicEnemyList = {
     },
     "8003060": {
       "8003060": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Fictional Ensemble"
     },
     "8012140": {
@@ -17734,7 +17734,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundance Lotus"
     },
     "8012201": {
@@ -17744,7 +17744,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundance Lotus"
     },
     "8012202": {
@@ -17754,7 +17754,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundance Lotus"
     },
     "8012203": {
@@ -17764,7 +17764,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundance Lotus"
     },
     "8012204": {
@@ -17776,7 +17776,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundance Lotus"
     },
     "8012205": {
@@ -17788,7 +17788,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundance Lotus"
     },
     "8012210": {
@@ -17799,7 +17799,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Destruction Lotus"
     },
     "8012211": {
@@ -17810,7 +17810,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Destruction Lotus"
     },
     "8012212": {
@@ -17821,7 +17821,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Destruction Lotus"
     },
     "8012213": {
@@ -17832,7 +17832,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Destruction Lotus"
     },
     "8012214": {
@@ -17844,7 +17844,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Destruction Lotus"
     },
     "8012215": {
@@ -17856,7 +17856,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Destruction Lotus"
     },
     "8013141": {
@@ -17927,17 +17927,17 @@ let basicEnemyList = {
     },
     "8032030": {
       "8032030": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"All or Nothing\""
     },
     "8032031": {
       "8032031": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"All or Nothing\""
     },
     "8032032": {
       "8032032": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"All or Nothing\""
     },
     "8032033": {
@@ -17981,7 +17981,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"All or Nothing\""
     },
     "8032034": {
@@ -18025,7 +18025,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"All or Nothing: Double Fortune\""
     }
   }

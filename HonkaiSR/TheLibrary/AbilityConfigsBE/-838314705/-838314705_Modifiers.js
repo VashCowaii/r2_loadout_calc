@@ -1281,11 +1281,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
-                  "displayLines": "MDF_IF_BOSS_Standard_Defence",
+                  "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
+                  "displayLines": "MDF_IF_BOSS_Common_Defence",
                   "constants": [],
                   "variables": [
-                    "MDF_IF_BOSS_Standard_Defence"
+                    "MDF_IF_BOSS_Common_Defence"
                   ]
                 }
               }
@@ -1299,11 +1299,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1963095263\">Standard_MinionsSuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
-                  "displayLines": "MDF_IF_BOSS_Standard_Defence",
+                  "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
+                  "displayLines": "MDF_IF_BOSS_Common_Defence",
                   "constants": [],
                   "variables": [
-                    "MDF_IF_BOSS_Standard_Defence"
+                    "MDF_IF_BOSS_Common_Defence"
                   ]
                 }
               }
@@ -1406,11 +1406,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_Standard_Defence",
+                      "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
+                      "displayLines": "MDF_IF_BOSS_Common_Defence",
                       "constants": [],
                       "variables": [
-                        "MDF_IF_BOSS_Standard_Defence"
+                        "MDF_IF_BOSS_Common_Defence"
                       ]
                     }
                   }
@@ -1424,11 +1424,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1963095263\">Standard_MinionsSuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_Standard_Defence",
+                      "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
+                      "displayLines": "MDF_IF_BOSS_Common_Defence",
                       "constants": [],
                       "variables": [
-                        "MDF_IF_BOSS_Standard_Defence"
+                        "MDF_IF_BOSS_Common_Defence"
                       ]
                     }
                   }
@@ -1686,11 +1686,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
-                  "displayLines": "MDF_IF_BOSS_Standard_Defence",
+                  "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
+                  "displayLines": "MDF_IF_BOSS_Common_Defence",
                   "constants": [],
                   "variables": [
-                    "MDF_IF_BOSS_Standard_Defence"
+                    "MDF_IF_BOSS_Common_Defence"
                   ]
                 }
               }
@@ -1793,11 +1793,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_Standard_Defence",
+                      "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
+                      "displayLines": "MDF_IF_BOSS_Common_Defence",
                       "constants": [],
                       "variables": [
-                        "MDF_IF_BOSS_Standard_Defence"
+                        "MDF_IF_BOSS_Common_Defence"
                       ]
                     }
                   }
@@ -1961,11 +1961,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
-                  "displayLines": "MDF_IF_BOSS_Standard_Defence",
+                  "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
+                  "displayLines": "MDF_IF_BOSS_Common_Defence",
                   "constants": [],
                   "variables": [
-                    "MDF_IF_BOSS_Standard_Defence"
+                    "MDF_IF_BOSS_Common_Defence"
                   ]
                 }
               }
@@ -2068,11 +2068,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageTypeResistance": {
-                      "operator": "Variables[0] (MDF_IF_BOSS_Standard_Defence) || RETURN",
-                      "displayLines": "MDF_IF_BOSS_Standard_Defence",
+                      "operator": "Variables[0] (MDF_IF_BOSS_Common_Defence) || RETURN",
+                      "displayLines": "MDF_IF_BOSS_Common_Defence",
                       "constants": [],
                       "variables": [
-                        "MDF_IF_BOSS_Standard_Defence"
+                        "MDF_IF_BOSS_Common_Defence"
                       ]
                     }
                   }

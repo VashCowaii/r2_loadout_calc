@@ -6123,7 +6123,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Monster_IF_BOSS_Standard_BreakBonus_Show",
+    "name": "<a class=\"gModGreen\" id=\"338689764\">Monster_IF_BOSS_Standard_BreakBonus_Show</a>",
     "realName": "Mind Shadow",
     "aim": "Other",
     "desc": "Takes #1[i]% less DMG. When Weakness is broken, action is additionally delayed by #2[i]% and takes #3[i]% more DMG.",
@@ -6136,7 +6136,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Monster_IF_BOSS_Standard_Weakness",
+    "name": "<a class=\"gModGreen\" id=\"-1386398687\">Monster_IF_BOSS_Standard_Weakness</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG received by #1[i]%.",

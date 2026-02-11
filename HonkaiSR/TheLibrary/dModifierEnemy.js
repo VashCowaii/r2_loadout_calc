@@ -46,7 +46,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_Gepard_Attack_Sign",
+    "name": "<a class=\"gModGreen\" id=\"-2038076408\">Monster_Gepard_Attack_Sign</a>",
     "realName": "Aggravate",
     "aim": "Debuff",
     "desc": "Silvermane Guards will focus their attacks on this target.",
@@ -54,7 +54,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W1_Gepard_BlockDamage",
+    "name": "<a class=\"gModGreen\" id=\"-1321981323\">Enemy_W1_Gepard_BlockDamage</a>",
     "realName": "Barrier",
     "aim": "Buff",
     "desc": "Nullifies all DMG received except for DoT until after being attacked.",
@@ -62,7 +62,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_W1_CocoliaP1_RL_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect can stack.",
@@ -85,7 +85,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_CocoliaP1_RL_Ability05_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-883410937\">Monster_W1_CocoliaP1_RL_Ability05_Bonus</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -143,7 +143,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W1_Gepard_RL_DamageUP",
+    "name": "<a class=\"gModGreen\" id=\"352751855\">Monster_W1_Gepard_RL_DamageUP</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -154,7 +154,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W1_Gepard_RL_ListenBeingAttacked",
+    "name": "<a class=\"gModGreen\" id=\"-1955091143\">Enemy_W1_Gepard_RL_ListenBeingAttacked</a>",
     "realName": "Counter",
     "aim": "Buff",
     "desc": "Uses a Powerful Counter on the attacker after being attacked.",
@@ -162,7 +162,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Gepard_RL_ShieldIcon",
+    "name": "<a class=\"gModGreen\" id=\"-1788931056\">Gepard_RL_ShieldIcon</a>",
     "realName": "Collective Shield",
     "aim": "Buff",
     "desc": "A Shield that absorbs DMG taken by all enemies. While the Shield persists, allies' attacks will not reduce the Shielded enemies' HP.",
@@ -170,7 +170,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Gepard_RL_ShieldIcon2",
+    "name": "<a class=\"gModGreen\" id=\"1185722758\">Gepard_RL_ShieldIcon2</a>",
     "realName": "Weakness Protected",
     "aim": "Buff",
     "desc": "Before the Collective Shield ends, enemy targets' Toughness cannot be reduced.",
@@ -178,7 +178,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_Gepard_IF_03_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"-1430608043\">Enemy_W1_Gepard_IF_03_Enhance</a>",
     "realName": "Thick and Thin",
     "aim": "Buff",
     "desc": "Greatly enhances this unit, increasing SPD by #1[i]%. When in this state, Frigid Waterfall has a slight chance to Freeze the attacked target.",
@@ -189,7 +189,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_IF_LimboMark",
+    "name": "<a class=\"gModGreen\" id=\"1981216123\">Enemy_IF_LimboMark</a>",
     "realName": "Valor Via Setbacks",
     "aim": "Other",
     "desc": "Enters Downed state, waiting for recovery.",
@@ -197,7 +197,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_Gepard_IF_03_EnhancePerTurn",
+    "name": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>",
     "realName": "Will of Steel",
     "aim": "Buff",
     "desc": "Each stack increases SPD by #1[i]% and ATK by #2[i]%. All stacks are lost when Weakness is broken.",
@@ -281,7 +281,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W1_CocoliaP2_Ability10_TargetLock",
+    "name": "<a class=\"gModGreen\" id=\"1281838321\">Enemy_W1_CocoliaP2_Ability10_TargetLock</a>",
     "realName": "Harbinger of Annihilation",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -289,7 +289,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP2_Ability08_Charge",
+    "name": "<a class=\"gModGreen\" id=\"1681589484\">Enemy_W1_CocoliaP2_Ability08_Charge</a>",
     "realName": "The Creation's Prelude",
     "aim": "Other",
     "desc": "The next attack will cause Last Choir of Genesis to all targets.",
@@ -297,7 +297,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP2_WeakPointProtected",
+    "name": "<a class=\"gModGreen\" id=\"-1081875098\">Enemy_W1_CocoliaP2_WeakPointProtected</a>",
     "realName": "Weakness Protected",
     "aim": "Buff",
     "desc": "Cocolia, Mother of Deception's Toughness cannot be reduced while there are enemies on the field.",
@@ -1177,7 +1177,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_Standard_WeakControl",
+    "name": "<a class=\"gModGreen\" id=\"-1754480095\">Monster_Standard_WeakControl</a>",
     "realName": "Toughness Protection",
     "aim": "Other",
     "desc": "Toughness cannot be reduced.",
@@ -1426,7 +1426,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "XP_Ice_Elite_Powerful_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-557071994\">XP_Ice_Elite_Powerful_Modifier</a>",
     "realName": "Freezing Point",
     "aim": "Other",
     "desc": "Ice Out of Space's attack mode is enhanced.",
@@ -1434,7 +1434,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "XP_Elite_Fire_Ability07_AttackUp_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>",
     "realName": "Molten",
     "aim": "Buff",
     "desc": "Increases ATK by #1[i]%. This effect can stack.",
@@ -1445,7 +1445,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "XP_Fire_Elite_Burning_Modifier_2",
+    "name": "<a class=\"gModGreen\" id=\"1090456915\">XP_Fire_Elite_Burning_Modifier_2</a>",
     "realName": "Spontaneous Combustion",
     "aim": "Other",
     "desc": "Blaze Out of Space's attack mode is enhanced.",
@@ -1453,7 +1453,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_XP_Elite01_Burn",
+    "name": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>",
     "realName": "Enkindle",
     "aim": "Debuff",
     "desc": "Takes Fire DMG at the beginning of each turn for a certain number of turns.",
@@ -1461,7 +1461,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_XP_Elite02_Edict01",
+    "name": "<a class=\"gModGreen\" id=\"-634944090\">Monster_XP_Elite02_Edict01</a>",
     "realName": "Ban",
     "aim": "Debuff",
     "desc": "Whoever attacks %CasterName will be attacked 1 time.",
@@ -1469,7 +1469,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_XP_Elite02_Edict02",
+    "name": "<a class=\"gModGreen\" id=\"-651721709\">Monster_XP_Elite02_Edict02</a>",
     "realName": "Ban",
     "aim": "Debuff",
     "desc": "Whoever uses Basic ATK will be attacked 1 time.",
@@ -1477,7 +1477,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_XP_Elite02_Edict03",
+    "name": "<a class=\"gModGreen\" id=\"-668499328\">Monster_XP_Elite02_Edict03</a>",
     "realName": "Ban",
     "aim": "Debuff",
     "desc": "Whoever uses Skills will be attacked 1 time.",
@@ -1485,7 +1485,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_XP_Elite02_Edict_Success",
+    "name": "<a class=\"gModGreen\" id=\"762896637\">Monster_XP_Elite02_Edict_Success</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -1496,7 +1496,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Elite02_Edict_Failure",
+    "name": "<a class=\"gModGreen\" id=\"906589272\">Monster_XP_Elite02_Edict_Failure</a>",
     "realName": "undefined",
     "aim": "Debuff",
     "desc": "undefined",
@@ -1509,7 +1509,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Elite02_DebuffEnhanceEffect",
+    "name": "<a class=\"gModGreen\" id=\"783092667\">Monster_XP_Elite02_DebuffEnhanceEffect</a>",
     "realName": "undefined",
     "aim": "Debuff",
     "desc": "undefined",
@@ -1521,7 +1521,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Elite02_EdictInsert",
+    "name": "<a class=\"gModGreen\" id=\"1954502860\">Monster_XP_Elite02_EdictInsert</a>",
     "realName": "Retribution Warning",
     "aim": "Other",
     "desc": "Character(s) will be punished accordingly at the end of the turn.",
@@ -1529,7 +1529,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_XP_Elite02_01_Battle",
+    "name": "<a class=\"gModGreen\" id=\"-749414927\">Monster_XP_Elite02_01_Battle</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -1537,7 +1537,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_XP_Elite02_01_Accelerate",
+    "name": "<a class=\"gModGreen\" id=\"-799757302\">Monster_XP_Elite02_01_Accelerate</a>",
     "realName": "undefined",
     "aim": "Buff",
     "desc": "undefined",
@@ -1549,7 +1549,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Elite02_01_Exhausted",
+    "name": "<a class=\"gModGreen\" id=\"267392722\">Monster_XP_Elite02_01_Exhausted</a>",
     "realName": "undefined",
     "aim": "Debuff",
     "desc": "undefined",
@@ -1560,7 +1560,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Elite02_01_Fragile",
+    "name": "<a class=\"gModGreen\" id=\"-440963203\">Monster_XP_Elite02_01_Fragile</a>",
     "realName": "undefined",
     "aim": "Debuff",
     "desc": "undefined",
@@ -1571,7 +1571,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_XP_Elite02_01_EnergyLayer",
+    "name": "<a class=\"gModGreen\" id=\"1432699776\">Monster_XP_Elite02_01_EnergyLayer</a>",
     "realName": "Gauge Recollection",
     "aim": "Other",
     "desc": "Current stacks of Gauge Recollection: #1[i]. Loses 1 stack of Gauge Recollection after being hit.",
@@ -1648,7 +1648,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Elite01_Aim",
+    "name": "<a class=\"gModGreen\" id=\"1071596347\">Enemy_AML_Elite01_Aim</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -1656,7 +1656,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Elite01_01_DOTAim",
+    "name": "<a class=\"gModGreen\" id=\"-940158065\">Enemy_AML_Elite01_01_DOTAim</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -1664,7 +1664,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_AML_Elite01_01_AttackAdd",
+    "name": "<a class=\"gModGreen\" id=\"1859460834\">Enemy_AML_Elite01_01_AttackAdd</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "Increases ATK by #1[i]%, stacking up to #2[i] time(s).",
@@ -1714,7 +1714,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Huanlong_BlackBlood",
+    "name": "<a class=\"gModGreen\" id=\"-1573763827\">Monster_W2_Huanlong_BlackBlood</a>",
     "realName": "Prana-Siphoned",
     "aim": "Debuff",
     "desc": "Decreases Maximum Restorable HP by #1[i]%.",
@@ -1725,7 +1725,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Huanlong_Sign",
+    "name": "<a class=\"gModGreen\" id=\"911555281\">Monster_W2_Huanlong_Sign</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -1733,7 +1733,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_HuanlongPart_Heal",
+    "name": "<a class=\"gModGreen\" id=\"-1471440713\">Monster_W2_HuanlongPart_Heal</a>",
     "realName": "Vigor",
     "aim": "Buff",
     "desc": "Every action taken restores #1[i]% HP.",
@@ -1744,7 +1744,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_HuanlongPart_01_Activity",
+    "name": "<a class=\"gModGreen\" id=\"1845976277\">Monster_W2_HuanlongPart_01_Activity</a>",
     "realName": "Bloom",
     "aim": "Buff",
     "desc": "Will use Havoc during the next action. This status can be dispelled by abilities.",
@@ -1752,7 +1752,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_W2_HuanlongPart_01_Success",
+    "name": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG received by #1[i]%. This effect is stackable.",
@@ -1763,7 +1763,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_HuanlongPart_01_Dormancy",
+    "name": "<a class=\"gModGreen\" id=\"-1043458445\">Monster_W2_HuanlongPart_01_Dormancy</a>",
     "realName": "Repose",
     "aim": "Other",
     "desc": "In Repose.",
@@ -1771,7 +1771,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_Sign02",
+    "name": "<a class=\"gModGreen\" id=\"-1866067565\">Monster_W2_Huanlong_Sign02</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -1779,7 +1779,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_HuanlongPart_01_WeakControl",
+    "name": "<a class=\"gModGreen\" id=\"569926357\">Monster_W2_HuanlongPart_01_WeakControl</a>",
     "realName": "Weakness Protected",
     "aim": "Other",
     "desc": "When Destruction Lotus is not in Bloom, its Toughness cannot be reduced.",
@@ -1787,7 +1787,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_SW_Boss_DOT_Poison",
+    "name": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>",
     "realName": "Wind Shear",
     "aim": "Debuff",
     "desc": "Takes Wind DMG at the start of each turn for a certain number of turns.",
@@ -1795,7 +1795,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_SW_Boss_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect is stackable.",
@@ -1806,7 +1806,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_SW_Boss_DamageTakenUp",
+    "name": "<a class=\"gModGreen\" id=\"-658511969\">Monster_SW_Boss_DamageTakenUp</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG received by #1[i]%. This effect is stackable.",
@@ -1817,7 +1817,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_SW_Minion01_Split",
+    "name": "<a class=\"gModGreen\" id=\"1780753426\">Monster_SW_Minion01_Split</a>",
     "realName": "Mitosis: Warning",
     "aim": "Other",
     "desc": "Propagate after #1[i] turn(s). Cannot propagate during the turn in which this unit recovers from Weakness Break.",
@@ -1828,7 +1828,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_SW_Minion01_SplitEffect",
+    "name": "<a class=\"gModGreen\" id=\"-157441217\">Monster_SW_Minion01_SplitEffect</a>",
     "realName": "Propagation",
     "aim": "Other",
     "desc": "Propagate in the next turn.",
@@ -1836,7 +1836,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_SW_Boss_01_DamageTakenUp",
+    "name": "<a class=\"gModGreen\" id=\"-257262548\">Monster_SW_Boss_01_DamageTakenUp</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG received by #1[i]%. This effect is stackable.",
@@ -1847,7 +1847,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_SW_Boss_01_DamageReduce",
+    "name": "<a class=\"gModGreen\" id=\"-850302516\">Monster_SW_Boss_01_DamageReduce</a>",
     "realName": "Multiply",
     "aim": "Buff",
     "desc": "Reduces DMG taken by #1[i]%. Summons a regular Swarm every time this unit is attacked. When this unit's Weakness is Broken, deals Toughness Reduction equal to its own max Toughness to all friendly units and increases the DMG taken by all other friendly units besides the target themselves.",
@@ -1943,7 +1943,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_AventurinePart_SpeedZero",
+    "name": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>",
     "realName": "Fickle Fortune",
     "aim": "Other",
     "desc": "Immune to DMG. When this unit is attacked by a target that has entered the Gamble, apply 1 random number (between 1 and 6) to the target.",
@@ -2131,7 +2131,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_AventurinePart_SpeedZero_RL",
+    "name": "<a class=\"gModGreen\" id=\"-1321309283\">Monster_W3_AventurinePart_SpeedZero_RL</a>",
     "realName": "Forever Concealed",
     "aim": "Other",
     "desc": "When this unit is attacked by a target that has entered the Gamble, the Gamble's odds are doubled.",
@@ -2139,7 +2139,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_AventurinePart_Odds_EnergyBar_RL",
+    "name": "<a class=\"gModGreen\" id=\"-96862504\">Monster_W3_AventurinePart_Odds_EnergyBar_RL</a>",
     "realName": "Odds",
     "aim": "Other",
     "desc": "Current Odds — 1:#1[i]. Highest Odds — 1:#2[i].",
@@ -2151,7 +2151,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_AventurinePart_DeathRattle_RL",
+    "name": "<a class=\"gModGreen\" id=\"288143778\">Monster_W3_AventurinePart_DeathRattle_RL</a>",
     "realName": "Influx of Fortuity",
     "aim": "Other",
     "desc": "When this unit is attacked by a target that has entered the Gamble, this unit always generates a roll of 6, and uses Punishment of Defeat when the Gamble ends.",
@@ -2533,7 +2533,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_AventurinePart_01_BlockDamage_RL",
+    "name": "<a class=\"gModGreen\" id=\"-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>",
     "realName": "Fickle Fortune",
     "aim": "Other",
     "desc": "The minimum HP is 1. When attacked by a target that has entered the gamble, this unit gains a random number from 1 to 6. when its health drops to 1, this unit gains the Influx of Fortuity effect.",
@@ -2541,7 +2541,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Cocolia_IF_WeaknessCount_Sub01",
+    "name": "<a class=\"gModGreen\" id=\"-641521707\">Enemy_W2_Cocolia_IF_WeaknessCount_Sub01</a>",
     "realName": "Tenacious Resolve",
     "aim": "Buff",
     "desc": "DMG taken decreases by #1[i]%.",
@@ -2552,7 +2552,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Cocolia_IF_WeaknessCount_Sub02",
+    "name": "<a class=\"gModGreen\" id=\"-691854564\">Enemy_W2_Cocolia_IF_WeaknessCount_Sub02</a>",
     "realName": "Tenacious Resolve",
     "aim": "Debuff",
     "desc": "Increases DMG taken by #1[i]%.",
@@ -2563,7 +2563,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W1_CocoliaP1_IF_TargetLock01",
+    "name": "<a class=\"gModGreen\" id=\"-302789304\">Enemy_W1_CocoliaP1_IF_TargetLock01</a>",
     "realName": "Nowhere to Escape",
     "aim": "Other",
     "desc": "Locked on by the Ice Edge, and will be considered as an additional target for the Annihilator of Desolation Mistral's single-target ability.",
@@ -2571,7 +2571,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP1_IF_TargetLock02",
+    "name": "<a class=\"gModGreen\" id=\"-252456447\">Enemy_W1_CocoliaP1_IF_TargetLock02</a>",
     "realName": "Nowhere to Escape",
     "aim": "Other",
     "desc": "Locked on by the Ice Edge, and will be considered as an additional target for the Annihilator of Desolation Mistral's single-target ability.",
@@ -2579,7 +2579,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP2_IF_TargetLock01",
+    "name": "<a class=\"gModGreen\" id=\"-1288586649\">Enemy_W1_CocoliaP2_IF_TargetLock01</a>",
     "realName": "Nowhere to Escape",
     "aim": "Other",
     "desc": "Locked on by Lance of the Eternal Freeze, and will be considered as an additional target for the Annihilator of Desolation Mistral: Mother of Deception's single-target ability.",
@@ -2587,7 +2587,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP2_IF_TargetLock02",
+    "name": "<a class=\"gModGreen\" id=\"-1271809030\">Enemy_W1_CocoliaP2_IF_TargetLock02</a>",
     "realName": "Nowhere to Escape",
     "aim": "Other",
     "desc": "Locked on by Lance of the Eternal Freeze, and will be considered as an additional target for the Annihilator of Desolation Mistral: Mother of Deception's single-target ability.",
@@ -2736,7 +2736,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W1_CocoliaP1_IF_SplitWeakness_Show",
+    "name": "<a class=\"gModGreen\" id=\"-1094163808\">Enemy_W1_CocoliaP1_IF_SplitWeakness_Show</a>",
     "realName": "Devious Metamorphosis",
     "aim": "Other",
     "desc": "The Weakness Type has been transferred to Ice Edge.",
@@ -2744,7 +2744,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP2_IF_SplitWeakness_Show",
+    "name": "<a class=\"gModGreen\" id=\"-426543761\">Enemy_W1_CocoliaP2_IF_SplitWeakness_Show</a>",
     "realName": "Devious Metamorphosis",
     "aim": "Other",
     "desc": "The Weakness Type has been transferred to Lance of the Eternal Freeze.",
@@ -2752,7 +2752,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP1_IF_SplitWeakness_ShowSub",
+    "name": "<a class=\"gModGreen\" id=\"-145483550\">Enemy_W1_CocoliaP1_IF_SplitWeakness_ShowSub</a>",
     "realName": "Scapegoat of Sins",
     "aim": "Other",
     "desc": "A Weakness Type has been transferred from Annihilator of Desolation Mistral to this unit. The Weakness Type will be returned when this unit is defeated.",
@@ -2760,7 +2760,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W1_CocoliaP2_IF_SplitWeakness_ShowSub",
+    "name": "<a class=\"gModGreen\" id=\"-822615197\">Enemy_W1_CocoliaP2_IF_SplitWeakness_ShowSub</a>",
     "realName": "Scapegoat of Sins",
     "aim": "Other",
     "desc": "A Weakness Type has been transferred from Annihilator of Desolation Mistral: Mother of Deception to this unit. The Weakness Type will be returned when this unit is defeated.",
@@ -3058,7 +3058,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_BlackBonus",
+    "name": "<a class=\"gModGreen\" id=\"-357357562\">Monster_W2_Huanlong_IF_BlackBonus</a>",
     "realName": "Destruction Buff",
     "aim": "Other",
     "desc": "Increases Break Effect by #1[i]%. Unable to obtain buffs from Abundance Lotus again.",
@@ -3069,7 +3069,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Huanlong_IF_WhiteBonus",
+    "name": "<a class=\"gModGreen\" id=\"1948779644\">Monster_W2_Huanlong_IF_WhiteBonus</a>",
     "realName": "Abundance Buff",
     "aim": "Other",
     "desc": "DMG dealt increases by #1[i]%. Unable to obtain any from Destruction Lotus again.",
@@ -3163,7 +3163,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_Black_DeathRattle",
+    "name": "<a class=\"gModGreen\" id=\"947500340\">Monster_W2_Huanlong_IF_Black_DeathRattle</a>",
     "realName": "Destruction Buff",
     "aim": "Other",
     "desc": "Defeating Destruction Lotus can increase Break Effect.",
@@ -3171,7 +3171,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_White_DeathRattle",
+    "name": "<a class=\"gModGreen\" id=\"1149800438\">Monster_W2_Huanlong_IF_White_DeathRattle</a>",
     "realName": "Abundance Buff",
     "aim": "Other",
     "desc": "Defeating Abundance Lotus can increase damage dealt.",
@@ -3179,7 +3179,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_Black_DeathRattle_Invalid",
+    "name": "<a class=\"gModGreen\" id=\"-1834686604\">Monster_W2_Huanlong_IF_Black_DeathRattle_Invalid</a>",
     "realName": "Destruction Buff",
     "aim": "Other",
     "desc": "Abundance buff gained. Defeating Destruction Lotus will not grant the Destruction buff.",
@@ -3187,7 +3187,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_White_DeathRattle_Invalid",
+    "name": "<a class=\"gModGreen\" id=\"1991541642\">Monster_W2_Huanlong_IF_White_DeathRattle_Invalid</a>",
     "realName": "Abundance Buff",
     "aim": "Other",
     "desc": "Destruction buff gained. Defeating Abundance Lotus will not grant the Abundance buff.",
@@ -3195,7 +3195,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_WeaknessProtect",
+    "name": "<a class=\"gModGreen\" id=\"-1788965070\">Monster_W2_Huanlong_IF_WeaknessProtect</a>",
     "realName": "Flower By Another Name",
     "aim": "Buff",
     "desc": "Defeat any Lotus to dispel the Toughness Protection state.",
@@ -3244,7 +3244,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Huanlong_IF_Sign01",
+    "name": "<a class=\"gModGreen\" id=\"-861835202\">Monster_W2_Huanlong_IF_Sign01</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -3252,7 +3252,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_Sign02",
+    "name": "<a class=\"gModGreen\" id=\"-878612821\">Monster_W2_Huanlong_IF_Sign02</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -3260,7 +3260,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_Sign03",
+    "name": "<a class=\"gModGreen\" id=\"-895390440\">Monster_W2_Huanlong_IF_Sign03</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -3268,7 +3268,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Huanlong_IF_Sign04",
+    "name": "<a class=\"gModGreen\" id=\"-777947107\">Monster_W2_Huanlong_IF_Sign04</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -3434,7 +3434,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_SW_Boss_01_IF_SwarmArmor",
+    "name": "<a class=\"gModGreen\" id=\"-2022523841\">Enemy_SW_Boss_01_IF_SwarmArmor</a>",
     "realName": "Insect Egg",
     "aim": "Other",
     "desc": "Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\"",
@@ -3442,7 +3442,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_SW_Boss_01_IF_MinionsEnhancement",
+    "name": "<a class=\"gModGreen\" id=\"-103304753\">Enemy_SW_Boss_01_IF_MinionsEnhancement</a>",
     "realName": "Growth Hormones",
     "aim": "Other",
     "desc": "Each stack increases ATK by #1[i]%.",
@@ -3688,7 +3688,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Serpent_01_Passive_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1717754231\">Enemy_W4_Serpent_01_Passive_Sub</a>",
     "realName": "Expedite Verdict",
     "aim": "Other",
     "desc": "DMG received decreases by #1[i]%. When this unit is Weakness Broken, this effect is dispelled, its action will be further delayed, and deals massive Imaginary DMG to this unit.",
@@ -3699,7 +3699,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Serpent_01_Summon_Deathrattle",
+    "name": "<a class=\"gModGreen\" id=\"120636483\">Enemy_W4_Serpent_01_Summon_Deathrattle</a>",
     "realName": "Execution Squad",
     "aim": "Other",
     "desc": "When defeated, reduces the Toughness of \"Ichor Memosprite: Judge of Oblivion.\"",
@@ -3707,7 +3707,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Serpent_01_Charge01",
+    "name": "<a class=\"gModGreen\" id=\"1560904792\">Enemy_W4_Serpent_01_Charge01</a>",
     "realName": "Pursuer",
     "aim": "Other",
     "desc": "Increases SPD by #1[i]%. Will launch #2[i] instance(s) of Single Target attacks on %DynamicTargetName. This effect is dispelled when this unit's Weakness is Broken.",
@@ -3719,7 +3719,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Serpent_01_Charge01_Target",
+    "name": "<a class=\"gModGreen\" id=\"1710428840\">Enemy_W4_Serpent_01_Charge01_Target</a>",
     "realName": "Pursuit Target",
     "aim": "Other",
     "desc": "Will receive #1[i] instances of Single Target attacks from \"%CasterName.\" If this unit has Shield, when hit by \"%CasterName's\" Single Target attacks, reduces Toughness. This effect is dispelled when \"%CasterName\" is Weakness Broken.",
@@ -3730,7 +3730,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Serpent_01_Charge02",
+    "name": "<a class=\"gModGreen\" id=\"1611237649\">Enemy_W4_Serpent_01_Charge02</a>",
     "realName": "Penance Prep",
     "aim": "Other",
     "desc": "Use \"Hemotort Decapitation\" in the next action. This effect is dispelled when this unit becomes Weakness Broken.",
@@ -3738,7 +3738,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Serpent_01_Charge02_Target",
+    "name": "<a class=\"gModGreen\" id=\"-2034245301\">Enemy_W4_Serpent_01_Charge02_Target</a>",
     "realName": "First Offense",
     "aim": "Other",
     "desc": "When \"%DynamicTargetName\" uses \"Hemotort Decapitation\", they take maximum damage, and if any DMG is not offset by Shield, they will be inflicted with \"Hemotort Corruption.\"",
@@ -4147,7 +4147,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Beast01_04_AbilityP02_GoldBlood_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"-771052398\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_Enhance</a>",
     "realName": "Hemotort Stain",
     "aim": "Other",
     "desc": "After attacking, applies \"Hemotort Corruption\" based on the amount of DMG taken (not offset by Shield) to the selected characters.",
@@ -4155,7 +4155,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Beast01_04_AbilityP02_GoldBlood_DOT",
+    "name": "<a class=\"gModGreen\" id=\"1128925615\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_DOT</a>",
     "realName": "Hemotort Corruption",
     "aim": "Debuff",
     "desc": "Take a set amount of #1[i] Imaginary DMG at the beginning of the turn.",
@@ -4174,7 +4174,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Serpent_01_Charge02_Target_Sub",
+    "name": "<a class=\"gModGreen\" id=\"839686414\">Enemy_W4_Serpent_01_Charge02_Target_Sub</a>",
     "realName": "Accomplice",
     "aim": "Other",
     "desc": "\"%DynamicTargetName\" takes damage when using \"Hemotort Decapitation.\"",
@@ -4293,7 +4293,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Serpent_Charge",
+    "name": "<a class=\"gModGreen\" id=\"-919299430\">Enemy_W4_Serpent_Charge</a>",
     "realName": "Whirl",
     "aim": "Other",
     "desc": "After being hit by attacks from target units, uses \"Torque Counter\" and loses 1 stack of \"Whirl.\" During any unit's turn, each target unit can only trigger this effect once. When the \"Whirl\" stack reaches 0, the Charging state is dispelled. When Weakness is Broken, this unit loses all \"Whirl\" stacks.",
@@ -4482,7 +4482,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_SW_Minion01_03_CommandMark",
+    "name": "<a class=\"gModGreen\" id=\"1035214462\">Enemy_SW_Minion01_03_CommandMark</a>",
     "realName": "Mirage Rush",
     "aim": "Other",
     "desc": "Before \"Mirage Rush\" state is dispelled, other \"Mirage Fizzle Kids\" will prioritize attacking the locked-on target. This state is dispelled when this unit is Broken or receives a killing blow.",
@@ -4490,7 +4490,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_SW_Minion01_03_CommandMarkTarget",
+    "name": "<a class=\"gModGreen\" id=\"-360637105\">Enemy_SW_Minion01_03_CommandMarkTarget</a>",
     "realName": "Shadow of the Grand Fair",
     "aim": "Other",
     "desc": "Locked on by all \"Mirage Fizzle Kids\" as an attack target.",
@@ -4576,7 +4576,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Turkey_Ability02_Power",
+    "name": "<a class=\"gModGreen\" id=\"-1846949450\">Enemy_W4_Turkey_Ability02_Power</a>",
     "realName": "Hemotort Resonance",
     "aim": "Other",
     "desc": "After other \"Ichor Memosprites: Pheasant\" in the \"Hemotort Resonance\" state attack, this unit will attack together with them. Dispels when Weakness is broken.",
@@ -4966,7 +4966,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Serpent_01_Passive_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-1922828191\">Enemy_W4_Serpent_01_Passive_Sub2</a>",
     "realName": "Expedite Verdict",
     "aim": "Other",
     "desc": "Takes #1[i]% more DMG. Dispelled when recovering from the Weakness Break state.",
@@ -5288,7 +5288,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W4_Serpent_01_RLBoss_Ability06Choose",
+    "name": "<a class=\"gModGreen\" id=\"968355900\">Monster_W4_Serpent_01_RLBoss_Ability06Choose</a>",
     "realName": "Hemotort Drench",
     "aim": "Other",
     "desc": "The character that has been selected by \"Name the Culprit.\"",

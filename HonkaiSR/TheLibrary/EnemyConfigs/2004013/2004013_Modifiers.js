@@ -2570,11 +2570,11 @@ const configAbility = {
                       {
                         "name": "Enemy ID",
                         "ID": {
-                          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__24) || RETURN",
-                          "displayLines": "ENEMIES_OBJECT_UNUSED__24",
+                          "operator": "Variables[0] (SummonID_1) || RETURN",
+                          "displayLines": "SummonID_1",
                           "constants": [],
                           "variables": [
-                            "ENEMIES_OBJECT_UNUSED__24"
+                            "SummonID_1"
                           ]
                         },
                         "target": {
@@ -2586,11 +2586,11 @@ const configAbility = {
                       {
                         "name": "Enemy ID",
                         "ID": {
-                          "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__25) || RETURN",
-                          "displayLines": "ENEMIES_OBJECT_UNUSED__25",
+                          "operator": "Variables[0] (SummonID_2) || RETURN",
+                          "displayLines": "SummonID_2",
                           "constants": [],
                           "variables": [
-                            "ENEMIES_OBJECT_UNUSED__25"
+                            "SummonID_2"
                           ]
                         },
                         "target": {
@@ -2782,11 +2782,11 @@ const configAbility = {
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__24) || RETURN",
-                                "displayLines": "ENEMIES_OBJECT_UNUSED__24",
+                                "operator": "Variables[0] (SummonID_1) || RETURN",
+                                "displayLines": "SummonID_1",
                                 "constants": [],
                                 "variables": [
-                                  "ENEMIES_OBJECT_UNUSED__24"
+                                  "SummonID_1"
                                 ]
                               },
                               "locationType": "First"
@@ -2824,11 +2824,11 @@ const configAbility = {
                             {
                               "name": "Enemy Entry",
                               "enemyID": {
-                                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__25) || RETURN",
-                                "displayLines": "ENEMIES_OBJECT_UNUSED__25",
+                                "operator": "Variables[0] (SummonID_2) || RETURN",
+                                "displayLines": "SummonID_2",
                                 "constants": [],
                                 "variables": [
-                                  "ENEMIES_OBJECT_UNUSED__25"
+                                  "SummonID_2"
                                 ]
                               },
                               "locationType": "Last"

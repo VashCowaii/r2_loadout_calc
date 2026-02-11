@@ -1116,6 +1116,22 @@ div {
     /* padding: 5px; */
     /* background-color: #c0c1d60D; */
 }
+.characterDisplayLogStatIconEnemyIcon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    position:relative;
+    justify-content: center;
+    /* border: 1px solid green; */
+    transform: none;
+    bottom: 0;
+    position: relative;
+    box-sizing: border-box;
+    /* margin-right: -5px; */
+    margin: 5px;
+    /* padding: 5px; */
+    /* background-color: #c0c1d60D; */
+}
 
 .characterDisplayLogStatIcon {
     display: flex;
