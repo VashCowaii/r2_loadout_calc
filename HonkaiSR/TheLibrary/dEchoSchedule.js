@@ -76,7 +76,9 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Combat_IronTomb_Phase01_Weekly"
-                }
+                },
+                "highSTSUM": 4933942.9035,
+                "aoeSUM": 4933942.9035
               }
             ]
           },
@@ -176,7 +178,9 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Combat_DawnsEye_Phase01"
-                }
+                },
+                "highSTSUM": 7932262.052550001,
+                "aoeSUM": 7932262.052550001
               }
             ]
           },
@@ -273,7 +277,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
                   "_Load3DTextFromFloor": "20242001"
-                }
+                },
+                "highSTSUM": 3643527.0672000004,
+                "aoeSUM": 3643527.0672000004
               }
             ]
           },
@@ -378,7 +384,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Penocony_Combat_Clock_P1",
                   "_CreateBattleEvent": "60013"
-                }
+                },
+                "highSTSUM": 2641557.12372,
+                "aoeSUM": 2641557.12372
               }
             ]
           },
@@ -473,7 +481,9 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm"
-                }
+                },
+                "highSTSUM": 874446.4961280001,
+                "aoeSUM": 874446.4961280001
               }
             ]
           },
@@ -571,7 +581,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Xianzhou_Combat_Phantylia_01",
                   "_CreateBattleEvent": "60006"
-                }
+                },
+                "highSTSUM": 661148.349069,
+                "aoeSUM": 661148.349069
               }
             ]
           },
@@ -676,7 +688,9 @@ let mocSchedule = [
                   "_BGM": "State_Belobog_Combat_Cocolia_High_01",
                   "_CreateBattleEvent": "60004",
                   "_SpecialBattleStartCamera": "1"
-                }
+                },
+                "highSTSUM": 504780.31243499997,
+                "aoeSUM": 504780.31243499997
               }
             ]
           },
@@ -763,7 +777,9 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Herta_Space_Station_Suppy_Zone_Combat_Beast",
                   "_SpecialBattleStartCamera": "1"
-                }
+                },
+                "highSTSUM": 455440.8834,
+                "aoeSUM": 455440.8834
               }
             ]
           },
