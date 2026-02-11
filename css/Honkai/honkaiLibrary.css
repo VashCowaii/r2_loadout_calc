@@ -1099,6 +1099,9 @@ div {
     /* border: 1px solid green; */
 
 }
+.enemyResDisplayText {
+    font-size: 14px;
+}
 
 
 .characterDisplayLogStatIconCenter {
