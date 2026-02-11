@@ -3688,7 +3688,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Serpent_01_Passive_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1717754231\">Enemy_W4_Serpent_01_Passive_Sub</a>",
     "realName": "Expedite Verdict",
     "aim": "Other",
     "desc": "DMG received decreases by #1[i]%. When this unit is Weakness Broken, this effect is dispelled, its action will be further delayed, and deals massive Imaginary DMG to this unit.",
@@ -3699,7 +3699,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Serpent_01_Summon_Deathrattle",
+    "name": "<a class=\"gModGreen\" id=\"120636483\">Enemy_W4_Serpent_01_Summon_Deathrattle</a>",
     "realName": "Execution Squad",
     "aim": "Other",
     "desc": "When defeated, reduces the Toughness of \"Ichor Memosprite: Judge of Oblivion.\"",
@@ -3707,7 +3707,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Serpent_01_Charge01",
+    "name": "<a class=\"gModGreen\" id=\"1560904792\">Enemy_W4_Serpent_01_Charge01</a>",
     "realName": "Pursuer",
     "aim": "Other",
     "desc": "Increases SPD by #1[i]%. Will launch #2[i] instance(s) of Single Target attacks on %DynamicTargetName. This effect is dispelled when this unit's Weakness is Broken.",
@@ -3719,7 +3719,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Serpent_01_Charge01_Target",
+    "name": "<a class=\"gModGreen\" id=\"1710428840\">Enemy_W4_Serpent_01_Charge01_Target</a>",
     "realName": "Pursuit Target",
     "aim": "Other",
     "desc": "Will receive #1[i] instances of Single Target attacks from \"%CasterName.\" If this unit has Shield, when hit by \"%CasterName's\" Single Target attacks, reduces Toughness. This effect is dispelled when \"%CasterName\" is Weakness Broken.",
@@ -3730,7 +3730,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Serpent_01_Charge02",
+    "name": "<a class=\"gModGreen\" id=\"1611237649\">Enemy_W4_Serpent_01_Charge02</a>",
     "realName": "Penance Prep",
     "aim": "Other",
     "desc": "Use \"Hemotort Decapitation\" in the next action. This effect is dispelled when this unit becomes Weakness Broken.",
@@ -3738,7 +3738,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Serpent_01_Charge02_Target",
+    "name": "<a class=\"gModGreen\" id=\"-2034245301\">Enemy_W4_Serpent_01_Charge02_Target</a>",
     "realName": "First Offense",
     "aim": "Other",
     "desc": "When \"%DynamicTargetName\" uses \"Hemotort Decapitation\", they take maximum damage, and if any DMG is not offset by Shield, they will be inflicted with \"Hemotort Corruption.\"",
@@ -4147,7 +4147,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Beast01_04_AbilityP02_GoldBlood_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"-771052398\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_Enhance</a>",
     "realName": "Hemotort Stain",
     "aim": "Other",
     "desc": "After attacking, applies \"Hemotort Corruption\" based on the amount of DMG taken (not offset by Shield) to the selected characters.",
@@ -4155,7 +4155,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Beast01_04_AbilityP02_GoldBlood_DOT",
+    "name": "<a class=\"gModGreen\" id=\"1128925615\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_DOT</a>",
     "realName": "Hemotort Corruption",
     "aim": "Debuff",
     "desc": "Take a set amount of #1[i] Imaginary DMG at the beginning of the turn.",
@@ -4174,7 +4174,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Serpent_01_Charge02_Target_Sub",
+    "name": "<a class=\"gModGreen\" id=\"839686414\">Enemy_W4_Serpent_01_Charge02_Target_Sub</a>",
     "realName": "Accomplice",
     "aim": "Other",
     "desc": "\"%DynamicTargetName\" takes damage when using \"Hemotort Decapitation.\"",
@@ -4293,7 +4293,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Serpent_Charge",
+    "name": "<a class=\"gModGreen\" id=\"-919299430\">Enemy_W4_Serpent_Charge</a>",
     "realName": "Whirl",
     "aim": "Other",
     "desc": "After being hit by attacks from target units, uses \"Torque Counter\" and loses 1 stack of \"Whirl.\" During any unit's turn, each target unit can only trigger this effect once. When the \"Whirl\" stack reaches 0, the Charging state is dispelled. When Weakness is Broken, this unit loses all \"Whirl\" stacks.",
@@ -4576,7 +4576,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Turkey_Ability02_Power",
+    "name": "<a class=\"gModGreen\" id=\"-1846949450\">Enemy_W4_Turkey_Ability02_Power</a>",
     "realName": "Hemotort Resonance",
     "aim": "Other",
     "desc": "After other \"Ichor Memosprites: Pheasant\" in the \"Hemotort Resonance\" state attack, this unit will attack together with them. Dispels when Weakness is broken.",
@@ -4966,7 +4966,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Serpent_01_Passive_Sub2",
+    "name": "<a class=\"gModGreen\" id=\"-1922828191\">Enemy_W4_Serpent_01_Passive_Sub2</a>",
     "realName": "Expedite Verdict",
     "aim": "Other",
     "desc": "Takes #1[i]% more DMG. Dispelled when recovering from the Weakness Break state.",
@@ -5288,7 +5288,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W4_Serpent_01_RLBoss_Ability06Choose",
+    "name": "<a class=\"gModGreen\" id=\"968355900\">Monster_W4_Serpent_01_RLBoss_Ability06Choose</a>",
     "realName": "Hemotort Drench",
     "aim": "Other",
     "desc": "The character that has been selected by \"Name the Culprit.\"",

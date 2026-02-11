@@ -11119,7 +11119,7 @@ let basicEnemyList = {
           "Fire"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Ichor Memosprite: Pheasant"
   },
@@ -11131,7 +11131,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Ichor Memosprite: Canine"
   },
@@ -11151,7 +11151,7 @@ let basicEnemyList = {
           "Ice"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Ichor Memosprite: Winged Serpent"
   },
@@ -11165,7 +11165,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "4064011": {
       "4064011": {
@@ -11176,7 +11176,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Ichor Memosprite: Judge of Oblivion (Complete)"
     },
     "groupName": "Ichor Memosprite: Judge of Oblivion"
@@ -17602,7 +17602,7 @@ let basicEnemyList = {
     },
     "8003060": {
       "8003060": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Fictional Ensemble"
     },
     "8012140": {

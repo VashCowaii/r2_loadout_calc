@@ -512,12 +512,24 @@ let sizeLeaderboardArray = [
     "sizeCount": 161523
   },
   {
+    "entryType": "enemy",
+    "enemyID": 4064011,
+    "lineCount": 4312,
+    "sizeCount": 157273
+  },
+  {
     "entryType": "char",
     "entryName": "Dan Heng • Permansor Terrae",
     "trimCharacterName": "DanHengPT",
     "entryIcon": "icon/character/1414.png",
     "lineCount": 4253,
     "sizeCount": 157271
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4064010,
+    "lineCount": 4312,
+    "sizeCount": 157255
   },
   {
     "entryType": "char",
@@ -1379,6 +1391,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 4063010,
+    "lineCount": 1379,
+    "sizeCount": 48778
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 2022010,
     "lineCount": 1376,
     "sizeCount": 48230
@@ -1573,6 +1591,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 4062010,
+    "lineCount": 915,
+    "sizeCount": 33146
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 8013012,
     "lineCount": 1017,
     "sizeCount": 32802
@@ -1656,6 +1680,12 @@ let sizeLeaderboardArray = [
     "enemyID": 8012204,
     "lineCount": 769,
     "sizeCount": 27870
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4062020,
+    "lineCount": 747,
+    "sizeCount": 27571
   },
   {
     "entryType": "enemy",
@@ -3192,6 +3222,12 @@ let sizeLeaderboardArray = [
     "enemyID": 8001040,
     "lineCount": 139,
     "sizeCount": 4337
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8003060,
+    "lineCount": 139,
+    "sizeCount": 4260
   },
   {
     "entryType": "enemy",
