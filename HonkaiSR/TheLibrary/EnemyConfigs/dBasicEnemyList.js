@@ -11009,7 +11009,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4052012": {
       "4052012": {
@@ -11019,7 +11019,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Servant of Tides"
     },
     "groupName": "Servant of Tides"
@@ -11032,7 +11032,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Mirage Fizzle Kid"
   },
@@ -17399,7 +17399,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Hallucinogenic Mermaid"
     },
     "4053011": {

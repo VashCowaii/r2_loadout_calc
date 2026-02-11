@@ -4482,7 +4482,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_SW_Minion01_03_CommandMark",
+    "name": "<a class=\"gModGreen\" id=\"1035214462\">Enemy_SW_Minion01_03_CommandMark</a>",
     "realName": "Mirage Rush",
     "aim": "Other",
     "desc": "Before \"Mirage Rush\" state is dispelled, other \"Mirage Fizzle Kids\" will prioritize attacking the locked-on target. This state is dispelled when this unit is Broken or receives a killing blow.",
@@ -4490,7 +4490,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_SW_Minion01_03_CommandMarkTarget",
+    "name": "<a class=\"gModGreen\" id=\"-360637105\">Enemy_SW_Minion01_03_CommandMarkTarget</a>",
     "realName": "Shadow of the Grand Fair",
     "aim": "Other",
     "desc": "Locked on by all \"Mirage Fizzle Kids\" as an attack target.",
