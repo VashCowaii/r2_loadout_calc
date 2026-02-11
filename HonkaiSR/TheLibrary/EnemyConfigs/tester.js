@@ -4441,13 +4441,16 @@ const userTriggers = {
 
         let resIconString = "";
 
-        if (newCharRef.res?.length) {
+        if (Object.keys(newCharRef.res)?.length) {
             resIconString += `<div class="enemyResBoxHolderRow">`
+
+            // console.log(newCharRef.res)
+            // throw new Error()
 
             for (let weaknessEntry in newCharRef.res) {
                 resIconString += `<div class="enemyResBoxHolder">
                     <img src="/HonkaiSR/icon/element/${weaknessEntry}.png" class="characterDisplayElementWeaknessIcon">
-                    <div>${+(newCharRef.res[weaknessEntry] * 100).toFixed(7)}%</div>
+                    <div class="enemyResDisplayText">${+(newCharRef.res[weaknessEntry] * 100).toFixed(7)}%</div>
                 </div>`
             }
             // if (resIconString) {resIconString += `</div>`}

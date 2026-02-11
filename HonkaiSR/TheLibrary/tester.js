@@ -7,7 +7,7 @@ const handleUI = {
 
 const endgameModeList = [
     {
-        name: "Anomaly Aribitration",
+        name: "Anomaly Arbitration",
         img: "/HonkaiSR/icon/sign/ActivityStrongChallengeIcon.png",
         link: "/HonkaiSR/TheLibrary/Anomaly/",
     },
