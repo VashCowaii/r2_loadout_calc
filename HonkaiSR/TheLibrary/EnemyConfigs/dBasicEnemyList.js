@@ -11066,7 +11066,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4053012": {
       "4053012": {
@@ -11076,7 +11076,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Lady of Crashing Waves"
     },
     "4053014": {
@@ -11087,7 +11087,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Lady of Crashing Waves (Bug)"
     },
     "groupName": "Lady of Crashing Waves"
@@ -11101,7 +11101,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Cyclonic Swarm Mother"
   },
@@ -17418,7 +17418,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Elegy Siren: Insatiable Leviathan"
     },
     "4053013": {
@@ -17429,7 +17429,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Elegy Siren: Insatiable Leviathan"
     },
     "8002058": {

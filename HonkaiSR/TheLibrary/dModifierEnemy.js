@@ -3995,7 +3995,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Manta_Passive",
+    "name": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>",
     "realName": "Respite By The Waters",
     "aim": "Other",
     "desc": "Advances action after taking a certain number of attacks from Basic ATK, Skill, Ultimate, or Memosprite Skill.",
@@ -4003,7 +4003,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Manta_Virus_Avatar",
+    "name": "<a class=\"gModGreen\" id=\"-1491117859\">Enemy_W4_Manta_Virus_Avatar</a>",
     "realName": "Black Tide Fever",
     "aim": "Debuff",
     "desc": "#1[i] DMG is taken in the form of DoT over a certain number of turns. Wind Shear, Burn, Shock, and Bleed DoTs are received at the start of every turn. Immediately dispelled for this unit when HP is fully restored, negating this DoT.",
@@ -4014,7 +4014,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Manta_DefenseDown",
+    "name": "<a class=\"gModGreen\" id=\"1240691682\">Enemy_W4_Manta_DefenseDown</a>",
     "realName": "Inebriated Daze",
     "aim": "Debuff",
     "desc": "DEF decreases by #1[i]% and All-Type RES decreases by #2[i]%.",
@@ -4026,7 +4026,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Manta_PassiveUp_Sub",
+    "name": "<a class=\"gModGreen\" id=\"233383223\">Enemy_W4_Manta_PassiveUp_Sub</a>",
     "realName": "Revel in Destruction",
     "aim": "Other",
     "desc": "Number of hits to advance action decreases. When taking DMG or using certain abilities to deal DMG, some DMG will be taken in the form of \"Black Tide Fever\" over a specific number of turns. When the \"Revel in Destruction\" countdown's turn begins, all enemy units will have their \"Revel in Destruction\" state dispelled.",
@@ -4034,7 +4034,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Manta_Charge",
+    "name": "<a class=\"gModGreen\" id=\"-1741196770\">Enemy_W4_Manta_Charge</a>",
     "realName": "Yearning for a Shared Dance",
     "aim": "Other",
     "desc": "Uses \"Embrace From the Waves\" in every action. Dispelled when Weakness is broken.",
@@ -4458,7 +4458,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Unicorn_01_UltraReady",
+    "name": "<a class=\"gModGreen\" id=\"-1713527003\">Enemy_W4_Unicorn_01_UltraReady</a>",
     "realName": "Fetal Movement of the Ocean",
     "aim": "Other",
     "desc": "In this state, \"Cyclonic Swarm Mother's\" Toughness cannot be reduced. \"Cyclonic Swarm Mother\" will use \"Rain Is Born to Fall\". Eliminate all \"Mirage Fizzle Kids\" to dispel this state.",
@@ -4466,7 +4466,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Unicorn_01_MuteSpeed",
+    "name": "<a class=\"gModGreen\" id=\"-565541120\">Enemy_W4_Unicorn_01_MuteSpeed</a>",
     "realName": "Breeding Frenzy",
     "aim": "Other",
     "desc": "In this state, DMG taken from attacks is reduced. When action advances, HP will be consumed. Summons \"Mirage Fizzle Kid\" and slightly delays \"Incubation\" action. When \"Incubation\" takes action, all remaining \"Mirage Fizzle Kid\" will be summoned.",
@@ -4474,7 +4474,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MWMonster_W4_Unicorn_01_BlockDamage",
+    "name": "<a class=\"gModGreen\" id=\"2140507283\">MWMonster_W4_Unicorn_01_BlockDamage</a>",
     "realName": "Maelstrom's Eye",
     "aim": "Buff",
     "desc": "Immune to all DMG except DoTs. This status is dispelled after being attacked.",
@@ -4955,7 +4955,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Manta_Virus_Monster",
+    "name": "<a class=\"gModGreen\" id=\"-1447914838\">Enemy_W4_Manta_Virus_Monster</a>",
     "realName": "Black Tide Fever",
     "aim": "Debuff",
     "desc": "#1[i] DMG is taken in the form of DoT over a certain number of turns. Wind Shear, Burn, Shock, and Bleed DoTs are received at the start of every turn. Immediately dispelled for this unit when \"Revel in Destruction\" state ends, negating this DoT.",
@@ -4977,7 +4977,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Unicorn_01_SummonMonsterWeak",
+    "name": "<a class=\"gModGreen\" id=\"1300638915\">Enemy_W4_Unicorn_01_SummonMonsterWeak</a>",
     "realName": "Weakling",
     "aim": "Debuff",
     "desc": "Due to premature hatching, decreases DEF by #1[i]%.",
@@ -4996,7 +4996,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Manta_LocalLegend_Statues",
+    "name": "<a class=\"gModGreen\" id=\"1575455810\">Enemy_W4_Manta_LocalLegend_Statues</a>",
     "realName": "Respite By The Waters",
     "aim": "Other",
     "desc": "After receiving a certain number of attacks from the targets, immediately uses \"Psychedelic Elegy.\"",
@@ -5004,7 +5004,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Manta_LocalLegend_Virus_Avatar",
+    "name": "<a class=\"gModGreen\" id=\"1965379982\">Enemy_W4_Manta_LocalLegend_Virus_Avatar</a>",
     "realName": "Glacial Erosion",
     "aim": "Debuff",
     "desc": "At the start of the turn, receives Ice DoT equal to a percentage of this unit's Max HP. This DoT is stackable.",
@@ -5012,7 +5012,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_Manta_LocalLegend_Charge",
+    "name": "<a class=\"gModGreen\" id=\"1347964205\">Enemy_W4_Manta_LocalLegend_Charge</a>",
     "realName": "Yearning for a Shared Dance",
     "aim": "Other",
     "desc": "Uses \"Embrace From the Waves\" in every action. Dispelled when Weakness is broken.",
@@ -5020,7 +5020,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Manta_LocalLegend_Virus_Monster",
+    "name": "<a class=\"gModGreen\" id=\"-643353377\">Enemy_W4_Manta_LocalLegend_Virus_Monster</a>",
     "realName": "Glacial Erosion",
     "aim": "Debuff",
     "desc": "At the start of the turn, receives Ice DoT equal to a percentage of this unit's Max HP. This DoT is stackable.",
@@ -5188,7 +5188,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Manta_LocalLegend_Virus_NightMare",
+    "name": "<a class=\"gModGreen\" id=\"799207340\">Enemy_W4_Manta_LocalLegend_Virus_NightMare</a>",
     "realName": "Glacial Erosion",
     "aim": "Debuff",
     "desc": "At the start of the turn, receives Ice DoT equal to a percentage of this unit's Max HP. This DoT is stackable.",

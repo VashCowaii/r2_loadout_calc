@@ -153,6 +153,18 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 4053011,
+    "lineCount": 6390,
+    "sizeCount": 248687
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4053013,
+    "lineCount": 6378,
+    "sizeCount": 248219
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 8015012,
     "lineCount": 6623,
     "sizeCount": 246894
@@ -404,6 +416,24 @@ let sizeLeaderboardArray = [
     "enemyID": 8032030,
     "lineCount": 3973,
     "sizeCount": 174866
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4053010,
+    "lineCount": 4351,
+    "sizeCount": 174475
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4053012,
+    "lineCount": 4351,
+    "sizeCount": 174475
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4053014,
+    "lineCount": 4351,
+    "sizeCount": 174475
   },
   {
     "entryType": "enemy",
@@ -766,6 +796,12 @@ let sizeLeaderboardArray = [
     "enemyID": 8002089,
     "lineCount": 3290,
     "sizeCount": 120300
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4053020,
+    "lineCount": 3157,
+    "sizeCount": 117294
   },
   {
     "entryType": "enemy",
@@ -1691,7 +1727,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 4052011,
     "lineCount": 787,
-    "sizeCount": 26548
+    "sizeCount": 26518
   },
   {
     "entryType": "enemy",
