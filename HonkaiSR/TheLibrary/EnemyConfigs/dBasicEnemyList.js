@@ -9420,7 +9420,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Furiae Warrior"
   },
@@ -9482,7 +9482,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Furiae Philosopher"
   },
@@ -9544,7 +9544,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4012031": {
       "4012031": {
@@ -9589,7 +9589,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Archer"
     },
     "groupName": "Furiae Archer"
@@ -9631,7 +9631,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4012041": {
       "4012041": {
@@ -9641,7 +9641,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Troupe"
     },
     "groupName": "Furiae Troupe"
@@ -9650,14 +9650,14 @@ let basicEnemyList = {
     "4012050": {
       "4012050": {},
       "401205001": {},
-      "hasReader": false
+      "hasReader": true
     },
     "4012051": {
       "4012051": {},
       "401205101": {},
       "401205102": {},
       "401205103": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Spirithief\" Bartholos"
     },
     "groupName": "\"Spirithief\" Bartholos"
@@ -10883,7 +10883,7 @@ let basicEnemyList = {
   "4034020": {
     "4034020": {
       "4034020": {},
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Vessel of the Destruction, Khaslana"
   },
@@ -16438,7 +16438,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Warrior"
     },
     "4012021": {
@@ -16470,7 +16470,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Philosopher"
     },
     "4012022": {
@@ -16481,7 +16481,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Philosopher"
     },
     "4012023": {
@@ -16492,7 +16492,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Philosopher"
     },
     "4012032": {
@@ -16503,7 +16503,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Archer"
     },
     "4012033": {
@@ -16514,7 +16514,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Archer"
     },
     "4012042": {
@@ -16525,12 +16525,12 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Troupe"
     },
     "4012052": {
       "4012052": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Spirithief\" Bartholos"
     },
     "4012080": {

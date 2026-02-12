@@ -29,6 +29,7 @@
     "BreakDamageAddRatio": "VulnBreak[?]",
 
     "BaseDamageMultiRatio": "BaseDMGMultiplier",
+    "ConstFinalDamage": "FinalDMGConstant",
 
     "ForceStanceBreakRatio": "ToughnessReductionForced%",
     "StanceBreakAddRatio": "DamageBreakEfficiency[?]",

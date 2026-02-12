@@ -4278,6 +4278,27 @@ const megaParsingFuckeryPain = {
         
         `;
     },
+    "Abort Ability Use"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "abilityName",
+            "abilitySource",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Abort Ability Use");
+        // initialCounter++;
+
+        
+
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Inject Ability Use:</div>&nbsp;
+            ${parseRef.abilityName ?? (parseRef.abilityID?.displayLines ?? parseRef.abilityID)}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.abilitySource,"Ability Source",true)}
+
+        </div>
+        `;
+    },
     "Inject Ability Use"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -4628,6 +4649,26 @@ const megaParsingFuckeryPain = {
         <div class="modifierDetailsBox">
         </div>`;
     },
+    "Set Custom Wave Info"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "currentWave",
+            "maxWave",
+            // "casterFilter",
+            // "justAddedOrActive",
+            // "includePreDeath",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Set Custom Wave Info");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.currentWave,"Current Wave")}
+            ${getStandardNameDisplay(initialCounter,parseRef.maxWave,"Max Waves")}
+        </div>`;
+    },
     "Infinite Enemy Waves Remain"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -4683,6 +4724,23 @@ const megaParsingFuckeryPain = {
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+        </div>`;
+    },
+    "Has Turn-State"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "states",
+            "invertCondition",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Turn-State");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.invertCondition ? "NOT " : ""}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.states,"States")}
         </div>`;
     },
     "Has Modifier"(parseRef,initialCounter) {
@@ -4784,7 +4842,7 @@ const megaParsingFuckeryPain = {
             "triggerName",
             "target"
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Modifier");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Update Action Bar Display");
 
         // initialCounter++;
         return `<div class="actionDetailBody">

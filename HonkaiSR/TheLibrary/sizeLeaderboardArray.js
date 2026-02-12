@@ -829,6 +829,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 4012052,
+    "lineCount": 3169,
+    "sizeCount": 118043
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 4053020,
     "lineCount": 3157,
     "sizeCount": 117294
@@ -850,6 +856,12 @@ let sizeLeaderboardArray = [
     "enemyID": 1005012,
     "lineCount": 3370,
     "sizeCount": 115733
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012033,
+    "lineCount": 3090,
+    "sizeCount": 115504
   },
   {
     "entryType": "char",
@@ -1136,6 +1148,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 85548
   },
   {
+    "entryType": "enemy",
+    "enemyID": 4012051,
+    "lineCount": 2271,
+    "sizeCount": 85194
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012050,
+    "lineCount": 2272,
+    "sizeCount": 85184
+  },
+  {
     "entryType": "char",
     "entryName": "March 7th - Preservation",
     "trimCharacterName": "March7thP",
@@ -1315,6 +1339,18 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 4012030,
+    "lineCount": 1646,
+    "sizeCount": 63309
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012031,
+    "lineCount": 1645,
+    "sizeCount": 63264
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 4012073,
     "lineCount": 1761,
     "sizeCount": 62818
@@ -1446,12 +1482,30 @@ let sizeLeaderboardArray = [
     "sizeCount": 54783
   },
   {
+    "entryType": "enemy",
+    "enemyID": 4012022,
+    "lineCount": 1415,
+    "sizeCount": 54056
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012023,
+    "lineCount": 1410,
+    "sizeCount": 53911
+  },
+  {
     "entryType": "char",
     "entryName": "Argenti",
     "trimCharacterName": "Argenti",
     "entryIcon": "icon/character/1302.png",
     "lineCount": 1601,
     "sizeCount": 52693
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012032,
+    "lineCount": 1458,
+    "sizeCount": 52518
   },
   {
     "entryType": "enemy",
@@ -1583,6 +1637,18 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 4012040,
+    "lineCount": 1097,
+    "sizeCount": 40875
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012041,
+    "lineCount": 1097,
+    "sizeCount": 40875
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 4012071,
     "lineCount": 1133,
     "sizeCount": 40780
@@ -1687,6 +1753,18 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 4012020,
+    "lineCount": 906,
+    "sizeCount": 34337
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012021,
+    "lineCount": 905,
+    "sizeCount": 34293
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 4062010,
     "lineCount": 915,
     "sizeCount": 33146
@@ -1726,6 +1804,12 @@ let sizeLeaderboardArray = [
     "enemyID": 3021021,
     "lineCount": 852,
     "sizeCount": 31569
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012010,
+    "lineCount": 869,
+    "sizeCount": 30983
   },
   {
     "entryType": "enemy",
@@ -2963,6 +3047,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 4012042,
+    "lineCount": 177,
+    "sizeCount": 5972
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 2022110,
     "lineCount": 191,
     "sizeCount": 5952
@@ -3866,6 +3956,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 2074
   },
   {
+    "entryType": "enemy",
+    "enemyID": 4012011,
+    "lineCount": 67,
+    "sizeCount": 2055
+  },
+  {
     "entryType": "lc",
     "entryName": "Data Bank",
     "trimCharacterName": "DataBank",
@@ -3888,6 +3984,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/20017.png",
     "lineCount": 77,
     "sizeCount": 1930
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4034020,
+    "lineCount": 6,
+    "sizeCount": 110
   },
   {
     "entryType": "enemy",

@@ -2628,7 +2628,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Scholar_BookController",
+    "name": "<a class=\"gModGreen\" id=\"-1513370696\">MModifier_Monster_W4_Scholar_BookController</a>",
     "realName": "Proselytize",
     "aim": "Other",
     "desc": "Causes %DynamicTargetName to enter the \"Gleaned Instruction\" state. Dispelled when this unit's \"War Armor\" is destroyed.",
@@ -2636,7 +2636,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W4_Scholar_BookTarget",
+    "name": "<a class=\"gModGreen\" id=\"-1765528423\">MModifier_Monster_W4_Scholar_BookTarget</a>",
     "realName": "Gleaned Instruction",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]% and DMG dealt by #2[i]%. Dispelled when %CasterName's \"War Armor\" is destroyed.",
@@ -2648,7 +2648,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Scholar_BookKiller",
+    "name": "<a class=\"gModGreen\" id=\"1075754631\">MModifier_Monster_W4_Scholar_BookKiller</a>",
     "realName": "Ignited Flame",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%, and DMG dealt by #2[i]%.",
@@ -2940,7 +2940,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Standard_Unstable_Monster",
+    "name": "<a class=\"gModGreen\" id=\"773544799\">Standard_Unstable_Monster</a>",
     "realName": "Reverberation",
     "aim": "Debuff",
     "desc": "After receiving an attack, enters \"Strong Reverberation,\" then dispels \"Reverberation.\"",
@@ -2948,7 +2948,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Standard_Shake_Monster",
+    "name": "<a class=\"gModGreen\" id=\"1822783917\">Standard_Shake_Monster</a>",
     "realName": "Strong Reverberation",
     "aim": "Debuff",
     "desc": "Action delayed. Cannot take actions for a certain number of turns.",
@@ -2956,7 +2956,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "MModifier_Monster_AML_Minion03_01_StoneShieldEnhance",
+    "name": "<a class=\"gModGreen\" id=\"1276555812\">MModifier_Monster_AML_Minion03_01_StoneShieldEnhance</a>",
     "realName": "Indomitable",
     "aim": "Buff",
     "desc": "Increases max \"War Armor\" stacks. Dispelled when %CasterName's \"War Armor\" is broken.",
@@ -2964,7 +2964,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_AML_Minion03_01_Halo",
+    "name": "<a class=\"gModGreen\" id=\"1735610792\">MModifier_Monster_AML_Minion03_01_Halo</a>",
     "realName": "War Song",
     "aim": "Buff",
     "desc": "Increases max \"War Armor\" stacks for enemy units aside from this unit. Dispelled when this unit's \"Armor\" is destroyed.",
@@ -3388,7 +3388,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Mascot_EscapingCharge00",
+    "name": "<a class=\"gModGreen\" id=\"-1102283112\">Enemy_W4_Mascot_EscapingCharge00</a>",
     "realName": "Brainteaser",
     "aim": "Other",
     "desc": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
@@ -3396,7 +3396,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Mascot_EscapingCharge01",
+    "name": "<a class=\"gModGreen\" id=\"-1085505493\">Enemy_W4_Mascot_EscapingCharge01</a>",
     "realName": "Brainteaser",
     "aim": "Other",
     "desc": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
@@ -3404,7 +3404,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Mascot_EscapingCharge02",
+    "name": "<a class=\"gModGreen\" id=\"-1068727874\">Enemy_W4_Mascot_EscapingCharge02</a>",
     "realName": "Brainteaser",
     "aim": "Other",
     "desc": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
@@ -5242,7 +5242,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W4_Scholar_LocalLegend_BookController",
+    "name": "<a class=\"gModGreen\" id=\"-1087631853\">MModifier_Monster_W4_Scholar_LocalLegend_BookController</a>",
     "realName": "Proselytize",
     "aim": "Other",
     "desc": "Causes %DynamicTargetName to enter the \"Gleaned Instruction\" state.",
@@ -5250,7 +5250,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W4_Scholar_LocalLegend_BookTarget",
+    "name": "<a class=\"gModGreen\" id=\"2022021618\">MModifier_Monster_W4_Scholar_LocalLegend_BookTarget</a>",
     "realName": "Gleaned Instruction",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -5261,7 +5261,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Scholar_LocalLegend_BookKiller",
+    "name": "<a class=\"gModGreen\" id=\"487625140\">MModifier_Monster_W4_Scholar_LocalLegend_BookKiller</a>",
     "realName": "Ignited Flame",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",

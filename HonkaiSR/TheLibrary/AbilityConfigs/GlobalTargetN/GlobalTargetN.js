@@ -2575,6 +2575,58 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "Spirit Theif: Death",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Spirit Theif: Remove",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-906898841\">Enemy_W4_Mascot_ListenCorrectInteract_Activity_DeathMark</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Valkyrie Skill Target",
       "isTargetOperator": false,
       "execute": [
