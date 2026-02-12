@@ -10940,7 +10940,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Herta #ErrorModel"
   },
@@ -10953,7 +10953,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4044011": {
       "4044011": {
@@ -10963,7 +10963,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "First Genius, Entelechy, Zandar"
     },
     "4044012": {
@@ -10974,7 +10974,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "First Genius, Entelechy, Zandar"
     },
     "groupName": "First Genius, Entelechy, Zandar"

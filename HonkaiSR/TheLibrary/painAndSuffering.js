@@ -3003,6 +3003,25 @@ const megaParsingFuckeryPain = {
             
         </div>`;
     },
+    "Divide BossHP into Bars"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "stat",
+            // "living",
+            "barCount",
+            // "sortByHighest",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Divide BossHP into Bars");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.barCount,"Bar Count")}
+            
+        </div>`;
+    },
     "Set Enemy Phase"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -3011,6 +3030,7 @@ const megaParsingFuckeryPain = {
             "mode",
             "target",
             "phase",
+            "phaseType",
             "applyOverride",
             // "sortByHighest",
         ])
@@ -3023,6 +3043,7 @@ const megaParsingFuckeryPain = {
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.mode,"Mode")}
             ${getStandardNameDisplay(initialCounter,parseRef.phase,"Phase")}
+            ${getStandardNameDisplay(initialCounter,parseRef.phaseType,"Phase Type")}
             ${getStandardNameDisplay(initialCounter,parseRef.applyOverride,"Apply Override")}
 
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
@@ -4990,6 +5011,27 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
         </div>`;
     },
+    "Select Random Enemy from Pool"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "poolID",
+            "poolKey",
+            "filter",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Select Random Enemy from Pool");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+
+            ${getStandardNameDisplay(initialCounter,parseRef.poolID,"Pool ID")}
+            ${getStandardNameDisplay(initialCounter,parseRef.poolKey,"Result Key")}
+            ${getStandardNameDisplay(initialCounter,parseRef.filter,"Filter")}
+
+        </div>`;
+    },
     "Dispel Debuffs"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -5026,9 +5068,11 @@ const megaParsingFuckeryPain = {
     "Deal Toughness DMG"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
+            "target",
             "attacker",
             "defender",
             "value",
+            "valuePercentReduce",
 
             "forceReduction",
             "ignoreAttackerBonuses",
@@ -5057,7 +5101,9 @@ const megaParsingFuckeryPain = {
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.value,"Value")}
+            ${getStandardNameDisplay(initialCounter,parseRef.valuePercentReduce,"% Reduction")}
 
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.attacker,"Attacker",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.defender,"Defender",true)}
 

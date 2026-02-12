@@ -4635,7 +4635,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W4_Theoroi_Creation",
+    "name": "<a class=\"gModGreen\" id=\"-303636173\">Monster_W4_Theoroi_Creation</a>",
     "realName": "Potential Realization",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%, HP is restored by #2[i]% at the start of turn.",
@@ -4647,7 +4647,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Theoroi_Reversion",
+    "name": "<a class=\"gModGreen\" id=\"-2105282223\">Monster_W4_Theoroi_Reversion</a>",
     "realName": "Antinomy",
     "aim": "Other",
     "desc": "Ultimate is activated. Using Ultimate consumes HP equal to #1[i]% of this unit's Max HP, this DMG prioritizes Shield effect reduction and is Non-fatal. If Ultimate is not used during the effect duration, Energy will be regenerated to #2[i] points when the effect ends.",
@@ -4659,7 +4659,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Theoroi_Destruction",
+    "name": "<a class=\"gModGreen\" id=\"688363638\">Monster_W4_Theoroi_Destruction</a>",
     "realName": "Retribution of \"Law\"",
     "aim": "Other",
     "desc": "Lose #1[i]% HP after each action.",
@@ -4670,7 +4670,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Theoroi_Destruction_Self",
+    "name": "<a class=\"gModGreen\" id=\"-1039726651\">Monster_W4_Theoroi_Destruction_Self</a>",
     "realName": "Loading: Mythos",
     "aim": "Other",
     "desc": "Use \"Query: Prime Mover's Outcome\" after #1[i] more instance(s) of any of the following: enemy target defeats, ally character knock-downs, or memosprite disappearances.",
@@ -4681,7 +4681,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Theoroi_Part1",
+    "name": "<a class=\"gModGreen\" id=\"534638248\">Monster_W4_Theoroi_Part1</a>",
     "realName": "To Logos",
     "aim": "Other",
     "desc": "Use \"SET Proof_Method=Black_Tide\" after #1[i] more instances of either of the following: enemy target generations or ally memosprite summons.",
@@ -4692,7 +4692,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Theoroi_Reload",
+    "name": "<a class=\"gModGreen\" id=\"1881355591\">Monster_W4_Theoroi_Reload</a>",
     "realName": "Infinite Recursion",
     "aim": "Buff",
     "desc": "Each stack increases \"Query: Prime Mover's Outcome\" DMG by #1[i]%, and additionally inflicts Entanglement on #2[i] target(s).",
@@ -4944,7 +4944,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Theoroi_DamageTakenUp",
+    "name": "<a class=\"gModGreen\" id=\"2001837227\">Monster_W4_Theoroi_DamageTakenUp</a>",
     "realName": "Corporeal",
     "aim": "Debuff",
     "desc": "DMG received increases by #1[i]%. This effect is stackable.",
