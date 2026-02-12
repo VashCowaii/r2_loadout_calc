@@ -465,472 +465,478 @@ const megaParsingFuckery = {
 
     },
     pageLoad(loadFile) {
+        const hasAbilitiesAtAll = compositeAbilityObject.abilityList?.length;
         
         if (compositeAbilityObject && !Array.isArray(compositeAbilityObject)) {
             const bodyBox = readSelection("eventBodyMainBox");
 
+            if (hasAbilitiesAtAll) {
+                const abilityObjectInstance = compositeAbilityObject.abilityObject;
+                const abilityListInstance = compositeAbilityObject.abilityList;
 
-            const abilityObjectInstance = compositeAbilityObject.abilityObject;
-            const abilityListInstance = compositeAbilityObject.abilityList;
+                const isLightcone = compositeAbilityObject.isLightcone;
+                const isRelic = compositeAbilityObject.isRelic;
 
-            const isLightcone = compositeAbilityObject.isLightcone;
-            const isRelic = compositeAbilityObject.isRelic;
+                globalIsLightcone = isLightcone;
+                globalIsRelic = isRelic;
 
-            globalIsLightcone = isLightcone;
-            globalIsRelic = isRelic;
-
-            loadFile = loadFile ?? abilityListInstance[abilityListInstance.length >= 2 ? 1 : 0];
-            let configAbility = abilityObjectInstance[loadFile];
+                loadFile = loadFile ?? abilityListInstance[abilityListInstance.length >= 2 ? 1 : 0];
+                let configAbility = abilityObjectInstance[loadFile];
 
 
-            if (!configAbility || location.hash) {
-                let foundValidFile = false;
-                
-                if (location.hash) {
-                    const elemIDAfter = decodeURIComponent(location.hash.slice(1));
-                    // const elemIDAfter = location.hash.slice(1);
+                if (!configAbility || location.hash) {
+                    let foundValidFile = false;
                     
-                    // console.log(elemIDAfter,readSelection(decodeURIComponent((elemIDAfter))))
-                    if (!firstPageLoad && elemIDAfter && (elemIDAfter.includes("mod__") || elemIDAfter.includes("fun__"))) {
-                        // readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
-    
-                        firstPageLoad = true;
+                    if (location.hash) {
+                        const elemIDAfter = decodeURIComponent(location.hash.slice(1));
+                        // const elemIDAfter = location.hash.slice(1);
                         
-                        for (let loadFileEntry in compositeAbilityObject.abilityObject) {
-                            let currentEntry = JSON.stringify(compositeAbilityObject.abilityObject[loadFileEntry]);
-    
-                            console.log(elemIDAfter,currentEntry.includes(elemIDAfter))
-                            if (currentEntry.includes(elemIDAfter)) {
-                                configAbility = compositeAbilityObject.abilityObject[loadFileEntry];
-                                loadFile = loadFileEntry;
+                        // console.log(elemIDAfter,readSelection(decodeURIComponent((elemIDAfter))))
+                        if (!firstPageLoad && elemIDAfter && (elemIDAfter.includes("mod__") || elemIDAfter.includes("fun__"))) {
+                            // readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+        
+                            firstPageLoad = true;
+                            
+                            for (let loadFileEntry in compositeAbilityObject.abilityObject) {
+                                let currentEntry = JSON.stringify(compositeAbilityObject.abilityObject[loadFileEntry]);
+        
+                                console.log(elemIDAfter,currentEntry.includes(elemIDAfter))
+                                if (currentEntry.includes(elemIDAfter)) {
+                                    configAbility = compositeAbilityObject.abilityObject[loadFileEntry];
+                                    loadFile = loadFileEntry;
+                                    currentEntry = "";
+                                    foundValidFile = true;
+                                    break;
+                                }
                                 currentEntry = "";
-                                foundValidFile = true;
-                                break;
                             }
-                            currentEntry = "";
-                        }
-    
-                        // console.log(elemIDAfter)
-                        // if (elemIDAfter.includes("mod__") || elemIDAfter.includes("fun__")) {
-                        //     readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
-                        // }
-                        // else {
-                        //     readSelection("fileSelectionSelector").value = `${currentCharFilePrefix}_${elemIDAfter}`;
-                        //     megaParsingFuckery.renewFileSelected()
-                        // }
-    
-                        if (!foundValidFile) {
-                            alert(`Couldn't find a matching file under this entity, for the link you were provided.\n\nIf you believe this is in error and you didn't just fuck with the URL like an idiot, then join the discord and let Vash know.`)
-                        }
-                    };
+        
+                            // console.log(elemIDAfter)
+                            // if (elemIDAfter.includes("mod__") || elemIDAfter.includes("fun__")) {
+                            //     readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+                            // }
+                            // else {
+                            //     readSelection("fileSelectionSelector").value = `${currentCharFilePrefix}_${elemIDAfter}`;
+                            //     megaParsingFuckery.renewFileSelected()
+                            // }
+        
+                            if (!foundValidFile) {
+                                alert(`Couldn't find a matching file under this entity, for the link you were provided.\n\nIf you believe this is in error and you didn't just fuck with the URL like an idiot, then join the discord and let Vash know.`)
+                            }
+                        };
+                    }
+        
+        
+        
+                    if ((!firstPageLoad || !foundValidFile) && !configAbility) {
+                        firstPageLoad = true;
+                        // loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName + "_Servant",compositeAbilityObject.trimSummonName);
+                        loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName,compositeAbilityObject.trimSummonName);
+                        // console.log(loadFile)
+                        // console.log(loadFile)
+                        configAbility = compositeAbilityObject.abilityObject[loadFile];
+                        // compositeAbilityObject.trimSummonName
+                    }
+        
+                    
+                    
+        
                 }
-    
-    
-    
-                if ((!firstPageLoad || !foundValidFile) && !configAbility) {
-                    firstPageLoad = true;
-                    // loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName + "_Servant",compositeAbilityObject.trimSummonName);
-                    loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName,compositeAbilityObject.trimSummonName);
-                    // console.log(loadFile)
-                    // console.log(loadFile)
-                    configAbility = compositeAbilityObject.abilityObject[loadFile];
-                    // compositeAbilityObject.trimSummonName
-                }
-    
+
+                // if (!configAbility && abilityListInstance.length) {
+                //     loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName,compositeAbilityObject.trimSummonName);
+                //     // console.log(loadFile)
+                //     configAbility = abilityObjectInstance[loadFile];
+                //     // compositeAbilityObject.trimSummonName
+
+                // }
+
+
+
+
+                const hasValidInstance = !!configAbility;
+
+                // let paramObject = hasValidInstance ? userTriggers.getEnemySkillsObject(true) : null;
+                let paramObject = userTriggers.getEnemySkillsObject(true);
+                // console.log(paramObject)
+
+                let stringInstance = hasValidInstance ? JSON.stringify(configAbility).replace(
+                    /\{\[([A-Za-z0-9_]+)\[(\d+)\]\]\}/g,
+                    (_,skill,index) => {
+                        const currentSkillEntryList = paramObject[skill];
+
+                        
+
+                        let paramIndex = Number(index);
+
+
+                        if (currentSkillEntryList == undefined || (currentSkillEntryList.paramOverrides?.[paramIndex] == undefined && currentSkillEntryList.params?.[paramIndex] == undefined)) {
+                            // console.log(skill,index,paramObject,currentSkillEntryList)
+                            return "UnusedUnderThisBase_" + skill + index
+                        }
+
+
+                        // console.log(paramIndex,skill,paramObject)
+                        
+                        let paramEntry = currentSkillEntryList.paramOverrides?.[paramIndex] && currentSkillEntryList.paramOverrides[paramIndex] != "-" ? currentSkillEntryList.paramOverrides[paramIndex] : currentSkillEntryList.params[paramIndex];
+
+                        // paramOverrides
+                        return paramEntry;
+                    }
+                ) : null;
+
+                configAbility = hasValidInstance ? JSON.parse(stringInstance) : configAbility;
+                stringInstance = null;
+
+                const abilitiesHaveLength = abilityListInstance.length;
+
+                let initialCounter = 1;
+                let eventBodyString = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter) : "";
+                let eventBodyStringOnAdd = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.whenAdded,initialCounter) : "";
+                let eventBodyStringOnRemove = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.whenRemoved,initialCounter) : "";
+
+                
+                let eventBodyStringOnAbort = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.onAbort,initialCounter) : "";
+                let eventBodyStringFunctions = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.functions,initialCounter) : "";
+                
+
+                let referenceBodyString = configAbility?.references.length ? megaParsingFuckery.fillEventBodyBox(configAbility.references,initialCounter) : null;
+                currentCharFilePrefix = compositeAbilityObject.trimCharacterName;
+
+                
+
+                let referenceGlobalString = configAbility?.referencesGlobal?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobal,initialCounter) : null;
+                let referenceGlobalFunctionString = configAbility?.referencesGlobalFunctions?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobalFunctions,initialCounter) : null;
                 
                 
-    
-            }
 
-            // if (!configAbility && abilityListInstance.length) {
-            //     loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName,compositeAbilityObject.trimSummonName);
-            //     // console.log(loadFile)
-            //     configAbility = abilityObjectInstance[loadFile];
-            //     // compositeAbilityObject.trimSummonName
+                // "fileName": "Saber_Skill02",
+                // "abilityType": "Skill",
+                // "energy": 30,
+                // "toughnessList": [
+                //     20,
+                //     0,
+                //     10
+                // ],
+                // parse: []
+                // references: []
+                // desc: currentLCEntry.desc,
+                // params: currentLCEntry.params,
+                const isGlobalNoImage = false;
+                // const isGlobalNoImage = compositeAbilityObject.fullCharacterName.toLowerCase().includes("global")
+                // || compositeAbilityObject.fullCharacterName.toLowerCase().includes("enemyabilities");
 
-            // }
+                globalIsNoImage = isGlobalNoImage;
+
+                // console.log(compositeAbilityObject.fullCharacterName,characterRef.preview)
+                // const characterRef = characters[compositeAbilityObject.fullCharacterName];
+                // const lightconeRef = lightcones[compositeAbilityObject.fullCharacterName];
+                // const relicSetRef = relicSets[compositeAbilityObject.fullCharacterName];
+                // console.log(compositeAbilityObject.fullCharacterName,characterRef,characters)
+
+                const startingKeys = [
+                    // {leftHand: "File", keyValue: "fileName"},
+                    {leftHand: "trash", keyValue: "trash"},
+                    {leftHand: "Ability", keyValue: "abilityType"},
+                    {leftHand: "Skill Trigger", keyValue: "skillTrigger"},
+                    {leftHand: "Element", keyValue: "element"},
+                    {leftHand: "Energy", keyValue: "energy"},
+                    
+                    
+                    
+                    // {leftHand: "Toughness", keyValue: "toughnessList"},
+                ];
 
 
 
+                // ${!isGlobalNoImage ? `<div class="customMenuResultRowIcon">
+                //     <img src="/HonkaiSR/${isRelic ? relicSetRef.icon : (isLightcone ? lightconeRef.preview : characterRef.preview)}" class="${isRelic ? "eventCharacterFileIconRelic" : "eventCharacterFileIcon"}" style="border: 2px solid #d2ae73;">
+                // </div>` : ""}
+                let startingString = `
+                    
+                    
+                    <div class="eventCharacterFileInfoBox">
 
-            const hasValidInstance = !!configAbility;
-
-            // let paramObject = hasValidInstance ? userTriggers.getEnemySkillsObject(true) : null;
-            let paramObject = userTriggers.getEnemySkillsObject(true);
-            // console.log(paramObject)
-
-            let stringInstance = hasValidInstance ? JSON.stringify(configAbility).replace(
-                /\{\[([A-Za-z0-9_]+)\[(\d+)\]\]\}/g,
-                (_,skill,index) => {
-                    const currentSkillEntryList = paramObject[skill];
-
+                    <div class="abilitySelectorFloaterBox">
+                        <div class="abilitySelectorFloaterBoxName">Ability Selection</div>
+                        <select class="selectorWidthRestriction" id="fileSelectionSelector" onchange="megaParsingFuckery.renewFileSelected()">
+                    </div>
+                    `;
                     
 
-                    let paramIndex = Number(index);
+                let optionsString = "";
+
+                for (let fileEntry of abilityListInstance) {
+                    optionsString += `<option value="${fileEntry}" ${fileEntry === loadFile ? "selected" : ""}>${fileEntry}</option>`
+                }
+                optionsString += "</select></div>"
+                startingString += optionsString;
 
 
-                    if (currentSkillEntryList == undefined || (currentSkillEntryList.paramOverrides?.[paramIndex] == undefined && currentSkillEntryList.params?.[paramIndex] == undefined)) {
-                        // console.log(skill,index,paramObject,currentSkillEntryList)
-                        return "UnusedUnderThisBase_" + skill + index
+
+                let rowAlternating = 1;
+                startingString += `<div class="${globalIsLightcone || globalIsRelic ? "energyAndToughnessRowHolderItems" : "energyAndToughnessRowHolder"}">`;
+                if (!isLightcone && abilitiesHaveLength) {
+
+
+                    const propertyDisplayTemplates = {
+                        energy(keyValue,configAbility,currentSkillTrigger,currentParamsEntry) {
+                            return `<div class="imageRowStatisticBoxWithIcon">
+                                <img src="/HonkaiSR/icon/property/IconEnergyRecovery.png" class="characterDisplayLogStatIcon"></img>
+                                <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}</div>
+                            </div>`;
+                        },
+                        element(keyValue,configAbility,currentSkillTrigger,currentParamsEntry) {
+                            return `<div class="imageRowStatisticBoxWithIcon">
+                                <img src="/HonkaiSR/icon/element/${keyValue}.png" class="characterDisplayLogStatIconElement"></img>
+                            </div>`;
+                        },
+                        skillTrigger(keyValue,configAbility,currentSkillTrigger,currentParamsEntry) {
+                            return `<div class="imageRowStatisticBoxWithIcon">
+                                <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}${configAbility.abilityType ? `[${configAbility.abilityType}]` : ""}</div>
+                            </div>`;
+                        },
+                        // abilityType(keyValue) {
+                        //     return `<div class="imageRowStatisticBoxWithIcon">
+                        //         <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}</div>
+                        //     </div>`;
+                        // },
                     }
 
-
-                    // console.log(paramIndex,skill,paramObject)
                     
-                    let paramEntry = currentSkillEntryList.paramOverrides?.[paramIndex] && currentSkillEntryList.paramOverrides[paramIndex] != "-" ? currentSkillEntryList.paramOverrides[paramIndex] : currentSkillEntryList.params[paramIndex];
+                    
+                    for (let entry of startingKeys) {
+                        if (configAbility[entry.keyValue] == null) {
 
-                    // paramOverrides
-                    return paramEntry;
+                            // loadFile = loadFile ?? compositeAbilityObject.abilityList[compositeAbilityObject.abilityList.length >= 2 ? 1 : 0];
+
+                            for (let findAbilityEntry of compositeAbilityObject.abilityList) {
+                                const testCurrentEntry = compositeAbilityObject.abilityObject[findAbilityEntry];
+                                if (!testCurrentEntry.childAbilityList) {continue;}
+
+                                const newSet = new Set(testCurrentEntry.childAbilityList)
+                                if (newSet.has(loadFile)) {
+                                    
+                                    configAbility["abilityType"] = testCurrentEntry["abilityType"];
+                                    configAbility["skillTrigger"] = testCurrentEntry["skillTrigger"];
+                                    // configAbility["energy"] = testCurrentEntry["energy"];
+                                    configAbility["energy"] = configAbility["energy"] ?? paramObject[testCurrentEntry["skillTrigger"]]?.["energy"];
+                                    configAbility["element"] = configAbility["element"] ?? paramObject[testCurrentEntry["skillTrigger"]]?.["element"];
+                                    // console.log("EEEEEEEEEEEEE",configAbility["energy"])
+
+                                    configAbility.toughnessList = testCurrentEntry.toughnessList;
+                                    break;
+                                }
+                            }
+
+                            // childAbilityList
+
+
+                            continue;
+                        }
+                        if (entry.keyValue === "abilityType") {continue;}
+
+                        let currentSkillTrigger = null;
+                        let currentParamsEntry = null;
+
+                        // if (entry.keyValue === "energy") {console.log("AAAAAAAAAAH")}
+                        // startingString += `<div class="">${configAbility[entry]}</div>`;
+
+                        // <div class="imageRowStatisticImageBox"><img src="${currentKey.icon}" class="${isStatMenuCreation ? "imageRowStatisticImageStatMenu" : "imageRowStatisticImage"}"/></div>
+                        // ${subRolls && estRolls ? `<div class="imageRowStatisticStatBoxRollsEst">${estRolls}</div>` : ""}
+
+
+                        if (propertyDisplayTemplates[entry.keyValue] || currentParamsEntry[entry.keyValue]) {startingString += propertyDisplayTemplates[entry.keyValue](configAbility[entry.keyValue],configAbility,currentSkillTrigger,currentParamsEntry);}
+                        else {
+                            startingString +=  `<div class="imageRowStatisticBox${(globalIsLightcone || globalIsRelic) ? rowAlternating : 0}DETAILS">
+                                <div class="imageRowStatisticNameBoxDETAILS">${entry.leftHand}</div>
+                                <div class="imageRowStatisticStatBoxDETAILS">${configAbility[entry.keyValue]}</div>
+                            </div>`;
+                        }
+
+                        if (rowAlternating === 2) {rowAlternating = 1;}
+                        else {rowAlternating++;}
+                    }
                 }
-            ) : null;
 
-            configAbility = hasValidInstance ? JSON.parse(stringInstance) : configAbility;
-            stringInstance = null;
 
-            const abilitiesHaveLength = abilityListInstance.length;
+                let toughnessRowString = "";
+                if (configAbility?.toughnessList && abilitiesHaveLength) {
+                    const toughnessIndexConversion = {
+                        0: "ST",
+                        1: "AOE",
+                        2: "Blast"
+                    }
 
-            let initialCounter = 1;
-            let eventBodyString = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter) : "";
-            let eventBodyStringOnAdd = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.whenAdded,initialCounter) : "";
-            let eventBodyStringOnRemove = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.whenRemoved,initialCounter) : "";
+                    const check1 = configAbility.toughnessList[0] != 0;
+                    const check2 = configAbility.toughnessList[1] != 0;
+                    const check3 = configAbility.toughnessList[2] != 0;
+                    const hasActualValues = check1 || check2 || check3;
 
-            
-            let eventBodyStringOnAbort = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.onAbort,initialCounter) : "";
-            let eventBodyStringFunctions = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.functions,initialCounter) : "";
-            
+                    
 
-            let referenceBodyString = configAbility?.references.length ? megaParsingFuckery.fillEventBodyBox(configAbility.references,initialCounter) : null;
-            currentCharFilePrefix = compositeAbilityObject.trimCharacterName;
+                    if (hasActualValues) {
+                        toughnessRowString += `<img src="/HonkaiSR/icon/property/IconBreakUp.png" class="characterDisplayLogStatIconCenter"></img>`;
 
-            
+                        for (let i=0;i<3;i++) {
+                            if (configAbility.toughnessList[i] === 0) {continue;}
+                            toughnessRowString += `<div class="toughnessTableRowItemBox">
+                                <div class="toughnessTableRowItemHeader">${toughnessIndexConversion[i]}</div>
+                                <div class="toughnessTableRowItemValue">${configAbility.toughnessList[i]}</div>
+                            </div>`;
+                        }
+                    }
+                }
 
-            let referenceGlobalString = configAbility?.referencesGlobal?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobal,initialCounter) : null;
-            let referenceGlobalFunctionString = configAbility?.referencesGlobalFunctions?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobalFunctions,initialCounter) : null;
-            
-            
+                // <div class="toughnessTableRowHeader">Toughness</div>
+                let toughnessString = !isLightcone && toughnessRowString != "" ? `<div class="toughnessTableRowBox">
+                    
 
-            // "fileName": "Saber_Skill02",
-            // "abilityType": "Skill",
-            // "energy": 30,
-            // "toughnessList": [
-            //     20,
-            //     0,
-            //     10
-            // ],
-            // parse: []
-            // references: []
-            // desc: currentLCEntry.desc,
-            // params: currentLCEntry.params,
-            const isGlobalNoImage = false;
-            // const isGlobalNoImage = compositeAbilityObject.fullCharacterName.toLowerCase().includes("global")
-            // || compositeAbilityObject.fullCharacterName.toLowerCase().includes("enemyabilities");
-
-            globalIsNoImage = isGlobalNoImage;
-
-            // console.log(compositeAbilityObject.fullCharacterName,characterRef.preview)
-            // const characterRef = characters[compositeAbilityObject.fullCharacterName];
-            // const lightconeRef = lightcones[compositeAbilityObject.fullCharacterName];
-            // const relicSetRef = relicSets[compositeAbilityObject.fullCharacterName];
-            // console.log(compositeAbilityObject.fullCharacterName,characterRef,characters)
-
-            const startingKeys = [
-                // {leftHand: "File", keyValue: "fileName"},
-                {leftHand: "trash", keyValue: "trash"},
-                {leftHand: "Ability", keyValue: "abilityType"},
-                {leftHand: "Skill Trigger", keyValue: "skillTrigger"},
-                {leftHand: "Element", keyValue: "element"},
-                {leftHand: "Energy", keyValue: "energy"},
+                    <div class="toughnessTableRowTableRow">
+                        ${toughnessRowString}
+                    </div>
                 
+                </div>` : "";
+
+                let statRowString1 = "";
+                let statRowString2 = "";
+
+                let lightconeStatRow = "";
+
+                // console.log(compositeAbilityObject.fixedStats)
+                if (isRelic) {
+                    if (compositeAbilityObject.fixedStats[2]) {
+                        const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[2]);
+                        statRowString1 = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,compositeAbilityObject.fixedStats[2]);
+                    }
+                    if (compositeAbilityObject.fixedStats[4]) {
+                        const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[4]);
+                        statRowString2 = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,compositeAbilityObject.fixedStats[4]);
+                    }
+                }
+                if (isLightcone && !isRelic && compositeAbilityObject.fixedStats && compositeAbilityObject.fixedStats[currentLCSuperimposition]) {
+                    const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[currentLCSuperimposition]);
+                    lightconeStatRow = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,compositeAbilityObject.fixedStats[currentLCSuperimposition]);
+                }
+
                 
-                
-                // {leftHand: "Toughness", keyValue: "toughnessList"},
-            ];
+
+                if (isLightcone) {
+                    toughnessString += `
+                    ${!isRelic ? `<div class="customMenuSearchNote" id="customMenuSearchNote">Changing superimposition won't change the events, only the description</div>
+                    <div class="superimpositionHolderbox">
+                        <div class="superimpositionButton clickable" id="superimpositionButton1" onclick="megaParsingFuckery.updateSuperimposition(1)" style="${currentLCSuperimposition === 1 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">1</div>
+                        <div class="superimpositionButton clickable" id="superimpositionButton2" onclick="megaParsingFuckery.updateSuperimposition(2)" style="${currentLCSuperimposition === 2 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">2</div>
+                        <div class="superimpositionButton clickable" id="superimpositionButton3" onclick="megaParsingFuckery.updateSuperimposition(3)" style="${currentLCSuperimposition === 3 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">3</div>
+                        <div class="superimpositionButton clickable" id="superimpositionButton4" onclick="megaParsingFuckery.updateSuperimposition(4)" style="${currentLCSuperimposition === 4 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">4</div>
+                        <div class="superimpositionButton clickable" id="superimpositionButton5" onclick="megaParsingFuckery.updateSuperimposition(5)" style="${currentLCSuperimposition === 5 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">5</div>
+                    </div>` : ""}
+                    
+                    
+                    
+                    ${lightconeStatRow ? `<div class="characterDisplayPathAndNameBox">
+                        <div class="characterDisplayPathNameBox">Lightcone Menu Bonuses:</div>
+                    </div>` + lightconeStatRow : ""}
+                    
+                    `
+                }
+                startingString += toughnessString + ``;
+                startingString += `</div>`
 
 
 
-            // ${!isGlobalNoImage ? `<div class="customMenuResultRowIcon">
-            //     <img src="/HonkaiSR/${isRelic ? relicSetRef.icon : (isLightcone ? lightconeRef.preview : characterRef.preview)}" class="${isRelic ? "eventCharacterFileIconRelic" : "eventCharacterFileIcon"}" style="border: 2px solid #d2ae73;">
-            // </div>` : ""}
-            let startingString = `
-                
-                
-                <div class="eventCharacterFileInfoBox">
+                // <details class="rotationsPermaConditionsExpand" open="">
+                //     <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                //         <div class="rotationConditionOperatorHeaderCondition">${parseRef.name}</div>
+                //         ${returnString}
+                //     </summary>
 
-                <div class="abilitySelectorFloaterBox">
-                    <div class="abilitySelectorFloaterBoxName">Ability Selection</div>
-                    <select class="selectorWidthRestriction" id="fileSelectionSelector" onchange="megaParsingFuckery.renewFileSelected()">
+                //     <div class="rotationConditionOperatorBoxMain">
+                //         ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">THEN</div>
+                //         <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                //             ${parseString}
+                //         </div>` : ""}
+                //         ${hasRef ? `<div class="rotationConditionOperatorHeaderConditionELSE">ELSE</div>
+                //         <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                //             ${refString}
+                //         </div>` : ""}
+                //     </div>
+                // </details>
+
+
+                //TODO: add back in later
+                // ${startingString}
+
+                readSelection("eventReaderControlsBox").innerHTML = startingString;
+
+                const mainAbilityString = `
+                <div class="eventBodyScrollerMain">
+                    <details class="rotationsPermaConditionsExpand" open="">
+                        <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                            <div class="rotationConditionOperatorHeaderCondition">ABILITY LOG</div>
+                        </summary>
+                        ${eventBodyString}
+                    </details>
+                    ${eventBodyStringOnAdd ? `<details class="rotationsPermaConditionsExpand" open="">
+                        <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                            <div class="rotationConditionOperatorHeaderCondition">ADDED LOG</div>
+                        </summary>
+                        ${eventBodyStringOnAdd}
+                    </details>` : ""}
+                    ${eventBodyStringOnRemove ? `<details class="rotationsPermaConditionsExpand" open="">
+                        <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                            <div class="rotationConditionOperatorHeaderCondition">REMOVED LOG</div>
+                        </summary>
+                        ${eventBodyStringOnRemove}
+                    </details>` : ""}
+                    ${eventBodyStringOnAbort ? `<details class="rotationsPermaConditionsExpand" open="">
+                        <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                            <div class="rotationConditionOperatorHeaderCondition">ON ABILITY ABORT</div>
+                        </summary>
+                        ${eventBodyStringOnAbort}
+                    </details>` : ""}
+
+                    
+                    ${referenceBodyString ? `<details class="rotationsPermaConditionsExpand" open="">
+                        <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                            <div class="rotationConditionOperatorHeaderCondition">MODIFIER LOG</div>
+                        </summary>
+                        ${referenceBodyString}
+                    </details>` : ""}
+                    ${eventBodyStringFunctions ? `<details class="rotationsPermaConditionsExpand" open="">
+                        <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                            <div class="rotationConditionOperatorHeaderCondition">ABILITY FUNCTIONS</div>
+                        </summary>
+                        ${eventBodyStringFunctions}
+                    </details>` : ""}
+                    ${referenceGlobalString ? `<details class="rotationsPermaConditionsExpand" open="">
+                        <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                            <div class="rotationConditionOperatorHeaderCondition">GLOBAL MODIFERS</div>
+                        </summary>
+                        ${referenceGlobalString}
+                    </details>` : ""}
+                    ${referenceGlobalFunctionString ? `<details class="rotationsPermaConditionsExpand" open="">
+                        <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                            <div class="rotationConditionOperatorHeaderCondition">GLOBAL FUNCTIONS</div>
+                        </summary>
+                        ${referenceGlobalFunctionString}
+                    </details>` : ""}
                 </div>
                 `;
+
                 
 
-            let optionsString = "";
+                bodyBox.innerHTML = mainAbilityString;
 
-            for (let fileEntry of abilityListInstance) {
-                optionsString += `<option value="${fileEntry}" ${fileEntry === loadFile ? "selected" : ""}>${fileEntry}</option>`
+
+
+                megaParsingFuckery.populateLinkedEntriesGlobal("gModGreen")
+                megaParsingFuckery.populateLinkedEntriesGlobal("gTempYellow")
             }
-            optionsString += "</select></div>"
-            startingString += optionsString;
-
-
-
-            let rowAlternating = 1;
-            startingString += `<div class="${globalIsLightcone || globalIsRelic ? "energyAndToughnessRowHolderItems" : "energyAndToughnessRowHolder"}">`;
-            if (!isLightcone && abilitiesHaveLength) {
-
-
-                const propertyDisplayTemplates = {
-                    energy(keyValue,configAbility,currentSkillTrigger,currentParamsEntry) {
-                        return `<div class="imageRowStatisticBoxWithIcon">
-                            <img src="/HonkaiSR/icon/property/IconEnergyRecovery.png" class="characterDisplayLogStatIcon"></img>
-                            <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}</div>
-                        </div>`;
-                    },
-                    element(keyValue,configAbility,currentSkillTrigger,currentParamsEntry) {
-                        return `<div class="imageRowStatisticBoxWithIcon">
-                            <img src="/HonkaiSR/icon/element/${keyValue}.png" class="characterDisplayLogStatIconElement"></img>
-                        </div>`;
-                    },
-                    skillTrigger(keyValue,configAbility,currentSkillTrigger,currentParamsEntry) {
-                        return `<div class="imageRowStatisticBoxWithIcon">
-                            <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}${configAbility.abilityType ? `[${configAbility.abilityType}]` : ""}</div>
-                        </div>`;
-                    },
-                    // abilityType(keyValue) {
-                    //     return `<div class="imageRowStatisticBoxWithIcon">
-                    //         <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}</div>
-                    //     </div>`;
-                    // },
-                }
-
+            else {
+                bodyBox.innerHTML = `<div class="customMenuSearchNote">No events to read. Either an error, or this enemy genuinely does nothing itself.<br><br>This can happen more often than you'd think, where enemies can be visual props that don't "exist" in a combat sense.</div>`
                 
-                
-                for (let entry of startingKeys) {
-                    if (configAbility[entry.keyValue] == null) {
-
-                        // loadFile = loadFile ?? compositeAbilityObject.abilityList[compositeAbilityObject.abilityList.length >= 2 ? 1 : 0];
-
-                        for (let findAbilityEntry of compositeAbilityObject.abilityList) {
-                            const testCurrentEntry = compositeAbilityObject.abilityObject[findAbilityEntry];
-                            if (!testCurrentEntry.childAbilityList) {continue;}
-
-                            const newSet = new Set(testCurrentEntry.childAbilityList)
-                            if (newSet.has(loadFile)) {
-                                
-                                configAbility["abilityType"] = testCurrentEntry["abilityType"];
-                                configAbility["skillTrigger"] = testCurrentEntry["skillTrigger"];
-                                // configAbility["energy"] = testCurrentEntry["energy"];
-                                configAbility["energy"] = configAbility["energy"] ?? paramObject[testCurrentEntry["skillTrigger"]]?.["energy"];
-                                configAbility["element"] = configAbility["element"] ?? paramObject[testCurrentEntry["skillTrigger"]]?.["element"];
-                                // console.log("EEEEEEEEEEEEE",configAbility["energy"])
-
-                                configAbility.toughnessList = testCurrentEntry.toughnessList;
-                                break;
-                            }
-                        }
-
-                        // childAbilityList
-
-
-                        continue;
-                    }
-                    if (entry.keyValue === "abilityType") {continue;}
-
-                    let currentSkillTrigger = null;
-                    let currentParamsEntry = null;
-
-                    // if (entry.keyValue === "energy") {console.log("AAAAAAAAAAH")}
-                    // startingString += `<div class="">${configAbility[entry]}</div>`;
-
-                    // <div class="imageRowStatisticImageBox"><img src="${currentKey.icon}" class="${isStatMenuCreation ? "imageRowStatisticImageStatMenu" : "imageRowStatisticImage"}"/></div>
-                    // ${subRolls && estRolls ? `<div class="imageRowStatisticStatBoxRollsEst">${estRolls}</div>` : ""}
-
-
-                    if (propertyDisplayTemplates[entry.keyValue] || currentParamsEntry[entry.keyValue]) {startingString += propertyDisplayTemplates[entry.keyValue](configAbility[entry.keyValue],configAbility,currentSkillTrigger,currentParamsEntry);}
-                    else {
-                        startingString +=  `<div class="imageRowStatisticBox${(globalIsLightcone || globalIsRelic) ? rowAlternating : 0}DETAILS">
-                            <div class="imageRowStatisticNameBoxDETAILS">${entry.leftHand}</div>
-                            <div class="imageRowStatisticStatBoxDETAILS">${configAbility[entry.keyValue]}</div>
-                        </div>`;
-                    }
-
-                    if (rowAlternating === 2) {rowAlternating = 1;}
-                    else {rowAlternating++;}
-                }
             }
-
-
-            let toughnessRowString = "";
-            if (configAbility?.toughnessList && abilitiesHaveLength) {
-                const toughnessIndexConversion = {
-                    0: "ST",
-                    1: "AOE",
-                    2: "Blast"
-                }
-
-                const check1 = configAbility.toughnessList[0] != 0;
-                const check2 = configAbility.toughnessList[1] != 0;
-                const check3 = configAbility.toughnessList[2] != 0;
-                const hasActualValues = check1 || check2 || check3;
-
-                
-
-                if (hasActualValues) {
-                    toughnessRowString += `<img src="/HonkaiSR/icon/property/IconBreakUp.png" class="characterDisplayLogStatIconCenter"></img>`;
-
-                    for (let i=0;i<3;i++) {
-                        if (configAbility.toughnessList[i] === 0) {continue;}
-                        toughnessRowString += `<div class="toughnessTableRowItemBox">
-                            <div class="toughnessTableRowItemHeader">${toughnessIndexConversion[i]}</div>
-                            <div class="toughnessTableRowItemValue">${configAbility.toughnessList[i]}</div>
-                        </div>`;
-                    }
-                }
-            }
-
-            // <div class="toughnessTableRowHeader">Toughness</div>
-            let toughnessString = !isLightcone && toughnessRowString != "" ? `<div class="toughnessTableRowBox">
-                
-
-                <div class="toughnessTableRowTableRow">
-                    ${toughnessRowString}
-                </div>
-            
-            </div>` : "";
-
-            let statRowString1 = "";
-            let statRowString2 = "";
-
-            let lightconeStatRow = "";
-
-            // console.log(compositeAbilityObject.fixedStats)
-            if (isRelic) {
-                if (compositeAbilityObject.fixedStats[2]) {
-                    const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[2]);
-                    statRowString1 = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,compositeAbilityObject.fixedStats[2]);
-                }
-                if (compositeAbilityObject.fixedStats[4]) {
-                    const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[4]);
-                    statRowString2 = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,compositeAbilityObject.fixedStats[4]);
-                }
-            }
-            if (isLightcone && !isRelic && compositeAbilityObject.fixedStats && compositeAbilityObject.fixedStats[currentLCSuperimposition]) {
-                const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[currentLCSuperimposition]);
-                lightconeStatRow = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,compositeAbilityObject.fixedStats[currentLCSuperimposition]);
-            }
-
-            
-
-            if (isLightcone) {
-                toughnessString += `
-                ${!isRelic ? `<div class="customMenuSearchNote" id="customMenuSearchNote">Changing superimposition won't change the events, only the description</div>
-                <div class="superimpositionHolderbox">
-                    <div class="superimpositionButton clickable" id="superimpositionButton1" onclick="megaParsingFuckery.updateSuperimposition(1)" style="${currentLCSuperimposition === 1 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">1</div>
-                    <div class="superimpositionButton clickable" id="superimpositionButton2" onclick="megaParsingFuckery.updateSuperimposition(2)" style="${currentLCSuperimposition === 2 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">2</div>
-                    <div class="superimpositionButton clickable" id="superimpositionButton3" onclick="megaParsingFuckery.updateSuperimposition(3)" style="${currentLCSuperimposition === 3 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">3</div>
-                    <div class="superimpositionButton clickable" id="superimpositionButton4" onclick="megaParsingFuckery.updateSuperimposition(4)" style="${currentLCSuperimposition === 4 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">4</div>
-                    <div class="superimpositionButton clickable" id="superimpositionButton5" onclick="megaParsingFuckery.updateSuperimposition(5)" style="${currentLCSuperimposition === 5 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">5</div>
-                </div>` : ""}
-                
-                
-                
-                ${lightconeStatRow ? `<div class="characterDisplayPathAndNameBox">
-                    <div class="characterDisplayPathNameBox">Lightcone Menu Bonuses:</div>
-                </div>` + lightconeStatRow : ""}
-                
-                `
-            }
-            startingString += toughnessString + ``;
-            startingString += `</div>`
-
-
-
-            // <details class="rotationsPermaConditionsExpand" open="">
-            //     <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-            //         <div class="rotationConditionOperatorHeaderCondition">${parseRef.name}</div>
-            //         ${returnString}
-            //     </summary>
-
-            //     <div class="rotationConditionOperatorBoxMain">
-            //         ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">THEN</div>
-            //         <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
-            //             ${parseString}
-            //         </div>` : ""}
-            //         ${hasRef ? `<div class="rotationConditionOperatorHeaderConditionELSE">ELSE</div>
-            //         <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
-            //             ${refString}
-            //         </div>` : ""}
-            //     </div>
-            // </details>
-
-
-            //TODO: add back in later
-            // ${startingString}
-
-            readSelection("eventReaderControlsBox").innerHTML = startingString;
-
-            const mainAbilityString = `
-            <div class="eventBodyScrollerMain">
-                <details class="rotationsPermaConditionsExpand" open="">
-                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-                        <div class="rotationConditionOperatorHeaderCondition">ABILITY LOG</div>
-                    </summary>
-                    ${eventBodyString}
-                </details>
-                ${eventBodyStringOnAdd ? `<details class="rotationsPermaConditionsExpand" open="">
-                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-                        <div class="rotationConditionOperatorHeaderCondition">ADDED LOG</div>
-                    </summary>
-                    ${eventBodyStringOnAdd}
-                </details>` : ""}
-                ${eventBodyStringOnRemove ? `<details class="rotationsPermaConditionsExpand" open="">
-                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-                        <div class="rotationConditionOperatorHeaderCondition">REMOVED LOG</div>
-                    </summary>
-                    ${eventBodyStringOnRemove}
-                </details>` : ""}
-                ${eventBodyStringOnAbort ? `<details class="rotationsPermaConditionsExpand" open="">
-                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-                        <div class="rotationConditionOperatorHeaderCondition">ON ABILITY ABORT</div>
-                    </summary>
-                    ${eventBodyStringOnAbort}
-                </details>` : ""}
-
-                
-                ${referenceBodyString ? `<details class="rotationsPermaConditionsExpand" open="">
-                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-                        <div class="rotationConditionOperatorHeaderCondition">MODIFIER LOG</div>
-                    </summary>
-                    ${referenceBodyString}
-                </details>` : ""}
-                ${eventBodyStringFunctions ? `<details class="rotationsPermaConditionsExpand" open="">
-                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-                        <div class="rotationConditionOperatorHeaderCondition">ABILITY FUNCTIONS</div>
-                    </summary>
-                    ${eventBodyStringFunctions}
-                </details>` : ""}
-                ${referenceGlobalString ? `<details class="rotationsPermaConditionsExpand" open="">
-                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-                        <div class="rotationConditionOperatorHeaderCondition">GLOBAL MODIFERS</div>
-                    </summary>
-                    ${referenceGlobalString}
-                </details>` : ""}
-                ${referenceGlobalFunctionString ? `<details class="rotationsPermaConditionsExpand" open="">
-                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-                        <div class="rotationConditionOperatorHeaderCondition">GLOBAL FUNCTIONS</div>
-                    </summary>
-                    ${referenceGlobalFunctionString}
-                </details>` : ""}
-            </div>
-            `;
-
-            
-
-            bodyBox.innerHTML = mainAbilityString;
-
-
-
-            megaParsingFuckery.populateLinkedEntriesGlobal("gModGreen")
-            megaParsingFuckery.populateLinkedEntriesGlobal("gTempYellow")
         }
     },
     ...megaParsingFuckeryPain
