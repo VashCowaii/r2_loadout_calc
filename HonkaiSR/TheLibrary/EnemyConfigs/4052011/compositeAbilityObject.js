@@ -513,7 +513,7 @@ const compositeAbilityObject = {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Name",
-                    "target": "MMonster_W4_Manta_00_LocalLegend"
+                    "target": "{{Manta: Event Target 01}}"
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-643353377\">Enemy_W4_Manta_LocalLegend_Virus_Monster</a>[<span class=\"descriptionNumberColor\">Glacial Erosion</span>]",
                   "duration": {
@@ -548,7 +548,7 @@ const compositeAbilityObject = {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}} - MMonster_W4_Manta_00_LocalLegend"
+                    "target": "{{All Team Members(Exclude Self)}} - {{Manta: Event Target 01}}"
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-643353377\">Enemy_W4_Manta_LocalLegend_Virus_Monster</a>[<span class=\"descriptionNumberColor\">Glacial Erosion</span>]",
                   "duration": {
@@ -691,7 +691,7 @@ const compositeAbilityObject = {
                 "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
-                  "target": "MMonster_W4_Manta_00_LocalLegend"
+                  "target": "{{Manta: Event Target 01}}"
                 }
               },
               {
@@ -699,7 +699,7 @@ const compositeAbilityObject = {
                 "ID": 4053013,
                 "target": {
                   "name": "Target Name",
-                  "target": "MMonster_W4_Manta_00_LocalLegend"
+                  "target": "{{Manta: Event Target 01}}"
                 },
                 "characterName": "Elegy Siren: Insatiable Leviathan"
               }
@@ -710,7 +710,7 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable with Copy",
               "target": {
                 "name": "Target Name",
-                "target": "MMonster_W4_Manta_00_LocalLegend"
+                "target": "{{Manta: Event Target 01}}"
               },
               "variable": "_DotDamageRatio",
               "target2": null,

@@ -1811,6 +1811,7 @@ const megaParsingFuckeryPain = {
             "name",
             "variableName",
             "target",
+            "targetWrite",
             "value",
             "context",
             // "warningType",
@@ -2774,6 +2775,7 @@ const megaParsingFuckeryPain = {
             "arena",
             "tag",
             "status",
+            "arenaID",
             "priorityTag",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Change Battle Arena");
@@ -2784,9 +2786,35 @@ const megaParsingFuckeryPain = {
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.arena,"Arena")}
+            ${getStandardNameDisplay(initialCounter,parseRef.arenaID,"Arena ID")}
             ${getStandardNameDisplay(initialCounter,parseRef.tag,"Arena Tag")}
             ${getStandardNameDisplay(initialCounter,parseRef.status,"Change Status")}
             ${getStandardNameDisplay(initialCounter,parseRef.priorityTag,"Priority Tag")}
+        </div>`;
+    },
+    "Set IronTomb Progress"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "show",
+            "display",
+            "preview",
+            "warningTheshold",
+            "errorThreshold",
+            "mode",
+            "duration",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Set IronTomb Progress");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.display,"Show")}
+            ${getStandardNameDisplay(initialCounter,parseRef.duration,"Duration")}
+            ${getStandardNameDisplay(initialCounter,parseRef.mode,"Mode")}
+            ${getStandardNameDisplay(initialCounter,parseRef.warningTheshold,"Warning Theshold")}
+            ${getStandardNameDisplay(initialCounter,parseRef.errorThreshold,"Error Threshold")}
         </div>`;
     },
     "Set Netherwing's Ardent Will Stacks"(parseRef,initialCounter) {
@@ -3003,6 +3031,25 @@ const megaParsingFuckeryPain = {
             
         </div>`;
     },
+    "Divide BossHP into Bars"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "stat",
+            // "living",
+            "barCount",
+            // "sortByHighest",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Divide BossHP into Bars");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.barCount,"Bar Count")}
+            
+        </div>`;
+    },
     "Set Enemy Phase"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -3011,6 +3058,7 @@ const megaParsingFuckeryPain = {
             "mode",
             "target",
             "phase",
+            "phaseType",
             "applyOverride",
             // "sortByHighest",
         ])
@@ -3023,6 +3071,7 @@ const megaParsingFuckeryPain = {
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.mode,"Mode")}
             ${getStandardNameDisplay(initialCounter,parseRef.phase,"Phase")}
+            ${getStandardNameDisplay(initialCounter,parseRef.phaseType,"Phase Type")}
             ${getStandardNameDisplay(initialCounter,parseRef.applyOverride,"Apply Override")}
 
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
@@ -3319,13 +3368,14 @@ const megaParsingFuckeryPain = {
             "target",
             "characterName",
             "compareType",
+            "invertCondition",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Stage ID");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.compareType ?? "[=?]"} ${parseRef.ID}(${parseRef.characterName})
+            ${parseRef.invertCondition ? "NOT " : ""}${parseRef.compareType ?? "[=?]"} ${parseRef.ID}(${parseRef.characterName})
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
@@ -3901,12 +3951,37 @@ const megaParsingFuckeryPain = {
             ${parseRef.popUpText ? `bannerPopUp["${parseRef.popUpText}"]` : ""} on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}${parseRef.living ? "(Living)" : ""}
         </div>`;
     },
+    "Force-Sync AV Link"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "from",
+            "to",
+            "linkOrder",
+            "isStart",
+            "linkOwnerModifications",
+            "linkFollowerModifications",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Force-Sync AV Link");
+        // initialCounter++;
+
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Force-Sync AV Link:</div>
+            
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.from,"From",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.to,"To",true)}
+        </div>`;
+    },
     "Create AV Link"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
             "from",
             "to",
             "linkOrder",
+            "isStart",
+            "linkOwnerModifications",
+            "linkFollowerModifications",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Create AV Link");
         // initialCounter++;
@@ -3920,6 +3995,16 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.to,"To",true)}
 
             ${getStandardNameDisplay(initialCounter,parseRef.linkOrder,"Link Order")}
+            ${getStandardNameDisplay(initialCounter,parseRef.isStart,"Start")}
+
+            ${parseRef.linkOwnerModifications != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Owner Logic:</div>&nbsp;
+                ${parseRef.linkOwnerModifications.displayLines ?? typeof parseRef.linkOwnerModifications === "object" ? megaParsingFuckery.ValuePerStackParsing(parseRef.linkOwnerModifications,initialCounter) : parseRef.linkOwnerModifications}
+            </div>` : ""}
+            ${parseRef.linkFollowerModifications != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Follower Logic:</div>&nbsp;
+                ${parseRef.linkFollowerModifications.displayLines ?? typeof parseRef.linkFollowerModifications === "object" ? megaParsingFuckery.ValuePerStackParsing(parseRef.linkFollowerModifications,initialCounter) : parseRef.linkFollowerModifications}
+            </div>` : ""}
         </div>`;
     },
     "Redirect AV Changes"(parseRef,initialCounter) {
@@ -4191,6 +4276,27 @@ const megaParsingFuckeryPain = {
         </div>
         ${returnString2}` : ""}
         
+        `;
+    },
+    "Abort Ability Use"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "abilityName",
+            "abilitySource",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Abort Ability Use");
+        // initialCounter++;
+
+        
+
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Inject Ability Use:</div>&nbsp;
+            ${parseRef.abilityName ?? (parseRef.abilityID?.displayLines ?? parseRef.abilityID)}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.abilitySource,"Ability Source",true)}
+
+        </div>
         `;
     },
     "Inject Ability Use"(parseRef,initialCounter) {
@@ -4543,6 +4649,26 @@ const megaParsingFuckeryPain = {
         <div class="modifierDetailsBox">
         </div>`;
     },
+    "Set Custom Wave Info"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "currentWave",
+            "maxWave",
+            // "casterFilter",
+            // "justAddedOrActive",
+            // "includePreDeath",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Set Custom Wave Info");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.currentWave,"Current Wave")}
+            ${getStandardNameDisplay(initialCounter,parseRef.maxWave,"Max Waves")}
+        </div>`;
+    },
     "Infinite Enemy Waves Remain"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -4598,6 +4724,23 @@ const megaParsingFuckeryPain = {
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+        </div>`;
+    },
+    "Has Turn-State"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "states",
+            "invertCondition",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Turn-State");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.invertCondition ? "NOT " : ""}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.states,"States")}
         </div>`;
     },
     "Has Modifier"(parseRef,initialCounter) {
@@ -4699,7 +4842,7 @@ const megaParsingFuckeryPain = {
             "triggerName",
             "target"
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Modifier");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Update Action Bar Display");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
@@ -4990,6 +5133,27 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
         </div>`;
     },
+    "Select Random Enemy from Pool"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "poolID",
+            "poolKey",
+            "filter",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Select Random Enemy from Pool");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+
+            ${getStandardNameDisplay(initialCounter,parseRef.poolID,"Pool ID")}
+            ${getStandardNameDisplay(initialCounter,parseRef.poolKey,"Result Key")}
+            ${getStandardNameDisplay(initialCounter,parseRef.filter,"Filter")}
+
+        </div>`;
+    },
     "Dispel Debuffs"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -5026,9 +5190,11 @@ const megaParsingFuckeryPain = {
     "Deal Toughness DMG"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
+            "target",
             "attacker",
             "defender",
             "value",
+            "valuePercentReduce",
 
             "forceReduction",
             "ignoreAttackerBonuses",
@@ -5057,7 +5223,9 @@ const megaParsingFuckeryPain = {
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.value,"Value")}
+            ${getStandardNameDisplay(initialCounter,parseRef.valuePercentReduce,"% Reduction")}
 
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.attacker,"Attacker",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.defender,"Defender",true)}
 
@@ -5185,6 +5353,21 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.EnergyGainPercent,"Energy Split")}
             ${getStandardNameDisplay(initialCounter,parseRef.formula,"Heal Formula")}
             ${getStandardNameDisplay(initialCounter,parseRef.livingOnly,"Living Only")}
+        </div>
+        `;
+    },
+    "Override HP Lost"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "setTo",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Override HP Lost");
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Override HP Lost:</div>&nbsp;
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.setTo,"Set To")}
         </div>
         `;
     },
@@ -6126,6 +6309,31 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
+    "Stack Skill Point Lock-Out"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "amount",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Stack Skill Point Lock-Out");
+
+        // const conditionObject = parseRef.conditions;
+        // const conditionName = conditionObject?.name;
+
+        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
+        // const functionExists = megaParsingFuckery[conditionName];
+        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
+
+        // if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
+
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Stack Skill Point Lock-Out:</div>&nbsp;
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.amount,"Value")}
+        </div>
+        `;
+    },
     "Add to Team Target Grouping"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -6361,6 +6569,25 @@ const megaParsingFuckeryPain = {
             ${parseRef.DamageType.sourceType ?? parseRef.DamageType} Element is${parseRef.invertCondition ? " NOT" : ""} on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
         </div>`;
     },
+    "Is Entity Special Type"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "type",
+            "invertCondition",
+            "livingState",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Is Entity Type");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)} ${parseRef.invertCondition ? "(NOT)" : ""}= ${parseRef.type}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.livingState,"Living State")}
+        </div>`;
+    },
     "Is Entity Type"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -6412,6 +6639,24 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.point,"Point")}
             ${getStandardNameDisplay(initialCounter,parseRef.mapTo,"Map To")}
             ${getStandardNameDisplay(initialCounter,parseRef.reset,"Reset")}
+
+        </div>`;
+    },
+    "Detach Parent Mapping Point"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "point",
+            "target",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Detach Parent Mapping Point");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.point,"Point")}
 
         </div>`;
     },
@@ -7134,6 +7379,8 @@ const megaParsingFuckeryPain = {
             "name",
             "target",
             "row",
+            "spot",
+            "casterOverride",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Assign Target Battle-Location");
 
@@ -7148,10 +7395,12 @@ const megaParsingFuckeryPain = {
         
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Assign Target Battle-Location:</div>&nbsp;
-            ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
         </div>
         <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.casterOverride,"Caster Override",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.row,"Row")}
+            ${getStandardNameDisplay(initialCounter,parseRef.spot,"Spot")}
             
         </div>
         `;

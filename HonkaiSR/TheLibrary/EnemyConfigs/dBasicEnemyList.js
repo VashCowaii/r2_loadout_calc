@@ -9420,7 +9420,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Furiae Warrior"
   },
@@ -9482,7 +9482,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Furiae Philosopher"
   },
@@ -9544,7 +9544,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4012031": {
       "4012031": {
@@ -9589,7 +9589,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Archer"
     },
     "groupName": "Furiae Archer"
@@ -9631,7 +9631,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4012041": {
       "4012041": {
@@ -9641,7 +9641,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Troupe"
     },
     "groupName": "Furiae Troupe"
@@ -9650,14 +9650,14 @@ let basicEnemyList = {
     "4012050": {
       "4012050": {},
       "401205001": {},
-      "hasReader": false
+      "hasReader": true
     },
     "4012051": {
       "4012051": {},
       "401205101": {},
       "401205102": {},
       "401205103": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Spirithief\" Bartholos"
     },
     "groupName": "\"Spirithief\" Bartholos"
@@ -10562,11 +10562,11 @@ let basicEnemyList = {
   "4032060": {
     "4032060": {
       "4032060": {},
-      "hasReader": false
+      "hasReader": true
     },
     "4032061": {
       "4032061": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Imprisoned Mythos"
     },
     "groupName": "Imprisoned Mythos"
@@ -10574,11 +10574,11 @@ let basicEnemyList = {
   "4032070": {
     "4032070": {
       "4032070": {},
-      "hasReader": false
+      "hasReader": true
     },
     "4032071": {
       "4032071": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Manipulated Logos"
     },
     "groupName": "Manipulated Logos"
@@ -10883,7 +10883,7 @@ let basicEnemyList = {
   "4034020": {
     "4034020": {
       "4034020": {},
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Vessel of the Destruction, Khaslana"
   },
@@ -10897,7 +10897,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false
+      "hasReader": true
     },
     "4035011": {
       "4035011": {
@@ -10908,7 +10908,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Anti-Creator, Hatred Inundate"
     },
     "groupName": "Anti-Creator, Hatred Inundate"
@@ -10922,7 +10922,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Irontomb, Anti-Nous, Funeral of Gnosis"
   },
@@ -10940,7 +10940,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Herta #ErrorModel"
   },
@@ -10953,7 +10953,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4044011": {
       "4044011": {
@@ -10963,7 +10963,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "First Genius, Entelechy, Zandar"
     },
     "4044012": {
@@ -10974,7 +10974,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "First Genius, Entelechy, Zandar"
     },
     "groupName": "First Genius, Entelechy, Zandar"
@@ -11066,7 +11066,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "4053012": {
       "4053012": {
@@ -11076,7 +11076,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Lady of Crashing Waves"
     },
     "4053014": {
@@ -11087,7 +11087,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Lady of Crashing Waves (Bug)"
     },
     "groupName": "Lady of Crashing Waves"
@@ -11101,7 +11101,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Cyclonic Swarm Mother"
   },
@@ -16438,7 +16438,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Warrior"
     },
     "4012021": {
@@ -16470,7 +16470,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Philosopher"
     },
     "4012022": {
@@ -16481,7 +16481,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Philosopher"
     },
     "4012023": {
@@ -16492,7 +16492,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Philosopher"
     },
     "4012032": {
@@ -16503,7 +16503,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Archer"
     },
     "4012033": {
@@ -16514,7 +16514,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Archer"
     },
     "4012042": {
@@ -16525,12 +16525,12 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Troupe"
     },
     "4012052": {
       "4012052": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Spirithief\" Bartholos"
     },
     "4012080": {
@@ -17418,7 +17418,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Elegy Siren: Insatiable Leviathan"
     },
     "4053013": {
@@ -17429,7 +17429,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Elegy Siren: Insatiable Leviathan"
     },
     "8002058": {

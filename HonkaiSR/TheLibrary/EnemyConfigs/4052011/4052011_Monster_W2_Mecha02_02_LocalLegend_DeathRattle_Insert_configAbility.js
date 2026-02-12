@@ -83,7 +83,7 @@ const configAbility = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Name",
-                "target": "MMonster_W4_Manta_00_LocalLegend"
+                "target": "{{Manta: Event Target 01}}"
               },
               "modifier": "<a class=\"gModGreen\" id=\"-643353377\">Enemy_W4_Manta_LocalLegend_Virus_Monster</a>[<span class=\"descriptionNumberColor\">Glacial Erosion</span>]",
               "duration": {
@@ -118,7 +118,7 @@ const configAbility = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}} - MMonster_W4_Manta_00_LocalLegend"
+                "target": "{{All Team Members(Exclude Self)}} - {{Manta: Event Target 01}}"
               },
               "modifier": "<a class=\"gModGreen\" id=\"-643353377\">Enemy_W4_Manta_LocalLegend_Virus_Monster</a>[<span class=\"descriptionNumberColor\">Glacial Erosion</span>]",
               "duration": {

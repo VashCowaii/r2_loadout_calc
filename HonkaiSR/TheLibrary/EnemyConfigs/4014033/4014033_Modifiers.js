@@ -393,7 +393,6 @@ const configAbility = {
       ],
       "stackData": [],
       "latentQueue": [
-        "_TempAIFlag",
         "AIFlag",
         "StoryMode",
         "_StorySkill05"
@@ -2281,7 +2280,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__2086497725\">Monster_W4_Pollux_EnergyBar</a>",
       "stackData": [],
       "latentQueue": [
-        "_TempAIFlag",
         "AIFlag",
         "StoryMode",
         "_StorySkill05"

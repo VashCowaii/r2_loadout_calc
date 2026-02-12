@@ -2628,7 +2628,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Scholar_BookController",
+    "name": "<a class=\"gModGreen\" id=\"-1513370696\">MModifier_Monster_W4_Scholar_BookController</a>",
     "realName": "Proselytize",
     "aim": "Other",
     "desc": "Causes %DynamicTargetName to enter the \"Gleaned Instruction\" state. Dispelled when this unit's \"War Armor\" is destroyed.",
@@ -2636,7 +2636,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W4_Scholar_BookTarget",
+    "name": "<a class=\"gModGreen\" id=\"-1765528423\">MModifier_Monster_W4_Scholar_BookTarget</a>",
     "realName": "Gleaned Instruction",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]% and DMG dealt by #2[i]%. Dispelled when %CasterName's \"War Armor\" is destroyed.",
@@ -2648,7 +2648,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Scholar_BookKiller",
+    "name": "<a class=\"gModGreen\" id=\"1075754631\">MModifier_Monster_W4_Scholar_BookKiller</a>",
     "realName": "Ignited Flame",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%, and DMG dealt by #2[i]%.",
@@ -2940,7 +2940,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Standard_Unstable_Monster",
+    "name": "<a class=\"gModGreen\" id=\"773544799\">Standard_Unstable_Monster</a>",
     "realName": "Reverberation",
     "aim": "Debuff",
     "desc": "After receiving an attack, enters \"Strong Reverberation,\" then dispels \"Reverberation.\"",
@@ -2948,7 +2948,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Standard_Shake_Monster",
+    "name": "<a class=\"gModGreen\" id=\"1822783917\">Standard_Shake_Monster</a>",
     "realName": "Strong Reverberation",
     "aim": "Debuff",
     "desc": "Action delayed. Cannot take actions for a certain number of turns.",
@@ -2956,7 +2956,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "MModifier_Monster_AML_Minion03_01_StoneShieldEnhance",
+    "name": "<a class=\"gModGreen\" id=\"1276555812\">MModifier_Monster_AML_Minion03_01_StoneShieldEnhance</a>",
     "realName": "Indomitable",
     "aim": "Buff",
     "desc": "Increases max \"War Armor\" stacks. Dispelled when %CasterName's \"War Armor\" is broken.",
@@ -2964,7 +2964,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_AML_Minion03_01_Halo",
+    "name": "<a class=\"gModGreen\" id=\"1735610792\">MModifier_Monster_AML_Minion03_01_Halo</a>",
     "realName": "War Song",
     "aim": "Buff",
     "desc": "Increases max \"War Armor\" stacks for enemy units aside from this unit. Dispelled when this unit's \"Armor\" is destroyed.",
@@ -3388,7 +3388,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Mascot_EscapingCharge00",
+    "name": "<a class=\"gModGreen\" id=\"-1102283112\">Enemy_W4_Mascot_EscapingCharge00</a>",
     "realName": "Brainteaser",
     "aim": "Other",
     "desc": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
@@ -3396,7 +3396,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Mascot_EscapingCharge01",
+    "name": "<a class=\"gModGreen\" id=\"-1085505493\">Enemy_W4_Mascot_EscapingCharge01</a>",
     "realName": "Brainteaser",
     "aim": "Other",
     "desc": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
@@ -3404,7 +3404,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Mascot_EscapingCharge02",
+    "name": "<a class=\"gModGreen\" id=\"-1068727874\">Enemy_W4_Mascot_EscapingCharge02</a>",
     "realName": "Brainteaser",
     "aim": "Other",
     "desc": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
@@ -3995,7 +3995,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Manta_Passive",
+    "name": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>",
     "realName": "Respite By The Waters",
     "aim": "Other",
     "desc": "Advances action after taking a certain number of attacks from Basic ATK, Skill, Ultimate, or Memosprite Skill.",
@@ -4003,7 +4003,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Manta_Virus_Avatar",
+    "name": "<a class=\"gModGreen\" id=\"-1491117859\">Enemy_W4_Manta_Virus_Avatar</a>",
     "realName": "Black Tide Fever",
     "aim": "Debuff",
     "desc": "#1[i] DMG is taken in the form of DoT over a certain number of turns. Wind Shear, Burn, Shock, and Bleed DoTs are received at the start of every turn. Immediately dispelled for this unit when HP is fully restored, negating this DoT.",
@@ -4014,7 +4014,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Manta_DefenseDown",
+    "name": "<a class=\"gModGreen\" id=\"1240691682\">Enemy_W4_Manta_DefenseDown</a>",
     "realName": "Inebriated Daze",
     "aim": "Debuff",
     "desc": "DEF decreases by #1[i]% and All-Type RES decreases by #2[i]%.",
@@ -4026,7 +4026,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Manta_PassiveUp_Sub",
+    "name": "<a class=\"gModGreen\" id=\"233383223\">Enemy_W4_Manta_PassiveUp_Sub</a>",
     "realName": "Revel in Destruction",
     "aim": "Other",
     "desc": "Number of hits to advance action decreases. When taking DMG or using certain abilities to deal DMG, some DMG will be taken in the form of \"Black Tide Fever\" over a specific number of turns. When the \"Revel in Destruction\" countdown's turn begins, all enemy units will have their \"Revel in Destruction\" state dispelled.",
@@ -4034,7 +4034,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Manta_Charge",
+    "name": "<a class=\"gModGreen\" id=\"-1741196770\">Enemy_W4_Manta_Charge</a>",
     "realName": "Yearning for a Shared Dance",
     "aim": "Other",
     "desc": "Uses \"Embrace From the Waves\" in every action. Dispelled when Weakness is broken.",
@@ -4458,7 +4458,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Unicorn_01_UltraReady",
+    "name": "<a class=\"gModGreen\" id=\"-1713527003\">Enemy_W4_Unicorn_01_UltraReady</a>",
     "realName": "Fetal Movement of the Ocean",
     "aim": "Other",
     "desc": "In this state, \"Cyclonic Swarm Mother's\" Toughness cannot be reduced. \"Cyclonic Swarm Mother\" will use \"Rain Is Born to Fall\". Eliminate all \"Mirage Fizzle Kids\" to dispel this state.",
@@ -4466,7 +4466,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Unicorn_01_MuteSpeed",
+    "name": "<a class=\"gModGreen\" id=\"-565541120\">Enemy_W4_Unicorn_01_MuteSpeed</a>",
     "realName": "Breeding Frenzy",
     "aim": "Other",
     "desc": "In this state, DMG taken from attacks is reduced. When action advances, HP will be consumed. Summons \"Mirage Fizzle Kid\" and slightly delays \"Incubation\" action. When \"Incubation\" takes action, all remaining \"Mirage Fizzle Kid\" will be summoned.",
@@ -4474,7 +4474,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MWMonster_W4_Unicorn_01_BlockDamage",
+    "name": "<a class=\"gModGreen\" id=\"2140507283\">MWMonster_W4_Unicorn_01_BlockDamage</a>",
     "realName": "Maelstrom's Eye",
     "aim": "Buff",
     "desc": "Immune to all DMG except DoTs. This status is dispelled after being attacked.",
@@ -4635,7 +4635,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W4_Theoroi_Creation",
+    "name": "<a class=\"gModGreen\" id=\"-303636173\">Monster_W4_Theoroi_Creation</a>",
     "realName": "Potential Realization",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%, HP is restored by #2[i]% at the start of turn.",
@@ -4647,7 +4647,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Theoroi_Reversion",
+    "name": "<a class=\"gModGreen\" id=\"-2105282223\">Monster_W4_Theoroi_Reversion</a>",
     "realName": "Antinomy",
     "aim": "Other",
     "desc": "Ultimate is activated. Using Ultimate consumes HP equal to #1[i]% of this unit's Max HP, this DMG prioritizes Shield effect reduction and is Non-fatal. If Ultimate is not used during the effect duration, Energy will be regenerated to #2[i] points when the effect ends.",
@@ -4659,7 +4659,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Theoroi_Destruction",
+    "name": "<a class=\"gModGreen\" id=\"688363638\">Monster_W4_Theoroi_Destruction</a>",
     "realName": "Retribution of \"Law\"",
     "aim": "Other",
     "desc": "Lose #1[i]% HP after each action.",
@@ -4670,7 +4670,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Theoroi_Destruction_Self",
+    "name": "<a class=\"gModGreen\" id=\"-1039726651\">Monster_W4_Theoroi_Destruction_Self</a>",
     "realName": "Loading: Mythos",
     "aim": "Other",
     "desc": "Use \"Query: Prime Mover's Outcome\" after #1[i] more instance(s) of any of the following: enemy target defeats, ally character knock-downs, or memosprite disappearances.",
@@ -4681,7 +4681,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Theoroi_Part1",
+    "name": "<a class=\"gModGreen\" id=\"534638248\">Monster_W4_Theoroi_Part1</a>",
     "realName": "To Logos",
     "aim": "Other",
     "desc": "Use \"SET Proof_Method=Black_Tide\" after #1[i] more instances of either of the following: enemy target generations or ally memosprite summons.",
@@ -4692,7 +4692,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Theoroi_Reload",
+    "name": "<a class=\"gModGreen\" id=\"1881355591\">Monster_W4_Theoroi_Reload</a>",
     "realName": "Infinite Recursion",
     "aim": "Buff",
     "desc": "Each stack increases \"Query: Prime Mover's Outcome\" DMG by #1[i]%, and additionally inflicts Entanglement on #2[i] target(s).",
@@ -4944,7 +4944,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W4_Theoroi_DamageTakenUp",
+    "name": "<a class=\"gModGreen\" id=\"2001837227\">Monster_W4_Theoroi_DamageTakenUp</a>",
     "realName": "Corporeal",
     "aim": "Debuff",
     "desc": "DMG received increases by #1[i]%. This effect is stackable.",
@@ -4955,7 +4955,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Manta_Virus_Monster",
+    "name": "<a class=\"gModGreen\" id=\"-1447914838\">Enemy_W4_Manta_Virus_Monster</a>",
     "realName": "Black Tide Fever",
     "aim": "Debuff",
     "desc": "#1[i] DMG is taken in the form of DoT over a certain number of turns. Wind Shear, Burn, Shock, and Bleed DoTs are received at the start of every turn. Immediately dispelled for this unit when \"Revel in Destruction\" state ends, negating this DoT.",
@@ -4977,7 +4977,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Unicorn_01_SummonMonsterWeak",
+    "name": "<a class=\"gModGreen\" id=\"1300638915\">Enemy_W4_Unicorn_01_SummonMonsterWeak</a>",
     "realName": "Weakling",
     "aim": "Debuff",
     "desc": "Due to premature hatching, decreases DEF by #1[i]%.",
@@ -4996,7 +4996,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Manta_LocalLegend_Statues",
+    "name": "<a class=\"gModGreen\" id=\"1575455810\">Enemy_W4_Manta_LocalLegend_Statues</a>",
     "realName": "Respite By The Waters",
     "aim": "Other",
     "desc": "After receiving a certain number of attacks from the targets, immediately uses \"Psychedelic Elegy.\"",
@@ -5004,7 +5004,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Manta_LocalLegend_Virus_Avatar",
+    "name": "<a class=\"gModGreen\" id=\"1965379982\">Enemy_W4_Manta_LocalLegend_Virus_Avatar</a>",
     "realName": "Glacial Erosion",
     "aim": "Debuff",
     "desc": "At the start of the turn, receives Ice DoT equal to a percentage of this unit's Max HP. This DoT is stackable.",
@@ -5012,7 +5012,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_Manta_LocalLegend_Charge",
+    "name": "<a class=\"gModGreen\" id=\"1347964205\">Enemy_W4_Manta_LocalLegend_Charge</a>",
     "realName": "Yearning for a Shared Dance",
     "aim": "Other",
     "desc": "Uses \"Embrace From the Waves\" in every action. Dispelled when Weakness is broken.",
@@ -5020,7 +5020,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Manta_LocalLegend_Virus_Monster",
+    "name": "<a class=\"gModGreen\" id=\"-643353377\">Enemy_W4_Manta_LocalLegend_Virus_Monster</a>",
     "realName": "Glacial Erosion",
     "aim": "Debuff",
     "desc": "At the start of the turn, receives Ice DoT equal to a percentage of this unit's Max HP. This DoT is stackable.",
@@ -5056,7 +5056,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_IronTombCorePart_Ability02_ChargeOnPart",
+    "name": "<a class=\"gModGreen\" id=\"-681994307\">Enemy_W4_IronTombCorePart_Ability02_ChargeOnPart</a>",
     "realName": "Deliverance of Relief",
     "aim": "Other",
     "desc": "\"Anti-Creator\" will use \"Mire Not Within Caves\" in the next action. This state can be dispelled after receiving a killing blow.",
@@ -5064,7 +5064,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_IronTombCorePart_01_Ability02_ChargeOnPart",
+    "name": "<a class=\"gModGreen\" id=\"-1309969172\">Enemy_W4_IronTombCorePart_01_Ability02_ChargeOnPart</a>",
     "realName": "Rebellious",
     "aim": "Other",
     "desc": "\"Anti-Creator\" will use \"Yield Not to Tyranny\" in the next action. This state can be dispelled after receiving a killing blow.",
@@ -5072,7 +5072,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_W4_IronTombCore_Ability07_Charge",
+    "name": "<a class=\"gModGreen\" id=\"187835282\">MModifier_W4_IronTombCore_Ability07_Charge</a>",
     "realName": "Resist and Destroy",
     "aim": "Other",
     "desc": "\"Anti-Creator\" enters Charging state, and will use \"Resist and Destroy\" in the next action. Dispel the Charging state by dealing a killing blow to \"Mythos\" and \"Logos.\"",
@@ -5080,7 +5080,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_IronTombCorePart_DamageTransfer",
+    "name": "<a class=\"gModGreen\" id=\"-453954106\">Enemy_W4_IronTombCorePart_DamageTransfer</a>",
     "realName": "Damage Resonance",
     "aim": "Other",
     "desc": "When the target takes damage, \"Anti-Creator\" will also take the same damage.",
@@ -5088,7 +5088,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded",
+    "name": "<a class=\"gModGreen\" id=\"1626881642\">Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded</a>",
     "realName": "Chronicled \"Love\"",
     "aim": "Buff",
     "desc": "Cyrene's \"Love\" greatly increases DMG dealt by the target.",
@@ -5120,7 +5120,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_IronTombPhantom_Part1",
+    "name": "<a class=\"gModGreen\" id=\"2031591014\">Enemy_W4_IronTombPhantom_Part1</a>",
     "realName": "ERROR: Security System Compromised",
     "aim": "Other",
     "desc": "\"FINAL PROCESS: ERROR LOG 1\"\\n\\nHapLotes405: Error Loading ▀█Transfer Loop█▄ Information Database Connection Timeout\\nApoRia432: Error Loading █▀Assertion Failed▄█ Detection System Unresponsive\\nHubRis504: Error Loading ▀▄Illegal Protocol█▄ Firewall Deactivated\\n\\nWARNING: Security system disrupted. Electrical signal anomaly detected.",
@@ -5128,7 +5128,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_IronTombPhantom_Part2",
+    "name": "<a class=\"gModGreen\" id=\"2014813395\">Enemy_W4_IronTombPhantom_Part2</a>",
     "realName": "ERROR: Repair System Compromised",
     "aim": "Other",
     "desc": "\"FINAL PROCESS: ERROR LOG 2\"\\n\\nKaLos618: Abnormal Loading ▀▄Throttle Failed▄█ Performance Overload\\nSkeMma720: Abnormal Loading █▀Malicious Code Injected▄█ System Out of Control\\nOreXis945: Abnormal Loading ▀█Parameters Distorted▄█ Massive Logic Errors\\n\\nWARNING: Repair system not responding. Internal attack detected.",
@@ -5136,7 +5136,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_IronTombPhantom_Part3",
+    "name": "<a class=\"gModGreen\" id=\"1998035776\">Enemy_W4_IronTombPhantom_Part3</a>",
     "realName": "ERROR: Main Process Compromised",
     "aim": "Other",
     "desc": "\"FINAL PROCESS: ERROR LOG 3\"\\n\\nPoleMos600: Abnormal Loading ██Data Wipe Attack▄▄ Copy Lost\\nEpieiKeia216: Abnormal Loading █▀Subprocess Frozen▄█ Unable to Terminate\\nEleOs252: Abnormal Loading ▀▄Stack Overflow█▄ Insufficient RAM\\n\\nWARNING: Calculation process terminated. Massive amount of corruption detected.",
@@ -5144,7 +5144,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_IronTombPhantom_Part4",
+    "name": "<a class=\"gModGreen\" id=\"2115479109\">Enemy_W4_IronTombPhantom_Part4</a>",
     "realName": "ERROR: Core Damaged",
     "aim": "Other",
     "desc": "\"FINAL PROCESS: ERROR LOG 4\"\\n\\n[Intrusion Variable] Dan Heng: Input SkoPeo365 Value ▀█Storage Anomaly█▄ Unable to Delete\\n[Intrusion Variable] March 7th: Input PhiLia093 Value▄ ▀System Time Rollback█▀ Infinite Loop\\nNeiKos496: Merge-Split Detected ▀▀█▄Core Damaged▄▄▄ Critical Process Terminated▄▄▄\\n\\nMAJOR WARNING: System crashed. Terminating operations.\\n\\nNotice: Detected PhiLia093 managing permissions.",
@@ -5152,7 +5152,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "MModifier_W4_IronTombCore_TimeLock",
+    "name": "<a class=\"gModGreen\" id=\"-1372521903\">MModifier_W4_IronTombCore_TimeLock</a>",
     "realName": "Action Lock",
     "aim": "Debuff",
     "desc": "This target's action value will not change because of the end of any target's turn. This target can reduce the \"Unlock Value\" through action advance effects or Energy regeneration. When the \"Unlock Value\" is depleted, this state will be dispelled.",
@@ -5160,7 +5160,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_IronTombCorePart_Break",
+    "name": "<a class=\"gModGreen\" id=\"-2078801645\">Enemy_W4_IronTombCorePart_Break</a>",
     "realName": "Grave Wound",
     "aim": "Other",
     "desc": "Target cannot take action.",
@@ -5168,7 +5168,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_IronTombCore_BlackBlood",
+    "name": "<a class=\"gModGreen\" id=\"-2081954099\">Enemy_W4_IronTombCore_BlackBlood</a>",
     "realName": "Descent into Chaos",
     "aim": "Debuff",
     "desc": "Maximum Restorable HP and Maximum Recoverable Skill Points are reduced. This effect can be weakened when \"Amphorean Hatred\" decreases.",
@@ -5188,7 +5188,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Manta_LocalLegend_Virus_NightMare",
+    "name": "<a class=\"gModGreen\" id=\"799207340\">Enemy_W4_Manta_LocalLegend_Virus_NightMare</a>",
     "realName": "Glacial Erosion",
     "aim": "Debuff",
     "desc": "At the start of the turn, receives Ice DoT equal to a percentage of this unit's Max HP. This DoT is stackable.",
@@ -5242,7 +5242,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W4_Scholar_LocalLegend_BookController",
+    "name": "<a class=\"gModGreen\" id=\"-1087631853\">MModifier_Monster_W4_Scholar_LocalLegend_BookController</a>",
     "realName": "Proselytize",
     "aim": "Other",
     "desc": "Causes %DynamicTargetName to enter the \"Gleaned Instruction\" state.",
@@ -5250,7 +5250,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W4_Scholar_LocalLegend_BookTarget",
+    "name": "<a class=\"gModGreen\" id=\"2022021618\">MModifier_Monster_W4_Scholar_LocalLegend_BookTarget</a>",
     "realName": "Gleaned Instruction",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -5261,7 +5261,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W4_Scholar_LocalLegend_BookKiller",
+    "name": "<a class=\"gModGreen\" id=\"487625140\">MModifier_Monster_W4_Scholar_LocalLegend_BookKiller</a>",
     "realName": "Ignited Flame",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",

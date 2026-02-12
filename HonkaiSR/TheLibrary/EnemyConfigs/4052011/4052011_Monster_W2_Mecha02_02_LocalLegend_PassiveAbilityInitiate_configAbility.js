@@ -32,7 +32,7 @@ const configAbility = {
             "state": "Mask_AliveOnly",
             "target": {
               "name": "Target Name",
-              "target": "MMonster_W4_Manta_00_LocalLegend"
+              "target": "{{Manta: Event Target 01}}"
             }
           },
           {
@@ -40,7 +40,7 @@ const configAbility = {
             "ID": 4053013,
             "target": {
               "name": "Target Name",
-              "target": "MMonster_W4_Manta_00_LocalLegend"
+              "target": "{{Manta: Event Target 01}}"
             },
             "characterName": "Elegy Siren: Insatiable Leviathan"
           }
@@ -51,7 +51,7 @@ const configAbility = {
           "name": "Define Custom Variable with Copy",
           "target": {
             "name": "Target Name",
-            "target": "MMonster_W4_Manta_00_LocalLegend"
+            "target": "{{Manta: Event Target 01}}"
           },
           "variable": "_DotDamageRatio",
           "target2": null,

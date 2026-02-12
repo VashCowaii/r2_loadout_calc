@@ -1093,7 +1093,7 @@ const configAbility = {
                   "modifiedValuesArray": [
                     {
                       "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">BaseAbilityMultiplier</span>&nbsp;",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">BaseDMGMultiplier</span>&nbsp;",
                       "value": "_Rank01_Rat"
                     }
                   ]
