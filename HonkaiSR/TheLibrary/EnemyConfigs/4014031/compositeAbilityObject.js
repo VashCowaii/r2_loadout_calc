@@ -1392,11 +1392,11 @@ const compositeAbilityObject = {
           "name": "Define Custom Variable",
           "variableName": "AIFlag",
           "value": {
-            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__41) || RETURN",
-            "displayLines": "ENEMIES_OBJECT_UNUSED__41",
+            "operator": "Variables[0] (_TempAIFlag) || RETURN",
+            "displayLines": "_TempAIFlag",
             "constants": [],
             "variables": [
-              "ENEMIES_OBJECT_UNUSED__41"
+              "_TempAIFlag"
             ]
           }
         },
@@ -1520,11 +1520,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "AIFlag",
               "value": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__41) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__41",
+                "operator": "Variables[0] (_TempAIFlag) || RETURN",
+                "displayLines": "_TempAIFlag",
                 "constants": [],
                 "variables": [
-                  "ENEMIES_OBJECT_UNUSED__41"
+                  "_TempAIFlag"
                 ]
               }
             }
@@ -4723,11 +4723,11 @@ const compositeAbilityObject = {
           "name": "Define Custom Variable",
           "variableName": "AIFlag",
           "value": {
-            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__41) || RETURN",
-            "displayLines": "ENEMIES_OBJECT_UNUSED__41",
+            "operator": "Variables[0] (_TempAIFlag) || RETURN",
+            "displayLines": "_TempAIFlag",
             "constants": [],
             "variables": [
-              "ENEMIES_OBJECT_UNUSED__41"
+              "_TempAIFlag"
             ]
           }
         },
@@ -4838,11 +4838,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "AIFlag",
               "value": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__41) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__41",
+                "operator": "Variables[0] (_TempAIFlag) || RETURN",
+                "displayLines": "_TempAIFlag",
                 "constants": [],
                 "variables": [
-                  "ENEMIES_OBJECT_UNUSED__41"
+                  "_TempAIFlag"
                 ]
               }
             }
@@ -7112,7 +7112,6 @@ const compositeAbilityObject = {
           ],
           "stackData": [],
           "latentQueue": [
-            "_TempAIFlag",
             "AIFlag",
             "StoryMode",
             "_StorySkill05"
@@ -9005,7 +9004,6 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__2086497725\">Monster_W4_Pollux_EnergyBar</a>",
           "stackData": [],
           "latentQueue": [
-            "_TempAIFlag",
             "AIFlag",
             "StoryMode",
             "_StorySkill05"

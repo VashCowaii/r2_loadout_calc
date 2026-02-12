@@ -10562,11 +10562,11 @@ let basicEnemyList = {
   "4032060": {
     "4032060": {
       "4032060": {},
-      "hasReader": false
+      "hasReader": true
     },
     "4032061": {
       "4032061": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Imprisoned Mythos"
     },
     "groupName": "Imprisoned Mythos"
@@ -10574,11 +10574,11 @@ let basicEnemyList = {
   "4032070": {
     "4032070": {
       "4032070": {},
-      "hasReader": false
+      "hasReader": true
     },
     "4032071": {
       "4032071": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Manipulated Logos"
     },
     "groupName": "Manipulated Logos"
@@ -10897,7 +10897,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false
+      "hasReader": true
     },
     "4035011": {
       "4035011": {
@@ -10908,7 +10908,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Anti-Creator, Hatred Inundate"
     },
     "groupName": "Anti-Creator, Hatred Inundate"
@@ -10922,7 +10922,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Irontomb, Anti-Nous, Funeral of Gnosis"
   },

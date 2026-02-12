@@ -544,7 +544,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">BaseAbilityMultiplier</span>&nbsp;",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">BaseDMGMultiplier</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (1) || Variables[0] (BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio) || Variables[1] (MDF_Layer) || MUL || ADD || RETURN",
                     "displayLines": "(1 + (BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio * MDF_Layer))",

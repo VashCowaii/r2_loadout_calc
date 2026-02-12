@@ -5056,7 +5056,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_IronTombCorePart_Ability02_ChargeOnPart",
+    "name": "<a class=\"gModGreen\" id=\"-681994307\">Enemy_W4_IronTombCorePart_Ability02_ChargeOnPart</a>",
     "realName": "Deliverance of Relief",
     "aim": "Other",
     "desc": "\"Anti-Creator\" will use \"Mire Not Within Caves\" in the next action. This state can be dispelled after receiving a killing blow.",
@@ -5064,7 +5064,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_IronTombCorePart_01_Ability02_ChargeOnPart",
+    "name": "<a class=\"gModGreen\" id=\"-1309969172\">Enemy_W4_IronTombCorePart_01_Ability02_ChargeOnPart</a>",
     "realName": "Rebellious",
     "aim": "Other",
     "desc": "\"Anti-Creator\" will use \"Yield Not to Tyranny\" in the next action. This state can be dispelled after receiving a killing blow.",
@@ -5072,7 +5072,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_W4_IronTombCore_Ability07_Charge",
+    "name": "<a class=\"gModGreen\" id=\"187835282\">MModifier_W4_IronTombCore_Ability07_Charge</a>",
     "realName": "Resist and Destroy",
     "aim": "Other",
     "desc": "\"Anti-Creator\" enters Charging state, and will use \"Resist and Destroy\" in the next action. Dispel the Charging state by dealing a killing blow to \"Mythos\" and \"Logos.\"",
@@ -5080,7 +5080,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_IronTombCorePart_DamageTransfer",
+    "name": "<a class=\"gModGreen\" id=\"-453954106\">Enemy_W4_IronTombCorePart_DamageTransfer</a>",
     "realName": "Damage Resonance",
     "aim": "Other",
     "desc": "When the target takes damage, \"Anti-Creator\" will also take the same damage.",
@@ -5088,7 +5088,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded",
+    "name": "<a class=\"gModGreen\" id=\"1626881642\">Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded</a>",
     "realName": "Chronicled \"Love\"",
     "aim": "Buff",
     "desc": "Cyrene's \"Love\" greatly increases DMG dealt by the target.",
@@ -5120,7 +5120,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_IronTombPhantom_Part1",
+    "name": "<a class=\"gModGreen\" id=\"2031591014\">Enemy_W4_IronTombPhantom_Part1</a>",
     "realName": "ERROR: Security System Compromised",
     "aim": "Other",
     "desc": "\"FINAL PROCESS: ERROR LOG 1\"\\n\\nHapLotes405: Error Loading ▀█Transfer Loop█▄ Information Database Connection Timeout\\nApoRia432: Error Loading █▀Assertion Failed▄█ Detection System Unresponsive\\nHubRis504: Error Loading ▀▄Illegal Protocol█▄ Firewall Deactivated\\n\\nWARNING: Security system disrupted. Electrical signal anomaly detected.",
@@ -5128,7 +5128,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_IronTombPhantom_Part2",
+    "name": "<a class=\"gModGreen\" id=\"2014813395\">Enemy_W4_IronTombPhantom_Part2</a>",
     "realName": "ERROR: Repair System Compromised",
     "aim": "Other",
     "desc": "\"FINAL PROCESS: ERROR LOG 2\"\\n\\nKaLos618: Abnormal Loading ▀▄Throttle Failed▄█ Performance Overload\\nSkeMma720: Abnormal Loading █▀Malicious Code Injected▄█ System Out of Control\\nOreXis945: Abnormal Loading ▀█Parameters Distorted▄█ Massive Logic Errors\\n\\nWARNING: Repair system not responding. Internal attack detected.",
@@ -5136,7 +5136,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_IronTombPhantom_Part3",
+    "name": "<a class=\"gModGreen\" id=\"1998035776\">Enemy_W4_IronTombPhantom_Part3</a>",
     "realName": "ERROR: Main Process Compromised",
     "aim": "Other",
     "desc": "\"FINAL PROCESS: ERROR LOG 3\"\\n\\nPoleMos600: Abnormal Loading ██Data Wipe Attack▄▄ Copy Lost\\nEpieiKeia216: Abnormal Loading █▀Subprocess Frozen▄█ Unable to Terminate\\nEleOs252: Abnormal Loading ▀▄Stack Overflow█▄ Insufficient RAM\\n\\nWARNING: Calculation process terminated. Massive amount of corruption detected.",
@@ -5144,7 +5144,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_IronTombPhantom_Part4",
+    "name": "<a class=\"gModGreen\" id=\"2115479109\">Enemy_W4_IronTombPhantom_Part4</a>",
     "realName": "ERROR: Core Damaged",
     "aim": "Other",
     "desc": "\"FINAL PROCESS: ERROR LOG 4\"\\n\\n[Intrusion Variable] Dan Heng: Input SkoPeo365 Value ▀█Storage Anomaly█▄ Unable to Delete\\n[Intrusion Variable] March 7th: Input PhiLia093 Value▄ ▀System Time Rollback█▀ Infinite Loop\\nNeiKos496: Merge-Split Detected ▀▀█▄Core Damaged▄▄▄ Critical Process Terminated▄▄▄\\n\\nMAJOR WARNING: System crashed. Terminating operations.\\n\\nNotice: Detected PhiLia093 managing permissions.",
@@ -5152,7 +5152,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "MModifier_W4_IronTombCore_TimeLock",
+    "name": "<a class=\"gModGreen\" id=\"-1372521903\">MModifier_W4_IronTombCore_TimeLock</a>",
     "realName": "Action Lock",
     "aim": "Debuff",
     "desc": "This target's action value will not change because of the end of any target's turn. This target can reduce the \"Unlock Value\" through action advance effects or Energy regeneration. When the \"Unlock Value\" is depleted, this state will be dispelled.",
@@ -5160,7 +5160,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_IronTombCorePart_Break",
+    "name": "<a class=\"gModGreen\" id=\"-2078801645\">Enemy_W4_IronTombCorePart_Break</a>",
     "realName": "Grave Wound",
     "aim": "Other",
     "desc": "Target cannot take action.",
@@ -5168,7 +5168,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_IronTombCore_BlackBlood",
+    "name": "<a class=\"gModGreen\" id=\"-2081954099\">Enemy_W4_IronTombCore_BlackBlood</a>",
     "realName": "Descent into Chaos",
     "aim": "Debuff",
     "desc": "Maximum Restorable HP and Maximum Recoverable Skill Points are reduced. This effect can be weakened when \"Amphorean Hatred\" decreases.",
