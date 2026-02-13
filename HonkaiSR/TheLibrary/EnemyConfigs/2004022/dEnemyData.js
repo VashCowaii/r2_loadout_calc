@@ -166,17 +166,13 @@ let enemyData = {
       ],
       "phhp": [
         1,
-        [
-          -1,
-          -1,
-          1.2
-        ],
-        null
+        1,
+        1.5
       ],
       "phs": [
         1,
-        null,
-        null
+        1,
+        1.5
       ],
       "weak": [
         "Thunder",

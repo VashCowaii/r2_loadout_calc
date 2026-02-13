@@ -127,7 +127,7 @@ let enemyData = {
       "phhp": [
         1,
         1,
-        null
+        1.66
       ],
       "weak": [
         "Physical",
