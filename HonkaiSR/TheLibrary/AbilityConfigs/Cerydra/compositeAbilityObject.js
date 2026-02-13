@@ -3613,6 +3613,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1079912443\">Cerydra_PointB3</a>[<span class=\"descriptionNumberColor\">Vici</span>]",
           "stackType": "Refresh",
+          "modifierFlags": [
+            "STAT_SpeedUp"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
