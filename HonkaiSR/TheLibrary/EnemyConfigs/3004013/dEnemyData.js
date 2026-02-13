@@ -31,6 +31,11 @@ let enemyData = {
         1,
         null
       ],
+      "phhp": [
+        1,
+        1,
+        1.5
+      ],
       "abilities": [
         1274,
         1275,
