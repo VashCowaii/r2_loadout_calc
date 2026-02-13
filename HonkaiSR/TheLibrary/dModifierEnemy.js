@@ -1037,17 +1037,6 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Mecha01_02_ResistanceDown",
-    "realName": "undefined",
-    "aim": "Debuff",
-    "desc": "undefined",
-    "type": "undefined",
-    "perma": false,
-    "params": [
-      "MDF_PropertyValue"
-    ]
-  },
-  {
     "name": "MModifier_Monster_W3_TV_Side1",
     "realName": "Surprise Channel",
     "aim": "Other",
@@ -3284,14 +3273,6 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W3_Theater_IF_FaceLock",
-    "realName": "undefined",
-    "aim": "Other",
-    "desc": "undefined",
-    "type": "undefined",
-    "perma": true
-  },
-  {
     "name": "MModifier_Monster_W3_Theater_IF_MinionsSuperArmor",
     "realName": "Homework In-Class",
     "aim": "Buff",
@@ -3555,19 +3536,6 @@ let modifiersEnemy = [
     "desc": "Each stack increases DMG dealt for the next attack.",
     "type": "Valiance",
     "perma": true
-  },
-  {
-    "name": "Enemy_W4_Claymore_01_Ability02_DeadLock_Self",
-    "realName": "Duel",
-    "aim": "Other",
-    "desc": "Increases SPD by #1[i]% and when receiving DMG from targets outside the Showdown state, reduces DMG by #2[i]%. Obtains 1 stack of \"Morale\" after each attack. DMG taken from Duel target will reduce the Duel's progress bar based on the DMG. When the Duel's progress bar is at 0, the Duel is lost and the Duel state is dispelled. Still requires #3[i] DMG to dispel Duel state.",
-    "type": "Duel",
-    "perma": true,
-    "params": [
-      "MDF_SpeedAddedRatio",
-      "MDF_DamageReduce",
-      "DeadLock_HP_CurrentValue"
-    ]
   },
   {
     "name": "Enemy_W4_Claymore_01_Ability02_DeadLock_Target",
@@ -4966,6 +4934,118 @@ let modifiersEnemy = [
     ]
   },
   {
+    "name": "Enemy_W5_Peacock_AbilityP01_FireResistanceDown",
+    "realName": "Fire Weakness",
+    "aim": "Other",
+    "desc": "As Pure Crimson is obtained, gains Fire Weakness after entering \"Color\" state, and Fire RES reduces by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_ResistanceDown"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_IceResistanceDown",
+    "realName": "Ice Weakness",
+    "aim": "Other",
+    "desc": "As Indigo is obtained, gains Ice Weakness after entering \"Color\" state, and Ice RES reduces by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_ResistanceDown"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown",
+    "realName": "Imaginary Weakness",
+    "aim": "Other",
+    "desc": "As Pale Yellow is obtained, gains Imaginary Weakness after entering \"Color\" state, and Imaginary RES reduces by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_ResistanceDown"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown",
+    "realName": "Physical Weakness",
+    "aim": "Other",
+    "desc": "As Unbleached Silk is obtained, gains Physical Weakness after entering \"Color\" state, and Physical RES reduces by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_ResistanceDown"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown",
+    "realName": "Quantum Weakness",
+    "aim": "Other",
+    "desc": "As Ultramarine is obtained, gains Quantum Weakness after entering \"Color\" state, and Quantum RES reduces by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_ResistanceDown"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown",
+    "realName": "Lightning Weakness",
+    "aim": "Other",
+    "desc": "As Wisteria Purple is obtained, gains Lightning Weakness after entering \"Color\" state, and Lightning RES reduces by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_ResistanceDown"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_WindResistanceDown",
+    "realName": "Wind Weakness",
+    "aim": "Other",
+    "desc": "As Jade Green is obtained, gains Wind Weakness after entering \"Color\" state, and Wind RES reduces by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_ResistanceDown"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_ElementResistance",
+    "realName": "All-Type RES Boost",
+    "aim": "Other",
+    "desc": "Increases All-Type RES by #1[i]%. Removed when Weakness is Broken. Regained when recovering from Weakness Broken state.",
+    "type": "All-Type RES Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_Ink",
+    "realName": "Color Imbalance",
+    "aim": "Debuff",
+    "desc": "Unable to use Ultimate.",
+    "type": "Ultimate cannot be used.",
+    "perma": false
+  },
+  {
+    "name": "Enemy_W3_TV_03_PowerUnlockListener",
+    "realName": "Happy Smiles",
+    "aim": "Other",
+    "desc": "When this unit is attacked for the first time, the target team gains Punchline, and this unit uses \"Happiness Charm.\"",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "Enemy_W3_TV_03_Shake",
+    "realName": "Strong Reverberation",
+    "aim": "Debuff",
+    "desc": "Action delayed. Cannot take actions for a certain number of turns.",
+    "type": "Strong Reverberation",
+    "perma": true
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-1922828191\">Enemy_W4_Serpent_01_Passive_Sub2</a>",
     "realName": "Expedite Verdict",
     "aim": "Other",
@@ -4994,6 +5074,50 @@ let modifiersEnemy = [
     "desc": "When ally targets' HP reduces, accumulates \"Desperate Bubble.\" When \"Desperate Bubble\" reaches the limit, this unit enters the \"Fragrance of Death\" state.",
     "type": null,
     "perma": true
+  },
+  {
+    "name": "Enemy_W4_Nikadory_IF_StoneShield",
+    "realName": "War Armor",
+    "aim": "Other",
+    "desc": "DMG taken decreases by #1[i]%. Loses stacks of \"War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing their Toughness, delaying their action, and restoring Skill Points to targets. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_AllDamageReduce"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Nikadory_IF_EnhanceShield",
+    "realName": "War Armor",
+    "aim": "Other",
+    "desc": "DMG taken decreases by #1[i]%. Loses stacks of \"War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing their Toughness, delaying their action, and restoring Skill Points to targets. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_AllDamageReduce"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Nikadory_IF_SuperShieldP2",
+    "realName": "Centirefined War Armor",
+    "aim": "Other",
+    "desc": "DMG taken decreases by #1[i]%. Loses stacks of \"Centirefined War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"Centirefined War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing a large amount of their Toughness, greatly delaying their action, restoring Skill Points to targets, and grants the attacker a certain number of stacks of \"Glory.\" After \"Centirefined War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. If \"Centirefined War Armor\" stack is 0 at the end of this unit's turn, it will be restored to maximum stacks.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_AllDamageReduce"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Nikadory_IF_Brave",
+    "realName": "Glory",
+    "aim": "Other",
+    "desc": "Each stack of \"Glory\" increases CRIT DMG by #1[i]%. Consuming 1 Skill Point adds 1 stack of \"Glory.\" When attacking, reduces stacks of \"War Armor\" or \"Centirefined War Armor\" equal to the current \"Glory\" stacks.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_DamageUpRatio_PerLayer"
+    ]
   },
   {
     "name": "<a class=\"gModGreen\" id=\"1575455810\">Enemy_W4_Manta_LocalLegend_Statues</a>",
@@ -5056,6 +5180,264 @@ let modifiersEnemy = [
     ]
   },
   {
+    "name": "MModifier_Monster_W4_Claymore_02_Ability05_Speed",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Nikadory_IF_Ability06Charge",
+    "realName": "Ready for Battle",
+    "aim": "Other",
+    "desc": "DMG dealt increases by #1[i]%. This state is removed when \"War Armor\" stacks are reduced to 0.",
+    "type": "Ready for Battle",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypeAddedRatio"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Claymore_01_LocalLegend_AllMonst",
+    "realName": "Fight in Unity",
+    "aim": "Other",
+    "desc": "DMG dealt increases by #1[i]% and DMG received reduces by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_ShowValue1",
+      "MDF_ShowValue2"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Nikadory_IF_AbilityEX04_TGT",
+    "realName": "Protective Formation",
+    "aim": "Buff",
+    "desc": "Each stack increases DMG dealt by #1[i]% and reduces DMG received by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypeAddedRatio_PerLayer",
+      "MDF_AllDamageReduce_PerLayer"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"799207340\">Enemy_W4_Manta_LocalLegend_Virus_NightMare</a>",
+    "realName": "Glacial Erosion",
+    "aim": "Debuff",
+    "desc": "At the start of the turn, receives Ice DoT equal to a percentage of this unit's Max HP. This DoT is stackable.",
+    "type": "Glacial Erosion",
+    "perma": true
+  },
+  {
+    "name": "MModifier_W4_Griffin_LocalLegend_AllDamageTaken",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Monster_W4_Claymore_01_LocalLegend_LockHP_Revive",
+    "realName": "Indomitable Battle",
+    "aim": "Other",
+    "desc": "Restores a certain amount of HP and returns to battle during the next action.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_Vtuber_Charge01",
+    "realName": "Live Showdown",
+    "aim": "Other",
+    "desc": "The current remaining HP percentage of the enemy on the sub-field is at #1[i]%. When Live Showdown ends, uses \"Commence Chat Bombing!\" on ally characters going to the sub-field.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Ratio"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Vtuber_Charge02",
+    "realName": "Live Showdown",
+    "aim": "Other",
+    "desc": "The current remaining HP percentage of the enemy on the sub-field is at #1[i]%. When Live Showdown ends, if all enemies in the sub-field are defeated, uses \"Commence Chat Bombing!\" on ally characters going to the sub-field, or else uses \"Bullet Comments Ready!\" on all allies.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Ratio"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Vtuber_InField",
+    "realName": "Epic showdown in progress!",
+    "aim": "Other",
+    "desc": "Located on the sub-field.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_VtuberPart01_Charge",
+    "realName": "Ally Popularity",
+    "aim": "Other",
+    "desc": "After being attacked, \"Ally Popularity\" increases and action advances. During the next action, grants \"Ally Gratuity\" to sub-field ally targets based on the increased \"Ally Popularity.\"",
+    "type": "Thumbs Up",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_VtuberPart02_Charge",
+    "realName": "Enemy Popularity",
+    "aim": "Other",
+    "desc": "After being attacked, \"Enemy Popularity\" decreases and action advances. During the next action, removes \"Enemy Gratuity\" from sub-field enemy targets based on the amount of reduced \"Enemy Popularity.\"",
+    "type": "Diss",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_Vtuber_CriticalDamageAdd",
+    "realName": "Ally Gratuity",
+    "aim": "Buff",
+    "desc": "All-Type RES PEN increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Vtuber_DamageAdd",
+    "realName": "Enemy Gratuity",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Vtuber_Charge_AllDamageReduce",
+    "realName": "Privacy Protection",
+    "aim": "Buff",
+    "desc": "Immune to Crowd Control debuffs and DMG taken decreases by #1[i]%.",
+    "type": "DMG Received Reduction",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageReduce"
+    ]
+  },
+  {
+    "name": "Monster_W5_Vtuber_AllDamageTypeTaken",
+    "realName": "Tilted",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%. Action delayed.",
+    "type": "Tilted",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypeTakenRatio"
+    ]
+  },
+  {
+    "name": "Modifier_StageSpecialAbility_20501060_Sub",
+    "realName": "Sparxie's Encouragement",
+    "aim": "Buff",
+    "desc": "Support from their idol fills fans with Sparxie Energy, increasing DMG dealt by #1[i]%.",
+    "type": "Sparxie's Encouragement",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Vtuber_Ability04_Bonus",
+    "realName": "Flooding Viewers",
+    "aim": "Buff",
+    "desc": "Increases action advances and CRIT Rate by #1[i]%.",
+    "type": null,
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Enemy_W3_Sam_01_EnhanceChargeCount",
+    "realName": "Mortal Instinct",
+    "aim": "Other",
+    "desc": "\"Mortal Instinct\" stacked #1[i] time(s)",
+    "type": "Mortal Instinct",
+    "perma": true,
+    "params": [
+      "MDF_Layer"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Claymore_01_LocalLegend_WhiteCurse_Active",
+    "realName": "Fury Duel",
+    "aim": "Other",
+    "desc": "This target can only attack the \"Titankin\" and can only be attacked by the \"Titankin.\"",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "Enemy_W4_Claymore_01_LocalLegend_WhiteCurse_InActive",
+    "realName": "Fury Duel",
+    "aim": "Other",
+    "desc": "This target can only attack the \"Titankin\" and can only be attacked by the \"Titankin.\"",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1087631853\">MModifier_Monster_W4_Scholar_LocalLegend_BookController</a>",
+    "realName": "Proselytize",
+    "aim": "Other",
+    "desc": "Causes %DynamicTargetName to enter the \"Gleaned Instruction\" state.",
+    "type": "Proselytize",
+    "perma": true
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"2022021618\">MModifier_Monster_W4_Scholar_LocalLegend_BookTarget</a>",
+    "realName": "Gleaned Instruction",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "Gleaned Instruction",
+    "perma": true,
+    "params": [
+      "MDF_SpeedUpRatio"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"487625140\">MModifier_Monster_W4_Scholar_LocalLegend_BookKiller</a>",
+    "realName": "Ignited Flame",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "Ignited Flame",
+    "perma": false,
+    "params": [
+      "MDF_SpeedUpRatio"
+    ]
+  },
+  {
+    "name": "MModifier_Monster_W4_Claymore_LocalLegend_Ability03_Aim",
+    "realName": "Charging",
+    "aim": "Other",
+    "desc": "Charging. Dispelled upon Weakness Break.",
+    "type": "Charging",
+    "perma": true
+  },
+  {
+    "name": "MModifier_Monster_W4_Claymore_LocalLegend03_Ability03_Aim",
+    "realName": "Charging",
+    "aim": "Other",
+    "desc": "Charging. Dispelled upon Weakness Break.",
+    "type": "Charging",
+    "perma": true
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-681994307\">Enemy_W4_IronTombCorePart_Ability02_ChargeOnPart</a>",
     "realName": "Deliverance of Relief",
     "aim": "Other",
@@ -5084,6 +5466,14 @@ let modifiersEnemy = [
     "realName": "Damage Resonance",
     "aim": "Other",
     "desc": "When the target takes damage, \"Anti-Creator\" will also take the same damage.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-2081954099\">Enemy_W4_IronTombCore_BlackBlood</a>",
+    "realName": "Descent into Chaos",
+    "aim": "Debuff",
+    "desc": "Maximum Restorable HP and Maximum Recoverable Skill Points are reduced. This effect can be weakened when \"Amphorean Hatred\" decreases.",
     "type": null,
     "perma": true
   },
@@ -5168,132 +5558,23 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"-2081954099\">Enemy_W4_IronTombCore_BlackBlood</a>",
-    "realName": "Descent into Chaos",
-    "aim": "Debuff",
-    "desc": "Maximum Restorable HP and Maximum Recoverable Skill Points are reduced. This effect can be weakened when \"Amphorean Hatred\" decreases.",
-    "type": null,
-    "perma": true
-  },
-  {
-    "name": "Enemy_W4_Claymore_01_LocalLegend_AllMonst",
-    "realName": "Fight in Unity",
-    "aim": "Other",
-    "desc": "DMG dealt increases by #1[i]% and DMG received reduces by #2[i]%.",
-    "type": null,
-    "perma": true,
-    "params": [
-      "MDF_ShowValue1",
-      "MDF_ShowValue2"
-    ]
-  },
-  {
-    "name": "<a class=\"gModGreen\" id=\"799207340\">Enemy_W4_Manta_LocalLegend_Virus_NightMare</a>",
-    "realName": "Glacial Erosion",
-    "aim": "Debuff",
-    "desc": "At the start of the turn, receives Ice DoT equal to a percentage of this unit's Max HP. This DoT is stackable.",
-    "type": "Glacial Erosion",
-    "perma": true
-  },
-  {
-    "name": "MModifier_W4_Griffin_LocalLegend_AllDamageTaken",
-    "realName": "Vulnerability",
-    "aim": "Debuff",
-    "desc": "DMG taken increases by #1[i]%.",
-    "type": null,
-    "perma": true,
-    "params": [
-      "MDF_PropertyValue"
-    ]
-  },
-  {
-    "name": "Monster_W4_Claymore_01_LocalLegend_LockHP_Revive",
-    "realName": "Indomitable Battle",
-    "aim": "Other",
-    "desc": "Restores a certain amount of HP and returns to battle during the next action.",
-    "type": null,
-    "perma": true
-  },
-  {
-    "name": "Enemy_W3_Sam_01_EnhanceChargeCount",
-    "realName": "Mortal Instinct",
-    "aim": "Other",
-    "desc": "\"Mortal Instinct\" stacked #1[i] time(s)",
-    "type": "Mortal Instinct",
-    "perma": true,
-    "params": [
-      "MDF_Layer"
-    ]
-  },
-  {
-    "name": "Enemy_W4_Claymore_01_LocalLegend_WhiteCurse_Active",
-    "realName": "Fury Duel",
-    "aim": "Other",
-    "desc": "This target can only attack the \"Titankin\" and can only be attacked by the \"Titankin.\"",
-    "type": null,
-    "perma": true
-  },
-  {
-    "name": "Enemy_W4_Claymore_01_LocalLegend_WhiteCurse_InActive",
-    "realName": "Fury Duel",
-    "aim": "Other",
-    "desc": "This target can only attack the \"Titankin\" and can only be attacked by the \"Titankin.\"",
-    "type": null,
-    "perma": true
-  },
-  {
-    "name": "<a class=\"gModGreen\" id=\"-1087631853\">MModifier_Monster_W4_Scholar_LocalLegend_BookController</a>",
-    "realName": "Proselytize",
-    "aim": "Other",
-    "desc": "Causes %DynamicTargetName to enter the \"Gleaned Instruction\" state.",
-    "type": "Proselytize",
-    "perma": true
-  },
-  {
-    "name": "<a class=\"gModGreen\" id=\"2022021618\">MModifier_Monster_W4_Scholar_LocalLegend_BookTarget</a>",
-    "realName": "Gleaned Instruction",
-    "aim": "Buff",
-    "desc": "SPD increases by #1[i]%.",
-    "type": "Gleaned Instruction",
-    "perma": true,
-    "params": [
-      "MDF_SpeedUpRatio"
-    ]
-  },
-  {
-    "name": "<a class=\"gModGreen\" id=\"487625140\">MModifier_Monster_W4_Scholar_LocalLegend_BookKiller</a>",
-    "realName": "Ignited Flame",
-    "aim": "Buff",
-    "desc": "SPD increases by #1[i]%.",
-    "type": "Ignited Flame",
-    "perma": false,
-    "params": [
-      "MDF_SpeedUpRatio"
-    ]
-  },
-  {
-    "name": "MModifier_Monster_W4_Claymore_LocalLegend_Ability03_Aim",
-    "realName": "Charging",
-    "aim": "Other",
-    "desc": "Charging. Dispelled upon Weakness Break.",
-    "type": "Charging",
-    "perma": true
-  },
-  {
-    "name": "MModifier_Monster_W4_Claymore_LocalLegend03_Ability03_Aim",
-    "realName": "Charging",
-    "aim": "Other",
-    "desc": "Charging. Dispelled upon Weakness Break.",
-    "type": "Charging",
-    "perma": true
-  },
-  {
     "name": "<a class=\"gModGreen\" id=\"968355900\">Monster_W4_Serpent_01_RLBoss_Ability06Choose</a>",
     "realName": "Hemotort Drench",
     "aim": "Other",
     "desc": "The character that has been selected by \"Name the Culprit.\"",
     "type": null,
     "perma": true
+  },
+  {
+    "name": "Enemy_W5_Limao_ElationDamageUp",
+    "realName": "Make Headlines, Please!",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": "Elation Boost",
+    "perma": false,
+    "params": [
+      "MDF_ElationDamageAddedRatio"
+    ]
   },
   {
     "name": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>",
@@ -5310,5 +5591,186 @@ let modifiersEnemy = [
     "desc": "Cannot become the primary target for abilities that require active selection. When Weakness is Broken or when all enemy units on the field aside from this unit are in \"Lurking\" state, dispels \"Lurking\" state for this unit. When there are no other enemy units on the battlefield, this unit dispels the \"Lurking\" state.",
     "type": "Lurking",
     "perma": false
+  },
+  {
+    "name": "Enemy_W5_Vtuber_ChargeEnd_AllDamageReduce",
+    "realName": "Privacy Protection",
+    "aim": "Buff",
+    "desc": "Decreases DMG taken by #1[i]%.",
+    "type": "DMG Received Reduction",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageReduce"
+    ]
+  },
+  {
+    "name": "MModifier_Monster_W4_Claymore_02_Ability03_AllDamageTypeTaken",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Enemy_W5_JK_Power",
+    "realName": "Book-Smart",
+    "aim": "Buff",
+    "desc": "Increases DMG dealt by #1[i]% and decreases DMG taken by #2[i]%. After receiving Elation DMG or when the target team gains Punchline and reaches #3[i] points, the effect is dispelled.",
+    "type": "Book-Smart",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypeAddedRatio",
+      "MDF_AllDamageReduce",
+      "MDF_ThresholdValue"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_Color_Red_Display",
+    "realName": "Pure Crimson",
+    "aim": "Other",
+    "desc": "Gained #1[i] points of Pure Crimson. When using abilities, consumes points to deal Fire Additional DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ModifierLayers"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_Color_Blue_Display",
+    "realName": "Indigo",
+    "aim": "Other",
+    "desc": "Gained #1[i] points of Indigo. When using abilities, consumes points to deal Ice Additional DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ModifierLayers"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_Color_Yellow_Display",
+    "realName": "Pale Yellow",
+    "aim": "Other",
+    "desc": "Gained #1[i] points of Pale Yellow. When using abilities, consumes points to deal Imaginary Additional DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ModifierLayers"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_Color_White_Display",
+    "realName": "Unbleached Silk",
+    "aim": "Other",
+    "desc": "Gained #1[i] points of Unbleached Silk. When using abilities, consumes points to deal Physical Additional DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ModifierLayers"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_Color_Cyan_Display",
+    "realName": "Ultramarine",
+    "aim": "Other",
+    "desc": "Gained #1[i] points of Ultramarine. When using abilities, consumes points to deal Quantum Additional DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ModifierLayers"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_Color_Purple_Display",
+    "realName": "Wisteria Purple",
+    "aim": "Other",
+    "desc": "Gained #1[i] points of Wisteria Purple. When using abilities, consumes points to deal Lightning Additional DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ModifierLayers"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_Color_Green_Display",
+    "realName": "Jade Green",
+    "aim": "Other",
+    "desc": "Gained #1[i] points of Jade Green. When using abilities, consumes points to deal Wind Additional DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ModifierLayers"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_Colorless",
+    "realName": "Colorless",
+    "aim": "Other",
+    "desc": "When attacked by ally targets, gains 1 point of \"Paint\" based on the attacker's Type. If Elation DMG is received during the attack, then additionally gains a certain amount of \"Paint.\" When reaching 6 points of \"Paint,\" enters the \"Color\" state. During this state, based on the Types of Paint already gained, gains corresponding Types of Weakness and decreases the Type RES of corresponding Type. When in the \"Colorless\" state, Toughness will not drop below 1.",
+    "type": "Colorless",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_Peacock_AbilityP01_Colorful",
+    "realName": "Color",
+    "aim": "Other",
+    "desc": "When using abilities, \"Paint\" will be consumed to deal Additional DMG of the corresponding Type. At the end of the turn, if all \"Paint\" has been consumed, enters the \"Colorless\" state and removes Weakness and Type RES reduction caused by \"Paint.\" When Weakness is Broken, consumes all \"Paint\" to deal Additional DMG equal to a percentage of this unit's max HP to this unit.",
+    "type": "Color",
+    "perma": true
+  },
+  {
+    "name": "MModifier_Monster_W4_Claymore_02_Ability03_Aim",
+    "realName": "Charging",
+    "aim": "Other",
+    "desc": "When taking the next action, uses \"Time to Rock!\" When Aha Instant is triggered or Weakness is broken, dispels Charging, grants the target team Punchline, and increases the DMG taken by this unit.",
+    "type": "Charging",
+    "perma": true
+  },
+  {
+    "name": "MModifier_Monster_W4_Claymore_02_Ability05_Status",
+    "realName": "Revelry",
+    "aim": "Debuff",
+    "desc": "Cannot take action. At the start of the turn, if \"%CasterName\" is not in Charging state, \"%CasterName\" will initiate a Sweep attack.",
+    "type": "Revelry",
+    "perma": false
+  },
+  {
+    "name": "MModifier_Monster_W4_Claymore_02_Elation",
+    "realName": "Frenzied Rendition",
+    "aim": "Other",
+    "desc": "Using \"Get Hyped!\" produces a more Elated effect.",
+    "type": "Frenzied Rendition",
+    "perma": true
+  },
+  {
+    "name": "MModifier_Monster_W4_Claymore_02_NoElation",
+    "realName": "Music Madness",
+    "aim": "Other",
+    "desc": "When Aha Instant is activated, this unit gains the \"Frenzied Rendition\" state, making the effects of \"Get Hyped!\" more Elated.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "Enemy_W2_Beast01_05_Boss",
+    "realName": "Fealty",
+    "aim": "Buff",
+    "desc": "When a target with \"Fealty\" is attacked, the DMG from this attack will be transferred to the Security Doggo, and causes the target team to gain Punchline.",
+    "type": "Fealty",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W4_Claymore_01_Ability02_DeadLock_Self",
+    "realName": "Duel",
+    "aim": "Other",
+    "desc": "Increases SPD by #1[i]% and when receiving DMG from targets outside the Showdown state, reduces DMG by #2[i]%. Obtains 1 stack of \"Morale\" after each attack. DMG taken from Duel target will reduce the Duel's progress bar based on the DMG. When the Duel's progress bar is at 0, the Duel is lost and the Duel state is dispelled. Still requires #3[i] DMG to dispel Duel state.",
+    "type": "Duel",
+    "perma": true,
+    "params": [
+      "MDF_SpeedAddedRatio",
+      "MDF_DamageReduce",
+      "DeadLock_HP_CurrentValue"
+    ]
   }
 ]

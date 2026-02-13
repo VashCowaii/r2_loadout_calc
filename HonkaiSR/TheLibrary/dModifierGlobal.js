@@ -15807,7 +15807,7 @@ let modifiersGlobal = [
     "name": "Modifier_StageAbility_674820_Character",
     "realName": "Giant Wise Tree",
     "aim": "Buff",
-    "desc": "ATK increases by #1[i]%. When launching an attack and dealing Ultimate DMG, causes \"Murmur\" to dealt DMG equal to #2[i]% of the original DMG.",
+    "desc": "ATK increases by #1[i]%. When launching an attack and dealing Ultimate DMG, causes \"Murmur\" to deal DMG equal to #2[i]% of the original DMG.",
     "type": "ATK Boost",
     "perma": true,
     "params": [
@@ -17044,7 +17044,7 @@ let modifiersGlobal = [
     "name": "GridFight_Argenti_Passive_Charge",
     "realName": "Apotheosis",
     "aim": "Buff",
-    "desc": "CRIT Rate increases by #1[f1]% and ATK increases by #1[f2]%.",
+    "desc": "Increases CRIT Rate by #1[f1]% and ATK by #2[f1]%.",
     "type": "Apotheosis",
     "perma": false,
     "params": [
@@ -17332,7 +17332,7 @@ let modifiersGlobal = [
   {
     "name": "GridFight_Harscyline_PassiveAbility01_Dot",
     "realName": "Deep Sea Resonance",
-    "aim": "Buff",
+    "aim": "Debuff",
     "desc": "At the start of the turn, deals Physical DoT equal to #1[i]% of Hysilens' ATK per stack. After being attacked, immediately inflicts Physical DoT equal to #2[i]% of the original \"Deep Sea Resonance\" DMG to this unit and adjacent enemy targets, and triggers #3[i]% of the original DMG from 1 other random DoT state currently affecting the target.",
     "type": "Deep Sea Resonance",
     "perma": false,
@@ -18753,7 +18753,8 @@ let modifiersGlobal = [
     "type": null,
     "perma": true,
     "params": [
-      "ADF_1"
+      "ADF_1",
+      "#ADF_2"
     ]
   },
   {
@@ -18786,7 +18787,7 @@ let modifiersGlobal = [
     "aim": "Debuff",
     "desc": "DEF decreases by #1[i]%.",
     "type": "DEF Reduction",
-    "perma": false,
+    "perma": true,
     "params": [
       "#SkillP01_P8_DefenceReduceRadio"
     ]
@@ -18858,7 +18859,7 @@ let modifiersGlobal = [
     "name": "MGridFight_MonsterTag_3019_Debuff",
     "realName": "Permanent Trauma",
     "aim": "Debuff",
-    "desc": "Decreases Max HP by #1[i].",
+    "desc": "Max HP decreases by #1[i]%.",
     "type": null,
     "perma": true,
     "params": [
@@ -19581,6 +19582,28 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "Relic_129_Sub",
+    "realName": "Ever-Glorious Magical Girl",
+    "aim": "Buff",
+    "desc": "Elation DMG dealt ignores #1[i]% of the target's DEF.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_DefenceAddRatio"
+    ]
+  },
+  {
+    "name": "Relic_130_Sub",
+    "realName": "Diviner of Distant Reach",
+    "aim": "Buff",
+    "desc": "CRIT Rate increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-681980542\">Modifier_ChallengePeakBattle_EnhancedAbility_0001_03</a>",
     "realName": "Resilient Armor+",
     "aim": "Other",
@@ -19859,6 +19882,642 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "<a class=\"gModGreen\" id=\"-1773698342\">MStrongChallengeEX_Talent_StageAbility_TGT_084</a>",
+    "realName": "Montane Gush",
+    "aim": "Buff",
+    "desc": "CRIT DMG dealt by Skill increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_BPCrit_DamageAddedRatio"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1807253580\">MStrongChallengeEX_Talent_StageAbility_TGT_086</a>",
+    "realName": "Collapse on Sight",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_SpeedAddedRatio"
+    ]
+  },
+  {
+    "name": "Modifier_FantasticStory_BaseAbility_2210_BaseAddOn_ForShow",
+    "realName": "Grit Mechanics",
+    "aim": "Buff",
+    "desc": "Each time Punchline is gained, allies will additionally accumulate #1[i] Grit Value.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_Ratio"
+    ]
+  },
+  {
+    "name": "Modifier_FantasticStory_BaseAbility_2210_BeforeFever_ForShow",
+    "realName": "Concordant Truce",
+    "aim": "Buff",
+    "desc": "This stage has a special Elation Skill. When entering Aha Instant, deals #1[i] instance(s) of Elation DMG to a random enemy target. When an enemy target is defeated, obtains #3[i] Punchline point(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_BaseAbility_2210_BeforeFever_P1_MaxCount",
+      "DV_FantasticStory_BaseAbility_2210_BeforeFever_P2_Ratio",
+      "DV_FantasticStory_BaseAbility_2210_BeforeFever_P3_ElationPoint"
+    ]
+  },
+  {
+    "name": "Modifier_FantasticStory_BaseAbility_2210_EnterFever_sub",
+    "realName": "Surging Grit",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_Ratio_Get"
+    ]
+  },
+  {
+    "name": "Modifier_FantasticStory_BaseAbility_2210_Plus1AddOn_ForShow",
+    "realName": "Grit Mechanics_Euphoria",
+    "aim": "Buff",
+    "desc": "When consuming Skill Points, additionally accumulates #3[i] Grit Value for allies.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_PlusAbility_2211_ADF_1",
+      "DV_FantasticStory_PlusAbility_2211_ADF_2",
+      "DV_FantasticStory_PlusAbility_2211_ADF_3"
+    ]
+  },
+  {
+    "name": "Modifier_FantasticStory_BaseAbility_2210_plus1_sub",
+    "realName": "Euphoria",
+    "aim": "Debuff",
+    "desc": "Elation DMG taken increases by #1[i]%",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_PlusAbility_2211_ADF_1",
+      "DV_FantasticStory_PlusAbility_2211_ADF_2",
+      "DV_FantasticStory_PlusAbility_2211_ADF_3"
+    ]
+  },
+  {
+    "name": "Modifier_FantasticStory_BaseAbility_2210_Plus2AddOn_Sub",
+    "realName": "Grit Mechanics_Delirium",
+    "aim": "Buff",
+    "desc": "After using Basic ATK or Skill to attack, every enemy target hit additionally accumulates #3[i] Grit Value for allies.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_PlusAbility_2212_ADF_1",
+      "DV_FantasticStory_PlusAbility_2212_ADF_2",
+      "DV_FantasticStory_PlusAbility_2212_ADF_3"
+    ]
+  },
+  {
+    "name": "Modifier_FantasticStory_BaseAbility_2210_plus2_sub2",
+    "realName": "Delirium",
+    "aim": "Buff",
+    "desc": "After using Basic ATK or Skill, gains #2[i] Punchline. During Surging Grit, DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_PlusAbility_2212_ADF_1",
+      "DV_FantasticStory_PlusAbility_2212_ADF_2",
+      "DV_FantasticStory_PlusAbility_2212_ADF_3"
+    ]
+  },
+  {
+    "name": "Modifier_FantasticStory_BaseAbility_2210_plus3_sub2",
+    "realName": "Tirade",
+    "aim": "Buff",
+    "desc": "After dealing Break DMG with an attack, gains #2[i] Punchline.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_PlusAbility_2213_ADF_1",
+      "DV_FantasticStory_PlusAbility_2213_ADF_2",
+      "DV_FantasticStory_PlusAbility_2213_ADF_3"
+    ]
+  },
+  {
+    "name": "Modifier_FantasticStory_BaseAbility_2210_plus3_sub",
+    "realName": "Tirade",
+    "aim": "Debuff",
+    "desc": "Increases Break DMG taken by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_PlusAbility_2213_ADF_1",
+      "DV_FantasticStory_PlusAbility_2213_ADF_2",
+      "DV_FantasticStory_PlusAbility_2213_ADF_3"
+    ]
+  },
+  {
+    "name": "Modifier_FantasticStory_BaseAbility_2210_Plus3AddOn_ForShow",
+    "realName": "Grit Mechanics_Tirade",
+    "aim": "Debuff",
+    "desc": "When a Weakness is Broken, additionally accumulates #1[i] Grit Value for allies.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_PlusAbility_2213_ADF_3"
+    ]
+  },
+  {
+    "name": "MBattleEvent_GridFight_Argenti_Passive_Charge",
+    "realName": "Apotheosis",
+    "aim": "Buff",
+    "desc": "Increases CRIT Rate by #1[f1]% and ATK by #2[f1]%.",
+    "type": "Apotheosis",
+    "perma": false,
+    "params": [
+      "MDF_CritChance",
+      "MDF_AttackAddRatio",
+      "MDF_CritDamage"
+    ]
+  },
+  {
+    "name": "GridFight_Constance_Dancer",
+    "realName": "Dance Partner",
+    "aim": "Buff",
+    "desc": "After attacking a Weakness Broken enemy target, converts the Toughness Reduction of this attack into 1 instance of #1[i]% Super Break DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "GridFight_Constance_Eidolon2_PropertyValue",
+    "realName": "Fresh, Ethereal, and Beloved",
+    "aim": "Debuff",
+    "desc": "All-Type RES decreases by #1[i]%.",
+    "type": "All-Type RES Reduction",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1350070322\">Modifier_ChallengePeakBattle_BaseAbility_0014_02</a>",
+    "realName": "Confinement",
+    "aim": "Other",
+    "desc": "Each stack decreases DMG dealt by #2[i]%, and 1 stack is removed after each Ultimate used.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0014_ADF_1",
+      "ChallengePeakBattle_0014_ADF_2"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1953155713\">Modifier_ChallengePeakBattle_EnhancedAbility_0014_02</a>",
+    "realName": "Confinement+",
+    "aim": "Other",
+    "desc": "Each stack decreases DMG dealt by #2[i]%, and 1 stack is removed after each Ultimate used.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0014_ADF_1",
+      "ChallengePeakBattle_0014_ADF_2"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1374245116\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0011_02</a>",
+    "realName": "Tears Behind Smiles",
+    "aim": "Other",
+    "desc": "Increases Final DMG received by #1[i]%, but cannot take CRIT Hits.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-144097265\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0012_02</a>",
+    "realName": "Thrilling Delight",
+    "aim": "Other",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0012_ADF_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-160874884\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0012_03</a>",
+    "realName": "Thrilling Delight",
+    "aim": "Other",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0012_ADF_2"
+    ]
+  },
+  {
+    "name": "GridFight_MonsterTag_4.0_1009_Bonus",
+    "realName": "Speed Alternation",
+    "aim": "Buff",
+    "desc": "Increases SPD Amplification by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "GridFight_MonsterTag_4.0_1009_DeBonus",
+    "realName": "Speed Alternation",
+    "aim": "Debuff",
+    "desc": "SPD Amplification decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "LC_20023_Sub",
+    "realName": "Elation Boost",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": "Elation Boost",
+    "perma": false,
+    "params": [
+      "#SkillEquip_P1_ElationDamageAddedRatio"
+    ]
+  },
+  {
+    "name": "LC_20024_Sub",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": false,
+    "params": [
+      "#SkillEquip_P2_CriticalDamage"
+    ]
+  },
+  {
+    "name": "LC_21064_Sub",
+    "realName": "Elation DMG Vulnerability",
+    "aim": "Debuff",
+    "desc": "Elation DMG taken increases by #1[i]%.",
+    "type": "Elation DMG Vulnerability",
+    "perma": false,
+    "params": [
+      "#SkillEquip_P2_ElationDamageTakenRatio"
+    ]
+  },
+  {
+    "name": "LC_21065_Sub",
+    "realName": "Elation Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases Elation by #1[i]%. This effect can stack up to #2[i] time(s).",
+    "type": "Elation Boost",
+    "perma": false,
+    "params": [
+      "#SkillEquip_P2_ElationDamageAddedRatio",
+      "#SkillEquip_P3_MaxLayer"
+    ]
+  },
+  {
+    "name": "LC_23054_Sub_ToTeamMembers",
+    "realName": "Great Fortune",
+    "aim": "Buff",
+    "desc": "CRIT Rate increases by #1[i]% and CRIT DMG increases by #2[i]%.",
+    "type": "Great Fortune",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue",
+      "MDF_PropertyValue2"
+    ]
+  },
+  {
+    "name": "GridFight_Sparxie_ElationTimeDamageUp",
+    "realName": "Follower Growth",
+    "aim": "Buff",
+    "desc": "Each stack increases DMG Amplification during Aha Instant by #1[i]%.",
+    "type": "DMG Amplification Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "GridFight_YaoGuang_AddNormalDamage",
+    "realName": "Basic ATK DMG Multiplier Boost",
+    "aim": "Buff",
+    "desc": "The next Basic ATK's DMG multiplier increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_ExtraRatio"
+    ]
+  },
+  {
+    "name": "StageAbility_2050101_Modifier_Sub",
+    "realName": "Ultimate Dental Care Package",
+    "aim": "Buff",
+    "desc": "Physical DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050102_Modifier_Sub",
+    "realName": "Ultimate Dental Care Package",
+    "aim": "Buff",
+    "desc": "Wind DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050103_Modifier_Sub",
+    "realName": "Ultimate Dental Care Package",
+    "aim": "Buff",
+    "desc": "Fire DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050104_Modifier_Sub",
+    "realName": "Ultimate Dental Care Package",
+    "aim": "Buff",
+    "desc": "Ice DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050105_Modifier_Sub",
+    "realName": "Ultimate Dental Care Package",
+    "aim": "Buff",
+    "desc": "Lightning DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050106_Modifier_Sub",
+    "realName": "Ultimate Dental Care Package",
+    "aim": "Buff",
+    "desc": "Quantum DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050107_Modifier_Sub",
+    "realName": "Ultimate Dental Care Package",
+    "aim": "Buff",
+    "desc": "Imaginary DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050108_Modifier_Sub",
+    "realName": "Imagenated Dental Cleaning Package",
+    "aim": "Buff",
+    "desc": "DEF increases by #1[i]%",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050109_Modifier_Sub",
+    "realName": "Imagenated Dental Cleaning Package",
+    "aim": "Buff",
+    "desc": "Max HP increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050110_Modifier_Sub",
+    "realName": "Imagenated Dental Cleaning Package",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050111_Modifier_Sub",
+    "realName": "Sweet Sweet Time",
+    "aim": "Buff",
+    "desc": "Shield Effect gained increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050112_Modifier_Sub",
+    "realName": "Sweet Sweet Time",
+    "aim": "Buff",
+    "desc": "HP restored increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050113_Modifier_Sub",
+    "realName": "Sweet Sweet Time",
+    "aim": "Buff",
+    "desc": "CRIT Rate increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050114_Modifier_Sub",
+    "realName": "Sweet Sweet Time",
+    "aim": "Buff",
+    "desc": "Break Effect increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050115_Modifier_Sub",
+    "realName": "Sweet Sweet Time",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050116_Modifier_Sub",
+    "realName": "That Hit the Spot",
+    "aim": "Buff",
+    "desc": "Basic ATK DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050117_Modifier_Sub",
+    "realName": "That Hit the Spot",
+    "aim": "Buff",
+    "desc": "Ultimate DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050118_Modifier_Sub",
+    "realName": "That Hit the Spot",
+    "aim": "Buff",
+    "desc": "Skill DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050119_Modifier_Sub",
+    "realName": "That Hit the Spot",
+    "aim": "Buff",
+    "desc": "Follow-Up ATK DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050120_Modifier_Sub",
+    "realName": "That Hit the Spot",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050121_Modifier_Sub",
+    "realName": "Greetings From World's End",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050122_Modifier_Sub",
+    "realName": "Greetings From World's End",
+    "aim": "Buff",
+    "desc": "Chance to resist Burn increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050123_Modifier_Sub",
+    "realName": "Greetings From World's End",
+    "aim": "Buff",
+    "desc": "Chance to resist Freeze increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050125_Modifier_Sub",
+    "realName": "Greetings From World's End",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050127_Modifier_Sub",
+    "realName": "Greetings From World's End",
+    "aim": "Buff",
+    "desc": "DEF increases by #1[i]%",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050128_Modifier_Sub",
+    "realName": "Greetings From World's End",
+    "aim": "Buff",
+    "desc": "Effect Hit Rate increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_2050129_Modifier_Sub",
+    "realName": "Greetings From World's End",
+    "aim": "Buff",
+    "desc": "Max HP increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
     "name": "StageAbility_673890_Damage_Modifier",
     "realName": "Selfless Giant Turtle",
     "aim": "Debuff",
@@ -19878,6 +20537,455 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "GridFight_Sparkle_MonsterDamageTakenUp",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "GridFight_Sparkle_Eidolon2",
+    "realName": "DEF Reduction",
+    "aim": "Debuff",
+    "desc": "DEF decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Relic_130_Sub2",
+    "realName": "Diviner of Distant Reach",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": "Elation Boost",
+    "perma": true,
+    "params": [
+      "#SkillRelic_130_4_P5_ElationDamageAddedRatioBase"
+    ]
+  },
+  {
+    "name": "MItem_402036",
+    "realName": "Grudge Notebook",
+    "aim": "Buff",
+    "desc": "When HP percentage is lowered to below #1[i]% for the first time in battle, restores HP equal to #2[i]% of Max HP.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1",
+      "MDF_2"
+    ]
+  },
+  {
+    "name": "MItem_403016",
+    "realName": "Steel Coil",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "MItem_408444",
+    "realName": "Anti-Meme Toy Box",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "MItem_408444_2",
+    "realName": "Anti-Meme Toy Box",
+    "aim": "Debuff",
+    "desc": "ATK decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "MItem_408445",
+    "realName": "Badge Battle Robe",
+    "aim": "Buff",
+    "desc": "DEF increases by #1[i]%",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "MItem_408446",
+    "realName": "Sparxie Unlimited Edition Collectible Plushie",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "MItem_408447",
+    "realName": "Cold Joke",
+    "aim": "Buff",
+    "desc": "Ice DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "MItem_408642",
+    "realName": "Bottled Quantum Ghost",
+    "aim": "Debuff",
+    "desc": "SPD decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "MItem_408643",
+    "realName": "Sea Monster's Touch",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "MItem_408804",
+    "realName": "The Fluffy Multi-Functional Fan Glowstick",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "LC_23054_Sub",
+    "realName": "Great Fortune",
+    "aim": "Buff",
+    "desc": "Increases CRIT Rate by #1[i]%, CRIT DMG by #2[i]%, and Energy Regeneration Rate by #3[i]%.",
+    "type": "Great Fortune",
+    "perma": true,
+    "params": [
+      "#SkillEquip_P2_Value",
+      "#SkillEquip_P3_Value",
+      "#SkillEquip_P5_AddSPRatio"
+    ]
+  },
+  {
+    "name": "MStageAbility_GridFight_Stage_35500140_Bonus",
+    "realName": "Special Guest Expert: Qingque",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i].",
+    "type": "ATK Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "MStageAbility_GridFight_Stage_35500141_Bonus",
+    "realName": "Special Guest Expert: Tingyun",
+    "aim": "Buff",
+    "desc": "On-Field Strength increases by #1[i].",
+    "type": "On-Field Strength Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "GridFight_Constance_Aura",
+    "realName": "Lick... Enkindled Betrayal",
+    "aim": "Buff",
+    "desc": "Weakness Break Efficiency increases by #1[i]%. Toughness Reduction taken by enemy targets that are not Weakness Broken can also be converted to Super Break DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "GridFight_Constance_Aura_OnEnemy",
+    "realName": "Lick... Enkindled Betrayal",
+    "aim": "Debuff",
+    "desc": "Toughness Reduction taken when not Weakness Broken can also be converted to Super Break DMG.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "GridFight_Constance_Eidolon6_Property",
+    "realName": "And Yet, Always, Deathly Beautiful",
+    "aim": "Buff",
+    "desc": "Break Effect increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "GridFight_Constance_Aura_OnTeam",
+    "realName": "Lick... Enkindled Betrayal",
+    "aim": "Buff",
+    "desc": "Weakness Break Efficiency increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "GridFight_Constance_Eidolon1_SuperBreak",
+    "realName": "When a Bud Readies to Bloom",
+    "aim": "Buff",
+    "desc": "After attacking a Weakness Broken enemy target, converts the Toughness Reduction of this attack into 1 instance of #1[i]% Super Break DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1706325911\">Modifier_ChallengePeakBattle_ExtremeAbility_0014_02</a>",
+    "realName": "Confinement++",
+    "aim": "Other",
+    "desc": "Each stack decreases DMG dealt by #2[i]%, and 1 stack is removed after each Ultimate used.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0014_ADF_1",
+      "ChallengePeakBattle_0014_ADF_2"
+    ]
+  },
+  {
+    "name": "MGridFight_MonsterTag_4.0_1002_Debuff",
+    "realName": "Curbed Wind",
+    "aim": "Debuff",
+    "desc": "Attacks will only deal 1 DMG, this effect lasts for #1[i] attacks, #2[i] attack(s) have been used.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1",
+      "_AttackTime"
+    ]
+  },
+  {
+    "name": "MGridFight_MonsterTag_4.0_1003_Debuff",
+    "realName": "Curbed Fire",
+    "aim": "Debuff",
+    "desc": "Attacks will only deal 1 DMG, this effect lasts for #1[i] attacks, #2[i] attack(s) have been used.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1",
+      "_AttackTime"
+    ]
+  },
+  {
+    "name": "MGridFight_MonsterTag_4.0_1004_Debuff",
+    "realName": "Curbed Ice",
+    "aim": "Debuff",
+    "desc": "Attacks will only deal 1 DMG, this effect lasts for #1[i] attacks, #2[i] attack(s) have been used.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1",
+      "_AttackTime"
+    ]
+  },
+  {
+    "name": "MGridFight_MonsterTag_4.0_1005_Debuff",
+    "realName": "Curbed Lightning",
+    "aim": "Debuff",
+    "desc": "Attacks will only deal 1 DMG, this effect lasts for #1[i] attacks, #2[i] attack(s) have been used.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1",
+      "_AttackTime"
+    ]
+  },
+  {
+    "name": "MGridFight_MonsterTag_4.0_1006_Debuff",
+    "realName": "Curbed Physical",
+    "aim": "Debuff",
+    "desc": "Attacks will only deal 1 DMG, this effect lasts for #1[i] attacks, #2[i] attack(s) have been used.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1",
+      "_AttackTime"
+    ]
+  },
+  {
+    "name": "MGridFight_MonsterTag_4.0_1007_Debuff",
+    "realName": "Curbed Quantum",
+    "aim": "Debuff",
+    "desc": "Attacks will only deal 1 DMG, this effect lasts for #1[i] attacks, #2[i] attack(s) have been used.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1",
+      "_AttackTime"
+    ]
+  },
+  {
+    "name": "MGridFight_MonsterTag_4.0_1008_Debuff",
+    "realName": "Curbed Imaginary",
+    "aim": "Debuff",
+    "desc": "Attacks will only deal 1 DMG, this effect lasts for #1[i] attacks, #2[i] attack(s) have been used.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#ADF_1",
+      "_AttackTime"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1480313555\">Modifier_ChallengePeakBattle_BaseAbility_0015_02</a>",
+    "realName": "Honing the Blade",
+    "aim": "Other",
+    "desc": "Each stack reduces CRIT DMG by #2[i]%. Each time any ally consumes 1 Skill Point, 1 stack of this effect is removed.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0015_ADF_1",
+      "ChallengePeakBattle_0015_ADF_2"
+    ]
+  },
+  {
+    "name": "LC_23053_Sub02",
+    "realName": "Center of Attention",
+    "aim": "Buff",
+    "desc": "Each stack enables the Elation DMG dealt to ignore #2[f1]% of the target's DEF.",
+    "type": "Ignore Defense",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue",
+      "MDF_PropertyValue2"
+    ]
+  },
+  {
+    "name": "Lingsha_GridFight_RabbitCountBonus",
+    "realName": "Fuyuan Fulgurating Strike",
+    "aim": "Buff",
+    "desc": "DMG Amplification increases by #1[i]% and DMG Mitigation increases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue",
+      "MDF_PropertyValue02"
+    ]
+  },
+  {
+    "name": "MGridFight_MonsterTag_4.0_1011_Monster",
+    "realName": "Emergency Hemostasis",
+    "aim": "Buff",
+    "desc": "After performing an action, restores HP equal to #1[i]% of this unit's Max HP.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_HealHPRatio"
+    ]
+  },
+  {
+    "name": "MGridFight_MonsterTag_4.0_1010_Confine",
+    "realName": "Imprisonment",
+    "aim": "Debuff",
+    "desc": "Action delayed.",
+    "type": "Imprisonment",
+    "perma": false
+  },
+  {
+    "name": "MGridFight_MonsterTag_4.0_1010_Entangle",
+    "realName": "Entanglement",
+    "aim": "Debuff",
+    "desc": "Action delayed.",
+    "type": "Entanglement",
+    "perma": false
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1130750663\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0010_02</a>",
+    "realName": "Elation Instant",
+    "aim": "Other",
+    "desc": "All-Type RES PEN increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue",
+      "MDF_PropertyValue2"
+    ]
+  },
+  {
+    "name": "LC_23053_Sub02_Halo",
+    "realName": "Stream Promo",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": "Elation Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "GridFight_Sparxie_ElationTimeDamageUp_PreCheck",
+    "realName": "Content Creation Team",
+    "aim": "Buff",
+    "desc": "Each stack provides 1 stack of \"Follower Growth\" at the start of the next Aha's turn.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "MBattleEvent_Elation_ElationEchoPointBonus",
+    "realName": "undefined",
+    "aim": "Buff",
+    "desc": "undefined",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "MLevel_ElationBE_ElationEchoPointBonus_OnEnterBattle",
+    "realName": "undefined",
+    "aim": "Buff",
+    "desc": "undefined",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "Topaz_GridFight_Eidolon1",
+    "realName": "Debtor",
+    "aim": "Debuff",
+    "desc": "Each stack increases the CRIT DMG taken by #1[i]%. This effect can stack up to #2[i] time(s).",
+    "type": "Debtor",
+    "perma": true,
+    "params": [
+      "#SkillRank_Rank01_P1_CriticalValue",
+      "#SkillRank_Rank01_P2_CriticalMaxLayer"
     ]
   }
 ]
