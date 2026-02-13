@@ -1272,7 +1272,7 @@ const compositeAbilityObject = {
                           "conditions": {
                             "name": "Compare: Variable",
                             "value1": "CurrentSkillPoints",
-                            "compareType": "=",
+                            "compareType": "<=",
                             "value2": 0
                           },
                           "passed": [
