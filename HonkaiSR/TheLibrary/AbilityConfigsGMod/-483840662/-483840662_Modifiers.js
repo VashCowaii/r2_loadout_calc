@@ -515,7 +515,86 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Ability Use [Owner]: Start"
+          "eventTrigger": "Ability Use [Owner]: Start",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Character ID",
+                    "ID": 1501,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "characterName": "Sparxie"
+                  },
+                  {
+                    "name": "Skill Name",
+                    "skillName": "Skill11"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable with Copy",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variable": "_SkillUseCount",
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variable2": "_1501_SkillUseCount",
+                  "scope": "ContextModifier"
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Character ID",
+                    "ID": 1501,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "characterName": "Sparxie"
+                  },
+                  {
+                    "name": "Skill Name",
+                    "skillName": "Skill12"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "_SkillUseCount",
+                  "value": {
+                    "operator": "Variables[0] (_1501_SkillUseCount) || RETURN",
+                    "displayLines": "_1501_SkillUseCount",
+                    "constants": [],
+                    "variables": [
+                      "_1501_SkillUseCount"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -604,20 +683,72 @@ const configAbility = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Character ID",
-                    "ID": 1213,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "characterName": "Dan Heng • Imbibitor Lunae"
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Character ID",
+                        "ID": 1213,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "characterName": "Dan Heng • Imbibitor Lunae"
+                      },
+                      {
+                        "name": "Character ID",
+                        "ID": 1501,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "characterName": "Sparxie"
+                      }
+                    ]
                   },
                   "passed": [
                     {
-                      "name": "Define Custom Variable with Varying Data",
-                      "target": null,
-                      "variableName": "_CurrnetSkillIndex",
-                      "value": "CurrentActionSkillIndex"
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Character ID",
+                        "ID": 1213,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "characterName": "Dan Heng • Imbibitor Lunae"
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable with Varying Data",
+                          "target": null,
+                          "variableName": "_CurrnetSkillIndex",
+                          "value": "CurrentActionSkillIndex"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Skill Name",
+                            "skillName": "Skill11"
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_CurrnetSkillIndex",
+                              "value": 9
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Define Custom Variable with Varying Data",
+                              "target": null,
+                              "variableName": "_CurrnetSkillIndex",
+                              "value": "CurrentActionSkillIndex"
+                            }
+                          ]
+                        }
+                      ]
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1038,19 +1169,33 @@ const configAbility = {
                 "name": "Compare: Variable",
                 "value1": "_OnWaveMonster_SkillType",
                 "compareType": ">",
-                "value2": 0
+                "value2": -1
               },
               "passed": [
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Character ID",
-                    "ID": 1213,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "characterName": "Dan Heng • Imbibitor Lunae"
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Character ID",
+                        "ID": 1213,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "characterName": "Dan Heng • Imbibitor Lunae"
+                      },
+                      {
+                        "name": "Character ID",
+                        "ID": 1501,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "characterName": "Sparxie"
+                      }
+                    ]
                   },
                   "passed": [
                     {
@@ -1141,7 +1286,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "variableName": "_OnWaveMonster_SkillType",
-                              "value": 0
+                              "value": -1
                             }
                           ]
                         }
@@ -1238,7 +1383,7 @@ const configAbility = {
                                     {
                                       "name": "Define Custom Variable",
                                       "variableName": "_OnWaveMonster_SkillType",
-                                      "value": 0
+                                      "value": -1
                                     }
                                   ]
                                 }
@@ -1325,7 +1470,7 @@ const configAbility = {
                                     {
                                       "name": "Define Custom Variable",
                                       "variableName": "_OnWaveMonster_SkillType",
-                                      "value": 0
+                                      "value": -1
                                     }
                                   ]
                                 }
@@ -4264,12 +4409,12 @@ const configAbility = {
                   },
                   "passed": [
                     {
-                      "name": "Add Events/Bonuses",
-                      "to": {
+                      "name": "Reset Turn AV",
+                      "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"160325498\">Standard_MindControl_DisableAction</a>"
+                      "skipTurn": true
                     }
                   ]
                 }
