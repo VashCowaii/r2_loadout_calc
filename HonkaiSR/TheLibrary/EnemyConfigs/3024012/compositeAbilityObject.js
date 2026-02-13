@@ -893,6 +893,17 @@ const compositeAbilityObject = {
         "Ability Start",
         "Ability Start",
         {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "ENEMIES_OBJECT_UNUSED__113"
+          }
+        },
+        {
           "name": "ATK Scaling DMG",
           "target": {
             "name": "Target Name",

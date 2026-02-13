@@ -3491,6 +3491,12 @@ const configAbility = {
                     "target": "{{Enemy Team All(with Unselectable)}}"
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Modifier_Callback_Variable",
+                    "compareType": "=",
+                    "value2": 1
+                  },
                   "execute": [],
                   "failed": [
                     "Modifier Deletes Itself"
@@ -3872,17 +3878,25 @@ const configAbility = {
                     "team": "Player Team"
                   },
                   {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Basic ATK",
-                      "Skill",
-                      "Ultimate",
-                      "Memosprite"
-                    ],
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Basic ATK"
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Skill"
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Memosprite"
+                      }
+                    ]
                   },
                   {
                     "name": "Has Modifier",

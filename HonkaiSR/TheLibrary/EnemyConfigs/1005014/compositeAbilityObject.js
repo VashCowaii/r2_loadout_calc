@@ -3130,6 +3130,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Recently Summoned Enemies}}"
           },
+          "priorityTag": "MonsterChangeState",
           "canHitNonTargets": true,
           "allowAbilityTriggers": false
         },
@@ -11351,7 +11352,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Inject Ability Use",
                               "abilityName": "Monster_W1_CocoliaP1_IF_02_ChangePhase_Insert_Part03",
-                              "priorityTag": "PROG_MonsterLowest",
+                              "priorityTag": "MonsterChangeState",
                               "ownerState": "Mask_AliveOrLimbo",
                               "targetState": "Mask_AliveOrLimbo",
                               "canHitNonTargets": true,
