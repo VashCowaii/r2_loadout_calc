@@ -18,6 +18,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1965028940\">LC_23027_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "modifierFlags": [
+        "STAT_SpeedUp"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
