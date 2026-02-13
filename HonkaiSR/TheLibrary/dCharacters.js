@@ -641,6 +641,37 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Purify",
+        "icon": "icon/skill/1001_skilltree1.png",
+        "desc": "When using Skill, dispels 1 debuff from one designated ally.",
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Reinforce",
+        "icon": "icon/skill/1001_skilltree2.png",
+        "desc": "The duration of the Shield generated from Skill is extended for #1[i] turn(s).",
+        "params": [
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Ice Spell",
+        "icon": "icon/skill/1001_skilltree3.png",
+        "desc": "When using Ultimate, increases the base chance to Freeze enemies by #1[i]%.",
+        "params": [
+          0.15
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
       "Point09": {
         "name": "DMG Boost: Ice",
         "icon": "icon/property/IconIceAddedRatio.png",
@@ -709,37 +740,6 @@ let characters = {
         "icon": "icon/property/IconDefence.png",
         "stats": {
           "DEF%": 0.1
-        }
-      },
-      "Point06": {
-        "name": "Purify",
-        "icon": "icon/skill/1001_skilltree1.png",
-        "desc": "When using Skill, dispels 1 debuff from one designated ally.",
-        "extraEffects": {
-          "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
-          }
-        }
-      },
-      "Point07": {
-        "name": "Reinforce",
-        "icon": "icon/skill/1001_skilltree2.png",
-        "desc": "The duration of the Shield generated from Skill is extended for #1[i] turn(s).",
-        "params": [
-          1
-        ]
-      },
-      "Point08": {
-        "name": "Ice Spell",
-        "icon": "icon/skill/1001_skilltree3.png",
-        "desc": "When using Ultimate, increases the base chance to Freeze enemies by #1[i]%.",
-        "params": [
-          0.15
-        ],
-        "extraEffects": {
-          "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
-          }
         }
       }
     },
@@ -3711,7 +3711,7 @@ let characters = {
         "id": "1100602",
         "name": "Zombie Network",
         "rank": 2,
-        "desc": "When an enemy target enters battle, increases their DMG taken by 20%. When an enemy target gets attacked by ally targets, Silver Wolf has a 100% base chance to implant 1 random \"Bug\" on the attacked enemy target.",
+        "desc": "When an enemy target enters combat, increases their DMG taken by 20%. When an enemy target gets attacked by ally targets, Silver Wolf has a 100% base chance to implant 1 random \"Bug\" on the attacked enemy target.",
         "icon": "icon/skill/1100_rank2.png",
         "paramsEido": [
           0.2,
@@ -12073,6 +12073,14 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Trap",
+        "icon": "icon/skill/1108_skilltree1.png",
+        "desc": "Extends the duration of Wind Shear caused by Talent by #1[i] turn(s).",
+        "params": [
+          1
+        ]
+      },
       "Point07": {
         "name": "Defensive Position",
         "icon": "icon/skill/1108_skilltree2.png",
@@ -12160,14 +12168,6 @@ let characters = {
         "stats": {
           "ATK%": 0.08
         }
-      },
-      "Point06": {
-        "name": "Trap",
-        "icon": "icon/skill/1108_skilltree1.png",
-        "desc": "Extends the duration of Wind Shear caused by Talent by #1[i] turn(s).",
-        "params": [
-          1
-        ]
       }
     },
     "hasSummon": false,
@@ -16683,6 +16683,14 @@ let characters = {
           0.2
         ]
       },
+      "Point07": {
+        "name": "Knell Subdual",
+        "icon": "icon/skill/1202_skilltree2.png",
+        "desc": "DMG dealt by Basic ATK increases by #1[i]%.",
+        "params": [
+          0.4
+        ]
+      },
       "Point08": {
         "name": "Jubilant Passage",
         "icon": "icon/skill/1202_skilltree3.png",
@@ -16761,14 +16769,6 @@ let characters = {
         "stats": {
           "ATK%": 0.08
         }
-      },
-      "Point07": {
-        "name": "Knell Subdual",
-        "icon": "icon/skill/1202_skilltree2.png",
-        "desc": "DMG dealt by Basic ATK increases by #1[i]%.",
-        "params": [
-          0.4
-        ]
       }
     },
     "hasSummon": false,
@@ -17413,6 +17413,29 @@ let characters = {
           }
         }
       },
+      "Point07": {
+        "name": "Sanctified",
+        "icon": "icon/skill/1203_skilltree2.png",
+        "desc": "When any enemy in the Zone is attacked by an ally, all allies (except the attacker) restore HP equal to #1[f1]% of Luocha's ATK plus #2[i].",
+        "params": [
+          0.07,
+          93
+        ]
+      },
+      "Point08": {
+        "name": "Through the Valley",
+        "icon": "icon/skill/1203_skilltree3.png",
+        "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%.",
+        "params": [
+          0.7
+        ],
+        "traceAbility": "Luocha_Luocha_Trace03",
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+          }
+        }
+      },
       "Point09": {
         "name": "ATK Boost",
         "icon": "icon/property/IconAttack.png",
@@ -17481,29 +17504,6 @@ let characters = {
         "icon": "icon/property/IconAttack.png",
         "stats": {
           "ATK%": 0.08
-        }
-      },
-      "Point07": {
-        "name": "Sanctified",
-        "icon": "icon/skill/1203_skilltree2.png",
-        "desc": "When any enemy in the Zone is attacked by an ally, all allies (except the attacker) restore HP equal to #1[f1]% of Luocha's ATK plus #2[i].",
-        "params": [
-          0.07,
-          93
-        ]
-      },
-      "Point08": {
-        "name": "Through the Valley",
-        "icon": "icon/skill/1203_skilltree3.png",
-        "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%.",
-        "params": [
-          0.7
-        ],
-        "traceAbility": "Luocha_Luocha_Trace03",
-        "extraEffects": {
-          "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
-          }
         }
       }
     },
@@ -18133,6 +18133,32 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Battalia Crush",
+        "icon": "icon/skill/1204_skilltree1.png",
+        "desc": "If the Lightning-Lord's Hits Per Action is greater or equal to #1[i] in the next turn, its CRIT DMG increases by #2[i]% for the next turn.",
+        "params": [
+          6,
+          0.25
+        ]
+      },
+      "Point07": {
+        "name": "Savant Providence",
+        "icon": "icon/skill/1204_skilltree2.png",
+        "desc": "At the start of the battle, immediately regenerates #1[i] Energy.",
+        "params": [
+          15
+        ]
+      },
+      "Point08": {
+        "name": "War Marshal",
+        "icon": "icon/skill/1204_skilltree3.png",
+        "desc": "After the Skill is used, the CRIT Rate increases by #1[i]% for #2[i] turn(s).",
+        "params": [
+          0.1,
+          2
+        ]
+      },
       "Point09": {
         "name": "ATK Boost",
         "icon": "icon/property/IconAttack.png",
@@ -18202,32 +18228,6 @@ let characters = {
         "stats": {
           "ATK%": 0.08
         }
-      },
-      "Point06": {
-        "name": "Battalia Crush",
-        "icon": "icon/skill/1204_skilltree1.png",
-        "desc": "If the Lightning-Lord's Hits Per Action is greater or equal to #1[i] in the next turn, its CRIT DMG increases by #2[i]% for the next turn.",
-        "params": [
-          6,
-          0.25
-        ]
-      },
-      "Point07": {
-        "name": "Savant Providence",
-        "icon": "icon/skill/1204_skilltree2.png",
-        "desc": "At the start of the battle, immediately regenerates #1[i] Energy.",
-        "params": [
-          15
-        ]
-      },
-      "Point08": {
-        "name": "War Marshal",
-        "icon": "icon/skill/1204_skilltree3.png",
-        "desc": "After the Skill is used, the CRIT Rate increases by #1[i]% for #2[i] turn(s).",
-        "params": [
-          0.1,
-          2
-        ]
       }
     },
     "hasSummon": false,
@@ -20383,7 +20383,7 @@ let characters = {
             "name": "Windchaser",
             "type": "Enhance",
             "slot": "Technique",
-            "desc": "After using her Technique, Yukong enters Sprint mode for #1[i] seconds. In Sprint mode, her movement speed increases by #2[i]%, and Yukong gains #3[i] stack(s) of \"Roaring Bowstrings\" when she enters battle by attacking enemies.",
+            "desc": "After using her Technique, Yukong enters Sprint mode for #1[i] seconds. In Sprint mode, her movement speed increases by #2[i]%, and Yukong gains #3[i] stack(s) of \"Roaring Bowstrings\" when she enters combat by attacking enemies.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -20982,7 +20982,7 @@ let characters = {
             "name": "Bleak Breeds Bliss",
             "type": "Restore",
             "slot": "Talent",
-            "desc": "While Fu Xuan is still active in battle, Misfortune Avoidance is applied to the entire team. With Misfortune Avoidance, allies take #1[f1]% less DMG.\\nWhen Fu Xuan's current HP percentage falls to #2[i]% of her Max HP or less, HP Restore will be triggered for Fu Xuan, restoring her HP by #3[i]% of the amount of HP she is currently missing. This effect cannot be triggered if she receives a killing blow. This effect has 1 trigger count by default and can hold up to a maximum of 2 trigger counts.",
+            "desc": "While Fu Xuan is still active in combat, Misfortune Avoidance is applied to the entire team. With Misfortune Avoidance, allies take #1[f1]% less DMG.\\nWhen Fu Xuan's current HP percentage falls to #2[i]% of her Max HP or less, HP Restore will be triggered for Fu Xuan, restoring her HP by #3[i]% of the amount of HP she is currently missing. This effect cannot be triggered if she receives a killing blow. This effect has 1 trigger count by default and can hold up to a maximum of 2 trigger counts.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -21096,7 +21096,7 @@ let characters = {
             "name": "Of Fortune Comes Fate",
             "type": "Defense",
             "slot": "Technique",
-            "desc": "After the Technique is used, all team members receive a Barrier, lasting for #1[i] seconds. This Barrier can block all enemy attacks, and the team will not enter battle when attacked. Entering battle while the Barrier is active will have Fu Xuan automatically activate Matrix of Prescience at the start of the battle, lasting for #2[i] turn(s).",
+            "desc": "After the Technique is used, all team members receive a Barrier, lasting for #1[i] seconds. This Barrier can block all enemy attacks, and the team will not enter combat when attacked. Entering battle while the Barrier is active will have Fu Xuan automatically activate Matrix of Prescience at the start of the battle, lasting for #2[i] turn(s).",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -32205,7 +32205,7 @@ let characters = {
             "name": "Master, It's Tea Time!",
             "type": "Support",
             "slot": "Skill",
-            "desc": "Designates a single ally (excluding this unit) as \"Shifu\" and increases \"Shifu\"'s SPD by #1[f1]%. Only the most recent target of March 7th's Skill is considered as \"Shifu.\"\\n\\n\\nWhenever using Basic ATK or dealing 1 hit of Enhanced Basic ATK's DMG, triggers the corresponding effect if \"Shifu\" with the specified Path is present on the field:\\n\\nErudition, Destruction, The Hunt, Remembrance: Deals Additional DMG (DMG Type based on \"Shifu\"'s Combat Type) equal to #2[i]% of March 7th's ATK.\\n\\nHarmony, Nihility, Preservation, Abundance: Increases the Toughness Reduction of this instance of DMG by #3[i]%.",
+            "desc": "Designates one ally (excluding this unit) as \"Shifu\" and increases \"Shifu\"'s SPD by #1[f1]%. Only the most recent target of March 7th's Skill is considered as \"Shifu.\"\\nWhenever using Basic ATK or dealing 1 hit of Enhanced Basic ATK's DMG, triggers the corresponding effect if \"Shifu\" with the specified Path is present on the field:\\nErudition, Destruction, The Hunt, Remembrance, Elation: Deals Additional DMG (DMG Type based on \"Shifu\"'s Combat Type) equal to #2[i]% of March 7th's ATK.\\nHarmony, Nihility, Preservation, Abundance: Increases the Toughness Reduction of this instance of DMG by #3[i]%.",
             "energyCost": null,
             "energyRegen": 30,
             "energyRate": 0.5,
@@ -34978,7 +34978,7 @@ let characters = {
       "Point07": {
         "name": "Generosity",
         "icon": "icon/skill/1302_skilltree2.png",
-        "desc": "When enemy targets enter battle, immediately regenerates #1[i] Energy for self.",
+        "desc": "When enemy targets enter combat, immediately regenerates #1[i] Energy for self.",
         "params": [
           2
         ]
@@ -35629,7 +35629,7 @@ let characters = {
             "name": "Silken Serenade",
             "type": "Enhance",
             "slot": "Technique",
-            "desc": "After using the Technique, gains Silken Serenade. At the start of the next battle, automatically triggers the Skill for #1[i] time(s) without consuming Skill Points.\\nIn Simulated Universe or Divergent Universe, when Ruan Mei has Silken Serenade, the team actively attacking enemies will always be regarded as attacking their Weakness to enter battle, and this attack can reduce all enemies' Toughness regardless of Weakness types. When breaking Weakness, triggers Weakness Break Effect corresponding to the attacker's Type. For every Blessing in possession (up to a max of #4[i] Blessings will be taken into account), additionally increases the Toughness Reduction of this attack by #2[i]%. After breaking an enemy target's Weakness, additionally deals to the enemy target Break DMG equal to #3[i]% of Ruan Mei's Ice Break DMG.",
+            "desc": "After using the Technique, gains Silken Serenade. At the start of the next battle, automatically triggers the Skill for #1[i] time(s) without consuming Skill Points.\\nIn Simulated Universe or Divergent Universe, when Ruan Mei has Silken Serenade, the team actively attacking enemies will always be regarded as attacking their Weakness to enter combat, and this attack can reduce all enemies' Toughness regardless of Weakness types. When breaking Weakness, triggers Weakness Break Effect corresponding to the attacker's Type. For every Blessing in possession (up to a max of #4[i] Blessings will be taken into account), additionally increases the Toughness Reduction of this attack by #2[i]%. After breaking an enemy target's Weakness, additionally deals to the enemy target Break DMG equal to #3[i]% of Ruan Mei's Ice Break DMG.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -37318,9 +37318,9 @@ let characters = {
     ],
     "isBuffed": false
   },
-  "Sparkle": {
+  "Sparkle_v0": {
     "internalID": 1306,
-    "name": "Sparkle",
+    "name": "Sparkle_v0",
     "path": "Harmony",
     "element": "Quantum",
     "rarity": 5,
@@ -37868,7 +37868,7 @@ let characters = {
             "name": "Unreliable Narrator",
             "type": "Support",
             "slot": "Technique",
-            "desc": "Using the Technique grants all allies Misdirect for #2[i] seconds. Characters with Misdirect will not be detected by enemies, and entering battle in the Misdirect state recovers #1[i] Skill Point(s) for the team.",
+            "desc": "After using Technique, grants all allies Misdirect for #2[i] seconds. Characters with Misdirect will not be detected by enemies, and entering combat in the Misdirect state recovers #1[i] Skill Point(s) for the team.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -38049,11 +38049,11 @@ let characters = {
       51,
       0.54
     ],
-    "isBuffed": false
+    "isBuffed": true
   },
-  "Black Swan": {
+  "Black Swan_v0": {
     "internalID": 1307,
-    "name": "Black Swan",
+    "name": "Black Swan_v0",
     "path": "Nihility",
     "element": "Wind",
     "rarity": 5,
@@ -38072,12 +38072,12 @@ let characters = {
         "id": "130701",
         "name": "Seven Pillars of Wisdom",
         "rank": 1,
-        "desc": "While Black Swan is active in battle, enemies afflicted with Wind Shear, Bleed, Burn, or Shock will have their corresponding Wind, Physical, Fire, or Lightning RES respectively reduced by 25%.",
+        "desc": "While Black Swan is active in combat, enemies afflicted with Wind Shear, Bleed, Burn, or Shock will have their corresponding Wind, Physical, Fire, or Lightning RES respectively reduced by 25%.",
         "icon": "icon/skill/1307_rank1.png",
         "paramsEido": [
           0.25
         ],
-        "eidoAbility": "BlackSwan_BlackSwan_Eidolon1"
+        "eidoAbility": "BlackSwanv0_BlackSwan_Eidolon1"
       },
       {
         "id": "130702",
@@ -38097,7 +38097,7 @@ let characters = {
             "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
           }
         },
-        "eidoAbility": "BlackSwan_BlackSwan_Eidolon2"
+        "eidoAbility": "BlackSwanv0_BlackSwan_Eidolon2"
       },
       {
         "id": "130703",
@@ -38146,7 +38146,7 @@ let characters = {
             "desc": "Fixed chance will not be affected by any factor."
           }
         },
-        "eidoAbility": "BlackSwan_BlackSwan_Eidolon6"
+        "eidoAbility": "BlackSwanv0_BlackSwan_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -38421,7 +38421,7 @@ let characters = {
             "name": "Bliss of Otherworld's Embrace",
             "type": "AoE",
             "slot": "Ultimate",
-            "desc": "Inflicts Epiphany on all enemies for #2[i] turn(s).\\nWhile afflicted with Epiphany, enemies take #3[i]% increased DMG in their turn. Additionally, if enemies are also inflicted with Arcana, they are considered to be simultaneously afflicted with Wind Shear, Bleed, Burn, and Shock. After Arcana causes DMG at the start of each turn, its stacks are not reset. This non-reset effect of Arcana stacks can be triggered up to #4[i] time(s) for the duration of Epiphany. And the trigger count resets when Epiphany is applied again.\\nDeals Wind DMG equal to #1[i]% of Black Swan's ATK to all enemies.",
+            "desc": "Inflicts Epiphany on all enemies for #2[i] turn(s).\\nWhile afflicted with Epiphany, enemies take #3[i]% increased DMG in their turn. Additionally, if enemies are also inflicted with Arcana, they are also considered to be simultaneously afflicted with Wind Shear, Bleed, Burn, and Shock. After Arcana causes DMG at the start of each turn, its stacks are not reset. This non-reset effect of Arcana stacks can be triggered up to #4[i] time(s) for the duration of Epiphany. And the trigger count resets when Epiphany is applied again.\\nDeals Wind DMG equal to #1[i]% of Black Swan's ATK to all enemies.",
             "energyCost": 120,
             "energyRegen": 5,
             "energyRate": 0.5,
@@ -38852,12 +38852,12 @@ let characters = {
       "Point07": {
         "name": "Goblet's Dredges",
         "icon": "icon/skill/1307_skilltree2.png",
-        "desc": "When an enemy target enters battle, there is a #1[i]% base chance for it to be inflicted with 1 stack of Arcana.\nEvery time an enemy target receives 1 instance of DoT during a single attack by an ally, there is a #1[i]% base chance for the target to be inflicted with 1 stack of Arcana. The maximum number of stacks that can be inflicted during 1 single attack is #2[i].",
+        "desc": "When an enemy target enters combat, there is a #1[i]% base chance for it to be inflicted with 1 stack of Arcana.\nEvery time an enemy target receives 1 instance of DoT during a single attack by an ally, there is a #1[i]% base chance for the target to be inflicted with 1 stack of Arcana. The maximum number of stacks that can be inflicted during 1 single attack is #2[i].",
         "params": [
           0.65,
           3
         ],
-        "traceAbility": "BlackSwan_BlackSwan_Trace02",
+        "traceAbility": "BlackSwanv0_BlackSwan_Trace02",
         "extraEffects": {
           "Base Chance": {
             "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
@@ -38875,7 +38875,7 @@ let characters = {
           0.6,
           0.72
         ],
-        "traceAbility": "BlackSwan_BlackSwan_Trace03"
+        "traceAbility": "BlackSwanv0_BlackSwan_Trace03"
       },
       "Point09": {
         "name": "ATK Boost",
@@ -38963,7 +38963,7 @@ let characters = {
       -55,
       0.69
     ],
-    "isBuffed": false
+    "isBuffed": true
   },
   "Acheron": {
     "internalID": 1308,
@@ -42807,7 +42807,7 @@ let characters = {
             "name": "Benison of Paper and Rites",
             "type": "Support",
             "slot": "Skill",
-            "desc": "Enables one designated ally character and their summon to immediately take action, and increases their DMG dealt by #2[i]%. If the target has a summon, then the dealt DMG increase is further boosted by an additional #4[i]%, lasting for #3[i] turn(s).\\nAfter using Skill on The Beatified, recovers 1 Skill Point.\\nWhen Sunday uses this ability on characters following the Path of Harmony, cannot trigger the \"immediate action\" effect.",
+            "desc": "Enables one designated ally character and their summon to immediately take action, and increases their DMG dealt by #2[i]%. If the target has a summon, then the DMG Boost effect is further boosted by an additional #4[i]%, lasting for #3[i] turn(s).\\nAfter using Skill on The Beatified, recovers 1 Skill Point.\\nWhen Sunday uses this ability on characters following the Path of Harmony, cannot trigger the \"immediate action\" effect.",
             "energyCost": null,
             "energyRegen": 30,
             "energyRate": 0.5,
@@ -46877,7 +46877,7 @@ let characters = {
         "id": "140102",
         "name": "Wind Through Keyhole",
         "rank": 2,
-        "desc": "After The Herta enters battle or uses Ultimate, additionally gains 1 \"Inspiration\" stack. After using Enhanced Skill, advances The Herta's next action by 35%.",
+        "desc": "After The Herta enters combat or uses Ultimate, additionally gains 1 \"Inspiration\" stack. After using Enhanced Skill, advances The Herta's next action by 35%.",
         "icon": "icon/skill/1401_rank2.png",
         "paramsEido": [
           0.35,
@@ -47425,7 +47425,7 @@ let characters = {
             "name": "Hand Them Over",
             "type": "Enhance",
             "slot": "Talent",
-            "desc": "When enemy targets enter battle, The Herta inflicts 1 stack of \"Interpretation\" on them. At the start of each wave, applies #6[i] stack(s) of \"Interpretation\" to a random enemy target, prioritizing Elite-level targets and above. When the Enhanced Skill's primary target has \"Interpretation,\" the multiplier for the DMG dealt increases, with each stack granting an increase of #1[f1]%/#2[f1]% on the primary target/other targets respectively. If 2 or more characters follow the Path of Erudition in the team, each stack grants an additional increase of #1[f1]%/#2[f1]% on the primary target/other targets respectively. \"Interpretation\" can stack up to #3[i] time(s). When using the Enhanced Skill, resets the number of \"Interpretation\" stacks on the primary target to 1. After the enemy target leaves the field or gets defeated by any unit, \"Interpretation\" will be transferred, prioritizing the transfer to Elite-level targets and above.",
+            "desc": "When enemy targets enter combat, The Herta inflicts 1 stack of \"Interpretation\" on them. At the start of each wave, applies #6[i] stack(s) of \"Interpretation\" to a random enemy target, prioritizing Elite-level targets and above. When the Enhanced Skill's primary target has \"Interpretation,\" the multiplier for the DMG dealt increases, with each stack granting an increase of #1[f1]%/#2[f1]% on the primary target/other targets respectively. If 2 or more characters follow the Path of Erudition in the team, each stack grants an additional increase of #1[f1]%/#2[f1]% on the primary target/other targets respectively. \"Interpretation\" can stack up to #3[i] time(s). When using the Enhanced Skill, resets the number of \"Interpretation\" stacks on the primary target to 1. After the enemy target leaves the field or gets defeated by any unit, \"Interpretation\" will be transferred, prioritizing the transfer to Elite-level targets and above.",
             "energyCost": null,
             "energyRegen": 30,
             "energyRate": 0.5,
@@ -51332,7 +51332,7 @@ let characters = {
             "name": "Prism of the Pupil",
             "type": "Impair",
             "slot": "Technique",
-            "desc": "After using Technique, inflicts the Terrified state on enemies in a set area. Terrified enemies will flee in a direction away from Anaxa for #1[i] second(s). When allies enter battle via actively attacking a Terrified enemy, it will always be considered as entering battle via attacking a Weakness. After entering battle, Anaxa applies 1 Weakness of the attacker's Type to every enemy target, lasting for #2[i] turn(s).",
+            "desc": "After using Technique, inflicts the Terrified state on enemies in a set area. Terrified enemies will flee in a direction away from Anaxa for #1[i] second(s). When allies enter combat via actively attacking a Terrified enemy, it will always be considered as entering battle via attacking a Weakness. After entering battle, Anaxa applies 1 Weakness of the attacker's Type to every enemy target, lasting for #2[i] turn(s).",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -56331,22 +56331,6 @@ let characters = {
       }
     },
     "traces": {
-      "Point19": {
-        "name": "Rainclouds, Time to Go!",
-        "icon": "icon/skill/1409_memosprite_skill.png",
-        "skillRef": {
-          "skillName": "Rainclouds, Time to Go!",
-          "skillSlot": "Memosprite Skill"
-        }
-      },
-      "Point20": {
-        "name": "Take Sky in Hand",
-        "icon": "icon/skill/1409_memosprite_talent.png",
-        "skillRef": {
-          "skillName": "Take Sky in Hand",
-          "skillSlot": "Memosprite Talent"
-        }
-      },
       "Point01": {
         "icon": "icon/skill/1409_basic_atk.png",
         "skillRef": {
@@ -56486,6 +56470,22 @@ let characters = {
         "icon": "icon/property/IconSpeed.png",
         "stats": {
           "SPDFlat": 4
+        }
+      },
+      "Point19": {
+        "name": "Rainclouds, Time to Go!",
+        "icon": "icon/skill/1409_memosprite_skill.png",
+        "skillRef": {
+          "skillName": "Rainclouds, Time to Go!",
+          "skillSlot": "Memosprite Skill"
+        }
+      },
+      "Point20": {
+        "name": "Take Sky in Hand",
+        "icon": "icon/skill/1409_memosprite_talent.png",
+        "skillRef": {
+          "skillName": "Take Sky in Hand",
+          "skillSlot": "Memosprite Talent"
         }
       }
     },
@@ -69092,7 +69092,7 @@ let characters = {
         "id": "100602",
         "name": "Zombie Network",
         "rank": 2,
-        "desc": "When an enemy enters battle, reduces their Effect RES by 20%.",
+        "desc": "When an enemy enters combat, reduces their Effect RES by 20%.",
         "icon": "icon/skill/1006_rank2.png",
         "paramsEido": [
           0.2

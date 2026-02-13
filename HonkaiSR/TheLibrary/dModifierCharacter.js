@@ -2474,7 +2474,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sparkle_Ability02_CritDmgAddedRatio02",
+    "name": "<a class=\"gModGreen\" id=\"1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>",
     "realName": "Dreamdiver",
     "aim": "Buff",
     "desc": "Increase CRIT DMG by #1[i]%.",
@@ -2485,7 +2485,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sparkle_Ability03_PowerUp",
+    "name": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>",
     "realName": "Cipher",
     "aim": "Buff",
     "desc": "Additionally enhances the DMG Boost effect provided by each stack of Sparkle's talent by #2[f1]%.",
@@ -2497,7 +2497,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sparkle_Ability02_CritDmgAddedRatio01",
+    "name": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>",
     "realName": "Dreamdiver",
     "aim": "Buff",
     "desc": "Increase CRIT DMG by #1[i]%.",
@@ -2508,7 +2508,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sparkle_PassiveAbility_AllDamageAddedRatio02",
+    "name": "<a class=\"gModGreen\" id=\"-1017813291\">Sparkle_PassiveAbility_AllDamageAddedRatio02</a>",
     "realName": "Red Herring",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[f1]%.",
@@ -2520,7 +2520,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Sparkle_Tree03",
+    "name": "<a class=\"gModGreen\" id=\"-1336404304\">Sparkle_Tree03</a>",
     "realName": "Nocturne",
     "aim": "Buff",
     "desc": "Increases ATK by #1[i]%.",
@@ -2553,7 +2553,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "BlackSwan_DOT",
+    "name": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>",
     "realName": "Arcana",
     "aim": "Debuff",
     "desc": "Takes Wind DMG at the start of each turn. Being afflicted with Arcana will also be considered as suffering from Wind Shear. This state stacks up to #1[i] times.",
@@ -2564,7 +2564,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "BlackSwan_DOT_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"488421404\">BlackSwan_DOT_Enhance</a>",
     "realName": "Epiphany",
     "aim": "Debuff",
     "desc": "The DMG received increases by #1[i]% during this unit's turn. While in Arcana state, this unit is also considered to be simultaneously inflicted with Wind Shear, Bleed, Burn, and Shock. Additionally, after Arcana causes DMG at the start of each turn, its stacks do not reset. This effect can trigger #3[i] more time(s).",
@@ -2577,7 +2577,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "BlackSwan_DefenceDown",
+    "name": "<a class=\"gModGreen\" id=\"2093125302\">BlackSwan_DefenceDown</a>",
     "realName": "Decadence, False Twilight",
     "aim": "Debuff",
     "desc": "DEF -#1[f1]%.",
@@ -2588,7 +2588,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "BlackSwan_Eidolon1_WindResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"-698439125\">BlackSwan_Eidolon1_WindResistanceDown</a>",
     "realName": "Seven Pillars of Wisdom",
     "aim": "Debuff",
     "desc": "Wind RES -#1[i]%.",
@@ -2599,7 +2599,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "BlackSwan_Eidolon1_PhysicalResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"184250140\">BlackSwan_Eidolon1_PhysicalResistanceDown</a>",
     "realName": "Seven Pillars of Wisdom",
     "aim": "Debuff",
     "desc": "Physical RES -#1[i]%.",
@@ -2610,7 +2610,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "BlackSwan_Eidolon1_FireResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"757395769\">BlackSwan_Eidolon1_FireResistanceDown</a>",
     "realName": "Seven Pillars of Wisdom",
     "aim": "Debuff",
     "desc": "Fire RES -#1[i]%.",
@@ -3215,7 +3215,7 @@ let modifiersCharacter = [
     "perma": false
   },
   {
-    "name": "BlackSwan_Eidolon1_ThunderResistanceDown",
+    "name": "<a class=\"gModGreen\" id=\"-1059820745\">BlackSwan_Eidolon1_ThunderResistanceDown</a>",
     "realName": "Seven Pillars of Wisdom",
     "aim": "Debuff",
     "desc": "Lightning RES -#1[i]%.",

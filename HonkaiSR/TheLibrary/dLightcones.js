@@ -8093,7 +8093,7 @@ let lightcones = {
     },
     "fixedStats": {},
     "skillName": "Sweet Dream",
-    "desc": "Increases the wearer's provided Shield Effect by #1[i]% and while any ally target has a Shield, the wearer's DMG dealt increases by #2[i]%.",
+    "desc": "Increases the wearer's provided Shield Effect by #1[i]%. While an ally target has a Shield, their DMG dealt increases by #2[i]%.",
     "params": [
       [
         0.12,
