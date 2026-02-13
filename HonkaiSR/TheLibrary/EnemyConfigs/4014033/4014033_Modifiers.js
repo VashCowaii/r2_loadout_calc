@@ -1107,7 +1107,8 @@ const configAbility = {
                       "target": "{{Caster}}"
                     },
                     "characterName": "Castorice, Hand of Shadow",
-                    "isBaseCompare": true
+                    "isBaseCompare": true,
+                    "invertCondition": true
                   }
                 ]
               },
@@ -1268,6 +1269,529 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__586169347\">Monster_W4_Pollux_Strengthen_BreakMark</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__477176839\">Monster_W4_Pollux_GridFight_Strengthen_Shield</a>",
+      "stackType": "Replace",
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "MDF_CurrentShieldValue",
+                "compareType": "<=",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "phase": "Phase2"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "StunCheck",
+                  "value": 1
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"586169347\">Monster_W4_Pollux_Strengthen_BreakMark</a>"
+                },
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_W4_Pollux_Stun_Insert",
+                  "priorityTag": "MonsterForceKill",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "targetState": "Mask_AliveOrLimbo",
+                  "canHitNonTargets": true,
+                  "showInActionOrder": true,
+                  "allowAbilityTriggers": false
+                }
+              ]
+            },
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": 0,
+              "entityClass": "Enemy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "maximum": 1,
+              "assignState": "False"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Take Damage Start [Anyone]: Any",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  {
+                    "name": "Is Part Of",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Minions}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "mustBeAlive2": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable with Damage Data",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_AttackDamageData",
+                  "context": "ContextModifier"
+                },
+                {
+                  "name": "Define Custom Variable with Damage Data",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_AttackDamageDataMulRatio",
+                  "value": "Result_FinalDamageMulRatio",
+                  "context": "ContextModifier"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_CurrentShieldValue",
+                  "value": {
+                    "operator": "Variables[0] (MDF_CurrentShieldValue) || Variables[1] (MDF_AttackDamageData) || Variables[2] (MDF_SummonerMaxHP_DownScale) || DIV || Constants[0] (1000) || DIV || Variables[3] (MDF_AttackDamageDataMulRatio) || MUL || SUB || RETURN",
+                    "displayLines": "(MDF_CurrentShieldValue - (((MDF_AttackDamageData / MDF_SummonerMaxHP_DownScale) / 1000) * MDF_AttackDamageDataMulRatio))",
+                    "constants": [
+                      1000
+                    ],
+                    "variables": [
+                      "MDF_CurrentShieldValue",
+                      "MDF_AttackDamageData",
+                      "MDF_SummonerMaxHP_DownScale",
+                      "MDF_AttackDamageDataMulRatio"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_LastEnergyBarValue",
+                  "value": {
+                    "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
+                    "displayLines": "MDF_EnergyBarValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_EnergyBarValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-891601506\">Monster_W4_Pollux_RLBoss_Status</a>"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "_IsAttack",
+                        "compareType": "=",
+                        "value2": 1
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_LastEnergyBarValue_RLCheck",
+                        "compareType": "=",
+                        "value2": 0
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_LastEnergyBarValue_RL",
+                      "value": {
+                        "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
+                        "displayLines": "MDF_EnergyBarValue",
+                        "constants": [],
+                        "variables": [
+                          "MDF_EnergyBarValue"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_LastEnergyBarValue_RLCheck",
+                      "value": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "MDF_CurrentShieldValue",
+                        "compareType": "<=",
+                        "value2": 0
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"23603986\">Modifier_StageSpecialAbility_10441065_OnPollux</a>",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_EnergyBarValue",
+                      "value": 0
+                    },
+                    {
+                      "name": "Heal",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "healPercent": {
+                        "operator": "Variables[0] (MDF_LastEnergyBarValue_RL) || Variables[1] (MDF_EnergyBarValue) || SUB || Variables[2] (MDF_SummonerMaxHP_DownScale) || MUL || Constants[0] (1000) || MUL || Variables[3] (MDF_ShieldAttack_HealRatio) || MUL || RETURN",
+                        "displayLines": "((((MDF_LastEnergyBarValue_RL - MDF_EnergyBarValue) * MDF_SummonerMaxHP_DownScale) * 1000) * MDF_ShieldAttack_HealRatio)",
+                        "constants": [
+                          1000
+                        ],
+                        "variables": [
+                          "MDF_LastEnergyBarValue_RL",
+                          "MDF_EnergyBarValue",
+                          "MDF_SummonerMaxHP_DownScale",
+                          "MDF_ShieldAttack_HealRatio"
+                        ]
+                      },
+                      "formula": "Heal from Target MaxHP"
+                    },
+                    "Modifier Deletes Itself"
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_EnergyBarValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_CurrentShieldValue) || Variables[1] (MDF_MaxShieldValue) || DIV || RETURN",
+                        "displayLines": "(MDF_CurrentShieldValue / MDF_MaxShieldValue)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_CurrentShieldValue",
+                          "MDF_MaxShieldValue"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-891601506\">Monster_W4_Pollux_RLBoss_Status</a>",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Compare: Variable",
+                            "value1": "_IsAttack",
+                            "compareType": "=",
+                            "value2": 0
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Heal",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All}}"
+                          },
+                          "healPercent": {
+                            "operator": "Variables[0] (MDF_LastEnergyBarValue_RL) || Variables[1] (MDF_EnergyBarValue) || SUB || Variables[2] (MDF_SummonerMaxHP_DownScale) || MUL || Constants[0] (1000) || MUL || Variables[3] (MDF_ShieldAttack_HealRatio) || MUL || RETURN",
+                            "displayLines": "((((MDF_LastEnergyBarValue_RL - MDF_EnergyBarValue) * MDF_SummonerMaxHP_DownScale) * 1000) * MDF_ShieldAttack_HealRatio)",
+                            "constants": [
+                              1000
+                            ],
+                            "variables": [
+                              "MDF_LastEnergyBarValue_RL",
+                              "MDF_EnergyBarValue",
+                              "MDF_SummonerMaxHP_DownScale",
+                              "MDF_ShieldAttack_HealRatio"
+                            ]
+                          },
+                          "formula": "Heal from Target MaxHP"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
+                        "displayLines": "MDF_EnergyBarValue",
+                        "constants": [],
+                        "variables": [
+                          "MDF_EnergyBarValue"
+                        ]
+                      },
+                      "entityClass": "Enemy",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "maximum": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "variableName": "MDF_SummonerMaxHP_DownScale",
+              "value": 1000
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_MaxShieldValue",
+              "value": {
+                "operator": "Variables[0] (MDF_ShieldPercentage) || RETURN",
+                "displayLines": "MDF_ShieldPercentage",
+                "constants": [],
+                "variables": [
+                  "MDF_ShieldPercentage"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_CurrentShieldValue",
+              "value": {
+                "operator": "Variables[0] (MDF_MaxShieldValue) || RETURN",
+                "displayLines": "MDF_MaxShieldValue",
+                "constants": [],
+                "variables": [
+                  "MDF_MaxShieldValue"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_EnergyBarValue",
+              "value": 1
+            },
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": {
+                "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
+                "displayLines": "MDF_EnergyBarValue",
+                "constants": [],
+                "variables": [
+                  "MDF_EnergyBarValue"
+                ]
+              },
+              "entityClass": "Enemy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "maximum": {
+                "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
+                "displayLines": "MDF_EnergyBarValue",
+                "constants": [],
+                "variables": [
+                  "MDF_EnergyBarValue"
+                ]
+              },
+              "assignState": "True",
+              "state": "Active",
+              "trigger": "SpEff_Trigger"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Attack Start [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "team": "Player Team"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_IsAttack",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Attack DMG End [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "team": "Player Team"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_IsAttack",
+                  "value": 0
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-891601506\">Monster_W4_Pollux_RLBoss_Status</a>"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_LastEnergyBarValue_RL",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
+                          "displayLines": "MDF_EnergyBarValue",
+                          "constants": [],
+                          "variables": [
+                            "MDF_EnergyBarValue"
+                          ]
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_LastEnergyBarValue_RLCheck",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Heal",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "healPercent": {
+                        "operator": "Variables[0] (MDF_LastEnergyBarValue) || Variables[1] (MDF_EnergyBarValue) || SUB || Variables[2] (MDF_SummonerMaxHP_DownScale) || MUL || Constants[0] (1000) || MUL || Variables[3] (MDF_ShieldAttack_HealRatio) || MUL || RETURN",
+                        "displayLines": "((((MDF_LastEnergyBarValue - MDF_EnergyBarValue) * MDF_SummonerMaxHP_DownScale) * 1000) * MDF_ShieldAttack_HealRatio)",
+                        "constants": [
+                          1000
+                        ],
+                        "variables": [
+                          "MDF_LastEnergyBarValue",
+                          "MDF_EnergyBarValue",
+                          "MDF_SummonerMaxHP_DownScale",
+                          "MDF_ShieldAttack_HealRatio"
+                        ]
+                      },
+                      "formula": "Heal from Target MaxHP"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_LastEnergyBarValue_RLCheck",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1951,30 +2475,67 @@ const configAbility = {
               ],
               "failed": [
                 {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Stage Type",
+                    "stageType": "GridFightActivity"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
-                  "valuePerStack": {
-                    "MDF_ShieldPercentage": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
-                    },
-                    "MDF_ShieldAttack_HealRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[1]]}"
-                      ]
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"477176839\">Monster_W4_Pollux_GridFight_Strengthen_Shield</a>",
+                      "valuePerStack": {
+                        "MDF_ShieldPercentage": {
+                          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
+                          "displayLines": "{[PassiveSkill02[0]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[PassiveSkill02[0]]}"
+                          ]
+                        },
+                        "MDF_ShieldAttack_HealRatio": {
+                          "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
+                          "displayLines": "{[PassiveSkill02[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[PassiveSkill02[1]]}"
+                          ]
+                        }
+                      }
                     }
-                  }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
+                      "valuePerStack": {
+                        "MDF_ShieldPercentage": {
+                          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
+                          "displayLines": "{[PassiveSkill02[0]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[PassiveSkill02[0]]}"
+                          ]
+                        },
+                        "MDF_ShieldAttack_HealRatio": {
+                          "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
+                          "displayLines": "{[PassiveSkill02[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[PassiveSkill02[1]]}"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               ]
             },
@@ -2083,6 +2644,14 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"477176839\">Monster_W4_Pollux_GridFight_Strengthen_Shield</a>"
             },
             {
               "name": "Remove Events/Bonuses",

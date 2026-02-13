@@ -789,12 +789,13 @@ const megaParsingFuckeryPain = {
             "value",
             "target",
             "scope",
+            "statValue",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Declare Custom Variable");
         // initialCounter++;
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Declare:</div>&nbsp;
-            ${parseRef.variableName} = ${parseRef.value?.displayLines ?? parseRef.value ?? "No value assignment(yet)/Reset"} ${parseRef.target ? `on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}` : ""}
+            ${parseRef.variableName} = ${parseRef.value?.displayLines ?? parseRef.value ?? parseRef.statValue ?? "No value assignment(yet)/Reset"} ${parseRef.target ? `on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}` : ""}
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.scope,"Context")}
