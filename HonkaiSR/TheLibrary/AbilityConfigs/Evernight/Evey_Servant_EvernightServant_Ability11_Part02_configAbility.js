@@ -304,6 +304,7 @@ const configAbility = {
       "consumePercent": 1,
       "attackType": "Unknown"
     },
+    "Wait for Pending Ability Completions",
     "Trigger: Ability End"
   ],
   "references": []
