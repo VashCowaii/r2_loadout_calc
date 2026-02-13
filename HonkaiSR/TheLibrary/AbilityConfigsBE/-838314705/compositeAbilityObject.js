@@ -11,6 +11,7 @@ const compositeAbilityObject = {
     "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_Camera",
     "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_BeingBreak",
     "-838314705_StrongChallengeEX_Test_StageAbility_001",
+    "-838314705_StrongChallengeEX_Environment_StageAbility_015",
     "-838314705_StrongChallengeEX_Environment_StageAbility_014",
     "-838314705_StrongChallengeEX_Environment_StageAbility_013",
     "-838314705_StrongChallengeEX_Environment_StageAbility_012",
@@ -342,6 +343,34 @@ const compositeAbilityObject = {
               "toRemove": [
                 "STAT_CTRL"
               ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Level Entity}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"51921734\">MStrongChallengeEX_BEMark_ExtraElationBE</a>"
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
+              "variables": {
+                "TryStartElationTime_OverrideElationPoint": {
+                  "operator": "Variables[0] (Override_ElationPoint) || RETURN",
+                  "displayLines": "Override_ElationPoint",
+                  "constants": [],
+                  "variables": [
+                    "Override_ElationPoint"
+                  ]
+                },
+                "TryStartElationTime_ElationTimeIsNoConsume": 1
+              }
             }
           ]
         },
@@ -1074,6 +1103,34 @@ const compositeAbilityObject = {
               "toRemove": [
                 "STAT_CTRL"
               ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Level Entity}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"51921734\">MStrongChallengeEX_BEMark_ExtraElationBE</a>"
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
+              "variables": {
+                "TryStartElationTime_OverrideElationPoint": {
+                  "operator": "Variables[0] (Override_ElationPoint) || RETURN",
+                  "displayLines": "Override_ElationPoint",
+                  "constants": [],
+                  "variables": [
+                    "Override_ElationPoint"
+                  ]
+                },
+                "TryStartElationTime_ElationTimeIsNoConsume": 1
+              }
             }
           ]
         },
@@ -1824,6 +1881,34 @@ const compositeAbilityObject = {
           ]
         },
         {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Level Entity}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"51921734\">MStrongChallengeEX_BEMark_ExtraElationBE</a>"
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
+              "variables": {
+                "TryStartElationTime_OverrideElationPoint": {
+                  "operator": "Variables[0] (Override_ElationPoint) || RETURN",
+                  "displayLines": "Override_ElationPoint",
+                  "constants": [],
+                  "variables": [
+                    "Override_ElationPoint"
+                  ]
+                },
+                "TryStartElationTime_ElationTimeIsNoConsume": 1
+              }
+            }
+          ]
+        },
+        {
           "name": "UI Display Event (On Entity)",
           "target": {
             "name": "Target Name",
@@ -2426,6 +2511,34 @@ const compositeAbilityObject = {
           ]
         },
         {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Level Entity}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"51921734\">MStrongChallengeEX_BEMark_ExtraElationBE</a>"
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
+              "variables": {
+                "TryStartElationTime_OverrideElationPoint": {
+                  "operator": "Variables[0] (Override_ElationPoint) || RETURN",
+                  "displayLines": "Override_ElationPoint",
+                  "constants": [],
+                  "variables": [
+                    "Override_ElationPoint"
+                  ]
+                },
+                "TryStartElationTime_ElationTimeIsNoConsume": 1
+              }
+            }
+          ]
+        },
+        {
           "name": "UI Display Event (On Entity)",
           "target": {
             "name": "Target Name",
@@ -2779,6 +2892,191 @@ const compositeAbilityObject = {
                   "priorityTag": "MonsterBattleCry",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ],
+          "stackData": [],
+          "latentQueue": []
+        }
+      ]
+    },
+    "-838314705_StrongChallengeEX_Environment_StageAbility_015": {
+      "fileName": "-838314705_StrongChallengeEX_Environment_StageAbility_015",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"854290299\">MStrongChallengeEX_Environment_StageAbility_LE_015</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-948928871\">MStrongChallengeEX_Environment_StageAbility_BOSS_015</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Elation DMG"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Break DMG"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                          "value": "MDF_PropertyValue2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__854290299\">MStrongChallengeEX_Environment_StageAbility_LE_015</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"812754161\">MStrongChallengeEX_BEMark_BP</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"51921734\">MStrongChallengeEX_BEMark_ExtraElationBE</a>",
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (#ADF_3) || RETURN",
+                      "displayLines": "#ADF_3",
+                      "constants": [],
+                      "variables": [
+                        "#ADF_3"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-948928871\">MStrongChallengeEX_Environment_StageAbility_BOSS_015</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (#ADF_1) || RETURN",
+                          "displayLines": "#ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_1"
+                          ]
+                        },
+                        "MDF_PropertyValue2": {
+                          "operator": "Variables[0] (#ADF_2) || RETURN",
+                          "displayLines": "#ADF_2",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_2"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               ]
             }
@@ -7245,6 +7543,38 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1972197914\">Enemy_W2_Cocolia_IF_SuperArmor_FakeBreak</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__51921734\">MStrongChallengeEX_BEMark_ExtraElationBE</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "Override_ElationPoint",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": []
         },
         {
           "name": "Modifier Construction",

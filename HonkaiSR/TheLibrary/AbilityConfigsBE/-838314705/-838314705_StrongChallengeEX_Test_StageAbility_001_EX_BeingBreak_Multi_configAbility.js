@@ -215,6 +215,34 @@ const configAbility = {
       ]
     },
     {
+      "name": "IF",
+      "conditions": {
+        "name": "Has Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Level Entity}}"
+        },
+        "modifier": "<a class=\"gModGreen\" id=\"51921734\">MStrongChallengeEX_BEMark_ExtraElationBE</a>"
+      },
+      "passed": [
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
+          "variables": {
+            "TryStartElationTime_OverrideElationPoint": {
+              "operator": "Variables[0] (Override_ElationPoint) || RETURN",
+              "displayLines": "Override_ElationPoint",
+              "constants": [],
+              "variables": [
+                "Override_ElationPoint"
+              ]
+            },
+            "TryStartElationTime_ElationTimeIsNoConsume": 1
+          }
+        }
+      ]
+    },
+    {
       "name": "UI Display Event (On Entity)",
       "target": {
         "name": "Target Name",
