@@ -614,6 +614,17 @@ const configAbility = {
           "name": "AND",
           "conditionList": [
             {
+              "name": "Compare: Target",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Attack Source}}"
+              },
+              "target2": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              }
+            },
+            {
               "name": "Action is an Attack",
               "useActiveAbility": true
             },
