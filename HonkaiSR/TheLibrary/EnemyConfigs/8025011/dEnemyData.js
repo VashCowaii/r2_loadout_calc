@@ -33,7 +33,6 @@ let enemyData = {
       ],
       "phhp": [
         1,
-        1,
         1
       ],
       "weak": [
@@ -94,7 +93,6 @@ let enemyData = {
         null
       ],
       "phhp": [
-        1,
         1,
         1
       ],
@@ -157,7 +155,6 @@ let enemyData = {
       ],
       "phhp": [
         1,
-        1,
         1
       ],
       "weak": [
@@ -219,7 +216,6 @@ let enemyData = {
       ],
       "phhp": [
         1,
-        1,
         1
       ],
       "weak": [
@@ -280,7 +276,6 @@ let enemyData = {
         null
       ],
       "phhp": [
-        1,
         1,
         1
       ],

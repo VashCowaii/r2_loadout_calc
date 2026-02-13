@@ -403,7 +403,11 @@ let mocSchedule = [
                       "rank": "LittleBoss",
                       "attackBase": 649.5292138,
                       "defBase": 1099.99995,
-                      "hpBase": 968595.1615257,
+                      "hpBase": [
+                        968595.1615257,
+                        968595.1615257,
+                        1452892.7422886
+                      ],
                       "speedBase": null,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
@@ -520,8 +524,8 @@ let mocSchedule = [
                   "_Wave": "1",
                   "_IsEliteBattle": "1"
                 },
-                "highSTSUM": 2905785.4845771,
-                "aoeSUM": 3874380.6461028
+                "highSTSUM": 3390083.06534,
+                "aoeSUM": 4358678.2268657
               }
             ]
           },

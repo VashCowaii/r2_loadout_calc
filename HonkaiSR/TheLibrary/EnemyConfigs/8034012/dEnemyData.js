@@ -30,6 +30,10 @@ let enemyData = {
         1,
         null
       ],
+      "phhp": [
+        1,
+        1
+      ],
       "weak": [
         "Physical",
         "Ice",
@@ -92,6 +96,10 @@ let enemyData = {
         null,
         1,
         -60
+      ],
+      "phhp": [
+        1,
+        1
       ],
       "weak": [
         "Physical",
@@ -156,6 +164,10 @@ let enemyData = {
         1,
         -60
       ],
+      "phhp": [
+        1,
+        1
+      ],
       "weak": [
         "Physical",
         "Ice",
@@ -219,6 +231,10 @@ let enemyData = {
         1,
         -60
       ],
+      "phhp": [
+        1,
+        1
+      ],
       "weak": [
         "Physical",
         "Ice",
@@ -281,6 +297,10 @@ let enemyData = {
         null,
         1,
         null
+      ],
+      "phhp": [
+        1,
+        1
       ],
       "weak": [
         "Physical",

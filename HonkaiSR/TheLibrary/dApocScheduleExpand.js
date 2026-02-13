@@ -4605,7 +4605,6 @@ let mocSchedule = [
                       "defBase": 800.00004,
                       "hpBase": [
                         235360.596672,
-                        235360.596672,
                         235360.596672
                       ],
                       "speedBase": 120,
@@ -4642,8 +4641,8 @@ let mocSchedule = [
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110013"
                 },
-                "highSTSUM": 706081.790016,
-                "aoeSUM": 706081.790016
+                "highSTSUM": 470721.193344,
+                "aoeSUM": 470721.193344
               }
             ]
           },
@@ -4977,7 +4976,6 @@ let mocSchedule = [
                       "defBase": 899.99994,
                       "hpBase": [
                         1130727.27168,
-                        1130727.27168,
                         1130727.27168
                       ],
                       "speedBase": 132,
@@ -5014,8 +5012,8 @@ let mocSchedule = [
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110013"
                 },
-                "highSTSUM": 3392181.81504,
-                "aoeSUM": 3392181.81504
+                "highSTSUM": 2261454.54336,
+                "aoeSUM": 2261454.54336
               }
             ]
           },
@@ -5349,7 +5347,6 @@ let mocSchedule = [
                       "defBase": 1000.00005,
                       "hpBase": [
                         3523846.36416,
-                        3523846.36416,
                         3523846.36416
                       ],
                       "speedBase": 144,
@@ -5386,8 +5383,8 @@ let mocSchedule = [
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110013"
                 },
-                "highSTSUM": 10571539.09248,
-                "aoeSUM": 10571539.09248
+                "highSTSUM": 7047692.72832,
+                "aoeSUM": 7047692.72832
               }
             ]
           },
@@ -5721,7 +5718,6 @@ let mocSchedule = [
                       "defBase": 1099.99995,
                       "hpBase": [
                         8447127.56352,
-                        8447127.56352,
                         8447127.56352
                       ],
                       "speedBase": 158.4,
@@ -5758,8 +5754,8 @@ let mocSchedule = [
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110013"
                 },
-                "highSTSUM": 25341382.69056,
-                "aoeSUM": 25341382.69056
+                "highSTSUM": 16894255.12704,
+                "aoeSUM": 16894255.12704
               }
             ]
           },
@@ -12447,7 +12443,6 @@ let mocSchedule = [
                       "defBase": 800.00004,
                       "hpBase": [
                         196133.83056,
-                        196133.83056,
                         196133.83056
                       ],
                       "speedBase": 120,
@@ -12484,8 +12479,8 @@ let mocSchedule = [
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110008"
                 },
-                "highSTSUM": 588401.49168,
-                "aoeSUM": 588401.49168
+                "highSTSUM": 392267.66112,
+                "aoeSUM": 392267.66112
               }
             ]
           },
@@ -12805,7 +12800,6 @@ let mocSchedule = [
                       "defBase": 899.99994,
                       "hpBase": [
                         706704.5448,
-                        706704.5448,
                         706704.5448
                       ],
                       "speedBase": 132,
@@ -12842,8 +12836,8 @@ let mocSchedule = [
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110008"
                 },
-                "highSTSUM": 2120113.6344,
-                "aoeSUM": 2120113.6344
+                "highSTSUM": 1413409.0896,
+                "aoeSUM": 1413409.0896
               }
             ]
           },
@@ -13163,7 +13157,6 @@ let mocSchedule = [
                       "defBase": 1000.00005,
                       "hpBase": [
                         1982163.57984,
-                        1982163.57984,
                         1982163.57984
                       ],
                       "speedBase": 144,
@@ -13200,8 +13193,8 @@ let mocSchedule = [
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110008"
                 },
-                "highSTSUM": 5946490.73952,
-                "aoeSUM": 5946490.73952
+                "highSTSUM": 3964327.15968,
+                "aoeSUM": 3964327.15968
               }
             ]
           },
@@ -13521,7 +13514,6 @@ let mocSchedule = [
                       "defBase": 1099.99995,
                       "hpBase": [
                         4223563.78176,
-                        4223563.78176,
                         4223563.78176
                       ],
                       "speedBase": 158.4,
@@ -13558,8 +13550,8 @@ let mocSchedule = [
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110008"
                 },
-                "highSTSUM": 12670691.34528,
-                "aoeSUM": 12670691.34528
+                "highSTSUM": 8447127.56352,
+                "aoeSUM": 8447127.56352
               }
             ]
           },
@@ -13980,7 +13972,10 @@ let mocSchedule = [
                       "rank": "LittleBoss",
                       "attackBase": 338.30289,
                       "defBase": 800.00004,
-                      "hpBase": 128712.826305,
+                      "hpBase": [
+                        128712.826305,
+                        128712.826305
+                      ],
                       "speedBase": 120,
                       "critDMG": 0.2,
                       "effectRES": 0.34,
@@ -14297,7 +14292,10 @@ let mocSchedule = [
                       "rank": "LittleBoss",
                       "attackBase": 457.5952332,
                       "defBase": 899.99994,
-                      "hpBase": 463774.857525,
+                      "hpBase": [
+                        463774.857525,
+                        463774.857525
+                      ],
                       "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.38,
@@ -14614,7 +14612,10 @@ let mocSchedule = [
                       "rank": "LittleBoss",
                       "attackBase": 579.9368232,
                       "defBase": 1000.00005,
-                      "hpBase": 1300794.84927,
+                      "hpBase": [
+                        1300794.84927,
+                        1300794.84927
+                      ],
                       "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
@@ -14931,7 +14932,10 @@ let mocSchedule = [
                       "rank": "LittleBoss",
                       "attackBase": 715.807705,
                       "defBase": 1099.99995,
-                      "hpBase": 2502241.5634125,
+                      "hpBase": [
+                        2502241.5634125,
+                        2502241.5634125
+                      ],
                       "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
@@ -15355,7 +15359,6 @@ let mocSchedule = [
                       "defBase": 800.00004,
                       "hpBase": [
                         196133.83056,
-                        196133.83056,
                         196133.83056
                       ],
                       "speedBase": 120,
@@ -15392,8 +15395,8 @@ let mocSchedule = [
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110006"
                 },
-                "highSTSUM": 588401.49168,
-                "aoeSUM": 588401.49168
+                "highSTSUM": 392267.66112,
+                "aoeSUM": 392267.66112
               }
             ]
           },
@@ -15727,7 +15730,6 @@ let mocSchedule = [
                       "defBase": 899.99994,
                       "hpBase": [
                         706704.5448,
-                        706704.5448,
                         706704.5448
                       ],
                       "speedBase": 132,
@@ -15764,8 +15766,8 @@ let mocSchedule = [
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110006"
                 },
-                "highSTSUM": 2120113.6344,
-                "aoeSUM": 2120113.6344
+                "highSTSUM": 1413409.0896,
+                "aoeSUM": 1413409.0896
               }
             ]
           },
@@ -16099,7 +16101,6 @@ let mocSchedule = [
                       "defBase": 1000.00005,
                       "hpBase": [
                         1982163.57984,
-                        1982163.57984,
                         1982163.57984
                       ],
                       "speedBase": 144,
@@ -16136,8 +16137,8 @@ let mocSchedule = [
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110006"
                 },
-                "highSTSUM": 5946490.73952,
-                "aoeSUM": 5946490.73952
+                "highSTSUM": 3964327.15968,
+                "aoeSUM": 3964327.15968
               }
             ]
           },
@@ -16471,7 +16472,6 @@ let mocSchedule = [
                       "defBase": 1099.99995,
                       "hpBase": [
                         3519636.4848,
-                        3519636.4848,
                         3519636.4848
                       ],
                       "speedBase": 158.4,
@@ -16508,8 +16508,8 @@ let mocSchedule = [
                   "_BGM": "State_Herta_Space_Station_Combat_Swarm",
                   "_BindingMazeBuff": "3110006"
                 },
-                "highSTSUM": 10558909.454400001,
-                "aoeSUM": 10558909.454400001
+                "highSTSUM": 7039272.9696,
+                "aoeSUM": 7039272.9696
               }
             ]
           },
@@ -18612,14 +18612,6 @@ let mocSchedule = [
                       "delay": 1,
                       "toughnessBars": [
                         10,
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
                         10
                       ],
                       "toughnessElement": "Imaginary",
@@ -19004,14 +18996,6 @@ let mocSchedule = [
                       "delay": 1,
                       "toughnessBars": [
                         10,
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
                         10
                       ],
                       "toughnessElement": "Imaginary",
@@ -19395,14 +19379,6 @@ let mocSchedule = [
                       "ehr": 0.24,
                       "delay": 1,
                       "toughnessBars": [
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
                         10,
                         10
                       ],
@@ -19793,14 +19769,6 @@ let mocSchedule = [
                       "ehr": 0.32,
                       "delay": 1,
                       "toughnessBars": [
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
                         10,
                         10
                       ],
@@ -20213,7 +20181,10 @@ let mocSchedule = [
                       "rank": "LittleBoss",
                       "attackBase": 304.472601,
                       "defBase": 800.00004,
-                      "hpBase": 107260.6885875,
+                      "hpBase": [
+                        107260.6885875,
+                        107260.6885875
+                      ],
                       "speedBase": 120,
                       "critDMG": 0.2,
                       "effectRES": 0.34,
@@ -20561,7 +20532,10 @@ let mocSchedule = [
                       "rank": "LittleBoss",
                       "attackBase": 435.804984,
                       "defBase": 899.99994,
-                      "hpBase": 386479.0479375,
+                      "hpBase": [
+                        386479.0479375,
+                        386479.0479375
+                      ],
                       "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.38,
@@ -20909,7 +20883,10 @@ let mocSchedule = [
                       "rank": "LittleBoss",
                       "attackBase": 552.320784,
                       "defBase": 1000.00005,
-                      "hpBase": 1083995.707725,
+                      "hpBase": [
+                        1083995.707725,
+                        1083995.707725
+                      ],
                       "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
@@ -21257,7 +21234,10 @@ let mocSchedule = [
                       "rank": "LittleBoss",
                       "attackBase": 662.784912,
                       "defBase": 1099.99995,
-                      "hpBase": 1924801.202625,
+                      "hpBase": [
+                        1924801.202625,
+                        1924801.202625
+                      ],
                       "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
