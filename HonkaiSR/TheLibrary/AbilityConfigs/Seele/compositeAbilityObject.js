@@ -170,30 +170,20 @@ const compositeAbilityObject = {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
               "execute": [
                 {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "MDF_MaxHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
                   "name": "IF",
                   "conditions": {
-                    "name": "Compare: Ability Value",
+                    "name": "Compare: Variable",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                    "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.8) || MUL || RETURN",
-                      "displayLines": "(MDF_MaxHP * 0.8)",
+                      "operator": "Variables[0] (0.8) || RETURN",
+                      "displayLines": "0.8",
                       "constants": [],
                       "variables": [
-                        "MDF_MaxHP",
                         0.8
                       ]
                     }
