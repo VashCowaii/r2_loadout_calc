@@ -25,6 +25,7 @@
 
     "MaxStance": "ToughnessMax",
     "CurrentStance": "CurrentToughness",
+    "StanceRatio": "ToughnessCurrent%",
 
     "BreakDamageAddRatio": "VulnBreak[?]",
 
