@@ -22,39 +22,52 @@ const configAbility = {
           "eventTrigger": "Being Attacked End [Owner]",
           "execute": [
             {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "team": "Enemy Team"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
-              "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
-              },
-              "baseChance": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
-              },
-              "valuePerStack": {
-                "Modifier_Burn_DamagePercentage_Defence": {
-                  "operator": "Variables[0] (0.4) || RETURN",
-                  "displayLines": "0.4",
-                  "constants": [],
-                  "variables": [
-                    0.4
-                  ]
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
+                  "duration": {
+                    "operator": "Variables[0] (2) || RETURN",
+                    "displayLines": "2",
+                    "constants": [],
+                    "variables": [
+                      2
+                    ]
+                  },
+                  "baseChance": {
+                    "operator": "Variables[0] (1) || RETURN",
+                    "displayLines": "1",
+                    "constants": [],
+                    "variables": [
+                      1
+                    ]
+                  },
+                  "valuePerStack": {
+                    "Modifier_Burn_DamagePercentage_Defence": {
+                      "operator": "Variables[0] (0.4) || RETURN",
+                      "displayLines": "0.4",
+                      "constants": [],
+                      "variables": [
+                        0.4
+                      ]
+                    }
+                  },
+                  "stackFlag": "Equipment"
                 }
-              },
-              "stackFlag": "Equipment"
+              ]
             }
           ]
         }
