@@ -14,7 +14,7 @@ const compositeAbilityObject = {
         0,
         0
       ],
-      "length": 1,
+      "length": 2,
       "parse": [
         {
           "name": "CharacterFunctions",
@@ -30,6 +30,16 @@ const compositeAbilityObject = {
                 "STAT_CTRL_Frozen"
               ],
               "value": 1
+            }
+          ]
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__774823497\">GM_StartElationTime</a>",
+          "parse": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>"
             }
           ]
         }
