@@ -650,6 +650,7 @@
 }
 .enemyWaveEnemyDisplayBox {
     width: 19%;
+    min-height: 200px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
