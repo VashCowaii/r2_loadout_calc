@@ -5,6 +5,22 @@ const configAbility = {
   "toughnessList": null,
   "parse": [
     {
+      "name": "IF",
+      "conditions": {
+        "name": "In Aha-Instant"
+      },
+      "passed": [
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "AllDarkTeamDyingCharacter"
+          },
+          "dieNow": true
+        }
+      ]
+    },
+    {
       "name": "WAIT FOR",
       "condition": {
         "name": "Death Animation Completed",
@@ -21,7 +37,15 @@ const configAbility = {
       "scope": "TargetEntity",
       "variableName": "Insert_Flag"
     },
-    "Deleted bullshit",
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "In Aha-Instant"
+      },
+      "failed": [
+        "Deleted bullshit"
+      ]
+    },
     {
       "name": "Looped Event",
       "conditions": {
@@ -98,6 +122,12 @@ const configAbility = {
       "variableName": null,
       "eventType": "InfiniteRefresh",
       "value": null
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "In Aha-Instant"
+      }
     }
   ],
   "references": []

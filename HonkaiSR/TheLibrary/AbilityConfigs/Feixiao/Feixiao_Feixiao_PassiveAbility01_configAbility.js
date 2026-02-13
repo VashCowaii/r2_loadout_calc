@@ -185,41 +185,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-349901882\">M_Feixiao_Friend_Mark_Main</a>",
+      "stackType": "RetainGlobalLatestUnique",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
       "execute": [
-        {
-          "eventTrigger": "When Constructing Modifier",
-          "execute": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}} - {{Modifier Holder}}"
-              },
-              "maxTargets": 99,
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-349901882\">M_Feixiao_Friend_Mark_Main</a>"
-                }
-              ]
-            }
-          ]
-        },
         {
           "eventTrigger": "Injected Ability Use [Anyone]: Start",
           "execute": [
@@ -236,7 +206,7 @@ const configAbility = {
                     },
                     "target": {
                       "name": "Target Name",
-                      "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                      "target": "{{Caster}}.[[getTeamMembers]].[[addAttachedSummon]] - {{Caster}}"
                     },
                     "mustBeAlive2": true
                   },

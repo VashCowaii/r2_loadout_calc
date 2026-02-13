@@ -42,8 +42,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2916,
-        2917
+        3039,
+        3040
       ]
     },
     "803203401": {
@@ -70,8 +70,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2916,
-        2917
+        3039,
+        3040
       ]
     },
     "803203402": {
@@ -98,8 +98,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2916,
-        2917
+        3039,
+        3040
       ]
     },
     "803203403": {
@@ -126,8 +126,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2916,
-        2917
+        3039,
+        3040
       ]
     },
     "803203404": {
@@ -154,8 +154,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2916,
-        2917
+        3039,
+        3040
       ]
     }
   }

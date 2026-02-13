@@ -42,8 +42,8 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2015,
-        2016
+        2061,
+        2062
       ]
     },
     "403201001": {
@@ -70,8 +70,8 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2015,
-        2016
+        2061,
+        2062
       ],
       "enemyTag": [
         "MGrid_4009"
@@ -101,17 +101,20 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2015,
-        2016
+        2061,
+        2062
       ],
       "overrideParams": {
-        "2015": [
-          3.5,
-          2.4,
-          "-",
-          "-",
-          "-",
-          "-",
+        "2061": [
+          [
+            3.5,
+            2.4
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
           "-",
           "-"
         ]

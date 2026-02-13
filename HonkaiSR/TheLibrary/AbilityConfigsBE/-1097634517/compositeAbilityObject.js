@@ -2487,6 +2487,22 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [
         {
+          "name": "IF",
+          "conditions": {
+            "name": "In Aha-Instant"
+          },
+          "passed": [
+            {
+              "name": "Mark Entity For Immediate Death",
+              "target": {
+                "name": "Target Name",
+                "target": "AllDarkTeamDyingCharacter"
+              },
+              "dieNow": true
+            }
+          ]
+        },
+        {
           "name": "WAIT FOR",
           "condition": {
             "name": "Death Animation Completed",
@@ -2503,7 +2519,15 @@ const compositeAbilityObject = {
           "scope": "TargetEntity",
           "variableName": "Insert_Flag"
         },
-        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "In Aha-Instant"
+          },
+          "failed": [
+            "Deleted bullshit"
+          ]
+        },
         {
           "name": "Looped Event",
           "conditions": {
@@ -2580,6 +2604,12 @@ const compositeAbilityObject = {
           "variableName": null,
           "eventType": "InfiniteRefresh",
           "value": null
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "In Aha-Instant"
+          }
         }
       ],
       "references": []
@@ -2590,7 +2620,25 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [
-        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "In Aha-Instant"
+          },
+          "passed": [
+            {
+              "name": "Mark Entity For Immediate Death",
+              "target": {
+                "name": "Target Name",
+                "target": "AllDarkTeamDyingCharacter"
+              },
+              "dieNow": true
+            }
+          ],
+          "failed": [
+            "Deleted bullshit"
+          ]
+        },
         {
           "name": "WAIT FOR",
           "condition": {
@@ -2685,6 +2733,12 @@ const compositeAbilityObject = {
           "variableName": null,
           "eventType": "InfiniteRefresh",
           "value": null
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "In Aha-Instant"
+          }
         }
       ],
       "references": []
@@ -2695,7 +2749,25 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [
-        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "In Aha-Instant"
+          },
+          "passed": [
+            {
+              "name": "Mark Entity For Immediate Death",
+              "target": {
+                "name": "Target Name",
+                "target": "AllDarkTeamDyingCharacter"
+              },
+              "dieNow": true
+            }
+          ],
+          "failed": [
+            "Deleted bullshit"
+          ]
+        },
         {
           "name": "WAIT FOR",
           "condition": {
@@ -2791,6 +2863,12 @@ const compositeAbilityObject = {
           "variableName": null,
           "eventType": "InfiniteRefresh",
           "value": null
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "In Aha-Instant"
+          }
         }
       ],
       "references": []
@@ -3115,6 +3193,22 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [
         {
+          "name": "IF",
+          "conditions": {
+            "name": "In Aha-Instant"
+          },
+          "passed": [
+            {
+              "name": "Mark Entity For Immediate Death",
+              "target": {
+                "name": "Target Name",
+                "target": "AllDarkTeamDyingCharacter"
+              },
+              "dieNow": true
+            }
+          ]
+        },
+        {
           "name": "WAIT FOR",
           "condition": {
             "name": "Death Animation Completed",
@@ -3131,7 +3225,15 @@ const compositeAbilityObject = {
           "scope": "TargetEntity",
           "variableName": "Insert_Flag"
         },
-        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "In Aha-Instant"
+          },
+          "failed": [
+            "Deleted bullshit"
+          ]
+        },
         {
           "name": "Define Custom Variable",
           "variableName": "Value_SummonCount",
@@ -3198,6 +3300,12 @@ const compositeAbilityObject = {
               }
             }
           ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "In Aha-Instant"
+          }
         },
         {
           "name": "Declare Custom Variable",
@@ -3324,7 +3432,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "PROG_MonsterLowest",
+                          "priorityTag": "MonsterSummon",
                           "canHitNonTargets": true,
                           "allowAbilityTriggers": false
                         }
@@ -3347,6 +3455,22 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [
         {
+          "name": "IF",
+          "conditions": {
+            "name": "In Aha-Instant"
+          },
+          "passed": [
+            {
+              "name": "Mark Entity For Immediate Death",
+              "target": {
+                "name": "Target Name",
+                "target": "AllDarkTeamDyingCharacter"
+              },
+              "dieNow": true
+            }
+          ]
+        },
+        {
           "name": "WAIT FOR",
           "condition": {
             "name": "Death Animation Completed",
@@ -3363,7 +3487,15 @@ const compositeAbilityObject = {
           "scope": "TargetEntity",
           "variableName": "Insert_Flag"
         },
-        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "In Aha-Instant"
+          },
+          "failed": [
+            "Deleted bullshit"
+          ]
+        },
         {
           "name": "Define Custom Variable",
           "variableName": "Value_SummonCount",
@@ -3408,6 +3540,12 @@ const compositeAbilityObject = {
               }
             }
           ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "In Aha-Instant"
+          }
         },
         {
           "name": "Declare Custom Variable",
@@ -3534,7 +3672,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "priorityTag": "PROG_MonsterLowest",
+                          "priorityTag": "MonsterSummon",
                           "canHitNonTargets": true,
                           "allowAbilityTriggers": false
                         }
@@ -10757,14 +10895,40 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [
         {
-          "name": "WAIT FOR",
-          "condition": {
-            "name": "Death Animation Completed",
-            "team": "Enemy Team",
-            "type": "Team Characters"
-          }
+          "name": "IF",
+          "conditions": {
+            "name": "In Aha-Instant"
+          },
+          "passed": [
+            {
+              "name": "Mark Entity For Immediate Death",
+              "target": {
+                "name": "Target Name",
+                "target": "AllDarkTeamDyingCharacter"
+              },
+              "dieNow": true
+            },
+            {
+              "name": "WAIT FOR",
+              "condition": {
+                "name": "Death Animation Completed",
+                "team": "Enemy Team",
+                "type": "Team Characters"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "WAIT FOR",
+              "condition": {
+                "name": "Death Animation Completed",
+                "team": "Enemy Team",
+                "type": "Team Characters"
+              }
+            },
+            "Deleted bullshit"
+          ]
         },
-        "Deleted bullshit",
         {
           "name": "Create Enemies",
           "delayPercent": 0.5,
@@ -10782,6 +10946,12 @@ const compositeAbilityObject = {
               "locationType": "FormationRecord"
             }
           ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "In Aha-Instant"
+          }
         }
       ],
       "references": []
@@ -10955,7 +11125,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "priorityTag": "PROG_MonsterLowest",
+                      "priorityTag": "MonsterSummon",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }

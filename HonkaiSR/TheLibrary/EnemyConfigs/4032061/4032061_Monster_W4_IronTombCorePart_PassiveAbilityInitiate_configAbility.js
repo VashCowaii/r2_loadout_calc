@@ -194,7 +194,7 @@ const configAbility = {
                     }
                   },
                   "abilityName": "Monster_W4_IronTombCorePart_PassiveAbility02_Insert",
-                  "priorityTag": "MonsterBuffSelf",
+                  "priorityTag": "MonsterBuffSelf_Elation",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false

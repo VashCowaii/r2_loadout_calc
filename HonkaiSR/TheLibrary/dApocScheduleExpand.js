@@ -1,6 +1,1570 @@
 const stageTypers = "apoc";
 let mocSchedule = [
   {
+    "id": 3016,
+    "image": "activityBG/ChallengeBossBanner_3015.png",
+    "realName": "Militant Lupine",
+    "start": "2026-03-16 04:00:00",
+    "end": "2026-04-27 04:00:00",
+    "buffData": {
+      "modifierName": "ADV_StageAbility_3031001",
+      "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
+      "name": "Word Shatter",
+      "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
+      "battleDesc": null,
+      "buffType": "",
+      "params": [
+        0.6,
+        6
+      ]
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Militant Lupine: Difficulty 1",
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              420381
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "The Ravaged Unconquerable",
+                "enemyLevel": 60,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15,
+                    10
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "The Ravaged Unconquerable",
+                      "id": 401401301,
+                      "image": 4014013,
+                      "rank": "LittleBoss",
+                      "attackBase": 270.642312,
+                      "defBase": 800.00004,
+                      "hpBase": 343234.20348,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.34,
+                      "ehr": 0.08,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "toughnessBase": 480,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Thunder",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.4,
+                        "Wind": 0.4,
+                        "Imaginary": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 0.5
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 896,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
+                  "_BindingMazeBuff": "3110015"
+                },
+                "highSTSUM": 343234.20348,
+                "aoeSUM": 343234.20348
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              420391
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Hellcharred Shadow General",
+                "enemyLevel": 60,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15,
+                    10
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Hellcharred Shadow General",
+                      "id": 203501201,
+                      "image": 2035012,
+                      "rank": "BigBoss",
+                      "attackBase": 304.472601,
+                      "defBase": 800.00004,
+                      "hpBase": [
+                        471947.029785,
+                        471947.029785
+                      ],
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.34,
+                      "ehr": 0.08,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Wind",
+                      "hpBars": 2,
+                      "toughnessBase": 280,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Ice": 0.4,
+                        "Wind": 0.4,
+                        "Imaginary": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 1
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 701,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
+                  "_BindingMazeBuff": "3110015"
+                },
+                "highSTSUM": 943894.05957,
+                "aoeSUM": 943894.05957
+              }
+            ]
+          }
+        },
+        "boss1Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "name": "Ironclad Renitence",
+              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
+              "extraEffects": [
+                250,
+                251
+              ]
+            },
+            {
+              "name": "Taint of the Sublime",
+              "desc": "In Phase 2, the max stack of Boss Mirage's \"Centirefined War Armor\" will increase."
+            },
+            {
+              "name": "Protective Formation",
+              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize consuming Skill Points to gain \"Glory,\" increasing CRIT DMG dealt and reducing enemy \"War Armor\" stacks. Ally Skill Points can exceed the maximum limit."
+            },
+            {
+              "desc": "When enemy targets have \"War Armor\", their DEF is greatly increased. Reducing their \"War Armor\" will increase the DMG they take and recover Skill Points."
+            },
+            {
+              "desc": "In Phase 2, when summons have \"Centirefined War Armor\", the Boss Mirage's abilities will be enhanced. Prioritizing reducing the summons' \"Centirefined War Armor\" can effectively weaken the Boss Mirage's abilities."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase 1: Iron Steeds and Golden Spears",
+              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them.",
+              "answer": "Strategy: Prioritize consuming Skill Points to gain \"Glory,\" which increases your CRIT DMG and reduces more stacks of \"War Armor\".",
+              "skillList": [
+                {
+                  "name": "How to obtain \"Glory\"",
+                  "descData": [
+                    {
+                      "desc": "Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Actively consuming Skill Points will quickly increase the number of \"Glory\" stacks."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to reduce \"War Armor\"",
+                  "descData": [
+                    {
+                      "desc": "When an ally unit attacks an enemy target, it reduces their \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to Efficiently Reduce Boss Mirage's Toughness",
+                  "descData": [
+                    {
+                      "desc": "Destroying the \"War Armor\" of the Boss Mirage will massively reduce its Toughness. Defeating the summons of the Boss Mirage will reduce its Toughness by a small amount."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase 2: Face-off with the Enemy",
+              "desc": "The \"War Armor\" of Boss Mirage and its summons are enhanced into \"Centirefined War Armor.\" Summons with \"Centirefined War Armor\" enhance Boss Mirage's abilities.",
+              "answer": "Strategy: Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities.",
+              "skillList": [
+                {
+                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "descData": [
+                    {
+                      "desc": "When Boss Mirage's \"Centirefined War Armor\" stack count is greater than 0, it will be in a Toughness Protection state. Depleting its \"Centirefined War Armor\" will dispel the Toughness Protection state."
+                    }
+                  ]
+                },
+                {
+                  "name": "Counter the Boss Mirage's \"Centirefined Attack Ability\" and \"Fury Falls, and All Bows to Strife\"",
+                  "descData": [
+                    {
+                      "desc": "Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection."
+            },
+            {
+              "desc": "At the start of combat, all allies gain 1 stack of \"Glory\". Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Each stack of \"Glory\" increases CRIT DMG, and when enemy targets with \"War Armor\" are attacked, reduces their stacks of \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks. Targets' Skill Points can exceed the maximum limit."
+            }
+          ]
+        },
+        "boss2Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1
+              ]
+            },
+            {
+              "name": "Steelbone Summit",
+              "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
+              "params": [
+                0.5,
+                1
+              ]
+            },
+            {
+              "name": "Sickleclawed Sawteeth",
+              "desc": "Boss Mirage's Toughness increases by #1[i].",
+              "params": [
+                40
+              ]
+            },
+            {
+              "name": "Beastly Rage",
+              "desc": "The duration of \"Malediction\" state increases by #1[i] turn(s).",
+              "params": [
+                1
+              ]
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Weakness Break Boss Mirage's parts multiple times to effectively reduce Boss Mirage's Toughness. Break Boss Mirage to greatly increase the DMG taken by itself and all its parts, while recovering Skill Points and activating Ultimates for all allies."
+            },
+            {
+              "desc": "When \"Bloodstained Lupine\" replaces an ally character in battle, it will additionally reduce Toughness irrespective of Weakness Types based on the number of DoT debuffs inflicted on the enemy target attacked. \"Bloodstained Lupine's\" Basic ATK can restore HP for all ally targets, and its Skill can hit multiple enemy targets while greatly reducing their Toughness. This does not consume Skill Points."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase 1: Unyielding Winds",
+              "desc": "The Boss Mirage will use \"Soul-Shattering Malediction\" to inflict the \"Malediction\" effect on allies.",
+              "answer": "Strategy: When \"Soul-Shattering Malediction\" is used, prioritize selecting non-DMG dealing ally characters as the target of the ability.",
+              "skillList": [
+                {
+                  "name": "How to control \"Bloodstained Lupine\" in battle",
+                  "descData": [
+                    {
+                      "desc": "Prioritize using \"Bloodstained Lupine's\" Skill to reduce the enemy target's Toughness. When all allies' HP are low, prioritize using \"Bloodstained Lupine's\" Basic ATK to quickly restore HP for allies."
+                    }
+                  ]
+                },
+                {
+                  "name": "Dispelling the \"Malediction\" state",
+                  "descData": [
+                    {
+                      "desc": "When \"Bloodstained Lupine\" uses Basic ATK or Skill, gains 1 stack of \"Bloodthirst.\" When \"Bloodthirst\" stacks are maxed, dispels the \"Malediction\" effect. Causing Boss Mirage to enter the Weakness Broken state also dispels the \"Malediction\" effect."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase 2: Sweep the Heavens",
+              "desc": "The Boss Mirage will use \"Sweep the Heavens, Swallow the Earth\" to deal high DMG and debuffs.",
+              "answer": "Strategy: Do what you can to break all parts before \"Sweep the Heavens, Swallow the Earth\" is used.",
+              "skillList": [
+                {
+                  "name": "How to face the DMG and debuffs dealt by \"Sweep the Heavens, Swallow the Earth\"",
+                  "descData": [
+                    {
+                      "desc": "Use \"Bloodstained Lupine's\" Skill to hit multiple Boss Mirage parts to greatly reduce the Toughness of those parts. Alternatively, Break the Weakness of all parts to prevent the Boss from using \"Sweep the Heavens, Swallow the Earth.\""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and all other parts take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "When the Boss Mirage's parts get Weakness Broken, the Toughness of the Boss Mirage will be reduced."
+            },
+            {
+              "desc": "When the Boss Mirage uses \"Soul-Shattering Malediction,\" causes ally characters to enter the \"Malediction\" state. Ally characters and summons in the \"Malediction\" state will Depart the field. At the same time, summons Bloodstained Lupine to replace the Departed character and continue the battle, and the \"Bloodstained Lupine\"'s attacks can cause heavy Toughness Reduction."
+            }
+          ]
+        }
+      },
+      "2": {
+        "floorName": "Militant Lupine: Difficulty 2",
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              420382
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "The Ravaged Unconquerable",
+                "enemyLevel": 70,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15,
+                    10
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "The Ravaged Unconquerable",
+                      "id": 401401302,
+                      "image": 4014013,
+                      "rank": "LittleBoss",
+                      "attackBase": 392.2244856,
+                      "defBase": 899.99994,
+                      "hpBase": 1236732.9534,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.38,
+                      "ehr": 0.16,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "toughnessBase": 480,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Thunder",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.4,
+                        "Wind": 0.4,
+                        "Imaginary": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 0.5
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 897,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
+                  "_BindingMazeBuff": "3110015"
+                },
+                "highSTSUM": 1236732.9534,
+                "aoeSUM": 1236732.9534
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              420392
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Hellcharred Shadow General",
+                "enemyLevel": 70,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15,
+                    10
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Hellcharred Shadow General",
+                      "id": 203501202,
+                      "image": 2035012,
+                      "rank": "BigBoss",
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": [
+                        1700507.810925,
+                        1700507.810925
+                      ],
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.38,
+                      "ehr": 0.16,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Wind",
+                      "hpBars": 2,
+                      "toughnessBase": 280,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Ice": 0.4,
+                        "Wind": 0.4,
+                        "Imaginary": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 1
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 702,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
+                  "_BindingMazeBuff": "3110015"
+                },
+                "highSTSUM": 3401015.62185,
+                "aoeSUM": 3401015.62185
+              }
+            ]
+          }
+        },
+        "boss1Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "name": "Ironclad Renitence",
+              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
+              "extraEffects": [
+                250,
+                251
+              ]
+            },
+            {
+              "name": "Taint of the Sublime",
+              "desc": "In Phase 2, the max stack of Boss Mirage's \"Centirefined War Armor\" will increase."
+            },
+            {
+              "name": "Protective Formation",
+              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize consuming Skill Points to gain \"Glory,\" increasing CRIT DMG dealt and reducing enemy \"War Armor\" stacks. Ally Skill Points can exceed the maximum limit."
+            },
+            {
+              "desc": "When enemy targets have \"War Armor\", their DEF is greatly increased. Reducing their \"War Armor\" will increase the DMG they take and recover Skill Points."
+            },
+            {
+              "desc": "In Phase 2, when summons have \"Centirefined War Armor\", the Boss Mirage's abilities will be enhanced. Prioritizing reducing the summons' \"Centirefined War Armor\" can effectively weaken the Boss Mirage's abilities."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase 1: Iron Steeds and Golden Spears",
+              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them.",
+              "answer": "Strategy: Prioritize consuming Skill Points to gain \"Glory,\" which increases your CRIT DMG and reduces more stacks of \"War Armor\".",
+              "skillList": [
+                {
+                  "name": "How to obtain \"Glory\"",
+                  "descData": [
+                    {
+                      "desc": "Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Actively consuming Skill Points will quickly increase the number of \"Glory\" stacks."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to reduce \"War Armor\"",
+                  "descData": [
+                    {
+                      "desc": "When an ally unit attacks an enemy target, it reduces their \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to Efficiently Reduce Boss Mirage's Toughness",
+                  "descData": [
+                    {
+                      "desc": "Destroying the \"War Armor\" of the Boss Mirage will massively reduce its Toughness. Defeating the summons of the Boss Mirage will reduce its Toughness by a small amount."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase 2: Face-off with the Enemy",
+              "desc": "The \"War Armor\" of Boss Mirage and its summons are enhanced into \"Centirefined War Armor.\" Summons with \"Centirefined War Armor\" enhance Boss Mirage's abilities.",
+              "answer": "Strategy: Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities.",
+              "skillList": [
+                {
+                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "descData": [
+                    {
+                      "desc": "When Boss Mirage's \"Centirefined War Armor\" stack count is greater than 0, it will be in a Toughness Protection state. Depleting its \"Centirefined War Armor\" will dispel the Toughness Protection state."
+                    }
+                  ]
+                },
+                {
+                  "name": "Counter the Boss Mirage's \"Centirefined Attack Ability\" and \"Fury Falls, and All Bows to Strife\"",
+                  "descData": [
+                    {
+                      "desc": "Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection."
+            },
+            {
+              "desc": "At the start of combat, all allies gain 1 stack of \"Glory\". Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Each stack of \"Glory\" increases CRIT DMG, and when enemy targets with \"War Armor\" are attacked, reduces their stacks of \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks. Targets' Skill Points can exceed the maximum limit."
+            }
+          ]
+        },
+        "boss2Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1
+              ]
+            },
+            {
+              "name": "Steelbone Summit",
+              "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
+              "params": [
+                0.5,
+                1
+              ]
+            },
+            {
+              "name": "Sickleclawed Sawteeth",
+              "desc": "Boss Mirage's Toughness increases by #1[i].",
+              "params": [
+                40
+              ]
+            },
+            {
+              "name": "Beastly Rage",
+              "desc": "The duration of \"Malediction\" state increases by #1[i] turn(s).",
+              "params": [
+                1
+              ]
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Weakness Break Boss Mirage's parts multiple times to effectively reduce Boss Mirage's Toughness. Break Boss Mirage to greatly increase the DMG taken by itself and all its parts, while recovering Skill Points and activating Ultimates for all allies."
+            },
+            {
+              "desc": "When \"Bloodstained Lupine\" replaces an ally character in battle, it will additionally reduce Toughness irrespective of Weakness Types based on the number of DoT debuffs inflicted on the enemy target attacked. \"Bloodstained Lupine's\" Basic ATK can restore HP for all ally targets, and its Skill can hit multiple enemy targets while greatly reducing their Toughness. This does not consume Skill Points."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase 1: Unyielding Winds",
+              "desc": "The Boss Mirage will use \"Soul-Shattering Malediction\" to inflict the \"Malediction\" effect on allies.",
+              "answer": "Strategy: When \"Soul-Shattering Malediction\" is used, prioritize selecting non-DMG dealing ally characters as the target of the ability.",
+              "skillList": [
+                {
+                  "name": "How to control \"Bloodstained Lupine\" in battle",
+                  "descData": [
+                    {
+                      "desc": "Prioritize using \"Bloodstained Lupine's\" Skill to reduce the enemy target's Toughness. When all allies' HP are low, prioritize using \"Bloodstained Lupine's\" Basic ATK to quickly restore HP for allies."
+                    }
+                  ]
+                },
+                {
+                  "name": "Dispelling the \"Malediction\" state",
+                  "descData": [
+                    {
+                      "desc": "When \"Bloodstained Lupine\" uses Basic ATK or Skill, gains 1 stack of \"Bloodthirst.\" When \"Bloodthirst\" stacks are maxed, dispels the \"Malediction\" effect. Causing Boss Mirage to enter the Weakness Broken state also dispels the \"Malediction\" effect."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase 2: Sweep the Heavens",
+              "desc": "The Boss Mirage will use \"Sweep the Heavens, Swallow the Earth\" to deal high DMG and debuffs.",
+              "answer": "Strategy: Do what you can to break all parts before \"Sweep the Heavens, Swallow the Earth\" is used.",
+              "skillList": [
+                {
+                  "name": "How to face the DMG and debuffs dealt by \"Sweep the Heavens, Swallow the Earth\"",
+                  "descData": [
+                    {
+                      "desc": "Use \"Bloodstained Lupine's\" Skill to hit multiple Boss Mirage parts to greatly reduce the Toughness of those parts. Alternatively, Break the Weakness of all parts to prevent the Boss from using \"Sweep the Heavens, Swallow the Earth.\""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and all other parts take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "When the Boss Mirage's parts get Weakness Broken, the Toughness of the Boss Mirage will be reduced."
+            },
+            {
+              "desc": "When the Boss Mirage uses \"Soul-Shattering Malediction,\" causes ally characters to enter the \"Malediction\" state. Ally characters and summons in the \"Malediction\" state will Depart the field. At the same time, summons Bloodstained Lupine to replace the Departed character and continue the battle, and the \"Bloodstained Lupine\"'s attacks can cause heavy Toughness Reduction."
+            }
+          ]
+        }
+      },
+      "3": {
+        "floorName": "Militant Lupine: Difficulty 3",
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              420383
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "The Ravaged Unconquerable",
+                "enemyLevel": 80,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15,
+                    10
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "The Ravaged Unconquerable",
+                      "id": 401401303,
+                      "image": 4014013,
+                      "rank": "LittleBoss",
+                      "attackBase": 497.0887056,
+                      "defBase": 1000.00005,
+                      "hpBase": 2649767.28555,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "toughnessBase": 480,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Thunder",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.4,
+                        "Wind": 0.4,
+                        "Imaginary": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 0.5
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 943,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
+                  "_BindingMazeBuff": "3110015"
+                },
+                "highSTSUM": 2649767.28555,
+                "aoeSUM": 2649767.28555
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              420393
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Hellcharred Shadow General",
+                "enemyLevel": 80,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15,
+                    10
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Hellcharred Shadow General",
+                      "id": 203501203,
+                      "image": 2035012,
+                      "rank": "BigBoss",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": [
+                        4769581.11399,
+                        4769581.11399
+                      ],
+                      "speedBase": 172.8,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Wind",
+                      "hpBars": 2,
+                      "toughnessBase": 280,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Ice": 0.4,
+                        "Wind": 0.4,
+                        "Imaginary": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 1
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 703,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
+                  "_BindingMazeBuff": "3110015"
+                },
+                "highSTSUM": 9539162.22798,
+                "aoeSUM": 9539162.22798
+              }
+            ]
+          }
+        },
+        "boss1Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "name": "Ironclad Renitence",
+              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
+              "extraEffects": [
+                250,
+                251
+              ]
+            },
+            {
+              "name": "Taint of the Sublime",
+              "desc": "In Phase 2, the max stack of Boss Mirage's \"Centirefined War Armor\" will increase."
+            },
+            {
+              "name": "Protective Formation",
+              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize consuming Skill Points to gain \"Glory,\" increasing CRIT DMG dealt and reducing enemy \"War Armor\" stacks. Ally Skill Points can exceed the maximum limit."
+            },
+            {
+              "desc": "When enemy targets have \"War Armor\", their DEF is greatly increased. Reducing their \"War Armor\" will increase the DMG they take and recover Skill Points."
+            },
+            {
+              "desc": "In Phase 2, when summons have \"Centirefined War Armor\", the Boss Mirage's abilities will be enhanced. Prioritizing reducing the summons' \"Centirefined War Armor\" can effectively weaken the Boss Mirage's abilities."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase 1: Iron Steeds and Golden Spears",
+              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them.",
+              "answer": "Strategy: Prioritize consuming Skill Points to gain \"Glory,\" which increases your CRIT DMG and reduces more stacks of \"War Armor\".",
+              "skillList": [
+                {
+                  "name": "How to obtain \"Glory\"",
+                  "descData": [
+                    {
+                      "desc": "Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Actively consuming Skill Points will quickly increase the number of \"Glory\" stacks."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to reduce \"War Armor\"",
+                  "descData": [
+                    {
+                      "desc": "When an ally unit attacks an enemy target, it reduces their \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to Efficiently Reduce Boss Mirage's Toughness",
+                  "descData": [
+                    {
+                      "desc": "Destroying the \"War Armor\" of the Boss Mirage will massively reduce its Toughness. Defeating the summons of the Boss Mirage will reduce its Toughness by a small amount."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase 2: Face-off with the Enemy",
+              "desc": "The \"War Armor\" of Boss Mirage and its summons are enhanced into \"Centirefined War Armor.\" Summons with \"Centirefined War Armor\" enhance Boss Mirage's abilities.",
+              "answer": "Strategy: Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities.",
+              "skillList": [
+                {
+                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "descData": [
+                    {
+                      "desc": "When Boss Mirage's \"Centirefined War Armor\" stack count is greater than 0, it will be in a Toughness Protection state. Depleting its \"Centirefined War Armor\" will dispel the Toughness Protection state."
+                    }
+                  ]
+                },
+                {
+                  "name": "Counter the Boss Mirage's \"Centirefined Attack Ability\" and \"Fury Falls, and All Bows to Strife\"",
+                  "descData": [
+                    {
+                      "desc": "Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection."
+            },
+            {
+              "desc": "At the start of combat, all allies gain 1 stack of \"Glory\". Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Each stack of \"Glory\" increases CRIT DMG, and when enemy targets with \"War Armor\" are attacked, reduces their stacks of \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks. Targets' Skill Points can exceed the maximum limit."
+            }
+          ]
+        },
+        "boss2Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1
+              ]
+            },
+            {
+              "name": "Steelbone Summit",
+              "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
+              "params": [
+                0.5,
+                1
+              ]
+            },
+            {
+              "name": "Sickleclawed Sawteeth",
+              "desc": "Boss Mirage's Toughness increases by #1[i].",
+              "params": [
+                40
+              ]
+            },
+            {
+              "name": "Beastly Rage",
+              "desc": "The duration of \"Malediction\" state increases by #1[i] turn(s).",
+              "params": [
+                1
+              ]
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Weakness Break Boss Mirage's parts multiple times to effectively reduce Boss Mirage's Toughness. Break Boss Mirage to greatly increase the DMG taken by itself and all its parts, while recovering Skill Points and activating Ultimates for all allies."
+            },
+            {
+              "desc": "When \"Bloodstained Lupine\" replaces an ally character in battle, it will additionally reduce Toughness irrespective of Weakness Types based on the number of DoT debuffs inflicted on the enemy target attacked. \"Bloodstained Lupine's\" Basic ATK can restore HP for all ally targets, and its Skill can hit multiple enemy targets while greatly reducing their Toughness. This does not consume Skill Points."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase 1: Unyielding Winds",
+              "desc": "The Boss Mirage will use \"Soul-Shattering Malediction\" to inflict the \"Malediction\" effect on allies.",
+              "answer": "Strategy: When \"Soul-Shattering Malediction\" is used, prioritize selecting non-DMG dealing ally characters as the target of the ability.",
+              "skillList": [
+                {
+                  "name": "How to control \"Bloodstained Lupine\" in battle",
+                  "descData": [
+                    {
+                      "desc": "Prioritize using \"Bloodstained Lupine's\" Skill to reduce the enemy target's Toughness. When all allies' HP are low, prioritize using \"Bloodstained Lupine's\" Basic ATK to quickly restore HP for allies."
+                    }
+                  ]
+                },
+                {
+                  "name": "Dispelling the \"Malediction\" state",
+                  "descData": [
+                    {
+                      "desc": "When \"Bloodstained Lupine\" uses Basic ATK or Skill, gains 1 stack of \"Bloodthirst.\" When \"Bloodthirst\" stacks are maxed, dispels the \"Malediction\" effect. Causing Boss Mirage to enter the Weakness Broken state also dispels the \"Malediction\" effect."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase 2: Sweep the Heavens",
+              "desc": "The Boss Mirage will use \"Sweep the Heavens, Swallow the Earth\" to deal high DMG and debuffs.",
+              "answer": "Strategy: Do what you can to break all parts before \"Sweep the Heavens, Swallow the Earth\" is used.",
+              "skillList": [
+                {
+                  "name": "How to face the DMG and debuffs dealt by \"Sweep the Heavens, Swallow the Earth\"",
+                  "descData": [
+                    {
+                      "desc": "Use \"Bloodstained Lupine's\" Skill to hit multiple Boss Mirage parts to greatly reduce the Toughness of those parts. Alternatively, Break the Weakness of all parts to prevent the Boss from using \"Sweep the Heavens, Swallow the Earth.\""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and all other parts take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "When the Boss Mirage's parts get Weakness Broken, the Toughness of the Boss Mirage will be reduced."
+            },
+            {
+              "desc": "When the Boss Mirage uses \"Soul-Shattering Malediction,\" causes ally characters to enter the \"Malediction\" state. Ally characters and summons in the \"Malediction\" state will Depart the field. At the same time, summons Bloodstained Lupine to replace the Departed character and continue the battle, and the \"Bloodstained Lupine\"'s attacks can cause heavy Toughness Reduction."
+            }
+          ]
+        }
+      },
+      "4": {
+        "floorName": "Militant Lupine: Difficulty 4",
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              420384
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "The Ravaged Unconquerable",
+                "enemyLevel": 90,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15,
+                    10
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "The Ravaged Unconquerable",
+                      "id": 401401304,
+                      "image": 4014013,
+                      "rank": "LittleBoss",
+                      "attackBase": 662.784912,
+                      "defBase": 1099.99995,
+                      "hpBase": 8084165.051025,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.32,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "toughnessBase": 480,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Thunder",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.4,
+                        "Wind": 0.4,
+                        "Imaginary": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 0.5
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 899,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
+                  "_BindingMazeBuff": "3110015"
+                },
+                "highSTSUM": 8084165.051025,
+                "aoeSUM": 8084165.051025
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              420394
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Hellcharred Shadow General",
+                "enemyLevel": 90,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_015",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, restores Skill Points, immediately takes action, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Elation DMG dealt to all enemies by #1[i]% and Break DMG by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15,
+                    10
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Hellcharred Shadow General",
+                      "id": 203501204,
+                      "image": 2035012,
+                      "rank": "BigBoss",
+                      "attackBase": 662.784912,
+                      "defBase": 1099.99995,
+                      "hpBase": [
+                        11856775.40817,
+                        11856775.40817
+                      ],
+                      "speedBase": 190.08,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.32,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Wind",
+                      "hpBars": 2,
+                      "toughnessBase": 280,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Ice": 0.4,
+                        "Wind": 0.4,
+                        "Imaginary": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 1
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 84,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
+                  "_BindingMazeBuff": "3110015"
+                },
+                "highSTSUM": 23713550.81634,
+                "aoeSUM": 23713550.81634
+              }
+            ]
+          }
+        },
+        "boss1Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "name": "Ironclad Renitence",
+              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
+              "extraEffects": [
+                250,
+                251
+              ]
+            },
+            {
+              "name": "Taint of the Sublime",
+              "desc": "In Phase 2, the max stack of Boss Mirage's \"Centirefined War Armor\" will increase."
+            },
+            {
+              "name": "Protective Formation",
+              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG."
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Prioritize consuming Skill Points to gain \"Glory,\" increasing CRIT DMG dealt and reducing enemy \"War Armor\" stacks. Ally Skill Points can exceed the maximum limit."
+            },
+            {
+              "desc": "When enemy targets have \"War Armor\", their DEF is greatly increased. Reducing their \"War Armor\" will increase the DMG they take and recover Skill Points."
+            },
+            {
+              "desc": "In Phase 2, when summons have \"Centirefined War Armor\", the Boss Mirage's abilities will be enhanced. Prioritizing reducing the summons' \"Centirefined War Armor\" can effectively weaken the Boss Mirage's abilities."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase 1: Iron Steeds and Golden Spears",
+              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them.",
+              "answer": "Strategy: Prioritize consuming Skill Points to gain \"Glory,\" which increases your CRIT DMG and reduces more stacks of \"War Armor\".",
+              "skillList": [
+                {
+                  "name": "How to obtain \"Glory\"",
+                  "descData": [
+                    {
+                      "desc": "Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Actively consuming Skill Points will quickly increase the number of \"Glory\" stacks."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to reduce \"War Armor\"",
+                  "descData": [
+                    {
+                      "desc": "When an ally unit attacks an enemy target, it reduces their \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks."
+                    }
+                  ]
+                },
+                {
+                  "name": "How to Efficiently Reduce Boss Mirage's Toughness",
+                  "descData": [
+                    {
+                      "desc": "Destroying the \"War Armor\" of the Boss Mirage will massively reduce its Toughness. Defeating the summons of the Boss Mirage will reduce its Toughness by a small amount."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase 2: Face-off with the Enemy",
+              "desc": "The \"War Armor\" of Boss Mirage and its summons are enhanced into \"Centirefined War Armor.\" Summons with \"Centirefined War Armor\" enhance Boss Mirage's abilities.",
+              "answer": "Strategy: Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities.",
+              "skillList": [
+                {
+                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "descData": [
+                    {
+                      "desc": "When Boss Mirage's \"Centirefined War Armor\" stack count is greater than 0, it will be in a Toughness Protection state. Depleting its \"Centirefined War Armor\" will dispel the Toughness Protection state."
+                    }
+                  ]
+                },
+                {
+                  "name": "Counter the Boss Mirage's \"Centirefined Attack Ability\" and \"Fury Falls, and All Bows to Strife\"",
+                  "descData": [
+                    {
+                      "desc": "Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection."
+            },
+            {
+              "desc": "At the start of combat, all allies gain 1 stack of \"Glory\". Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Each stack of \"Glory\" increases CRIT DMG, and when enemy targets with \"War Armor\" are attacked, reduces their stacks of \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks. Targets' Skill Points can exceed the maximum limit."
+            }
+          ]
+        },
+        "boss2Guide": {
+          "tagList": [
+            {
+              "name": "Steadfast Safeguard",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1
+              ]
+            },
+            {
+              "name": "Steelbone Summit",
+              "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
+              "params": [
+                0.5,
+                1
+              ]
+            },
+            {
+              "name": "Sickleclawed Sawteeth",
+              "desc": "Boss Mirage's Toughness increases by #1[i].",
+              "params": [
+                40
+              ]
+            },
+            {
+              "name": "Beastly Rage",
+              "desc": "The duration of \"Malediction\" state increases by #1[i] turn(s).",
+              "params": [
+                1
+              ]
+            }
+          ],
+          "textList": [
+            {
+              "desc": "Weakness Break Boss Mirage's parts multiple times to effectively reduce Boss Mirage's Toughness. Break Boss Mirage to greatly increase the DMG taken by itself and all its parts, while recovering Skill Points and activating Ultimates for all allies."
+            },
+            {
+              "desc": "When \"Bloodstained Lupine\" replaces an ally character in battle, it will additionally reduce Toughness irrespective of Weakness Types based on the number of DoT debuffs inflicted on the enemy target attacked. \"Bloodstained Lupine's\" Basic ATK can restore HP for all ally targets, and its Skill can hit multiple enemy targets while greatly reducing their Toughness. This does not consume Skill Points."
+            }
+          ],
+          "phaseList": [
+            {
+              "name": "Phase 1: Unyielding Winds",
+              "desc": "The Boss Mirage will use \"Soul-Shattering Malediction\" to inflict the \"Malediction\" effect on allies.",
+              "answer": "Strategy: When \"Soul-Shattering Malediction\" is used, prioritize selecting non-DMG dealing ally characters as the target of the ability.",
+              "skillList": [
+                {
+                  "name": "How to control \"Bloodstained Lupine\" in battle",
+                  "descData": [
+                    {
+                      "desc": "Prioritize using \"Bloodstained Lupine's\" Skill to reduce the enemy target's Toughness. When all allies' HP are low, prioritize using \"Bloodstained Lupine's\" Basic ATK to quickly restore HP for allies."
+                    }
+                  ]
+                },
+                {
+                  "name": "Dispelling the \"Malediction\" state",
+                  "descData": [
+                    {
+                      "desc": "When \"Bloodstained Lupine\" uses Basic ATK or Skill, gains 1 stack of \"Bloodthirst.\" When \"Bloodthirst\" stacks are maxed, dispels the \"Malediction\" effect. Causing Boss Mirage to enter the Weakness Broken state also dispels the \"Malediction\" effect."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Phase 2: Sweep the Heavens",
+              "desc": "The Boss Mirage will use \"Sweep the Heavens, Swallow the Earth\" to deal high DMG and debuffs.",
+              "answer": "Strategy: Do what you can to break all parts before \"Sweep the Heavens, Swallow the Earth\" is used.",
+              "skillList": [
+                {
+                  "name": "How to face the DMG and debuffs dealt by \"Sweep the Heavens, Swallow the Earth\"",
+                  "descData": [
+                    {
+                      "desc": "Use \"Bloodstained Lupine's\" Skill to hit multiple Boss Mirage parts to greatly reduce the Toughness of those parts. Alternatively, Break the Weakness of all parts to prevent the Boss from using \"Sweep the Heavens, Swallow the Earth.\""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "difficultyList": [
+            {
+              "desc": "Boss Mirage and all other parts take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "params": [
+                0.5,
+                1,
+                1.5
+              ]
+            },
+            {
+              "desc": "When the Boss Mirage's parts get Weakness Broken, the Toughness of the Boss Mirage will be reduced."
+            },
+            {
+              "desc": "When the Boss Mirage uses \"Soul-Shattering Malediction,\" causes ally characters to enter the \"Malediction\" state. Ally characters and summons in the \"Malediction\" state will Depart the field. At the same time, summons Bloodstained Lupine to replace the Departed character and continue the battle, and the \"Bloodstained Lupine\"'s attacks can cause heavy Toughness Reduction."
+            }
+          ]
+        }
+      }
+    },
+    "buffList1": [
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_083",
+        "BEKey": -243519640,
+        "name": "Oppose With Tenderness",
+        "desc": "All allies' Elation DMG ignores #1[i]% of enemy target's All-Type RES. When an enemy target's \"War Armor\" or \"Centirefined War Armor\" are broken, gains #2[i] Punchline points.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.15,
+          3
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_084",
+        "BEKey": -243519640,
+        "name": "Montane Gush",
+        "desc": "After an ally target uses their Ultimate, the CRIT DMG dealt by their Skill increases by #1[i]% for #2[i] turn(s).",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.5,
+          2
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_085",
+        "BEKey": -243519640,
+        "name": "Moment of Opportunity",
+        "desc": "Increases Follow-Up ATK and Ultimate DMG dealt by all allies by #1[i]%, and additionally increases by #2[i]% against enemy targets in Weakness Broken state.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.5,
+          0.5
+        ]
+      }
+    ],
+    "buffList2": [
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_086",
+        "BEKey": -243519640,
+        "name": "Collapse on Sight",
+        "desc": "Increases all enemies' Break DMG taken by #1[i]%. After Breaking an enemy's Weakness, increases all allies' SPD by #2[i]% for #3[i] turn(s).",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.1,
+          0.15,
+          2
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_087",
+        "BEKey": -243519640,
+        "name": "Essence of Gold",
+        "desc": "Increases all allies' CRIT DMG by #1[i]%. Additionally increases the CRIT DMG by #2[i]% for the 1st character in the team lineup and their memosprite.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.3,
+          0.3
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_088",
+        "BEKey": -243519640,
+        "name": "Devastating Heartbreak",
+        "desc": "Increases DoT dealt to enemy targets in the Weakness Broken state by #1[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.3
+        ]
+      }
+    ]
+  },
+  {
     "id": 3015,
     "image": "activityBG/ChallengeBossBanner_3014.png",
     "realName": "Dominance of Netherveil",
@@ -2948,7 +4512,7 @@ let mocSchedule = [
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_080",
         "BEKey": -243519640,
         "name": "Past Life: Shadowed Reverie",
-        "desc": "When there are 3 ally memosprites or more currently on the field, increases all allies' dealt DMG by #1[i]%.",
+        "desc": "When there are 3 ally memosprites or more currently on the field, increases all allies' DMG dealt by #1[i]%.",
         "battleDesc": null,
         "buffType": "",
         "params": [

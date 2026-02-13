@@ -41,9 +41,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2904,
-        2905,
-        2906
+        3027,
+        3028,
+        3029
       ],
       "enemyTag": [
         "Company"
@@ -73,9 +73,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2904,
-        2905,
-        2906
+        3027,
+        3028,
+        3029
       ],
       "enemyTag": [
         "Company"
@@ -105,9 +105,9 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
-        2904,
-        2905,
-        2906
+        3027,
+        3028,
+        3029
       ],
       "enemyTag": [
         "Company"
@@ -137,9 +137,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2904,
-        2905,
-        2906
+        3027,
+        3028,
+        3029
       ],
       "enemyTag": [
         "Company"
@@ -169,9 +169,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2904,
-        2905,
-        2906
+        3027,
+        3028,
+        3029
       ],
       "enemyTag": [
         "Company"
@@ -201,9 +201,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2904,
-        2905,
-        2906
+        3027,
+        3028,
+        3029
       ],
       "enemyTag": [
         "Company"
@@ -233,9 +233,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2904,
-        2905,
-        2906
+        3027,
+        3028,
+        3029
       ],
       "enemyTag": [
         "Company"
@@ -265,9 +265,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2904,
-        2905,
-        2906
+        3027,
+        3028,
+        3029
       ],
       "enemyTag": [
         "Company"
@@ -297,9 +297,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2904,
-        2905,
-        2906
+        3027,
+        3028,
+        3029
       ],
       "enemyTag": [
         "Company"
@@ -329,9 +329,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2904,
-        2905,
-        2906
+        3027,
+        3028,
+        3029
       ],
       "enemyTag": [
         "Company"
@@ -361,9 +361,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2904,
-        2905,
-        2906
+        3027,
+        3028,
+        3029
       ],
       "enemyTag": [
         "Company"
@@ -393,9 +393,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2904,
-        2905,
-        2906
+        3027,
+        3028,
+        3029
       ],
       "enemyTag": [
         "Company"
@@ -425,9 +425,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2904,
-        2905,
-        2906
+        3027,
+        3028,
+        3029
       ],
       "enemyTag": [
         "Company"

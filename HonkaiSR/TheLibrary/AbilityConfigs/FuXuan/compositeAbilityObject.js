@@ -1981,12 +1981,16 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Is Entity Type",
+                    "name": "Is Part Of",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectables}}"
+                    },
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Memosprite"
+                    "mustBeAlive2": true
                   },
                   "passed": [
                     {
@@ -2024,12 +2028,34 @@ const compositeAbilityObject = {
                       }
                     },
                     {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Trace Activated",
+                            "conditionList": "Liuren, the Sexagenary"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+                          }
+                        ]
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+                        }
+                      ]
                     },
                     {
                       "name": "IF",
@@ -2096,6 +2122,57 @@ const compositeAbilityObject = {
                               "constants": [],
                               "variables": [
                                 0.12
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Eidolon Activated",
+                            "eidolon": 2
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-72449608\">FuXuan_Eidolon2TeamCheck</a>",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Is Entity Type",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "type": "Memosprite",
+                            "invertCondition": true,
+                            "livingState": "Mask_AliveOnly"
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]",
+                          "valuePerStack": {
+                            "MDF_HealPercentage": {
+                              "operator": "Variables[0] (0.7) || RETURN",
+                              "displayLines": "0.7",
+                              "constants": [],
+                              "variables": [
+                                0.7
                               ]
                             }
                           }

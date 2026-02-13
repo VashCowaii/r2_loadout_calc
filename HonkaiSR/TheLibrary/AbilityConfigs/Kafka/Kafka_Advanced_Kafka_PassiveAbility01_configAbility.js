@@ -242,13 +242,30 @@ const configAbility = {
                     {
                       "name": "IF",
                       "conditions": {
-                        "name": "Compare: Target Count",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target's Attack Targets}}"
-                        },
-                        "compareType": "=",
-                        "value2": 1
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Target Count",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Attack Targets}}"
+                            },
+                            "compareType": "=",
+                            "value2": 1
+                          },
+                          {
+                            "name": "Target is Unselectable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Attack Targets}}"
+                            },
+                            "source": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "invertCondition": true
+                          }
+                        ]
                       },
                       "passed": [
                         {
@@ -269,6 +286,18 @@ const configAbility = {
                           },
                           "searchRandom": true,
                           "maxTargets": 1,
+                          "conditions": {
+                            "name": "Target is Unselectable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "source": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "invertCondition": true
+                          },
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
@@ -378,14 +407,31 @@ const configAbility = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Compare: Target Count",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target's Ability Targets}}"
-                    },
-                    "compareType": "=",
-                    "value2": 1,
-                    "livingTargets": true
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Target Count",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Targets}}"
+                        },
+                        "compareType": "=",
+                        "value2": 1,
+                        "livingTargets": true
+                      },
+                      {
+                        "name": "Target is Unselectable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Targets}}"
+                        },
+                        "source": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "invertCondition": true
+                      }
+                    ]
                   },
                   "passed": [
                     {
@@ -414,6 +460,18 @@ const configAbility = {
                       },
                       "searchRandom": true,
                       "maxTargets": 1,
+                      "conditions": {
+                        "name": "Target is Unselectable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "source": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "invertCondition": true
+                      },
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",

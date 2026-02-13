@@ -6468,14 +6468,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "setValue": {
-                        "operator": "Variables[0] (ChangePhase_MaxHPValue) || RETURN",
-                        "displayLines": "ChangePhase_MaxHPValue",
-                        "constants": [],
-                        "variables": [
-                          "ChangePhase_MaxHPValue"
-                        ]
-                      }
+                      "setPercent": 1
                     }
                   ]
                 }

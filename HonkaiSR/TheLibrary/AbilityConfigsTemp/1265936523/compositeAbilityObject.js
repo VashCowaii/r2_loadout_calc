@@ -14,7 +14,7 @@ const compositeAbilityObject = {
         0,
         0
       ],
-      "length": 4,
+      "length": 5,
       "parse": [
         {
           "name": "CharacterFunctions",
@@ -542,6 +542,147 @@ const compositeAbilityObject = {
                       }
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Is Matching Team Count",
+                    "countType": "Count4"
+                  },
+                  {
+                    "name": "Is Matching Team Count",
+                    "countType": "Count5"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team Location",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "team": "Player Team",
+                    "location": "Max"
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team Location",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "team": "Player Team",
+                    "location": "Pos3"
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team Location",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "team": "Player Team",
+                    "location": "Pos2"
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team Location",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "team": "Player Team"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__453464513\">PositionConfigByFormationIndex_Joy</a>",
+          "parse": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Name",
+                  "target": "Joy_Member"
+                },
+                "compareType": "=",
+                "value2": 1,
+                "livingTargets": true
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Name",
+                  "target": "Joy_Member"
+                },
+                "compareType": "=",
+                "value2": 2,
+                "livingTargets": true
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Matching Team Count",
+                "countType": "Count3"
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team Location",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "team": "Player Team",
+                    "location": "Max"
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team Location",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "team": "Player Team",
+                    "location": "Pos2"
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team Location",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "team": "Player Team"
+                  }
                 }
               ]
             },

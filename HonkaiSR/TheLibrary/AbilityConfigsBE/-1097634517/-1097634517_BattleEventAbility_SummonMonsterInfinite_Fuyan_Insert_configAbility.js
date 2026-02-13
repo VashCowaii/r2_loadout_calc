@@ -4,7 +4,25 @@ const configAbility = {
   "energy": null,
   "toughnessList": null,
   "parse": [
-    "Deleted bullshit",
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "In Aha-Instant"
+      },
+      "passed": [
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "AllDarkTeamDyingCharacter"
+          },
+          "dieNow": true
+        }
+      ],
+      "failed": [
+        "Deleted bullshit"
+      ]
+    },
     {
       "name": "WAIT FOR",
       "condition": {
@@ -100,6 +118,12 @@ const configAbility = {
       "variableName": null,
       "eventType": "InfiniteRefresh",
       "value": null
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "In Aha-Instant"
+      }
     }
   ],
   "references": []

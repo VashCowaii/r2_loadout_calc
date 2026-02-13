@@ -1,4 +1,4 @@
 let lastVerionHSR = {
-  "version": "3.8.0",
-  "date": "01/14/26"
+  "version": "4.0.0",
+  "date": "02/12/26"
 }

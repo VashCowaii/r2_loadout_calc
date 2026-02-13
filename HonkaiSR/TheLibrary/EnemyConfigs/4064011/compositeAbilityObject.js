@@ -1732,11 +1732,11 @@ const compositeAbilityObject = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID) || RETURN",
-                    "displayLines": "SummonID",
+                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__95) || RETURN",
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__95",
                     "constants": [],
                     "variables": [
-                      "SummonID"
+                      "ENEMIES_OBJECT_UNUSED__95"
                     ]
                   },
                   "locationType": "KeepOnEdge"
@@ -1757,11 +1757,11 @@ const compositeAbilityObject = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID) || RETURN",
-                    "displayLines": "SummonID",
+                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__95) || RETURN",
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__95",
                     "constants": [],
                     "variables": [
-                      "SummonID"
+                      "ENEMIES_OBJECT_UNUSED__95"
                     ]
                   },
                   "locationType": "KeepOnEdge"
@@ -1804,11 +1804,11 @@ const compositeAbilityObject = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID) || RETURN",
-                        "displayLines": "SummonID",
+                        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__95) || RETURN",
+                        "displayLines": "ENEMIES_OBJECT_UNUSED__95",
                         "constants": [],
                         "variables": [
-                          "SummonID"
+                          "ENEMIES_OBJECT_UNUSED__95"
                         ]
                       },
                       "locationType": "KeepOnEdge"
@@ -1829,11 +1829,11 @@ const compositeAbilityObject = {
                     {
                       "name": "Enemy Entry",
                       "enemyID": {
-                        "operator": "Variables[0] (SummonID) || RETURN",
-                        "displayLines": "SummonID",
+                        "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__95) || RETURN",
+                        "displayLines": "ENEMIES_OBJECT_UNUSED__95",
                         "constants": [],
                         "variables": [
-                          "SummonID"
+                          "ENEMIES_OBJECT_UNUSED__95"
                         ]
                       },
                       "locationType": "KeepOnEdge"
@@ -2343,12 +2343,28 @@ const compositeAbilityObject = {
           ],
           "failed": [
             {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
+              "name": "IF",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 4064013,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Ichor Memosprite: Judge of Oblivion",
+                "isBaseCompare": true,
+                "invertCondition": true
               },
-              "modifier": "<a class=\"gModGreen\" id=\"2038153082\">Enemy_W4_Serpent_01_ChangePhaseController</a>"
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2038153082\">Enemy_W4_Serpent_01_ChangePhaseController</a>"
+                }
+              ]
             },
             {
               "name": "Preload Battle Event(s)",
@@ -2780,7 +2796,7 @@ const compositeAbilityObject = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Caster}}"
+            "target": "{{Level Entity}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"623581294\">Enemy_W4_Serpent_01_ResetStageBGM</a>"
         }

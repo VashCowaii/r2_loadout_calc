@@ -1,6 +1,124 @@
 const stageTypers = "shadow"
 let mocSchedule = [
   {
+    "id": 1128,
+    "realName": "Stagnant Shadow: Shape of Soundburst",
+    "worldLevel": 5,
+    "testWorldLevel": 5,
+    "testMapID": 1128,
+    "buffData": {
+      "modifierName": "",
+      "realModifierNamne": "",
+      "name": "",
+      "desc": "",
+      "battleDesc": null,
+      "buffType": "",
+      "params": []
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Stagnant Shadow: Shape of Soundburst",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              1012285
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Rocking Rebel",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "FarmElement",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Assistant Graffiti: Demander",
+                      "id": 5012061,
+                      "image": 5012061,
+                      "rank": "MinionLv2",
+                      "attackBase": 396.804168,
+                      "defBase": 859.99998,
+                      "hpBase": 25415.67798,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Thunder",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.5,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Rocking Rebel",
+                      "id": 5013010,
+                      "image": 5013010,
+                      "rank": "Elite",
+                      "attackBase": 396.804168,
+                      "defBase": 859.99998,
+                      "hpBase": 182992.881456,
+                      "speedBase": 145.2,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 0.25,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0
+                  ]
+                ],
+                "scalarElite": 6,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1"
+                },
+                "highSTSUM": 182992.881456,
+                "aoeSUM": 233824.23741600002
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [],
+            "stageDataArray": []
+          }
+        }
+      }
+    },
+    "realDropList": [
+      "110434.png",
+      "2.png"
+    ]
+  },
+  {
     "id": 1127,
     "realName": "Stagnant Shadow: Shape of Ashes",
     "worldLevel": 5,

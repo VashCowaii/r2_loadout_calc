@@ -25969,6 +25969,403 @@ let enemyAbilityData = [
     "energyPerHit": 10
   },
   {
+    "id": 302403101,
+    "name": "Malignform Elytra",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Fire DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      2.4,
+      0.3
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403102,
+    "name": "Rapacious Appendages",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals minor Fire DMG to one designated target and adjacent targets.",
+    "tag": "Blast",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      2.4,
+      1.8,
+      0.3
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403103,
+    "name": "Encroach, Mangle, Sate",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Deals Fire DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3,
+      0.4
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403104,
+    "name": "Rend, Putrefy, Engorge",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Enters \"Gene Duplication\" state, increasing this unit's SPD. Summons \"Juvenile Sting\" and apply \"Rapid Evolution\" state to it. A target character and their summoned target can immediately take action and enter the \"Nemesis\" state, increasing their Break Effect. When targets not in the \"Nemesis\" state attack friendly units in the \"Rapid Evolution\" state, they cannot deal CRIT Hit effects.",
+    "tag": "Enhance",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.5,
+      0.5,
+      2,
+      2
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403105,
+    "name": "Primordial Tide, Swarm of Death",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Deals massive Fire DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3,
+      0.5
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403106,
+    "name": "Primal Hunger",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Increases the SPD of \"Juvenile Sting\" summoned by this unit.",
+    "tag": "Support",
+    "phases": [
+      2
+    ],
+    "params": [
+      20,
+      2
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403107,
+    "name": "Whirling Carapace",
+    "type": "Ability",
+    "trigger": "PassiveSkill01",
+    "desc": "When \"Harbinger of Death: Swarm Nightmare\" is attacked, a portion of its reduced HP is converted into \"Corrosion.\" When \"Harbinger of Death: Swarm Nightmare\" uses \"Primordial Tide, Swarm of Death,\" it will recover HP equal to the corrosion amount.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.005,
+      0.1,
+      0.15
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403108,
+    "name": "Symbiosis, Swarm, Gnaw",
+    "type": "Ability",
+    "trigger": "PassiveSkill02",
+    "desc": "After entering the \"Gene Duplication\" state, the field enters Combustion. \"Gene Duplication\" is dispelled when all summoned \"Juvenile Sting\" are eliminated. When \"Gene Duplication\" is dispelled, \"Harbinger of Death: Swarm Nightmare\" receives increased DMG, dispels the \"Corrosion\" state, and all ally Skill Points are restored.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403109,
+    "name": "Universal Blight, Howl of the Life Eater",
+    "type": "Ability",
+    "trigger": "PassiveSkill03",
+    "desc": "After entering the \"Gene Duplication\" state, whenever this unit uses an attack, it additionally deals minor Fire DMG based on the number of \"Juvenile Sting\" remaining. When any \"Juvenile Sting\" uses an attack, \"Harbinger of Death: Swarm Nightmare\" gains a stack of \"Mortal Instinct.\" When \"Mortal Instinct\" reaches a certain number of stacks, \"Harbinger of Death: Swarm Nightmare\" will immediately take action, uses \"Primordial Tide, Swarm of Death\" and clear all \"Mortal Instinct\" stacks. \"Juvenile Sting\" will prioritize attacking ally characters in the \"Nemesis\" state.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      1,
+      5,
+      0.75,
+      0.25
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403110,
+    "type": "Ability",
+    "trigger": "Skill01Pre",
+    "tag": "Single Target",
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403201,
+    "name": "Malignform Elytra",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Fire DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      2.4,
+      0.3
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403202,
+    "name": "Rapacious Appendages",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals minor Fire DMG to one designated target and adjacent targets.",
+    "tag": "Blast",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      2.4,
+      1.8,
+      0.3
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403203,
+    "name": "Encroach, Mangle, Sate",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Deals Fire DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      3,
+      0.4
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403204,
+    "name": "Rend, Putrefy, Engorge",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Enters \"Gene Duplication\" state, increasing this unit's SPD. Summons \"Juvenile Sting\" and apply \"Rapid Evolution\" state to it. A target character and their summoned target can immediately take action and enter the \"Nemesis\" state, increasing their Break Effect. When targets not in the \"Nemesis\" state attack friendly units in the \"Rapid Evolution\" state, they cannot deal CRIT Hit effects.",
+    "tag": "Enhance",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.5,
+      0.5,
+      2,
+      2
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403205,
+    "name": "Primordial Tide, Swarm of Death",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Deals massive Fire DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      3,
+      0.5
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403206,
+    "name": "Primal Hunger",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Increases the SPD of \"Juvenile Sting\" summoned by this unit.",
+    "tag": "Support",
+    "phases": [
+      2,
+      3
+    ],
+    "params": [
+      20,
+      2,
+      50
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403207,
+    "name": "Whirling Carapace",
+    "type": "Ability",
+    "trigger": "PassiveSkill01",
+    "desc": "When \"Harbinger of Death: Swarm Nightmare\" is attacked, a portion of its reduced HP is converted into \"Corrosion.\" When \"Harbinger of Death: Swarm Nightmare\" uses \"Primordial Tide, Swarm of Death,\" it will recover HP equal to the corrosion amount.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.005,
+      0.1,
+      0.15
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403208,
+    "name": "Symbiosis, Swarm, Gnaw",
+    "type": "Ability",
+    "trigger": "PassiveSkill02",
+    "desc": "After entering the \"Gene Duplication\" state, the field enters Combustion. \"Gene Duplication\" is dispelled when all summoned \"Juvenile Sting\" are eliminated. When \"Gene Duplication\" is dispelled, \"Harbinger of Death: Swarm Nightmare\" receives increased DMG, dispels the \"Corrosion\" state, and all ally Skill Points are restored.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403209,
+    "name": "Universal Blight, Howl of the Life Eater",
+    "type": "Ability",
+    "trigger": "PassiveSkill03",
+    "desc": "After entering the \"Gene Duplication\" state, whenever this unit uses an attack, it additionally deals minor Fire DMG based on the number of \"Juvenile Sting\" remaining. When any \"Juvenile Sting\" uses an attack, \"Harbinger of Death: Swarm Nightmare\" gains a stack of \"Mortal Instinct.\" When \"Mortal Instinct\" reaches a certain number of stacks, \"Harbinger of Death: Swarm Nightmare\" will immediately take action, uses \"Primordial Tide, Swarm of Death\" and clear all \"Mortal Instinct\" stacks. \"Juvenile Sting\" will prioritize attacking ally characters in the \"Nemesis\" state.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      1,
+      5,
+      0.75,
+      0.25,
+      3
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 302403210,
+    "type": "Ability",
+    "trigger": "Skill01Pre",
+    "tag": "Single Target",
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
     "id": 302501001,
     "name": "Grazioso",
     "type": "Ability",
@@ -28107,7 +28504,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      249
+      254
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28126,7 +28523,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      249
+      254
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28298,7 +28695,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      250
+      255
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28332,6 +28729,59 @@ let enemyAbilityData = [
     "tag": "Talent",
     "phases": [
       1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401206101,
+    "name": "Victor Upon Billions of Bones",
+    "type": "Talent",
+    "trigger": "SkillP01",
+    "desc": "\"The Conquered\" cannot take action. When summoned, it gains \"War Armor\" or \"Centirefined War Armor\" based on the phase of \"The Ravaged Unconquerable.\"",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      5,
+      0,
+      0.3,
+      1,
+      0.5,
+      0.015,
+      60
+    ],
+    "extraEffects": [
+      250,
+      251
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401206102,
+    "name": "A Home After Countless Scars",
+    "type": "Talent",
+    "trigger": "SkillP02",
+    "desc": "When \"The Conquered\" receives a killing blow, if \"War Armor\" or \"Centirefined War Armor\" is not yet destroyed, directly gains corresponding Skill Points and \"Glory\" rewards. When receiving a killing blow, reduces the Toughness and HP of \"The Ravaged Unconquerable\".",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      15,
+      1,
+      0,
+      0.05,
+      0.08,
+      0.25,
+      180
+    ],
+    "extraEffects": [
+      250,
+      251,
+      248
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -29367,7 +29817,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      249
+      254
     ],
     "delay": 1,
     "alert": true,
@@ -29415,7 +29865,7 @@ let enemyAbilityData = [
       6
     ],
     "extraEffects": [
-      249
+      254
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -29602,7 +30052,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      249
+      254
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -30626,6 +31076,380 @@ let enemyAbilityData = [
     ],
     "delay": 1,
     "atkType": "Basic ATK"
+  },
+  {
+    "id": 401401301,
+    "name": "Lightning Spear of the Firmament",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Imaginary DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      2.4
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 401401302,
+    "name": "Worldsplitting Spine",
+    "type": "Ability",
+    "trigger": "Skill11",
+    "desc": "Deals minor Imaginary DMG to a single target and adjacent targets and delays their action.",
+    "tag": "Blast",
+    "phases": [
+      2
+    ],
+    "params": [
+      2.2,
+      1.8,
+      0.1
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 401401303,
+    "name": "Hewing of the River of Souls",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Imaginary DMG to a single target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3.6
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 401401304,
+    "name": "Survivors Unto Dead Waters",
+    "type": "Ability",
+    "trigger": "Skill12",
+    "desc": "Deals Imaginary DMG to a single target and delays their action.",
+    "tag": "Single Target",
+    "phases": [
+      2
+    ],
+    "params": [
+      4,
+      0.15
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 401401305,
+    "name": "Unceasing Flames of War",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Deals Imaginary DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      2.8
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 401401306,
+    "name": "Pyre of High Graves",
+    "type": "Ability",
+    "trigger": "Skill13",
+    "desc": "Deals Imaginary DMG to all ally targets and delays their actions.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      3.2,
+      0.1
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 401401307,
+    "name": "Sky-Piercing Lance",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals successive minor Imaginary DMG to random targets.",
+    "tag": "Bounce",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      1.2,
+      5
+    ],
+    "delay": 1.5,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 401401308,
+    "name": "Ruination of Night and Light",
+    "type": "Ability",
+    "trigger": "Skill14",
+    "desc": "Repeatedly deals minor Imaginary DMG to a random ally and delays the attacked target's action.",
+    "tag": "Bounce",
+    "phases": [
+      2
+    ],
+    "params": [
+      1.2,
+      10,
+      0.1
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 401401309,
+    "name": "Calamity Eternal",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Deals Imaginary DMG to all targets. In Phase 1, increases this unit's \"War Armor\" stack limit and uses \"All Realms Leveled, All Legions to Dust\" in the next action. In Phase 2, uses \"Fury Falls, and All Bows to Strife\" together with \"The Giver, Master of Legions, Lance of Fury\" in the next action.",
+    "tag": "Enhance",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.8,
+      25,
+      0.5,
+      0.5
+    ],
+    "extraEffects": [
+      250
+    ],
+    "delay": 1.25,
+    "alert": true,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 401401310,
+    "name": "All Realms Leveled, All Legions to Dust",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Deals massive Imaginary DMG to all targets, with the DMG distributed evenly among targets. This attack reduces all targets' \"Glory\" to 1 stack.",
+    "tag": "Distribute",
+    "phases": [
+      1
+    ],
+    "params": [
+      22
+    ],
+    "extraEffects": [
+      185,
+      248
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 401401311,
+    "name": "The Solitary Throne",
+    "type": "Talent",
+    "trigger": "SkillP01",
+    "desc": "\"The Ravaged Unconquerable\" possesses a number of \"War Armor\" stacks, which decreases DMG taken. Loses stacks of \"War Armor\" based on the attacker's \"Glory\" stacks when attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing their Toughness, delaying their action, and restoring Skill Points to targets. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      12,
+      0.1,
+      0.03,
+      1,
+      0.25,
+      0.0029999998,
+      240
+    ],
+    "extraEffects": [
+      250,
+      248
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401401312,
+    "name": "The Last Monarch",
+    "type": "Talent",
+    "trigger": "SkillP02",
+    "desc": "\"The Ravaged Unconquerable\"'s \"War Armor\" is enhanced into \"Centirefined War Armor\", reducing damage taken by this unit. When \"Centirefined War Armor\" stacks are greater than 0, \"The Ravaged Unconquerable\" gains an additional Toughness Protection state. After being attacked, this unit's \"Centirefined War Armor\" stacks are reduced based on the attacker's \"Glory\" stacks. When reduced to 0 stacks, \"Centirefined War Armor\" is destroyed, dealing massive Imaginary DMG to this unit, reducing this unit's Toughness significantly, delaying its action, restoring its target's Skill Points, and granting the attacker certain stacks of \"Glory\". After \"Centirefined War Armor\" is destroyed, this unit takes additional minor Imaginary DMG when attacked.",
+    "tag": "Talent",
+    "phases": [
+      2
+    ],
+    "params": [
+      49,
+      1,
+      1,
+      0.5,
+      960
+    ],
+    "extraEffects": [
+      250,
+      251,
+      248
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401401313,
+    "name": "Sever the Path Homeward",
+    "type": "Talent",
+    "trigger": "SkillP03",
+    "desc": "At the start of combat, applies \"Glory\" to all targets. Each stack of \"Glory\" increases the target's CRIT DMG. Each Skill Point consumed adds 1 stack of \"Glory\". When the \"The Ravaged Unconquerable\" uses \"All Realms Leveled, All Legions to Dust\" or recovers from Weakness Break state, all its targets' \"Glory\" stacks are reduced to 1. Its targets' Skill Points can exceed the limit.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.02
+    ],
+    "extraEffects": [
+      248
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401401314,
+    "name": "Death Brings Glory",
+    "type": "Talent",
+    "trigger": "SkillP04",
+    "desc": "When entering Phase 2, all targets' \"Glory\" is reduced to 1 stack. Each stack of \"Glory\" increases the target's CRIT DMG, and 1 stack of \"Glory\" can be gained for each Skill Point consumed. The targets' Skill Points can exceed the limit.",
+    "tag": "Talent",
+    "phases": [
+      2
+    ],
+    "extraEffects": [
+      248
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401401315,
+    "name": "Will of Strife",
+    "type": "Talent",
+    "trigger": "SkillP05",
+    "desc": "\"The Ravaged Unconquerable\" can take 4 actions per turn. When it acts, for each undestroyed \"Centirefined War Armor\" belonging to a \"The Conquered\" on the field, \"The Ravaged Unconquerable\" will use the Centirefined attack ability.",
+    "tag": "Talent",
+    "phases": [
+      2
+    ],
+    "extraEffects": [
+      251,
+      249
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401401316,
+    "type": "Talent",
+    "trigger": "SkillEX01",
+    "tag": "Talent",
+    "params": [
+      0.5,
+      1,
+      1.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401401317,
+    "type": "Talent",
+    "trigger": "SkillEX02",
+    "tag": "Talent",
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401401318,
+    "type": "Talent",
+    "trigger": "SkillEX03",
+    "tag": "Talent",
+    "params": [
+      99
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401401319,
+    "type": "Talent",
+    "trigger": "SkillEX04",
+    "tag": "Talent",
+    "params": [
+      0.1,
+      0.05
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401401320,
+    "type": "Talent",
+    "trigger": "SkillEX05",
+    "tag": "Talent",
+    "params": [
+      40,
+      20,
+      4,
+      0.1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401401321,
+    "type": "Ability",
+    "trigger": "Skill00",
+    "tag": "Others",
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
   },
   {
     "id": 401401401,
@@ -31662,6 +32486,75 @@ let enemyAbilityData = [
     "type": "Ability",
     "trigger": "Skill04",
     "desc": "Absorbs remaining \"Conquer or Be Conquered\" to enhance \"Savage God, Mad King, Incarnation of Strife.\" At the same time, adds Toughness Protection and dispels Crowd Control debuffs and Weakness Break debuffs on \"Savage God, Mad King, Incarnation of Strife.\"",
+    "tag": "Enhance",
+    "phases": [
+      2
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401402101,
+    "name": "Submit or Die",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Summons 4 \"The Conquered.\"",
+    "tag": "Impair",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      9,
+      0,
+      0.35,
+      1,
+      0.5,
+      0.03,
+      120,
+      15,
+      1,
+      1,
+      0.5,
+      720,
+      0.02,
+      0.02,
+      120
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 401402103,
+    "name": "Fury Falls, and All Bows to Strife",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Controlling \"The Ravaged Unconquerable\" deals massive Imaginary DMG to all its targets. For each unbroken \"Centirefined War Armor\" of a \"The Conquered\" on the field, this ability's DMG multiplier increases.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      6,
+      1
+    ],
+    "extraEffects": [
+      251
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 20
+  },
+  {
+    "id": 401402104,
+    "name": "The Fallen Feeds My Might",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Absorbs the remaining \"The Conquered\" and dispels Crowd Control debuffs on \"The Ravaged Unconquerable.\"",
     "tag": "Enhance",
     "phases": [
       2
@@ -33142,7 +34035,7 @@ let enemyAbilityData = [
     "extraEffects": [
       242,
       241,
-      245
+      246
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -34499,7 +35392,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      250
+      255
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -34710,7 +35603,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      250
+      255
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -34842,7 +35735,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      250
+      255
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -35185,7 +36078,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      250
+      255
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -35933,6 +36826,80 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 403202801,
+    "name": "Mutual Sacrifice: Demise's Storm",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Physical DMG to one designated target and units adjacent to the target.",
+    "tag": "Blast",
+    "params": [
+      2,
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 403202802,
+    "name": "Mutual Sacrifice: Fading Fate",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals minor Physical DMG to all targets. A portion of the hit target's reduced HP is converted to \"Corrosion.\"",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      2,
+      0.6,
+      0.3,
+      0.2
+    ],
+    "extraEffects": [
+      209
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 403202803,
+    "name": "Prayers For Me",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "Resists Crowd Control debuffs. When \"Black Cloak Demon King\" uses \"Demise's Storm\" or \"Fading Fate\" again, if this unit was summoned by the current attack and is in a \"Mutual Sacrifice\" state, then \"Black Cloak Demon King\" also attacks. It is absorbed after this, restoring HP that was converted to \"Entangled By Agony\" and gaining \"Calamity Power.\"",
+    "tag": "Talent",
+    "params": [
+      1,
+      0.08
+    ],
+    "extraEffects": [
+      187,
+      217
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 403202804,
+    "name": "Libations For Me",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "Receives the killing blow when \"Enfettered\" is active. If \"Black Cloak Demon King\"'s \"Calamity Power\" stacks are not 0, this unit is immediately resummoned and enters \"Enfettered\" state, but will cause \"Black Cloak Demon King\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP. When \"Black Cloak Demon King\" uses \"Cry Not for the Discarded,\" it is absorbed, and restores HP that was converted to \"Entangled By Agony\".",
+    "tag": "Talent",
+    "params": [
+      1,
+      0.05
+    ],
+    "extraEffects": [
+      187,
+      217
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
     "id": 403203001,
     "name": "Wrathful Blazing Axe",
     "type": "Ability",
@@ -36476,7 +37443,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      246
+      247
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36575,7 +37542,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      246
+      247
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36699,7 +37666,7 @@ let enemyAbilityData = [
       0.15
     ],
     "extraEffects": [
-      246
+      247
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36818,7 +37785,7 @@ let enemyAbilityData = [
       0.15
     ],
     "extraEffects": [
-      246
+      247
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -39341,7 +40308,7 @@ let enemyAbilityData = [
     "params": [
       8,
       0.05,
-      1.5
+      1.25
     ],
     "extraEffects": [
       187
@@ -39400,7 +40367,7 @@ let enemyAbilityData = [
     ],
     "params": [
       1,
-      0.8,
+      0.6,
       3
     ],
     "extraEffects": [
@@ -39509,12 +40476,12 @@ let enemyAbilityData = [
     "trigger": "SkillP01",
     "tag": "Talent",
     "params": [
-      0.25,
-      0.25,
-      95,
-      0.1,
+      0.15,
+      0.4,
+      150,
+      0.15,
       0.5,
-      225
+      300
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -40316,7 +41283,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      246
+      247
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -40362,7 +41329,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      246
+      247
     ],
     "delay": 1,
     "alert": true,
@@ -40403,7 +41370,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      246
+      247
     ],
     "delay": 1,
     "alert": true,
@@ -40564,7 +41531,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      246
+      247
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -40607,7 +41574,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      246
+      247
     ],
     "delay": 1,
     "alert": true,
@@ -41642,7 +42609,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      251
+      256
     ],
     "delay": 1,
     "element": "Ice",
@@ -42038,7 +43005,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      251
+      256
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -42272,7 +43239,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      251
+      256
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -42483,7 +43450,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      244
+      245
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -43180,6 +44147,1417 @@ let enemyAbilityData = [
     ],
     "extraEffects": [
       209
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401301,
+    "name": "Hemotort Teethgrind",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals massive Imaginary DMG to one designated target. If the target has Shield, reduce this unit's Toughness instead. This Toughness Reduction effect will not reduce Toughness below 1.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      4.5,
+      180,
+      0
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 406401302,
+    "name": "Execution in Place",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Summons \"Ichor Memosprite: Pheasant.\" For every summon eliminated, reduces this unit's Toughness.",
+    "tag": "Summon",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.1,
+      2,
+      180,
+      0.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401303,
+    "name": "Hemotort Glower",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Locks on to one designated character, increases this unit's SPD, and uses \"Hemotort Teethgrind\" and \"Hemotort Saw\" on the target within several turns. Take 1 extra action after using this ability.",
+    "tag": "Lock On",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5,
+      0,
+      3
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401304,
+    "name": "Hemotort Saw",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals massive Imaginary DMG to one designated target and converts a portion of the hit target's reduced HP into \"Corrosion.\" If the target has Shield, reduce this unit's Toughness instead. This Toughness Reduction effect will not reduce Toughness below 1.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      6,
+      180
+    ],
+    "extraEffects": [
+      209
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 406401305,
+    "name": "Hemotort Clamps",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Deals massive Imaginary DMG to all targets and converts a portion of the targets' reduced HP to \"Corrosion.\"",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      4,
+      0.5,
+      0.2,
+      0.5
+    ],
+    "extraEffects": [
+      209
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 406401306,
+    "name": "Name the Culprit",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Enters the Charging state. In the next action, uses \"Hemotort Decapitation.\" Selects 1 target to receive the highest DMG of \"Hemotort Decapitation\" and \"Hemotort Corruption.\"",
+    "tag": "Charging",
+    "params": [
+      1
+    ],
+    "extraEffects": [
+      239
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401307,
+    "name": "Hemotort Decapitation",
+    "type": "Ability",
+    "trigger": "Skill07",
+    "desc": "Deals Imaginary Type DMG to target characters not selected with \"Name the Culprit.\" Deals massive Imaginary Type DMG to target characters selected with \"Name the Culprit,\" and applies \"Hemotort Corruption\" based on the amount of DMG taken (not offset by Shield) to the selected characters.",
+    "tag": "AoE ATK",
+    "params": [
+      14,
+      4.5,
+      0.5
+    ],
+    "extraEffects": [
+      239
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 406401308,
+    "name": "Expedite Verdict",
+    "type": "Ability",
+    "trigger": "PassiveSkillInitiate",
+    "desc": "Reduces DMG received when not Weakness Broken. When this unit is Weakness Broken, its action will be further delayed, and deals massive Imaginary DMG to this unit. While Weakness Broken, this unit receives increased DMG.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5,
+      2,
+      0.5,
+      0.2
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501201001,
+    "name": "Crackle Shot",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501201002,
+    "name": "Happiness Charm",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Randomly triggers one of the following effects: Increases this unit's ATK, advances all friendly targets' actions, or has a high chance to inflict \"Strong Reverberation\" on all friendly units other than this unit.",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5,
+      0.5,
+      0.25,
+      0.33,
+      0.33,
+      0.34
+    ],
+    "delay": 0.5,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501201003,
+    "name": "Magic of Smiles",
+    "type": "Talent",
+    "trigger": "SkillP01",
+    "desc": "When this unit is attacked for the first time, the target team gains Punchline, and this unit uses \"Happiness Charm.\"",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      3
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501202001,
+    "name": "Arrest",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.5
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501202002,
+    "name": "Guard",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Applies \"Fealty\" to one designated friendly unit. When a target with \"Fealty\" is attacked, the Security Doggo will transfer the DMG from this attack to itself and grants the target team Punchline.",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "params": [
+      3
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501203001,
+    "name": "Read Or Die!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.5
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501203002,
+    "name": "Curse of Knowledge",
+    "type": "Talent",
+    "trigger": "SkillP01",
+    "desc": "At the start of combat, while in the \"Book-Smart\" state, DMG dealt increases and DMG taken decreases. After receiving Elation DMG or when the target team gains Punchline to a certain amount, the \"Book-Smart\" state is dispelled.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5,
+      0.5,
+      20
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501203101,
+    "name": "Read Or Die!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.5
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501203102,
+    "name": "Curse of Knowledge",
+    "type": "Talent",
+    "trigger": "SkillP01",
+    "desc": "At the start of combat, while in the \"Book-Smart\" state, DMG dealt increases and DMG taken decreases. After receiving Elation DMG or when the target team gains Punchline to a certain amount, the \"Book-Smart\" state is dispelled.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.3,
+      0.3,
+      10
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501204001,
+    "name": "Go On, Delay More!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Ice DMG to one designated target, with a high chance to increase the DMG taken by the attacked target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2,
+      1,
+      0.3,
+      2
+    ],
+    "delay": 1,
+    "element": "Ice",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501204002,
+    "name": "Creative Work in Progress...",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "High Ice RES, low RES to Weakness Types.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501204101,
+    "name": "Go On, Delay More!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Ice DMG to one designated target, with a high chance to increase the DMG taken by the attacked target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2,
+      1,
+      0.3,
+      2
+    ],
+    "delay": 1,
+    "element": "Ice",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501205001,
+    "name": "Quick, Double Time!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Wind DMG to one designated target, with a high chance to inflict Wind Shear on the target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2,
+      1,
+      2,
+      0.5,
+      5
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501205002,
+    "name": "Deaf to Idle Chatter",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "High Wind RES, low RES to Weakness Types.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501205101,
+    "name": "Quick, Double Time!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Wind DMG to one designated target, with a high chance to inflict Wind Shear on the target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2,
+      1,
+      2,
+      0.5,
+      5
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501206001,
+    "name": "Move It, Get to Work!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Lightning DMG to one designated target, with a high chance to Shock the target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2,
+      1,
+      2,
+      0.7
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501206002,
+    "name": "Sloth Antibody",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "High Lightning RES, low RES to Weakness Types.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501206101,
+    "name": "Move It, Get to Work!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Lightning DMG to one designated target, with a high chance to Shock the target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2,
+      1,
+      2,
+      0.7
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501207001,
+    "name": "Follower Growth",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "If \"Ally Popularity\" increases, grants \"Ally Gratuity\" to ally targets on the sub-field.",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "extraEffects": [
+      267
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501208001,
+    "name": "Bleeding Followers",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "If \"Enemy Popularity\" decreases, enemy targets on the sub-field lose their \"Enemy Gratuity.\"",
+    "tag": "Impair",
+    "phases": [
+      1
+    ],
+    "extraEffects": [
+      268
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501211001,
+    "name": "Capture",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Imaginary DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.8
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501211002,
+    "name": "Ugly Close-Up",
+    "type": "Talent",
+    "trigger": "PassiveSkillInitiate",
+    "desc": "When taking a killing blow, snaps a photo and receives a rating based on the DMG dealt by the killing blow that rewards Elation. Additionally, grants the target team Punchlines.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      1,
+      0.5,
+      10,
+      5,
+      3,
+      0.5,
+      0.2,
+      0.1,
+      2
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501301001,
+    "name": "Sweep the Left!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Starting from the leftmost target, uses a sweeping attack on 3 consecutive targets, dealing minor Imaginary DMG.",
+    "tag": "Sweep",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.8
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501301002,
+    "name": "Sweep the Right!",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Starting from the rightmost target, uses a sweeping attack on 3 consecutive targets, dealing minor Imaginary DMG.",
+    "tag": "Sweep",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.8
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501301003,
+    "name": "Performance Rehearsal",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters Charging state. On its next action, uses \"Time to Rock!\" When Aha Instant triggers, immediately dispels the Charging state, grants the target team Punchline, and increases DMG taken by this unit.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "params": [
+      6,
+      10,
+      0.4,
+      2
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501301004,
+    "name": "Time to Rock!",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals massive Imaginary DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      5
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 20
+  },
+  {
+    "id": 501301005,
+    "name": "Get Hyped!",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "If this unit is not in \"Frenzied Rendition\" state, increases SPD of friendly units other than this unit. If this unit is in the \"Frenzied Rendition\" state, deals Imaginary DMG to friendly units other than this unit, with a chance to inflict the \"Revelry\" state to them, and grants the target team Punchline.",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5,
+      0.5,
+      2,
+      1,
+      1,
+      0.1,
+      120,
+      10
+    ],
+    "extraEffects": [
+      265,
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501301006,
+    "name": "Music Madness",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "When Aha Instant is activated, this unit gains the \"Frenzied Rendition\" state, making the effects of \"Get Hyped!\" more Elated.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501301101,
+    "name": "Sweep the Left!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Starting from the leftmost target, uses a sweeping attack on 3 consecutive targets, dealing minor Imaginary DMG.",
+    "tag": "Sweep",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.8
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501301102,
+    "name": "Sweep the Right!",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Starting from the rightmost target, uses a sweeping attack on 3 consecutive targets, dealing minor Imaginary DMG.",
+    "tag": "Sweep",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.8
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501301103,
+    "name": "Performance Rehearsal",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters Charging state. On its next action, uses \"Time to Rock!\" When Aha Instant triggers, immediately dispels the Charging state, grants the target team Punchline, and increases DMG taken by this unit.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "params": [
+      6,
+      5,
+      0.4,
+      2
+    ],
+    "extraEffects": [
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501301104,
+    "name": "Time to Rock!",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals massive Imaginary DMG to all targets.",
+    "tag": "Distribute",
+    "phases": [
+      1
+    ],
+    "params": [
+      5
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 20
+  },
+  {
+    "id": 501301105,
+    "name": "Get Hyped!",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "If this unit is not in \"Frenzied Rendition\" state, increases SPD of friendly units other than this unit. If this unit is in the \"Frenzied Rendition\" state, deals Imaginary DMG to friendly units other than this unit, with a chance to inflict the \"Revelry\" state to them, and grants the target team Punchline.",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5,
+      0.5,
+      2,
+      1,
+      1,
+      0.1,
+      120,
+      3
+    ],
+    "extraEffects": [
+      265,
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501301106,
+    "name": "Music Madness",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "When Aha Instant is activated, this unit gains the \"Frenzied Rendition\" state, making the effects of \"Get Hyped!\" more Elated.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501303001,
+    "name": "The Stroke",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501303002,
+    "name": "Sweeping Hues",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Deals Physical DMG to one designated target and consumes 1 \"Paint\" to deal Additional DMG of the corresponding Type.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2
+    ],
+    "extraEffects": [
+      263
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501303003,
+    "name": "Dancing Splendor",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals Physical DMG to all targets and consumes 1 \"Paint\" to deal Additional DMG of the corresponding Type.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.5
+    ],
+    "extraEffects": [
+      263
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501303004,
+    "name": "Palette Meltdown",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Deals Physical DMG to all targets and consumes all remaining \"Paint\" to deal Additional DMG of the corresponding Type.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      2
+    ],
+    "extraEffects": [
+      263
+    ],
+    "delay": 1,
+    "alert": true,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501303005,
+    "name": "Hue Overflow",
+    "type": "Talent",
+    "trigger": "SkillP01",
+    "desc": "After being attacked by ally targets while in the \"Colorless\" state, gains 1 point of \"Paint\" based on the attacker's Type. If Elation DMG is received during the attack, gains additional \"Paint\" points.\\nWhen \"Paint\" reaches 6 points, enters the \"Color\" state.\\nWhile in the \"Colorless\" state, Toughness will not drop below 1 point.\\nIncreases All-Type RES, this effect is removed when Weakness is Broken and is regained when recovering from Weakness Break.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.4,
+      0.6,
+      1,
+      0.03,
+      0.5,
+      1,
+      2,
+      5
+    ],
+    "extraEffects": [
+      261,
+      262,
+      263
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501303006,
+    "name": "Chromatic Threshold",
+    "type": "Talent",
+    "trigger": "SkillP02",
+    "desc": "When consuming \"Paint\" to deal Additional DMG to a target, if the target's Type differs from the Additional DMG Type, this Additional DMG is boosted.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "extraEffects": [
+      263
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501303007,
+    "name": "The Art of Color",
+    "type": "Talent",
+    "trigger": "SkillP03",
+    "desc": "Upon entering the \"Color\" state, grants targets a set number of Punchline points based on the highest amount of a single type of \"Paint\". Then, according to the Type of the already obtained \"Paint\", gains the corresponding Type Weakness, and reduces corresponding Type RES.\\nAt the end of the turn while in the \"Color\" state, if all \"Paint\" has been consumed, enters the \"Colorless\" state.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "extraEffects": [
+      261,
+      262,
+      263,
+      259
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401001,
+    "name": "Net Battle!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401002,
+    "name": "Bring the Beat In!",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401003,
+    "name": "Get On the Mic!",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Initiates Live Showdown and selects one target character to fight in sub-field while other characters remain in the prime-field providing support. During Live Showdown, Elation Skills can only target prime-field enemies. A Live Showdown countdown appears in the Action Order.\\nThe Live Showdown will be dispelled when any of these conditions are met: countdown ends, the sub-field target character is downed, all sub-field friendly units are defeated, or when there are no sub-field target characters left available to battle.",
+    "tag": "Impair",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.6,
+      0,
+      4,
+      0.3,
+      0.6,
+      0.3
+    ],
+    "extraEffects": [
+      266
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401004,
+    "name": "Stream Promo",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Apply the \"Flooding Viewers\" state to sub-field friendly units, advancing their actions and increasing their CRIT Rate.",
+    "tag": "Others",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.25,
+      0.25,
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401006,
+    "name": "Commence Chat Bombing!",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "If all sub-field friendly units are defeated when Live Showdown is dispelled, increases the DMG taken by all friendly units, delays their actions, recovers Skill Points, and enables Aha to immediately gain 1 extra turn where a fixed amount of Punchline is taken into account. This extra turn does not consume Punchline. If not all sub-field friendly units are defeated when Live Showdown is dispelled, then deals massive Quantum DMG to target characters going into the sub-field, and inflicts them with \"Entanglement.\"",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1,
+      2,
+      6,
+      1,
+      20,
+      6,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "extraEffects": [
+      266,
+      259,
+      258,
+      0
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401007,
+    "name": "Commence Chat Bombing!",
+    "type": "Ability",
+    "trigger": "Skill062",
+    "desc": "If all sub-field friendly units have been defeated when Live Showdown is dispelled, increases DMG taken by all friendly units, delays their actions, restores Skill Points, and grants Aha 1 extra turn where a fixed amount of Punchline is taken into account. This turn does not consume Punchline.",
+    "tag": "Single Target",
+    "phases": [
+      2
+    ],
+    "extraEffects": [
+      266,
+      259,
+      258,
+      0
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401008,
+    "name": "Bullet Comments Ready!",
+    "type": "Ability",
+    "trigger": "Skill07",
+    "desc": "When Live Showdown is dispelled, if the sub-field friendly units are still not defeated, it will deal Quantum DMG to all targets and has a chance to inflict random Bullet Comments penalties. The higher the remaining HP percentage of the sub-field friendly units, the higher the DMG dealt and the higher the probability of penalties.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      12,
+      2,
+      0.1,
+      2,
+      1.2,
+      1,
+      0.5,
+      0.5
+    ],
+    "extraEffects": [
+      266,
+      269
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401009,
+    "name": "Friendship Level Adjustment",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "After Live Showdown is activated, attacking \"Output Port 1\" will increase \"Ally Popularity,\" while attacking \"Output Port 2\" will decrease \"Enemy Popularity.\" When \"Ally Popularity\" increases, \"Output Port 1\" action advances, and when \"Enemy Popularity\" decreases, \"Output Port 2\" action advances.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      4,
+      0.2,
+      0.4
+    ],
+    "extraEffects": [
+      266
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401010,
+    "name": "Fan Frenzy",
+    "type": "Talent",
+    "trigger": "PassiveSkill02",
+    "desc": "After Live Showdown is activated, friendly targets on the prime-field receive reduced DMG and become immune to Crowd Control debuffs. When Live Showdown is dispelled, if all friendly targets on the sub-field are defeated, this effect will be removed. Otherwise, based on the remaining HP percentage of sub-field friendly targets, a portion of the DMG Reduction effect will be retained until the next Live Showdown is activated. If this unit's HP drops to a certain percentage without having activated Live Showdown, this unit's action advances.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.75
+    ],
+    "extraEffects": [
+      266
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401101,
+    "name": "Net Battle!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.5
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401102,
+    "name": "Bring the Beat In!",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401201,
+    "name": "Net Battle!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401202,
+    "name": "Bring the Beat In!",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401203,
+    "name": "Get On the Mic!",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Initiates Live Showdown and selects one target character to fight in sub-field while other characters remain in the prime-field providing support. During Live Showdown, Elation Skills can only target prime-field enemies. A Live Showdown countdown appears in the Action Order.\\nThe Live Showdown will be dispelled when any of these conditions are met: countdown ends, the sub-field target character is downed, all sub-field friendly units are defeated, or when there are no sub-field target characters left available to battle.",
+    "tag": "Impair",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.6,
+      0,
+      4,
+      0.3,
+      0.6,
+      0.3
+    ],
+    "extraEffects": [
+      266
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401204,
+    "name": "Stream Promo",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Apply the \"Flooding Viewers\" state to sub-field friendly units, advancing their actions and increasing their CRIT Rate.",
+    "tag": "Others",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.25,
+      0.25,
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401206,
+    "name": "Commence Chat Bombing!",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "If all sub-field friendly units are defeated when Live Showdown is dispelled, increases the DMG taken by all friendly units, delays their actions, recovers Skill Points, and enables Aha to immediately gain 1 extra turn where a fixed amount of Punchline is taken into account. This extra turn does not consume Punchline. If not all sub-field friendly units are defeated when Live Showdown is dispelled, then deals massive Quantum DMG to target characters going into the sub-field, and inflicts them with \"Entanglement.\"",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1,
+      2,
+      6,
+      1,
+      20,
+      6,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "extraEffects": [
+      266,
+      259,
+      258,
+      0
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401207,
+    "name": "Commence Chat Bombing!",
+    "type": "Ability",
+    "trigger": "Skill062",
+    "desc": "If all sub-field friendly units have been defeated when Live Showdown is dispelled, increases DMG taken by all friendly units, delays their actions, restores Skill Points, and grants Aha 1 extra turn where a fixed amount of Punchline is taken into account. This turn does not consume Punchline.",
+    "tag": "Single Target",
+    "phases": [
+      2,
+      3
+    ],
+    "extraEffects": [
+      266,
+      259,
+      258,
+      0
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401208,
+    "name": "Bullet Comments Ready!",
+    "type": "Ability",
+    "trigger": "Skill07",
+    "desc": "When Live Showdown is dispelled, if the sub-field friendly units are still not defeated, it will deal Quantum DMG to all targets and has a chance to inflict random Bullet Comments penalties. The higher the remaining HP percentage of the sub-field friendly units, the higher the DMG dealt and the higher the probability of penalties.",
+    "tag": "AoE ATK",
+    "phases": [
+      2,
+      3
+    ],
+    "params": [
+      12,
+      2,
+      0.1,
+      2,
+      1.2,
+      1,
+      0.5,
+      0.5
+    ],
+    "extraEffects": [
+      266,
+      269
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501401209,
+    "name": "Friendship Level Adjustment",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "After Live Showdown is activated, attacking \"Output Port 1\" will increase \"Ally Popularity,\" while attacking \"Output Port 2\" will decrease \"Enemy Popularity.\" When \"Ally Popularity\" increases, \"Output Port 1\" action advances, and when \"Enemy Popularity\" decreases, \"Output Port 2\" action advances.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      4,
+      0.2,
+      0.4
+    ],
+    "extraEffects": [
+      266
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501401210,
+    "name": "Fan Frenzy",
+    "type": "Talent",
+    "trigger": "PassiveSkill02",
+    "desc": "After Live Showdown is activated, friendly targets on the prime-field receive reduced DMG and become immune to Crowd Control debuffs. When Live Showdown is dispelled, if all friendly targets on the sub-field are defeated, this effect will be removed. Otherwise, based on the remaining HP percentage of sub-field friendly targets, a portion of the DMG Reduction effect will be retained until the next Live Showdown is activated. If this unit's HP drops to a certain percentage without having activated Live Showdown, this unit's action advances.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.75
+    ],
+    "extraEffects": [
+      266
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -49458,6 +51836,78 @@ let enemyAbilityData = [
       0.15
     ],
     "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 802201201,
+    "name": "Wingflap",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Wind DMG to one designated ally target, with a high chance to inflict Wind Shear.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2,
+      1,
+      0.5,
+      3,
+      5
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 802201202,
+    "name": "Meiotic Division",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Produces 1 spawn of itself. This effect can be triggered again after 2 turns.",
+    "tag": "Summon",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 802201203,
+    "type": "Ability",
+    "trigger": "Skill03",
+    "tag": "Single Target",
+    "params": [
+      2,
+      1,
+      0.08
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 802201204,
+    "name": "Entomon Eulogy",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "When receiving a killing blow, deals Wind DMG to all friendly units, with a high chance to slightly increase their DMG received.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.15,
+      1,
+      0.1,
+      3,
+      10,
+      30
+    ],
+    "delay": 1,
+    "element": "Wind",
     "atkType": "Basic ATK"
   },
   {

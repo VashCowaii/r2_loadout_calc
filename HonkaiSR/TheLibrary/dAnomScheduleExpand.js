@@ -1,6 +1,1053 @@
 const stageTypers = "anom";
 let mocSchedule = [
   {
+    "id": 4,
+    "image": "activityBG/ChallengePeakPanelBanner_4004.png",
+    "realName": "Cyber Crisis",
+    "buffData": null,
+    "floorData": {
+      "1": {
+        "floorName": "Knight (I)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30504011
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Harbinger of Death: Swarm Nightmare",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 355,
+                    "enemies": [
+                      {
+                        "name": "Dreamjolt Troupe's Beyond Overcooked",
+                        "id": 3003010,
+                        "image": 3003010,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 2011148.9568,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Lady of Crashing Waves",
+                        "id": 4053010,
+                        "image": 4053010,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 1675957.464,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Ice",
+                        "hpBars": 1,
+                        "toughnessBase": 180,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 355,
+                    "enemies": [
+                      {
+                        "name": "Harbinger of Death: Swarm Nightmare",
+                        "id": 3024030,
+                        "image": 3024030,
+                        "rank": "LittleBoss",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 8938439.808,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Fire",
+                        "hpBars": 1,
+                        "toughnessBase": 200,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30504011",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 10949588.764800001,
+                "aoeSUM": 12625546.2288
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Tempering",
+            "desc": "For every 1% HP the enemy target loses, reduces CRIT DMG dealt to them by #1[i]%.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0002",
+            "BEKey": 1912336050,
+            "params": [
+              0.03
+            ]
+          }
+        ]
+      },
+      "2": {
+        "floorName": "Knight (II)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30504012
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Flame Reaver of the Deepest Dark",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 356,
+                    "enemies": [
+                      {
+                        "name": "Black Tide's Corroded Daemon",
+                        "id": 4033010,
+                        "image": 4033010,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 2688515.0985,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Wind",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Dark Sun Gryphon",
+                        "id": 4033030,
+                        "image": 4033030,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 2880551.89125,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Wind",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 356,
+                    "enemies": [
+                      {
+                        "name": "Flame Reaver of the Deepest Dark",
+                        "id": 4034010,
+                        "image": 4034010,
+                        "rank": "LittleBoss",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 6241195.764375,
+                        "speedBase": 174.24,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 2,
+                        "toughnessBase": 240,
+                        "weaknessList": [
+                          "Ice",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL_Frozen": 0.75,
+                          "STAT_Confine": 0.75,
+                          "STAT_Entangle": 0.75
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30504012",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 15362943.42,
+                "aoeSUM": 18051458.5185
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Inversion",
+            "desc": "Each time after the enemy target is attacked, the attacker will lose HP equal to #1[i]% of their own Max HP. This effect is Non-fatal.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0003",
+            "BEKey": 1912336050,
+            "params": [
+              0.02
+            ]
+          },
+          {
+            "name": "Depowered",
+            "desc": "When entering combat, reduces ally target's Energy by #1[i]% and decreases their Energy Regeneration Rate by #2[i]% outside of their turn for #3[i] turn(s).",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0013",
+            "BEKey": 1912336050,
+            "params": [
+              0.5,
+              0.5,
+              2
+            ]
+          }
+        ]
+      },
+      "3": {
+        "floorName": "Knight (III)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30504013
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Stellaron Hunter: Sam",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 357,
+                    "enemies": [
+                      {
+                        "name": "Canvas Peacock",
+                        "id": 5013030,
+                        "image": 5013030,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3072588.684,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 120,
+                        "weaknessList": [],
+                        "resistances": {},
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Blaze Out of Space",
+                        "id": 8003020,
+                        "image": 8003020,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 1920367.9275,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 100,
+                        "weaknessList": [
+                          "Physical",
+                          "Ice",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Fire": 0.4,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_DOT_Burn": 1
+                        }
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 357,
+                    "enemies": [
+                      {
+                        "name": "Stellaron Hunter: Sam",
+                        "id": 3024020,
+                        "image": 3024020,
+                        "rank": "LittleBoss",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 9601839.6375,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Fire",
+                        "hpBars": 1,
+                        "toughnessBase": 200,
+                        "weaknessList": [
+                          "Thunder",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30504013",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 12674428.3215,
+                "aoeSUM": 14594796.248999998
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Honing the Blade",
+            "desc": "Ally targets initially obtain #1[i] stack(s) of this effect, with each stack decreasing their own CRIT DMG by #2[i]%. This effect cannot be dispelled. Each time any ally target consumes a Skill Point, 1 stack is removed from all ally targets.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0015",
+            "BEKey": 1912336050,
+            "params": [
+              10,
+              0.15
+            ]
+          }
+        ]
+      },
+      "4": {
+        "floorName": "King in Check",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30504021
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "@SparxiConOfficial",
+                "enemyLevel": 100,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 358,
+                    "enemies": [
+                      {
+                        "name": "Aggressive Reading Material",
+                        "id": 5012030,
+                        "image": 5012030,
+                        "rank": "MinionLv2",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 631067.49972,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.4,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Rocking Rebel",
+                        "id": 5013010,
+                        "image": 5013010,
+                        "rank": "Elite",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 4543685.997984,
+                        "speedBase": 174.24,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.4,
+                        "delay": 0.25,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Imaginary",
+                        "hpBars": 1,
+                        "toughnessBase": 120,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Abundance Sprite: Malefic Ape",
+                        "id": 2023020,
+                        "image": 2023020,
+                        "rank": "Elite",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 3029123.998656,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.4,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 120,
+                        "weaknessList": [
+                          "Fire",
+                          "Ice",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0
+                    ],
+                    "totalMax": 4,
+                    "fieldMax": 4,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 358,
+                    "enemies": [
+                      {
+                        "name": "@SparxiConOfficial",
+                        "id": 5014010,
+                        "image": 5014010,
+                        "rank": "LittleBoss",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 10728147.49524,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.4,
+                        "delay": 0.5,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "toughnessBase": 320,
+                        "weaknessList": [
+                          "Fire",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30504021",
+                  "_CreateBattleEvent": "30503"
+                },
+                "highSTSUM": 15271833.493223999,
+                "aoeSUM": 19563092.49132
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Interference",
+            "desc": "After the enemy target uses an attack, randomly causes #1[i]% or #2[i]% action delay to the attacked target.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0009",
+            "BEKey": 1912336050,
+            "params": [
+              0.05,
+              0.1
+            ]
+          },
+          {
+            "name": "Confinement+",
+            "desc": "Ally targets initially obtain #1[i] stack(s) of this effect, with each stack decreasing their own DMG by #2[i]%. This effect cannot be dispelled, and 1 stack is removed after each Ultimate used.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0014",
+            "BEKey": 1912336050,
+            "params": [
+              2,
+              0.2
+            ]
+          }
+        ]
+      },
+      "5": {
+        "floorName": "King in Check: Plight",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30504022
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "@SparxiConOfficial",
+                "enemyLevel": 120,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      3,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      3,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_HardBossScreenEffect",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      3,
+                      0,
+                      0
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 359,
+                    "enemies": [
+                      {
+                        "name": "Aggressive Reading Material",
+                        "id": 5012030,
+                        "image": 5012030,
+                        "rank": "MinionLv2",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 2524269.9468,
+                        "speedBase": 150,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.5,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Rocking Rebel",
+                        "id": 5013010,
+                        "image": 5013010,
+                        "rank": "Elite",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 18174743.61696,
+                        "speedBase": 198,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.5,
+                        "delay": 0.25,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Imaginary",
+                        "hpBars": 1,
+                        "toughnessBase": 120,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Abundance Sprite: Malefic Ape",
+                        "id": 2023020,
+                        "image": 2023020,
+                        "rank": "Elite",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 12116495.74464,
+                        "speedBase": 216,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.5,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 120,
+                        "weaknessList": [
+                          "Fire",
+                          "Ice",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0
+                    ],
+                    "totalMax": 4,
+                    "fieldMax": 4,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 359,
+                    "enemies": [
+                      {
+                        "name": "@SparxiConOfficial",
+                        "id": 501401003,
+                        "image": 5014010,
+                        "rank": "LittleBoss",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 55533953.9752197,
+                        "speedBase": 180,
+                        "critDMG": 0.2,
+                        "effectRES": 0.5,
+                        "ehr": 0.5,
+                        "delay": 0.5,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "toughnessBase": 320,
+                        "weaknessList": [
+                          "Fire",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30504022",
+                  "_CreateBattleEvent": "30504"
+                },
+                "highSTSUM": 73708697.5921797,
+                "aoeSUM": 90873733.2304197
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Interference+",
+            "desc": "After the enemy target uses an attack, randomly causes #1[i]% or #2[i]% action delay to the attacked target.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0009",
+            "BEKey": 1912336050,
+            "params": [
+              0.05,
+              0.2
+            ]
+          },
+          {
+            "name": "Confinement++",
+            "desc": "Ally targets initially obtain #1[i] stack(s) of this effect, with each stack decreasing their own DMG by #2[i]%. This effect cannot be dispelled, and 1 stack is removed after each Ultimate used.",
+            "realModifierNamne": "ChallengePeakBattle_ExtremeAbility_0014",
+            "BEKey": 1912336050,
+            "params": [
+              2,
+              0.3
+            ]
+          }
+        ]
+      }
+    },
+    "kingBuffList": [
+      {
+        "modifierName": "ADV_StageAbility_3033043",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0010",
+        "BEKey": 1912336050,
+        "name": "Elation Instant",
+        "desc": "This stage has a special Elation Skill. When entering Aha Instant, deals #1[i] instance(s) of Imaginary Elation DMG to a random enemy target. When Aha Instant ends, all allies gain #3[i]% All-Type RES PEN, lasting for #4[i] turn(s).",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          15,
+          4.5,
+          0.1,
+          2
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3033044",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0011",
+        "BEKey": 1912336050,
+        "name": "Tears Behind Smiles",
+        "desc": "Enemy targets on the sub-field receive #1[i]% more final DMG but cannot take CRIT Hits.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.3
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3033045",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0012",
+        "BEKey": 1912336050,
+        "name": "Thrilling Delight",
+        "desc": "Increases all ally targets' DMG dealt by #1[i]% and increases the SPD of prime-field ally targets by #2[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.4,
+          0.4
+        ]
+      }
+    ],
+    "patchName": "4.0"
+  },
+  {
     "id": 3,
     "image": "activityBG/ChallengePeakPanelBanner_4003.png",
     "realName": "Dissonance",
@@ -1447,9 +2494,9 @@ let mocSchedule = [
                         "attackBase": 641.306646,
                         "defBase": 1200.00006,
                         "hpBase": [
-                          12677695.306875,
-                          17748773.429625,
-                          27890929.675125
+                          12677700.3779531,
+                          17748780.5291344,
+                          25355400.7559062
                         ],
                         "speedBase": 190.08,
                         "critDMG": 0.2,
@@ -1493,8 +2540,8 @@ let mocSchedule = [
                   "_StageInfiniteGroup": "30502021",
                   "_CreateBattleEvent": "30503"
                 },
-                "highSTSUM": 58317398.411625,
-                "aoeSUM": 58317398.411625
+                "highSTSUM": 55781881.6629937,
+                "aoeSUM": 55781881.6629937
               }
             ]
           },
@@ -1584,9 +2631,9 @@ let mocSchedule = [
                         "attackBase": 897.829308,
                         "defBase": 1200.00006,
                         "hpBase": [
-                          56345311.3125,
-                          78883435.8375,
-                          123959684.8875
+                          56345333.8506245,
+                          78883467.3908743,
+                          112690667.701249
                         ],
                         "speedBase": 216,
                         "critDMG": 0.2,
@@ -1630,8 +2677,8 @@ let mocSchedule = [
                   "_StageInfiniteGroup": "30502022",
                   "_CreateBattleEvent": "30504"
                 },
-                "highSTSUM": 259188432.03750002,
-                "aoeSUM": 259188432.03750002
+                "highSTSUM": 247919468.9427478,
+                "aoeSUM": 247919468.9427478
               }
             ]
           },
@@ -2726,7 +3773,7 @@ let mocSchedule = [
         "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0001",
         "BEKey": 1912336050,
         "name": "Think Outside the Box",
-        "desc": "When the number of ally targets currently on the field is not 4, all allies' dealt DMG increases by #1[i]%.",
+        "desc": "When the number of ally targets currently on the field is not 4, all allies' DMG dealt increases by #1[i]%.",
         "battleDesc": null,
         "buffType": "",
         "params": [

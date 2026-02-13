@@ -1793,22 +1793,27 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "characterName": "Anti-Creator, Hatred Inundate"
-              },
-              {
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
                 "name": "Has Modifier",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"-493664803\">MScoring_30234_FirstTutorial</a>"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Achievement",
-              "matchTags": true,
-              "relatedAchievements": []
+              },
+              "passed": [
+                {
+                  "name": "Achievement",
+                  "matchTags": true,
+                  "relatedAchievements": []
+                }
+              ]
             }
           ]
         }
@@ -2354,7 +2359,8 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "characterName": "Anti-Creator, Hatred Inundate"
+                "characterName": "Anti-Creator, Hatred Inundate",
+                "invertCondition": true
               },
               {
                 "name": "Stage ID",
@@ -3231,7 +3237,8 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "characterName": "Anti-Creator, Hatred Inundate"
+                "characterName": "Anti-Creator, Hatred Inundate",
+                "invertCondition": true
               },
               "passed": [
                 {
@@ -3553,7 +3560,8 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "characterName": "Anti-Creator, Hatred Inundate"
+            "characterName": "Anti-Creator, Hatred Inundate",
+            "invertCondition": true
           },
           "passed": [
             {
@@ -9078,7 +9086,8 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "AvatarBreak",
-            "STAT_CTRL"
+            "STAT_CTRL",
+            "DisableAction"
           ],
           "execute": [
             {

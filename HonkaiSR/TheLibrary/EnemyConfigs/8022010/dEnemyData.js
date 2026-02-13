@@ -42,14 +42,21 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2807,
-        2808,
-        2809,
-        2810
+        2926,
+        2927,
+        2928,
+        2929
       ],
       "enemyTag": [
         "SW_Minion01",
         "SW_Minion"
+      ],
+      "summons": [
+        {
+          "name": "Juvenile Sting",
+          "over": 8022010,
+          "base": 8022010
+        }
       ]
     },
     "802201001": {
@@ -76,14 +83,62 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2807,
-        2808,
-        2809,
-        2810
+        2926,
+        2927,
+        2928,
+        2929
       ],
       "enemyTag": [
         "SW_Minion01",
         "SW_Minion"
+      ],
+      "summons": [
+        {
+          "name": "Juvenile Sting",
+          "over": 802201001,
+          "base": 8022010
+        }
+      ]
+    },
+    "802201002": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1.111111,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Quantum",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2
+      },
+      "abilities": [
+        2926,
+        2927,
+        2928,
+        2929
+      ],
+      "enemyTag": [
+        "SW_Minion01",
+        "SW_Minion"
+      ],
+      "summons": [
+        {
+          "name": "Juvenile Sting",
+          "over": 802201002,
+          "base": 8022010
+        }
       ]
     },
     "802201005": {
@@ -110,24 +165,33 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2807,
-        2808,
-        2809,
-        2810
+        2926,
+        2927,
+        2928,
+        2929
       ],
       "enemyTag": [
         "SW_Minion01",
         "SW_Minion",
         "SW_Minion01_Sam01"
       ],
+      "summons": [
+        {
+          "name": "Juvenile Sting",
+          "over": 802201005,
+          "base": 8022010
+        }
+      ],
       "overrideParams": {
-        "2810": [
-          0.15,
-          "-",
-          "-",
-          "-",
-          "-",
-          "-",
+        "2929": [
+          [
+            0.15
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
           "-",
           "-"
         ]

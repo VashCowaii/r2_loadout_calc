@@ -369,9 +369,16 @@ const compositeAbilityObject = {
           "delayPercent": 0.5,
           "enemyList": [
             {
-              "name": "Create Enemy from Custom",
-              "value": "SummonID1",
-              "summonLocation": "BeforeCaster"
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__95) || RETURN",
+                "displayLines": "ENEMIES_OBJECT_UNUSED__95",
+                "constants": [],
+                "variables": [
+                  "ENEMIES_OBJECT_UNUSED__95"
+                ]
+              },
+              "locationType": "BeforeCaster"
             }
           ]
         },

@@ -1,6 +1,959 @@
 const stageTypers = "golden"
 let mocSchedule = [
   {
+    "id": 1030,
+    "realName": "Bud of Treasures",
+    "worldLevel": 4,
+    "testWorldLevel": 4,
+    "testMapID": 1030,
+    "buffData": {
+      "modifierName": "",
+      "realModifierNamne": "",
+      "name": "",
+      "desc": "",
+      "battleDesc": null,
+      "buffType": "",
+      "params": []
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Bud of Treasures",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              1024914,
+              1024924,
+              1024934
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "undefined",
+                "enemyLevel": 56,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Assistant Graffiti: Demander",
+                      "id": 5012061,
+                      "image": 5012061,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Thunder",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.5,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Autonomous Wand",
+                      "id": 5012010,
+                      "image": 5012010,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0,
+                    1
+                  ]
+                ],
+                "scalarElite": 29,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 11296.859544,
+                "aoeSUM": 45187.438176
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 56,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Autonomous Wand",
+                      "id": 5012010,
+                      "image": 5012010,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Assistant Graffiti: Rusher",
+                      "id": 5012051,
+                      "image": 5012051,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Wind",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Wind": 0.5,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0,
+                    1
+                  ]
+                ],
+                "scalarElite": 29,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 11296.859544,
+                "aoeSUM": 45187.438176
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 56,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Assistant Graffiti: Rusher",
+                      "id": 5012051,
+                      "image": 5012051,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Wind",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Wind": 0.5,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Assistant Graffiti: Demander",
+                      "id": 5012061,
+                      "image": 5012061,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Thunder",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.5,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Autonomous Wand",
+                      "id": 5012010,
+                      "image": 5012010,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0,
+                    1
+                  ]
+                ],
+                "scalarElite": 29,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 11296.859544,
+                "aoeSUM": 56484.29772
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [],
+            "stageDataArray": []
+          }
+        }
+      }
+    },
+    "realDropList": [
+      "180006.png",
+      "180001.png",
+      "181009.png",
+      "116001.png",
+      "2.png"
+    ]
+  },
+  {
+    "id": 1029,
+    "realName": "Bud of Aether",
+    "worldLevel": 4,
+    "testWorldLevel": 4,
+    "testMapID": 1029,
+    "buffData": {
+      "modifierName": "",
+      "realModifierNamne": "",
+      "name": "",
+      "desc": "",
+      "battleDesc": null,
+      "buffType": "",
+      "params": []
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Bud of Aether",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              1024814,
+              1024824,
+              1024834
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "undefined",
+                "enemyLevel": 56,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Assistant Graffiti: Rusher",
+                      "id": 5012051,
+                      "image": 5012051,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Wind",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Wind": 0.5,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Security Doggo",
+                      "id": 5012020,
+                      "image": 5012020,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 10167.1735896,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    1,
+                    0
+                  ]
+                ],
+                "scalarElite": 29,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 11296.859544,
+                "aoeSUM": 42928.0662672
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 56,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Security Doggo",
+                      "id": 5012020,
+                      "image": 5012020,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 10167.1735896,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Assistant Graffiti: Demander",
+                      "id": 5012061,
+                      "image": 5012061,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Thunder",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.5,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0,
+                    1
+                  ]
+                ],
+                "scalarElite": 29,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 11296.859544,
+                "aoeSUM": 42928.0662672
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 56,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Assistant Graffiti: Rusher",
+                      "id": 5012051,
+                      "image": 5012051,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Wind",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Wind": 0.5,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Assistant Graffiti: Demander",
+                      "id": 5012061,
+                      "image": 5012061,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Thunder",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.5,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Security Doggo",
+                      "id": 5012020,
+                      "image": 5012020,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 10167.1735896,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    1,
+                    0
+                  ]
+                ],
+                "scalarElite": 29,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 11296.859544,
+                "aoeSUM": 55354.6117656
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [],
+            "stageDataArray": []
+          }
+        }
+      }
+    },
+    "realDropList": [
+      "180006.png",
+      "180001.png",
+      "181009.png",
+      "116001.png",
+      "223.png",
+      "222.png",
+      "221.png",
+      "2.png"
+    ]
+  },
+  {
+    "id": 1028,
+    "realName": "Bud of Memories",
+    "worldLevel": 4,
+    "testWorldLevel": 4,
+    "testMapID": 1028,
+    "buffData": {
+      "modifierName": "",
+      "realModifierNamne": "",
+      "name": "",
+      "desc": "",
+      "battleDesc": null,
+      "buffType": "",
+      "params": []
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Bud of Memories",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              1024714,
+              1024724,
+              1024734
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "undefined",
+                "enemyLevel": 56,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Assistant Graffiti: Slacker",
+                      "id": 5012041,
+                      "image": 5012041,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Ice",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Thunder",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.5,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Aggressive Reading Material",
+                      "id": 5012030,
+                      "image": 5012030,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 100,
+                      "critDMG": 0.2,
+                      "effectRES": 0.124,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0,
+                    1
+                  ]
+                ],
+                "scalarElite": 29,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 11296.859544,
+                "aoeSUM": 45187.438176
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 56,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Assistant Graffiti: Rusher",
+                      "id": 5012051,
+                      "image": 5012051,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Wind",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Wind": 0.5,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Aggressive Reading Material",
+                      "id": 5012030,
+                      "image": 5012030,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 100,
+                      "critDMG": 0.2,
+                      "effectRES": 0.124,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    1,
+                    0
+                  ]
+                ],
+                "scalarElite": 29,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 11296.859544,
+                "aoeSUM": 45187.438176
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 56,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Assistant Graffiti: Rusher",
+                      "id": 5012051,
+                      "image": 5012051,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Wind",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Wind": 0.5,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Assistant Graffiti: Slacker",
+                      "id": 5012041,
+                      "image": 5012041,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.224,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Ice",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Thunder",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.5,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Aggressive Reading Material",
+                      "id": 5012030,
+                      "image": 5012030,
+                      "rank": "MinionLv2",
+                      "attackBase": 237.2755968,
+                      "defBase": 760.00008,
+                      "hpBase": 11296.859544,
+                      "speedBase": 100,
+                      "critDMG": 0.2,
+                      "effectRES": 0.124,
+                      "ehr": 0.048,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0,
+                    1
+                  ]
+                ],
+                "scalarElite": 29,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 11296.859544,
+                "aoeSUM": 56484.29772
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [],
+            "stageDataArray": []
+          }
+        }
+      }
+    },
+    "realDropList": [
+      "180006.png",
+      "180001.png",
+      "181009.png",
+      "116001.png",
+      "213.png",
+      "212.png",
+      "2.png"
+    ]
+  },
+  {
     "id": 1027,
     "realName": "Bud of Treasures",
     "worldLevel": 4,

@@ -20,7 +20,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-241610538\">Modifier_ChallengePeakBattle_EnhancedAbility_0011_02</a>",
       "execute": [
         {
-          "eventTrigger": "Take Damage Start [Owner]: Hit",
+          "eventTrigger": "Take Damage Start [Owner]: Any",
           "execute": [
             {
               "name": "Adjust Target Stats",

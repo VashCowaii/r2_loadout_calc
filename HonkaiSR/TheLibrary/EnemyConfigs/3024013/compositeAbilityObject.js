@@ -5368,6 +5368,17 @@ const compositeAbilityObject = {
         "Ability Start",
         "Ability Start",
         {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "ENEMIES_OBJECT_UNUSED__113"
+          }
+        },
+        {
           "name": "ATK Scaling DMG",
           "target": {
             "name": "Target Name",
@@ -8086,7 +8097,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target's Source Owner}}"
                       },
-                      "priorityTag": "MonsterBuffOthers",
+                      "priorityTag": "MonsterBuffOthers_Elation",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,

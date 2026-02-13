@@ -2532,7 +2532,7 @@ let modifiersCharacter = [
   },
   {
     "name": "Sparkle_Tree03CD",
-    "realName": "undefined",
+    "realName": "Dreamdiver",
     "aim": "Buff",
     "desc": "undefined",
     "type": null,
@@ -2543,10 +2543,10 @@ let modifiersCharacter = [
   },
   {
     "name": "Sparkle_Eidolon4_HPIncrease",
-    "realName": "undefined",
+    "realName": "Cipher",
     "aim": "Buff",
     "desc": "undefined",
-    "type": "undefined",
+    "type": "Cipher",
     "perma": true,
     "params": [
       "MDF_PropertyValue2"
@@ -6150,6 +6150,73 @@ let modifiersCharacter = [
     ]
   },
   {
+    "name": "G_YaoGuang_Ability03_AllDamageTypePenetrate",
+    "realName": "Hexagram of Feathered Fortune",
+    "aim": "Buff",
+    "desc": "All-Type RES PEN increases by #1[f1]%.",
+    "type": "All-Type RES PEN Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "G_YaoGuang_Ability04_AllDamageTypeTaken",
+    "realName": "Woe's Whisper",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[f1]%.",
+    "type": "Vulnerability",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "G_YaoGuang_Ability02_ToMember",
+    "realName": "Decalight Unveils All",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[f1]%.",
+    "type": "Elation Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "G_YaoGuang_Eidolon2_Bonus",
+    "realName": "Blind Arrows Guided by Feathers",
+    "aim": "Buff",
+    "desc": "Elation increases by #2[i]% and SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue",
+      "#SkillRank_Rank02_P1"
+    ]
+  },
+  {
+    "name": "G_YaoGuang_Eidolon1_Bonus",
+    "realName": "Chuckle Chimes Where Jade Falls",
+    "aim": "Buff",
+    "desc": "Elation DMG dealt ignores #1[i]% of the target's DEF.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "G_YaoGuang_ElationPursued_UI_TOP_Nodisplay",
+    "realName": "Certified Banger",
+    "aim": "Other",
+    "desc": "The tallied Punchline is #1[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_Current"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>",
     "realName": "Epic",
     "aim": "Other",
@@ -6254,6 +6321,39 @@ let modifiersCharacter = [
     "desc": "DEF decreases by #1[i]%.",
     "type": "DEF Reduction",
     "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Sparxie_ElationPursued",
+    "realName": "Certified Banger",
+    "aim": "Buff",
+    "desc": "The tallied Punchline is #1[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_ElationPoint"
+    ]
+  },
+  {
+    "name": "Sparxie_Eidolon2_CriticalDamage",
+    "realName": "#AudienceKnows",
+    "aim": "Buff",
+    "desc": "Each stack increases CRIT DMG by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Sparxie_Trace01_Bonus",
+    "realName": "Sweet! Punchline Signing",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[f1]%.",
+    "type": "Elation Boost",
+    "perma": true,
     "params": [
       "MDF_PropertyValue"
     ]
@@ -6434,6 +6534,51 @@ let modifiersCharacter = [
     "perma": true
   },
   {
+    "name": "Advanced_BlackSwan_DOT",
+    "realName": "Arcana",
+    "aim": "Debuff",
+    "desc": "Takes Wind DMG at the start of each turn. While in the \"Arcana\" state, will also be considered as suffering from Wind Shear, Bleed, Burn, and Shock.",
+    "type": "Arcana",
+    "perma": true,
+    "params": [
+      "MDF_MaxLayer"
+    ]
+  },
+  {
+    "name": "Advanced_BlackSwan_DOT_Enhance",
+    "realName": "Epiphany",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%. When enemy targets are inflicted with \"Arcana,\" there is a #2[i]% fixed chance to additionally increase the number of \"Arcana\" stacked this time by 1. And the number of \"Arcana\" stacks will not be halved after dealing DMG at the start of the turn.",
+    "type": "Epiphany",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue",
+      "MDF_Chance"
+    ]
+  },
+  {
+    "name": "Advanced_BlackSwan_DefenceDown",
+    "realName": "Decadence, False Twilight",
+    "aim": "Debuff",
+    "desc": "DEF decreases by #1[f1]%.",
+    "type": "DEF Reduction",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Advanced_BlackSwan_Trace03_Sub",
+    "realName": "Candleflame's Portent",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"827249673\">Cyrene_PointB3_Sub3</a>",
     "realName": "Causality in Trichotomy",
     "aim": "Buff",
@@ -6602,14 +6747,215 @@ let modifiersCharacter = [
     ]
   },
   {
+    "name": "Mavatar_Advanced_Sparkle_Ability02_CritDmgAddedRatio02",
+    "realName": "Dreamdiver",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue2",
+      "MDF_ElationRatio"
+    ]
+  },
+  {
+    "name": "Advanced_Sparkle_Ability03_PowerUp",
+    "realName": "Cipher",
+    "aim": "Buff",
+    "desc": "Each stack of the Vulnerability effect provided by Sparkle's Talent additionally increases by #2[f2]%.",
+    "type": "Cipher",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue2",
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Advanced_Sparkle_Ability02_CritDmgAddedRatio01",
+    "realName": "Dreamdiver",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue",
+      "MDF_AllDamageTypePenetrate"
+    ]
+  },
+  {
+    "name": "Advanced_Sparkle_PassiveAbility_AllDamageAddedRatio02",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[f1]%.",
+    "type": "Vulnerability",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue",
+      "MDF_DefenceAddedRatio2"
+    ]
+  },
+  {
+    "name": "Advanced_Sparkle_Tree03",
+    "realName": "Nocturne",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": "Nocturne",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue3"
+    ]
+  },
+  {
+    "name": "Advanced_Sparkle_SpeedUP",
+    "realName": "Suspension of Disbelief",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Sparxie_Trace03_Sub02",
+    "realName": "Frenzy! Palette of Truth and Lies",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Sparxie_Eidolon1_Sub02",
+    "realName": "#GoingViral #WhoIsShe",
+    "aim": "Buff",
+    "desc": "All-Type RES PEN increases by #1[f1]%.",
+    "type": "All-Type RES PEN Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Sparxie_Eidolon4_Sub",
+    "realName": "#LockedIn #FaceCard",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": "Elation Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-1624350031\">Constance_Eidolon2_PropertyValue</a>",
     "realName": "Fresh, Ethereal, and Beloved",
     "aim": "Debuff",
-    "desc": "Decreases All-Type RES by #1[i]%",
+    "desc": "All-Type RES decreases by #1[i]%.",
     "type": "All-Type RES Reduction",
     "perma": true,
     "params": [
       "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Advanced_Sparkle_Ability03ExtraBP",
+    "realName": "The Hero with a Thousand Faces",
+    "aim": "Buff",
+    "desc": "After an ally's turn ends, if the current Skill Points are not at maximum, immediately recovers Skill Points for the team.",
+    "type": null,
+    "perma": false
+  },
+  {
+    "name": "Sparxie_Eidolon6",
+    "realName": "#BuiltDifferent #GoingExtinct",
+    "aim": "Buff",
+    "desc": "All-Type RES PEN increases by #1[i]%.",
+    "type": "All-Type RES PEN Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "YaoGuang_Trace02_Sub02",
+    "realName": "Poised and Sated",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "YaoGuang_Trace02_Sub01",
+    "realName": "Poised and Sated",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue2"
+    ]
+  },
+  {
+    "name": "Sparxie_EnergyPoint",
+    "realName": "Thrill",
+    "aim": "Other",
+    "desc": "Can be used to offset Sparxie's consumption of Skill Points. Consuming \"Thrill\" is considered as consuming Skill Points.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "G_YaoGuang_ElationPursued",
+    "realName": "Certified Banger",
+    "aim": "Buff",
+    "desc": "The tallied Punchline is #1[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_ElationPoint"
+    ]
+  },
+  {
+    "name": "G_YaoGuang_Eidolon6_Bonus",
+    "realName": "Ferried Along the Astral Arc",
+    "aim": "Buff",
+    "desc": "Elation DMG merrymakes by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Advanced_Sparkle_PassiveAbility_Halo",
+    "realName": "Figment",
+    "aim": "Buff",
+    "desc": "The DMG taken by all enemies increases.",
+    "type": null,
+    "perma": false
+  },
+  {
+    "name": "Advanced_Sparkle_PointB2_FreeAbility",
+    "realName": "Artificial Flower",
+    "aim": "Buff",
+    "desc": "The next use of Skill does not consume any Skill Points.",
+    "type": null,
+    "perma": false
+  },
+  {
+    "name": "G_YaoGuang_Ability02_ToSelf",
+    "realName": "Decalight Unveils All",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[f1]%.",
+    "type": "Elation Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue3"
     ]
   },
   {
@@ -6621,6 +6967,39 @@ let modifiersCharacter = [
     "perma": true,
     "params": [
       "Saber_00_EntityStockSPForShow"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1386884047\">Saber_Energy_Count</a>",
+    "realName": "Core Resonance",
+    "aim": "Other",
+    "desc": "Currently possesses #1[i] point(s) of \"Core Resonance.\"",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Layer"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1328926688\">Saber_Trace03_Bonus_02</a>",
+    "realName": "Crown of the Star",
+    "aim": "Buff",
+    "desc": "Each stack increases CRIT DMG by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-914489393\">Saber_Eidolon4</a>",
+    "realName": "The Saga of Sixteen Winter Days",
+    "aim": "Buff",
+    "desc": "Wind RES PEN increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#SkillRank_Rank04_P1_Ratio"
     ]
   },
   {
@@ -6662,6 +7041,51 @@ let modifiersCharacter = [
     "perma": false,
     "params": [
       "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1058966793\">Saber_Eidolon2_Bonus</a>",
+    "realName": "The Lost Oath of the Round Table",
+    "aim": "Buff",
+    "desc": "Each stack causes DMG dealt by Saber to ignore #1[f1]% of the target's DEF.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#SkillRank_Rank02_P2_Ratio"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1732744103\">Saber_TechniqueUsage_Bonus</a>",
+    "realName": "Behold, the King of Knights",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": "Behold, the King of Knights",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-269544975\">Saber_Eidolon4_Bonus</a>",
+    "realName": "The Saga of Sixteen Winter Days",
+    "aim": "Buff",
+    "desc": "Each stack increases Wind RES PEN by #1[i]%.",
+    "type": "Increases Wind RES PEN.",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1658820893\">Saber_Eidolon6_Count</a>",
+    "realName": "The Long Fated Night",
+    "aim": "Other",
+    "desc": "After using Ultimate #1[i] more time(s), regenerates a fixed amount of #2[i] Energy.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Count",
+      "#SkillRank_Rank06_P3_Amount"
     ]
   },
   {
@@ -6714,28 +7138,6 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"-1058966793\">Saber_Eidolon2_Bonus</a>",
-    "realName": "The Lost Oath of the Round Table",
-    "aim": "Buff",
-    "desc": "Each stack causes DMG dealt by Saber to ignore #1[f1]% of the target's DEF.",
-    "type": null,
-    "perma": true,
-    "params": [
-      "#SkillRank_Rank02_P2_Ratio"
-    ]
-  },
-  {
-    "name": "<a class=\"gModGreen\" id=\"-1732744103\">Saber_TechniqueUsage_Bonus</a>",
-    "realName": "Behold, the King of Knights",
-    "aim": "Buff",
-    "desc": "ATK increases by #1[i]%.",
-    "type": "Behold, the King of Knights",
-    "perma": true,
-    "params": [
-      "MDF_PropertyValue"
-    ]
-  },
-  {
     "name": "<a class=\"gModGreen\" id=\"-1473893661\">Archer_Eidolon2_AddWeak</a>",
     "realName": "The Unfulfilled Happiness",
     "aim": "Debuff",
@@ -6744,62 +7146,6 @@ let modifiersCharacter = [
     "perma": false,
     "params": [
       "MDF_PropertyValue"
-    ]
-  },
-  {
-    "name": "<a class=\"gModGreen\" id=\"-269544975\">Saber_Eidolon4_Bonus</a>",
-    "realName": "The Saga of Sixteen Winter Days",
-    "aim": "Buff",
-    "desc": "Each stack increases Wind RES PEN by #1[i]%.",
-    "type": "Increases Wind RES PEN.",
-    "perma": true,
-    "params": [
-      "MDF_PropertyValue"
-    ]
-  },
-  {
-    "name": "<a class=\"gModGreen\" id=\"1658820893\">Saber_Eidolon6_Count</a>",
-    "realName": "The Long Fated Night",
-    "aim": "Other",
-    "desc": "After using Ultimate #1[i] more time(s), regenerates a fixed amount of #2[i] Energy.",
-    "type": null,
-    "perma": true,
-    "params": [
-      "MDF_Count",
-      "#SkillRank_Rank06_P3_Amount"
-    ]
-  },
-  {
-    "name": "<a class=\"gModGreen\" id=\"-1386884047\">Saber_Energy_Count</a>",
-    "realName": "Core Resonance",
-    "aim": "Other",
-    "desc": "Currently possesses #1[i] point(s) of \"Core Resonance.\"",
-    "type": null,
-    "perma": true,
-    "params": [
-      "MDF_Layer"
-    ]
-  },
-  {
-    "name": "<a class=\"gModGreen\" id=\"-1328926688\">Saber_Trace03_Bonus_02</a>",
-    "realName": "Crown of the Star",
-    "aim": "Buff",
-    "desc": "Each stack increases CRIT DMG by #1[f1]%.",
-    "type": null,
-    "perma": true,
-    "params": [
-      "MDF_PropertyValue"
-    ]
-  },
-  {
-    "name": "<a class=\"gModGreen\" id=\"-914489393\">Saber_Eidolon4</a>",
-    "realName": "The Saga of Sixteen Winter Days",
-    "aim": "Buff",
-    "desc": "Wind RES PEN increases by #1[i]%.",
-    "type": null,
-    "perma": true,
-    "params": [
-      "#SkillRank_Rank04_P1_Ratio"
     ]
   }
 ]

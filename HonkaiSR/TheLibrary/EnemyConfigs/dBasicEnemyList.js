@@ -1506,6 +1506,14 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "100402302": {
+        "name": "Gepard",
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
       "phases": 3,
       "hasReader": true,
       "baseName": "Gepard (Complete)"
@@ -5197,6 +5205,13 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
+      "202204007": {
+        "weak": [
+          "Ice",
+          "Thunder",
+          "Quantum"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Abundance Sprite: Golden Hound"
@@ -5739,6 +5754,13 @@ let basicEnemyList = {
           "Wind"
         ]
       },
+      "202302017": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Wind"
+        ]
+      },
       "hasReader": true
     },
     "2023021": {
@@ -5902,6 +5924,13 @@ let basicEnemyList = {
         ]
       },
       "202303018": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Thunder"
+        ]
+      },
+      "202303019": {
         "weak": [
           "Physical",
           "Ice",
@@ -9193,6 +9222,28 @@ let basicEnemyList = {
       },
       "hasReader": false
     },
+    "3024031": {
+      "3024031": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Wind"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Harbinger of Death: Swarm Nightmare"
+    },
+    "3024032": {
+      "3024032": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Wind"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Harbinger of Death: Swarm Nightmare"
+    },
     "groupName": "Harbinger of Death: Swarm Nightmare"
   },
   "3025010": {
@@ -9688,6 +9739,50 @@ let basicEnemyList = {
       },
       "hasReader": false
     },
+    "4012061": {
+      "4012061": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "401206101": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "401206102": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "401206103": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "401206104": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "The Conquered"
+    },
     "4012062": {
       "4012062": {
         "weak": [
@@ -10063,6 +10158,50 @@ let basicEnemyList = {
       "hasReader": false,
       "baseName": "Savage God, Mad King, Incarnation of Strife"
     },
+    "4014013": {
+      "4014013": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Thunder",
+          "Quantum"
+        ]
+      },
+      "401401301": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Thunder",
+          "Quantum"
+        ]
+      },
+      "401401302": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Thunder",
+          "Quantum"
+        ]
+      },
+      "401401303": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Thunder",
+          "Quantum"
+        ]
+      },
+      "401401304": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Thunder",
+          "Quantum"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "The Ravaged Unconquerable"
+    },
     "4014014": {
       "4014014": {
         "weak": [
@@ -10141,6 +10280,15 @@ let basicEnemyList = {
       "401402003": {},
       "phases": 2,
       "hasReader": false
+    },
+    "4014021": {
+      "4014021": {},
+      "401402101": {},
+      "401402102": {},
+      "401402103": {},
+      "401402104": {},
+      "hasReader": false,
+      "baseName": "The Giver, Master of Legions, Lance of Fury"
     },
     "4014022": {
       "4014022": {},
@@ -10673,6 +10821,13 @@ let basicEnemyList = {
           "Wind"
         ]
       },
+      "403302005": {
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Wind"
+        ]
+      },
       "hasReader": false
     },
     "4033024": {
@@ -10953,6 +11108,20 @@ let basicEnemyList = {
           "Wind"
         ]
       },
+      "404401001": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Wind"
+        ]
+      },
+      "404401002": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Wind"
+        ]
+      },
       "hasReader": true
     },
     "4044011": {
@@ -11002,6 +11171,13 @@ let basicEnemyList = {
           "Wind"
         ]
       },
+      "405201003": {
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Wind"
+        ]
+      },
       "405201004": {
         "weak": [
           "Physical",
@@ -11027,6 +11203,12 @@ let basicEnemyList = {
   "4052020": {
     "4052020": {
       "4052020": {
+        "weak": [
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "405202001": {
         "weak": [
           "Fire",
           "Thunder"
@@ -11060,6 +11242,13 @@ let basicEnemyList = {
         ]
       },
       "405301003": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "405301004": {
         "weak": [
           "Physical",
           "Fire",
@@ -11101,6 +11290,13 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
+      "405302001": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Thunder"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Cyclonic Swarm Mother"
@@ -11119,6 +11315,12 @@ let basicEnemyList = {
           "Fire"
         ]
       },
+      "406201006": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Ichor Memosprite: Pheasant"
@@ -11126,6 +11328,12 @@ let basicEnemyList = {
   "4062020": {
     "4062020": {
       "4062020": {
+        "weak": [
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "406202001": {
         "weak": [
           "Ice",
           "Imaginary"
@@ -11151,6 +11359,13 @@ let basicEnemyList = {
           "Ice"
         ]
       },
+      "406301002": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Ichor Memosprite: Winged Serpent"
@@ -11158,6 +11373,13 @@ let basicEnemyList = {
   "4064010": {
     "4064010": {
       "4064010": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "406401001": {
         "weak": [
           "Physical",
           "Ice",
@@ -11175,11 +11397,379 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "406401101": {
+        "name": "Ichor Memosprite: Judge of Oblivion",
+        "weak": [
+          "Physical",
+          "Ice",
+          "Imaginary"
+        ]
+      },
       "phases": 3,
       "hasReader": true,
       "baseName": "Ichor Memosprite: Judge of Oblivion (Complete)"
     },
+    "4064013": {
+      "4064013": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "406401301": {
+        "name": "Franken_Official",
+        "weak": [
+          "Physical",
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Ichor Memosprite: Judge of Oblivion"
+    },
     "groupName": "Ichor Memosprite: Judge of Oblivion"
+  },
+  "5012010": {
+    "5012010": {
+      "5012010": {
+        "weak": [
+          "Physical",
+          "Imaginary"
+        ]
+      },
+      "501201001": {
+        "weak": [
+          "Physical",
+          "Imaginary"
+        ]
+      },
+      "501201002": {
+        "name": "Infected Student",
+        "weak": [
+          "Physical",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false
+    },
+    "groupName": "Autonomous Wand"
+  },
+  "5012020": {
+    "5012020": {
+      "5012020": {
+        "weak": [
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false
+    },
+    "groupName": "Security Doggo"
+  },
+  "5012030": {
+    "5012030": {
+      "5012030": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203002": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203003": {
+        "name": "Devoted Fan",
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203004": {
+        "name": "Infected Student",
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "hasReader": false
+    },
+    "5012031": {
+      "5012031": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203101": {
+        "name": "Sparxie's Fans",
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203102": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203103": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203104": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203105": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501203106": {
+        "name": "Enclave of Laughter",
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Aggressive Reading Material"
+    },
+    "groupName": "Aggressive Reading Material"
+  },
+  "5012040": {
+    "5012040": {
+      "5012040": {
+        "weak": [
+          "Thunder",
+          "Wind"
+        ]
+      },
+      "501204001": {
+        "weak": [
+          "Thunder",
+          "Wind"
+        ]
+      },
+      "hasReader": false
+    },
+    "5012041": {
+      "5012041": {
+        "weak": [
+          "Thunder",
+          "Wind"
+        ]
+      },
+      "501204101": {
+        "name": "Skott's Sidekick",
+        "weak": [
+          "Thunder",
+          "Wind"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Assistant Graffiti: Slacker"
+    },
+    "groupName": "Assistant Graffiti: Slacker"
+  },
+  "5012050": {
+    "5012050": {
+      "5012050": {
+        "weak": [
+          "Ice",
+          "Thunder"
+        ]
+      },
+      "501205001": {
+        "weak": [
+          "Ice",
+          "Thunder"
+        ]
+      },
+      "hasReader": false
+    },
+    "5012051": {
+      "5012051": {
+        "weak": [
+          "Ice",
+          "Thunder"
+        ]
+      },
+      "501205101": {
+        "name": "Skott's Sidekick",
+        "weak": [
+          "Ice",
+          "Thunder"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Assistant Graffiti: Rusher"
+    },
+    "groupName": "Assistant Graffiti: Rusher"
+  },
+  "5012060": {
+    "5012060": {
+      "5012060": {
+        "weak": [
+          "Ice",
+          "Wind"
+        ]
+      },
+      "501206001": {
+        "weak": [
+          "Ice",
+          "Wind"
+        ]
+      },
+      "hasReader": false
+    },
+    "5012061": {
+      "5012061": {
+        "weak": [
+          "Ice",
+          "Wind"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Assistant Graffiti: Demander"
+    },
+    "groupName": "Assistant Graffiti: Demander"
+  },
+  "5012110": {
+    "5012110": {
+      "5012110": {
+        "weak": [
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501211001": {
+        "name": "Tabloid Journalist Furbulitzer",
+        "weak": [
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501211002": {
+        "weak": [
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false
+    },
+    "groupName": "Furbo Journalist"
+  },
+  "5013010": {
+    "5013010": {
+      "5013010": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Wind"
+        ]
+      },
+      "501301001": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Wind"
+        ]
+      },
+      "501301002": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Wind"
+        ]
+      },
+      "hasReader": false
+    },
+    "5013011": {
+      "5013011": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Wind"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Synwish Syndicate's Underboss, Caustide"
+    },
+    "groupName": "Rocking Rebel"
+  },
+  "5013030": {
+    "5013030": {
+      "5013030": {},
+      "501303001": {},
+      "501303002": {
+        "name": "Sparxie's \"Gift\""
+      },
+      "hasReader": false
+    },
+    "groupName": "Canvas Peacock"
+  },
+  "5014010": {
+    "5014010": {
+      "5014010": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501401001": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501401003": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false
+    },
+    "5014012": {
+      "5014012": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "@SparxiConOfficial"
+    },
+    "groupName": "@SparxiConOfficial"
   },
   "8001010": {
     "8001010": {
@@ -13851,6 +14441,13 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "801202017": {
+        "name": "Hell Humor",
+        "weak": [
+          "Wind",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
     },
     "8012021": {
@@ -13968,6 +14565,14 @@ let basicEnemyList = {
         ]
       },
       "801203011": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "801203012": {
+        "name": "Hell Humor",
         "weak": [
           "Fire",
           "Ice",
@@ -14377,6 +14982,12 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
+      "802201002": {
+        "weak": [
+          "Quantum",
+          "Imaginary"
+        ]
+      },
       "802201005": {
         "weak": [
           "Quantum",
@@ -14419,6 +15030,22 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Juvenile Sting"
     },
+    "8022012": {
+      "8022012": {
+        "weak": [
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "802201201": {
+        "weak": [
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Juvenile Sting"
+    },
     "groupName": "Juvenile Sting"
   },
   "8022020": {
@@ -14456,6 +15083,13 @@ let basicEnemyList = {
           "Physical",
           "Fire",
           "Quantum"
+        ]
+      },
+      "802202005": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Imaginary"
         ]
       },
       "hasReader": true
@@ -14510,6 +15144,12 @@ let basicEnemyList = {
         ]
       },
       "802203001": {
+        "weak": [
+          "Physical",
+          "Ice"
+        ]
+      },
+      "802203002": {
         "weak": [
           "Physical",
           "Ice"
@@ -17196,6 +17836,17 @@ let basicEnemyList = {
       "hasReader": false,
       "baseName": "Shadow of \"Hatred\""
     },
+    "4032028": {
+      "4032028": {
+        "weak": [
+          "Ice",
+          "Thunder",
+          "Quantum"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Time Assassin"
+    },
     "4032031": {
       "4032031": {
         "weak": [
@@ -17431,6 +18082,53 @@ let basicEnemyList = {
       },
       "hasReader": true,
       "baseName": "Elegy Siren: Insatiable Leviathan"
+    },
+    "5012070": {
+      "5012070": {
+        "weak": [
+          "Wind",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Output Port 1"
+    },
+    "5012080": {
+      "5012080": {
+        "weak": [
+          "Wind",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Output Port 2"
+    },
+    "5014011": {
+      "5014011": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501401101": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501401102": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Live Stream Assistant"
     },
     "8002058": {
       "8002058": {

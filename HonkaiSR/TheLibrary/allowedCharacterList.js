@@ -196,12 +196,12 @@ let allowedCharacterList = [
     "trimName": "DrRatio"
   },
   {
-    "fullName": "Sparkle",
-    "trimName": "Sparkle"
+    "fullName": "Sparkle_v0",
+    "trimName": "Sparklev0"
   },
   {
-    "fullName": "Black Swan",
-    "trimName": "BlackSwan"
+    "fullName": "Black Swan_v0",
+    "trimName": "BlackSwanv0"
   },
   {
     "fullName": "Acheron",

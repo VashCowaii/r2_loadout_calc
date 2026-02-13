@@ -41,10 +41,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1626,
-        1627,
-        1628,
-        1629
+        1646,
+        1647,
+        1648,
+        1649
       ],
       "enemyTag": [
         "MonsterType_W4_Scholar_00"
@@ -74,10 +74,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1626,
-        1627,
-        1628,
-        1629
+        1646,
+        1647,
+        1648,
+        1649
       ],
       "enemyTag": [
         "MonsterType_W4_Scholar_00"
@@ -107,10 +107,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1626,
-        1627,
-        1628,
-        1629
+        1646,
+        1647,
+        1648,
+        1649
       ],
       "enemyTag": [
         "MonsterType_W4_Scholar_00"
@@ -140,10 +140,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1626,
-        1627,
-        1628,
-        1629
+        1646,
+        1647,
+        1648,
+        1649
       ],
       "enemyTag": [
         "MonsterType_W4_Scholar_00"
@@ -173,10 +173,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1626,
-        1627,
-        1628,
-        1629
+        1646,
+        1647,
+        1648,
+        1649
       ],
       "enemyTag": [
         "MonsterType_W4_Scholar_00"
@@ -206,10 +206,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1626,
-        1627,
-        1628,
-        1629
+        1646,
+        1647,
+        1648,
+        1649
       ],
       "enemyTag": [
         "MonsterType_W4_Scholar_00"
@@ -239,10 +239,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1626,
-        1627,
-        1628,
-        1629
+        1646,
+        1647,
+        1648,
+        1649
       ],
       "enemyTag": [
         "MonsterType_W4_Scholar_00"
@@ -272,10 +272,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1626,
-        1627,
-        1628,
-        1629
+        1646,
+        1647,
+        1648,
+        1649
       ],
       "enemyTag": [
         "MonsterType_W4_Scholar_00",

@@ -1362,6 +1362,39 @@ const compositeAbilityObject = {
                 },
                 "Modifier Deletes Itself"
               ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Owner]: Aborted",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Parameter String",
+                        "compareType": "=",
+                        "value2": "Monster_W4_Serpent_Ability05_Insert"
+                      },
+                      {
+                        "name": "Compare: Parameter String",
+                        "compareType": "=",
+                        "value2": "Monster_W4_Serpent_Ability05ToStb_Insert"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-969691416\">Enemy_W4_Serpent_Charge_TriggerEff</a>"
+                    }
+                  ]
+                }
+              ]
             }
           ],
           "stackData": [],

@@ -2092,6 +2092,11 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Inject Ability Use",
+                              "condition": {
+                                "name": "Insert Ability Condition",
+                                "type": "AbilityOwnerInsertUnusedCount",
+                                "typeValue": 1
+                              },
                               "abilityName": "Monster_W1_Soldier03_Ability06_Insert_Part01",
                               "abilityTarget": {
                                 "name": "Target Name",

@@ -31,11 +31,11 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID) || RETURN",
-                "displayLines": "SummonID",
+                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__95) || RETURN",
+                "displayLines": "ENEMIES_OBJECT_UNUSED__95",
                 "constants": [],
                 "variables": [
-                  "SummonID"
+                  "ENEMIES_OBJECT_UNUSED__95"
                 ]
               },
               "locationType": "KeepOnEdge"
@@ -56,11 +56,11 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (SummonID) || RETURN",
-                "displayLines": "SummonID",
+                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__95) || RETURN",
+                "displayLines": "ENEMIES_OBJECT_UNUSED__95",
                 "constants": [],
                 "variables": [
-                  "SummonID"
+                  "ENEMIES_OBJECT_UNUSED__95"
                 ]
               },
               "locationType": "KeepOnEdge"
@@ -103,11 +103,11 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID) || RETURN",
-                    "displayLines": "SummonID",
+                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__95) || RETURN",
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__95",
                     "constants": [],
                     "variables": [
-                      "SummonID"
+                      "ENEMIES_OBJECT_UNUSED__95"
                     ]
                   },
                   "locationType": "KeepOnEdge"
@@ -128,11 +128,11 @@ const configAbility = {
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonID) || RETURN",
-                    "displayLines": "SummonID",
+                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__95) || RETURN",
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__95",
                     "constants": [],
                     "variables": [
-                      "SummonID"
+                      "ENEMIES_OBJECT_UNUSED__95"
                     ]
                   },
                   "locationType": "KeepOnEdge"

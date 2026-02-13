@@ -559,7 +559,8 @@ const compositeAbilityObject = {
                               "target": "{{Modifier Holder}}"
                             },
                             "characterName": null,
-                            "isCompareUniqueID": true
+                            "isCompareUniqueID": true,
+                            "invertCondition": true
                           }
                         ]
                       }

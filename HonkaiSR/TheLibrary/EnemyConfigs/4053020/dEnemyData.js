@@ -43,12 +43,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2390,
-        2391,
-        2392,
-        2393,
-        2394,
-        2395
+        2440,
+        2441,
+        2442,
+        2443,
+        2444,
+        2445
       ],
       "enemyTag": [
         "W4_Unicorn_01"
@@ -57,6 +57,48 @@ let enemyData = {
         {
           "name": "Mirage Fizzle Kid",
           "over": 4052020,
+          "base": 4052020
+        }
+      ]
+    },
+    "405302001": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.666667,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Ice",
+        "Thunder"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2440,
+        2441,
+        2442,
+        2443,
+        2444,
+        2445
+      ],
+      "enemyTag": [
+        "W4_Unicorn_01"
+      ],
+      "summons": [
+        {
+          "name": "Mirage Fizzle Kid",
+          "over": 405202001,
           "base": 4052020
         }
       ]

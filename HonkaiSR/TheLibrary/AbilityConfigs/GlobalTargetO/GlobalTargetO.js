@@ -84,6 +84,17 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "sortByTough%",
+      "isTargetOperator": true,
+      "execute": [
+        {
+          "name": "Sort by Stat Percentage",
+          "stat": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessCurrent%</span>&nbsp;"
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "sortByToughCurrent",
       "isTargetOperator": true,
       "execute": [
@@ -112,6 +123,17 @@ const configAbility = {
         {
           "name": "Sort by Stat",
           "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "sortByHP%",
+      "isTargetOperator": true,
+      "execute": [
+        {
+          "name": "Sort by Stat Percentage",
+          "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;"
         }
       ]
     },
@@ -798,6 +820,41 @@ const configAbility = {
             "type": "Battle Event",
             "invertCondition": true,
             "livingState": "Anyone"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Remove Backup Memosprite",
+      "isTargetOperator": true,
+      "execute": [
+        {
+          "name": "Target Filter",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "$type": "RPG.GameCore.ByIsTargetCustomUnselectable",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "ParamEntity"
+                },
+                "SourceEntity": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "Caster"
+                }
+              },
+              {
+                "name": "Is Entity Type",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "type": "Memosprite"
+              }
+            ],
+            "invertCondition": true
           }
         }
       ]

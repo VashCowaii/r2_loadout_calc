@@ -44,7 +44,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -77,7 +77,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -110,7 +110,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -143,7 +143,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -176,7 +176,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -209,7 +209,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -242,7 +242,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -275,7 +275,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -308,7 +308,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -341,7 +341,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -374,7 +374,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -407,7 +407,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -440,7 +440,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -473,7 +473,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -506,7 +506,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -539,7 +539,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -572,7 +572,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -605,7 +605,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -638,7 +638,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -671,7 +671,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"
@@ -704,7 +704,7 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        2428
+        2547
       ],
       "enemyTag": [
         "LockTarget"

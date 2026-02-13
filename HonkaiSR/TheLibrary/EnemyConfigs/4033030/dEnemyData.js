@@ -43,10 +43,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2150,
-        2151,
-        2152,
-        2153
+        2200,
+        2201,
+        2202,
+        2203
       ],
       "summons": [
         {
@@ -80,10 +80,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2150,
-        2151,
-        2152,
-        2153
+        2200,
+        2201,
+        2202,
+        2203
       ],
       "enemyTag": [
         "MGrid_4009"
@@ -120,10 +120,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2150,
-        2151,
-        2152,
-        2153
+        2200,
+        2201,
+        2202,
+        2203
       ],
       "summons": [
         {
@@ -157,10 +157,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2150,
-        2151,
-        2152,
-        2153
+        2200,
+        2201,
+        2202,
+        2203
       ],
       "summons": [
         {
@@ -194,10 +194,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2150,
-        2151,
-        2152,
-        2153
+        2200,
+        2201,
+        2202,
+        2203
       ],
       "summons": [
         {

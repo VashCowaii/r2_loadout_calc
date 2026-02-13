@@ -89,12 +89,14 @@ let enemyData = {
       ],
       "overrideParams": {
         "41": [
-          4,
-          "-",
-          "-",
-          "-",
-          "-",
-          "-",
+          [
+            4
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
           15,
           "-"
         ]

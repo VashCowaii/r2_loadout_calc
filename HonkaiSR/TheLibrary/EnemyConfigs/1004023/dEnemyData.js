@@ -91,7 +91,7 @@ let enemyData = {
       "stArray": [
         1,
         1,
-        1.846154,
+        2.076923,
         1,
         null,
         1,
@@ -100,7 +100,7 @@ let enemyData = {
       "phhp": [
         1,
         1,
-        1
+        1.5
       ],
       "weak": [
         "Physical",
@@ -155,22 +155,133 @@ let enemyData = {
       ],
       "overrideParams": {
         "130": [
-          "-",
-          0.8,
-          "-",
-          "-",
-          1,
-          "-",
+          [
+            -1,
+            0.5,
+            0.15,
+            -1,
+            1
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
           "-",
           "-"
         ],
         "131": [
+          [
+            -1,
+            0.05,
+            1
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
           "-",
-          0.05,
-          1,
+          "-"
+        ]
+      }
+    },
+    "100402302": {
+      "name": "Gepard",
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        2.307692,
+        1,
+        null,
+        1,
+        null
+      ],
+      "phhp": [
+        1,
+        1,
+        1.5
+      ],
+      "weak": [
+        "Physical",
+        "Thunder",
+        "Imaginary"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Ice": 0.4,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL_Frozen": 0.75,
+        "STAT_Confine": 0.75,
+        "STAT_Entangle": 0.75
+      },
+      "abilities": [
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139
+      ],
+      "enemyTag": [
+        "RL",
+        "MGrid_4002"
+      ],
+      "summons": [
+        {
+          "name": "Silvermane Lieutenant",
+          "over": 100301301,
+          "base": 1003013
+        },
+        {
+          "name": "Silvermane Cannoneer",
+          "over": 100203025,
+          "base": 1002030
+        },
+        {
+          "name": "Silvermane Soldier",
+          "over": 100204030,
+          "base": 1002040
+        }
+      ],
+      "overrideParams": {
+        "130": [
+          [
+            -1,
+            0.3,
+            0.15,
+            -1,
+            1
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
           "-",
-          "-",
-          "-",
+          "-"
+        ],
+        "131": [
+          [
+            -1,
+            0.05,
+            1
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
           "-",
           "-"
         ]

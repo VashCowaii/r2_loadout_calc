@@ -618,7 +618,8 @@ const configAbility = {
                       "target": "{{Modifier Holder}}"
                     },
                     "characterName": "Castorice, Hand of Shadow",
-                    "isBaseCompare": true
+                    "isBaseCompare": true,
+                    "invertCondition": true
                   }
                 ]
               },

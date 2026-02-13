@@ -3472,7 +3472,8 @@ const configAbility = {
       "stackType": "Replace",
       "modifierFlags": [
         "AvatarBreak",
-        "STAT_CTRL"
+        "STAT_CTRL",
+        "DisableAction"
       ],
       "execute": [
         {

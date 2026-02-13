@@ -1,6 +1,574 @@
 const stageTypers = "crimson"
 let mocSchedule = [
   {
+    "id": 1033,
+    "realName": "Bud of The Hunt",
+    "worldLevel": 5,
+    "testWorldLevel": 5,
+    "testMapID": 1033,
+    "buffData": {
+      "modifierName": "",
+      "realModifierNamne": "",
+      "name": "",
+      "desc": "",
+      "battleDesc": null,
+      "buffType": "",
+      "params": []
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Bud of The Hunt",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              1025215,
+              1025225,
+              1025235
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "undefined",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Servant of Tides",
+                      "id": 4052010,
+                      "image": 4052010,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 40120.463097,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Ice",
+                      "hpBars": 1,
+                      "toughnessBase": 40,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Mirage Fizzle Kid",
+                      "id": 4052020,
+                      "image": 4052020,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 40120.463097,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "toughnessBase": 40,
+                      "weaknessList": [
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0
+                  ]
+                ],
+                "scalarElite": 2,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 40120.463097,
+                "aoeSUM": 120361.389291
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Mirage Fizzle Kid",
+                      "id": 4052020,
+                      "image": 4052020,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 40120.463097,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "toughnessBase": 40,
+                      "weaknessList": [
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Servant of Tides",
+                      "id": 4052010,
+                      "image": 4052010,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 40120.463097,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Ice",
+                      "hpBars": 1,
+                      "toughnessBase": 40,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    1,
+                    0
+                  ]
+                ],
+                "scalarElite": 2,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 40120.463097,
+                "aoeSUM": 160481.852388
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Servant of Tides",
+                      "id": 4052010,
+                      "image": 4052010,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 40120.463097,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Ice",
+                      "hpBars": 1,
+                      "toughnessBase": 40,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Mirage Fizzle Kid",
+                      "id": 4052020,
+                      "image": 4052020,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 40120.463097,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "toughnessBase": 40,
+                      "weaknessList": [
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0,
+                    1
+                  ]
+                ],
+                "scalarElite": 2,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 40120.463097,
+                "aoeSUM": 160481.852388
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [],
+            "stageDataArray": []
+          }
+        }
+      }
+    },
+    "realDropList": [
+      "110273.png",
+      "110272.png",
+      "110271.png",
+      "2.png"
+    ]
+  },
+  {
+    "id": 1031,
+    "realName": "Bud of Elation",
+    "worldLevel": 5,
+    "testWorldLevel": 5,
+    "testMapID": 1031,
+    "buffData": {
+      "modifierName": "",
+      "realModifierNamne": "",
+      "name": "",
+      "desc": "",
+      "battleDesc": null,
+      "buffType": "",
+      "params": []
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Bud of Elation",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              1025015,
+              1025025,
+              1025035
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "undefined",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Aggressive Reading Material",
+                      "id": 5012030,
+                      "image": 5012030,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 30861.89469,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Security Doggo",
+                      "id": 5012020,
+                      "image": 5012020,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 27775.705221,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0
+                  ]
+                ],
+                "scalarElite": 2,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 30861.89469,
+                "aoeSUM": 89499.494601
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Autonomous Wand",
+                      "id": 5012010,
+                      "image": 5012010,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 30861.89469,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Aggressive Reading Material",
+                      "id": 5012030,
+                      "image": 5012030,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 30861.89469,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    1,
+                    0
+                  ]
+                ],
+                "scalarElite": 2,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 30861.89469,
+                "aoeSUM": 123447.57876
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Security Doggo",
+                      "id": 5012020,
+                      "image": 5012020,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 27775.705221,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Autonomous Wand",
+                      "id": 5012010,
+                      "image": 5012010,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 30861.89469,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0,
+                    1
+                  ]
+                ],
+                "scalarElite": 2,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 30861.89469,
+                "aoeSUM": 117275.199822
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [],
+            "stageDataArray": []
+          }
+        }
+      }
+    },
+    "realDropList": [
+      "110263.png",
+      "110262.png",
+      "110261.png",
+      "2.png"
+    ]
+  },
+  {
     "id": 1024,
     "realName": "Bud of Remembrance",
     "worldLevel": 5,

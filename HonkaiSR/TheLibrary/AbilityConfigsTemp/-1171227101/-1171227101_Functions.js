@@ -7,7 +7,7 @@ const configAbility = {
     0,
     0
   ],
-  "length": 54,
+  "length": 51,
   "parse": [
     {
       "name": "CharacterFunctions",
@@ -44,14 +44,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "setValue": {
-            "operator": "Variables[0] (ChangePhase_MaxHPValue) || RETURN",
-            "displayLines": "ChangePhase_MaxHPValue",
-            "constants": [],
-            "variables": [
-              "ChangePhase_MaxHPValue"
-            ]
-          }
+          "setPercent": 1
         },
         {
           "name": "Reset Toughness",
@@ -130,14 +123,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "setValue": {
-            "operator": "Variables[0] (ChangePhase_MaxHPValue) || RETURN",
-            "displayLines": "ChangePhase_MaxHPValue",
-            "constants": [],
-            "variables": [
-              "ChangePhase_MaxHPValue"
-            ]
-          }
+          "setPercent": 1
         },
         {
           "name": "Reset Toughness",
@@ -1336,7 +1322,7 @@ const configAbility = {
           "name": "Declare Custom Variable",
           "target": {
             "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}.[[living]]"
+            "target": "{{Player Team All(with Unselectable)}}.[[living]] + {{Currency Wars Full OffFieldList}}.[[living]]"
           },
           "scope": "TargetEntity",
           "variableName": "MDF_PerformanceDelay"
@@ -2015,1667 +2001,6 @@ const configAbility = {
     },
     {
       "name": "CharacterFunctions",
-      "functionName": "<a class=\"gTempYellow\" id=\"fun__-1214929217\">ElementBall_Consume</a>",
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "Team_Shared_Points",
-            "compareType": ">=",
-            "value2": 1,
-            "sharePointType": "Physical"
-          },
-          "passed": [
-            {
-              "name": "Modify Share Points",
-              "pointsArray": [
-                "Physical[1]"
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "Team_Shared_Points",
-                "compareType": ">=",
-                "value2": 1,
-                "sharePointType": "Fire"
-              },
-              "passed": [
-                {
-                  "name": "Modify Share Points",
-                  "pointsArray": [
-                    "Fire[1]"
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Team_Shared_Points",
-                    "compareType": ">=",
-                    "value2": 1,
-                    "sharePointType": "Wind"
-                  },
-                  "passed": [
-                    {
-                      "name": "Modify Share Points",
-                      "pointsArray": [
-                        "Wind[1]"
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "Team_Shared_Points",
-                        "compareType": ">=",
-                        "value2": 1,
-                        "sharePointType": "Ice"
-                      },
-                      "passed": [
-                        {
-                          "name": "Modify Share Points",
-                          "pointsArray": [
-                            "Ice[1]"
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "Team_Shared_Points",
-                            "compareType": ">=",
-                            "value2": 1,
-                            "sharePointType": "Thunder"
-                          },
-                          "passed": [
-                            {
-                              "name": "Modify Share Points",
-                              "pointsArray": [
-                                "Thunder[1]"
-                              ]
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "value1": "Team_Shared_Points",
-                                "compareType": ">=",
-                                "value2": 1,
-                                "sharePointType": "Imaginary"
-                              },
-                              "passed": [
-                                {
-                                  "name": "Modify Share Points",
-                                  "pointsArray": [
-                                    "Imaginary[1]"
-                                  ]
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Compare: Variable",
-                                    "value1": "Team_Shared_Points",
-                                    "compareType": ">=",
-                                    "value2": 1,
-                                    "sharePointType": "Quantum"
-                                  },
-                                  "passed": [
-                                    {
-                                      "name": "Modify Share Points",
-                                      "pointsArray": [
-                                        "Quantum[1]"
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "CharacterFunctions",
-      "functionName": "<a class=\"gTempYellow\" id=\"fun__1405102231\">ElementBall_Dam</a>",
-      "parse": [
-        {
-          "name": "SWITCH",
-          "switchValue": {
-            "operator": "Variables[0] (TotalBall) || RETURN",
-            "displayLines": "TotalBall",
-            "constants": [],
-            "variables": [
-              "TotalBall"
-            ]
-          },
-          "caseEvents": [
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 1,
-              "execute": [
-                {
-                  "name": "Random Event",
-                  "odds": [
-                    1,
-                    0
-                  ],
-                  "execute": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "SWITCH",
-                          "switchValue": {
-                            "operator": "Variables[0] (TEMP_OBJECT_UNUSED_10) || RETURN",
-                            "displayLines": "TEMP_OBJECT_UNUSED_10",
-                            "constants": [],
-                            "variables": [
-                              "TEMP_OBJECT_UNUSED_10"
-                            ]
-                          },
-                          "caseEvents": [
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 1,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 2,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 3,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            }
-                          ],
-                          "defaultEvents": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "ElementBall_BE_Lv",
-                            "compareType": "=",
-                            "value2": 2
-                          }
-                        },
-                        {
-                          "name": "Consume",
-                          "consumeFrom": "MaxHP",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "consumePercent": {
-                            "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                            "displayLines": "TEMP_OBJECT_UNUSED_11",
-                            "constants": [],
-                            "variables": [
-                              "TEMP_OBJECT_UNUSED_11"
-                            ]
-                          },
-                          "attackType": "Level",
-                          "DamageType": {
-                            "name": "Damage Type Source",
-                            "sourceType": "Fire"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 2,
-              "execute": [
-                {
-                  "name": "Random Event",
-                  "odds": [
-                    1,
-                    0
-                  ],
-                  "execute": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "SWITCH",
-                          "switchValue": {
-                            "operator": "Variables[0] (TEMP_OBJECT_UNUSED_10) || RETURN",
-                            "displayLines": "TEMP_OBJECT_UNUSED_10",
-                            "constants": [],
-                            "variables": [
-                              "TEMP_OBJECT_UNUSED_10"
-                            ]
-                          },
-                          "caseEvents": [
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 1,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 2,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 3,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            }
-                          ],
-                          "defaultEvents": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Consume",
-                          "consumeFrom": "MaxHP",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "consumePercent": {
-                            "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                            "displayLines": "TEMP_OBJECT_UNUSED_11",
-                            "constants": [],
-                            "variables": [
-                              "TEMP_OBJECT_UNUSED_11"
-                            ]
-                          },
-                          "attackType": "Level",
-                          "DamageType": {
-                            "name": "Damage Type Source",
-                            "sourceType": "Ice"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 3,
-              "execute": [
-                {
-                  "name": "Random Event",
-                  "odds": [
-                    1,
-                    0
-                  ],
-                  "execute": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "SWITCH",
-                          "switchValue": {
-                            "operator": "Variables[0] (TEMP_OBJECT_UNUSED_10) || RETURN",
-                            "displayLines": "TEMP_OBJECT_UNUSED_10",
-                            "constants": [],
-                            "variables": [
-                              "TEMP_OBJECT_UNUSED_10"
-                            ]
-                          },
-                          "caseEvents": [
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 1,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 2,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 3,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            }
-                          ],
-                          "defaultEvents": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Consume",
-                          "consumeFrom": "MaxHP",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "consumePercent": {
-                            "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                            "displayLines": "TEMP_OBJECT_UNUSED_11",
-                            "constants": [],
-                            "variables": [
-                              "TEMP_OBJECT_UNUSED_11"
-                            ]
-                          },
-                          "attackType": "Level",
-                          "DamageType": {
-                            "name": "Damage Type Source",
-                            "sourceType": "Thunder"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 4,
-              "execute": [
-                {
-                  "name": "Random Event",
-                  "odds": [
-                    1,
-                    0
-                  ],
-                  "execute": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "SWITCH",
-                          "switchValue": {
-                            "operator": "Variables[0] (TEMP_OBJECT_UNUSED_10) || RETURN",
-                            "displayLines": "TEMP_OBJECT_UNUSED_10",
-                            "constants": [],
-                            "variables": [
-                              "TEMP_OBJECT_UNUSED_10"
-                            ]
-                          },
-                          "caseEvents": [
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 1,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 2,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 3,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            }
-                          ],
-                          "defaultEvents": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Consume",
-                          "consumeFrom": "MaxHP",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "consumePercent": {
-                            "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                            "displayLines": "TEMP_OBJECT_UNUSED_11",
-                            "constants": [],
-                            "variables": [
-                              "TEMP_OBJECT_UNUSED_11"
-                            ]
-                          },
-                          "attackType": "Level",
-                          "DamageType": {
-                            "name": "Damage Type Source",
-                            "sourceType": "Wind"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 5,
-              "execute": [
-                {
-                  "name": "Random Event",
-                  "odds": [
-                    1,
-                    0
-                  ],
-                  "execute": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "SWITCH",
-                          "switchValue": {
-                            "operator": "Variables[0] (TEMP_OBJECT_UNUSED_10) || RETURN",
-                            "displayLines": "TEMP_OBJECT_UNUSED_10",
-                            "constants": [],
-                            "variables": [
-                              "TEMP_OBJECT_UNUSED_10"
-                            ]
-                          },
-                          "caseEvents": [
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 1,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 2,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 3,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            }
-                          ],
-                          "defaultEvents": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Consume",
-                          "consumeFrom": "MaxHP",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "consumePercent": {
-                            "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                            "displayLines": "TEMP_OBJECT_UNUSED_11",
-                            "constants": [],
-                            "variables": [
-                              "TEMP_OBJECT_UNUSED_11"
-                            ]
-                          },
-                          "attackType": "Level",
-                          "DamageType": {
-                            "name": "Damage Type Source",
-                            "sourceType": "Imaginary"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 6,
-              "execute": [
-                {
-                  "name": "Random Event",
-                  "odds": [
-                    1,
-                    0
-                  ],
-                  "execute": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "SWITCH",
-                          "switchValue": {
-                            "operator": "Variables[0] (TEMP_OBJECT_UNUSED_10) || RETURN",
-                            "displayLines": "TEMP_OBJECT_UNUSED_10",
-                            "constants": [],
-                            "variables": [
-                              "TEMP_OBJECT_UNUSED_10"
-                            ]
-                          },
-                          "caseEvents": [
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 1,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 2,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 3,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            }
-                          ],
-                          "defaultEvents": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Consume",
-                          "consumeFrom": "MaxHP",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "consumePercent": {
-                            "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                            "displayLines": "TEMP_OBJECT_UNUSED_11",
-                            "constants": [],
-                            "variables": [
-                              "TEMP_OBJECT_UNUSED_11"
-                            ]
-                          },
-                          "attackType": "Level",
-                          "DamageType": {
-                            "name": "Damage Type Source",
-                            "sourceType": "Quantum"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 7,
-              "execute": [
-                {
-                  "name": "Random Event",
-                  "odds": [
-                    1,
-                    0
-                  ],
-                  "execute": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "SWITCH",
-                          "switchValue": {
-                            "operator": "Variables[0] (TEMP_OBJECT_UNUSED_10) || RETURN",
-                            "displayLines": "TEMP_OBJECT_UNUSED_10",
-                            "constants": [],
-                            "variables": [
-                              "TEMP_OBJECT_UNUSED_10"
-                            ]
-                          },
-                          "caseEvents": [
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 1,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 2,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 3,
-                              "execute": [
-                                {
-                                  "name": "Consume",
-                                  "consumeFrom": "MaxHP",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "consumePercent": {
-                                    "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                                    "displayLines": "TEMP_OBJECT_UNUSED_11",
-                                    "constants": [],
-                                    "variables": [
-                                      "TEMP_OBJECT_UNUSED_11"
-                                    ]
-                                  },
-                                  "attackType": "Level",
-                                  "DamageType": {
-                                    "name": "Damage Type Source",
-                                    "sourceType": "Fire"
-                                  }
-                                }
-                              ]
-                            }
-                          ],
-                          "defaultEvents": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Consume",
-                          "consumeFrom": "MaxHP",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "consumePercent": {
-                            "operator": "Variables[0] (TEMP_OBJECT_UNUSED_11) || RETURN",
-                            "displayLines": "TEMP_OBJECT_UNUSED_11",
-                            "constants": [],
-                            "variables": [
-                              "TEMP_OBJECT_UNUSED_11"
-                            ]
-                          },
-                          "attackType": "Level",
-                          "DamageType": {
-                            "name": "Damage Type Source",
-                            "sourceType": "Physical"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "CharacterFunctions",
-      "functionName": "<a class=\"gTempYellow\" id=\"fun__1549875740\">ElementBall_Calculation</a>",
-      "parse": [
-        {
-          "name": "Define Custom Variable with Share Points",
-          "sharePointType": "Fire",
-          "variableName": "FireBall_Sum"
-        },
-        {
-          "name": "Define Custom Variable with Share Points",
-          "sharePointType": "Ice",
-          "variableName": "IceBall_Sum"
-        },
-        {
-          "name": "Define Custom Variable with Share Points",
-          "sharePointType": "Wind",
-          "variableName": "WindBall_Sum"
-        },
-        {
-          "name": "Define Custom Variable with Share Points",
-          "sharePointType": "Thunder",
-          "variableName": "ThunderBall_Sum"
-        },
-        {
-          "name": "Define Custom Variable with Share Points",
-          "sharePointType": "Quantum",
-          "variableName": "QuantumBall_Sum"
-        },
-        {
-          "name": "Define Custom Variable with Share Points",
-          "sharePointType": "Imaginary",
-          "variableName": "ImaginaryBall_Sum"
-        },
-        {
-          "name": "Define Custom Variable with Share Points",
-          "sharePointType": "Physical",
-          "variableName": "PhysicalBall_Sum"
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "variableName": "TotalBall",
-          "value": {
-            "operator": "Variables[0] (FireBall_Sum) || Variables[1] (IceBall_Sum) || ADD || Variables[2] (WindBall_Sum) || ADD || Variables[3] (ThunderBall_Sum) || ADD || Variables[4] (QuantumBall_Sum) || ADD || Variables[5] (ImaginaryBall_Sum) || ADD || Variables[6] (PhysicalBall_Sum) || ADD || RETURN",
-            "displayLines": "((((((FireBall_Sum + IceBall_Sum) + WindBall_Sum) + ThunderBall_Sum) + QuantumBall_Sum) + ImaginaryBall_Sum) + PhysicalBall_Sum)",
-            "constants": [],
-            "variables": [
-              "FireBall_Sum",
-              "IceBall_Sum",
-              "WindBall_Sum",
-              "ThunderBall_Sum",
-              "QuantumBall_Sum",
-              "ImaginaryBall_Sum",
-              "PhysicalBall_Sum"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "name": "CharacterFunctions",
-      "functionName": "<a class=\"gTempYellow\" id=\"fun__-732112097\">LeziActivity_Dam</a>",
-      "parse": [
-        {
-          "name": "SWITCH",
-          "switchValue": {
-            "operator": "Variables[0] (TotalBall) || RETURN",
-            "displayLines": "TotalBall",
-            "constants": [],
-            "variables": [
-              "TotalBall"
-            ]
-          },
-          "caseEvents": [
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 1,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (TEMP_OBJECT_UNUSED_12) || RETURN",
-                      "displayLines": "TEMP_OBJECT_UNUSED_12",
-                      "constants": [],
-                      "variables": [
-                        "TEMP_OBJECT_UNUSED_12"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Break DMG"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 2,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Ice",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (TEMP_OBJECT_UNUSED_12) || RETURN",
-                      "displayLines": "TEMP_OBJECT_UNUSED_12",
-                      "constants": [],
-                      "variables": [
-                        "TEMP_OBJECT_UNUSED_12"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Break DMG"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 3,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Thunder",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (TEMP_OBJECT_UNUSED_12) || RETURN",
-                      "displayLines": "TEMP_OBJECT_UNUSED_12",
-                      "constants": [],
-                      "variables": [
-                        "TEMP_OBJECT_UNUSED_12"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Break DMG"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 4,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Wind",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (TEMP_OBJECT_UNUSED_12) || RETURN",
-                      "displayLines": "TEMP_OBJECT_UNUSED_12",
-                      "constants": [],
-                      "variables": [
-                        "TEMP_OBJECT_UNUSED_12"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Break DMG"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 5,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Imaginary",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (TEMP_OBJECT_UNUSED_12) || RETURN",
-                      "displayLines": "TEMP_OBJECT_UNUSED_12",
-                      "constants": [],
-                      "variables": [
-                        "TEMP_OBJECT_UNUSED_12"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Break DMG"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 6,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Quantum",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (TEMP_OBJECT_UNUSED_12) || RETURN",
-                      "displayLines": "TEMP_OBJECT_UNUSED_12",
-                      "constants": [],
-                      "variables": [
-                        "TEMP_OBJECT_UNUSED_12"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Break DMG"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 7,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Physical",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (TEMP_OBJECT_UNUSED_12) || RETURN",
-                      "displayLines": "TEMP_OBJECT_UNUSED_12",
-                      "constants": [],
-                      "variables": [
-                        "TEMP_OBJECT_UNUSED_12"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Break DMG"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "CharacterFunctions",
       "functionName": "<a class=\"gTempYellow\" id=\"fun__-537679168\">ReduceActionDelay</a>",
       "parse": [
         {
@@ -4308,6 +2633,195 @@ const configAbility = {
                 {
                   "name": "Call Parameter Sequence",
                   "parameterName": "DamagePerformance"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CharacterFunctions",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__101547145\">Elation_StartElationTime</a>",
+      "dynamicStringsArray": [
+        {
+          "name": "TryStartElationTime_CustomTag",
+          "value": "-1"
+        }
+      ],
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Battle Event List}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Battle Event ID",
+            "ID": 70001,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            }
+          },
+          "ifTargetFound": [
+            {
+              "name": "Inject Extra-Turn",
+              "actionTag": null,
+              "valuePerStack": {
+                "ElationTime_OverrideElationPointTemp": {
+                  "operator": "Variables[0] (TryStartElationTime_OverrideElationPoint) || RETURN",
+                  "displayLines": "TryStartElationTime_OverrideElationPoint",
+                  "constants": [],
+                  "variables": [
+                    "TryStartElationTime_OverrideElationPoint"
+                  ]
+                },
+                "ElationTime_IsNoConsumeTemp": {
+                  "operator": "Variables[0] (TryStartElationTime_ElationTimeIsNoConsume) || RETURN",
+                  "displayLines": "TryStartElationTime_ElationTimeIsNoConsume",
+                  "constants": [],
+                  "variables": [
+                    "TryStartElationTime_ElationTimeIsNoConsume"
+                  ]
+                }
+              },
+              "target": {
+                "name": "Target Name",
+                "target": "Elation_BE"
+              },
+              "dynamicStringsArray": [
+                {
+                  "name": "ElationTime_CustomTagTemp",
+                  "value": {
+                    "Custom": true,
+                    "Key": "TryStartElationTime_CustomTag"
+                  }
+                }
+              ],
+              "afterInjection": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "Elation_BE"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"291062653\">MBattleEvent_Elation_InsertActionCheck</a>",
+                  "valuePerStack": {
+                    "MDF_OverrideElationPoint": {
+                      "operator": "Variables[0] (TryStartElationTime_OverrideElationPoint) || RETURN",
+                      "displayLines": "TryStartElationTime_OverrideElationPoint",
+                      "constants": [],
+                      "variables": [
+                        "TryStartElationTime_OverrideElationPoint"
+                      ]
+                    },
+                    "MDF_ElationTimeIsNoConsume": {
+                      "operator": "Variables[0] (TryStartElationTime_ElationTimeIsNoConsume) || RETURN",
+                      "displayLines": "TryStartElationTime_ElationTimeIsNoConsume",
+                      "constants": [],
+                      "variables": [
+                        "TryStartElationTime_ElationTimeIsNoConsume"
+                      ]
+                    }
+                  },
+                  "dynamicStringsArray": [
+                    {
+                      "name": "MDF_CustomTag",
+                      "value": {
+                        "Custom": true,
+                        "Key": "TryStartElationTime_CustomTag"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "copyAbortFlags": true
+            }
+          ],
+          "noTargetFound": [
+            {
+              "name": "Add Battle Event",
+              "teamName": "Neutral Team",
+              "eventID": 70001,
+              "assignOwner": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "statSource": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "canDupe": true,
+              "variables": null,
+              "whenCreated": [
+                {
+                  "name": "Inject Extra-Turn",
+                  "actionTag": null,
+                  "valuePerStack": {
+                    "ElationTime_OverrideElationPointTemp": {
+                      "operator": "Variables[0] (TryStartElationTime_OverrideElationPoint) || RETURN",
+                      "displayLines": "TryStartElationTime_OverrideElationPoint",
+                      "constants": [],
+                      "variables": [
+                        "TryStartElationTime_OverrideElationPoint"
+                      ]
+                    },
+                    "ElationTime_IsNoConsumeTemp": {
+                      "operator": "Variables[0] (TryStartElationTime_ElationTimeIsNoConsume) || RETURN",
+                      "displayLines": "TryStartElationTime_ElationTimeIsNoConsume",
+                      "constants": [],
+                      "variables": [
+                        "TryStartElationTime_ElationTimeIsNoConsume"
+                      ]
+                    }
+                  },
+                  "target": {
+                    "name": "Target Name",
+                    "target": "Elation_BE"
+                  },
+                  "dynamicStringsArray": [
+                    {
+                      "name": "ElationTime_CustomTagTemp",
+                      "value": "TryStartElationTime_CustomTag"
+                    }
+                  ],
+                  "afterInjection": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "Elation_BE"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"291062653\">MBattleEvent_Elation_InsertActionCheck</a>",
+                      "valuePerStack": {
+                        "MDF_OverrideElationPoint": {
+                          "operator": "Variables[0] (TryStartElationTime_OverrideElationPoint) || RETURN",
+                          "displayLines": "TryStartElationTime_OverrideElationPoint",
+                          "constants": [],
+                          "variables": [
+                            "TryStartElationTime_OverrideElationPoint"
+                          ]
+                        },
+                        "MDF_ElationTimeIsNoConsume": {
+                          "operator": "Variables[0] (TryStartElationTime_ElationTimeIsNoConsume) || RETURN",
+                          "displayLines": "TryStartElationTime_ElationTimeIsNoConsume",
+                          "constants": [],
+                          "variables": [
+                            "TryStartElationTime_ElationTimeIsNoConsume"
+                          ]
+                        }
+                      },
+                      "dynamicStringsArray": [
+                        {
+                          "name": "MDF_CustomTag",
+                          "value": "TryStartElationTime_CustomTag"
+                        }
+                      ]
+                    }
+                  ],
+                  "copyAbortFlags": true
                 }
               ]
             }

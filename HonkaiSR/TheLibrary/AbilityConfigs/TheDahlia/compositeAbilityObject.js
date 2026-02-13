@@ -2374,7 +2374,7 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "description": "Decreases All-Type RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
+          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",
           "effectName": "All-Type RES Reduction",
           "statusName": "Fresh, Ethereal, and Beloved"
@@ -2959,6 +2959,18 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-783629950\">_M_Constance_ListenInsert_SubOnEnemy</a>",
               "aliveOnly": "False",
               "haloStatus": true
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1409392867\">_M_Constance_Aura_ElementDamage</a>",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_SuperBreakDamagePercentage": 0
+              }
             }
           ]
         }

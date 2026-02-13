@@ -2243,6 +2243,38 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__51921734\">MStrongChallengeEX_BEMark_ExtraElationBE</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "Override_ElationPoint",
+              "value": {
+                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                "displayLines": "MDF_PropertyValue",
+                "constants": [],
+                "variables": [
+                  "MDF_PropertyValue"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-329109669\">MStrongChallengeEX_BEMark_HP</a>",
       "stackData": [],
       "latentQueue": []

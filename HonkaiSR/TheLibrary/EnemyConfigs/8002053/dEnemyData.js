@@ -42,9 +42,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2451,
-        2452,
-        2453
+        2570,
+        2571,
+        2572
       ],
       "enemyTag": [
         "Monster_Minion04"
@@ -74,9 +74,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2451,
-        2452,
-        2453
+        2570,
+        2571,
+        2572
       ],
       "enemyTag": [
         "Monster_Minion04"
@@ -106,9 +106,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2451,
-        2452,
-        2453
+        2570,
+        2571,
+        2572
       ],
       "enemyTag": [
         "Monster_Minion04"
@@ -138,9 +138,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2451,
-        2452,
-        2453
+        2570,
+        2571,
+        2572
       ],
       "enemyTag": [
         "Monster_Minion04"
@@ -170,9 +170,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2451,
-        2452,
-        2453
+        2570,
+        2571,
+        2572
       ],
       "enemyTag": [
         "Monster_Minion04"

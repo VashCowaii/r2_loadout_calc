@@ -417,6 +417,24 @@ const configAbility = {
                     },
                     "flagName": "Endurance",
                     "invertCondition": true
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "EnduranceLogicOnly",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "EnduranceEnemyOnly",
+                    "invertCondition": true
                   }
                 ]
               },

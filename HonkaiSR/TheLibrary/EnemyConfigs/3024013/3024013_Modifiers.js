@@ -978,7 +978,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target's Source Owner}}"
                   },
-                  "priorityTag": "MonsterBuffOthers",
+                  "priorityTag": "MonsterBuffOthers_Elation",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,

@@ -42,8 +42,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1640,
-        1641
+        1660,
+        1661
       ]
     },
     "401203001": {
@@ -70,8 +70,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1640,
-        1641
+        1660,
+        1661
       ]
     },
     "401203002": {
@@ -98,8 +98,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1640,
-        1641
+        1660,
+        1661
       ]
     },
     "401203003": {
@@ -126,8 +126,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1640,
-        1641
+        1660,
+        1661
       ]
     },
     "401203004": {
@@ -154,8 +154,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1640,
-        1641
+        1660,
+        1661
       ]
     },
     "401203005": {
@@ -182,8 +182,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1640,
-        1641
+        1660,
+        1661
       ]
     },
     "401203006": {
@@ -210,8 +210,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1640,
-        1641
+        1660,
+        1661
       ]
     },
     "401203007": {
@@ -238,8 +238,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1640,
-        1641
+        1660,
+        1661
       ],
       "enemyTag": [
         "MGrid_4008"

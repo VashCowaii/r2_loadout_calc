@@ -68,62 +68,86 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn Start [Anyone]",
           "execute": [
             {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
+              "name": "IF",
+              "conditions": {
+                "name": "Current Turn Is",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-1710557010\">Modifier_ChallengePeakBattle_BaseAbility_0013_03</a>"
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1710557010\">Modifier_ChallengePeakBattle_BaseAbility_0013_03</a>"
+                }
+              ]
             }
           ]
         },
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn End [Anyone]",
           "execute": [
             {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1710557010\">Modifier_ChallengePeakBattle_BaseAbility_0013_03</a>",
-              "duration": {
-                "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_3) || RETURN",
-                "displayLines": "ChallengePeakBattle_0013_ADF_3",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_0013_ADF_3"
-                ]
-              },
-              "valuePerStack": {
-                "ChallengePeakBattle_0013_ADF_1": {
-                  "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_1) || RETURN",
-                  "displayLines": "ChallengePeakBattle_0013_ADF_1",
-                  "constants": [],
-                  "variables": [
-                    "ChallengePeakBattle_0013_ADF_1"
-                  ]
-                },
-                "ChallengePeakBattle_0013_ADF_2": {
-                  "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_2) || RETURN",
-                  "displayLines": "ChallengePeakBattle_0013_ADF_2",
-                  "constants": [],
-                  "variables": [
-                    "ChallengePeakBattle_0013_ADF_2"
-                  ]
-                },
-                "ChallengePeakBattle_0013_ADF_3": {
-                  "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_3) || RETURN",
-                  "displayLines": "ChallengePeakBattle_0013_ADF_3",
-                  "constants": [],
-                  "variables": [
-                    "ChallengePeakBattle_0013_ADF_3"
-                  ]
+              "name": "IF",
+              "conditions": {
+                "name": "Current Turn Is",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
                 }
-              }
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1710557010\">Modifier_ChallengePeakBattle_BaseAbility_0013_03</a>",
+                  "duration": {
+                    "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_3) || RETURN",
+                    "displayLines": "ChallengePeakBattle_0013_ADF_3",
+                    "constants": [],
+                    "variables": [
+                      "ChallengePeakBattle_0013_ADF_3"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "ChallengePeakBattle_0013_ADF_1": {
+                      "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_1) || RETURN",
+                      "displayLines": "ChallengePeakBattle_0013_ADF_1",
+                      "constants": [],
+                      "variables": [
+                        "ChallengePeakBattle_0013_ADF_1"
+                      ]
+                    },
+                    "ChallengePeakBattle_0013_ADF_2": {
+                      "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_2) || RETURN",
+                      "displayLines": "ChallengePeakBattle_0013_ADF_2",
+                      "constants": [],
+                      "variables": [
+                        "ChallengePeakBattle_0013_ADF_2"
+                      ]
+                    },
+                    "ChallengePeakBattle_0013_ADF_3": {
+                      "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_3) || RETURN",
+                      "displayLines": "ChallengePeakBattle_0013_ADF_3",
+                      "constants": [],
+                      "variables": [
+                        "ChallengePeakBattle_0013_ADF_3"
+                      ]
+                    }
+                  }
+                }
+              ]
             }
           ]
         },
@@ -244,20 +268,31 @@ const configAbility = {
           "eventTrigger": "Enter Battle",
           "execute": [
             {
-              "name": "Update Energy",
-              "on": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Wave Count",
+                "compareType": "=",
+                "value2": 1
               },
-              "valuePercent": {
-                "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_1) || INVERT || RETURN",
-                "displayLines": "-ChallengePeakBattle_0013_ADF_1",
-                "constants": [],
-                "variables": [
-                  "ChallengePeakBattle_0013_ADF_1"
-                ]
-              },
-              "isFixed": "(Fixed)"
+              "passed": [
+                {
+                  "name": "Update Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valuePercent": {
+                    "operator": "Variables[0] (ChallengePeakBattle_0013_ADF_1) || INVERT || RETURN",
+                    "displayLines": "-ChallengePeakBattle_0013_ADF_1",
+                    "constants": [],
+                    "variables": [
+                      "ChallengePeakBattle_0013_ADF_1"
+                    ]
+                  },
+                  "isFixed": "(Fixed)"
+                }
+              ]
             }
           ],
           "priorityLevel": -90

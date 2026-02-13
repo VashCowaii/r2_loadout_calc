@@ -1527,7 +1527,8 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "characterName": "Sky-Shrouding Stardevourer Swarm",
-                        "isBaseCompare": true
+                        "isBaseCompare": true,
+                        "invertCondition": true
                       }
                     ]
                   }
@@ -2799,6 +2800,86 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Chess: Enemy Base",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Chess Base",
+              "target": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "Adjust Target by Hostile Team Entity"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Chess: Base",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Chess Base"
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Chess: Enemies in Alert Range",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Add Target by Enemies in Alert Range"
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Chess: Enemies in Attack Range",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Add Target by Enemies in Attack Range"
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Chess Movement Target",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Add Target by Chess Movement Target"
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Chess Skill Target",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Add Target by Chess Skill Target"
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Chess Lock Target",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Add Target by Chess Lock Target"
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Caster's Battle-Event[Memosprite]",
           "isTargetOperator": false,
           "execute": [
@@ -3225,6 +3306,41 @@ const compositeAbilityObject = {
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
+                },
+                {
+                  "name": "Sort by Physical Positioning",
+                  "byHighest": true
+                },
+                {
+                  "name": "Target Index",
+                  "indexType": "First"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Far Left Player Entity(no Memosprite, living)",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}.[[removeMemosprite]]"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Living State",
+                    "state": "Mask_AliveOnly",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  }
                 },
                 {
                   "name": "Sort by Physical Positioning",
@@ -5175,6 +5291,21 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "Adjust Target by Skill Point User"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Next Ability Caster",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Add Target by Next Ability Caster"
+                }
               ]
             }
           ]

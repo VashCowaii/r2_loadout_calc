@@ -1405,7 +1405,7 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "Monster_W4_Theoroi_Part2Summon",
-              "priorityTag": "MonsterBuffOthers",
+              "priorityTag": "MonsterBuffOthers_Elation",
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }

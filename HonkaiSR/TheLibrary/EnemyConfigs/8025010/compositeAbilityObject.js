@@ -2497,7 +2497,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": null
+                        "characterName": null,
+                        "invertCondition": true
                       },
                       "passed": [
                         {

@@ -840,7 +840,7 @@ let modifiersExtraEffects = [
   },
   {
     "name": "Obsession — Trait",
-    "desc": "When ally targets enter battle or when a memosprite is summoned, gain #1[i] stack(s) of \"Obsession.\" After taking action, there is a #2[i]% fixed chance to gain 1 stack of \"Obsession.\" For each Blessing of Remembrance in possession, the fixed chance additionally increases by #3[i]%. A max of #4[i] Blessings of Remembrance can be taken into account.",
+    "desc": "When ally targets enter combat or when a memosprite is summoned, gain #1[i] stack(s) of \"Obsession.\" After taking action, there is a #2[i]% fixed chance to gain 1 stack of \"Obsession.\" For each Blessing of Remembrance in possession, the fixed chance additionally increases by #3[i]%. A max of #4[i] Blessings of Remembrance can be taken into account.",
     "params": [
       8,
       0.26,
@@ -1184,6 +1184,10 @@ let modifiersExtraEffects = [
     "desc": "After attacking this target, the attacker will receive minor Quantum \"Atrophy DMG.\""
   },
   {
+    "name": "Elation",
+    "desc": "A base stat that affects Elation DMG and can boost the multiplier for Elation DMG dealt."
+  },
+  {
     "name": "Breeding Frenzy",
     "desc": "In this state, \"Cyclonic Swarm Mother\" takes less DMG when attacked. When this unit takes action early due to \"Respite By The Waters,\" it will consume HP, summon \"Mirage Fizzle Kid,\" and slightly delay the action of \"Incubation.\""
   },
@@ -1194,6 +1198,22 @@ let modifiersExtraEffects = [
   {
     "name": "Action Lock",
     "desc": "The target's action value will not change because of the end of any target's turn."
+  },
+  {
+    "name": "Glory",
+    "desc": "Each stack of \"Glory\" increases CRIT DMG, each Skill Point consumed adds 1 stack of \"Glory.\" When attacking, can dispel corresponding stacks of \"War Armor\" or \"Centirefined War Armor\" corresponding to the \"Glory\" stacks."
+  },
+  {
+    "name": "Centirefined Attack Ability",
+    "desc": "\"Lightning Spear of the Firmament\" enhanced to \"Worldsplitting Spine,\" \"Hewing of the River of Souls\" enhanced to \"Survivors Unto Dead Waters,\" \"Unceasing Flames of War\" enhanced to \"Pyre of High Graves,\" \"Sky-Piercing Lance\" enhanced to \"Ruination of Night and Light.\""
+  },
+  {
+    "name": "War Armor",
+    "desc": "Decreases DMG taken. Loses stacks of \"War Armor\" based on the attacker's \"Glory\" stacks when attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing their Toughness, delaying their action, and restoring Skill Point(s) to targets. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn."
+  },
+  {
+    "name": "Centirefined War Armor",
+    "desc": "Decreases DMG taken. After being attacked, reduces stacks of \"Centirefined War Armor\" based on the attacker's \"Glory\" stacks. When reduced to 0 stacks, \"Centirefined War Armor\" is destroyed, dealing massive Imaginary DMG to this unit, reducing a large amount of Toughness, delaying their action, restoring Skill Points to targets, and granting the attacker certain stacks of \"Glory.\" After \"Centirefined War Armor\" is destroyed, this unit will additionally take minor Imaginary DMG when attacked. If \"Centirefined War Armor\" is at 0 stacks at the end of this unit's turn, it will be restored to maximum stacks."
   },
   {
     "name": "Out-of-Bounds",
@@ -1218,5 +1238,65 @@ let modifiersExtraEffects = [
   {
     "name": "Chrysos Heir",
     "desc": "Cyrene, Tribbie, Cerydra, Evernight, Dan Heng • Permansor Terrae, Hysilens, Hyacine, Phainon, Anaxa, Aglaea, Mydei, Castorice, Cipher, Trailblazer (Remembrance)."
+  },
+  {
+    "name": "Aha",
+    "desc": "When taking action, triggers an Aha Instant and causes units capable of using Elation Skills to each use their Elation Skill 1 time. If there are no units capable of using Elation Skills when Aha takes action, Aha will use \"Let There Be Laughter.\"\\nThe Aha Instant lasts until the final Elation Skill finishes this time.\\nWhen the Aha Instant ends, participating characters gain the \"Certified Banger\" state for the Punchline points taken into account this time, lasting for 2 turns. After Aha takes action, all Punchlines will be consumed."
+  },
+  {
+    "name": "Punchline",
+    "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+  },
+  {
+    "name": "Elation DMG",
+    "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+  },
+  {
+    "name": "Colorless",
+    "desc": "When attacked by ally targets, gains 1 point of \"Paint\" based on the attacker's Type. If Elation DMG is received during the attack, then additionally gains a certain amount of \"Paint.\" When reaching 6 points of \"Paint,\" enters the \"Color\" state. During this state, based on the Types of Paint already gained, gains corresponding Types of Weakness and decreases the Type RES of corresponding Type. When in the \"Colorless\" state, Toughness will not drop below 1."
+  },
+  {
+    "name": "Color",
+    "desc": "When using abilities, \"Paint\" will be consumed to deal Additional DMG of the corresponding Type. At the end of the turn, if all \"Paint\" has been consumed, enters the \"Colorless\" state and removes Weakness and Type RES reduction caused by \"Paint.\" When Weakness is Broken, consumes all \"Paint\" to deal Additional DMG equal to a percentage of this unit's max HP to this unit."
+  },
+  {
+    "name": "Paint",
+    "desc": "\"Canvas Peacock\": When using abilities while in the \"Color\" state, \"Paint\" will be consumed to deal Additional DMG of the corresponding Type. Each Type corresponds to a different \"Paint.\""
+  },
+  {
+    "name": "Color Imbalance",
+    "desc": "Unable to use Ultimate."
+  },
+  {
+    "name": "Revelry",
+    "desc": "Cannot take action. At the start of the turn, if the inflictor is not in a Charging state, they will initiate a Sweep attack."
+  },
+  {
+    "name": "Live Showdown",
+    "desc": "All ally targets will engage in combat in prime-field and sub-field respectively. Aside the Aha Instant, targets from different battlefields cannot attack targets on the other battlefield. During the Aha Instant, Elation Skills can only be used to attack enemy targets that are on the sub-field.\\nLive Showdown will be dispelled when any of these conditions are met: Live Showdown countdown ends, an sub-field ally character is knocked down, all sub-field enemy targets are defeated, or there are no sub-field ally characters remaining who can battle."
+  },
+  {
+    "name": "Ally Gratuity",
+    "desc": "All-Type RES PEN Boost."
+  },
+  {
+    "name": "Enemy Gratuity",
+    "desc": "Increases DMG dealt."
+  },
+  {
+    "name": "Random Bullet Comments Penalty",
+    "desc": "Randomly inflicts one of the following states: \"ATK Reduction\", \"DEF Reduction\", \"SPD Reduction\", \"Weaken\", or \"Entanglement.\""
+  },
+  {
+    "name": "Certified Banger",
+    "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+  },
+  {
+    "name": "Participant ID",
+    "desc": "The Participant ID determines the order in which Elation Skills are used during the Aha Instant. The lower the Participant ID, the earlier the Elation Skill will be used."
+  },
+  {
+    "name": "Merrymake",
+    "desc": "A special effect that affects Elation DMG and can additionally boost Elation DMG dealt."
   }
 ]

@@ -42,10 +42,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2504,
-        2505,
-        2506,
-        2507
+        2623,
+        2624,
+        2625,
+        2626
       ],
       "enemyTag": [
         "Monster_Minion04"

@@ -108,12 +108,28 @@ const configAbility = {
       ],
       "failed": [
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 4064013,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "Ichor Memosprite: Judge of Oblivion",
+            "isBaseCompare": true,
+            "invertCondition": true
           },
-          "modifier": "<a class=\"gModGreen\" id=\"2038153082\">Enemy_W4_Serpent_01_ChangePhaseController</a>"
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"2038153082\">Enemy_W4_Serpent_01_ChangePhaseController</a>"
+            }
+          ]
         },
         {
           "name": "Preload Battle Event(s)",

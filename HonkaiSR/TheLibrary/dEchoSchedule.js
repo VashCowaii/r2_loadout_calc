@@ -40,9 +40,9 @@ let mocSchedule = [
                       "attackBase": 574.413606,
                       "defBase": 1020.00003,
                       "hpBase": [
-                        1518136.278,
-                        1897670.3475,
-                        1518136.278
+                        1138602.2085,
+                        1423252.760625,
+                        1138602.2085
                       ],
                       "speedBase": 192,
                       "critDMG": 0.2,
@@ -77,8 +77,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Combat_IronTomb_Phase01_Weekly"
                 },
-                "highSTSUM": 4933942.9035,
-                "aoeSUM": 4933942.9035
+                "highSTSUM": 3700457.1776249995,
+                "aoeSUM": 3700457.1776249995
               }
             ]
           },
@@ -135,12 +135,12 @@ let mocSchedule = [
                       "id": 4015011,
                       "image": 4015011,
                       "rank": "BigBoss",
-                      "attackBase": 516.9722454,
+                      "attackBase": 482.507429,
                       "defBase": 1020.00003,
                       "hpBase": [
-                        1802786.830125,
-                        2523901.562175,
-                        3605573.66025
+                        1261950.7810875,
+                        1766731.0935225,
+                        2523901.562175
                       ],
                       "speedBase": 172.8,
                       "critDMG": 0.2,
@@ -172,15 +172,15 @@ let mocSchedule = [
                     }
                   ]
                 ],
-                "scalarElite": 3306,
+                "scalarElite": 3316,
                 "scalarHard": 1,
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Amphoreus_Combat_DawnsEye_Phase01"
                 },
-                "highSTSUM": 7932262.052550001,
-                "aoeSUM": 7932262.052550001
+                "highSTSUM": 5552583.436785,
+                "aoeSUM": 5552583.436785
               }
             ]
           },
@@ -240,9 +240,9 @@ let mocSchedule = [
                       "attackBase": 505.4839733,
                       "defBase": 1020.00003,
                       "hpBase": [
-                        227720.4417,
-                        1366322.6502,
-                        2049483.9753
+                        204948.39753,
+                        1229690.38518,
+                        1844535.57777
                       ],
                       "speedBase": 144,
                       "critDMG": 0.2,
@@ -278,8 +278,8 @@ let mocSchedule = [
                   "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
                   "_Load3DTextFromFloor": "20242001"
                 },
-                "highSTSUM": 3643527.0672000004,
-                "aoeSUM": 3643527.0672000004
+                "highSTSUM": 3279174.3604800003,
+                "aoeSUM": 3279174.3604800003
               }
             ]
           },

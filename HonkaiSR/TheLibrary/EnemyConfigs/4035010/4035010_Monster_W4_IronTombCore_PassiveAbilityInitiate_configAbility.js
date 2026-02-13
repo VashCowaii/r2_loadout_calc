@@ -66,7 +66,8 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "characterName": "Anti-Creator, Hatred Inundate"
+            "characterName": "Anti-Creator, Hatred Inundate",
+            "invertCondition": true
           },
           {
             "name": "Stage ID",

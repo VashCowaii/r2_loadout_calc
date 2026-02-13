@@ -7,7 +7,7 @@ let enemyData = {
   "stArray": [
     18,
     210,
-    1395,
+    1255.5,
     120,
     null,
     0.2,

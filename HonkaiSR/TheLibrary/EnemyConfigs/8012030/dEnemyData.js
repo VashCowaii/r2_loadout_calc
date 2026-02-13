@@ -42,8 +42,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2632,
-        2633
+        2751,
+        2752
       ]
     },
     "801203001": {
@@ -70,8 +70,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2632,
-        2633
+        2751,
+        2752
       ],
       "enemyTag": [
         "LockTarget801203001"
@@ -101,8 +101,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2632,
-        2633
+        2751,
+        2752
       ],
       "enemyTag": [
         "LockTarget801203002"
@@ -132,8 +132,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2632,
-        2633
+        2751,
+        2752
       ]
     },
     "801203004": {
@@ -160,8 +160,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2632,
-        2633
+        2751,
+        2752
       ]
     },
     "801203005": {
@@ -188,8 +188,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2632,
-        2633
+        2751,
+        2752
       ]
     },
     "801203006": {
@@ -216,8 +216,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2632,
-        2633
+        2751,
+        2752
       ]
     },
     "801203007": {
@@ -244,8 +244,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2632,
-        2633
+        2751,
+        2752
       ]
     },
     "801203008": {
@@ -272,8 +272,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2632,
-        2633
+        2751,
+        2752
       ]
     },
     "801203009": {
@@ -300,8 +300,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2632,
-        2633
+        2751,
+        2752
       ]
     },
     "801203010": {
@@ -328,8 +328,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2632,
-        2633
+        2751,
+        2752
       ]
     },
     "801203011": {
@@ -356,11 +356,39 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2632,
-        2633
+        2751,
+        2752
       ],
       "enemyTag": [
         "MGrid_4007"
+      ]
+    },
+    "801203012": {
+      "name": "Hell Humor",
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Ice",
+        "Quantum"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2751,
+        2752
       ]
     }
   }

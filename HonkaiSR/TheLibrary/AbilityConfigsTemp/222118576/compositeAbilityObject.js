@@ -14,7 +14,7 @@ const compositeAbilityObject = {
         0,
         0
       ],
-      "length": 24,
+      "length": 26,
       "parse": [
         {
           "name": "CharacterFunctions",
@@ -488,6 +488,36 @@ const compositeAbilityObject = {
         {
           "name": "CharacterFunctions",
           "functionName": "<a class=\"gTempYellow\" id=\"fun__786362683\">4064010StartCamera</a>",
+          "parse": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Wave Count",
+                "compareType": "=",
+                "value2": 1
+              }
+            }
+          ]
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1583825037\">5014010StartCamera</a>",
+          "parse": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Wave Count",
+                "compareType": "=",
+                "value2": 1
+              }
+            }
+          ]
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__595293168\">5014020StartCamera</a>",
           "parse": [
             {
               "name": "IF",

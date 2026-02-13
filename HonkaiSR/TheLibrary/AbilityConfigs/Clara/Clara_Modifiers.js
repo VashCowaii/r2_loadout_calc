@@ -52,7 +52,8 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]",
       "modifierFlags": [
-        "ListenBattleEventSkill"
+        "ListenBattleEventSkill",
+        "RemoveWhenCasterDead"
       ],
       "execute": [
         {

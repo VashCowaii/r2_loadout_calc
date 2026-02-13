@@ -63,8 +63,8 @@ let enemyData = {
       "summons": [
         {
           "name": "Juvenile Sting",
-          "over": 802201005,
-          "base": 8022010
+          "over": 8022012,
+          "base": 8022012
         }
       ]
     },
@@ -112,18 +112,23 @@ let enemyData = {
       "summons": [
         {
           "name": "Juvenile Sting",
-          "over": 802201005,
-          "base": 8022010
+          "over": 8022012,
+          "base": 8022012
         }
       ],
       "overrideParams": {
         "1527": [
-          3,
-          "-",
-          0.25,
-          0.35,
-          "-",
-          "-",
+          [
+            3,
+            -1,
+            0.25,
+            0.35
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
           "-",
           "-"
         ]

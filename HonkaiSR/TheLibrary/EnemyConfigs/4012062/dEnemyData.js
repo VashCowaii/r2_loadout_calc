@@ -45,8 +45,8 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1670,
-        1671
+        1692,
+        1693
       ]
     },
     "401206201": {
@@ -76,8 +76,8 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1670,
-        1671
+        1692,
+        1693
       ],
       "enemyTag": [
         "MGrid_4008"

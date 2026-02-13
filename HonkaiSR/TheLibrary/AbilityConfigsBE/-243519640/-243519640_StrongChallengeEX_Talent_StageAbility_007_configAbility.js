@@ -38,7 +38,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "priorityTag": "PROG_MonsterLowest",
+              "priorityTag": "MonsterSummon",
               "canHitNonTargets": true,
               "valuePerStack": {
                 "PropertyValue": {
@@ -104,7 +104,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "MonsterSummon",
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "PropertyValue": {

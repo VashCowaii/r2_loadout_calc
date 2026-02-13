@@ -1267,20 +1267,35 @@ const configAbility = {
           "eventTrigger": "Got a Kill [Owner]",
           "execute": [
             {
-              "name": "Update Energy",
-              "on": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
+              "name": "IF",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 9001013,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null,
+                "invertCondition": true
               },
-              "value": {
-                "operator": "Variables[0] (MDF_AddValue) || RETURN",
-                "displayLines": "MDF_AddValue",
-                "constants": [],
-                "variables": [
-                  "MDF_AddValue"
-                ]
-              },
-              "isFixed": "* ERR"
+              "passed": [
+                {
+                  "name": "Update Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "value": {
+                    "operator": "Variables[0] (MDF_AddValue) || RETURN",
+                    "displayLines": "MDF_AddValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AddValue"
+                    ]
+                  },
+                  "isFixed": "* ERR"
+                }
+              ]
             }
           ]
         }

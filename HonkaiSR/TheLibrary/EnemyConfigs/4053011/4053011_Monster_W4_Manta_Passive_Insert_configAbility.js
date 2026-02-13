@@ -123,6 +123,15 @@ const configAbility = {
                   },
                   "passed": [
                     {
+                      "name": "Action Advance/Delay",
+                      "advanceType": "Set",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "set": 0
+                    },
+                    {
                       "name": "Assign Advance/Delay to Current Ability Use",
                       "adjustmentValue": 0,
                       "adjustmentType": "="
@@ -174,6 +183,15 @@ const configAbility = {
                     }
                   },
                   "passed": [
+                    {
+                      "name": "Action Advance/Delay",
+                      "advanceType": "Set",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "set": 0
+                    },
                     {
                       "name": "Assign Advance/Delay to Current Ability Use",
                       "adjustmentValue": 0,

@@ -228,11 +228,11 @@ let enemyData = {
       ],
       "phhp": [
         1,
-        "-"
+        1
       ],
       "phs": [
         1,
-        "-"
+        1
       ],
       "weak": [
         "Thunder",
@@ -281,12 +281,16 @@ let enemyData = {
       ],
       "overrideParams": {
         "614": [
-          "-",
-          "-",
-          1.2,
-          "-",
-          "-",
-          "-",
+          [
+            -1,
+            -1,
+            1.2
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
           "-",
           "-"
         ]
