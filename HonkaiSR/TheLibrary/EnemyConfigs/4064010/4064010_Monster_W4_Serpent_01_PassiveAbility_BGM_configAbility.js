@@ -41,7 +41,7 @@ const configAbility = {
       "name": "Add Events/Bonuses",
       "to": {
         "name": "Target Name",
-        "target": "{{Caster}}"
+        "target": "{{Level Entity}}"
       },
       "modifier": "<a class=\"gModGreen\" id=\"623581294\">Enemy_W4_Serpent_01_ResetStageBGM</a>"
     }
