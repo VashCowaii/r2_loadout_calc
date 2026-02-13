@@ -388,18 +388,16 @@ const compositeAbilityObject = {
                     },
                     "Deleted bullshit",
                     {
-                      "$type": "LDHOLDAKCHL",
-                      "EAALEOIKBKA": {
-                        "IsDynamic": true,
-                        "PostfixExpr": {
-                          "OpCodes": "AQAR",
-                          "FixedValues": [],
-                          "DynamicHashes": [
-                            546201620
-                          ]
-                        }
+                      "name": "Adjust Team Punchline Value",
+                      "value": {
+                        "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                        "displayLines": "BattleEvent_P1_ADF",
+                        "constants": [],
+                        "variables": [
+                          "BattleEvent_P1_ADF"
+                        ]
                       },
-                      "ENNEJHENOHC": "Add"
+                      "adjustment": "Add"
                     }
                   ]
                 }
@@ -445,18 +443,16 @@ const compositeAbilityObject = {
                   "isTrigger": true
                 },
                 {
-                  "$type": "LDHOLDAKCHL",
-                  "EAALEOIKBKA": {
-                    "IsDynamic": true,
-                    "PostfixExpr": {
-                      "OpCodes": "AQAR",
-                      "FixedValues": [],
-                      "DynamicHashes": [
-                        546201620
-                      ]
-                    }
+                  "name": "Adjust Team Punchline Value",
+                  "value": {
+                    "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                    "displayLines": "BattleEvent_P1_ADF",
+                    "constants": [],
+                    "variables": [
+                      "BattleEvent_P1_ADF"
+                    ]
                   },
-                  "ENNEJHENOHC": "Add"
+                  "adjustment": "Add"
                 }
               ],
               "priorityLevel": -90
