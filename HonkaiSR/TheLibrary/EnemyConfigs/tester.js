@@ -3850,7 +3850,8 @@ const userTriggers = {
                         const currentInnerSkillVariant = currentInnerSkill[innerSkillVariant];
 
 
-                        const paramsCheckOverride = currentInnerSkillVariant?.paramOverrides;
+                        let energyOverride = null;
+                        const paramsCheckOverride = currentInnerSkillVariant?.paramOverrides?.[0];
                         let paramsStringerOverride = "";
                         if (paramsCheckOverride?.length) {
 
@@ -3858,15 +3859,20 @@ const userTriggers = {
                             let paramCounter = 0;
                             for (let paramEntry of paramsCheckOverride) {
                                 // console.log(paramEntry)
-                                paramString += `${isNaN(paramEntry) ? paramEntry : +(paramEntry).toFixed(7)}${paramCounter != paramsCheckOverride.length-1 ? ", " : ""}`;
+                                paramString += `${(isNaN(paramEntry) || paramEntry == -1) ? "-" : +(paramEntry).toFixed(7)}${paramCounter != paramsCheckOverride.length-1 ? ", " : ""}`;
                                 paramCounter++;
                             }
         
                             paramsStringerOverride += `
                                 <div class="actionDetailBody">
-                                    <div class="rotationConditionOperatorHeaderInlineParams crossThroughTextFaded">Mask: [${paramString}]</div>
+                                    <div class="rotationConditionOperatorHeaderInlineParams crossThroughTextFaded">Mask: [${paramString}][${currentInnerSkillVariant?.paramOverrides?.[6]}][${currentInnerSkillVariant?.paramOverrides?.[7]}]</div>
                                 </div>
-                            `
+                            `;
+                            
+                        }
+                        const sixChecker = currentInnerSkillVariant?.paramOverrides?.[6];
+                        if (sixChecker && sixChecker != -1 && sixChecker != "-") {
+                            energyOverride = sixChecker;
                         }
 
                         const phasesCheckOverride = currentInnerSkillVariant?.phaseList;
@@ -3901,12 +3907,14 @@ const userTriggers = {
                                 // console.log(paramEntry)
                                 let paramEntryString = "";
 
-                                if (paramsCheckOverride?.[paramCounter] && paramsCheckOverride[paramCounter] != "-" && paramsCheckOverride[paramCounter] != paramEntry) {paramEntryString = `&nbsp;<span class="crossThroughText crossThroughTextFaded">${+(paramEntry).toFixed(7)}</span>&nbsp;${+(paramsCheckOverride[paramCounter]).toFixed(7)}`;}
+                                if (paramsCheckOverride?.[paramCounter] && (paramsCheckOverride[paramCounter] != "-" && paramsCheckOverride[paramCounter] != -1) && paramsCheckOverride[paramCounter] != paramEntry) {paramEntryString = `&nbsp;<span class="crossThroughText crossThroughTextFaded">${+(paramEntry).toFixed(7)}</span>&nbsp;${+(paramsCheckOverride[paramCounter]).toFixed(7)}`;}
                                 else {paramEntryString = ` ${+(paramEntry).toFixed(7)}`;}
 
 
                                 paramString += `${paramEntryString}${paramCounter != paramsCheck.length-1 ? ", " : ""}`;
                                 paramCounter++;
+
+                                // [${currentInnerSkillVariant?.paramOverrides?.[6]}][${currentInnerSkillVariant?.paramOverrides?.[7]}]
                             }
 
                             // ${paramsStringerOverride ? " crossThroughText" : ""}
@@ -3915,8 +3923,9 @@ const userTriggers = {
                                 <div class="actionDetailBody">
                                     <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
                                 </div>
-                            `
+                            `;
                         }
+                        
 
                         let paramString2 = "";
                         if (currentInnerSkillVariant.extraEffects && Object.keys(currentInnerSkillVariant.extraEffects).length) {
@@ -3966,6 +3975,7 @@ const userTriggers = {
                             }
                         }
 
+
                         
                         entryString += `
                             <div class="rotationsSectionRowHolder3Overview">
@@ -4003,7 +4013,7 @@ const userTriggers = {
                                     </div>` : ""}
                                     ${currentInnerSkillVariant.energyRegen ? `<div class="traceToughnessBoxOverviewSkill">
                                         <div class="traceToughnessTitleBox">Hit-Energy</div>
-                                        <div class="traceToughnessValueBox">${currentInnerSkillVariant.energyRegen}</div>
+                                        <div class="traceToughnessValueBox">${energyOverride ? `<span class="crossThroughText crossThroughTextFaded">${+(currentInnerSkillVariant.energyRegen).toFixed(7)}</span>&nbsp;${energyOverride}` : currentInnerSkillVariant.energyRegen}</div>
                                     </div>` : ""}
                                     ${phasesStringerOverride ? `<div class="traceToughnessBoxOverviewSkill">
                                         <div class="traceToughnessTitleBox">Phase Allowed</div>
