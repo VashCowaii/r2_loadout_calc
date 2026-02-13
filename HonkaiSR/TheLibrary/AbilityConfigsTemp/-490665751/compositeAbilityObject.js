@@ -66,7 +66,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "PROG_MonsterLowest",
+                      "priorityTag": "MonsterSummon",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -126,7 +126,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "PROG_MonsterLowest",
+                      "priorityTag": "MonsterSummon",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
@@ -209,7 +209,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "priorityTag": "PROG_MonsterLowest",
+                      "priorityTag": "MonsterSummon",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
                     }
