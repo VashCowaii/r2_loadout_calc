@@ -321,7 +321,8 @@ const configAbility = {
                       "Destruction",
                       "Erudition",
                       "The Hunt",
-                      "Remembrance"
+                      "Remembrance",
+                      "Elation"
                     ],
                     "target": {
                       "name": "Target Name",
@@ -390,7 +391,8 @@ const configAbility = {
                       "Destruction",
                       "Erudition",
                       "The Hunt",
-                      "Remembrance"
+                      "Remembrance",
+                      "Elation"
                     ],
                     "target": {
                       "name": "Target Name",

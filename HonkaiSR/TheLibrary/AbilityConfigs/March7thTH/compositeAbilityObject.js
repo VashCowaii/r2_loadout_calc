@@ -2072,7 +2072,8 @@ const compositeAbilityObject = {
                           "Destruction",
                           "Erudition",
                           "The Hunt",
-                          "Remembrance"
+                          "Remembrance",
+                          "Elation"
                         ],
                         "target": {
                           "name": "Target Name",
@@ -2141,7 +2142,8 @@ const compositeAbilityObject = {
                           "Destruction",
                           "Erudition",
                           "The Hunt",
-                          "Remembrance"
+                          "Remembrance",
+                          "Elation"
                         ],
                         "target": {
                           "name": "Target Name",
@@ -2573,7 +2575,8 @@ const compositeAbilityObject = {
                       "Nihility",
                       "Preservation",
                       "Abundance",
-                      "Remembrance"
+                      "Remembrance",
+                      "Elation"
                     ],
                     "target": {
                       "name": "Target Name",
@@ -2591,7 +2594,8 @@ const compositeAbilityObject = {
                       "Destruction",
                       "Erudition",
                       "The Hunt",
-                      "Remembrance"
+                      "Remembrance",
+                      "Elation"
                     ],
                     "target": {
                       "name": "Target Name",
@@ -2725,7 +2729,8 @@ const compositeAbilityObject = {
                       "Nihility",
                       "Preservation",
                       "Abundance",
-                      "Remembrance"
+                      "Remembrance",
+                      "Elation"
                     ],
                     "target": {
                       "name": "Target Name",
@@ -2743,7 +2748,8 @@ const compositeAbilityObject = {
                       "Destruction",
                       "Erudition",
                       "The Hunt",
-                      "Remembrance"
+                      "Remembrance",
+                      "Elation"
                     ],
                     "target": {
                       "name": "Target Name",
@@ -2835,7 +2841,8 @@ const compositeAbilityObject = {
                       "Nihility",
                       "Preservation",
                       "Abundance",
-                      "Remembrance"
+                      "Remembrance",
+                      "Elation"
                     ],
                     "target": {
                       "name": "Target Name",
@@ -2853,7 +2860,8 @@ const compositeAbilityObject = {
                       "Destruction",
                       "Erudition",
                       "The Hunt",
-                      "Remembrance"
+                      "Remembrance",
+                      "Elation"
                     ],
                     "target": {
                       "name": "Target Name",
@@ -4186,7 +4194,8 @@ const compositeAbilityObject = {
                       "Destruction",
                       "Erudition",
                       "The Hunt",
-                      "Remembrance"
+                      "Remembrance",
+                      "Elation"
                     ],
                     "target": {
                       "name": "Target Name",
@@ -4405,7 +4414,8 @@ const compositeAbilityObject = {
                       "Nihility",
                       "Preservation",
                       "Abundance",
-                      "Remembrance"
+                      "Remembrance",
+                      "Elation"
                     ],
                     "target": {
                       "name": "Target Name",
@@ -4423,7 +4433,8 @@ const compositeAbilityObject = {
                       "Destruction",
                       "Erudition",
                       "The Hunt",
-                      "Remembrance"
+                      "Remembrance",
+                      "Elation"
                     ],
                     "target": {
                       "name": "Target Name",
