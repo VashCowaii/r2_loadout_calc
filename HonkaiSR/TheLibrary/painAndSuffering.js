@@ -9909,10 +9909,10 @@ const megaParsingFuckeryPain = {
         let returnString = "";
 
         for (let stringEntry of stringerArray) {
-            returnString += `${delayAdvancePreview ? `<div class="actionDetailBody2">
+            returnString += `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">${stringEntry.name}:</div>&nbsp;
-                ${stringEntry.value}
-            </div>` : ""}`
+                ${stringEntry.value?.Key ?? stringEntry.value}
+            </div>`
         }
         return returnString;
     },
