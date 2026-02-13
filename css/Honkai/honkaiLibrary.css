@@ -1595,6 +1595,7 @@ div {
 .enemyWaveEnemyDisplayBox {
     width: 10%;
     min-width: 120px;
+    min-height: 150px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
