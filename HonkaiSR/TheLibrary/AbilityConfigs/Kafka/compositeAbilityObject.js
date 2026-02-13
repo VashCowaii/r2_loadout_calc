@@ -1366,13 +1366,30 @@ const compositeAbilityObject = {
                         {
                           "name": "IF",
                           "conditions": {
-                            "name": "Compare: Target Count",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target's Attack Targets}}"
-                            },
-                            "compareType": "=",
-                            "value2": 1
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Compare: Target Count",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target's Attack Targets}}"
+                                },
+                                "compareType": "=",
+                                "value2": 1
+                              },
+                              {
+                                "name": "Target is Unselectable",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target's Attack Targets}}"
+                                },
+                                "source": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
+                                "invertCondition": true
+                              }
+                            ]
                           },
                           "passed": [
                             {
@@ -1393,6 +1410,18 @@ const compositeAbilityObject = {
                               },
                               "searchRandom": true,
                               "maxTargets": 1,
+                              "conditions": {
+                                "name": "Target is Unselectable",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "source": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
+                                "invertCondition": true
+                              },
                               "ifTargetFound": [
                                 {
                                   "name": "Add Events/Bonuses",
@@ -1502,14 +1531,31 @@ const compositeAbilityObject = {
                     {
                       "name": "IF",
                       "conditions": {
-                        "name": "Compare: Target Count",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target's Ability Targets}}"
-                        },
-                        "compareType": "=",
-                        "value2": 1,
-                        "livingTargets": true
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Target Count",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Targets}}"
+                            },
+                            "compareType": "=",
+                            "value2": 1,
+                            "livingTargets": true
+                          },
+                          {
+                            "name": "Target is Unselectable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Targets}}"
+                            },
+                            "source": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "invertCondition": true
+                          }
+                        ]
                       },
                       "passed": [
                         {
@@ -1538,6 +1584,18 @@ const compositeAbilityObject = {
                           },
                           "searchRandom": true,
                           "maxTargets": 1,
+                          "conditions": {
+                            "name": "Target is Unselectable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "source": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "invertCondition": true
+                          },
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
@@ -2981,41 +3039,11 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-671501657\">Advanced_Kafka_Friend_Mark_Main</a>",
+          "stackType": "RetainGlobalLatestUnique",
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
           "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE, with Unselectables)}} - {{Modifier Holder}}"
-                  },
-                  "maxTargets": 99,
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-671501657\">Advanced_Kafka_Friend_Mark_Main</a>"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-671501657\">Advanced_Kafka_Friend_Mark_Main</a>"
-                    }
-                  ]
-                }
-              ]
-            },
             {
               "eventTrigger": "Injected Ability Use [Anyone]: Start",
               "execute": [
@@ -3032,7 +3060,7 @@ const compositeAbilityObject = {
                         },
                         "target": {
                           "name": "Target Name",
-                          "target": "{{Caster}}.[[getTeamMembers]] - {{Caster}}"
+                          "target": "{{Caster}}.[[getTeamMembers]].[[addAttachedSummon]] - {{Caster}}"
                         },
                         "mustBeAlive2": true
                       },
