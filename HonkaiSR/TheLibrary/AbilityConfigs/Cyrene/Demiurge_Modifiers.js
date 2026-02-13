@@ -683,7 +683,7 @@ const configAbility = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
+                        "target": "{{Modifier Holder's Hostile Entities(AOE)}}"
                       },
                       "searchRandom": true,
                       "maxTargets": 1,

@@ -418,6 +418,35 @@ const compositeAbilityObject = {
               ]
             },
             {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Character ID",
+                    "ID": 11415,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null
+                  },
+                  "passed": [
+                    {
+                      "name": "Disable Abilities",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "abilityTypes": [
+                        "Ultimate"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "eventTrigger": "Entity Created [Anyone]",
               "execute": [
                 {
@@ -757,6 +786,9 @@ const compositeAbilityObject = {
               "priorityLevel": -80
             },
             {
+              "eventTrigger": "Leave Battle"
+            },
+            {
               "eventTrigger": "Update Target Selected(UI) [Owner]",
               "execute": [
                 {
@@ -1081,6 +1113,12 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1030329555\">Cyrene_AbilityPreloadCtrl</a>",
           "execute": [
             {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                "Deleted bullshit"
+              ]
+            },
+            {
               "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
                 "Deleted bullshit"
@@ -1106,12 +1144,6 @@ const compositeAbilityObject = {
                     "Deleted bullshit"
                   ]
                 }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                "Deleted bullshit"
               ]
             },
             {
@@ -6804,7 +6836,7 @@ const compositeAbilityObject = {
                           "name": "Find New Target",
                           "from": {
                             "name": "Target Name",
-                            "target": "{{Hostile Entities(AOE)}}"
+                            "target": "{{Modifier Holder's Hostile Entities(AOE)}}"
                           },
                           "searchRandom": true,
                           "maxTargets": 1,
