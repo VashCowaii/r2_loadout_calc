@@ -70,7 +70,8 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": "Bronya (Complete)"
+            "characterName": "Bronya (Complete)",
+            "invertCondition": true
           },
           {
             "name": "Enemy ID",
@@ -79,7 +80,8 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": null
+            "characterName": null,
+            "invertCondition": true
           }
         ]
       },

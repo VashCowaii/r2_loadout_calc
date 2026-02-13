@@ -1520,7 +1520,8 @@ const configAbility = {
                       "target": "{{Parameter Target}}"
                     },
                     "characterName": "Sky-Shrouding Stardevourer Swarm",
-                    "isBaseCompare": true
+                    "isBaseCompare": true,
+                    "invertCondition": true
                   }
                 ]
               }
