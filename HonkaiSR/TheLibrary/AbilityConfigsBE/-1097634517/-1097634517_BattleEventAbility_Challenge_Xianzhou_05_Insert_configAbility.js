@@ -5,14 +5,40 @@ const configAbility = {
   "toughnessList": null,
   "parse": [
     {
-      "name": "WAIT FOR",
-      "condition": {
-        "name": "Death Animation Completed",
-        "team": "Enemy Team",
-        "type": "Team Characters"
-      }
+      "name": "IF",
+      "conditions": {
+        "name": "In Aha-Instant"
+      },
+      "passed": [
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "AllDarkTeamDyingCharacter"
+          },
+          "dieNow": true
+        },
+        {
+          "name": "WAIT FOR",
+          "condition": {
+            "name": "Death Animation Completed",
+            "team": "Enemy Team",
+            "type": "Team Characters"
+          }
+        }
+      ],
+      "failed": [
+        {
+          "name": "WAIT FOR",
+          "condition": {
+            "name": "Death Animation Completed",
+            "team": "Enemy Team",
+            "type": "Team Characters"
+          }
+        },
+        "Deleted bullshit"
+      ]
     },
-    "Deleted bullshit",
     {
       "name": "Create Enemies",
       "delayPercent": 0.5,
@@ -30,6 +56,12 @@ const configAbility = {
           "locationType": "FormationRecord"
         }
       ]
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "In Aha-Instant"
+      }
     }
   ],
   "references": []

@@ -167,7 +167,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "priorityTag": "PROG_MonsterLowest",
+                  "priorityTag": "MonsterSummon",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
