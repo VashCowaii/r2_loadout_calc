@@ -3528,14 +3528,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "setValue": {
-                    "operator": "Variables[0] (MaxHPValue) || RETURN",
-                    "displayLines": "MaxHPValue",
-                    "constants": [],
-                    "variables": [
-                      "MaxHPValue"
-                    ]
-                  }
+                  "setPercent": 1
                 },
                 {
                   "name": "Reset Toughness",

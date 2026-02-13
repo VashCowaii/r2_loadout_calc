@@ -42,10 +42,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2828,
-        2829,
-        2830,
-        2831
+        2951,
+        2952,
+        2953,
+        2954
       ],
       "enemyTag": [
         "SW_Minion01"
@@ -75,10 +75,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2828,
-        2829,
-        2830,
-        2831
+        2951,
+        2952,
+        2953,
+        2954
       ],
       "enemyTag": [
         "SW_Minion01"
@@ -108,10 +108,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2828,
-        2829,
-        2830,
-        2831
+        2951,
+        2952,
+        2953,
+        2954
       ],
       "enemyTag": [
         "SW_Minion01"
@@ -141,10 +141,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2828,
-        2829,
-        2830,
-        2831
+        2951,
+        2952,
+        2953,
+        2954
       ],
       "enemyTag": [
         "SW_Minion01"
@@ -174,10 +174,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2828,
-        2829,
-        2830,
-        2831
+        2951,
+        2952,
+        2953,
+        2954
       ],
       "enemyTag": [
         "SW_Minion01"

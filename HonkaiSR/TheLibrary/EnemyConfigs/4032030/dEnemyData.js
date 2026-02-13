@@ -41,9 +41,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2053,
-        2054,
-        2055
+        2103,
+        2104,
+        2105
       ]
     },
     "403203001": {
@@ -70,9 +70,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2053,
-        2054,
-        2055
+        2103,
+        2104,
+        2105
       ],
       "enemyTag": [
         "MGrid_4009"
@@ -102,18 +102,20 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2053,
-        2054,
-        2055
+        2103,
+        2104,
+        2105
       ],
       "overrideParams": {
-        "2054": [
-          14,
-          "-",
-          "-",
-          "-",
-          "-",
-          "-",
+        "2104": [
+          [
+            14
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
           "-",
           "-"
         ]

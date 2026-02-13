@@ -43,7 +43,7 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2623
+        2742
       ],
       "enemyTag": [
         "LockTarget"
@@ -73,7 +73,7 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2623
+        2742
       ],
       "enemyTag": [
         "LockTarget"
@@ -103,7 +103,7 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2623
+        2742
       ],
       "enemyTag": [
         "LockTarget"
@@ -133,7 +133,7 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2623
+        2742
       ],
       "enemyTag": [
         "LockTarget"
@@ -163,7 +163,7 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2623
+        2742
       ],
       "enemyTag": [
         "LockTarget"
@@ -193,7 +193,7 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2623
+        2742
       ],
       "enemyTag": [
         "LockTarget"
@@ -223,7 +223,7 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2623
+        2742
       ],
       "enemyTag": [
         "LockTarget"
@@ -253,7 +253,7 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2623
+        2742
       ],
       "enemyTag": [
         "LockTarget"
@@ -283,7 +283,7 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2623
+        2742
       ],
       "enemyTag": [
         "LockTarget"
@@ -313,7 +313,7 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2623
+        2742
       ],
       "enemyTag": [
         "LockTarget"
@@ -343,7 +343,7 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2623
+        2742
       ],
       "enemyTag": [
         "LockTarget"
@@ -373,7 +373,7 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2623
+        2742
       ],
       "enemyTag": [
         "LockTarget"

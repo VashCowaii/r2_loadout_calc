@@ -43,12 +43,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -78,12 +78,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -113,12 +113,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -148,12 +148,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -181,12 +181,12 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -214,12 +214,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -249,12 +249,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -284,12 +284,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -319,12 +319,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -354,12 +354,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -389,12 +389,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -424,12 +424,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -459,12 +459,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -494,12 +494,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -529,12 +529,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -564,12 +564,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -599,12 +599,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -637,12 +637,12 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -672,12 +672,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -707,12 +707,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2601,
-        2602,
-        2603,
-        2604,
-        2605,
-        2606
+        2720,
+        2721,
+        2722,
+        2723,
+        2724,
+        2725
       ],
       "enemyTag": [
         "BattleScore_Horse",

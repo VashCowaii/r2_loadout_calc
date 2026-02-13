@@ -127,7 +127,7 @@ let enemyData = {
       "phhp": [
         1,
         1,
-        1.2
+        null
       ],
       "weak": [
         "Physical",
@@ -161,12 +161,17 @@ let enemyData = {
       ],
       "overrideParams": {
         "534": [
-          "-",
-          "-",
-          "-",
-          1.2,
-          "-",
-          "-",
+          [
+            -1,
+            -1,
+            -1,
+            1.2
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
           "-",
           "-"
         ]

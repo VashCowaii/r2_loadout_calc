@@ -43,9 +43,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -75,9 +75,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -107,9 +107,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02",
@@ -140,9 +140,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02",
@@ -173,9 +173,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02",
@@ -206,9 +206,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02",
@@ -239,9 +239,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02",
@@ -272,9 +272,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02",
@@ -305,9 +305,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02",
@@ -338,9 +338,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -370,9 +370,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02",
@@ -403,9 +403,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -435,9 +435,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -467,9 +467,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -499,9 +499,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -531,9 +531,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -563,9 +563,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02",
@@ -596,9 +596,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02",
@@ -629,9 +629,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -661,9 +661,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -693,9 +693,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -725,9 +725,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -757,9 +757,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -789,9 +789,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -821,9 +821,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -853,9 +853,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -885,9 +885,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -917,9 +917,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -950,9 +950,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -982,9 +982,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -1017,9 +1017,9 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -1049,9 +1049,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02"
@@ -1081,9 +1081,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2625,
-        2626,
-        2627
+        2744,
+        2745,
+        2746
       ],
       "enemyTag": [
         "LockTarget02",

@@ -694,12 +694,14 @@ let enemyData = {
       ],
       "overrideParams": {
         "264": [
-          0.15,
-          "-",
-          "-",
-          "-",
-          "-",
-          "-",
+          [
+            0.15
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
           "-",
           "-"
         ]

@@ -33,7 +33,7 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2276
+        2326
       ],
       "summons": [
         {

@@ -43,8 +43,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -74,8 +74,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -105,8 +105,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -136,8 +136,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -167,8 +167,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -198,8 +198,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -229,8 +229,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -260,8 +260,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -291,8 +291,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -322,8 +322,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -353,8 +353,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -384,8 +384,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -415,8 +415,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -446,8 +446,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -477,8 +477,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -508,8 +508,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01"
@@ -539,12 +539,43 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2628,
-        2629
+        2747,
+        2748
       ],
       "enemyTag": [
         "LockTarget01",
         "MGrid_4007"
+      ]
+    },
+    "801202017": {
+      "name": "Hell Humor",
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Wind",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        2747,
+        2748
+      ],
+      "enemyTag": [
+        "LockTarget01"
       ]
     }
   }

@@ -42,9 +42,9 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2469,
-        2470,
-        2471
+        2588,
+        2589,
+        2590
       ],
       "enemyTag": [
         "Monster_Minion04"
