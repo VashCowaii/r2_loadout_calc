@@ -136,6 +136,27 @@ const configAbility = {
                     "team": "Player Team"
                   },
                   {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Character"
+                      },
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Memosprite"
+                      }
+                    ]
+                  },
+                  {
                     "name": "Has Modifier",
                     "target": {
                       "name": "Target Name",
