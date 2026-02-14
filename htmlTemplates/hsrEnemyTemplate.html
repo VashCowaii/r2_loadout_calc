@@ -1,0 +1,199 @@
+<div class="updateBannerMegaBox">
+    <div style="color: white;">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+</div>
+<div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+
+
+
+<div class="mainGridRow" style="display: flex;width: 100%;">
+
+  
+  <div class="libraryCharacterDataHeaderBox">
+    <div class="libraryCharacterDataHeader">
+
+
+        <div class="actionDetailHeaderRowCharacterImageAndEnergyBox">
+            <img src="" class="actionDetailHeaderRowCharacterImage" id="libraryCharacterHeaderPreview">
+
+        </div>
+
+
+
+      
+      <div class="libraryCharacterDataHeaderCharNameBox" id="libraryCharacterDataHeaderCharName">
+        <div class="libraryCharacterDataHeaderCharName" id="libraryCharacterDataHeaderCharName">
+          <div class="libraryCharacterDataHeaderCharNameInnerEnemies" id="characterName">Loading</div>
+        </div>
+
+        <!-- <div class="characterDisplayPathAndNameBoxRowHolder" id="characterDisplayPathAndNameBoxRowHolder">
+          <div class="characterDisplayPathAndNameBoxExtra">
+            <div class="characterDisplayPathNameBoxExtraEnemies" id="characterDisplayPathName">Enemy</div>
+          </div>
+        </div> -->
+        
+        <div class="menuSwitcherBarTopBox scrollHolderHorizontal">
+          <!-- <div class="characterSelectionsOverview scrollHolderHorizontalBody"> -->
+          <div class="menuSwitcherBarTopBox scrollHolderHorizontalBody" id="menuSwitcherBarTopBox">
+            <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton1" onclick="userTriggers.updateMainMenuDisplayed(1)" style="color: white; opacity: 0.75;">Event-Reader</div>
+            <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton2" onclick="userTriggers.updateMainMenuDisplayed(2)" style="color: rgb(255, 219, 145); opacity: 1; background-color: rgba(255, 255, 255, 0.1);">Enemy</div>
+            <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton3" onclick="userTriggers.updateMainMenuDisplayed(3)" style="color: white; opacity: 0.75;">Abilities</div>
+            <!-- <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton4" onclick="userTriggers.updateMainMenuDisplayed(4)" style="color: white; opacity: 0.75;">asdf</div> -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  
+
+  <div class="eventCharacterFileInfoBoxEnemies">
+
+
+
+    <div class="enemyMainStatsBoxScalarOverview">
+      <div class="imageRowStatisticBox1 imageRowStatisticBoxEnemyAdjustmentRow">
+          <div class="imageRowStatisticImageBoxEnemyAdjustment">
+          <div class="imageRowStatisticNameBox">BASE</div>
+          </div>
+          <div class="imageRowStatisticStatBox" id="enemyBaseName"></div>
+      </div>
+      <div class="imageRowStatisticBox2 imageRowStatisticBoxEnemyAdjustmentRow">
+          <div class="imageRowStatisticImageBoxEnemyAdjustment">
+          <div class="imageRowStatisticNameBox">Mask</div>
+          </div>
+          
+          <div class="imageRowStatisticStatBox" id="enemyMaskName"></div>
+      </div>
+      <div class="imageRowStatisticBox1 imageRowStatisticBoxEnemyAdjustmentRow">
+          <div class="imageRowStatisticImageBoxEnemyAdjustment">
+          <div class="imageRowStatisticNameBox">Activity</div>
+          </div>
+          
+          <div class="imageRowStatisticStatBox" id="enemyHardScalar"></div>
+      </div>
+      <div class="imageRowStatisticBox2 imageRowStatisticBoxEnemyAdjustmentRow">
+          <div class="imageRowStatisticImageBoxEnemyAdjustment">
+          <div class="imageRowStatisticNameBox">Activity Group</div>
+          </div>
+          
+          <div class="imageRowStatisticStatBox" id="enemyEliteScalar"></div>
+      </div>
+      <div class="imageRowStatisticBox1 imageRowStatisticBoxEnemyAdjustmentRow">
+        <div class="imageRowStatisticImageBoxEnemyAdjustment">
+        <div class="imageRowStatisticNameBox">Wave Multi</div>
+        </div>
+        
+        <div class="imageRowStatisticStatBox" id="enemyWaveScalar"></div>
+      </div>
+      
+    </div>
+
+    <div class="abilitySelectorFloaterBoxEnemies">
+      <div class="abilitySelectorFloaterBoxNameEnemies">Mask</div>
+      <select class="selectorWidthRestrictionEnemies" id="fileSelectionSelectorEnemyOptions" onchange="megaParsingFuckery.changeEnemyVariant()"></select>
+    </div>
+  </div>
+
+  <div class="noParamsPassedWarningBox" id="noParamsPassedWarningBox"></div>
+
+  <div class="customMenuSearchNoteVashWarning" id="vashCustomWarningNote">If you can see this text after the page has loaded, then something broke.<br><br>Press F12 to open the browser console, screenshot any errors there, and make a post in #website-forum in the discord to let Vash know about it.</div>
+
+  <div class="mainBodyRowOrColumn" id="mainBodyRowOrColumn">
+    <div class="eventReaderControlsBox" id="eventReaderControlsBox"></div>
+    <div class="eventBodyMainBox" id="eventBodyMainBox"></div>
+  </div>
+
+
+  <div class="expandedDataHolderHolderBox" id="teamBoxMainHolderBox">
+
+    
+    <div class="characterMainCenterDisplayEnemies expandedMiddle" id="expandedMiddle">
+
+        <div class="characterMainCenterDisplayOverviewHolderBox" id="characterMainCenterDisplayOverview">
+            <div class="skillsMainBoxHolderEnemies" id="overviewMainBoxHolder">
+
+            </div>
+        </div>
+
+
+        <div class="characterMainCenterDisplayOverviewHolderBox" id="characterMainCenterDisplayTraces">
+          <div class="skillsMainBoxHolder" id="overviewMainBoxHolderAbilities">
+
+          </div>
+          <!-- <div class="skillsMainBoxHolder" id="overviewMainBoxHolder">
+
+          </div> -->
+        </div>
+
+        <div class="centerDisplayHolderBox" id="characterMainCenterDisplayEidolons" style="display: none; border: none;flex-direction: column;">
+            <!-- <div class="eidolonsMainBoxHolder" id="eidolonsMainBoxHolder"></div> -->
+
+            <div class="characterBasicMenuStatsBox" id="mainStatsDisplayOverview" style="display: flex;">
+              
+              <div class="characterDisplayNameAndElement">
+                  <div class="characterDisplayNameBox">Base Stats</div>
+              </div>
+
+
+
+              <div class="characterDisplayAscension"></div>
+              <div class="characterDisplayLevel"></div>
+              <div class="characterDisplayStatsAndAbility"></div>
+              <div class="characterDisplayStatsBasic" id="characterDisplayStatsBasic">
+                  <div class="imageRowStatisticBox1">
+                      <div class="imageRowStatisticImageBox"></div>
+                      <div class="imageRowStatisticNameBox"></div>
+                      <div class="imageRowStatisticStatBox"></div>
+
+                  </div>
+                  <div class="imageRowStatisticBox2">test</div>
+              </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="characterSummaryStats expandedQuarters" id="expandedQuarterRight">
+
+
+        <!-- EIDOLONS -->
+        <div class="characterBasicMenuStatsBox" id="mainStatsDisplayEidolons" style="display: none;">
+            <!-- <div class="traceContentBodyBox" id="eidolonContentBodyBox"></div> -->
+
+            <div class="characterDisplayNameAndElement">
+                <div class="characterDisplayNameBox">Eidolon Rank</div>
+            </div>
+            
+            <div class="eidolonRankRowHolder">
+                <div class="eidolonRankHolderbox">
+                    <div class="superimpositionButton clickable" id="eidolonRankButton0" onclick="userTriggers.updateEidolonRank(0)">0</div>
+                    <div class="superimpositionButton clickable" id="eidolonRankButton1" onclick="userTriggers.updateEidolonRank(1)">1</div>
+                    <div class="superimpositionButton clickable" id="eidolonRankButton2" onclick="userTriggers.updateEidolonRank(2)">2</div>
+                    <div class="superimpositionButton clickable" id="eidolonRankButton3" onclick="userTriggers.updateEidolonRank(3)">3</div>
+                    <div class="superimpositionButton clickable" id="eidolonRankButton4" onclick="userTriggers.updateEidolonRank(4)">4</div>
+                    <div class="superimpositionButton clickable" id="eidolonRankButton5" onclick="userTriggers.updateEidolonRank(5)">5</div>
+                    <div class="superimpositionButton clickable" id="eidolonRankButton6" onclick="userTriggers.updateEidolonRank(6)">6</div>
+                </div>
+            </div>
+
+            <div class="characterDisplayNameBox"></div>
+
+            <div class="characterDisplayPathAndNameBox">
+                <div class="characterDisplayPathNameBox">Bonus Levels</div>
+            </div>
+            
+            <div class="rightDescriptionBox" id="eidolonLevelBonuses"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+</div>
