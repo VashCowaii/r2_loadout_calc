@@ -1513,15 +1513,12 @@ const configAbility = {
                         "target": "{{Player Team All}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_LastEnergyBarValue_RL) || Variables[1] (MDF_EnergyBarValue) || SUB || Variables[2] (MDF_SummonerMaxHP_DownScale) || MUL || Constants[0] (1000) || MUL || Variables[3] (MDF_ShieldAttack_HealRatio) || MUL || RETURN",
-                        "displayLines": "((((MDF_LastEnergyBarValue_RL - MDF_EnergyBarValue) * MDF_SummonerMaxHP_DownScale) * 1000) * MDF_ShieldAttack_HealRatio)",
-                        "constants": [
-                          1000
-                        ],
+                        "operator": "Variables[0] (MDF_LastEnergyBarValue_RL) || Variables[1] (MDF_EnergyBarValue) || SUB || Variables[2] (MDF_ShieldAttack_HealRatio) || MUL || RETURN",
+                        "displayLines": "((MDF_LastEnergyBarValue_RL - MDF_EnergyBarValue) * MDF_ShieldAttack_HealRatio)",
+                        "constants": [],
                         "variables": [
                           "MDF_LastEnergyBarValue_RL",
                           "MDF_EnergyBarValue",
-                          "MDF_SummonerMaxHP_DownScale",
                           "MDF_ShieldAttack_HealRatio"
                         ]
                       },
@@ -1573,15 +1570,12 @@ const configAbility = {
                             "target": "{{Player Team All}}"
                           },
                           "healPercent": {
-                            "operator": "Variables[0] (MDF_LastEnergyBarValue_RL) || Variables[1] (MDF_EnergyBarValue) || SUB || Variables[2] (MDF_SummonerMaxHP_DownScale) || MUL || Constants[0] (1000) || MUL || Variables[3] (MDF_ShieldAttack_HealRatio) || MUL || RETURN",
-                            "displayLines": "((((MDF_LastEnergyBarValue_RL - MDF_EnergyBarValue) * MDF_SummonerMaxHP_DownScale) * 1000) * MDF_ShieldAttack_HealRatio)",
-                            "constants": [
-                              1000
-                            ],
+                            "operator": "Variables[0] (MDF_LastEnergyBarValue_RL) || Variables[1] (MDF_EnergyBarValue) || SUB || Variables[2] (MDF_ShieldAttack_HealRatio) || MUL || RETURN",
+                            "displayLines": "((MDF_LastEnergyBarValue_RL - MDF_EnergyBarValue) * MDF_ShieldAttack_HealRatio)",
+                            "constants": [],
                             "variables": [
                               "MDF_LastEnergyBarValue_RL",
                               "MDF_EnergyBarValue",
-                              "MDF_SummonerMaxHP_DownScale",
                               "MDF_ShieldAttack_HealRatio"
                             ]
                           },
@@ -1766,15 +1760,12 @@ const configAbility = {
                         "target": "{{Player Team All}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_LastEnergyBarValue) || Variables[1] (MDF_EnergyBarValue) || SUB || Variables[2] (MDF_SummonerMaxHP_DownScale) || MUL || Constants[0] (1000) || MUL || Variables[3] (MDF_ShieldAttack_HealRatio) || MUL || RETURN",
-                        "displayLines": "((((MDF_LastEnergyBarValue - MDF_EnergyBarValue) * MDF_SummonerMaxHP_DownScale) * 1000) * MDF_ShieldAttack_HealRatio)",
-                        "constants": [
-                          1000
-                        ],
+                        "operator": "Variables[0] (MDF_LastEnergyBarValue) || Variables[1] (MDF_EnergyBarValue) || SUB || Variables[2] (MDF_ShieldAttack_HealRatio) || MUL || RETURN",
+                        "displayLines": "((MDF_LastEnergyBarValue - MDF_EnergyBarValue) * MDF_ShieldAttack_HealRatio)",
+                        "constants": [],
                         "variables": [
                           "MDF_LastEnergyBarValue",
                           "MDF_EnergyBarValue",
-                          "MDF_SummonerMaxHP_DownScale",
                           "MDF_ShieldAttack_HealRatio"
                         ]
                       },
