@@ -373,7 +373,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "APOC_BOOL_OBJECT_UNUSED_23"
+            "value": "MonsterType_W3_Dinosaur_00"
           }
         },
         {
@@ -396,7 +396,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "APOC_BOOL_OBJECT_UNUSED_22"
+                "value": "MonsterType_W3_TV_00"
               }
             ]
           },
@@ -432,7 +432,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "APOC_BOOL_OBJECT_UNUSED_22"
+                "value": "MonsterType_W3_TV_00"
               }
             ]
           },
@@ -456,7 +456,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "APOC_BOOL_OBJECT_UNUSED_21"
+            "value": "MonsterType_W1_Mecha01_02"
           },
           "passed": [
             {
@@ -478,7 +478,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "APOC_BOOL_OBJECT_UNUSED_20"
+            "value": "MonsterType_W3_Clock_00"
           },
           "passed": [
             {

@@ -1037,7 +1037,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W3_TV_Side1",
+    "name": "<a class=\"gModGreen\" id=\"-516989914\">MModifier_Monster_W3_TV_Side1</a>",
     "realName": "Surprise Channel",
     "aim": "Other",
     "desc": "Mr. Domescreen can use the \"Surprise Variety Show\" ability. After it has been attacked, switches to the Fright Channel state.",
@@ -1045,7 +1045,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W3_TV_Side2",
+    "name": "<a class=\"gModGreen\" id=\"-533767533\">MModifier_Monster_W3_TV_Side2</a>",
     "realName": "Fright Channel",
     "aim": "Other",
     "desc": "Mr. Domescreen can use the \"Startling Broadcast\" ability. After it has been attacked, switches to the Surprise Channel state.",
@@ -1097,7 +1097,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Clock_Ability01_Charge",
+    "name": "<a class=\"gModGreen\" id=\"2064893309\">Enemy_W3_Clock_Ability01_Charge</a>",
     "realName": "Set Alarm",
     "aim": "Other",
     "desc": "Uses Wake-Up Alarm for the next action.",
@@ -1116,7 +1116,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W3_Dinosaur_SpeedDownRatio",
+    "name": "<a class=\"gModGreen\" id=\"-1761981801\">MModifier_Monster_W3_Dinosaur_SpeedDownRatio</a>",
     "realName": "Slow",
     "aim": "Debuff",
     "desc": "Decreases SPD by #1[i]%.",
@@ -1127,7 +1127,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W3_Dinosaur_AttackUpRatio",
+    "name": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>",
     "realName": "Stove Heating",
     "aim": "Other",
     "desc": "#1[i] stack(s) of Stove Heating has been applied.",
@@ -1139,7 +1139,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W3_Dinosaur_OverHit",
+    "name": "<a class=\"gModGreen\" id=\"-992878048\">MModifier_Monster_W3_Dinosaur_OverHit</a>",
     "realName": "Stove Overheating",
     "aim": "Other",
     "desc": "#1[i] stack(s) of Stove Overheating has been applied.",
@@ -1150,7 +1150,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W3_Dinosaur_Calm",
+    "name": "<a class=\"gModGreen\" id=\"-1583693402\">MModifier_Monster_W3_Dinosaur_Calm</a>",
     "realName": "Simmer",
     "aim": "Other",
     "desc": "When this unit is attacked or takes DoT, gain 1 stack of Stove Heating.",
@@ -1158,7 +1158,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W3_Dinosaur_Fury",
+    "name": "<a class=\"gModGreen\" id=\"-1287806639\">MModifier_Monster_W3_Dinosaur_Fury</a>",
     "realName": "Boil",
     "aim": "Other",
     "desc": "When this unit is attacked or takes DoT, gain 1 stack of Stove Heating.",
@@ -2018,7 +2018,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W3_Dinosaur_RLElite_SpeedUp",
+    "name": "<a class=\"gModGreen\" id=\"1193792195\">MModifier_Monster_W3_Dinosaur_RLElite_SpeedUp</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "Increase SPD by#1[i]%.",
@@ -2396,7 +2396,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W3_TV_02_Side1",
+    "name": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>",
     "realName": "Off-Class Channel",
     "aim": "Other",
     "desc": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
@@ -2404,7 +2404,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W3_TV_02_Side2",
+    "name": "<a class=\"gModGreen\" id=\"665202517\">MModifier_Monster_W3_TV_02_Side2</a>",
     "realName": "Classroom Channel",
     "aim": "Other",
     "desc": "Banacademic Office members can use \"Classroom Channel\" abilities. After they are attacked, they switch to \"Off-Class Channel\" mode.",
@@ -2412,7 +2412,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_Dinosaur_02_Burn",
+    "name": "<a class=\"gModGreen\" id=\"-1809911628\">Enemy_W3_Dinosaur_02_Burn</a>",
     "realName": "Burn",
     "aim": "Debuff",
     "desc": "Takes Fire DMG at the beginning of each turn for a certain number of turns.",
@@ -2431,7 +2431,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W3_TV_02_FaceLock",
+    "name": "<a class=\"gModGreen\" id=\"579019848\">MModifier_Monster_W3_TV_02_FaceLock</a>",
     "realName": "Tutoring",
     "aim": "Other",
     "desc": "In Tutoring mode, this unit will not change its channel when attacked.",
@@ -2765,7 +2765,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_Fuyan_RL_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>",
     "realName": "Slay Move",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%. This effect can stack.",
@@ -2776,7 +2776,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_Fuyan_RL_SpeedUp",
+    "name": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>",
     "realName": "Transfer Move",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%. This effect can stack.",
@@ -3222,7 +3222,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Dinosaur_02_AttackRatioUp",
+    "name": "<a class=\"gModGreen\" id=\"-1792784435\">Enemy_W3_Dinosaur_02_AttackRatioUp</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "Increases ATK by #1[i]%. This effect can stack.",
@@ -3273,7 +3273,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W3_Theater_IF_MinionsSuperArmor",
+    "name": "<a class=\"gModGreen\" id=\"1242309858\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmor</a>",
     "realName": "Homework In-Class",
     "aim": "Buff",
     "desc": "When Blaznana Monkey Trick is in the \"Steadfast Safeguard\" state, reduces this unit's DMG received by #1[i]%.",
@@ -3284,7 +3284,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W3_Theater_IF_MinionsSuperArmorBreak",
+    "name": "<a class=\"gModGreen\" id=\"393225449\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmorBreak</a>",
     "realName": "Prolonged Class",
     "aim": "Debuff",
     "desc": "When Blaznana Monkey Trick is in the \"Safeguard Breach\" state, increases this unit's DMG taken by #1[i]%.",
@@ -3295,7 +3295,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W3_Theater_IF_HourglassCharge",
+    "name": "<a class=\"gModGreen\" id=\"-1013818127\">MModifier_Monster_W3_Theater_IF_HourglassCharge</a>",
     "realName": "Regular Examination",
     "aim": "Other",
     "desc": "When enemy units in the \"Classroom Channel\" state are switched to \"Off-Class Channel\" via either Breaking their Weaknesses or accumulating the tally, reduces the Toughness of \"Blaznana Monkey Trick\". When all enemy units are Weakness Broken, attacking any enemy units can reduce the Toughness of \"Blaznana Monkey Trick\" by a minor amount. When \"Blaznana Monkey Trick\" is Weakness Broken, all enemy targets will be Broken, and the \"Blaznana Monkey Trick\" will enter the \"Safeguard Breach\" state.",
@@ -3314,7 +3314,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Dinosaur_02_IF_StanceBreakRatioUp",
+    "name": "<a class=\"gModGreen\" id=\"-396183840\">Enemy_W3_Dinosaur_02_IF_StanceBreakRatioUp</a>",
     "realName": "Weakness Break Efficiency Boost",
     "aim": "Buff",
     "desc": "Weakness Break Efficiency increases by #1[i]%.",
@@ -3434,7 +3434,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "MModifier_Monster_W3_Theater_IF_Side_Positive",
+    "name": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>",
     "realName": "Off-Class Channel",
     "aim": "Other",
     "desc": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
@@ -3442,7 +3442,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W3_Theater_IF_Side_Negative",
+    "name": "<a class=\"gModGreen\" id=\"-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>",
     "realName": "Classroom Channel",
     "aim": "Other",
     "desc": "\"Banacademic Office\" members can use \"Classroom Channel\" abilities. When the tally reaches the maximum, switches to \"Off-Class Channel\" and enters the Weakness Broken state.",
@@ -3749,7 +3749,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W3_Theater_RLBoss_AllDamageTypeAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1129261000\">MModifier_Monster_W3_Theater_RLBoss_AllDamageTypeAddedRatio</a>",
     "realName": "Oil to the Banabana",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect is stackable.",
@@ -4504,7 +4504,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W3_TV_Side1Scot",
+    "name": "<a class=\"gModGreen\" id=\"1317365887\">MModifier_Monster_W3_TV_Side1Scot</a>",
     "realName": "Succor",
     "aim": "Other",
     "desc": "Skott can use the \"Succor\" ability. After he has been attacked, switches to the \"Curse\" state.",
@@ -4512,7 +4512,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W3_TV_Side2Scot",
+    "name": "<a class=\"gModGreen\" id=\"-968991614\">MModifier_Monster_W3_TV_Side2Scot</a>",
     "realName": "Curse",
     "aim": "Other",
     "desc": "Skott can use the \"Curse\" ability. After he has been attacked, switches to the \"Succor\" state.",
@@ -4520,7 +4520,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W3_TV_02_Side1Scot",
+    "name": "<a class=\"gModGreen\" id=\"1880611649\">MModifier_Monster_W3_TV_02_Side1Scot</a>",
     "realName": "Mocked",
     "aim": "Other",
     "desc": "Skott members can use \"Mocked\" abilities. After they are attacked, they will not switch states.",
@@ -4528,7 +4528,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W3_TV_02_Side2Scot",
+    "name": "<a class=\"gModGreen\" id=\"687901456\">MModifier_Monster_W3_TV_02_Side2Scot</a>",
     "realName": "Rabid",
     "aim": "Other",
     "desc": "Skott members can use \"Rabid\" abilities. After they are attacked, switches to the \"Mocked\" state.",
@@ -4536,7 +4536,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "MModifier_Monster_W3_TV_02_FaceLockScot",
+    "name": "<a class=\"gModGreen\" id=\"811520749\">MModifier_Monster_W3_TV_02_FaceLockScot</a>",
     "realName": "Overworked",
     "aim": "Other",
     "desc": "While in Overworked mode, this unit will not change its state when attacked.",

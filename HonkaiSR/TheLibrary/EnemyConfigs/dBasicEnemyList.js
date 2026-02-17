@@ -6172,12 +6172,12 @@ let basicEnemyList = {
       "202402007": {
         "name": "Karmic Hinkypunk"
       },
-      "hasReader": false
+      "hasReader": true
     },
     "2024021": {
       "2024021": {},
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cirrus (Complete)"
     },
     "groupName": "Cirrus"
@@ -6810,7 +6810,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3002014": {
       "3002014": {
@@ -6827,7 +6827,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Skott: Batch Produced"
     },
     "groupName": "Dreamjolt Troupe's Mr. Domescreen"
@@ -6855,7 +6855,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3002012": {
       "3002012": {
@@ -6900,7 +6900,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Banacademic Office's Assistanana"
     },
     "3002013": {
@@ -6919,7 +6919,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Banacademic Office's Assistanana (Complete)"
     },
     "3002015": {
@@ -6938,7 +6938,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Envious Skott"
     },
     "3002016": {
@@ -6957,7 +6957,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Envious Skott (Corrupted)"
     },
     "groupName": "Banacademic Office's Assistanana"
@@ -7002,7 +7002,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Dreamjolt Troupe's Fortune Seller"
   },
@@ -7029,7 +7029,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3002022": {
       "3002022": {
@@ -7074,7 +7074,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Banacademic Office's Fortune BananAdvisor"
     },
     "3002023": {
@@ -7093,7 +7093,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Banacademic Office's Fortune BananAdvisor (Complete)"
     },
     "3002024": {
@@ -7104,7 +7104,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Greedy Skott"
     },
     "3002025": {
@@ -7115,7 +7115,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Greedy Skott (Corrupted)"
     },
     "groupName": "Banacademic Office's Fortune BananAdvisor"
@@ -7323,7 +7323,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Dreamjolt Troupe's Winder Goon"
   },
@@ -7350,7 +7350,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3002042": {
       "3002042": {
@@ -7401,7 +7401,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Banacademic Office's Dreamweaver BananAdvisor"
     },
     "3002043": {
@@ -7422,7 +7422,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Banacademic Office's Dreamweaver BananAdvisor (Complete)"
     },
     "3002044": {
@@ -7433,7 +7433,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Slothful Skott"
     },
     "3002045": {
@@ -7444,7 +7444,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Slothful Skott (Corrupted)"
     },
     "groupName": "Banacademic Office's Dreamweaver BananAdvisor"
@@ -7581,7 +7581,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3003011": {
       "3003011": {
@@ -7598,7 +7598,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Dreamjolt Troupe's Beyond Overcooked (Projection)"
     },
     "3003012": {
@@ -7631,7 +7631,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Dreamjolt Troupe's Beyond Overcooked (Bug)"
     },
     "3003014": {
@@ -7640,7 +7640,7 @@ let basicEnemyList = {
       "300301402": {},
       "300301403": {},
       "300301404": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Dreamjolt Troupe's Beyond Overcooked"
     },
     "groupName": "Dreamjolt Troupe's Beyond Overcooked"
@@ -7679,7 +7679,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3003015": {
       "3003015": {
@@ -7730,7 +7730,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Banacademic Office's Charmony BananAdvisor"
     },
     "3003016": {
@@ -7751,7 +7751,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Banacademic Office's Charmony BananAdvisor (Complete)"
     },
     "3003017": {
@@ -7762,7 +7762,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Wrathful Skott"
     },
     "3003018": {
@@ -7773,7 +7773,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Wrathful Skott (Corrupted)"
     },
     "groupName": "Banacademic Office's Charmony BananAdvisor"
@@ -8402,7 +8402,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "3004021": {
       "3004021": {},
@@ -8411,7 +8411,7 @@ let basicEnemyList = {
       "300402103": {},
       "300402104": {},
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Blaznana Monkey Trick"
     },
     "3004022": {
@@ -8420,7 +8420,7 @@ let basicEnemyList = {
         "name": "Wonder Forest's Banacademic Office Staff"
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Wonder Forest's Banacademic Office Staff (Complete)"
     },
     "3004023": {
@@ -8433,7 +8433,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Thousand-Faced Skott"
     },
     "3004024": {
@@ -8446,7 +8446,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Thousand-Faced Skott (Corrupted)"
     },
     "3004025": {
@@ -8458,7 +8458,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Thousand-Faced Skott"
     },
     "groupName": "Wonder Forest's Banacademic Office Staff"

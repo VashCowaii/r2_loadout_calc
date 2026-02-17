@@ -5104,6 +5104,26 @@ const megaParsingFuckeryPain = {
             </div>` : ""}
         </div>`;
     },
+    "Update Override Controller"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "controller",
+            // "lockHolder",
+            // "isUnlock",
+            // "typeOverride",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Update Override Controller");
+
+        // initialCounter++;
+
+        // ${parseRef.isUnlock ? "UN" : ""}
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.controller,"Controller")}
+        </div>`;
+    },
     "Override Enemy Rank"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -6735,12 +6755,13 @@ const megaParsingFuckeryPain = {
             "target",
             "subTarget",
             "removeShields",
+            "isRemove",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Create Shared HP Group");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
-            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}${parseRef.isRemove ? " [REMOVE]" : ""}:</div>
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Main Targets",true)}
