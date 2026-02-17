@@ -7993,7 +7993,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3003031": {
       "3003031": {
@@ -8025,7 +8025,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Past Confined and Caged\""
     },
     "3003032": {
@@ -8036,7 +8036,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Past Confined and Caged\" (Bug)"
     },
     "3003033": {
@@ -8055,7 +8055,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Past Confined and Caged\" (Complete)"
     },
     "groupName": "\"Past Confined and Caged\""
@@ -8090,7 +8090,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3003041": {
       "3003041": {
@@ -8129,7 +8129,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Tomorrow in Harmonious Chords\""
     },
     "3003042": {
@@ -8140,7 +8140,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Tomorrow in Harmonious Chords\" (Bug)"
     },
     "3003043": {
@@ -8159,7 +8159,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Tomorrow in Harmonious Chords\" (Complete)"
     },
     "groupName": "\"Tomorrow in Harmonious Chords\""
@@ -8243,7 +8243,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3003051": {
       "3003051": {
@@ -8275,7 +8275,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Present Inebriated in Revelry\""
     },
     "3003052": {
@@ -8301,7 +8301,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Present Inebriated in Revelry\" (Bug)"
     },
     "3003053": {
@@ -8320,7 +8320,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Present Inebriated in Revelry\" (Complete)"
     },
     "groupName": "\"Present Inebriated in Revelry\""
@@ -8334,7 +8334,7 @@ let basicEnemyList = {
       },
       "300401003": {},
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "3004011": {
       "3004011": {},
@@ -8342,19 +8342,19 @@ let basicEnemyList = {
         "name": "The Past, Present, and Eternal Show"
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "The Past, Present, and Eternal Show (Complete)"
     },
     "3004012": {
       "3004012": {},
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "The Past, Present, and Eternal Show"
     },
     "3004013": {
       "3004013": {},
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "The Past, Present, and Eternal Show (Complete)"
     },
     "groupName": "The Past, Present, and Eternal Show"

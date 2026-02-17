@@ -1,0 +1,13 @@
+const configAbility = {
+  "fileName": "3003033_Monster_W3_Figure_02_RLElite_Ability02_Part01",
+  "childAbilityList": [
+    "3003033_Monster_W3_Figure_02_RLElite_Ability02_Part01",
+    "3003033_Monster_W3_Figure_02_RLElite_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
+  "abilityType": "Skill",
+  "energy": null,
+  "toughnessList": null,
+  "parse": [],
+  "references": []
+}

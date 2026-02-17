@@ -1,0 +1,12 @@
+const configAbility = {
+  "fileName": "3004011_Monster_W3_FigureBoss_PassiveAbility05",
+  "childAbilityList": [
+    "3004011_Monster_W3_FigureBoss_PassiveAbility05"
+  ],
+  "skillTrigger": "Skill05",
+  "abilityType": "Talent",
+  "energy": null,
+  "toughnessList": null,
+  "parse": [],
+  "references": []
+}

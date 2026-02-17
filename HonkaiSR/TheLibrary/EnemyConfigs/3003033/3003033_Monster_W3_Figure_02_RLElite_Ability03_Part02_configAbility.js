@@ -1,0 +1,64 @@
+const configAbility = {
+  "fileName": "3003033_Monster_W3_Figure_02_RLElite_Ability03_Part02",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    "Ability Start",
+    {
+      "name": "ATK Scaling DMG",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
+      "AttackScaling": {
+        "DamageType": "Physical",
+        "Damage": {
+          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+          "displayLines": "{[Skill03[0]]}",
+          "constants": [],
+          "variables": [
+            "{[Skill03[0]]}"
+          ]
+        },
+        "Toughness": null,
+        "Tags": null,
+        "attackType": "Basic ATK",
+        "EnergyGainPercent": "100%"
+      }
+    },
+    {
+      "name": "ATK Scaling DMG",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
+      "AttackScaling": {
+        "DamageType": "Physical",
+        "Damage": {
+          "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+          "displayLines": "{[Skill03[0]]}",
+          "constants": [],
+          "variables": [
+            "{[Skill03[0]]}"
+          ]
+        },
+        "Toughness": null,
+        "Tags": null,
+        "attackType": "Basic ATK",
+        "EnergyGainPercent": "100%"
+      }
+    },
+    {
+      "name": "Change Character Transformation",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "phase": "Phase1"
+    },
+    "Trigger: Attack End",
+    "Trigger: Ability End"
+  ],
+  "references": []
+}

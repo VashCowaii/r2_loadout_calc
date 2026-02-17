@@ -1940,7 +1940,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Figure_02_IsAiming",
+    "name": "<a class=\"gModGreen\" id=\"-596409662\">Monster_W3_Figure_02_IsAiming</a>",
     "realName": "Shackle-Bearing Messenger",
     "aim": "Other",
     "desc": "About to use Desmios Evangelion. The current DMG level is #1[i].",
@@ -1951,7 +1951,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Figure_02_AimTarget",
+    "name": "<a class=\"gModGreen\" id=\"-413256865\">Monster_W3_Figure_02_AimTarget</a>",
     "realName": "Target Locked On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -1959,7 +1959,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_Figure_01_Poison",
+    "name": "<a class=\"gModGreen\" id=\"-578587123\">Enemy_W3_Figure_01_Poison</a>",
     "realName": "Carousal of Wantonness",
     "aim": "Debuff",
     "desc": "Takes Wind DMG at the start of each turn for a certain number of turns. This effect can be stacked.",
@@ -1967,7 +1967,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W3_Figure_01_Electric",
+    "name": "<a class=\"gModGreen\" id=\"723419042\">Enemy_W3_Figure_01_Electric</a>",
     "realName": "Carousal of Revelry",
     "aim": "Debuff",
     "desc": "Takes Lightning DMG at the start of each turn for a certain number of turns. This effect can be stacked.",
@@ -1975,7 +1975,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Monster_W3_Figure_01_DotMarkListener",
+    "name": "<a class=\"gModGreen\" id=\"1565080492\">Monster_W3_Figure_01_DotMarkListener</a>",
     "realName": "My Cup Runneth Over",
     "aim": "Other",
     "desc": "About to use \"Wash Away All Sins For You\"",
@@ -1983,7 +1983,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Figure_01_DotMark",
+    "name": "<a class=\"gModGreen\" id=\"-1920724212\">Monster_W3_Figure_01_DotMark</a>",
     "realName": "Target Locked On",
     "aim": "Other",
     "desc": "%CasterName will focus attacks on this target.",
@@ -1991,7 +1991,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_DollElite_Commnon_Basic",
+    "name": "<a class=\"gModGreen\" id=\"-1336534629\">Enemy_W3_DollElite_Commnon_Basic</a>",
     "realName": "\"Puppets of the Order\"",
     "aim": "Other",
     "desc": "Puppets controlled by Order. Can become Impresario.",
@@ -1999,7 +1999,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_DollElite_Commnon_TheChosenOne",
+    "name": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>",
     "realName": "Impresario",
     "aim": "Buff",
     "desc": "An extra action can be taken every turn with a slight increase in SPD.",
@@ -2007,7 +2007,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_DollElite_Standard_DamageTakenUp",
+    "name": "<a class=\"gModGreen\" id=\"1389138668\">Enemy_W3_DollElite_Standard_DamageTakenUp</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG taken by #1[i]%.",
@@ -2066,7 +2066,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W3_Figure_RLElite_AttackUP",
+    "name": "<a class=\"gModGreen\" id=\"1025576815\">Enemy_W3_Figure_RLElite_AttackUP</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "For every target with Alien Dream, increase this unit's ATK by #1[i]%.",
@@ -2077,7 +2077,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Figure_02_RLElite_IsAiming",
+    "name": "<a class=\"gModGreen\" id=\"-2034637668\">Monster_W3_Figure_02_RLElite_IsAiming</a>",
     "realName": "Shackle-Bearing Messenger",
     "aim": "Other",
     "desc": "About to use Desmios Evangelion. The current DMG level is #1[i].",
@@ -2088,7 +2088,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Figure_02_RLElite_AimTarget",
+    "name": "<a class=\"gModGreen\" id=\"1529042769\">Monster_W3_Figure_02_RLElite_AimTarget</a>",
     "realName": "Target Locked On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -2148,7 +2148,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Figure_01_RLElite_DotMarkListener",
+    "name": "<a class=\"gModGreen\" id=\"1916393494\">Monster_W3_Figure_01_RLElite_DotMarkListener</a>",
     "realName": "My Cup Runneth Over",
     "aim": "Other",
     "desc": "About to use \"Wash Away All Sins For You.\"",
@@ -2156,7 +2156,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Figure_01_RLElite_DotMark",
+    "name": "<a class=\"gModGreen\" id=\"635359514\">Monster_W3_Figure_01_RLElite_DotMark</a>",
     "realName": "Target Locked On",
     "aim": "Other",
     "desc": "Locked on by %CasterName as their attack target.",
@@ -2164,7 +2164,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Figure_02_RLElite_ChargeLayer_DamageUP",
+    "name": "<a class=\"gModGreen\" id=\"787345585\">Monster_W3_Figure_02_RLElite_ChargeLayer_DamageUP</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "Each stack increases ATK by #1[i]%.",
@@ -2206,7 +2206,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_FigureBoss_Standard_Basic",
+    "name": "<a class=\"gModGreen\" id=\"-900182182\">Monster_W3_FigureBoss_Standard_Basic</a>",
     "realName": "\"Puppets of the Order\"",
     "aim": "Other",
     "desc": "Puppets controlled by Order. Can become Impresario.",
@@ -2214,7 +2214,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_FigureBoss_Standard_TheChosenOne",
+    "name": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>",
     "realName": "Impresario",
     "aim": "Buff",
     "desc": "An extra action can be taken every turn and SPD increases slightly.",
@@ -2222,7 +2222,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_FigureBoss_DamageTakenUp",
+    "name": "<a class=\"gModGreen\" id=\"-558855282\">Enemy_W3_FigureBoss_DamageTakenUp</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Increases DMG taken by #1[i]%.",
@@ -2233,7 +2233,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_FigureBoss_DamageUP",
+    "name": "<a class=\"gModGreen\" id=\"919092314\">Monster_W3_FigureBoss_DamageUP</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%.",
@@ -2346,7 +2346,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Figure_ChargeEffect",
+    "name": "<a class=\"gModGreen\" id=\"-25601954\">Monster_W3_Figure_ChargeEffect</a>",
     "realName": "Holy Night",
     "aim": "Other",
     "desc": "About to use \"Sleep In Heavenly Peace\"",
@@ -2388,7 +2388,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Figure_RLElite_ChargeEffect",
+    "name": "<a class=\"gModGreen\" id=\"-316988116\">Monster_W3_Figure_RLElite_ChargeEffect</a>",
     "realName": "Holy Night",
     "aim": "Other",
     "desc": "About to use \"Sleep In Heavenly Peace.\"",

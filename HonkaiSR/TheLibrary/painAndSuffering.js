@@ -6758,6 +6758,8 @@ const megaParsingFuckeryPain = {
             "subTarget",
             "removeShields",
             "isRemove",
+            "resolveToSubGroups",
+            "canKillSubGroups",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Create Shared HP Group");
 
@@ -6769,6 +6771,8 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Main Targets",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.subTarget,"Sub Targets",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.removeShields,"Remove Shields")}
+            ${getStandardNameDisplay(initialCounter,parseRef.resolveToSubGroups,"Resolve to Sub-Groups")}
+            ${getStandardNameDisplay(initialCounter,parseRef.canKillSubGroups,"Can Kill Sub-Groups")}
 
         </div>`;
     },
