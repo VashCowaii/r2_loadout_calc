@@ -1,0 +1,5039 @@
+const configAbility = {
+  "fileName": "3004021_Modifiers",
+  "abilityType": "Char. Modifiers",
+  "energy": null,
+  "toughnessList": [
+    0,
+    0,
+    0
+  ],
+  "parse": [
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1459208645\">W3_Theater_BattleScore2</a>",
+      "execute": [
+        {
+          "eventTrigger": "Being Weakness Broken: End [Owner]",
+          "execute": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "ENEMIES_OBJECT_UNUSED__114"
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "Break",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "noTargetFound": [
+                {
+                  "name": "Achievement",
+                  "relatedAchievements": [
+                    {
+                      "title": "Un-banaenlighten-able",
+                      "desc": "Ensure all Banacademic Office members are Weakness Broken at the same time during the fight with Wonder Forest's Banacademic Office Staff",
+                      "rarity": "Low"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1408875788\">W3_Theater_BattleScore1</a>",
+      "stackType": "Replace",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "W3_Theater_00_BattleScore1_Flag"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "W3_Theater_00_BattleScore1_Flag",
+                "compareType": "=",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Achievement",
+                  "relatedAchievements": [
+                    {
+                      "title": "Bananenlightenment Master",
+                      "desc": "Prevent Wonder Forest's Banacademic Office Staff from using \"To the Doctor: Banacademic Report\" during the fight",
+                      "rarity": "Low"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1072054994\">MModifier_Monster_W3_Theater_DamageSharePhase2</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier"
+        }
+      ],
+      "stackData": [],
+      "latentQueue": [
+        "BreakEndFlag",
+        "InsertCheck"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1055277375\">MModifier_Monster_W3_Theater_DamageSharePhase1</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Lock HP",
+              "threshold": 0.0009999999
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1426745765\">MModifier_Monster_W3_TV_02_Side1Message</a>",
+      "stackType": "ReplaceByCaster",
+      "modifierFlags": [
+        "RemoveWhenCasterDead"
+      ],
+      "execute": [
+        {
+          "eventTrigger": "Attack Action Completed [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "flagName": "Break",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "flagName": "STAT_CTRL",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "flagName": "DisableAction",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "value": "Theater_Rogue"
+                  }
+                }
+              ]
+            },
+            "Modifier Deletes Itself"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__811520749\">MModifier_Monster_W3_TV_02_FaceLockScot</a>[<span class=\"descriptionNumberColor\">Overworked</span>]",
+      "description": "While in Overworked mode, this unit will not change its state when attacked.",
+      "type": "Other",
+      "effectName": "Overworked",
+      "statusName": "Overworked"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__579019848\">MModifier_Monster_W3_TV_02_FaceLock</a>[<span class=\"descriptionNumberColor\">Tutoring</span>]",
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Update Displayed Energy Bar",
+              "entityClass": "Enemy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "assignState": "False"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value": "MonsterType_W3_TV_00"
+              },
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "MonsterType_W3_Clock_00"
+                  },
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value": "MonsterType_W1_Mecha01_02"
+                      },
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "MonsterType_W3_Dinosaur_00"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value": "Theater_Rogue"
+              },
+              "passed": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "entityClass": "Enemy",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "assignState": "True",
+                  "state": "Active"
+                },
+                {
+                  "name": "Override Modifier Name",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifierName": "<a class=\"gModGreen\" id=\"579019848\">MModifier_Monster_W3_TV_02_FaceLock</a>[<span class=\"descriptionNumberColor\">Tutoring</span>]",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"811520749\">MModifier_Monster_W3_TV_02_FaceLockScot</a>[<span class=\"descriptionNumberColor\">Overworked</span>]"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "entityClass": "Enemy",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "assignState": "True",
+                  "state": "Active"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Being Attacked End [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Level Entity}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1426745765\">MModifier_Monster_W3_TV_02_Side1Message</a>",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "Theater_Rogue"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Being Weakness Broken: End [Owner]",
+          "execute": [
+            "Modifier Deletes Itself"
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking Modifier Instance [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Modifier Has Flag",
+                    "flagName": "STAT_CTRL"
+                  },
+                  {
+                    "name": "Modifier Has Flag",
+                    "flagName": "STAT_CTRL_Stun"
+                  },
+                  {
+                    "name": "Modifier Has Flag",
+                    "flagName": "STAT_CTRL_Frozen"
+                  },
+                  {
+                    "name": "Modifier Has Flag",
+                    "flagName": "STAT_Confine"
+                  },
+                  {
+                    "name": "Modifier Has Flag",
+                    "flagName": "Break"
+                  }
+                ]
+              },
+              "passed": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": [
+        "AIFlag"
+      ],
+      "description": "In Tutoring mode, this unit will not change its channel when attacked.",
+      "type": "Other",
+      "effectName": "Being Tutored",
+      "statusName": "Tutoring",
+      "duration": 1
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__687901456\">MModifier_Monster_W3_TV_02_Side2Scot</a>[<span class=\"descriptionNumberColor\">Rabid</span>]",
+      "description": "Skott members can use \"Rabid\" abilities. After they are attacked, switches to the \"Mocked\" state.",
+      "type": "Other",
+      "statusName": "Rabid"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1880611649\">MModifier_Monster_W3_TV_02_Side1Scot</a>[<span class=\"descriptionNumberColor\">Mocked</span>]",
+      "description": "Skott members can use \"Mocked\" abilities. After they are attacked, they will not switch states.",
+      "type": "Other",
+      "statusName": "Mocked"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__665202517\">MModifier_Monster_W3_TV_02_Side2</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Update Override Controller",
+              "controller": "Override2"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value": "Theater_Rogue"
+              },
+              "passed": [
+                {
+                  "name": "Override Modifier Name",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifierName": "<a class=\"gModGreen\" id=\"665202517\">MModifier_Monster_W3_TV_02_Side2</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"687901456\">MModifier_Monster_W3_TV_02_Side2Scot</a>[<span class=\"descriptionNumberColor\">Rabid</span>]"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": [
+        "BreakEndFlag",
+        "InsertCheck",
+        "LockCount",
+        "AI_HeiShengBei_SpecialAI",
+        "AI_HeiShengBei_Need"
+      ],
+      "description": "Banacademic Office members can use \"Classroom Channel\" abilities. After they are attacked, they switch to \"Off-Class Channel\" mode.",
+      "type": "Other",
+      "statusName": "Classroom Channel"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]",
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Update Displayed Energy Bar",
+              "entityClass": "Enemy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "assignState": "False"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value": "MonsterType_W3_Dinosaur_00",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Update Override Controller",
+              "controller": "Override1"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value": "MonsterType_W3_Dinosaur_00",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value": "MonsterType_W3_TV_00"
+              },
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "MonsterType_W3_Clock_00"
+                  },
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value": "MonsterType_W1_Mecha01_02"
+                      },
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "MonsterType_W3_Dinosaur_00"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1426745765\">MModifier_Monster_W3_TV_02_Side1Message</a>",
+              "casterAssign": "CasterSelf"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value": "Theater_Rogue"
+              },
+              "passed": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": 0,
+                  "entityClass": "Enemy",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "maximum": 1,
+                  "assignState": "True",
+                  "state": "Normal"
+                },
+                {
+                  "name": "Override Modifier Name",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifierName": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"1880611649\">MModifier_Monster_W3_TV_02_Side1Scot</a>[<span class=\"descriptionNumberColor\">Mocked</span>]"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": 0,
+                  "entityClass": "Enemy",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "maximum": 1,
+                  "assignState": "True",
+                  "state": "Normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Being Attacked End [Owner]"
+        }
+      ],
+      "stackData": [],
+      "latentQueue": [
+        "AIFlag"
+      ],
+      "description": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
+      "type": "Other",
+      "statusName": "Off-Class Channel"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1906678885\">MModifier_Monster_W3_TV_02_RemoveMark</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1262827161\">MModifier_Monster_W3_TV_02_SideCheck</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Define Custom Variable with Varying Data",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "variableName": "MonsterIDSelf",
+              "value": "TargetCharacterID"
+            },
+            {
+              "name": "Add Stage Ability",
+              "abilityName": "BattleEventAbility_Monster_W3_Theater_PuzzleAbility",
+              "parameters": {}
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Entity Death [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "STAT_CTRL",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "Break",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Right of Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Left of Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Right of Caster}}"
+                        },
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Left of Caster}}"
+                        },
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Right of Caster}}"
+                        },
+                        "flagName": "Break",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Left of Caster}}"
+                        },
+                        "flagName": "Break",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder and Adjacent Targets}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1906678885\">MModifier_Monster_W3_TV_02_RemoveMark</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Entity Created [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "STAT_CTRL",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "Break",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Right of Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Left of Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Right of Caster}}"
+                        },
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Left of Caster}}"
+                        },
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Right of Caster}}"
+                        },
+                        "flagName": "Break",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Left of Caster}}"
+                        },
+                        "flagName": "Break",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder and Adjacent Targets}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1906678885\">MModifier_Monster_W3_TV_02_RemoveMark</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Attack DMG End [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "STAT_CTRL",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "Break",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Right of Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Left of Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Right of Caster}}"
+                        },
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Left of Caster}}"
+                        },
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Right of Caster}}"
+                        },
+                        "flagName": "Break",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Left of Caster}}"
+                        },
+                        "flagName": "Break",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder and Adjacent Targets}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1906678885\">MModifier_Monster_W3_TV_02_RemoveMark</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-545642147\">Enemy_W3_TV_02_Flop</a>",
+      "stackType": "Replace",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"579019848\">MModifier_Monster_W3_TV_02_FaceLock</a>[<span class=\"descriptionNumberColor\">Tutoring</span>]",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "scope": "TargetEntity",
+                  "variableName": "AIFlag",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "FlopSide",
+                "compareType": "=",
+                "value2": 1,
+                "contextScope": "TargetEntity"
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"665202517\">MModifier_Monster_W3_TV_02_Side2</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "MonsterType_W3_TV_00"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "FlopSide",
+                "compareType": "=",
+                "value2": -1,
+                "contextScope": "TargetEntity"
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"665202517\">MModifier_Monster_W3_TV_02_Side2</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "MonsterType_W3_TV_00"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1877150008\">Enemy_W3_Theater_IF_ImmuneDebuff</a>",
+      "modifierFlags": [
+        "ImmuneDebuff"
+      ],
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1090299931\">MModifier_W3_Theater_IF_UltraDamageReduce</a>",
+      "stackType": "Replace",
+      "execute": [
+        {
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-685472168\">MModifier_W3_Theater_IF_UltraDamageReduce_TriggerFlag</a>"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Adjust Target Stats",
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+                      "value": "(MDF_DamageReduce * MDF_Layer)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackLimit": 5
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-685472168\">MModifier_W3_Theater_IF_UltraDamageReduce_TriggerFlag</a>",
+      "stackData": [],
+      "latentQueue": [
+        "AIFlag"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__629494345\">Enemy_W3_Theater_IF_HintToastController</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "UI Display Event",
+              "popUpText": "Accumulate attacks to the full to reduce the boss's Toughness"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Modifier is Added [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "UI Display Event",
+                  "popUpText": "Accumulate attacks to the full to reduce the boss's Toughness"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Losing Modifier [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All}}"
+                    },
+                    "value1": "TeamCharacterCount",
+                    "compareType": "=",
+                    "value2": 0,
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1480644115\">MModifier_Monster_W3_Theater_IF_Side_Negative_Count_Trigger</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__890205763\">Enemy_W3_Theater_IF_BattleEvent</a>",
+      "stackType": "ReplaceByCaster",
+      "execute": [
+        {
+          "eventTrigger": "Turn [Pre-action Phase]",
+          "execute": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "searchRandom": true,
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "ENEMIES_OBJECT_UNUSED__114"
+                  },
+                  {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "flagName": "Break"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "flagName": "STAT_CTRL"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Inject Ability Use",
+                  "condition": {
+                    "name": "Insert Ability Condition",
+                    "type": "AbilityOwnerInsertCount",
+                    "typeValue": 1
+                  },
+                  "abilityName": "Monster_W3_Theater_IF_Insert_RestartPhase2",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "priorityTag": "MonsterChangeState",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                }
+              ],
+              "noTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Sequence",
+                    "Sequence": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
+                      {
+                        "name": "Target Filter",
+                        "conditions": {
+                          "name": "Check Boolean Value",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "value": "MonsterType_W3_Dinosaur_00"
+                        }
+                      }
+                    ]
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-685472168\">MModifier_W3_Theater_IF_UltraDamageReduce_TriggerFlag</a>"
+                },
+                {
+                  "name": "Trigger Ability",
+                  "from": {
+                    "name": "Target Sequence",
+                    "Sequence": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
+                      {
+                        "name": "Target Filter",
+                        "conditions": {
+                          "name": "Check Boolean Value",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "value": "MonsterType_W3_Dinosaur_00"
+                        }
+                      }
+                    ]
+                  },
+                  "ability": "Monster_W3_Dinosaur_02_Ultimate_Part00",
+                  "isTrigger": true
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Add Target by Unique Identifier",
+                    "identifier": "TheaterCore"
+                  },
+                  "variableName": "W3_Theater_00_BattleScore1_Flag",
+                  "value": 1
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-618537723\">Enemy_Monster_W3_Theater_Part02Recover</a>"
+                },
+                "Wait for Pending Ability Completions",
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "MonsterType_W1_Mecha01_02"
+                  }
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-685472168\">MModifier_W3_Theater_IF_UltraDamageReduce_TriggerFlag</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1090299931\">MModifier_W3_Theater_IF_UltraDamageReduce</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedOverride</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (BE_P1_BESpeed) || RETURN",
+                "displayLines": "BE_P1_BESpeed",
+                "constants": [],
+                "variables": [
+                  "BE_P1_BESpeed"
+                ]
+              }
+            },
+            {
+              "name": "Action Advance/Delay",
+              "advanceType": "Set",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "multiBase": {
+                "operator": "Variables[0] (BE_P3_InitDelay) || RETURN",
+                "displayLines": "BE_P3_InitDelay",
+                "constants": [],
+                "variables": [
+                  "BE_P3_InitDelay"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Weakness Break [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "ENEMIES_OBJECT_UNUSED__114"
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Add Target by Unique Identifier",
+                      "identifier": "TheaterCore"
+                    },
+                    "value": "MonsterType_W3_Theater"
+                  },
+                  "passed": [
+                    {
+                      "name": "Action Advance/Delay",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "advanceType": "Set",
+                      "multiAdd": "P2_BreakDelayRatioPerFigure"
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1090299931\">MModifier_W3_Theater_IF_UltraDamageReduce</a>",
+                  "stackLimit": 99,
+                  "valuePerStack": {
+                    "MDF_DamageReduce": {
+                      "operator": "Variables[0] (MDF_BEBreakDamageReduce) || RETURN",
+                      "displayLines": "MDF_BEBreakDamageReduce",
+                      "constants": [],
+                      "variables": [
+                        "MDF_BEBreakDamageReduce"
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": 1
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Add Target by Unique Identifier",
+                      "identifier": "TheaterCore"
+                    },
+                    "value": "MonsterType_W3_Theater",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1013818127\">MModifier_Monster_W3_Theater_IF_HourglassCharge</a>[<span class=\"descriptionNumberColor\">Regular Examination</span>]"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Action Advance/Delay",
+                  "advanceType": "Set",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "set": {
+                    "operator": "Constants[0] (1000) || Variables[0] (BE_P1_BESpeed) || DIV || Variables[1] (BE_P3_InitDelay) || MUL || Constants[1] (15) || ADD || RETURN",
+                    "displayLines": "(((1000 / BE_P1_BESpeed) * BE_P3_InitDelay) + 15)",
+                    "constants": [
+                      1000,
+                      15
+                    ],
+                    "variables": [
+                      "BE_P1_BESpeed",
+                      "BE_P3_InitDelay"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [
+        "MDF_BEBreakDamageReduce"
+      ],
+      "latentQueue": [
+        "BreakEndFlag"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__168509453\">Enemy_W3_Theater_IF_DuringChangePhase</a>",
+      "stackData": [],
+      "latentQueue": [
+        "InsertCheck"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-831498858\">MModifier_Monster_W3_Theater_IF_Part2</a>",
+      "stackData": [],
+      "latentQueue": [
+        "BreakEndFlag",
+        "InsertCheck"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1450423939\">MModifier_Monster_W3_Theater_IF_HourglassTrigger</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2083560746\">MModifier_W3_Theater_IF_HourglassTrigger_Flop</a>",
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-396183840\">Enemy_W3_Dinosaur_02_IF_StanceBreakRatioUp</a>[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
+      "stackType": "ReplaceByCaster",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                "displayLines": "MDF_PropertyValue",
+                "constants": [],
+                "variables": [
+                  "MDF_PropertyValue"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [],
+      "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Weakness Break Efficiency Boost",
+      "statusName": "Weakness Break Efficiency Boost"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1371722317\">MModifier_Monster_W3_Theater_IF_DuringAbility</a>",
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-831657031\">Enemy_W3_Theater_IF_AbilityEX04</a>",
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-814879412\">Enemy_W3_Theater_IF_AbilityEX03</a>",
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-798101793\">Enemy_W3_Theater_IF_AbilityEX02</a>",
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-781324174\">Enemy_W3_Theater_IF_AbilityEX01</a>",
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1991654587\">Enemy_W3_Dinosaur_02_Break_Listener</a>",
+      "execute": [
+        {
+          "eventTrigger": "Being Weakness Broken: End [Owner]",
+          "execute": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "Vibrate_Count"
+            },
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "Crazy_Flag"
+            },
+            {
+              "name": "Update Displayed Energy Bar",
+              "entityClass": "Enemy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "assignState": "False"
+            },
+            {
+              "name": "Define Custom Variable",
+              "scope": "TargetEntity",
+              "variableName": "FlopSide",
+              "value": 1
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Toughness Reset [Owner]",
+          "execute": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "AIFlag",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Losing Modifier [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "flagName": "STAT_CTRL_Frozen",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "Crazy_Flag",
+                    "compareType": "=",
+                    "value2": 1
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking Modifier Instance [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Modifier Has Flag",
+                "flagName": "STAT_CTRL_Frozen"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__393225449\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Prolonged Class</span>]",
+      "modifierFlags": [
+        "STAT_SuperArmorBreak",
+        "STAT_AITargetKeepActionDelay"
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
+                "displayLines": "MDF_AllDamageTypeTakenRatio",
+                "constants": [],
+                "variables": [
+                  "MDF_AllDamageTypeTakenRatio"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Modifier is Added [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Modifier Was",
+                "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "description": "When Blaznana Monkey Trick is in the \"Safeguard Breach\" state, increases this unit's DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
+      "type": "Debuff",
+      "effectName": "Prolonged Class",
+      "statusName": "Prolonged Class"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1242309858\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Homework In-Class</span>]",
+      "modifierFlags": [],
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier"
+        },
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Set Hit-Class",
+              "reset": true
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Take Damage Start [Owner]: Any",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Body-Types",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "types": "Thin"
+                      },
+                      {
+                        "name": "Has Body-Types",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "types": [
+                          "LargeMonster",
+                          "LargeAvatar",
+                          "LargeFakeAvatar"
+                        ],
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Compare: Monster Rank",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "compareType": "<",
+                        "value2": 5
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Has Body-Types",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "types": "Thin"
+                          },
+                          {
+                            "name": "Has Body-Types",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "types": [
+                              "LargeMonster",
+                              "LargeAvatar",
+                              "LargeFakeAvatar"
+                            ]
+                          },
+                          {
+                            "name": "Compare: Monster Rank",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "compareType": "<",
+                            "value2": 5
+                          }
+                        ]
+                      },
+                      {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Has Body-Types",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "types": "Thin",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Compare: Monster Rank",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "compareType": "<",
+                            "value2": 5
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Monster Rank",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "compareType": ">=",
+                        "value2": 5
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
+                "displayLines": "MDF_AllDamageReduce",
+                "constants": [],
+                "variables": [
+                  "MDF_AllDamageReduce"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "stackData": [
+        "MDF_AllDamageReduce"
+      ],
+      "latentQueue": [
+        "BreakEndFlag"
+      ],
+      "description": "When Blaznana Monkey Trick is in the \"Steadfast Safeguard\" state, reduces this unit's DMG received by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
+      "type": "Buff",
+      "effectName": "Homework In-Class",
+      "statusName": "Homework In-Class"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1954613914\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmorController</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1242309858\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Homework In-Class</span>]",
+              "valuePerStack": {
+                "MDF_AllDamageReduce": {
+                  "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageReduce) || RETURN",
+                  "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce",
+                  "constants": [],
+                  "variables": [
+                    "MDF_MinionsSuperArmor_AllDamageReduce"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Weakness Break [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1013818127\">MModifier_Monster_W3_Theater_IF_HourglassCharge</a>[<span class=\"descriptionNumberColor\">Regular Examination</span>]"
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1242309858\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Homework In-Class</span>]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "End Broken State [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1013818127\">MModifier_Monster_W3_Theater_IF_HourglassCharge</a>[<span class=\"descriptionNumberColor\">Regular Examination</span>]"
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"393225449\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Prolonged Class</span>]"
+                },
+                {
+                  "name": "Exit Broken-State",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-627803266\">Standard_SuperArmor_IF</a>[<span class=\"descriptionNumberColor\">Steadfast Safeguard</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1242309858\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Homework In-Class</span>]",
+                      "valuePerStack": {
+                        "MDF_AllDamageReduce": {
+                          "operator": "Variables[0] (MDF_MinionsSuperArmor_AllDamageReduce) || RETURN",
+                          "displayLines": "MDF_MinionsSuperArmor_AllDamageReduce",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MinionsSuperArmor_AllDamageReduce"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Modifier Behavior Flag(s)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "flagNames": []
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "AIFlag",
+                  "value": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "FlopSide",
+                  "value": -1
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]",
+                  "casterAssign": "TargetSelf"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [
+        "MDF_MinionsSuperArmor_AllDamageReduce",
+        "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
+        "MDF_SetActionDelayValue"
+      ],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1013818127\">MModifier_Monster_W3_Theater_IF_HourglassCharge</a>[<span class=\"descriptionNumberColor\">Regular Examination</span>]",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier"
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value": "MonsterType_W3_Theater"
+              },
+              "passed": [
+                {
+                  "name": "Update Modifier Description",
+                  "popUpText": "When enemy units in the \"Off-Class Channel\" state use the corresponding abilities, reduces the Toughness of \"Wonder Forest's Banacademic Office Staff (Complete)\". When \"Wonder Forest's Banacademic Office Staff (Complete)\" is Weakness Broken, deals DMG to this unit and action delays all Banacademic Office members."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "End Broken State [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"714067831\">Standard_SuperArmorBreak_IF</a>[<span class=\"descriptionNumberColor\">Safeguard Breach</span>]"
+                  },
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value": "MonsterType_W3_Theater"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "Break"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Exit Broken-State",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
+                },
+                {
+                  "name": "Reset Toughness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Losing Modifier [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"-2083560746\">MModifier_W3_Theater_IF_HourglassTrigger_Flop</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "MonsterType_W3_Theater",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "MonsterType_W3_Dinosaur_00"
+                  },
+                  "passed": [
+                    {
+                      "name": "Deal Toughness DMG",
+                      "value": {
+                        "operator": "Variables[0] (MDF_DamageStanceValue_Dinosaur) || RETURN",
+                        "displayLines": "MDF_DamageStanceValue_Dinosaur",
+                        "constants": [],
+                        "variables": [
+                          "MDF_DamageStanceValue_Dinosaur"
+                        ]
+                      },
+                      "defender": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "forceReduction": true,
+                      "canDelay": true,
+                      "ToughnessDMGType": "Imaginary"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "MonsterType_W3_TV_00"
+                  },
+                  "passed": [
+                    {
+                      "name": "Deal Toughness DMG",
+                      "value": {
+                        "operator": "Variables[0] (MDF_DamageStanceValue_TV) || RETURN",
+                        "displayLines": "MDF_DamageStanceValue_TV",
+                        "constants": [],
+                        "variables": [
+                          "MDF_DamageStanceValue_TV"
+                        ]
+                      },
+                      "defender": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "forceReduction": true,
+                      "canDelay": true,
+                      "ToughnessDMGType": "Imaginary"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "MonsterType_W1_Mecha01_02"
+                  },
+                  "passed": [
+                    {
+                      "name": "Deal Toughness DMG",
+                      "value": {
+                        "operator": "Variables[0] (MDF_DamageStanceValue_Mecha) || RETURN",
+                        "displayLines": "MDF_DamageStanceValue_Mecha",
+                        "constants": [],
+                        "variables": [
+                          "MDF_DamageStanceValue_Mecha"
+                        ]
+                      },
+                      "defender": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "forceReduction": true,
+                      "canDelay": true,
+                      "ToughnessDMGType": "Imaginary"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "MonsterType_W3_Clock_00"
+                  },
+                  "passed": [
+                    {
+                      "name": "Deal Toughness DMG",
+                      "value": {
+                        "operator": "Variables[0] (MDF_DamageStanceValue_Clock) || RETURN",
+                        "displayLines": "MDF_DamageStanceValue_Clock",
+                        "constants": [],
+                        "variables": [
+                          "MDF_DamageStanceValue_Clock"
+                        ]
+                      },
+                      "defender": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "forceReduction": true,
+                      "canDelay": true,
+                      "ToughnessDMGType": "Imaginary"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"1450423939\">MModifier_Monster_W3_Theater_IF_HourglassTrigger</a>"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All}}"
+                    },
+                    "value1": "TeamCharacterCount",
+                    "compareType": "=",
+                    "value2": 0,
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Deal Toughness DMG",
+                      "value": {
+                        "operator": "Variables[0] (MDF_DamageStanceValue_2) || RETURN",
+                        "displayLines": "MDF_DamageStanceValue_2",
+                        "constants": [],
+                        "variables": [
+                          "MDF_DamageStanceValue_2"
+                        ]
+                      },
+                      "defender": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "forceReduction": true,
+                      "canDelay": true,
+                      "ToughnessDMGType": "Imaginary"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking Modifier Instance [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "MonsterType_W3_Theater"
+                  },
+                  {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-720232452\">MModifier_Monster_W3_Theater_RLBoss_StanceDamage</a>"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "MonsterType_W3_Dinosaur_00"
+                  },
+                  "passed": [
+                    {
+                      "name": "Deal Toughness DMG",
+                      "value": {
+                        "operator": "Variables[0] (MDF_DamageStanceValue_Dinosaur) || RETURN",
+                        "displayLines": "MDF_DamageStanceValue_Dinosaur",
+                        "constants": [],
+                        "variables": [
+                          "MDF_DamageStanceValue_Dinosaur"
+                        ]
+                      },
+                      "defender": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "forceReduction": true,
+                      "canDelay": true,
+                      "ToughnessDMGType": "Imaginary"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "MonsterType_W3_TV_00"
+                  },
+                  "passed": [
+                    {
+                      "name": "Deal Toughness DMG",
+                      "value": {
+                        "operator": "Variables[0] (MDF_DamageStanceValue_TV) || RETURN",
+                        "displayLines": "MDF_DamageStanceValue_TV",
+                        "constants": [],
+                        "variables": [
+                          "MDF_DamageStanceValue_TV"
+                        ]
+                      },
+                      "defender": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "forceReduction": true,
+                      "canDelay": true,
+                      "ToughnessDMGType": "Imaginary"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "MonsterType_W1_Mecha01_02"
+                  },
+                  "passed": [
+                    {
+                      "name": "Deal Toughness DMG",
+                      "value": {
+                        "operator": "Variables[0] (MDF_DamageStanceValue_Mecha) || RETURN",
+                        "displayLines": "MDF_DamageStanceValue_Mecha",
+                        "constants": [],
+                        "variables": [
+                          "MDF_DamageStanceValue_Mecha"
+                        ]
+                      },
+                      "defender": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "forceReduction": true,
+                      "canDelay": true,
+                      "ToughnessDMGType": "Imaginary"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "MonsterType_W3_Clock_00"
+                  },
+                  "passed": [
+                    {
+                      "name": "Deal Toughness DMG",
+                      "value": {
+                        "operator": "Variables[0] (MDF_DamageStanceValue_Clock) || RETURN",
+                        "displayLines": "MDF_DamageStanceValue_Clock",
+                        "constants": [],
+                        "variables": [
+                          "MDF_DamageStanceValue_Clock"
+                        ]
+                      },
+                      "defender": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "forceReduction": true,
+                      "canDelay": true,
+                      "ToughnessDMGType": "Imaginary"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [
+        "MDF_DamageStanceValue_Dinosaur",
+        "MDF_DamageStanceValue_TV",
+        "MDF_DamageStanceValue_Mecha",
+        "MDF_DamageStanceValue_Clock",
+        "MDF_DamageStanceValue_2",
+        "MDF_DamageStanceValue_All"
+      ],
+      "latentQueue": [],
+      "description": "When enemy units in the \"Classroom Channel\" state are switched to \"Off-Class Channel\" via either Breaking their Weaknesses or accumulating the tally, reduces the Toughness of \"Blaznana Monkey Trick\". When all enemy units are Weakness Broken, attacking any enemy units can reduce the Toughness of \"Blaznana Monkey Trick\" by a minor amount. When \"Blaznana Monkey Trick\" is Weakness Broken, all enemy targets will be Broken, and the \"Blaznana Monkey Trick\" will enter the \"Safeguard Breach\" state.",
+      "type": "Other",
+      "statusName": "Regular Examination"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__268137515\">MModifier_Monster_W3_Theater_IF_FlopHandler_TV</a>",
+      "modifierFlags": [
+        "KeepOnDeathrattle"
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed"
+        },
+        {
+          "eventTrigger": "Take Damage End [Owner]: Hit"
+        },
+        {
+          "eventTrigger": "Being Attacked End [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "STAT_Confine"
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "STAT_CTRL_Frozen"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "FaceChangeFlag",
+                "compareType": "=",
+                "value2": 1,
+                "contextScope": "TargetEntity"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "DoingFlop",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "FaceChangeFlag",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Action Start [Anyone]",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "DoingFlop",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Losing Modifier [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "STAT_CTRL"
+                  },
+                  {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "Break"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_CTRL"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "Break"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking Modifier Instance [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "Break"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"168509453\">Enemy_W3_Theater_IF_DuringChangePhase</a>",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "FlopSide",
+                        "compareType": "=",
+                        "value2": -1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value": "MonsterType_W3_Theater",
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Inject Ability Use",
+                          "conditionActive": {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Has Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "modifier": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                              }
+                            ]
+                          },
+                          "checkOverride": {
+                            "name": "Condition Priority",
+                            "overridePriority": "MonsterForceKill",
+                            "condition": {
+                              "name": "Compare: Ability Value",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                              "compareType": "<=",
+                              "value2": 0
+                            }
+                          },
+                          "abilityName": "Monster_W3_TV_02_IF_Ability01_Insert_SelectTarget",
+                          "priorityTag": "MonsterBuffOthers_Elation",
+                          "ownerState": "Mask_AliveOrLimbo",
+                          "targetState": "Mask_AliveOrLimbo",
+                          "canHitNonTargets": true,
+                          "allowAbilityTriggers": false
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "TargetEntity",
+                      "variableName": "FlopSide",
+                      "value": 1
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-521198824\">MModifier_Monster_W3_Theater_IF_Flop</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "Break"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1938387265\">MModifier_Monster_W3_Theater_IF_FlopHandler_Clock</a>",
+      "execute": [
+        {
+          "eventTrigger": "Being Attacked End [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "STAT_Confine"
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "STAT_CTRL_Frozen"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "FaceChangeFlag",
+                "compareType": "=",
+                "value2": 1,
+                "contextScope": "TargetEntity"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "DoingFlop",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "FaceChangeFlag",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Action Start [Anyone]",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "DoingFlop",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Losing Modifier [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "STAT_CTRL"
+                  },
+                  {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "Break"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_CTRL"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "Break"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking Modifier Instance [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "Break"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"168509453\">Enemy_W3_Theater_IF_DuringChangePhase</a>",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "FlopSide",
+                        "compareType": "=",
+                        "value2": -1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value": "MonsterType_W3_Theater",
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Inject Ability Use",
+                          "conditionActive": {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Has Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "modifier": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                              }
+                            ]
+                          },
+                          "checkOverride": {
+                            "name": "Condition Priority",
+                            "overridePriority": "MonsterForceKill",
+                            "condition": {
+                              "name": "Compare: Ability Value",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                              "compareType": "<=",
+                              "value2": 0
+                            }
+                          },
+                          "abilityName": "Monster_W3_Clock_02_IF_Ability03_Insert_Part01",
+                          "priorityTag": "MonsterBuffOthers_Elation",
+                          "ownerState": "Mask_AliveOrLimbo",
+                          "targetState": "Mask_AliveOrLimbo",
+                          "canHitNonTargets": true,
+                          "allowAbilityTriggers": false
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "TargetEntity",
+                      "variableName": "FlopSide",
+                      "value": 1
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-521198824\">MModifier_Monster_W3_Theater_IF_Flop</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "Break"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__566459392\">MModifier_Monster_W3_Theater_IF_FlopHandler_Mecha01</a>",
+      "modifierFlags": [
+        "KeepOnDeathrattle"
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed"
+        },
+        {
+          "eventTrigger": "Being Attacked End [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "STAT_Confine"
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "STAT_CTRL_Frozen"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "FaceChangeFlag",
+                "compareType": "=",
+                "value2": 1,
+                "contextScope": "TargetEntity"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "DoingFlop",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "FaceChangeFlag",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Action Start [Anyone]",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "DoingFlop",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Losing Modifier [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "STAT_CTRL"
+                  },
+                  {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "Break"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_CTRL"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "Break"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking Modifier Instance [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "Break"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"168509453\">Enemy_W3_Theater_IF_DuringChangePhase</a>",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "FlopSide",
+                        "compareType": "=",
+                        "value2": -1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value": "MonsterType_W3_Theater",
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Inject Ability Use",
+                          "conditionActive": {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Has Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "modifier": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                              }
+                            ]
+                          },
+                          "checkOverride": {
+                            "name": "Condition Priority",
+                            "overridePriority": "MonsterForceKill",
+                            "condition": {
+                              "name": "Compare: Ability Value",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                              "compareType": "<=",
+                              "value2": 0
+                            }
+                          },
+                          "abilityName": "Monster_W1_Mecha01_03_IF_Ability01_Insert_Part01",
+                          "priorityTag": "MonsterBuffOthers_Elation",
+                          "ownerState": "Mask_AliveOrLimbo",
+                          "targetState": "Mask_AliveOrLimbo",
+                          "canHitNonTargets": true,
+                          "allowAbilityTriggers": false
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "TargetEntity",
+                      "variableName": "FlopSide",
+                      "value": 1
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-521198824\">MModifier_Monster_W3_Theater_IF_Flop</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "Break"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-36763018\">MModifier_Monster_W3_Theater_IF_FlopHandler_Dinosaur</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed"
+        },
+        {
+          "eventTrigger": "Being Attacked End [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "STAT_Confine"
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "STAT_CTRL_Frozen"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "FaceChangeFlag",
+                "compareType": "=",
+                "value2": 1,
+                "contextScope": "TargetEntity"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "DoingFlop",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "FaceChangeFlag",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Action Start [Anyone]",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "DoingFlop",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Losing Modifier [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "STAT_CTRL"
+                  },
+                  {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "Break"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_CTRL"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "Break"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking Modifier Instance [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "Break"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"168509453\">Enemy_W3_Theater_IF_DuringChangePhase</a>",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "FlopSide",
+                        "compareType": "=",
+                        "value2": -1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value": "MonsterType_W3_Theater",
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Inject Ability Use",
+                          "conditionActive": {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Has Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "modifier": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                              }
+                            ]
+                          },
+                          "checkOverride": {
+                            "name": "Condition Priority",
+                            "overridePriority": "MonsterForceKill",
+                            "condition": {
+                              "name": "Compare: Ability Value",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                              "compareType": "<=",
+                              "value2": 0
+                            }
+                          },
+                          "abilityName": "Monster_W3_Dinosaur_02_IF_Ability09_Insert_Part01",
+                          "priorityTag": "MonsterBuffOthers_Elation",
+                          "ownerState": "Mask_AliveOrLimbo",
+                          "targetState": "Mask_AliveOrLimbo",
+                          "canHitNonTargets": true,
+                          "allowAbilityTriggers": false
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "TargetEntity",
+                      "variableName": "FlopSide",
+                      "value": 1
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-521198824\">MModifier_Monster_W3_Theater_IF_Flop</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "Break"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-521198824\">MModifier_Monster_W3_Theater_IF_Flop</a>",
+      "stackType": "Replace",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-467122101\">MModifier_Monster_W3_Theater_IF_FaceLock</a>",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "scope": "TargetEntity",
+                  "variableName": "AIFlag",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "FlopSide",
+                "compareType": "=",
+                "value2": 1,
+                "contextScope": "TargetEntity"
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "MonsterType_W3_TV_00"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "FlopSide",
+                "compareType": "=",
+                "value2": -1,
+                "contextScope": "TargetEntity"
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "MonsterType_W3_TV_00"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": [
+        "FaceChangeFlag",
+        "DoingFlop"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-467122101\">MModifier_Monster_W3_Theater_IF_FaceLock</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "Negative_Count",
+              "value": 0
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value": "MonsterType_W3_TV_00"
+              },
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "MonsterType_W3_Clock_00"
+                  },
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value": "MonsterType_W1_Mecha01_02"
+                      },
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "MonsterType_W3_Dinosaur_00"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"2042117256\">MModifier_Monster_W3_Theater_IF_Side_Negative_Count</a>"
+            },
+            {
+              "name": "Update Displayed Energy Bar",
+              "entityClass": "Enemy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "assignState": "True",
+              "state": "Active"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Update Displayed Energy Bar",
+              "entityClass": "Enemy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "assignState": "False"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Being Attacked End [Owner]"
+        },
+        {
+          "eventTrigger": "Being Weakness Broken: End [Owner]",
+          "execute": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1218613881\">MModifier_Monster_W3_Theater_IF_Side_Noise_Count</a>"
+            },
+            "Modifier Deletes Itself"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1218613881\">MModifier_Monster_W3_Theater_IF_Side_Noise_Count</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "ForbidFlag",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed"
+        },
+        {
+          "eventTrigger": "Being Attacked Start [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "ForbidFlag",
+                "compareType": "=",
+                "value2": 0,
+                "contextScope": "ContextModifier"
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1450423939\">MModifier_Monster_W3_Theater_IF_HourglassTrigger</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Being Attacked End [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "ForbidFlag",
+                "compareType": "=",
+                "value2": 0,
+                "contextScope": "ContextModifier"
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1450423939\">MModifier_Monster_W3_Theater_IF_HourglassTrigger</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Being Attacked Completed [Owner]",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "ForbidFlag",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "eventTrigger": "End Broken State [Owner]",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "Negative_Count",
+              "value": 0
+            },
+            "Modifier Deletes Itself"
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": [
+        "Negative_Count"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__2042117256\">MModifier_Monster_W3_Theater_IF_Side_Negative_Count</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "ContextModifier",
+              "variableName": "MDF_Negative_Count",
+              "value": 0
+            },
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "Negative_Count",
+              "value": 0
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value": "MonsterType_W3_Theater"
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Add Target by Unique Identifier",
+                      "identifier": "TheaterCore"
+                    },
+                    "value1": "HP_Bars_Remaining",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Negative_Count_Max",
+                      "value": {
+                        "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
+                        "displayLines": "MDF_Negative_Count_Max",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Negative_Count_Max"
+                        ]
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Add Target by Unique Identifier",
+                          "identifier": "TheaterCore"
+                        },
+                        "value1": "HP_Bars_Remaining",
+                        "compareType": "=",
+                        "value2": 2
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_Negative_Count_Max",
+                          "value": {
+                            "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
+                            "displayLines": "MDF_Negative_Count",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Negative_Count"
+                            ]
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "target": {
+                              "name": "Add Target by Unique Identifier",
+                              "identifier": "TheaterCore"
+                            },
+                            "value1": "HP_Bars_Remaining",
+                            "compareType": "=",
+                            "value2": 3
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "MDF_Negative_Count_Max",
+                              "value": {
+                                "operator": "Variables[0] (Negative_Count) || RETURN",
+                                "displayLines": "Negative_Count",
+                                "constants": [],
+                                "variables": [
+                                  "Negative_Count"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Negative_Count_Max",
+                  "value": {
+                    "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
+                    "displayLines": "MDF_Negative_Count_Max",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Negative_Count_Max"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": {
+                "operator": "Variables[0] (BreakEndFlag) || RETURN",
+                "displayLines": "BreakEndFlag",
+                "constants": [],
+                "variables": [
+                  "BreakEndFlag"
+                ]
+              },
+              "entityClass": "Enemy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "maximum": {
+                "operator": "Variables[0] (InsertCheck) || RETURN",
+                "displayLines": "InsertCheck",
+                "constants": [],
+                "variables": [
+                  "InsertCheck"
+                ]
+              },
+              "assignState": "True",
+              "state": "Normal"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": {
+                "operator": "Variables[0] (BreakEndFlag) || RETURN",
+                "displayLines": "BreakEndFlag",
+                "constants": [],
+                "variables": [
+                  "BreakEndFlag"
+                ]
+              },
+              "entityClass": "Enemy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "maximum": {
+                "operator": "Variables[0] (InsertCheck) || RETURN",
+                "displayLines": "InsertCheck",
+                "constants": [],
+                "variables": [
+                  "InsertCheck"
+                ]
+              },
+              "assignState": "False",
+              "state": "Normal"
+            },
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "ReadytoFlop",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Turn [Pre-action Phase]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-814879412\">Enemy_W3_Theater_IF_AbilityEX03</a>"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable with Added Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_Negative_Count",
+                  "context": "ContextModifier",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (ReadytoFlop) || SUB || RETURN",
+                    "displayLines": "(0 - ReadytoFlop)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "ReadytoFlop"
+                    ]
+                  },
+                  "max": 100
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "Negative_Count",
+                  "value": {
+                    "operator": "Variables[0] (BreakEndFlag) || RETURN",
+                    "displayLines": "BreakEndFlag",
+                    "constants": [],
+                    "variables": [
+                      "BreakEndFlag"
+                    ]
+                  }
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (BreakEndFlag) || RETURN",
+                    "displayLines": "BreakEndFlag",
+                    "constants": [],
+                    "variables": [
+                      "BreakEndFlag"
+                    ]
+                  },
+                  "entityClass": "Enemy",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] (InsertCheck) || RETURN",
+                    "displayLines": "InsertCheck",
+                    "constants": [],
+                    "variables": [
+                      "InsertCheck"
+                    ]
+                  },
+                  "assignState": "True",
+                  "state": "Normal"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "ReadytoFlop",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Being Attacked End [Owner]",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "ContextModifier",
+              "variableName": "MDF_Negative_Count",
+              "value": {
+                "operator": "Variables[0] (BreakEndFlag) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(BreakEndFlag + 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "BreakEndFlag"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "Negative_Count",
+              "value": {
+                "operator": "Variables[0] (BreakEndFlag) || RETURN",
+                "displayLines": "BreakEndFlag",
+                "constants": [],
+                "variables": [
+                  "BreakEndFlag"
+                ]
+              }
+            },
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": {
+                "operator": "Variables[0] (BreakEndFlag) || RETURN",
+                "displayLines": "BreakEndFlag",
+                "constants": [],
+                "variables": [
+                  "BreakEndFlag"
+                ]
+              },
+              "entityClass": "Enemy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "maximum": {
+                "operator": "Variables[0] (InsertCheck) || RETURN",
+                "displayLines": "InsertCheck",
+                "constants": [],
+                "variables": [
+                  "InsertCheck"
+                ]
+              },
+              "assignState": "True",
+              "state": "Normal"
+            },
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "ContextModifier",
+              "variableName": "MDF_Negative_Count_Diff",
+              "value": {
+                "operator": "Variables[0] (InsertCheck) || Variables[1] (BreakEndFlag) || SUB || RETURN",
+                "displayLines": "(InsertCheck - BreakEndFlag)",
+                "constants": [],
+                "variables": [
+                  "InsertCheck",
+                  "BreakEndFlag"
+                ]
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "MDF_Negative_Count_Diff",
+                "compareType": "=",
+                "value2": 1,
+                "contextScope": "ContextModifier"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "ReadytoFlop",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "MDF_Negative_Count_Diff",
+                "compareType": "=",
+                "value2": 0,
+                "contextScope": "ContextModifier"
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "MonsterType_W3_Theater"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "TargetEntity",
+                      "variableName": "FlopSide",
+                      "value": 1
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "FaceChangeFlag",
+                      "value": 1
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-521198824\">MModifier_Monster_W3_Theater_IF_Flop</a>"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "MDF_CurrentStance",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "Break",
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Deal Toughness DMG",
+                          "value": {
+                            "operator": "Variables[0] (MDF_CurrentStance) || RETURN",
+                            "displayLines": "MDF_CurrentStance",
+                            "constants": [],
+                            "variables": [
+                              "MDF_CurrentStance"
+                            ]
+                          },
+                          "attacker": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "defender": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "forceReduction": true,
+                          "canDelay": true,
+                          "ToughnessDMGType": "Imaginary"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Being Weakness Broken: End [Owner]",
+          "execute": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1218613881\">MModifier_Monster_W3_Theater_IF_Side_Noise_Count</a>"
+            },
+            "Modifier Deletes Itself"
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": [
+        "BreakEndFlag",
+        "InsertCheck"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"2042117256\">MModifier_Monster_W3_Theater_IF_Side_Negative_Count</a>"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"2042117256\">MModifier_Monster_W3_Theater_IF_Side_Negative_Count</a>"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Update Override Controller",
+              "controller": "Override2"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value": "MonsterType_W3_Theater"
+              },
+              "passed": [
+                {
+                  "name": "Update Modifier Description",
+                  "popUpText": "Banacademic Office members can use \"Classroom Channel\" abilities. When the tally number reaches the maximum, they switch to \"Off-Class Channel\" mode."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": [
+        "DoingFlop",
+        "FaceChangeFlag",
+        "AIFlag"
+      ],
+      "description": "\"Banacademic Office\" members can use \"Classroom Channel\" abilities. When the tally reaches the maximum, switches to \"Off-Class Channel\" and enters the Weakness Broken state.",
+      "type": "Other",
+      "statusName": "Classroom Channel"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]",
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Update Displayed Energy Bar",
+              "entityClass": "Enemy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "assignState": "False"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value": "MonsterType_W3_Dinosaur_00",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "Negative_Count",
+              "value": 0
+            },
+            {
+              "name": "Update Override Controller",
+              "controller": "Override1"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value": "MonsterType_W3_Theater"
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value": "MonsterType_W3_Dinosaur_00",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value": "MonsterType_W3_TV_00"
+                  },
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value": "MonsterType_W3_Clock_00"
+                      },
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "MonsterType_W1_Mecha01_02"
+                          },
+                          "failed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Check Boolean Value",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "value": "MonsterType_W3_Dinosaur_00"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value": "MonsterType_W3_Dinosaur_00",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value": "MonsterType_W3_TV_00",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": 0,
+              "entityClass": "Enemy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "maximum": 1,
+              "assignState": "True",
+              "state": "Normal"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Being Weakness Broken: End [Owner]",
+          "execute": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1218613881\">MModifier_Monster_W3_Theater_IF_Side_Noise_Count</a>"
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": [
+        "DoingFlop",
+        "FaceChangeFlag",
+        "AIFlag"
+      ],
+      "description": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
+      "type": "Other",
+      "statusName": "Off-Class Channel"
+    }
+  ],
+  "references": []
+}

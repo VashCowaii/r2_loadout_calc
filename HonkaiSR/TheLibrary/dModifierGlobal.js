@@ -7286,7 +7286,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "Enemy_Monster_W2_Beast02_01_ActivityTelevision_AttackDownRatio",
+    "name": "<a class=\"gModGreen\" id=\"-358519479\">Enemy_Monster_W2_Beast02_01_ActivityTelevision_AttackDownRatio</a>",
     "realName": "undefined",
     "aim": "Debuff",
     "desc": "undefined",

@@ -2635,6 +2635,17 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Cirrus",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Add Target by Unique Identifier",
+              "identifier": "Fuyan"
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Valkyrie Skill Target",
           "isTargetOperator": false,
           "execute": [
