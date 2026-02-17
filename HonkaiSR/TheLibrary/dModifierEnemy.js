@@ -1053,7 +1053,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W2_Beast01_03_LayerCount",
+    "name": "<a class=\"gModGreen\" id=\"-210849987\">Monster_W2_Beast01_03_LayerCount</a>",
     "realName": "SoulGlad Revel",
     "aim": "Other",
     "desc": "Enhances ability effects, stacking up to #1[i] times.",
@@ -1064,7 +1064,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W2_Beast01_03_Bleed",
+    "name": "<a class=\"gModGreen\" id=\"-1066196333\">Monster_W2_Beast01_03_Bleed</a>",
     "realName": "Bleed",
     "aim": "Debuff",
     "desc": "For a certain number of turns, receive Physical DMG based on Max HP at the beginning of each turn, stacking up to #1[i] time(s).",
@@ -1075,7 +1075,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_Standard_SpeedAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1551178382\">Monster_Standard_SpeedAddedRatio</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%.",
@@ -1105,7 +1105,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Junk_AttackAddRatio1",
+    "name": "<a class=\"gModGreen\" id=\"-1796573830\">Monster_W3_Junk_AttackAddRatio1</a>",
     "realName": "The Can's Battle Pose",
     "aim": "Buff",
     "desc": "Increases ATK by #1[i]%.",

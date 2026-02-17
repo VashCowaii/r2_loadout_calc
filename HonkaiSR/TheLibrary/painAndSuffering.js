@@ -6629,6 +6629,7 @@ const megaParsingFuckeryPain = {
             "DamageType",
             "invertCondition",
             "weaknessFilter",
+            "defaultOnly",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Weakness");
 
@@ -6640,6 +6641,7 @@ const megaParsingFuckeryPain = {
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.weaknessFilter,"Weakness Filter")}
             ${getStandardNameDisplay(initialCounter,parseRef.anyMatchingTarget,"Any Matching Target")}
+            ${getStandardNameDisplay(initialCounter,parseRef.defaultOnly,"Default Only")}
 
         </div>`;
     },

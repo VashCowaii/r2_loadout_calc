@@ -6661,7 +6661,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Dreamjolt Troupe's Spring Loader"
   },
@@ -6715,7 +6715,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Dreamjolt Troupe's Birdskull"
   },
@@ -7248,7 +7248,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Dreamjolt Troupe's Bubble Hound"
   },
@@ -7464,11 +7464,11 @@ let basicEnemyList = {
       "300205007": {
         "name": "Mass-Production Machine"
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3002051": {
       "3002051": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Lordly Trashcan (Projection)"
     },
     "3002052": {
@@ -7476,12 +7476,12 @@ let basicEnemyList = {
       "300205201": {
         "name": "Unit-01"
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Lordly Trashcan"
     },
     "3002053": {
       "3002053": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Lordly Trashcan (Projection)"
     },
     "groupName": "Lordly Trashcan"
@@ -7873,7 +7873,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3003021": {
       "3003021": {
@@ -7883,7 +7883,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Dreamjolt Troupe's Sweet Gorilla (Projection)"
     },
     "3003022": {
@@ -7915,7 +7915,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Dreamjolt Troupe's Sweet Gorilla (Bug)"
     },
     "groupName": "Dreamjolt Troupe's Sweet Gorilla"

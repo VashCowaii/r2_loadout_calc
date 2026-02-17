@@ -197,6 +197,18 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 3003020,
+    "lineCount": 7012,
+    "sizeCount": 252671
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3003021,
+    "lineCount": 7013,
+    "sizeCount": 252667
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 4014030,
     "lineCount": 6874,
     "sizeCount": 252571
@@ -212,6 +224,12 @@ let sizeLeaderboardArray = [
     "enemyID": 4014032,
     "lineCount": 6874,
     "sizeCount": 252532
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3003022,
+    "lineCount": 7012,
+    "sizeCount": 252314
   },
   {
     "entryType": "enemy",
@@ -1583,6 +1601,18 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 3002051,
+    "lineCount": 1620,
+    "sizeCount": 56441
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3002053,
+    "lineCount": 1620,
+    "sizeCount": 56441
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 4032060,
     "lineCount": 1602,
     "sizeCount": 56430
@@ -1592,6 +1622,18 @@ let sizeLeaderboardArray = [
     "enemyID": 4032061,
     "lineCount": 1602,
     "sizeCount": 56430
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3002050,
+    "lineCount": 1619,
+    "sizeCount": 56400
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3002052,
+    "lineCount": 1619,
+    "sizeCount": 56400
   },
   {
     "entryType": "enemy",
@@ -1942,6 +1984,12 @@ let sizeLeaderboardArray = [
     "enemyID": 8013013,
     "lineCount": 1003,
     "sizeCount": 32234
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3002030,
+    "lineCount": 860,
+    "sizeCount": 31878
   },
   {
     "entryType": "enemy",
@@ -3662,6 +3710,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 4188
   },
   {
+    "entryType": "enemy",
+    "enemyID": 3001020,
+    "lineCount": 134,
+    "sizeCount": 4130
+  },
+  {
     "entryType": "lc",
     "entryName": "Indelible Promise",
     "trimCharacterName": "IndeliblePromise",
@@ -3722,6 +3776,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/relic/120.png",
     "lineCount": 130,
     "sizeCount": 4025
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3001010,
+    "lineCount": 126,
+    "sizeCount": 4011
   },
   {
     "entryType": "lc",
