@@ -12342,7 +12342,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Imaginary Weaver"
   },
@@ -13963,7 +13963,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Stormbringer (Bug)"
     },
     "8003052": {
@@ -13974,7 +13974,7 @@ let basicEnemyList = {
           "Ice"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Stormbringer"
     },
     "groupName": "Stormbringer"

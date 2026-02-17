@@ -1369,7 +1369,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "XP_Minion02_Armor",
+    "name": "<a class=\"gModGreen\" id=\"-1446174465\">XP_Minion02_Armor</a>",
     "realName": "Repulsive Force",
     "aim": "Buff",
     "desc": "Reduces damage taken from non-Weakness Type attacks by #1[i]%. This effect is removed when Weakness is broken.",
@@ -1380,7 +1380,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "XP_Minion02_Attack",
+    "name": "<a class=\"gModGreen\" id=\"-975874348\">XP_Minion02_Attack</a>",
     "realName": "Defensive Position",
     "aim": "Buff",
     "desc": "Uses Carolburst during the next action and increases DMG dealt to targets by #1[i]%.",
