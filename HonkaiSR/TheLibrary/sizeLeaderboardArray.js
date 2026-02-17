@@ -1132,6 +1132,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 100235
   },
   {
+    "entryType": "enemy",
+    "enemyID": 3013012,
+    "lineCount": 2505,
+    "sizeCount": 96899
+  },
+  {
     "entryType": "char",
     "entryName": "Trailblazer - Preservation",
     "trimCharacterName": "TrailblazerPreservation",
@@ -1466,6 +1472,24 @@ let sizeLeaderboardArray = [
     "enemyID": 8012146,
     "lineCount": 1797,
     "sizeCount": 66182
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3013010,
+    "lineCount": 1716,
+    "sizeCount": 65899
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3013011,
+    "lineCount": 1716,
+    "sizeCount": 65899
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3013013,
+    "lineCount": 1716,
+    "sizeCount": 65656
   },
   {
     "entryType": "char",
@@ -1963,6 +1987,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 3012040,
+    "lineCount": 937,
+    "sizeCount": 32787
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 8013010,
     "lineCount": 1016,
     "sizeCount": 32758
@@ -2286,6 +2316,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23047.png",
     "lineCount": 438,
     "sizeCount": 15573
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3012010,
+    "lineCount": 492,
+    "sizeCount": 15146
   },
   {
     "entryType": "lc",
@@ -3034,6 +3070,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/relic/127.png",
     "lineCount": 222,
     "sizeCount": 8085
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3012020,
+    "lineCount": 230,
+    "sizeCount": 8044
   },
   {
     "entryType": "lc",
@@ -4166,6 +4208,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/21008.png",
     "lineCount": 98,
     "sizeCount": 2304
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3011010,
+    "lineCount": 77,
+    "sizeCount": 2236
   },
   {
     "entryType": "lc",

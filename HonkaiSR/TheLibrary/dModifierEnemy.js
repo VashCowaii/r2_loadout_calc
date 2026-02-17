@@ -1190,7 +1190,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_Dinosaur_01_Standard_Growth",
+    "name": "<a class=\"gModGreen\" id=\"-1395319081\">Enemy_W3_Dinosaur_01_Standard_Growth</a>",
     "realName": "Obscure Blaze",
     "aim": "Buff",
     "desc": "Each stack causes Bonepiercing Odium to deal DMG 1 additional time, up to 5 times. This state will be dispelled after being Weakness Broken.",
@@ -2029,7 +2029,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Ghost_Ability01_Parasitize_Target",
+    "name": "<a class=\"gModGreen\" id=\"-892811864\">Enemy_W3_Ghost_Ability01_Parasitize_Target</a>",
     "realName": "Deception's Crown",
     "aim": "Other",
     "desc": "Restores HP after being attacked but additionally gains Physical and Fire-Type Weaknesses and takes increased Break DMG. This state will be dispelled after being Weakness Broken.",
@@ -3760,7 +3760,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Dinosaur_01_Standard_Growth_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>",
     "realName": "Scorchbone Inferno",
     "aim": "Buff",
     "desc": "Each stack causes \"Bonepiercing Odium\" to additionally deal DMG 1 time, stacking up to #1[i] time(s). Weaken is dispelled when Broken.",

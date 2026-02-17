@@ -8478,7 +8478,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Memory Zone Meme \"Allseer\""
   },
@@ -8498,7 +8498,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Memory Zone Meme \"Something In The Mirror\""
   },
@@ -8539,7 +8539,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Memory Zone Meme \"Heartbreaker\""
   },
@@ -8551,7 +8551,7 @@ let basicEnemyList = {
           "Fire"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Memory Zone Meme \"Insatiable Vanity\""
   },
@@ -8638,7 +8638,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3013011": {
       "3013011": {
@@ -8648,7 +8648,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Memory Zone Meme \"Shell of Faded Rage\""
     },
     "3013012": {
@@ -8657,7 +8657,7 @@ let basicEnemyList = {
       "301301202": {},
       "301301203": {},
       "301301204": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Memory Zone Meme \"Shell of Faded Rage\""
     },
     "3013013": {
@@ -8668,7 +8668,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Memory Zone Meme \"Shell of Faded Rage\" (Bug)"
     },
     "groupName": "Memory Zone Meme \"Shell of Faded Rage\""
