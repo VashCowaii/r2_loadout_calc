@@ -1198,7 +1198,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "M_Death_CTRL",
+    "name": "<a class=\"gModGreen\" id=\"387549983\">M_Death_CTRL</a>",
     "realName": "Morbid Dream",
     "aim": "Other",
     "desc": "Cannot be selected, cannot take action.",
@@ -1206,7 +1206,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_W3_Death_ChargeShoot",
+    "name": "<a class=\"gModGreen\" id=\"163694883\">Modifier_W3_Death_ChargeShoot</a>",
     "realName": "Nightfall",
     "aim": "Other",
     "desc": "Locks on to the next 2 characters who either use their Basic ATK, Skill, or Ultimate.",
@@ -1214,7 +1214,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_W3_Death_Attack_Sign",
+    "name": "<a class=\"gModGreen\" id=\"1275477744\">Modifier_W3_Death_Attack_Sign</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked On by \"Something Unto Death\" as an attack target.",
@@ -1222,7 +1222,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_W3_Death_HuntingMode1",
+    "name": "<a class=\"gModGreen\" id=\"656665951\">Modifier_W3_Death_HuntingMode1</a>",
     "realName": "Sunset",
     "aim": "Other",
     "desc": "Gained 1 stack of Sunset.",
@@ -1230,7 +1230,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_W3_Death_HuntingMode0",
+    "name": "<a class=\"gModGreen\" id=\"639888332\">Modifier_W3_Death_HuntingMode0</a>",
     "realName": "Sunset",
     "aim": "Other",
     "desc": "\"Death\" has gained 0 stacks of \"Sunset.\"",
@@ -1249,7 +1249,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Death_AllDamageUp",
+    "name": "<a class=\"gModGreen\" id=\"606573810\">Monster_W3_Death_AllDamageUp</a>",
     "realName": "Biting Obituary",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect is removed when this unit becomes Weakness Broken.",
@@ -1260,7 +1260,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Modifier_W3_Death_HuntingMode2",
+    "name": "<a class=\"gModGreen\" id=\"673443570\">Modifier_W3_Death_HuntingMode2</a>",
     "realName": "Sunset",
     "aim": "Other",
     "desc": "Gained 2 stacks of Sunset.",
@@ -1268,7 +1268,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_W3_Death_HuntingMode3",
+    "name": "<a class=\"gModGreen\" id=\"690221189\">Modifier_W3_Death_HuntingMode3</a>",
     "realName": "Sunset",
     "aim": "Other",
     "desc": "Gained 3 stacks of Sunset. It is about to deal a killing blow.",
@@ -1316,7 +1316,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Sam_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"-909732184\">Monster_W3_Sam_Enhance</a>",
     "realName": "Secondary Combustion",
     "aim": "Other",
     "desc": "All attacks consume HP. Increases SPD by #1[i]% and gains an additional action. #2[i] point(s) of Molten Energy remain before the Secondary Combustion state expires.",
@@ -1328,7 +1328,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Sam_WeakPointProtected",
+    "name": "<a class=\"gModGreen\" id=\"1457316398\">Monster_W3_Sam_WeakPointProtected</a>",
     "realName": "Weakness Protected",
     "aim": "Other",
     "desc": "Sam's Toughness cannot be reduced before entering the Secondary Combustion state.",
@@ -1336,7 +1336,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Sam_BurningBP",
+    "name": "<a class=\"gModGreen\" id=\"1797892283\">Monster_W3_Sam_BurningBP</a>",
     "realName": "Molten Core",
     "aim": "Other",
     "desc": "When an ally consumes Combusted Skill Points, loses HP and additionally deals a set amount of Fire DMG equal to #1[i]% of the original DMG. When they receive healing from sources other than oneself, the amount of HP restored is massively reduced.",
@@ -1347,7 +1347,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_Sam_TakenDamage",
+    "name": "<a class=\"gModGreen\" id=\"-1431346612\">Monster_W3_Sam_TakenDamage</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "Takes #1[i]% more DMG. This effect expires when Sam recovers from Weakness Break state.",
@@ -2037,7 +2037,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_Death_RLBoss_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"2051878613\">Monster_W3_Death_RLBoss_DamageUp</a>",
     "realName": "Elegy",
     "aim": "Buff",
     "desc": "Deals #1[i]% more DMG and increases Sombrous Sepulcher's HP by #2[i] bar(s). This effect is stackable. The initial HP for Sombrous Sepulcher is currently #3[i] bars.",
@@ -2050,7 +2050,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Monster_W3_DeathPart_RLBoss_WeakPointProtected",
+    "name": "<a class=\"gModGreen\" id=\"-1685076974\">Monster_W3_DeathPart_RLBoss_WeakPointProtected</a>",
     "realName": "Weakness Protected",
     "aim": "Other",
     "desc": "Toughness cannot be reduced before the Nightfall state ends.",
@@ -2255,7 +2255,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sunday_Ability08_TheWorld_V4",
+    "name": "<a class=\"gModGreen\" id=\"1481304918\">Enemy_W3_Sunday_Ability08_TheWorld_V4</a>",
     "realName": "Im Anfang war die Kraft",
     "aim": "Other",
     "desc": "After #1[i] turn(s), unleashes \"Im Anfang war die Tat.\"",
@@ -2266,7 +2266,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sunday_Ability07_Shield_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-2045350392\">Enemy_W3_Sunday_Ability07_Shield_Modifier</a>",
     "realName": "If We Live In the Light",
     "aim": "Buff",
     "desc": "Increases the DMG dealt by #1[i]%, and decreases the DMG taken. Toughness cannot be reduced. This lasts until the Shield is depleted.",
@@ -2277,7 +2277,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sunday_LightTeam_Shield_Display",
+    "name": "<a class=\"gModGreen\" id=\"-552386510\">Enemy_W3_Sunday_LightTeam_Shield_Display</a>",
     "realName": "Walk in the Light",
     "aim": "Buff",
     "desc": "A Shield that absorbs DMG taken by all allies. Before the Shield is depleted or its effect expires, enemy targets' attacks won't reduce the Shielded allies' HP. Currently, the Shield has #1[i] point(s) remaining.",
@@ -2288,7 +2288,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Standard_CTRL_Sleep",
+    "name": "<a class=\"gModGreen\" id=\"2144716663\">Standard_CTRL_Sleep</a>",
     "realName": "Alien Dream",
     "aim": "Debuff",
     "desc": "Cannot take action within a certain number of turns and regenerates minor amounts of HP at the start of every turn. When this unit is attacked, greatly increase the DMG it takes. Getting attacked dispels the Alien Dream state.",
@@ -2338,7 +2338,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sunday_P3Ability10Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-396148290\">Enemy_W3_Sunday_P3Ability10Bonus</a>",
     "realName": "Im Anfang war der Sinn",
     "aim": "Other",
     "desc": "Immune to all DMG.",
@@ -2354,7 +2354,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_Sam_RLBoss_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"-1053337379\">Enemy_W3_Sam_RLBoss_Enhance</a>",
     "realName": "Secondary Combustion",
     "aim": "Other",
     "desc": "All attacks consume HP. Gains 1 stack of Thermocumulative Upgrade and increases SPD by #1[i]% and gains an additional action. #2[i] point(s) of Molten Energy remain before the Secondary Combustion state expires.",
@@ -2366,7 +2366,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sam_RLBoss_AttackAddRatio",
+    "name": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>",
     "realName": "Thermocumulative Upgrade",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect is stackable.",
@@ -2377,7 +2377,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sam_RLBoss_BlackBlood",
+    "name": "<a class=\"gModGreen\" id=\"2015325888\">Enemy_W3_Sam_RLBoss_BlackBlood</a>",
     "realName": "Immolation",
     "aim": "Debuff",
     "desc": "Decreases the Maximum Restorable HP by #1[i]%.",
@@ -3200,7 +3200,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_SundayPart_IF_EX02_DamageReduce",
+    "name": "<a class=\"gModGreen\" id=\"606317793\">Monster_W3_SundayPart_IF_EX02_DamageReduce</a>",
     "realName": "Rhythm Without End",
     "aim": "Other",
     "desc": "\"Echo of Faded Dreams\" takes #1[i]% less DMG. This effect is dispelled when Cacophonic Conductor becomes Weakness Broken.",
@@ -3303,7 +3303,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_Sunday_IF_Ability07_Shield_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-1243262352\">Enemy_W3_Sunday_IF_Ability07_Shield_Modifier</a>",
     "realName": "One With the Light",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect is dispelled when the Shield is depleted.",
@@ -3393,7 +3393,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Monster_W3_SundayPart_IF_EX02_DamageTaken",
+    "name": "<a class=\"gModGreen\" id=\"901570774\">Monster_W3_SundayPart_IF_EX02_DamageTaken</a>",
     "realName": "Shattered Illusion",
     "aim": "Other",
     "desc": "\"Echo of Faded Dreams\" takes #1[i]% increased DMG. This effect is dispelled when Cacophonic Conductor recovers from a Weakness Break.",
@@ -4825,7 +4825,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_Sam_01_Enhance",
+    "name": "<a class=\"gModGreen\" id=\"-1922120036\">Enemy_W3_Sam_01_Enhance</a>",
     "realName": "Gene Duplication",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -4836,7 +4836,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sam_01_TakenDamage",
+    "name": "<a class=\"gModGreen\" id=\"1121915816\">Enemy_W3_Sam_01_TakenDamage</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%. This effect is dispelled when this unit recovers from Weakness Break state.",
@@ -4847,7 +4847,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sam_01_Shield",
+    "name": "<a class=\"gModGreen\" id=\"-16655209\">Enemy_W3_Sam_01_Shield</a>",
     "realName": "Whirling Carapace",
     "aim": "Buff",
     "desc": "After \"Harbinger of Death: Swarm Nightmare\" is attacked, a portion of the reduced HP is converted into \"Corrosion.\" When \"Harbinger of Death: Swarm Nightmare\" uses \"Primordial Tide, Swarm of Death,\" this unit will restore HP equal to the amount of Corrosion.",
@@ -4855,7 +4855,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W3_Sam_01_Ability04Target",
+    "name": "<a class=\"gModGreen\" id=\"-781925470\">Enemy_W3_Sam_01_Ability04Target</a>",
     "realName": "Nemesis",
     "aim": "Other",
     "desc": "Increases Break Effect by #1[i]%. When attacking an enemy target in the \"Rapid Evolution\" state, ignores the \"Rapid Evolution\" effect that prevents attackers from dealing CRIT Hits. \"Juvenile Sting\" will prioritize attacking ally characters in the \"Nemesis\" state.",
@@ -4866,7 +4866,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sam_01_Ability04TargetServant",
+    "name": "<a class=\"gModGreen\" id=\"2095098739\">Enemy_W3_Sam_01_Ability04TargetServant</a>",
     "realName": "Nemesis",
     "aim": "Other",
     "desc": "Increases Break Effect by #1[i]%. When attacking enemy targets in the \"Rapid Evolution\" state, ignores the \"Rapid Evolution\" effect that prevents attackers from dealing CRIT Hits.",
@@ -4877,7 +4877,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sam_01_Ability04UnselectableMark",
+    "name": "<a class=\"gModGreen\" id=\"-2138788815\">Enemy_W3_Sam_01_Ability04UnselectableMark</a>",
     "realName": "Rapid Evolution",
     "aim": "Other",
     "desc": "When attacked by ally targets not in the \"Nemesis\" state, cannot receive CRIT Hits.",
@@ -5365,7 +5365,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W3_Sam_01_EnhanceChargeCount",
+    "name": "<a class=\"gModGreen\" id=\"792733911\">Enemy_W3_Sam_01_EnhanceChargeCount</a>",
     "realName": "Mortal Instinct",
     "aim": "Other",
     "desc": "\"Mortal Instinct\" stacked #1[i] time(s)",

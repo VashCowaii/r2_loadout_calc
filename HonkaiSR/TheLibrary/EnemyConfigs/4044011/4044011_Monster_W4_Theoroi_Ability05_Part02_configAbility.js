@@ -217,11 +217,11 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__104) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__104",
+                "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
+                "displayLines": "SummonList_ADF_2",
                 "constants": [],
                 "variables": [
-                  "ENEMIES_OBJECT_UNUSED__104"
+                  "SummonList_ADF_2"
                 ]
               },
               "locationType": "BeforeCaster"
@@ -242,11 +242,11 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__104) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__104",
+                "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
+                "displayLines": "SummonList_ADF_2",
                 "constants": [],
                 "variables": [
-                  "ENEMIES_OBJECT_UNUSED__104"
+                  "SummonList_ADF_2"
                 ]
               },
               "locationType": "First"
@@ -267,11 +267,11 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__103) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__103",
+                "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
+                "displayLines": "SummonList_ADF_3",
                 "constants": [],
                 "variables": [
-                  "ENEMIES_OBJECT_UNUSED__103"
+                  "SummonList_ADF_3"
                 ]
               },
               "locationType": "AfterCaster"
@@ -292,11 +292,11 @@ const configAbility = {
             {
               "name": "Enemy Entry",
               "enemyID": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__104) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__104",
+                "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
+                "displayLines": "SummonList_ADF_2",
                 "constants": [],
                 "variables": [
-                  "ENEMIES_OBJECT_UNUSED__104"
+                  "SummonList_ADF_2"
                 ]
               },
               "locationType": "Last"

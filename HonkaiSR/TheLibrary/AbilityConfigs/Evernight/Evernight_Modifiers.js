@@ -44,7 +44,8 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
-              }
+              },
+              "icon": "11413.png"
             }
           ]
         },
@@ -56,7 +57,8 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
-              }
+              },
+              "icon": "11413_02.png"
             }
           ]
         }

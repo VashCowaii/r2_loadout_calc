@@ -250,7 +250,8 @@ const configAbility = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "icon": "11413_02.png"
                     }
                   ]
                 },

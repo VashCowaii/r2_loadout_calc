@@ -761,7 +761,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Change Character UI",
-              "characterName": "Phainon"
+              "characterName": "Phainon",
+              "icon": "1408.png"
             },
             {
               "name": "IF",
@@ -918,7 +919,8 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              }
+              },
+              "icon": "1408_02.png"
             },
             {
               "name": "Define Custom Variable with Team Count",

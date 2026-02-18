@@ -55,12 +55,12 @@ const configAbility = {
           "enemyList": [
             {
               "name": "Create Enemy from Custom",
-              "value": "ENEMIES_OBJECT_UNUSED__95",
+              "value": "SummonList_ADF_1",
               "summonLocation": "KeepOnEdge"
             },
             {
               "name": "Create Enemy from Custom",
-              "value": "ENEMIES_OBJECT_UNUSED__95",
+              "value": "SummonList_ADF_1",
               "summonLocation": "KeepOnEdge"
             }
           ]

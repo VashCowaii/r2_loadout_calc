@@ -2628,6 +2628,230 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "Enemy Sunday: All Enemies + Trailblazer",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{Hostile Entities(AOE)}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Sunday: Trailblazer}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Enemy Sunday: Trailblazer",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Character ID",
+                    "ID": 8005,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": "Trailblazer - Harmony[M]"
+                  },
+                  {
+                    "name": "Character ID",
+                    "ID": 8006,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": "Trailblazer - Harmony[F]"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "BattleEvent60012",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{All Unselectable Targets}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Battle Event ID",
+                "ID": 60012,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Enemy Sunday",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Hostile Entities(AOE)}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 302501,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null,
+                "isCompareUniqueID": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "SAM: Self",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1337606012\">Monster_W3_Sam_AIChange</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "MZM: Skill07 Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Hostile Entities(AOE)}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1275477744\">Modifier_W3_Death_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  }
+                },
+                {
+                  "name": "Return Target",
+                  "value": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "MZM: Unselectable Part",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{All Unselectable Targets}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"488990783\">W3_DeathPart_Sgin_Modifier</a>",
+                "casterFilter": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
+              }
+            },
+            {
+              "name": "Return Target",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Cirrus",
       "isTargetOperator": false,
       "execute": [

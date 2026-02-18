@@ -8733,7 +8733,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "3014021": {
       "3014021": {
@@ -8744,7 +8744,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Memory Zone Meme \"Something Unto Death\" (Projection)"
     },
     "3014022": {
@@ -8770,7 +8770,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Memory Zone Meme \"Something Unto Death\" (Complete)"
     },
     "3014023": {
@@ -8783,7 +8783,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Memory Zone Meme \"Something Unto Death\""
     },
     "3014024": {
@@ -8794,7 +8794,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Memory Zone Meme \"Something Unto Death\""
     },
     "3014025": {
@@ -8807,7 +8807,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Memory Zone Meme \"Something Unto Death\""
     },
     "groupName": "Memory Zone Meme \"Something Unto Death\""
@@ -9128,7 +9128,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3024021": {
       "3024021": {
@@ -9138,7 +9138,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Stellaron Hunter: Sam"
     },
     "3024022": {
@@ -9179,7 +9179,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Stellaron Hunter: Sam"
     },
     "3024023": {
@@ -9199,7 +9199,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Stellaron Hunter: Sam (Complete)"
     },
     "groupName": "Stellaron Hunter: Sam"
@@ -9220,7 +9220,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "3024031": {
       "3024031": {
@@ -9264,7 +9264,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false
+      "hasReader": true
     },
     "3025011": {
       "3025011": {
@@ -9274,7 +9274,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Harmonious Choir\" The Great Septimus"
     },
     "3025012": {
@@ -9293,7 +9293,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Harmonious Choir\" The Great Septimus"
     },
     "3025013": {
@@ -9338,7 +9338,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cacophonic Conductor"
     },
     "3025014": {
@@ -9350,7 +9350,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Harmonious Choir\" The Great Septimus"
     },
     "3025015": {
@@ -9361,7 +9361,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Harmonious Choir\" The Great Septimus"
     },
     "3025016": {
@@ -9373,7 +9373,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"Harmonious Choir\" The Great Septimus"
     },
     "groupName": "\"Harmonious Choir\" The Great Septimus"
@@ -16807,7 +16807,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Sombrous Sepulcher"
     },
     "3012031": {
@@ -16818,7 +16818,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Sombrous Sepulcher"
     },
     "3012032": {
@@ -16829,7 +16829,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Sombrous Sepulcher"
     },
     "3021020": {
@@ -17055,7 +17055,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Echo of Faded Dreams"
     },
     "3022011": {
@@ -17067,7 +17067,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Echo of Faded Dreams"
     },
     "4012011": {

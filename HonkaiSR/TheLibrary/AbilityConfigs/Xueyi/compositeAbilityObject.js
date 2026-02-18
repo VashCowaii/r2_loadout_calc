@@ -2910,7 +2910,7 @@ const compositeAbilityObject = {
                   },
                   "targetDefender": {
                     "name": "Target Name",
-                    "target": "{{Caster}}"
+                    "target": "{{Parameter Target}}"
                   },
                   "dmgType": "Quantum",
                   "attackType": "Ultimate",
