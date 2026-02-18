@@ -6040,7 +6040,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "2024011": {
       "2024011": {
@@ -6051,7 +6051,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundant Ebon Deer (Complete)"
     },
     "2024012": {
@@ -6085,7 +6085,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundant Ebon Deer (Complete)"
     },
     "2024013": {
@@ -6097,7 +6097,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundant Ebon Deer (Illusion)"
     },
     "2024014": {
@@ -6143,7 +6143,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundant Ebon Deer"
     },
     "2024015": {
@@ -6155,7 +6155,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Abundant Ebon Deer (Complete)"
     },
     "groupName": "Abundant Ebon Deer"
@@ -16504,7 +16504,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Wintry Wind"
     },
     "2022071": {
@@ -16530,7 +16530,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Wintry Wind"
     },
     "2022080": {
@@ -16571,7 +16571,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Marple Leaf"
     },
     "2022081": {
@@ -16594,7 +16594,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Marple Leaf"
     },
     "2022090": {
@@ -16623,7 +16623,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Glorious Blooms"
     },
     "2022091": {
@@ -16647,7 +16647,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Glorious Blooms"
     },
     "2022100": {
@@ -16672,7 +16672,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Lavish Fruits"
     },
     "2022101": {
@@ -16698,7 +16698,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Lavish Fruits"
     },
     "2032040": {

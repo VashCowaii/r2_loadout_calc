@@ -328,6 +328,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 251191
   },
   {
+    "entryType": "enemy",
+    "enemyID": 2024013,
+    "lineCount": 7228,
+    "sizeCount": 250687
+  },
+  {
     "entryType": "char",
     "entryName": "Black Swan_v0",
     "trimCharacterName": "BlackSwanv0",
@@ -596,6 +602,24 @@ let sizeLeaderboardArray = [
     "enemyID": 3014025,
     "lineCount": 5415,
     "sizeCount": 192722
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2024011,
+    "lineCount": 5569,
+    "sizeCount": 192694
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2024012,
+    "lineCount": 5569,
+    "sizeCount": 192694
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2024015,
+    "lineCount": 5569,
+    "sizeCount": 192694
   },
   {
     "entryType": "enemy",
@@ -1555,6 +1579,18 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 2024010,
+    "lineCount": 2359,
+    "sizeCount": 78512
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2024014,
+    "lineCount": 2359,
+    "sizeCount": 78512
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 2013011,
     "lineCount": 2199,
     "sizeCount": 78245
@@ -2195,6 +2231,18 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 2022080,
+    "lineCount": 1073,
+    "sizeCount": 36633
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2022081,
+    "lineCount": 1073,
+    "sizeCount": 36489
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 8022010,
     "lineCount": 1040,
     "sizeCount": 36462
@@ -2664,6 +2712,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23040.png",
     "lineCount": 405,
     "sizeCount": 14630
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2022100,
+    "lineCount": 453,
+    "sizeCount": 14568
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2022101,
+    "lineCount": 453,
+    "sizeCount": 14568
   },
   {
     "entryType": "enemy",
@@ -3292,6 +3352,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 8657
   },
   {
+    "entryType": "enemy",
+    "enemyID": 2022090,
+    "lineCount": 272,
+    "sizeCount": 8614
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2022091,
+    "lineCount": 272,
+    "sizeCount": 8614
+  },
+  {
     "entryType": "lc",
     "entryName": "Though Worlds Apart",
     "trimCharacterName": "ThoughWorldsApart",
@@ -3480,12 +3552,24 @@ let sizeLeaderboardArray = [
     "sizeCount": 7246
   },
   {
+    "entryType": "enemy",
+    "enemyID": 2022070,
+    "lineCount": 224,
+    "sizeCount": 7102
+  },
+  {
     "entryType": "lc",
     "entryName": "Fly Into a Pink Tomorrow",
     "trimCharacterName": "FlyIntoaPinkTomorrow",
     "entryIcon": "icon/light_cone/22006.png",
     "lineCount": 227,
     "sizeCount": 7065
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2022071,
+    "lineCount": 224,
+    "sizeCount": 7027
   },
   {
     "entryType": "lc",

@@ -850,7 +850,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W2_Xuanlu_02_Counter",
+    "name": "<a class=\"gModGreen\" id=\"-2090846144\">Enemy_W2_Xuanlu_02_Counter</a>",
     "realName": "Retaliation",
     "aim": "Buff",
     "desc": "When attacked by an enemy, deals DMG to that enemy.",
@@ -858,7 +858,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W2_Xuanlu_02_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-924806619\">Enemy_W2_Xuanlu_02_Bonus</a>",
     "realName": "Engender",
     "aim": "Buff",
     "desc": "Increases ATK.",
@@ -869,7 +869,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Xuanlu_02_Counter_RL",
+    "name": "<a class=\"gModGreen\" id=\"-1848268909\">Enemy_W2_Xuanlu_02_Counter_RL</a>",
     "realName": "Retaliation",
     "aim": "Buff",
     "desc": "When attacked by an enemy, deals DMG to that enemy.",
@@ -877,7 +877,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W2_Xuanlu_10_Extra_IncreaseReturnDamage",
+    "name": "<a class=\"gModGreen\" id=\"1933098157\">Enemy_W2_Xuanlu_10_Extra_IncreaseReturnDamage</a>",
     "realName": "Cultivation",
     "aim": "Buff",
     "desc": "Retaliation deals #1[i]% more DMG.",
@@ -888,7 +888,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Xuanlu_04_Charge",
+    "name": "<a class=\"gModGreen\" id=\"-1305390378\">Enemy_W2_Xuanlu_04_Charge</a>",
     "realName": "Lavish Fruit",
     "aim": "Other",
     "desc": "When there are 2 Lavish Fruits on the field, the Abundant Ebon Deer will immediately use Flamboyant Gore.",
@@ -1004,7 +1004,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Xuanlu_Ability07_NoWeakness",
+    "name": "<a class=\"gModGreen\" id=\"-2023283041\">Enemy_W2_Xuanlu_Ability07_NoWeakness</a>",
     "realName": "Hardy Leaf Sheath",
     "aim": "Buff",
     "desc": "DEF increases. Toughness cannot be reduced.",
@@ -1015,7 +1015,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Xuanlu_10_EnergyDrain",
+    "name": "<a class=\"gModGreen\" id=\"938780665\">Enemy_W2_Xuanlu_10_EnergyDrain</a>",
     "realName": "Synwood Renewal",
     "aim": "Buff",
     "desc": "In every turn, restores HP equal to #1[i]% of the unit's Max HP.",
@@ -1026,7 +1026,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Xuanlu_10_RL_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"-536192328\">Enemy_W2_Xuanlu_10_RL_DamageUp</a>",
     "realName": "Vigor Overflow",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[f1]%. This effect is stackable.",
