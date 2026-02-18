@@ -13,6 +13,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 2004023,
+    "lineCount": 16404,
+    "sizeCount": 593696
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 4014036,
     "lineCount": 15124,
     "sizeCount": 561933
@@ -162,6 +168,36 @@ let sizeLeaderboardArray = [
     "enemyID": 4014031,
     "lineCount": 9761,
     "sizeCount": 354729
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2004021,
+    "lineCount": 9687,
+    "sizeCount": 346102
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2004022,
+    "lineCount": 9687,
+    "sizeCount": 346102
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2004026,
+    "lineCount": 9678,
+    "sizeCount": 345918
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2004024,
+    "lineCount": 9675,
+    "sizeCount": 345720
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2004025,
+    "lineCount": 9675,
+    "sizeCount": 345720
   },
   {
     "entryType": "char",
@@ -518,6 +554,12 @@ let sizeLeaderboardArray = [
     "enemyID": 4044012,
     "lineCount": 5646,
     "sizeCount": 195716
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2004020,
+    "lineCount": 5539,
+    "sizeCount": 195185
   },
   {
     "entryType": "enemy",
@@ -2624,6 +2666,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 14630
   },
   {
+    "entryType": "enemy",
+    "enemyID": 2002021,
+    "lineCount": 442,
+    "sizeCount": 14567
+  },
+  {
     "entryType": "relic",
     "entryName": "Arcadia of Woven Dreams",
     "trimCharacterName": "ArcadiaofWovenDreams",
@@ -3306,6 +3354,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/21053.png",
     "lineCount": 240,
     "sizeCount": 8097
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2002020,
+    "lineCount": 250,
+    "sizeCount": 8093
   },
   {
     "entryType": "lc",

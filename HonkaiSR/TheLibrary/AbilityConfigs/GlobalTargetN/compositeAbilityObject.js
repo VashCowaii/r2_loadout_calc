@@ -2901,6 +2901,28 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Trial: Blade",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Add Target by CharacterID",
+              "characterID": 7205
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Trial: Dan Heng IL",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Add Target by CharacterID",
+              "characterID": 7213
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Enemy Kafka Skill4 Other Targets",
           "isTargetOperator": false,
           "execute": [

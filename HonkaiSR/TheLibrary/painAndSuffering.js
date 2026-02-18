@@ -307,6 +307,7 @@ const megaParsingFuckeryPain = {
             "conditions",
             "abortFlags",
             "delay",
+            "behaviorTag",
 
             //potentially not gonna use
             "isTrigger"
@@ -364,6 +365,8 @@ const megaParsingFuckeryPain = {
                 ${getStandardNameDisplay(initialCounter,parseRef.inherentTarget,"Inherent Target",true)}
                 ${getStandardNameDisplay(initialCounter,parseRef.isTrigger,"isTrigger")}
                 ${getStandardNameDisplay(initialCounter,parseRef.delay,"Delay")}
+                ${getStandardNameDisplay(initialCounter,parseRef.behaviorTag,"Behavior Tag")}
+                
                 
                 ${parseRef.parameters != undefined ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Parameters:</div>&nbsp;
@@ -506,6 +509,7 @@ const megaParsingFuckeryPain = {
 
             "action",
             "valueList",
+            "valueListHidden",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Modify Weaknesses");
         // initialCounter++;
@@ -515,6 +519,7 @@ const megaParsingFuckeryPain = {
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.valueListHidden,"Hidden List")}
         </div>
         `;
     },
@@ -3865,6 +3870,21 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.characterName,"Name",true)}
         </div>`;
     },
+    "Add Target by CharacterID"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "characterID",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Attack-Type Extension");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.characterID,"ID")}
+        </div>`;
+    },
     "Add Target by Pseudo-Character Partner"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -3933,6 +3953,7 @@ const megaParsingFuckeryPain = {
             "text",
             "controlTypes",
             "extraText",
+            "isLock",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Disable Abilities");
 
@@ -3944,6 +3965,7 @@ const megaParsingFuckeryPain = {
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.controlTypes,"Controlled Types")}
             ${getStandardNameDisplay(initialCounter,parseRef.extraText,"Extra Description")}
+            ${getStandardNameDisplay(initialCounter,parseRef.isLock,"Lock")}
 
         </div>`;
     },

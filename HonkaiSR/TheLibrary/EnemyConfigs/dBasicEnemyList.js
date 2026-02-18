@@ -4336,7 +4336,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "2004021": {
       "2004021": {
@@ -4364,7 +4364,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cloud Knight Lieutenant: Yanqing (Complete)"
     },
     "2004022": {
@@ -4391,7 +4391,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cloud Knight Lieutenant: Yanqing (Complete)"
     },
     "2004023": {
@@ -4404,7 +4404,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cloud Knight Lieutenant: Yanqing (Illusion)"
     },
     "2004024": {
@@ -4438,7 +4438,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cloud Knight Lieutenant: Yanqing"
     },
     "2004025": {
@@ -4451,7 +4451,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cloud Knight Lieutenant: Yanqing"
     },
     "2004026": {
@@ -4463,7 +4463,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Cloud Knight Lieutenant: Yanqing (Corrupted)"
     },
     "groupName": "Cloud Knight Lieutenant: Yanqing"
@@ -16360,7 +16360,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Flying Sword"
     },
     "2002021": {
@@ -16414,7 +16414,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Flying Sword"
     },
     "2005010": {

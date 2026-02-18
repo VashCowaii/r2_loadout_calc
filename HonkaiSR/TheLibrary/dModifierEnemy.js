@@ -640,7 +640,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_01",
+    "name": "<a class=\"gModGreen\" id=\"2051112248\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_01</a>",
     "realName": "Formation Core",
     "aim": "Other",
     "desc": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
@@ -648,7 +648,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_02",
+    "name": "<a class=\"gModGreen\" id=\"2101445105\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_02</a>",
     "realName": "Formation Core",
     "aim": "Other",
     "desc": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
@@ -656,7 +656,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_03",
+    "name": "<a class=\"gModGreen\" id=\"2084667486\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_03</a>",
     "realName": "Formation Core",
     "aim": "Other",
     "desc": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
@@ -664,7 +664,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core",
+    "name": "<a class=\"gModGreen\" id=\"194045592\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core</a>",
     "realName": "Sword Formation",
     "aim": "Other",
     "desc": "Yanqing's Toughness cannot be reduced, and his SPD increases by #1[i]. Destroy all of Yanqing's Flying Swords to dispel this effect and cause DMG to Yanqing.",
@@ -675,7 +675,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core_MainBattle",
+    "name": "<a class=\"gModGreen\" id=\"-242524526\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core_MainBattle</a>",
     "realName": "Sword Formation",
     "aim": "Other",
     "desc": "Yanqing's Toughness cannot be reduced. Destroy all of Yanqing's Flying Swords to dispel that effect and cause DMG to Yanqing.",
@@ -683,7 +683,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core_RL",
+    "name": "<a class=\"gModGreen\" id=\"-1389810309\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core_RL</a>",
     "realName": "Sword Formation",
     "aim": "Other",
     "desc": "Yanqing's Toughness cannot be reduced, and his SPD increases by #1[i]. Destroy all of Yanqing's Flying Swords to dispel this effect and cause DMG to Yanqing.",
@@ -694,7 +694,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Yanqing_SwordPowerUp",
+    "name": "<a class=\"gModGreen\" id=\"-2068860507\">Enemy_W2_Yanqing_SwordPowerUp</a>",
     "realName": "Ordeal",
     "aim": "Other",
     "desc": "This summon receives an enhancement and increases Max Toughness. After attacking, there is a high chance of Freezing the target.",
@@ -702,7 +702,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Standard_Overdrive",
+    "name": "<a class=\"gModGreen\" id=\"-1122230262\">Enemy_W2_Yanqing_Standard_Overdrive</a>",
     "realName": "Chilling Light",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%. This effect can stack.",
@@ -713,7 +713,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_MarkingCountDown_1",
+    "name": "<a class=\"gModGreen\" id=\"-1666789092\">Enemy_W2_Yanqing_Ability02_MarkingCountDown_1</a>",
     "realName": "Ready for Battle",
     "aim": "Other",
     "desc": "Use Aethereal Dreamflux in the next turn.",
@@ -721,7 +721,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_MarkingCountDown_2",
+    "name": "<a class=\"gModGreen\" id=\"-1616456235\">Enemy_W2_Yanqing_Ability02_MarkingCountDown_2</a>",
     "realName": "Ready for Battle",
     "aim": "Other",
     "desc": "Use Aethereal Dreamflux after 2 turns",
@@ -729,7 +729,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Yanqing_Ability02_Mark",
+    "name": "<a class=\"gModGreen\" id=\"-1560182165\">Enemy_W2_Yanqing_Ability02_Mark</a>",
     "realName": "Lock On",
     "aim": "Other",
     "desc": "Locked on by %CasterName and is the target of Aethereal Dreamflux.",
