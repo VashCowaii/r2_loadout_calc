@@ -6208,7 +6208,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "2032011": {
       "2032011": {
@@ -6219,7 +6219,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Sableclaw Wolftrooper"
     },
     "groupName": "Sableclaw Wolftrooper"
@@ -6257,7 +6257,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "2032021": {
       "2032021": {
@@ -6266,7 +6266,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Mok Tok"
     },
     "2032022": {
@@ -6278,7 +6278,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Eclipse Wolftrooper"
     },
     "groupName": "Eclipse Wolftrooper"
@@ -6419,7 +6419,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "2034011": {
       "2034011": {
@@ -6436,7 +6436,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Borisin Warhead: Hoolay"
     },
     "2034012": {
@@ -6455,7 +6455,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Borisin Warhead: Hoolay (Complete)"
     },
     "2034013": {
@@ -6466,7 +6466,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Borisin Warhead: Hoolay"
     },
     "2034014": {
@@ -6511,7 +6511,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Fulminating Wolflord"
     },
     "2034015": {
@@ -6523,7 +6523,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Borisin Warhead: Hoolay (Corrupted)"
     },
     "2034016": {
@@ -6534,7 +6534,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Borisin Warhead: Hoolay"
     },
     "groupName": "Borisin Warhead: Hoolay"

@@ -1721,6 +1721,7 @@ const megaParsingFuckeryPain = {
             "DamageType",
             "sourceTarget",
             "eatShield",
+            "roundDMG",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Consume");
 
@@ -1743,6 +1744,8 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.dynamicAssignment,"Assign Ratio To")}
             ${getStandardNameDisplay(initialCounter,parseRef.attackType,"Attack Type")}
             ${getStandardNameDisplay(initialCounter,parseRef.eatShield,"Eats Shield")}
+            ${getStandardNameDisplay(initialCounter,parseRef.roundDMG,"Round DMG")}
+            
             ${getStandardNameDisplay(initialCounter,parseRef.floor,"Floor")}
             ${parseRef.DamageType != undefined ? `<div class="actionDetailBody2Detail">
                 <div class="rotationConditionOperatorHeaderInline">Damage Type:</div>&nbsp;
@@ -4051,6 +4054,7 @@ const megaParsingFuckeryPain = {
             "name",
             "show",
             "forceDisplayUltButton",
+            "showKey",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Update Character Panel Visibility");
 
@@ -4060,6 +4064,7 @@ const megaParsingFuckeryPain = {
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.show,"Show")}
+            ${getStandardNameDisplay(initialCounter,parseRef.showKey,"Display Key")}
             ${getStandardNameDisplay(initialCounter,parseRef.forceDisplayUltButton,"Force Display Ult-Button")}
             
         </div>`;
@@ -9846,6 +9851,7 @@ const megaParsingFuckeryPain = {
 
             "delayAdvancePreview",
 
+            "toughnessReductionPreviewAdd",
             "toughnessReductionPreview",
             "toughnessForcedReductionPreview",
             "showAsForcedReduction",
@@ -9888,6 +9894,7 @@ const megaParsingFuckeryPain = {
 
         const delayAdvancePreview = parseRef.delayAdvancePreview ? megaParsingFuckery["Preview: Delay/Advance"](parseRef.delayAdvancePreview,initialCounter) : null;
 
+        const toughnessReductionPreviewAdd = parseRef.toughnessReductionPreviewAdd?.displayLines ?? parseRef.toughnessReductionPreviewAdd;
         const toughnessReductionPreview = parseRef.toughnessReductionPreview?.displayLines ?? parseRef.toughnessReductionPreview;
         const toughnessForcedReductionPreview = parseRef.toughnessForcedReductionPreview?.displayLines ?? parseRef.toughnessForcedReductionPreview;
 
@@ -9934,6 +9941,12 @@ const megaParsingFuckeryPain = {
                 ${delayAdvancePreview ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Preview Value:</div>&nbsp;
                     ${delayAdvancePreview}
+                </div>` : ""}
+
+                
+                ${toughnessReductionPreviewAdd ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Preview Toughness Flat Add:</div>&nbsp;
+                    ${toughnessReductionPreviewAdd}
                 </div>` : ""}
                 ${toughnessReductionPreview ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Preview Toughness:</div>&nbsp;

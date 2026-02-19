@@ -2679,7 +2679,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Lycan_RageStatus",
+    "name": "<a class=\"gModGreen\" id=\"-1495768773\">Enemy_W2_Lycan_RageStatus</a>",
     "realName": "Moon Rage",
     "aim": "Buff",
     "desc": "Enters the Moon Rage state and increases SPD by #1[i]%. There is a high chance of inflicting Bleed on the target when attacking. This state will be removed when this unit is Weakness Broken.",
@@ -2690,7 +2690,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Lycan_RageStatusEnhance",
+    "name": "<a class=\"gModGreen\" id=\"-1564570329\">Enemy_W2_Lycan_RageStatusEnhance</a>",
     "realName": "Moon Rage",
     "aim": "Buff",
     "desc": "Enters the Moon Rage state and can take an extra action every turn. There is a high chance of inflicting Bleed on the target when attacking. This state will be removed when this unit is Weakness Broken.",
@@ -2698,7 +2698,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Lycan_01_RageStatus",
+    "name": "<a class=\"gModGreen\" id=\"-1326641454\">Enemy_W2_Lycan_01_RageStatus</a>",
     "realName": "Moon Rage",
     "aim": "Buff",
     "desc": "Enters the Moon Rage state and increases SPD by #1[i]%. After attacking an allied target, restores this unit's HP. This state will be removed when this unit is Weakness Broken.",
@@ -2709,7 +2709,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Lycan_01_RageStatusEnhance",
+    "name": "<a class=\"gModGreen\" id=\"-1949316860\">Enemy_W2_Lycan_01_RageStatusEnhance</a>",
     "realName": "Moon Rage",
     "aim": "Buff",
     "desc": "Enters the Moon Rage state and can take an extra action every turn. After attacking a target, restores this unit's HP. This state will be removed when this unit is Weakness Broken.",
@@ -2787,7 +2787,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_Poison",
+    "name": "<a class=\"gModGreen\" id=\"-211625513\">Enemy_W2_LycanKing_Poison</a>",
     "realName": "\"Tumbledust\"",
     "aim": "Debuff",
     "desc": "At the start of each turn, consumes #1[i]% of this unit's HP.",
@@ -2961,7 +2961,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_LycanKing_RageStatus",
+    "name": "<a class=\"gModGreen\" id=\"224849748\">Enemy_W2_LycanKing_RageStatus</a>",
     "realName": "Eclipse's Ire",
     "aim": "Buff",
     "desc": "Enters the Moon Rage state and increases SPD by #1[i]%. While in this state, Hoolay gains Irate and can use Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
@@ -2973,7 +2973,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_RageStatusPhase2",
+    "name": "<a class=\"gModGreen\" id=\"540941563\">Enemy_W2_LycanKing_RageStatusPhase2</a>",
     "realName": "Eclipse's Wrath",
     "aim": "Buff",
     "desc": "Enters the Moon Rage state and increases SPD by #1[i]%. While in this state, Hoolay gains Irate and can use Barrenness of Earth Gouged and Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
@@ -2985,7 +2985,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_BloodRageMark",
+    "name": "<a class=\"gModGreen\" id=\"563066245\">Enemy_W2_LycanKing_BloodRageMark</a>",
     "realName": "Irate",
     "aim": "Other",
     "desc": "Hoolay currently possesses #1[i] stack(s) of Irate.",
@@ -2996,7 +2996,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_RageStatusEnhance",
+    "name": "<a class=\"gModGreen\" id=\"1729331430\">Enemy_W2_LycanKing_RageStatusEnhance</a>",
     "realName": "Lupine Lord's Majesty",
     "aim": "Buff",
     "desc": "When entering Moon Rage, the effect of Moon Rage will be Enhanced.",
@@ -3004,7 +3004,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_LycanKing_RageStatusEnhanceSelf",
+    "name": "<a class=\"gModGreen\" id=\"-717129648\">Enemy_W2_LycanKing_RageStatusEnhanceSelf</a>",
     "realName": "Lupine Lord's Majesty",
     "aim": "Buff",
     "desc": "Hoolay's SPD increases by #1[i]% due to the presence of Sableclaw Wolftrooper and Eclipse Wolftrooper on the field.",
@@ -3211,7 +3211,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_RLBoss_AllDamageTypeAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-661361560\">Enemy_W2_LycanKing_RLBoss_AllDamageTypeAddedRatio</a>",
     "realName": "Thirst for War",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%. This effect is stackable.",
@@ -3828,7 +3828,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_LycanKing_IF_RageStatus",
+    "name": "<a class=\"gModGreen\" id=\"609854366\">Enemy_W2_LycanKing_IF_RageStatus</a>",
     "realName": "Full Moon's Furor",
     "aim": "Buff",
     "desc": "Enters the \"Lunar Devourer\" state and gains immunity to action delay effects from targets. While in this state, Hoolay gains \"Irate\" and can use \"Lupine Chase Calls Bloody Gleam.\" This state will be removed when this unit is Weakness Broken.",
@@ -3840,7 +3840,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_IF_RageStatusPhase2",
+    "name": "<a class=\"gModGreen\" id=\"327803157\">Enemy_W2_LycanKing_IF_RageStatusPhase2</a>",
     "realName": "Full Moon's Furor",
     "aim": "Buff",
     "desc": "Enters the \"Lunar Devourer\" state and gains immunity to action delay effects from targets. While in this state, Hoolay gains \"Irate\" and can use \"Lupine Chase Calls Bloody Gleam.\" This state will be removed when this unit is Weakness Broken.",
@@ -3852,7 +3852,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_IF_PickUpMarkLycanKing",
+    "name": "<a class=\"gModGreen\" id=\"1565088528\">Enemy_W2_LycanKing_IF_PickUpMarkLycanKing</a>",
     "realName": "Going Solo",
     "aim": "Other",
     "desc": "Currently in the \"Going Solo\" state. Increases DMG dealt by #1[i]% and decreases DMG taken by #2[i]%.",
@@ -3864,7 +3864,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_IF_DisableAction",
+    "name": "<a class=\"gModGreen\" id=\"-480380135\">Enemy_W2_LycanKing_IF_DisableAction</a>",
     "realName": "Departed",
     "aim": "Other",
     "desc": "Targets in the Departed state cannot be designated as ability targets and will not appear in the Action Order.",
@@ -3872,7 +3872,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_LycanKing_IF_ChampionMark",
+    "name": "<a class=\"gModGreen\" id=\"848754639\">Enemy_W2_LycanKing_IF_ChampionMark</a>",
     "realName": "Blood Surge",
     "aim": "Buff",
     "desc": "When a target character with \"Blood Surge\" and their summon enters \"Going Solo,\" they will additionally reduce enemy Toughness and restore HP after attacking. This effect is stackable and is removed when \"Going Solo\" ends.",
@@ -3884,7 +3884,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_IF_ChampionEnhanceForeverStatus",
+    "name": "<a class=\"gModGreen\" id=\"-160773215\">Enemy_W2_LycanKing_IF_ChampionEnhanceForeverStatus</a>",
     "realName": "Rising War Spirits",
     "aim": "Buff",
     "desc": "DMG dealt by this unit and their summoned targets increases by #1[i]% and Break Effect increases by #2[i]%. This effect is stackable.",
@@ -4054,7 +4054,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_LycanKing_IF_ChampionHPEnhance",
+    "name": "<a class=\"gModGreen\" id=\"84881984\">Enemy_W2_LycanKing_IF_ChampionHPEnhance</a>",
     "realName": "Last Stand",
     "aim": "Buff",
     "desc": "Max HP increases by #1[i] and ATK increases by #2[i]. This effect will be removed when the \"Going Solo\" state ends.",
@@ -4104,7 +4104,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Lycan_RagePhase1Mark",
+    "name": "<a class=\"gModGreen\" id=\"1414738413\">Enemy_W2_Lycan_RagePhase1Mark</a>",
     "realName": "Bloodlust",
     "aim": "Other",
     "desc": "Apply #1[i] stack(s) of Bloodlust. The Bloodlust stacks and stack limits for enemy units that can enter Moon Rage will be kept consistent.",
