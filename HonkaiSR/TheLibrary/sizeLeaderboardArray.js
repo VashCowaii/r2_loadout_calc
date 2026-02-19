@@ -7,6 +7,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 4015011,
+    "lineCount": 18696,
+    "sizeCount": 684117
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 2004014,
     "lineCount": 16955,
     "sizeCount": 618990
@@ -40,6 +46,12 @@ let sizeLeaderboardArray = [
     "enemyID": 3025015,
     "lineCount": 13910,
     "sizeCount": 472682
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4015010,
+    "lineCount": 12665,
+    "sizeCount": 464410
   },
   {
     "entryType": "char",
@@ -314,6 +326,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 288229
   },
   {
+    "entryType": "enemy",
+    "enemyID": 4015021,
+    "lineCount": 7644,
+    "sizeCount": 286712
+  },
+  {
     "entryType": "char",
     "entryName": "Phainon",
     "trimCharacterName": "Phainon",
@@ -488,6 +506,12 @@ let sizeLeaderboardArray = [
     "enemyID": 8012215,
     "lineCount": 5625,
     "sizeCount": 222389
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4015020,
+    "lineCount": 6118,
+    "sizeCount": 222261
   },
   {
     "entryType": "enemy",
@@ -953,7 +977,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3024030,
     "lineCount": 4323,
-    "sizeCount": 159095
+    "sizeCount": 159059
   },
   {
     "entryType": "enemy",
@@ -2093,6 +2117,18 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 4012090,
+    "lineCount": 1277,
+    "sizeCount": 48619
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012091,
+    "lineCount": 1277,
+    "sizeCount": 48619
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 2022010,
     "lineCount": 1376,
     "sizeCount": 48230
@@ -2568,6 +2604,12 @@ let sizeLeaderboardArray = [
     "enemyID": 3002045,
     "lineCount": 769,
     "sizeCount": 25223
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012080,
+    "lineCount": 677,
+    "sizeCount": 24782
   },
   {
     "entryType": "enemy",
@@ -3472,6 +3514,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23051.png",
     "lineCount": 258,
     "sizeCount": 8583
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012092,
+    "lineCount": 254,
+    "sizeCount": 8485
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012093,
+    "lineCount": 254,
+    "sizeCount": 8485
   },
   {
     "entryType": "lc",

@@ -2303,6 +2303,61 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "Aquila: Self",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1259657295\">Enemy_W4_DawnsEye_01_BreakController</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Aquila: Cyrene's Demiurge",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{All Memosprites}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Character ID",
+                "ID": 11415,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Pollux",
       "isTargetOperator": false,
       "execute": [

@@ -10444,7 +10444,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false
+      "hasReader": true
     },
     "4015020": {
       "4015020": {
@@ -10461,7 +10461,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Decimator, Karma of Daythunder, Eye of Twilight"
     },
     "4015021": {
@@ -10472,7 +10472,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Hyacinthia, Eye of Twilight"
     },
     "groupName": "Sublime, Radiant, Avatar of the Sky"
@@ -17182,7 +17182,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Daythunder Raven"
     },
     "4012090": {
@@ -17193,7 +17193,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Hundred Eyes"
     },
     "4012091": {
@@ -17204,7 +17204,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Shoot of Hundred Eyes"
     },
     "4012092": {
@@ -17215,7 +17215,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Languid Ethmoid Bone"
     },
     "4012093": {
@@ -17226,7 +17226,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Dried Lacrimal Bone"
     },
     "4013014": {
@@ -17305,7 +17305,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Sublime, Radiant, Avatar of the Sky"
     },
     "4022011": {

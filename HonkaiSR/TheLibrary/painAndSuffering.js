@@ -2896,6 +2896,31 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.errorThreshold,"Error Threshold")}
         </div>`;
     },
+    "Set Aquila UI Data"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "darkValue",
+            "lightValue",
+            "sunTemp",
+            "sunProg",
+            "lightningCharge",
+            "showWarning",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Set Aquila UI Data");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.darkValue,"Dark Charge")}
+            ${getStandardNameDisplay(initialCounter,parseRef.lightValue,"Light Charge")}
+            ${getStandardNameDisplay(initialCounter,parseRef.sunTemp,"Temperature")}
+            ${getStandardNameDisplay(initialCounter,parseRef.sunProg,"Temperature Progress")}
+            ${getStandardNameDisplay(initialCounter,parseRef.lightningCharge,"Lightning Charge")}
+            ${getStandardNameDisplay(initialCounter,parseRef.showWarning,"Warning Value")}
+        </div>`;
+    },
     "Set Netherwing's Ardent Will Stacks"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -5588,6 +5613,7 @@ const megaParsingFuckeryPain = {
             "setValue",
             "setPercent",
             "clearNegativeHP",
+            "targetSource",
             
             // "EnergyGainPercent",
             // "healPercent",
@@ -5606,6 +5632,7 @@ const megaParsingFuckeryPain = {
             ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
         </div>
         <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.targetSource,"Source",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.clearNegativeHP,"Clears Negative HP")}
             ${getStandardNameDisplay(initialCounter,parseRef.setValue,"Set Heal Flat")}
             ${getStandardNameDisplay(initialCounter,parseRef.setPercent,"Set Heal Percent")}
@@ -10833,6 +10860,8 @@ const megaParsingFuckeryPain = {
             "partName",
             "offset",
             "type",
+            "offsetInGroup",
+            "linkHitByPart",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Create Enemy as Body Part");
 
@@ -10847,6 +10876,8 @@ const megaParsingFuckeryPain = {
                 ${getStandardNameDisplay(initialCounter,parseRef.value,"Custom ID")}
                 ${getStandardNameDisplay(initialCounter,parseRef.partName,"Part")}
                 ${getStandardNameDisplay(initialCounter,parseRef.offset,"Offset")}
+                ${getStandardNameDisplay(initialCounter,parseRef.offsetInGroup,"Offset in Group")}
+                ${getStandardNameDisplay(initialCounter,parseRef.linkHitByPart,"Link Hits by Part")}
 
                 ${getStandardNameDisplay(initialCounter,parseRef.type,"Type")}
 

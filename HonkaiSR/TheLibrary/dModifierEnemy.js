@@ -3572,7 +3572,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_DawnsEye_PartHP",
+    "name": "<a class=\"gModGreen\" id=\"-1716068014\">Enemy_W4_DawnsEye_PartHP</a>",
     "realName": "All As One",
     "aim": "Other",
     "desc": "When receiving DMG, \"Sublime, Radiant, Avatar of the Sky\" loses an equal amount of HP.",
@@ -3580,7 +3580,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_Monster_W4_DawnsEye_WheaterSunnyBurn",
+    "name": "<a class=\"gModGreen\" id=\"1383289356\">Enemy_Monster_W4_DawnsEye_WheaterSunnyBurn</a>",
     "realName": "Solar Storm",
     "aim": "Other",
     "desc": "Takes Fire DMG based on the current Temperature at the start of each turn.",
@@ -3591,7 +3591,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_DawnsEye_Ability04_SunnyChargeHeat",
+    "name": "<a class=\"gModGreen\" id=\"-1737251406\">Enemy_W4_DawnsEye_Ability04_SunnyChargeHeat</a>",
     "realName": "Helium Flash",
     "aim": "Buff",
     "desc": "Uses \"Fury, Incineration of Dawn and Dusk\" on all targets in the next action and increases the Temperature by #1[i].",
@@ -3602,7 +3602,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_DawnsEye_WeatherEnhanced",
+    "name": "<a class=\"gModGreen\" id=\"-1785279589\">Enemy_W4_DawnsEye_WeatherEnhanced</a>",
     "realName": "Wingbeats",
     "aim": "Other",
     "desc": "\"Daythunder Raven\" enters Enhanced state. Dispelled upon being Weakness Broken.",
@@ -4166,7 +4166,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_Monster_W4_DawnsEye_WheaterMarkAbility04",
+    "name": "<a class=\"gModGreen\" id=\"-1414068042\">Modifier_Monster_W4_DawnsEye_WheaterMarkAbility04</a>",
     "realName": "Ionization",
     "aim": "Buff",
     "desc": "Uses \"Wrath, Rend of Eternal Sky\" in the next action and additionally deals DMG based on the number of Thunderclouds possessed. Current Thundercloud(s): #1[i].",
@@ -4177,7 +4177,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub",
+    "name": "<a class=\"gModGreen\" id=\"1789818614\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub</a>",
     "realName": "Rot",
     "aim": "Debuff",
     "desc": "Maximum Restorable HP decreases by #1[i].",
@@ -4188,7 +4188,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Modifier_Monster_W4_DawnsEye_01_MaxHPAdd",
+    "name": "<a class=\"gModGreen\" id=\"-815851324\">Modifier_Monster_W4_DawnsEye_01_MaxHPAdd</a>",
     "realName": "Flame-Chase",
     "aim": "Buff",
     "desc": "Max HP increases by #1[i].",
@@ -4200,7 +4200,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Modifier_Monster_W4_DawnsEye_01_HOT",
+    "name": "<a class=\"gModGreen\" id=\"27951832\">Modifier_Monster_W4_DawnsEye_01_HOT</a>",
     "realName": "Eagerness",
     "aim": "Buff",
     "desc": "Restores this unit's HP by #1[i] at the start of every turn, and increases DMG dealt by #2[i]%.",
@@ -4212,7 +4212,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Modifier_Monster_W4_DawnsEye_01_MuteSpeed",
+    "name": "<a class=\"gModGreen\" id=\"-1488863445\">Modifier_Monster_W4_DawnsEye_01_MuteSpeed</a>",
     "realName": "Tide-Corrosion",
     "aim": "Debuff",
     "desc": "Cannot be selected, cannot take action.",
@@ -4220,7 +4220,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_DawnsEye_01_Ability03_Charge",
+    "name": "<a class=\"gModGreen\" id=\"-439718905\">Enemy_W4_DawnsEye_01_Ability03_Charge</a>",
     "realName": "The Dark Tides Cometh",
     "aim": "Other",
     "desc": "The next attack will inflict \"Unmaking Ashes: Godsfall\" on all allies.",
@@ -4228,7 +4228,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamage",
+    "name": "<a class=\"gModGreen\" id=\"-2100215981\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamage</a>",
     "realName": "Black Tide Sync Rate",
     "aim": "Other",
     "desc": "The current Charge ratio of \"Eye of Twilight\" is #1[i]%.",
@@ -4285,7 +4285,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_Monster_W4_DawnsEye_WheaterSunnyAllDamageTypeAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1769039176\">Enemy_Monster_W4_DawnsEye_WheaterSunnyAllDamageTypeAddedRatio</a>",
     "realName": "DMG Boost",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -4343,7 +4343,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_DawnsEye_PartBlock",
+    "name": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>",
     "realName": "Marine Layer",
     "aim": "Other",
     "desc": "Currently unselectable.",
@@ -4351,7 +4351,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_Monster_W4_DawnsEye_WheaterRognarokTrueDamage",
+    "name": "<a class=\"gModGreen\" id=\"74735154\">Modifier_Monster_W4_DawnsEye_WheaterRognarokTrueDamage</a>",
     "realName": "Skygash",
     "aim": "Buff",
     "desc": "After targets attack, deals True DMG based on \"Black Tide Sync Rate.\" This DMG is \"Non-fatal.\"",
@@ -4496,7 +4496,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_DawnsEye_B_PartHP",
+    "name": "<a class=\"gModGreen\" id=\"-1459512555\">Enemy_W4_DawnsEye_B_PartHP</a>",
     "realName": "All As One",
     "aim": "Other",
     "desc": "When receiving DMG, \"Sublime, Radiant, Avatar of the Sky\" loses an equal amount of HP.",

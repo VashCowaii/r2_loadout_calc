@@ -1554,12 +1554,12 @@ const configAbility = {
                         "value1": "MDF_HPChangeRatio",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (MDF_MaxRallyHPRatio) || Variables[1] (MDF_RallyHPRatio) || SUB || RETURN",
-                          "displayLines": "(MDF_MaxRallyHPRatio - MDF_RallyHPRatio)",
+                          "operator": "Variables[0] (MDF_MaxRallyHPRatio) || Variables[1] (MDF_TotalDamageRatio) || SUB || RETURN",
+                          "displayLines": "(MDF_MaxRallyHPRatio - MDF_TotalDamageRatio)",
                           "constants": [],
                           "variables": [
                             "MDF_MaxRallyHPRatio",
-                            "MDF_RallyHPRatio"
+                            "MDF_TotalDamageRatio"
                           ]
                         }
                       },
@@ -1572,14 +1572,14 @@ const configAbility = {
                           },
                           "variableName": "MDF_RallyHPRatio",
                           "value": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_ShieldThreshold) || Variables[1] (MDF_RallyHPRatio) || ADD || Variables[2] (MDF_MaxRallyHPRatio) || SUB || SUB || RETURN",
-                            "displayLines": "(0 - ((MDF_ShieldThreshold + MDF_RallyHPRatio) - MDF_MaxRallyHPRatio))",
+                            "operator": "Constants[0] (0) || Variables[0] (MDF_ShieldThreshold) || Variables[1] (MDF_TotalDamageRatio) || ADD || Variables[2] (MDF_MaxRallyHPRatio) || SUB || SUB || RETURN",
+                            "displayLines": "(0 - ((MDF_ShieldThreshold + MDF_TotalDamageRatio) - MDF_MaxRallyHPRatio))",
                             "constants": [
                               0
                             ],
                             "variables": [
                               "MDF_ShieldThreshold",
-                              "MDF_RallyHPRatio",
+                              "MDF_TotalDamageRatio",
                               "MDF_MaxRallyHPRatio"
                             ]
                           },
@@ -1657,11 +1657,11 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_RallyHPRatio",
                       "value": {
-                        "operator": "Variables[0] (MDF_TotalDamageRatio) || Variables[1] (MDF_ShieldThreshold) || SUB || RETURN",
-                        "displayLines": "(MDF_TotalDamageRatio - MDF_ShieldThreshold)",
+                        "operator": "Variables[0] (MDF_RallyHPRatio) || Variables[1] (MDF_ShieldThreshold) || SUB || RETURN",
+                        "displayLines": "(MDF_RallyHPRatio - MDF_ShieldThreshold)",
                         "constants": [],
                         "variables": [
-                          "MDF_TotalDamageRatio",
+                          "MDF_RallyHPRatio",
                           "MDF_ShieldThreshold"
                         ]
                       }
@@ -1676,11 +1676,11 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_TotalDamageRatio) || RETURN",
-                    "displayLines": "MDF_TotalDamageRatio",
+                    "operator": "Variables[0] (MDF_RallyHPRatio) || RETURN",
+                    "displayLines": "MDF_RallyHPRatio",
                     "constants": [],
                     "variables": [
-                      "MDF_TotalDamageRatio"
+                      "MDF_RallyHPRatio"
                     ]
                   }
                 }
@@ -1722,11 +1722,11 @@ const configAbility = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (MDF_TotalDamageRatio) || RETURN",
-                        "displayLines": "MDF_TotalDamageRatio",
+                        "operator": "Variables[0] (MDF_RallyHPRatio) || RETURN",
+                        "displayLines": "MDF_RallyHPRatio",
                         "constants": [],
                         "variables": [
-                          "MDF_TotalDamageRatio"
+                          "MDF_RallyHPRatio"
                         ]
                       }
                     }
@@ -1792,11 +1792,11 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_TotalDamageRatio) || RETURN",
-                    "displayLines": "MDF_TotalDamageRatio",
+                    "operator": "Variables[0] (MDF_RallyHPRatio) || RETURN",
+                    "displayLines": "MDF_RallyHPRatio",
                     "constants": [],
                     "variables": [
-                      "MDF_TotalDamageRatio"
+                      "MDF_RallyHPRatio"
                     ]
                   }
                 }
@@ -1889,11 +1889,11 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "healPercent": {
-                            "operator": "Variables[0] (MDF_TotalDamageRatio) || Variables[1] (MDF_CurrentHPRatio) || SUB || RETURN",
-                            "displayLines": "(MDF_TotalDamageRatio - MDF_CurrentHPRatio)",
+                            "operator": "Variables[0] (MDF_RallyHPRatio) || Variables[1] (MDF_CurrentHPRatio) || SUB || RETURN",
+                            "displayLines": "(MDF_RallyHPRatio - MDF_CurrentHPRatio)",
                             "constants": [],
                             "variables": [
-                              "MDF_TotalDamageRatio",
+                              "MDF_RallyHPRatio",
                               "MDF_CurrentHPRatio"
                             ]
                           },
